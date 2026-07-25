@@ -180,3 +180,18 @@ now has an exact overcomplete lower edge.
 - Context: `~/sae-identifiability/theory/general_no_go.md` (general no-go,
   m ≤ d), `~/sae-identifiability/report.md` §7.1b (anti-rotation evasion,
   bounded remedy ε\*\*(β), OrtSAE prior art arXiv:2509.22033).
+
+## Addendum: frame potential is not mutual coherence (signed-basis degeneracy)
+
+From *Causal-Ontology Inversion in Overcomplete Sparse Autoencoders* (R. Lee, GPT
+session, 2026-07-25; adversarial review there identified this as a necessary
+conceptual correction, verified here independently): the Gram-sum penalty C_Σ is a
+**frame-potential** objective, not a guarantee of low worst-pair coherence. At
+m = 2d the signed duplicated basis [I, −I] attains the frame-potential floor
+C_Σ = m(m−d)/(2d) exactly while its worst-pair squared coherence is **maximal**
+(equal to 1: antipodal pairs). Verified in exact arithmetic for d = 2..8
+(`verify_signed_basis_degeneracy`). Consequence for this note's scope: the
+distortion theorem and the empirical failure mode it predicts concern the full
+Gram-sum penalty; true mutual-coherence minimization is a different objective and
+remains empirically open (classical background: Benedetto–Fickus 2003 frame
+potential; Mixon et al. arXiv:2112.02916).

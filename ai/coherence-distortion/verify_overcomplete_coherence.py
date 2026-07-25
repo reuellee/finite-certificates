@@ -725,3 +725,33 @@ def verify_class_wide_bounds(
 
 if __name__ == "__main__":
     main()
+
+
+def verify_signed_basis_degeneracy() -> None:
+    """[I,-I] proposition (from 'Causal-Ontology Inversion in Overcomplete
+    Sparse Autoencoders', 2026-07-25): at m=2d the signed duplicated basis
+    attains the frame-potential floor m(m-d)/(2d) exactly while its worst-pair
+    squared coherence is maximal (=1). Frame potential is not mutual coherence.
+    Exact rational arithmetic, d=2..8."""
+    for d in range(2, 9):
+        eye = [[F(int(i == j)) for j in range(d)] for i in range(d)]
+        cols = [tuple(r[j] for r in eye) for j in range(d)]
+        cols += [tuple(-r[j] for r in eye) for j in range(d)]
+        m = len(cols)
+        dots = [
+            sum(a * b for a, b in zip(cols[i], cols[j]))
+            for i in range(m)
+            for j in range(i + 1, m)
+        ]
+        gram_sum = sum(x * x for x in dots)
+        max_coh = max(x * x for x in dots)
+        assert gram_sum == F(m * (m - d), 2 * d), (d, gram_sum)
+        assert max_coh == 1, (d, max_coh)
+    print(
+        "SIGNED-BASIS DEGENERACY [I,-I]: Gram-sum floor m(m-d)/2d attained "
+        "with max squared coherence = 1, d=2..8 — frame potential is not "
+        "mutual coherence. PASS"
+    )
+
+
+verify_signed_basis_degeneracy()
