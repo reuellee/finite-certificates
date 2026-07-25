@@ -25,6 +25,13 @@ det Jac ≡ −2, generic degree 3). `verify_original.py` re-verifies it in seco
   total degree > 100 (with Orevkov, Domrina–Orevkov, Moh). Also: y-linear Keller maps in
   n=2 are automorphisms (mechanism no-go), and degree-4 Keller maps have Galois closure
   S₄ or A₄. Gemini review: VERIFIED-SOUND (`reviews/GEMINI_n2_review.md`).
+- `minimal_degree_hunt.md` + `verify_mechanism_lower_bound.py` (22 checks) +
+  `verify_composition_obstruction.py` (9 checks) — minimal generic degree of a Keller
+  non-automorphism is exactly 3 in every dimension ≥ 3, and **within the full z-linear
+  cubic-mechanism class of the counterexample no Keller map has max component degree
+  ≤ 6** — the original (7,6,4) is degree-minimal in its class (Gemini: VERIFIED-SOUND;
+  scope boundaries in the note). Conjectured next step: no C³ counterexample of max
+  degree ≤ 4.
 - Explicit fallout witnesses derived constructively from F — full write-up with
   implication chains, dimensions, and a 5-day arXiv scoop-check in
   `fallout_harvest.md` (Gemini review: VERIFIED-SOUND). Headlines: the Poisson
@@ -41,6 +48,26 @@ det Jac ≡ −2, generic degree 3). `verify_original.py` re-verifies it in seco
     identity Keller non-automorphism in dimension 55, nilpotent Jacobian part.
   - `druzkowski_map.py` + `verify_druzkowski.py` — explicit **Drużkowski-form**
     (x_i + (Ax)_i³) counterexample.
+
+### ai/sae-grounding/ — The Intervention-Grounding Gap (Gemini: VERIFIED-SOUND)
+
+`intervention_grounding_gap.md` (author: Reuel Lee; revisions applied in two-round
+review) + `verify_intervention_grounding.py` (31 exact-Fraction checks): exact theorem
+— two SCMs with fixed named concepts, identical labels, the same invertible activation,
+identical transcript distributions under ANY adaptive internal-intervention protocol,
+yet different semantic do-distributions. Internal causal relevance does not identify a
+semantic causal ontology. Includes a swap-symmetric witness defeating any equivariant
+selection rule, and a corollary at the SAE absorption wall. `REVIEW.md` documents the
+full referee pass.
+
+### ai/coherence-distortion/ — coherence penalties provably distort features (Gemini: VERIFIED-SOUND)
+
+`overcomplete_coherence.md` + `verify_overcomplete_coherence.py` (certificate script by
+Reuel Lee; class-wide bounds added in review): at λ=1/5, β=1/16, an explicit rational
+5-12-13 frame strictly beats EVERY 3-atom dictionary containing the true features under
+the Gram penalty (class-wide faithful objective is exactly 19/100+β by a one-line KKT
+argument), with a mutual-coherence twin, a near-onset witness against the analytic
+threshold λ(2−λ)/16, and a β=0 control proving the distortion is remedy-induced.
 
 ### ai/optimizer/ — convergence-theory counterexamples (Gemini: VERIFIED-SOUND)
 
