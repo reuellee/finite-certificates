@@ -69,10 +69,21 @@ case (d,n)=(4,4) of Conjecture 6.6(2)** of Balakin–Cox–Loho–Sturmfels, *Ma
 Polytopes* (arXiv:2509.21286), where the paper had no computational evidence for d ≥ 4.
 `target_list.md` is the ranked harvest of further attackable ML-theory conjectures.
 
+### ai/sae-unidentifiability/ — ρ-unidentifiability certificates (Gemini: r1 BLOCKING → r2 VERIFIED-SOUND)
+
+`unidentifiability-certificate.md` + `verify_unidentifiability.py` (49 exact checks):
+finite certificates that an absorbed child's conditional rate ρ is unidentifiable
+label-free — culminating in Certificate C (interleaved cones: both dictionaries
+support-irreducible, both strict hierarchies, both nonnegative, equal sizes, ρ = 3/4 vs
+1/2), which survives the canonical-selection objection that blocked round 1; plus the
+coupling identity E[L0]₁−E[L0]₂ = (ρ₁−ρ₂)·P(parent) (sparsity selection is biased, not
+identifying) and a boundary map of anchors that do/don't restore identifiability.
+Canonical home: the sae-identifiability repo (commit fd01873); mirrored here.
+
 ### reviews/ — adversarial reviews (Gemini 2.5 Pro via gemx)
 
-One review per result set. A fifth result (SAE ρ-unidentifiability certificate, in the
-sae-identifiability repo) received a BLOCKING review and is excluded pending revision.
+One review per result set; the unidentifiability result carries two rounds
+(BLOCKING → revision with a strengthened construction → VERIFIED-SOUND).
 
 ## Provenance
 
