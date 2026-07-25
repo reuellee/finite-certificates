@@ -16,7 +16,7 @@ python3 run_all.py --fast     # skips the two slow verifiers (~10 min total othe
 
 ### jacobian/ — aftermath of the Jacobian Conjecture counterexample (Alpöge, 2026-07-20)
 
-Reference: `alpoge_jacobian.pdf` (verification preprint; the original map F, deg (7,6,4),
+Reference: the verification preprint at https://www.ulam.ai/research/jacobian.pdf (the original map F, deg (7,6,4),
 det Jac ≡ −2, generic degree 3). `verify_original.py` re-verifies it in seconds.
 
 - `n2_analysis.md` + `verify_n2.py` — **no Keller map of generic degree 2 exists in any
