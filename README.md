@@ -25,8 +25,13 @@ det Jac ≡ −2, generic degree 3). `verify_original.py` re-verifies it in seco
   total degree > 100 (with Orevkov, Domrina–Orevkov, Moh). Also: y-linear Keller maps in
   n=2 are automorphisms (mechanism no-go), and degree-4 Keller maps have Galois closure
   S₄ or A₄. Gemini review: VERIFIED-SOUND (`reviews/GEMINI_n2_review.md`).
-- Explicit fallout witnesses derived constructively from F (write-up pending — the
-  scripts and their printed statements are the current claims; see `FALLOUT_STATUS.md`):
+- Explicit fallout witnesses derived constructively from F — full write-up with
+  implication chains, dimensions, and a 5-day arXiv scoop-check in
+  `fallout_harvest.md` (Gemini review: VERIFIED-SOUND). Headlines: the Poisson
+  Conjecture PC₃ witness is SELF-CONTAINED (bracket-preserving non-injective endo of
+  C⁶) and, with the explicit dim-368 Drużkowski matrix, apparently first; Dixmier DC₃
+  refuted via an explicit A₃ Weyl endomorphism + the classical DC_n ⟹ JC_n direction;
+  the Mathieu and cubic-homogeneous witnesses were scooped within the window:
   - `verify_dixmier_poisson.py` — explicit polynomial endomorphism of C⁶ preserving the
     standard symplectic Poisson bracket, det Jac ≡ 1, with **three distinct points
     sharing one image** (so: bracket-preserving, not injective, not an automorphism).
