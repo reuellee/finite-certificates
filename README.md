@@ -12,7 +12,38 @@ python3 run_all.py            # runs every verify_*.py; nonzero exit if any fail
 python3 run_all.py --fast     # skips the two slow verifiers (~10 min total otherwise)
 ```
 
-## Contents
+## Results index
+
+Each directory is self-contained and has its own README stating the result, so you can
+go straight to one without reading the rest. No verifier imports any other.
+
+**Sparse autoencoders / interpretability**
+
+| result | where |
+|---|---|
+| The SAE feature-absorption metric is not identifying — it scores a zero-absorption dictionary as up to 70% absorbed, and cannot tell single-parent from distributed absorption | [`ai/absorption-metric/`](ai/absorption-metric/) |
+| An absorbed feature's conditional rate is unidentifiable without labels | [`ai/sae-unidentifiability/`](ai/sae-unidentifiability/) |
+| Internal causal relevance does not identify a semantic causal ontology | [`ai/sae-grounding/`](ai/sae-grounding/) |
+| Coherence penalties provably distort the features they are meant to fix | [`ai/coherence-distortion/`](ai/coherence-distortion/) |
+| Four exact minimal networks on which standard interpretability methods lie | [`ai/interp-illusions/`](ai/interp-illusions/) |
+| A third-party empirical result, independently verified and replicated | [`ai/coherence-transfer/`](ai/coherence-transfer/) |
+
+**Other machine-learning theory**
+
+| result | where |
+|---|---|
+| Counterexamples to published optimizer convergence claims (Muon, Li–Hong, Lion) | [`ai/optimizer/`](ai/optimizer/) |
+| Smallest open case of Sturmfels et al. Conjecture 6.6, resolved | [`ai/maxout/`](ai/maxout/) |
+
+**Commutative algebra**
+
+| result | where |
+|---|---|
+| Aftermath of the Jacobian Conjecture counterexample — the n=2 boundary, fallout witnesses, minimal-degree theorems | [`jacobian/`](jacobian/) |
+
+Adversarial review trail for all of the above: [`reviews/`](reviews/).
+
+## Detail
 
 ### jacobian/ — aftermath of the Jacobian Conjecture counterexample (Alpöge, 2026-07-20)
 
