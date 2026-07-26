@@ -107,10 +107,52 @@ coupling identity E[L0]₁−E[L0]₂ = (ρ₁−ρ₂)·P(parent) (sparsity sel
 identifying) and a boundary map of anchors that do/don't restore identifiability.
 Canonical home: the sae-identifiability repo (commit fd01873); mirrored here.
 
+### ai/coherence-transfer/ — THIRD-PARTY empirical result, verified and replicated here
+
+**Not this repo's own work.** "Causal-Ontology Inversion in Overcomplete Sparse
+Autoencoders" was produced in a separate GPT session; what is ours is the verification.
+Unlike everything else here, this is an *empirical* result (120 trained SAEs on
+digit-classifier activations with two planted factors), so it cannot be settled by a
+finite exact certificate — it is settled by independent recomputation and replication.
+
+`audit_dossier.py` is self-contained: give it the dossier and nothing else and it
+extracts all 17 appendices, recomputes every registered statistic from the raw 120-row
+table, reproduces the 20,000-replicate bootstrap **bit-exactly**, and re-applies the
+decision rules. `REPLICATION_RECORD.md` then retrains all 120 SAEs from the frozen
+sources on different hardware. Both primary effect sizes land within 2.4e−3 of the
+originals (L1 ΔA −0.2549 vs −0.2553; TopK −0.4068 vs −0.4092), 12/12 seed signs, all
+gates pass, and P1/P2/P3 come out identically.
+
+The registered claim is that a strong coherence penalty destroys the *one-atom*
+encoding of a planted factor while the *family* still carries it. It does: at β=0.5
+single-atom alignment falls to 0.47/0.52 against a computed chance baseline of **0.434**,
+while family cosine holds at **0.994/0.983** across ~19/~8 atoms. Redistribution, not
+erasure.
+
+Read with four disclosures, stated in full in `IMPORT_ADJUDICATION.md`:
+its preregistration has **no trusted timestamp** (treat as post-hoc — the one risk that
+cannot be retired); it is **not byte-reproducible** even at exactly matched library
+versions, because dataset construction is BLAS-dispatch dependent; the planted factors
+are exactly orthogonal, so generalisation to correlated natural features is untested;
+and TopK's β=0 alignment is near-ceiling (0.973), so the L1 arm (0.730) carries the
+headroom. Three defects are flagged for the original authors rather than patched here.
+
+Of independent interest: the L1 dose profile is non-monotone — alignment 0.730 (β=0) →
+**0.965** (β=0.0625) → 0.472 (β=0.5) — the same qualitative shape that
+`ai/coherence-distortion/` and the sibling `sae-identifiability` paper derive
+analytically, where a Gram penalty helps at moderate strength and *overdosing worsens
+it*. An exact toy analysis and a semi-real 120-SAE sweep agreeing on that is a cheap
+cross-check worth having.
+
 ### reviews/ — adversarial reviews (Gemini 2.5 Pro via gemx)
 
 One review per result set; the unidentifiability result carries two rounds
-(BLOCKING → revision with a strengthened construction → VERIFIED-SOUND).
+(BLOCKING → revision with a strengthened construction → VERIFIED-SOUND). The
+coherence-transfer review is a *meta*-review — Gemini auditing our audit — and its
+three raised risks are adjudicated in `ai/coherence-transfer/IMPORT_ADJUDICATION.md`
+rather than adopted wholesale: one is closed by replication, one is downgraded (the
+experiment's own TopK fixed-L0 gate already controls the confound it names), and one
+is permanent and disclosed.
 
 ## Provenance
 
