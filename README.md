@@ -151,6 +151,16 @@ boundary. Verified with the nonnegative lasso solved by KKT active-set enumerati
 the faithful dictionary is strictly worse by $39/100-\sqrt2/5$, and all 16
 Pythagorean-triple tilts lose.
 
+$\varepsilon = 0$ is not the restriction it appears to be. It is the *correct* model
+for first-letter absorption — a token like *short* cannot occur without starting with
+s, so the child-solo rate is zero by the semantics of the task, and the certificate
+sits in exactly the regime of the metric it critiques. And for $\varepsilon > 0$ the
+restriction lifts with one extra atom: the tilt is an artifact of a 2-atom dictionary,
+whereas $\{a_L, a_m, a_c\}$ makes every event 1-sparse and so attains the bound at
+**any** $\varepsilon$, with $a_L$ still silent on joint events and $a_c$ never entering
+$F_L$. The real condition is dictionary capacity, which an $8\times$ overcomplete SAE
+always has.
+
 The bound is **sharp**: at $k/N_L = \tau$ the composite is swept into $F_L$ and
 `rate_family` diverges (0 versus 3/10) — the family endpoint regains power there, while
 `rate_single` stays blind because it reads only the argmax latent. The **repair** is a

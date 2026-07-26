@@ -22,8 +22,9 @@ Verifiers: `verify_m1_optimality.py` (10 checks, sympy — the optimality gate) 
 ## 1. The two models
 
 Let the letter $L$ occur on $N_L$ tokens: $N_L - k$ where the parent fires alone, and
-$k$ where a child co-occurs. Set $\varepsilon = 0$ — children never fire without the
-parent. (This is not a convenience; see §2.)
+$k$ where a child co-occurs. Take $\varepsilon = \Pr[\text{child without parent}] = 0$
+— which in the first-letter task is not an assumption but a fact, since a token like
+*short* cannot occur without starting with s (§6).
 
 **M1 — single-parent absorption.** One child concept $a_c$, co-occurring with $a_L$ on
 all $k$ tokens, absorbed into one composite $a_m = (a_L + a_c)/\sqrt2$.
@@ -130,12 +131,38 @@ distributed carriage by many context-specific composites than to a child hidden 
 one identifiable parent — and the metric cannot report that difference, which is why it
 had to be measured separately.
 
-## 6. Scope
+## 6. The $\varepsilon = 0$ restriction is not the limitation it looks like
 
-- The construction is at $\varepsilon = 0$. That is what makes both dictionaries
-  provably optimal; at $\varepsilon > 0$ the tilt phenomenon returns and neither pure
-  strategy is optimal, so the certificate would need the global boundary instead of
-  Theorem 1b.
+Two independent reasons, and the first matters more than the second.
+
+**$\varepsilon = 0$ is the *correct* model for first-letter absorption, not a
+convenience.** Here $\varepsilon = \Pr[\text{child fires without the parent}]$. In the
+task this metric is actually applied to, the parent is "starts with S" and a child is a
+token such as *short* — and *short* cannot occur without starting with s. **The
+child-solo rate is exactly zero by the semantics of the task.** $\varepsilon$ is a free
+parameter in the general toy model of parent/child hierarchies, where it is what breaks
+non-identifiability; in the first-letter instantiation it is pinned at 0. So the
+certificate is built in precisely the regime of the metric it critiques, and the
+apparent edge case is the actual case.
+
+**And if one wants $\varepsilon > 0$ anyway, the restriction lifts with one extra
+atom.** The tilt is an artifact of the dictionary having only two atoms. Numerically,
+the best 2-atom dictionary holds at $(0°, 45°)$ until $\varepsilon \approx 0.04$
+(at $\lambda = 1/5$, $p_0 = q = 3/10$) and then tilts to $(4°, 83°)$, at which point
+the letter atom starts firing on joint events and the construction would break. Add
+$a_c$ and every event type becomes 1-sparse in $\{a_L, a_m, a_c\}$, so the Theorem 1b
+bound is attained on *all* of them and the dictionary is optimal at **any**
+$\varepsilon$ — verified exactly, including that $a_L$ remains silent on joint events
+and that $a_c$ never enters $F_L$ (child-solo tokens are not letter tokens, so
+$\mathrm{sel}(a_c) \le 0 < \tau$). The same holds for M2's $(2k+1)$-atom dictionary.
+
+Capacity is therefore the real condition, not $\varepsilon$ — and real SAEs are
+$8\times$ overcomplete ($m = 16384$ against $d = 2048$), so it is never binding there.
+The honest scope statement is: **the certificate needs room for the child atoms**,
+which is the opposite of a restrictive assumption.
+
+## 7. Remaining scope
+
 - Indistinguishability requires $k/N_L < \tau$, shown sharp in §3.
 - Children are orthogonal to each other and to the parent. Correlated children would
   change the selectivity arithmetic.

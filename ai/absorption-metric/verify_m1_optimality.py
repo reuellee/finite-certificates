@@ -222,11 +222,63 @@ check("precondition: M1's composite escapes F_L (sel < tau) while the letter lat
       sel_am < TAU <= sel_aL,
       f"sel(a_m) = {sel_am} < {TAU} <= sel(a_L) = {sel_aL}")
 
+# ================================================================= epsilon > 0
+# The tilt that forces epsilon = 0 is an artifact of restricting the dictionary to TWO
+# atoms. Numerically, the best 2-atom dictionary tilts away from (0, 45 deg) once
+# epsilon exceeds ~0.04 (lambda=1/5, p0=q=3/10) and the letter atom starts firing on
+# joint events, which would destroy the construction. Give the dictionary ONE more
+# atom and the problem disappears: with a_c present every event type is 1-sparse, so
+# the bound is attained on all of them and the dictionary is optimal at ANY epsilon.
+# Real SAEs are 8x overcomplete, so capacity is never the binding constraint there.
+print()
+print("-" * 74)
+print("epsilon > 0: does one extra atom remove the restriction?")
+print("-" * 74)
+
+D_M1_eps = [aL, am, ac]                      # {a_L, a_m, a_c}
+ok_eps, rows = True, []
+for nm, x, r in [("parent-solo", aL, 1), ("joint", aL + ac, sp.sqrt(2)),
+                 ("child-solo", ac, 1)]:
+    o, S = nnlasso(D_M1_eps, x)
+    good = sp.simplify(o - bound_at(r)) == 0
+    ok_eps &= good
+    rows.append(f"{nm}:{S}")
+    print(f"        M1+ {nm:12s} loss = {sp.nsimplify(o)}  "
+          f"{'= bound' if good else '!= bound'}  support={S}")
+check("epsilon>0: M1's 3-atom dictionary {a_L, a_m, a_c} attains the bound on ALL "
+      "event types, so it is optimal for EVERY epsilon -- no tilt, no epsilon=0",
+      ok_eps, "; ".join(rows))
+
+joint_support = nnlasso(D_M1_eps, aL + ac)[1]
+check("epsilon>0: the letter atom a_L (index 0) is still SILENT on joint events, so "
+      "the metric-relevant firing pattern is unchanged",
+      0 not in joint_support, f"joint support = {joint_support}")
+
+child_solo_support = nnlasso(D_M1_eps, ac)[1]
+check("epsilon>0: child-solo events are served by a_c (index 2), and those tokens are "
+      "NOT letter tokens -- so sel(a_c) <= 0 < tau and a_c never enters F_L",
+      child_solo_support == (2,), f"child-solo support = {child_solo_support}")
+
+# M2's analogue: {a_L} + k composites + k child atoms, k = 2.
+D_M2_eps = [aL3, am1, am2, ac1, ac2]
+ok_eps2 = True
+for nm, x, r in [("parent-solo", aL3, 1),
+                 ("joint c1", aL3 + ac1, sp.sqrt(2)), ("joint c2", aL3 + ac2, sp.sqrt(2)),
+                 ("child-solo c1", ac1, 1), ("child-solo c2", ac2, 1)]:
+    o, S = nnlasso(D_M2_eps, x)
+    good = sp.simplify(o - bound_at(r)) == 0
+    ok_eps2 &= good and (0 not in S or nm == "parent-solo")
+check("epsilon>0: M2's (2k+1)-atom dictionary likewise attains the bound on all 2k+1 "
+      "event types, with a_L silent on every joint event",
+      ok_eps2)
+
 print("=" * 74)
 n_pass = sum(1 for _, ok, _ in checks if ok)
 print(f"TOTAL: {len(checks)} checks, {n_pass} PASS, {len(checks) - n_pass} FAIL")
 print()
-print("CONCLUSION: at epsilon = 0 both M1 and M2 attain the Theorem 1b bound for their")
-print("own generative model, and every tilted alternative is strictly worse. The")
-print("optimality lemma HOLDS, so the indistinguishability certificate can be built.")
+print("CONCLUSION: both M1 and M2 attain the Theorem 1b bound for their own generative")
+print("model, and every tilted alternative is strictly worse. At epsilon = 0 this holds")
+print("for the 2-atom dictionaries; for epsilon > 0 it holds once the dictionary has")
+print("room for the child atoms, which an overcomplete SAE always does. The optimality")
+print("lemma HOLDS, so the indistinguishability certificate can be built.")
 raise SystemExit(0 if n_pass == len(checks) else 1)
