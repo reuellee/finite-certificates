@@ -132,6 +132,33 @@ rejected [BLOCKING]: the objection "linear probes recover first letters, so ther
 monolithic feature" is refuted by this very construction, whose probe
 $w=\sum_t u_t$ achieves margin 1 with no monolithic feature anywhere.
 
+### ai/absorption-metric/ (2) — the metric cannot tell single-parent from distributed absorption (Gemini: SOUND)
+
+`indistinguishability.md` + `verify_indistinguishability.py` (14 checks) +
+`verify_m1_optimality.py` (10 checks): two generative models — one child absorbed into
+ONE composite, versus *k* children absorbed into *k* composites — each carrying its own
+**loss-optimal** dictionary, on which the metric returns identical values. Not merely
+two matching rates: the entire per-token observable the metric consumes ($F_L$ firing
+pattern, present, retained) is identical, so **every** statistic measurable from it
+agrees. $F_L = \{a_L\}$ in both models because every composite falls below $\tau$, and
+$a_L$ is *strictly* silent on the absorbed tokens (dual gradient
+$\lambda(1-1/\sqrt2) > 0$), so the construction is robust rather than knife-edge.
+
+Optimality is the load-bearing half and was gated before anything was written around
+it: at $\varepsilon = 0$ Theorem 1b pins the optimal direction set uniquely, excluding
+the tilt hazard that makes $\varepsilon^*$ a pure-strategy rather than a global
+boundary. Verified with the nonnegative lasso solved by KKT active-set enumeration —
+the faithful dictionary is strictly worse by $39/100-\sqrt2/5$, and all 16
+Pythagorean-triple tilts lose.
+
+The bound is **sharp**: at $k/N_L = \tau$ the composite is swept into $F_L$ and
+`rate_family` diverges (0 versus 3/10) — the family endpoint regains power there, while
+`rate_single` stays blind because it reads only the argmax latent. The **repair** is a
+statistic reading outside $F_L$: modal-carrier share is $1$ for single-parent against
+$1/k$ for distributed. That is exactly round 14's P2, so the theory makes the carrier
+check a *necessity* rather than an extra — and run on real Pythia-1.4B SAEs it answers
+**distributed** (14.1% against a 34.0% null).
+
 ### ai/coherence-transfer/ — THIRD-PARTY empirical result, verified and replicated here
 
 **Not this repo's own work.** "Causal-Ontology Inversion in Overcomplete Sparse
