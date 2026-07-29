@@ -19,5 +19,5 @@ anchors do and do not restore identifiability.
 python3 verify_unidentifiability.py
 ```
 
-Canonical home is the `sae-identifiability` repo (commit `fd01873`); mirrored here.
+Canonical home is the `sae-identifiability` repo (commit `1cd27e4`); mirrored here.
 Part of [finite-certificates](../../README.md).

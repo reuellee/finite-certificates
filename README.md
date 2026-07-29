@@ -136,7 +136,7 @@ support-irreducible, both strict hierarchies, both nonnegative, equal sizes, ρ 
 1/2), which survives the canonical-selection objection that blocked round 1; plus the
 coupling identity E[L0]₁−E[L0]₂ = (ρ₁−ρ₂)·P(parent) (sparsity selection is biased, not
 identifying) and a boundary map of anchors that do/don't restore identifiability.
-Canonical home: the sae-identifiability repo (commit fd01873); mirrored here.
+Canonical home: the sae-identifiability repo (commit 1cd27e4); mirrored here.
 
 ### ai/absorption-metric/ — the absorption metric scores a zero-absorption dictionary (Gemini: SOUND)
 

@@ -46,7 +46,7 @@ asserted, not attested.
 
 *Practice note, since this recurs:* the fix is free going forward — push the lock
 commit to a public remote **before** the confirmatory run. That is exactly what makes
-`sae-identifiability`'s round-14 lock (`708211f`, public before its results existed)
+`sae-identifiability`'s round-14 lock (`2a81a98`, public before its results existed)
 attestable, and it costs nothing to do every time.
 
 ### (ii) The physical experiment was never replicated — NOW CLOSED
