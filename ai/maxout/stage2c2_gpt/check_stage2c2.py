@@ -206,6 +206,57 @@ def check_coefficientwise_boundary():
     assert mechanisms["labeled_system_cumulative_coverage"]["0"]["total"] == 33437
     assert mechanisms["labeled_system_cumulative_coverage"]["1"]["total"] == 33437
     assert set(mechanisms["first_degrees"].values()) == {0}
+
+    from coefficientwise_search import coefficient_cone
+
+    def csr_products(matrix, values):
+        products = []
+        for row in range(matrix.shape[0]):
+            start, stop = matrix.indptr[row], matrix.indptr[row + 1]
+            products.append(sum(
+                Fraction(int(matrix.data[position]))
+                * values[matrix.indices[position]]
+                for position in range(start, stop)
+            ))
+        return products
+
+    for key, result in mechanisms["certificates"].items():
+        k_text, pattern = key.split(":", 1)
+        degree = result["degree"]
+        _, variables, constraints, matrix = coefficient_cone(
+            pattern, int(k_text), degree
+        )
+        assert len(variables) == result["n_variables"]
+        assert len(constraints) == result["n_constraints"]
+        values = [Fraction(0)] * matrix.shape[1]
+        for index, value in result["coefficient_vector"]:
+            assert value > 0
+            values[index] = Fraction(value)
+        assert any(values)
+        assert max(csr_products(matrix, values)) <= 0
+
+    for key, by_degree in mechanisms["degree_no_gos"].items():
+        k_text, pattern = key.split(":", 1)
+        for degree_text, result in by_degree.items():
+            degree = int(degree_text)
+            _, variables, constraints, matrix = coefficient_cone(
+                pattern, int(k_text), degree
+            )
+            assert len(variables) == result["n_variables"]
+            assert len(constraints) == result["n_constraints"]
+            values = [Fraction(0)] * matrix.shape[0]
+            for index, value in result["dual_functional"]:
+                assert value > 0
+                values[index] = Fraction(value)
+            assert all(
+                product > 0
+                for product in csr_products(matrix.transpose().tocsr(), values)
+            )
+    assert len(mechanisms["canaries"]) == 4
+    assert all(
+        item["outcome"]["status"] == "EXACT_DEGREE_NO_GO"
+        for item in mechanisms["canaries"]
+    )
     return counts
 
 

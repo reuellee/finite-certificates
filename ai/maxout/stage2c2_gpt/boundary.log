@@ -1,0 +1,32 @@
+canary PASS: bits=10070, k=1, margin=1
+canary PASS: bits=25998, k=2, margin=1
+boundary 1000/16102; success patterns=1000; elapsed=0.2s
+boundary 2000/16102; success patterns=2000; elapsed=0.2s
+boundary 3000/16102; success patterns=3000; elapsed=0.2s
+boundary 4000/16102; success patterns=4000; elapsed=0.2s
+boundary 5000/16102; success patterns=4941; elapsed=0.4s
+boundary 6000/16102; success patterns=5441; elapsed=1.5s
+boundary 7000/16102; success patterns=5941; elapsed=2.7s
+boundary 8000/16102; success patterns=6263; elapsed=4.6s
+boundary 9000/16102; success patterns=6634; elapsed=6.4s
+boundary 10000/16102; success patterns=6889; elapsed=8.9s
+boundary 11000/16102; success patterns=7389; elapsed=10.4s
+boundary 12000/16102; success patterns=7889; elapsed=11.8s
+boundary 13000/16102; success patterns=8299; elapsed=13.6s
+boundary 14000/16102; success patterns=8590; elapsed=15.9s
+boundary 15000/16102; success patterns=8809; elapsed=18.2s
+boundary 16000/16102; success patterns=8926; elapsed=20.3s
+boundary 16102/16102; success patterns=8926; elapsed=20.5s
+{
+  "SINGLE_CLASS_IF_AND_ONLY_IF": {
+    "1": 24691,
+    "2": 8746,
+    "total": 33437
+  },
+  "ALL_DEGREES_IMPOSSIBLE": {
+    "1": 8449,
+    "2": 24394,
+    "total": 32843
+  }
+}
+wrote C:\Users\reuel\AppData\Local\Temp\claude\E--Projects\8f05ea6b-b743-4889-b448-362647b88861\scratchpad\finite-certificates\ai\maxout\stage2c2_gpt\coefficientwise_boundary.json.gz (73999 bytes)

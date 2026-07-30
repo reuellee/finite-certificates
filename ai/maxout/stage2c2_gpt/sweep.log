@@ -1,0 +1,48 @@
+canary PASS: bits=10070, k=1, pattern=xxxx+xx---, margin=1
+canary PASS: bits=25998, k=2, pattern=x+-xxxxx--, margin=1986708/1986721
+patterns 500/16102; covered patterns=500; elapsed=1.3s
+patterns 1000/16102; covered patterns=1000; elapsed=2.4s
+patterns 1500/16102; covered patterns=1500; elapsed=3.5s
+patterns 2000/16102; covered patterns=2000; elapsed=4.7s
+patterns 2500/16102; covered patterns=2500; elapsed=5.9s
+patterns 3000/16102; covered patterns=3000; elapsed=7.1s
+patterns 3500/16102; covered patterns=3500; elapsed=8.3s
+patterns 4000/16102; covered patterns=4000; elapsed=9.6s
+patterns 4500/16102; covered patterns=4500; elapsed=10.8s
+patterns 5000/16102; covered patterns=5000; elapsed=11.9s
+patterns 5500/16102; covered patterns=5461; elapsed=13.8s
+patterns 6000/16102; covered patterns=5936; elapsed=15.5s
+patterns 6500/16102; covered patterns=6436; elapsed=16.7s
+patterns 7000/16102; covered patterns=6878; elapsed=19.0s
+patterns 7500/16102; covered patterns=7304; elapsed=22.0s
+patterns 8000/16102; covered patterns=7657; elapsed=25.8s
+patterns 8500/16102; covered patterns=8095; elapsed=28.1s
+patterns 9000/16102; covered patterns=8443; elapsed=32.1s
+patterns 9500/16102; covered patterns=8821; elapsed=35.5s
+patterns 10000/16102; covered patterns=9139; elapsed=40.0s
+patterns 10500/16102; covered patterns=9590; elapsed=42.1s
+patterns 11000/16102; covered patterns=9997; elapsed=44.9s
+patterns 11500/16102; covered patterns=10444; elapsed=47.1s
+patterns 12000/16102; covered patterns=10909; elapsed=48.9s
+patterns 12500/16102; covered patterns=11315; elapsed=51.9s
+patterns 13000/16102; covered patterns=11688; elapsed=55.3s
+patterns 13500/16102; covered patterns=11912; elapsed=61.6s
+patterns 14000/16102; covered patterns=12364; elapsed=63.6s
+patterns 14500/16102; covered patterns=12717; elapsed=67.4s
+patterns 15000/16102; covered patterns=12915; elapsed=74.1s
+patterns 15500/16102; covered patterns=13228; elapsed=78.5s
+patterns 16000/16102; covered patterns=13389; elapsed=85.8s
+patterns 16102/16102; covered patterns=13402; elapsed=87.7s
+{
+  "T_INDEPENDENTLY_COVERED": {
+    "1": 28106,
+    "2": 23324,
+    "total": 51430
+  },
+  "HARD": {
+    "1": 5034,
+    "2": 9816,
+    "total": 14850
+  }
+}
+wrote C:\Users\reuel\AppData\Local\Temp\claude\E--Projects\8f05ea6b-b743-4889-b448-362647b88861\scratchpad\finite-certificates\ai\maxout\stage2c2_gpt\equal_pair_coverage.json.gz (541239 bytes)

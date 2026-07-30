@@ -1,0 +1,87 @@
+degree 0: normal forms ready (10 degree-1 monomials)
+degree 0 negative canary PASS (EXACT_DEGREE_NO_GO)
+degree 0 positive control PASS (support 5)
+degree 0: 10/122, research successes=0, elapsed=0.4s
+degree 0: 20/122, research successes=0, elapsed=0.5s
+degree 0: 30/122, research successes=0, elapsed=0.6s
+degree 0: 40/122, research successes=0, elapsed=0.6s
+degree 0: 50/122, research successes=0, elapsed=0.7s
+degree 0: 60/122, research successes=0, elapsed=0.8s
+degree 0: 70/122, research successes=0, elapsed=0.8s
+degree 0: 80/122, research successes=0, elapsed=0.9s
+degree 0: 90/122, research successes=0, elapsed=0.9s
+degree 0: 100/122, research successes=0, elapsed=1.0s
+degree 0: 110/122, research successes=0, elapsed=1.1s
+degree 0: 120/122, research successes=0, elapsed=1.1s
+degree 0: 122/122, research successes=0, elapsed=1.2s
+degree 1: normal forms ready (55 degree-2 monomials)
+degree 1 negative canary PASS (EXACT_DEGREE_NO_GO)
+degree 1 positive control PASS (support 5)
+degree 1: 10/122, research successes=8, elapsed=1.4s
+degree 1: 20/122, research successes=18, elapsed=1.6s
+degree 1: 30/122, research successes=20, elapsed=1.8s
+degree 1: 40/122, research successes=20, elapsed=2.0s
+degree 1: 50/122, research successes=20, elapsed=2.2s
+degree 1: 60/122, research successes=20, elapsed=2.4s
+degree 1: 70/122, research successes=20, elapsed=2.6s
+degree 1: 80/122, research successes=24, elapsed=2.8s
+degree 1: 90/122, research successes=34, elapsed=3.0s
+degree 1: 100/122, research successes=44, elapsed=3.2s
+degree 1: 110/122, research successes=53, elapsed=3.3s
+degree 1: 120/122, research successes=62, elapsed=3.5s
+degree 1: 122/122, research successes=64, elapsed=3.5s
+degree 2: normal forms ready (220 degree-3 monomials)
+degree 2 negative canary PASS (EXACT_DEGREE_NO_GO)
+degree 2 positive control PASS (support 5)
+degree 2: 10/122, research successes=8, elapsed=4.9s
+degree 2: 20/122, research successes=18, elapsed=5.7s
+degree 2: 30/122, research successes=28, elapsed=6.5s
+degree 2: 40/122, research successes=38, elapsed=7.3s
+degree 2: 50/122, research successes=48, elapsed=8.1s
+degree 2: 60/122, research successes=58, elapsed=8.9s
+degree 2: 70/122, research successes=68, elapsed=9.7s
+degree 2: 80/122, research successes=78, elapsed=10.5s
+degree 2: 90/122, research successes=88, elapsed=11.2s
+degree 2: 100/122, research successes=98, elapsed=12.0s
+degree 2: 110/122, research successes=108, elapsed=12.8s
+degree 2: 120/122, research successes=118, elapsed=13.7s
+degree 2: 122/122, research successes=120, elapsed=13.8s
+degree 3: normal forms ready (715 degree-4 monomials)
+degree 3 negative canary PASS (EXACT_DEGREE_NO_GO)
+degree 3 positive control PASS (support 5)
+degree 3: 10/122, research successes=8, elapsed=19.1s
+degree 3: 20/122, research successes=18, elapsed=23.0s
+degree 3: 30/122, research successes=28, elapsed=26.4s
+degree 3: 40/122, research successes=38, elapsed=30.0s
+degree 3: 50/122, research successes=48, elapsed=33.4s
+degree 3: 60/122, research successes=58, elapsed=37.0s
+degree 3: 70/122, research successes=68, elapsed=40.5s
+degree 3: 80/122, research successes=78, elapsed=44.3s
+degree 3: 90/122, research successes=88, elapsed=47.6s
+degree 3: 100/122, research successes=98, elapsed=51.1s
+degree 3: 110/122, research successes=108, elapsed=54.6s
+degree 3: 120/122, research successes=118, elapsed=58.0s
+degree 3: 122/122, research successes=120, elapsed=58.8s
+{
+  "0": {
+    "EXACT_CELLWIDE_CERTIFICATE": 0,
+    "EXACT_DEGREE_NO_GO": 120,
+    "EMPIRICAL_NO_GO": 0
+  },
+  "1": {
+    "EXACT_CELLWIDE_CERTIFICATE": 64,
+    "EXACT_DEGREE_NO_GO": 56,
+    "EMPIRICAL_NO_GO": 0
+  },
+  "2": {
+    "EXACT_CELLWIDE_CERTIFICATE": 120,
+    "EXACT_DEGREE_NO_GO": 0,
+    "EMPIRICAL_NO_GO": 0
+  },
+  "3": {
+    "EXACT_CELLWIDE_CERTIFICATE": 120,
+    "EXACT_DEGREE_NO_GO": 0,
+    "EMPIRICAL_NO_GO": 0
+  }
+}
+wrote C:\Users\reuel\AppData\Local\Temp\claude\E--Projects\8f05ea6b-b743-4889-b448-362647b88861\scratchpad\finite-certificates\ai\maxout\stage2c2_gpt\gp_degree3_results.json.gz (26343 bytes)
