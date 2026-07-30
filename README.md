@@ -33,7 +33,7 @@ go straight to one without reading the rest. No verifier imports any other.
 | result | where |
 |---|---|
 | Counterexamples to published optimizer convergence claims (Muon, Li–Hong, Lion) | [`ai/optimizer/`](ai/optimizer/) |
-| Smallest open case of Sturmfels et al. Conjecture 6.6, resolved | [`ai/maxout/`](ai/maxout/) |
+| Sturmfels et al. Conjecture 6.6: smallest open case resolved; two further cases confirmed; three odd-n cases certified 2-4 below the conjectured maxima | [`ai/maxout/`](ai/maxout/) |
 
 **Commutative algebra**
 
@@ -119,13 +119,26 @@ feature; loss-optimal absorbed SAE whose sparse-feature-circuit is the causally 
 child latent (exact KKT); 4-param probing certificate that passes the Hewitt–Liang
 control-task defense while probing a causally inert neuron.
 
-### ai/maxout/ — smallest open case of a 2025 Sturmfels-et-al conjecture, resolved
+### ai/maxout/ — smallest open case of a 2025 Sturmfels-et-al conjecture, resolved; two further cases confirmed; odd-n resistance certified
 
 `attack_maxout66.md` + `verify_maxout66_d4n4.py` (+ `cert_d4n4.json`): explicit
 32-vertex exact-rational certificate **confirming achievability in the smallest open
 case (d,n)=(4,4) of Conjecture 6.6(2)** of Balakin–Cox–Loho–Sturmfels, *Maxout
 Polytopes* (arXiv:2509.21286), where the paper had no computational evidence for d ≥ 4.
 `target_list.md` is the ranked harvest of further attackable ML-theory conjectures.
+
+**Second attack (2026-07-30)** — `attack_c66_deficit.md` + `verify_c66_new_cases.py`
+(5 certificates, ~2 s, stdlib Fractions): **(4,6) = 104 confirmed** (part 2's first
+n > d case; the conjectured maximum is the cap, so the case closes) and
+**(3,8) = 110 confirmed** (achievability of the even-n formula at the first n beyond
+the paper's DFS range). At the odd-n cases the conjectured maxima were **not
+reproduced** despite the paper's own sampling recipe at 15× its budget, ~300
+complete-per-direction-set branch-and-bound searches, and generator-drop seeding
+from exact even-n extremals: certified exact counts **42/58/84** at
+(3,5)/(4,5)/(3,7) vs conjectured 44/60/88 (lower bounds; nothing refuted). The one
+direct tension with a stated result — Prop 6.5's sampled tightness at (3,5) — plus
+an out-of-sample-falsified intermediate "deficit law" are documented with full
+honesty scoping in the note.
 
 ### ai/sae-unidentifiability/ — ρ-unidentifiability certificates (Gemini: r1 BLOCKING → r2 VERIFIED-SOUND)
 
