@@ -4,8 +4,10 @@ Re-verifies, in one run, every certificate in:
   - gp_all_d2_shard_0{0..3}_of_04.json.gz  (32,843 complement systems, k=1,2)
   - k0_cellwide_shard_00_of_01.json.gz     (570 GP certificates at k=0)
   - gp_degree3_results.json.gz             (the 120 prioritized targets, d=2)
+  - ../capstone/split02_cellwide_shard_*   (the {0,2}-split orbit closure)
 plus the family criterion for every family-covered system (33,437 at k=1,2
-and 32,570 at k=0), whose certificate is the closed-form single-class one.
+and 32,570 at k=0, plus the split02 family kills), whose certificate is the
+closed-form single-class one.
 
 For each explicit certificate: decode the (side/weight, monomial) variable
 layout, then check
@@ -229,6 +231,33 @@ def main():
                             r["outcome"]["certificate"], table, 2, forms)
         record(st, "prior120")
         audited120 += 1
+
+    # 5. the split02 sweep (capstone dir): second 2-subset split orbit
+    cap = HERE.parent / "capstone"
+    table3 = forms4 = None
+    for si in range(4):
+        d = load_gz(cap / f"split02_cellwide_shard_{si:02d}_of_04.json.gz")
+        for r in d["results"]:
+            o = r["outcome"]
+            split = tuple(r["split"])
+            bits = int(r["sigma_bits"])
+            if o["status"] == "FAMILY_SINGLE_CLASS":
+                record("OK" if family_ok(bits, split) else "FAMILY_FAIL",
+                       "s02fam")
+            elif o["status"] == "EXACT_CELLWIDE_CERTIFICATE":
+                deg = o.get("degree", 2)
+                if deg == 2:
+                    st = check_explicit(bits, split, o["certificate"],
+                                        table, 2, forms)
+                else:
+                    if table3 is None:
+                        table3 = var_table(3)
+                        forms4 = normal_forms(4)
+                    st = check_explicit(bits, split, o["certificate"],
+                                        table3, 3, forms4)
+                record(st, f"s02gp{deg}")
+            else:
+                record("NO_GO_PRESENT", "s02")
 
     report = dict(schema=1, total_audited=n, elapsed_seconds=time.time() - t0,
                   counts=counts, n_failures=len(failures),

@@ -75,3 +75,19 @@ n = 5, and the tightness claim of its Proposition 6.5 at n = 5.
    maximum-settings dual review (Gemini + GPT), given the stakes.
 3. The capstone document itself (theorem statement, full component list,
    verification instructions).
+
+## Postscript (2026-07-31, capstone preparation)
+
+Item 1 executed: `audit_all_certificates.py`, 99,541 certificates, zero
+failures. Item 2's caution proved justified: writing the transport
+argument exposed a split-orbit gap — the equivariance sketch above says
+"the certificate data transports along this group action", which is true
+but insufficient, because the library's split representatives covered
+only one of the two stabilizer orbits of 2-element splits. The
+paragraph's implicit "splits reduce to sizes k = 0..2" was the same
+error as Stage 2b's "any A/B split" scope. Closed by the
+`../capstone/split02_cellwide_sweep.py` sweep (all 33,140 sigmas at the
+{0,2} representative), the exact orbit accounting
+(`../capstone/check_split_orbits.py`), and the exact transport checks
+(`../capstone/check_transport.py`). The capstone document is
+`../capstone/CAPSTONE.md`.

@@ -1,0 +1,5 @@
+sampled 37 certificates/family items
+FLIP OK: 37 certificates re-verified on their flip partners
+TRANSPORT OK: 2220 (g, certificate) pairs verified exactly (1380 family-criterion transports)
+VALIDITY CLOSURE OK: all 10 stabilizer elements map the 33140 valid sigmas onto themselves
+ALL TRANSPORT CHECKS PASS

@@ -349,6 +349,37 @@ carefully written equivariance/transport argument, and a maximum-settings
 dual review of the capstone. Until those complete, the claim is stated
 here as assembled-but-not-yet-declared.
 
+## Capstone (2026-07-31): the split-orbit gap, its closure, and the declared theorem
+
+The full standalone re-audit passed: **99,541 certificates, zero
+failures**, one run (`stage2c2_gpt/audit_all_certificates.py`).
+
+While writing the capstone's equivariance argument, a genuine gap was
+found that every prior stage and review had missed — **an erratum for
+Stage 2b's theorem as originally scoped**: all sweeps treated splits by
+size k with prefix representatives, implicitly assuming splits of equal
+size are interchangeable. They are not. The stabilizer of the reference
+chirotope is the pentagon group D_5 (order 10, computed exactly in
+`capstone/check_split_orbits.py`), and D_5 has TWO orbits on 2-element
+splits; the library covered only the {0,1} orbit. Stage 2b's "any A/B
+split" claim was therefore unproven for the {0,2} orbit (and its k=3
+flip partners) until now. Closure: `capstone/split02_cellwide_sweep.py`
+certified all 33,140 valid sigmas at the representative split {0,2} —
+zero no-gos, canaries passing — and the extended audit re-verified the
+whole enlarged library. The transport bookkeeping itself (side/ray
+twisting, D-permutation, validity closure under the stabilizer, and the
+negate-and-swap-rays flip identity) is verified exactly in
+`capstone/check_transport.py`.
+
+With the orbit accounting proven, the transport verified, the
+non-generic/support-deficient bound (<= 40), the 43-parity exclusion,
+and the certified 42-instance, the chain is complete and stated in
+full in **`capstone/CAPSTONE.md`**:
+
+**THEOREM. max f0(3,5) = 42** — refuting the odd case of Conjecture
+6.6.1 of arXiv:2509.21286 at n = 5 (conjectured value 44) and the
+tightness of its Proposition 6.5 at n = 5.
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned
