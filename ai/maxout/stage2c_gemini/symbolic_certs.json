@@ -1,0 +1,123 @@
+[
+  {
+    "sigma_bits": 837872,
+    "k": 3,
+    "idx": 53599,
+    "status": "equality_failed_due_to_sign_bug",
+    "support": [
+      "(3,4,+)",
+      "(3,4,-)",
+      "w_0",
+      "w_1",
+      "w_2"
+    ],
+    "multipliers": {
+      "(3,4,+)": "D234",
+      "(3,4,-)": "D234",
+      "w_0": "2*D034*D234",
+      "w_1": "2*D134*D234",
+      "w_2": "2*D234**2"
+    }
+  },
+  {
+    "sigma_bits": 806128,
+    "k": 3,
+    "idx": 50615,
+    "status": "equality_failed_due_to_sign_bug",
+    "support": [
+      "(3,4,+)",
+      "(3,4,-)",
+      "w_0",
+      "w_1",
+      "w_2"
+    ],
+    "multipliers": {
+      "(3,4,+)": "D234",
+      "(3,4,-)": "D234",
+      "w_0": "2*D034*D234",
+      "w_1": "2*D134*D234",
+      "w_2": "2*D234**2"
+    }
+  },
+  {
+    "sigma_bits": 838896,
+    "k": 3,
+    "idx": 53767,
+    "status": "equality_failed_due_to_sign_bug",
+    "support": [
+      "(3,4,+)",
+      "(3,4,-)",
+      "w_0",
+      "w_1",
+      "w_2"
+    ],
+    "multipliers": {
+      "(3,4,+)": "D234",
+      "(3,4,-)": "D234",
+      "w_0": "2*D034*D234",
+      "w_1": "2*D134*D234",
+      "w_2": "2*D234**2"
+    }
+  },
+  {
+    "sigma_bits": 874672,
+    "k": 3,
+    "idx": 55859,
+    "status": "equality_failed_due_to_sign_bug",
+    "support": [
+      "(3,4,+)",
+      "(3,4,-)",
+      "w_0",
+      "w_1",
+      "w_2"
+    ],
+    "multipliers": {
+      "(3,4,+)": "D234",
+      "(3,4,-)": "D234",
+      "w_0": "2*D034*D234",
+      "w_1": "2*D134*D234",
+      "w_2": "2*D234**2"
+    }
+  },
+  {
+    "sigma_bits": 516678,
+    "k": 1,
+    "idx": 32316,
+    "status": "equality_failed_due_to_sign_bug",
+    "support": [
+      "(0,3,+)",
+      "(0,3,-)",
+      "w_1",
+      "w_2",
+      "w_4"
+    ],
+    "multipliers": {
+      "(0,3,+)": "D124",
+      "(0,3,-)": "D124",
+      "w_1": "2*D013*D124",
+      "w_2": "2*D023*D124",
+      "w_4": "2*D034*D124"
+    }
+  },
+  {
+    "idx": "GENERIC_SINGLE_CLASS",
+    "sigma_bits": "ANY",
+    "k": "ANY",
+    "status": "proven_generic",
+    "criterion": "sigma_{ij,+} = sigma_{ij,-} and sigma_{ij}*s_t = -1 for all 3 t not in {i,j}",
+    "support": [
+      "(i,j,+)",
+      "(i,j,-)",
+      "w_t1",
+      "w_t2",
+      "w_t3"
+    ],
+    "multipliers": {
+      "(i,j,+)": "D_t1_t2_t3",
+      "(i,j,-)": "D_t1_t2_t3",
+      "w_t1": "D_t1_t2_t3 * D_t1_i_j",
+      "w_t2": "D_t1_t2_t3 * D_t2_i_j",
+      "w_t3": "D_t1_t2_t3 * D_t3_i_j"
+    }
+  }
+]

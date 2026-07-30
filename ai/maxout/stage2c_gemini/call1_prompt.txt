@@ -1,0 +1,46 @@
+Stage 2c CALL 1 of 3 — failure diagnosis and ansatz mining for cell-wide Gordan certificates.
+
+WORKING DIRECTORY (all relative paths below are relative to it):
+C:/Users/reuel/AppData/Local/Temp/claude/E--Projects/8f05ea6b-b743-4889-b448-362647b88861/scratchpad/finite-certificates/ai/maxout
+
+DO NOT SEARCH THE FILESYSTEM. Read ONLY these files, by exact path:
+- stage2b_gpt/STAGE2B.md
+- stage2b_gpt/REVIEW_stage2b_claude.md
+- stage2b_gpt/symbolic_gp_search.py
+- stage2b_gpt/symbolic_gp_results.json
+- stage2_gemini/STAGE2A.md
+- stage2_gemini/REVIEW_stage2a_claude.md
+- stage2b_gpt/reference_structure.json  (large: load from python code, do not open as text)
+Large gz artifacts must be loaded ONLY from python code (gzip + json), never opened as text:
+- stage2b_gpt/gordan_bundle.json.gz
+- stage2b_gpt/symmetric_coverage.json.gz
+
+Python interpreter (numpy/scipy/sympy available):
+E:/Projects/sae-identifiability/.venv/Scripts/python.exe
+
+MANDATORY RULES:
+- No network access.
+- Do NOT modify or delete ANY existing file. Write ONLY inside the subdirectory stage2c_gemini/ (it exists). All scripts and outputs go there.
+- Never name a script verify_*.py; use check_*.py naming.
+- Use exact arithmetic (fractions.Fraction / sympy Rational) whenever you fit or compare certificate coefficients. Floats only for throwaway exploration, clearly labeled.
+- Log every random seed you use.
+- Honesty over coverage: in your writeup, separate solid observed facts from speculation.
+
+MISSION CONTEXT. The per-configuration theorem max f0(3,5) = 42 is proven for the integer configuration U_ints (see stage2b_gpt/STAGE2B.md and its review). Stage 2c seeks CELL-WIDE certificates: Farkas/Gordan multipliers that are polynomials in the ten absolute determinants D_abc = |det(U_a,U_b,U_c)|, valid across the ENTIRE reference chirotope cell, not just at U_ints. The conservative Stage 2c attempt in stage2b_gpt (supports = 4 facet-normal circuits, coefficientwise-positive, no cross-monomial cancellation) failed 0/100. That failure is your starting point. Stage 2a's Grassmann-Pluecker 5-cycle identity (see stage2_gemini/STAGE2A.md) is the one known symbolic success to generalize.
+
+YOUR TASK — this call is DIAGNOSIS + ANSATZ MINING ONLY. Do not implement the cell-wide ideal-membership verifier yet (that is CALL 2).
+
+1. Target selection. Select ~20 of the 100 failed targets from stage2b_gpt/symbolic_gp_results.json AND ~20 classes from the both-splits symmetric residue (load the residue lists from stage2b_gpt/symmetric_coverage.json.gz). ALL labels must be expressed in U_ints / reference_structure.json terms — self-consistency is MANDATORY (Stage 2a pitfall P1: never mix labelings from different sources; symbolic_gp_results.json documents its own signed-permutation transport into the literal U_ints labeling — use it, do not re-derive a different one). Record the exact selection lists (representative bits, sigma, k) in your outputs, and the selection rule you used.
+
+2. Numeric certificate anatomy. For each selected target, locate its exact numeric Gordan certificate in stage2b_gpt/gordan_bundle.json.gz. Bundle order (documented in STAGE2B.md): for representative bits ascending -> for sigma in (rep, rep xor (2^20 - 1)) -> for k in (1, 2): one certificate. For each: support size, exactly which rows (which (i,j,side) side rows and which weight rows w_t), and the exact rational coefficient ratios compared against products/ratios of the ten determinant values D_abc computed exactly from the integer U_ints in reference_structure.json.
+
+3. Pattern mining. Do certificate coefficient ratios match monomials or binomials in the D_abc? Which supports recur across targets? Do residue classes share support shapes with the failed-100 targets? Compare against (a) the successful Stage 2a 5-cycle identity shape and (b) the failed 4-circuit ansatz, and state exactly WHY the conservative test plausibly failed (needed cross-monomial cancellation? supports larger than 4? weight-row participation? cofactor expansion sign obstructions?). Where a numeric coefficient vector is NOT explained by a monomial/binomial in the D's, say so — negative findings are wanted too.
+
+4. Ansatz catalogue. Produce a data-driven catalogue of candidate symbolic ansatz shapes for CALL 2: supports of size 4-8 including weight rows where the data demands it; multiplier coefficient forms as monomials or binomials in the D's (strings like "D012*D034" or "D013*D024 - D014*D023"); for each shape: which target classes it is hypothesized to cover and the concrete numeric evidence backing the hypothesis.
+
+DELIVERABLES (write them; do not print long analysis to chat):
+- stage2c_gemini/diagnosis.md — selection lists with exact labels, per-target certificate anatomy, mined patterns, why-0/100 analysis, and an explicit section separating solid observations from speculation.
+- stage2c_gemini/ansatz_catalogue.json — machine-readable: per ansatz shape: id, support description, coefficient-form hypotheses (strings in D_abc), hypothesized target classes (exact labels), numeric evidence summary.
+- Helper scripts in stage2c_gemini/ (e.g. stage2c_gemini/mine_certs.py), runnable with the interpreter above from the working directory.
+
+Work autonomously to completion within this session. End by confirming the two deliverable paths and a 5-line summary of the strongest mined pattern.

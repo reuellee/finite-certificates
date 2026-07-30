@@ -1,0 +1,128 @@
+{
+  "61043": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "63435": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "53599": {
+    "status": "equality_failed_due_to_sign_bug",
+    "positivity_classes": {
+      "(3,4,+)": "PROVEN POSITIVE",
+      "(3,4,-)": "PROVEN POSITIVE",
+      "w_0": "PROVEN POSITIVE",
+      "w_1": "PROVEN POSITIVE",
+      "w_2": "PROVEN POSITIVE"
+    }
+  },
+  "50615": {
+    "status": "equality_failed_due_to_sign_bug",
+    "positivity_classes": {
+      "(3,4,+)": "PROVEN POSITIVE",
+      "(3,4,-)": "PROVEN POSITIVE",
+      "w_0": "PROVEN POSITIVE",
+      "w_1": "PROVEN POSITIVE",
+      "w_2": "PROVEN POSITIVE"
+    }
+  },
+  "65855": {
+    "status": "equality_failed",
+    "positivity_classes": null
+  },
+  "53767": {
+    "status": "equality_failed_due_to_sign_bug",
+    "positivity_classes": {
+      "(3,4,+)": "PROVEN POSITIVE",
+      "(3,4,-)": "PROVEN POSITIVE",
+      "w_0": "PROVEN POSITIVE",
+      "w_1": "PROVEN POSITIVE",
+      "w_2": "PROVEN POSITIVE"
+    }
+  },
+  "50843": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "61855": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "65721": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "62091": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "64771": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "55859": {
+    "status": "equality_failed_due_to_sign_bug",
+    "positivity_classes": {
+      "(3,4,+)": "PROVEN POSITIVE",
+      "(3,4,-)": "PROVEN POSITIVE",
+      "w_0": "PROVEN POSITIVE",
+      "w_1": "PROVEN POSITIVE",
+      "w_2": "PROVEN POSITIVE"
+    }
+  },
+  "60552": {
+    "status": "not_found_at_degree_2",
+    "positivity_classes": null
+  },
+  "64844": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "32316": {
+    "status": "equality_failed_due_to_sign_bug",
+    "positivity_classes": {
+      "(0,3,+)": "PROVEN POSITIVE",
+      "(0,3,-)": "PROVEN POSITIVE",
+      "w_1": "PROVEN POSITIVE",
+      "w_2": "PROVEN POSITIVE",
+      "w_4": "PROVEN POSITIVE"
+    }
+  },
+  "40172": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "55680": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "6192": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "29824": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "29708": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "9420": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "63456": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "30916": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  },
+  "32428": {
+    "status": "not_attempted",
+    "positivity_classes": null
+  }
+}

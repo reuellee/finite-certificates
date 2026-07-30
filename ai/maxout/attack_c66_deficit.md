@@ -263,6 +263,37 @@ or citation-free:
   cell (realizability of all rank-3 oriented matroids on <= 8 elements is
   classical, so no non-realizable phantom cells exist here).
 
+## Stage 2c-1 addendum (2026-07-31): the first transferable certificate family; the hard region sharpened
+
+Executed by Gemini 3.1 Pro (High) in bounded calls with an audit-first
+design; adversarially reviewed (`stage2c_gemini/REVIEW_stage2c1_claude.md`).
+Post-review state:
+
+- **A systematic cell-wide certificate family (proven, reviewer-derived):**
+  whenever some class (i,j) carries equal side signs sigma* with
+  sigma*.s_t = -1 on all three complementary generators, the explicit
+  equal-pair certificate {y_sides = 1, y_wt = 2 D_tij} kills the system
+  with positive-monomial multipliers - valid across the entire chirotope
+  cell, GP relations not needed. Exact coverage (independently reproduced):
+  **33,437 / 66,280** labeled systems at k in {1,2} - all in the easy
+  region (0 canonical equal-pair-residue members, 0 of the hard
+  failed-100), plus 4,755 flip-partner kills beyond Stage 2b-1's measured
+  set. Serialization erratum (missing factor 2) documented and corrected
+  in review.
+- **Five false theorems prevented:** a deliberately-included impossible
+  canary target exposed a verifier sign bug in the per-instance search;
+  all five claimed instance certificates were invalidated (confirmed
+  independently in review) and the Stage 2b no-go reconfirmed by an exact
+  primal witness. Canary targets are now standard practice here.
+- **Accounting finding (review):** Stage 2b-1's coverage/residue lists are
+  per canonical representative and the equal-pair property is not
+  flip-invariant - Stage 2c-2 must work at labeled-system granularity.
+- **The frontier, sharpened:** numeric fitting to symbolic identities is
+  dead (fails GP-ideal membership); degree <= 2 undetermined coefficients
+  finds nothing on hard targets. The equal-pair residues and the
+  failed-100 need T-carrying supports with genuine Grassmann-Plucker
+  cancellation, likely degree >= 3 - Stage 2c-2's precise target.
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned

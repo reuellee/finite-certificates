@@ -1,0 +1,7 @@
+{
+  "criterion": "sigma_{ij,+} = sigma_{ij,-} AND sigma_{ij} * s_t = -1 for all 3 t not in {i,j}",
+  "total_systems_covered": 33437,
+  "failed_100_covered": [],
+  "residue_overlap": 0,
+  "stage2b1_equal_pair_overlap": 30650
+}
