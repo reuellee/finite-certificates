@@ -213,6 +213,36 @@ brief (`stage2_gemini/STAGE2A.md`), then adversarially reviewed and repaired
   symmetry-breaking assignments, is exactly what a complete
   max f0(3,5) = 42 proof (Stage 2b) still requires.
 
+## Stage 2b addendum (2026-07-31): the per-configuration theorem — max f0(3,5) = 42 on an explicit direction set
+
+Executed by GPT-5.6 (codex, maximum reasoning effort), repo-pointed;
+adversarially reviewed (`stage2b_gpt/REVIEW_stage2b_claude.md`). Result,
+post-review:
+
+**THEOREM (fully certified, exact).** On the directions of the explicit
+integer configuration U_ints, no zonoboxtope — any midpoints, any positive
+weights, any A/B split — has more than 42 vertices; and 42 is attained
+(`cert_35_42.json`). Components: 66,280 exact primitive-integer Gordan
+certificates for splits k=1,2 over all 33,140 valid side assignments
+(`stage2b_gpt/gordan_bundle.json.gz`; k=3,4 by the global flip); 33,140
+further exact certificates closing k=0 (`stage2b_gpt/k0_bundle.json.gz`,
+added in review — the original homothetic-copy argument covered only
+exact-homothet pairs; k=5 by flip); an even-parity + perturbation argument
+excluding 43 (chamber adjacency is bipartite; verified in review); and a
+stdlib-only exact checker (`stage2b_gpt/check_stage2b.py`, ~4 s). Review
+also verified the sigma-set equality against an independent enumeration and
+1,500 sampled certificates against an independently constructed system
+matrix.
+
+Consequences and scope: the conjectured odd-n maximum 44 of Conjecture
+6.6.1 is NOT attained on this configuration — the first exact, complete
+negative instance for the conjectured value at (3,5). The global maximum
+over all configurations remains open (Stage 2c): certificates are
+per-configuration; the conservative symbolic chirotope-wise attempt is
+0/100; and Stage 2a's complete-symmetry-coverage conjecture is now
+DISPROVEN (16.1% of classes uncovered for at least one split even at this
+configuration), so cell-wide transfer needs a richer certificate family.
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned
