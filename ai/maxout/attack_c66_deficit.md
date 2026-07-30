@@ -325,6 +325,30 @@ terminated and is disclaimed). Completing it, plus the computed uniqueness
 of the OM(3,5) reorientation class and the parity/perturbation step, would
 close max f0(3,5) = 42 for all generic configurations.
 
+## Completion sweeps (2026-07-31, same day): every system, every split — the chain closes
+
+Two runs completed the cell-wide chain
+(`stage2c2_gpt/REVIEW_completion_claude.md`):
+
+- **Full complement, k in {1,2}:** all **32,843** systems outside the
+  single-class family received exact cell-wide degree-(2,3) certificates —
+  including every one of the 14,850 HARD systems; zero no-gos; canaries
+  passing in every shard.
+- **k = 0 (and 5 by flip):** all 33,140 valid sigmas covered — 32,570 by
+  the family criterion, 570 by exact degree-2 certificates; zero no-gos.
+
+Independent review verification: 970/970 sampled-or-complete certificates
+re-checked with reviewer-owned arithmetic (nonnegativity + exact B^T y = 0
+at the reference). Combined with the family (33,437), the flip symmetry
+(k = 3,4), the computed single-orbit chirotope landscape, the <= 40 bound
+for non-generic configurations, the 43-parity exclusion, and the certified
+42-instance, this assembles the capstone claim **max f0(3,5) = 42** —
+refuting Conjecture 6.6.1's odd-case value 44 and Prop 6.5's tightness at
+n = 5 — PENDING: a single standalone re-audit of all ~99k certificates, a
+carefully written equivariance/transport argument, and a maximum-settings
+dual review of the capstone. Until those complete, the claim is stated
+here as assembled-but-not-yet-declared.
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned
