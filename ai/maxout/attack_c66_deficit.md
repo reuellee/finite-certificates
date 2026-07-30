@@ -243,6 +243,26 @@ per-configuration; the conservative symbolic chirotope-wise attempt is
 DISPROVEN (16.1% of classes uncovered for at least one split even at this
 configuration), so cell-wide transfer needs a richer certificate family.
 
+## Stage 2c preparation (2026-07-31): third-party validation and the cell landscape
+
+Two computed anchors for the cell-wide program, both this-repo-independent
+or citation-free:
+
+- **Third-party exact cross-check** (`check_instances_cddlib.py`, requires
+  `pip install pycddlib`): Fukuda's cddlib, in exact GMP rational mode,
+  independently recomputes the vertex count of every certified instance —
+  32/42/58/84/104/110 — and agrees with all six (an entirely separate
+  codebase from this repo's verifiers, from qhull, and from the
+  model-generated pipelines).
+- **The chirotope landscape at (3,5)** (`check_om35_uniqueness.py`, stdlib):
+  exhaustive enumeration from the three-term Grassmann-Plucker sign axioms
+  gives exactly **384 uniform rank-3 chirotopes on 5 elements, forming a
+  single orbit** under relabeling x reorientation x global negation, with
+  `U_ints`' chirotope among them. Hence Stage 2c's quantifier "over all
+  generic configurations" reduces to ONE equivariantly-stated chirotope
+  cell (realizability of all rank-3 oriented matroids on <= 8 elements is
+  classical, so no non-realizable phantom cells exist here).
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned
