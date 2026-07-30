@@ -180,6 +180,39 @@ being wrong at n = 5. Stage 2 = turn the T = 0 / 5-cycle dual structure
 into an exact impossibility certificate. Artifacts and seeded rerunnable
 code: `stage1_gpt/`.
 
+## Stage 2a addendum (2026-07-30): first exact theorem-pieces toward max f0(3,5) = 42
+
+Executed by Gemini 3.1 Pro (High) in three bounded calls against a written
+brief (`stage2_gemini/STAGE2A.md`), then adversarially reviewed and repaired
+(`stage2_gemini/REVIEW_stage2a_claude.md`). Post-review state:
+
+- **Centered-slice theorem (exact):** at T = 0 the 20 side signs collapse to
+  10 class signs (valid assignments are antipodal-symmetric; exactly **200**
+  exist, a structure-invariant count). For an explicit integer configuration
+  (Pythagorean-quadruple rows), **all 400 (assignment x split) systems are
+  infeasible with exact rational Farkas certificates**
+  (`stage2_gemini/farkas_t0_exact.json`, generator `t0_exact_fixed.py`): the
+  centered slice of that exact cell cannot reach 44. The executor's original
+  artifact had a labeling gap (valid set enumerated on one configuration,
+  LPs run on another) plus corrupt serialization; the review rebuilt the
+  chain self-consistently — the idea survived, the artifact was replaced.
+- **The binding obstruction is a Grassmann-Plucker relation:** Stage 1's
+  numerically-binding dual demands four class signs (E02<0, E03>0, E13<0,
+  E24>0 — decoded from Stage 1's own sigma, orientation-free at T=0) that
+  are **algebraically contradictory throughout Stage 1's chirotope cell**:
+  c2*E24 + c4*E03 = c1*E02 + c3*E13 holds identically there with all four
+  coefficients strictly positive (products of absolute determinants;
+  verified exactly on the rationalized Stage-1 optimum, all five
+  per-coordinate residuals identically zero). The identity is
+  chirotope-conditional — correctly scoped per reorientation class.
+- **T-cancellation:** equal dual multipliers on antipodal-symmetric classes
+  cancel T identically; Stage 1's best dual instead cancels T through a
+  geometric rank-dependence of four facet normals. The precise coverage
+  condition for a fully T-independent certificate family is formulated —
+  that condition, plus per-cell GP contradictions for the
+  symmetry-breaking assignments, is exactly what a complete
+  max f0(3,5) = 42 proof (Stage 2b) still requires.
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned
