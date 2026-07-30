@@ -11,8 +11,16 @@ import argparse
 import gzip
 import io
 import json
+import os
 import time
 from fractions import Fraction
+
+# Keep future shard reruns from repeating the development host's BLAS-thread
+# oversubscription.  These must be set before NumPy/SciPy are imported.
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
 
 import numpy as np
 
