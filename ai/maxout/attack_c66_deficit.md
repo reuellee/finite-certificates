@@ -294,6 +294,37 @@ Post-review state:
   failed-100 need T-carrying supports with genuine Grassmann-Plucker
   cancellation, likely degree >= 3 - Stage 2c-2's precise target.
 
+## Stage 2c-2 addendum (2026-07-31): the coverage ground truth, a boundary theorem, and the hard region falls on all prioritized targets
+
+Executed by GPT-5.6 (codex, maximum reasoning effort), repo-pointed;
+adversarially reviewed (`stage2c2_gpt/REVIEW_stage2c2_claude.md` — checker
+re-run PASS; representative certificate re-verified independently, its
+T-cancellation holding identically even over generic symbolic vectors).
+Three results, all exact:
+
+- **Labeled coverage ground truth:** of the 66,280 labeled systems,
+  **51,430 admit equal-pair (T-independent) certificates and 14,850 are
+  HARD** (per-split 28,106/5,034 and 23,324/9,816), every system carrying
+  an exact certificate or an exact strict-primal no-go witness.
+- **Boundary theorem:** the ordinary coefficientwise-positive equal-pair
+  mechanism is EXACTLY the Stage 2c-1 single-class family (33,437
+  systems); multi-class extensions add zero at every degree (formal-D
+  strict-witness necessity argument, degree-independent).
+- **The hard region falls, on all prioritized targets:** with weight-row
+  multipliers as independent unknowns modulo the Grassmann-Plucker ideal,
+  ALL 120 prioritized targets (20 canonical HARD + the historical
+  failed-100) carry exact cell-wide certificates at side-degree <= 2
+  (109 genuinely T-carrying; supports mostly 4 terms). Canary integrity
+  maintained throughout (a provably-uncertifiable control rejected, a
+  positive control accepted, at every degree).
+
+Frontier after this stage: run the same degree-(2,3) machinery over the
+full 14,850-system HARD set and the rest of the single-class family's
+complement (the sweep script exists; a first attempt was externally
+terminated and is disclaimed). Completing it, plus the computed uniqueness
+of the OM(3,5) reorientation class and the parity/perturbation step, would
+close max f0(3,5) = 42 for all generic configurations.
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned
