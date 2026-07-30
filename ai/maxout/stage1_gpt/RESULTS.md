@@ -229,7 +229,7 @@ Principal deliverables:
 - `floor_sensitivity.json`: smaller positivity-floor results.
 - `incidence_enum.py`, `margin_search.py`, `broad_lp_screen.py`,
   `outer_lp_search.py`, `floor_sensitivity.py`, `analyze_results.py`,
-  `verify_candidate.py`, and `validate_artifacts.py`: seeded rerunnable code.
+  `candidate_check.py`, and `validate_artifacts.py`: seeded rerunnable code.
 - JSON logs and NPZ checkpoints preserve all seeds, traces, directions, and
   pre-/post-broad leader campaigns.
 
@@ -248,7 +248,7 @@ $PY = 'E:/Projects/sae-identifiability/.venv/Scripts/python.exe'
 & $PY ai/maxout/stage1_gpt/margin_search.py --phase assemble
 & $PY ai/maxout/stage1_gpt/analyze_results.py
 & $PY ai/maxout/stage1_gpt/validate_artifacts.py
-& $PY ai/maxout/stage1_gpt/verify_candidate.py
+& $PY ai/maxout/stage1_gpt/candidate_check.py
 ```
 
 The last command writes `instance_44.json` only if the assembled best margin
