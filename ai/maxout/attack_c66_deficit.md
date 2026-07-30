@@ -26,8 +26,9 @@ first even n beyond the paper's DFS range (n ≤ 6). Certificate
 combinations over the 512 candidates). Because the conjectured value sits
 below the cap 116 here, this confirms the **achievability half** of the
 even-n formula at n = 8; the upper-bound half remains conjectural (their
-DFS did not reach n = 8). The same searches never produced 112, i.e. no
-refutation of the even-n deficit appeared.
+DFS did not reach n = 8). The same searches never produced any count
+above 110 (with midpoints there is no central symmetry, so already 111
+would refute the even-n deficit); no refutation appeared.
 
 **Result 3 — certified lower bounds at three odd-n cases that RESIST their
 conjectured values.** Explicit rational instances with exactly
@@ -41,8 +42,10 @@ conjectured values.** Explicit rational instances with exactly
 (same exact witness + convex-combination structure; the counts are pinned,
 not merely bounded below). These certify max ≥ 42 / 58 / 84. The
 *conjectured* values were not found by any of the methods below, despite
-search effort several orders of magnitude beyond what the paper reports
-using for its own evidence.
+search effort well beyond what the paper reports using for its own
+evidence: 15× its stated sample budget on its own recipe, plus ~300
+complete-per-direction-set searches of a qualitatively stronger kind,
+plus structured seeding.
 
 ## The empirical dichotomy
 
@@ -53,9 +56,10 @@ with **n odd, n > d** stalls at exactly the certified values above and never
 moves. In detail, at
 (3,5) the value 42 was the terminal count of: (i) ~1.5·10⁴ samples of the
 paper's own Prop 6.5 family (endpoints on the unit sphere, split residual
-weights) with exact-deduplicated hull counting — the paper reports 1000
+weights) with float hull counting (10⁻⁹ deduplication, no joggle) — the
+paper reports 1000
 samples sufficing for 44; (ii) hill-climbing in the full midpoint family;
-(iii) ~250 *complete-per-direction-set* branch-and-bound searches (method
+(iii) ~300 *complete-per-direction-set* branch-and-bound searches (method
 M3 below), including near-coplanar, incommensurate-fan and perturbed
 families, at margins δ = 10⁻³ and 10⁻⁶; (iv) generator-drop seeding from an
 exact (3,6)-extremal (all six drops → 42). At (4,5), 58 was terminal for
@@ -68,20 +72,22 @@ generator-drops from the exact 110-vertex (3,8) instance (all drops ≤ 80);
 
 ## Methods (validated before use; all claims are exact certificates)
 
-**M1 — paper-faithful sampling + exact hull counting**
+**M1 — paper-faithful sampling + careful float hull counting**
 (`search_maxout67.py`). Segments mᵢ + [−uᵢ, uᵢ]; every vertex of
 Q = conv(Z^a ∪ Z^b) is one of the 2^{n+1} sign points. The counter
-deduplicates exactly and never joggles (both the prior attack's undercount
-and the joggle overcount are excluded); it reproduces the exact generic
-zonotope counts at n = 5, 6, 7.
+deduplicates at 10⁻⁹ and never joggles (excluding the prior attack's
+random-direction undercount and the joggle duplicate-overcount), and it
+reproduces the known generic zonotope counts at n = 5, 6, 7 — but it is
+floating-point qhull, not exact: search counts are numerical evidence.
+Exactness lives only in the certificates.
 
 **M2 — chamber model with the T-reduction** (`tsearch.py`). For full-support
 instances Z^a, Z^b are normally equivalent and f0(Q) = #chambers +
 #bicolored, where chamber ε of the arrangement {uᵢ⊥} is bicolored iff
 s_ε = T + Σ_A αᵢεᵢuᵢ − Σ_B βⱼεⱼuⱼ avoids ±cone{εᵢuᵢ} (the paper's
 Prop 6.3/Thm 5.5 specialized). **All midpoint freedom enters through the
-single vector T = Σ_A αᵢmᵢ − Σ_B βⱼmⱼ**; the prior attack's centered family
-is exactly T = 0, explaining its systematic shortfalls. Validated: model
+single vector T = Σ_A αᵢmᵢ − Σ_B βⱼmⱼ**; the prior attack's centered family maps into the T = 0 slice (as do some
+non-centered configurations), explaining its systematic shortfalls. Validated: model
 count = hull count on live instances.
 
 **M3 — facet-side coloring + complete-per-U branch and bound**
@@ -91,7 +97,11 @@ T ≠ 0 — the antipodal sides ±r carry *independent* signs, each **linear** i
 (T, α, β). Cap attainment ⇔ some side-sign assignment makes every chamber
 see both signs (not-all-equal constraints) and is LP-realizable. For fixed
 directions U the branch and bound (LP-pruned partial assignments, rows
-normalized so margins are scale-free) is **complete** up to the δ margin.
+normalized so per-row margins are scale-invariant) is **complete for the
+model it searches**: the fixed A/B split (first ⌈n/2⌉ or ⌊n/2⌋ generators
+vs the rest), weights in [0.02, 10], side margins ≥ δ under the floating
+LP's own tolerances, within the time budget. "Complete per U" below
+always means complete in that qualified sense.
 Validation: finds the cap at (3,3) on the first random U (hull-confirmed);
 never finds the impossible cap 28 at (3,4) in 222 complete runs — matching
 the paper's proven max 26.
@@ -125,10 +135,17 @@ incommensurate fans — so parity structure in this problem has precedent.)
   re-implementation of that exact recipe reproduces 16/26/60 instantly but
   tops out at 42 for n=5 in 15× the sample budget. Possible resolutions:
   a thin extremal region their run happened to hit; a float-hull
-  overcount in their tightness verification (near-duplicate vertices); or
-  a subtle definitional mismatch — our formalization reproduces every
-  other value they report, which bounds how large such a mismatch could
-  be. The paper publishes no instance data or code to check against
+  overcount in their tightness verification (near-duplicate or
+  triangulated-flat-face vertices); a subtle definitional mismatch — our
+  formalization reproduces every other value they report, which bounds how
+  large such a mismatch could be; an unstated difference in their sampling
+  distribution or post-processing ("1000 samples" may include
+  optimization or multiple coefficient draws per sample); or a wording
+  slip — "this method succeeds" scoped loosely over n ≤ 6 with n = 5 not
+  individually confirmed. Note also that a valid 44-instance cannot be
+  measure-zero in the full parameter space (strict witnesses persist under
+  small perturbations), so if it exists our samplers assign its basin very
+  small mass rather than zero — which is itself notable. The paper publishes no instance data or code to check against
   (searched arXiv ancillary files, MathRepo, author pages, 2026-07-30).
   **An explicit certified 44-vertex (3,5)-zonoboxtope from the authors
   would settle this immediately**, and the harness here would verify it in

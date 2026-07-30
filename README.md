@@ -33,7 +33,7 @@ go straight to one without reading the rest. No verifier imports any other.
 | result | where |
 |---|---|
 | Counterexamples to published optimizer convergence claims (Muon, Li–Hong, Lion) | [`ai/optimizer/`](ai/optimizer/) |
-| Sturmfels et al. Conjecture 6.6: smallest open case resolved; two further cases confirmed; three odd-n cases certified 2-4 below the conjectured maxima | [`ai/maxout/`](ai/maxout/) |
+| Sturmfels et al. Conjecture 6.6: (4,4) and (4,6) resolved, (3,8) achievability confirmed; three odd-n cases certified 2-4 below the conjectured maxima | [`ai/maxout/`](ai/maxout/) |
 
 **Commutative algebra**
 
@@ -119,7 +119,7 @@ feature; loss-optimal absorbed SAE whose sparse-feature-circuit is the causally 
 child latent (exact KKT); 4-param probing certificate that passes the Hewitt–Liang
 control-task defense while probing a causally inert neuron.
 
-### ai/maxout/ — smallest open case of a 2025 Sturmfels-et-al conjecture, resolved; two further cases confirmed; odd-n resistance certified
+### ai/maxout/ — smallest open case of a 2025 Sturmfels-et-al conjecture resolved; (4,6) resolved and (3,8) achievability confirmed; odd-n resistance certified
 
 `attack_maxout66.md` + `verify_maxout66_d4n4.py` (+ `cert_d4n4.json`): explicit
 32-vertex exact-rational certificate **confirming achievability in the smallest open

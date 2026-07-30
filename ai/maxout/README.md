@@ -1,4 +1,4 @@
-# Sturmfels et al. Conjecture 6.6: two new cases confirmed, three odd-n cases resist
+# Sturmfels et al. Conjecture 6.6: (4,6) resolved, (3,8) achievability confirmed, three odd-n cases resist
 
 Conjecture 6.6 of **Balakin, Cox, Loho & Sturmfels, "Maxout Polytopes"**
 ([arXiv:2509.21286](https://arxiv.org/abs/2509.21286), Sept 2025) claims maximal
@@ -18,7 +18,7 @@ vertex counts are equalities, not just bounds):
 |---|---|---|---|
 | (4,6) | **104** | 104 (= cap) | part 2 case **confirmed** (first with n > d) |
 | (3,8) | **110** | 110 (< cap 116) | even-n formula's **achievability confirmed** beyond the paper's DFS range |
-| (3,5) | **42** | 44 | conjectured value **not reproduced** — incl. the paper's own claimed-successful sampling recipe at 15× its budget, ~300 complete-per-direction-set searches, generator-drop seeding |
+| (3,5) | **42** | 44 | conjectured value **not reproduced** — incl. the paper's own claimed-successful sampling recipe at 15× its budget, ~300 complete-per-direction-set searches (in the qualified sense stated in the note), generator-drop seeding |
 | (4,5) | **58** | 60 | same resistance (while neighboring (4,6) falls in minutes) |
 | (3,7) | **84** | 88 | same resistance (survives 8 drops from the exact (3,8) extremal) |
 

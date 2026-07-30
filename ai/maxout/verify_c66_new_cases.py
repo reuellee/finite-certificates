@@ -1,4 +1,4 @@
-"""Standalone EXACT verification: four zonoboxtope vertex-count certificates
+"""Standalone EXACT verification: five zonoboxtope vertex-count certificates
 for Conjecture 6.6 of "Maxout Polytopes" (Balakin-Cox-Loho-Sturmfels,
 arXiv:2509.21286); see attack_c66_deficit.md.
 
@@ -60,6 +60,10 @@ for fname, d, n, f0 in CERTS:
     U = [[Fraction(x) for x in r] for r in cert["U"]]
     a = [Fraction(x) for x in cert["a"]]
     b = [Fraction(x) for x in cert["b"]]
+    if not (len(M) == len(U) == len(a) == len(b) == n):
+        fail(f"{fname}: instance arrays must have exactly n={n} rows")
+    if any(len(r) != d for r in M + U):
+        fail(f"{fname}: instance rows must have exactly d={d} coordinates")
     if not all(x >= 0 for x in a + b):
         fail(f"{fname}: coefficients must be nonnegative")
 
@@ -86,12 +90,17 @@ for fname, d, n, f0 in CERTS:
         fail(f"{fname}: witness/combo index sets must partition the candidates")
 
     for i, c in wit.items():
+        if len(c) != d:
+            fail(f"{fname}: witness {i} has wrong dimension")
         vi = sum(c[k] * pts[i][k] for k in range(d))
         for j, q in enumerate(pts):
             if j != i and sum(c[k] * q[k] for k in range(d)) >= vi:
                 fail(f"{fname}: witness {i} not strict against {j}")
 
     for i, parts in com.items():
+        if any(not isinstance(j, int) or j < 0 or j >= len(pts)
+               for j, _ in parts):
+            fail(f"{fname}: combo {i} has an out-of-range index")
         if any(j == i for j, _ in parts):
             fail(f"{fname}: combo {i} uses itself")
         if any(l < 0 for _, l in parts):
