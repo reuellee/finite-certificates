@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "all_checks_passed": true,
+  "fresh_enumeration": {
+    "vectorized_classes": 16570,
+    "dfs_classes": 16570,
+    "exact_order_match": true
+  },
+  "margin_table": {
+    "classes": 16570,
+    "split_records": 33140,
+    "finite_and_index_consistent": true,
+    "maximum_margin": 2.0816681711721685e-17,
+    "count_above_decision_threshold": 0
+  },
+  "best_fresh_LP": {
+    "margin": 2.0816681711721685e-17,
+    "active_sides": [
+      2,
+      3,
+      4,
+      5,
+      10,
+      11,
+      12,
+      13,
+      16,
+      17
+    ],
+    "dual_sum": 0.9999999999999996
+  },
+  "best_U_incidence": {
+    "chambers": 22,
+    "sigma_NAE_in_all_chambers": true
+  },
+  "coverage_counts": {
+    "fixed_reference_LPs": 33140,
+    "post_joint_polish_LPs": 33140,
+    "broad_screen_LPs": 66280,
+    "final_deep_smooth_runs": {
+      "2": 240,
+      "3": 240
+    },
+    "final_outer_LP_runs": {
+      "2": 240,
+      "3": 240
+    },
+    "pre_broad_deep_and_outer_campaigns_also_preserved": true
+  },
+  "no_instance_44_file": true
+}

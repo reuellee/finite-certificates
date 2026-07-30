@@ -153,6 +153,33 @@ incommensurate fans — so parity structure in this problem has precedent.)
 - Search-negative results are not proofs. M3's completeness is per
   direction set; the U-space is not exhausted.
 
+## Stage 1 addendum (2026-07-30, later the same day): the σ-complete max-margin search at (3,5)
+
+Executed by GPT-5.6 (codex, maximum reasoning effort) against a written
+brief, then adversarially reviewed (`stage1_gpt/REVIEW_stage1_claude.md`;
+independent σ-count reproduction, margins-table audit, boundary-instance
+rebuild). Design: since any 43+-vertex (3,5) instance forces a generic
+arrangement, whose chamber/side incidence structure is unique in every
+sample tested, the side-sign assignments σ can be enumerated EXHAUSTIVELY —
+there are exactly **33,140** valid ones (16,570 mod global flip; two
+independent enumerators in Stage 1 and a third in review agree) — and each
+gets a gauge-fixed max-margin optimization over ALL remaining parameters
+(directions included).
+
+Result: **the best margin over the entire σ space is 2.1×10⁻¹⁷ — numerical
+zero — and it is not attained**: the maximizing sequences degenerate
+(T → 0, a weight at the positivity floor, chirotope walls), and the
+boundary object rebuilt at the best point has only 36 vertices. The binding
+obstruction concentrates on both antipodal sides of the five facet classes
+forming the 5-cycle (0,2),(2,4),(4,1),(1,3),(3,0), with a 4-side LP dual
+summing to 1. Direction-space optimization is local (the executor's and the
+review's shared caveat), so this is strong numerical evidence, not proof —
+but it upgrades the working hypothesis to **max f₀(3,5) = 42**, i.e. the
+odd case of Conjecture 6.6.1 (and Prop 6.5's sampled tightness at n = 5)
+being wrong at n = 5. Stage 2 = turn the T = 0 / 5-cycle dual structure
+into an exact impossibility certificate. Artifacts and seeded rerunnable
+code: `stage1_gpt/`.
+
 ## Reproduction
 
 - `python verify_c66_new_cases.py` — exact verification of all five pinned
