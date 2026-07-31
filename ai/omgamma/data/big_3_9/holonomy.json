@@ -1,0 +1,10 @@
+{
+ "perm_order": 362880,
+ "S_n": 362880,
+ "sign_dim": 9,
+ "n": 9,
+ "H_equals_Gbar": true,
+ "phase": 2,
+ "exact_sign": true,
+ "harvested_edges": 46733
+}

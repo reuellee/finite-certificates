@@ -1,8 +1,8 @@
 {
- "level": 4,
- "total_classes": 2598,
- "total_edges_expanded": 28767,
- "total_mass": "25527613440",
+ "level": 6,
+ "total_classes": 2628,
+ "total_edges_expanded": 30645,
+ "total_mass": "25703946240",
  "target_mass": "25703946240",
- "complete": false
+ "complete": true
 }

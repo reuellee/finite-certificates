@@ -320,12 +320,23 @@ exhaustive BFS; plus completeness. Two independent certificates:
    Γ̂(9,4) is connected AND the class count is definitive — this is what
    settles 9,276,595 vs 9,276,601.
 
-Canary set for the campaign: (a) same pipeline at (8,4)/(9,3) must
-reproduce the table above; (b) a sabotaged run (one voltage corrupted,
-one class deleted) must fail the standalone checker and the mass
-identity respectively; (c) scrambled chirotopes must fail GP; (d) the
-mass identity at (9,4) must fail if run against a deliberately truncated
-BFS set.
+Canary set for the campaign (all executed): (a) the same pipeline at
+(8,4) and (9,3) reproduces the known results exactly, both before and
+after the full-edge-harvest rework; (b) sabotaged certificates (five
+corruption modes) are rejected by BOTH the pure checker and the numpy
+fast checker; (c) scrambled chirotopes fail GP; (d) a corrupted mass
+target (+998244353) is loudly detected ("frontier empty but mass <
+target", complete=false). Note also the stop-rule granularity: the mass
+is compared only at level boundaries, so a false "complete" would
+additionally require the wrong target to coincide exactly with a
+level-boundary partial sum.
+
+Holonomy at (9,4) is harvested from EVERY expanded edge (inline at
+known-hits, deferred for in-level duplicates with a 500k cap), so if the
+run terminates by mass with H < Ḡ, the harvested H is a lower bound with
+provenance sufficient to investigate; if it terminates with H = Ḡ, the
+positive verdicts are certificate-backed. The final saturation is the
+exact staged Schreier computation.
 
 ### Empirical observation: local holonomy flatness at (9,4)
 
