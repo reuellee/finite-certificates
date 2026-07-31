@@ -1,0 +1,236 @@
+artifact: data/coverage_4_9
+  [ OK ] (0) SHA-256 of coverage_4_9.npz
+  [ OK ] (0) size of coverage_4_9.npz
+  [ OK ] (0) SHA-256 of witness_4_9.npz
+  [ OK ] (0) size of witness_4_9.npz
+  [ OK ] (0) raw SHA-256 of array key_hi
+  [ OK ] (0) raw SHA-256 of array key_lo
+  [ OK ] (0) raw SHA-256 of array stab
+  [ OK ] (0) raw SHA-256 of witness array parent
+  [ OK ] (0) raw SHA-256 of witness array flip
+  [ OK ] (0) raw SHA-256 of witness array sigma
+  [ OK ] (0) raw SHA-256 of witness array eps
+  [ OK ] (0) raw SHA-256 of witness array gsgn
+  [ OK ] (0) raw SHA-256 of witness array depth
+  (n,r) = (9,4), 9276595 rows, kappa = 1
+  [ OK ] (c) three arrays have equal length
+  [ OK ] (c) keys strictly increasing (sorted AND pairwise distinct)  9276595 keys
+  [ OK ] (e) count matches manifest  9276595 vs 9276595
+  [ OK ] (e) every stabilizer order divides |G'|  orders seen: [2, 4, 6, 8, 12, 36]
+  [ OK ] (e) orbit masses sum to the manifest total  1722704635330560 vs 1722704635330560
+  [ OK ] (e) mass equals the (4,9) target 1722704635330560
+  [ OK ] (e) count equals 9276595
+  [ OK ] (e) stabilizer histogram matches manifest  {'2': 9267682, '4': 8717, '6': 73, '8': 106, '12': 16, '36': 1}
+  [ OK ] (f) extension table has contiguous parent ids 0..2627  2628 rows
+  [ OK ] (f) extension table sums to the target mass  1722704635330560 vs 1722704635330560
+  FULL mode: all 9276595 rows for checks (a),(b),(d)
+    shard     0  100000 rows  12s | 1/93  elapsed 12s
+    shard     1  100000 rows  12s | 2/93  elapsed 12s
+    shard     2  100000 rows  12s | 3/93  elapsed 23s
+    shard     3  100000 rows  12s | 4/93  elapsed 24s
+    shard     4  100000 rows  12s | 5/93  elapsed 35s
+    shard     5  100000 rows  12s | 6/93  elapsed 35s
+    shard     6  100000 rows  11s | 7/93  elapsed 46s
+    shard     7  100000 rows  11s | 8/93  elapsed 47s
+    shard     8  100000 rows  11s | 9/93  elapsed 58s
+    shard     9  100000 rows  11s | 10/93  elapsed 58s
+    shard    10  100000 rows  11s | 11/93  elapsed 69s
+    shard    11  100000 rows  11s | 12/93  elapsed 69s
+    shard    12  100000 rows  11s | 13/93  elapsed 81s
+    shard    13  100000 rows  11s | 14/93  elapsed 81s
+    shard    14  100000 rows  11s | 15/93  elapsed 92s
+    shard    15  100000 rows  11s | 16/93  elapsed 92s
+    shard    16  100000 rows  11s | 17/93  elapsed 103s
+    shard    17  100000 rows  11s | 18/93  elapsed 104s
+    shard    18  100000 rows  11s | 19/93  elapsed 115s
+    shard    19  100000 rows  11s | 20/93  elapsed 115s
+    shard    20  100000 rows  11s | 21/93  elapsed 126s
+    shard    21  100000 rows  11s | 22/93  elapsed 126s
+    shard    22  100000 rows  12s | 23/93  elapsed 137s
+    shard    23  100000 rows  12s | 24/93  elapsed 138s
+    shard    24  100000 rows  11s | 25/93  elapsed 149s
+    shard    25  100000 rows  11s | 26/93  elapsed 149s
+    shard    26  100000 rows  11s | 27/93  elapsed 160s
+    shard    27  100000 rows  11s | 28/93  elapsed 161s
+    shard    28  100000 rows  11s | 29/93  elapsed 171s
+    shard    29  100000 rows  11s | 30/93  elapsed 172s
+    shard    30  100000 rows  11s | 31/93  elapsed 182s
+    shard    31  100000 rows  11s | 32/93  elapsed 183s
+    shard    32  100000 rows  11s | 33/93  elapsed 194s
+    shard    33  100000 rows  11s | 34/93  elapsed 195s
+    shard    34  100000 rows  11s | 35/93  elapsed 205s
+    shard    35  100000 rows  11s | 36/93  elapsed 206s
+    shard    36  100000 rows  11s | 37/93  elapsed 217s
+    shard    37  100000 rows  11s | 38/93  elapsed 218s
+    shard    38  100000 rows  11s | 39/93  elapsed 228s
+    shard    39  100000 rows  11s | 40/93  elapsed 229s
+    shard    40  100000 rows  11s | 41/93  elapsed 239s
+    shard    41  100000 rows  12s | 42/93  elapsed 241s
+    shard    42  100000 rows  12s | 43/93  elapsed 251s
+    shard    43  100000 rows  12s | 44/93  elapsed 252s
+    shard    44  100000 rows  11s | 45/93  elapsed 262s
+    shard    45  100000 rows  11s | 46/93  elapsed 263s
+    shard    46  100000 rows  11s | 47/93  elapsed 274s
+    shard    47  100000 rows  11s | 48/93  elapsed 275s
+    shard    48  100000 rows  11s | 49/93  elapsed 285s
+    shard    49  100000 rows  11s | 50/93  elapsed 286s
+    shard    50  100000 rows  12s | 51/93  elapsed 297s
+    shard    51  100000 rows  12s | 52/93  elapsed 298s
+    shard    52  100000 rows  11s | 53/93  elapsed 308s
+    shard    53  100000 rows  12s | 54/93  elapsed 310s
+    shard    54  100000 rows  11s | 55/93  elapsed 320s
+    shard    55  100000 rows  11s | 56/93  elapsed 321s
+    shard    56  100000 rows  11s | 57/93  elapsed 331s
+    shard    57  100000 rows  11s | 58/93  elapsed 333s
+    shard    58  100000 rows  11s | 59/93  elapsed 342s
+    shard    59  100000 rows  11s | 60/93  elapsed 344s
+    shard    60  100000 rows  11s | 61/93  elapsed 354s
+    shard    61  100000 rows  12s | 62/93  elapsed 356s
+    shard    62  100000 rows  11s | 63/93  elapsed 365s
+    shard    63  100000 rows  12s | 64/93  elapsed 367s
+    shard    64  100000 rows  12s | 65/93  elapsed 377s
+    shard    65  100000 rows  12s | 66/93  elapsed 379s
+    shard    66  100000 rows  12s | 67/93  elapsed 389s
+    shard    67  100000 rows  12s | 68/93  elapsed 391s
+    shard    68  100000 rows  12s | 69/93  elapsed 401s
+    shard    69  100000 rows  12s | 70/93  elapsed 403s
+    shard    70  100000 rows  11s | 71/93  elapsed 412s
+    shard    71  100000 rows  11s | 72/93  elapsed 414s
+    shard    72  100000 rows  11s | 73/93  elapsed 424s
+    shard    73  100000 rows  11s | 74/93  elapsed 426s
+    shard    74  100000 rows  12s | 75/93  elapsed 435s
+    shard    75  100000 rows  12s | 76/93  elapsed 438s
+    shard    76  100000 rows  11s | 77/93  elapsed 447s
+    shard    77  100000 rows  12s | 78/93  elapsed 449s
+    shard    78  100000 rows  12s | 79/93  elapsed 458s
+    shard    79  100000 rows  12s | 80/93  elapsed 461s
+    shard    80  100000 rows  11s | 81/93  elapsed 470s
+    shard    81  100000 rows  12s | 82/93  elapsed 473s
+    shard    82  100000 rows  14s | 83/93  elapsed 484s
+    shard    83  100000 rows  11s | 84/93  elapsed 484s
+    shard    84  100000 rows  11s | 85/93  elapsed 495s
+    shard    85  100000 rows  11s | 86/93  elapsed 495s
+    shard    86  100000 rows  11s | 87/93  elapsed 507s
+    shard    87  100000 rows  12s | 88/93  elapsed 507s
+    shard    88  100000 rows  12s | 89/93  elapsed 519s
+    shard    89  100000 rows  13s | 90/93  elapsed 520s
+    shard    90  100000 rows  13s | 91/93  elapsed 532s
+    shard    91  100000 rows  12s | 92/93  elapsed 532s
+    shard    92  76595 rows  165s | 93/93  elapsed 697s
+  9276595 rows checked in 697s (22544370 admissible relabellings enumerated, 2.430 per class)
+  [ OK ] (a) all 9276595 keys are valid uniform chirotopes
+  [ OK ] (b) all 9276595 keys extremal in their orbit (manifest convention)
+  [ OK ] (d) all 9276595 stabilizer orders exact
+  witness: 9276595 rows, reachability checks (g),(h)
+  [ OK ] (g) witness has exactly one row per listed class
+  [ OK ] (g) every recorded sigma is a permutation of 1..n
+  [ OK ] (g) every recorded eps is a reorientation mask < 2^9
+  [ OK ] (g) every recorded global sign is 0 or 1
+  [ OK ] (g) every recorded mutated basis index is < 126
+  [ OK ] (g) exactly one parentless row (a tree, not a forest)  1 parentless rows
+  [ OK ] (g) every parent pointer lands inside the artifact
+  [ OK ] (g) the root has depth 0  depth[root=9276594] = 0
+  [ OK ] (g) depth[i] = depth[parent[i]] + 1 for every non-root row (the parent map strictly decreases depth, hence is acyclic)  max depth 27
+  [ OK ] (g) every row's ancestor chain terminates at that one root (pointer doubling)  6 rounds, cap 26
+  [ OK ] (g) the manifest's root_row is the computed root  manifest 9276594, computed 9276594
+  [ OK ] (g) the manifest's max_depth is the computed one  manifest 27, computed 27
+    wshard     0  100000 rows  3s | 1/93  elapsed 3s
+    wshard     1  100000 rows  3s | 2/93  elapsed 3s
+    wshard     2  100000 rows  3s | 3/93  elapsed 6s
+    wshard     3  100000 rows  3s | 4/93  elapsed 6s
+    wshard     5  100000 rows  3s | 5/93  elapsed 9s
+    wshard     4  100000 rows  3s | 6/93  elapsed 9s
+    wshard     6  100000 rows  3s | 7/93  elapsed 11s
+    wshard     7  100000 rows  3s | 8/93  elapsed 11s
+    wshard     8  100000 rows  3s | 9/93  elapsed 14s
+    wshard     9  100000 rows  3s | 10/93  elapsed 14s
+    wshard    10  100000 rows  3s | 11/93  elapsed 16s
+    wshard    11  100000 rows  3s | 12/93  elapsed 16s
+    wshard    12  100000 rows  3s | 13/93  elapsed 19s
+    wshard    13  100000 rows  3s | 14/93  elapsed 19s
+    wshard    14  100000 rows  3s | 15/93  elapsed 21s
+    wshard    15  100000 rows  3s | 16/93  elapsed 22s
+    wshard    16  100000 rows  3s | 17/93  elapsed 24s
+    wshard    17  100000 rows  3s | 18/93  elapsed 24s
+    wshard    18  100000 rows  3s | 19/93  elapsed 27s
+    wshard    19  100000 rows  3s | 20/93  elapsed 27s
+    wshard    20  100000 rows  3s | 21/93  elapsed 29s
+    wshard    21  100000 rows  3s | 22/93  elapsed 29s
+    wshard    22  100000 rows  3s | 23/93  elapsed 32s
+    wshard    23  100000 rows  3s | 24/93  elapsed 32s
+    wshard    24  100000 rows  3s | 25/93  elapsed 35s
+    wshard    25  100000 rows  3s | 26/93  elapsed 35s
+    wshard    26  100000 rows  3s | 27/93  elapsed 37s
+    wshard    27  100000 rows  3s | 28/93  elapsed 37s
+    wshard    28  100000 rows  3s | 29/93  elapsed 40s
+    wshard    29  100000 rows  3s | 30/93  elapsed 40s
+    wshard    30  100000 rows  3s | 31/93  elapsed 42s
+    wshard    31  100000 rows  3s | 32/93  elapsed 43s
+    wshard    32  100000 rows  3s | 33/93  elapsed 45s
+    wshard    33  100000 rows  3s | 34/93  elapsed 45s
+    wshard    34  100000 rows  3s | 35/93  elapsed 48s
+    wshard    35  100000 rows  3s | 36/93  elapsed 48s
+    wshard    36  100000 rows  3s | 37/93  elapsed 50s
+    wshard    37  100000 rows  3s | 38/93  elapsed 50s
+    wshard    38  100000 rows  3s | 39/93  elapsed 53s
+    wshard    39  100000 rows  3s | 40/93  elapsed 53s
+    wshard    40  100000 rows  3s | 41/93  elapsed 56s
+    wshard    41  100000 rows  3s | 42/93  elapsed 56s
+    wshard    42  100000 rows  3s | 43/93  elapsed 58s
+    wshard    43  100000 rows  3s | 44/93  elapsed 58s
+    wshard    44  100000 rows  3s | 45/93  elapsed 61s
+    wshard    45  100000 rows  3s | 46/93  elapsed 61s
+    wshard    46  100000 rows  3s | 47/93  elapsed 63s
+    wshard    47  100000 rows  3s | 48/93  elapsed 63s
+    wshard    48  100000 rows  3s | 49/93  elapsed 66s
+    wshard    49  100000 rows  3s | 50/93  elapsed 66s
+    wshard    50  100000 rows  3s | 51/93  elapsed 69s
+    wshard    51  100000 rows  3s | 52/93  elapsed 69s
+    wshard    52  100000 rows  3s | 53/93  elapsed 71s
+    wshard    53  100000 rows  3s | 54/93  elapsed 71s
+    wshard    54  100000 rows  3s | 55/93  elapsed 74s
+    wshard    55  100000 rows  3s | 56/93  elapsed 74s
+    wshard    56  100000 rows  3s | 57/93  elapsed 77s
+    wshard    57  100000 rows  3s | 58/93  elapsed 77s
+    wshard    58  100000 rows  3s | 59/93  elapsed 79s
+    wshard    59  100000 rows  3s | 60/93  elapsed 79s
+    wshard    60  100000 rows  3s | 61/93  elapsed 82s
+    wshard    61  100000 rows  3s | 62/93  elapsed 82s
+    wshard    62  100000 rows  3s | 63/93  elapsed 84s
+    wshard    63  100000 rows  3s | 64/93  elapsed 84s
+    wshard    64  100000 rows  3s | 65/93  elapsed 87s
+    wshard    65  100000 rows  3s | 66/93  elapsed 87s
+    wshard    66  100000 rows  3s | 67/93  elapsed 90s
+    wshard    67  100000 rows  3s | 68/93  elapsed 90s
+    wshard    68  100000 rows  3s | 69/93  elapsed 92s
+    wshard    69  100000 rows  3s | 70/93  elapsed 92s
+    wshard    70  100000 rows  3s | 71/93  elapsed 95s
+    wshard    71  100000 rows  3s | 72/93  elapsed 95s
+    wshard    72  100000 rows  3s | 73/93  elapsed 97s
+    wshard    73  100000 rows  3s | 74/93  elapsed 97s
+    wshard    74  100000 rows  3s | 75/93  elapsed 100s
+    wshard    75  100000 rows  3s | 76/93  elapsed 100s
+    wshard    76  100000 rows  3s | 77/93  elapsed 103s
+    wshard    77  100000 rows  3s | 78/93  elapsed 103s
+    wshard    78  100000 rows  3s | 79/93  elapsed 105s
+    wshard    79  100000 rows  3s | 80/93  elapsed 105s
+    wshard    80  100000 rows  3s | 81/93  elapsed 108s
+    wshard    81  100000 rows  3s | 82/93  elapsed 108s
+    wshard    82  100000 rows  3s | 83/93  elapsed 111s
+    wshard    83  100000 rows  3s | 84/93  elapsed 111s
+    wshard    84  100000 rows  3s | 85/93  elapsed 113s
+    wshard    85  100000 rows  3s | 86/93  elapsed 113s
+    wshard    86  100000 rows  3s | 87/93  elapsed 116s
+    wshard    87  100000 rows  3s | 88/93  elapsed 116s
+    wshard    88  100000 rows  3s | 89/93  elapsed 119s
+    wshard    89  100000 rows  3s | 90/93  elapsed 119s
+    wshard    90  100000 rows  3s | 91/93  elapsed 121s
+    wshard    91  100000 rows  3s | 92/93  elapsed 121s
+    wshard    92  76594 rows  2s | 93/93  elapsed 123s
+  9276594 tree edges checked in 123s
+  [ OK ] (h) all 9276594 tree edges satisfy the mutation identity (sigma,eps,gsgn).chi_child = mu_flip(chi_parent)
+  => all 9276595 listed classes are joined to row 9276594 by paths of certified mutation edges: ONE component.
+
+================ RESULT ================
+  39 checks passed, 0 failed
+=======================================
