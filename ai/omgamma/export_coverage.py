@@ -214,15 +214,18 @@ def main(r, n, indir, outdir):
             "exported_by": "export_coverage.py",
         },
         "how_to_obtain": (
-            "This file is ~130 MB and is NOT tracked in git (see "
-            ".gitignore).  Two ways to get it: (1) regenerate -- run "
-            f"`python runbig.py {r} {n} ...` (about 4 h on 4 cores, "
-            "writing data/big_{r}_{n}/level_*.npz) and then "
-            "`python export_coverage.py {r} {n} data/big_{r}_{n} "
-            "data/coverage_{r}_{n}`; the MANIFEST's array_sha256 values "
-            "pin the result.  (2) download the archived release attached "
-            "to the repository and check it against the SHA-256 values in "
-            "this manifest, which IS tracked in git."),
+            f"{os.path.basename(npz)} is {size/1e6:.1f} MB and is NOT "
+            "tracked in git (see .gitignore); this MANIFEST.json is.  Two "
+            "ways to get it.  (1) Regenerate: run "
+            f"`python runbig.py {r} {n} <workers>` (about 4 h on 4 cores; "
+            f"it writes {indir}/level_*.npz), then "
+            f"`python export_coverage.py {r} {n} {indir} {outdir}`.  The "
+            "array_sha256 values below pin the result: they are SHA-256 "
+            "of the raw array buffers, so they must reproduce exactly, "
+            "whereas the .npz file hash need not (savez_compressed "
+            "records zip timestamps).  (2) Download the archived release "
+            "attached to the repository and check it against the "
+            "array_sha256 values below."),
         "checker": "coverage_checker.py (imports nothing from this project)",
     }
     man['files'][os.path.basename(npz)] = {

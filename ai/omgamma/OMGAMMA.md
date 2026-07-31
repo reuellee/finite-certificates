@@ -797,7 +797,7 @@ P-orbit closure had no word-level counterpart — precisely the situation
 at (9,4), where the sign part is reached through the A₉-orbit closure of
 the stabilizer generators.
 
-### 6.x The coverage certificate (`export_coverage.py`, `coverage_checker.py`)
+## 7. The coverage certificate (`export_coverage.py`, `coverage_checker.py`)
 
 The compact certificates above prove H = Ḡ; they say nothing about
 coverage, and until 2026-07-31 the *left-hand side* of the mass identity —
@@ -900,7 +900,11 @@ failed` — (0),(a),(b),(c),(d),(e),(f) all green
 the artifact is sorted by key and the largest keys are the most symmetric
 classes. `--sample N` runs (a),(b),(d) on a seeded pseudorandom subset;
 `--cheap-only` skips them; shards are checkpointed into `--state` and a
-re-run skips finished ones.
+re-run skips finished ones. The export is deterministic: re-running
+`export_coverage.py` over the same checkpoints reproduced the `.npz`
+**byte for byte** (same file SHA-256, same 62,185,111 bytes), so the
+`array_sha256` values in the manifest are a usable pin and the full-run
+verdict transfers to any copy matching them.
 
 **What this still does not certify.** The checker takes the target
 1,722,704,635,330,560 as an input constant. Check (f) confirms that the
@@ -909,7 +913,7 @@ extension counts E(c) themselves, and nothing here re-derives the (8,4)
 catalog they are taken over. The right-hand side of the mass identity
 remains reproducible-only.
 
-## 7. Trust boundaries
+## 8. Trust boundaries
 
 * The standalone certificate checker (`checker.py`, and the vectorized
   `checker_fast.py` with the same semantics) verifies: validity (GP) of
@@ -928,7 +932,7 @@ remains reproducible-only.
   #components(Γ̄) = #components(Γ̂); it says nothing about coverage.
   Coverage is a separate artifact: the mass identity in
   `data/big_4_9/meta.json` / `summary.json`, whose left-hand side is now
-  itself certified by `data/coverage_4_9/` + `coverage_checker.py` (§6.x).
+  itself certified by `data/coverage_4_9/` + `coverage_checker.py` (§7).
 * **The class list's completeness has two independent supports** and they
   should not be conflated: (1) the mass identity against the
   independently computed target N_chi(4,9) from the (8,4) extension
@@ -943,7 +947,7 @@ remains reproducible-only.
 * The mass identity's inputs are `canon.py`'s exact stabilizer orders
   (`stab_order_exact`) and the extension-count sweep `ext_count.py`.
   **As of 2026-07-31 the first is re-derived by a standalone checker and
-  the second is not.** `coverage_checker.py` (§6.x) recomputes, from the
+  the second is not.** `coverage_checker.py` (§7) recomputes, from the
   shipped artifact and with no project imports, the validity, the
   orbit-extremality and the stabilizer order of every one of the
   9,276,595 classes, and re-adds the masses; so the LEFT-hand side of the
@@ -980,7 +984,7 @@ remains reproducible-only.
   verdict; it is used only as a *prediction* which the computation then
   confirms (Result A is exactly the prediction of Lemma 3's corollary).
 
-## 8. History / errata log
+## 9. History / errata log
 
 * 2026-07-31 (session 3): **coverage gap closed on the left-hand side.**
   The GPT referee report on the note (`paper/REVIEW_note_gpt.md`, finding 3
