@@ -406,8 +406,9 @@ re-derived; the definition of a valid labeled side pattern; the
 symmetry reduction of §§3.2–3.3 (checked by `check_split_orbits.py`,
 which is stdlib and standalone, and by `check_transport.py`, which is
 itself generator-coupled in exactly the two narrow respects named here
-— it imports `monomials_of_degree` for the serialization convention and
-`VALID_BITS` for the valid-σ list, and nothing else); the serialization
+— from the generation side it imports only `monomials_of_degree`, the
+serialization convention, and `VALID_BITS`, the valid-σ list; its other
+import, `check_split_orbits`, is a checker); the serialization
 layout of the sparse certificate vectors (a data format, tested by a
 rotate-the-monomial-order canary); and the 121 `EXACT_DEGREE_NO_GO`
 entries of
