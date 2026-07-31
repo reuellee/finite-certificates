@@ -2,6 +2,7 @@
 \usepackage[margin=1.2in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs}
+\usepackage{xcolor}
 \usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
 
 \newtheorem{theorem}{Theorem}
@@ -22,13 +23,15 @@
 
 \date{July 31, 2026}
 
+\begin{document}
+
 \begin{abstract}
 A $(d,n)$-zonoboxtope is a maxout polytope of type $(d,n,1)$: the convex
 hull of a union of two weighted Minkowski sums of a common family of $n$
 segments in $\RR^d$. Balakin, Cox, Loho, and Sturmfels
 (arXiv:2509.21286) prove that a $(3,5)$-zonoboxtope has at most $44$
 vertices, assert that this bound is tight, and conjecture
-$4\sum_{k\le 2}\binom{n-1}{k}$ as the maximal vertex number of
+$4\sum_{k=0}^{2}\binom{n-1}{k}$ as the maximal vertex number of
 $(3,n)$-zonoboxtopes for all odd $n$. We prove that the maximum at
 $(d,n)=(3,5)$ is exactly $42$: the bound $44$ is not attained, the
 tightness assertion fails, and the odd-$n$ case of the conjecture fails
@@ -44,7 +47,6 @@ attained at $(3,8)$ and $(4,6)$, the latter resolving that case
 completely.
 \end{abstract}
 
-\begin{document}
 \maketitle
 
 \section{Introduction}
@@ -52,8 +54,9 @@ completely.
 Maxout polytopes were introduced by Balakin, Cox, Loho, and Sturmfels
 \cite{BCLS} as the polytopes computed by feedforward neural networks
 with maxout activation and nonnegative weights after the first layer.
-The first interesting class beyond zonotopes are the polytopes of type
-$(d,n,1)$, called \emph{$(d,n)$-zonoboxtopes} in \cite[\S 6]{BCLS}:
+The first interesting class beyond zonotopes is the class of polytopes
+of type $(d,n,1)$, called \emph{$(d,n)$-zonoboxtopes} in
+\cite[\S 6]{BCLS}:
 polytopes of the form
 \begin{equation}\label{eq:zbt}
   Q \;=\; \conv\Bigl(\;\sum_{i=1}^{n} a_i I_i \;\cup\; \sum_{i=1}^{n} b_i I_i\Bigr)
@@ -85,17 +88,21 @@ Consequently the upper bound $44$ of \cite[Proposition 6.5]{BCLS} is
 correct but not attained: its tightness assertion fails at $n=5$, and
 the odd-$n$ case of part 1 of \cite[Conjecture 6.6]{BCLS} fails at its
 first instance beyond $n=3$. In particular no sampled instance can
-attain $44$ at $n=5$; since our formalization reproduces every other
-vertex number reported in \cite[\S 6]{BCLS}, we suspect a
-floating-point vertex-count artifact in the tightness verification of
-the sampled $n=5$ example rather than any definitional mismatch, and
-the ancillary verifier of this note can check any explicit instance in
-seconds. Following \cite[Remark 6.7]{BCLS}, our upper bound is in fact
-proven for the wider family of \emph{zonoboxtope candidates} (two
-zonotopes with pairwise parallel generators and an arbitrary relative
-translation --- the translation parameter $T$ below is unconstrained),
-while the $42$-vertex witness is a genuine zonoboxtope; so the maximum
-is $42$ for both families. The attainment half of Theorem~\ref{thm:main} is
+attain $44$ at $n=5$. Our implementation numerically reproduces the
+other three values $16, 26, 60$ of \cite[Proposition 6.5]{BCLS} and
+certifies exact instances attaining the conjectured values at $(3,8)$
+and $(4,6)$ (Proposition~\ref{prop:positive}), so we suspect a
+floating-point vertex-count artifact in the verification of the
+sampled $n=5$ example rather than any definitional mismatch; an
+explicit instance, once equipped with vertex witnesses by any exact
+convex-hull code, can be checked in seconds in the format of our
+ancillary verifier. Following \cite[Remark 6.7]{BCLS}, our upper bound
+is proven for the wider family of \emph{zonoboxtope candidates} (two
+zonotopes with pairwise parallel generators and independent
+translations --- the translation parameter $T$ below is
+unconstrained), while the $42$-vertex witness is a genuine
+zonoboxtope; so the maximum is $42$ for both families. The attainment
+half of Theorem~\ref{thm:main} is
 the following explicit instance, whose vertex count is verified in
 exact rational arithmetic by a Python-stdlib program included with this
 note (Section~\ref{sec:verification}).
@@ -152,9 +159,11 @@ $4$-dimensional zonotope with $6$ generic generators.
 \end{proposition}
 
 We also certify $58$ vertices at $(4,5)$ and $84$ at $(3,7)$
-(conjectured maxima: $60$ and $88$). Extensive complete-per-instance
-searches found no more; whether the odd-case deficit $2$ persists for
-all odd $n>3$ is an open question we do not settle here.
+(conjectured maxima: $60$ and $88$). Searches that are exhaustive for
+each fixed sampled direction configuration found no more, but the
+space of direction configurations was sampled, not exhausted; whether
+the odd-case deficit $2$ persists for all odd $n>3$ is an open
+question we do not settle here.
 
 \section{The proof}\label{sec:architecture}
 
@@ -181,14 +190,16 @@ and (specializing the framework of \cite[\S\S 5--6]{BCLS} to two
 normally equivalent zonotopes)
 $f_0(Q) = \#\text{chambers} + \#\text{bicolored chambers}$, where a
 chamber of the arrangement $\{u_i^\perp\}$ is \emph{bicolored} when it
-contains support vectors of both copies. With $22$ chambers this gives
+contains linear objective directions maximized on each of the two
+copies. With $22$ chambers this gives
 $f_0\le 44$, with equality iff every chamber is bicolored.
 
 Write $\delta_i = a_i - b_i$, let $s_i=\sign\delta_i\in\{\pm1\}$ be the
 \emph{split} and (after a normalization removing square roots)
-$w_i>0$ the residual weight; all midpoint freedom enters through a
-single vector $T\in\RR^3$ (an explicit linear combination of the
-$m_i$).
+$w_i>0$ the residual weight; all translation freedom enters through a
+single unconstrained vector $T\in\RR^3$ (for zonoboxtopes
+\eqref{eq:zbt}, an explicit linear combination of the $m_i$; for
+zonoboxtope candidates, the relative translation of the two copies).
 The all-chambers-bicolored condition becomes a strict linear
 feasibility system in $x=(T,w)\in\RR^3\times\RR^5$: for each unordered
 pair $i<j$, the two antipodal rays $\pm C_{ij}$, $C_{ij}=u_i\times u_j$,
@@ -225,11 +236,16 @@ equal ray signs $\sigma^*$ with $\sigma^* s_t=-1$ for all
 $t\notin\{i,j\}$, the closed form $y_{ij,\pm}=1$,
 $y_{w,t}=2D_{tij}$ is a certificate with no Grassmann--Pl\"ucker
 reduction needed (and this \emph{single-class family} is provably the
-complete coefficientwise-positive mechanism). All remaining systems are
+complete coefficientwise-positive mechanism among ordinary polynomial
+identities, i.e.\ those requiring no Grassmann--Pl\"ucker reduction). All remaining systems are
 killed by explicit degree-$(2,3)$ certificates found by exact kernel
-computations in the quotient ring; typical supports have four terms.
-Deliberately impossible control systems (``canaries'') were wired into
-every search and correctly rejected throughout.
+computations in the quotient ring --- normal forms modulo a
+Gr\"obner basis of the signed-determinant Pl\"ucker ideal over
+$\mathbb{Q}$ --- with typical supports of four terms.
+Deliberately impossible control systems (``canaries''), a discipline
+instituted after one such control exposed a verifier defect in an
+earlier stage, were wired into every final certificate sweep and
+correctly rejected throughout.
 
 \subsection{Symmetry: one cell, four splits}\label{sec:symmetry}
 The group $G=S_5\ltimes\{\pm1\}^5$ acts on configurations by
@@ -241,8 +257,8 @@ $m, a, b, s$ along). Two exact computations reduce the quantifiers:
 \begin{itemize}
 \item[(i)] The uniform rank-$3$ chirotopes on $5$ elements number
 exactly $384$ and form a \emph{single} $G$-orbit
-(all rank-$3$ oriented matroids on $\le 8$ elements are realizable, so
-there are no other cells). Hence every generic instance moves, without
+(all rank-$3$ oriented matroids on at most eight elements are
+realizable \cite[Ch.~8]{OMbook}, so there are no other cells). Hence every generic instance moves, without
 changing its polytope, to an instance whose configuration realizes one
 fixed reference chirotope $\chi_{\mathrm{ref}}$ --- that of the integer
 configuration
@@ -272,9 +288,11 @@ each of the $33{,}140$ valid patterns at each of the four split
 representatives: $132{,}560$ certificates in total, of which $74{,}923$
 are closed-form single-class and $57{,}637$ are explicit
 quotient-ring certificates. Certificates transport along $G$
-covariantly (ray twisting by
-$\tau=\pm\varepsilon\varepsilon$, permutation of the $D$-variables,
-bijection of valid patterns); the transport bookkeeping is verified
+covariantly: the ray pair of class $(i,j)$ maps to that of class
+$(i',j')=(\pi(i),\pi(j))$ twisted by the sign
+$\tau=\pm\varepsilon_{i'}\varepsilon_{j'}$ (negative iff $\pi$
+reverses the order of the pair), the $D$-variables permute, and valid
+patterns map bijectively to valid patterns. The bookkeeping is verified
 exactly on thousands of transported certificates against independently
 built systems, and the validity enumeration is verified to be preserved
 by the full stabilizer.
@@ -283,31 +301,43 @@ by the full stabilizer.
 Two boundary issues remain: the normal form requires all
 $\delta_i\ne 0$, and the chamber-model count requires no accidental
 coincidence among the $2^{6}$ candidate points. Both are handled by a
-perturbation lemma: every vertex of $Q$ is strictly exposed among the
-candidate points, and candidates vary polynomially in $(a,b,m)$, so
-all vertices persist under small parameter perturbations; the excluded
-loci (a vanishing residual, a vanishing side value, a coincidence of
-candidates) are finitely many proper algebraic subsets, whose union
-misses arbitrarily nearby parameters. Hence any instance with
-$f_0\ge 43$ yields a nearby \emph{strict generic position} instance
-with $f_0\ge 43$.
+perturbation lemma, stated in \emph{candidate coordinates} --- two
+independent translations $c_A, c_B\in\RR^3$ and two width vectors
+$a, b\in\RR^{5}_{>0}$, which subsume the shared-midpoint
+parameterization of \eqref{eq:zbt}: every vertex of $Q$ is strictly
+exposed among the candidate points, and candidates vary polynomially
+in $(c_A, c_B, a, b)$, so all vertices persist under small parameter
+perturbations; the excluded loci (a vanishing width difference
+$a_i-b_i$, a vanishing side value, a coincidence of candidates that
+are not identical as polynomial maps) are finitely many proper
+algebraic subsets, whose union misses arbitrarily nearby parameters.
+Hence any candidate instance with $f_0\ge 43$ yields a nearby
+\emph{strict generic position} instance with $f_0\ge 43$.
 
 In strict generic position the count
 $f_0 = 22 + \#\text{bicolored}$ is literal, and the bicolored count is
 even: the zero set of the support-function difference crosses chamber
-walls transversally, meets each strictly convex chamber cone in a
-single sector, and traces cycles in the chamber-adjacency graph, which
+walls transversally, meets each open chamber cone in a single
+connected sector (the intersection of a plane with a convex cone is
+convex), and traces cycles in the chamber-adjacency graph, which
 is bipartite (the chambers of a central simple arrangement of five
 planes $2$-color by sign-vector parity). So $f_0\ge 43$ forces
 $f_0=44$ with all side signs strict --- producing a valid pattern and a
 strictly feasible system \eqref{eq:system} at some realization of
 $\chi_{\mathrm{ref}}$ with one of the four split representatives, which
-the certificate library kills. Hence $f_0\le 42$, and
-Proposition~\ref{prop:instance} completes Theorem~\ref{thm:main}. \qed
+the certificate library kills. Hence $f_0\le 42$ for every zonoboxtope
+candidate.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The upper bound is the chain of
+\S\S\ref{sec:degenerate}--\ref{sec:endgame}; the attainment is
+Proposition~\ref{prop:instance}.
+\end{proof}
 
 \section{Verification}\label{sec:verification}
 
 \subsection*{Ancillary files}
+\sloppy
 The ancillary files of this note contain the five instance certificates
 (\texttt{cert\_35\_42.json}, \texttt{cert\_38\_110.json},
 \texttt{cert\_46\_104.json}, \texttt{cert\_45\_58.json},
@@ -340,26 +370,32 @@ with erratum history are in the same directory.
 This result was produced in a multi-model AI research pipeline: search,
 certificate generation, and drafts of the arguments were carried out by
 large language models (GPT-5.6, Gemini 3.1 Pro, Claude) directing exact
-computer algebra, with adversarial cross-review between models,
-deliberately-impossible canary controls in every certificate search,
-and independent re-verification of every serialized object. No
-mathematical claim in this note rests on model output: the upper bound
-rests on the audited certificate library and the short arguments of
+computer algebra, with adversarial cross-review between models, canary
+controls in the certificate sweeps, and independent re-verification of
+every serialized object. No mathematical claim in this note rests on
+\emph{unverified} model output: the model-produced certificates and
+programs are exactly re-checked by the standalone audit, the upper
+bound rests on that audited library and the short arguments of
 Section~\ref{sec:architecture}, and the attainment on the ancillary
 stdlib verification. The author directed the program and takes
 responsibility for the claims.
 
 \subsection*{Acknowledgments}
 I thank the authors of \cite{BCLS} for a beautiful paper. Any explicit
-$44$-vertex $(3,5)$-instance would contradict Theorem~\ref{thm:main}
-and could be checked in seconds by the ancillary verifier; I would be
-grateful for any such communication.
+$44$-vertex $(3,5)$-instance would contradict Theorem~\ref{thm:main},
+and, once equipped with vertex witnesses by any exact convex-hull
+code, could be checked in seconds in the format of the ancillary
+verifier; I would be grateful for any such communication.
 
 \begin{thebibliography}{9}
 \bibitem{BCLS}
 A.~Balakin, S.~Cox, G.~Loho, B.~Sturmfels,
 \emph{Maxout polytopes},
 preprint, 2025, \href{https://arxiv.org/abs/2509.21286}{arXiv:2509.21286}.
+\bibitem{OMbook}
+A.~Bj\"orner, M.~Las Vergnas, B.~Sturmfels, N.~White, G.~M.~Ziegler,
+\emph{Oriented Matroids}, 2nd ed., Encyclopedia of Mathematics and its
+Applications 46, Cambridge University Press, 1999.
 \end{thebibliography}
 
 \end{document}
