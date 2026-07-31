@@ -456,6 +456,32 @@ needs only that the tree paths exist, not that the BFS is complete. So
 the harvested elements are genuine members of H whatever the rest of the
 graph looks like.
 
+**Exactly what the resume does and does not cost here.** A resumed run
+harvests the edge family only from levels expanded after the resume, so
+its H′ is a LOWER bound: H′ ≤ H ≤ Ḡ. Since H′ = Ḡ was reached, H = Ḡ
+outright — a lower bound that equals the whole group *is* the whole
+group. So the positive verdict is sound despite the resume, and **no
+completing pass over the earlier levels is needed**. (`--holopass` would
+be mandatory only for a NEGATIVE verdict, where a lower bound proves
+nothing.) What the resume does not supply, and what H = Ḡ alone does not
+supply, is **Γ̂-connectivity**: Lemma 1 requires the quotient to be
+connected before [Ḡ : H] = 1 can be read as "Γ̄ connected". That is the
+mass identity's job and nothing else's. Precisely:
+
+    certified now :  H = Ḡ
+    Lemma 1       :  #comp(Γ̄) = #comp(Γ̂)   and   #comp(Γ̃) = #comp(Γ̂)
+    still needed  :  #comp(Γ̂^{9,4}) = 1, i.e. accumulated mass = N_chi(4,9)
+    ⟹ Γ̄, Γ̃, Γ̂ all connected at (9,4).
+
+**The dichotomy makes the observation a proof.** The run's sign
+dimension went 1 → 9 with no intermediate value ever appearing. That is
+not luck and not evidence in itself: Proposition 4 (§3, machine-checked
+in `artifacts/submodules.json`) shows that for n = 9 the only
+S₉-invariant subspaces of F₂⁹ containing 1⁹ are ⟨1⁹⟩ (dim 1) and F₂⁹
+(dim 9), so **1 and 9 were the only values the sign dimension could ever
+have taken** once π(H) = S₉, and correspondingly #components(Γ̄^{9,4})
+could only ever have been 256 or 1. The computation picked out which.
+
 **Consequence, unconditional on coverage.** Apply Lemma 1 to the
 Ḡ-invariant subgraph Γ̄′ = π⁻¹(Γ̂′) where Γ̂′ is the component of Γ̂(9,4)
 containing the root: Γ̄′ is a union of components of Γ̄, its quotient Γ̂′
