@@ -797,6 +797,118 @@ P-orbit closure had no word-level counterpart — precisely the situation
 at (9,4), where the sign part is reached through the A₉-orbit closure of
 the stabilizer generators.
 
+### 6.x The coverage certificate (`export_coverage.py`, `coverage_checker.py`)
+
+The compact certificates above prove H = Ḡ; they say nothing about
+coverage, and until 2026-07-31 the *left-hand side* of the mass identity —
+the list of 9,276,595 canonical keys with their stabilizer orders — existed
+only as the ~326 MB of gitignored `level_*.npz` checkpoints. A reader could
+not check that the list consists of that many distinct valid classes with
+the asserted stabilizers. That was the single most serious finding of the
+GPT referee report on the note (`paper/REVIEW_note_gpt.md`, finding 3).
+
+**The artifact.** `export_coverage.py 4 9 data/big_4_9 data/coverage_4_9`
+transports the `keys`/`stab` columns out of the checkpoints, sorts them
+strictly increasingly by the 126-bit key, and writes
+
+```
+data/coverage_4_9/coverage_4_9.npz    key_hi, key_lo (uint64), stab (uint8)
+data/coverage_4_9/MANIFEST.json       conventions, totals, SHA-256s
+```
+
+62.2 MB, readable with `np.load` and nothing else. The manifest records n,
+r, the basis order, the key bit-encoding, the group and its action, the
+**exact canonical convention** (see below), the count, the mass, the
+stabilizer histogram, three fully worked example rows (row 0 as a 126-char
+± string), the SHA-256 of the `.npz` and, separately, of each array's raw
+little-endian buffer, so the hashes survive repacking of the zip container.
+The `.npz` is gitignored; `MANIFEST.json` is tracked, so a downloaded or
+regenerated copy can be pinned against the repository.
+
+**The checker.** `coverage_checker.py` imports nothing from this project —
+no `core`, `canon`, `flip`, `runbig`, `bigstate`, `ext_count`, `checker*`.
+It rebuilds the colex basis order, the 1,260 three-term Grassmann–Plücker
+conditions, the sign lattice (reduced row echelon over F₂, rank 9, κ = 1)
+and the group action from the definitions. It verifies
+
+* (0) every SHA-256 in the manifest, file and per-array;
+* (a) every key decodes to a valid uniform chirotope;
+* (b) every key is **extremal in its own orbit under the manifest's
+  convention** — see the caveat below;
+* (c) the keys are strictly increasing, hence sorted *and* pairwise
+  distinct (one expression; these are not two independent checks);
+* (d) every recorded stabilizer order equals |Stab_{G′}(χ)| recomputed by
+  exhaustive enumeration;
+* (e) the orbit masses sum to 1,722,704,635,330,560 and the count is
+  9,276,595;
+* (f) optional, `--extcount`: the tracked 2,628-row extension table sums
+  arithmetically to that same target.
+
+**How (b) and (d) are done, and why this is not just canon.py again.**
+`canon.py` finds the canonical key by a level-by-level DFS that *prunes*
+to the states achieving the maximal prefix. The checker does not reproduce
+that search. It computes the invariant element colouring, orders the colour
+classes, and then **enumerates every admissible relabelling exhaustively**
+(∏_c m_c!: exactly 1 for 93.1% of classes on a 300,000-row sample, 2.43 per
+class on average over the whole catalog — the mean is dragged up by a thin
+tail ending at the alternating matroid's 362,880), sign-maximises each
+image over the full sign lattice, and takes the maximum and the argmax
+count. So the checker verifies the *result* of canon.py's pruning by brute
+force rather than re-deriving the pruning, and |Stab| = 2^κ · #argmax comes
+out of the same enumeration. Two independent agreements were checked while
+building it: the colour *partitions* agree with `canon.element_colors` on
+2,000/2,000 sampled classes, and a slow reference implementation reproduced
+both the stored key and the stored stabilizer order on 5,000/5,000 classes
+drawn from all 20 BFS levels.
+
+**The caveat that must not be dropped.** The keys are *not* the maximum
+over all of S_n. `canonical()` maximises only over relabellings respecting
+the invariant colouring, so the convention is colour-restricted. This was
+measured, not assumed: on sampled classes the unrestricted maximum differs
+from the stored key in 8 of 9 cases, and computing it costs ~1.5 s/class,
+i.e. ~160 CPU-days over the catalog. The colour-restricted maximum is still
+a well-defined function of the G′-orbit (the colouring is invariant under
+reorientation and global negation and equivariant under relabelling), which
+is all the distinctness argument needs — but the reader has to read the
+forty lines of `canonical_convention()` rather than accept the word
+"canonical". The manifest and the note both say so.
+
+**Canaries** (`--canary`). Six sabotages of a 20,000-row sub-artifact, each
+shipped with a **regenerated, internally consistent manifest** — i.e. an
+adversary who can rewrite the hashes — plus an untampered control that must
+pass. Where the sabotage would otherwise be caught by arithmetic, the
+totals are repaired so that only the mathematical check can fire:
+
+| canary | fires on |
+|---|---|
+| control, untampered | *accepted* (as required) |
+| duplicated key (kept sorted, totals repaired) | (c) |
+| non-canonical key (another representative of the same orbit) | (b), and (d) |
+| corrupted stabilizer order (manifest mass repaired) | (d) |
+| GP-invalid key (a **non-mutable** basis flipped) | (a), and (b),(d) |
+| truncated artifact, 500 rows dropped | (e) |
+| stale SHA-256, data changed | (0) |
+
+All seven behave as required.
+
+**Run of record (2026-07-31).** FULL, not sampled: all 9,276,595 rows,
+4 worker processes, 93 shards of 100,000, **510 s wall / ~26 min CPU**,
+22,544,370 admissible relabellings enumerated. `18 checks passed, 0
+failed` — (0),(a),(b),(c),(d),(e),(f) all green
+(`data/coverage_full.log`). The cost is very unevenly distributed: shards
+0–91 took 14–19 s each and the last shard, 76,595 rows, took 174 s, because
+the artifact is sorted by key and the largest keys are the most symmetric
+classes. `--sample N` runs (a),(b),(d) on a seeded pseudorandom subset;
+`--cheap-only` skips them; shards are checkpointed into `--state` and a
+re-run skips finished ones.
+
+**What this still does not certify.** The checker takes the target
+1,722,704,635,330,560 as an input constant. Check (f) confirms that the
+tracked extension table adds up to it; nothing here recomputes the 2,628
+extension counts E(c) themselves, and nothing here re-derives the (8,4)
+catalog they are taken over. The right-hand side of the mass identity
+remains reproducible-only.
+
 ## 7. Trust boundaries
 
 * The standalone certificate checker (`checker.py`, and the vectorized
@@ -815,7 +927,8 @@ the stabilizer generators.
   ~9.3M. That is sufficient for the H = Ḡ claim (Result A) and for
   #components(Γ̄) = #components(Γ̂); it says nothing about coverage.
   Coverage is a separate artifact: the mass identity in
-  `data/big_4_9/meta.json` / `summary.json`.
+  `data/big_4_9/meta.json` / `summary.json`, whose left-hand side is now
+  itself certified by `data/coverage_4_9/` + `coverage_checker.py` (§6.x).
 * **The class list's completeness has two independent supports** and they
   should not be conflated: (1) the mass identity against the
   independently computed target N_chi(4,9) from the (8,4) extension
@@ -829,14 +942,21 @@ the stabilizer generators.
   exact identity.
 * The mass identity's inputs are `canon.py`'s exact stabilizer orders
   (`stab_order_exact`) and the extension-count sweep `ext_count.py`.
-  Neither is re-derived by the standalone checkers — that is the main
-  remaining trust boundary for the class COUNT (not for the holonomy).
-  It is mitigated by: the same machinery reproducing every published
-  count where one exists ((3,5..9), (4,5..8)), the same mass identity
-  closing exactly at (8,4) and (9,3) where the class lists are also
-  independently confirmed against Finschi's representatives, and the
-  stabilizer orders being re-verified for 8,913 classes by an
-  independent re-canonicalization during the family-(i) harvest.
+  **As of 2026-07-31 the first is re-derived by a standalone checker and
+  the second is not.** `coverage_checker.py` (§6.x) recomputes, from the
+  shipped artifact and with no project imports, the validity, the
+  orbit-extremality and the stabilizer order of every one of the
+  9,276,595 classes, and re-adds the masses; so the LEFT-hand side of the
+  identity is now certificate-backed, conditional on the manifest's
+  colour-restricted canonical convention (which is stated there in full,
+  and is a well-defined function of the orbit — the point the distinctness
+  argument actually needs). The RIGHT-hand side is not: the target
+  1,722,704,635,330,560 enters the checker as a constant, and `--extcount`
+  only confirms that the tracked 2,628-row table sums to it. What still
+  mitigates the right-hand side: the same machinery reproduces every
+  published count where one exists ((3,5..9), (4,5..8)), and the same mass
+  identity closes exactly at (8,4) and (9,3), where the class lists are
+  independently confirmed against Finschi's representatives.
 * **Resumed runs make H a lower bound** for the edge family (ii): sound
   for a positive verdict, not for a negative one. `summary.json` records
   `holonomy_is_lower_bound`.
@@ -862,6 +982,25 @@ the stabilizer generators.
 
 ## 8. History / errata log
 
+* 2026-07-31 (session 3): **coverage gap closed on the left-hand side.**
+  The GPT referee report on the note (`paper/REVIEW_note_gpt.md`, finding 3
+  and "Single most important fix") established that the headline count and
+  the coverage claim were NOT publicly certificate-backed: the repository
+  shipped only the compact holonomy certificates, while the list of
+  9,276,595 keys + stabilizers lived in ~326 MB of gitignored checkpoints.
+  Now: `data/coverage_4_9/` (62.2 MB `.npz` + tracked `MANIFEST.json`) and
+  `coverage_checker.py`, a checker with no project imports, run FULL over
+  all 9,276,595 rows — validity, orbit-extremality, strict sortedness,
+  exact stabilizer orders, mass, and the extension table's arithmetic —
+  510 s wall on 4 workers, 18/18 checks green, and 6 sabotages (each with a
+  regenerated self-consistent manifest) plus an untampered control all
+  behaving as required. **The right-hand side of the mass identity is still
+  not certified**: the target enters the checker as a constant, and
+  `--extcount` only re-adds the tracked table. Also recorded, because it
+  is easy to overstate: the stored keys are extremal under a
+  *colour-restricted* convention, not under all of S_n (measured: the
+  unrestricted maximum differs on 8 of 9 sampled classes and would cost
+  ~160 CPU-days).
 * 2026-07-31 (session 2): **(9,4) SETTLED.** 9,276,595 classes,
   150,561,898 directed mutation-edge traversals, 19 BFS levels, mass
   identity exact, H = Ḡ. Γ̄, Γ̃, Γ̂ connected at (9,4) and hence at

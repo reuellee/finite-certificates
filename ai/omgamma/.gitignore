@@ -5,8 +5,19 @@ data/big_4_8_canary/
 data/*.log
 data/*.err
 data/extcount_*.jsonl
+# ...except the (4,9) extension table, which IS tracked: it is the
+# right-hand side of the mass identity and coverage_checker.py --extcount
+# re-adds it up.
+!data/extcount_4_9.jsonl
+# The coverage artifact is ~62 MB: too large for git.  Its MANIFEST.json
+# (with the SHA-256 of every array) IS tracked, so a downloaded or
+# regenerated copy can be pinned against the repository.
+data/coverage_*/*.npz
+data/covstate_*/
+data/canary_coverage/
 data/big_*.bak/
 data/big_*.orig/
 data/big_*.full/
 data/canary_resume_tmp/
 data/pure94/
+paper/*.out

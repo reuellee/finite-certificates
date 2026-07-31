@@ -1,0 +1,86 @@
+{
+ "artifact": "omgamma coverage certificate (4,9)",
+ "format_version": 1,
+ "n": 9,
+ "r": 4,
+ "M_bases": 126,
+ "count": 9276595,
+ "complete": true,
+ "mass_total": "1722704635330560",
+ "mass_target": "1722704635330560",
+ "group_order_Gprime": "371589120",
+ "stab_histogram": {
+  "2": 9267682,
+  "4": 8717,
+  "6": 73,
+  "8": 106,
+  "12": 16,
+  "36": 1
+ },
+ "conventions": {
+  "ground_set": "E = {1,...,n}",
+  "basis_order": "the C(n,r) r-subsets of E in COLEX order: A < B iff max(A xor B) in B; equivalently sort each ascending r-tuple by its reversal.  Index j runs 0..M-1.",
+  "chirotope": "a uniform chirotope chi is evaluated on ascending r-tuples and takes values in {+1,-1}; it is valid iff every three-term Grassmann-Pluecker condition holds: for every (r-2)-subset L and every a<b<c<d disjoint from L, the three terms chi(L,a,b)chi(L,c,d), -chi(L,a,c)chi(L,b,d), chi(L,a,d)chi(L,b,c) are not all equal.",
+  "key_encoding": "key is a 126-bit unsigned integer with bit (M-1-j) equal to 1 iff chi(B_j) = +1, B_j the j-th basis in colex order.  So the most significant bit is basis 0 and integer order on keys is lexicographic order on the sign string '+' > '-'.  Stored split as key = key_hi*2^64 + key_lo.",
+  "group": "G' = S_n x {0,1}^n x {0,1} acting on the left by ((sig,eps,s).chi)(x_1..x_r) = (-1)^s (-1)^{|eps cap {x_1..x_r}|} chi(sig^{-1}x_1,..,sig^{-1}x_r).  |G'| = n! 2^(n+1).  The recorded stab is the order of the stabilizer of chi in G' (which contains the 2^kappa elements acting trivially on every chirotope; here kappa = 1, so the minimum is 2).",
+  "canonical_form": "IMPORTANT -- the keys are extremal in their orbit under a COLOUR-RESTRICTED relabelling set, not under all of S_n.  Precisely: (1) call a basis MUTABLE if flipping its sign leaves a valid uniform chirotope; (2) set deg(i) = #mutable bases containing i and m2(i,j) = #mutable bases containing both i and j; (3) colour the ground set by col_0(i) = deg(i), then refine at most 3 times by col_{t+1}(i) = rank of (col_t(i), sorted multiset over j != i of (m2(i,j), col_t(j))) among the n composite values, ranks assigned by ascending sort, stopping early if the number of distinct colours did not grow (the assignment is kept, then the loop stops); (4) order the colour classes by (class size ascending, colour rank ascending) and let them occupy the positions 1..n in that order; (5) the key is the MAXIMUM, over all relabellings sending each colour class onto its designated block of positions and over all of {0,1}^n x {0,1}, of the resulting key integer.  Because the colouring is invariant under reorientation and global negation and equivariant under relabelling, this is a well-defined function of the G'-orbit, so distinct keys certify distinct classes.  The unrestricted maximum over all of S_n would be a cleaner convention but costs about 1.5 s per class, i.e. some 160 CPU-days here.",
+  "stab_semantics": "stab[i] = 2^kappa * #{relabellings in the set of step (5) that attain the maximum} = |Stab_{G'}(chi)|."
+ },
+ "sorted": "strictly increasing in the 126-bit key",
+ "files": {
+  "coverage_4_9.npz": {
+   "sha256": "fd7da051cc2b93e9d2b0824612ddd9bfb7a9f779a6fd4f2d6dbc249d613e7657",
+   "bytes": 62185111
+  }
+ },
+ "array_sha256": {
+  "key_hi": "09517f6f381ae1aac8f67565b7d4d734e7528220b56c0f7b7911dcb9d1507d5e",
+  "key_lo": "0315f3ede71335778ec68e399beb819faecd8d7cc49de4ef7736ab9fca24439b",
+  "stab": "2c237034a1cda8a0dbfadafccd1af3f21729eac99745bcb673238955361f09a4"
+ },
+ "array_sha256_note": "SHA-256 of the raw little-endian C-contiguous buffer of each array (numpy .tobytes()), so the hashes survive repacking of the .npz container.",
+ "examples": [
+  {
+   "row": 0,
+   "key_hi": 4539698793200746496,
+   "key_lo": 71283537256364227,
+   "sign_string": "++++++---------+-------------------+----------------------------------++++++-+--++++++++++++++++-+++---++++++++-+++---++----++",
+   "stab": 2
+  },
+  {
+   "row": 4638297,
+   "key_hi": 4593811395198443378,
+   "key_lo": 4899493968857266008,
+   "sign_string": "++++++++-------+++++++---+++++++++-+++++++---+++-+++++-+++--+--+----+++++++++--+++++++++--+++--+-++---+++--+++++++-+++-+-++---",
+   "stab": 2
+  },
+  {
+   "row": 9276594,
+   "key_hi": 4611686018427387903,
+   "key_lo": 18446744073709551615,
+   "sign_string": "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++",
+   "stab": 36
+  }
+ ],
+ "provenance": {
+  "source": "data/big_4_9/level_*.npz produced by runbig.py 4 9",
+  "source_meta": {
+   "level": 19,
+   "total_classes": 9276595,
+   "total_edges_expanded": 150561898,
+   "total_mass": "1722704635330560",
+   "target_mass": "1722704635330560",
+   "complete": true,
+   "hol_perm_order": 362880,
+   "hol_sign_dim": 9,
+   "hol_full": true,
+   "stab_gens": 3508,
+   "edge_gens": 3,
+   "pend_dropped": 7939890,
+   "resumed_from_level": 9
+  },
+  "exported_by": "export_coverage.py"
+ },
+ "how_to_obtain": "This file is ~130 MB and is NOT tracked in git (see .gitignore).  Two ways to get it: (1) regenerate -- run `python runbig.py 4 9 ...` (about 4 h on 4 cores, writing data/big_{r}_{n}/level_*.npz) and then `python export_coverage.py {r} {n} data/big_{r}_{n} data/coverage_{r}_{n}`; the MANIFEST's array_sha256 values pin the result.  (2) download the archived release attached to the repository and check it against the SHA-256 values in this manifest, which IS tracked in git.",
+ "checker": "coverage_checker.py (imports nothing from this project)"
+}

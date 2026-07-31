@@ -1,0 +1,544 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\Gb}{\overline{\mathcal{G}}}
+\newcommand{\Gm}{\mathcal{G}}
+\newcommand{\Gu}{\underline{\mathcal{G}}}
+\newcommand{\Gbar}{\overline{G}}
+\newcommand{\Stab}{\operatorname{Stab}}
+
+\title[Mutation graphs of uniform oriented matroids on $\le 9$ elements]{The mutation graphs of uniform oriented matroids\\ on at most nine elements are connected}
+\author{Reuel Lee}
+\address{}
+\email{reuellee@gmail.com}
+\date{July 31, 2026}
+
+\begin{document}
+
+\begin{abstract}
+Cordovil and Las Vergnas conjectured that the mutation graph of uniform
+oriented matroids of fixed rank and size is connected. Knauer and Marc
+distinguish three versions of this graph --- on labelled uniform oriented
+matroids, on their reorientation classes, and on their isomorphism
+classes --- prove the labelled graph connected in rank $3$ for every $n$,
+prove the conjecture for $n\le 9$ at the reorientation-class level, and
+write that beyond rank $3$ they know nothing about the labelled graph,
+where they suspect a counterexample exists. We show there is no
+counterexample below $n=10$: for every rank $r$ and every $n\le 9$, all
+three graphs are connected. Once their rank-$3$ theorem, oriented-matroid
+duality and the degenerate ranks are accounted for, the cases genuinely
+settled here are $(n,r)=(8,4)$, $(9,4)$ and its dual $(9,5)$ --- among
+them the case they single out as hardest. The method is a covering-space
+reduction expressing the number of components of the labelled graph as
+the index of a holonomy subgroup computable on the isomorphism-class
+quotient. Two by-products: the number of isomorphism classes of uniform
+rank-$4$ oriented matroids on $9$ elements is $9{,}276{,}595$, certified
+by an exact mass identity, correcting the value $9{,}276{,}601$ printed
+by Fukuda, Miyata and Moriyama; and, for odd $n$, the number of
+components of the labelled graph is forced into $\{1,2^{n-1}\}$ with no
+intermediate value possible. All computations are exact; the holonomy
+certificates and their standalone checkers are public, and
+\S\ref{sec:honesty} states precisely which claims they cover.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $\mathcal{M}$ be a uniform oriented matroid (UOM) of rank $r$ on
+$E=\{1,\dots,n\}$, presented by a chirotope $\chi$. A \emph{mutation} of
+$\mathcal{M}$ flips the sign of a single basis so that the result is
+again a chirotope; geometrically, for realizable $\mathcal{M}$, it is the
+passage of one point through the hyperplane spanned by $r-1$ others. The
+\emph{mutation graph} has the UOMs of rank $r$ on $n$ elements as
+vertices and mutations as edges.
+
+Cordovil and Las Vergnas conjectured that this graph is connected; the
+conjecture is recorded in \cite{RS88}. Knauer and Marc \cite{KM23} observe that the
+statement depends on which objects one takes as vertices, and separate
+three graphs, in decreasing fineness:
+\[
+  \Gb^{n,r} \quad(\text{labelled UOMs}), \qquad
+  \Gm^{n,r} \quad(\text{reorientation classes}), \qquad
+  \Gu^{n,r} \quad(\text{isomorphism classes}),
+\]
+where reorientation means the action of $\{\pm1\}^n$ (sign changes) and
+isomorphism the action of the full hyperoctahedral group
+$\{\pm1\}^n\rtimes S_n$ (sign changes and relabelling). Connectivity of
+each implies connectivity of the next. Knauer and Marc state the
+Cordovil--Las Vergnas conjecture at the middle level. They prove, at the
+\emph{labelled} level, that $\Gb^{n,3}$ is connected for every $n$
+\cite[Prop.~3.2]{KM23}, via Ringel's homotopy theorem together with an
+explicit reorientation gadget; and they deduce $\Gm^{n,r}$ connected for
+$n\le 9$ from a computation that $\Gu^{n,r}$ is connected in that range.
+Of the finest level in higher rank they write that checking connectivity
+``is far more demanding'' and that they ``do not know anything about the
+connectivity of this graph beyond rank~3''; in their conclusion they say
+they ``suspect the existence of a counter example at least in the setting
+of $\Gb^{n,r}$.''
+
+Our main result is that no such counterexample exists below $n=10$.
+
+\begin{theorem}\label{thm:main}
+For every $n\le 9$ and every rank $r$, the graphs $\Gb^{n,r}$,
+$\Gm^{n,r}$ and $\Gu^{n,r}$ are connected.
+\end{theorem}
+
+The content is the labelled level; the other two follow. Much of the
+range is not new, and it is worth saying at once which part is. Ranks
+$r\le 1$ and $r\ge n-1$ are degenerate and elementary
+(\S\ref{sec:mass}); rank $2$ is elementary as well; rank $3$ is
+\cite[Prop.~3.2]{KM23}, and rank $n-3$ follows from it by
+oriented-matroid duality. What remains at $n\le 9$ is rank $4$ for
+$n=8,9$ together with $(9,5)$, which is dual to $(9,4)$. So the cases
+genuinely settled here are
+\[
+  (n,r)\;=\;(8,4),\qquad (9,4),\qquad (9,5)\cong(9,4)^{*},
+\]
+and it is $(9,4)$ that carries the weight: its isomorphism-class quotient
+has $9{,}276{,}595$ vertices, and it is the case Knauer and Marc identify
+as beyond reach. Theorem~\ref{thm:main} does not settle the
+Cordovil--Las Vergnas conjecture, nor the labelled question, in general:
+it rules out a counterexample only for $n\le 9$.
+
+Two by-products deserve separate statement. The first corrects the
+literature.
+
+\begin{theorem}\label{thm:count}
+The number of isomorphism classes of uniform oriented matroids of rank
+$4$ on $9$ elements is exactly $9{,}276{,}595$.
+\end{theorem}
+
+This value appears in Finschi's database \cite{Finschi} and in
+\cite[Table 1]{KM23}; Fukuda, Miyata and Moriyama \cite[Table]{FMM13}
+print $9{,}276{,}601$, which is six too many. Our certificate is not a
+third opinion but an exact integer identity: the orbit masses of the
+classes found by an exhaustive search sum to a target computed
+independently, by a single-element extension sweep over the $2{,}628$
+classes at $n=8$ (\S\ref{sec:mass}). A search that missed a class falls
+short of the target and cannot overshoot it.
+
+The second by-product explains why the labelled question at odd $n$ is
+binary.
+
+\begin{proposition}\label{prop:dichotomy}
+Let $n$ be odd, let $\Gu^{n,r}$ be connected, and suppose the holonomy
+subgroup $H$ of \S\ref{sec:reduction} surjects onto $S_n$. Then
+\[
+  \#\mathrm{components}\bigl(\Gb^{n,r}\bigr)\in\{1,\ 2^{n-1}\}.
+\]
+For $n=9$: either $1$ or $256$, with no intermediate value possible.
+\end{proposition}
+
+Finally, we record an erratum: \cite[Table 1]{KM23} lists $482$ classes at
+$(n,r)=(9,3)$. The correct value is $4382$, as its own dual entry at
+$(9,6)$, Finschi's database, \cite{FMM13} and our independent generation
+all agree.
+
+\subsection*{Verifying this note before reading it}
+The computational claims are machine-checkable, within the scope
+\S\ref{sec:honesty} sets out. From the repository
+\begin{center}
+\url{https://github.com/reuellee/finite-certificates}
+\end{center}
+(directory \texttt{ai/omgamma}), with Python 3 and no third-party
+packages beyond \texttt{numpy} for the fast checker:
+\begin{verbatim}
+    python verify_omgamma.py             # holonomy certificates
+    python verify_omgamma.py --canary    # self-test: must fail on a
+                                         # missing artifact
+    python submodules.py                 # Proposition 3, two methods
+    python coverage_checker.py --artifact data/coverage_4_9 \
+           --extcount data/extcount_4_9.jsonl     # coverage, all 9.28M
+    python coverage_checker.py --canary --artifact data/coverage_4_9
+\end{verbatim}
+The last two need the coverage array, which is too large for the
+repository; \S\ref{sec:honesty} says how to obtain it, and how far each of
+these commands reaches.
+The ledger \texttt{ai/omgamma/OMGAMMA.md} records every computation, its
+artifacts, its trust boundaries, and its errata --- including one of our
+own, discussed in \S\ref{sec:honesty}.
+
+\section{The three graphs}\label{sec:defs}
+
+Fix $n$ and $r$. A uniform chirotope is an alternating map
+$\chi\colon E^r\to\{\pm1\}$ satisfying the three-term Grassmann--Pl\"ucker
+sign conditions; $\chi$ and $-\chi$ describe the same oriented matroid,
+so a vertex of $\Gb^{n,r}$ is the pair $\{\chi,-\chi\}$. Let
+\[
+  G' \;=\; S_n\times\{0,1\}^n\times\{0,1\},
+\]
+\[
+  \bigl((\sigma,\varepsilon,s)\cdot\chi\bigr)(x_1,\dots,x_r)
+   \;=\;(-1)^{s}\,(-1)^{\sum_{i=1}^{r}\varepsilon_{x_i}}\,
+        \chi(\sigma^{-1}x_1,\dots,\sigma^{-1}x_r),
+\]
+where $\varepsilon=(\varepsilon_1,\dots,\varepsilon_n)\in\{0,1\}^n$
+records which ground-set elements are reoriented and $s$ is the global
+sign. Here $G'$ carries the semidirect-product multiplication induced by
+the $S_n$-action on $\{0,1\}^n$,
+\[
+  (\sigma_1,\varepsilon_1,s_1)(\sigma_2,\varepsilon_2,s_2)
+  =(\sigma_1\sigma_2,\ \varepsilon_1\oplus\sigma_1(\varepsilon_2),\ s_1\oplus s_2).
+\]
+\sloppy
+Throughout Sections~\ref{sec:reduction}--\ref{sec:mass} we work in the
+nondegenerate range $2\le r\le n-2$; the degenerate ranks are disposed of
+directly in Section~\ref{sec:mass}. There the subgroup
+$K_4=\{(\mathrm{id},0,0),(\mathrm{id},1^n,0),(\mathrm{id},0,1),
+(\mathrm{id},1^n,1)\}$ acts trivially on pairs $\{\chi,-\chi\}$, and we
+write $\Gbar=G'/K_4$, of order $n!\,2^{\,n-1}$, with normal sign subgroup
+$\bar R=\{0,1\}^n/\langle 1^n\rangle$ and quotient
+$\pi\colon\Gbar\twoheadrightarrow S_n$. (Nothing below requires $K_4$ to
+be the \emph{full} kernel; it is, in this range, but we use only that it
+acts trivially.) Then
+\[
+  \Gm^{n,r}=\Gb^{n,r}/\bar R, \qquad \Gu^{n,r}=\Gb^{n,r}/\Gbar ,
+\]
+and mutation is $\Gbar$-equivariant, so these quotients are graphs in the
+usual way.
+
+\section{From the labelled graph to a subgroup}\label{sec:reduction}
+
+The reduction is standard covering-space bookkeeping, stated for a group
+action that is \emph{not} free --- which is exactly where care is needed.
+
+\begin{lemma}\label{lem:transitive}
+Let a finite group $\Gbar$ act by automorphisms on a graph $\Gb$ with
+connected quotient $\Gu=\Gb/\Gbar$. Then $\Gbar$ permutes the components
+of $\Gb$ transitively, every component maps onto $\Gu$, and for a base
+vertex $v_0$,
+\[
+  \#\mathrm{components}(\Gb)=[\Gbar:H],\qquad
+  H:=\{g\in\Gbar\;:\;g\cdot v_0\in\mathrm{comp}(v_0)\}.
+\]
+\end{lemma}
+
+For a chirotope $\chi$ and a basis $B$ at which $\chi$ is mutable, write
+$\mu_B\chi$ for the chirotope agreeing with $\chi$ except that its sign
+on $B$ is negated. If the class of $\mu_B\chi_c$ is $c'$, the
+\emph{voltage} of that mutation edge is the element $t\in\Gbar$ with
+$\mu_B\chi_c=t\cdot\chi_{c'}$ (as pairs); it is well defined up to
+$\Stab_{\Gbar}(\chi_{c'})$, and any choice may be fixed.
+
+\begin{lemma}\label{lem:gens}
+Fix class representatives $\chi_c$ and a spanning tree of $\Gu$ rooted at
+$c_0$. Define transports $\tau_c\in\Gbar$ by $\tau_{c_0}=\mathrm{id}$
+and, along each tree edge directed away from the root, $c\to c'$ with
+voltage $t$, by $\tau_{c'}=\tau_c\,t$. Then $H$ is generated by
+\[
+  \underbrace{\{\tau_c\,u\,\tau_c^{-1}\;:\;u\in\Stab_{\Gbar}(\chi_c)\}}_{\text{(i) stabilizers}}
+  \;\cup\;
+  \underbrace{\{\tau_c\,t\,\tau_{c'}^{-1}\;:\;\text{every mutation edge }(c,j,c')\}}_{\text{(ii) voltages}} .
+\]
+\end{lemma}
+
+\begin{proof}
+$(\supseteq)$ Induction along the tree gives $\tau_c\cdot\chi_c\in
+\mathrm{comp}(v_0)$ for every $c$, mutations being $\Gbar$-equivariant.
+Then $\tau_c u\tau_c^{-1}$ fixes the component vertex $\tau_c\cdot\chi_c$,
+and $\tau_c t\tau_{c'}^{-1}$ carries $\tau_{c'}\cdot\chi_{c'}$ to
+$\tau_c\cdot(\mu_B\chi_c)$, a neighbour of $\tau_c\cdot\chi_c$; an
+element carrying some component vertex into the component stabilizes it.
+Note this direction needs only that the tree paths exist, not that the
+search is complete, so elements harvested from a partial search are
+genuine members of $H$.
+
+$(\subseteq)$ Let $g\in H$, witnessed by a walk
+$v_0=x_0\sim x_1\sim\dots\sim x_k=g\cdot v_0$ in $\Gb$. Write
+$x_i=s_i\cdot\chi_{c_i}$ with $s_0=\mathrm{id}$. Applying $s_i^{-1}$ to
+the edge $x_i\sim x_{i+1}$ shows $s_i^{-1}s_{i+1}\cdot\chi_{c_{i+1}}$ is
+a mutation of $\chi_{c_i}$, so
+$s_i^{-1}s_{i+1}\in t_i\Stab_{\Gbar}(\chi_{c_{i+1}})$ for the voltage
+$t_i$ of some mutation edge $c_i\to c_{i+1}$. Hence $g=s_k h$ with
+$h\in\Stab_{\Gbar}(\chi_{c_0})$ and $s_k$ a product of the $s_i^{-1}s_{i+1}$;
+inserting $\tau_{c_i}^{-1}\tau_{c_i}$ between consecutive factors
+rewrites that product as a word in the displayed conjugated families,
+which telescopes because $\tau_{c_0}=\mathrm{id}$.
+\end{proof}
+
+Family (i) is not optional: the action of $\Gbar$ on chirotopes has
+nontrivial stabilizers, and omitting the stabilizer conjugates computes a
+proper subgroup of $H$. We learned this the hard way
+(\S\ref{sec:honesty}).
+
+Combining, with $\Gu$ connected: $\Gb^{n,r}$ is connected iff
+$H=\Gbar$. For the middle level, the components of
+$\Gm^{n,r}=\Gb^{n,r}/\bar R$ are the $\bar R$-orbits on the components of
+$\Gb^{n,r}$; since $\bar R$ is normal, $\bar R H$ is a subgroup, and
+Lemma~\ref{lem:transitive} gives
+\[
+  \#\mathrm{components}(\Gm^{n,r})=[\Gbar:\bar R H]=[S_n:\pi(H)] .
+\]
+So the labelled question becomes: compute a subgroup of $\Gbar$ from data
+harvested on the quotient, and ask whether it is everything.
+
+\section{The dichotomy at odd $n$}\label{sec:dichotomy}
+
+Write $S:=H\cap\bar R$ for the sign part of $H$. Since $\bar R$ is normal
+and abelian, conjugation gives
+$(\sigma,\delta,s)(\mathrm{id},\varepsilon,0)(\sigma,\delta,s)^{-1}
+ =(\mathrm{id},\sigma(\varepsilon),0)$, so $S$ is $\pi(H)$-invariant. If
+$\pi(H)=S_n$ then $S$ is an $\FF_2[S_n]$-submodule of $\bar R$.
+
+\begin{proof}[Proof of Proposition~\ref{prop:dichotomy}]
+For odd $n$ we have $1^n\notin E$, where $E\le\FF_2^n$ is the even-weight
+subspace, so $\FF_2^n=\langle 1^n\rangle\oplus E$ and $\bar R\cong E$. We
+check directly that $E$ is an irreducible $\FF_2[S_n]$-module. Let
+$0\ne V\le E$ be invariant and $0\ne v\in V$. Since $v$ has even weight
+and $n$ is odd, $v$ has a coordinate $i$ in its support and a coordinate
+$j$ outside it; then $v+(i\,j)\cdot v=e_i+e_j$ lies in $V$. The
+$S_n$-orbit of $e_i+e_j$ is all weight-two vectors, and these span $E$,
+so $V=E$. Hence $S\in\{0,\bar R\}$, and by Lemma~\ref{lem:transitive} the
+number of components is $[\Gbar:H]\in\{2^{n-1},1\}$.
+\end{proof}
+
+The conclusion is corroborated computationally, independently of the
+argument: \texttt{submodules.py} enumerates the $S_n$-invariant subspaces
+of $\FF_2^n$ for $n=5,\dots,10$ as sums of spans of weight classes,
+finding exactly four for each $n$; for $n\le 7$ it also enumerates
+\emph{all} subspaces through their reduced row echelon forms and filters
+them, the totals $374/2825/29212$ matching the Galois numbers (so that
+enumeration is provably exhaustive) and agreeing with the first method
+where both were run. A deliberately non-invariant subspace is rejected by
+the invariance test. For even $n$ an intermediate value is admissible;
+the full sign parts observed at $n=8$ are therefore not forced by
+algebra.
+
+Proposition~\ref{prop:dichotomy} is not needed for the final verdict ---
+the certificate exhibits a full sign span directly --- but it explains
+the shape of the computation: at $n=9$ the tracked sign dimension jumped
+from its minimum to its maximum with no intermediate value, and the
+proposition says no intermediate value was ever available.
+
+\section{The computation}\label{sec:mass}
+
+Ranks $r\le 1$ and $r\ge n-1$ are degenerate: the three-term
+Grassmann--Pl\"ucker condition set is empty (it is nonempty only when
+$r\ge2$ and $n\ge r+2$), so every sign vector on the $\binom{n}{r}$ bases
+is a chirotope and every single-bit flip is a mutation; $\Gb^{n,r}$ is
+then a folded cube, visibly connected. Rank $2$ is likewise elementary: a
+uniform oriented matroid of rank $2$ on $n$ elements is a cyclic
+arrangement of $n$ signed points on a circle, so its chirotope is
+determined by that cyclic order together with the reorientation, a
+mutation transposes two neighbours, and adjacent transpositions connect
+all such data. Rank $3$ is \cite[Prop.~3.2]{KM23}. Rank $4$ is computed
+exhaustively as described below. Ranks $5\le r\le n-2$ follow by duality. For a basis
+$B=\{x_1<\dots<x_r\}$ with complement
+$E\setminus B=\{x_{r+1}<\dots<x_n\}$, the dual chirotope is
+\[
+  \chi^*(x_{r+1},\dots,x_n)\;=\;\chi(x_1,\dots,x_r)\cdot
+    \operatorname{sgn}(x_1,\dots,x_n),
+\]
+$\operatorname{sgn}$ being the sign of the permutation
+$(x_1,\dots,x_n)$ of $E$. Then $\chi\mapsto\chi^*$ is a graph
+isomorphism $\Gb^{n,r}\cong\Gb^{n,n-r}$ (and likewise for $\Gm$ and
+$\Gu$), carrying the mutation at $B$ to the mutation at $E\setminus B$
+(verified computationally on all $135$ classes at $(8,3)$, among
+others). This
+covers every rank at $n\le 9$.
+
+For rank $4$ at $n\le 8$ (and, as a control, rank $3$ at $n\le 9$, where
+the answer is already known from \cite[Prop.~3.2]{KM23}) the quotient
+$\Gu$ is small enough for an exhaustive breadth-first search harvesting
+both generator families of Lemma~\ref{lem:gens} at every class. In each
+case $H=\Gbar$, so all three graphs are connected; the rank-$3$ runs
+agreeing with \cite{KM23} is one of this project's regression controls.
+
+The case $(9,4)$ needs $9{,}276{,}595$ classes and
+$150{,}561{,}898$ directed edge traversals, run as a disk-based
+level-synchronous search. Completeness is certified by a \emph{mass
+identity}. Every class $c$ contributes an orbit of size
+$|G'_9|/|\Stab(\chi_c)|$ labelled objects, and the total number of
+labelled uniform chirotopes is computed by a structurally independent
+counting route --- counting single-element extensions of each of the
+$2{,}628$ classes at $(8,4)$, which touches neither the mutation graph
+nor the search:
+\[
+  \sum_{c\ \text{found}}\frac{|G'_9|}{|\Stab(\chi_c)|}
+  \;=\;1{,}722{,}704{,}635{,}330{,}560
+  \;=\;N_{\chi}(4,9),
+\]
+an exact integer identity, reached exactly. Provided the enumerated
+classes are valid, pairwise inequivalent, and carry their true stabilizer
+orders, and provided the extension target is exact, a missed class leaves
+the sum short and it cannot overshoot; under those hypotheses the
+identity proves simultaneously that the search visited every class ---
+hence that $\Gu^{9,4}$ is connected --- and Theorem~\ref{thm:count}.
+Those hypotheses are conditions on this project's own canonicalizer and
+extension counter, not on the search: a defective list carrying duplicates
+or wrong stabilizer orders could in principle overshoot. The first three
+are discharged by the coverage certificate of \S\ref{sec:honesty}, checked
+by a program sharing no code with the generator; the fourth is not. Of
+the classes found, $8{,}913$ have a nontrivial stabilizer.
+
+The harvested holonomy is the full group: $\pi(H)=S_9$ of order
+$362{,}880$ and the sign part full. Notably, on the shipped certificate
+the $73$ stabilizer-derived generators are all even permutations and
+generate exactly $A_9$, and a single edge voltage of odd permutation part
+supplies the remaining coset --- so on that certificate family (i) alone
+does not reach $S_9$. (We do not claim this of the complete family (i)
+over all classes, which was not enumerated: harvesting stops once $H$ is
+full.) With
+$\Gu^{9,4}$ connected, Lemma~\ref{lem:transitive} gives
+$[\Gbar:H]=1$, so $\Gb^{9,4}$, $\Gm^{9,4}$ and $\Gu^{9,4}$ are connected,
+and $(9,5)$ follows by duality. This completes
+Theorem~\ref{thm:main}.
+
+\begin{remark}
+The computation was interrupted by an out-of-memory kill and resumed from
+a checkpoint. A resumed run harvests edge voltages only from levels
+expanded after the resume, so the subgroup it computes is a \emph{lower}
+bound $H'\le H$. Since $H'=\Gbar$ was reached, $H=\Gbar$ outright: a
+lower bound equal to the whole group is the whole group. The direction
+matters --- for a negative verdict a lower bound proves nothing, and a
+completing pass over the earlier levels would be mandatory. The shipped
+summary records the lower-bound status explicitly.
+\end{remark}
+
+\section{Certificates, and what is not certified}\label{sec:honesty}
+
+The claims above rest on artifacts rather than on trust in the search
+programs, but the two halves rest on different artifacts and to different
+depths, and the first boundary below says how.
+Each completed case emits representatives, a spanning tree with voltages,
+generators, and exhibits; two checkers sharing no code with the generator
+--- one pure Python, one \texttt{numpy} --- re-verify the chirotope
+conditions, the group action, the mutation identity of every tree edge,
+the generator words, and the resulting group orders from scratch. Five
+sabotage mutations (corrupted representative, corrupted voltage,
+corrupted generator, truncated exhibits, re-pointed tree parent) are
+rejected, and the verifier fails loudly when a required artifact is
+missing, renamed or emptied.
+
+What follows states the boundaries plainly, beginning with the one that is
+sharp enough to belong before the claims it qualifies.
+
+\emph{The compact certificates prove $H=\Gbar$; coverage is certified by a
+separate artifact, and only on one side of the mass identity.} The compact
+$(9,4)$ certificates contain the root-path closure of the classes
+referenced by generators --- a few hundred classes --- which is what the
+holonomy claim needs and all that the checkers above verify. The left-hand
+side of the mass identity is a different object: the list of
+$9{,}276{,}595$ class keys with their stabilizer orders. That list is now
+published as a checkable artifact: the keys sorted, each a $126$-bit
+integer recording the signs of a chirotope on the bases in colex order,
+with each class's stabilizer order; $62$~MB compressed, readable with
+\texttt{numpy} and nothing else, beside a manifest fixing the conventions
+and recording the \texttt{SHA-256} of every array. Too large to track in
+git, it comes from an archived release or from regenerating it with the
+shipped code (about four hours); the manifest, which pins it by hash, is
+tracked. A standalone checker \texttt{coverage\_checker.py}, importing
+nothing from this project and rebuilding the basis order, the
+Grassmann--Pl\"ucker conditions, the sign lattice and the group action from
+scratch, verifies in exact
+integer arithmetic that every key is a valid uniform chirotope; that every
+key is extremal in its own orbit; that the keys are strictly increasing,
+hence pairwise distinct; that every recorded stabilizer order is the true
+one, recomputed by exhaustively enumerating the admissible relabellings
+rather than by rerunning the generator's pruned search; and that the orbit
+masses sum to $1{,}722{,}704{,}635{,}330{,}560$ with a count of
+$9{,}276{,}595$. This was run in full, not sampled: every one of the
+$9{,}276{,}595$ rows, in $510$ seconds on four processes, all checks
+passing. Six sabotages --- a duplicated key, a non-canonical key, a
+corrupted stabilizer order, a Grassmann--Pl\"ucker-invalid key, a truncated
+array, and a stale hash --- are each rejected. Each ships with a
+regenerated, internally consistent manifest, and with the totals repaired
+where they would otherwise betray it, so that none is caught merely by a
+checksum or by arithmetic.
+
+\emph{Two qualifications, and they are not cosmetic.} First, ``extremal in
+its own orbit'' is relative to the convention recorded in the manifest,
+which maximises over the relabellings respecting an invariant colouring of
+the ground set, not over all of $S_n$: the unrestricted maximum differs
+from the stored key on most classes and would cost some $160$ CPU-days
+here. It is still a well-defined function of the $G'$-orbit, the colouring
+being invariant under reorientation and global negation and equivariant
+under relabelling; and that --- not extremality as such --- is what makes
+distinct keys certify distinct classes. A reader who wants that fact rather
+than the word ``canonical'' must read the forty lines defining the
+colouring. Second, the checker certifies the
+left-hand side only. The target $1{,}722{,}704{,}635{,}330{,}560$ enters it
+as a constant; an option re-adds the tracked $2{,}628$-row extension table
+and confirms that it sums to that number, but nothing recomputes the
+extension counts, nor re-derives the $(8,4)$ catalog they are taken over.
+Those are cross-checked against every published count that exists, and the
+identity closes exactly in the smaller cases where the answer is
+independently known, but they are reproducible rather than
+certified. So Theorem~\ref{thm:count} and the coverage half of
+Theorem~\ref{thm:main} are certificate-backed on the enumeration, under a
+stated convention, and reproducible-only on the target.
+
+\emph{One earlier observation was withdrawn.} An intermediate report from
+this project described a structural phenomenon at $(9,4)$: the sign part
+of the holonomy appeared to stay trivial over a large neighbourhood of
+the alternating oriented matroid, which was read as evidence that the
+labelled question there was delicate and perhaps negative. It was an
+artifact of a defect in the search engine, which computed the stabilizer
+of each newly discovered class and retained only its order, thereby
+harvesting family (ii) of Lemma~\ref{lem:gens} but never family (i). With
+the missing generators supplied the sign part is full immediately. The
+observation is retracted. The defect escaped notice because the smaller
+cases had run almost entirely through a different code path; the
+regression suite now forces the path that the large runs take. We record
+this because the failure mode is general: an incomplete harvest produces
+a plausible \emph{negative} structural finding, and a negative finding is
+exactly what one is predisposed to believe when a counterexample has been
+conjectured.
+
+\section*{Relation to \cite{KM23}}
+
+Their rank-$3$ theorem $\Gb^{n,3}$ is theirs and is used here; our
+labelled results add $(8,4)$, $(9,4)$ and $(9,5)$, which is what closes
+$n\le 9$. Our $\Gm$ results for $n\le 9$ reprove theirs; the difference
+is not a stronger theorem but that the computation here ships
+certificates and checkers, whereas their connectivity computation ---
+published in \cite{KM23}, with its method described there --- is reported
+without publicly archived code, data or certificates. Their suspicion of
+a labelled counterexample is not refuted in general; it is refuted in the
+range $n\le 9$, which is where they had verified the other two levels.
+Our Theorem~\ref{thm:count} confirms the value in their Table 1 against
+\cite{FMM13}; the $(9,3)$ entry of that table needs the correction noted
+in \S1.
+
+\section*{Provenance}
+
+This work was carried out by AI systems (Claude, with adversarial review
+by Gemini and GPT models) directing exact computation under human
+direction, with deliberately-failing controls in every search and
+independent re-verification of the serialized certificates (with the
+scope limits of \S\ref{sec:honesty}). No claim here rests on unverified
+model output: the verdicts rest on those certificates and on the short
+arguments above, both checkable by the reader. The author
+directed the work and is responsible for the claims. The retraction in
+\S\ref{sec:honesty} was found by this process, not despite it.
+
+\begin{thebibliography}{9}
+\bibitem{Finschi} L.~Finschi, \emph{Catalog of oriented matroids},
+  \url{https://finschi.com/math/om/} (uniform rank-4 classes on 9
+  elements computed by S.~Moriyama, December 2010).
+\bibitem{FMM13} K.~Fukuda, H.~Miyata, S.~Moriyama,
+  \emph{Complete enumeration of small realizable oriented matroids},
+  Discrete Comput. Geom. \textbf{49} (2013), 359--381;
+  \href{https://arxiv.org/abs/1204.0645}{arXiv:1204.0645}.
+\bibitem{KM23} K.~Knauer, T.~Marc, \emph{Corners and simpliciality in
+  oriented matroids and partial cubes}, European J. Combin. \textbf{112}
+  (2023), 103714; \href{https://arxiv.org/abs/2002.11403}{arXiv:2002.11403}.
+\bibitem{RS88} J.-P.~Roudneff, B.~Sturmfels, \emph{Simplicial cells in
+  arrangements and mutations of oriented matroids},
+  Geom. Dedicata \textbf{27} (1988), 153--170.
+\end{thebibliography}
+
+\end{document}
