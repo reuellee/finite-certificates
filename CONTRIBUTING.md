@@ -76,9 +76,12 @@ Every pull request runs the verifier suite in CI. You can run the same thing
 locally before sending:
 
 ```
-python run_all.py --fast     # the quick suite
-python run_all.py            # everything (slower)
+python run_all.py --fast     # the quick suite (local iteration)
+python run_all.py            # everything — this is what CI runs
 ```
+
+Note that `run_all.py` is not read-only: a few verifiers regenerate the
+artifacts they check, so your working tree may show diffs afterwards.
 
 A green run is necessary, not sufficient: results are read by a human too.
 

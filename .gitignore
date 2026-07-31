@@ -1,2 +1,12 @@
 __pycache__/
 *.pyc
+
+# Raw agent-session transcripts and tool logs: they carry local paths and
+# full prompts, and the curated REVIEW_*.md files are the artifact of record.
+*.log
+*.err
+# LaTeX build products
+*.aux
+*.synctex.gz
+*.fdb_latexmk
+*.fls
