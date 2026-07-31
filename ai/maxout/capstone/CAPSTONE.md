@@ -104,13 +104,19 @@ k ∈ {1,2} jointly; the family covers the complementary 33,437.)
 
 Every certificate in every bundle is re-verified **in one standalone
 run** by `../stage2c2_gpt/audit_all_certificates.py`: nonnegativity and
-nontriviality of coefficients, all eight quotient-ring identities
+nontriviality of coefficients, all ten quotient-ring identity families
+(the five u_t-dotted T-identities and five weight identities — the
+five u_t span R³, so their vanishing forces the 3-vector T-part to
+vanish; "eight columns" below refers to B's specialization)
 re-derived in exact rational arithmetic, and specialization at U_ints
 against an independently written row builder. Zero failures.
 
-Canary discipline (instituted after a caught sign bug — see §6): every
-sweep wires in a provably-uncertifiable negative control and a known
-positive control; all passed in every shard.
+Canary discipline (instituted after a caught sign bug — see §6): the
+k ∈ {1,2} completion sweep and the {0,2}-split sweep wire in a
+provably-uncertifiable negative control and a known positive control,
+all passing in every shard. The k = 0 sweep ran without canaries; its
+certificates are covered by the standalone audit and were re-verified
+at fresh realizations of the chirotope in review.
 
 ## 3. From the library to the theorem
 
@@ -169,6 +175,19 @@ can be chosen inside it. ∎
 Consequently every instance with f₀ ≥ 43 yields, arbitrarily nearby,
 a strict-generic-position instance with f₀ ≥ 43 in the (w, s) normal
 form with strict side signs. From here on we work with such instances.
+
+**Remark (candidate scope).** The lemma and the whole chain extend
+verbatim to the paper's wider family of *zonoboxtope candidates* (two
+zonotopes with correspondingly parallel generators and independent
+translations, cf. its Remark 6.7): restate the lemma in candidate
+coordinates — translations c_A, c_B ∈ R³ and width vectors
+a, b ∈ R⁵₊, which subsume the shared-midpoint parameterization —
+with the same proof (candidates vary polynomially; the excluded loci,
+including vanishing width differences a_i − b_i, are proper algebraic
+subsets). The certificate systems only ever see (T, w) with T free, so
+no other step changes; the arXiv note (`../paper/maxout35note.tex`)
+states the argument in this generality. Hence max f₀ = 42 for
+candidates as well, attained by a genuine zonoboxtope.
 
 ### 3.2 Instance normalization: WLOG χ(U) = χ_ref and s ∈ four subsets
 

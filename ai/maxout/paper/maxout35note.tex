@@ -70,9 +70,9 @@ $u_i\in\RR^d$, the parameters are $(u_i, m_i, a, b)$.
 For $d=3$, \cite[Proposition 6.5]{BCLS} states that a
 $(3,n)$-zonoboxtope has at most $16, 26, 44, 60$ vertices for
 $n=3,4,5,6$, and that these bounds are tight. The upper bounds are
-proven there by a depth-first search over the combinatorial types of
-three-dimensional zonotopes; the tightness by extremal examples found
-by sampling. Part 1 of \cite[Conjecture 6.6]{BCLS} proposes, for the
+proven there by a depth-first search over valid bicolorings, performed
+for each combinatorial type of three-dimensional zonotope; the
+tightness by extremal examples found by sampling. Part 1 of \cite[Conjecture 6.6]{BCLS} proposes, for the
 maximal vertex number of a $(3,n,1)$-maxout polytope,
 \[
   4\sum_{k=0}^{2}\binom{n-1}{k} \ \text{ if } n \text{ is odd},
@@ -99,7 +99,7 @@ explicit instance, once equipped with vertex witnesses by any exact
 convex-hull code, can be checked in seconds in the format of our
 ancillary verifier. Following \cite[Remark 6.7]{BCLS}, our upper bound
 is proven for the wider family of \emph{zonoboxtope candidates} (two
-zonotopes with pairwise parallel generators and independent
+zonotopes with correspondingly parallel generators and independent
 translations --- the translation parameter $T$ below is
 unconstrained), while the $42$-vertex witness is a genuine
 zonoboxtope; so the maximum is $42$ for both families. The attainment
@@ -185,10 +185,10 @@ $4$-dimensional zonotope with $6$ generic generators.
 \end{proposition}
 
 We also certify $58$ vertices at $(4,5)$ and $84$ at $(3,7)$
-(conjectured maxima: $60$ and $88$). Searches that are exhaustive for
-each fixed sampled direction configuration found no more, but the
-space of direction configurations was sampled, not exhausted; whether
-the odd-case deficit $2$ persists for all odd $n>3$ is an open
+(conjectured maxima: $60$ and $88$). Extensive searches (complete only
+for the restricted models they searched, with direction configurations
+sampled rather than exhausted) found no more; whether the conjectured
+odd-$n$ values fail for all odd $n>3$, and by how much, is an open
 question we do not settle here.
 
 \section{The proof}\label{sec:architecture}
@@ -203,7 +203,9 @@ the two zonotopes, so $f_0(Q)\le f_0(Z^a)+f_0(Z^b)$. The vertex count
 of a $3$-dimensional zonotope equals the chamber count of the central
 plane arrangement dual to its generators, which is at most
 $2\bigl(\binom40+\binom41+\binom42\bigr)=22$ for five planes, with
-equality iff the arrangement is simple. Hence if the direction
+equality iff the arrangement is simple; chamber counts of central
+arrangements are even (chambers come in antipodal pairs), so a
+non-simple arrangement has at most $20$. Hence if the direction
 configuration $U=(u_1,\dots,u_5)$ is \emph{not} generic (some $3\times3$
 minor vanishes), each copy has at most $20$ vertices and $f_0\le 40$;
 and if some $a_i=0$ or $b_i=0$, that copy has at most
@@ -214,15 +216,16 @@ assume $U$ generic and $a,b>0$.
 For generic $U$ and $a,b>0$ the two zonotopes are normally equivalent,
 and (specializing the framework of \cite[\S\S 5--6]{BCLS} to two
 normally equivalent zonotopes)
-$f_0(Q) = \#\text{chambers} + \#\text{bicolored chambers}$, where a
+$f_0(Q) \le \#\text{chambers} + \#\text{bicolored chambers}$, where a
 chamber of the arrangement $\{u_i^\perp\}$ is \emph{bicolored} when it
 contains linear objective directions maximized on each of the two
-copies. With $22$ chambers this gives
-$f_0\le 44$, with equality iff every chamber is bicolored.
+copies; the inequality is an equality in the strict generic position
+of \S\ref{sec:endgame}. With $22$ chambers this gives $f_0\le 44$,
+attainable only with every chamber bicolored.
 
 Write $\delta_i = a_i - b_i$, let $s_i=\sign\delta_i\in\{\pm1\}$ be the
-\emph{split} and (after a normalization removing square roots)
-$w_i>0$ the residual weight; all translation freedom enters through a
+\emph{split} and $w_i=|\delta_i|>0$ the residual weight; all
+translation freedom enters through a
 single unconstrained vector $T\in\RR^3$ (for zonoboxtopes
 \eqref{eq:zbt}, an explicit linear combination of the $m_i$; for
 zonoboxtope candidates, the relative translation of the two copies).
@@ -261,8 +264,9 @@ Two mechanisms produce the library. If some pair class $(i,j)$ has
 equal ray signs $\sigma^*$ with $\sigma^* s_t=-1$ for all
 $t\notin\{i,j\}$, the closed form $y_{ij,\pm}=1$,
 $y_{w,t}=2D_{tij}$ is a certificate with no Grassmann--Pl\"ucker
-reduction needed (and this \emph{single-class family} is provably the
-complete coefficientwise-positive mechanism among ordinary polynomial
+reduction needed (and, at the prefix splits $k\in\{1,2\}$, this
+\emph{single-class family} is provably the complete
+coefficientwise-positive mechanism among ordinary polynomial
 identities, i.e.\ those requiring no Grassmann--Pl\"ucker reduction). All remaining systems are
 killed by explicit degree-$(2,3)$ certificates found by exact kernel
 computations in the quotient ring --- normal forms modulo a
@@ -270,8 +274,11 @@ Gr\"obner basis of the signed-determinant Pl\"ucker ideal over
 $\mathbb{Q}$ --- with typical supports of four terms.
 Deliberately impossible control systems (``canaries''), a discipline
 instituted after one such control exposed a verifier defect in an
-earlier stage, were wired into every final certificate sweep and
-correctly rejected throughout.
+earlier stage, were wired into the $k\in\{1,2\}$ completion sweep and
+the $\{1,3\}$-split sweep and correctly rejected throughout; the
+$k=0$ sweep ran without canaries, and its certificates are covered by
+the standalone audit and were re-verified at fresh realizations in
+review.
 
 \subsection{Symmetry: one cell, four splits}\label{sec:symmetry}
 The group $G=S_5\ltimes\{\pm1\}^5$ acts on configurations by
@@ -282,9 +289,11 @@ $m, a, b, s$ along). Two exact computations reduce the quantifiers:
 
 \begin{itemize}
 \item[(i)] The uniform rank-$3$ chirotopes on $5$ elements number
-exactly $384$ and form a \emph{single} $G$-orbit
-(all rank-$3$ oriented matroids on at most eight elements are
-realizable \cite[Ch.~8]{OMbook}, so there are no other cells). Hence every generic instance moves, without
+exactly $384$ and form a \emph{single} $G$-orbit. (Only the
+containment direction is used: the chirotope of any real generic
+configuration satisfies the three-term sign conditions, hence lies
+among the $384$. That all of them are in fact realizable
+\cite[Ch.~8]{OMbook} is reassurance, not a step of the proof.) Hence every generic instance moves, without
 changing its polytope, to an instance whose configuration realizes one
 fixed reference chirotope $\chi_{\mathrm{ref}}$ --- that of the integer
 configuration
@@ -384,9 +393,11 @@ stabilizer and split-orbit accounting; stdlib),
 \texttt{capstone/check\_transport.py} (exact transport verification),
 and \texttt{stage2c2\_gpt/audit\_all\_certificates.py} --- a single
 standalone audit that re-verifies \emph{every} certificate in the
-library: coefficient nonnegativity, all quotient-ring identities
-re-derived modulo the Grassmann--Pl\"ucker ideal in exact rational
-arithmetic, and specialization at $U_{\mathrm{ref}}$ against an
+library: coefficient nonnegativity, all quotient-ring identities of
+every explicit certificate re-derived modulo the
+Grassmann--Pl\"ucker ideal in exact rational arithmetic (the family
+certificates satisfy ordinary polynomial identities needing no
+reduction), and specialization at $U_{\mathrm{ref}}$ against an
 independently written row builder ($132{,}681$ checks including
 redundant coverage; zero failures; about $20$ minutes). The
 generation-side programs, sweep artifacts, and a complete prose account
