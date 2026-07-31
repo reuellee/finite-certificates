@@ -20,13 +20,18 @@ trail; all exact integer arithmetic, stdlib + numpy):
   (extension generation + canonicalization anchored to Finschi's
   published representatives), reproducing every published count and
   exposing a typo in Knauer–Marc's Table 1 (482 → 4382 at (3,9)).
-* Connectivity verdicts with standalone certificates: all three graphs
-  are CONNECTED for every rank at n ≤ 8, and for ranks 1,2,3 and
-  coranks ≤ 1 at n = 9. (9,4)/(9,5): see OMGAMMA.md Section 6/8 (final
-  campaign).
+* Connectivity verdicts with standalone certificates: **all three graphs
+  are CONNECTED for every rank at every n ≤ 9** — including the labeled
+  graph $\overline{\mathcal{G}}^{n,r}$, the level where Knauer–Marc
+  suspect a counterexample. **There is no counterexample below n = 10.**
+  The last open case, (9,4) (≅ (9,5) by duality), was settled by an
+  exhaustive BFS over its 9,276,595 isomorphism classes and
+  150,561,898 mutation-edge traversals.
 * Mass-formula (orbit-stabilizer) completeness certificates; the
-  (4,9) class count arbitration between Finschi's database / Knauer–Marc
-  (9,276,595) and Fukuda–Miyata–Moriyama 2013 (9,276,601).
+  (4,9) class-count discrepancy between Finschi's database / Knauer–Marc
+  (9,276,595) and Fukuda–Miyata–Moriyama 2013 (9,276,601) **resolved in
+  favour of 9,276,595** by an exact integer identity between two
+  structurally different sweeps.
 * A dichotomy proposition (`submodules.py`): once π(H) = S_n, the sign
   part of the holonomy is an F₂[S_n]-submodule of {0,1}ⁿ/⟨1ⁿ⟩, which for
   ODD n is irreducible — so #components of the labeled graph is

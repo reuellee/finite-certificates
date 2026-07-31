@@ -1,6 +1,10 @@
 # OMGAMMA — connectivity of the mutation graphs of uniform oriented matroids, n ≤ 9
 
-Slow-lane program note. Started 2026-07-31. Status: ACTIVE.
+Slow-lane program note. Started 2026-07-31. Status: **MAIN QUESTION
+SETTLED** (2026-07-31) — Γ̄^{n,r}, Γ̃^{n,r} and Γ̂^{n,r} are connected for
+every n ≤ 9 and every r, so there is no counterexample to the
+Cordovil–Las Vergnas conjecture, at any of its three levels, below
+n = 10. The final open case (9,4)/(9,5) is in §6.
 Predecessor standards apply: every claim carries a machine-checkable
 certificate or an explicit trust boundary; deliberately-broken controls
 ("canaries") are wired into every computation.
