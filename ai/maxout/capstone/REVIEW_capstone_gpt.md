@@ -105,3 +105,72 @@ the written proof before it is cited as a theorem.
    \(D\)'s make every nonzero nonnegative-coefficient multiplier genuinely
    nontrivial. The optional cddlib rerun was unavailable because `cdd` is
    not installed, but the exact stdlib attainment verifier passed.
+
+## Postscript — 2026-07-31: assessment after commit `c4393ff`
+
+1. **Finding 1: RESOLVED.**  
+   **Location checked:** `CAPSTONE.md` §1 and the new generic-position
+   perturbation lemma in §3.1.
+
+   The lemma now explicitly identifies the residual
+   \(\delta_i=a_i-b_i\), acknowledges that the \((w,s)\) normal form
+   excludes \(\delta_i=0\), and moves any hypothetical \(f_0\ge43\)
+   instance into the nonzero-residual regime before §3.2.
+
+   The proof sketch is adequate. A vertex of a finite polytope has a
+   strict exposing functional relative to all other *distinct* candidate
+   points. Under a sufficiently small parameter perturbation, the cluster
+   of candidate indices formerly representing that vertex remains
+   separated by a uniform positive margin from every other cluster; at
+   least one maximizer in the cluster is a vertex. Different original
+   vertices remain in disjoint neighborhoods, so at least \(v\) vertices
+   persist.
+
+   The excluded loci are genuinely proper algebraic subsets. Residual
+   zeros and side zeros are nontrivial polynomial equations. For two
+   indexed candidates from the same copy, their difference is a nonzero
+   polynomial because some differing sign contributes a nonzero \(u_i\);
+   for candidates from different copies, the independent \(a,b,m\)
+   variables make the difference polynomial nonzero even when their sign
+   patterns happen to agree. Thus their coincidence locus is proper, and
+   a finite union of these loci cannot fill any parameter neighborhood.
+   The lemma's parenthetical justification mentions differing sign
+   patterns too narrowly, but this does not affect the argument.
+
+2. **Finding 2: RESOLVED.**  
+   **Location checked:** `CAPSTONE.md` §3.1 and rewritten §3.5.
+
+   The perturbation now simultaneously removes residual zeros, side
+   equalities, and candidate coincidences while preserving at least the
+   original vertex count. Section 3.5 therefore applies the chamber
+   identity and cycle parity only in the regime where the count is
+   literal. Starting from any \(f_0\ge43\), the nearby strict-generic
+   instance still has \(f_0\ge43\); parity and the cap force \(f_0=44\),
+   which §3.4 excludes. This closes both the 43 case and non-strict 44
+   without assuming the conclusion of the perturbation.
+
+3. **Finding 3: RESOLVED.**  
+   **Location checked:** `CAPSTONE.md` §3.2.
+
+   The revised text correctly distinguishes the physical copy swap
+   \((T,s,\sigma)\mapsto(-T,-s,-\sigma)\) at fixed ray labels from the
+   implemented involution obtained after antipodal ray relabeling. The
+   stated row identity is the correct algebraic transport used by the
+   proof.
+
+4. **Finding 4: NOT RESOLVED (MINOR).**  
+   **Location checked:** `CAPSTONE.md` §4 and the import chains of
+   `audit_all_certificates.py` and `check_transport.py`.
+
+   The manifest now correctly says steps 3–5 are not stdlib-only and need
+   NumPy/SciPy. It still says only step 3 needs SymPy. In fact steps 4 and
+   5 import `gp_degree3_search.py` as well, and that module imports and
+   uses SymPy to construct the signed-\(D\) Gröbner basis and normal
+   forms. The accurate dependency sentence is that **steps 3–5 require
+   NumPy, SciPy, and SymPy**. This is solely a reproduction-instructions
+   defect and has no effect on the mathematics.
+
+Because one minor manifest error remains, not all four findings are
+resolved. The mathematical reservations are cleared: **the mathematical
+verdict is ACCEPT**. The document-level verdict remains **ACCEPT WITH
+RESERVATIONS** only until the SymPy dependency sentence is corrected.

@@ -159,10 +159,12 @@ distinct vertices of Q′, so f₀(Q′) ≥ v. The conditions to avoid — a
 vanishing residual, a vanishing side value, a coincidence of two
 candidates that are not identical as polynomial maps — each cut a
 proper algebraic subset of the parameter space (each is a nontrivial
-polynomial equation: the candidate-difference polynomials are nonzero
-because the generic u_i span R³ and the sign patterns differ). A finite
-union of proper algebraic subsets has dense open complement, so the
-perturbation can be chosen inside it. ∎
+polynomial equation: same-copy candidate differences are nonzero
+because some differing sign contributes a nonzero u_i, and cross-copy
+differences are nonzero polynomials even for matching sign patterns
+because the a, b, m variables are independent). A finite union of
+proper algebraic subsets has dense open complement, so the perturbation
+can be chosen inside it. ∎
 
 Consequently every instance with f₀ ≥ 43 yields, arbitrarily nearby,
 a strict-generic-position instance with f₀ ≥ 43 in the (w, s) normal
@@ -272,9 +274,10 @@ Together: **max f₀(3,5) = 42.**
 ## 4. Verification manifest
 
 Run everything with CPython ≥ 3.10. Steps 1, 2, and 6's
-`verify_c66_new_cases.py` are stdlib-only; steps 3–5 need
-numpy/scipy (and step 3 sympy) for matrix assembly — the verification
-arithmetic itself is exact `Fraction` throughout. From `ai/maxout/`:
+`verify_c66_new_cases.py` are stdlib-only; steps 3–5 require NumPy,
+SciPy, and SymPy for matrix assembly and normal forms — the
+verification arithmetic itself is exact `Fraction` throughout. From
+`ai/maxout/`:
 
 1. `python check_om35_uniqueness.py` — 384 chirotopes, single orbit
    (stdlib, seconds).
