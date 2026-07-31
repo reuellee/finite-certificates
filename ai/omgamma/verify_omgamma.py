@@ -42,16 +42,21 @@ def main():
               f"  ({n},{r}) certificate [fast checker]")
         ok &= p.returncode == 0
 
-    big = os.path.join(HERE, "data", "big_4_9")
-    bigfiles = [os.path.join(big, x) for x in
-                ("reps.txt.gz", "tree.txt.gz", "gens.txt", "exhibits.txt")]
-    if all(os.path.exists(x) for x in bigfiles):
-        p = run("checker_fast.py", 9, 4, bigfiles)
-        print(("PASS" if p.returncode == 0 else "FAIL") +
-              "  (9,4) certificate [fast checker]")
-        ok &= p.returncode == 0
-    else:
-        print("SKIP  (9,4) certificate (not present)")
+    # (9,4): the COMPACT sub-certificate (root-path closure of the classes
+    # referenced by holonomy generators).  It certifies H = Gbar, not
+    # class-list completeness -- see OMGAMMA.md Sec. 7.
+    for (r, n) in [(4, 9), (3, 9)]:
+        big = os.path.join(HERE, "data", f"big_{r}_{n}")
+        bigfiles = [os.path.join(big, "subcert_" + x) for x in
+                    ("reps.txt.gz", "tree.txt.gz", "gens.txt",
+                     "exhibits.txt")]
+        if all(os.path.exists(x) for x in bigfiles):
+            p = run("checker_fast.py", n, r, bigfiles)
+            print(("PASS" if p.returncode == 0 else "FAIL") +
+                  f"  ({n},{r}) sub-certificate [fast checker]")
+            ok &= p.returncode == 0
+        else:
+            print(f"SKIP  ({n},{r}) sub-certificate (not present)")
 
     # canary: corrupt a tree voltage -> must be rejected
     tmp = os.path.join(HERE, "data", "verify_tmp")

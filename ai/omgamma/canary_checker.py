@@ -1,6 +1,17 @@
 """Sabotage canaries: the standalone checker MUST fail on each corrupted
-variant of a valid certificate.  Run: python canary_checker.py <n> <r>
-(expects data/flip_<r>_<n>_{reps,tree,gens,exhibits}.txt to exist)."""
+variant of a valid certificate.
+
+  python canary_checker.py <n> <r>
+      canaries data/flip_<r>_<n>_{reps,tree,gens,exhibits}.txt with
+      checker.py (the pure-python reference)
+  python canary_checker.py <n> <r> <reps> <tree> <gens> <exhibits>
+                           [--fast]
+      canaries an arbitrary certificate (e.g. the compact (9,4)
+      sub-certificate); --fast uses checker_fast.py, and .gz inputs are
+      supported (they are decompressed into the temp dir before being
+      corrupted, so the corruption is applied to real certificate text).
+"""
+import gzip
 import os
 import shutil
 import subprocess
@@ -9,27 +20,36 @@ import sys
 TMP = "data/canary_tmp"
 
 
-def run_checker(n, r, files):
+def run_checker(n, r, files, script):
     p = subprocess.run(
-        [sys.executable, "checker.py", str(n), str(r)] + files,
+        [sys.executable, script, str(n), str(r)] + files,
         capture_output=True, text=True)
     return p.returncode
 
 
-def main(n, r):
-    base = {k: f"data/flip_{r}_{n}_{k}.txt"
-            for k in ("reps", "tree", "gens", "exhibits")}
+def _copy_plain(src, dst):
+    """Copy src to dst, decompressing .gz so the corruptors see text."""
+    if src.endswith(".gz"):
+        with gzip.open(src, "rt") as a, open(dst, "w") as b:
+            shutil.copyfileobj(a, b)
+    else:
+        shutil.copy(src, dst)
+
+
+def main(n, r, base=None, script="checker.py"):
+    base = base or {k: f"data/flip_{r}_{n}_{k}.txt"
+                    for k in ("reps", "tree", "gens", "exhibits")}
     os.makedirs(TMP, exist_ok=True)
 
     def variant(name, mutate):
         files = {}
         for k, path in base.items():
             dst = f"{TMP}/{name}_{k}.txt"
-            shutil.copy(path, dst)
+            _copy_plain(path, dst)
             files[k] = dst
         mutate(files)
         rc = run_checker(n, r, [files['reps'], files['tree'],
-                                files['gens'], files['exhibits']])
+                                files['gens'], files['exhibits']], script)
         ok = (rc != 0)
         print(("PASS " if ok else "FAIL ") +
               f"canary '{name}': checker {'rejects' if ok else 'ACCEPTS'}")
@@ -68,7 +88,7 @@ def main(n, r):
 
     def swap_tree_parent(files):
         lines = open(files['tree']).read().splitlines()
-        # point a mid muta­tion edge at a different parent
+        # point a mid mutation edge at a different parent
         for t, ln in enumerate(lines):
             parts = ln.split()
             if parts[1] != 'root' and int(parts[0]) > 3:
@@ -88,4 +108,10 @@ def main(n, r):
 
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]), int(sys.argv[2]))
+    args = [a for a in sys.argv[1:] if a != "--fast"]
+    script = "checker_fast.py" if "--fast" in sys.argv else "checker.py"
+    n, r = int(args[0]), int(args[1])
+    b = None
+    if len(args) >= 6:
+        b = dict(zip(("reps", "tree", "gens", "exhibits"), args[2:6]))
+    main(n, r, b, script)
