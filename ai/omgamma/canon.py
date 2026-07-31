@@ -28,7 +28,7 @@ witness g satisfies  g . chi = chi_canonical  (exactly, as chirotopes).
 from functools import lru_cache
 from itertools import combinations
 
-from core import (bases_colex, basis_index, mutable_bases, g_compose,
+from core import (bases_colex, basis_index, mutable_bases_np, g_compose,
                   g_inverse, g_apply, to_string, from_string)
 
 
@@ -151,7 +151,7 @@ def element_colors(n, r, b, rounds=3):
     Refined WL-style `rounds` times on the complete graph weighted by m2.
     Returns list color[i-1] = hashable color value.
     """
-    mut = mutable_bases(n, r, b)
+    mut = mutable_bases_np(n, r, b)
     bs = bases_colex(n, r)
     deg = [0] * (n + 1)
     m2 = [[0] * (n + 1) for _ in range(n + 1)]

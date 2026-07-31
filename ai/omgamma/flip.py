@@ -21,7 +21,7 @@ This module: exact BFS over all classes with full edge enumeration
 import time
 from math import comb, factorial
 
-from core import (bases_colex, mutable_bases, g_compose, g_inverse,
+from core import (bases_colex, mutable_bases_np, g_compose, g_inverse,
                   g_apply, g_identity)
 from canon import canonical
 
@@ -201,9 +201,12 @@ class Holonomy:
         self.n = n
         self.P = PermGroup(n)
         self.U = SignSpace(n)
-        self.reps = {}        # perm tuple -> full normalized element
-        self.pending = []     # elements whose perm part is already known
-        self.gen_log = []     # provenance records
+        self.reps = {}        # perm tuple -> element index in self.elems
+        self.elems = []       # ordered [(prov, g, grew)] — generates H*:
+        #  every added element is either in elems, or a product of a
+        #  U-spanned pure-sign element with the elems entry of its perm
+        #  part; growers ('grew') have pi generating P.
+        self.gen_log = self.elems       # backwards-compat alias
 
     def _pure(self, g):
         sig, eps, _ = g
@@ -213,28 +216,32 @@ class Holonomy:
         g = normalize(self.n, g)
         pure, eps = self._pure(g)
         new = False
+        keep = False
         if pure:
             new = self.U.add(eps)
+            keep = new
         else:
             sig = g[0]
             if sig in self.reps:
-                v = bar_compose(self.n, g, bar_inverse(self.n,
-                                                       self.reps[sig]))
+                other = self.elems[self.reps[sig]][1]
+                v = bar_compose(self.n, g, bar_inverse(self.n, other))
                 p2, e2 = self._pure(v)
                 assert p2
                 new = self.U.add(e2)
+                keep = new
             else:
-                self.reps[sig] = g
+                self.reps[sig] = len(self.elems)
                 new = self.P.add(sig)
-        if new and prov is not None:
-            self.gen_log.append((prov, g))
+                keep = True          # first carrier of this perm part
+        if keep:
+            self.elems.append((prov, g, new))
         return new
 
     def close(self, rounds=200, rng=None):
         """Product closure to move perm-collisions into the sign space."""
         import random as _r
         rng = rng or _r
-        reps = list(self.reps.values())
+        reps = [self.elems[i][1] for i in self.reps.values()]
         if len(reps) < 2:
             return
         for _ in range(rounds):
@@ -243,7 +250,7 @@ class Holonomy:
             a = rng.choice(reps)
             b = rng.choice(reps)
             self.add(bar_compose(self.n, a, b))
-            reps = list(self.reps.values())
+            reps = [self.elems[i][1] for i in self.reps.values()]
 
     def saturate(self, limit=None):
         """Deterministic EXACT completion of the sign part U.
@@ -258,7 +265,7 @@ class Holonomy:
         the P-orbit closure only needs the P-GENERATOR permutations.
         Cost ~ |P| * |L| compositions.
         """
-        gens = [g for _, g in self.gen_log]
+        gens = [g for (_, g, grew) in self.elems if grew]
         for eps in list(self.U.basis.values()):
             gens.append((tuple(range(1, self.n + 1)), eps, 0))
         ident = tuple(range(1, self.n + 1))
@@ -281,18 +288,18 @@ class Holonomy:
                 cnt += 1
                 if limit and cnt > limit:
                     raise RuntimeError("saturate limit exceeded")
-        # harvest every stored rep against the transversal
-        for sig, g in self.reps.items():
-            t = trans.get(sig)
+        # harvest every stored element against the transversal
+        for (_, g, _grew) in self.elems:
+            t = trans.get(g[0])
             if t is None:
-                # pi(g) not in <pi(L)> would contradict construction
-                raise RuntimeError("rep perm outside transversal (bug)")
+                # pi(g) not in <pi(growers)> would contradict construction
+                raise RuntimeError("elem perm outside transversal (bug)")
             v = bar_compose(self.n, g, bar_inverse(self.n, t))
             assert all(v[0][i] == i + 1 for i in range(self.n))
             self.U.add(v[1])
         # close U under the permutation action of P (generators suffice;
         # iterate to fixpoint)
-        pgens = [g[0] for _, g in self.gen_log]
+        pgens = [g[0] for (_, g, grew) in self.elems if grew]
         changed = True
         while changed:
             changed = False
@@ -312,6 +319,88 @@ class Holonomy:
 
     def status(self):
         return (self.P.order(), factorial(self.n), self.U.dim(), self.n)
+
+    def sign_exhibits(self, max_cosets=400000):
+        """Produce explicit WORDS over gen_log (index i = generator i,
+        index -(i+1) = its inverse; leftmost factor applied last) whose
+        products are pure-sign elements of H spanning F2^n together with
+        the kernel vector 1^n.  Word-tracked transversal BFS + Gaussian
+        elimination in F2^n seeded with 1^n (which needs no exhibit: it is
+        the identity of Gbar).  Every word is re-verified by explicit
+        composition before being accepted."""
+        n = self.n
+        allg = [g for (_, g, _gr) in self.elems]
+        growers = [(i, g) for i, (_, g, gr) in enumerate(self.elems)
+                   if gr]
+        ident = tuple(range(1, n + 1))
+        trans = {ident: (normalize(n, g_identity(n)), ())}
+        basis = {}      # pivot -> (eps_vector, word or None-for-kernel)
+
+        def gauss_add(v, w):
+            while v:
+                p = v.bit_length() - 1
+                if p not in basis:
+                    basis[p] = (v, w)
+                    return True
+                bv, bw = basis[p]
+                v ^= bv
+                if bw is not None:
+                    w = w + bw    # pure-sign products: eps parts XOR
+            return False
+
+        gauss_add((1 << n) - 1, None)     # kernel of the pair action
+
+        def word_eval(word):
+            g = normalize(n, g_identity(n))
+            for idx in word:
+                f = allg[idx] if idx >= 0 else \
+                    bar_inverse(n, allg[-idx - 1])
+                g = bar_compose(n, g, f)
+            return normalize(n, g)
+
+        def harvest(v, word):
+            if v[1] == 0:
+                return
+            chk = word_eval(word)
+            if chk != v:
+                raise RuntimeError("word bookkeeping bug")
+            gauss_add(v[1], word)
+
+        qi = 0
+        frontier = [ident]
+        while qi < len(frontier) and len(trans) <= max_cosets:
+            sig = frontier[qi]
+            qi += 1
+            h, hw = trans[sig]
+            for gi, g in growers:
+                hg = bar_compose(n, g, h)
+                s2 = hg[0]
+                w2 = (gi,) + hw
+                if s2 in trans:
+                    t, tw = trans[s2]
+                    v = bar_compose(n, hg, bar_inverse(n, t))
+                    if not all(v[0][i] == i + 1 for i in range(n)):
+                        raise RuntimeError("transversal bug")
+                    word = w2 + tuple(-(x + 1) for x in reversed(tw))
+                    harvest(v, word)
+                else:
+                    trans[s2] = (hg, w2)
+                    frontier.append(s2)
+        # harvest every stored element against the transversal (this is
+        # where the sign content of the non-grower carriers lives)
+        for i, g in enumerate(allg):
+            ent = trans.get(g[0])
+            if ent is None:
+                raise RuntimeError("elem perm outside transversal")
+            t, tw = ent
+            v = bar_compose(n, g, bar_inverse(n, t))
+            if not all(v[0][i2] == i2 + 1 for i2 in range(n)):
+                raise RuntimeError("transversal bug")
+            word = (i,) + tuple(-(x + 1) for x in reversed(tw))
+            harvest(v, word)
+        out = [(w, v) for _, (v, w) in sorted(basis.items())
+               if w is not None]
+        return out, len(basis)
 
 
 # ---------------------------------------------------------------- BFS
@@ -344,7 +433,7 @@ def bfs_holonomy(n, r, start_mask, verbose=True, expect=None):
         c = queue[qi]
         qi += 1
         chi = reps[c]
-        for j in mutable_bases(n, r, chi):
+        for j in mutable_bases_np(n, r, chi):
             psi = chi ^ (1 << j)
             resm = canonical(n, r, psi)
             kk = resm['can']

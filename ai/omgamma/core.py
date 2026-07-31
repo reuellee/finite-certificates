@@ -169,6 +169,105 @@ def mutable_bases(n, r, b):
 # strings
 # ----------------------------------------------------------------------
 
+@lru_cache(maxsize=None)
+def _flat_flip_tables(n, r):
+    """For mutable_bases_fast: per basis, flat list of (cond_idx, slot)
+    pairs (slot = which of the three parities the basis' term feeds)."""
+    conds = gp3_conditions(n, r)
+    per = [[] for _ in range(len(bases_colex(n, r)))]
+    for k, (i1, i2, _, i3, i4, _, i5, i6, _) in enumerate(conds):
+        per[i1].append((k, 0))
+        per[i2].append((k, 0))
+        per[i3].append((k, 1))
+        per[i4].append((k, 1))
+        per[i5].append((k, 2))
+        per[i6].append((k, 2))
+    return tuple(tuple(p) for p in per)
+
+
+def mutable_bases_fast(n, r, b):
+    """Same output as mutable_bases, ~4x faster: evaluate all condition
+    parities once, then per condition mark which single-term flips would
+    make the three parities equal."""
+    conds = gp3_conditions(n, r)
+    per = _flat_flip_tables(n, r)
+    # bad[k*3+slot] = True if flipping that term makes p1==p2==p3
+    bad = bytearray(len(conds) * 3)
+    for k, (i1, i2, c1, i3, i4, c2, i5, i6, c3) in enumerate(conds):
+        p1 = ((b >> i1) ^ (b >> i2) ^ c1) & 1
+        p2 = ((b >> i3) ^ (b >> i4) ^ c2) & 1
+        p3 = ((b >> i5) ^ (b >> i6) ^ c3) & 1
+        k3 = 3 * k
+        if p2 == p3 and p1 != p2:
+            bad[k3] = 1
+        if p1 == p3 and p2 != p1:
+            bad[k3 + 1] = 1
+        if p1 == p2 and p3 != p1:
+            bad[k3 + 2] = 1
+    out = []
+    for i, lst in enumerate(per):
+        ok = True
+        for (k, slot) in lst:
+            if bad[3 * k + slot]:
+                ok = False
+                break
+        if ok:
+            out.append(i)
+    return out
+
+
+_NP_TABLES = {}
+
+
+def _np_tables(n, r):
+    """numpy index tables for mutable_bases_np."""
+    key = (n, r)
+    if key in _NP_TABLES:
+        return _NP_TABLES[key]
+    import numpy as np
+    conds = gp3_conditions(n, r)
+    M = len(bases_colex(n, r))
+    if not conds:
+        _NP_TABLES[key] = (np, None, None, M, 0)
+        return _NP_TABLES[key]
+    I = np.array(conds, dtype=np.int64)      # columns i1,i2,c1,i3,i4,c2,...
+    per = _flat_flip_tables(n, r)
+    maxlen = max(len(p) for p in per)
+    ncond3 = len(conds) * 3
+    IDX = np.full((M, maxlen), ncond3, dtype=np.int64)   # pad -> sentinel
+    for i, lst in enumerate(per):
+        for j, (k, slot) in enumerate(lst):
+            IDX[i, j] = 3 * k + slot
+    _NP_TABLES[key] = (np, I, IDX, M, ncond3)
+    return _NP_TABLES[key]
+
+
+def bits_array(n, r, b):
+    """chirotope int -> numpy uint8 array of M bits."""
+    np, I, IDX, M, _ = _np_tables(n, r)
+    bb = b.to_bytes((M + 7) // 8, 'little')
+    arr = np.unpackbits(np.frombuffer(bb, dtype=np.uint8), bitorder='little')
+    return arr[:M]
+
+
+def mutable_bases_np(n, r, b):
+    """numpy-vectorized mutable_bases (same output, much faster)."""
+    np, I, IDX, M, ncond3 = _np_tables(n, r)
+    if I is None:
+        return list(range(M))
+    bits = bits_array(n, r, b)
+    p1 = bits[I[:, 0]] ^ bits[I[:, 1]] ^ I[:, 2].astype(np.uint8)
+    p2 = bits[I[:, 3]] ^ bits[I[:, 4]] ^ I[:, 5].astype(np.uint8)
+    p3 = bits[I[:, 6]] ^ bits[I[:, 7]] ^ I[:, 8].astype(np.uint8)
+    bad = np.empty(ncond3 + 1, dtype=bool)
+    bad[0:ncond3:3] = (p2 == p3) & (p1 != p2)
+    bad[1:ncond3:3] = (p1 == p3) & (p2 != p1)
+    bad[2:ncond3:3] = (p1 == p2) & (p3 != p1)
+    bad[ncond3] = False
+    ok = ~bad[IDX].any(axis=1)
+    return np.flatnonzero(ok).tolist()
+
+
 def to_string(n, r, b):
     M = len(bases_colex(n, r))
     return ''.join('+' if (b >> i) & 1 else '-' for i in range(M))

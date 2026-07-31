@@ -71,10 +71,17 @@ def main(r, n):
                 p, j, (sig, eps, s) = td
                 f.write(f"{cid} {p} {j} {perm_str(sig)} {eps} {s}\n")
     with open(f"data/flip_{r}_{n}_gens.txt", "w") as f:
-        for prov, g in hol.gen_log:
+        for prov, g, _grew in hol.elems:
             sig, eps, s = g
             f.write(f"{'|'.join(map(str,prov))} {perm_str(sig)} "
                     f"{eps} {s}\n")
+    ex, exdim = hol.sign_exhibits()
+    with open(f"data/flip_{r}_{n}_exhibits.txt", "w") as f:
+        for w, v in ex:
+            f.write(f"{v} {','.join(map(str, w))}\n")
+    summary['exhibit_sign_dim'] = exdim
+    with open(f"data/flip_{r}_{n}_summary.json", "w") as f:
+        json.dump(summary, f, indent=1)
 
     print(json.dumps(summary, indent=1))
 

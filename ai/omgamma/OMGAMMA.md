@@ -250,11 +250,26 @@ all stabilizer generators; sign part exact):
 
 | (n,r) | Γ̂ classes | Γ̂ conn. | π(H) = S_n | sign part full | verdict |
 |---|---|---|---|---|---|
-| (8,3) | 135 ✓cat | yes | yes (40320) | yes (8/8) | **Γ̄(8,3), Γ̃(8,3) connected** |
+| (8,3) | 135 ✓cat | yes | yes (40320) | yes (8/8, exact) | **Γ̄(8,3), Γ̃(8,3) connected** |
+| (9,3) | 4382 ✓cat | yes | yes (362880) | yes (9/9, exact) | **Γ̄(9,3), Γ̃(9,3) connected** |
 | (7,4) | 11 ✓cat | yes | yes (5040) | yes (7/7) | **Γ̄(7,4), Γ̃(7,4) connected** |
+| (8,4) | 2628 ✓cat | yes | yes (40320) | yes (8/8, exact) | **Γ̄(8,4), Γ̃(8,4) connected** — NEW (first rank-4 labeled verdict) |
 | tiny  | (5,2),(5,3),(5,4),(6,2),(6,3),(6,4) | yes | yes | yes | connected & brute-force-equal |
 
-(9,3) and (8,4) runs in progress; (9,4) campaign design in Section 6.
+Both (8,4) and (9,3) were re-run through the parallel disk-based engine
+(runbig.py) with mass-formula termination: the accumulated
+orbit-stabilizer mass hit the independently computed target
+N_chi exactly (100.0000%), certifying catalog completeness AND
+Γ̂-connectivity simultaneously. Γ̂(8,4) has 15,338 directed mutation-edge
+traversals from class representatives (avg mutation degree ≈ 11.7).
+
+**Standalone certificates + checker**: for each completed (n,r) the run
+emits reps/tree/gens/exhibits files; `checker.py` (zero shared code;
+independent GP check, group action, orbit-stabilizer-chain order
+computation, word evaluation) verifies V1-V5 (see its docstring) and
+passed on (8,3), (8,4), (9,3). Sabotage canaries (`canary_checker.py`:
+corrupted rep char / tree voltage / generator perm / truncated exhibits /
+re-pointed tree parent) are all rejected by the checker.
 
 Rank coverage for "all n ≤ 9": rank ≤ 2 and corank ≤ 2 are classical/
 trivial (verified anyway at (5,2),(6,2)); rank 3 is Knauer–Marc Prop 4.2

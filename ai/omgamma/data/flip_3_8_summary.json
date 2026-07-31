@@ -14,5 +14,6 @@
  "catalog_matches_bfs": true,
  "gamma_bar_connected": true,
  "gamma_tilde_connected": true,
- "seconds": 2.491116523742676
+ "seconds": 8.266067504882812,
+ "exhibit_sign_dim": 8
 }
