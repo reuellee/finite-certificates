@@ -472,6 +472,24 @@ and 9,276,601 would have required Σ(1 − 1/nstates) = 81,125/18. Of the
 9,276,595 classes, **8,913 have a nontrivial Ḡ-stabilizer**; the
 stabilizer-order histogram is in `stabstats.json`.
 
+**Second, independent support for the class list** (does not use the mass
+identity at all): a completing pass over a mid-range slice far from the
+symmetric root, `runbig.py 4 9 8 --holopass 5000000 5150000`
+(`data/big_4_9/holopass_5000000_5150000.json`) re-expanded 150,000
+classes and all **2,499,128** of their directed mutation edges, and
+**every single one landed on a key already in the class list**
+(`edges_to_unknown_keys: 0`, `closure_certified: true`). It also
+re-derived H = Ḡ *exactly* on that region — every edge harvested, no
+lower-bound caveat, π 362880/362880 and sign 9/9. A missing class
+adjacent to that slice would have shown up here.
+
+**Certificates emitted from the completed sweep.** `finish94.sh` exports
+a second compact certificate from the sweep's own generators (as opposed
+to `certify.py`'s, built at level 9): **561 classes, 75 generators**,
+V1–V5 pass under `checker_fast.py`, five sabotage canaries rejected
+(`data/big_4_9/subcertB_*`). Both (9,4) certificates are now required
+artifacts of `verify_omgamma.py`, which passes.
+
 ### Result A (2026-07-31): the holonomy at (9,4) is everything
 
 **H = Ḡ for (9,4)**, established from generators harvested inside the
@@ -799,9 +817,24 @@ the stabilizer generators.
 * **The class list's completeness has two independent supports** and they
   should not be conflated: (1) the mass identity against the
   independently computed target N_chi(4,9) from the (8,4) extension
-  sweep; (2) optionally, a `--holopass` over the whole class list, whose
-  `edges_to_unknown_keys == 0` certifies mutation-closure directly. Only
-  (1) has been executed for (9,4).
+  sweep — executed, exact; (2) a `--holopass`, whose
+  `edges_to_unknown_keys == 0` certifies mutation-closure directly —
+  executed for (9,3) over the WHOLE class list, and for (9,4) over a
+  150,000-class mid-range slice (2,499,128 edges) only, not the whole
+  9.28M. A full (9,4) closure pass would cost another ~150M
+  canonicalizations (~5 h at 10 workers) and is the obvious next
+  hardening step; it is not needed for the verdict, since (1) is an
+  exact identity.
+* The mass identity's inputs are `canon.py`'s exact stabilizer orders
+  (`stab_order_exact`) and the extension-count sweep `ext_count.py`.
+  Neither is re-derived by the standalone checkers — that is the main
+  remaining trust boundary for the class COUNT (not for the holonomy).
+  It is mitigated by: the same machinery reproducing every published
+  count where one exists ((3,5..9), (4,5..8)), the same mass identity
+  closing exactly at (8,4) and (9,3) where the class lists are also
+  independently confirmed against Finschi's representatives, and the
+  stabilizer orders being re-verified for 8,913 classes by an
+  independent re-canonicalization during the family-(i) harvest.
 * **Resumed runs make H a lower bound** for the edge family (ii): sound
   for a positive verdict, not for a negative one. `summary.json` records
   `holonomy_is_lower_bound`.
@@ -827,6 +860,20 @@ the stabilizer generators.
 
 ## 8. History / errata log
 
+* 2026-07-31 (session 2): **(9,4) SETTLED.** 9,276,595 classes,
+  150,561,898 directed mutation-edge traversals, 19 BFS levels, mass
+  identity exact, H = Ḡ. Γ̄, Γ̃, Γ̂ connected at (9,4) and hence at
+  (9,5); n ≤ 9 is now closed at all three levels of the hierarchy, with
+  no counterexample. The (4,9) count discrepancy resolved to 9,276,595.
+* 2026-07-31 (session 2): **verify_omgamma.py defect fixed (SERIOUS).**
+  It treated a MISSING certificate as "SKIP" and still exited 0, so a
+  contributor could delete the headline artifacts and CI would stay
+  green. The expected certificates are now an explicit manifest;
+  required artifacts are checked for existence/readability/non-emptiness
+  before any checker runs and a missing one is a loud named FAILURE;
+  optional artifacts are declared as such and every skip prints its
+  reason; `--canary` self-tests deletion, renaming and emptying of a
+  required artifact (all three now rejected).
 * 2026-07-31 (session 2): **ERRATUM, corrected.** `runbig` phase 2
   harvested only Lemma 2's edge family (ii), never the stabilizer family
   (i). Consequence: the (9,4) sign part read as trivial (1/9) through

@@ -1,0 +1,11 @@
+{
+ "lo": 5000000,
+ "hi": 5150000,
+ "edges": 2499128,
+ "generators": 2499128,
+ "edges_to_unknown_keys": 0,
+ "perm_order": 362880,
+ "sign_dim": 9,
+ "H_equals_Gbar": true,
+ "closure_certified": true
+}
