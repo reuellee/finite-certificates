@@ -20,11 +20,13 @@ results are re-proven exactly before use).
 Fix five direction vectors U = (u₀,…,u₄), uᵢ ∈ R³, weights wᵢ > 0,
 midpoints mᵢ, and a split s ∈ {±1}⁵ assigning each segment to the A-copy
 (sₜ = +1) or B-copy (sₜ = −1). (The reduction of the general
-two-coefficient-vector zonoboxtope to this weight/split normal form, and
+two-coefficient-vector zonoboxtope to this weight/split normal form —
+sₜ the sign and wₜ the magnitude of the residual δₜ = aₜ − bₜ — and
 the removal of all square roots by row scaling, is the "Exact row model"
 of `../stage2b_gpt/STAGE2B.md`, validated against hull counts on live
-instances; boundary cases where a copy misses a generator are handled in
-§3 without the model.)
+instances. The normal form exists only when every residual is nonzero;
+the boundary cases — a copy missing a generator, or aₜ = bₜ > 0 — are
+handled in §3.1 without the model.)
 
 For a generic U (all ten 3×3 determinants nonzero) the central
 arrangement {u_i^⊥} has exactly 22 chambers, and the chamber model gives
@@ -135,7 +137,36 @@ chambers, attained only when the arrangement is simple. Hence:
   (four generic planes: 2(1+3+3) = 14) and f₀(Q) ≤ 14 + 22 = 36.
 
 Both are < 42, so from here on U is generic and both copies have full
-support.
+support. One boundary remains inside the full-support regime: some
+**a_i = b_i > 0**, where the residual δ_i = a_i − b_i vanishes and the
+(w, s) normal form of §1 does not exist. It is absorbed by the
+following lemma, which also supplies the genericity needed in §3.5.
+
+**Lemma (generic-position perturbation).** Let Q, with parameters
+(a, b, m) over a generic U, have f₀(Q) = v. Then arbitrarily small
+perturbations (a′, b′, m′) exist whose zonoboxtope Q′ has f₀(Q′) ≥ v
+and is in *strict generic position*: every residual a′_i − b′_i is
+nonzero, every side value on the twenty rays is nonzero, and no two
+distinct candidate points coincide.
+
+*Proof.* Every vertex q of Q is strictly exposed: some functional c has
+⟨c, q⟩ exceeding ⟨c, p⟩ by a positive margin for every candidate point
+p ∉ {q} (candidates = the 2⁶ sign points, finitely many). Candidates
+vary continuously (polynomially) in (a, b, m), so after a small enough
+perturbation the maximizer of c over the candidates is a candidate near
+q, hence a vertex of Q′; distinct vertices of Q stay separated and give
+distinct vertices of Q′, so f₀(Q′) ≥ v. The conditions to avoid — a
+vanishing residual, a vanishing side value, a coincidence of two
+candidates that are not identical as polynomial maps — each cut a
+proper algebraic subset of the parameter space (each is a nontrivial
+polynomial equation: the candidate-difference polynomials are nonzero
+because the generic u_i span R³ and the sign patterns differ). A finite
+union of proper algebraic subsets has dense open complement, so the
+perturbation can be chosen inside it. ∎
+
+Consequently every instance with f₀ ≥ 43 yields, arbitrarily nearby,
+a strict-generic-position instance with f₀ ≥ 43 in the (w, s) normal
+form with strict side signs. From here on we work with such instances.
 
 ### 3.2 Instance normalization: WLOG χ(U) = χ_ref and s ∈ four subsets
 
@@ -163,15 +194,18 @@ Two exact computations:
   configuration realizing χ_ref) normalizes the split subset to one of
   **∅, {0}, {0,1}, {0,2}** or a complement of one of these.
 
-Complements reduce to the four representatives by the **global flip**:
-swapping the roles of the two copies maps (σ, s) ↦ (flip σ, −s) where
-flip negates σ and swaps the two rays of each class, and
-Row(flip σ, −s; class, ray) = Row(σ, s; class, −ray) — an exact row
-correspondence, so certificates transport by the same ray swap
-(verified exactly on samples: `check_transport.py`, "FLIP OK").
-Geometrically: swapping the copies negates the support-function
-difference, i.e. (T, s) ↦ (−T, −s), which exchanges the positive and
-negative extreme rays of each facet normal — whence the ray swap.
+Complements reduce to the four representatives by the **global flip**.
+Physically, swapping the roles of the two copies sends
+(T, s, σ) ↦ (−T, −s, −σ) with the geometric ray labels fixed; composing
+with the antipodal ray relabeling (which restores the T coordinate)
+gives the implemented involution (σ, s) ↦ (flip σ, −s), where flip
+negates σ *and* swaps the two rays of each class. It satisfies the
+exact row identity
+Row(flip σ, −s; class, ray) = Row(σ, s; class, −ray), so certificates
+transport by the same ray swap; it is an involution and maps the
+33,140-pattern valid set onto itself (verified exactly:
+`check_transport.py` "FLIP OK", and independently re-checked in the
+GPT review).
 
 ### 3.3 Certificate transport
 
@@ -212,22 +246,21 @@ with strict side signs.
 
 ### 3.5 Parity, perturbation, and attainment: max = 42
 
-- **No non-strict 44:** a 44-vertex instance with some side equality
-  perturbs (T, w) infinitesimally to strictness while keeping all 44
-  vertices: each vertex of Q has a full-dimensional open normal cone,
-  which persists under small deformations of (T, w), so no vertex is
-  swallowed. Strict 44 is dead by 3.4, so 44 is dead.
-- **No 43:** in the strict generic regime the bicolored count is even —
-  the zero set of the support-function difference traces cycles in the
-  bipartite chamber-adjacency graph (the 5-cube-embedded adjacency of
-  the 22 chambers; adjacency is bipartite because the chamber graph is
-  dual to a great-circle arrangement on S², 2-colorable by parity of
-  the sign vector). Each bicolored chamber contributes exactly one
-  segment: the zero plane meets a strictly convex open cone in a single
-  connected sector, so no chamber is re-entered. 43 needs 21 bicolored
-  chambers, odd; and a 43-vertex instance with equalities perturbs to
-  ≥ 43 strict, hence to 44 — dead either way.
-  (Verified argument: `../stage2b_gpt/REVIEW_stage2b_claude.md`.)
+- **No 43 and no non-strict 44:** suppose any instance (any parameters,
+  U generic by §3.1) has f₀ ≥ 43. The Lemma of §3.1 produces a nearby
+  instance in strict generic position with f₀ ≥ 43. In strict generic
+  position the chamber-model count is literal — no cross-copy candidate
+  coincidences can merge vertices — so f₀ = 22 + #bicolored, and the
+  bicolored count is even: the zero set of the support-function
+  difference traces cycles in the bipartite chamber-adjacency graph
+  (adjacency is bipartite because the chamber graph is dual to a
+  great-circle arrangement on S², 2-colorable by parity of the sign
+  vector), and each bicolored chamber contributes exactly one segment —
+  the zero plane meets a strictly convex open cone in a single
+  connected sector, so no chamber is re-entered. Hence f₀ is even and
+  ≥ 43, i.e. f₀ = 44 with all side signs strict — which §3.4 kills.
+  So no instance reaches 43.
+  (Parity argument verified: `../stage2b_gpt/REVIEW_stage2b_claude.md`.)
 - **42 is attained:** `../cert_35_42.json` — an explicit rational
   42-vertex (3,5)-zonoboxtope, verified exactly by this repo's
   stdlib verifier (`../verify_c66_new_cases.py`) with strict-witness
@@ -238,9 +271,10 @@ Together: **max f₀(3,5) = 42.**
 
 ## 4. Verification manifest
 
-Run everything with a stock CPython ≥ 3.10; scipy/numpy needed only for
-the sweep generators and the standalone auditor, not for the stdlib
-checkers. From `ai/maxout/`:
+Run everything with CPython ≥ 3.10. Steps 1, 2, and 6's
+`verify_c66_new_cases.py` are stdlib-only; steps 3–5 need
+numpy/scipy (and step 3 sympy) for matrix assembly — the verification
+arithmetic itself is exact `Fraction` throughout. From `ai/maxout/`:
 
 1. `python check_om35_uniqueness.py` — 384 chirotopes, single orbit
    (stdlib, seconds).
@@ -266,11 +300,13 @@ certificate, every canary, the valid-σ count, the orbit and stabilizer
 computations, the transport bookkeeping on samples, the 42-instance.
 
 Argued in prose above, kept deliberately short so they can be audited by
-reading: the hull-of-union bound (§3.1), instance invariance under G
-(§3.2, two sentences: segments are orientation-invariant, relabeling is
-renaming), the flip row-identity (§3.2, one line of algebra), the
-Gordan contradiction (§3.4), and the parity/perturbation step (§3.5,
-verified in the Stage 2b review). The chamber model itself and the
+reading: the hull-of-union bound and the generic-position perturbation
+lemma (§3.1 — the lemma also carries the a_i = b_i boundary and the
+coincidence-free genericity that §3.5 needs), instance invariance under
+G (§3.2, two sentences: segments are orientation-invariant, relabeling
+is renaming), the flip row-identity (§3.2, one line of algebra), the
+Gordan contradiction (§3.4), and the parity step (§3.5, verified in the
+Stage 2b review). The chamber model itself and the
 validity enumeration carry three-way independent computational
 confirmation (§1).
 
