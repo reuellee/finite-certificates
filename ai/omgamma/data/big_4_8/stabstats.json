@@ -1,0 +1,25 @@
+{
+ "r": 4,
+ "n": 8,
+ "classes": 2628,
+ "stab_histogram": {
+  "2": 2385,
+  "4": 186,
+  "6": 13,
+  "8": 21,
+  "12": 6,
+  "16": 9,
+  "24": 4,
+  "32": 1,
+  "48": 3
+ },
+ "sign_kernel_dim_kappa": 1,
+ "trivial_stab_order": 2,
+ "classes_with_nontrivial_Gbar_stabilizer": 243,
+ "sum_1_over_nstates": "119531/48",
+ "sum_1_minus_1_over_nstates": "6613/48",
+ "mass": "25703946240",
+ "target": "25703946240",
+ "mass_identity_holds": true,
+ "mass_pct": 100.0
+}
