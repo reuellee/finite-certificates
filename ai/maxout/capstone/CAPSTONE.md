@@ -403,10 +403,14 @@ reader must check by reading rather than by running (its docstring says
 the same): the 25×8 row model of §1 — that is the *statement* of what
 the certificates certify, re-implemented there from this prose, not
 re-derived; the definition of a valid labeled side pattern; the
-symmetry reduction of §§3.2–3.3 (checked by `check_split_orbits.py` and
-`check_transport.py` instead); the serialization layout of the sparse
-certificate vectors (a data format, tested by a rotate-the-monomial-
-order canary); and the 121 `EXACT_DEGREE_NO_GO` entries of
+symmetry reduction of §§3.2–3.3 (checked by `check_split_orbits.py`,
+which is stdlib and standalone, and by `check_transport.py`, which is
+itself generator-coupled in exactly the two narrow respects named here
+— it imports `monomials_of_degree` for the serialization convention and
+`VALID_BITS` for the valid-σ list, and nothing else); the serialization
+layout of the sparse certificate vectors (a data format, tested by a
+rotate-the-monomial-order canary); and the 121 `EXACT_DEGREE_NO_GO`
+entries of
 `gp_degree3_results.json.gz`, which are negative results carrying no
 weight in the upper bound and are counted but not re-verified.
 
