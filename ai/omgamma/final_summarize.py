@@ -1,6 +1,5 @@
 """Assemble the final results table from all summaries on disk."""
 import glob
-import os
 import json
 import os
 
