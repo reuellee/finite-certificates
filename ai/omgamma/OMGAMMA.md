@@ -810,93 +810,179 @@ GPT referee report on the note (`paper/REVIEW_note_gpt.md`, finding 3).
 A second gap, found by the same referee's re-review (POSTSCRIPT, finding 3
 NOT RESOLVED), was that the coverage artifact certified the *catalog* but
 not *reachability*: nothing in it showed that those 9,276,595 classes form
-ONE component. That is what the witness below closes.
+ONE component. That is what the spanning tree closes.
+
+A third problem survived both: the artifact was 145 MB (62 MB of keys +
+83 MB of witness), far too large to track, so the note had to say that no
+archived release existed and that a reader had to *regenerate ~4 h of
+search* before checking anything. **Fixed 2026-07-31: the certificate is
+now 10.44 MB and is TRACKED IN GIT.**
+
+**The insight.** Check (h) verified, per class,
+`(σ_c, ε_c, s_c) · χ_c = μ_{B_{j_c}}(χ_parent)`. Read as a DERIVATION
+rather than as a check it says: χ_c lies in the G′-orbit of
+μ_{B_{j_c}}(χ_parent), and the class key is by construction a function of
+the orbit alone (that is exactly what the colour-restricted canonical
+convention buys — see the caveat below). So the tree DETERMINES the keys:
+from the root key and, per class, (parent, mutated basis), every chirotope
+is computable, its key is the canonical form the checker was already
+computing for check (b), and the stabilizer order comes out of the same
+argmax count. Depth and the voltage are derivable too. The irreducible core
+is therefore **(root key, parent, flip)** — and that packs to 10.44 MB.
 
 **The artifact.** `export_coverage.py 4 9 data/big_4_9 data/coverage_4_9`
-transports the `keys`/`stab` columns out of the checkpoints, sorts them
-strictly increasingly by the 126-bit key, re-derives the per-edge global
-sign, and writes
+writes
 
 ```
-data/coverage_4_9/coverage_4_9.npz    key_hi, key_lo (uint64), stab (uint8)
-data/coverage_4_9/witness_4_9.npz     parent (int32), flip (uint8),
-                                      sigma (N,9 uint8), eps (uint16),
-                                      gsgn (uint8), depth (uint16)
+data/coverage_4_9/tree_4_9.npz        THE CERTIFICATE, 10,437,614 bytes:
+                                      format, params=[n,r,count],
+                                      root_key (uint64[2]), gap_nbits,
+                                      gap_bits (uint8), flip_bits (uint8)
+data/coverage_4_9/coverage_4_9.npz    legacy: key_hi, key_lo, stab (62 MB)
+data/coverage_4_9/witness_4_9.npz     legacy: parent, flip, sigma, eps,
+                                      gsgn, depth (83 MB)
 data/coverage_4_9/MANIFEST.json       conventions, totals, SHA-256s
 ```
 
-62.2 MB + 83.5 MB, readable with `np.load` and nothing else. The manifest records n,
-r, the basis order, the key bit-encoding, the group and its action, the
-**exact canonical convention** (see below), the count, the mass, the
-stabilizer histogram, three fully worked example rows (row 0 as a 126-char
-± string), the SHA-256 of the `.npz` and, separately, of each array's raw
-little-endian buffer, so the hashes survive repacking of the zip container.
-The `.npz` is gitignored; `MANIFEST.json` is tracked, so a downloaded or
-regenerated copy can be pinned against the repository.
+Only `tree_4_9.npz` and `MANIFEST.json` are tracked; the two legacy arrays
+stay gitignored and are needed by nothing but `--legacy-crosscheck`.
+
+*Row order.* Rows are in the **canonical tree order**: row 0 is the root,
+and the rows of depth d follow those of depth d−1 ordered by (position of
+parent, mutated basis). This is defined by induction on depth, so it is a
+function of the tree alone and not of the order the BFS happened to
+discover classes in. Consequences, all of them load-bearing: `parent[i] < i`
+(acyclicity and a unique root are structural, not checked properties of
+recorded numbers); `parent` is globally nondecreasing, so the whole parent
+map is a **monotone gap bitmap**; every PREFIX is closed under `parent`,
+hence is itself a complete certificate for a smaller catalog (which is what
+`--prefix` and the canary sub-certificates use); and the layout is
+verifiable, so no reordering or duplicated edge can pass unnoticed.
+
+*Packing.* `parent`: for each row i = 1..N−1 in order, write
+`parent[i] − parent[i−1]` zero bits (parent[0] := 0) then a single one bit
+— 18,552,799 bits = 2,319,100 bytes, decoded by `ones − arange`. `flip`:
+7 bits per row, MSB first — 8,117,020 bytes. Both are stored in the `.npz`
+**uncompressed (ZIP_STORED) with a fixed timestamp**, so the file is
+byte-for-byte reproducible with no dependence on a zlib version (verified:
+two writes give identical SHA-256). The manifest records n, r, the basis
+order, the key bit-encoding, the group and its action, the **exact
+canonical convention**, the exact decoding and reconstruction procedure,
+the count, the mass, the stabilizer histogram, and the SHA-256 of the file
+and of every raw array buffer in it.
+
+Root of the tree: **row 0 = the alternating matroid**, key 2¹²⁶−1 (all `+`),
+|Stab| = 36; max depth **27**.
 
 **The checker.** `coverage_checker.py` imports nothing from this project —
-no `core`, `canon`, `flip`, `runbig`, `bigstate`, `ext_count`, `checker*`.
-It rebuilds the colex basis order, the 1,260 three-term Grassmann–Plücker
+no `core`, `canon`, `flip`, `runbig`, `bigstate`, `ext_count`, `checker*` —
+and now **enforces that at run time**: `_assert_independent()` refuses to
+start if any module in `sys.modules` resolves to a `.py` file sitting next
+to it, or carries one of the generator module names. It rebuilds the colex
+basis order, the 1,260 three-term Grassmann–Plücker
 conditions, the sign lattice (reduced row echelon over F₂, rank 9, κ = 1)
-and the group action from the definitions. It verifies
+and the group action from the definitions. Before reading any artifact it
+runs five **data-independent self-tests** pinning the three pieces of code
+the reconstruction plays against each other: `relabel_batch` equals the
+action of the inverse placement, XOR by an echelon row equals the action of
+the sign element its recorded generator combination names, and the
+recovered inverse element maps the canonical form back.
 
-* (0) every SHA-256 in the manifest, file and per-array;
-* (a) every key decodes to a valid uniform chirotope;
-* (b) every key is **extremal in its own orbit under the manifest's
-  convention** — see the caveat below;
-* (c) the keys are strictly increasing, hence sorted *and* pairwise
-  distinct (one expression; these are not two independent checks);
-* (d) every recorded stabilizer order equals |Stab_{G′}(χ)| recomputed by
-  exhaustive enumeration;
+It then RECONSTRUCTS the catalog — taking the classes in order, each parent
+before its children — and verifies
+
+* (0) every SHA-256 in the manifest: the certificate file, each of its
+  arrays, and any legacy array that happens to be present;
+* (a) every reconstructed mutant μ_{B_flip[i]}(χ_parent[i]) is a valid
+  uniform chirotope. Applied BEFORE canonicalization, this is exactly the
+  statement that `flip[i]` is a mutable basis of the parent, i.e. that the
+  edge is a real mutation edge;
+* (b) the **root key** is extremal in its own orbit under the manifest's
+  convention. Every other key is not checked for extremality but
+  **constructed** as the extremal representative of its orbit, by
+  enumerating every admissible relabelling and maximising over the sign
+  lattice — see "what changed in the guarantee" below;
+* (c) the reconstructed keys are pairwise **distinct** (sorted, then
+  strictly increasing);
+* (d) every stabilizer order is |Stab_{G′}(χ)| = 2^κ · #argmax from that
+  same enumeration, divides |G′|, and their histogram is the one the
+  manifest declares;
 * (e) the orbit masses sum to 1,722,704,635,330,560 and the count is
   9,276,595;
 * (f) optional, `--extcount`: the tracked 2,628-row extension table sums
   arithmetically to that same target;
-* (g) the witness is a genuine spanning **tree**: every `sigma` is a
-  permutation of 1..9, every `eps` < 2⁹, every `gsgn` ∈ {0,1}, every
-  `flip` < 126, every `parent` in range, **exactly one** parentless row,
-  `depth[root] = 0` and `depth[i] = depth[parent[i]] + 1` elsewhere (so
-  the parent map strictly decreases depth and cannot cycle), plus an
-  independent **pointer-doubling** pass — hard-capped at ⌈log₂N⌉+2 rounds,
-  FAIL if the cap is hit — confirming that every ancestor chain ends at
-  that one root;
+* (g) the certificate decodes to a genuine spanning **tree**: exact bit
+  lengths, zero padding, exactly one gap bit per non-root row, every
+  `flip` < 126, `parent[i] < i` for every row but row 0 (so the parent map
+  cannot cycle, row 0 is the unique parentless row, and every row reaches
+  it), `depth[i] = depth[parent[i]] + 1`, the rows strictly increasing in
+  (depth, parent, flip), plus an independent **pointer-doubling** pass —
+  hard-capped at ⌈log₂N⌉+2 rounds, FAIL if the cap is hit;
 * (h) every one of the 9,276,594 tree edges satisfies, exactly as 126-bit
-  sign vectors, `(sigma[i], eps[i], gsgn[i]) · χ_i = μ_{B_flip[i]}(χ_parent[i])`.
+  sign vectors, `(σ_i, ε_i, s_i) · χ_i = μ_{B_flip[i]}(χ_parent[i])`. The
+  group element is not read from the certificate — there is none there —
+  but read off the checker's own canonicalization (the winning placement,
+  inverted, plus the generator combination the sign maximisation applied)
+  and handed to `apply_voltage`, a **separate implementation** of the
+  action built from the defining formula with the inverse permutation and
+  a reorientation-parity table. So (h) is two code paths agreeing, not a
+  tautology.
 
-**The reachability argument, stated once.** (h) exhibits
-μ_{B_j}(χ_parent) as a *G′-translate of χ_child*. Validity is G′-invariant
-and χ_child is valid by (a), so μ_{B_j}(χ_parent) is valid: `flip[i]`
-really is a mutable basis of the parent, and parent and child really are
-adjacent in Γᵤ^{9,4}. (No separate mutability check is done, and none is
-needed.) (g) then makes those edges a spanning tree, so **all 9,276,595
+**The reachability argument, stated once.** (a) says μ_{B_j}(χ_parent) is
+valid, so `flip[i]` really is a mutable basis of the parent; the child is
+by construction a G′-translate of that mutant, so parent and child really
+are adjacent in Γᵤ^{9,4}, and (h) exhibits and independently confirms which
+translate. (g) then makes those edges a spanning tree, so **all 9,276,595
 listed classes lie in one component**. Completeness — that they are *all*
 the classes — is the mass identity's job, and it is the mass identity that
 still depends on the extension-count target. One component + complete =
 Γᵤ^{9,4} connected. The two halves must not be conflated: the first is now
 certificate-backed outright, the second remains reproducible-only.
 
-**How (b) and (d) are done, and why this is not just canon.py again.**
-`canon.py` finds the canonical key by a level-by-level DFS that *prunes*
-to the states achieving the maximal prefix. The checker does not reproduce
-that search. It computes the invariant element colouring, orders the colour
-classes, and then **enumerates every admissible relabelling exhaustively**
-(∏_c m_c!: exactly 1 for 93.1% of classes on a 300,000-row sample, 2.43 per
-class on average over the whole catalog — the mean is dragged up by a thin
-tail ending at the alternating matroid's 362,880), sign-maximises each
-image over the full sign lattice, and takes the maximum and the argmax
-count. So the checker verifies the *result* of canon.py's pruning by brute
-force rather than re-deriving the pruning, and |Stab| = 2^κ · #argmax comes
-out of the same enumeration. Two independent agreements were checked while
-building it: the colour *partitions* agree with `canon.element_colors` on
-2,000/2,000 sampled classes, and a slow reference implementation reproduced
-both the stored key and the stored stabilizer order on 5,000/5,000 classes
-drawn from all 20 BFS levels.
+**What changed in the guarantee (record this honestly).** Under the old
+145 MB format the keys and stabilizer orders were *independent data*,
+produced by `canon.py`'s pruned DFS and *verified* by the checker's
+exhaustive enumeration: two unrelated implementations agreeing. Now the
+checker's enumeration is their sole producer. Nothing in the theorem
+weakens — validity, distinctness, one-componentness and the mass identity
+are all conclusions of the checker's own computation, and an adversary has
+strictly fewer degrees of freedom, since a key or a stabilizer order that
+is not in the certificate cannot be misreported — but the redundancy is
+gone from what a fresh cloner runs. The replacement is
+`--legacy-crosscheck`, which compares the reconstruction against the arrays
+the search wrote. **Run at full scale 2026-07-31: all 9,276,595 keys and
+all 9,276,595 stabilizer orders agree exactly.** That is corroboration of
+implementation agreement, NOT a link in the certificate chain, and the note
+says so.
+
+**How the canonicalization is done, and why this is not just canon.py
+again.** `canon.py` finds the canonical key by a level-by-level DFS that
+*prunes* to the states achieving the maximal prefix. The checker does not
+reproduce that search. It computes the invariant element colouring, orders
+the colour classes, and then **enumerates every admissible relabelling
+exhaustively** (∏_c m_c!: exactly 1 for 93.1% of classes on a 300,000-row
+sample, 2.43 per class on average over the whole catalog — the mean is
+dragged up by a thin tail ending at the alternating matroid's 362,880),
+sign-maximises each image over the full sign lattice, and takes the maximum
+and the argmax count; |Stab| = 2^κ · #argmax comes out of the same
+enumeration. Under the old format this brute force *verified* the result of
+canon.py's pruning; it now *replaces* it, and `--legacy-crosscheck` is what
+re-establishes that the two agree (all 9,276,595 rows, both arrays). Two
+further agreements were checked while the machinery was built: the colour
+*partitions* agree with `canon.element_colors` on 2,000/2,000 sampled
+classes, and a slow reference implementation reproduced both the stored key
+and the stored stabilizer order on 5,000/5,000 classes drawn from all 20
+BFS levels. A gate run before any of this went in: reconstructing 40,009
+classes sampled across every depth — including every class with |Stab| ≥ 8
+— from their parents reproduced the stored key and stabilizer order in
+every case, 0 mismatches, which is what made the compact format possible at
+all.
 
 **The caveat that must not be dropped.** The keys are *not* the maximum
 over all of S_n. `canonical()` maximises only over relabellings respecting
 the invariant colouring, so the convention is colour-restricted. This was
 measured, not assumed: on sampled classes the unrestricted maximum differs
-from the stored key in 8 of 9 cases, and computing it costs ~1.5 s/class,
+from the canonical key in 8 of 9 cases, and computing it costs ~1.5 s/class,
 i.e. ~160 CPU-days over the catalog. The colour-restricted maximum is still
 a well-defined function of the G′-orbit (the colouring is invariant under
 reorientation and global negation and equivariant under relabelling), which
@@ -904,75 +990,88 @@ is all the distinctness argument needs — but the reader has to read the
 forty lines of `canonical_convention()` rather than accept the word
 "canonical". The manifest and the note both say so.
 
-**Canaries** (`--canary`). Eleven sabotages of a 20,000-row sub-artifact,
-each shipped with a **regenerated, internally consistent manifest** — fresh
-SHA-256s for the witness arrays too, i.e. an adversary who can rewrite the
-hashes — plus an untampered control that must pass. The sub-artifact is the
-20,000 rows *nearest the root of the witness tree*, which is closed under
-`parent` (a parent has strictly smaller depth), so it is itself a complete
-artifact: a sorted key list AND a spanning tree over exactly those rows.
-Where a sabotage would otherwise be caught by arithmetic, the count and
-mass are repaired so that only the mathematical check can fire:
+**Canaries** (`--canary`, `data/canary_tree_49.log`). Twelve sabotages of a
+20,000-row sub-certificate — the first 20,000 rows of the canonical order,
+which is closed under `parent` because `parent[i] < i`, so the prefix is
+itself a complete certificate — plus an untampered control that must pass.
+Where a sabotage would otherwise be caught by arithmetic, the manifest is
+**regenerated and made internally consistent**: fresh SHA-256s and the
+count, mass and stabilizer histogram recomputed by reconstructing the
+*sabotaged* tree, i.e. an adversary who can rewrite the whole manifest.
+Measured outcome of the run of record:
 
-| canary | fires on |
+| canary | rejected by |
 |---|---|
 | control, untampered | *accepted* (as required) |
-| duplicated key (kept sorted, totals repaired) | (c), and (h) |
-| non-canonical key (another representative of the same orbit) | (b), (d), (h) |
-| corrupted stabilizer order (manifest mass repaired) | (d) |
-| GP-invalid key (a **non-mutable** basis flipped) | (a), and (b),(d),(h) |
-| re-pointed parent creating a 2-cycle | (g) depth + pointer-doubling |
-| corrupted voltage (**single** eps bit — `eps ^ 511` is a NO-OP, r even) | (h) |
-| wrong mutated-basis index | (h) |
-| second parentless node (a leaf, depth repaired to 0) | (g) unique root |
-| parent re-pointed to another node at the **same depth** (tree intact) | (h) only |
-| truncated artifact, 500 **leaf** rows dropped, totals NOT repaired | (e) |
-| stale SHA-256, data changed | (0) |
+| duplicated class (a leaf edge re-pointed onto a class already listed) | (c) |
+| corrupted root key (another representative of its orbit) | (b) |
+| corrupted stabilizer histogram in the manifest | (d) |
+| GP-invalid mutant (a **non-mutable** basis of the parent) | (a) |
+| truncated certificate (500 trailing rows, totals NOT repaired) | (d), (e) |
+| stale SHA-256, data changed | (0), then (a) |
+| parent that does not precede its row (a self-loop) | (g) |
+| parent multiset preserved, tree changed, re-sorted into canonical order | (a) |
+| parent re-pointed at the **same depth**, re-sorted into canonical order | (c) |
+| malformed gap stream (one extra one-bit) | (g) |
+| out-of-range mutated-basis index (127) | (g) |
+| rows out of canonical order (two swapped) | (g), then (a),(c),(d),(e) |
 
-The last two are deliberately not manifest-repaired: the truncation is
-meant to be caught by the count/mass arithmetic and the stale hash by the
-integrity path. The other nine must be caught by a substantive check.
-Canaries 7, 8 and 10 (voltage / flip / same-depth re-point) are asserted
-**semantically real at construction time** — the builder recomputes the
-mutation identity and requires that it now fails — so a perturbation
-silently absorbed by a stabilizer cannot produce a vacuous canary.
+Five are manifest-repaired (duplicated class, corrupted root, GP-invalid,
+and the two re-pointings); a sixth corrupts nothing *but* the manifest's
+histogram. The truncation deliberately leaves the totals unrepaired and the
+stale hash leaves the manifest untouched, so the arithmetic and integrity
+paths are exercised too; the last four break the encoding, the parent order
+or the row order and are refused before any reconstruction starts. The
+three that re-point an edge are asserted **semantically real at
+construction time** — the builder reconstructs the tampered edge and
+requires that it become invalid or land on a class already listed — so a
+perturbation absorbed by a symmetry cannot produce a vacuous canary.
 
-All twelve behave as required (control + 11 sabotages).
+*Three sabotages of the old format have no analogue, and that is the
+point*: a corrupted stabilizer order, a corrupted voltage and a second
+parentless row are **not expressible**, because the certificate carries no
+stabilizer orders and no voltages and its root is structurally unique. The
+nearest analogues (corrupted histogram, corrupted mutated basis, parent not
+preceding its row) are in the table. All thirteen cases behave as required;
+the suite takes 180 s.
 
-**Run of record (2026-07-31, with the witness).** FULL, not sampled: all
-9,276,595 rows AND all 9,276,594 tree edges, **2 worker processes** (the
-16 GB laptop has had OOM kills; shard payloads are built one at a time
-rather than materialized up front), 93 shards of 100,000 in each phase,
-**853 s wall** = 702 s for (a),(b),(d) + 144 s for (g),(h), 22,544,370
-admissible relabellings enumerated. `39 checks passed, 0 failed` —
-(0),(a),(b),(c),(d),(e),(f),(g),(h) all green
-(`data/coverage_witness_full.log`). Tree: root = row 9,276,594 (the
-all-`+` alternating matroid, |Stab| = 36), **max depth 27**, pointer
-doubling closes in 6 rounds against a cap of 26. The earlier 4-worker
-catalog-only run took 510 s (`data/coverage_full.log`). The catalog cost
-is very unevenly distributed: shards 0–91 take 11–14 s each and the last
-shard, 76,595 rows, takes 173 s, because the artifact is sorted by key and
-the largest keys are the most symmetric classes; the *tree* check has no
-such tail (2–3 s per shard throughout) because it applies one recorded
-group element per row instead of searching. `--sample N` runs (a),(b),(d)
-on a seeded pseudorandom subset; `--cheap-only` skips (a),(b),(d),(g),(h);
-`--witness-only` runs (0),(c),(e),(g),(h); both phases checkpoint into
-`--state` and a re-run skips finished shards. Resume was tested at full
-scale: deleting 50 of the 186 shard checkpoints and re-running recomputed
-exactly those (176 s + 27 s instead of 702 s + 144 s) and reproduced the
-same aggregates (22,544,370 relabellings, 9,276,594 edges, 0 failures).
-The export is deterministic: re-running `export_coverage.py`
-over the same checkpoints reproduced **both** `.npz` files byte for byte
-(62,185,111 and 83,453,421 bytes, identical file SHA-256s); only
-`MANIFEST.json` differs, and only in the output path echoed inside
-`how_to_obtain`. So the `array_sha256` / `witness_array_sha256` values are
-a usable pin and the full-run verdict transfers to any copy matching them.
+**Run of record (2026-07-31, compact certificate).** FULL, not sampled: all
+9,276,595 classes RECONSTRUCTED and all 9,276,594 edges verified,
+**2 worker processes** (the 16 GB laptop has had OOM kills; shard payloads
+are built one at a time and the placement enumeration is capped at 32,768
+relabellings per call, so even the alternating matroid's 362,880 costs
+bounded memory), 113 shards of 100,000 spread over the 27 depth levels,
+**837 s wall** = 819 s reconstruction + 15 s for integrity, structure, the
+root, the distinctness sort and the mass arithmetic (+ ~3 s for the legacy
+cross-check), 22,181,490 admissible relabellings enumerated in the shards
+plus the root's 362,880 = 22,544,370, exactly the old run's total.
+`50 checks passed, 0 failed` — (0),(a),(b),(c),(d),(e),(f),(g),(h) and the
+five cross-checks (`data/coverage_tree_full.log`); without the legacy
+arrays it is 45, and without `--extcount` 43. Pointer doubling closes in 6
+rounds against a cap of 26. **This is not slower than the old 853 s**, even
+though it derives what it used to be given: one pass now yields the key,
+the stabilizer order and the edge witness together, where the old checker
+canonicalized to compare against a stored key and then made a second pass
+over the witness arrays. The cost is also far more evenly spread — the old
+run's last shard took 173 s because the artifact was sorted by key and the
+most symmetric classes clustered at the end; in depth order the worst shard
+is 72 s (34,040 deep classes, which are symmetric ones) and the typical one
+13 s.
 
-**Caveat on `--witness-only` / `--sample`.** (h) shows that the parent's
-mutant is a *G′-translate of the child*; that it is a **valid** chirotope,
-which is what makes the edge a real mutation edge, comes from check (a).
-Run (a) over every row or the reachability conclusion is incomplete — the
-checker prints this caveat when it is not.
+`--prefix N` reconstructs the first N rows (a complete sub-certificate);
+`--structure-only` runs (0) and (g) alone, in 1.6 s; `--legacy-crosscheck`
+adds the comparison against the untracked arrays. The reconstruction
+checkpoints into `--state`: keys and stabilizer orders go into memory-mapped
+files and each finished shard drops a JSON, so a re-run skips it. Resume
+was tested at full scale: with everything checkpointed the whole run takes
+**15 s**, and deleting 20 of the 113 shard checkpoints recomputed exactly
+those (155 s) and reproduced identical aggregates.
+
+The export is deterministic: `tree_4_9.npz` is written STORED with a fixed
+timestamp, so it reproduces byte for byte (10,437,614 bytes), and
+re-running `export_coverage.py` over the same checkpoints also reproduced
+both legacy `.npz` files byte for byte (62,185,111 and 83,453,421 bytes,
+identical raw-array SHA-256s).
 
 **What this still does not certify.** The checker takes the target
 1,722,704,635,330,560 as an input constant. Check (f) confirms that the
@@ -983,13 +1082,24 @@ remains reproducible-only — and with it *completeness* of the catalog,
 hence the final step from "one component" to "Γᵤ^{9,4} is connected".
 One-componentness itself does **not** depend on it.
 
-**Availability.** Both `.npz` files are gitignored (62.2 + 83.5 MB);
-`MANIFEST.json` is tracked. **No archived release exists yet** — do not
-describe the artifact as public or published. The only way for a reader to
-obtain the arrays today is to regenerate: `python runbig.py 4 9 <workers>`
-(~4 h on 4 cores) then `python export_coverage.py 4 9 data/big_4_9
-data/coverage_4_9` (~5 min), then pin against the manifest's per-array
-SHA-256s.
+**Availability.** `data/coverage_4_9/tree_4_9.npz` (10,437,614 bytes) and
+`MANIFEST.json` are **TRACKED IN GIT**; the `.gitignore` negation
+`!data/coverage_*/tree_*.npz` sits after the blanket `data/coverage_*/*.npz`
+rule (verified with `git check-ignore -v`). So the (9,4) coverage claim is
+checkable directly after cloning — no release, no download, no
+regeneration:
+
+```
+python coverage_checker.py --artifact data/coverage_4_9 --workers 2 \
+       --extcount data/extcount_4_9.jsonl        # ~14 min, 45 checks
+```
+
+The two legacy arrays (62.2 + 83.5 MB) remain gitignored and are needed by
+nothing except `--legacy-crosscheck`; regenerate them with `python runbig.py
+4 9 <workers>` (~4 h on 4 cores) then `python export_coverage.py 4 9
+data/big_4_9 data/coverage_4_9` (~6 min, of which 5 are the export's own
+voltage-identity gate over all 9.28M rows). Still true, and still worth
+saying: **no archived release exists**, and none is needed now.
 
 ## 8. Trust boundaries
 
@@ -1016,12 +1126,22 @@ SHA-256s.
   with exact stabilizers whose masses hit the target" and "the BFS reached
   them all from one root" are different assertions, and until 2026-07-31
   only the first was certified; the second rested on reproducing or
-  trusting the disk BFS. `data/coverage_4_9/witness_4_9.npz` + checks
-  (g),(h) of `coverage_checker.py` now certify the second **outright and
+  trusting the disk BFS. `data/coverage_4_9/tree_4_9.npz` +
+  `coverage_checker.py` now certify the second **outright and
   independently of the extension target**: all 9,276,595 classes are
   joined to one root by mutation edges each verified in exact arithmetic.
   What is left conditional on the target is *completeness* — hence the
   step from "one component" to "Γᵤ^{9,4} is connected".
+* **The keys and stabilizer orders are now DERIVED, not cross-verified.**
+  Under the 145 MB format they were data produced by `canon.py` and checked
+  by `coverage_checker.py`: two implementations agreeing. The compact
+  certificate does not contain them, so the checker's own exhaustive
+  enumeration is their only producer. No conclusion weakens (every one of
+  them is a conclusion of the checker's computation, and a datum that is
+  absent cannot be misreported), but the redundancy is no longer part of
+  what a cloner runs. `--legacy-crosscheck` restores it for anyone holding
+  the regenerated arrays; run at full scale 2026-07-31, all 9,276,595 keys
+  and stabilizer orders agree exactly. §7 and the note both say this.
 * **The class list's completeness has two independent supports** and they
   should not be conflated: (1) the mass identity against the
   independently computed target N_chi(4,9) from the (8,4) extension
@@ -1076,6 +1196,31 @@ SHA-256s.
 
 ## 9. History / errata log
 
+* 2026-07-31 (session 5): **the certificate now fits in git (145 MB →
+  10.44 MB) and is tracked.** The two arrays were redundant: check (h) read
+  as a derivation says the tree determines the keys, so the certificate was
+  reduced to the root key plus, per class, (parent, mutated basis), in a
+  canonical tree order that makes `parent` monotone (a 2.3 MB gap bitmap)
+  and every prefix a complete sub-certificate. `coverage_checker.py`
+  RECONSTRUCTS the keys and stabilizer orders and then runs
+  (a),(b),(c),(d),(e),(f),(g),(h) as before, with (h) now checked against a
+  second implementation of the group action; five data-independent
+  self-tests pin the conventions before any artifact is read, and the
+  no-project-imports rule is enforced at run time. FULL run: **837 s, 50/50
+  checks** (`data/coverage_tree_full.log`), against 853 s for the old
+  format — deriving the keys costs nothing here. `--legacy-crosscheck`
+  confirms the reconstruction reproduces all 9,276,595 recorded keys and
+  stabilizer orders exactly. Twelve sabotages + control all behave as
+  required in 180 s (`data/canary_tree_49.log`); three sabotages of the old
+  format are no longer expressible, which is the point. Before any of this
+  was built, a gate reconstructed 40,009 classes sampled across every depth
+  (and every class with |Stab| ≥ 8) and reproduced key and stabilizer order
+  in all of them. The note's availability passage is rewritten accordingly:
+  it no longer says "no archived release exists ... regenerate ~4 h", it
+  says the certificate is in the repository — while keeping both older
+  boundaries (extension target reproducible-only; colour-restricted
+  canonical convention) and adding the third (keys/stabilizers derived, not
+  cross-verified).
 * 2026-07-31 (session 4): **reachability certified — the last open finding
   of the GPT re-review.** The POSTSCRIPT of `paper/REVIEW_note_gpt.md`
   (finding 3, NOT RESOLVED) observed that the coverage artifact certified

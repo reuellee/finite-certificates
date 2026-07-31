@@ -9,10 +9,14 @@ data/extcount_*.jsonl
 # right-hand side of the mass identity and coverage_checker.py --extcount
 # re-adds it up.
 !data/extcount_4_9.jsonl
-# The coverage artifact is ~62 MB: too large for git.  Its MANIFEST.json
-# (with the SHA-256 of every array) IS tracked, so a downloaded or
-# regenerated copy can be pinned against the repository.
+# The two LEGACY coverage arrays (keys+stabilizers, and the witness) total
+# ~145 MB: too large for git, and no longer needed.  The COMPACT
+# CERTIFICATE they were derived from -- tree_<r>_<n>.npz, ~10.4 MB: the
+# root key plus, per class, its parent and the mutated basis -- IS tracked,
+# together with MANIFEST.json, so coverage_checker.py can be run straight
+# after cloning.  It reconstructs the keys and stabilizer orders from it.
 data/coverage_*/*.npz
+!data/coverage_*/tree_*.npz
 data/covstate_*/
 data/canary_coverage/
 data/big_*.bak/

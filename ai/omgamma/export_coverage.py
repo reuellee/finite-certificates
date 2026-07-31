@@ -1,16 +1,40 @@
-"""Export the (r,n) coverage artifact: every canonical class key + |Stab|,
-plus a mutation SPANNING-TREE (reachability) witness.
+"""Export the (r,n) coverage artifact.
 
 Reads the level_*.npz checkpoints of a completed runbig.py campaign and emits
 
-    <out>/coverage_<r>_<n>.npz      key_hi, key_lo (uint64), stab (uint8)
-    <out>/witness_<r>_<n>.npz       parent, flip, sigma, eps, gsgn, depth
+    <out>/tree_<r>_<n>.npz          THE CERTIFICATE (small, tracked in git):
+                                    the root key + per class (parent, flip)
+    <out>/coverage_<r>_<n>.npz      legacy: key_hi, key_lo (uint64), stab
+    <out>/witness_<r>_<n>.npz       legacy: parent, flip, sigma, eps, gsgn,
+                                    depth
     <out>/MANIFEST.json             conventions, counts, mass, SHA-256s
 
-sorted strictly increasingly by the 126-bit key, so that a third party can
-verify distinctness, validity, canonicity, the stabilizer orders AND the
-one-component reachability of the whole catalog with `coverage_checker.py`
-(which shares no code with any generator) or with numpy alone.
+THE COMPACT CERTIFICATE.  The two legacy arrays total ~145 MB, which is too
+much for a repository.  They are also redundant: the mutation identity
+
+    (sigma_i, eps_i, gsgn_i) . chi_i  ==  mu_{B_flip[i]} ( chi_parent[i] )
+
+says that chi_i lies in the G'-orbit of mu_{B_flip[i]}(chi_parent[i]), and
+the class key is by construction a function of that orbit alone.  Read as a
+DERIVATION rather than as a check, it means the tree determines the keys:
+from the root key, and per class the parent and the mutated basis, every
+chirotope is computable, its canonical key follows from the canonicalization
+the checker already performs, and the stabilizer order from the same argmax
+count.  Depth and the voltage are likewise derivable.  So the irreducible
+core of the artifact is (root key, parent, flip) -- about 10.4 MB packed --
+and `coverage_checker.py` reconstructs the rest.
+
+ROW ORDER.  Rows are in the CANONICAL TREE ORDER: sorted by (depth, position
+of parent, mutated-basis index), the root first.  This is a function of the
+tree alone (an induction on depth), it makes `parent` strictly precede its
+row and globally nondecreasing -- which is what makes the tree a 2.3 MB gap
+bitmap -- and it lets the checker verify the layout, so that no reordering
+of the rows can pass unnoticed.  A PREFIX of this order is closed under
+`parent`, hence is itself a complete certificate for a smaller catalog.
+
+The legacy arrays are still written (they are what `--legacy-crosscheck`
+compares the reconstruction against) but they are not needed to check the
+certificate and are not tracked.
 
 THE WITNESS.  Row i of the witness refers to row i of the coverage array.
 For every non-root row it records
@@ -42,14 +66,20 @@ Usage:  python export_coverage.py 4 9 data/big_4_9 data/coverage_4_9
 """
 import glob
 import hashlib
+import io
 import json
 import os
 import sys
 import time
+import zipfile
 from itertools import combinations
 from math import comb, factorial
 
 import numpy as np
+from numpy.lib import format as npformat
+
+TREE_FORMAT = "omgamma-tree-v1"
+FIXED_ZIP_DATE = (1980, 1, 1, 0, 0, 0)
 
 
 def sha256_file(path, bufsize=1 << 20):
@@ -131,6 +161,90 @@ def act(A, S, sigma, eps):
     return out
 
 
+# ----------------------------------------------------------------------
+# the compact certificate: canonical tree order, then a bit-level packing
+# ----------------------------------------------------------------------
+
+def canonical_tree_order(parent, flip, depth):
+    """Positions of the rows in the canonical tree order.
+
+    Row 0 is the root; the rows of depth d follow, ordered by (position of
+    parent, mutated basis).  Defined by induction on depth, so it depends
+    only on the tree, not on the order the search happened to discover
+    classes in.  Returns (pos, blocks) with blocks[d] the first position of
+    depth d and blocks[-1] = N.
+    """
+    N = len(parent)
+    D = int(depth.max())
+    pos = np.full(N, -1, dtype=np.int64)
+    root = int(np.flatnonzero(parent < 0)[0])
+    pos[root] = 0
+    nxt = 1
+    blocks = [0, 1]
+    for d in range(1, D + 1):
+        ids = np.flatnonzero(depth == d)
+        ids = ids[np.lexsort((flip[ids], pos[parent[ids]]))]
+        pos[ids] = np.arange(nxt, nxt + len(ids), dtype=np.int64)
+        nxt += len(ids)
+        blocks.append(nxt)
+    if nxt != N or int((pos < 0).sum()):
+        raise SystemExit("canonical order did not cover every row")
+    return pos, blocks
+
+
+def pack_tree(root_key, parent, flip, n, r):
+    """(root key, parent, flip) -> the arrays of the certificate.
+
+    `parent` is nondecreasing and parent[i] < i, so the whole parent map is
+    a monotone gap bitmap: for each row i = 1..N-1 in order, write
+    parent[i]-parent[i-1] zero bits (parent[0] := 0) and then a single one
+    bit.  `flip` is packed at 7 bits per row, most significant bit first.
+    """
+    N = len(parent)
+    par = parent[1:].astype(np.int64)
+    if not (par < np.arange(1, N)).all():
+        raise SystemExit("parent does not strictly precede its row")
+    if not (np.diff(par) >= 0).all():
+        raise SystemExit("parent is not nondecreasing in canonical order")
+    gaps = np.diff(np.concatenate(([0], par)))
+    nbits = int((N - 1) + int(par[-1]))
+    bits = np.zeros(nbits, dtype=np.uint8)
+    bits[np.cumsum(gaps + 1) - 1] = 1
+    if int(bits.sum()) != N - 1:
+        raise SystemExit("gap bitmap does not carry one bit per row")
+    fb = np.zeros((N - 1, 7), dtype=np.uint8)
+    f = flip[1:]
+    if int(f.max()) >= comb(n, r):
+        raise SystemExit("flip index out of range")
+    for k in range(7):
+        fb[:, 6 - k] = (f >> k) & 1
+    return {
+        'format': np.array(TREE_FORMAT),
+        'params': np.array([n, r, N], dtype=np.int64),
+        'root_key': np.asarray(root_key, dtype=np.uint64),
+        'gap_nbits': np.array([nbits], dtype=np.int64),
+        'gap_bits': np.packbits(bits, bitorder='big'),
+        'flip_bits': np.packbits(fb.ravel(), bitorder='big'),
+    }
+
+
+def save_npz_deterministic(path, arrays):
+    """A .npz written STORED (no compression) with a fixed timestamp.
+
+    The payload is already bit-packed, so there is nothing for a compressor
+    to find; storing it means the file does not depend on the zlib version
+    and is byte-for-byte reproducible.  `np.load` reads it normally.
+    """
+    with zipfile.ZipFile(path, 'w', compression=zipfile.ZIP_STORED) as zf:
+        for name, arr in arrays.items():
+            buf = io.BytesIO()
+            npformat.write_array(buf, np.asanyarray(arr), allow_pickle=False)
+            zi = zipfile.ZipInfo(name + '.npy', date_time=FIXED_ZIP_DATE)
+            zi.compress_type = zipfile.ZIP_STORED
+            zi.external_attr = 0o600 << 16
+            zf.writestr(zi, buf.getvalue())
+
+
 def main(r, n, indir, outdir):
     t0 = time.time()
     M = comb(n, r)
@@ -208,6 +322,36 @@ def main(r, n, indir, outdir):
     if maxdepth >= (1 << 16):
         raise SystemExit("tree depth exceeds uint16")
     print(f"  spanning tree: 1 root, max depth {maxdepth}", flush=True)
+
+    # --- THE COMPACT CERTIFICATE, in canonical tree order --------------
+    tpos, tblocks = canonical_tree_order(par_id.astype(np.int64), flip, depth)
+    tparent = np.empty(N, dtype=np.int64)
+    tflip = np.empty(N, dtype=np.uint8)
+    tdepth = np.empty(N, dtype=np.int64)
+    tparent[tpos] = np.where(par_id < 0, -1,
+                             tpos[np.maximum(par_id, 0).astype(np.intp)])
+    tflip[tpos] = flip
+    tdepth[tpos] = depth
+    troot = int(np.flatnonzero(par_id < 0)[0])
+    root_key = np.array([key_hi[troot], key_lo[troot]], dtype=np.uint64)
+    # gates: the layout the certificate's encoding and the checker rely on
+    if int(tparent[0]) != -1:
+        raise SystemExit("the root is not row 0 of the canonical order")
+    if not bool((tparent[1:] < np.arange(1, N)).all()):
+        raise SystemExit("parent does not strictly precede its row")
+    if not bool((tdepth[1:] == tdepth[tparent[1:]] + 1).all()):
+        raise SystemExit("depth is not parent-depth + 1 in canonical order")
+    lexkey = ((tdepth[1:] << 40) | (tparent[1:] << 7) | tflip[1:])
+    if not bool((np.diff(lexkey) > 0).all()):
+        raise SystemExit("rows are not strictly ordered by "
+                         "(depth, parent, flip)")
+    del lexkey
+    tree_arrays = pack_tree(root_key, tparent, tflip, n, r)
+    tnpz = os.path.join(outdir, f"tree_{r}_{n}.npz")
+    save_npz_deterministic(tnpz, tree_arrays)
+    tsize = os.path.getsize(tnpz)
+    print(f"  wrote {tnpz}: {tsize/1e6:.2f} MB "
+          f"(root key {int(root_key[0])}*2^64+{int(root_key[1])})", flush=True)
 
     # --- sort by key, and carry the witness along ---------------------
     order = np.lexsort((key_lo, key_hi))
@@ -311,7 +455,7 @@ def main(r, n, indir, outdir):
 
     man = {
         "artifact": f"omgamma coverage certificate ({r},{n})",
-        "format_version": 1,
+        "format_version": 2,
         "n": n, "r": r, "M_bases": M,
         "count": int(N),
         "complete": True,
@@ -379,15 +523,86 @@ def main(r, n, indir, outdir):
         },
         "sorted": "strictly increasing in the 126-bit key",
         "files": {},
+        "legacy_files": {},
+        "tree": {
+            "file": os.path.basename(tnpz),
+            "purpose":
+                "THE CERTIFICATE.  The root key together with, per class, "
+                "the parent class and the mutated basis.  Everything else "
+                "-- the class keys, the stabilizer orders, the depths and "
+                "the edge voltages -- is DERIVED from it by "
+                "coverage_checker.py, which is why the certificate fits in "
+                "the repository while the two arrays below do not.",
+            "count": int(N),
+            "root_key_hi": int(root_key[0]),
+            "root_key_lo": int(root_key[1]),
+            "max_depth": maxdepth,
+            "row_order":
+                "CANONICAL TREE ORDER: row 0 is the root; the rows of depth "
+                "d follow those of depth d-1, ordered by (position of "
+                "parent, mutated-basis index).  This is defined by "
+                "induction on depth, so it is a function of the tree alone. "
+                " It makes parent[i] < i and the parent array nondecreasing, "
+                "and every prefix of it is closed under `parent`, hence is "
+                "itself a complete certificate for a smaller catalog.",
+            "arrays": {
+                "format": f"0-d unicode array, the string {TREE_FORMAT!r}",
+                "params": "int64[3] = [n, r, count]",
+                "root_key": "uint64[2] = [hi, lo]; the 126-bit key of row 0 "
+                            "under conventions.key_encoding",
+                "gap_nbits": "int64[1]; the exact length in bits of the "
+                             "parent gap stream",
+                "gap_bits": "uint8[ceil(gap_nbits/8)]; the parent gap "
+                            "stream packed MSB-first",
+                "flip_bits": "uint8[ceil(7*(count-1)/8)]; the mutated-basis "
+                             "indices, 7 bits each, MSB-first",
+            },
+            "decoding":
+                "PARENT: unpack gap_bits MSB-first, keep the first "
+                "gap_nbits bits (the padding must be zero), and let "
+                "p_0 < ... < p_{count-2} be the positions of the one bits "
+                "(there must be exactly count-1 of them); then "
+                "parent[k+1] = p_k - k.  Equivalently the stream writes, "
+                "for each row i = 1..count-1 in order, "
+                "parent[i]-parent[i-1] zeros (with parent[0] := 0) followed "
+                "by a single one.  FLIP: unpack flip_bits MSB-first, keep "
+                "the first 7*(count-1) bits, read them as (count-1) "
+                "big-endian 7-bit integers; flip[i] for i = 1..count-1 must "
+                "be < M_bases.  Row 0 is the root and has neither.",
+            "reconstruction":
+                "chi_0 is decoded from root_key.  For i = 1,2,...: "
+                "psi_i = mu_{B_flip[i]}(chi_parent[i]) -- flip the sign of "
+                "the flip[i]-th basis of the parent chirotope -- which must "
+                "be a VALID uniform chirotope, and chi_i is the canonical "
+                "representative of the G'-orbit of psi_i under "
+                "conventions.canonical_form, with stab[i] the size of that "
+                "orbit's stabilizer read off the same maximisation.  "
+                "parent[i] < i, so this terminates; the rows of one depth "
+                "can be done in parallel.",
+            "why_this_is_a_certificate":
+                "psi_i valid means flip[i] really is a mutable basis of the "
+                "parent, so parent[i] and i are adjacent in the mutation "
+                "graph on classes; parent[i] < i with a single parentless "
+                "row makes the edges a spanning tree, so all listed classes "
+                "lie in ONE component.  The keys are a function of the "
+                "G'-orbit, so distinct keys certify distinct classes, and "
+                "the orbit masses summing to the target certifies that "
+                "there are no others.",
+        },
         "array_sha256": {
             "key_hi": sha256_array(key_hi),
             "key_lo": sha256_array(key_lo),
             "stab": sha256_array(stab),
         },
+        "tree_array_sha256": {k: sha256_array(v)
+                              for k, v in tree_arrays.items()},
         "array_sha256_note":
             "SHA-256 of the raw little-endian C-contiguous buffer of each "
             "array (numpy .tobytes()), so the hashes survive repacking of "
-            "the .npz container.",
+            "the .npz container.  `array_sha256` and `witness_array_sha256` "
+            "pin the LEGACY arrays, which are not tracked and are not "
+            "needed to check the certificate; `tree_array_sha256` pins the "
+            "certificate itself.",
         "witness": {
             "file": os.path.basename(wnpz),
             "purpose":
@@ -456,23 +671,29 @@ def main(r, n, indir, outdir):
             "exported_by": "export_coverage.py",
         },
         "how_to_obtain": (
-            f"{os.path.basename(npz)} ({size/1e6:.1f} MB) and "
-            f"{os.path.basename(wnpz)} ({wsize/1e6:.1f} MB) are NOT "
-            "tracked in git (see .gitignore); this MANIFEST.json is.  No "
-            "archived release exists yet -- one is planned, and until it "
-            "does the only way to obtain the arrays is to REGENERATE "
-            f"them: run `python runbig.py {r} {n} <workers>` (about 4 h "
-            f"on 4 cores; it writes {indir}/level_*.npz), then "
-            f"`python export_coverage.py {r} {n} {indir} {outdir}`.  The "
-            "array_sha256 / witness_array_sha256 values below pin the "
-            "result: they are SHA-256 of the raw array buffers, so they "
-            "must reproduce exactly, whereas the .npz file hashes need "
-            "not in general (the zip container may record timestamps)."),
+            f"{os.path.basename(tnpz)} ({tsize/1e6:.2f} MB) IS tracked in "
+            "git together with this MANIFEST.json, so the certificate can "
+            "be checked directly after cloning the repository: `python "
+            f"coverage_checker.py --artifact {outdir}`.  The two LEGACY "
+            f"arrays {os.path.basename(npz)} ({size/1e6:.1f} MB) and "
+            f"{os.path.basename(wnpz)} ({wsize/1e6:.1f} MB) are NOT tracked "
+            "(see .gitignore) and are NOT needed: the checker reconstructs "
+            "their contents from the certificate.  They exist only so that "
+            "`--legacy-crosscheck` can compare the reconstruction against "
+            "what the search programs actually recorded; to regenerate "
+            f"them run `python runbig.py {r} {n} <workers>` (about 4 h on 4 "
+            f"cores; it writes {indir}/level_*.npz) and then `python "
+            f"export_coverage.py {r} {n} {indir} {outdir}`.  Every "
+            "array_sha256 value is a SHA-256 of a raw array buffer and must "
+            "reproduce exactly; the certificate .npz is written STORED with "
+            "a fixed timestamp, so its FILE hash reproduces too."),
         "checker": "coverage_checker.py (imports nothing from this project)",
     }
-    man['files'][os.path.basename(npz)] = {
+    man['files'][os.path.basename(tnpz)] = {
+        "sha256": sha256_file(tnpz), "bytes": tsize}
+    man['legacy_files'][os.path.basename(npz)] = {
         "sha256": sha256_file(npz), "bytes": size}
-    man['files'][os.path.basename(wnpz)] = {
+    man['legacy_files'][os.path.basename(wnpz)] = {
         "sha256": sha256_file(wnpz), "bytes": wsize}
 
     mpath = os.path.join(outdir, "MANIFEST.json")

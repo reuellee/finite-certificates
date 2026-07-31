@@ -46,13 +46,18 @@ with the generators) on the shipped certificates, plus a sabotage
 canary. Deeper canaries: `canary_checker.py` (five certificate
 corruptions), `canary_resume.py` (six checkpoint corruptions),
 `submodules.py` (its own two-method cross-check).
-`coverage_checker.py --artifact data/coverage_4_9` (no project imports)
-re-verifies the whole (9,4) catalog — validity, distinctness, exact
-stabilizers, mass — *and* the mutation spanning tree witnessing that all
-9,276,595 classes lie in one component; `--canary` runs 11 sabotages.
-The two arrays it reads are gitignored (62 + 84 MB); regenerate them with
-`runbig.py 4 9` then `export_coverage.py`, and pin against the tracked
-`data/coverage_4_9/MANIFEST.json`.
+`coverage_checker.py --artifact data/coverage_4_9` (no project imports,
+enforced at run time) RECONSTRUCTS the whole (9,4) catalog from the
+tracked 10.4 MB certificate `data/coverage_4_9/tree_4_9.npz` — which holds
+only the root key and, per class, its parent and the mutated basis — and
+then checks validity, distinctness, exact stabilizers, mass, the tree
+structure and the mutation identity of every one of the 9,276,594 edges,
+so that all 9,276,595 classes are certified to lie in one component.
+Nothing needs downloading: it runs on a fresh clone. `--canary` runs 12
+sabotages; `--prefix N` checks the first N rows (a complete
+sub-certificate); `--legacy-crosscheck` compares the reconstruction with
+the 145 MB arrays the search wrote, which stay gitignored (regenerate with
+`runbig.py 4 9` then `export_coverage.py`).
 Regenerate everything: `test_core.py`, `test_canon.py`,
 `test_extend.py`, `test_flip.py`, `masscheck.py`, `runcat.py`,
 `runflip.py`, `ext_count.py`, `runbig.py`.

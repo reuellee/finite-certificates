@@ -1,6 +1,6 @@
 {
  "artifact": "omgamma coverage certificate (4,9)",
- "format_version": 1,
+ "format_version": 2,
  "n": 9,
  "r": 4,
  "M_bases": 126,
@@ -28,6 +28,12 @@
  },
  "sorted": "strictly increasing in the 126-bit key",
  "files": {
+  "tree_4_9.npz": {
+   "sha256": "b4a3623a996c0174555a746879cef6bfb043d9f5ab0d2fc64dfba596ea946e8e",
+   "bytes": 10437614
+  }
+ },
+ "legacy_files": {
   "coverage_4_9.npz": {
    "sha256": "fd7da051cc2b93e9d2b0824612ddd9bfb7a9f779a6fd4f2d6dbc249d613e7657",
    "bytes": 62185111
@@ -37,12 +43,40 @@
    "bytes": 83453421
   }
  },
+ "tree": {
+  "file": "tree_4_9.npz",
+  "purpose": "THE CERTIFICATE.  The root key together with, per class, the parent class and the mutated basis.  Everything else -- the class keys, the stabilizer orders, the depths and the edge voltages -- is DERIVED from it by coverage_checker.py, which is why the certificate fits in the repository while the two arrays below do not.",
+  "count": 9276595,
+  "root_key_hi": 4611686018427387903,
+  "root_key_lo": 18446744073709551615,
+  "max_depth": 27,
+  "row_order": "CANONICAL TREE ORDER: row 0 is the root; the rows of depth d follow those of depth d-1, ordered by (position of parent, mutated-basis index).  This is defined by induction on depth, so it is a function of the tree alone.  It makes parent[i] < i and the parent array nondecreasing, and every prefix of it is closed under `parent`, hence is itself a complete certificate for a smaller catalog.",
+  "arrays": {
+   "format": "0-d unicode array, the string 'omgamma-tree-v1'",
+   "params": "int64[3] = [n, r, count]",
+   "root_key": "uint64[2] = [hi, lo]; the 126-bit key of row 0 under conventions.key_encoding",
+   "gap_nbits": "int64[1]; the exact length in bits of the parent gap stream",
+   "gap_bits": "uint8[ceil(gap_nbits/8)]; the parent gap stream packed MSB-first",
+   "flip_bits": "uint8[ceil(7*(count-1)/8)]; the mutated-basis indices, 7 bits each, MSB-first"
+  },
+  "decoding": "PARENT: unpack gap_bits MSB-first, keep the first gap_nbits bits (the padding must be zero), and let p_0 < ... < p_{count-2} be the positions of the one bits (there must be exactly count-1 of them); then parent[k+1] = p_k - k.  Equivalently the stream writes, for each row i = 1..count-1 in order, parent[i]-parent[i-1] zeros (with parent[0] := 0) followed by a single one.  FLIP: unpack flip_bits MSB-first, keep the first 7*(count-1) bits, read them as (count-1) big-endian 7-bit integers; flip[i] for i = 1..count-1 must be < M_bases.  Row 0 is the root and has neither.",
+  "reconstruction": "chi_0 is decoded from root_key.  For i = 1,2,...: psi_i = mu_{B_flip[i]}(chi_parent[i]) -- flip the sign of the flip[i]-th basis of the parent chirotope -- which must be a VALID uniform chirotope, and chi_i is the canonical representative of the G'-orbit of psi_i under conventions.canonical_form, with stab[i] the size of that orbit's stabilizer read off the same maximisation.  parent[i] < i, so this terminates; the rows of one depth can be done in parallel.",
+  "why_this_is_a_certificate": "psi_i valid means flip[i] really is a mutable basis of the parent, so parent[i] and i are adjacent in the mutation graph on classes; parent[i] < i with a single parentless row makes the edges a spanning tree, so all listed classes lie in ONE component.  The keys are a function of the G'-orbit, so distinct keys certify distinct classes, and the orbit masses summing to the target certifies that there are no others."
+ },
  "array_sha256": {
   "key_hi": "09517f6f381ae1aac8f67565b7d4d734e7528220b56c0f7b7911dcb9d1507d5e",
   "key_lo": "0315f3ede71335778ec68e399beb819faecd8d7cc49de4ef7736ab9fca24439b",
   "stab": "2c237034a1cda8a0dbfadafccd1af3f21729eac99745bcb673238955361f09a4"
  },
- "array_sha256_note": "SHA-256 of the raw little-endian C-contiguous buffer of each array (numpy .tobytes()), so the hashes survive repacking of the .npz container.",
+ "tree_array_sha256": {
+  "format": "864a9ca4eb82887ea485e68bc1a86da6462f2f7cf4289680b093246b4dba60d2",
+  "params": "2a016223574b5d3b036308a817ee8fc2acbe4a48a65f86b0144a38a1b63c88fa",
+  "root_key": "d0451f1d1c4de30d4524b10fd70113d5343582e2f437e14022fe522799109c38",
+  "gap_nbits": "3ed92c3660099e47f2536f51e194af463dea03c99c990ef50262d9b4ff21db61",
+  "gap_bits": "8cdbbf954923d3c3936115420ec38e0f9ce9c3e1f522eee0862be399509b9d4b",
+  "flip_bits": "9d220e3e8d2ecc8c3e8059e4ca59eddb227b9aa5e03583541336023653fd9309"
+ },
+ "array_sha256_note": "SHA-256 of the raw little-endian C-contiguous buffer of each array (numpy .tobytes()), so the hashes survive repacking of the .npz container.  `array_sha256` and `witness_array_sha256` pin the LEGACY arrays, which are not tracked and are not needed to check the certificate; `tree_array_sha256` pins the certificate itself.",
  "witness": {
   "file": "witness_4_9.npz",
   "purpose": "a mutation SPANNING TREE over the same rows: it certifies REACHABILITY, i.e. that all listed classes lie in ONE connected component of the mutation graph on classes.  The coverage array alone certifies the catalog (valid, pairwise inequivalent, exact stabilizers, right mass); it says nothing about how the classes are joined to each other.",
@@ -111,6 +145,6 @@
   },
   "exported_by": "export_coverage.py"
  },
- "how_to_obtain": "coverage_4_9.npz (62.2 MB) and witness_4_9.npz (83.5 MB) are NOT tracked in git (see .gitignore); this MANIFEST.json is.  No archived release exists yet -- one is planned, and until it does the only way to obtain the arrays is to REGENERATE them: run `python runbig.py 4 9 <workers>` (about 4 h on 4 cores; it writes data/big_4_9/level_*.npz), then `python export_coverage.py 4 9 data/big_4_9 data/coverage_4_9`.  The array_sha256 / witness_array_sha256 values below pin the result: they are SHA-256 of the raw array buffers, so they must reproduce exactly, whereas the .npz file hashes need not in general (the zip container may record timestamps).",
+ "how_to_obtain": "tree_4_9.npz (10.44 MB) IS tracked in git together with this MANIFEST.json, so the certificate can be checked directly after cloning the repository: `python coverage_checker.py --artifact data/coverage_4_9`.  The two LEGACY arrays coverage_4_9.npz (62.2 MB) and witness_4_9.npz (83.5 MB) are NOT tracked (see .gitignore) and are NOT needed: the checker reconstructs their contents from the certificate.  They exist only so that `--legacy-crosscheck` can compare the reconstruction against what the search programs actually recorded; to regenerate them run `python runbig.py 4 9 <workers>` (about 4 h on 4 cores; it writes data/big_4_9/level_*.npz) and then `python export_coverage.py 4 9 data/big_4_9 data/coverage_4_9`.  Every array_sha256 value is a SHA-256 of a raw array buffer and must reproduce exactly; the certificate .npz is written STORED with a fixed timestamp, so its FILE hash reproduces too.",
  "checker": "coverage_checker.py (imports nothing from this project)"
 }

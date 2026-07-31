@@ -51,9 +51,9 @@ by Fukuda, Miyata and Moriyama; and, when the isomorphism-class graph is
 connected and the holonomy surjects onto $S_n$, for odd $n$ the number of
 components of the labelled graph is forced into $\{1,2^{n-1}\}$ with no
 intermediate value possible. All computations are exact. Certificates and
-standalone checkers accompany the holonomy claims, the
-$9{,}276{,}595$-class enumeration, and a mutation spanning tree joining
-those classes into a single component; \S\ref{sec:honesty} states
+standalone checkers, all of them in the repository, accompany the holonomy
+claims, the $9{,}276{,}595$-class enumeration, and a mutation spanning tree
+joining those classes into a single component; \S\ref{sec:honesty} states
 precisely which claims they cover and which remain reproducible rather
 than certified.
 \end{abstract}
@@ -174,11 +174,12 @@ packages beyond \texttt{numpy} for the fast checker:
            --extcount data/extcount_4_9.jsonl  # coverage + reachability,
                                                # all 9.28M classes
     python coverage_checker.py --canary --artifact data/coverage_4_9
-                                               # 11 sabotages; must REJECT
+                                               # 12 sabotages; must REJECT
 \end{verbatim}
-The last two need the coverage and witness arrays, which are too large for
-the repository; \S\ref{sec:honesty} says how to obtain them, and how far
-each of these commands reaches.
+Every artifact these commands read is in the repository, the coverage
+certificate included: it is a $10.4$~MB file from which the checker
+reconstructs all $9{,}276{,}595$ class keys and stabilizer orders.
+\S\ref{sec:honesty} says how far each command reaches.
 The ledger \texttt{ai/omgamma/OMGAMMA.md} records every computation, its
 artifacts, its trust boundaries, and its errata --- including one of our
 own, discussed in \S\ref{sec:honesty}.
@@ -402,8 +403,8 @@ Completeness of the list is not by itself connectivity of $\Gu^{9,4}$:
 those are different statements, and the second also needs the listed
 classes to be joined to one another. That is a separate artifact, a
 mutation \emph{spanning tree} over all $9{,}276{,}595$ classes
-(\S\ref{sec:honesty}), recording for each class but a fixed root a parent
-class, the basis mutated, and the voltage of that edge. The same
+(\S\ref{sec:honesty}), recording for each class but a fixed root the
+parent class and the basis mutated to reach it. The same
 standalone checker verifies in exact arithmetic that every recorded edge
 is a genuine mutation edge of $\Gu^{9,4}$ and that the parent pointers
 form a tree with one root, so every listed class is joined to that root
@@ -458,79 +459,144 @@ the mass identity.} The compact $(9,4)$ certificates contain the root-path
 closure of the classes referenced by generators --- a few hundred classes
 --- which is what the holonomy claim needs and all that the checkers above
 verify. The left-hand side of the mass identity is a different object: the
-list of $9{,}276{,}595$ class keys with their stabilizer orders. That list
-is now a checkable artifact: the keys sorted, each a $126$-bit integer
-recording the signs of a chirotope on the bases in colex order, with each
-class's stabilizer order; $62$~MB compressed, readable with \texttt{numpy}
-and nothing else, beside a manifest fixing the conventions and recording
-the \texttt{SHA-256} of every array. Beside it sits an $83$~MB
-\emph{reachability witness}: for every class but a fixed root, the row of
-the class it was reached from, the colex index $j_c$ of the mutated basis,
-the voltage $(\sigma_c,\varepsilon_c,s_c)\in G'$ of that edge, and the
-distance to the root.
-
-A standalone checker \texttt{coverage\_checker.py}, importing nothing from
-this project and rebuilding the basis order, the Grassmann--Pl\"ucker
-conditions, the sign lattice and the group action from scratch, verifies in
-exact integer arithmetic that every key is a valid uniform chirotope; that
-every key is extremal in its own orbit; that the keys are strictly
-increasing, hence pairwise distinct; that every recorded stabilizer order
-is the true one, recomputed by exhaustively enumerating the admissible
-relabellings rather than by rerunning the generator's pruned search; and
-that the orbit masses sum to $1{,}722{,}704{,}635{,}330{,}560$ with a count
-of $9{,}276{,}595$. On the witness it verifies that every $\sigma_c$ is a
-permutation; that exactly one class is parentless; that
-$\mathrm{depth}(c)=\mathrm{depth}(\mathrm{parent}(c))+1$ for all others, so
-that the parent map strictly decreases depth and cannot cycle, an
-independent pointer-doubling pass confirming that every chain ends at that
-one root; and that each edge satisfies, exactly,
+$9{,}276{,}595$ classes themselves, with their stabilizer orders and with
+mutation edges joining them. That object is now a $10.4$~MB file in the
+repository, and it records only
+\begin{quote}
+the key of one root class --- a $126$-bit integer whose bits are the signs
+of a chirotope on the bases in colex order --- and, for each other class,
+the class it was reached from together with the colex index $j_c$ of the
+basis mutated to reach it.
+\end{quote}
+There are no class keys in it, no stabilizer orders, no voltages and no
+depths: those are \emph{derived}. What makes that possible is an identity
+that had been read as a check,
 \[
   (\sigma_c,\varepsilon_c,s_c)\cdot\chi_c
-   \;=\;\mu_{B_{j_c}}\bigl(\chi_{\mathrm{parent}(c)}\bigr).
+   \;=\;\mu_{B_{j_c}}\bigl(\chi_{\mathrm{parent}(c)}\bigr)
+   \qquad\text{for some }(\sigma_c,\varepsilon_c,s_c)\in G' .
 \]
-That identity exhibits the mutant of the parent as a $G'$-translate of the
-child; since $\chi_c$ is valid and $G'$ preserves validity, $B_{j_c}$
-really is a mutable basis of the parent, and the two classes really are
-adjacent in $\Gu^{9,4}$. With the tree structure, every listed class is
-therefore joined to the root by a path of certified mutation edges.
+It says that $\chi_c$ lies in the $G'$-orbit of
+$\mu_{B_{j_c}}(\chi_{\mathrm{parent}(c)})$; and the class key is by
+construction a function of the orbit alone. Read as a derivation rather
+than as a check, it therefore determines each class's key from its
+parent's. The rows are stored in a canonical order --- by depth, then by
+parent, then by mutated basis --- which is a function of the tree alone,
+makes every parent pointer precede its row and the parent array monotone,
+hence codable as a $2.3$~MB bitmap, and lets the checker verify the layout
+itself. The earlier form of the artifact --- a $62$~MB array of sorted
+keys and stabilizer orders beside an $83$~MB witness of parents, mutated
+bases, voltages and depths --- is still what the export writes, but it is
+redundant, and it is not tracked.
 
-This was run in full, not sampled: all $9{,}276{,}595$ rows and all
-$9{,}276{,}594$ tree edges, in $853$ seconds on two processes ($702$ for
-the catalog checks, $144$ for the tree), all $39$ checks passing. On a $20{,}000$-row sub-artifact --- the rows nearest
-the root, which is closed under the parent map and so is a complete
-artifact in its own right --- eleven sabotages are each rejected: a
-duplicated key, a
-non-canonical key, a corrupted stabilizer order, a
-Grassmann--Pl\"ucker-invalid key, a re-pointed parent creating a cycle, a
-second parentless class, a corrupted voltage, a wrong mutated-basis index,
-a parent re-pointed to a different class at the same depth (tree intact,
-identity broken), a truncated array, and a stale hash. Each is built at
-run time by tampering with a $20{,}000$-class, parent-closed excerpt of
-the real arrays --- so the suite needs those arrays, like the full run
-above. The first nine carry a regenerated, internally consistent manifest
---- fresh hashes for the witness arrays too --- and have the count and
-mass repaired, so that only a substantive mathematical check can catch
-them; the remaining two are
-deliberately different, the truncation being meant to be caught by the
-count and mass arithmetic and the stale hash by the integrity check.
+A standalone checker \texttt{coverage\_checker.py}, importing nothing from
+this project --- it refuses to run if any module loaded into the
+interpreter resolves to a file beside it --- and rebuilding the basis
+order, the Grassmann--Pl\"ucker conditions, the sign lattice and the group
+action from scratch, reconstructs that catalog and checks it in exact
+integer arithmetic. Taking the classes in order, each parent before its
+children, it flips the recorded basis of the parent's chirotope and
+verifies that the result is a \emph{valid} uniform chirotope --- which is
+exactly the statement that $B_{j_c}$ is mutable in the parent, so that the
+edge is a real mutation edge --- and then canonicalizes it into the
+child's key and stabilizer order, by enumerating every admissible
+relabelling and maximising over the sign lattice. It verifies that the
+root key it was handed is itself extremal in its orbit; that the
+$9{,}276{,}595$ reconstructed keys are pairwise distinct; that every
+reconstructed stabilizer order divides $|G'|$ and that their histogram is
+the one the manifest declares; and that the orbit masses sum to
+$1{,}722{,}704{,}635{,}330{,}560$ with a count of $9{,}276{,}595$. On the
+tree it verifies that the packed streams are well formed --- exact bit
+lengths, zero padding, one gap bit per non-root class, every basis index
+in range
+--- and that each parent strictly precedes its row, so that the parent map
+cannot cycle and every row reaches row $0$, the one parentless row, with
+an independent pointer-doubling pass confirming it; and that the rows are
+in the canonical order, so that no reordering can pass unnoticed. Finally
+the group element that its own canonicalization applied is read off as
+$(\sigma_c,\varepsilon_c,s_c)$ and handed to a second, independent
+implementation of the action --- one built from the defining formula, with
+the inverse permutation and a reorientation-parity table rather than the
+placement machinery --- which confirms the displayed identity exactly, as
+$126$-bit sign vectors, for every one of the $9{,}276{,}594$ edges.
 
-Neither array is tracked in git. Their manifest is, and pins them by the
-\texttt{SHA-256} of each raw array buffer. \emph{No archived release exists
-at the time of writing}; one is planned, and until then the way to
-obtain the arrays is to regenerate them with the shipped code --- about
-four hours for the search on four cores, five minutes for the export ---
-and to check them against those hashes, which reproduce exactly.
+Validity of the mutant makes $B_{j_c}$ a mutable basis of the parent, and
+the child is by construction a $G'$-translate of that mutant, so the two
+classes really are adjacent in $\Gu^{9,4}$; the identity is the witness of
+which translate it is, and a second implementation of the action confirms
+it. With the tree structure, every listed class is therefore joined to the
+root by a path of certified mutation edges.
 
-\emph{Two qualifications, and they are not cosmetic.} First, ``extremal in
-its own orbit'' is relative to the convention recorded in the manifest,
+This was run in full, not sampled: all $9{,}276{,}595$ classes
+reconstructed and all $9{,}276{,}594$ edges verified, in $837$ seconds on
+two processes, all $50$ checks passing --- $819$ of those seconds in the
+reconstruction, the remaining $15$ in the integrity hashes, the structural
+checks, the root, the sort that establishes distinctness and the mass
+arithmetic. A reader without the legacy arrays runs the same thing minus
+the five cross-checks of the third qualification below. Deriving the keys
+rather than reading them costs nothing measurable: the $145$~MB artifact,
+where they were given, took $853$ seconds on the same machine, since it
+canonicalized each class only to compare against a stored key and then made
+a second pass for the tree. The work is sharded and checkpointed, and the
+rows of one depth are independent, which is what keeps it parallel although
+each class is reconstructed from its parent.
+
+On a $20{,}000$-row sub-certificate --- a prefix of the canonical order,
+which is closed under the parent map and so is a complete certificate in
+its own right --- twelve sabotages are each rejected: a duplicated class
+(an edge re-pointed onto a class already listed), a corrupted root key, a
+corrupted stabilizer histogram, a Grassmann--Pl\"ucker-invalid mutant, a
+truncated certificate, a stale hash, a parent that does not precede its
+row, a permutation of the parents preserving their multiset, a parent
+re-pointed to another class at the same depth, a malformed gap stream, an
+out-of-range mutated-basis index, and rows out of the canonical order.
+Each is built at run time by tampering with a prefix of the real
+certificate. Five carry a regenerated, internally consistent manifest ---
+fresh hashes, and the count, mass and stabilizer histogram recomputed from
+the sabotaged data --- so that only a substantive mathematical check can
+catch them, and the three that re-point an edge are additionally asserted
+at construction time to be semantically real: the tampered edge is
+required to become invalid or to land on a class already listed, so that a
+perturbation absorbed by a symmetry cannot produce a vacuous canary. A
+sixth corrupts nothing but the manifest's stabilizer histogram. The
+truncation deliberately leaves the totals unrepaired and the stale hash
+leaves the manifest untouched, so that the count-and-mass arithmetic and
+the integrity check are exercised too. The last four break the encoding,
+the parent order or the row order; three of them are refused outright,
+before any reconstruction starts, and the fourth --- two rows swapped out
+of the canonical order --- is caught there and then caught again by the
+mathematics downstream.
+
+Three sabotages that the $145$~MB form admitted have no analogue here, and
+the reason is the point of the new format: a corrupted stabilizer order, a
+corrupted voltage and a second parentless class are not expressible,
+because the certificate carries neither stabilizer orders nor voltages and
+its root is structurally unique. Their nearest analogues --- a corrupted
+histogram in the manifest, a corrupted mutated basis, and a parent that
+does not precede its row --- are in the list above.
+
+The certificate is tracked in git, so a reader who clones the repository
+can check it where it lies, with no download and no regeneration; the
+manifest pins it by the \texttt{SHA-256} of each of its arrays and of the
+file itself, which is stored uncompressed with a fixed timestamp and so
+reproduces byte for byte. The two legacy arrays are not tracked and are
+not needed for any of the above. Regenerating them --- about four hours
+for the search on four cores, six minutes for the export --- reproduces
+the certificate exactly, and is what the cross-check of the third
+qualification below requires.
+
+\emph{Three qualifications, and they are not cosmetic.} First, ``extremal
+in its own orbit'' is relative to the convention recorded in the manifest,
 which maximises over the relabellings respecting an invariant colouring of
 the ground set, not over all of $S_n$: the unrestricted maximum differs
-from the stored key on most classes and would cost some $160$ CPU-days
-here. It is still a well-defined function of the $G'$-orbit, the colouring
-being invariant under reorientation and global negation and equivariant
-under relabelling; and that --- not extremality as such --- is what makes
-distinct keys certify distinct classes. A reader who wants that fact rather
-than the word ``canonical'' must read the forty lines defining the
+from the reconstructed key on most classes and would cost some $160$
+CPU-days here. It is still a well-defined function of the $G'$-orbit, the
+colouring being invariant under reorientation and global negation and
+equivariant under relabelling; and that --- not extremality as such --- is
+what makes distinct keys certify distinct classes, and what makes the key
+of a class computable from any representative of its orbit, which is what
+the reconstruction uses. A reader who wants that fact rather than the word
+``canonical'' must read the forty lines defining the
 colouring. Second, the checker certifies the
 left-hand side only. The target $1{,}722{,}704{,}635{,}330{,}560$ enters it
 as a constant; an option re-adds the tracked $2{,}628$-row extension table
@@ -540,13 +606,29 @@ Those are cross-checked against every published count that exists, and the
 identity closes exactly in the smaller cases where the answer is
 independently known, but they are reproducible rather than certified.
 
+Third, and this one is new with the compact certificate: the class keys
+and the stabilizer orders are now \emph{derived} by the checker, not
+compared against values the search recorded. That cuts both ways. A
+certificate cannot misreport a key or a stabilizer order that it does not
+contain, so a whole family of defects --- and of sabotages --- is no
+longer expressible; but the earlier arrangement had two unrelated programs
+agreeing, the generator's pruned canonicalization search and the checker's
+exhaustive enumeration, and a reader who runs only what the repository
+holds no longer sees that agreement. It can still be seen: the checker's
+\texttt{--legacy-crosscheck} compares the reconstruction against the
+arrays the search wrote, row by row, and on the untracked
+$(9,4)$ arrays all $9{,}276{,}595$ keys and all $9{,}276{,}595$ stabilizer
+orders agree exactly. That is corroboration of implementation agreement,
+not a link in the chain: nothing in the argument above appeals to it.
+
 The consequence deserves stating exactly, because the two halves of the
 coverage claim now stand on different footings. That the $9{,}276{,}595$
 listed classes are valid, pairwise inequivalent, carry their true
 stabilizer orders and lie in a \emph{single} component of $\Gu^{9,4}$ is
 certificate-backed outright, under the stated canonical convention, and
-does not depend on the target at all: it is what checks (a)--(e) and the
-spanning-tree checks above establish. That they are \emph{all} the classes
+does not depend on the target at all: it is what the validity,
+distinctness, stabilizer and spanning-tree checks above establish. That
+they are \emph{all} the classes
 is what the mass identity adds, and it is reproducible-only, since the
 target is. So Theorem~\ref{thm:count}, and the last step of the coverage
 half of Theorem~\ref{thm:main} --- from ``these $9{,}276{,}595$ classes
