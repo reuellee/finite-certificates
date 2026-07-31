@@ -1,9 +1,18 @@
 # finite-certificates
 
 Small, explicit, machine-checkable research results ("finite certificates"), produced
-2026-07-25 by an autonomous multi-agent research session (Claude Fable 5 agents;
-adversarial review by Gemini 2.5 Pro). Every claim ships with a standalone verifier in
-exact arithmetic. **Requirements: python3 + numpy + sympy only.**
+from 2026-07-25 onward by autonomous multi-agent research sessions (Claude agents,
+with adversarial review by Gemini and GPT models). Almost every claim ships with a
+standalone verifier in **exact arithmetic** (integers, `fractions.Fraction`, or exact
+symbolic computation); floating point is used to *search*, never to *justify*. The one
+deliberate exception is [`ai/coherence-transfer/`](ai/coherence-transfer/), which
+replicates an empirical third-party result and says so.
+
+**Requirements:** `python3` plus `numpy`, `scipy`, `sympy` (see
+[`requirements.txt`](requirements.txt)). Many individual verifiers — including the
+primary check of the maxout theorem — are standard-library only, and say so at the top
+of the file. The `ai/coherence-transfer/` replication additionally needs
+`scikit-learn` and `pandas`.
 
 ## Verify everything
 
@@ -11,6 +20,9 @@ exact arithmetic. **Requirements: python3 + numpy + sympy only.**
 python3 run_all.py            # runs every verify_*.py; nonzero exit if any fails
 python3 run_all.py --fast     # skips the two slow verifiers (~10 min total otherwise)
 ```
+
+`run_all.py` is what CI runs. Note it is not read-only: a few verifiers regenerate the
+artifacts they check, so the working tree may show diffs afterwards.
 
 ## Results index
 
@@ -32,9 +44,9 @@ go straight to one without reading the rest. No verifier imports any other.
 
 | result | where |
 |---|---|
-| Counterexamples to published optimizer convergence claims (Muon, Li–Hong, Lion) | [`ai/optimizer/`](ai/optimizer/) |
+| Exact counterexamples and scope failures in published optimizer convergence claims: Muon's deployed coefficients falsify a coverage claim; Li–Hong's admissible stepsize set is empty for β ≥ 1/2 (vacuous, not false); a Lion period-two cycle contradicts an informal constant-hyperparameter claim (the annealed theorems stand) | [`ai/optimizer/`](ai/optimizer/) |
 | **max f₀(3,5) = 42** — refutes the tightness of Prop. 6.5 and the odd case of Conjecture 6.6.1 of Balakin–Cox–Loho–Sturmfels at n=5 (132,560 exact cell-wide certificates; [arXiv note](ai/maxout/paper/)) | [`ai/maxout/`](ai/maxout/) |
-| Same conjecture: (4,4) and (4,6) resolved, (3,8) achievability confirmed; (4,5) and (3,7) certified below the conjectured maxima | [`ai/maxout/`](ai/maxout/) |
+| Same conjecture: (4,4) and (4,6) resolved, (3,8) achievability confirmed; at (4,5) and (3,7), instances certified at 58 and 84 vs conjectured 60 and 88 — lower bounds only, those maxima remain open | [`ai/maxout/`](ai/maxout/) |
 
 **Commutative algebra**
 
@@ -149,10 +161,19 @@ the paper's DFS range). At the odd-n cases the conjectured maxima were **not
 reproduced** despite the paper's own sampling recipe at 15× its budget, ~300
 complete-per-direction-set branch-and-bound searches, and generator-drop seeding
 from exact even-n extremals: certified exact counts **42/58/84** at
-(3,5)/(4,5)/(3,7) vs conjectured 44/60/88 (lower bounds; nothing refuted). The one
-direct tension with a stated result — Prop 6.5's sampled tightness at (3,5) — plus
-an out-of-sample-falsified intermediate "deficit law" are documented with full
-honesty scoping in the note.
+(3,5)/(4,5)/(3,7) vs conjectured 44/60/88. As of that note these were *lower
+bounds only* and nothing was refuted; an out-of-sample-falsified intermediate
+"deficit law" is documented there with full honesty scoping.
+
+**Capstone (2026-07-31)** — `capstone/CAPSTONE.md`: **THEOREM, max f₀(3,5) = 42**,
+so the (3,5) row above is now settled in both directions and the odd case of
+Conjecture 6.6.1 is **refuted at n = 5**, as is the tightness of Prop 6.5 there.
+The upper bound is 132,560 exact cell-wide Gordan certificates plus a symmetry
+reduction to one oriented-matroid cell; the primary re-verification
+(`capstone/independent_audit.py`, stdlib, ~2 min) imports nothing from the
+programs that generated the library. A submission-ready note is in
+`ai/maxout/paper/`. **(4,5) and (3,7) remain lower bounds** — 58 and 84 are
+attained; whether their true maxima fall below 60 and 88 is open.
 
 ### ai/sae-unidentifiability/ — ρ-unidentifiability certificates (Gemini: r1 BLOCKING → r2 VERIFIED-SOUND)
 

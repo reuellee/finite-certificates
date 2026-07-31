@@ -1,0 +1,17 @@
+# Dependencies for the verifier suite (`python run_all.py`).
+#
+# Many individual verifiers need none of these — notably
+# ai/maxout/capstone/independent_audit.py, the primary check of the
+# max f0(3,5) = 42 theorem, which is Python standard library only.
+#
+# Lower bounds, not pins: the exact-arithmetic results do not depend on
+# version specifics, and CI deliberately runs against current releases so
+# that breakage surfaces here rather than in a contributor's checkout.
+numpy>=1.24
+scipy>=1.10
+sympy>=1.12
+
+# Additionally required only by ai/coherence-transfer/ (an empirical
+# replication of a third-party result, not an exact certificate):
+#   scikit-learn>=1.3
+#   pandas>=2.0
