@@ -595,8 +595,8 @@ def tree_checks(T, N, W, rep, man=None):
               bool((eps.astype(np.int64) < (1 << n)).all()))
     rep.check("(g) every recorded global sign is 0 or 1",
               bool((gsgn.astype(np.int64) <= 1).all()))
-    rep.check(f"(g) every recorded mutated basis index is < {M}",
-              bool((flip.astype(np.int64) < M).all()))
+    flip_ok = bool((flip.astype(np.int64) < M).all())
+    rep.check(f"(g) every recorded mutated basis index is < {M}", flip_ok)
 
     pr = parent.astype(np.int64)
     isroot = pr < 0
@@ -607,7 +607,8 @@ def tree_checks(T, N, W, rep, man=None):
     rep.check("(g) every parent pointer lands inside the artifact",
               range_ok, "" if range_ok else
               f"min {int(pr.min())}, max {int(pr.max())}")
-    if not range_ok:
+    if not (range_ok and flip_ok):
+        # (h) would index out of bounds; refuse rather than crash
         return False, None
     if nroots != 1:
         return True, None
