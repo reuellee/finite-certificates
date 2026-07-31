@@ -939,27 +939,57 @@ silently absorbed by a stabilizer cannot produce a vacuous canary.
 
 All twelve behave as required (control + 11 sabotages).
 
-**Run of record (2026-07-31).** FULL, not sampled: all 9,276,595 rows,
-4 worker processes, 93 shards of 100,000, **510 s wall / ~26 min CPU**,
-22,544,370 admissible relabellings enumerated. `18 checks passed, 0
-failed` — (0),(a),(b),(c),(d),(e),(f) all green
-(`data/coverage_full.log`). The cost is very unevenly distributed: shards
-0–91 took 14–19 s each and the last shard, 76,595 rows, took 174 s, because
-the artifact is sorted by key and the largest keys are the most symmetric
-classes. `--sample N` runs (a),(b),(d) on a seeded pseudorandom subset;
-`--cheap-only` skips them; shards are checkpointed into `--state` and a
-re-run skips finished ones. The export is deterministic: re-running
-`export_coverage.py` over the same checkpoints reproduced the `.npz`
-**byte for byte** (same file SHA-256, same 62,185,111 bytes), so the
-`array_sha256` values in the manifest are a usable pin and the full-run
-verdict transfers to any copy matching them.
+**Run of record (2026-07-31, with the witness).** FULL, not sampled: all
+9,276,595 rows AND all 9,276,594 tree edges, **2 worker processes** (the
+16 GB laptop has had OOM kills; shard payloads are built one at a time
+rather than materialized up front), 93 shards of 100,000 in each phase,
+**853 s wall** = 702 s for (a),(b),(d) + 144 s for (g),(h), 22,544,370
+admissible relabellings enumerated. `39 checks passed, 0 failed` —
+(0),(a),(b),(c),(d),(e),(f),(g),(h) all green
+(`data/coverage_witness_full.log`). Tree: root = row 9,276,594 (the
+all-`+` alternating matroid, |Stab| = 36), **max depth 27**, pointer
+doubling closes in 6 rounds against a cap of 26. The earlier 4-worker
+catalog-only run took 510 s (`data/coverage_full.log`). The catalog cost
+is very unevenly distributed: shards 0–91 take 11–14 s each and the last
+shard, 76,595 rows, takes 173 s, because the artifact is sorted by key and
+the largest keys are the most symmetric classes; the *tree* check has no
+such tail (2–3 s per shard throughout) because it applies one recorded
+group element per row instead of searching. `--sample N` runs (a),(b),(d)
+on a seeded pseudorandom subset; `--cheap-only` skips (a),(b),(d),(g),(h);
+`--witness-only` runs (0),(c),(e),(g),(h); both phases checkpoint into
+`--state` and a re-run skips finished shards. Resume was tested at full
+scale: deleting 50 of the 186 shard checkpoints and re-running recomputed
+exactly those (176 s + 27 s instead of 702 s + 144 s) and reproduced the
+same aggregates (22,544,370 relabellings, 9,276,594 edges, 0 failures).
+The export is deterministic: re-running `export_coverage.py`
+over the same checkpoints reproduced **both** `.npz` files byte for byte
+(62,185,111 and 83,453,421 bytes, identical file SHA-256s); only
+`MANIFEST.json` differs, and only in the output path echoed inside
+`how_to_obtain`. So the `array_sha256` / `witness_array_sha256` values are
+a usable pin and the full-run verdict transfers to any copy matching them.
+
+**Caveat on `--witness-only` / `--sample`.** (h) shows that the parent's
+mutant is a *G′-translate of the child*; that it is a **valid** chirotope,
+which is what makes the edge a real mutation edge, comes from check (a).
+Run (a) over every row or the reachability conclusion is incomplete — the
+checker prints this caveat when it is not.
 
 **What this still does not certify.** The checker takes the target
 1,722,704,635,330,560 as an input constant. Check (f) confirms that the
 tracked extension table adds up to it; nothing here recomputes the 2,628
 extension counts E(c) themselves, and nothing here re-derives the (8,4)
 catalog they are taken over. The right-hand side of the mass identity
-remains reproducible-only.
+remains reproducible-only — and with it *completeness* of the catalog,
+hence the final step from "one component" to "Γᵤ^{9,4} is connected".
+One-componentness itself does **not** depend on it.
+
+**Availability.** Both `.npz` files are gitignored (62.2 + 83.5 MB);
+`MANIFEST.json` is tracked. **No archived release exists yet** — do not
+describe the artifact as public or published. The only way for a reader to
+obtain the arrays today is to regenerate: `python runbig.py 4 9 <workers>`
+(~4 h on 4 cores) then `python export_coverage.py 4 9 data/big_4_9
+data/coverage_4_9` (~5 min), then pin against the manifest's per-array
+SHA-256s.
 
 ## 8. Trust boundaries
 
@@ -1058,7 +1088,11 @@ remains reproducible-only.
   manifest — and `coverage_checker.py` gained checks (g) tree structure and
   (h) the per-edge mutation identity, plus five new canaries (cycle,
   corrupted voltage, wrong flip index, second parentless node, same-depth
-  re-pointed parent). RUNRECORD The note and §7/§8 above now say
+  re-pointed parent). Run of record: FULL over all 9,276,595 rows and all
+  9,276,594 tree edges, 2 workers, **853 s wall** (702 s catalog + 144 s
+  tree), 39/39 checks green (`data/coverage_witness_full.log`); the
+  12-case canary suite PASSes in 88 s
+  (`data/canary_witness_49.log`). The note and §7/§8 above now say
   exactly what changed: one-componentness is certificate-backed outright
   and does *not* depend on the extension-count target; completeness — hence
   the step to "Γᵤ^{9,4} is connected" — still does.

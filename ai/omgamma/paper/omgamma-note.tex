@@ -493,8 +493,11 @@ adjacent in $\Gu^{9,4}$. With the tree structure, every listed class is
 therefore joined to the root by a path of certified mutation edges.
 
 This was run in full, not sampled: all $9{,}276{,}595$ rows and all
-$9{,}276{,}594$ tree edges, in RUNSECS seconds on two processes, all
-checks passing. Eleven sabotages are each rejected --- a duplicated key, a
+$9{,}276{,}594$ tree edges, in $853$ seconds on two processes ($702$ for
+the catalog checks, $144$ for the tree), all $39$ checks passing. On a $20{,}000$-row sub-artifact --- the rows nearest
+the root, which is closed under the parent map and so is a complete
+artifact in its own right --- eleven sabotages are each rejected: a
+duplicated key, a
 non-canonical key, a corrupted stabilizer order, a
 Grassmann--Pl\"ucker-invalid key, a re-pointed parent creating a cycle, a
 second parentless class, a corrupted voltage, a wrong mutated-basis index,
