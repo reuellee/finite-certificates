@@ -1,22 +1,22 @@
 {
  "r": 4,
  "n": 9,
- "classes": 3037250,
+ "classes": 9276595,
  "stab_histogram": {
-  "2": 3033864,
-  "4": 3330,
-  "6": 20,
-  "8": 27,
-  "12": 8,
+  "2": 9267682,
+  "4": 8717,
+  "6": 73,
+  "8": 106,
+  "12": 16,
   "36": 1
  },
  "sign_kernel_dim_kappa": 1,
  "trivial_stab_order": 2,
- "classes_with_nontrivial_Gbar_stabilizer": 3386,
- "sum_1_over_nstates": "109279577/36",
- "sum_1_minus_1_over_nstates": "61423/36",
- "mass": "563987525713920",
+ "classes_with_nontrivial_Gbar_stabilizer": 8913,
+ "sum_1_over_nstates": "166897693/18",
+ "sum_1_minus_1_over_nstates": "81017/18",
+ "mass": "1722704635330560",
  "target": "1722704635330560",
- "mass_identity_holds": false,
- "mass_pct": 32.73849237688384
+ "mass_identity_holds": true,
+ "mass_pct": 100.0
 }

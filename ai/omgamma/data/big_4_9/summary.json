@@ -1,0 +1,15 @@
+{
+ "n": 9,
+ "r": 4,
+ "classes": 9276595,
+ "complete_by_mass": true,
+ "gamma_hat_connected": true,
+ "H_equals_Gbar": true,
+ "gamma_bar_connected": true,
+ "gamma_tilde_connected": true,
+ "edges_expanded": 150561898,
+ "session_edges": 120911075,
+ "resumed_from_level": 9,
+ "holonomy_is_lower_bound": true,
+ "seconds": 15325.014349222183
+}

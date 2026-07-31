@@ -323,8 +323,8 @@ all stabilizer generators; sign part exact):
 | (9,3) | 4382 ✓cat | yes | yes (362880) | yes (9/9, exact) | **Γ̄(9,3), Γ̃(9,3) connected** |
 | (7,4) | 11 ✓cat | yes | yes (5040) | yes (7/7) | **Γ̄(7,4), Γ̃(7,4) connected** |
 | (8,4) | 2628 ✓cat | yes | yes (40320) | yes (8/8, exact) | **Γ̄(8,4), Γ̃(8,4) connected** — NEW (first rank-4 labeled verdict) |
-| (9,4) | campaign in §6 | sweep in progress | yes (362880) ✓cert | yes (9/9, exact) ✓cert | **H = Ḡ, certified** ⟹ #comp(Γ̄) = #comp(Γ̃) = #comp(Γ̂) (Result A, §6); connected iff Γ̂ is |
-| (9,5) | ≅ (9,4) by duality | — | — | — | same verdict as (9,4) |
+| (9,4) | **9,276,595** ✓mass | yes (mass identity, 100.0000%) | yes (362880) ✓cert | yes (9/9, exact) ✓cert | **Γ̄(9,4), Γ̃(9,4) connected** — NEW; settles the level Knauer–Marc suspected |
+| (9,5) | ≅ (9,4) by duality | yes | yes | yes | **Γ̄(9,5), Γ̃(9,5) connected** |
 | tiny  | (5,2),(5,3),(5,4),(6,2),(6,3),(6,4) | yes | yes | yes | connected & brute-force-equal |
 
 Both (8,4) and (9,3) were re-run through the parallel disk-based engine
@@ -418,6 +418,55 @@ buffer) and from the stabilizer of every class with a nontrivial
 H is a lower bound with provenance sufficient to investigate; if it
 terminates with H = Ḡ, the positive verdicts are certificate-backed. The
 final saturation is the exact staged Schreier computation.
+
+### RESULT (2026-07-31): (9,4) SETTLED — all three graphs connected
+
+The coverage sweep completed. `data/big_4_9/summary.json`:
+
+```
+ classes                 9,276,595
+ complete_by_mass        true     (accumulated mass == N_chi(4,9) exactly)
+ H_equals_Gbar           true     (pi 362880/362880, sign 9/9, exact)
+ gamma_hat_connected     true
+ gamma_bar_connected     true
+ gamma_tilde_connected   true
+ edges_expanded          150,561,898 directed mutation-edge traversals
+ levels                  19 (BFS eccentricity of the alternating class)
+```
+
+**Verdict.** Γ̂^{9,4}, Γ̃^{9,4} and Γ̄^{9,4} are all **CONNECTED**; every
+one of them has exactly one component. By the duality proposition (§5)
+the same holds for (9,5). Combined with the earlier rows of the §5 table
+and the rank/corank coverage list, this closes n ≤ 9 for **all three
+graphs at every rank**: the labeled graph
+$\overline{\mathcal{G}}^{n,r}$ — the level where Knauer–Marc "suspect the
+existence of a counter example" — is connected for every n ≤ 9 and every
+r. No counterexample exists below n = 10.
+
+**The (4,9) class count is 9,276,595.** The discrepancy in the
+literature is resolved in favour of Finschi's database and Knauer–Marc's
+Table 1; Fukuda–Miyata–Moriyama's **9,276,601** (DCG 49 (2013), Table
+"existing1", at both (4,9) and (5,9)) is **six too many**. The reason is
+an exact integer identity, not agreement with either source:
+
+    sum over the 9,276,595 found classes of |G'_9| / |Stab(chi_c)|
+      = 1,722,704,635,330,560
+      = N_chi(4,9), computed independently by the single-element
+        extension sweep over the 2,628 classes of (8,4)
+
+so the class list is provably exhaustive (any missing class would leave
+the sum short by at least |Ḡ|/|Stab| ≥ 9!·2⁸/|Stab| > 0, and the sum can
+never overshoot). Cross-check in exact rationals (`stabstats.py`,
+`data/big_4_9/stabstats.json`, recomputed from the checkpoints rather
+than from any running counter):
+
+    Σ_c 1/nstates_c = N_chi/(|G'_9|/2) = 166,897,693/18   (forced by the target)
+    Σ_c (1 − 1/nstates_c)             =      81,017/18    (measured)
+    #classes = (166,897,693 + 81,017)/18 = 166,978,710/18 = 9,276,595 ✓
+
+and 9,276,601 would have required Σ(1 − 1/nstates) = 81,125/18. Of the
+9,276,595 classes, **8,913 have a nontrivial Ḡ-stabilizer**; the
+stabilizer-order histogram is in `stabstats.json`.
 
 ### Result A (2026-07-31): the holonomy at (9,4) is everything
 
@@ -822,7 +871,15 @@ the stabilizer generators.
     (Moriyama on Finschi's code), six apart, dual-consistently printed
     in both sources. A Wayback check of the historic ETH pages was
     attempted but the archive API was unreachable from this network.
-  - Arbitration by this project: an independent from-scratch count via
-    two structurally different sweeps (single-element-extension mass
-    identity + mutation-graph BFS) — see Section 6; resolution recorded
-    below when the campaign lands.
+  - **RESOLVED 2026-07-31: the count is 9,276,595** (Finschi's DB and
+    K–M Table 1 are right; FMM13's 9,276,601 is six too many). Settled
+    by an independent from-scratch count via two structurally different
+    sweeps whose results are compared by an exact integer identity: the
+    single-element-extension mass target N_chi(4,9) =
+    1,722,704,635,330,560 computed from the 2,628 classes of (8,4), and
+    the orbit-stabilizer mass accumulated over the 9,276,595 classes
+    found by the mutation-graph BFS — equal on the nose (§6). We do not
+    know which of the six is spurious in FMM13's table, only that their
+    figure cannot be the number of isomorphism classes; note their entry
+    and the database entry agree everywhere else, including (3,9) = 4,382
+    and (4,8) = 2,628, both of which we also reproduce from scratch.
