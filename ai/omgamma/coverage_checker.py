@@ -997,11 +997,18 @@ def structure_checks(T, man, tree, rep):
                   int(man['tree']['max_depth']) == len(bounds) - 2,
                   f"manifest {man['tree']['max_depth']}, "
                   f"computed {len(bounds)-2}")
-    # canonical order: strictly increasing in (depth, parent, flip)
-    lex = ((depth[1:] << 40) | (par << 7) | flip.astype(np.int64))
-    inc = np.diff(lex) > 0
+    # canonical order: strictly increasing in (depth, parent, flip).
+    # Compared field by field rather than packed into one integer: a
+    # hostile certificate could have depths large enough to overflow the
+    # packing, and this check has to hold on hostile input too.
+    d0, d1 = depth[1:-1], depth[2:]
+    p0, p1 = par[:-1], par[1:]
+    f0 = flip[:-1].astype(np.int64)
+    f1 = flip[1:].astype(np.int64)
+    inc = ((d1 > d0) | ((d1 == d0) &
+                        ((p1 > p0) | ((p1 == p0) & (f1 > f0)))))
     nbad = int((~inc).sum())
-    del lex, inc
+    del inc, d0, d1, p0, p1, f0, f1
     rep.check("(g) rows are in the canonical order, strictly increasing in "
               "(depth, parent, mutated basis) -- so no reordering or "
               "duplicated edge can pass unnoticed", nbad == 0,

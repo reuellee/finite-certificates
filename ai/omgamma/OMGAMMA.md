@@ -1033,7 +1033,9 @@ parentless row are **not expressible**, because the certificate carries no
 stabilizer orders and no voltages and its root is structurally unique. The
 nearest analogues (corrupted histogram, corrupted mutated basis, parent not
 preceding its row) are in the table. All thirteen cases behave as required;
-the suite takes 180 s.
+the suite takes about three minutes (180–202 s over two runs), most of it
+spent reconstructing each sabotaged sub-certificate twice — once to state
+its own repaired totals, once to check it.
 
 **Run of record (2026-07-31, compact certificate).** FULL, not sampled: all
 9,276,595 classes RECONSTRUCTED and all 9,276,594 edges verified,
