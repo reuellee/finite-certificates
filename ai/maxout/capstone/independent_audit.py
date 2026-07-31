@@ -162,14 +162,20 @@ cross-check of the whole decoding/building pipeline.
   audit then verifies that the set of sigmas carrying a verified certificate is
   EXACTLY the set of 33,140 valid sigmas -- no gap, no duplicate.
 
-* Canaries.  Nine deliberate corruptions must be REJECTED, and the report
-  records which layer caught each one.  Canary C8 is constructed to pass the
-  reference-specialization layer exactly (it is a genuine Gordan vector at
-  U_ints) while failing cell-wideness -- a concrete demonstration that the
-  shipped auditor's independently-written half cannot close finding 1 on its
-  own.  Two machinery controls check the reduction is neither vacuous nor
-  over-strict: a known Pluecker multiple must PASS, a pseudorandom vector must
-  FAIL.
+* Canaries.  Ten deliberate corruptions must be REJECTED, and the report
+  records which layer caught each one.  Two of them target this audit's whole
+  reason for existing.  C8 is constructed to pass the reference-specialization
+  layer exactly (it is a genuine Gordan vector at U_ints) while failing
+  cell-wideness -- a concrete demonstration that the shipped auditor's
+  independently-written half cannot close finding 1 on its own.  C10 rebuilds
+  the entire symbolic semantics with the wrong chirotope, leaving the
+  certificates untouched: an auditor that imports the generator's quotient
+  construction agrees with the generator by definition and cannot see such an
+  error, while this one rejects every sample whose identities are not
+  chirotope-free ordinary cancellations.  Three machinery controls per degree
+  check the reduction is neither vacuous nor over-strict: a known Pluecker
+  multiple must PASS, a pseudorandom vector must FAIL, and the rank sandwich
+  must close.
 
 ===============================================================================
 5. RESIDUAL TRUST BOUNDARY  (what this file does NOT re-prove)
