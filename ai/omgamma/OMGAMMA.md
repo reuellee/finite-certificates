@@ -566,8 +566,23 @@ classes referenced by holonomy generators (so that it recomputes exactly
 the τ the generator identities were built with), plus the generators and
 sign exhibits. That set is closed under `parent`, so restricting and
 renumbering yields a valid certificate in the checker's own format.
-Validated on (9,3): 2155 of 4382 classes, 1044 generators, all of
-V1–V5 pass under `checker_fast.py`.
+Validated on (9,3), where early saturation makes the generator set tiny:
+**56 of 4382 classes and 39 generators suffice to certify H = Ḡ**, and
+all of V1–V5 pass under `checker_fast.py`; the five sabotage canaries are
+rejected on this certificate too (`canary_checker.py` now takes explicit
+paths and handles `.gz`). An earlier, pre-saturation export of the same
+result needed 2155 classes / 1044 generators and also passed — two
+independent certificates for the same statement.
+
+**The completing pass, executed on (9,3)** as a rehearsal:
+`runbig.py 3 9 2 --holopass 0 999999` re-expanded all 4382 classes,
+56,473 directed edges, harvesting every one. Results
+(`data/big_3_9/holopass_0_4382.json`): `edges_to_unknown_keys = 0` —
+i.e. every mutation of every class lands on a class already in the list,
+an **independent closure certificate for the (9,3) class list that does
+not use the mass identity at all** — and H = Ḡ *exactly* (not a lower
+bound). The edge count 56,473 reproduces the in-process engine's
+`directed_edge_traversals` for (9,3) to the unit.
 
 `Holonomy.sign_exhibits` was extended at the same time: it now closes the
 exhibited sign space under conjugation by the generators (h w h⁻¹ =

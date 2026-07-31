@@ -1,9 +1,9 @@
 {
  "r": 3,
  "n": 9,
- "classes_in_subcert": 2155,
+ "classes_in_subcert": 56,
  "classes_total": 4382,
- "generators": 1044,
+ "generators": 39,
  "files": [
   "data/big_3_9/subcert_reps.txt.gz",
   "data/big_3_9/subcert_tree.txt.gz",
