@@ -1,0 +1,241 @@
+\begin{thebibliography}{10}
+
+\bibitem{Alb-16}
+{\sc M.~{Albenque} and K.~{Knauer}}, {\em {Convexity in partial cubes: the hull
+  number.}}, {Discrete Math.}, 339 (2016), pp.~866--876.
+
+\bibitem{bab-01}
+{\sc E.~Babson, L.~Finschi, and K.~Fukuda}, {\em Cocircuit graphs and efficient
+  orientation reconstruction in oriented matroids}, Eur. J. Combin., 22 (2001),
+  pp.~587--600.
+
+\bibitem{Ban-96}
+{\sc H.-J. {Bandelt} and V.~{Chepoi}}, {\em {Cellular bipartite graphs.}},
+  {Eur. J. Comb.}, 17 (1996), pp.~121--134.
+
+\bibitem{Ban-18}
+{\sc H.-J. {Bandelt}, V.~{Chepoi}, and K.~{Knauer}}, {\em {COMs: complexes of
+  oriented matroids.}}, {J. Comb. Theory Ser. A}, 156 (2018), pp.~195--237.
+
+\bibitem{Bau-16}
+{\sc A.~{Baum} and Y.~{Zhu}}, {\em {The axiomatization of affine oriented
+  matroids reassessed.}}, {J. Geom.}, 109 (2018).
+
+\bibitem{Bjo-90}
+{\sc A.~{Bj\"orner}, P.~H. {Edelman}, and G.~M. {Ziegler}}, {\em {Hyperplane
+  arrangements with a lattice of regions.}}, {Discrete Comput. Geom.}, 5
+  (1990), pp.~263--288.
+
+\bibitem{bjvestwhzi-93}
+{\sc A.~Bj{\"o}rner, M.~Las~Vergnas, B.~Sturmfels, N.~White, and G.~M.
+  Ziegler}, {\em Oriented matroids}, vol.~46 of Encyclopedia of Mathematics and
+  its Applications, Cambridge University Press, Cambridge, second~ed., 1999.
+
+\bibitem{Bok-01}
+{\sc J.~{Bokowski} and H.~{Rohlfs}}, {\em {On a mutation problem for oriented
+  matroids.}}, {Eur. J. Comb.}, 22 (2001), pp.~617--626.
+
+\bibitem{Cha-18}
+{\sc J.~Chalopin, V.~Chepoi, S.~Moran, and M.~K. Warmuth}, {\em {Unlabeled
+  Sample Compression Schemes and Corner Peelings for Ample and Maximum
+  Classes}}, in 46th International Colloquium on Automata, Languages, and
+  Programming (ICALP 2019), vol.~132, 2019, pp.~34:1--34:15.
+
+\bibitem{Che-94}
+{\sc V.~{Chepoi}}, {\em {Separation of two convex sets in convexity
+  structures.}}, {J. Geom.}, 50 (1994), pp.~30--51.
+
+\bibitem{Che-16}
+{\sc V.~Chepoi, K.~Knauer, and T.~Marc}, {\em Hypercellular graphs: Partial
+  cubes without ${Q}_3^-$ as partial cube minor}, Discrete Math., 343 (2020),
+  p.~111678.
+
+\bibitem{CKP20}
+{\sc V.~Chepoi, K.~Knauer, and M.~Philibert}, {\em Two-dimensional partial
+  cubes}, Electron. J. Comb., 27 (2020), pp.~research paper p3.29, 40.
+
+\bibitem{CKP22}
+{\sc V.~Chepoi, K.~Knauer, and M.~Philibert}, {\em Ample completions of
+  oriented matroids and complexes of uniform oriented matroids}, SIAM J.
+  Discrete Math., 36 (2022), pp.~509--535.
+
+\bibitem{cordovil2000cocircuit}
+{\sc R.~Cordovil, K.~Fukuda, and A.~G. de~Oliveira}, {\em On the cocircuit
+  graph of an oriented matroid}, Discrete Comput. Geom., 24 (2000),
+  pp.~257--266.
+
+\bibitem{daS-95}
+{\sc I.~P.~F. da~Silva}, {\em Axioms for maximal vectors of an oriented
+  matroid: a combinatorial characterization of the regions determined by an
+  arrangement of pseudohyperplanes}, Eur. J. Combin., 16 (1995), pp.~125--145.
+
+\bibitem{DKR21}
+{\sc G.~Dorpalen-Barry, J.~S. Kim, and V.~Reiner}, {\em {Whitney Numbers for
+  Poset Cones.}}, {Order},  (2021).
+
+\bibitem{omcubic}
+{\sc S.~Felsner, R.~G\'omez, K.~Knauer, J.~J. Montellano-Ballesteros, and
+  R.~Strausz}, {\em {Cubic time recognition of cocircuit graphs of uniform
+  oriented matroids.}}, {Eur. J. Comb.}, 32 (2011), pp.~60--66.
+
+\bibitem{fo-la-78}
+{\sc J.~Folkman and J.~Lawrence}, {\em Oriented matroids}, J. Combinatorial
+  Theory Ser. B, 25 (1978), pp.~199--236.
+
+\bibitem{Fuk-82}
+{\sc K.~Fukuda}, {\em Oriented matroid programming}, 1982.
+\newblock PhD Thesis, University of Waterloo.
+
+\bibitem{Fuk-93}
+{\sc K.~Fukuda and K.~Handa}, {\em Antipodal graphs and oriented matroids},
+  Discrete Math., 111 (1993), pp.~245--256.
+
+\bibitem{GKP70}
+{\sc F.~Glivjak, A.~Kotzig, and J.~Plesn{\'{\i}}k}, {\em Remark on the graphs
+  with a central symmetry}, Monatsh. Math., 74 (1970), pp.~302--307.
+
+\bibitem{hac-00}
+{\sc M.~Hachimori}, {\em Combinatorics of constructible complexes}, 2000.
+\newblock PhD thesis, University of Tokyo.
+
+\bibitem{ham-11}
+{\sc R.~Hammack, W.~Imrich, and S.~Klav{\v{z}}ar}, {\em Handbook of product
+  graphs}, Discrete Mathematics and its Applications (Boca Raton), CRC Press,
+  Boca Raton, FL, 2011.
+
+\bibitem{ha-90}
+{\sc K.~Handa}, {\em A characterization of oriented matroids in terms of
+  topes}, Eur. J. Combin., 11 (1990), pp.~41--45.
+
+\bibitem{Hoch-19}
+{\sc W.~{Hochst\"attler} and V.~{Welker}}, {\em {The Varchenko determinant for
+  oriented matroids.}}, {Math. Z.}, 293 (2019), pp.~1415--1430.
+
+\bibitem{imrich1998convexity}
+{\sc W.~Imrich and S.~Klav{\v{z}}ar}, {\em A convexity lemma and expansion
+  procedures for bipartite graphs}, Eur. J. Comb., 19 (1998), pp.~677--685.
+
+\bibitem{itskov2018hyperplane}
+{\sc V.~Itskov, A.~Kunin, and Z.~Rosen}, {\em Hyperplane neural codes and the
+  polar complex}, in Topological data analysis. Proceedings of the Abel
+  symposium 2018, Geiranger, Norway, June 4--8, 2018, Cham: Springer, 2020,
+  pp.~343--369.
+
+\bibitem{junttila2007engineering}
+{\sc T.~Junttila and P.~Kaski}, {\em Engineering an efficient canonical
+  labeling tool for large and sparse graphs}, in 2007 Proceedings of the Ninth
+  Workshop on Algorithm Engineering and Experiments (ALENEX), SIAM, 2007,
+  pp.~135--149.
+
+\bibitem{Kla-08}
+{\sc S.~Klavzar}, {\em Hunting for cubic partial cubes}, Convexity in Discrete
+  Structures, 5 (2008), pp.~87--95.
+
+\bibitem{Kla-12}
+{\sc S.~Klav{\v{z}}ar and S.~Shpectorov}, {\em Convex excess in partial cubes},
+  J. Graph Theory, 69 (2012), pp.~356--369.
+
+\bibitem{Kna-17}
+{\sc K.~Knauer and T.~Marc}, {\em On tope graphs of complexes of oriented
+  matroids}, Discrete Comput. Geom.,  (2019), pp.~377--417.
+
+\bibitem{omax}
+{\sc K.~Knauer, J.~J. Montellano-Ballesteros, and R.~Strausz}, {\em A
+  graph-theoretical axiomatization of oriented matroids}, Eur. J. Combin., 35
+  (2014), pp.~388--391.
+
+\bibitem{alex2020oriented}
+{\sc A.~Kunin, C.~Lienkaemper, and Z.~Rosen}, {\em Oriented matroids and
+  combinatorial neural codes}, 2020.
+
+\bibitem{lv-80}
+{\sc M.~{Las Vergnas}}, {\em {Convexity in oriented matroids.}}, {J. Comb.
+  Theory Ser. B}, 29 (1980), pp.~231--243.
+
+\bibitem{Law-83}
+{\sc J.~Lawrence}, {\em Lopsided sets and orthant-intersection by convex sets},
+  Pacific J. Math., 104 (1983), pp.~155--173.
+
+\bibitem{Lev-26}
+{\sc F.~Levi}, {\em Die {T}eilung der projektiven {E}bene durch {G}erade oder
+  {P}seudogerade}, Ber. Math.-Phys. Kl. S{\"a}chs. Akad. Wiss, 78 (1926),
+  pp.~256--267.
+
+\bibitem{Man-82}
+{\sc A.~Mandel}, {\em Topology of oriented matroids}, 1982.
+\newblock PhD Thesis, University of Waterloo.
+
+\bibitem{Mar-17}
+{\sc T.~{Marc}}, {\em {Classification of vertex-transitive cubic partial
+  cubes.}}, {J. Graph Theory}, 86 (2017), pp.~406--421.
+
+\bibitem{mar-18}
+{\sc T.~Marc}, {\em Cycling in hypercubes}, PhD thesis, Univ. of Ljubljana,
+  Faculty of Mathematics and Physics, 2018.
+
+\bibitem{margolis2015cell}
+{\sc S.~Margolis, F.~V. Saliola, and B.~Steinberg}, {\em Cell complexes, poset
+  topology and the representation theory of algebras arising in algebraic
+  combinatorics and discrete geometry}, vol.~1345 of Mem. Am. Math. Soc.,
+  Providence, RI: American Mathematical Society (AMS), 2021.
+
+\bibitem{mon-06}
+{\sc J.~J. Montellano-Ballesteros and R.~Strausz}, {\em A characterization of
+  cocircuit graphs of uniform oriented matroids}, J. Combin. Theory Ser. B, 96
+  (2006), pp.~445--454.
+
+\bibitem{Ovc-11}
+{\sc S.~{Ovchinnikov}}, {\em {Graphs and cubes.}}, Berlin: Springer, 2011.
+
+\bibitem{padrol2021sweeps}
+{\sc A.~Padrol and E.~Philippe}, {\em Sweeps, polytopes, oriented matroids, and
+  allowable graphs of permutations}, 2021.
+
+\bibitem{polat2018some}
+{\sc N.~Polat}, {\em On some properties of antipodal partial cubes}, Discuss.
+  Math., Graph Theory,  (2018).
+
+\bibitem{Pol-19}
+{\sc N.~{Polat}}, {\em {On some characterizations of antipodal partial
+  cubes.}}, {Discuss. Math., Graph Theory}, 39 (2019), pp.~439--453.
+
+\bibitem{R20}
+{\sc H.~{Randriamaro}}, {\em {The Varchenko determinant for apartments}},
+  {Result. Math.}, 75 (2020), p.~17.
+\newblock Id/No 86.
+
+\bibitem{Ric-93}
+{\sc J.~{Richter-Gebert}}, {\em {Oriented matroids with few mutations.}},
+  {Discrete Comput. Geom.}, 10 (1993), pp.~251--269.
+
+\bibitem{Rin-56}
+{\sc G.~{Ringel}}, {\em {Teilungen der Ebenen durch Geraden oder topologische
+  Geraden.}}, {Math. Z.}, 64 (1956), pp.~79--102.
+
+\bibitem{Rin-57}
+{\sc G.~{Ringel}}, {\em {\"Uber Geraden in allgemeiner Lage.}}, {Elem. Math.},
+  12 (1957), pp.~75--82.
+
+\bibitem{Rou-88}
+{\sc J.-P. {Roudneff} and B.~{Sturmfels}}, {\em {Simplicial cells in
+  arrangements and mutations of oriented matroids.}}, {Geom. Dedicata}, 27
+  (1988), pp.~153--170.
+
+\bibitem{San-02}
+{\sc F.~{Santos}}, {\em {Triangulations of oriented matroids.}}, vol.~741,
+  American Mathematical Society (AMS), 2002.
+
+\bibitem{Sha-79}
+{\sc R.~W. {Shannon}}, {\em {Simplicial cells in arrangements of
+  hyperplanes.}}, {Geom. Dedicata}, 8 (1979), pp.~179--187.
+
+\bibitem{Tra-04}
+{\sc H.~Tracy~Hall}, {\em Counterexamples in Discrete Geometry}, PhD Thesis,
+  University Of California, Berkeley, 2004.
+
+\bibitem{VC-15}
+{\sc V.~N. {Vapnik} and A.~Y. {Chervonenkis}}, {\em {On the uniform convergence
+  of relative frequencies of events to their probabilities.}}, in {Measures of
+  complexity}, Springer, 2015, pp.~11--30.
+
+\end{thebibliography}

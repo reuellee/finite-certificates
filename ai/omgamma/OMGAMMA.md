@@ -327,6 +327,20 @@ identity respectively; (c) scrambled chirotopes must fail GP; (d) the
 mass identity at (9,4) must fail if run against a deliberately truncated
 BFS set.
 
+### Empirical observation: local holonomy flatness at (9,4)
+
+Phase-1 diagnostic (2026-07-31): a BFS ball of 4000 classes / 18,091
+directed edges around the alternating class of (9,4) harvested 14,092
+non-tree loop voltages, yet the holonomy subgroup they generate (with the
+root stabilizer) has permutation part of order just 18 (= the dihedral
+symmetry of the alternating OM) and sign part = kernel only. In other
+words, every loop in that ball is voltage-trivializable: the covering
+Γ̄ → Γ̂ is locally "flat" near the alternating class at a scale (4000
+classes) at which (8,4) had already saturated to the full group (800
+classes sufficed there). This is a concrete structural sense in which
+the labeled question at (9,4) is delicate, consistent with Knauer–Marc's
+caution; the full-edge harvest in the main run decides it.
+
 ## 7. Trust boundaries
 
 * The standalone certificate checker (checker.py, forthcoming) verifies:
