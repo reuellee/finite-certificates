@@ -458,6 +458,25 @@ given Γ̂.
 By Proposition 4 this was the only alternative to 256 components; the
 "binary" prediction is confirmed on the connected side.
 
+**Certificate for Result A** (`certify.py` → `export_subcert.py` →
+`checker_fast.py`; artifacts `data/big_4_9/certA_dir/{holonomy,gens,
+exhibits}` and `data/big_4_9/subcert_*`). Built from the level-9
+checkpoint (3,037,250 classes), *without* waiting for the sweep:
+family (i) = 3508 stabilizer conjugates over the 3386 flagged classes →
+π = A₉, sign 9/9 after exact saturation; family (ii) = expanding 16
+classes starting at id 600,000 → 232 edge voltages, of which the ones
+that matter complete π to S₉. The packaged certificate is
+
+    547 classes,  546 tree mutation edges,  74 generators,
+    V1–V5 all PASS under checker_fast.py (independent implementation)
+
+— i.e. **a 547-class artifact proves H = Ḡ for (9,4)**, with V4 (S₉ by an
+orbit-stabilizer chain written from scratch) and V5 (the sign words
+re-evaluated and Gaussian-eliminated) checked by code sharing nothing
+with the generator. The five sabotage canaries are rejected on this
+certificate. This settles the labeled question modulo Γ̂-connectivity and
+is independent of the coverage sweep completing.
+
 ### ~~Empirical observation: local holonomy flatness at (9,4)~~ — RETRACTED
 
 An earlier revision of this section recorded that the (9,4) run showed a
@@ -591,6 +610,35 @@ H = Ḡ. The five sabotage canaries of `canary_checker.py` are still all
 rejected, and `verify_omgamma.py` still passes on the (8,3), (8,4) and
 (9,3) certificates.
 
+### RESTART RECIPE (if the sweep is interrupted again)
+
+The **only** state needed is `data/big_4_9/level_*.npz` + `meta.json`
+(and `data/mass_target_4_9.json`). Everything else is derived.
+
+```
+cd .../ai/omgamma
+# 1. if a level_XXX.npz exists that meta.json does not know about
+#    (crash between the two writes), delete that trailing file.
+python -c "import json;print(json.load(open('data/big_4_9/meta.json')))"
+ls data/big_4_9/level_*.npz | tail -2
+# 2. relaunch detached (workers: 6 is safe on 16 GB, 10 if idle)
+powershell -File launch94.ps1 -Workers 6         # runs runbig.py 4 9 6 --resume
+# 3. the certificate does NOT depend on the sweep finishing:
+python certify.py 4 9 3000 "" 600000             # -> data/big_4_9/certA_dir/
+python export_subcert.py 4 9 "" data/big_4_9/certA_dir
+python checker_fast.py 9 4 data/big_4_9/subcert_reps.txt.gz \
+    data/big_4_9/subcert_tree.txt.gz data/big_4_9/subcert_gens.txt \
+    data/big_4_9/subcert_exhibits.txt
+# 4. when the sweep does finish:
+powershell -File finish94.ps1
+```
+
+The resume is gated (§ above): if any of the class count, the total mass,
+the level-file contiguity, the `ids` contiguity or the 200-class
+re-canonicalization sample disagrees with `meta.json`, it aborts instead
+of continuing from a damaged state. `canary_resume.py` demonstrates that
+the gate actually fires on six corruption modes.
+
 **Compact certificates** (`export_subcert.py`). Re-verifying
 Grassmann–Plücker on 9.3M representatives is neither necessary nor
 feasible; what the checker needs is the spanning-tree root-paths of the
@@ -655,7 +703,12 @@ the stabilizer generators.
   `holonomy_is_lower_bound`.
 * `pend_dropped` counts in-level duplicate edges whose holonomy was not
   harvested because the bounded buffer was full; it must be read as part
-  of any lower-bound statement (it was 0 in every completed run to date).
+  of any lower-bound statement. It was 0 in every (8,4)/(9,3) run, and
+  **5,865,152 at level 9 of the (9,4) sweep** — which does not weaken
+  anything, because H had already reached Ḡ during that level and all
+  harvesting (including the buffer) is a no-op from that point on. It
+  would matter only for a *negative* verdict, which is exactly the case
+  `--holopass` exists for.
 * Lemma 3 is proved here but not load-bearing for any computational
   verdict; it is used only as a *prediction* which the computation then
   confirms (Result A is exactly the prediction of Lemma 3's corollary).

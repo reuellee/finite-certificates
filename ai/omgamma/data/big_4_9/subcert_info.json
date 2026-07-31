@@ -1,0 +1,13 @@
+{
+ "r": 4,
+ "n": 9,
+ "classes_in_subcert": 547,
+ "classes_total": 3037250,
+ "generators": 74,
+ "files": [
+  "data/big_4_9/subcert_reps.txt.gz",
+  "data/big_4_9/subcert_tree.txt.gz",
+  "data/big_4_9/subcert_gens.txt",
+  "data/big_4_9/subcert_exhibits.txt"
+ ]
+}
