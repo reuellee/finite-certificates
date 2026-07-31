@@ -41,10 +41,11 @@ and four split representatives, followed by $132{,}560$ exact Gordan
 certificates whose multipliers are polynomial in the maximal minors of
 the configuration, verified modulo the Grassmann--Pl\"ucker ideal in
 exact rational arithmetic. An explicit rational $42$-vertex instance is
-included, together with a stdlib-only verifier, as ancillary files. In
-the positive direction we certify that the conjectured values are
-attained at $(3,8)$ and $(4,6)$, the latter resolving that case
-completely.
+included, together with a stdlib-only verifier, as ancillary files: a
+two-second command checks the attainment, and four further commands
+re-verify the entire upper-bound library. In the positive direction we
+certify that the conjectured values are attained at $(3,8)$ and
+$(4,6)$, the latter resolving that case completely.
 \end{abstract}
 
 \maketitle
@@ -126,6 +127,31 @@ b = \bigl(\tfrac{16}{17}, \tfrac{27}{22}, \tfrac98, \tfrac{28}{17}, \tfrac{23}{9
 \]
 Then the $(3,5)$-zonoboxtope \eqref{eq:zbt} has exactly $42$ vertices.
 \end{proposition}
+
+\subsection*{Verifying this note before reading it}
+Every claim is machine-checkable, and the reader is invited to check
+first and read second. The attainment half
+(Propositions~\ref{prop:instance} and~\ref{prop:positive}) takes about
+two seconds with no dependencies beyond the Python standard library:
+download the ancillary files of this note into one directory and run
+\begin{verbatim}
+    python verify_c66_new_cases.py        # ~2 s, exact arithmetic -> PASS
+\end{verbatim}
+This proves, in exact rational arithmetic, that the instance above has
+exactly $42$ vertices (and verifies the $110$-, $104$-, $58$- and
+$84$-vertex instances of Proposition~\ref{prop:positive} and beyond).
+The upper bound rests on a certificate library whose complete
+re-verification is four commands from the public repository
+(\texttt{ai/maxout} of the repository cited below; the last two need
+\texttt{numpy}, \texttt{scipy}, \texttt{sympy}):
+\begin{verbatim}
+    python check_om35_uniqueness.py                # seconds, stdlib
+    python capstone/check_split_orbits.py          # seconds, stdlib
+    python capstone/check_transport.py             # ~2 min
+    python stage2c2_gpt/audit_all_certificates.py  # ~20 min, all
+                                                   # 132,560 certificates
+\end{verbatim}
+Section~\ref{sec:verification} states precisely what each run proves.
 
 The substance of Theorem~\ref{thm:main} is the upper bound. It is a
 computer-assisted proof in the certificate tradition: the mathematical
