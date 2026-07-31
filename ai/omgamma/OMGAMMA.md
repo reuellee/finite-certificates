@@ -376,7 +376,30 @@ caution; the full-edge harvest in the main run decides it.
 * 2026-07-31: mission-brief attribution corrected (suspected
   counterexample lives in $\overline{\mathcal{G}}$, not $\mathcal{G}$);
   K–M Table 1 typo 482→4382 identified and confirmed by generation.
-* 2026-07-31: (4,9) count discrepancy pinned: live DB (and K–M) say
-  9,276,595; FMM13 (Table "existing1") says 9,276,601 at both (4,9) and
-  (5,9). Both trace to Moriyama's computation (DB changelog 2010-12-21).
-  To be arbitrated by our generation + mass identity.
+* 2026-07-31: (4,9) count discrepancy pinned. The dossier:
+  - The live database (finschi.com/math/om, "Catalog of Isomorphism
+    Classes of Oriented Matroids", non-degenerate filter; archived copy
+    in sources/om_49.html) displays **9 276 595** at (4,9) and (5,9).
+    Its changelog: "2010 December 21: Added the classes of uniform
+    oriented matroids of 9 elements and rank 4 computed by Sonoko
+    Moriyama (University of Tokyo) using Lukas Finschi's code."
+  - Knauer–Marc Table 1 ("retrieved from om.math.ethz.ch") prints
+    **9276595** at (4,9)/(5,9) — consistent with the DB.
+  - Fukuda–Miyata–Moriyama, DCG 49 (2013) (arXiv:1204.0645, Table
+    labeled existing1: "The numbers of simple oriented matroids ...
+    (reorientation class, the numbers enclosed by brackets are those of
+    uniform oriented matroids)") prints **(9,276,601)** at both (4,9)
+    and (5,9); their reference for the database is [FF] = the same
+    homepage ("A database of oriented matroids by Finschi and Fukuda
+    [FF] consists of the representatives of the reorientation classes",
+    their Sec. on databases). All other entries of their table agree
+    with the DB and with our from-scratch counts (in particular (3,9):
+    4,382 and (4,8): 2,628).
+  - So the two published figures come from the SAME computation lineage
+    (Moriyama on Finschi's code), six apart, dual-consistently printed
+    in both sources. A Wayback check of the historic ETH pages was
+    attempted but the archive API was unreachable from this network.
+  - Arbitration by this project: an independent from-scratch count via
+    two structurally different sweeps (single-element-extension mass
+    identity + mutation-graph BFS) — see Section 6; resolution recorded
+    below when the campaign lands.
