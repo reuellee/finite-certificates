@@ -469,13 +469,21 @@ classes starting at id 600,000 → 232 edge voltages, of which the ones
 that matter complete π to S₉. The packaged certificate is
 
     547 classes,  546 tree mutation edges,  74 generators,
-    V1–V5 all PASS under checker_fast.py (independent implementation)
+    V1–V5 all PASS under BOTH checkers:
+      checker_fast.py (numpy)      -- data/big_4_9/subcert_*
+      checker.py      (pure python, separate implementation of the
+                       GP axiom, the group action, the group-order
+                       computation and the word evaluation)
 
 — i.e. **a 547-class artifact proves H = Ḡ for (9,4)**, with V4 (S₉ by an
 orbit-stabilizer chain written from scratch) and V5 (the sign words
 re-evaluated and Gaussian-eliminated) checked by code sharing nothing
-with the generator. The five sabotage canaries are rejected on this
-certificate. This settles the labeled question modulo Γ̂-connectivity and
+with the generator, in two independent implementations that agree. The
+five sabotage canaries are rejected on this certificate.
+(Caveat on reading `checker.py`'s closing message: it prints the
+connectivity conclusion *given* class-list completeness. The certificate
+itself proves H = Ḡ; Γ̂-connectivity is the separate mass-identity
+artifact.) This settles the labeled question modulo Γ̂-connectivity and
 is independent of the coverage sweep completing.
 
 ### ~~Empirical observation: local holonomy flatness at (9,4)~~ — RETRACTED
