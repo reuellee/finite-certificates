@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "total_audited": 99541,
- "elapsed_seconds": 920.7568964958191,
+ "total_audited": 132681,
+ "elapsed_seconds": 1351.363834142685,
  "counts": {
   "sweep0:OK": 8211,
   "sweep1:OK": 8211,
@@ -11,7 +11,9 @@
   "k0gp:OK": 570,
   "famk1:OK": 24691,
   "famk2:OK": 8746,
-  "prior120:OK": 121
+  "prior120:OK": 121,
+  "s02fam:OK": 8916,
+  "s02gp2:OK": 24224
  },
  "n_failures": 0,
  "failures": [],
