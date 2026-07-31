@@ -46,6 +46,13 @@ with the generators) on the shipped certificates, plus a sabotage
 canary. Deeper canaries: `canary_checker.py` (five certificate
 corruptions), `canary_resume.py` (six checkpoint corruptions),
 `submodules.py` (its own two-method cross-check).
+`coverage_checker.py --artifact data/coverage_4_9` (no project imports)
+re-verifies the whole (9,4) catalog — validity, distinctness, exact
+stabilizers, mass — *and* the mutation spanning tree witnessing that all
+9,276,595 classes lie in one component; `--canary` runs 11 sabotages.
+The two arrays it reads are gitignored (62 + 84 MB); regenerate them with
+`runbig.py 4 9` then `export_coverage.py`, and pin against the tracked
+`data/coverage_4_9/MANIFEST.json`.
 Regenerate everything: `test_core.py`, `test_canon.py`,
 `test_extend.py`, `test_flip.py`, `masscheck.py`, `runcat.py`,
 `runflip.py`, `ext_count.py`, `runbig.py`.

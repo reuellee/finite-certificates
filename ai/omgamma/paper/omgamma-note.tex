@@ -51,10 +51,11 @@ by Fukuda, Miyata and Moriyama; and, when the isomorphism-class graph is
 connected and the holonomy surjects onto $S_n$, for odd $n$ the number of
 components of the labelled graph is forced into $\{1,2^{n-1}\}$ with no
 intermediate value possible. All computations are exact. Certificates and
-standalone checkers accompany the holonomy claims and the
-$9{,}276{,}595$-class enumeration; \S\ref{sec:honesty} states precisely
-which claims they cover and which remain reproducible rather than
-certified.
+standalone checkers accompany the holonomy claims, the
+$9{,}276{,}595$-class enumeration, and a mutation spanning tree joining
+those classes into a single component; \S\ref{sec:honesty} states
+precisely which claims they cover and which remain reproducible rather
+than certified.
 \end{abstract}
 
 \maketitle
@@ -169,13 +170,15 @@ packages beyond \texttt{numpy} for the fast checker:
     python verify_omgamma.py --canary    # self-test: must fail on a
                                          # missing artifact
     python submodules.py                 # Proposition 3, two methods
-    python coverage_checker.py --artifact data/coverage_4_9 \
-           --extcount data/extcount_4_9.jsonl     # coverage, all 9.28M
+    python coverage_checker.py --artifact data/coverage_4_9 --workers 2 \
+           --extcount data/extcount_4_9.jsonl  # coverage + reachability,
+                                               # all 9.28M classes
     python coverage_checker.py --canary --artifact data/coverage_4_9
+                                               # 11 sabotages; must REJECT
 \end{verbatim}
-The last two need the coverage array, which is too large for the
-repository; \S\ref{sec:honesty} says how to obtain it, and how far each of
-these commands reaches.
+The last two need the coverage and witness arrays, which are too large for
+the repository; \S\ref{sec:honesty} says how to obtain them, and how far
+each of these commands reaches.
 The ledger \texttt{ai/omgamma/OMGAMMA.md} records every computation, its
 artifacts, its trust boundaries, and its errata --- including one of our
 own, discussed in \S\ref{sec:honesty}.
@@ -384,14 +387,26 @@ an exact integer identity, reached exactly. Provided the enumerated
 classes are valid, pairwise inequivalent, and carry their true stabilizer
 orders, and provided the extension target is exact, a missed class leaves
 the sum short and it cannot overshoot; under those hypotheses the
-identity proves simultaneously that the search visited every class ---
-hence that $\Gu^{9,4}$ is connected --- and Theorem~\ref{thm:count}.
-Those hypotheses are conditions on this project's own canonicalizer and
-extension counter, not on the search: a defective list carrying duplicates
-or wrong stabilizer orders could in principle overshoot. The first three
-are discharged by the coverage certificate of \S\ref{sec:honesty}, checked
-by a program sharing no code with the generator; the fourth is not. Of
-the classes found, $8{,}913$ have a nontrivial stabilizer.
+identity proves that the search visited every class, which is
+Theorem~\ref{thm:count}. Those hypotheses are conditions on this
+project's own canonicalizer and extension counter, not on the search: a
+defective list carrying duplicates or wrong stabilizer orders could in
+principle overshoot. The first three are discharged by the coverage
+certificate of \S\ref{sec:honesty}, checked by a program sharing no code
+with the generator; the fourth is not. Of the classes found, $8{,}913$
+have a nontrivial stabilizer.
+
+Completeness of the list is not by itself connectivity of $\Gu^{9,4}$:
+those are different statements, and the second also needs the listed
+classes to be joined to one another. That is a separate artifact, a
+mutation \emph{spanning tree} over all $9{,}276{,}595$ classes
+(\S\ref{sec:honesty}), recording for each class but a fixed root a parent
+class, the basis mutated, and the voltage of that edge. The same
+standalone checker verifies in exact arithmetic that every recorded edge
+is a genuine mutation edge of $\Gu^{9,4}$ and that the parent pointers
+form a tree with one root, so every listed class is joined to that root
+by a path of mutations. All $9{,}276{,}595$ of them therefore lie in one
+component; the list being complete, $\Gu^{9,4}$ is connected.
 
 The harvested holonomy is the full group: $\pi(H)=S_9$ of order
 $362{,}880$ and the sign part full. Notably, on the shipped certificate
@@ -435,38 +450,68 @@ missing, renamed or emptied.
 What follows states the boundaries plainly, beginning with the one that is
 sharp enough to belong before the claims it qualifies.
 
-\emph{The compact certificates prove $H=\Gbar$; coverage is certified by a
-separate artifact, and only on one side of the mass identity.} The compact
-$(9,4)$ certificates contain the root-path closure of the classes
-referenced by generators --- a few hundred classes --- which is what the
-holonomy claim needs and all that the checkers above verify. The left-hand
-side of the mass identity is a different object: the list of
-$9{,}276{,}595$ class keys with their stabilizer orders. That list is now
-published as a checkable artifact: the keys sorted, each a $126$-bit
-integer recording the signs of a chirotope on the bases in colex order,
-with each class's stabilizer order; $62$~MB compressed, readable with
-\texttt{numpy} and nothing else, beside a manifest fixing the conventions
-and recording the \texttt{SHA-256} of every array. Too large to track in
-git, it comes from an archived release or from regenerating it with the
-shipped code (about four hours); the manifest, which pins it by hash, is
-tracked. A standalone checker \texttt{coverage\_checker.py}, importing
-nothing from this project and rebuilding the basis order, the
-Grassmann--Pl\"ucker conditions, the sign lattice and the group action from
-scratch, verifies in exact
-integer arithmetic that every key is a valid uniform chirotope; that every
-key is extremal in its own orbit; that the keys are strictly increasing,
-hence pairwise distinct; that every recorded stabilizer order is the true
-one, recomputed by exhaustively enumerating the admissible relabellings
-rather than by rerunning the generator's pruned search; and that the orbit
-masses sum to $1{,}722{,}704{,}635{,}330{,}560$ with a count of
-$9{,}276{,}595$. This was run in full, not sampled: every one of the
-$9{,}276{,}595$ rows, in $510$ seconds on four processes, all checks
-passing. Six sabotages --- a duplicated key, a non-canonical key, a
-corrupted stabilizer order, a Grassmann--Pl\"ucker-invalid key, a truncated
-array, and a stale hash --- are each rejected. Each ships with a
-regenerated, internally consistent manifest, and with the totals repaired
-where they would otherwise betray it, so that none is caught merely by a
-checksum or by arithmetic.
+\emph{The compact certificates prove $H=\Gbar$; the catalog and its
+reachability are certified by a separate artifact, and only on one side of
+the mass identity.} The compact $(9,4)$ certificates contain the root-path
+closure of the classes referenced by generators --- a few hundred classes
+--- which is what the holonomy claim needs and all that the checkers above
+verify. The left-hand side of the mass identity is a different object: the
+list of $9{,}276{,}595$ class keys with their stabilizer orders. That list
+is now a checkable artifact: the keys sorted, each a $126$-bit integer
+recording the signs of a chirotope on the bases in colex order, with each
+class's stabilizer order; $62$~MB compressed, readable with \texttt{numpy}
+and nothing else, beside a manifest fixing the conventions and recording
+the \texttt{SHA-256} of every array. Beside it sits an $83$~MB
+\emph{reachability witness}: for every class but a fixed root, the row of
+the class it was reached from, the colex index $j_c$ of the mutated basis,
+the voltage $(\sigma_c,\varepsilon_c,s_c)\in G'$ of that edge, and the
+distance to the root.
+
+A standalone checker \texttt{coverage\_checker.py}, importing nothing from
+this project and rebuilding the basis order, the Grassmann--Pl\"ucker
+conditions, the sign lattice and the group action from scratch, verifies in
+exact integer arithmetic that every key is a valid uniform chirotope; that
+every key is extremal in its own orbit; that the keys are strictly
+increasing, hence pairwise distinct; that every recorded stabilizer order
+is the true one, recomputed by exhaustively enumerating the admissible
+relabellings rather than by rerunning the generator's pruned search; and
+that the orbit masses sum to $1{,}722{,}704{,}635{,}330{,}560$ with a count
+of $9{,}276{,}595$. On the witness it verifies that every $\sigma_c$ is a
+permutation; that exactly one class is parentless; that
+$\mathrm{depth}(c)=\mathrm{depth}(\mathrm{parent}(c))+1$ for all others, so
+that the parent map strictly decreases depth and cannot cycle, an
+independent pointer-doubling pass confirming that every chain ends at that
+one root; and that each edge satisfies, exactly,
+\[
+  (\sigma_c,\varepsilon_c,s_c)\cdot\chi_c
+   \;=\;\mu_{B_{j_c}}\bigl(\chi_{\mathrm{parent}(c)}\bigr).
+\]
+That identity exhibits the mutant of the parent as a $G'$-translate of the
+child; since $\chi_c$ is valid and $G'$ preserves validity, $B_{j_c}$
+really is a mutable basis of the parent, and the two classes really are
+adjacent in $\Gu^{9,4}$. With the tree structure, every listed class is
+therefore joined to the root by a path of certified mutation edges.
+
+This was run in full, not sampled: all $9{,}276{,}595$ rows and all
+$9{,}276{,}594$ tree edges, in RUNSECS seconds on two processes, all
+checks passing. Eleven sabotages are each rejected --- a duplicated key, a
+non-canonical key, a corrupted stabilizer order, a
+Grassmann--Pl\"ucker-invalid key, a re-pointed parent creating a cycle, a
+second parentless class, a corrupted voltage, a wrong mutated-basis index,
+a parent re-pointed to a different class at the same depth (tree intact,
+identity broken), a truncated array, and a stale hash. The first nine ship
+with a regenerated, internally consistent manifest --- fresh hashes for the
+witness arrays too --- and with the count and mass repaired, so that only a
+substantive mathematical check can catch them; the remaining two are
+deliberately different, the truncation being meant to be caught by the
+count and mass arithmetic and the stale hash by the integrity check.
+
+Neither array is tracked in git. Their manifest is, and pins them by the
+\texttt{SHA-256} of each raw array buffer. \emph{No archived release exists
+at the time of writing}; one is planned, and until it does the way to
+obtain the arrays is to regenerate them with the shipped code --- about
+four hours for the search on four cores, five minutes for the export ---
+and to check them against those hashes, which reproduce exactly.
 
 \emph{Two qualifications, and they are not cosmetic.} First, ``extremal in
 its own orbit'' is relative to the convention recorded in the manifest,
@@ -485,10 +530,21 @@ and confirms that it sums to that number, but nothing recomputes the
 extension counts, nor re-derives the $(8,4)$ catalog they are taken over.
 Those are cross-checked against every published count that exists, and the
 identity closes exactly in the smaller cases where the answer is
-independently known, but they are reproducible rather than
-certified. So Theorem~\ref{thm:count} and the coverage half of
-Theorem~\ref{thm:main} are certificate-backed on the enumeration, under a
-stated convention, and reproducible-only on the target.
+independently known, but they are reproducible rather than certified.
+
+The consequence deserves stating exactly, because the two halves of the
+coverage claim now stand on different footings. That the $9{,}276{,}595$
+listed classes are valid, pairwise inequivalent, carry their true
+stabilizer orders and lie in a \emph{single} component of $\Gu^{9,4}$ is
+certificate-backed outright, under the stated canonical convention, and
+does not depend on the target at all: it is what checks (a)--(e) and the
+spanning-tree checks above establish. That they are \emph{all} the classes
+is what the mass identity adds, and it is reproducible-only, since the
+target is. So Theorem~\ref{thm:count}, and the last step of the coverage
+half of Theorem~\ref{thm:main} --- from ``these $9{,}276{,}595$ classes
+form one component'' to ``$\Gu^{9,4}$ is connected'' --- rest on a number
+this project computes but does not certify. Nothing else in the coverage
+half does.
 
 \emph{One earlier observation was withdrawn.} An intermediate report from
 this project described a structural phenomenon at $(9,4)$: the sign part

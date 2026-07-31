@@ -31,6 +31,10 @@
   "coverage_4_9.npz": {
    "sha256": "fd7da051cc2b93e9d2b0824612ddd9bfb7a9f779a6fd4f2d6dbc249d613e7657",
    "bytes": 62185111
+  },
+  "witness_4_9.npz": {
+   "sha256": "9bb588728666c66d9633a414ce25f5bfb64babe77ed15b22f9f99db330ae8059",
+   "bytes": 83453421
   }
  },
  "array_sha256": {
@@ -39,6 +43,32 @@
   "stab": "2c237034a1cda8a0dbfadafccd1af3f21729eac99745bcb673238955361f09a4"
  },
  "array_sha256_note": "SHA-256 of the raw little-endian C-contiguous buffer of each array (numpy .tobytes()), so the hashes survive repacking of the .npz container.",
+ "witness": {
+  "file": "witness_4_9.npz",
+  "purpose": "a mutation SPANNING TREE over the same rows: it certifies REACHABILITY, i.e. that all listed classes lie in ONE connected component of the mutation graph on classes.  The coverage array alone certifies the catalog (valid, pairwise inequivalent, exact stabilizers, right mass); it says nothing about how the classes are joined to each other.",
+  "indexing": "row i of every witness array refers to row i of coverage_4_9.npz, i.e. to the class with key key_hi[i]*2^64 + key_lo[i].",
+  "arrays": {
+   "parent": "int32; the row this class was reached from, -1 at the unique root",
+   "flip": "uint8; colex index of the mutated basis (0..M-1)",
+   "sigma": "uint8 (N,n); a permutation of 1..n, sigma[i][x-1] = sigma(x)",
+   "eps": "uint16; reorientation bitmask, bit (x-1) set iff element x is reoriented",
+   "gsgn": "uint8; the global sign s in {0,1}",
+   "depth": "uint16; distance from row i to the root along parent pointers"
+  },
+  "identity": "for every non-root row i, with chi_i the chirotope decoded from key i, B_j the j-th basis in colex order and mu_B the sign flip on B, EXACTLY: (sigma[i], eps[i], gsgn[i]) . chi_i = mu_{B_flip[i]} ( chi_parent[i] ), the group acting as recorded under conventions.group.  Equivalently, the recorded element is the VOLTAGE of the mutation edge parent[i] -> i.",
+  "why_this_certifies_reachability": "the identity exhibits mu_{B_flip[i]}(chi_parent[i]) as a G'-translate of chi_i, hence (i) B_flip[i] really is a mutable basis of chi_parent[i] -- the mutant is valid because chi_i is valid and G' preserves validity -- and (ii) rows parent[i] and i are adjacent in the mutation graph on G'-classes.  depth[root]=0 with depth[i]=depth[parent[i]]+1 makes the parent map strictly depth-decreasing, so it is acyclic and every row reaches the unique root.  Therefore all 9276595 listed classes lie in one connected component.",
+  "root_row": 9276594,
+  "max_depth": 27,
+  "root_sentinels": "at the root, parent=-1, flip=0, sigma=identity, eps=0, gsgn=0, depth=0; the identity is not asserted there."
+ },
+ "witness_array_sha256": {
+  "parent": "4f540fe4c626df0be1a6939b49dfaaff27d8a9386500fbbb72871da3f92d9a67",
+  "flip": "85917338a1ea6600a868a9c80477b0135b1ddbb4596df0c6aaaa906a3c01c22c",
+  "sigma": "e1988d814c24d04df9324f083d4c2caea674d1aa874927ce5fb94c769f5d3c93",
+  "eps": "7ba70c746012cf88bc84d6d9041ab274d72a393adee1ff0bf878a84b80796f09",
+  "gsgn": "bc4ca959d91e688e6bf920fd2a0994f20cfbbcd14b3c6777fb541cd3c9c59c91",
+  "depth": "022cabc5b10ed64540584c51edb3b7a28fa154826c8ae75a01f99f1ad9a8f1c8"
+ },
  "examples": [
   {
    "row": 0,
@@ -81,6 +111,6 @@
   },
   "exported_by": "export_coverage.py"
  },
- "how_to_obtain": "coverage_4_9.npz is 62.2 MB and is NOT tracked in git (see .gitignore); this MANIFEST.json is.  Two ways to get it.  (1) Regenerate: run `python runbig.py 4 9 <workers>` (about 4 h on 4 cores; it writes data/big_4_9/level_*.npz), then `python export_coverage.py 4 9 data/big_4_9 data/coverage_4_9`.  The array_sha256 values below pin the result: they are SHA-256 of the raw array buffers, so they must reproduce exactly, whereas the .npz file hash need not (savez_compressed records zip timestamps).  (2) Download the archived release attached to the repository and check it against the array_sha256 values below.",
+ "how_to_obtain": "coverage_4_9.npz (62.2 MB) and witness_4_9.npz (83.5 MB) are NOT tracked in git (see .gitignore); this MANIFEST.json is.  No archived release exists yet -- one is planned, and until it does the only way to obtain the arrays is to REGENERATE them: run `python runbig.py 4 9 <workers>` (about 4 h on 4 cores; it writes data/big_4_9/level_*.npz), then `python export_coverage.py 4 9 data/big_4_9 data/coverage_4_9`.  The array_sha256 / witness_array_sha256 values below pin the result: they are SHA-256 of the raw array buffers, so they must reproduce exactly, whereas the .npz file hashes need not in general (the zip container may record timestamps).",
  "checker": "coverage_checker.py (imports nothing from this project)"
 }

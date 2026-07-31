@@ -807,16 +807,25 @@ not check that the list consists of that many distinct valid classes with
 the asserted stabilizers. That was the single most serious finding of the
 GPT referee report on the note (`paper/REVIEW_note_gpt.md`, finding 3).
 
+A second gap, found by the same referee's re-review (POSTSCRIPT, finding 3
+NOT RESOLVED), was that the coverage artifact certified the *catalog* but
+not *reachability*: nothing in it showed that those 9,276,595 classes form
+ONE component. That is what the witness below closes.
+
 **The artifact.** `export_coverage.py 4 9 data/big_4_9 data/coverage_4_9`
 transports the `keys`/`stab` columns out of the checkpoints, sorts them
-strictly increasingly by the 126-bit key, and writes
+strictly increasingly by the 126-bit key, re-derives the per-edge global
+sign, and writes
 
 ```
 data/coverage_4_9/coverage_4_9.npz    key_hi, key_lo (uint64), stab (uint8)
+data/coverage_4_9/witness_4_9.npz     parent (int32), flip (uint8),
+                                      sigma (N,9 uint8), eps (uint16),
+                                      gsgn (uint8), depth (uint16)
 data/coverage_4_9/MANIFEST.json       conventions, totals, SHA-256s
 ```
 
-62.2 MB, readable with `np.load` and nothing else. The manifest records n,
+62.2 MB + 83.5 MB, readable with `np.load` and nothing else. The manifest records n,
 r, the basis order, the key bit-encoding, the group and its action, the
 **exact canonical convention** (see below), the count, the mass, the
 stabilizer histogram, three fully worked example rows (row 0 as a 126-char
@@ -842,7 +851,29 @@ and the group action from the definitions. It verifies
 * (e) the orbit masses sum to 1,722,704,635,330,560 and the count is
   9,276,595;
 * (f) optional, `--extcount`: the tracked 2,628-row extension table sums
-  arithmetically to that same target.
+  arithmetically to that same target;
+* (g) the witness is a genuine spanning **tree**: every `sigma` is a
+  permutation of 1..9, every `eps` < 2⁹, every `gsgn` ∈ {0,1}, every
+  `flip` < 126, every `parent` in range, **exactly one** parentless row,
+  `depth[root] = 0` and `depth[i] = depth[parent[i]] + 1` elsewhere (so
+  the parent map strictly decreases depth and cannot cycle), plus an
+  independent **pointer-doubling** pass — hard-capped at ⌈log₂N⌉+2 rounds,
+  FAIL if the cap is hit — confirming that every ancestor chain ends at
+  that one root;
+* (h) every one of the 9,276,594 tree edges satisfies, exactly as 126-bit
+  sign vectors, `(sigma[i], eps[i], gsgn[i]) · χ_i = μ_{B_flip[i]}(χ_parent[i])`.
+
+**The reachability argument, stated once.** (h) exhibits
+μ_{B_j}(χ_parent) as a *G′-translate of χ_child*. Validity is G′-invariant
+and χ_child is valid by (a), so μ_{B_j}(χ_parent) is valid: `flip[i]`
+really is a mutable basis of the parent, and parent and child really are
+adjacent in Γᵤ^{9,4}. (No separate mutability check is done, and none is
+needed.) (g) then makes those edges a spanning tree, so **all 9,276,595
+listed classes lie in one component**. Completeness — that they are *all*
+the classes — is the mass identity's job, and it is the mass identity that
+still depends on the extension-count target. One component + complete =
+Γᵤ^{9,4} connected. The two halves must not be conflated: the first is now
+certificate-backed outright, the second remains reproducible-only.
 
 **How (b) and (d) are done, and why this is not just canon.py again.**
 `canon.py` finds the canonical key by a level-by-level DFS that *prunes*
@@ -873,23 +904,40 @@ is all the distinctness argument needs — but the reader has to read the
 forty lines of `canonical_convention()` rather than accept the word
 "canonical". The manifest and the note both say so.
 
-**Canaries** (`--canary`). Six sabotages of a 20,000-row sub-artifact, each
-shipped with a **regenerated, internally consistent manifest** — i.e. an
-adversary who can rewrite the hashes — plus an untampered control that must
-pass. Where the sabotage would otherwise be caught by arithmetic, the
-totals are repaired so that only the mathematical check can fire:
+**Canaries** (`--canary`). Eleven sabotages of a 20,000-row sub-artifact,
+each shipped with a **regenerated, internally consistent manifest** — fresh
+SHA-256s for the witness arrays too, i.e. an adversary who can rewrite the
+hashes — plus an untampered control that must pass. The sub-artifact is the
+20,000 rows *nearest the root of the witness tree*, which is closed under
+`parent` (a parent has strictly smaller depth), so it is itself a complete
+artifact: a sorted key list AND a spanning tree over exactly those rows.
+Where a sabotage would otherwise be caught by arithmetic, the count and
+mass are repaired so that only the mathematical check can fire:
 
 | canary | fires on |
 |---|---|
 | control, untampered | *accepted* (as required) |
-| duplicated key (kept sorted, totals repaired) | (c) |
-| non-canonical key (another representative of the same orbit) | (b), and (d) |
+| duplicated key (kept sorted, totals repaired) | (c), and (h) |
+| non-canonical key (another representative of the same orbit) | (b), (d), (h) |
 | corrupted stabilizer order (manifest mass repaired) | (d) |
-| GP-invalid key (a **non-mutable** basis flipped) | (a), and (b),(d) |
-| truncated artifact, 500 rows dropped | (e) |
+| GP-invalid key (a **non-mutable** basis flipped) | (a), and (b),(d),(h) |
+| re-pointed parent creating a 2-cycle | (g) depth + pointer-doubling |
+| corrupted voltage (**single** eps bit — `eps ^ 511` is a NO-OP, r even) | (h) |
+| wrong mutated-basis index | (h) |
+| second parentless node (a leaf, depth repaired to 0) | (g) unique root |
+| parent re-pointed to another node at the **same depth** (tree intact) | (h) only |
+| truncated artifact, 500 **leaf** rows dropped, totals NOT repaired | (e) |
 | stale SHA-256, data changed | (0) |
 
-All seven behave as required.
+The last two are deliberately not manifest-repaired: the truncation is
+meant to be caught by the count/mass arithmetic and the stale hash by the
+integrity path. The other nine must be caught by a substantive check.
+Canaries 7, 8 and 10 (voltage / flip / same-depth re-point) are asserted
+**semantically real at construction time** — the builder recomputes the
+mutation identity and requires that it now fails — so a perturbation
+silently absorbed by a stabilizer cannot produce a vacuous canary.
+
+All twelve behave as required (control + 11 sabotages).
 
 **Run of record (2026-07-31).** FULL, not sampled: all 9,276,595 rows,
 4 worker processes, 93 shards of 100,000, **510 s wall / ~26 min CPU**,
@@ -933,6 +981,17 @@ remains reproducible-only.
   Coverage is a separate artifact: the mass identity in
   `data/big_4_9/meta.json` / `summary.json`, whose left-hand side is now
   itself certified by `data/coverage_4_9/` + `coverage_checker.py` (§7).
+* **Catalog ≠ connectivity — the distinction that finding 3 of the GPT
+  re-review turned on.** "These 9,276,595 keys are distinct valid classes
+  with exact stabilizers whose masses hit the target" and "the BFS reached
+  them all from one root" are different assertions, and until 2026-07-31
+  only the first was certified; the second rested on reproducing or
+  trusting the disk BFS. `data/coverage_4_9/witness_4_9.npz` + checks
+  (g),(h) of `coverage_checker.py` now certify the second **outright and
+  independently of the extension target**: all 9,276,595 classes are
+  joined to one root by mutation edges each verified in exact arithmetic.
+  What is left conditional on the target is *completeness* — hence the
+  step from "one component" to "Γᵤ^{9,4} is connected".
 * **The class list's completeness has two independent supports** and they
   should not be conflated: (1) the mass identity against the
   independently computed target N_chi(4,9) from the (8,4) extension
@@ -950,7 +1009,8 @@ remains reproducible-only.
   the second is not.** `coverage_checker.py` (§7) recomputes, from the
   shipped artifact and with no project imports, the validity, the
   orbit-extremality and the stabilizer order of every one of the
-  9,276,595 classes, and re-adds the masses; so the LEFT-hand side of the
+  9,276,595 classes, re-adds the masses, and (since the witness was added)
+  re-verifies every spanning-tree edge; so the LEFT-hand side of the
   identity is now certificate-backed, conditional on the manifest's
   colour-restricted canonical convention (which is stated there in full,
   and is a well-defined function of the orbit — the point the distinctness
@@ -986,6 +1046,22 @@ remains reproducible-only.
 
 ## 9. History / errata log
 
+* 2026-07-31 (session 4): **reachability certified — the last open finding
+  of the GPT re-review.** The POSTSCRIPT of `paper/REVIEW_note_gpt.md`
+  (finding 3, NOT RESOLVED) observed that the coverage artifact certified
+  the *catalog* side only: "the BFS reached them all from one root"
+  remained a reproducible search assertion, and the honesty section did not
+  disclose it. Now `export_coverage.py` also emits
+  `data/coverage_4_9/witness_4_9.npz` — a mutation spanning tree over all
+  9,276,595 classes (`parent`, `flip`, `sigma`, `eps`, `gsgn`, `depth`),
+  83.5 MB compressed / 176.3 MB raw, every array hash-pinned in the tracked
+  manifest — and `coverage_checker.py` gained checks (g) tree structure and
+  (h) the per-edge mutation identity, plus five new canaries (cycle,
+  corrupted voltage, wrong flip index, second parentless node, same-depth
+  re-pointed parent). RUNRECORD The note and §7/§8 above now say
+  exactly what changed: one-componentness is certificate-backed outright
+  and does *not* depend on the extension-count target; completeness — hence
+  the step to "Γᵤ^{9,4} is connected" — still does.
 * 2026-07-31 (session 3): **coverage gap closed on the left-hand side.**
   The GPT referee report on the note (`paper/REVIEW_note_gpt.md`, finding 3
   and "Single most important fix") established that the headline count and
