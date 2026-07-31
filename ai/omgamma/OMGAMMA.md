@@ -314,7 +314,8 @@ all stabilizer generators; sign part exact):
 | (9,3) | 4382 ✓cat | yes | yes (362880) | yes (9/9, exact) | **Γ̄(9,3), Γ̃(9,3) connected** |
 | (7,4) | 11 ✓cat | yes | yes (5040) | yes (7/7) | **Γ̄(7,4), Γ̃(7,4) connected** |
 | (8,4) | 2628 ✓cat | yes | yes (40320) | yes (8/8, exact) | **Γ̄(8,4), Γ̃(8,4) connected** — NEW (first rank-4 labeled verdict) |
-| (9,4) | 9,276,… (campaign, §6) | pending | yes (362880) | yes (9/9, exact) | **H = Ḡ** ⟹ #comp(Γ̄) = #comp(Γ̂) (Result A, §6) |
+| (9,4) | campaign in §6 | sweep in progress | yes (362880) ✓cert | yes (9/9, exact) ✓cert | **H = Ḡ, certified** ⟹ #comp(Γ̄) = #comp(Γ̃) = #comp(Γ̂) (Result A, §6); connected iff Γ̂ is |
+| (9,5) | ≅ (9,4) by duality | — | — | — | same verdict as (9,4) |
 | tiny  | (5,2),(5,3),(5,4),(6,2),(6,3),(6,4) | yes | yes | yes | connected & brute-force-equal |
 
 Both (8,4) and (9,3) were re-run through the parallel disk-based engine
