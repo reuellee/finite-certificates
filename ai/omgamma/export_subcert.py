@@ -17,7 +17,9 @@ each component of Gamma_hat).  It does NOT certify class-list
 completeness -- that is the mass identity's job (separate trust
 boundary).
 
-Usage: python export_subcert.py <r> <n> [outprefix]
+Usage: python export_subcert.py <r> <n> [outprefix] [gensdir]
+       gensdir defaults to the state dir; pass e.g.
+       data/big_4_9/certA_dir to package a certify.py holonomy instead.
 """
 import gzip
 import json
@@ -30,8 +32,9 @@ import numpy as np
 from bigstate import load_state
 
 
-def main(r, n, prefix=None):
+def main(r, n, prefix=None, gensdir=None):
     d = f"data/big_{r}_{n}"
+    gensdir = gensdir or d
     prefix = prefix or f"{d}/subcert"
     M = comb(n, r)
     st = load_state(r, n, d, meta_gate=False)
@@ -42,7 +45,7 @@ def main(r, n, prefix=None):
     eps = st['eps']
 
     gens = []
-    with open(f"{d}/gens.txt") as f:
+    with open(f"{gensdir}/gens.txt") as f:
         for line in f:
             parts = line.split()
             if parts:
@@ -99,8 +102,8 @@ def main(r, n, prefix=None):
                 prov[1] = str(newid[int(prov[1])])
                 prov[3] = str(newid[int(prov[3])])
             fg.write("|".join(prov) + " " + " ".join(parts[1:]) + "\n")
-    if os.path.exists(f"{d}/exhibits.txt"):
-        with open(f"{d}/exhibits.txt") as a, \
+    if os.path.exists(f"{gensdir}/exhibits.txt"):
+        with open(f"{gensdir}/exhibits.txt") as a, \
                 open(f"{prefix}_exhibits.txt", "w") as b:
             b.write(a.read())
     info = {'r': r, 'n': n, 'classes_in_subcert': len(keep),
@@ -115,4 +118,5 @@ def main(r, n, prefix=None):
 
 if __name__ == "__main__":
     main(int(sys.argv[1]), int(sys.argv[2]),
-         sys.argv[3] if len(sys.argv) > 3 else None)
+         sys.argv[3] if len(sys.argv) > 3 else None,
+         sys.argv[4] if len(sys.argv) > 4 else None)
