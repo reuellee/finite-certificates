@@ -59,6 +59,10 @@ coefficients nonnegative, at least one positive) such that Bᵀy = 0 holds
 *identically modulo the Grassmann–Plücker ideal* given the chirotope's
 signs — hence specializes to an exact Gordan vector at **every**
 configuration realizing that chirotope, not just the reference one.
+(Specialization preserves both Gordan conditions unconditionally: on a
+generic configuration every D_tij > 0 strictly, so nonnegative
+coefficients give y ≥ 0 and the positive coefficient's monomial gives a
+strictly positive entry, hence y ≠ 0.)
 
 The reference configuration is the integer matrix
 
@@ -165,6 +169,9 @@ flip negates σ and swaps the two rays of each class, and
 Row(flip σ, −s; class, ray) = Row(σ, s; class, −ray) — an exact row
 correspondence, so certificates transport by the same ray swap
 (verified exactly on samples: `check_transport.py`, "FLIP OK").
+Geometrically: swapping the copies negates the support-function
+difference, i.e. (T, s) ↦ (−T, −s), which exchanges the positive and
+negative extreme rays of each facet normal — whence the ray swap.
 
 ### 3.3 Certificate transport
 
@@ -207,14 +214,19 @@ with strict side signs.
 
 - **No non-strict 44:** a 44-vertex instance with some side equality
   perturbs (T, w) infinitesimally to strictness while keeping all 44
-  vertices (strict witnesses persist; each vertex is a strict linear
-  program solution). Strict 44 is dead by 3.4, so 44 is dead.
+  vertices: each vertex of Q has a full-dimensional open normal cone,
+  which persists under small deformations of (T, w), so no vertex is
+  swallowed. Strict 44 is dead by 3.4, so 44 is dead.
 - **No 43:** in the strict generic regime the bicolored count is even —
   the zero set of the support-function difference traces cycles in the
   bipartite chamber-adjacency graph (the 5-cube-embedded adjacency of
-  the 22 chambers), each bicolored chamber contributing one segment. 43
-  needs 21 bicolored chambers, odd; and a 43-vertex instance with
-  equalities perturbs to ≥ 43 strict, hence to 44 — dead either way.
+  the 22 chambers; adjacency is bipartite because the chamber graph is
+  dual to a great-circle arrangement on S², 2-colorable by parity of
+  the sign vector). Each bicolored chamber contributes exactly one
+  segment: the zero plane meets a strictly convex open cone in a single
+  connected sector, so no chamber is re-entered. 43 needs 21 bicolored
+  chambers, odd; and a 43-vertex instance with equalities perturbs to
+  ≥ 43 strict, hence to 44 — dead either way.
   (Verified argument: `../stage2b_gpt/REVIEW_stage2b_claude.md`.)
 - **42 is attained:** `../cert_35_42.json` — an explicit rational
   42-vertex (3,5)-zonoboxtope, verified exactly by this repo's
