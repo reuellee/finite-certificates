@@ -459,10 +459,12 @@ an exact integer identity, not agreement with either source:
         extension sweep over the 2,628 classes of (8,4)
 
 so the class list is provably exhaustive (any missing class would leave
-the sum short by at least |Ḡ|/|Stab| ≥ 9!·2⁸/|Stab| > 0, and the sum can
-never overshoot). Cross-check in exact rationals (`stabstats.py`,
-`data/big_4_9/stabstats.json`, recomputed from the checkpoints rather
-than from any running counter):
+the sum short by at least |Ḡ|/|Stab| > 0, and the sum can never
+overshoot). **That identity is the whole discriminator.** The rational
+decomposition below is not a second independent witness — it is
+arithmetic on the same stabilizer array, recomputed from the checkpoints
+by `stabstats.py` rather than from the engine's running counter — but it
+is what makes the six-class gap legible:
 
     Σ_c 1/nstates_c = N_chi/(|G'_9|/2) = 166,897,693/18   (forced by the target)
     Σ_c (1 − 1/nstates_c)             =      81,017/18    (measured)
