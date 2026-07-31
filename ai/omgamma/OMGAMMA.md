@@ -431,6 +431,13 @@ i.e. *independently of whether the coverage sweep completes*:
 * π(H) = S₉ (order 362,880): the family-(i) generators alone give A₉
   (order 181,440 — every stabilizer element of every flagged class has an
   EVEN permutation part), and the odd coset comes from edge voltages.
+  Both halves are independently confirmed on the shipped certificate,
+  whose 74 generators are 73 stabilizer conjugates + 1 edge voltage:
+  `checker.py`'s from-scratch orbit-stabilizer chain gives
+  order⟨perm parts of the 73⟩ = 181,440 = |A₉| (and all 73 are even
+  permutations, 0 odd), while adding the single edge generator — an odd
+  permutation — gives 362,880 = |S₉|. A₉ is the unique index-2 subgroup
+  of S₉, so "order 181,440" and "all generators even" are the same fact.
   Reached at level 3 of the original sweep, and re-derived after the
   resume at level 9 from just **2** edge generators
   (`data/big_4_9/meta.json`: `hol_perm_order 362880`, `hol_sign_dim 9`,
