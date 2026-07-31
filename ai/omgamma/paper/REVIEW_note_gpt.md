@@ -275,3 +275,230 @@ and a standalone checker), or withdraw the claim that the mass identity and clas
 count are publicly certificate-backed; that trust-boundary mismatch currently
 affects both the headline correction `9,276,601 -> 9,276,595` and the proof that the
 quotient search covered every class.
+
+---
+
+## Postscript — re-review after the coverage fixes (2026-07-31)
+
+### Verdict: NEEDS FIXES
+
+The revision is much stronger. In particular, the Knauer--Marc attribution is
+now fair; the non-free reduction is written out; the universal stabilizer claim
+has been cut back to what the compact certificate actually contains; and the new
+coverage artifact plus standalone checker close the former audit gap on the
+*left-hand side of the class-count mass identity*. I do not find a new numerical
+discrepancy or a defect in the restricted canonicalization algorithm.
+
+It is not yet submit-ready, however. The coverage artifact contains class keys
+and stabilizer orders, but no mutation spanning tree (or equivalent reachability
+witness) for the 9,276,595 quotient vertices. Consequently it certifies the
+catalog side of the count, not the claim that all those vertices were reached in
+one component. The latter still relies on reproducing or trusting the disk BFS.
+The new honesty section says that only the extension target is
+reproducible-only, so it leaves a material trust boundary undisclosed. There are
+also three smaller but definite overstatements: the unqualified mass-certificate
+language in the abstract and Introduction, the unconditional odd-`n` dichotomy
+in the abstract, and an inaccurate description of what the six canaries catch.
+
+I reread the revised TeX, `coverage_checker.py`, `MANIFEST.json`, the local
+full-run log, and the relevant tracked/untracked status. The local log records a
+FULL run over all 9,276,595 rows: 18 checks passed, 0 failed, in 510 seconds,
+after 22,544,370 admissible relabellings; its histogram and mass agree with the
+manifest. Python was not available on the re-review shell, so I could not
+independently rerun even sampled mode in that pass. This does not affect the
+source audit below, but the log itself is ignored and is not an immutable
+verification record.
+
+### Disposition of the original findings 1--11
+
+1. **RESOLVED (originally SERIOUS) — Knauer--Marc attribution and novelty.**
+   Abstract lines 32--43, Introduction lines 81--115, computation lines 338 and
+   354--359, and “Relation to [KM23]” lines 502--512 now say explicitly that
+   Knauer--Marc proved labelled rank 3 for every `n`. The revision identifies the
+   genuinely new labelled cases exactly as `(8,4)`, `(9,4)`, and the dual
+   `(9,5)`. The quotation of their lack of knowledge beyond rank 3 and their
+   suspicion of a counterexample remains faithful. Minor drafting point only:
+   abstract lines 40--42 should add “elementary rank 2” to the cases accounted
+   for; the displayed list of new cases is nevertheless correct.
+
+2. **RESOLVED (originally SERIOUS) — published versus publicly archived.**
+   Lines 506--510 now accurately call Knauer--Marc's computation published and
+   distinguish the absence of publicly archived code, data, or certificates.
+   Lines 93--115 and 510--512 restrict the claimed answer to `n <= 9` and do not
+   purport to settle the global labelled question.
+
+3. **NOT RESOLVED (originally SERIOUS) — coverage/count trust boundary.**
+   The principal count-side defect *is* fixed: the 62,185,111-byte NPZ contains
+   9,276,595 strictly ordered 126-bit keys and stabilizer orders; its container
+   and raw arrays are hash-pinned by the tracked manifest; and the standalone
+   checker verifies validity, restricted canonicality, distinctness, exact
+   stabilizers, and the left-hand orbit mass without importing project code.
+   That is a real certificate for the enumerated catalog.
+
+   It is not, however, a coverage certificate for quotient-graph connectivity in
+   the sense used at lines 379--380 and 396--399. Neither the NPZ nor
+   `coverage_checker.py` contains or checks a parent edge or mutation path for
+   each listed class. The checker computes mutability only to form the colouring;
+   it never checks that the 9,276,595 keys form a connected mutation graph, or
+   even that each non-root key has a certified path to the root. The compact
+   holonomy certificate contains root paths for only the few hundred classes used
+   by its generators (lines 430--434). Thus the artifacts show “these are all
+   classes” conditional on the extension target, while “the BFS reached them all
+   from one root” remains a reproducible search assertion. Lines 414--416 and
+   481--483 currently imply otherwise.
+
+   There is also a distribution issue to settle before submission. Local `HEAD`
+   was two commits ahead of `origin/main` during review; the checker and tracked
+   manifest were not in the inspected remote tip, the NPZ is deliberately
+   gitignored, and the manifest says only “the archived release attached to the
+   repository” without an exact release URL, tag, DOI, or asset name. I could not
+   identify an immutable release from the information recorded in the manuscript
+   or manifest. If the release already exists, cite its exact locator and pin it
+   to this checker/manifest; if it does not, lines 51--54 and 436--444 must not yet
+   say “public” or “published.”
+
+4. **NOT RESOLVED (originally SERIOUS) — mass-identity qualifications.**
+   Computation lines 363--385 are now excellent: “structurally independent” is
+   the right term; all four hypotheses are stated where the identity is used;
+   the first three are tied to the coverage checker; and the extension target is
+   expressly not certified. Honesty lines 473--483 also describe the target-side
+   limitation accurately. But abstract line 47 still says the count is
+   “certified by an exact mass identity,” and Introduction lines 127--132 still
+   call the target “computed independently” and say without qualification that a
+   missed-class search “cannot overshoot.” Those summaries are stronger than the
+   proof's own trust statement. They should say “structurally independent” and
+   either carry the hypotheses and target limitation or use “computed/proved by”
+   rather than unqualified “certified.”
+
+5. **RESOLVED (originally SERIOUS) — all-rank case split.**
+   Lines 329--352 now dispatch degenerate ranks mathematically, give an elementary
+   rank-2 model and connectivity argument, invoke Knauer--Marc for rank 3, and
+   state the explicit dual chirotope formula. The rank-2 sentence is terse: for
+   maximal clarity it could say that a mutation swaps the corresponding adjacent
+   antipodal pair in the signed cyclic order. That is an exposition improvement,
+   not a remaining computational-coverage gap.
+
+6. **RESOLVED (originally SERIOUS) — non-free reduction.**
+   Lines 230--246 define voltage ambiguity, root transport, and the two generator
+   families. Lines 249--270 give the needed two inclusions and the telescoping
+   factorization, including terminal stabilizers. Lemma 1 is left as standard
+   quotient-path lifting, but the non-free part on which the paper depends is now
+   proved at a publishable level.
+
+7. **RESOLVED (originally MINOR) — reorientation-component formula.**
+   Lines 278--285 now explicitly identify components of the reorientation
+   quotient as the normal sign-subgroup orbits and derive
+   `Gbar : Rbar H = S_n : pi(H)`.
+
+8. **RESOLVED (originally MINOR) — group action and kernels.**
+   Lines 182--207 supply the semidirect multiplication, write the sign action
+   unambiguously, restrict the reduction to `2 <= r <= n-2`, and use only that
+   `K_4` acts trivially. The degenerate cases are handled separately.
+
+9. **RESOLVED (originally MINOR) — odd-`n` module argument and computation.**
+   Lines 297--307 now give the elementary transposition proof of irreducibility.
+   Lines 309--319 correctly distinguish the weight-span computation for
+   `n=5,...,10` from exhaustive RREF enumeration only through `n=7`, and lines
+   321--325 say the proposition is explanatory rather than load-bearing.
+
+10. **RESOLVED (originally SERIOUS) — stabilizer parity.**
+    Lines 388--395 make exactly the supported statement: the 73
+    stabilizer-derived generators *in the shipped certificate* are even and
+    generate `A_9`, one odd edge voltage supplies the other coset, and no claim
+    is made about complete family (i). This matches the artifact scope and
+    removes the former universal assertion.
+
+11. **RESOLVED (originally NOTE) — degenerate ranks, duality, and resume.**
+    Lines 329--352 include the empty-GP/folded-cube argument and explicit duality
+    formula and explain mutation transport. Lines 401--409 correctly preserve
+    the one-sided resume logic: the harvested subgroup is a lower bound, and a
+    lower bound equal to the ambient group proves the positive result but could
+    not prove a negative one.
+
+### Audit of the new certificate language
+
+The two principal qualifications at lines 463--483 are technically accurate.
+
+* **Restricted canonicalization:** `coverage_checker.py` does not maximize over
+  all `S_9`. It derives mutable bases from the GP table (lines 272--282), builds
+  the degree/pair-incidence colouring and up to three equivariant refinements
+  (285--315), sends each colour class to its designated block and enumerates all
+  within-block permutations (318--336), and then maximizes over the independently
+  rebuilt sign lattice (354--361). Because mutability is invariant under
+  reorientation/global sign and equivariant under relabelling, this normalization
+  really is a function of the full `G'`-orbit. Strictly different normalized keys
+  therefore certify inequivalent classes even though the keys are usually not
+  global lexicographic maxima over `S_9`. The manifest describes the same
+  convention. The paper is right that orbit-invariance, not the bare word
+  “extremal,” carries the distinctness argument.
+
+* **Target side:** the checker hard-codes the target at lines 69--70. Its
+  `--extcount` path (lines 544--569) checks parent IDs, divisibility, and the
+  arithmetic sum of the tracked table; it does not recompute any extension count
+  or the 2,628-parent catalog. Calling that side reproducible-only is exactly
+  right. The disclosure must be expanded, however, to include quotient
+  reachability as explained in finding 3.
+
+The abstract's attribution and finite-range novelty claims are now accurate, but
+two claims remain too strong. First, “certified by an exact mass identity” is not
+consistent with the admitted reproducible-only target unless qualified. Second,
+abstract lines 49--50 state the odd-`n` dichotomy unconditionally. Proposition 3
+requires the isomorphism quotient to be connected and `pi(H)=S_n` (equivalently,
+in this setting, connectivity at the reorientation-class level). Without those
+hypotheses an additional permutation index is possible. The abstract should say
+“when the reorientation-class graph is connected” or state the proposition's two
+hypotheses.
+
+### New defects in the revision
+
+12. **SERIOUS — the new honesty section omits the quotient-reachability trust
+    boundary.** Locations: lines 414--416, 430--454, and 481--483. Catalog
+    validity/completeness and graph connectedness are different assertions. Add
+    a full mutation spanning-tree certificate/check, or state that the assertion
+    that the complete catalog was reached from one root is reproducible-only.
+
+13. **MINOR — the six-canary description is false as written.** Locations:
+    lines 456--461. The checker source expressly makes canary 6 an exception:
+    the stale-hash canary keeps a stale manifest and is intended to be caught by
+    check (0). The truncated-array canary deliberately does *not* repair totals
+    and is intended to be caught by count/mass arithmetic. Only the first four
+    mathematical sabotages have refreshed hashes and repaired totals so that the
+    substantive checks must catch them. Replace “Each ... so that none” by this
+    three-way description.
+
+14. **SERIOUS — the abstract omits the hypotheses of Proposition 3.** Location:
+    abstract lines 49--50. This is a mathematical overstatement, although it does
+    not affect the proved `n <= 9` theorem.
+
+15. **MINOR — public availability is not made auditable.** Locations: abstract
+    lines 51--54 and honesty lines 436--444. Give the exact immutable release
+    locator and asset name/hash, and ensure the commits containing the checker
+    and manifest are public before arXiv submission.
+
+The retraction at lines 485--500 remains adequate: it names the omitted generator
+family, explains the false negative-looking signal and the code-path gap, states
+the corrected result, and does not pretend that the old observation retains
+evidentiary value. I would keep it substantially as written. All headline
+numbers still agree internally: 9,276,595 classes; stabilizer histogram
+`2:9267682, 4:8717, 6:73, 8:106, 12:16, 36:1`; 8,913 nontrivial stabilizers;
+mass 1,722,704,635,330,560; and 150,561,898 directed traversals. I found no new
+numerical defect.
+
+### Readiness
+
+**NEEDS FIXES**, not rejection. The mathematical strategy and reported positive
+result remain credible, and most of the original report has been answered
+substantively. Before arXiv:math.CO, disclose or certify full quotient
+reachability, qualify the abstract/Introduction mass rhetoric, restore the
+dichotomy hypotheses in the abstract, correct the canary paragraph, and provide
+an exact public release locator. These are localized changes except for a full
+spanning-tree certificate, which is optional if the paper candidly labels that
+part reproducible-only.
+
+## Single most important fix after re-review
+
+Do not say that only the extension target is reproducible-only: either publish a
+checkable mutation spanning tree (or equivalent reachability witness) covering
+all 9,276,595 quotient classes, or state explicitly that the coverage artifact
+certifies the catalog/count side but that one-component reachability still relies
+on reproducing the disk BFS.

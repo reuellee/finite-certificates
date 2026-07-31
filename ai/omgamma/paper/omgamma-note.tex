@@ -38,20 +38,23 @@ write that beyond rank $3$ they know nothing about the labelled graph,
 where they suspect a counterexample exists. We show there is no
 counterexample below $n=10$: for every rank $r$ and every $n\le 9$, all
 three graphs are connected. Once their rank-$3$ theorem, oriented-matroid
-duality and the degenerate ranks are accounted for, the cases genuinely
-settled here are $(n,r)=(8,4)$, $(9,4)$ and its dual $(9,5)$ --- among
-them the case they single out as hardest. The method is a covering-space
-reduction expressing the number of components of the labelled graph as
-the index of a holonomy subgroup computable on the isomorphism-class
-quotient. Two by-products: the number of isomorphism classes of uniform
-rank-$4$ oriented matroids on $9$ elements is $9{,}276{,}595$, certified
-by an exact mass identity, correcting the value $9{,}276{,}601$ printed
-by Fukuda, Miyata and Moriyama; and, for odd $n$, the number of
+duality and the elementary ranks ($r\le2$ and $r\ge n-1$) are accounted
+for, the cases genuinely settled here are $(n,r)=(8,4)$, $(9,4)$ and its
+dual $(9,5)$ --- among them the case they single out as hardest. The
+method is a covering-space reduction expressing the number of components
+of the labelled graph as the index of a holonomy subgroup computable on
+the isomorphism-class quotient. Two by-products: the number of
+isomorphism classes of uniform rank-$4$ oriented matroids on $9$ elements
+is $9{,}276{,}595$, proved by a mass identity against a structurally
+independent extension count, correcting the value $9{,}276{,}601$ printed
+by Fukuda, Miyata and Moriyama; and, when the isomorphism-class graph is
+connected and the holonomy surjects onto $S_n$, for odd $n$ the number of
 components of the labelled graph is forced into $\{1,2^{n-1}\}$ with no
-intermediate value possible. All computations are exact; the certificates
---- for the holonomy, and for the $9{,}276{,}595$-class enumeration
-underlying the count --- and their standalone checkers are public, and
-\S\ref{sec:honesty} states precisely which claims they cover.
+intermediate value possible. All computations are exact. Certificates and
+standalone checkers accompany the holonomy claims and the
+$9{,}276{,}595$-class enumeration; \S\ref{sec:honesty} states precisely
+which claims they cover and which remain reproducible rather than
+certified.
 \end{abstract}
 
 \maketitle
@@ -124,12 +127,17 @@ $4$ on $9$ elements is exactly $9{,}276{,}595$.
 
 This value appears in Finschi's database \cite{Finschi} and in
 \cite[Table 1]{KM23}; Fukuda, Miyata and Moriyama \cite[Table]{FMM13}
-print $9{,}276{,}601$, which is six too many. Our certificate is not a
-third opinion but an exact integer identity: the orbit masses of the
-classes found by an exhaustive search sum to a target computed
-independently, by a single-element extension sweep over the $2{,}628$
-classes at $n=8$ (\S\ref{sec:mass}). A search that missed a class falls
-short of the target and cannot overshoot it.
+print $9{,}276{,}601$, which is six too many. Our argument is not a third
+opinion but an exact integer identity: the orbit masses of the classes
+found by an exhaustive search sum to a target obtained by a structurally
+independent route, a single-element extension sweep over the $2{,}628$
+classes at $n=8$. Under hypotheses made explicit in \S\ref{sec:mass} ---
+the enumerated classes valid, pairwise inequivalent, and carrying their
+true stabilizer orders, and the target exact --- a search that missed a
+class falls short and cannot overshoot. The first three hypotheses are
+discharged by a standalone checker over all $9{,}276{,}595$ classes; the
+fourth is reproducible but not independently certified
+(\S\ref{sec:honesty}).
 
 The second by-product explains why the labelled question at odd $n$ is
 binary.

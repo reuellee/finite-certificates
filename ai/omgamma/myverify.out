@@ -1,0 +1,119 @@
+artifact: data/coverage_4_9
+  [ OK ] (0) SHA-256 of coverage_4_9.npz
+  [ OK ] (0) size of coverage_4_9.npz
+  [ OK ] (0) raw SHA-256 of array key_hi
+  [ OK ] (0) raw SHA-256 of array key_lo
+  [ OK ] (0) raw SHA-256 of array stab
+  (n,r) = (9,4), 9276595 rows, kappa = 1
+  [ OK ] (c) three arrays have equal length
+  [ OK ] (c) keys strictly increasing (sorted AND pairwise distinct)  9276595 keys
+  [ OK ] (e) count matches manifest  9276595 vs 9276595
+  [ OK ] (e) every stabilizer order divides |G'|  orders seen: [2, 4, 6, 8, 12, 36]
+  [ OK ] (e) orbit masses sum to the manifest total  1722704635330560 vs 1722704635330560
+  [ OK ] (e) mass equals the (4,9) target 1722704635330560
+  [ OK ] (e) count equals 9276595
+  [ OK ] (e) stabilizer histogram matches manifest  {'2': 9267682, '4': 8717, '6': 73, '8': 106, '12': 16, '36': 1}
+  [ OK ] (f) extension table has contiguous parent ids 0..2627  2628 rows
+  [ OK ] (f) extension table sums to the target mass  1722704635330560 vs 1722704635330560
+  FULL mode: all 9276595 rows for checks (a),(b),(d)
+    shard     2  100000 rows  14s | 1/93  elapsed 14s
+    shard     3  100000 rows  14s | 2/93  elapsed 14s
+    shard     0  100000 rows  14s | 3/93  elapsed 15s
+    shard     1  100000 rows  14s | 4/93  elapsed 15s
+    shard     4  100000 rows  14s | 5/93  elapsed 29s
+    shard     5  100000 rows  15s | 6/93  elapsed 29s
+    shard     6  100000 rows  15s | 7/93  elapsed 29s
+    shard     7  100000 rows  15s | 8/93  elapsed 29s
+    shard     8  100000 rows  14s | 9/93  elapsed 43s
+    shard     9  100000 rows  15s | 10/93  elapsed 44s
+    shard    10  100000 rows  14s | 11/93  elapsed 44s
+    shard    11  100000 rows  15s | 12/93  elapsed 44s
+    shard    12  100000 rows  14s | 13/93  elapsed 57s
+    shard    13  100000 rows  14s | 14/93  elapsed 57s
+    shard    14  100000 rows  14s | 15/93  elapsed 58s
+    shard    15  100000 rows  14s | 16/93  elapsed 58s
+    shard    16  100000 rows  14s | 17/93  elapsed 71s
+    shard    17  100000 rows  14s | 18/93  elapsed 71s
+    shard    18  100000 rows  14s | 19/93  elapsed 72s
+    shard    19  100000 rows  14s | 20/93  elapsed 72s
+    shard    20  100000 rows  14s | 21/93  elapsed 85s
+    shard    21  100000 rows  14s | 22/93  elapsed 85s
+    shard    22  100000 rows  14s | 23/93  elapsed 86s
+    shard    23  100000 rows  14s | 24/93  elapsed 86s
+    shard    25  100000 rows  14s | 25/93  elapsed 99s
+    shard    24  100000 rows  14s | 26/93  elapsed 99s
+    shard    27  100000 rows  14s | 27/93  elapsed 100s
+    shard    26  100000 rows  14s | 28/93  elapsed 100s
+    shard    28  100000 rows  14s | 29/93  elapsed 113s
+    shard    29  100000 rows  14s | 30/93  elapsed 113s
+    shard    30  100000 rows  14s | 31/93  elapsed 114s
+    shard    31  100000 rows  14s | 32/93  elapsed 114s
+    shard    32  100000 rows  14s | 33/93  elapsed 127s
+    shard    33  100000 rows  14s | 34/93  elapsed 127s
+    shard    34  100000 rows  14s | 35/93  elapsed 128s
+    shard    35  100000 rows  14s | 36/93  elapsed 128s
+    shard    37  100000 rows  14s | 37/93  elapsed 141s
+    shard    36  100000 rows  14s | 38/93  elapsed 141s
+    shard    38  100000 rows  14s | 39/93  elapsed 142s
+    shard    39  100000 rows  14s | 40/93  elapsed 142s
+    shard    40  100000 rows  14s | 41/93  elapsed 155s
+    shard    41  100000 rows  14s | 42/93  elapsed 156s
+    shard    42  100000 rows  14s | 43/93  elapsed 156s
+    shard    43  100000 rows  14s | 44/93  elapsed 156s
+    shard    44  100000 rows  14s | 45/93  elapsed 170s
+    shard    45  100000 rows  14s | 46/93  elapsed 170s
+    shard    46  100000 rows  14s | 47/93  elapsed 171s
+    shard    47  100000 rows  14s | 48/93  elapsed 171s
+    shard    48  100000 rows  14s | 49/93  elapsed 184s
+    shard    49  100000 rows  14s | 50/93  elapsed 184s
+    shard    50  100000 rows  14s | 51/93  elapsed 185s
+    shard    51  100000 rows  14s | 52/93  elapsed 185s
+    shard    52  100000 rows  14s | 53/93  elapsed 197s
+    shard    53  100000 rows  14s | 54/93  elapsed 198s
+    shard    55  100000 rows  14s | 55/93  elapsed 198s
+    shard    54  100000 rows  14s | 56/93  elapsed 198s
+    shard    56  100000 rows  14s | 57/93  elapsed 211s
+    shard    57  100000 rows  14s | 58/93  elapsed 213s
+    shard    58  100000 rows  15s | 59/93  elapsed 213s
+    shard    59  100000 rows  14s | 60/93  elapsed 213s
+    shard    60  100000 rows  15s | 61/93  elapsed 227s
+    shard    62  100000 rows  15s | 62/93  elapsed 228s
+    shard    61  100000 rows  15s | 63/93  elapsed 228s
+    shard    63  100000 rows  15s | 64/93  elapsed 228s
+    shard    64  100000 rows  15s | 65/93  elapsed 242s
+    shard    65  100000 rows  16s | 66/93  elapsed 243s
+    shard    66  100000 rows  16s | 67/93  elapsed 244s
+    shard    67  100000 rows  16s | 68/93  elapsed 244s
+    shard    68  100000 rows  15s | 69/93  elapsed 258s
+    shard    69  100000 rows  15s | 70/93  elapsed 258s
+    shard    70  100000 rows  15s | 71/93  elapsed 259s
+    shard    71  100000 rows  15s | 72/93  elapsed 259s
+    shard    72  100000 rows  15s | 73/93  elapsed 273s
+    shard    73  100000 rows  15s | 74/93  elapsed 273s
+    shard    74  100000 rows  15s | 75/93  elapsed 274s
+    shard    75  100000 rows  16s | 76/93  elapsed 275s
+    shard    76  100000 rows  15s | 77/93  elapsed 288s
+    shard    77  100000 rows  15s | 78/93  elapsed 289s
+    shard    78  100000 rows  16s | 79/93  elapsed 290s
+    shard    79  100000 rows  15s | 80/93  elapsed 290s
+    shard    80  100000 rows  15s | 81/93  elapsed 303s
+    shard    81  100000 rows  15s | 82/93  elapsed 304s
+    shard    83  100000 rows  15s | 83/93  elapsed 305s
+    shard    82  100000 rows  19s | 84/93  elapsed 309s
+    shard    84  100000 rows  17s | 85/93  elapsed 320s
+    shard    85  100000 rows  18s | 86/93  elapsed 322s
+    shard    86  100000 rows  18s | 87/93  elapsed 323s
+    shard    87  100000 rows  17s | 88/93  elapsed 326s
+    shard    88  100000 rows  17s | 89/93  elapsed 337s
+    shard    89  100000 rows  17s | 90/93  elapsed 339s
+    shard    90  100000 rows  17s | 91/93  elapsed 340s
+    shard    91  100000 rows  16s | 92/93  elapsed 342s
+    shard    92  76595 rows  188s | 93/93  elapsed 526s
+  9276595 rows checked in 526s (22544370 admissible relabellings enumerated, 2.430 per class)
+  [ OK ] (a) all 9276595 keys are valid uniform chirotopes
+  [ OK ] (b) all 9276595 keys extremal in their orbit (manifest convention)
+  [ OK ] (d) all 9276595 stabilizer orders exact
+
+================ RESULT ================
+  18 checks passed, 0 failed
+=======================================

@@ -1,0 +1,28 @@
+artifact: data/coverage_4_9
+  [ OK ] (0) SHA-256 of coverage_4_9.npz
+  [ OK ] (0) size of coverage_4_9.npz
+  [ OK ] (0) raw SHA-256 of array key_hi
+  [ OK ] (0) raw SHA-256 of array key_lo
+  [ OK ] (0) raw SHA-256 of array stab
+  (n,r) = (9,4), 9276595 rows, kappa = 1
+  [ OK ] (c) three arrays have equal length
+  [ OK ] (c) keys strictly increasing (sorted AND pairwise distinct)  9276595 keys
+  [ OK ] (e) count matches manifest  9276595 vs 9276595
+  [ OK ] (e) every stabilizer order divides |G'|  orders seen: [2, 4, 6, 8, 12, 36]
+  [ OK ] (e) orbit masses sum to the manifest total  1722704635330560 vs 1722704635330560
+  [ OK ] (e) mass equals the (4,9) target 1722704635330560
+  [ OK ] (e) count equals 9276595
+  [ OK ] (e) stabilizer histogram matches manifest  {'2': 9267682, '4': 8717, '6': 73, '8': 106, '12': 16, '36': 1}
+  [ OK ] (f) extension table has contiguous parent ids 0..2627  2628 rows
+  [ OK ] (f) extension table sums to the target mass  1722704635330560 vs 1722704635330560
+  FULL mode: all 9276595 rows for checks (a),(b),(d)
+  resuming: 92 shard(s) already checkpointed
+    shard    92  76595 rows  176s | elapsed 177s
+  9276595 rows checked in 177s (22544370 admissible relabellings enumerated, 2.430 per class)
+  [ OK ] (a) all 9276595 keys are valid uniform chirotopes
+  [ OK ] (b) all 9276595 keys extremal in their orbit (manifest convention)
+  [ OK ] (d) all 9276595 stabilizer orders exact
+
+================ RESULT ================
+  18 checks passed, 0 failed
+=======================================
