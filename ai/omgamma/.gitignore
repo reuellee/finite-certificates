@@ -1,0 +1,7 @@
+data/big_4_9/level_*.npz
+data/canary_tmp/
+data/verify_tmp/
+data/big_4_8_canary/
+data/*.log
+data/*.err
+data/extcount_*.jsonl
