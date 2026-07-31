@@ -357,10 +357,12 @@ $E\setminus B=\{x_{r+1}<\dots<x_n\}$, the dual chirotope is
 $\operatorname{sgn}$ being the sign of the permutation
 $(x_1,\dots,x_n)$ of $E$. Then $\chi\mapsto\chi^*$ is a graph
 isomorphism $\Gb^{n,r}\cong\Gb^{n,n-r}$ (and likewise for $\Gm$ and
-$\Gu$), carrying the mutation at $B$ to the mutation at $E\setminus B$
-(verified computationally on all $135$ classes at $(8,3)$, among
-others). This
-covers every rank at $n\le 9$.
+$\Gu$), carrying the mutation at $B$ to the mutation at $E\setminus B$:
+since $\chi^*(E\setminus B)=\pm\chi(B)$ with a sign depending only on
+$B$, negating $\chi$ at $B$ is the same operation as negating $\chi^*$ at
+$E\setminus B$, and validity is preserved on both sides. (This was also
+checked computationally, on all $135$ classes at $(8,3)$ among others.)
+This covers every rank at $n\le 9$.
 
 For rank $4$ at $n\le 8$ (and, as a control, rank $3$ at $n\le 9$, where
 the answer is already known from \cite[Prop.~3.2]{KM23}) the quotient
@@ -502,10 +504,13 @@ non-canonical key, a corrupted stabilizer order, a
 Grassmann--Pl\"ucker-invalid key, a re-pointed parent creating a cycle, a
 second parentless class, a corrupted voltage, a wrong mutated-basis index,
 a parent re-pointed to a different class at the same depth (tree intact,
-identity broken), a truncated array, and a stale hash. The first nine ship
-with a regenerated, internally consistent manifest --- fresh hashes for the
-witness arrays too --- and with the count and mass repaired, so that only a
-substantive mathematical check can catch them; the remaining two are
+identity broken), a truncated array, and a stale hash. Each is built at
+run time by tampering with a $20{,}000$-class, parent-closed excerpt of
+the real arrays --- so the suite needs those arrays, like the full run
+above. The first nine carry a regenerated, internally consistent manifest
+--- fresh hashes for the witness arrays too --- and have the count and
+mass repaired, so that only a substantive mathematical check can catch
+them; the remaining two are
 deliberately different, the truncation being meant to be caught by the
 count and mass arithmetic and the stale hash by the integrity check.
 
