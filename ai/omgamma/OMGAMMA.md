@@ -194,6 +194,61 @@ generators⟩ plus harvesting every stored coset representative, then
 closing the F₂-span under the permutation action; correctness argument
 in flip.py docstring (uses normality + abelianness of R̄).
 
+### Proposition 4 (sign-part dichotomy) — new, 2026-07-31
+
+**Setup.** R̄ ⊴ Ḡ is the sign subgroup {0,1}ⁿ/⟨1ⁿ⟩ (order 2^{n−1}) and
+π: Ḡ ↠ S_n = Ḡ/R̄. For H ≤ Ḡ put S := H ∩ R̄ (the "sign part"). R̄ is
+normal, so S ⊴ H, and for h ∈ H with π(h) = σ the project's composition
+rule gives directly
+
+    (σ,δ,s)·(id,ε,0)·(σ,δ,s)⁻¹ = (id, σ(ε), 0),
+
+so S is π(H)-invariant. **If π(H) = S_n then S is an F₂[S_n]-submodule
+of R̄.** (In the code the tracked object is the lift U ≤ F₂ⁿ of S; the
+SignSpace is seeded with 1ⁿ, so the printed "sign d/n" is dim U =
+dim S + 1, and with π(H) = S_n one has |H| = n!·2^{dim U−1}, hence
+#components(Γ̄) = [Ḡ : H] = 2^{n − dim U}.)
+
+**Proposition.** For **n odd**, 2 ∤ n, so F₂ⁿ = ⟨1ⁿ⟩ ⊕ E with E the
+even-weight subspace, and R̄ ≅ E is the standard module S^{(n−1,1)},
+irreducible over F₂ precisely because 2 ∤ n. Therefore S ∈ {0, R̄} and,
+with π(H) = S_n and Γ̂ connected,
+
+    #components(Γ̄^{n,r}) ∈ {2^{n−1}, 1}.
+
+For n = 9: **#components(Γ̄^{9,r}) ∈ {256, 1}** — the labeled question at
+n = 9 is exactly binary once π(H) = S₉ is known, and a SINGLE
+sign-nontrivial holonomy loop settles the positive case. For **n even**
+1ⁿ ∈ E and the intermediate value S = E/⟨1ⁿ⟩ (index 2 in R̄) is also
+admissible: the full sign part observed at (8,3), (8,4) was *not* forced
+by the algebra.
+
+*Machine check* (`submodules.py` → `artifacts/submodules.json`, exact
+integer/F₂ arithmetic, two independent methods plus a canary). For
+n = 5..10 all S_n-invariant subspaces of F₂ⁿ are enumerated
+  * (M1) as the sums Σ_{w∈W} span(weight-w vectors), W ⊆ {0..n} — complete
+    because every invariant subspace is the sum of the spans of the
+    S_n-orbits of its elements and those orbits are exactly the weight
+    classes; and
+  * (M2, n ≤ 7) by filtering ALL subspaces, enumerated through their
+    unique reduced row echelon forms — the totals 374 / 2825 / 29212 match
+    the Galois numbers G₅ / G₆ / G₇, so the enumeration is provably
+    exhaustive.
+M1 = M2 in every checked case; each n has exactly four invariant
+subspaces (0, ⟨1ⁿ⟩, E, F₂ⁿ). Restricted to those containing 1ⁿ:
+
+| n | possible dim U | #components(Γ̄) if π(H)=S_n |
+|---|---|---|
+| 5, 7, 9 | 1, n | 2^{n−1}, 1 |
+| 6, 8, 10 | 1, n−1, n | 2^{n−1}, 2, 1 |
+
+Canary: the deliberately non-invariant span⟨e₁⟩ is rejected by the
+invariance test and is absent from the M1 list at every n. Consistency
+with the completed runs: every finished computation in the table below
+reported sign dim = n exactly; no run has ever shown an intermediate
+value, as the proposition requires for odd n and permits (but does not
+force) for even n.
+
 ## 4. Remark: the labeled level reduces to the isomorphism level (theory)
 
 The following easy configuration-space lemma seems to be folklore but we
@@ -343,19 +398,148 @@ provenance sufficient to investigate; if it terminates with H = Ḡ, the
 positive verdicts are certificate-backed. The final saturation is the
 exact staged Schreier computation.
 
-### Empirical observation: local holonomy flatness at (9,4)
+### ~~Empirical observation: local holonomy flatness at (9,4)~~ — RETRACTED
 
-Phase-1 diagnostic (2026-07-31): a BFS ball of 4000 classes / 18,091
-directed edges around the alternating class of (9,4) harvested 14,092
-non-tree loop voltages, yet the holonomy subgroup they generate (with the
-root stabilizer) has permutation part of order just 18 (= the dihedral
-symmetry of the alternating OM) and sign part = kernel only. In other
-words, every loop in that ball is voltage-trivializable: the covering
-Γ̄ → Γ̂ is locally "flat" near the alternating class at a scale (4000
-classes) at which (8,4) had already saturated to the full group (800
-classes sufficed there). This is a concrete structural sense in which
-the labeled question at (9,4) is delicate, consistent with Knauer–Marc's
-caution; the full-edge harvest in the main run decides it.
+An earlier revision of this section recorded that the (9,4) run showed a
+persistently trivial sign part (1/9) through level 8 — 16.6M expanded
+edges — and read that as a structural "flatness" of the covering
+Γ̄ → Γ̂ near the alternating class, i.e. as evidence that the labeled
+question at (9,4) is genuinely delicate. **That reading was wrong, and
+the observation was an artifact of a gap in the engine, not a property of
+the object.** See the ERRATUM below (missing Lemma-2 family (i)
+generators in phase 2). What remains true and unremarkable is the
+phase-1 diagnostic itself: a ball of 4000 classes / 18,091 directed
+edges around the alternating class yields a holonomy of permutation
+order 18 and trivial sign part — the alternating class simply has a
+large stabilizer and the ball is small (0.04% of the graph by mass).
+
+### ERRATUM (2026-07-31): phase 2 harvested only half of Lemma 2
+
+Lemma 2 generates H from two families: (i) τ_c u τ_c⁻¹ for u ∈
+Stab_Ḡ(χ_c), and (ii) τ_c t τ_{c'}⁻¹ for the mutation edges. The
+in-process engine (`flip.bfs_holonomy`) and `runbig.phase1` harvest both.
+**`runbig` phase 2 harvested only family (ii)**: its worker computes the
+canonical stabilizer of every child (`canonical(..., want_witness=True)`)
+and discards everything but its ORDER. So every class discovered in
+phase 2 contributed no family-(i) generator. At (9,4), phase 1 covered
+4000 of 1,876,681 classes, so 2548 classes with a nontrivial
+Ḡ-stabilizer were reachable and only a handful of them had been
+harvested. The harvested H was therefore a strict lower bound, and its
+sign part was spuriously trivial.
+
+The fix (a) makes phase 2 re-canonicalize, in the master, every fresh
+class flagged with stab_order_exact > 2^κ (κ = dim of the kernel of the
+sign action on strings; κ = 1 at (9,4), so the flag is stab > 2) and
+harvest its family-(i) generators, and (b) has `--resume` backfill the
+same for every already-known class. Only flagged classes can contribute,
+so the cost is one canonicalization per flagged class — 2548 of 1.88M,
+i.e. free. The flag is also a free integrity check: the re-canonicalized
+key and stabilizer order must equal the stored ones (they did, for all
+2548).
+
+**Effect** (`data/big_4_9/diag_stabhol.json`, produced by
+`diag_stabhol.py` on the crashed checkpoint): the 2548 flagged classes
+give 2608 nontrivial conjugates; the subgroup they generate has
+permutation part A₉ (order 181,440) and, after the exact staged Schreier
+completion, **sign part 9/9 — FULL**. Combined with π(H) = S₉ (which the
+edge family had already certified at level 3), this gives H = Ḡ. The
+"(9,4) is flat" reading is dead; by Proposition 4 the sign part could
+only ever have been 0 or everything, and it is everything.
+
+Why the regression suite did not catch this earlier: at (8,4) and (9,3)
+phase 1 covered 802 resp. ~1400 classes *including* their stabilizers,
+and the remaining family-(i) generators were not needed to reach H = Ḡ.
+The suite now runs both cases with `phase1cap = 2`, which forces
+essentially all harvesting through phase 2.
+
+### Resume, memory safety, and the completing pass (2026-07-31)
+
+The first (9,4) attempt was killed by the OS at level 9 (8 workers,
+16 GB machine with ~2 GB free) with levels 0–8 checkpointed. The engine
+now supports `--resume`.
+
+**What is rebuilt, and from what** (`bigstate.load_state`): the class
+keys / canonical masks / stabilizer orders / spanning tree
+(parent, flip, σ, ε) and the sorted packed-key index are read verbatim
+from `level_*.npz`; the **transports τ are recomputed by walking the
+saved tree from the root** (τ_c = τ_parent ∘ t, vectorized; the formula
+is self-tested against `core.g_compose` on random inputs at import) —
+they are never read from disk, because nothing else about them would be
+trustworthy. The frontier is the set of classes discovered at the last
+completed level.
+
+**Resume gate** (abort loudly on any mismatch): level files contiguous
+from 000; the `ids` array of every level exactly `arange`-contiguous;
+recomputed class count and recomputed total mass equal to `meta.json`;
+`meta.level` equal to the last level file (a torn checkpoint — level file
+written, meta not — is refused, with the fix being to delete the trailing
+level file); no duplicate canonical keys. Then a random sample of 200
+classes is re-canonicalized from scratch: stored key, stored canonical
+mask, stored stabilizer order and the tree mutation identity
+χ_parent ⊕ bit_j = ±t·χ_child must all reproduce.
+
+**Holonomy on resume — the correctness trap.** The harvested generators
+are NOT on disk. A resumed run therefore harvests family (ii) only from
+edges expanded after the resume, so its H′ ≤ H. This is
+**sound for a POSITIVE verdict** (H′ = Ḡ ⟹ H = Ḡ ⟹ connected) and
+**not sound for a negative one**. Family (i) is *not* affected: the
+backfill re-derives it for every already-known class from the
+checkpointed masks. Runs record `resumed_from_level` and
+`holonomy_is_lower_bound` in `summary.json`.
+
+**Completing pass** (`--holopass <lo> <hi>`), required before any
+disconnection claim: re-expands classes [lo,hi) purely to harvest, with
+no class discovery. Every mutation must land on an already-known key;
+`edges_to_unknown_keys` is counted and reported, so a completed pass over
+the whole class list is *also* an independent closure certificate for the
+class list (every mutation of every class is a known class), one that
+does not go through the mass identity at all.
+
+**Memory work.** Peak RSS is now dominated by the master's key index.
+Changes: 6 workers instead of 8; chunks capped at 2000 frontier classes
+(the worker's per-chunk Python lists were the largest single allocation);
+a bounded submission window of 2·workers outstanding `apply_async` tasks
+instead of `imap_unordered` handing out every chunk at once (this also
+makes id assignment deterministic, so a from-scratch run is now
+reproducible); the per-level "seen" map replaced by sorted packed-key
+numpy arrays with an O(N) merge (`merge_sorted`) in place of a bytes-keyed
+dict and a full re-sort of the 9.3M-entry index every level; the pending
+in-level holonomy buffer bounded at 200k rows with a *counted*
+`pend_dropped`; τ bookkeeping and all harvesting short-circuited once
+H = Ḡ; vectorized τ composition. `Holonomy.saturate()` — the exact
+staged Schreier completion — is now also run at the end of every level
+while H ≠ Ḡ, so H reaches Ḡ as soon as it mathematically has rather than
+only in post-processing; that is what lets the harvest short-circuit.
+Measured on the (9,4) resume: master + 6 workers ≈ 450–600 MB resident,
+free physical memory never below 2.1 GB (`data/rss94b.log`).
+
+**Regression canaries for the rework.** (8,4) and (9,3) were re-run
+end-to-end with the modified engine, from scratch AND via a forced
+resume from a truncated mid-level checkpoint (`truncate_state.py`), all
+four runs reproducing the known summaries exactly: 2628 resp. 4382
+classes, mass identity hit at 100.0000%, π(H) = S_n, sign part n/n,
+H = Ḡ. The five sabotage canaries of `canary_checker.py` are still all
+rejected, and `verify_omgamma.py` still passes on the (8,3), (8,4) and
+(9,3) certificates.
+
+**Compact certificates** (`export_subcert.py`). Re-verifying
+Grassmann–Plücker on 9.3M representatives is neither necessary nor
+feasible; what the checker needs is the spanning-tree root-paths of the
+classes referenced by holonomy generators (so that it recomputes exactly
+the τ the generator identities were built with), plus the generators and
+sign exhibits. That set is closed under `parent`, so restricting and
+renumbering yields a valid certificate in the checker's own format.
+Validated on (9,3): 2155 of 4382 classes, 1044 generators, all of
+V1–V5 pass under `checker_fast.py`.
+
+`Holonomy.sign_exhibits` was extended at the same time: it now closes the
+exhibited sign space under conjugation by the generators (h w h⁻¹ =
+(id, π(h)(ε_w)), whose word is just h · word(w) · h⁻¹, re-verified by
+explicit composition). Without this the *exhibits* could certify a
+strictly smaller space than `saturate()` proves, because saturate's final
+P-orbit closure had no word-level counterpart — precisely the situation
+at (9,4), where the sign part is reached through the A₉-orbit closure of
+the stabilizer generators.
 
 ## 7. Trust boundaries
 

@@ -1,0 +1,121 @@
+{
+ "5": {
+  "m1_count": 4,
+  "m1_dims": [
+   0,
+   1,
+   4,
+   5
+  ],
+  "dims_containing_all_ones": [
+   1,
+   5
+  ],
+  "components_if_pi_full": [
+   16,
+   1
+  ],
+  "m2_total_subspaces": 374,
+  "m2_galois_ok": true,
+  "m1_equals_m2": true
+ },
+ "6": {
+  "m1_count": 4,
+  "m1_dims": [
+   0,
+   1,
+   5,
+   6
+  ],
+  "dims_containing_all_ones": [
+   1,
+   5,
+   6
+  ],
+  "components_if_pi_full": [
+   32,
+   2,
+   1
+  ],
+  "m2_total_subspaces": 2825,
+  "m2_galois_ok": true,
+  "m1_equals_m2": true
+ },
+ "7": {
+  "m1_count": 4,
+  "m1_dims": [
+   0,
+   1,
+   6,
+   7
+  ],
+  "dims_containing_all_ones": [
+   1,
+   7
+  ],
+  "components_if_pi_full": [
+   64,
+   1
+  ],
+  "m2_total_subspaces": 29212,
+  "m2_galois_ok": true,
+  "m1_equals_m2": true
+ },
+ "8": {
+  "m1_count": 4,
+  "m1_dims": [
+   0,
+   1,
+   7,
+   8
+  ],
+  "dims_containing_all_ones": [
+   1,
+   7,
+   8
+  ],
+  "components_if_pi_full": [
+   128,
+   2,
+   1
+  ]
+ },
+ "9": {
+  "m1_count": 4,
+  "m1_dims": [
+   0,
+   1,
+   8,
+   9
+  ],
+  "dims_containing_all_ones": [
+   1,
+   9
+  ],
+  "components_if_pi_full": [
+   256,
+   1
+  ]
+ },
+ "10": {
+  "m1_count": 4,
+  "m1_dims": [
+   0,
+   1,
+   9,
+   10
+  ],
+  "dims_containing_all_ones": [
+   1,
+   9,
+   10
+  ],
+  "components_if_pi_full": [
+   512,
+   2,
+   1
+  ]
+ },
+ "canary": "span(e_1) rejected as non-invariant at every n",
+ "all_checks_passed": true
+}

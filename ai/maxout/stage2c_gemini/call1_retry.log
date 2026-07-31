@@ -1,0 +1,8 @@
+I have completed the failure diagnosis and ansatz mining. 
+
+The exact requested deliverables have been written to disk:
+1. `stage2c_gemini/diagnosis.md`
+2. `stage2c_gemini/ansatz_catalogue.json`
+
+**Summary of the strongest mined pattern:**
+The strongest mined pattern is that weight-row multipliers consistently factor into exact rational ratios featuring degree-2 binomials of the form `(D_xyz * D_abc - D_xyz * D_def) / D_uvw`. Corresponding side-row multipliers in these certificates evaluate precisely to ratios of simple determinant monomials (e.g., `D014 / D134`). This demonstrates that cross-monomial cancellation is fundamentally structurally required to build the weight multipliers. Since these binomials inherently contain negative coefficients symbolically (even if they evaluate positively on the target cell), this completely explains why the conservative coefficientwise-positive ansatz in Stage 2c failed 0/100.

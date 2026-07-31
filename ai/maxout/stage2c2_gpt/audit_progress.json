@@ -1,1 +1,1 @@
-{"done": 99000, "counts": {"sweep0:OK": 8211, "sweep1:OK": 8211, "sweep2:OK": 8211, "sweep3:OK": 8210, "k0fam:OK": 32570, "k0gp:OK": 570, "famk1:OK": 24393, "famk2:OK": 8624}, "elapsed": 920.6355001926422}
+{"done": 132500, "counts": {"sweep0:OK": 8211, "sweep1:OK": 8211, "sweep2:OK": 8211, "sweep3:OK": 8210, "k0fam:OK": 32570, "k0gp:OK": 570, "famk1:OK": 24691, "famk2:OK": 8746, "prior120:OK": 121, "s02fam:OK": 8906, "s02gp2:OK": 24053}, "elapsed": 1347.3918480873108}

@@ -6,5 +6,8 @@
  "H_equals_Gbar": true,
  "phase": 2,
  "exact_sign": true,
- "harvested_edges": 24964
+ "harvested_edges": 20818,
+ "stab_gens": 496,
+ "pend_dropped": 0,
+ "resumed_from_level": 7
 }

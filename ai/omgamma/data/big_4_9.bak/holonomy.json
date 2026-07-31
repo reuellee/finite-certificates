@@ -1,0 +1,10 @@
+{
+ "perm_order": 18,
+ "S_n": 362880,
+ "sign_dim": 1,
+ "n": 9,
+ "H_full_lower_bound_is_exact_subgroup": true,
+ "H_equals_Gbar": false,
+ "harvest_classes": 4000,
+ "harvest_edges": 18091
+}

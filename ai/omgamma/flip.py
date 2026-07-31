@@ -398,6 +398,32 @@ class Holonomy:
                 raise RuntimeError("transversal bug")
             word = (i,) + tuple(-(x + 1) for x in reversed(tw))
             harvest(v, word)
+        # close the exhibited sign space under conjugation by the
+        # generators: for h in H and a pure-sign w in H,
+        #   h w h^{-1} = (id, pi(h)(eps_w)) is again in H, and its WORD is
+        # simply  (h) + word(w) + (h^{-1}) -- so the P-orbit closure that
+        # Holonomy.saturate() performs abstractly is itself exhibitable.
+        # (Without this the exhibits could certify a strictly smaller
+        # space than the sign part actually is.)
+        changed = True
+        while changed:
+            changed = False
+            for p in sorted(basis, reverse=True):
+                ent = basis.get(p)
+                if ent is None or ent[1] is None:
+                    continue
+                _v, w = ent
+                W = word_eval(w)
+                for gi, g in growers:
+                    elem = bar_compose(n, bar_compose(n, g, W),
+                                       bar_inverse(n, g))
+                    if elem[1] == 0 or not all(elem[0][i2] == i2 + 1
+                                               for i2 in range(n)):
+                        continue
+                    before = len(basis)
+                    harvest(elem, (gi,) + w + (-(gi + 1),))
+                    if len(basis) != before:
+                        changed = True
         out = [(w, v) for _, (v, w) in sorted(basis.items())
                if w is not None]
         return out, len(basis)

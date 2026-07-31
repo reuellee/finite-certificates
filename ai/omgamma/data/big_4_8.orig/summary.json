@@ -1,0 +1,12 @@
+{
+ "n": 8,
+ "r": 4,
+ "classes": 2628,
+ "complete_by_mass": true,
+ "gamma_hat_connected": true,
+ "H_equals_Gbar": true,
+ "gamma_bar_connected": true,
+ "gamma_tilde_connected": true,
+ "edges_expanded": 30645,
+ "seconds": 206.08658266067505
+}

@@ -7,6 +7,9 @@
  "H_equals_Gbar": true,
  "gamma_bar_connected": true,
  "gamma_tilde_connected": true,
- "edges_expanded": 55585,
- "seconds": 89.9925651550293
+ "edges_expanded": 56304,
+ "session_edges": 56295,
+ "resumed_from_level": null,
+ "holonomy_is_lower_bound": false,
+ "seconds": 185.18803191184998
 }

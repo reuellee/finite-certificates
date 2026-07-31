@@ -1,0 +1,11 @@
+{
+ "r": 4,
+ "n": 9,
+ "classes_scanned": 1876681,
+ "nontrivial_stab_classes": 2548,
+ "stab_generators": 2608,
+ "perm_order": 181440,
+ "sign_dim": 9,
+ "sign_nontrivial": true,
+ "key_mismatches": 0
+}

@@ -1,0 +1,15 @@
+{
+ "level": 11,
+ "total_classes": 4382,
+ "total_edges_expanded": 56304,
+ "total_mass": "795396833280",
+ "target_mass": "795396833280",
+ "complete": true,
+ "hol_perm_order": 362880,
+ "hol_sign_dim": 2,
+ "hol_full": false,
+ "stab_gens": 235,
+ "edge_gens": 51915,
+ "pend_dropped": 0,
+ "resumed_from_level": null
+}
