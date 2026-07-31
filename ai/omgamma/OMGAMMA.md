@@ -282,6 +282,15 @@ without any realizability input. Lemma 3 is stated as context and as an
 explanation of why the positive outcome should be expected — and the
 computation is the check of the Lemma's prediction.
 
+**Status of that check (2026-07-31).** Lemma 3's corollary predicts
+exactly #components(Γ̄^{n,r}) = #components(Γ̂^{n,r}) whenever Γ̂ is
+connected — equivalently H = Ḡ. That prediction has now been confirmed
+by direct holonomy computation at every (n,r) with n ≤ 9 that the
+project has reached, *including* the hardest case (9,4) (§6, Result A),
+where a period of apparent disagreement turned out to be an engine bug
+rather than mathematics. The lemma is still not load-bearing; it is now,
+however, a hypothesis that has survived a serious attempt to break it.
+
 ## 5. Computations and results so far (all exact, stdlib Python)
 
 Catalog generation from scratch (single-element coline... extension
