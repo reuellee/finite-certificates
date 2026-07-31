@@ -719,6 +719,14 @@ the stabilizer generators.
 * **Resumed runs make H a lower bound** for the edge family (ii): sound
   for a positive verdict, not for a negative one. `summary.json` records
   `holonomy_is_lower_bound`.
+* **Do not read `stab_gens` / `edge_gens` in a finished `summary.json` as
+  totals.** Both counters live inside the `if not hol.full():` guard, so
+  they freeze the moment H reaches Ḡ (during level 10 of the (9,4)
+  sweep). The number of classes with a nontrivial Ḡ-stabilizer must be
+  taken from the `stab` arrays of the checkpoints — `stabstats.py` does
+  exactly that, and also re-derives the mass identity independently of
+  the engine's running total (it agrees at (8,4): 2628 classes, 243 with
+  nontrivial Ḡ-stabilizer, mass 25,703,946,240 = target).
 * `pend_dropped` counts in-level duplicate edges whose holonomy was not
   harvested because the bounded buffer was full; it must be read as part
   of any lower-bound statement. It was 0 in every (8,4)/(9,3) run, and
