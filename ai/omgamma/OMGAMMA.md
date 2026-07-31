@@ -271,14 +271,37 @@ passed on (8,3), (8,4), (9,3). Sabotage canaries (`canary_checker.py`:
 corrupted rep char / tree voltage / generator perm / truncated exhibits /
 re-pointed tree parent) are all rejected by the checker.
 
-Rank coverage for "all n ≤ 9": rank ≤ 2 and corank ≤ 2 are classical/
-trivial (verified anyway at (5,2),(6,2)); rank 3 is Knauer–Marc Prop 4.2
-(re-verified here exhaustively at n ≤ 9); rank ≥ 5 at n ≤ 9 is dual to
-rank ≤ 4 (mutation sets correspond under duality — verified
-computationally at (7,4)↔(7,3); the duality bijection on iso classes is
-label/reorientation-equivariant, and it maps mutation edges to mutation
-edges, so all three graphs at (n,r) and (n,n−r) are isomorphic; the
-formal statement is [BLSWZ, Ex. 7.9] as cited by K–M).
+### Coverage of every rank at n ≤ 9
+
+* **r ≤ 1 and r ≥ n−1** (vacuous-GP lemma): the 3-term GP condition set
+  is empty iff r < 2 or n < r+2; then EVERY sign vector on the C(n,r)
+  bases is a uniform chirotope and every single-bit flip is a mutation,
+  so Γ̄^{n,r} is the folded C(n,r)-cube, which is connected (two antipodal
+  pair-classes of any two vertices differ in ≤ C(n,r) bits, flip them one
+  at a time). (n,n) is a single pair-vertex. Verified computationally:
+  random-sign validity + explicit union-find connectivity at
+  (6,5),(7,6),(8,7),(9,8),(9,1) [256-vertex folded cubes etc.].
+* **r = 2**: computed directly for every n ≤ 9: brute force at
+  (5,2),(6,2); exact holonomy H = Ḡ at (7,2) [1 class, 7 edges],
+  (8,2) [1 class, 8 edges], (9,2) [1 class, 9 edges, 66 s — the rank-2
+  canonicalizer is slow because all (k,2)-restrictions are equivalent,
+  but it terminates]. So Γ̄^{n,2}, Γ̃^{n,2} connected for all n ≤ 9,
+  with no reliance on Lemma 3.
+* **r = 3**: exhaustive holonomy verdicts n ≤ 9 (table above), agreeing
+  with Knauer–Marc Prop. 4.2 (their Ringel-based proof for all n).
+* **r = 4**: exhaustive n ≤ 8 (table above); n = 9 campaign below.
+* **5 ≤ r ≤ n−2**: by duality. Proposition (duality transport): the map
+  χ ↦ χ*, χ*(x_{r+1..n}) = χ(x_1..x_r)·sgn(x_1..x_n), descends to
+  isomorphisms Γ̄^{n,r} ≅ Γ̄^{n,n−r}, Γ̃ ≅ Γ̃, Γ̂ ≅ Γ̂: it is a bijection
+  on pairs (double dual = ±id, verified), commutes with reorientation and
+  relabeling up to sign (standard, [BLSWZ §3.4]; K–M cite Ex. 7.9 for the
+  CLV statement), and maps the mutation at B to the mutation at E∖B
+  (verified computationally: mutable-basis sets correspond under
+  complementation at (7,4)/(7,3) and for all 135 classes at (8,3)/(8,5);
+  the 135 dualized (8,3) reps give exactly 135 distinct (8,5) classes,
+  and a 110-class sample of (9,3)→(9,6) behaves identically).
+  Hence (7,5)≅(7,2), (8,5)≅(8,3), (8,6)≅(8,2), (9,5)≅(9,4),
+  (9,6)≅(9,3), (9,7)≅(9,2) as labeled mutation graphs.
 
 ## 6. The (9,4) campaign (design)
 

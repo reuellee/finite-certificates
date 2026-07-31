@@ -178,6 +178,14 @@ def main(r, n, nw, cap=4000):
             sig, eps, s = g
             f.write(f"{'|'.join(map(str, prov))} "
                     f"{','.join(map(str, sig))} {eps} {s}\n")
+    try:
+        ex, exdim = hol.sign_exhibits()
+        with open(f"{outdir}/exhibits.txt", "w") as f:
+            for w, v in ex:
+                f.write(f"{v} {','.join(map(str, w))}\n")
+        print(f"sign exhibits written (dim {exdim})", flush=True)
+    except Exception as e:
+        print("exhibit generation failed:", e, flush=True)
 
     # ---- initialize disk state from phase 1
     allkeys = np.zeros((len(reps), 2), dtype=np.uint64)
@@ -232,7 +240,7 @@ def main(r, n, nw, cap=4000):
             NSG = []
             NE = []
             lvl_edges = 0
-            seen_level = None
+            seen_level = set()
             for (K, CM, ST, PAR, FL, SG, EP, ne) in \
                     pool.imap_unordered(_wexpand, chunks):
                 lvl_edges += ne
@@ -244,29 +252,24 @@ def main(r, n, nw, cap=4000):
                 pos = np.clip(pos, 0, len(known) - 1)
                 isold = known[pos] == pk
                 fresh = ~isold
-                if seen_level is not None and fresh.any():
-                    pos2 = np.searchsorted(seen_level, pk[fresh])
-                    pos2 = np.clip(pos2, 0, max(len(seen_level) - 1, 0))
-                    if len(seen_level):
-                        dup = seen_level[pos2] == pk[fresh]
-                    else:
-                        dup = np.zeros(fresh.sum(), dtype=bool)
-                    idxf = np.flatnonzero(fresh)
-                    fresh[idxf[dup]] = False
                 if fresh.any():
-                    NK.append(K[fresh])
-                    NC.append(CM[fresh])
-                    NS.append(ST[fresh])
-                    NP.append(PAR[fresh])
-                    NF.append(FL[fresh])
-                    NSG.append(SG[fresh])
-                    NE.append(EP[fresh])
-                    newpk = np.sort(pk[fresh])
-                    if seen_level is None:
-                        seen_level = newpk
-                    else:
-                        seen_level = np.sort(
-                            np.concatenate([seen_level, newpk]))
+                    idxf = np.flatnonzero(fresh)
+                    kb = K[idxf]
+                    keep = []
+                    for t2 in range(len(idxf)):
+                        bkey = kb[t2].tobytes()
+                        if bkey not in seen_level:
+                            seen_level.add(bkey)
+                            keep.append(idxf[t2])
+                    if keep:
+                        keep = np.array(keep, dtype=np.int64)
+                        NK.append(K[keep])
+                        NC.append(CM[keep])
+                        NS.append(ST[keep])
+                        NP.append(PAR[keep])
+                        NF.append(FL[keep])
+                        NSG.append(SG[keep])
+                        NE.append(EP[keep])
             total_edges += lvl_edges
             if NK:
                 K = np.concatenate(NK)

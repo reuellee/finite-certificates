@@ -96,6 +96,8 @@ def gp3_conditions(n, r):
     In bit arithmetic (bit=1 means +): p_k = b[i]^b[j]^c_k with p_k=0
     meaning s_k=+1.  Condition satisfied iff not (p1 == p2 == p3).
     """
+    if r < 2 or n < r + 2:
+        return ()
     idx = basis_index(n, r)
     E = range(1, n + 1)
     conds = []
