@@ -392,11 +392,48 @@ additionally require the wrong target to coincide exactly with a
 level-boundary partial sum.
 
 Holonomy at (9,4) is harvested from EVERY expanded edge (inline at
-known-hits, deferred for in-level duplicates with a 500k cap), so if the
-run terminates by mass with H < Ḡ, the harvested H is a lower bound with
-provenance sufficient to investigate; if it terminates with H = Ḡ, the
-positive verdicts are certificate-backed. The final saturation is the
-exact staged Schreier computation.
+known-hits, deferred for in-level duplicates with a bounded, *counted*
+buffer) and from the stabilizer of every class with a nontrivial
+Ḡ-stabilizer, so if the run terminates by mass with H < Ḡ, the harvested
+H is a lower bound with provenance sufficient to investigate; if it
+terminates with H = Ḡ, the positive verdicts are certificate-backed. The
+final saturation is the exact staged Schreier computation.
+
+### Result A (2026-07-31): the holonomy at (9,4) is everything
+
+**H = Ḡ for (9,4)**, established from generators harvested inside the
+already-checkpointed 1,876,681-class region (20.2% of Γ̂(9,4) by mass) —
+i.e. *independently of whether the coverage sweep completes*:
+
+* π(H) = S₉ (order 362,880): reached at level 3 of the original sweep
+  from edge voltages, and re-derived from edges after the resume.
+* sign part 9/9 (full): from the 2608 family-(i) stabilizer conjugates of
+  the 2548 flagged classes, after the exact staged Schreier completion
+  (`data/big_4_9/diag_stabhol.json`).
+
+Note that Lemma 2's (⊇) direction — every harvested element lies in H —
+needs only that the tree paths exist, not that the BFS is complete. So
+the harvested elements are genuine members of H whatever the rest of the
+graph looks like.
+
+**Consequence, unconditional on coverage.** Apply Lemma 1 to the
+Ḡ-invariant subgraph Γ̄′ = π⁻¹(Γ̂′) where Γ̂′ is the component of Γ̂(9,4)
+containing the root: Γ̄′ is a union of components of Γ̄, its quotient Γ̂′
+is connected, and its component stabiliser contains everything harvested,
+hence equals Ḡ. Therefore Γ̄′ is connected, and
+
+    #components(Γ̄^{9,4}) = #components(Γ̂^{9,4}),
+    Γ̄^{9,4} connected  ⟺  Γ̂^{9,4} connected,
+
+with the same statement for Γ̃^{9,4} (since π(H) = S₉). In particular the
+labeled level at (9,4) carries **no extra components over the
+isomorphism level** — which is exactly what Knauer–Marc suspected might
+fail, and what Lemma 3 predicts. The coverage sweep is now needed only
+for Γ̂-connectivity and the class count, not for the labeled verdict
+given Γ̂.
+
+By Proposition 4 this was the only alternative to 256 components; the
+"binary" prediction is confirmed on the connected side.
 
 ### ~~Empirical observation: local holonomy flatness at (9,4)~~ — RETRACTED
 
@@ -543,20 +580,63 @@ the stabilizer generators.
 
 ## 7. Trust boundaries
 
-* The standalone certificate checker (checker.py, forthcoming) verifies:
-  validity (GP) of all representatives, every tree edge's mutation
-  identity ψ = t·χ_child (as pairs), transports, generator identities,
-  and that the harvested permutations generate S_n (independent BFS over
-  S_n) and the sign space is full (independent Gaussian elimination). It
-  does NOT re-verify catalog completeness; completeness rests on the
-  extension sweep + mass identity (its own canaries), and on agreement
-  with Finschi/FMM13 counts at every level where published numbers
-  exist.
+* The standalone certificate checker (`checker.py`, and the vectorized
+  `checker_fast.py` with the same semantics) verifies: validity (GP) of
+  all listed representatives, every tree edge's mutation identity
+  ψ = t·χ_child (as pairs), transports, generator identities, that the
+  harvested permutations generate S_n (independent orbit-stabilizer
+  chain) and that the exhibited sign words compose to pure-sign elements
+  spanning F₂ⁿ (independent Gaussian elimination). It does NOT re-verify
+  catalog completeness; completeness rests on the extension sweep + mass
+  identity (its own canaries), and on agreement with Finschi/FMM13 counts
+  at every level where published numbers exist.
+* **What the (9,4) certificate covers.** With `export_subcert.py` the
+  emitted certificate lists only the root-path closure of the classes
+  referenced by generators, so V1/V2 cover *those* classes, not all
+  ~9.3M. That is sufficient for the H = Ḡ claim (Result A) and for
+  #components(Γ̄) = #components(Γ̂); it says nothing about coverage.
+  Coverage is a separate artifact: the mass identity in
+  `data/big_4_9/meta.json` / `summary.json`.
+* **The class list's completeness has two independent supports** and they
+  should not be conflated: (1) the mass identity against the
+  independently computed target N_chi(4,9) from the (8,4) extension
+  sweep; (2) optionally, a `--holopass` over the whole class list, whose
+  `edges_to_unknown_keys == 0` certifies mutation-closure directly. Only
+  (1) has been executed for (9,4).
+* **Resumed runs make H a lower bound** for the edge family (ii): sound
+  for a positive verdict, not for a negative one. `summary.json` records
+  `holonomy_is_lower_bound`.
+* `pend_dropped` counts in-level duplicate edges whose holonomy was not
+  harvested because the bounded buffer was full; it must be read as part
+  of any lower-bound statement (it was 0 in every completed run to date).
 * Lemma 3 is proved here but not load-bearing for any computational
-  verdict.
+  verdict; it is used only as a *prediction* which the computation then
+  confirms (Result A is exactly the prediction of Lemma 3's corollary).
 
 ## 8. History / errata log
 
+* 2026-07-31 (session 2): **ERRATUM, corrected.** `runbig` phase 2
+  harvested only Lemma 2's edge family (ii), never the stabilizer family
+  (i). Consequence: the (9,4) sign part read as trivial (1/9) through
+  level 8 and the ledger recorded a spurious "local holonomy flatness"
+  observation (now retracted, §6). With family (i) backfilled from the
+  crashed checkpoint — 2548 flagged classes, 2608 conjugates — the sign
+  part is FULL (9/9) and H = Ḡ. Fixed in the engine for both phases;
+  regression suite extended to force harvesting through phase 2
+  (`phase1cap = 2`).
+* 2026-07-31 (session 2): Proposition 4 (sign-part dichotomy) added and
+  machine-checked (`submodules.py`); for odd n the labeled component
+  count is binary, {2^{n−1}, 1}.
+* 2026-07-31 (session 2): the first (9,4) attempt was OOM-killed by the
+  OS at level 9 (8 workers, ~2 GB free). `--resume` added
+  (`bigstate.py`), with a hard state gate, a 200-class re-canonicalization
+  sample check, and an explicit statement of the resumed-holonomy
+  lower-bound caveat; memory reworked (bounded submission window, capped
+  chunks, numpy in-level dedupe, O(N) index merge, early exact
+  saturation). Peak resident ≈ 0.6 GB.
+* 2026-07-31 (session 2): `Holonomy.sign_exhibits` extended with the
+  conjugation closure, without which the *word-level* certificate could
+  fall short of the sign part that `saturate()` proves.
 * 2026-07-31: mission-brief attribution corrected (suspected
   counterexample lives in $\overline{\mathcal{G}}$, not $\mathcal{G}$);
   K–M Table 1 typo 482→4382 identified and confirmed by generation.
