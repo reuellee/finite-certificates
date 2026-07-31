@@ -314,6 +314,7 @@ all stabilizer generators; sign part exact):
 | (9,3) | 4382 ✓cat | yes | yes (362880) | yes (9/9, exact) | **Γ̄(9,3), Γ̃(9,3) connected** |
 | (7,4) | 11 ✓cat | yes | yes (5040) | yes (7/7) | **Γ̄(7,4), Γ̃(7,4) connected** |
 | (8,4) | 2628 ✓cat | yes | yes (40320) | yes (8/8, exact) | **Γ̄(8,4), Γ̃(8,4) connected** — NEW (first rank-4 labeled verdict) |
+| (9,4) | 9,276,… (campaign, §6) | pending | yes (362880) | yes (9/9, exact) | **H = Ḡ** ⟹ #comp(Γ̄) = #comp(Γ̂) (Result A, §6) |
 | tiny  | (5,2),(5,3),(5,4),(6,2),(6,3),(6,4) | yes | yes | yes | connected & brute-force-equal |
 
 Both (8,4) and (9,3) were re-run through the parallel disk-based engine
@@ -322,6 +323,15 @@ orbit-stabilizer mass hit the independently computed target
 N_chi exactly (100.0000%), certifying catalog completeness AND
 Γ̂-connectivity simultaneously. Γ̂(8,4) has 15,338 directed mutation-edge
 traversals from class representatives (avg mutation degree ≈ 11.7).
+Both were re-run again on 2026-07-31 after the engine rework, from
+scratch and from a forced mid-level resume, with `phase1cap = 2` so that
+essentially all holonomy harvesting goes through the parallel path; all
+four runs reproduce these numbers exactly (§6).
+
+The mass target itself is re-derivable from its own per-class artifact:
+Σ_c (|G'₈|/stab_c)·E_c over `data/extcount_4_9.jsonl` (2628 rows,
+Σ E_c = 176,265,330) gives N_chi(4,9) = 1,722,704,635,330,560, equal to
+the stored target.
 
 **Standalone certificates + checker**: for each completed (n,r) the run
 emits reps/tree/gens/exhibits files; `checker.py` (zero shared code;
