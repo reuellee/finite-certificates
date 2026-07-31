@@ -1,0 +1,18 @@
+{
+ "n": 8,
+ "r": 3,
+ "classes": 135,
+ "directed_edge_traversals": 1420,
+ "undirected_mutation_edges_with_multiplicity": 710,
+ "perm_holonomy_order": 40320,
+ "S_n_order": 40320,
+ "sign_dim": 8,
+ "sign_dim_full": 8,
+ "sign_part_exact": true,
+ "H_equals_Gbar": true,
+ "gamma_hat_connected_on_bfs": true,
+ "catalog_matches_bfs": true,
+ "gamma_bar_connected": true,
+ "gamma_tilde_connected": true,
+ "seconds": 2.491116523742676
+}

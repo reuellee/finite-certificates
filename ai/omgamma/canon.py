@@ -274,7 +274,12 @@ def canonical(n, r, b, want_witness=True, max_stab=4096, use_colors=True):
 
     # finalize: all states achieve the same sign-maxed full string `best`
     can = best
-    out = {'can': can, 'ncolors': ncol}
+    out = {'can': can, 'ncolors': ncol, 'nstates': len(states)}
+    # exact stabilizer order in G' = S_n x {0,1}^n x {0,1}:
+    #   |ExactStab(chi_can)| = |sign kernel| * #states   (each state = one
+    #   achieving sigma; the achieving (eps,s) per sigma form a coset of
+    #   the sign kernel, which has 2^(#dependent columns) elements).
+    out['stab_order_exact'] = (1 << len(_sign_kernel(n, r))) * len(states)
     # convert canonint -> core bitmask
     cm = 0
     for j in range(M):
