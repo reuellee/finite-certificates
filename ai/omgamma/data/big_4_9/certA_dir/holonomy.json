@@ -1,0 +1,14 @@
+{
+ "perm_order": 181440,
+ "S_n": 362880,
+ "sign_dim": 9,
+ "n": 9,
+ "H_equals_Gbar": false,
+ "phase": "certify",
+ "checkpoint_level": 8,
+ "checkpoint_classes": 1876681,
+ "stab_gens": 2608,
+ "edge_gens": 26013,
+ "classes_expanded": 2000,
+ "lower_bound_but_equal_Gbar": false
+}

@@ -415,11 +415,24 @@ final saturation is the exact staged Schreier computation.
 already-checkpointed 1,876,681-class region (20.2% of Γ̂(9,4) by mass) —
 i.e. *independently of whether the coverage sweep completes*:
 
-* π(H) = S₉ (order 362,880): reached at level 3 of the original sweep
-  from edge voltages, and re-derived from edges after the resume.
 * sign part 9/9 (full): from the 2608 family-(i) stabilizer conjugates of
   the 2548 flagged classes, after the exact staged Schreier completion
   (`data/big_4_9/diag_stabhol.json`).
+* π(H) = S₉ (order 362,880): the family-(i) generators alone give A₉
+  (order 181,440 — every stabilizer element of every flagged class has an
+  EVEN permutation part), and the odd coset comes from edge voltages.
+  Reached at level 3 of the original sweep, and re-derived after the
+  resume at level 9 from just **2** edge generators
+  (`data/big_4_9/meta.json`: `hol_perm_order 362880`, `hol_sign_dim 9`,
+  `hol_full true`, `stab_gens 2608`, `edge_gens 2`).
+
+A curiosity that survives the retraction of the old "flatness" claim, now
+correctly measured: expanding the 2000 classes nearest the root yields
+26,013 edge voltages whose permutation parts are **all even** — π stays
+at A₉ over that whole ball. The odd coset first appears a couple of BFS
+levels out. This is a real, if minor, structural feature of the
+alternating OM's neighbourhood at (9,4); it is *not* evidence about the
+sign part, which is what the retracted observation confused it with.
 
 Note that Lemma 2's (⊇) direction — every harvested element lies in H —
 needs only that the tree paths exist, not that the BFS is complete. So
