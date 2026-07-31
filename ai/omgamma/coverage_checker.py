@@ -1400,7 +1400,17 @@ def _write_artifact(path, man, arrays, T, repair=True, stale_from=None):
 
 
 def _repair_totals(man, arrays, T):
-    """Reconstruct a sabotaged tree far enough to state its own totals."""
+    """Reconstruct a sabotaged tree far enough to state its own totals.
+
+    If the sabotaged tree cannot be decoded or reconstructed at all, this
+    falls back to the PARENT manifest's totals, which will not match the
+    sabotaged data.  That is the conservative direction -- the canary is
+    then caught by (e) rather than by the check it was aimed at -- but it
+    means a canary built through this path passes for the wrong reason.
+    None of the twelve currently reaches it (each is either repaired or
+    explicitly built with repair=False); a new one that does should be
+    rewritten rather than left to fall through here.
+    """
     rep = Report(verbose=False)
     tree = {'n': man['n'], 'r': man['r'],
             'count': int(arrays['params'][2]),

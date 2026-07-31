@@ -950,8 +950,8 @@ strictly fewer degrees of freedom, since a key or a stabilizer order that
 is not in the certificate cannot be misreported — but the redundancy is
 gone from what a fresh cloner runs. The replacement is
 `--legacy-crosscheck`, which compares the reconstruction against the arrays
-the search wrote. **Run at full scale 2026-07-31: all 9,276,595 keys and
-all 9,276,595 stabilizer orders agree exactly.** That is corroboration of
+the search wrote. **Run at full scale 2026-07-31: every one of the 9,276,595
+rows agrees in both its key and its stabilizer order.** That is corroboration of
 implementation agreement, NOT a link in the certificate chain, and the note
 says so.
 
@@ -1142,8 +1142,8 @@ saying: **no archived release exists**, and none is needed now.
   them is a conclusion of the checker's computation, and a datum that is
   absent cannot be misreported), but the redundancy is no longer part of
   what a cloner runs. `--legacy-crosscheck` restores it for anyone holding
-  the regenerated arrays; run at full scale 2026-07-31, all 9,276,595 keys
-  and stabilizer orders agree exactly. §7 and the note both say this.
+  the regenerated arrays; run at full scale 2026-07-31, every one of the
+  9,276,595 rows agrees in both its key and its stabilizer order. §7 and the note both say this.
 * **The class list's completeness has two independent supports** and they
   should not be conflated: (1) the mass identity against the
   independently computed target N_chi(4,9) from the (8,4) extension
