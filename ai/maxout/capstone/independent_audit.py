@@ -594,12 +594,12 @@ def hilbert_g35(e):
 class DegreeContext:
     """Certified machinery for one homogeneous degree e = d+1."""
 
-    def __init__(self, e, reference, relations, log=print):
+    def __init__(self, e, chi, relations, log=print):
         self.e = e
         self.monos = monomials(e)
         self.index = {m: i for i, m in enumerate(self.monos)}
         self.M = len(self.monos)
-        self.reference = reference
+        self.chi = chi
 
         # (b) rank of the span of monomial multiples of the Pluecker relations
         jrows = []
@@ -614,7 +614,6 @@ class DegreeContext:
 
         # (d) evaluation rows at pseudorandom integer configurations
         rng = random.Random(SEED_EVAL_POINTS + 1000 * e)
-        chi = reference.chi
         self.points = []
         erows = []
         attempts = 0
@@ -844,7 +843,7 @@ class Auditor:
     def context(self, e):
         ctx = self.contexts.get(e)
         if ctx is None:
-            ctx = DegreeContext(e, self.ref, self.relations, log=self.log)
+            ctx = DegreeContext(e, self.ref.chi, self.relations, log=self.log)
             self.contexts[e] = ctx
         return ctx
 
@@ -1174,6 +1173,46 @@ def run_canaries(auditor, samples, log=print):
         fails, _ = auditor.verify(0, (1, -1, -1, -1, -1), cert, d)
         record("C9_transplant_onto_infeasible_system", tag, fails)
 
+    # 10. THE finding-1 control: simulate a systematic error in the
+    #     generator's symbolic semantics -- the chirotope used to build the
+    #     signed-D relations and the T-identities taken as all +1 -- leaving
+    #     the certificate library untouched.  An auditor that imports the
+    #     generator's quotient construction agrees with the generator by
+    #     definition and cannot see this.  Every sample whose identities are
+    #     not already ordinary (chirotope-free) cancellations must be
+    #     rejected under the wrong semantics.
+    ref = auditor.ref
+    wrong_chi = (1,) * 10
+    wrong_ctx = {}
+    checked = rejected = skipped = 0
+    for tag, bits, split, cert, d in samples:
+        e = d + 1
+        ctx = wrong_ctx.get(e)
+        if ctx is None:
+            ctx = DegreeContext(e, wrong_chi, plucker_relations(wrong_chi),
+                                log=lambda *a, **k: None)
+            wrong_ctx[e] = ctx
+        sides, weights = auditor.decoder(d).decode(cert)
+        true_polys, _ = build_identities(bits, split, sides, weights, ref.chi)
+        if not any(true_polys):
+            skipped += 1          # ordinary identity: chirotope-independent
+            continue
+        polys, _ = build_identities(bits, split, sides, weights, wrong_chi)
+        checked += 1
+        if any(not ctx.in_kernel(p) for p in polys):
+            rejected += 1
+    results.append({
+        "canary": "C10_wrong_chirotope_semantics", "sample": "all",
+        "rejected": checked > 0 and rejected == checked,
+        "caught_by": ["KERNEL"],
+        "expected": "REJECT",
+        "ok": checked > 0 and rejected == checked,
+        "note": f"{rejected}/{checked} rejected when the whole symbolic "
+                f"semantics is rebuilt with the wrong chirotope "
+                f"({skipped} samples skipped: their identities are ordinary "
+                f"cancellations that do not involve the chirotope at all)",
+    })
+
     # machinery controls
     controls = []
     for e, ctx in sorted(auditor.contexts.items()):
@@ -1255,8 +1294,8 @@ def main():
             continue
         if not path.exists():
             raise SystemExit(f"missing artifact: {path}")
-        inputs[str(path.relative_to(MAXOUT.parent.parent))] = {
-            "sha256": sha256(path), "bytes": path.stat().st_size}
+        rel = str(path.relative_to(MAXOUT.parent.parent)).replace("\\", "/")
+        inputs[rel] = {"sha256": sha256(path), "bytes": path.stat().st_size}
 
     # U_ints comes from the artifacts themselves; all bundles must agree.
     u_seen = None
@@ -1343,19 +1382,41 @@ def main():
 
     processed = [0]
 
-    def maybe_checkpoint(force=False):
-        processed[0] += 1
-        if not force and processed[0] % args.checkpoint_every:
-            return
-        atomic_write_json(args.progress, {
-            "completed": state["completed"],
-            "counts": counts,
+    def snapshot():
+        return {
+            "counts": dict(counts),
             "coverage": {k: {"family": sorted(v["family"]),
                              "explicit": sorted(v["explicit"]),
                              "duplicates": v["duplicates"]}
                          for k, v in coverage.items()},
-            "elapsed": time.time() - t0,
-        })
+        }
+
+    # A checkpoint written in the middle of a bundle records the state as of
+    # the last COMPLETED bundle, plus how far the current one had got.  Resume
+    # therefore replays the current bundle from its start: partial counts are
+    # never double-added.  The largest bundle is a few seconds of work.
+    baseline = [snapshot()]
+    current = ["", 0]
+
+    def write_progress(final=False):
+        payload = {"completed": state["completed"], "elapsed": time.time() - t0}
+        payload.update(baseline[0])
+        if not final:
+            payload["in_progress"] = {"bundle": current[0], "records": current[1]}
+        atomic_write_json(args.progress, payload)
+
+    def maybe_checkpoint(force=False):
+        processed[0] += 1
+        current[1] += 1
+        if force:
+            baseline[0] = snapshot()
+            write_progress(final=True)
+        elif processed[0] % args.checkpoint_every == 0:
+            write_progress()
+
+    def start_bundle(tag):
+        baseline[0] = snapshot()
+        current[0], current[1] = tag, 0
 
     def audit_record(tag, bits, split, cert, side_degree, kind):
         fails, info = auditor.verify(bits, split, cert, side_degree)
@@ -1377,6 +1438,7 @@ def main():
             if tag in state["completed"]:
                 continue
             log(f"[{time.time()-t0:7.1f}s] bundle {tag} ...")
+            start_bundle(tag)
 
             if tag == "family_k12":
                 n = 0
@@ -1617,12 +1679,34 @@ def main():
             "explicit_total": sum(auditor.identity_stats["explicit"].values()),
         },
         "partial_run": partial,
+        "library": {
+            "certificates_in_the_upper_bound_library": sum(
+                v["n_covered"] for v in coverage_report.values()),
+            "of_which_closed_form_family": sum(
+                v["n_family"] for v in coverage_report.values()),
+            "of_which_explicit_serialized": sum(
+                v["n_explicit"] for v in coverage_report.values()),
+            "extra_checks_outside_the_library": {
+                "gp_degree3_results_certificates": sum(
+                    v for k, v in counts.items()
+                    if k.startswith("gp_targets_d") and k.endswith(":OK")),
+                "negative_canary_primal_witness": counts.get(
+                    "gp_targets_canary:OK", 0),
+            },
+            "note": "the library is the four split representatives x 33,140 "
+                    "valid labeled side patterns; the gp_degree3_results "
+                    "entries are prioritized research targets re-certified "
+                    "here at every degree they claim, which the shipped "
+                    "auditor only did at degree 2",
+        },
         "totals": {"checks_ok": total, "checks_failed": n_fail},
         "failures": failures,
         "elapsed_seconds": round(time.time() - t0, 1),
         "verdict": verdict,
     }
     atomic_write_json(args.report, report)
+    if verdict == "PASS" and not partial and Path(args.progress).exists():
+        os.remove(args.progress)     # the report is the record; drop the scratch
     log(f"\nINDEPENDENT AUDIT {verdict}: {total} checks OK, {n_fail} failed, "
         f"{time.time()-t0:.0f}s")
     log(f"report written to {args.report}")

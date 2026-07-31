@@ -27,9 +27,12 @@ sum_i b_i(m_i+[-u_i,u_i])), checks they are pairwise distinct, and
 checks every witness and every convex combination exactly.
 
 The upper-bound certificate library (132,560 cell-wide Gordan
-certificates), its generating programs, its standalone audit, and the
-full prose account are in the public repository
+certificates), its generating programs, and the full prose account are
+in the public repository
 
     https://github.com/reuellee/finite-certificates
 
-under ai/maxout (see ai/maxout/capstone/CAPSTONE.md).
+under ai/maxout (see ai/maxout/capstone/CAPSTONE.md). Its independent
+verifier, ai/maxout/capstone/independent_audit.py, is also stdlib-only
+(about 2 minutes for the whole library) and imports nothing from the
+programs that produced the certificates.

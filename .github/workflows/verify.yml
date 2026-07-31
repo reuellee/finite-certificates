@@ -61,6 +61,14 @@ jobs:
       - name: Split-orbit accounting (stdlib)
         working-directory: ai/maxout/capstone
         run: python check_split_orbits.py
+      # The primary upper-bound check: re-proves all 132,560 cell-wide
+      # certificates from the serialized artifacts with no import from any
+      # generation-side module and no Groebner machinery. Stdlib only, ~2 min,
+      # so it is a required job rather than a scheduled one. The report is
+      # written outside the worktree so this job never reports drift.
+      - name: Independent certificate audit (stdlib, all 132,560)
+        working-directory: ai/maxout/capstone
+        run: python independent_audit.py --report "$RUNNER_TEMP/independent_audit_report.json" --progress "$RUNNER_TEMP/independent_audit_progress.json"
       - name: Certificate transport
         working-directory: ai/maxout/capstone
         run: python check_transport.py --n-group 12 --n-certs 8 --seed 11
@@ -68,8 +76,13 @@ jobs:
         working-directory: ai/maxout/stage2c2_gpt
         run: python check_stage2c2.py
 
+  # The generator-coupled second opinion. It imports the generators'
+  # quotient-ring construction, so it is NOT the independence guarantee --
+  # that is the stdlib `independent_audit.py` step in `maxout-capstone`
+  # above, which runs on every push and pull request. This job keeps the
+  # older auditor running so the two continue to agree.
   full-audit:
-    name: full certificate audit (~20 min, manual/scheduled)
+    name: secondary certificate audit (~20 min, manual/scheduled)
     if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 90

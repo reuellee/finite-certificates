@@ -142,16 +142,19 @@ exactly $42$ vertices (and verifies the $110$-, $104$-, $58$- and
 $84$-vertex instances of Proposition~\ref{prop:positive} and beyond).
 The upper bound rests on a certificate library whose complete
 re-verification is four commands from the public repository
-(\texttt{ai/maxout} of the repository cited below; the last two need
-\texttt{numpy}, \texttt{scipy}, \texttt{sympy}):
+(\texttt{ai/maxout} of the repository cited below; only
+\texttt{check\_transport.py} needs anything beyond the standard
+library):
 \begin{verbatim}
-    python check_om35_uniqueness.py                # seconds, stdlib
-    python capstone/check_split_orbits.py          # seconds, stdlib
-    python capstone/check_transport.py             # ~2 min
-    python stage2c2_gpt/audit_all_certificates.py  # ~20 min, all
-                                                   # 132,560 certificates
+    python check_om35_uniqueness.py           # seconds, stdlib
+    python capstone/check_split_orbits.py     # seconds, stdlib
+    python capstone/independent_audit.py      # ~2 min, stdlib, all
+                                              # 132,560 certificates
+    python capstone/check_transport.py        # ~2 min
 \end{verbatim}
 Section~\ref{sec:verification} states precisely what each run proves.
+The third command is a from-scratch verifier that shares no code and no
+algebra with the programs that produced the library.
 
 The substance of Theorem~\ref{thm:main} is the upper bound. It is a
 computer-assisted proof in the certificate tradition: the mathematical
@@ -277,8 +280,8 @@ instituted after one such control exposed a verifier defect in an
 earlier stage, were wired into the $k\in\{1,2\}$ completion sweep and
 the $\{1,3\}$-split sweep and correctly rejected throughout; the
 $k=0$ sweep ran without canaries, and its certificates are covered by
-the standalone audit and were re-verified at fresh realizations in
-review.
+the independent audit of Section~\ref{sec:verification} and were
+re-verified at fresh realizations in review.
 
 \subsection{Symmetry: one cell, four splits}\label{sec:symmetry}
 The group $G=S_5\ltimes\{\pm1\}^5$ acts on configurations by
@@ -391,17 +394,63 @@ From the repository, directory \texttt{ai/maxout}:
 computation; stdlib), \texttt{capstone/check\_split\_orbits.py} (the
 stabilizer and split-orbit accounting; stdlib),
 \texttt{capstone/check\_transport.py} (exact transport verification),
-and \texttt{stage2c2\_gpt/audit\_all\_certificates.py} --- a single
-standalone audit that re-verifies \emph{every} certificate in the
-library: coefficient nonnegativity, all quotient-ring identities of
-every explicit certificate re-derived modulo the
-Grassmann--Pl\"ucker ideal in exact rational arithmetic (the family
-certificates satisfy ordinary polynomial identities needing no
-reduction), and specialization at $U_{\mathrm{ref}}$ against an
-independently written row builder ($132{,}681$ checks including
-redundant coverage; zero failures; about $20$ minutes). The
-generation-side programs, sweep artifacts, and a complete prose account
-with erratum history are in the same directory.
+and \texttt{capstone/independent\_audit.py}, which re-proves
+\emph{every} certificate in the library.
+
+That last program is written from scratch against the serialized
+artifacts: it imports nothing from any of the programs that produced
+them and uses only the Python standard library. It does not re-use the
+generators' quotient-ring construction --- there is no Gr\"obner basis
+and no normal form anywhere in it. Instead it decides cell-wideness by
+the observation that the configurations realizing a fixed chirotope
+form a nonempty \emph{open} subset of $\mathbb{R}^{15}$, so an identity
+in the $D_{tij}$ holds across the cell if and only if its pullback
+under $D_{T}\mapsto \chi_{T}\det_{T}(x)$ is the zero polynomial in the
+$15$ entries of a symbolic $5\times3$ configuration $x$ --- an
+equivalence, whereas membership in the Pl\"ucker ideal is a priori only
+sufficient. That vanishing is decided by exact integer evaluation
+against a family of evaluation functionals whose sufficiency the run
+certifies itself: writing $M_e$ for the number of degree-$e$ monomials
+in ten variables, $E$ for the evaluation matrix and $J$ for the span of
+the monomial multiples of the five signed three-term Pl\"ucker
+relations, one always has $\operatorname{rank}E+\operatorname{rank}J\le
+M_e$, and the run computes both ranks and finds equality, which forces
+$\ker E$ to be exactly the degree-$e$ part of the kernel of the
+pullback. Nothing about Hilbert functions or standard monomials is
+assumed; the classical values $10,50,175,490$ for $e=1,\dots,4$ come
+out as confirmed predictions.
+
+The same run re-derives the reference chirotope, the $22$ chambers
+(with a completeness proof) and the $33{,}140$ valid side patterns from
+the reference matrix alone; verifies for every certificate that the
+coefficients are nonnegative and not all zero, that all ten identities
+hold across the cell, and that the specialization is an exact Gordan
+vector at $U_{\mathrm{ref}}$ and at two fresh integer realizations of
+the chirotope; verifies that the library \emph{covers} every valid side
+pattern at each of the four splits, with no gap and no duplicate; and
+runs a canary battery in which ten deliberate corruptions are all
+rejected, recording which layer caught each. Two of the canaries test
+precisely what a generator-coupled auditor cannot: a mutation that is a
+valid Gordan vector at $U_{\mathrm{ref}}$ but not cell-wide, and a
+systematic falsification of the symbolic semantics (the whole
+signed-determinant construction rebuilt with the wrong chirotope,
+certificates untouched). It reports
+\texttt{132869 checks OK, 0 failed} in about two minutes, and writes
+an immutable JSON report with the counts, the per-degree rank
+certification, the coverage differences, the canary table and the
+SHA-256 of every input artifact.
+
+A second, older auditor,
+\texttt{stage2c2\_gpt/audit\_all\_certificates.py}, checks the same
+library ($132{,}681$ checks including redundant coverage; zero
+failures; about $20$ minutes, and it needs \texttt{numpy}/\texttt{scipy}
+/\texttt{sympy}). It is retained and agrees with the independent audit
+on every shared count, but it is \emph{not} independent of the
+generators: it imports their quotient-ring construction, and its own
+independently written half checks only specialization at
+$U_{\mathrm{ref}}$. The generation-side programs, sweep artifacts, and
+a complete prose account with erratum history are in the same
+directory.
 
 \subsection*{Provenance}
 This result was produced in a multi-model AI research pipeline: search,
@@ -410,11 +459,15 @@ large language models (GPT-5.6, Gemini 3.1 Pro, Claude) directing exact
 computer algebra, with adversarial cross-review between models, canary
 controls in the certificate sweeps, and independent re-verification of
 every serialized object. No mathematical claim in this note rests on
-\emph{unverified} model output: the model-produced certificates and
-programs are exactly re-checked by the standalone audit, the upper
-bound rests on that audited library and the short arguments of
-Section~\ref{sec:architecture}, and the attainment on the ancillary
-stdlib verification. The author directed the program and takes
+\emph{unverified} model output: the model-produced certificates are
+exactly re-checked by the independent audit described above --- which
+was written specifically so that no program on the generation side is
+trusted --- the upper bound rests on that audited library and the short
+arguments of Section~\ref{sec:architecture}, and the attainment on the
+ancillary stdlib verification. What the audit necessarily takes as
+given is the $25\times8$ row model \eqref{eq:system} itself, since that
+is the statement of what the certificates certify; it is short enough
+to check by reading. The author directed the program and takes
 responsibility for the claims.
 
 \subsection*{Acknowledgments}

@@ -1,0 +1,3556 @@
+{
+ "algebra": {
+  "criterion": "F is cell-wide iff Phi(F) is the zero polynomial in the 15 configuration entries; decided by exact integer evaluation against a rank-certified set of evaluation functionals",
+  "degrees": {
+   "1": {
+    "classical_hilbert_value": 10,
+    "matches_classical": true,
+    "n_monomials": 10,
+    "n_plucker_generator_rows": 0,
+    "rank_evaluation_rows": 10,
+    "rank_plucker_multiples": 0,
+    "rank_prime": 2147483647,
+    "sandwich_closes": true
+   },
+   "2": {
+    "classical_hilbert_value": 50,
+    "matches_classical": true,
+    "n_monomials": 55,
+    "n_plucker_generator_rows": 5,
+    "rank_evaluation_rows": 50,
+    "rank_plucker_multiples": 5,
+    "rank_prime": 2147483647,
+    "sandwich_closes": true
+   },
+   "3": {
+    "classical_hilbert_value": 175,
+    "matches_classical": true,
+    "n_monomials": 220,
+    "n_plucker_generator_rows": 50,
+    "rank_evaluation_rows": 175,
+    "rank_plucker_multiples": 45,
+    "rank_prime": 2147483647,
+    "sandwich_closes": true
+   },
+   "4": {
+    "classical_hilbert_value": 490,
+    "matches_classical": true,
+    "n_monomials": 715,
+    "n_plucker_generator_rows": 275,
+    "rank_evaluation_rows": 490,
+    "rank_plucker_multiples": 225,
+    "rank_prime": 2147483647,
+    "sandwich_closes": true
+   }
+  },
+  "evaluation_point_rule": "random.Random(SEED+1000*e), entries uniform in [-4,4], skipping degenerate configurations",
+  "fresh_realizations": [
+   [
+    [
+     4,
+     4,
+     -9
+    ],
+    [
+     -6,
+     -1,
+     -5
+    ],
+    [
+     8,
+     1,
+     -8
+    ],
+    [
+     -9,
+     6,
+     -3
+    ],
+    [
+     -1,
+     9,
+     -6
+    ]
+   ],
+   [
+    [
+     -5,
+     -2,
+     -7
+    ],
+    [
+     -8,
+     9,
+     -4
+    ],
+    [
+     -8,
+     0,
+     8
+    ],
+    [
+     -2,
+     3,
+     -3
+    ],
+    [
+     3,
+     -1,
+     -7
+    ]
+   ]
+  ],
+  "plucker_relations_verified_symbolically": true,
+  "seed_evaluation_points": 20260731,
+  "seed_fresh_realizations": 991
+ },
+ "argv": [],
+ "canaries": [
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "k0"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "k0"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "gp_targets:d0"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C0_unmutated_control",
+   "caught_by": [],
+   "expected": "ACCEPT",
+   "note": "",
+   "ok": true,
+   "rejected": false,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "k0"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_0"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_2"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_3"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d0"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d0"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d0"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d0"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d0"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d0"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C1_corrupt_coefficient",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C2_drop_term",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C3_permute_monomial",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C4_negate_coefficient",
+   "caught_by": [
+    "COEFF",
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C5_flip_sigma_of_used_side",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C6_flip_split_of_used_weight_row",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C7_rotate_monomial_order",
+   "caught_by": [
+    "KERNEL/SPEC (decode convention)"
+   ],
+   "expected": "REJECT",
+   "note": "24/24 rejected when the monomial enumeration order is rotated by one",
+   "ok": true,
+   "rejected": true,
+   "sample": "all"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep2"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep3"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "split02_1"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C8_gordan_at_Uref_but_not_cellwide",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH"
+   ],
+   "expected": "REJECT",
+   "note": "passes COEFF and SPEC_REF (the only independently written layer of the shipped auditor) by construction; must be caught by KERNEL",
+   "ok": true,
+   "rejected": true,
+   "sample": "gp_targets:d1"
+  },
+  {
+   "canary": "C9_transplant_onto_infeasible_system",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C9_transplant_onto_infeasible_system",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep0"
+  },
+  {
+   "canary": "C9_transplant_onto_infeasible_system",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C9_transplant_onto_infeasible_system",
+   "caught_by": [
+    "KERNEL",
+    "SPEC_FRESH",
+    "SPEC_REF"
+   ],
+   "expected": "REJECT",
+   "note": "",
+   "ok": true,
+   "rejected": true,
+   "sample": "sweep1"
+  },
+  {
+   "canary": "C10_wrong_chirotope_semantics",
+   "caught_by": [
+    "KERNEL"
+   ],
+   "expected": "REJECT",
+   "note": "13/13 rejected when the whole symbolic semantics is rebuilt with the wrong chirotope (11 samples skipped: their identities are ordinary cancellations that do not involve the chirotope at all)",
+   "ok": true,
+   "rejected": true,
+   "sample": "all"
+  }
+ ],
+ "canaries_ok": true,
+ "counts": {
+  "famk1:OK": 24691,
+  "famk2:OK": 8746,
+  "gp_targets_canary:OK": 1,
+  "gp_targets_d0:OK": 1,
+  "gp_targets_d1:OK": 65,
+  "gp_targets_d2:OK": 121,
+  "gp_targets_d3:OK": 121,
+  "gp_targets_nogo:EXACT_DEGREE_NO_GO": 180,
+  "k0:OK": 570,
+  "k0fam:OK": 32570,
+  "split02_0:OK": 6069,
+  "split02_0fam:OK": 2216,
+  "split02_1:OK": 6023,
+  "split02_1fam:OK": 2262,
+  "split02_2:OK": 6053,
+  "split02_2fam:OK": 2232,
+  "split02_3:OK": 6079,
+  "split02_3fam:OK": 2206,
+  "sweep0:OK": 8211,
+  "sweep1:OK": 8211,
+  "sweep2:OK": 8211,
+  "sweep3:OK": 8210
+ },
+ "coverage": {
+  "empty": {
+   "complete": true,
+   "covered_but_not_valid": 0,
+   "duplicate_certifications": 0,
+   "missing_valid_sigma": 0,
+   "n_covered": 33140,
+   "n_explicit": 570,
+   "n_family": 32570,
+   "n_valid_sigma": 33140
+  },
+  "{0,1}": {
+   "complete": true,
+   "covered_but_not_valid": 0,
+   "duplicate_certifications": 0,
+   "missing_valid_sigma": 0,
+   "n_covered": 33140,
+   "n_explicit": 24394,
+   "n_family": 8746,
+   "n_valid_sigma": 33140
+  },
+  "{0,2}": {
+   "complete": true,
+   "covered_but_not_valid": 0,
+   "duplicate_certifications": 0,
+   "missing_valid_sigma": 0,
+   "n_covered": 33140,
+   "n_explicit": 24224,
+   "n_family": 8916,
+   "n_valid_sigma": 33140
+  },
+  "{0}": {
+   "complete": true,
+   "covered_but_not_valid": 0,
+   "duplicate_certifications": 0,
+   "missing_valid_sigma": 0,
+   "n_covered": 33140,
+   "n_explicit": 8449,
+   "n_family": 24691,
+   "n_valid_sigma": 33140
+  }
+ },
+ "coverage_complete": true,
+ "dependencies": "python standard library only",
+ "elapsed_seconds": 98.6,
+ "failures": [
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  },
+  {
+   "bundle": "gp_targets_nogo",
+   "status": "EXACT_DEGREE_NO_GO"
+  }
+ ],
+ "generated_utc": "2026-07-31T10:41:07Z",
+ "inputs": {
+  "ai/maxout/capstone/split02_cellwide_shard_00_of_04.json.gz": {
+   "bytes": 75894,
+   "sha256": "52d7e113083dc1f35cecf553728acce40ee3a0e3cd530982ccb74bfbafbb9696"
+  },
+  "ai/maxout/capstone/split02_cellwide_shard_01_of_04.json.gz": {
+   "bytes": 76354,
+   "sha256": "dcb83c0900fe5d3c49d337a81509d88804a00baeb0364aaec11a7605e21d4a83"
+  },
+  "ai/maxout/capstone/split02_cellwide_shard_02_of_04.json.gz": {
+   "bytes": 76431,
+   "sha256": "ba21892a5720f31b078819e7d9c65479a9f36746ae23cefd8128afdea71a0989"
+  },
+  "ai/maxout/capstone/split02_cellwide_shard_03_of_04.json.gz": {
+   "bytes": 75618,
+   "sha256": "a1009b83cc00ce59b012e70e201cd263481b6b7e9f74ec8ce0cbde5b313b38f6"
+  },
+  "ai/maxout/stage2c2_gpt/gp_all_d2_shard_00_of_04.json.gz": {
+   "bytes": 150236,
+   "sha256": "82c54c91eddf0da8dd7892c587184aec39386021cc81bf2f8729e48cea3dd381"
+  },
+  "ai/maxout/stage2c2_gpt/gp_all_d2_shard_01_of_04.json.gz": {
+   "bytes": 149947,
+   "sha256": "e91cb0bdc653dd84c340c0bafc59c64a7bd02235cd3588fbc9f961ca540c0d34"
+  },
+  "ai/maxout/stage2c2_gpt/gp_all_d2_shard_02_of_04.json.gz": {
+   "bytes": 150226,
+   "sha256": "9a9e476e60b80240a5cdc7fe75a07537ac13e60ca5308bdc727feb882ce128e5"
+  },
+  "ai/maxout/stage2c2_gpt/gp_all_d2_shard_03_of_04.json.gz": {
+   "bytes": 150257,
+   "sha256": "b657e0dcb6cee053e4a1ecab007fa01afc0243e1aad07aeb1e2203d9ddd024db"
+  },
+  "ai/maxout/stage2c2_gpt/gp_degree3_results.json.gz": {
+   "bytes": 26343,
+   "sha256": "80a3bf29201b16b193270453ecf8c90b155c433db28f5db2747e98337176c383"
+  },
+  "ai/maxout/stage2c2_gpt/k0_cellwide_shard_00_of_01.json.gz": {
+   "bytes": 111673,
+   "sha256": "a2273d5937ec17a196fb70d62050586c7afff7aed811dc6fabc20f33fc8f81cd"
+  }
+ },
+ "library": {
+  "certificates_in_the_upper_bound_library": 132560,
+  "extra_checks_outside_the_library": {
+   "gp_degree3_results_certificates": 308,
+   "negative_canary_primal_witness": 1
+  },
+  "note": "the library is the four split representatives x 33,140 valid labeled side patterns; the gp_degree3_results entries are prioritized research targets re-certified here at every degree they claim, which the shipped auditor only did at degree 2",
+  "of_which_closed_form_family": 74923,
+  "of_which_explicit_serialized": 57637
+ },
+ "machinery_controls": [
+  {
+   "control": "random_vector_not_in_kernel_e1",
+   "expected": "FAIL",
+   "ok": true,
+   "result": "FAIL"
+  },
+  {
+   "classical_hilbert_value": 10,
+   "control": "rank_sandwich_e1",
+   "expected": "rank(E)+rank(J)==10",
+   "matches_classical": true,
+   "ok": true,
+   "result": "10+0==10"
+  },
+  {
+   "control": "plucker_multiple_in_kernel_e2",
+   "expected": "PASS",
+   "ok": true,
+   "result": "PASS"
+  },
+  {
+   "control": "random_vector_not_in_kernel_e2",
+   "expected": "FAIL",
+   "ok": true,
+   "result": "FAIL"
+  },
+  {
+   "classical_hilbert_value": 50,
+   "control": "rank_sandwich_e2",
+   "expected": "rank(E)+rank(J)==55",
+   "matches_classical": true,
+   "ok": true,
+   "result": "50+5==55"
+  },
+  {
+   "control": "plucker_multiple_in_kernel_e3",
+   "expected": "PASS",
+   "ok": true,
+   "result": "PASS"
+  },
+  {
+   "control": "random_vector_not_in_kernel_e3",
+   "expected": "FAIL",
+   "ok": true,
+   "result": "FAIL"
+  },
+  {
+   "classical_hilbert_value": 175,
+   "control": "rank_sandwich_e3",
+   "expected": "rank(E)+rank(J)==220",
+   "matches_classical": true,
+   "ok": true,
+   "result": "175+45==220"
+  },
+  {
+   "control": "plucker_multiple_in_kernel_e4",
+   "expected": "PASS",
+   "ok": true,
+   "result": "PASS"
+  },
+  {
+   "control": "random_vector_not_in_kernel_e4",
+   "expected": "FAIL",
+   "ok": true,
+   "result": "FAIL"
+  },
+  {
+   "classical_hilbert_value": 490,
+   "control": "rank_sandwich_e4",
+   "expected": "rank(E)+rank(J)==715",
+   "matches_classical": true,
+   "ok": true,
+   "result": "490+225==715"
+  }
+ ],
+ "non_vacuity": {
+  "explanation": "number of the ten identity polynomials that are nonzero AS WRITTEN (before any use of the Pluecker variety) per certificate.  A 0 means the identity is ordinary polynomial cancellation needing no Pluecker input -- exactly what the closed-form family certificates do.  A positive count means the certificate really relies on the Pluecker relations and the new algebra had work to do.",
+  "explicit": {
+   "0": 4,
+   "1": 1592,
+   "10": 224,
+   "2": 45783,
+   "3": 2586,
+   "4": 6210,
+   "5": 362,
+   "6": 421,
+   "7": 169,
+   "8": 392,
+   "9": 202
+  },
+  "explicit_needing_plucker": 57941,
+  "explicit_total": 57945,
+  "family": {
+   "0": 74923
+  }
+ },
+ "old_auditor_comparison": {
+  "all_counts_agree": true,
+  "available": true,
+  "meaningful": true,
+  "note": "this audit additionally verifies the degree-0/1/3 entries of gp_degree3_results.json.gz, which the shipped auditor skips, and additionally proves coverage completeness; its totals are therefore a superset, not a disagreement",
+  "old_report": "audit_all_report.json",
+  "old_total": 132681,
+  "old_verdict": "PASS",
+  "rows": [
+   {
+    "agree": true,
+    "old_count": 8211,
+    "old_tag": "sweep0:OK",
+    "this_audit": 8211
+   },
+   {
+    "agree": true,
+    "old_count": 8211,
+    "old_tag": "sweep1:OK",
+    "this_audit": 8211
+   },
+   {
+    "agree": true,
+    "old_count": 8211,
+    "old_tag": "sweep2:OK",
+    "this_audit": 8211
+   },
+   {
+    "agree": true,
+    "old_count": 8210,
+    "old_tag": "sweep3:OK",
+    "this_audit": 8210
+   },
+   {
+    "agree": true,
+    "old_count": 32570,
+    "old_tag": "k0fam:OK",
+    "this_audit": 32570
+   },
+   {
+    "agree": true,
+    "old_count": 570,
+    "old_tag": "k0gp:OK",
+    "this_audit": 570
+   },
+   {
+    "agree": true,
+    "old_count": 24691,
+    "old_tag": "famk1:OK",
+    "this_audit": 24691
+   },
+   {
+    "agree": true,
+    "old_count": 8746,
+    "old_tag": "famk2:OK",
+    "this_audit": 8746
+   },
+   {
+    "agree": true,
+    "old_count": 121,
+    "old_tag": "prior120:OK",
+    "this_audit": 121
+   },
+   {
+    "agree": true,
+    "old_count": 8916,
+    "old_tag": "s02fam:OK",
+    "this_audit": 8916
+   },
+   {
+    "agree": true,
+    "old_count": 24224,
+    "old_tag": "s02gp2:OK",
+    "this_audit": 24224
+   }
+  ]
+ },
+ "partial_run": false,
+ "python": "3.11.9",
+ "reference": {
+  "U_ints": [
+   [
+    -6,
+    -13,
+    18
+   ],
+   [
+    -9,
+    -12,
+    8
+   ],
+   [
+    -13,
+    -4,
+    16
+   ],
+   [
+    4,
+    -19,
+    -8
+   ],
+   [
+    16,
+    15,
+    -12
+   ]
+  ],
+  "chamber_completeness": "each of the 32 sign vectors carries either an explicit integer interior point or an explicit Gordan vector (mutually exclusive by Gordan's theorem)",
+  "chirotope_match": true,
+  "chirotope_signs_derived": [
+   -1,
+   1,
+   1,
+   1,
+   -1,
+   1,
+   -1,
+   -1,
+   1,
+   1
+  ],
+  "chirotope_signs_shipped": [
+   -1,
+   1,
+   1,
+   1,
+   -1,
+   1,
+   -1,
+   -1,
+   1,
+   1
+  ],
+  "cross_check_reference_structure_json": {
+   "available": true,
+   "chambers_and_incidence_identical": true,
+   "note": "read-only cross-check; the audit does not depend on this file",
+   "valid_sigma_set_identical": true
+  },
+  "n_chambers": 22,
+  "n_valid_sigma": 33140,
+  "source": "read from the certificate artifacts themselves"
+ },
+ "schema": 1,
+ "tool": "ai/maxout/capstone/independent_audit.py",
+ "totals": {
+  "checks_failed": 0,
+  "checks_ok": 132869
+ },
+ "verdict": "PASS"
+}

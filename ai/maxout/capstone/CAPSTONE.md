@@ -102,21 +102,80 @@ The library, by split:
 (*the four prefix-sweep shards hold the 32,843 explicit certificates for
 k ∈ {1,2} jointly; the family covers the complementary 33,437.)
 
-Every certificate in every bundle is re-verified **in one standalone
-run** by `../stage2c2_gpt/audit_all_certificates.py`: nonnegativity and
-nontriviality of coefficients, all ten quotient-ring identity families
-(the five u_t-dotted T-identities and five weight identities — the
-five u_t span R³, so their vanishing forces the 3-vector T-part to
-vanish; "eight columns" below refers to B's specialization)
-re-derived in exact rational arithmetic, and specialization at U_ints
-against an independently written row builder. Zero failures.
+Every certificate in every bundle is re-verified by **two auditors**,
+each in a single run, both reporting zero failures. Only the first is
+independent of the programs that produced the library; the second is
+kept as a second opinion and is described honestly below.
+
+- `independent_audit.py` (this directory) is the **primary** check. It
+  is written from scratch against the serialized artifacts and imports
+  nothing from any generation-side module; it uses the Python standard
+  library only. It decides the cell-wide property by a route that
+  shares no algebra with the generator: no Gröbner basis, no normal
+  forms, no signed-D quotient ring. Its criterion is that each of the
+  ten identity polynomials F (the five u_t-dotted T-identities and the
+  five weight identities — the five u_t span R³, so their vanishing
+  forces the 3-vector T-part to vanish) satisfies Φ(F) ≡ 0, where Φ
+  substitutes D_T ↦ χ_T·det_T(x) for a *symbolic* 5×3 configuration x.
+  Since the realizations of χ_ref form a nonempty open subset of R¹⁵
+  and a real polynomial vanishing on a nonempty open set is zero, this
+  is exactly equivalent to cell-wideness (the generator's
+  ideal-membership criterion is a priori only sufficient). The test is
+  decided by exact integer evaluation against a set of evaluation
+  functionals whose sufficiency is *certified in the run itself*: with
+  M_e monomials of degree e, E the evaluation matrix and J the span of
+  the monomial multiples of the five signed three-term Plücker
+  relations, always rank E + rank J ≤ M_e; the run computes both ranks
+  (mod a prime, hence lower bounds on the rational ranks) and finds
+  rank E + rank J = M_e, which forces ker E = ker Φ exactly. No
+  Hilbert-function or standard-monomial input is assumed; the classical
+  values 10 / 50 / 175 / 490 for e = 1..4 are recomputed as predictions
+  and confirmed. The same run also re-derives χ_ref, the 22 chambers
+  (with a completeness proof: each of the 32 candidate sign vectors
+  gets either an explicit integer interior point or an explicit Gordan
+  vector), and the 33,140 valid σ, all from U_ints alone, and then
+  verifies what no earlier checker did — that the library **covers**
+  every valid σ at each of the four splits, with zero gaps and zero
+  duplicates.
+
+- `../stage2c2_gpt/audit_all_certificates.py` is the **secondary**
+  check and is *not* independent of the generator: it imports
+  `quotient_matrix` and `normal_forms` from `gp_degree3_search.py`, so
+  its quotient-ring half re-uses the construction it is checking. Its
+  other half — specialization at U_ints against an independently
+  written row builder — is sound but cannot detect a multiplier that is
+  a genuine Gordan vector at U_ints yet not cell-wide (this is
+  demonstrated, not asserted: canary C8 of the primary auditor is
+  exactly such a mutation, and it passes that layer). Both auditors
+  agree on every shared count.
 
 Canary discipline (instituted after a caught sign bug — see §6): the
 k ∈ {1,2} completion sweep and the {0,2}-split sweep wire in a
 provably-uncertifiable negative control and a known positive control,
 all passing in every shard. The k = 0 sweep ran without canaries; its
-certificates are covered by the standalone audit and were re-verified
-at fresh realizations of the chirotope in review.
+certificates are covered by both audits and were re-verified at fresh
+realizations of the chirotope in review.
+
+`independent_audit.py` carries its own canary battery, run every time
+and recorded in `independent_audit_report.json` together with *which
+layer* caught each mutation: a corrupted coefficient, a dropped term, a
+permuted monomial, a negated coefficient, a flipped σ bit on a side the
+certificate uses, a flipped split entry on a weight row it uses, a
+rotated monomial-decoding order, a certificate transplanted onto the
+strictly-feasible (σ = 0, split {0}) system, and — the two decisive
+ones — a mutation constructed to be a genuine Gordan vector at U_ints
+while not being cell-wide (C8, rejected *only* by the new algebra: it
+passes the coefficient and reference-specialization layers, which are
+the shipped auditor's entire independent content), and a simulated
+systematic error in the *symbolic semantics* itself (C10: the whole
+signed-D construction rebuilt with the wrong chirotope, library
+untouched — an auditor that imports the generator's construction agrees
+with the generator by definition and cannot see this; every sample
+whose identities are not chirotope-free ordinary cancellations is
+rejected). Three machinery controls per degree check the reduction is
+neither vacuous nor over-strict: a known Plücker multiple must be
+accepted, a pseudorandom vector must be rejected, and the rank sandwich
+must close.
 
 ## 3. From the library to the theorem
 
@@ -292,34 +351,64 @@ Together: **max f₀(3,5) = 42.**
 
 ## 4. Verification manifest
 
-Run everything with CPython ≥ 3.10. Steps 1, 2, and 6's
-`verify_c66_new_cases.py` are stdlib-only; steps 3–5 require NumPy,
-SciPy, and SymPy for matrix assembly and normal forms — the
-verification arithmetic itself is exact `Fraction` throughout. From
-`ai/maxout/`:
+Run everything with CPython ≥ 3.10. Steps 1, 2, 3 and 7's
+`verify_c66_new_cases.py` are **stdlib-only**; steps 4–6 require NumPy,
+SciPy, and SymPy — the verification arithmetic itself is exact
+`Fraction`/integer throughout. From `ai/maxout/`:
 
 1. `python check_om35_uniqueness.py` — 384 chirotopes, single orbit
    (stdlib, seconds).
 2. `python capstone/check_split_orbits.py` — stabilizer order 10, D₅
    orbits, "ACCOUNTING CONFIRMED", exit 0 (stdlib, seconds).
-3. `python stage2c2_gpt/check_stage2c2.py` — PASS (~2 min; re-derives
+3. `python capstone/independent_audit.py` — **the primary upper-bound
+   check**: `INDEPENDENT AUDIT PASS: 132869 checks OK, 0 failed`
+   (~2 min, stdlib only, exit 0). Re-proves all 132,560 cell-wide
+   certificates of the library from the serialized artifacts with no
+   import from any generation-side module and no Gröbner/normal-form
+   machinery (see §2), proves the library covers every valid σ at each
+   of the four splits, additionally re-certifies the 308 certificates
+   of `stage2c2_gpt/gp_degree3_results.json.gz` at every degree they
+   claim, runs its canary battery, and writes the immutable
+   `capstone/independent_audit_report.json` (counts, per-degree rank
+   certification, coverage set-differences, canary table with the layer
+   that caught each mutation, SHA-256 of every input artifact).
+   Interruptible: `--resume` restarts at the last completed bundle.
+4. `python stage2c2_gpt/check_stage2c2.py` — PASS (~2 min; re-derives
    structures, re-verifies the stage's certificates and witnesses).
-4. `python stage2c2_gpt/audit_all_certificates.py` — the one-run
-   standalone re-audit of every certificate in every bundle, including
-   `capstone/split02_cellwide_shard_*`: expect
-   `AUDIT PASS: … 0 failures` (~20 min, scipy for matrix assembly,
-   verification itself in exact `Fraction`).
-5. `python capstone/check_transport.py` — "ALL TRANSPORT CHECKS PASS"
+5. `python stage2c2_gpt/audit_all_certificates.py` — the secondary,
+   generator-coupled re-audit of the same library (see §2 for what it
+   does and does not establish): expect `AUDIT PASS: … 0 failures`
+   (~20 min, scipy for matrix assembly, verification itself in exact
+   `Fraction`).
+6. `python capstone/check_transport.py` — "ALL TRANSPORT CHECKS PASS"
    (~2 min).
-6. `python verify_c66_new_cases.py` and
+7. `python verify_c66_new_cases.py` and
    `python check_instances_cddlib.py` (optional pycddlib) — the
    42-instance (and the other pinned counts) exactly.
+
+Steps 3 and 5 audit the same 132,560 certificates and agree on every
+shared count (step 3's report records the comparison). Only step 3 is
+independent of the programs that produced the library.
 
 ## 5. What is machine-checked vs. argued in prose
 
 Machine-checked exactly (no trust in this document needed): every
-certificate, every canary, the valid-σ count, the orbit and stabilizer
-computations, the transport bookkeeping on samples, the 42-instance.
+certificate, every canary, the valid-σ count, the *completeness* of the
+library's coverage of the valid σ at each of the four splits, the orbit
+and stabilizer computations, the transport bookkeeping on samples, the
+42-instance.
+
+What `independent_audit.py` still takes as given, and therefore what a
+reader must check by reading rather than by running (its docstring says
+the same): the 25×8 row model of §1 — that is the *statement* of what
+the certificates certify, re-implemented there from this prose, not
+re-derived; the definition of a valid labeled side pattern; the
+symmetry reduction of §§3.2–3.3 (checked by `check_split_orbits.py` and
+`check_transport.py` instead); the serialization layout of the sparse
+certificate vectors (a data format, tested by a rotate-the-monomial-
+order canary); and the 121 `EXACT_DEGREE_NO_GO` entries of
+`gp_degree3_results.json.gz`, which are negative results carrying no
+weight in the upper bound and are counted but not re-verified.
 
 Argued in prose above, kept deliberately short so they can be audited by
 reading: the hull-of-union bound and the generic-position perturbation
@@ -350,7 +439,22 @@ confirmation (§1).
   split") until that sweep existed; the cell-wide split02 certificates
   specialize to U_ints, repairing it. This is recorded as an erratum in
   the master note.
+- The **independence gap**: until 2026-07-31 the only all-library
+  auditor was `stage2c2_gpt/audit_all_certificates.py`, and this
+  document and the arXiv note both called it a *standalone* audit. It
+  is not: it imports `quotient_matrix` and `normal_forms` from the
+  generator `gp_degree3_search.py`, so the quotient-ring half of every
+  check inherited the generator's Gröbner machinery, and its
+  independently written half checks only specialization at U_ints —
+  which provably cannot detect a multiplier that is a Gordan vector at
+  U_ints but not cell-wide. The defect was raised as finding 1 of
+  `reviews/GPT_repo_audit_2026-07.md` and closed by writing
+  `capstone/independent_audit.py` from scratch (§2, §4 step 3), which
+  re-proves the whole library by a different algorithm, agrees with the
+  old auditor on every shared count, and additionally proves the
+  coverage completeness nobody had checked. The wording in §2, §4 and
+  the note has been corrected; no certificate changed.
 - Floating-point appears only in LP support hints and search heuristics;
   every serialized object is exact (integers/Fractions) and was verified
-  exactly before serialization, then re-verified by the independent
-  audits above.
+  exactly before serialization, then re-verified by the two audits
+  above.

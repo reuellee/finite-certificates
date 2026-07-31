@@ -5,7 +5,12 @@ __pycache__/
 # full prompts, and the curated REVIEW_*.md files are the artifact of record.
 *.log
 *.err
-# LaTeX build products
+# Resumable-audit scratch state (the committed report is the record); the
+# file is removed automatically after a clean full run.
+ai/maxout/capstone/independent_audit_progress.json
+# LaTeX build products (note: *.out is NOT ignored globally -- several
+# tracked sweep transcripts use that suffix)
+ai/maxout/paper/*.out
 *.aux
 *.synctex.gz
 *.fdb_latexmk
