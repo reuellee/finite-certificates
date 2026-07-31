@@ -525,6 +525,15 @@ classes is re-canonicalized from scratch: stored key, stored canonical
 mask, stored stabilizer order and the tree mutation identity
 χ_parent ⊕ bit_j = ±t·χ_child must all reproduce.
 
+**Resume canaries** (`canary_resume.py`, run on the (8,4) checkpoint;
+control = the clean checkpoint must be ACCEPTED): six deliberately
+corrupted checkpoints are all rejected — total_mass off by one Ḡ-orbit,
+total_classes off by one, a torn checkpoint (trailing level file that
+meta.json does not know about), a deleted middle level file, a flipped
+tree-edge voltage bit, and a flipped bit in a stored canonical mask. The
+last two are caught only by the re-canonicalization sample check, which
+is what that check is for.
+
 **Holonomy on resume — the correctness trap.** The harvested generators
 are NOT on disk. A resumed run therefore harvests family (ii) only from
 edges expanded after the resume, so its H′ ≤ H. This is
