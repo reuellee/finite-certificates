@@ -27,10 +27,28 @@ trail; all exact integer arithmetic, stdlib + numpy):
 * Mass-formula (orbit-stabilizer) completeness certificates; the
   (4,9) class count arbitration between Finschi's database / Knauer–Marc
   (9,276,595) and Fukuda–Miyata–Moriyama 2013 (9,276,601).
+* A dichotomy proposition (`submodules.py`): once π(H) = S_n, the sign
+  part of the holonomy is an F₂[S_n]-submodule of {0,1}ⁿ/⟨1ⁿ⟩, which for
+  ODD n is irreducible — so #components of the labeled graph is
+  2^{n−1} or 1, nothing in between.
+* At (9,4): **H = Ḡ**, hence the labeled graph has exactly as many
+  components as the isomorphism-class graph (no counterexample at the
+  labeled level over what happens at the quotient).
 
 **Verify**: `python verify_omgamma.py` — runs the standalone checkers
 (`checker.py` pure python, `checker_fast.py` numpy; zero code shared
 with the generators) on the shipped certificates, plus a sabotage
-canary. Regenerate everything: `test_core.py`, `test_canon.py`,
+canary. Deeper canaries: `canary_checker.py` (five certificate
+corruptions), `canary_resume.py` (six checkpoint corruptions),
+`submodules.py` (its own two-method cross-check).
+Regenerate everything: `test_core.py`, `test_canon.py`,
 `test_extend.py`, `test_flip.py`, `masscheck.py`, `runcat.py`,
 `runflip.py`, `ext_count.py`, `runbig.py`.
+
+**Long runs**: `runbig.py <r> <n> <workers> [cap]` checkpoints every
+level to `data/big_<r>_<n>/level_*.npz`; `--resume` restarts from the
+last checkpoint (state gate + sample re-canonicalization);
+`--holopass <lo> <hi>` re-expands a class range for holonomy harvesting
+only and doubles as a mutation-closure certificate; `certify.py` builds
+a standalone H = Ḡ certificate from any checkpoint;
+`export_subcert.py` emits a compact checkable certificate.
