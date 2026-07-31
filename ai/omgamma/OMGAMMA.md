@@ -39,15 +39,17 @@ Dictionary to the brief's names: Γ = $\overline{\mathcal{G}}$ (labeled),
 (isomorphism classes).
 
 The Cordovil–Las Vergnas conjecture, as Knauer–Marc state it (their
-Conjecture 4.1, citing Roudneff–Sturmfels 1988):
+conjecture labeled conj:cordovil in the source, citing Roudneff–Sturmfels
+1988; we cite by source label since the published numbering was not
+checked against the paywalled version):
 
 > **Conjecture (Cordovil-Las Vergnas).** For all $r,n$ the graph
 > $\mathcal{G}^{n,r}$ is connected.
 
 So the CLV conjecture itself lives at the reorientation-class level Γ̃ —
-and Knauer–Marc *settled it* for n ≤ 9 (their Corollary 4.4: "The graph
-$\mathcal{G}^{n,r}$ is connected for $n\leq 9$."), via their Proposition
-4.3 ($\underline{\mathcal{G}}$ connected ⟹ $\mathcal{G}$ connected, using
+and Knauer–Marc *settled it* for n ≤ 9 (their corollary labeled cor:94: "The graph
+$\mathcal{G}^{n,r}$ is connected for $n\leq 9$."), via their proposition
+labeled prop:mut ($\underline{\mathcal{G}}$ connected ⟹ $\mathcal{G}$ connected, using
 Roudneff–Sturmfels' realizable connectivity) plus an unpublished
 computation that $\underline{\mathcal{G}}^{n,r}$ is connected for all
 parameters of their Table 1 (using tope graphs + the Bliss graph-iso
@@ -55,10 +57,10 @@ package). What they leave open, and where they suspect a counterexample,
 is the LABELED graph. Verbatim:
 
 > "Testing graph isomorphism instead of OM-isomorphism was an essential
-> ingredient in order to obtain Corollary 4.4. Checking connectivity of
+> ingredient in order to obtain Corollary [ref cor:94]. Checking connectivity of
 > $\overline{\mathcal{G}}^{n,r}$ is far more demanding. We do not know
 > anything about the connectivity of this graph beyond rank 3."
-> (after Cor. 4.4)
+> (text following cor:94)
 
 > "We have verified it [CLV] by computer for small examples and it holds
 > for low rank in general. However, here we suspect the existence of a
@@ -73,8 +75,8 @@ resolve the (4,9) class-count discrepancy. The single holonomy
 computation below settles all three levels at once, so the brief's
 literal request ("settle Γ̃") is subsumed.
 
-Also verified verbatim (their proof of Prop. 4.3 and rank-3 result):
-their Proposition 4.2 proves $\overline{\mathcal{G}}^{n,3}$ connected for
+Also verified verbatim (their proofs of prop:mut and the rank-3 result):
+their proposition labeled prop:pseudoline proves $\overline{\mathcal{G}}^{n,3}$ connected for
 every n via Ringel's homotopy theorem plus an explicit reorientation
 gadget; Observation ("obs:connectivities"): $\overline{\mathcal{G}}$
 connected ⟹ $\mathcal{G}$ connected ⟹ $\underline{\mathcal{G}}$
@@ -172,8 +174,11 @@ stabilizer enumeration):
   * Γ̄ = $\overline{\mathcal{G}}^{n,r}$ connected ⟺ H = Ḡ;
     #components = [Ḡ : H].
   * Γ̃ = $\mathcal{G}^{n,r}$: with R̄ ⊴ Ḡ the sign subgroup and
-    π: Ḡ → S_n, one shows (direct argument via R̄-orbit lifting)
-    #components(Γ̃) = [S_n : π(H)]; connected ⟺ π(H) = S_n.
+    π: Ḡ → S_n ≅ Ḡ/R̄: an edge R̄x ∼ R̄y of Γ̃ means x ∼ ρy for some
+    ρ ∈ R̄, so stepwise lifting gives comp_Γ̃(R̄v₀) = {R̄y : y ∈
+    R̄·comp_Γ̄(v₀)}, and the Γ̃-component stabilizer is H̃ = R̄H (a
+    subgroup because R̄ is normal). Hence
+    #components(Γ̃) = [Ḡ : R̄H] = [S_n : π(H)]; connected ⟺ π(H) = S_n.
 
 **Machine validation of the entire reduction** (test_flip.py): at
 (n,r) ∈ {(5,3),(6,3),(5,4),(6,4),(5,2),(6,2)} the full labeled graph Γ̄
@@ -288,7 +293,7 @@ re-pointed tree parent) are all rejected by the checker.
   but it terminates]. So Γ̄^{n,2}, Γ̃^{n,2} connected for all n ≤ 9,
   with no reliance on Lemma 3.
 * **r = 3**: exhaustive holonomy verdicts n ≤ 9 (table above), agreeing
-  with Knauer–Marc Prop. 4.2 (their Ringel-based proof for all n).
+  with Knauer–Marc's prop:pseudoline (their Ringel-based proof for all n).
 * **r = 4**: exhaustive n ≤ 8 (table above); n = 9 campaign below.
 * **5 ≤ r ≤ n−2**: by duality. Proposition (duality transport): the map
   χ ↦ χ*, χ*(x_{r+1..n}) = χ(x_1..x_r)·sgn(x_1..x_n), descends to
