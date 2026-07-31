@@ -1,0 +1,75 @@
+name: verify
+
+# `pull_request` (not `pull_request_target`): pull requests from forks run with
+# a read-only token and no access to secrets. Never change this to
+# `pull_request_target` — that would run untrusted code with write access.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Weekly full re-verification of the certificate library (Mondays 04:00 UTC).
+    - cron: '0 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  fast:
+    name: verifier suite (fast)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy scipy sympy
+      - name: Run verifier suite
+        run: python run_all.py --fast
+
+  maxout-capstone:
+    name: maxout (3,5) capstone checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy scipy sympy
+      # Attainment (the exact 42-vertex instance) is covered by the `fast`
+      # job: run_all.py picks up every verify_*.py, including
+      # ai/maxout/verify_c66_new_cases.py. This job runs the upper-bound
+      # checks, which are named check_* and so are not in that suite.
+      - name: OM(3,5) chirotope orbit (stdlib)
+        working-directory: ai/maxout
+        run: python check_om35_uniqueness.py
+      - name: Split-orbit accounting (stdlib)
+        working-directory: ai/maxout/capstone
+        run: python check_split_orbits.py
+      - name: Certificate transport
+        working-directory: ai/maxout/capstone
+        run: python check_transport.py --n-group 12 --n-certs 8 --seed 11
+      - name: Stage 2c-2 exact checker
+        working-directory: ai/maxout/stage2c2_gpt
+        run: python check_stage2c2.py
+
+  full-audit:
+    name: full certificate audit (~20 min, manual/scheduled)
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy scipy sympy
+      - name: Re-verify every certificate in the library
+        working-directory: ai/maxout/stage2c2_gpt
+        run: python audit_all_certificates.py

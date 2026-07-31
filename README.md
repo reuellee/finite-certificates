@@ -33,7 +33,8 @@ go straight to one without reading the rest. No verifier imports any other.
 | result | where |
 |---|---|
 | Counterexamples to published optimizer convergence claims (Muon, Li–Hong, Lion) | [`ai/optimizer/`](ai/optimizer/) |
-| Sturmfels et al. Conjecture 6.6: (4,4) and (4,6) resolved, (3,8) achievability confirmed; three odd-n cases certified 2-4 below the conjectured maxima | [`ai/maxout/`](ai/maxout/) |
+| **max f₀(3,5) = 42** — refutes the tightness of Prop. 6.5 and the odd case of Conjecture 6.6.1 of Balakin–Cox–Loho–Sturmfels at n=5 (132,560 exact cell-wide certificates; [arXiv note](ai/maxout/paper/)) | [`ai/maxout/`](ai/maxout/) |
+| Same conjecture: (4,4) and (4,6) resolved, (3,8) achievability confirmed; (4,5) and (3,7) certified below the conjectured maxima | [`ai/maxout/`](ai/maxout/) |
 
 **Commutative algebra**
 
@@ -42,6 +43,19 @@ go straight to one without reading the rest. No verifier imports any other.
 | Aftermath of the Jacobian Conjecture counterexample — the n=2 boundary, fallout witnesses, minimal-degree theorems | [`jacobian/`](jacobian/) |
 
 Adversarial review trail for all of the above: [`reviews/`](reviews/).
+
+## Contributing
+
+Pull requests are welcome from anyone — no permission needed, just fork and
+open one. Refutations are the most valuable thing you can send: if a
+certificate here is wrong, that is a result, and it will be reported as one.
+
+Every pull request runs the verifier suite in CI. The bar for new claims
+(exact arithmetic, an independent verifier, deliberately-failing controls,
+honest scope) and the credit policy — **contributors are credited by name in
+the papers** — are in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+Licensed under the [MIT License](LICENSE).
 
 ## Detail
 
