@@ -284,12 +284,12 @@ EXTRA_URLS = [
     # table renderer above does NOT apply to them (pypdf yields no cell
     # structure) -- see CORPUS.md section 8.
     dict(doc_id="ejc_ds21_graph_crossing_number",
-         url="https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS21/pdf",
+         url="https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS21/pdf/",
          title="The Graph Crossing Number and its Variants: A Survey (EJC Dynamic Survey DS21)",
          authors="Marcus Schaefer", year=2024, arxiv_id="",
          venue="Electron. J. Combin., Dynamic Survey DS21", kind="pdf"),
     dict(doc_id="ejc_ds12_macaulay_posets",
-         url="https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS12/pdf",
+         url="https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS12/pdf/",
          title="Macaulay Posets (EJC Dynamic Survey DS12)",
          authors="Sergei L. Bezrukov; Xavier Portas", year=2002, arxiv_id="",
          venue="Electron. J. Combin., Dynamic Survey DS12", kind="pdf"),
@@ -299,7 +299,7 @@ EXTRA_URLS = [
          authors="Erich Friedman", year=2009, arxiv_id="",
          venue="Electron. J. Combin., Dynamic Survey DS7", kind="html"),
     dict(doc_id="ejc_ds1_small_ramsey_numbers",
-         url="https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1/pdf",
+         url="https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf/",
          title="Small Ramsey Numbers (EJC Dynamic Survey DS1)",
          authors="Stanislaw P. Radziszowski", year=2024, arxiv_id="",
          venue="Electron. J. Combin., Dynamic Survey DS1", kind="pdf"),
@@ -491,6 +491,20 @@ def _render_grid(grid: dict, nrows: int, ncols: int, header_row,
     further column a cell spans holds ("cont", "") so a spanned-over column
     is still visibly a column and the anchors keep their true indices.
     """
+    # LaTeXML wraps every display equation in a <table>, and LaTeX \begin{array}
+    # is a tabular too.  Labelling those as tables buries the real tables in
+    # noise and inflates the index for nothing.  A block with no caption, no
+    # header row and at most one populated cell per row is not a table of
+    # values -- emit its contents plainly.
+    filled = {}
+    for (r, c), v in grid.items():
+        if v[0] != "cont" and v[1]:
+            filled.setdefault(r, []).append((c, v[1]))
+    if not caption and header_row is None and all(
+            len(cs) <= 1 for cs in filled.values()):
+        body = "\n".join(filled[r][0][1] for r in sorted(filled))
+        return ("\n" + body + "\n") if body else " "
+
     col_label: dict = {}
     if header_row is not None:
         for c in range(ncols):
@@ -550,7 +564,13 @@ def _render_grid(grid: dict, nrows: int, ncols: int, header_row,
     return "\n" + "\n".join(out) + "\n"
 
 
-def render_html_table(table_inner: str, tag: str) -> str:
+def render_html_table(table_inner: str, tag: str, attrs: str = "") -> str:
+    # LaTeXML marks its equation wrappers explicitly; honour that rather than
+    # guessing from shape, and flatten them back to plain math.
+    if re.search(r"ltx_(equation|eqn)", attrs, re.I):
+        cells = [txt for row in _split_rows(table_inner)
+                 for (_k, _cs, _rs, txt) in _split_cells(row) if txt]
+        return ("\n" + " ".join(cells) + "\n") if cells else " "
     cap = re.search(r"(?is)<caption\b[^>]*>(.*?)</caption\s*>", table_inner)
     caption = _cell_text(cap.group(1)) if cap else ""
     if cap:
@@ -651,7 +671,8 @@ def render_all_html_tables(t: str, prefix: str = "TABLE") -> str:
             continue
         op = opens[-1]
         n += 1
-        blocks[n] = render_html_table(t[op.end():close.start()], f"{prefix} {n}")
+        blocks[n] = render_html_table(t[op.end():close.start()],
+                                      f"{prefix} {n}", op.group(0))
         # A marker, not the block itself: an inner table sitting inside an
         # outer table's cell would otherwise be collapsed onto one line by the
         # outer renderer's cell-text pass, which is the very flattening this

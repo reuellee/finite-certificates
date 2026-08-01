@@ -35,7 +35,8 @@ only "nothing here contradicts it".
 | PARTIAL | substance right, wording or locator imprecise enough to draw a referee |
 | NOT-IN-CORPUS | the source is not indexed (usually a book), or the claim is about absence |
 
-**Totals: 2 CONTRADICTED, 41 VERIFIED, 7 PARTIAL, 13 NOT-IN-CORPUS.**
+**Totals over 72 checked claims: 2 CONTRADICTED, 50 VERIFIED, 7 PARTIAL,
+13 NOT-IN-CORPUS.**
 
 ---
 
@@ -108,12 +109,20 @@ as does the *candidate* definition, at offset 18155, still inside §2:
 > $\mathbb{R}^{d}$, each with $n$ generators, where corresponding generators
 > are parallel."
 
-§6 only *recalls* it — "Recall that a $(d,n)$-zonoboxtope $Q$ is a maxout
-polytope of type $(d,n,1)$" — which is what a reader checking `\S 6` will
-find, and it is not a definition.
+**The charitable reading, stated so the row defends itself.** §6 does open
+with "Recall that a $(d,n)$-zonoboxtope $Q$ is a maxout polytope of type
+$(d,n,1)$", so a reader who follows `\S 6` finds the same equivalence
+asserted there and is not misled about the mathematics. What is wrong is the
+locator as a *provenance* claim: the sentence reads "called
+$(d,n)$-zonoboxtopes **in** \cite[\S 6]{BCLS}", which points at where the
+name is given, and that is §2. The candidate family — which the note leans on
+for its Remark 6.7 extension (V5) and which CAPSTONE.md restates (V15) — is
+likewise defined in §2 and nowhere in §6.
 
-**Fix.** `\cite[\S 2]{BCLS}`. (Every other BCLS locator in the note is
-correct; see §3 below.)
+**Fix.** `\cite[\S 2]{BCLS}`, or "called $(d,n)$-zonoboxtopes in \cite{BCLS}"
+with no locator. (Every other BCLS locator in the note and in CAPSTONE.md is
+correct; see §3 below — Proposition 6.5, Conjecture 6.6, Remark 6.7,
+Proposition 6.3, Theorem 5.5 and §§5–6 all check out.)
 
 ---
 
@@ -200,9 +209,8 @@ correct; see §3 below.)
 | V46 | 269–273 | "Knauer–Marc quote a reorientation-class weakening because they redefined the symbol, which is why the labeled statement looked absent" | exactly borne out: KM's Prop 3.3 proof says "the induced subgraph of all realizable classes in $\mathcal{G}^{n,r}$", with $\mathcal{G}$ = reorientation classes, while DS4 states the same RS88 result on the labelled set. Two published sources, two levels, same citation. |
 | V47 | 322–326 | catalog table: $(3,5..9)$ = 1, 4, 11, 135, **4382**; $(4,5..8)$ = 1, 1, 11, **2628**, "same" as published | Finschi rank 3: `card = 5:1, 6:4, 7:11, 8:135, 9:4 382`; rank 4: `card = 5:1, 6:1, 7:11, 8:2 628`. FMM13 Table 1 brackets: $r=3$: (1),(4),(11),(135),(4,382); $r=4$: (1),(1),(11),(2,628). KM Table 1 row 3: 1,1,1,4,11,135,482(sic),312356; row 4: …,11,2628,9276595. All three agree except the single KM typo. |
 | V48 | 468–472, 1332–1339 | "FMM13's 9,276,601 (DCG 49 (2013), Table '**existing1**', at both (4,9) and (5,9))" | the LaTeX label is carried into the extracted text: `[TABLE 1 CAPTION] The numbers of simple oriented matroids … [label: existing1]`, and 9,276,601 appears at $r=4,n=9$ and $r=5,n=9$ of that table. Locator, label and both cells confirmed. |
-| V49 | 1334–1338 | FMM13's "reference for the database is [FF] … 'A database of oriented matroids by Finschi and Fukuda [FF] …'" | FMM13 body: "Since Finschi and Fukuda developed a database of oriented matroids~\cite{FF,FF02} containing non-uniform ones, the realizability classification of larger oriented matroids including non-uniform case has begun." (paraphrase accurate; the exact sentence our note quotes is from the databases section and was not located verbatim in the extracted LaTeX — see N13) |
-| V50 | 1324–1329 | Finschi changelog quotation | verbatim (V33) |
-| V51 | `ai/omreal/SCOPING.md`-derived ground truth reused in `OMGAMMA.md`/`CORPUS.md`: FMM13 prints the $(4,9)$ realizable-uniform cell as "unknown (unknown)" | FMM13 **Table 2** (label `existing1_realizable`, caption "The numbers of simple **realizable** oriented matroids … brackets are those of uniform realizable"): `r = 4 || … n = 9 [col 8]: unknown / (unknown)`. Confirmed — and note this is a *different table* from V25's, which the pre-fix corpus could not distinguish. |
+| V49 | 1324–1329 | Finschi changelog quotation | verbatim (V33) |
+| V50 | 1332–1339 and `CORPUS.md` §6.1 | FMM13 prints the $(4,9)$ **realizable**-uniform cell as "unknown (unknown)" | FMM13 **Table 2** (label `existing1_realizable`, caption "The numbers of simple **realizable** oriented matroids … brackets are those of uniform realizable"): `r = 4 || … n = 9 [col 8]: unknown / (unknown)`. Confirmed — and note this is a *different table* from V25's, which the pre-fix corpus could not distinguish. |
 
 ---
 
