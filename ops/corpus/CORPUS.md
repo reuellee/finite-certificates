@@ -137,21 +137,50 @@ metadata + abstract. Years 1998–2026.
 | 5 | this repo's own copies of primary sources | Knauer–Marc LaTeX source, FMM13 LaTeX source, three Finschi catalog pages |
 | 1 | EJC Dynamic Survey **DS4, "Oriented Matroids Today" (v4, 2024)** | the survey PDF, text-extracted locally with `pypdf` — *not* through any cloud OCR |
 
-Selection: 5 hand-verified seed arXiv IDs (1204.0645 FMM13,
+Selection: **6 hand-verified seed arXiv IDs** (1204.0645 FMM13,
 2002.11403 Knauer–Marc, 2509.21286 Maxout Polytopes, 2503.02336 NumPSLA,
-1408.0688 Miyata–Padrol) plus **33 topic queries** covering oriented
-matroid theory and realizability, final polynomials, chirotopes and
-pseudoline arrangements, realization spaces, order types, tope graphs
-and partial cubes, simplicial arrangements, polytope combinatorics and
-f-vectors, neighborly and projectively-unique polytopes, zonotopes,
-maxout / tropical neural networks, and the Tier-2 scouting targets
-(covering codes, rectilinear crossing number, empty hexagon, circulant
-Hadamard, Costas arrays, biplanes, isomorph-free generation, Hirsch).
-The harvest returned 549 distinct arXiv records; the **220** highest-scoring
-by a keyword relevance score were indexed (plus the 5 repo copies and DS4,
-giving 226); full text was attempted for the top
-55 and succeeded for 53 (one arXiv paper has neither native HTML nor an
-ar5iv conversion).
+1408.0688 Miyata–Padrol, and 2008.01032 Curto–Langdon–Morrison, added
+because `CITATION_AUDIT.md` C1 turns on what that paper does and does not
+say) plus **121 topic queries** — up from 33 — grouped as:
+
+* **oriented matroid theory and realizability** (27 queries): realization
+  spaces, single-element extensions, Euclideanness, non-realizability,
+  matroid polytopes, topes, OM programming, Mnëv–Sturmfels universality,
+  stretchability, wiring diagrams, line and hyperplane arrangements,
+  pseudohyperplanes, COMs, lopsided sets, shellability;
+* **polytope combinatorics and f-vectors** (17): flag f-vectors, the
+  cd-index, the g-theorem, cyclic and simplicial polytopes, combinatorial
+  types, Minkowski sums, zonotopes, generalized permutohedra, fiber and
+  secondary polytopes, projectively unique polytopes;
+* **mutation graphs** (8): mutations of oriented matroids, flip graphs of
+  triangulations and their connectivity, simplicial cells, Ringel's
+  homotopy theorem, reorientation classes, local-move connectivity;
+* **chirotopes and Grassmann–Plücker** (9): three-term relations,
+  biquadratic final polynomials, the positive Grassmannian, matroid
+  stratification, tropical Grassmannians, valuated matroids, positroids;
+* **maxout and tropical neural-network polytopes** (8): maxout networks,
+  neural-network and ReLU polytopes, linear regions, expressivity of
+  piecewise-linear maps, tropical polynomials and Newton polytopes;
+* **open-problem surveys, catalogs and exhaustive computation** (19):
+  exhaustive enumeration, computer-assisted proof, SAT-based combinatorial
+  search, canonical augmentation and orderly generation, order-type
+  databases, crossing numbers, Erdős–Szekeres, plus `cat:cs.CG` and
+  `cat:math.CO` sweeps in these areas;
+* the original **Tier-2 scouting targets**, unchanged (covering codes,
+  rectilinear crossing number, empty hexagon, circulant Hadamard, Costas
+  arrays, biplanes, isomorph-free generation, Hirsch).
+
+The harvest returned **1,887** distinct arXiv records (up from 549),
+spanning 1994–2026. `CORPUS_BUDGET` is 2,000, so **all** of them were
+indexed rather than a top slice — the keyword relevance score now decides
+only which get full text, not which get in. Full text was attempted for
+the top `FULLTEXT_BUDGET = 330`.
+
+**Brass–Moser–Pach is not here and cannot be.** *Research Problems in
+Discrete Geometry* is a Springer book with no open full text; the brief
+asked for its chapters "where obtainable" and they are not. DS4 v4 covers
+the oriented-matroid open problems it would have supplied, and does so
+with a 2024 revision date.
 
 **Deliberately NOT indexed: this program's own notes.** `OMGAMMA.md`,
 `CAPSTONE.md`, `SCOPING.md`, `omgamma-note.tex` and `maxout35note.tex`
@@ -163,9 +192,18 @@ are absent.
 `Disallow: /`; that directive governs crawlers, while the arXiv API
 manual documents `export.arxiv.org/api/query` as the sanctioned
 programmatic interface and asks for one request per 3 seconds, which is
-what we did, with a contact address in the User-Agent.
+what we did, with a contact address in the User-Agent — 122 API calls at
+3 s for this harvest.
 `arxiv.org/robots.txt` explicitly `Allow`s `/abs`, `/pdf` and `/html`
-with `Crawl-delay: 15`; we fetched only `/html`, at 15 s, 55 times.
+with `Crawl-delay: 15`; we fetched only `/html`, at 15 s, and fell back to
+`ar5iv.labs.arxiv.org` at 6 s for papers predating native arXiv HTML.
+**Two hosts were newly crawled this run and both robots.txt files were read
+first**: `finschi.com/robots.txt` is `allow: /math` above `disallow: /`, so
+`/math/om/…` is permitted and everything else is not, and
+`combinatorics.org/robots.txt` disallows only a named list of commercial
+crawlers (GPTBot, Amazonbot, Bytespider, Yandexbot, Barkrowler,
+meta-externalagent) of which this is not one. Neither publishes a
+`Crawl-delay`; we used 10 s anyway.
 `/e-print` and `/src` are `Disallow`ed and were never touched; no
 requester-pays S3 bulk access was used. Author licences vary and many
 arXiv papers carry the non-exclusive licence, which does not grant
@@ -176,12 +214,19 @@ and nothing is republished. That is also why the teardown in §7 matters.
 Reproduce with:
 
 ```
-python ops/corpus/build_corpus.py harvest       # ~2 min, cached
-python ops/corpus/build_corpus.py fetch         # ~15 min at the robots.txt delay
-python ops/corpus/build_corpus.py emit --gcs-prefix gs://fc-litcorpus-ebd5a273
+python ops/corpus/build_corpus.py harvest       # ~7 min, cached (122 API calls at 3 s)
+python ops/corpus/build_corpus.py fetch         # ~2 h at the robots.txt delay; resumable
+python ops/corpus/build_corpus.py emit --gcs-prefix gs://fc-litcorpus-ebd5a273   # ~1 min
 python ops/corpus/ingest.py upload
 python ops/corpus/ingest.py import --reconcile FULL
 ```
+
+**`fetch` now keeps the raw HTML** in `cache/raw/`, and `emit` re-extracts
+from it. That is why the table fix of §8 could be applied to every already
+fetched paper without re-crawling a single one at 15 s, and why the next
+extraction change will be free too. The only documents it cannot help are
+the PDFs: `pypdf` returns a flat character stream with no cell structure,
+so the EJC dynamic surveys keep the old defect and say so in §8.
 
 ---
 
@@ -210,13 +255,26 @@ serving config          projects/159398774377/locations/global/collections/
 ```
 
 Billing-relevant fields, as read back from the live resources
-(`GET` output, 2026-08-01):
+(`GET` output, re-read **after the scale-up re-import**, which is exactly
+when an unwanted parser would appear):
 
 * data store: `documentProcessingConfig.defaultParsingConfig.digitalParsingConfig: {}`
-  present; `configurableBillingApproach` **absent**.
+  present and *alone* — no `layoutParsingConfig`, no `ocrParsingConfig`, no
+  `parsingConfigOverrides`; `configurableBillingApproach` **absent**.
 * engine: `searchEngineConfig.searchTier: SEARCH_TIER_STANDARD`,
   `searchAddOns: [SEARCH_ADD_ON_LLM]`; `configurableBillingApproach`
   **absent**; `requiredSubscriptionTier` **absent**.
+
+Two fields have appeared on the engine since the first build that we did
+not set, and they are recorded here for the same reason §1.1 records the
+staging buckets — so that "nothing else changed" stays true:
+`modelConfigs: {"gemini-3.1-pro-preview": "MODEL_ENABLED"}` and
+`marketplaceAgentVisibility: SHOW_ALL_AGENTS`. Neither has its own SKU;
+the first only names which model serves the Advanced Generative Answers
+call that `--answer` already pays for, and the second is a console
+visibility setting. `observabilityConfig.observabilityEnabled: true` is
+still there, still a server-side default, still nowhere near the 50 GiB
+Cloud Logging free allotment at tens of queries a month.
 
 Import operations (both `done: true`, zero errors):
 
@@ -331,12 +389,21 @@ volume, so this is a defensible upgrade if longer verbatim passages turn
 out to matter more than the snippet + `--answer` combination does —
 change `searchTier` on the engine and nothing else.
 
+**The CLI shouts about numbers, on purpose.** Any `--answer` whose text
+contains a digit is followed by a block telling the caller not to quote it,
+naming the labelled-table format to grep for, and pointing at §6.4 and §6.7.
+That is not decoration: §6.7 measures the answer layer still crossing
+between two tables of one document after the extractor was fixed.
+
 Companion scripts:
 
-* `ops/corpus/build_corpus.py` — harvest / fetch / emit (§2).
+* `ops/corpus/build_corpus.py` — harvest / fetch / emit (§2), including the
+  table renderer of §8.
 * `ops/corpus/ingest.py` — `upload`, `import`, `status`, `count`, and
   `size`, which prints the measured real-money bytes and their monthly cost.
 * `ops/corpus/websearch_baseline.py` — the control arm of §6.
+* `ops/corpus/CITATION_AUDIT.md` — not a script: the output of pointing this
+  corpus at this repository's own citations. 73 claims, 2 contradicted.
 
 ---
 
