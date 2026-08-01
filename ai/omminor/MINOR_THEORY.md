@@ -184,7 +184,8 @@ the property measured below.
 
 > **Lemma K (contractions cannot witness at (4,9)).** For a uniform rank-4
 > chirotope on 9 elements, χ/e is a uniform rank-3 chirotope on 8 elements.
-> Every one of the 135 such classes is realizable.
+> Every one of the 135 such classes is realizable. *(Conditional on the
+> completeness of the (3,8) catalog; see §10.)*
 >
 > *Verification, not assumption.* `ai/omreal/certs_3_8.jsonl` holds 135
 > records, one per class of the complete (3,8) catalog, each an explicit
@@ -207,7 +208,8 @@ Then:
 
 > **Theorem (n ≤ 9, rank 4).** A uniform rank-4 oriented matroid on n ≤ 9
 > elements is non-realizable **iff** it has a minor isomorphic to one of the
-> 24 non-realizable (4,8) classes or to a member of N₉.
+> 24 non-realizable (4,8) classes or to a member of N₉. *(Conditional on the
+> completeness of the (4,8) and (3,8) catalogs; see §10.)*
 
 *Proof.* (⇐) is Lemmas D and C applied repeatedly along the minor, plus the
 fact that the 24 and the members of N₉ are non-realizable, which is
@@ -297,6 +299,7 @@ they are **not** excluded at random:
 
 > **Proposition R.** If some deletion χ∖e of a uniform rank-4 chirotope on 9
 > elements is non-realizable, then χ has a biquadratic final polynomial.
+> *(Conditional on the completeness of the (4,8) catalog; see §10.)*
 >
 > *Proof.* χ∖e is a uniform rank-4 class on 8 elements, and that cell is
 > completely classified: `certs_4_8.jsonl` settles all 2,628 classes, 2,604
@@ -492,6 +495,9 @@ non-realizable classes that *do* have a witness:
 | BFP support (terms), mean / median / range | **73.5** / 74 / [41, 96] | **61.7** / 62 / [27, 96] |
 | BFP total weight, mean | **249,833** | 106,676 |
 
+(The two BFP-shape rows are measured on 200-class random subsamples of each
+population, not the full populations; the other rows are exhaustive.)
+
 * **Depth, mutable-basis count and stabilizer do not separate the two
   populations.** The stabilizer is the minimum possible, order 2, for
   1,272/1,279 minimal classes — they are as generic as anything else in the
@@ -557,8 +563,9 @@ canonicalizations — it is ~83 ms/class.)
 ### 8.2 What fraction of the sweep's BFP searches was avoidable
 
 BFP fires in `sweep49.py` only when the wall crossing fails. In the frozen
-prefix that is at most 14,396 + 60 + 575 = 15,031 of 1,445,227 classes,
-**≤1.04%**. Of the certified non-realizable ones, 91.1% would have been
+prefix that is 14,396 NR + 60 residue plus the repair successes — 575 at the
+wave-15 log line, ≈775 scaled to the freeze — so ≈15,200 of 1,445,227
+classes, **≈1.05%**. Of the certified non-realizable ones, 91.1% would have been
 answered by the minor test instead. So:
 
 > **fraction of all (4,9) classes whose BFP search a minor test could have
@@ -593,7 +600,8 @@ the closure measurement, and that it yields Proposition R.
 **Size of the cell.** Uniform rank-4 class counts: (4,6) 1, (4,7) 11, (4,8)
 2,628, (4,9) 9,276,595 — successive ratios 11, 239, 3,530, i.e. the ratio
 itself grows by 15–22× per element added. Equivalently log₂(count) goes
-3.46 → 11.36 → 23.14, with second differences +7.90 → +11.78. Extrapolating
+3.46 → 11.36 → 23.14, with first differences +7.90 → +11.78 (second
+differences +4.44 → +3.88). Extrapolating
 either way gives a next ratio of 3×10⁴–8×10⁴ and
 
 > **(4,10) ≈ a few × 10^11 classes** (take 10^11–10^12 as the honest band;
@@ -616,8 +624,9 @@ classes:
 
 So the blocker is not exotic — it is a multi-hundred-core-year traversal, a
 sort-merge dedup over 8 TB of keys, and 80 TB of realizations if the
-parent-crossing walk is used at all. The (4,9) cell closed on a laptop
-overnight at ~86 core-hours; n = 10 is 4–5 orders of magnitude beyond that.
+parent-crossing walk is used at all. The (4,9) cell is closing on a laptop
+overnight (~86 core-hours projected; the sweep was still running when this
+was written — see §0); n = 10 is 4–5 orders of magnitude beyond that.
 And **no filter helps with the part that is expensive**: a filter decides
 classes, it does not help you enumerate them. Applied as a universal
 pre-filter the minor test would itself cost 5×10^11 × ~4 ms ≈ 5.6×10^5
@@ -743,7 +752,8 @@ with a reader that consumes only complete lines and records byte offsets.
 | `data/certs_4_5.jsonl`, `certs_4_6.jsonl`, `certs_4_7.jsonl`, `certs_3_7.jsonl` | the new small-cell certificates (tracked) |
 | `data/lifted_certs.jsonl`, `data/lifted_canaries.jsonl` | the 80 lifted certificates and the 5 sabotages (tracked) |
 | `data/*.state.json` | the pinned data prefix — byte offsets, line counts, verdict tallies (tracked) |
-| `data/report_sweep.json`, `data/report_uniform.json`, `data/rank3check.json`, `data/fastminor.json`, `data/verify_minimal.json` | machine-readable results (tracked) |
+| `data/report_sweep.json`, `data/report_uniform.json`, `data/rank3check.json`, `data/fastminor.json`, `data/verify_minimal_{sweep,ext,uniform}.json` | machine-readable results (tracked) |
+| `data/cat48_keys.npz`, `data/cat48_lines.txt` | the (4,8) catalog index used by `analyze.py`/`canaries.py` — derived from `ai/omreal/certs_4_8.jsonl` and the (4,8) catalog; no generating script was kept (content cross-verified against the certificates in review) |
 
 Large regenerable artifacts are gitignored (`data/harvest_*.jsonl`,
 `data/minors_*.jsonl`, `data/certs_minimal_*.jsonl`, the identification
