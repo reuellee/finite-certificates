@@ -243,7 +243,7 @@ For each certified non-realizable (4,9) class, all nine deletions were
 computed, canonicalized, and identified against the (4,8) catalog; likewise
 all nine contractions against the (3,8) catalog.
 
-### 4.1 The two corpora
+### 4.1 The corpora
 
 | corpus | non-realizable classes | with ≥1 non-realizable **deletion** | fraction | 95% Wilson |
 |---|---|---|---|---|
