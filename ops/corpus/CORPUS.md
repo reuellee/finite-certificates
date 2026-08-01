@@ -37,6 +37,21 @@ Measured outcomes are folded in as **CONFIRMED** notes.)
 | 1 | one GCS bucket, plain text + one JSONL | `us-central1`, standard class | Cloud Storage — **real money** |
 | 2 | one Discovery Engine data store | `global`, `GENERIC`, `SOLUTION_TYPE_SEARCH`, `CONTENT_REQUIRED` | Agent Search index storage — credit-covered |
 | 3 | one Discovery Engine search engine | `global`, `SEARCH_TIER_STANDARD`, add-on `SEARCH_ADD_ON_LLM` | Agent Search queries — credit-covered |
+| 4 | **two staging buckets created by the service, not by us** | `us-central1` and `us` | Cloud Storage — real money, **18 bytes total** |
+
+Item 4 was not planned and is worth naming because it means "nothing
+else was created" would have been false. Every `documents:import`
+response carries an `errorConfig.gcsPrefix`, and Discovery Engine
+auto-provisions the buckets behind it inside *this* project:
+
+```
+gs://159398774377_411525025_us_central1_import_document    12 bytes
+gs://159398774377_411525025_us_import_content               6 bytes
+```
+
+Eighteen bytes. At $0.020/GB/month that is $4 × 10⁻¹³ a month, so it
+changes no number in this report — but it is ours, it is billable in
+principle, and §7 says what to do with it.
 
 No VM, no `aiplatform.googleapis.com` call, nothing under
 `E:/Projects/tools/gemini`.
@@ -219,6 +234,40 @@ free digital-parser path.
 
 Document ids are `[A-Za-z0-9_-]` only, so `2509.21286` is indexed as
 `arxiv_2509_21286`; a literal dot is rejected.
+
+### The record shape, and one deviation from the brief
+
+One real line of `out/metadata.jsonl` (the file that is uploaded and
+imported):
+
+```json
+{"id": "arxiv_0704_3424",
+ "structData": {"title": "A New Proof of Pappus's Theorem",
+                "authors": "Jeremy J. Carroll", "year": 2007,
+                "arxiv_id": "0704.3424",
+                "url": "https://arxiv.org/abs/0704.3424",
+                "venue": "math.CO, math.MG",
+                "source": "arXiv API + arxiv.org/html",
+                "has_full_text": true, "doc_chars": 134293},
+ "content": {"mimeType": "text/plain",
+             "uri": "gs://fc-litcorpus-ebd5a273/docs/arxiv_0704_3424.txt"}}
+```
+
+Those nine `structData` keys are the complete list of fields available
+to a `filter=` expression or a facet.
+
+**The brief asked for `full_text` in the JSONL; it is not there, by
+necessity.** Discovery Engine's unstructured-with-metadata format takes
+document content only as `content.uri`, and each metadata row is capped
+at 1 MB while the median full-text document here is 70,073 characters
+and the largest is over 200,000. So the full text is the referenced
+`.txt` object — which is what Discovery Engine actually indexes, chunks
+and snippets — and `structData` carries `has_full_text` so a caller can
+tell an abstract-only record from a full one (the CLI prints it on every
+hit). `build_corpus.py` also writes `out/corpus.jsonl`, which *does*
+carry `full_text` inline in exactly the shape the brief describes; it is
+the portable local master and is deliberately not uploaded, since it
+would double the bucket for no indexing benefit.
 
 ---
 
@@ -432,7 +481,11 @@ leading empty cells** and starts at `card = r`, so rank 4 runs
 card = 4…10 and **9,276,595 is the 9-element count**, `unknown` the
 10-element one. Flattened to text the alignment is gone, and the model
 counted from the header and landed one column late. `1142` is the same
-class of error across two different FMM13 tables.
+class of error across two different FMM13 tables: `grep -rl 1142` over
+all 226 documents hits FMM13 (both extractions) and two unrelated
+papers, and in FMM13 it sits in the row `d = 4 & … & unknown (1142)`
+immediately before the row `d = 5` — a table indexed by *dimension*, not
+by rank.
 
 This is worth stating plainly because it is the cell the whole flagship
 target is about: **the (4,9) uniform class count IS known** — 9,276,595
@@ -441,10 +494,22 @@ per Finschi and Knauer–Marc, 9,276,601 per FMM13 (the discrepancy
 it is only the *realizable/non-realizable split* of that class that is
 unknown. The corpus answer inverted exactly that.
 
-Incidental gain: the corpus settled the provenance of the discrepancy in
-one query. 9,276,595 comes from Finschi's catalog page, which
-Knauer–Marc copy; FMM13's 9,276,601 is independent. Only the primary
-sources were needed, and both were in the index.
+Incidental gain, stated carefully: **the corpus put both primary sources
+for the count discrepancy in front of us in one query** — Finschi's
+catalog page and FMM13 — which is what a literature index is for. The
+determination that 9,276,595 is Finschi's (4,9) value, copied by
+Knauer–Marc, while FMM13's 9,276,601 is independent, was then made *by
+hand*: a grep across the indexed text and a pass over the raw
+`om_49.html` cell structure. The search tool found the evidence; it did
+not draw the conclusion, and on this question it drew the wrong one.
+
+The alignment reading is not a guess. Knauer–Marc's Table 1 states the
+same thing with explicit blanks: row 4 is
+`4 & & & 1 & 1 & 1 & 11 & 2628 & 9276595 & ?` against an n = 2…10
+header, putting 9,276,595 at **n = 9** with no counting required; and
+row 3, `3 & & 1 & 1 & 1 & 4 & 11 & 135 & 482 & 312356`, puts 482 at
+n = 9 — the dropped-digit erratum for 4382 that `OMGAMMA.md` §1 already
+records. Two independent sources, same column assignment.
 
 ### 6.5 Control arm: the same questions in a general web search
 
@@ -578,6 +643,11 @@ curl -H "Authorization: Bearer $TOKEN" -H "X-Goog-User-Project: $PROJECT" \
 # 3. the bucket, contents and all
 gcloud storage rm -r gs://fc-litcorpus-ebd5a273
 
+# 3b. the two staging buckets Discovery Engine auto-created in this project
+#     (18 bytes between them; they reappear if you ever import again)
+gcloud storage rm -r gs://159398774377_411525025_us_central1_import_document
+gcloud storage rm -r gs://159398774377_411525025_us_import_content
+
 # 4. verify nothing is left
 gcloud storage ls gs://fc-litcorpus-ebd5a273 2>&1 | tail -1     # expect: bucket does not exist
 curl -H "Authorization: Bearer $TOKEN" -H "X-Goog-User-Project: $PROJECT" "$BASE/dataStores"
@@ -588,9 +658,17 @@ Local artifacts (`ops/corpus/cache/`, `ops/corpus/out/`) are gitignored
 and hold third-party full text; delete them with the cloud side if the
 corpus is being retired rather than rebuilt.
 
-Nothing else was created. No VM, no service account, no API key, no
-`aiplatform` resource. `discoveryengine.googleapis.com` was already
-enabled before this work and is left enabled.
+Nothing else was created **by us**: no VM, no service account, no API
+key, no `aiplatform` resource. The only unplanned resources are the two
+Discovery Engine import-staging buckets in §1.1, 18 bytes in total,
+removed by step 3b. `discoveryengine.googleapis.com` was already enabled
+before this work and is left enabled. The other buckets in this project
+(`lee-tf-state-*`, `*-sweeps`, `sae-identifiability-artifacts-*`,
+`tf-state-lee-*`) predate this work and are untouched.
+
+Note also that the 10 GiB Agent Search index-storage free tier is
+per-account: while this data store exists it consumes 0.0056 GiB of a
+tier shared with any other Agent Search app on the billing account.
 
 ---
 

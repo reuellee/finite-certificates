@@ -22,9 +22,9 @@ WHAT THIS COSTS  (also printed by --cost-note)
                   1,000 user-input queries.  This SKU is NOT covered by the
                   free-query tier: roughly $0.004 per --answer call.
   at rest         Agent Search index storage, $5/GiB/month above a 10 GiB
-                  per-account free tier; this corpus is ~0.03 GiB, so $0.
-                  Plus a GCS bucket of the same size, ~$0.0006/month, which
-                  is the only real-money line.
+                  per-account free tier; this corpus measures 0.0056 GiB,
+                  so $0.  Plus a GCS bucket of the same size, measured at
+                  $0.00012/month, which is the only real-money line.
   never billed    the OCR parser and the Layout Parser ($10 / 1,000 pages)
                   are NOT enabled on this data store.
   All Discovery Engine SKUs above draw on the GenAI App Builder credit.
@@ -43,6 +43,16 @@ import textwrap
 import urllib.error
 import urllib.request
 
+# The corpus is full of Ziegler, Montufar, Jesus De Loera and LaTeX math, and
+# the default Windows console codec is cp1252.  Without this, printing a hit
+# raises UnicodeEncodeError -- which would break the documented one-liner for
+# any caller who has not set PYTHONIOENCODING.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):        # not a reconfigurable stream
+        pass
+
 PROJECT = os.environ.get("CORPUS_PROJECT", "project-ebd5a273-53ea-4c8b-81a")
 ENGINE = os.environ.get("CORPUS_ENGINE", "finite-certificates-lit-search")
 COLLECTION = os.environ.get("CORPUS_COLLECTION", "default_collection")
@@ -55,10 +65,11 @@ COST_NOTE = (
     "COST: --query bills Agent Search Search-Standard ($1.50/1k queries, "
     "first 10k/account/month free -> $0). --answer additionally bills "
     "Advanced Generative Answers (+$4.00/1k, NOT free-tier eligible, "
-    "~$0.004/call). Index storage ~0.03 GiB, inside the 10 GiB/account free "
-    "tier. Layout Parser and OCR are not enabled. All Discovery Engine SKUs "
-    "draw on the GenAI App Builder credit; the only real-money line is the "
-    "~30 MB GCS bucket at ~$0.0006/month.")
+    "~$0.004/call). Index storage 0.0056 GiB measured, inside the 10 GiB/"
+    "account free tier -> $0. Layout Parser and OCR are NOT enabled on this "
+    "data store. All Discovery Engine SKUs draw on the GenAI App Builder "
+    "credit; the only real-money line is the 5.7 MB GCS bucket at "
+    "$0.00012/month. See ops/corpus/CORPUS.md section 1.")
 
 
 def token() -> str:

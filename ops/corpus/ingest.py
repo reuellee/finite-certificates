@@ -26,6 +26,16 @@ import sys
 import urllib.request
 from pathlib import Path
 
+# The corpus is full of Ziegler, Montufar, Jesus De Loera and LaTeX math, and
+# the default Windows console codec is cp1252.  Without this, printing a hit
+# raises UnicodeEncodeError -- which would break the documented one-liner for
+# any caller who has not set PYTHONIOENCODING.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):        # not a reconfigurable stream
+        pass
+
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
 
