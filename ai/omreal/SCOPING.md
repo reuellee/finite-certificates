@@ -866,8 +866,134 @@ anything this is pessimistic — a searched parent is a generic point of its
 realization space, whereas the real walk arrives already pressed against
 the wall it just crossed.
 
-<!--PROBE-->
+`treewalk.py probe --rows 1200`, uniform over all 9 276 595 rows:
+
+| depth of the row | probed | parent realized | **crossed** |
+|---|---|---|---|
+| 8-11 | 9 | 9 | 9 (100.0%) |
+| 12-15 | 146 | 144 | 142 (98.6%) |
+| 16-19 | 609 | 585 | 577 (98.6%) |
+| 20-23 | 409 | 399 | 394 (98.7%) |
+| 24-27 | 27 | 24 | 23 (95.8%) |
+| **all** | **1200** | **1161** | **1145 (98.62%)** |
+
+**The crossing success rate is flat in depth.** It does not decay towards
+the leaves, which is what would have killed the idea. Crossing cost here is
+39.4 ms rather than the walk's 26.1 ms, exactly as expected: the probe
+starts from a searched, generic parent rather than one already pressed
+against the wall.
+
+And the 1.38% that do not cross is close to the **2.10%** non-realizable
+rate measured in S6.2 — consistent with the failures being, essentially,
+the classes that are non-realizable and therefore *cannot* be crossed to.
+All 1145 certificates were accepted by `checkcert.py`.
 
 ### 11.4 What this does to the cost
 
-<!--WALKCOST-->
+Per-class cost falls from **1 530 ms** (search cascade A-E) to **26.5 ms**
+(one crossing), a factor of **58**, and it falls hardest exactly where the
+old pipeline was most expensive: stage D, which was 79% of the search
+sweep's cost, exists only to find configurations the tree hands over for
+free.
+
+| | search cascade (S7) | tree walk (S11) |
+|---|---|---|
+| per class | 1 530 ms | **26.5 ms** |
+| whole catalogue | 3 940 core-hours | **~70 core-hours** |
+| on GCP spot @ $0.0125 | $49 | **~$0.90** |
+| on this laptop, 5 effective cores | 33 days | **~14 hours** |
+
+The walk only ever emits REALIZABLE certificates. Classes it cannot cross
+still need the old machinery, but there are far fewer of them and they are
+concentrated on the non-realizable side:
+
+1. **walk** the tree, one crossing per class - ~70 core-hours
+2. **BFP** on the walk's failures (~2-3%, i.e. essentially the
+   non-realizable classes) at ~0.25 s - ~16 core-hours
+3. **ladder** (C/E/D of S6) on whatever BFP leaves - sized by the residue,
+   see S12
+
+Two engineering notes for a real run. **Memory**: the walk needs the
+parent's matrix when it processes a child, and observed entries reach
+2^16, so a flat int32 array of all realizations is 9.28M x 36 x 4 B =
+1.34 GB - fine, but the tidier form is to process one depth wave at a time
+and keep only the frontier. **Parallelism**: within a depth wave every row
+is independent, so the walk parallelises with a barrier between waves -
+27 barriers. That makes it a good fit for one multi-core box and a poor
+fit for GitHub Actions, which has no shared state between jobs.
+
+---
+
+## 12. Revised plan under a $100/month total cloud budget
+
+The budget ceiling arrived after §8 was written, and §8's recommendation
+($315 of spot for a 3 940 core-hour search sweep) is dead. It should be:
+that plan was buying with money what it should have bought with method.
+
+### 12.1 The ceiling as a forcing function — it worked twice
+
+| what | residue / cost | bought with |
+|---|---|---|
+| build + repair sweep | 17.6% residue | — |
+| + prefix backtracking | 8.25% | insight |
+| + wall crossing | 3.25% | insight |
+| + heavy stage D | 0.93% | **compute** |
+| + mutation warm-start | 0.37% | insight |
+| **+ tree walk** | **1 530 -> 26.5 ms/class** | **insight** |
+
+Every large gain in this project came from attacking one specific failure
+mode — the search realizing a mutant off by exactly one basis — and the
+only step that was bought with compute (stage D) is also the one the tree
+walk makes largely redundant. The $315 plan was the residue of not having
+had the second idea yet.
+
+### 12.2 The revised sweep
+
+| phase | classes | per class | core-hours |
+|---|---|---|---|
+| 1. tree walk | 9 276 595 | 26.5 ms | **~70** |
+| 2. BFP on walk failures | ~230 000 (2.5%) | ~250 ms | **~16** |
+| 3. ladder on what BFP leaves | see §12.3 | ~19 s | **?** |
+
+Phases 1 and 2 are **~86 core-hours**, which is:
+
+* **$1.10** on n2-highcpu spot at $0.0125/core-hour — ~1% of one month's
+  ceiling;
+* **~17 hours** on this laptop at 5 effective cores — one overnight run,
+  **$0**;
+* well inside a single GitHub Actions wave for phase 2, though phase 1's
+  27 depth-wave barriers make Actions a poor fit for the walk itself.
+
+**Recommendation: run phases 1 and 2 on the laptop overnight, for nothing.**
+Cloud is no longer needed for the bulk of this problem. Keep spot in
+reserve for phase 3 and for re-verification passes, where the whole
+programme's remaining spend is measured in single dollars against a $100
+ceiling.
+
+### 12.3 What is actually left — the theory problem
+
+<!--THEORY-->
+
+### 12.4 If the residue does not yield
+
+If phase 3 plateaus, the honest deliverable is not a cheaper sweep — it is
+the plateau. State what the survivors have in common and publish them as a
+candidate family. A BFP-resistant uniform oriented matroid at **n = 9**
+would be three to five elements below the smallest known example, and
+finding one is a better result than counting the other 9.27 million.
+
+The theory that would be needed, stated as a specification:
+
+* **a decision method for uniform rank-4 realizability whose failure is
+  informative.** Realization search and biquadratic final polynomials both
+  fail *silently* — neither tells you which it is. A method whose negative
+  answer is itself a certificate (a Positivstellensatz witness of a degree
+  we do not currently search, or a SAT/SMT encoding with a DRAT proof) is
+  what converts a residue list into a closed cell.
+* Second best, and much cheaper: **a structural theorem for the survivors**
+  — e.g. "a uniform rank-4 OM on 9 elements all of whose 8-element
+  deletions are realizable and which has no biquadratic final polynomial is
+  realizable." Every residue class we have examined satisfies that
+  hypothesis (§6.3), so such a theorem would close the cell outright, and a
+  counterexample to it would be the interesting object. This is the
+  cheapest possible next question and nobody appears to have asked it.
