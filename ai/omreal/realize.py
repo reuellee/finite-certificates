@@ -413,7 +413,7 @@ def _build(chi, geom, rng, rerolls=6):
     return X
 
 
-def _search_float(chi, geom, rng, sweeps=40, rerolls=6):
+def _search_float(chi, geom, rng, sweeps=40, rerolls=6, wall_budget=4):
     n, r = geom.n, geom.r
     X = _build(chi, geom, rng, rerolls=rerolls)
     best = len(_wrong(chi, X, geom))
@@ -429,9 +429,11 @@ def _search_float(chi, geom, rng, sweeps=40, rerolls=6):
             if nx > 1e-12:
                 X[:, int(p)] = x / nx
         w = len(_wrong(chi, X, geom))
-        if w == 1 and _cross_wall(chi, X, geom, rng):
-            return X, 0
-        w = len(_wrong(chi, X, geom))
+        if w == 1 and wall_budget > 0:
+            wall_budget -= 1
+            if _cross_wall(chi, X, geom, rng):
+                return X, 0
+            w = len(_wrong(chi, X, geom))
         if w == 0:
             return X, 0
         if w < best:
@@ -472,7 +474,7 @@ def _rationalise(X, chi, geom, denoms=(8, 32, 256, 4096, 65536,
     return None, None
 
 
-def realize(chi, geom, tries=6, seed=0, sweeps=40, rerolls=6):
+def realize(chi, geom, tries=6, seed=0, sweeps=40, rerolls=6, wall_budget=4):
     """Try to realize the chirotope `chi` (int8 +-1, colex order).
 
     Returns (Z, info) with Z an integer (r,n) numpy array whose exact
@@ -494,7 +496,8 @@ def realize(chi, geom, tries=6, seed=0, sweeps=40, rerolls=6):
             if work[0] < 0:
                 work = (-work).astype(np.int8)
         info['tries'] = t + 1
-        X, wrong = _search_float(work, geom, rng, sweeps=sweeps, rerolls=rerolls)
+        X, wrong = _search_float(work, geom, rng, sweeps=sweeps, rerolls=rerolls,
+                                 wall_budget=wall_budget)
         info['best_wrong'] = min(info['best_wrong'], wrong)
         if wrong:
             continue

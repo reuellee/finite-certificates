@@ -50,17 +50,20 @@ def record_residue(n, r, chi):
             'verdict': 'RESIDUE'}
 
 
-STAGE_A = dict(tries=2, sweeps=15, rerolls=3)      # cheap realization
-STAGE_C = dict(tries=15, sweeps=80, rerolls=8)     # expensive realization
+STAGE_A = dict(tries=2, sweeps=15, rerolls=3, wall_budget=3)
+STAGE_C = dict(tries=8, sweeps=40, rerolls=8, wall_budget=12)
+STAGE_D = dict(tries=60, sweeps=120, rerolls=10, wall_budget=90)
 
 
 def run(CHI, n, r, out, cross=0, quiet=False, progress=250,
-        stage_a=None, stage_c=None, no_stage_c=False):
+        stage_a=None, stage_c=None, stage_d=None, no_stage_c=False,
+        no_stage_d=False):
     """Three-stage cascade, cheapest first:
 
         A  cheap realization search          -> REALIZABLE
         B  biquadratic final polynomial      -> NON_REALIZABLE
-        C  expensive realization search      -> REALIZABLE
+        C  medium realization search         -> REALIZABLE
+        D  heavy realization search          -> REALIZABLE
         -  otherwise                         -> RESIDUE
 
     A and C are the same algorithm at different budgets; B is exact-ish and
@@ -69,16 +72,18 @@ def run(CHI, n, r, out, cross=0, quiet=False, progress=250,
     """
     sa = dict(STAGE_A, **(stage_a or {}))
     sc = dict(STAGE_C, **(stage_c or {}))
+    sd = dict(STAGE_D, **(stage_d or {}))
     geom = rz.Geom(n, r)
     gp = bfpmod.GPSystem(n, r)
     S = {'n': n, 'r': r, 'total': len(CHI), 'REALIZABLE': 0,
          'NON_REALIZABLE': 0, 'RESIDUE': 0,
-         'by_stage': {'A': 0, 'C': 0},
+         'by_stage': {'A': 0, 'C': 0, 'D': 0},
          't_A_hit': 0.0, 't_A_miss': 0.0, 't_B_hit': 0.0, 't_B_miss': 0.0,
-         't_C_hit': 0.0, 't_C_miss': 0.0,
+         't_C_hit': 0.0, 't_C_miss': 0.0, 't_D_hit': 0.0, 't_D_miss': 0.0,
          'n_A_hit': 0, 'n_A_miss': 0, 'n_B_hit': 0, 'n_B_miss': 0,
-         'n_C_hit': 0, 'n_C_miss': 0,
+         'n_C_hit': 0, 'n_C_miss': 0, 'n_D_hit': 0, 'n_D_miss': 0,
          'bfp_support': [], 'denoms': {}, 'stage_a': sa, 'stage_c': sc,
+         'stage_d': sd, 'dur_C': [], 'dur_D': [],
          'cross_checked': 0, 'cross_bfp_on_realizable': 0,
          'cross_realize_on_nonrealizable': 0, 'residue_chi': []}
     fh = open(out, 'w') if out else None
@@ -117,6 +122,7 @@ def run(CHI, n, r, out, cross=0, quiet=False, progress=250,
                 tc = time.perf_counter()
                 Z, info = rz.realize(chi, geom, seed=1000003 + i, **sc)
                 dc = time.perf_counter() - tc
+                S['dur_C'].append(round(dc, 3))
                 if Z is not None:
                     S['t_C_hit'] += dc
                     S['n_C_hit'] += 1
@@ -124,6 +130,18 @@ def run(CHI, n, r, out, cross=0, quiet=False, progress=250,
                 else:
                     S['t_C_miss'] += dc
                     S['n_C_miss'] += 1
+                    if not no_stage_d:
+                        td = time.perf_counter()
+                        Z, info = rz.realize(chi, geom, seed=31337 + i, **sd)
+                        dd = time.perf_counter() - td
+                        S['dur_D'].append(round(dd, 3))
+                        if Z is not None:
+                            S['t_D_hit'] += dd
+                            S['n_D_hit'] += 1
+                            S['by_stage']['D'] += 1
+                        else:
+                            S['t_D_miss'] += dd
+                            S['n_D_miss'] += 1
         if Z is not None:
             S['REALIZABLE'] += 1
             S['denoms'][info['denom']] = S['denoms'].get(info['denom'], 0) + 1
@@ -157,7 +175,8 @@ def summarise(S):
     print('')
     print('  classes            %d' % tot)
     print('  REALIZABLE         %-9d (%.3f%%)   [stage A %d, stage C %d]'
-          % (R, 100.0 * R / tot, S['by_stage']['A'], S['by_stage']['C']))
+          % (R, 100.0 * R / tot, S['by_stage']['A'],
+             S['by_stage']['C'] + S['by_stage']['D']))
     print('  NON_REALIZABLE     %-9d (%.3f%%)' % (N, 100.0 * N / tot))
     print('  RESIDUE            %-9d (%.3f%%)' % (Q, 100.0 * Q / tot))
     print('  wall               %.1f s   (%.0f ms/class)'
@@ -165,11 +184,19 @@ def summarise(S):
     print('  stage timings (ms per class ENTERING that stage):')
     for st, hit, miss in (('A realize cheap', 'A_hit', 'A_miss'),
                           ('B bfp', 'B_hit', 'B_miss'),
-                          ('C realize hard', 'C_hit', 'C_miss')):
+                          ('C realize medium', 'C_hit', 'C_miss'),
+                          ('D realize heavy', 'D_hit', 'D_miss')):
         nh, nm = S['n_' + hit], S['n_' + miss]
         th, tm = S['t_' + hit], S['t_' + miss]
         print('    %-16s hit %6d @ %8.1f ms   miss %6d @ %8.1f ms'
               % (st, nh, 1000 * th / max(nh, 1), nm, 1000 * tm / max(nm, 1)))
+    for tag in ('C', 'D'):
+        d = sorted(S.get('dur_' + tag) or [])
+        if d:
+            q = lambda f: d[min(len(d) - 1, int(f * len(d)))]
+            print('  stage %s seconds   n=%d  median %.2f  p90 %.2f  p99 %.2f'
+                  '  MAX %.2f  total %.0f s'
+                  % (tag, len(d), q(.5), q(.9), q(.99), d[-1], sum(d)))
     if S['bfp_support']:
         s = S['bfp_support']
         print('  bfp terms          min %d  median %d  max %d'
@@ -196,6 +223,7 @@ def main():
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--out', default=None)
     ap.add_argument('--no-stage-c', action='store_true')
+    ap.add_argument('--no-stage-d', action='store_true')
     ap.add_argument('--cross', type=int, default=0)
     ap.add_argument('--limit', type=int, default=0)
     ap.add_argument('--shard', nargs=2, type=int, metavar=('I', 'K'),
@@ -246,7 +274,8 @@ def main():
     if a.limit:
         CHI = CHI[:a.limit]
     print('=== %s : %d classes ===' % (label, len(CHI)), flush=True)
-    st = run(CHI, n, r, a.out, cross=a.cross, no_stage_c=a.no_stage_c)
+    st = run(CHI, n, r, a.out, cross=a.cross, no_stage_c=a.no_stage_c,
+             no_stage_d=a.no_stage_d)
     st['label'] = label
     summarise(st)
     if a.stats_out:
