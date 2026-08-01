@@ -17,3 +17,9 @@ certs_walk_*.jsonl
 certs_probe.jsonl
 harvest_*.jsonl
 ladder_*.jsonl
+sweep_state/
+sweep_run.log
+sweep_run.err
+canaries_final.log
+gate48.log
+gate39.log

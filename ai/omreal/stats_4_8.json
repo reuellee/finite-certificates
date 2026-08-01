@@ -11,9 +11,9 @@
   "D": 0,
   "E": 0
  },
- "t_A_hit": 62.180265402654186,
- "t_A_miss": 19.732954900246114,
- "t_B_hit": 1.7215524991042912,
+ "t_A_hit": 51.976118605351076,
+ "t_A_miss": 16.504385000327602,
+ "t_B_hit": 1.6005888001527637,
  "t_B_miss": 0.0,
  "t_C_hit": 0.0,
  "t_C_miss": 0.0,
@@ -89,10 +89,10 @@
  "dur_C": [],
  "dur_D": [],
  "dur_E": [],
- "cross_checked": 500,
+ "cross_checked": 0,
  "cross_bfp_on_realizable": 0,
  "cross_realize_on_nonrealizable": 0,
  "residue_chi": [],
- "wall": 93.23401594161987,
+ "wall": 70.25193333625793,
  "label": "catalog (4,8)"
 }

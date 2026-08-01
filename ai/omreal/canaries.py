@@ -258,6 +258,88 @@ def main():
            'FINAL residue 40/1000 = 4.0000%' in txt,
            [l for l in txt.splitlines() if l.startswith('FINAL')][:1])
 
+    print('== E. tree-walk canaries (treewalk.py / sweep49.py) ==')
+    import treewalk as tw
+    hi, lo, stab, w, man = tw.load(verify_hashes=False)
+    act = tw.Action()
+    parent, flip = w['parent'], w['flip']
+    sig, eps, gsg = w['sigma'], w['eps'], w['gsgn']
+    rngE = np.random.default_rng(4242)
+    root = man['witness']['root_row']
+
+    def attempt(i, Zp, use_parent=None):
+        """Exactly the sweep's crossing step; returns an ACCEPTED matrix
+        or None.  Acceptance is exact-determinant verification against the
+        class's own sign string, which is what a bad input must not pass."""
+        j = int(flip[i])
+        CH = omdecode.signs_from_keys(9, 4, hi[[i]], lo[[i]])
+        chi = CH[0]
+        mut = act.on_chi(chi, sig[i], int(eps[i]), int(gsg[i]))
+        X = tw.cross_from(Zp, mut, g49, rngE, j)
+        if X is None:
+            return None, chi
+        s2, e2, g2 = act.inverse_params(sig[i], int(eps[i]), int(gsg[i]))
+        Zi, _ = rz._rationalise(act.on_matrix(X, s2, e2, g2), chi, g49)
+        if Zi is None:
+            return None, chi
+        chk = rz.exact_bracket_signs(Zi, g49)
+        if chk is None or not np.array_equal(chk, chi):
+            return None, chi
+        return Zi, chi
+
+    # find a row whose parent we can realize, and that crosses honestly
+    good = None
+    for cand in rngE.choice(len(hi), size=60, replace=False):
+        cand = int(cand)
+        if cand == root:
+            continue
+        pp = int(parent[cand])
+        chip = omdecode.signs_from_keys(9, 4, hi[[pp]], lo[[pp]])[0]
+        Zp, _ = rz.realize(chip, g49, tries=3, sweeps=25, rerolls=5,
+                           wall_budget=4, seed=cand)
+        if Zp is None:
+            continue
+        Zi, chi = attempt(cand, Zp)
+        if Zi is not None:
+            good = (cand, pp, Zp, chip)
+            break
+    report('E0 an honest crossing produces an accepted certificate',
+           good is not None)
+    if good:
+        i, pp, Zp, chip = good
+        # E1 the parent matrix is corrupted so it no longer realizes the parent
+        Zbad = Zp.copy()
+        Zbad[:, 2] = -Zbad[:, 2]
+        stillp = rz.exact_bracket_signs(Zbad, g49)
+        corrupted = stillp is None or not np.array_equal(stillp, chip)
+        Zi, _ = attempt(i, Zbad)
+        report('E1 corrupted parent realization yields no certificate',
+               corrupted and Zi is None,
+               'corruption left the parent cell: %s; certificate: %s'
+               % (corrupted, 'NONE' if Zi is None else 'ACCEPTED (BAD)'))
+        # E2 a wrong parent: another row's realization entirely
+        other = None
+        for cand in rngE.choice(len(hi), size=40, replace=False):
+            cand = int(cand)
+            if cand in (i, pp, root):
+                continue
+            chio = omdecode.signs_from_keys(9, 4, hi[[cand]], lo[[cand]])[0]
+            Zo, _ = rz.realize(chio, g49, tries=3, sweeps=25, rerolls=5,
+                               wall_budget=4, seed=cand)
+            if Zo is not None:
+                other = Zo
+                break
+        Zi, _ = attempt(i, other)
+        report('E2 a wrong parent yields no certificate', Zi is None,
+               'NONE' if Zi is None else 'ACCEPTED (BAD)')
+        # E3 the recorded group element is wrong
+        sv = sig[i].copy()
+        sig[i][0], sig[i][1] = sv[1], sv[0]
+        Zi, _ = attempt(i, Zp)
+        sig[i][:] = sv
+        report('E3 a wrong recorded group element yields no certificate',
+               Zi is None, 'NONE' if Zi is None else 'ACCEPTED (BAD)')
+
     print('')
     if FAILS:
         print('CANARIES FAILED: ' + ', '.join(FAILS))
