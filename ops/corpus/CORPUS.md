@@ -60,8 +60,8 @@ two thirds of it is abstract-only.
 | SKU | Rate | Our usage | Charge |
 |---|---|---|---|
 | Agent Search index storage | first **10 GiB/month free**, then $0.006849315 / GiB-hour (≈ $5 / GiB / month) | **0.00555 GiB** | **$0** — 1,800× inside the free tier |
-| Search Standard Edition query | first **10,000 queries / account / month free**, then $1.50 / 1,000 | ~25 during the build | **$0** |
-| Advanced Generative Answers (`--answer`) | +$4.00 / 1,000, **excluded from the free-query tier** | 6 calls | **$0.024 one-off**; ≈ $0.004 per future call |
+| Search Standard Edition query | first **10,000 queries / account / month free**, then $1.50 / 1,000 | ~12 during the build | **$0** |
+| Advanced Generative Answers (`--answer`) | +$4.00 / 1,000, **excluded from the free-query tier** | 5 calls | **$0.020 one-off**; ≈ $0.004 per future call |
 | OCR parser | $1.50 / 1,000 pages | **not enabled**; no PDF is ever uploaded | $0 |
 | Layout Parser (incl. chunking) | **$10.00 / 1,000 pages**, a parsed text/HTML "page" = 3,000 characters | **not enabled** | $0 |
 
@@ -132,9 +132,11 @@ f-vectors, neighborly and projectively-unique polytopes, zonotopes,
 maxout / tropical neural networks, and the Tier-2 scouting targets
 (covering codes, rectilinear crossing number, empty hexagon, circulant
 Hadamard, Costas arrays, biplanes, isomorph-free generation, Hirsch).
-The harvest returned 549 distinct records; the 226 highest-scoring by a
-keyword relevance score were indexed, and the top 55 of those got full
-text.
+The harvest returned 549 distinct arXiv records; the **220** highest-scoring
+by a keyword relevance score were indexed (plus the 5 repo copies and DS4,
+giving 226); full text was attempted for the top
+55 and succeeded for 53 (one arXiv paper has neither native HTML nor an
+ar5iv conversion).
 
 **Deliberately NOT indexed: this program's own notes.** `OMGAMMA.md`,
 `CAPSTONE.md`, `SCOPING.md`, `omgamma-note.tex` and `maxout35note.tex`
@@ -240,8 +242,8 @@ Cost consequence, split as the brief asks:
   not even drawn on while idle. In use: $0 per `--query` until 10,000
   queries in a calendar month, then $1.50 / 1,000; and ~$0.004 per
   `--answer`, which has no free tier.
-* **Total spend during this build: $0.024** of Advanced Generative
-  Answers (6 calls) plus $0.0013 of one-off GCS operations.
+* **Total spend during this build: $0.020** of Advanced Generative
+  Answers (5 calls) plus ~$0.0013 of one-off GCS operations.
 
 ---
 
