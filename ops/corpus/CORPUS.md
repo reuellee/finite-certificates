@@ -30,8 +30,8 @@ page puts it at **9** — inverting the exact cell this program's flagship
 target concerns. That was an *extraction* defect, not a model defect, and
 it is fixed: every table is now rendered cell by cell with its row label,
 its column header, its column index and its caption (§8). Re-tested on
-seven probes including the two that failed, **no fabricated number
-reproduced**; the two specific documented fabrications are gone and were
+eight calls covering seven probes, including the two that failed,
+**no fabricated number reproduced**; the two specific documented fabrications are gone and were
 replaced by correct readings of the correct cells. What remains is a
 milder and *visible* failure — the answer layer can pick the wrong
 *variant* of a source (Finschi's "All" catalog when asked about the
@@ -112,16 +112,16 @@ a cent a month. The binding constraint is not storage, it is the 15 s
 |---|---|---|---|
 | Agent Search index storage | first **10 GiB/month free**, then $0.006849315 / GiB-hour (≈ $5 / GiB / month) | **0.021642 GiB** | **$0** — 462× inside the free tier |
 | Search Standard Edition query | first **10,000 queries / account / month free**, then $1.50 / 1,000 | ~35 across both builds | **$0** |
-| Advanced Generative Answers (`--answer`) | +$4.00 / 1,000, **excluded from the free-query tier** | **14 calls** (5 in the first build, 9 in the §6.7 re-test battery) | **$0.056 one-off**; ≈ $0.004 per future call |
+| Advanced Generative Answers (`--answer`) | +$4.00 / 1,000, **excluded from the free-query tier** | **19 calls**: 5 in the first build, 6 probing the table fix at the old 226-document size, 8 in the §6.7.2 battery on the scaled index | **$0.076 one-off**; ≈ $0.004 per future call |
 | OCR parser | $1.50 / 1,000 pages | **not enabled**; no PDF is ever uploaded | $0 |
 | Layout Parser (incl. chunking) | **$10.00 / 1,000 pages**, a parsed text/HTML "page" = 3,000 characters | **not enabled** | $0 |
 
 **The Layout Parser counterfactual, measured on the actual corpus:**
 21,949,746 characters ÷ 3,000 = **7,317 billable pages = $73.17 one-off**,
-*and again on every re-import* — three imports have been run, so the
-counterfactual bill to date would be over $150. It scaled with the corpus
-exactly as the SKU says it would: $20.48 at 226 documents, $73.17 at
-1,905. It remains the single largest avoidable charge in this build, and
+*and again on every re-import*. Three FULL imports have been run, two at
+226 documents and one at 1,905, so the counterfactual bill to date is
+$20.48 + $20.48 + $73.17 = **$114.13**, not three times the current
+figure. It scaled with the corpus exactly as the SKU says it would. It remains the single largest avoidable charge in this build, and
 it is avoided by pinning the **digital parser** explicitly rather than
 trusting the documented default:
 
@@ -736,9 +736,23 @@ previously crossed now sit in visibly different tables:
 The caption is repeated on **every row**, not printed once above the
 table, because Discovery Engine chunks a document before indexing it and
 a caption line and a value line can otherwise land in different chunks.
-That detail is not cosmetic: in an intermediate run with the caption
-printed once, `1142` was *still* reported as an oriented-matroid count.
-With the caption on the row, it was not.
+That detail is not cosmetic, and it was measured rather than reasoned.
+With the column fix in but the caption printed once above the table, the
+realizability-split query still returned
+
+> "For d=4 and n=9, the number of realizable oriented matroids is
+> unknown, but **the number of non-realizable ones is 1142**."
+
+— the right cell of the wrong table, `1142` being a *simplicial polytope*
+count. With the caption carried onto every row, the same query returned
+
+> "For rank 4 and 9 elements, the number of simple realizable oriented
+> matroids is unknown, and the number of uniform realizable oriented
+> matroids is **also unknown**."
+
+which is FMM13 Table 2's `unknown (unknown)` cell, exactly right. One
+sample each, so this is evidence for the design and not a proof of it —
+but it is the reason the caption is on the row rather than above it.
 
 Two further details earned their place the hard way. Captions are paired
 with tables strictly inside one `<figure>` element or one LaTeX `table`
@@ -756,8 +770,9 @@ keep the old defect. Section 8 lists that as a live defect, not a fixed one.
 
 #### 6.7.2 Fabrication: not reproduced on any probe
 
-Nine `--answer` calls against the 1,905-document index. The two probes
-that failed in 6.1 and 6.4 are included verbatim.
+Eight `--answer` calls against the 1,905-document index, seven rows (row
+6 covers two phrasings of the same question). The two probes that failed
+in 6.1 and 6.4 are included verbatim.
 
 | # | probe | before | after |
 |---|---|---|---|
@@ -786,15 +801,20 @@ generated text's word.
   contain it, and the `doc_id` in the citation makes it visible.
 * **Retrieval misses.** Probe 7 answered "not provided" about a value
   plainly present in the index. Chunking, not extraction. It fails safe.
-* **Dilution.** Probe 6 is *weaker* than the 226-document run: at that
-  size the answer volunteered Ringel's rank-3 result, Roudneff-Sturmfels'
-  realizable connectivity and the labelled-level suspicion unprompted; at
-  1,905 documents it stops at the reorientation-class result. A second
-  phrasing that named the three graphs pulled in a *different* paper's
-  "counterexample" -- Wilhelmi 2025 on Euclideanness under mutation-flips
-  -- and conflated two senses of the word. **Growing the corpus is not
-  free: it improved table accuracy and cost some retrieval precision on
-  the one question the first build answered best.**
+* **Possible dilution, and the comparison is confounded — say so.** On
+  6.2's original wording the 1,905-document index is correct on everything
+  it addresses but does not volunteer Ringel's rank-3 result,
+  Roudneff-Sturmfels' realizable connectivity or the labelled-level
+  suspicion, all of which the 226-document build offered unprompted. That
+  looks like dilution. It is **not established**, for two reasons: one
+  sample per condition, and the second phrasing differed from the first
+  (it added "in which of the three graphs is a counterexample suspected?",
+  which is what pulled in Wilhelmi 2025 on Euclideanness under
+  mutation-flips and produced a conflation of two senses of
+  "counterexample"). The honest statement is that **more documents did not
+  visibly help the one question the first build answered best, and may
+  have hurt it** — and that a proper answer needs the same prompt run
+  several times against both index sizes, which has not been done.
 
 #### 6.7.4 The honest summary
 
@@ -944,12 +964,15 @@ The live defects, in priority order:
    tables as the whole corpus used to be. DS7 came as HTML and is fine.
    There is no cheap fix: the Layout Parser would do it and costs $73.17
    per import at this corpus size (§1.3).
-3. **Growing the corpus cost retrieval precision on the best question**
-   (§6.7.3). At 226 documents the mutation-graph query returned Ringel,
-   Roudneff–Sturmfels and the labelled-level suspicion unprompted; at
-   1,905 it returns less, and a nearby phrasing pulls in a different
-   paper's unrelated "counterexample". More documents is not monotonically
-   better and this is the measurement that shows it.
+3. **Growing the corpus may have cost retrieval precision on the best
+   question, and this is not established** (§6.7.3). At 226 documents the
+   mutation-graph query returned Ringel, Roudneff–Sturmfels and the
+   labelled-level suspicion unprompted; at 1,905 it returns less, and a
+   nearby phrasing pulls in a different paper's unrelated
+   "counterexample". One sample per condition and a changed prompt between
+   them, so it is a flag rather than a finding — but it is the flag worth
+   raising, because "more documents is better" is the assumption a
+   scale-up is built on and nothing here confirms it.
 4. **Seven eighths of the corpus is abstract-only.** 234 of 1,905
    documents carry full text. The fetch was stopped at 216 of 330 budgeted
    arXiv papers after ~2 h; the rest is patience at the 15 s
