@@ -120,11 +120,17 @@ def completion_rows(X, chi, geom, p):
     return A, bs
 
 
-def _lp_interior(A, obj=None, cap=1.0):
+def _lp_interior(A, obj=None, cap=1.0, margin_frac=0.25):
     """max t  s.t.  (A/|a|) x >= t,  |x|_inf <= cap,  t <= 1   [obj is None]
-    or  max <obj,x>  s.t. (A/|a|) x >= t0 > 0,  |x|_inf <= cap  [obj given].
+    or  max <obj,x>  s.t. (A/|a|) x >= margin_frac * t0  [obj given].
 
     Returns (x, t) with t the achieved margin, or (None, None).
+
+    `margin_frac` controls how close to the wall the exploratory move is
+    allowed to sit.  It matters: a completion cone is empty because the
+    other eight points are badly placed, and the configurations that open it
+    are often near the boundary of the deletion's own realization space, not
+    at its analytic centre.
     """
     Af = np.array(A, dtype=np.float64)
     m, d = Af.shape
@@ -145,7 +151,7 @@ def _lp_interior(A, obj=None, cap=1.0):
     x0, t0 = _lp_interior(A, None, cap)
     if x0 is None or t0 <= 0:
         return x0, t0
-    lo = 0.25 * t0
+    lo = margin_frac * t0
     res = linprog(-np.asarray(obj, dtype=np.float64), A_ub=-An,
                   b_ub=-lo * np.ones(m), bounds=[(-cap, cap)] * d,
                   method='highs')
@@ -315,7 +321,8 @@ class Searcher(object):
             A, _ = completion_rows(Y, dele.chi8, self.g8, q)
             obj = self.rng.normal(size=R)
             self.lp_calls += 1
-            x, t = _lp_interior(A, obj=obj, cap=cap)
+            mf = float(self.rng.choice([0.02, 0.08, 0.25, 0.6]))
+            x, t = _lp_interior(A, obj=obj, cap=cap, margin_frac=mf)
             if x is None or t <= 0:
                 continue
             y = _round_positive(A, x)
@@ -410,7 +417,7 @@ class Searcher(object):
             d[0] += 1
             d[1] += int(ok)
 
-        state = {'blk': ()}
+        state = {'blk': (), 't': None}
 
         def test(Y, dele, src):
             Z, t, blk = self.try_complete(Y, dele, chi)
@@ -419,17 +426,33 @@ class Searcher(object):
             else:
                 log['lp_infeasible'] += 1
                 state['blk'] = blk
+            state['t'] = t
             record(src, Z is not None)
             return Z
 
         def chase(Y, dele, src, depth, deadline):
-            """Walk the deletion's realization space towards the blockers."""
-            for _ in range(depth):
-                Y = self.walk_deletion(Y, dele, steps=2,
-                                       blockers=state['blk'])
-                Z = test(Y, dele, src)
+            """HILL-CLIMB on the completion margin.
+
+            The LP returns the best achievable margin for x_p even when it is
+            negative, and that number is a real objective: it measures how
+            far this eight-point configuration is from admitting the ninth
+            point.  Proposing a move and keeping it only when the margin does
+            not get much worse turns the walk from diffusion into a descent,
+            with a Metropolis tail so it can still leave a local basin.
+            """
+            best = state['t'] if state['t'] is not None else -1.0
+            cur = best
+            for k in range(depth):
+                Y2 = self.walk_deletion(Y, dele, steps=1,
+                                        blockers=state['blk'])
+                Z = test(Y2, dele, src)
                 if Z is not None:
-                    return Z, Y
+                    return Z, Y2
+                t2 = state['t'] if state['t'] is not None else -1.0
+                temp = 0.35 * (1.0 - k / float(max(depth, 1))) + 0.02
+                if t2 >= cur or self.rng.random() < math.exp(
+                        min(0.0, (t2 - cur) / (temp * max(abs(cur), 1e-6)))):
+                    Y, cur = Y2, t2
                 if time.time() - t0 > deadline:
                     break
             return None, Y
