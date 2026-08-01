@@ -1,0 +1,247 @@
+{
+ "tag": "uniform",
+ "harvest": {
+  "files": [
+   "certs_4_9_s2000.jsonl",
+   "certs_4_9_cal.jsonl",
+   "certs_4_9_cal2.jsonl",
+   "certs_49_u_0.jsonl",
+   "certs_49_u_1.jsonl",
+   "certs_49_u_2.jsonl",
+   "certs_49_u_3.jsonl",
+   "certs_49_u_4.jsonl",
+   "certs_49_u_5.jsonl"
+  ],
+  "labels": {
+   "certs_4_9_s2000.jsonl": "(4,9) uniform sample of 2000 from 9276595",
+   "certs_4_9_cal.jsonl": "(4,9) uniform sample of 400 from 9276595",
+   "certs_4_9_cal2.jsonl": "(4,9) uniform sample of 400 from 9276595",
+   "certs_49_u_0.jsonl": "(4,9) uniform sample of 6000 from 9276595 [shard 0/6]",
+   "certs_49_u_1.jsonl": "(4,9) uniform sample of 6000 from 9276595 [shard 1/6]"
+  },
+  "raw_counts": {
+   "RESIDUE": 425,
+   "NON_REALIZABLE": 126,
+   "REALIZABLE": 5251
+  },
+  "distinct": 5400,
+  "counts": {
+   "RESIDUE": 391,
+   "NON_REALIZABLE": 116,
+   "REALIZABLE": 4893
+  },
+  "total_lines": 5400,
+  "sweep_log_tail": []
+ },
+ "minors_consumed": 5400,
+ "closure": {
+  "NON_REALIZABLE": {
+   "n": 116,
+   "with_nr_deletion": 105,
+   "with_nr_contraction": 0,
+   "wilson95": [
+    0.8381469876056533,
+    0.9462226364259425
+   ],
+   "hist": {
+    "0": 11,
+    "1": 80,
+    "2": 22,
+    "3": 3
+   }
+  },
+  "RESIDUE": {
+   "n": 391,
+   "with_nr_deletion": 0,
+   "with_nr_contraction": 0,
+   "wilson95": [
+    0.0,
+    0.009729117185295445
+   ],
+   "hist": {
+    "0": 391
+   }
+  },
+  "REALIZABLE": {
+   "n": 4893,
+   "with_nr_deletion": 0,
+   "with_nr_contraction": 0,
+   "wilson95": [
+    0.0,
+    0.0007844768622386243
+   ],
+   "hist": {
+    "0": 4893
+   }
+  }
+ },
+ "minimal_count": 11,
+ "witness_occurrences": {
+  "804": 15,
+  "812": 0,
+  "813": 5,
+  "814": 5,
+  "815": 13,
+  "816": 4,
+  "817": 2,
+  "2146": 8,
+  "2286": 4,
+  "2330": 20,
+  "2391": 16,
+  "2473": 16,
+  "2487": 1,
+  "2488": 1,
+  "2565": 7,
+  "2588": 0,
+  "2592": 1,
+  "2593": 1,
+  "2594": 0,
+  "2595": 5,
+  "2596": 2,
+  "2597": 1,
+  "2598": 4,
+  "2611": 2
+ },
+ "open_rows": 391,
+ "open_settled_by_minor": 0,
+ "depth_bands": {
+  "12": {
+   "n": 1,
+   "with_witness": 1
+  },
+  "14": {
+   "n": 1,
+   "with_witness": 1
+  },
+  "15": {
+   "n": 3,
+   "with_witness": 3
+  },
+  "16": {
+   "n": 8,
+   "with_witness": 6
+  },
+  "17": {
+   "n": 14,
+   "with_witness": 13
+  },
+  "18": {
+   "n": 19,
+   "with_witness": 16
+  },
+  "19": {
+   "n": 27,
+   "with_witness": 25
+  },
+  "20": {
+   "n": 13,
+   "with_witness": 12
+  },
+  "21": {
+   "n": 13,
+   "with_witness": 13
+  },
+  "22": {
+   "n": 5,
+   "with_witness": 3
+  },
+  "23": {
+   "n": 5,
+   "with_witness": 5
+  },
+  "24": {
+   "n": 6,
+   "with_witness": 6
+  },
+  "25": {
+   "n": 1,
+   "with_witness": 1
+  }
+ },
+ "structure": {
+  "minor-minimal": {
+   "n": 11,
+   "depth": {
+    "mean": 18.636363636363637,
+    "min": 16,
+    "max": 22
+   },
+   "mutable_bases": {
+    "mean": 14.0,
+    "min": 11,
+    "max": 17
+   },
+   "distinct_deletion_classes": {
+    "8": 3,
+    "9": 8
+   },
+   "stab": {
+    "2": 11
+   }
+  },
+  "has a witness": {
+   "n": 11,
+   "depth": {
+    "mean": 19.90909090909091,
+    "min": 15,
+    "max": 24
+   },
+   "mutable_bases": {
+    "mean": 15.272727272727273,
+    "min": 11,
+    "max": 19
+   },
+   "distinct_deletion_classes": {
+    "9": 11
+   },
+   "stab": {
+    "2": 11
+   }
+  }
+ },
+ "bfp": {
+  "minor-minimal": {
+   "n": 11,
+   "found": 11,
+   "support_mean": 75.63636363636364,
+   "support_median": 75,
+   "support_min": 61,
+   "support_max": 91,
+   "weight_mean": 71884.0,
+   "support_hist": {
+    "61": 1,
+    "62": 1,
+    "68": 2,
+    "73": 1,
+    "75": 1,
+    "78": 1,
+    "82": 1,
+    "86": 1,
+    "88": 1,
+    "91": 1
+   }
+  },
+  "has a witness": {
+   "n": 11,
+   "found": 11,
+   "support_mean": 62.90909090909091,
+   "support_median": 67,
+   "support_min": 38,
+   "support_max": 89,
+   "weight_mean": 113160.63636363637,
+   "support_hist": {
+    "38": 1,
+    "41": 1,
+    "42": 1,
+    "45": 1,
+    "47": 1,
+    "67": 1,
+    "76": 1,
+    "81": 1,
+    "82": 1,
+    "84": 1,
+    "89": 1
+   }
+  }
+ }
+}

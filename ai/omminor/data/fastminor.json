@@ -1,0 +1,17 @@
+{
+ "workload_population": {
+  "n": 2000,
+  "ms_per_class": 6.070362448692322,
+  "stage1": 18000,
+  "stage2": 73,
+  "hits": 40
+ },
+ "workload_nonrealizable": {
+  "n": 2000,
+  "ms_per_class": 187.85568177700043,
+  "stage1": 18000,
+  "stage2": 2222,
+  "disagreements": 0
+ },
+ "n_invariants_24": 19
+}

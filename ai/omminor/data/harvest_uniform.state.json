@@ -1,0 +1,33 @@
+{
+ "files": [
+  "certs_4_9_s2000.jsonl",
+  "certs_4_9_cal.jsonl",
+  "certs_4_9_cal2.jsonl",
+  "certs_49_u_0.jsonl",
+  "certs_49_u_1.jsonl",
+  "certs_49_u_2.jsonl",
+  "certs_49_u_3.jsonl",
+  "certs_49_u_4.jsonl",
+  "certs_49_u_5.jsonl"
+ ],
+ "labels": {
+  "certs_4_9_s2000.jsonl": "(4,9) uniform sample of 2000 from 9276595",
+  "certs_4_9_cal.jsonl": "(4,9) uniform sample of 400 from 9276595",
+  "certs_4_9_cal2.jsonl": "(4,9) uniform sample of 400 from 9276595",
+  "certs_49_u_0.jsonl": "(4,9) uniform sample of 6000 from 9276595 [shard 0/6]",
+  "certs_49_u_1.jsonl": "(4,9) uniform sample of 6000 from 9276595 [shard 1/6]"
+ },
+ "raw_counts": {
+  "RESIDUE": 425,
+  "NON_REALIZABLE": 126,
+  "REALIZABLE": 5251
+ },
+ "distinct": 5400,
+ "counts": {
+  "RESIDUE": 391,
+  "NON_REALIZABLE": 116,
+  "REALIZABLE": 4893
+ },
+ "total_lines": 5400,
+ "sweep_log_tail": []
+}

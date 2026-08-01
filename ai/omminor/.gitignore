@@ -1,0 +1,22 @@
+# Large regenerable artifacts.  What IS tracked is the minor-minimal list
+# itself (data/minimal_*.txt), the new small certificate files, the state
+# files that pin the data prefix, and the machine-readable reports.
+#
+# Regeneration, in order (see MINOR_THEORY.md section 11):
+#   python harvest.py --tag sweep --realizable-sample 2000   [--extend]
+#   python harvest_pilot.py
+#   python minorsweep.py --in data/harvest_sweep.jsonl  --tag sweep   --workers 2
+#   python minorsweep.py --in data/harvest_uniform.jsonl --tag uniform --workers 2
+#   python analyze.py --tag sweep ; python analyze.py --tag uniform
+#   python cert47.py ; python rank3check.py ; python fastminor.py
+#   python liftcert.py --sample 40 --canary ; python canaries.py --tag sweep --all
+# and, for the tracked minimal-set certificates:
+#   (see MINOR_THEORY.md section 11 -- one filter over data/harvest_sweep.jsonl)
+
+data/harvest_*.jsonl
+data/minors_*.jsonl
+data/certs_minimal_*.jsonl
+data/idcache_*.npz
+data/cat48_keys.npz
+data/cat48_lines.txt
+data/minors_trial.*

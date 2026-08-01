@@ -1,0 +1,30 @@
+{
+ "offsets": {
+  "shard_00.jsonl": 146770649,
+  "shard_01.jsonl": 144160455,
+  "shard_02.jsonl": 136254731,
+  "shard_03.jsonl": 130403955,
+  "shard_root.jsonl": 322
+ },
+ "lines": {
+  "shard_00.jsonl": 382178,
+  "shard_01.jsonl": 374716,
+  "shard_02.jsonl": 352166,
+  "shard_03.jsonl": 336166,
+  "shard_root.jsonl": 1
+ },
+ "counts": {
+  "REALIZABLE": 1430771,
+  "NON_REALIZABLE": 14396,
+  "RESIDUE": 60
+ },
+ "kept": 0,
+ "realizable_sample": 2000,
+ "rmod": 1430771,
+ "total_lines": 1445227,
+ "wall_s": 26.000718593597412,
+ "when": "2026-08-01T17:13:22",
+ "sweep_log_tail": [
+  "[sweep] depth 15:   502956 rows in   5037 s | total  1074562/9276595 | 30.0 ms/class/core | eta 17.1 h | {'REALIZABLE(walk)': 859339, 'REALIZABLE(repair)': 575, 'NON_REALIZABLE': 8190, 'OPEN': 37}"
+ ]
+}
