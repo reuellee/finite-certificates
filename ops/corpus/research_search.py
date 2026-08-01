@@ -67,7 +67,7 @@ def token() -> str:
                           shell=(os.name == "nt")).stdout.strip()
 
 
-def post(path: str, body: dict) -> dict:
+def post(path: str, body: dict, soft: bool = False) -> dict | None:
     req = urllib.request.Request(
         f"{API}/{path}", data=json.dumps(body).encode(), method="POST",
         headers={"Authorization": f"Bearer {token()}",
@@ -77,7 +77,11 @@ def post(path: str, body: dict) -> dict:
         with urllib.request.urlopen(req, timeout=180) as r:
             return json.loads(r.read() or b"{}")
     except urllib.error.HTTPError as e:
-        sys.stderr.write(f"HTTP {e.code}\n" + e.read().decode("utf-8", "replace") + "\n")
+        msg = e.read().decode("utf-8", "replace")
+        if soft:
+            sys.stderr.write(f"(soft) HTTP {e.code}: {msg[:300]}\n")
+            return None
+        sys.stderr.write(f"HTTP {e.code}\n{msg}\n")
         raise SystemExit(2)
 
 
@@ -92,19 +96,28 @@ def wrap(s: str, indent: str = "     ") -> str:
                          subsequent_indent=indent)
 
 
-def run_search(query: str, top: int, extract: bool) -> dict:
-    spec: dict = {"snippetSpec": {"returnSnippet": True}}
+def run_search(query: str, top: int, extract: bool) -> tuple[dict, bool]:
+    """Returns (response, extract_actually_happened).
+
+    Extractive segments are an Enterprise-edition feature; this engine is on
+    the Standard tier (see CORPUS.md section 6), so --extract is attempted and
+    falls back to snippets rather than failing the call.
+    """
+    base = {"query": query, "pageSize": top,
+            "queryExpansionSpec": {"condition": "AUTO"},
+            "spellCorrectionSpec": {"mode": "AUTO"}}
     if extract:
-        spec["extractiveContentSpec"] = {"maxExtractiveSegmentCount": 2,
-                                         "numPreviousSegments": 0,
-                                         "numNextSegments": 0}
-    return post(f"{SERVING}:search", {
-        "query": query,
-        "pageSize": top,
-        "queryExpansionSpec": {"condition": "AUTO"},
-        "spellCorrectionSpec": {"mode": "AUTO"},
-        "contentSearchSpec": spec,
-    })
+        r = post(f"{SERVING}:search", dict(
+            base, contentSearchSpec={
+                "snippetSpec": {"returnSnippet": True},
+                "extractiveContentSpec": {"maxExtractiveSegmentCount": 2,
+                                          "numPreviousSegments": 0,
+                                          "numNextSegments": 0}}), soft=True)
+        if r is not None:
+            return r, True
+        sys.stderr.write("  -> falling back to snippets (Standard tier)\n")
+    return post(f"{SERVING}:search", dict(
+        base, contentSearchSpec={"snippetSpec": {"returnSnippet": True}})), False
 
 
 def show_search(resp: dict, extract: bool) -> None:
@@ -184,11 +197,11 @@ def main() -> None:
         ap.error("--query is required (or use --cost-note alone)")
 
     print(f"### corpus search: {a.query!r}   engine={ENGINE}")
-    resp = run_search(a.query, a.top, a.extract)
+    resp, got_extract = run_search(a.query, a.top, a.extract)
     if a.json:
         print(json.dumps(resp, indent=1)[:20000])
     else:
-        show_search(resp, a.extract)
+        show_search(resp, got_extract)
 
     if a.answer:
         ar = run_answer(a.query, a.top)
