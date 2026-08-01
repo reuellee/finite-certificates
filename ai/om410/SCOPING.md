@@ -79,6 +79,46 @@ lifted certificates. Sampled classes that resist *both* directions are the
 most interesting objects in the study — candidate BFP-completeness
 counterexamples at n = 10 — and get reported as a residue, never buried.
 
+## Endpoint E4 — the window distribution (registered, not a by-product)
+
+The localization proof skeleton ("minor-closure fraction → 1") stands or
+falls on a transfer lemma: *the 9-element windows (single-element deletion
+classes) of a random (4,10) class are distributed approximately like
+uniform random (4,9) classes.* om410 measures this directly — the first
+measurement of its kind — and it is a primary endpoint, pre-registered
+here, not something to read off opportunistically:
+
+* **Observables** (10 windows per sampled class, ~100k window draws at the
+  10k-sample scale): window non-realizability rate vs the catalog density
+  (the single most load-bearing scalar); distributions of window
+  invariants (depth, mutable-basis count, |Stab|, BFP-support size) vs
+  their exact catalog distributions; collision/birthday statistics
+  (effective support size — is the window measure concentrated?); and
+  **inter-window correlation** within one class (the independence
+  assumption of the amplification argument: compare joint non-realizable-
+  window counts against the product law).
+* **Conditioning matters**: by minor-closedness, realizable classes have
+  all-realizable windows, so the global window law mixes two very
+  different conditionals. Report windows-of-realizable and windows-of-
+  non-realizable classes separately; the transfer lemma needs the
+  realizable-class windows to look uniform *within the realizable
+  catalog*, and the non-realizable-class windows are the closure-fraction
+  measurement seen at finer grain.
+* **Sampler dependence**: E4 uses S1 (Metropolis-uniform) only; S2's raw
+  extension measure distorts the window law by construction (it *selects*
+  a window). S2 windows may be reported as a labeled-bias diagnostic, not
+  as E4.
+* **Methodology canary**: run the identical estimator one level down —
+  windows of uniformly sampled (4,9) classes against the fully enumerated
+  (4,8) ground truth — and require it to reproduce omminor's measured 9→8
+  statistics (closure fraction, witness concentration, deletion-multiset
+  distinctness) within CI before any 10→9 number is believed.
+* **Interpretation is two-sided by design**: windows ≈ uniform → the
+  transfer lemma is empirically live and the localization theorem is the
+  next proof target; windows skewed → the skew itself is the finding
+  (it says exactly where the naive probabilistic argument breaks, and its
+  direction says whether localization is helped or hurt).
+
 ## Dependencies and order
 
 - **Blocks on**: (4,9) sweep completion (certified non-realizable witness
