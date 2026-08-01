@@ -255,10 +255,25 @@ force) for even n.
 
 ## 4. Remark: the labeled level reduces to the isomorphism level (theory)
 
-The following easy configuration-space lemma seems to be folklore but we
-could not find the labeled-level statement in print; it makes the
-suspected-counterexample level collapse onto the level Knauer–Marc
-already verified, for every n where Γ̂ is connected.
+**ATTRIBUTION CORRECTED 2026-08-01 — this lemma is NOT ours.** An earlier
+version of this section said it "seems to be folklore but we could not
+find the labeled-level statement in print." That was wrong: the
+labeled-level statement IS in print, in Roudneff–Sturmfels 1988 itself.
+The zbMATH review of that paper states verbatim that "if G^{n,r}_real is
+a subgraph of G^{n,r} **induced** by the set of representable oriented
+matroids, then it is shown that G^{n,r}_real is connected"; DS4 v4 (2024)
+§3.7.1 and Curto et al. (arXiv:2008.01032) say the same, and "induced" is
+verbatim in all three — which is exactly the every-intermediate-OM-is-
+realizable reading the corollary needs. Caveats, kept explicit: the
+paywalled primary text has NOT been obtained, and no source we found
+cites it by proposition number, so it must never be written as
+"[RS88, Prop. X]". Knauer–Marc quote a reorientation-class weakening
+because they redefined the symbol, which is why the labeled statement
+looked absent. The proof below is our own reconstruction of a published
+result, not a new lemma; credit belongs to Roudneff and Sturmfels.
+
+The lemma makes the suspected-counterexample level collapse onto the
+level Knauer–Marc already verified, for every n where Γ̂ is connected.
 
 **Lemma 3 (labeled realizable connectivity).** For all n ≥ r ≥ 1 the
 subgraph of $\overline{\mathcal{G}}^{n,r}$ induced by the REALIZABLE
@@ -280,11 +295,14 @@ Aut(Q_n)-invariant — then apply Lemma 3). In particular Knauer–Marc's own
 Γ̂ computation already implies Γ̄ connected for n ≤ 9, *contrary to their
 suspicion*, modulo Lemma 3.
 
-Because Lemma 3 is our own argument, we do NOT rest the computational
-verdicts on it: the holonomy computation below decides Γ̄ directly,
-without any realizability input. Lemma 3 is stated as context and as an
-explanation of why the positive outcome should be expected — and the
-computation is the check of the Lemma's prediction.
+We do NOT rest the computational verdicts on Lemma 3 — not because it is
+doubtful (it is a published result, see the attribution note above) but
+because our access to it is second-hand: the primary text is paywalled
+and unread here, so what we actually have is a review's verbatim
+sentence plus two secondary restatements. The holonomy computation
+below decides Γ̄ directly, without any realizability input. Lemma 3 is
+stated as context and as an explanation of why the positive outcome
+should be expected — and the computation is the check of its prediction.
 
 **Status of that check (2026-07-31).** Lemma 3's corollary predicts
 exactly #components(Γ̄^{n,r}) = #components(Γ̂^{n,r}) whenever Γ̂ is
