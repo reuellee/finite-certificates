@@ -806,6 +806,11 @@ numpy + scipy for the pipeline; the checker requires neither.
 
 ## 11. The tree walk — realizing the catalogue without searching it
 
+> The mathematics of this section — why the transport cannot always work,
+> what is true instead, and what would still be needed — is written up
+> separately in **[`WALK_THEORY.md`](WALK_THEORY.md)**. This section is
+> the engineering and the measurements.
+
 **This section supersedes the cost model of §7 and the deployment
 recommendation of §8.** Everything above treats each of the 9 276 595
 classes as an independent search problem, which is what made the sweep
@@ -953,7 +958,14 @@ had the second idea yet.
 |---|---|---|---|
 | 1. tree walk | 9 276 595 | 26.5 ms | **~70** |
 | 2. BFP on walk failures | ~230 000 (2.5%) | ~250 ms | **~16** |
-| 3. ladder on what BFP leaves | see §12.3 | ~19 s | **?** |
+| 3. orphan repair (§4 of WALK_THEORY.md) | ~3% | ~1 s | **~8** |
+
+**Phase 3 as originally scoped -- a ladder over a large residue -- turned
+out not to be needed.** A complete cascade over 10 000 classes (the
+partial cloud run, collected before the VM was stopped) leaves **zero**
+unsettled, 95% CI [0%, 0.038%]. The residue-vs-effort curve does not
+plateau; it terminates, and the two heaviest direct-search levels are
+never entered at all. Full curve and its structure: `WALK_THEORY.md` §5.
 
 Phases 1 and 2 are **~86 core-hours**, which is:
 
@@ -972,7 +984,37 @@ ceiling.
 
 ### 12.3 What is actually left — the theory problem
 
-<!--THEORY-->
+After the walk, the only classes left are those it cannot cross to. Two
+measurements say what they are.
+
+**They carry no obstruction from any 8-element minor.** Of the residue
+classes examined (18 survivors of the full A-E cascade, and 33 earlier
+ones), **every single one has all nine deletions realizable** (S6.3). Since
+the GP relations of a deletion are a subset of the class's, a biquadratic
+final polynomial for a deletion is already one for the class, so this says
+the residue's obstruction - if it has one - is genuinely 9-element.
+By contrast 23 of 25 BFP-certified non-realizable classes *do* have a
+non-realizable deletion.
+
+**They are not the symmetric ones.** The 8913 classes with non-trivial
+stabiliser are *enriched* in non-realizability and *depleted* in residue
+(S6.4), so the hard cases are not the algebraically special ones. That
+kills the most natural guess about what the survivors have in common.
+
+<!--XFAIL-->
+
+That leaves a sharp, cheap, apparently unasked question:
+
+> **Conjecture.** A uniform rank-4 oriented matroid on 9 elements all of
+> whose 8-element deletions are realizable, and which has no biquadratic
+> final polynomial, is realizable.
+
+Every residue class we have seen satisfies the hypothesis. If the
+conjecture is true the cell closes with no new decision procedure at all -
+the walk plus BFP plus this theorem is a complete method. If it is false,
+the counterexample is a BFP-resistant uniform oriented matroid at n = 9,
+three to five elements below the smallest known one, and that is the more
+interesting object. Either branch is a result; neither needs money.
 
 ### 12.4 If the residue does not yield
 
