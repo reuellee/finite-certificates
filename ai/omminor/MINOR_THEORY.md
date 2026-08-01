@@ -662,8 +662,8 @@ unless the weighting is corrected by the parent counts.
 2^20 sign vectors at (3,6), keeping the 23,808 valid chirotopes, and
 partitioning them by brute-force group orbit: it finds **exactly 4 classes**,
 the published count. The catalog reps themselves are literal fixed points of
-the canonicalizer (checked for all 2,628 (4,8) rows, all 4,382 (3,9) rows,
-and the 242 (3,10) inputs).
+the canonicalizer (checked for all 2,628 (4,8) rows, all 135 (3,8) rows, all
+4,382 (3,9) rows, and the 242 (3,10) inputs).
 
 **What is still delegated.** Canonicalization in the main pipeline is
 `ai/omgamma/coverage_checker.py` — the standalone checker, which shares no
@@ -672,6 +672,15 @@ already used, so the (4,8) catalog keys, the sweep's (4,9) keys and the keys
 here are in one convention by construction. The realizability verdicts are
 `ai/omreal`'s and are re-checked by `checkcert.py`. Nothing here depends on
 `WALK_THEORY.md`'s Corollary B or on Roudneff–Sturmfels.
+
+Two things *do* depend on omgamma beyond the decoder, and only one of them
+is load-bearing. The **completeness** of the (4,8), (3,8) and (3,9) catalogs
+— 2,628 / 135 / 4,382 classes, which is what makes "identified against the
+catalog" a total function and makes G2 a real check — rests on omgamma's
+mass identity and on agreement with the published counts. The
+**completeness of the (4,9) catalog** (9,276,595) is used only for the
+catalogue-wide extrapolations in §6 and §9; every measured fraction is over
+classes actually certified and would survive a revision of that count.
 
 **Not touched:** `ai/omreal/` is read-only throughout. The shards were read
 with a reader that consumes only complete lines and records byte offsets.
