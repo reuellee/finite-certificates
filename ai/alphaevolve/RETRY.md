@@ -150,3 +150,26 @@ Include, because it rules out everything the first-line script will suggest:
 
 The error text `See b/510479459` (returned when a seed has no EVOLVE-BLOCK
 region) confirms this is an internally-tracked preview surface — worth quoting.
+
+---
+
+## OUTCOME 2026-08-01 — retry executed, campaign complete
+
+Seat propagation WAS the fix. Smoke test generated 4/4 candidates
+($0.0448, ~1.5c/program at toy scale). Canary passed. Campaign ran:
+
+    AE_MAX_USD=5 run_campaign.py 4 5 120 4   -> campaign_45.log
+
+* 9 candidates evaluated before the ceiling tripped at ~$5.81
+  (34,975 in / 236,369 out tokens). Experiment deleted; engine swept
+  afterwards: 0 experiments remain.
+* Real-scale economics: **~$0.65/program**, 40x the toy figure —
+  output tokens dominate (the model emits long programs + reasoning).
+* Best EXACT result: **58 — no new record.** Two candidates claimed
+  v=59 by float count; the exact-Fraction gate showed both were
+  actually 56. The float hull over-counts on evolved adversarial
+  geometry; the gate is not optional.
+* Verdict: mechanically AlphaEvolve works end-to-end now, but a
+  meaningful evolutionary run (hundreds of generations) costs
+  $100-500 at measured rates. 9 candidates is not evolution.
+  Do not re-run without an explicit new budget decision.
