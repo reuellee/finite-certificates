@@ -474,8 +474,10 @@ the residue is not the same as a method that converges.
 
 Only 8913 of the 9 276 595 classes have a non-trivial stabiliser. A
 stratified sample of them (`--stab-only`) is **enriched in
-non-realizability** (2.8%, and 7.6% in an earlier 500-class draw, vs 1.7%
-overall) and **depleted in residue**. So the algebraically special classes
+non-realizability** (2.8% on a 211-class draw, and 7.6% on an earlier
+500-class draw, against 2.10% overall) and **depleted in residue**
+(0.9% against 0.93%, and 0.2% on the earlier draw). So the algebraically
+special classes
 are the ones BFP handles *best*, not worst; the uniform-sample rates are
 not hiding a hard symmetric stratum, and at 0.096% of the catalogue this
 stratum cannot move the totals anyway.
@@ -506,8 +508,8 @@ The cost/residue frontier, all measured except where noted:
 
 | configuration | s/class | core-hours | residue |
 |---|---|---|---|
-| A + B only | 0.121 | 312 | ~13% (stage-A misses that BFP does not catch) |
-| A + B + C | 0.308 | 794 | ~5% |
+| A + B only | 0.120 | 310 | 9.7% (stage-A misses that BFP does not catch) |
+| A + B + C | 0.308 | 794 | 5.0% |
 | A + B + C + D | 1.494 | 3 850 | 0.933% [0.65%, 1.35%] |
 | A + B + C + D + E | 1.53 | **3 940** | **0.366%** [0.21%, 0.66%] |
 
@@ -564,10 +566,13 @@ make. What can be said:
   (3,10), uniform (3,11) — and the smallest known BFP-resistant oriented
   matroid lives at n = 12–14, well above 9.
 * Our own residue shows no *algebraic* signature so far: no vanishing
-  margins, no need for large denominators (99.9% of realizations round at
-  denominator ≤ 256), no stage-D outliers beyond the budget cap.
-* But the residue does not shrink to zero, and each increment of realizer
-  strength has bought a diminishing amount of it.
+  margins, no need for large denominators (~98% of realizations round at
+  denominator ≤ 256 and none needed more than 2^16), no stage-D outliers
+  beyond the budget cap.
+* But the residue has not reached zero and **we have not located the
+  plateau**. Five improvements have each removed most of what was left;
+  that is a trend, not a limit, and the point at which it stops is exactly
+  what nobody has measured.
 
 So there are exactly two possibilities for the residue, and they are both
 interesting:
