@@ -1,18 +1,39 @@
 # OMREAL — scoping the realizability split of uniform rank-4 oriented matroids on 9 elements
 
 Slow-lane program note. Started 2026-08-01. Status: **PILOT COMPLETE —
-CONDITIONAL GO.** The (4,8), (3,9) and (3,8) splits are reproduced exactly
-with machine-checkable certificates and zero residue; at (4,9) the pipeline
-settles 99.63% of a random sample and leaves a measured residue it has no
-method for. Predecessor standards apply: every claim carries a certificate
-or an explicit trust boundary, and deliberately-broken controls (canaries)
-are wired in.
+GO, ON THE LAPTOP, FOR NOTHING.**
 
-**Read the verdict in §9 before the rest. It is not "we can fill in the
-blank cell." It is "we can produce a certified partition of 99.6% plus an
-explicit list of open cases, for about $315, and we do not yet have a
-method for the last 0.37% (95% interval 0.21%–0.66%, i.e. 19 000–60 800
-classes)."**
+The three published splits reproduce exactly with zero residue. At (4,9)
+the target is not the wall it looked like at the start of the day:
+
+* **the tree walk** realizes a class by crossing ONE wall from its parent's
+  realization — 26.5 ms/class, ~70 core-hours for the whole catalogue
+  against 3 940 for the search cascade, a factor of 58;
+* every one of the **16 crossing failures** in a 1200-row uniform probe is
+  BFP-certified **non-realizable** — 0 realizable, 0 undecided;
+* a complete cascade over **10 000** classes leaves **zero** residue
+  (95% CI [0%, 0.038%]), with marginal conversion *rising* through the
+  effort ladder rather than plateauing;
+* the (3,10) BFP completeness test lands on **exactly 242**, the published
+  count.
+
+**The revised plan needs no cloud at all: walk + BFP + orphan repair is
+~86 core-hours, one overnight run on this laptop, $0.** Total spend on
+this project was **$0.45** of spot, and the VM is gone.
+
+The mathematics — why realizability cannot always transport along the
+tree, what is true instead, and the one gap that would still need a new
+idea — is in **[`WALK_THEORY.md`](WALK_THEORY.md)**.
+
+Predecessor standards apply: every claim carries a certificate or an
+explicit trust boundary, and deliberately-broken controls (canaries) are
+wired in.
+
+**What this is not.** It is still not a filled-in cell. It is a method
+that, on every sample we have run, settles every class it is given — but
+"0 of 10 000" is an upper bound of ~3 562 classes catalogue-wide, not a
+proof, and the completeness argument rests on a project-internal lemma
+(`WALK_THEORY.md` §7).
 
 ---
 
