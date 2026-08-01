@@ -1,0 +1,5 @@
+# transient run artefacts and the 2.3 MB discovery dump
+_*.json
+_*.log
+_*.txt
+__pycache__/
