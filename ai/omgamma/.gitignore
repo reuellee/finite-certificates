@@ -25,3 +25,5 @@ data/big_*.full/
 data/canary_resume_tmp/
 data/pure94/
 paper/*.out
+myverify*
+*.out

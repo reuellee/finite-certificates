@@ -261,10 +261,16 @@ find the labeled-level statement in print." That was wrong: the
 labeled-level statement IS in print, in Roudneff–Sturmfels 1988 itself.
 The zbMATH review of that paper states verbatim that "if G^{n,r}_real is
 a subgraph of G^{n,r} **induced** by the set of representable oriented
-matroids, then it is shown that G^{n,r}_real is connected"; DS4 v4 (2024)
-§3.7.1 and Curto et al. (arXiv:2008.01032) say the same, and "induced" is
-verbatim in all three — which is exactly the every-intermediate-OM-is-
-realizable reading the corollary needs. Caveats, kept explicit: the
+matroids, then it is shown that G^{n,r}_real is connected", and DS4 v4
+(2024) §3.7.1 states verbatim that "the **induced subgraph** defined by
+realizable uniform oriented matroids is connected [RS88]" — at the
+labelled level, which is exactly the every-intermediate-OM-is-realizable
+reading the corollary needs. Curto et al. (arXiv:2008.01032) support the
+attribution but only in paraphrase ("an analogue of a result from [7]
+stating that G^{k,r}_real is connected") — they never use the word
+"induced", and an earlier version of this note wrongly said it was
+verbatim in all three sources (caught by the corpus citation audit,
+2026-08-01; the claim rests on zbMATH + DS4, which suffice). Caveats, kept explicit: the
 paywalled primary text has NOT been obtained, and no source we found
 cites it by proposition number, so it must never be written as
 "[RS88, Prop. X]". Knauer–Marc quote a reorientation-class weakening
