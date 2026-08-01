@@ -30,6 +30,14 @@ set -euo pipefail
 PROJECT="${PROJECT:-project-ebd5a273-53ea-4c8b-81a}"
 ZONE="${ZONE:-us-central1-a}"
 REPO="${REPO:-https://github.com/reuellee/finite-certificates.git}"
+# Work in progress is committed LOCALLY and not pushed, so a git clone on the
+# VM would run stale code.  Set CODE_TARBALL to a gs:// tar.gz staged by
+# `stage`, and the worker unpacks that instead of cloning.
+CODE_TARBALL="${CODE_TARBALL:-}"
+# The shard range [lo,hi) need not be the whole partition: NSHARDS is how
+# many pieces the key file is split into, so a run can cover a uniform
+# random SUBSET by taking the first (hi-lo) of NSHARDS strided shards.
+NSHARDS="${NSHARDS:-}"
 BUCKET="${BUCKET:-gs://${PROJECT}-sweeps}"
 MAX_HOURS="${MAX_HOURS:-96}"
 RATE_PER_CORE_HOUR="${RATE_PER_CORE_HOUR:-0.0125}"   # n2-highcpu spot, approx
@@ -66,15 +74,34 @@ echo "[sweep] boot \$(date -Is)"
   gsutil -q cp /var/log/sweep.log ${BUCKET}/${job}/sweep-timeout.log || true; \
   poweroff ) &
 
-apt-get update -qq && apt-get install -y -qq python3 python3-numpy git
+apt-get update -qq && apt-get install -y -qq python3 python3-numpy python3-scipy git curl
+
+# Fetch from GCS without assuming which CLI the image ships.
+fetch() {
+  command -v gsutil >/dev/null 2>&1 && { gsutil -q cp "\$1" "\$2" && return 0; }
+  command -v gcloud >/dev/null 2>&1 && { gcloud storage cp "\$1" "\$2" && return 0; }
+  local tok rest bkt obj
+  tok=\$(curl -s -H 'Metadata-Flavor: Google'     'http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token'     | python3 -c 'import sys,json;print(json.load(sys.stdin)["access_token"])')
+  rest=\${1#gs://}; bkt=\${rest%%/*}; obj=\${rest#*/}
+  obj=\$(python3 -c 'import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1],safe=""))' "\$obj")
+  curl -sf -H "Authorization: Bearer \$tok"     "https://storage.googleapis.com/storage/v1/b/\$bkt/o/\$obj?alt=media" -o "\$2"
+}
+
 cd /opt
-[ -d finite-certificates ] || git clone --depth 1 "$REPO" finite-certificates
+if [ -n "${CODE_TARBALL}" ]; then
+  echo "[sweep] using staged code ${CODE_TARBALL} (local commits are not pushed)"
+  fetch "${CODE_TARBALL}" /opt/code.tar.gz
+  mkdir -p finite-certificates && tar xzf /opt/code.tar.gz -C finite-certificates
+else
+  [ -d finite-certificates ] || git clone --depth 1 "$REPO" finite-certificates
+fi
 cd finite-certificates
 
 mkdir -p /opt/state
 gsutil -q -m rsync -r ${BUCKET}/${job}/state /opt/state || true   # resume
 
 python3 ops/run_shards.py --job "$job" --lo "$lo" --hi "$hi" \\
+        ${NSHARDS:+--nshards $NSHARDS} \
         --workers \$(nproc) --state /opt/state \\
         --out ${BUCKET}/${job} || echo "[sweep] job exited nonzero"
 

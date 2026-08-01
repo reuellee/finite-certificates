@@ -184,6 +184,80 @@ def main():
     except ValueError as e:
         report('C2 BFP refuses to run on a non-chirotope', True, str(e)[:60])
 
+    print('== D. ladder canaries (ladder.py) ==')
+    import ladder as ld
+
+    # D1 THE critical one.  If any effort level ever "solves" a class that
+    # carries a Gordan vector, the whole residue-vs-effort curve is
+    # meaningless -- and worse, the sweep would emit contradictory
+    # certificates.  Feed the ladder classes we have PROVED non-realizable.
+    nr = []
+    for f in ('certs_49_u_0.jsonl', 'certs_49_u_1.jsonl', 'certs_49_u_2.jsonl'):
+        if os.path.exists(f):
+            nr += [json.loads(l) for l in open(f) if '"NON_REALIZABLE"' in l]
+    nr = nr[:8]
+    bad = 0
+    for rec in nr:
+        chi = omdecode.signs_from_string(rec['chi'])
+        for name, kind, kw in ld.LEVELS[:5]:
+            Z, _ = ld.run_level(chi, g49, kind, kw, seed=4242)
+            if Z is not None:
+                bad += 1
+                break
+    report('D1 no ladder level realizes a BFP-certified class',
+           bad == 0 and len(nr) > 0,
+           '%d classes x 5 levels -> %d spurious realizations' % (len(nr), bad))
+
+    # D2 the ladder must solve easy classes at its cheapest level
+    easy = [json.loads(l) for l in open('certs_49_u_0.jsonl')
+            if '"REALIZABLE"' in l][:8] if os.path.exists('certs_49_u_0.jsonl') else []
+    at1 = 0
+    for rec in easy:
+        chi = omdecode.signs_from_string(rec['chi'])
+        name, kind, kw = ld.LEVELS[0]
+        Z, _ = ld.run_level(chi, g49, kind, kw, seed=7)
+        if Z is not None and np.array_equal(rz.exact_bracket_signs(Z, g49), chi):
+            at1 += 1
+    report('D2 easy classes solved at L1, matrices exact',
+           at1 == len(easy) and easy, '%d/%d' % (at1, len(easy)))
+
+    # D3 sample-extraction must decode identically to the full artifact
+    hi, lo, stab = omdecode.load_coverage_4_9(verify=True)
+    take = np.array([3, 5000, 999999, 4000000, 9276594])
+    direct = omdecode.signs_from_keys(9, 4, hi[take], lo[take])
+    np.savez_compressed('_canary_keys.npz', key_hi=hi[take], key_lo=lo[take],
+                        stab=stab[take], row=take.astype(np.int64))
+    h2, l2, s2, r2 = ld._load_keys('_canary_keys.npz')
+    viaext = omdecode.signs_from_keys(9, 4, h2, l2)
+    report('D3 extracted key file decodes identically to the artifact',
+           np.array_equal(direct, viaext) and np.array_equal(r2, take))
+    os.remove('_canary_keys.npz')
+
+    # D4 curve arithmetic, on synthetic rows with a known answer
+    import tempfile
+    rows = ([{'chi': 'a%d' % i, 'solved_at': 'L1 C-lite',
+              'times': {'L1 C-lite': 1.0}} for i in range(60)]
+            + [{'chi': 'b%d' % i, 'solved_at': None,
+                'times': {'L1 C-lite': 1.0}} for i in range(40)])
+    fn = os.path.join(tempfile.gettempdir(), '_canary_ladder.jsonl')
+    with open(fn, 'w') as fh:
+        for r in rows:
+            fh.write(json.dumps(r) + chr(10))
+    import io as _io
+    import contextlib
+    buf = _io.StringIO()
+
+    class A:
+        ladder = fn
+        swept = 1000
+    with contextlib.redirect_stdout(buf):
+        ld.cmd_curve(A())
+    txt = buf.getvalue()
+    os.remove(fn)
+    report('D4 curve arithmetic: 100 residue of 1000 swept, 60 solved -> 4.0000%',
+           'FINAL residue 40/1000 = 4.0000%' in txt,
+           [l for l in txt.splitlines() if l.startswith('FINAL')][:1])
+
     print('')
     if FAILS:
         print('CANARIES FAILED: ' + ', '.join(FAILS))

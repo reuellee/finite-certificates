@@ -11,3 +11,9 @@ bfp310_[0-9].jsonl
 stats_49_*.json
 stats_4_9_*.json
 stats_3_10_*.json
+keys.npz
+probe.log
+certs_walk_*.jsonl
+certs_probe.jsonl
+harvest_*.jsonl
+ladder_*.jsonl
