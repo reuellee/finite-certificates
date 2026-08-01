@@ -35,8 +35,8 @@ only "nothing here contradicts it".
 | PARTIAL | substance right, wording or locator imprecise enough to draw a referee |
 | NOT-IN-CORPUS | the source is not indexed (usually a book), or the claim is about absence |
 
-**Totals over 72 checked claims: 2 CONTRADICTED, 50 VERIFIED, 7 PARTIAL,
-13 NOT-IN-CORPUS.**
+**Totals over 73 checked claims: 2 CONTRADICTED, 52 VERIFIED, 7 PARTIAL,
+12 NOT-IN-CORPUS.**
 
 ---
 
@@ -211,6 +211,8 @@ Proposition 6.3, Theorem 5.5 and §§5–6 all check out.)
 | V48 | 468–472, 1332–1339 | "FMM13's 9,276,601 (DCG 49 (2013), Table '**existing1**', at both (4,9) and (5,9))" | the LaTeX label is carried into the extracted text: `[TABLE 1 CAPTION] The numbers of simple oriented matroids … [label: existing1]`, and 9,276,601 appears at $r=4,n=9$ and $r=5,n=9$ of that table. Locator, label and both cells confirmed. |
 | V49 | 1324–1329 | Finschi changelog quotation | verbatim (V33) |
 | V50 | 1332–1339 and `CORPUS.md` §6.1 | FMM13 prints the $(4,9)$ **realizable**-uniform cell as "unknown (unknown)" | FMM13 **Table 2** (label `existing1_realizable`, caption "The numbers of simple **realizable** oriented matroids … brackets are those of uniform realizable"): `r = 4 || … n = 9 [col 8]: unknown / (unknown)`. Confirmed — and note this is a *different table* from V25's, which the pre-fix corpus could not distinguish. |
+| V51 | 99–102 | "bases = $r$-subsets in **colex order** (Finschi's 'RevLex-Index' order …); his glossary defines the representative as the '**lexicographically maximal chirotope**' over the class" | Finschi's glossary entry *RevLex-Index* (`finschi_glossary_revlex`), verbatim: "The index is based on the representation of oriented matroids by chirotopes, where the **signs of the bases are ordered in reverse lexicographic order**, and the representative is the oriented matroid in the corresponding equivalence class with **lexicographically maximal chirotope**." Reverse lexicographic order on $r$-subsets *is* colex, and the second phrase is verbatim. Both halves confirmed. |
+| V52 | 322–333 (and `omgamma-note.tex` Thm ~2) | that Finschi's catalog counts the same objects this project calls Ḡ-orbits (relabelling + reorientation) | Finschi's glossary entry *Isomorphism Class* (`finschi_glossary_isom`): "the equivalence class defined by an **arbitrary combination of relabeling and reorientation** of the elements of the ground set." One caveat, and it resolves in our favour: his *Relabeling Class* entry adds "**and introducing or deleting loops or parallel elements**" — but the catalog tabulates *non-degenerate (uniform)* classes with "card the cardinality of a **simple** representative", and a simple oriented matroid "has no loops and no (distinct) parallel elements", so on the uniform catalog relabelling reduces to permutation and his isomorphism classes are exactly the $\{\pm1\}^n\rtimes S_n$-orbits. |
 
 ---
 
@@ -226,7 +228,6 @@ These could not be checked here. Listed rather than guessed at.
 | N4 | `OMGAMMA.md` L399 | "K–M cite Ex. 7.9" — i.e. what Exercise 7.9 of BLSWZ says | book |
 | N5 | `maxout35note.tex` L253–255 | "Gordan's theorem" | classical; no attributed statement of it in the corpus |
 | N6 | `CAPSTONE.md` L347–348 | "independently by Fukuda's cddlib in exact GMP arithmetic" | software attribution, no paper indexed |
-| N7 | `OMGAMMA.md` L99–102 | "colex order (Finschi's 'RevLex-Index' order …); his glossary defines the representative as the 'lexicographically maximal chirotope'" | the glossary page (`finschi.com/math/om/?p=bib`) was added to the harvest this run; **see §5 for whether it landed**. Neither string occurs in the three catalog pages already indexed. |
 | N8 | `OMGAMMA.md` L262–264 | the zbMATH review sentence | zbMATH is paywalled and not indexed; the review itself was never obtainable here |
 | N9 | `OMGAMMA.md` L278–289; §4 generally | the primary text of Roudneff–Sturmfels 1988 | paywalled, pre-arXiv. §4 already says so explicitly and forbids citing it by proposition number. That restriction should stand: neither DS4 nor KM nor Curto cites it by number. |
 | N10 | `maxout35note.tex` L35–38, 84–86 | **novelty**: "We prove that the maximum at $(3,5)$ is exactly 42" | a corpus cannot verify novelty. Probe: `--query "the maximal number of vertices of a (3,5)-zonoboxtope is 42 not 44 counterexample to the conjecture"` returned BCLS itself, Montúfar et al. (2104.08135), Miyata–Padrol, DS4 — **nothing contradicting**. |

@@ -28,6 +28,15 @@ WHAT THIS COSTS  (also printed by --cost-note)
   never billed    the OCR parser and the Layout Parser ($10 / 1,000 pages)
                   are NOT enabled on this data store.
   All Discovery Engine SKUs above draw on the GenAI App Builder credit.
+
+READ THIS BEFORE QUOTING A NUMBER
+  Use --query to find the source, --answer to find the sentence, then OPEN
+  the document (ops/corpus/out/docs/<doc_id>.txt) and read the cell.  Source
+  tables are extracted cell by cell with the row label, the column header,
+  the column index and the caption on every row, so `grep <value>` lands you
+  on an unambiguous line.  Never quote a numeral that came only from
+  --answer: the generation layer has been measured reporting a value from
+  the wrong table of the right document.  CORPUS.md sections 6.4 and 6.7.
 """
 
 from __future__ import annotations
@@ -169,11 +178,24 @@ def run_answer(query: str, top: int) -> dict:
     })
 
 
+NUMBER_WARNING = (
+    "!! DO NOT QUOTE A NUMBER FROM THIS ANSWER. Open the cited document and\n"
+    "!! read the cell. Source tables are extracted with explicit labels --\n"
+    "!!   [TABLE 3 ROW 4] (table: <caption>) rank = 4 || card = 9 [col 9]: 9 276 595\n"
+    "!! -- so grep the doc_id in ops/corpus/out/docs/ and check the row, the\n"
+    "!! column AND the caption. The extractor no longer loses column\n"
+    "!! alignment (CORPUS.md section 8), but the ANSWER layer has been\n"
+    "!! measured conflating two tables inside one document and reporting a\n"
+    "!! value from the wrong one with full confidence. See CORPUS.md 6.4/6.7.")
+
+
 def show_answer(resp: dict) -> None:
     ans = resp.get("answer", {})
     print("\n=== GROUNDED ANSWER "
           f"(state={ans.get('answerSkippedReasons') or 'OK'}) ===")
     print(textwrap.fill(ans.get("answerText", "(no answer text)"), width=100))
+    if re.search(r"\d", ans.get("answerText", "")):
+        print("\n" + NUMBER_WARNING)
     refs = ans.get("references", [])
     if refs:
         print("\n--- cited documents ---")
