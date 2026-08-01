@@ -16,10 +16,12 @@ searched with `research_search.py --query` to find the source, and then the
 **document itself was opened** in `ops/corpus/out/docs/<doc_id>.txt` and the
 sentence quoted. No verdict below rests on a generated answer, and no number
 below came from one. This discipline is not optional: §6.4 of `CORPUS.md`
-records the corpus fabricating a table value with full confidence, and the
-re-test in §6.7 shows one half of that failure mode still alive.
+records the corpus fabricating a table value with full confidence. §6.7
+records the fix and its re-test, and also records what survives it: the
+answer layer can still read the right row of the *wrong variant* of a
+source. Opening the document is the only thing that catches that.
 
-**Standing caveat on novelty — read before the table.** A 1,900-document
+**Standing caveat on novelty — read before the table.** A 1,905-document
 index can *contradict* "this is new"; it can never *verify* it. Absence from
 this corpus is not absence from the literature: the index has no 2026 arXiv
 listings, no citation graph, and no paywalled journals. Every novelty claim
@@ -242,12 +244,19 @@ These could not be checked here. Listed rather than guessed at.
 Two things this audit could not have done before 2026-08-01, both consequences
 of the table-extraction fix (`CORPUS.md` §8):
 
-* **V26 / V47 / V51 / C1** all turn on reading a specific *cell* of a specific
+* **V24 / V25 / V26 / V47 / V50 / C1** all turn on reading a specific *cell* of a specific
   *table* in a specific *source*. Before the fix the extracted text of
-  Finschi's page, KM's Table 1 and FMM13's Tables 1/2/3 was a bare run of
-  numbers with the leading blanks dropped, and the corpus had already been
-  measured mis-assigning exactly these cells. Every table quotation above is
-  reproducible with `grep` against `ops/corpus/out/docs/`.
+  Finschi's page, Knauer–Marc's Table 1 and FMM13's Tables 1/2/3 was a bare
+  run of numbers with the leading blanks dropped, and the corpus had already
+  been measured mis-assigning exactly these cells. Every table quotation
+  above is reproducible with `grep` against `ops/corpus/out/docs/`. V26 in
+  particular — the 482/4382 erratum and its four cross-checks — requires
+  reading four different tables in three different documents and getting the
+  right cell from each; that was not possible before 2026-08-01.
+* **V51 / V52** were settled by fetching Finschi's glossary, which was not
+  in the corpus at all before this run: the basis-order convention and the
+  canonical representative are now backed by his definitions rather than by
+  inference from his page headers.
 * **V44** upgrades the highest-stakes correction in the repository — that the
   labelled realizable-connectivity lemma is Roudneff–Sturmfels', not ours —
   from "a zbMATH review sentence plus two secondary restatements" to a
