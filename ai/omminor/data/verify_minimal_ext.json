@@ -1,0 +1,12 @@
+{
+ "source": "minimal_ext.txt",
+ "minimal_classes": 1758,
+ "deletions": 15822,
+ "distinct_deletions": 15463,
+ "gordan_vectors_found": 0,
+ "positive_control": [
+  60,
+  60
+ ],
+ "wall_s": 211.83867049217224
+}

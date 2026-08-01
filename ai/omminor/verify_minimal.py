@@ -134,10 +134,14 @@ def main():
         print('positive control: %d/%d deletions known to be one of the 24 '
               'produced a Gordan vector' % (pos_ok, pos_n))
 
-    res = {'minimal_classes': len(keys), 'deletions': 9 * len(keys),
+    res = {'source': os.path.basename(a.minimal),
+           'minimal_classes': len(keys), 'deletions': 9 * len(keys),
            'distinct_deletions': len(U), 'gordan_vectors_found': len(allhits),
            'positive_control': [pos_ok, pos_n], 'wall_s': el}
-    json.dump(res, open(os.path.join(OUT, 'verify_minimal.json'), 'w'), indent=1)
+    stem = os.path.basename(a.minimal).replace('minimal_', '').replace('.txt', '')
+    outp = os.path.join(OUT, 'verify_minimal_%s.json' % stem)
+    json.dump(res, open(outp, 'w'), indent=1)
+    print('wrote %s' % outp)
     ok = len(allhits) == 0 and pos_ok == pos_n
     print('\n%s' % ('MINIMAL LIST CONFIRMED (no deletion of any minor-minimal '
                     'class has a biquadratic final polynomial)' if ok

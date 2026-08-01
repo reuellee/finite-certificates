@@ -6,15 +6,16 @@ extensional sweep can be turned into a classification theorem, measures the
 answer, and says plainly what the answer is worth.
 
 **Short answer.** Mostly, but not enough to be a theorem worth the name.
-**91.1%** of the certified non-realizable uniform rank-4 classes on 9
+**90.7%** of the certified non-realizable uniform rank-4 classes on 9
 elements contain one of the 24 non-realizable (4,8) classes as a
-single-element deletion. Contractions never witness anything, and we verify
-why. The other **8.9%** are minor-minimal — genuinely new 9-element
-obstructions — and there are **1,279 of them in the prefix measured**, on
-track for order 10^4 catalogue-wide. So a finite excluded-minor statement
-exists at n ≤ 9, but at n = 9 it degenerates into a table of tens of
-thousands of entries with no visible common structure. The honest
-deliverable is the closure fraction, the mechanism behind it, and one
+single-element deletion (91.1% on the smaller, fully-audited prefix; 90.5%
+on an unbiased uniform sample of the whole catalog). Contractions never
+witness anything, and we verify why. The other **9.3%** are minor-minimal —
+genuinely new 9-element obstructions — and there are **1,758 of them in the
+prefix measured**, on track for order 10^4 catalogue-wide. So a finite
+excluded-minor statement exists at n ≤ 9, but at n = 9 it degenerates into a
+table of tens of thousands of entries with no visible common structure. The
+honest deliverable is the closure fraction, the mechanism behind it, and one
 proposition that sharpens an open conjecture — not a classification.
 
 ---
@@ -54,13 +55,36 @@ sample of 5,400 classes** drawn by `ai/omreal/pilot.py --sample49` over all
 non-realizable, 391 residue, 4,893 realizable). The two agree.
 
 Everything is designed to be **extended, not redone**:
-`python harvest.py --tag sweep --extend` resumes from the byte offsets
-above; `python minorsweep.py --in data/harvest_sweep.jsonl --tag sweep
---extend` resumes from the line count; the minor-identification cache
+`python harvest.py --tag <t> --extend` resumes from the byte offsets above;
+`python minorsweep.py --in data/harvest_<t>.jsonl --tag <t> --extend`
+resumes from the line count; the minor-identification cache
 (`data/idcache_4_8.npz`, `data/idcache_3_8.npz`) means only genuinely new
 8-element minors are paid for. (The first pass here was a full pass because
-the harvest record format changed mid-session; from now on `--extend`
-works.)
+the harvest record format changed mid-session.)
+
+**The extend path was then exercised rather than merely asserted.** With
+tag `ext`, seeded from the frozen state files, the sweep's shards had grown
+to 1,773,749 lines; extending consumed the new 328,522 of them in 298 s:
+
+| | frozen prefix (`sweep`) | extended prefix (`ext`) |
+|---|---|---|
+| sweep certificate lines | 1,445,227 (15.58%) | **1,773,749 (19.12%)** |
+| certified non-realizable | 14,396 | 18,944 |
+| with a non-realizable deletion | 13,117 (**91.12%**) | 17,186 (**90.72%**) |
+| minor-minimal | 1,279 (8.88%) | **1,758** (9.28%) |
+| OPEN rows / with a witness | 60 / 0 | 84 / 0 |
+
+and three properties that had to hold, and do: the first 15,171 rows of the
+extended output are **identical** to the frozen run's, the frozen harvest
+file is a byte-for-byte prefix of the extended one, and the frozen minimal
+list is a **subset** of the extended one. All 1,758 extended certificates
+are accepted by `checkcert.py` and the extended minimal list passes the
+falsification test of §6.1 (15,463 distinct deletions, 0 Gordan vectors).
+
+The rest of this document quotes the **frozen** prefix, because the depth
+analysis (§4.2), the structure analysis (§7) and the canary suite (§10) were
+all run against exactly it. The extension is reported alongside wherever the
+number moves.
 
 **All 15,171 harvested (4,9) certificates and all 5,400 uniform-corpus
 certificates were re-verified by `ai/omreal/checkcert.py`** — the
@@ -223,7 +247,8 @@ all nine contractions against the (3,8) catalog.
 
 | corpus | non-realizable classes | with ≥1 non-realizable **deletion** | fraction | 95% Wilson |
 |---|---|---|---|---|
-| sweep prefix (depth-ordered, 15.58% of the catalog) | 14,396 | 13,117 | **91.12%** | [90.64%, 91.57%] |
+| sweep prefix, frozen (depth-ordered, 15.58% of the catalog) | 14,396 | 13,117 | **91.12%** | [90.64%, 91.57%] |
+| sweep prefix, extended (19.12% of the catalog) | 18,944 | 17,186 | **90.72%** | [90.30%, 91.12%] |
 | uniform random sample over all 9,276,595 classes | 116 | 105 | **90.52%** | [83.81%, 94.62%] |
 
 **With ≥1 non-realizable contraction: 0 of 20,571 classes tested** (14,512
@@ -396,16 +421,18 @@ Gordan vector from a fresh LP, all accepted by `checkcert.py` (canary C2).
 
 ## 6. The minor-minimal residue at n = 9
 
-**1,279 classes** in the frozen prefix, listed by canonical key in
-`data/minimal_sweep.txt`; their full certificates are in
-`data/certs_minimal_sweep.jsonl` and **all 1,279 were accepted by
-`checkcert.py`**. Each has all nine deletions realizable and all nine
-contractions realizable, so by Lemma M every proper minor is realizable:
-each is a genuine new excluded minor for realizability at n = 9.
+**1,279 classes** in the frozen prefix (`data/minimal_sweep.txt`), **1,758**
+in the extended one (`data/minimal_ext.txt`), the former a subset of the
+latter; both listed by canonical key. Their full certificates
+(`data/certs_minimal_*.jsonl`) were **all accepted by `checkcert.py`** —
+1,279 and 1,758 records, zero rejections. Each has all nine deletions
+realizable and all nine contractions realizable, so by Lemma M every proper
+minor is realizable: each is a genuine new excluded minor for realizability
+at n = 9.
 
-They are **8.88%** of the certified non-realizable classes in the prefix —
-matching, at 570× the sample size, the 2-of-25 (8%) that `SCOPING.md` §6.3
-reported from a hand sample.
+They are **8.88%** (frozen) / **9.28%** (extended) of the certified
+non-realizable classes — matching, at 570× the sample size, the 2-of-25 (8%)
+that `SCOPING.md` §6.3 reported from a hand sample.
 
 ### 6.1 The list survives a falsification test that bypasses the pipeline
 
@@ -415,21 +442,27 @@ identification is the one step whose failure would silently inflate the
 list. `verify_minimal.py` tests the claim without canonicalizing anything:
 
 > A realizable oriented matroid provably has **no** Gordan vector — the logs
-> of its brackets satisfy every strict inequality. So a single biquadratic
-> final polynomial found among the deletions of a minor-minimal class
-> refutes the list. Conversely each of the 24 obstructions has one, and
-> BFP-existence is a class invariant (§5.1), so the test is sharp both ways.
+> of its brackets satisfy every strict inequality — while each of the 24
+> obstructions does have one and BFP-existence is a class invariant (§5.1).
+> So if any deletion of a listed class were really one of the 24, however it
+> had been misidentified, an LP run directly on that deletion would find a
+> Gordan vector. Zero hits therefore rules out misassignment **regardless of
+> what the canonicalizer did**.
 
-| | |
-|---|---|
-| deletions of the 1,279 minimal classes | 11,511 (11,286 distinct labelled) |
-| put through a fresh BFP search | all of them, 14 ms each, 154 s at 2 workers |
-| **Gordan vectors found** | **0** |
-| positive control: deletions identified as one of the 24 | **60/60** produced a Gordan vector |
+| list | deletions | distinct labelled | **Gordan vectors found** | positive control |
+|---|---|---|---|---|
+| frozen, 1,279 classes | 11,511 | 11,286 | **0** | 60/60 |
+| extended, 1,758 classes | 15,822 | 15,463 | **0** | 60/60 |
+| uniform corpus, 11 classes | 99 | 99 | **0** | 20/20 |
 
-Zero hits over 11,286 independent LPs, against a positive control that fires
-60 times out of 60. The minimal list does not depend on the canonicalizer
-being right.
+Zero hits over 26,848 independent LPs (14–35 ms each), against a positive
+control — deletions the pipeline identified as one of the 24, run through
+the same code — that fires 140 times out of 140. Note what the positive
+control does and does not show: it confirms that BFP-existence transports to
+arbitrary labelled representatives, which is what §5.1 needs; it is *not* a
+test of misassignment. The falsification power comes entirely from the
+logical fact above. **The minimal list does not depend on the canonicalizer
+being right.**
 
 **Extrapolation, clearly labelled as one.** `SCOPING.md` §6.2 measures the
 catalogue-wide non-realizable density at 2.10% [1.64%, 2.68%] on a uniform
@@ -648,7 +681,7 @@ unless the weighting is corrected by the parent counts.
 | C2 deletions identified as one of the 24: run BFP directly on the deletion | 25/25 got a Gordan vector; `checkcert.py` accepted all |
 | C3 deletions identified as realizable: realize the deletion directly | 25/25 realized; `checkcert.py` accepted all |
 | C4 brute-force canonicalization over the **whole** group (8!·2⁸·2 elements; `bfcanon.py`, no shared code, no colour refinement, no sign lattice) | 12/12 land in the class the pipeline assigned, 12/12 separated from a random other class |
-| C5 (`verify_minimal.py`) every deletion of every minor-minimal class through a fresh BFP search — canonicalization not used | **0 Gordan vectors in 11,286 LPs**; positive control 60/60 |
+| C5 (`verify_minimal.py`) every deletion of every minor-minimal class through a fresh BFP search — canonicalization not used | **0 Gordan vectors in 26,848 LPs** across all three minimal lists; positive control 140/140 |
 
 **Global checks, asserted on every row rather than sampled** (`minorsweep.py`):
 
@@ -704,7 +737,8 @@ with a reader that consumes only complete lines and records byte offsets.
 | `cert47.py` | certificates for (4,5), (4,6), (4,7), (3,7) |
 | `rank3check.py` | the same question at (3,10), against published ground truth |
 | `ATLAS_SPEC.md` | design note: generalizing the coverage tree into a reusable property-slot artifact (task item 6, secondary) |
-| `data/minimal_sweep.txt` | **the minor-minimal list so far**, 1,279 canonical keys (tracked) |
+| `data/minimal_ext.txt` | **the minor-minimal list so far**, 1,758 canonical keys at 19.12% of the catalog (tracked) |
+| `data/minimal_sweep.txt` | the 1,279 at the frozen 15.58% prefix — a subset of the above, and the list every ancillary analysis was run against (tracked) |
 | `data/minimal_uniform.txt` | the 11 found in the uniform corpus (tracked) |
 | `data/certs_4_5.jsonl`, `certs_4_6.jsonl`, `certs_4_7.jsonl`, `certs_3_7.jsonl` | the new small-cell certificates (tracked) |
 | `data/lifted_certs.jsonl`, `data/lifted_canaries.jsonl` | the 80 lifted certificates and the 5 sabotages (tracked) |
@@ -732,9 +766,13 @@ mini = {json.loads(l)['chi'] for l in open('data/minors_sweep.jsonl')
 
 1. **The sweep finishing.** It would settle the closure fraction over all
    9,276,595 classes and make the minimal list complete rather than a
-   prefix. `harvest.py --extend` then `minorsweep.py --extend` does it; the
-   identification cache means the marginal cost is only the new 8-element
-   minors.
+   prefix. `harvest.py --extend` then `minorsweep.py --extend` does it — the
+   path is exercised, not just asserted (§0): the 15.58% → 19.12% extension
+   reproduced the earlier rows exactly and cost 298 s, because the
+   identification cache means the marginal price is only the genuinely new
+   8-element minors. Watch the drift: 91.12% → 90.72% closure and 8.88% →
+   9.28% minimal over that one step, in the direction §4.2's depth table
+   predicts.
 2. **Structure inside the 1,279.** Nothing found here separates them from
    generic non-realizable classes except certificate size. A property that
    did — a common submatroid, a common extension pattern, a bound on the

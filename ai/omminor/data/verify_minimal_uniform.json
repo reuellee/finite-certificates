@@ -1,0 +1,12 @@
+{
+ "source": "minimal_uniform.txt",
+ "minimal_classes": 11,
+ "deletions": 99,
+ "distinct_deletions": 99,
+ "gordan_vectors_found": 0,
+ "positive_control": [
+  20,
+  20
+ ],
+ "wall_s": 3.2393853664398193
+}

@@ -16,6 +16,8 @@
 data/harvest_*.jsonl
 data/minors_*.jsonl
 data/certs_minimal_*.jsonl
+data/harvest_ext.*
+data/minors_ext.*
 data/idcache_*.npz
 data/cat48_keys.npz
 data/cat48_lines.txt

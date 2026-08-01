@@ -1,4 +1,5 @@
 {
+ "source": "minimal_sweep.txt",
  "minimal_classes": 1279,
  "deletions": 11511,
  "distinct_deletions": 11286,
@@ -7,5 +8,5 @@
   60,
   60
  ],
- "wall_s": 154.19712352752686
+ "wall_s": 174.00975251197815
 }
