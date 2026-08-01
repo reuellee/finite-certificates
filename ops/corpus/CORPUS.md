@@ -446,7 +446,65 @@ sources were needed, and both were in the index.
 
 ### 6.5 Control arm: the same questions in a general web search
 
-WEBSEARCH_CONTROL_PLACEHOLDER
+Run 2026-08-01 against DuckDuckGo's `lite` endpoint. (The
+`websearch_baseline.py` script does the same thing, but the endpoint
+rate-limits this machine's IP after ~5 requests and then serves an empty
+page, so these transcripts were taken through the agent harness's fetch
+tool. This is a real limitation of the control, not of the corpus.)
+
+**Q1 — "realizability uniform rank 4 oriented matroids 9 elements known"**
+
+| # | result | snippet |
+|---|---|---|
+| 1 | *Oriented Matroids Today* (DS4 PDF) | "Fukuda, Miyata, and Moriyama [FMM13] … enumerate the realizable (non-uniform) oriented matroids of rank 3 on 9 elements and of rank 4 on **10** elements." |
+| 2 | Oriented matroid — Wikipedia | "The distinction between matroids and oriented matroids is discussed further below…" |
+| 3 | Matroid rank — Wikipedia | "…the rank of a matroid is the maximum size of an independent set…" |
+| 4 | "6 Oriented Matroids" (PDF) | "The realization space of an oriented matroid of rank 2 is always stably equivalent to {0}…" |
+| 5 | allMatroids — Macaulay2 | "…a list of matroids on n elements of rank r, for small n (currently, n ≤ 9)." |
+
+The top hit is the right document and its snippet is a **near-miss that
+reads like an answer**: rank 4 on *10* elements, non-uniform. Nothing on
+the page says the (4,9) uniform cell is unknown. Results 2–5 are noise.
+**Web search: does not answer.** Corpus: answers, plus one fabricated
+number (§6.1).
+
+**Q2 — "Cordovil Las Vergnas mutation graph uniform oriented matroids connected"**
+
+| # | result | snippet |
+|---|---|---|
+| 1 | arXiv:2501.12951 | "We call an oriented matroid Mandel if it has an extension in general position…" |
+| 2 | Mutations and (Non-)Euclideaness in oriented matroids | "If a totally non-Euclidean oriented matroid is connected to a Euclidean oriented matroid in the mutation-graph, the path must contain at least three edges." |
+| 3 | (PDF) same paper | "If L is the minimum number of mutations adjacent to an element of the groundset, we call an oriented matroid Las Vergnas if L>0." |
+| 4 | On a Mutation Problem for Oriented Matroids — ScienceDirect | "For uniform oriented matroids M with n elements, there is in the realizable case a sharp lower bound…" |
+| 5 | Oriented Matroids — Cambridge UP | "Oriented matroids are a very natural mathematical concept…" |
+
+Five plausible results, **none containing the number 9**, none naming
+Knauer–Marc, and none distinguishing
+$\overline{\mathcal{G}}$ / $\mathcal{G}$ / $\underline{\mathcal{G}}$ —
+which is precisely how this program's mission brief came to attribute
+the suspected counterexample to the wrong graph. **Web search: does not
+answer, and its failure mode is the one that already cost us a
+correction pass.** Corpus: fully correct (§6.2).
+
+**Q3 — `"Maxout Polytopes" Conjecture 6.6 zonoboxtope vertices`** →
+**no results at all.** Broadening to
+"Maxout Polytopes Balakin Cox Loho Sturmfels conjecture maximal number
+of vertices" returns five hits, all the same September-2025 paper
+(arXiv abs, arXiv PDF, Semantic Scholar, a mirror, NASA ADS), with
+abstract-level snippets:
+
+> "Maxout polytopes are defined by feedforward neural networks with maxout
+> activation function and non-negative weights after the first layer."
+> "We discuss methods for constructing maxout polytopes of type (d, n, m)
+> with the maximum possible number of vertices."
+> "Maxout polytopes are cubical for generic networks without bottlenecks."
+
+**Web search: finds the paper, answers nothing.** To learn which cases
+of Conjecture 6.6 are proven you must open the PDF and read §6. The
+corpus did that and returned the theorem numbers, the values 16/26/44/60,
+the DFS method and the 1000-sample tightness argument (§6.3). This is the
+clearest single demonstration of what indexing full text buys: the answer
+is never in an abstract, so it is never in a snippet.
 
 ### 6.6 Honest verdict
 
