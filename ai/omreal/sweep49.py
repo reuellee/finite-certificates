@@ -123,6 +123,19 @@ def cmd_init(a):
                                  'verdict': 'REALIZABLE',
                                  'matrix': [[int(v) for v in r] for r in Z0]}) + '\n')
         print('root row %d realized, |entry| <= %d' % (root, np.abs(Z0).max()))
+    # Flatten the per-row arrays to .npy so workers can MEMMAP them.  Four
+    # workers each np.load-ing the npz cost ~305 MB of PRIVATE memory apiece
+    # (~1.2 GB); memmapped they share one copy through the page cache, which
+    # matters because this is the owner's 16 GB working machine.
+    need = {'hi': hi, 'lo': lo, 'parent': w['parent'], 'flip': w['flip'],
+            'sigma': w['sigma'], 'eps': w['eps'], 'gsgn': w['gsgn']}
+    for k, v in need.items():
+        q = os.path.join(STATE, k + '.npy')
+        if not os.path.exists(q):
+            np.save(q, np.ascontiguousarray(v))
+    print('shared arrays written (%.0f MB total)'
+          % (sum(os.path.getsize(os.path.join(STATE, k + '.npy'))
+                 for k in need) / 1e6))
     Z.flush()
     st.flush()
     print('init done. %d rows todo' % int((st[:] == TODO).sum()))
@@ -137,10 +150,10 @@ _G = {}
 
 def _ctx():
     if not _G:
-        hi, lo, stab, w, man = tw.load(verify_hashes=False)
-        _G['hi'], _G['lo'] = hi, lo
-        _G['parent'], _G['flip'] = w['parent'], w['flip']
-        _G['sig'], _G['eps'], _G['gsg'] = w['sigma'], w['eps'], w['gsgn']
+        L = lambda k: np.load(os.path.join(STATE, k + '.npy'), mmap_mode='r')
+        _G['hi'], _G['lo'] = L('hi'), L('lo')
+        _G['parent'], _G['flip'] = L('parent'), L('flip')
+        _G['sig'], _G['eps'], _G['gsg'] = L('sigma'), L('eps'), L('gsgn')
         _G['act'] = tw.Action()
         _G['geom'] = rz.Geom(N, R)
         _G['gp'] = bfpmod.GPSystem(N, R)

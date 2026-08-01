@@ -105,16 +105,59 @@ heuristic: **a crossing-based search is complete on the realizable side.**
 It is also exactly why the walk's failures coincided with the
 non-realizable classes in every case we measured.
 
-**Trust boundary.** Lemma 3 is omgamma's own argument, described there as
-"folklore but we could not find the labeled-level statement in print",
-citing Roudneff–Sturmfels 1988 (Geom. Dedicata 27) for the
-reorientation-class version. We have not read Roudneff–Sturmfels directly.
-Theorem A is therefore *not* verified literature; it is a project-internal
-lemma. Nothing in any certificate depends on it — every realization is
-checked by exact integer determinants and every non-realizability
-certificate by a Gordan vector — but the *completeness* claim of
-Corollary B does. Before that claim is published it must be checked
-against the primary source.
+**Trust boundary — substantially improved, 2026-08-01.** `OMGAMMA.md`
+introduces Lemma 3 with "seems to be folklore but we could not find the
+labeled-level statement in print". **It is in print, at the labeled
+level.** A literature check found the result stated three times
+independently:
+
+* **J.-P. Roudneff and B. Sturmfels, "Simplicial cells in arrangements and
+  mutations of oriented matroids", Geometriae Dedicata 27 (1988) 153–170**,
+  [doi:10.1007/BF00151346](https://doi.org/10.1007/BF00151346). Citation
+  verified three ways (Sturmfels' own publication list, Semantic Scholar,
+  zbMATH Zbl 0654.05019). The **zbMATH review** — by a reviewer who had the
+  paper in hand — says verbatim:
+
+  > "This defines the mutation graph G^{n,r} on the set of all rank r
+  > uniform oriented matroids on n elements: M and M' are joined by an edge
+  > in G^{n,r} if and only if they are mutants. If G^{n,r}_real is a
+  > subgraph of G^{n,r} **induced** by the set of representable oriented
+  > matroids, then it is shown that **G^{n,r}_real is connected**."
+
+* **"Oriented Matroids Today", eljc dynamic survey DS4 v4 (2024), §3.7.1,
+  p. 14** ([pdf](https://www.combinatorics.org/files/Surveys/ds4/ds4v4-2024.pdf)),
+  verbatim: *"Also, in all ranks the induced subgraph defined by realizable
+  uniform oriented matroids is connected [RS88]."*
+
+* Curto et al., [arXiv:2008.01032](https://arxiv.org/abs/2008.01032) §4,
+  which also prints essentially the configuration-space argument above as
+  its own connectivity lemma, described there as "an analogue of a result
+  from [RS88]".
+
+Three things matter here. **"Induced"** appears verbatim in all three —
+that is exactly the "every intermediate OM is also realizable" that
+Corollary B needs, so it is not an over-reading. The statement is at the
+**labeled** level ("on n elements", "on the same elements"), which is the
+strongest of the three equivalence levels and implies the class-level
+version we use. And it holds **in all ranks**, with uniformity required
+(the mutation graph is only defined on uniform OMs) and no simplicity or
+rank side conditions.
+
+Residual caveats, stated plainly. The Springer text is paywalled and **was
+not obtained**; everything above is secondary, though one source is a
+review written from the paper itself. **No source cites the result by
+proposition number**, so nothing may be written as "[RS88, Prop. X]" —
+cite `[RS88]` whole, with DS4 v4 §3.7.1 as a corroborating pointer. And
+note that Knauer–Marc ([arXiv:2002.11403](https://arxiv.org/abs/2002.11403))
+cite RS88 for a *reorientation-class* version, because they redefined the
+symbol G^{n,r} to mean reorientation classes for their own purposes; that
+is a weakening for convenience, not a claim about what RS88 proved. If
+challenged, the labeled statement is anyway provable in five lines by the
+configuration-space argument quoted above.
+
+Net effect: **Corollary B rests on a published theorem, not on this
+project's own reasoning.** Nothing in any certificate ever depended on it;
+now the completeness claim does not depend on unpublished folklore either.
 
 ---
 
@@ -248,12 +291,12 @@ classes. Nothing in the revised plan needs a VM.
 
 Three gaps, in decreasing order of how much they should worry anyone.
 
-1. **Corollary B's completeness rests on a project-internal lemma.** Every
-   *certificate* is independent of it — realizations are checked by exact
-   determinants, non-realizability by Gordan vectors — but the claim "the
-   classes the walk never reaches are exactly the non-realizable ones"
-   does not hold without Theorem A. Verify Lemma 3 against
-   Roudneff–Sturmfels 1988 before anything is published.
+1. **Corollary B rests on Roudneff–Sturmfels 1988 — now a citation, not
+   folklore** (§3). The remaining exposure is small and precisely stated:
+   the primary text was not obtained, and no source gives a proposition
+   number. Get the Springer PDF before publishing a numbered citation.
+   Every *certificate* is independent of the lemma regardless — realizations
+   are checked by exact determinants, non-realizability by Gordan vectors.
 
 2. **BFP completeness at (4,9) is not a theorem and should not be
    assumed.** It does not have to be, though: we do not need BFP to be

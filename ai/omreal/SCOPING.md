@@ -29,6 +29,16 @@ Predecessor standards apply: every claim carries a certificate or an
 explicit trust boundary, and deliberately-broken controls (canaries) are
 wired in.
 
+**Trust boundary on the completeness claim.** The statement "the classes
+the walk never reaches are exactly the non-realizable ones" rests on
+realizable-connectivity under mutation. That is **Roudneff–Sturmfels,
+Geom. Dedicata 27 (1988) 153–170**, stated at the labeled level and in all
+ranks — verified through the zbMATH review of the paper and DS4 v4 §3.7.1,
+though the paywalled primary text was not obtained and no source gives a
+proposition number (`WALK_THEORY.md` §3). No certificate depends on it:
+realizations are checked by exact integer determinants, non-realizability
+by Gordan vectors.
+
 **What this is not.** It is still not a filled-in cell. It is a method
 that, on every sample we have run, settles every class it is given — but
 "0 of 10 000" is an upper bound of ~3 562 classes catalogue-wide, not a
