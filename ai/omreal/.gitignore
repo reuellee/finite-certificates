@@ -6,7 +6,7 @@ u49_all.jsonl
 b310_partial.jsonl
 certs_49_*.jsonl
 certs_4_9_*.jsonl
-certs_3_10_*.jsonl
+certs_3_10_[0-9].jsonl
 bfp310_[0-9].jsonl
 stats_49_*.json
 stats_4_9_*.json

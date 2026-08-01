@@ -328,7 +328,35 @@ of 27. So a clean result confirms the *implementation* at the right size.
 It does **not** establish BFP completeness at (4,9), which is a different
 rank with a 27× denser non-realizable population.
 
-<!--TEST310RESULT-->
+### Result: exactly 242
+
+`bfpsweep.py 3 10`, all **312 356** classes, 6 shards, ~102 min wall on
+this laptop:
+
+| shard | classes | BFP hits |
+|---|---|---|
+| 0 | 52 060 | 39 |
+| 1 | 52 060 | 44 |
+| 2 | 52 059 | 42 |
+| 3 | 52 059 | 33 |
+| 4 | 52 059 | 37 |
+| 5 | 52 059 | 47 |
+| **total** | **312 356** | **242** |
+
+**242, against the published 242** (FMM13 Table 1 minus Table 2). All 242
+certificates accepted by `checkcert.py` in 0.46 s.
+
+This is a two-sided match, and each side means something different. A
+Gordan vector *proves* non-realizability, so all 242 are genuinely
+non-realizable and there can be no false positive — finding no more than
+242 is therefore a check on the *catalogue*. Finding no fewer than 242
+means **BFP is complete on this catalogue**: every non-realizable class
+has a biquadratic final polynomial, and our implementation finds it.
+
+Read it with the caveat stated in advance: this establishes the
+implementation at the right LP size — (3,10) and (4,9) have 120 vs 126
+bases and 1260 GP relations each — but *not* BFP completeness at rank 4,
+where the non-realizable population is 27x denser.
 
 
 ## 5. Canaries
