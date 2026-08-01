@@ -1,0 +1,6 @@
+# Fetched artifacts: reproducible from build_corpus.py, and several are
+# third-party full texts under author licences that do not grant
+# redistribution.  Nothing under here belongs in git.
+cache/
+out/
+smoke/
