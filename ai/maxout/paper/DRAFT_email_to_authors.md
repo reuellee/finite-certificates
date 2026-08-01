@@ -1,4 +1,14 @@
-# Draft email to the authors of *Maxout Polytopes* — NOT SENT
+# Draft email to the authors of *Maxout Polytopes* — NOT SENT, AND NOT TO BE
+
+**Decision, 2026-08-01 (repository owner): do not send.** The repository is
+maintained as a portfolio demonstrating the research quality obtainable by
+directing AI systems, not as a bid for priority in the oriented-matroid or
+maxout-polytope literature. Contacting the authors is therefore out of
+scope. The draft is retained as a record of the decision and of what such
+a message would have contained, should that judgement ever change.
+
+---
+
 
 Recipients: Andrei Balakin, Shelby Cox, Georg Loho, Bernd Sturmfels
 (addresses to be looked up from their institutional pages; do not guess).
