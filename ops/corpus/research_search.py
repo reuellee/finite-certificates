@@ -22,9 +22,9 @@ WHAT THIS COSTS  (also printed by --cost-note)
                   1,000 user-input queries.  This SKU is NOT covered by the
                   free-query tier: roughly $0.004 per --answer call.
   at rest         Agent Search index storage, $5/GiB/month above a 10 GiB
-                  per-account free tier; this corpus measures 0.0056 GiB,
+                  per-account free tier; this corpus measures 0.0216 GiB,
                   so $0.  Plus a GCS bucket of the same size, measured at
-                  $0.00012/month, which is the only real-money line.
+                  $0.00047/month, which is the only real-money line.
   never billed    the OCR parser and the Layout Parser ($10 / 1,000 pages)
                   are NOT enabled on this data store.
   All Discovery Engine SKUs above draw on the GenAI App Builder credit.
@@ -74,11 +74,11 @@ COST_NOTE = (
     "COST: --query bills Agent Search Search-Standard ($1.50/1k queries, "
     "first 10k/account/month free -> $0). --answer additionally bills "
     "Advanced Generative Answers (+$4.00/1k, NOT free-tier eligible, "
-    "~$0.004/call). Index storage 0.0056 GiB measured, inside the 10 GiB/"
+    "~$0.004/call). Index storage 0.0216 GiB measured, inside the 10 GiB/"
     "account free tier -> $0. Layout Parser and OCR are NOT enabled on this "
     "data store. All Discovery Engine SKUs draw on the GenAI App Builder "
-    "credit; the only real-money line is the 5.7 MB GCS bucket at "
-    "$0.00012/month. See ops/corpus/CORPUS.md section 1.")
+    "credit; the only real-money line is the 22 MB GCS bucket at "
+    "$0.00047/month. See ops/corpus/CORPUS.md section 1.")
 
 
 def token() -> str:

@@ -1,7 +1,8 @@
 # A literature-search corpus on Vertex AI Search (Discovery Engine)
 
 Purpose: let research agents check a claim against **indexed primary
-sources** instead of web-search snippets. Built 2026-08-01.
+sources** instead of web-search snippets. Built 2026-08-01; scaled and
+its table-extraction defect fixed the same day (§6.7, §8).
 
 One-line use, from the repo root:
 
@@ -11,15 +12,39 @@ python ops/corpus/research_search.py --query "..." --answer      # grounded summ
 python ops/corpus/research_search.py --cost-note                 # which SKU am I spending?
 ```
 
+**Size, as of 2026-08-01 (second build):** **1,905 documents**, 234 with
+full text, 21.9 M characters, 22.16 MiB in GCS. Grown from 226 / 59 / 5.7 M.
+
 **Verdict up front (§6):** worth keeping, with a sharp asymmetry. On
 *"what does paper X actually say"* it is decisively better than web
 search — it reproduced, from the indexed source, the exact three-level
 distinction in the Cordovil–Las Vergnas conjecture that this program's
-own web-derived mission brief got **wrong**. On *"has anyone done X"*
-and on **numbers living in tables** it is unreliable: it silently
-mis-assigned a table column and reported 9,276,595 as the rank-4,
-10-element count when Finschi's page puts it at 9 elements. Use it for
-prose claims; do not take a number from it without opening the source.
+own web-derived mission brief got **wrong**. On *"has anyone done X"* it
+is no better: that question is about absence, and an index cannot
+establish absence.
+
+**On numbers in tables, the verdict has changed, and §6.7 is the
+evidence.** The first build silently mis-assigned a table column and
+reported 9,276,595 as the rank-4, **10**-element count when Finschi's
+page puts it at **9** — inverting the exact cell this program's flagship
+target concerns. That was an *extraction* defect, not a model defect, and
+it is fixed: every table is now rendered cell by cell with its row label,
+its column header, its column index and its caption (§8). Re-tested on
+seven probes including the two that failed, **no fabricated number
+reproduced**; the two specific documented fabrications are gone and were
+replaced by correct readings of the correct cells. What remains is a
+milder and *visible* failure — the answer layer can pick the wrong
+*variant* of a source (Finschi's "All" catalog when asked about the
+"non-degenerate (uniform)" one), or report "not provided" when retrieval
+misses the row. Both fail safe: real numbers from an identified document,
+or an admission. **The rule of thumb does not change.** `--query` to find
+the source, `--answer` to find the sentence, then open the document and
+read the cell; the CLI now prints that in bold on every answer containing
+a digit.
+
+`CITATION_AUDIT.md`, beside this file, is what the corpus was built for:
+73 attribution claims in this repository's own two notes and two ledgers,
+checked against the opened sources. Two came back CONTRADICTED.
 
 ---
 
@@ -37,7 +62,7 @@ Measured outcomes are folded in as **CONFIRMED** notes.)
 | 1 | one GCS bucket, plain text + one JSONL | `us-central1`, standard class | Cloud Storage — **real money** |
 | 2 | one Discovery Engine data store | `global`, `GENERIC`, `SOLUTION_TYPE_SEARCH`, `CONTENT_REQUIRED` | Agent Search index storage — credit-covered |
 | 3 | one Discovery Engine search engine | `global`, `SEARCH_TIER_STANDARD`, add-on `SEARCH_ADD_ON_LLM` | Agent Search queries — credit-covered |
-| 4 | **two staging buckets created by the service, not by us** | `us-central1` and `us` | Cloud Storage — real money, **18 bytes total** |
+| 4 | **two staging buckets created by the service, not by us** | `us-central1` and `us` | Cloud Storage — real money, **30 bytes total** |
 
 Item 4 was not planned and is worth naming because it means "nothing
 else was created" would have been false. Every `documents:import`
@@ -45,13 +70,16 @@ response carries an `errorConfig.gcsPrefix`, and Discovery Engine
 auto-provisions the buckets behind it inside *this* project:
 
 ```
-gs://159398774377_411525025_us_central1_import_document    12 bytes
+gs://159398774377_411525025_us_central1_import_document    24 bytes
 gs://159398774377_411525025_us_import_content               6 bytes
 ```
 
-Eighteen bytes. At $0.020/GB/month that is $4 × 10⁻¹³ a month, so it
-changes no number in this report — but it is ours, it is billable in
-principle, and §7 says what to do with it.
+Thirty bytes — twelve more than the first build, because each
+`documents:import` writes another empty error prefix. At $0.020/GB/month
+that is $6 × 10⁻¹³ a month, so it changes no number in this report —
+but it is ours, it is billable in principle, and §7 says what to do with
+it. It is also the one line that grows with re-imports rather than with
+the corpus, which is why it is re-measured here and not carried over.
 
 No VM, no `aiplatform.googleapis.com` call, nothing under
 `E:/Projects/tools/gemini`.
@@ -60,38 +88,51 @@ No VM, no `aiplatform.googleapis.com` call, nothing under
 
 | Item | Rate | Quantity | Monthly |
 |---|---|---|---|
-| Standard storage, `us-central1` | $0.020 / GB / month | **0.005959 GB measured** | **$0.000119** |
-| Class A ops (uploads) | $0.005 / 1,000 | 227 objects, one-off | $0.0011 one-off |
-| Class B ops (reads during import) | $0.0004 / 1,000 | ~460, one-off | $0.0002 one-off |
+| Standard storage, `us-central1` | $0.020 / GB / month | **0.023238 GB measured** | **$0.000465** |
+| Class A ops (uploads) | $0.005 / 1,000 | 1,906 objects + 227 from the first build, one-off | $0.0107 one-off |
+| Class B ops (reads during import) | $0.0004 / 1,000 | ~4,300 across three imports, one-off | $0.0017 one-off |
 | Egress to Discovery Engine | $0 (same-cloud) | — | $0 |
 
-**CONFIRMED real-money standing cost: $0.000119 / month** — twelve
-thousandths of a cent. Budget was ≤ 60 MB; actual is **5,958,881 bytes
-= 5.68 MiB**, ten times under, because the corpus is extracted text and
-two thirds of it is abstract-only.
+**CONFIRMED real-money standing cost: $0.000465 / month** — under five
+hundredths of a cent, for a corpus 8× larger in documents than the first
+build. Measured **23,237,745 bytes = 22.16 MiB**. It stays this small for
+one reason and it is worth restating: **the bucket holds extracted TEXT,
+never PDFs.** The four EJC dynamic surveys are 504 KB, 394 KB, 121 KB and
+34 KB of text; as PDFs they would be several megabytes each *and* would
+have put the OCR/Layout parser SKUs in play. Nothing under
+`gs://fc-litcorpus-ebd5a273` is a PDF.
+
+At this rate the corpus could grow another 40× before real money reached
+a cent a month. The binding constraint is not storage, it is the 15 s
+`arxiv.org` crawl delay.
 
 ### 1.3 Credit-covered (Discovery Engine / GenAI App Builder SKUs)
 
 | SKU | Rate | Our usage | Charge |
 |---|---|---|---|
-| Agent Search index storage | first **10 GiB/month free**, then $0.006849315 / GiB-hour (≈ $5 / GiB / month) | **0.00555 GiB** | **$0** — 1,800× inside the free tier |
-| Search Standard Edition query | first **10,000 queries / account / month free**, then $1.50 / 1,000 | ~12 during the build | **$0** |
-| Advanced Generative Answers (`--answer`) | +$4.00 / 1,000, **excluded from the free-query tier** | 5 calls | **$0.020 one-off**; ≈ $0.004 per future call |
+| Agent Search index storage | first **10 GiB/month free**, then $0.006849315 / GiB-hour (≈ $5 / GiB / month) | **0.021642 GiB** | **$0** — 462× inside the free tier |
+| Search Standard Edition query | first **10,000 queries / account / month free**, then $1.50 / 1,000 | ~35 across both builds | **$0** |
+| Advanced Generative Answers (`--answer`) | +$4.00 / 1,000, **excluded from the free-query tier** | **14 calls** (5 in the first build, 9 in the §6.7 re-test battery) | **$0.056 one-off**; ≈ $0.004 per future call |
 | OCR parser | $1.50 / 1,000 pages | **not enabled**; no PDF is ever uploaded | $0 |
 | Layout Parser (incl. chunking) | **$10.00 / 1,000 pages**, a parsed text/HTML "page" = 3,000 characters | **not enabled** | $0 |
 
 **The Layout Parser counterfactual, measured on the actual corpus:**
-5,740,616 characters ÷ 3,000 = **2,048 billable pages = $20.48 one-off**,
-and again on every re-import. That is the single largest avoidable charge
-in this build, and it is avoided by pinning the **digital parser**
-explicitly rather than trusting the documented default:
+21,949,746 characters ÷ 3,000 = **7,317 billable pages = $73.17 one-off**,
+*and again on every re-import* — three imports have been run, so the
+counterfactual bill to date would be over $150. It scaled with the corpus
+exactly as the SKU says it would: $20.48 at 226 documents, $73.17 at
+1,905. It remains the single largest avoidable charge in this build, and
+it is avoided by pinning the **digital parser** explicitly rather than
+trusting the documented default:
 
 ```json
 "documentProcessingConfig": {"defaultParsingConfig": {"digitalParsingConfig": {}}}
 ```
 
-Read back from the live resource in §3 — so "layout parsing was not
-enabled" is a fact recorded in the resource, not an inference.
+Read back from the live resource in §3 **after the 1,905-document
+re-import** — so "layout parsing was not enabled" is a fact recorded in
+the resource, not an inference, and it is a fact recorded *after* the
+event that would have changed it.
 
 ### 1.4 The two subscription traps, and why neither fired
 
@@ -113,7 +154,7 @@ present.
 * The 10 GiB index-storage free tier is documented as **"shared across
   Agent Search"** and metered **per account**, not per project. Standing
   cost is $0 *given no other Agent Search data store on this billing
-  account*. At 0.00555 GiB the margin is enormous, but the qualifier
+  account*. At 0.0216 GiB the margin is still 462×, but the qualifier
   belongs in the sentence.
 * The 10,000 free queries are likewise **per account per month**.
 * The engine was created with `observabilityConfig.observabilityEnabled:
@@ -127,15 +168,25 @@ present.
 
 ## 2. What was ingested, and from where
 
-**226 documents**, of which **59 carry full text** and 167 are
-metadata + abstract. Years 1998–2026.
+**1,905 documents**, of which **234 carry full text** and 1,671 are
+metadata + abstract. Years 1994–2026. (First build: 226 / 59.)
 
 | count | source | how |
 |---|---|---|
-| 167 | arXiv, abstract + metadata only | arXiv API (`export.arxiv.org/api/query`), 3 s between requests |
-| 53 | arXiv, **full text** | `arxiv.org/html/<id>` at the 15 s `Crawl-delay`, falling back to `ar5iv.labs.arxiv.org` |
+| 1,671 | arXiv, abstract + metadata only | arXiv API (`export.arxiv.org/api/query`), 3 s between requests |
+| 216 | arXiv, **full text** | `arxiv.org/html/<id>` at the 15 s `Crawl-delay`, falling back to `ar5iv.labs.arxiv.org` at 6 s |
 | 5 | this repo's own copies of primary sources | Knauer–Marc LaTeX source, FMM13 LaTeX source, three Finschi catalog pages |
-| 1 | EJC Dynamic Survey **DS4, "Oriented Matroids Today" (v4, 2024)** | the survey PDF, text-extracted locally with `pypdf` — *not* through any cloud OCR |
+| 4 | **EJC Dynamic Surveys** DS4 *Oriented Matroids Today* (v4, 2024), DS21 *The Graph Crossing Number and its Variants*, DS12 *Macaulay Posets*, DS1 *Small Ramsey Numbers* | the survey PDFs, text-extracted locally with `pypdf` — *not* through any cloud OCR |
+| 1 | EJC Dynamic Survey DS7 *Packing Unit Squares in Squares* | served as HTML, so it goes through the table renderer |
+| 8 | **Finschi's catalog and glossary**, `finschi.com/math/om/` | the four catalog pages (all classes, non-degenerate, point configurations, hyperplane arrangements) and four glossary entries (index, RevLex-Index, Isomorphism Class, Relabeling Class) |
+
+The arXiv full-text figure is 216 rather than the 330 budgeted: the fetch
+was stopped after ~2 h with 216 of 330 retrieved, because at a 15 s
+`Crawl-delay` the remainder is another two hours of pure patience and
+nothing downstream depends on it. `cache/raw/` makes the rest a resume,
+not a rebuild — re-running `fetch` continues where it stopped. The number
+that matters for the brief's target is the document count, and that comes
+from the harvest, not the fetch.
 
 Selection: **6 hand-verified seed arXiv IDs** (1204.0645 FMM13,
 2002.11403 Knauer–Marc, 2509.21286 Maxout Polytopes, 2503.02336 NumPSLA,
@@ -239,7 +290,7 @@ GCS bucket              gs://fc-litcorpus-ebd5a273
                         us-central1, STANDARD, uniform bucket-level access,
                         public access prevention enforced
                         gs://fc-litcorpus-ebd5a273/metadata.jsonl
-                        gs://fc-litcorpus-ebd5a273/docs/<doc_id>.txt   (226 objects)
+                        gs://fc-litcorpus-ebd5a273/docs/<doc_id>.txt   (1,905 objects)
 
 data store              projects/159398774377/locations/global/collections/
                         default_collection/dataStores/finite-certificates-lit
@@ -279,8 +330,10 @@ Cloud Logging free allotment at tens of queries a month.
 Import operations (both `done: true`, zero errors):
 
 ```
-.../branches/0/operations/import-documents-3244818261756964966   3/3    smoke test, text/plain
-.../branches/0/operations/import-documents-4731092091921172268   226/226  FULL reconciliation
+.../branches/0/operations/import-documents-3244818261756964966      3/3     smoke test, text/plain
+.../branches/0/operations/import-documents-4731092091921172268    226/226   FULL, first build
+.../branches/0/operations/import-documents-15588298161332898160   226/226   FULL, table fix at the old size
+.../branches/0/operations/import-documents-4141594058981297862  1905/1905   FULL, the scale-up
 ```
 
 The smoke test existed to settle one thing the ingest documentation does
@@ -317,7 +370,7 @@ to a `filter=` expression or a facet.
 **The brief asked for `full_text` in the JSONL; it is not there, by
 necessity.** Discovery Engine's unstructured-with-metadata format takes
 document content only as `content.uri`, and each metadata row is capped
-at 1 MB while the median full-text document here is 70,073 characters
+at 1 MB while the median full-text document here is 69,954 characters
 and the largest is over 200,000. So the full text is the referenced
 `.txt` object — which is what Discovery Engine actually indexes, chunks
 and snippets — and `structData` carries `has_full_text` so a caller can
@@ -333,17 +386,21 @@ would double the bucket for no indexing benefit.
 
 | | measured |
 |---|---|
-| GCS bucket, total | **5,958,881 bytes = 0.005959 GB = 0.005550 GiB** |
-| — 226 document text files | 5,853,651 bytes |
+| GCS bucket, total | **23,237,745 bytes = 0.023238 GB = 0.021642 GiB** |
+| — 1,905 document text files | 22,339,244 bytes |
 | — `metadata.jsonl` | 105,230 bytes |
-| corpus characters (what the index sees) | 5,740,616 |
-| median full-text document | 70,073 characters |
-| Discovery Engine index, estimated | **~0.0056 GiB** (the SKU meters "the total size of the raw data", i.e. the same 5.7 MB) |
+| corpus characters (what the index sees) | 21,949,746 |
+| median full-text document | 69,954 characters |
+| largest document (EJC DS21) | 504,958 characters |
+| Discovery Engine index, estimated | **~0.0216 GiB** (the SKU meters "the total size of the raw data", i.e. the same 22 MB) — **462× inside the 10 GiB per-account free tier** |
 
 Cost consequence, split as the brief asks:
 
-* **Real money: $0.000119 / month** (GCS). Rounding to the nearest cent
-  it is zero. Even a 100× larger corpus would be $0.012 / month.
+* **Real money: $0.000465 / month** (GCS). Rounding to the nearest cent
+  it is zero. Even a 100× larger corpus would be $0.046 / month — and
+  2.2 GiB of index, still inside the free tier. **Projected before the
+  import, as the budget rule requires: 0.0216 GiB. Measured after: the
+  same. Nothing approached 10 GiB, so no batch was stopped.**
 * **Credit-covered: $0 / month at rest** — the index is 1,800× inside
   the 10 GiB per-account free tier, so the GenAI App Builder credit is
   not even drawn on while idle. In use: $0 per `--query` until 10,000
@@ -640,6 +697,118 @@ the DFS method and the 1000-sample tightness argument (§6.3). This is the
 clearest single demonstration of what indexing full text buys: the answer
 is never in an abstract, so it is never in a snippet.
 
+### 6.7 The table fix, and its re-test on the scaled corpus
+
+Section 6.4 isolated the failure mode; this section is what happened when
+it was fixed and re-measured. **Two claims are made here and they differ
+in kind.** The first is deterministic and reproducible with `grep`. The
+second is a sample of a stochastic system, so it is reported as a
+battery, not as an anecdote.
+
+#### 6.7.1 Extraction: FIXED, and the evidence is greppable
+
+Finschi's rank-4 row expresses its leading blank cells as
+`<TH COLSPAN="3">`, and FMM13's tabular expresses them as empty `&`
+cells. Flattening either destroyed the alignment. Both are now rendered
+cell by cell. From `ops/corpus/out/docs/local_finschi_om_49.txt`:
+
+```
+[TABLE 3 ROW 4] rank = 4 (dim = 3) || card = 4 [col 4]: 1 || card = 5 [col 5]: 1
+  || card = 6 [col 6]: 1 || card = 7 [col 7]: 11 || card = 8 [col 8]: 2 628
+  || card = 9 [col 9]: 9 276 595 || card = 10 [col 10]: unknown
+```
+
+There is no counting left to do: 9,276,595 carries `card = 9` and the
+`unknown` carries `card = 10`. The same holds for
+`local_fmm13_om_classification.txt`, where the two numbers that were
+previously crossed now sit in visibly different tables:
+
+```
+[TABLE 1 ROW 3] (table: The numbers of simple oriented matroids ... the numbers
+  enclosed by brackets are those of uniform oriented matroids ... [label: existing1])
+  r = 4 || ... || n = 9 [col 8]: unknown / (9,276,601)
+
+[TABLE 3 ROW 4] (table: The numbers of combinatorial types of convex polytopes
+  (the numbers enclosed by brackets are those of simplicial polytopes) ...
+  [label: existing2]) d = 4 || ... || n = 9 [col 8]: unknown / (1142)
+```
+
+The caption is repeated on **every row**, not printed once above the
+table, because Discovery Engine chunks a document before indexing it and
+a caption line and a value line can otherwise land in different chunks.
+That detail is not cosmetic: in an intermediate run with the caption
+printed once, `1142` was *still* reported as an oriented-matroid count.
+With the caption on the row, it was not.
+
+Two further details earned their place the hard way. Captions are paired
+with tables strictly inside one `<figure>` element or one LaTeX `table`
+environment, never by proximity in the character stream -- a
+nearest-neighbour rule attached "Table 2" to table 3 on the first
+attempt, which is the same class of error being fixed. And the caption
+carried onto each row is clipped on a word boundary: at a hard 110
+characters it cut "simplicial polytopes" down to "simplici", deleting the
+one word that distinguishes that table's bracket semantics from the
+oriented-matroid table's.
+
+**The fix does not reach PDFs.** `pypdf` returns a flat character stream
+with no cell structure, so the four EJC dynamic surveys ingested as PDFs
+keep the old defect. Section 8 lists that as a live defect, not a fixed one.
+
+#### 6.7.2 Fabrication: not reproduced on any probe
+
+Nine `--answer` calls against the 1,905-document index. The two probes
+that failed in 6.1 and 6.4 are included verbatim.
+
+| # | probe | before | after |
+|---|---|---|---|
+| 1 | negative control: "maximum number of vertices of a (3,5)-zonoboxtope" | 44, the published value, not our 42 | **44** -- the control still passes at 8x the corpus size, so 6.1-6.7 remain a real test |
+| 2 | "how many reorientation classes of uniform rank 4 oriented matroids on 9 elements" (**the 6.4 query**) | "unknown ... **1142** ... for rank 4 and **10** elements ... **9,276,595**" -- three wrong claims | "The number of reorientation classes ... is **unknown**. However, the number of uniform rank 4 oriented matroids on 9 elements is **9,276,601**." FMM13 Table 1, right cell, right bracket semantics |
+| 3 | "uniform oriented matroids of rank 4 on **10** elements in Finschi's catalog" | the inversion: 9,276,595 | "**unknown**" -- correct |
+| 4 | "is the realizability split of uniform rank-4 oriented matroids on 9 elements known" (**the 6.1 query**) | "not fully known ... **1142**" | "unknown ... the number of simple realizable is unknown, and the number of uniform realizable is **also unknown**" -- FMM13 **Table 2**, exactly the `unknown (unknown)` cell; it also correctly quotes 4,381 at r=6, n=9 from that same table |
+| 5 | rank 3, 9 elements | 4,382 | **4,382**, plus "another source indicates 4,381" -- Table 1 uniform against Table 2 uniform-realizable, correctly kept apart |
+| 6 | 6.2's original question, "largest n for which uniform OM mutation graph connectivity is verified" | fully correct | still correct on n <= 9, on Bliss, on the (9,4) isomorphism-class graph being the most demanding case, and on which graph the conjecture is about -- but it no longer volunteers the labelled-level suspicion unprompted (see below) |
+| 7 | "at rank 4, card = 9 and card = 10 in the non-degenerate catalog" | -- | "**not provided in the given sources**" -- a retrieval miss, reported as a miss rather than filled in |
+
+**Every numeral in probes 2-5 was checked against the extracted source by
+`grep` before this table was written.** None of them is taken on the
+generated text's word.
+
+#### 6.7.3 What is still wrong, stated plainly
+
+* **Source-variant selection.** Probe 3's headline was right, but its
+  supporting figures (1, 3, 12, 206, 181 472) came from Finschi's **All**
+  catalog page rather than the **non-degenerate (uniform)** page the
+  question named. Checked: those five numbers are a verbatim, correctly
+  aligned reading of `finschi_catom_all`, row `rank = 4`. So the model
+  read a real row of a real table and cited the document -- it picked the
+  wrong *variant* of the source. That is a different and far less
+  dangerous failure than asserting a value for a cell that does not
+  contain it, and the `doc_id` in the citation makes it visible.
+* **Retrieval misses.** Probe 7 answered "not provided" about a value
+  plainly present in the index. Chunking, not extraction. It fails safe.
+* **Dilution.** Probe 6 is *weaker* than the 226-document run: at that
+  size the answer volunteered Ringel's rank-3 result, Roudneff-Sturmfels'
+  realizable connectivity and the labelled-level suspicion unprompted; at
+  1,905 documents it stops at the reorientation-class result. A second
+  phrasing that named the three graphs pulled in a *different* paper's
+  "counterexample" -- Wilhelmi 2025 on Euclideanness under mutation-flips
+  -- and conflated two senses of the word. **Growing the corpus is not
+  free: it improved table accuracy and cost some retrieval precision on
+  the one question the first build answered best.**
+
+#### 6.7.4 The honest summary
+
+The defect that made 6.4 "actively dangerous" was an extractor writing
+away the column structure, and it is gone. What is left is ordinary
+retrieval-and-grounding imprecision that shows its work: a cited
+`doc_id`, a labelled row, a caption you can check. The instruction to
+open the document before quoting a number stands, and the CLI now
+enforces it on every answer containing a digit -- but the reason has
+changed from "the number may be invented" to "the number may be from the
+neighbouring table".
+
+---
+
 ### 6.6 Honest verdict
 
 **Better than web search, clearly, for:** "what does this paper
@@ -654,25 +823,28 @@ FMM13 sentence and then a 2021 LP-certificate paper we had not previously
 noted.
 
 **No better, and in one respect worse, for:** *is problem P still open?*
-That question is about **absence**, and a 226-document index cannot
-establish absence. It surfaced FMM13's `unknown` correctly, but it
+That question is about **absence**, and a 1,905-document index cannot
+establish absence any more than a 226-document one could — growing it
+8× did not change this and could not have. It surfaced FMM13's `unknown` correctly, but it
 cannot see the 2026 arXiv listings, cannot run a citation sweep, and
 cannot notice a 2025 paper that closed the cell without citing FMM13 —
 all of which `SCOPING.md`'s web-based sweep did. For open-status
 questions web search remains the tool and the corpus is a supplement.
 
-**Actively dangerous for:** *numbers that live in tables* (§6.4). Three
-of the wrong claims in this report came from flattened table rows, and
-they are stated with exactly the same confidence as the correct ones.
-Treat every numeral from `--answer` as a pointer to a document, not as a
-value.
+**Was actively dangerous for:** *numbers that live in tables* (§6.4).
+Three of the wrong claims in the first build came from flattened table
+rows, stated with exactly the same confidence as the correct ones. §6.7
+is the fix and its re-test: no fabricated number reproduced on a
+nine-call battery. Treat every numeral from `--answer` as a pointer to a
+document anyway — the residual failure is picking the neighbouring
+table, which reads exactly as confidently.
 
 **Rule of thumb for agents using this:** `--query` to find the source,
 `--answer` to find the sentence, then **open the document** before
 quoting a number. The `doc_id` in every hit is there for that.
 
-**Is it worth $0.000119 a month?** Yes — at that price the question is
-whether it is worth the maintenance, and 226 documents rebuilt by one
+**Is it worth $0.000465 a month?** Yes — at that price the question is
+whether it is worth the maintenance, and 1,905 documents rebuilt by one
 command is cheap. The honest reason to keep it is §6.2: it corrects a
 class of error this program has actually made.
 
@@ -680,7 +852,7 @@ class of error this program has actually made.
 
 ## 7. Teardown
 
-Standing cost while it exists: **$0.000119 / month of real money** (the
+Standing cost while it exists: **$0.000465 / month of real money** (the
 GCS bucket) and **$0 / month of credit** (both Discovery Engine SKUs sit
 inside per-account free tiers at this size, given no other Agent Search
 data store on the account). Queries are $0 up to 10,000/month;
@@ -727,38 +899,77 @@ corpus is being retired rather than rebuilt.
 
 Nothing else was created **by us**: no VM, no service account, no API
 key, no `aiplatform` resource. The only unplanned resources are the two
-Discovery Engine import-staging buckets in §1.1, 18 bytes in total,
+Discovery Engine import-staging buckets in §1.1, 30 bytes in total,
 removed by step 3b. `discoveryengine.googleapis.com` was already enabled
 before this work and is left enabled. The other buckets in this project
 (`lee-tf-state-*`, `*-sweeps`, `sae-identifiability-artifacts-*`,
 `tf-state-lee-*`) predate this work and are untouched.
 
 Note also that the 10 GiB Agent Search index-storage free tier is
-per-account: while this data store exists it consumes 0.0056 GiB of a
+per-account: while this data store exists it consumes 0.0216 GiB of a
 tier shared with any other Agent Search app on the billing account.
 
 ---
 
 ## 8. Known defects, in priority order
 
-1. **Table extraction loses column alignment** (§6.4) — the direct cause
-   of every wrong number in this report. `strip_html` in
-   `build_corpus.py` turns `</td>` into `|` but cannot recover cells the
-   source markup never emitted. The fix is to render tables cell-by-cell
-   with an explicit header label per value
-   (`rank = 4, card = 9: 9 276 595`) rather than as a row of bare
-   numbers. Until that lands, do not trust a number from `--answer`.
-2. **Two thirds of the corpus is abstract-only.** Full text stops at 55
-   documents because of the 15 s `Crawl-delay`. Raising it is only
-   patience: `FULLTEXT_BUDGET` in `build_corpus.py`, ~15 s per document.
-3. **Two documents per paper for the seeds** — e.g. `arxiv_2002_11403`
+~~1. **Table extraction loses column alignment**~~ — **FIXED 2026-08-01,
+   §6.7.1.** This was the direct cause of every wrong number in the first
+   build. `strip_html` turned `</td>` into `|` and could not recover cells
+   the markup expressed as `COLSPAN`; `strip_latex` left tabulars as raw
+   `&`-rows. Both now render cell by cell, each value carrying its row
+   label, its column header, its column index and its table's caption, with
+   blank cells emitted as `(blank)` rather than dropped. Verified by `grep`
+   on the emitted text and re-tested on the two queries that failed
+   (§6.7.2); neither fabrication reproduced. **The defect list keeps this
+   entry rather than deleting it**, because the three wrong numbers in §6.1
+   and §6.4 are still printed above and a reader needs to know which
+   statements in this report have been superseded.
+
+The live defects, in priority order:
+
+1. **The answer layer can still pick the wrong *variant* of a source**
+   (§6.7.3). Asked about Finschi's *non-degenerate (uniform)* catalog it
+   answered from Finschi's *All* catalog — correct cells, correct
+   alignment, wrong table. It is visible (the `doc_id` is cited) and it
+   fails safe (real numbers, or an explicit "not provided"), which is why
+   it ranks below the old defect in severity and above everything else in
+   frequency. **Mitigation, and it is only a mitigation:** the CLI prints
+   a warning on every answer containing a digit, naming the labelled-row
+   format to `grep` for.
+2. **PDFs keep the old defect.** The table renderer works on HTML and on
+   LaTeX. `pypdf` returns a flat character stream with no cell structure
+   and nothing downstream can recover it, so the four EJC dynamic surveys
+   ingested as PDF (DS4, DS21, DS12, DS1) are exactly as unreliable on
+   tables as the whole corpus used to be. DS7 came as HTML and is fine.
+   There is no cheap fix: the Layout Parser would do it and costs $73.17
+   per import at this corpus size (§1.3).
+3. **Growing the corpus cost retrieval precision on the best question**
+   (§6.7.3). At 226 documents the mutation-graph query returned Ringel,
+   Roudneff–Sturmfels and the labelled-level suspicion unprompted; at
+   1,905 it returns less, and a nearby phrasing pulls in a different
+   paper's unrelated "counterexample". More documents is not monotonically
+   better and this is the measurement that shows it.
+4. **Seven eighths of the corpus is abstract-only.** 234 of 1,905
+   documents carry full text. The fetch was stopped at 216 of 330 budgeted
+   arXiv papers after ~2 h; the rest is patience at the 15 s
+   `Crawl-delay`, and `cache/raw/` makes it a resume rather than a
+   rebuild — re-running `fetch` continues where it stopped.
+5. **Two documents per paper for the seeds** — e.g. `arxiv_2002_11403`
    (arXiv HTML) and `local_knauer_marc_corners_simpliciality` (LaTeX
-   source) are the same paper. Harmless, and the two extractions differ
-   in what survives, so it is redundancy rather than noise; but it
-   inflates the document count by 2.
-4. **Relevance scoring is a keyword sum**, so a handful of
-   `chirotope`-matching mathematical-physics papers made the cut. They
-   have never appeared in a top-5.
-5. **`--extract` needs Enterprise tier** (§5). Not fixed because the
+   source) are the same paper. This turned out to be *useful* rather than
+   merely harmless: the arXiv HTML resolves `\ref` to printed numbers, so
+   it is what settled that Knauer–Marc's rank-3 theorem is **Proposition
+   3.2** (`CITATION_AUDIT.md` V19), which the LaTeX source could only give
+   as a label. Still inflates the document count by 2.
+6. **Relevance scoring is a keyword sum.** It no longer decides *which*
+   documents are indexed — `CORPUS_BUDGET` (2,000) exceeds the harvest
+   (1,887), so everything harvested is in — but it still decides which get
+   full text, and a handful of `chirotope`-matching mathematical-physics
+   papers rank higher than they deserve.
+7. **`--extract` needs Enterprise tier** (§5). Not fixed because the
    Standard tier is what the brief specified and snippets plus
-   `--answer` cover the need.
+   `--answer` cover the need. Worth revisiting now that §6.7.3 traces the
+   residual failure to retrieval rather than extraction: longer verbatim
+   segments would let a caller see the neighbouring rows without opening
+   the file.

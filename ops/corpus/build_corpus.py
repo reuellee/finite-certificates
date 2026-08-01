@@ -1068,7 +1068,10 @@ def fetch(limit: int | None = None) -> None:
         else:
             rawdest.write_bytes(raw)
             text = strip_html(raw.decode("utf-8", "replace"))
-        if text and len(text) > 2000:
+        # Glossary entries are a few hundred characters and are exactly the
+        # definitions this project's conventions rest on, so the extras
+        # threshold is a floor on "did the fetch work", not on usefulness.
+        if text and len(text) > 300:
             dest.write_text(text, encoding="utf-8")
             print(f"got {len(text):>7} chars  {extra['doc_id']}")
         else:
