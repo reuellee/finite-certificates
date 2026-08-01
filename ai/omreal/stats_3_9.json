@@ -1,0 +1,50 @@
+{
+ "n": 9,
+ "r": 3,
+ "total": 4382,
+ "REALIZABLE": 4381,
+ "NON_REALIZABLE": 1,
+ "RESIDUE": 0,
+ "by_stage": {
+  "A": 4381,
+  "C": 0
+ },
+ "t_A_hit": 131.23024160740897,
+ "t_A_miss": 0.4831157000735402,
+ "t_B_hit": 0.21978699997998774,
+ "t_B_miss": 0.0,
+ "t_C_hit": 0.0,
+ "t_C_miss": 0.0,
+ "n_A_hit": 4381,
+ "n_A_miss": 1,
+ "n_B_hit": 1,
+ "n_B_miss": 0,
+ "n_C_hit": 0,
+ "n_C_miss": 0,
+ "bfp_support": [
+  59
+ ],
+ "denoms": {
+  "8": 1460,
+  "32": 2296,
+  "256": 578,
+  "65536": 2,
+  "4096": 45
+ },
+ "stage_a": {
+  "tries": 2,
+  "sweeps": 15,
+  "rerolls": 3
+ },
+ "stage_c": {
+  "tries": 15,
+  "sweeps": 80,
+  "rerolls": 8
+ },
+ "cross_checked": 500,
+ "cross_bfp_on_realizable": 0,
+ "cross_realize_on_nonrealizable": 0,
+ "residue_chi": [],
+ "wall": 148.62573432922363,
+ "label": "catalog (3,9)"
+}

@@ -1,0 +1,5 @@
+*.log
+nohup.out
+hammer_wins.jsonl
+certs_49_*.jsonl
+certs_4_9_*.jsonl
