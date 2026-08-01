@@ -173,3 +173,17 @@ Seat propagation WAS the fix. Smoke test generated 4/4 candidates
   meaningful evolutionary run (hundreds of generations) costs
   $100-500 at measured rates. 9 candidates is not evolution.
   Do not re-run without an explicit new budget decision.
+
+## Framing post-mortem (Gemini consult, 2026-08-01)
+
+Asked Gemini what problem types AlphaEvolve actually wins at. Answer,
+consistent with our measurements: published wins ran MILLIONS of candidate
+evaluations (FunSearch-class scale); at tens of candidates one is doing
+"zero-shot prompting with a while loop", paying harness overhead for no
+search benefit. The correct framing — if ever used at scale — is evolving
+small heuristic kernels (priority/support-selection functions scored over a
+benchmark suite, ~5-line EVOLVE blocks, exact-only scoring, graded partial
+credit), never whole constructors, and never direct record-hunting in
+brittle algebraic search spaces. Verdict: structurally misaligned with a
+$100/mo exact-mathematics program; dollars go to reasoning passes instead.
+Subscription left to lapse 2026-09-01 (auto-renew off).
