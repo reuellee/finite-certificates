@@ -207,8 +207,9 @@ achievable margin for x_p *even when it is negative*, and that number is a
 real objective — it measures how far the eight-point configuration is from
 admitting the ninth point. Hill-climbing it converts the walk from diffusion
 into a descent. Measured on rows that survived a 60 s pass with the
-undirected walk: row 586623 survived 2,004 completion LPs and then fell in
-4.3 s; row 1213079 in 19.2 s; row 1200032 in 0.4 s.
+undirected walk: row 586623 survived 1,920 completion LPs and then fell in
+4.6 s; row 1213079 in 11.7 s; row 1200032 in 8.7 s. (Numbers corrected to
+match `run2.log` after review finding D2.)
 
 The exploratory move deliberately allows small margins (down to 0.02 of the
 Chebyshev radius). The configurations that open a completion cone are often
@@ -537,7 +538,9 @@ polynomials at all.
 
 ### 7.1 Gates, all run before any OPEN class was touched
 
-`python validate.py --n 40` → `data/validation.json`, `data/validation.log`.
+`python validate.py --budget 120` → `data/validation.json`,
+`data/validation.log` (the shipped run used `--budget 120`, not the quick
+`--n 40` variant; review finding D6).
 
 | gate | claim | measured | |
 |---|---|---|---|
@@ -586,7 +589,9 @@ contributes only when its signs split (N−1, 1).
 
 `python canaries.py` → `data/canaries.jsonl` (the records),
 `data/canaries_result.json` (the verdicts).
-**7 controls accepted, 23 sabotages rejected with the expected diagnosis, 0
+**7 controls accepted, 23 sabotages rejected (21 with a named diagnosis
+required and matched; C4/C17 accept any rejection, and their diagnoses do
+name the corruption), 0
 failures.** Both checkers are exercised: `fpcheck.py` on every record kind,
 and `ai/omreal/checkcert.py` on level-0 Gordan vectors re-expressed in its
 schema and on realization certificates. A sabotage counts as passing only if
@@ -1067,3 +1072,18 @@ five-term exchange families).
 | 8698279 | 16 | REALIZABLE | walk | 12.2 | 8192 | yes / yes |
 | 8924175 | 16 | REALIZABLE | walk | 17.5 | 16384 | yes / yes |
 | 8929110 | 15 | REALIZABLE | walk | 3.6 | 1024 | yes / yes |
+
+## Post-review provenance notes (findings D3, D4, D5, D7 of REVIEW_FABLE.md)
+
+* `data/fp_found.jsonl` is from the earlier 2-hit draw and carries two
+  fields (`also_has_L0_gordan_vector`, `L0_gordan_terms`) emitted by the
+  fpprobe.py revision of that draw; `data/fp_probe.json` records the later
+  3-hit run. Two draws, one shipped file each — not a single replayable run.
+* One positive-control canary record labels a pl5-family relation
+  `level: L0`; both checkers ignore the field, so it is cosmetic.
+* §7.1a's six-class inequality-system comparison shipped no artifact; the
+  adversarial review re-ran the comparison on all 126 classes and confirmed
+  the documented ranges (REVIEW_FABLE.md, area 3).
+* Pass-1 rows of `data/results.jsonl` were produced by an earlier attack.py
+  revision (witness stages backfilled by later passes); the shipped code
+  reproduces the verdicts but is not a byte-level replay of pass-1 rows.

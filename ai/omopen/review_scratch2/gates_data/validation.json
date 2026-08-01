@@ -1,0 +1,97 @@
+{
+ "n": 40,
+ "budget": 120.0,
+ "when": "2026-08-01T21:30:58",
+ "identity_test": {
+  "L0_identities": 1260,
+  "L1_identities": 5544,
+  "random_configs": 60,
+  "failures": 0
+ },
+ "A1_weaponA_REPAIR": {
+  "n": 40,
+  "realized": 40,
+  "sources": {
+   "store_walk": 2,
+   "walk": 22,
+   "fresh": 16
+  },
+  "median_s": 0.23234987258911133,
+  "max_s": 75.0230119228363,
+  "wall_s": 176.7,
+  "PASS": true
+ },
+ "A1_weaponA_WALK": {
+  "n": 40,
+  "realized": 40,
+  "sources": {
+   "store": 37,
+   "store_walk": 3
+  },
+  "median_s": 0.005994081497192383,
+  "max_s": 0.19452977180480957,
+  "wall_s": 0.5,
+  "PASS": true
+ },
+ "B1_gordan_on_nonrealizable": {
+  "n": 40,
+  "found": 40,
+  "wall_s": 23.1,
+  "PASS": true
+ },
+ "B2_soundness_L0": {
+  "n": 80,
+  "false_positives": 0,
+  "PASS": true
+ },
+ "B3_witness_on_realizable_L0": {
+  "n": 80,
+  "found": 80,
+  "wall_s": 22.9,
+  "PASS": true
+ },
+ "B3_witness_on_nonrealizable_L0": {
+  "n": 40,
+  "found": 0,
+  "PASS": true
+ },
+ "B2_soundness_L1": {
+  "n": 80,
+  "false_positives": 0,
+  "PASS": true
+ },
+ "B3_witness_on_realizable_L1": {
+  "n": 80,
+  "found": 80,
+  "wall_s": 50.8,
+  "PASS": true
+ },
+ "B3_witness_on_nonrealizable_L1": {
+  "n": 40,
+  "found": 0,
+  "PASS": true
+ },
+ "B4_fpcheck": {
+  "rc": 0,
+  "tail": [
+   "    REALIZABLE/-                           80",
+   "C:\\Users\\reuel\\AppData\\Local\\Temp\\claude\\E--Projects\\8f05ea6b-b743-4889-b448-362647b88861\\scratchpad\\finite-certificates\\ai\\omopen\\review_scratch2\\gates_data\\validation_gordan.jsonl: 40 distinct classes",
+   "    NON_REALIZABLE/GORDAN                  40",
+   "C:\\Users\\reuel\\AppData\\Local\\Temp\\claude\\E--Projects\\8f05ea6b-b743-4889-b448-362647b88861\\scratchpad\\finite-certificates\\ai\\omopen\\review_scratch2\\gates_data\\validation_witness.jsonl: 0 distinct classes",
+   "    NO_FINAL_POLYNOMIAL/GORDAN_WITNESS     160",
+   "ALL CERTIFICATES ACCEPTED"
+  ]
+ },
+ "B4_checkcert": {
+  "rc": 0,
+  "tail": [
+   "    RESIDUE          0",
+   "C:\\Users\\reuel\\AppData\\Local\\Temp\\claude\\E--Projects\\8f05ea6b-b743-4889-b448-362647b88861\\scratchpad\\finite-certificates\\ai\\omopen\\review_scratch2\\gates_data\\validation_gordan_bfpschema.jsonl: 40 distinct classes",
+   "    REALIZABLE       0",
+   "    NON_REALIZABLE   40",
+   "    RESIDUE          0",
+   "ALL CERTIFICATES ACCEPTED"
+  ]
+ },
+ "ALL_PASS": true
+}

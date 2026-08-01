@@ -63,6 +63,18 @@ import weaponA                                              # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, 'data')
+
+
+def _load_local(mod):
+    # weaponA prepends ai/omreal to sys.path, where another canaries.py
+    # lives; load omopen's module by explicit path so the name can't be
+    # shadowed (review finding D1).
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        mod + '_omopen', os.path.join(HERE, mod + '.py'))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
 RESULTS = os.path.join(DATA, 'results.jsonl')
 C_REAL = os.path.join(DATA, 'certs_realizable.jsonl')
 C_NONREAL = os.path.join(DATA, 'certs_nonrealizable.jsonl')
@@ -403,7 +415,7 @@ def main():
     v.add_argument('--budget', type=float, default=60.0)
     v.set_defaults(fn=lambda a: __import__('validate').run(a))
     c = sub.add_parser('canaries')
-    c.set_defaults(fn=lambda a: __import__('canaries').run(a))
+    c.set_defaults(fn=lambda a: _load_local('canaries').run(a))
     a = ap.parse_args()
     a.fn(a)
 

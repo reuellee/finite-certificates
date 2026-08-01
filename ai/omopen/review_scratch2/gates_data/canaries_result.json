@@ -1,5 +1,5 @@
 {
- "when": "2026-08-01T21:44:44",
+ "when": "2026-08-01T21:37:17",
  "controls": 7,
  "sabotages": 23,
  "rejected_as_expected": 23,
@@ -11,7 +11,7 @@
    "checker": "fpcheck",
    "is_control": true,
    "accepted": true,
-   "diagnosis": "Gordan vector, 63 inequalities, total weight 6433",
+   "diagnosis": "Gordan vector, 60 inequalities, total weight 2022",
    "expected": null,
    "pass": true
   },
@@ -20,7 +20,7 @@
    "checker": "fpcheck",
    "is_control": true,
    "accepted": true,
-   "diagnosis": "Gordan vector, 66 inequalities, total weight 58339",
+   "diagnosis": "Gordan vector, 59 inequalities, total weight 20229",
    "expected": null,
    "pass": true
   },
@@ -29,7 +29,7 @@
    "checker": "fpcheck",
    "is_control": true,
    "accepted": true,
-   "diagnosis": "u satisfies all 7520 strict inequalities over families gp3+pl4+pl5 (min slack 49344); by Gordan no final polynomial of that form exists",
+   "diagnosis": "u satisfies all 8208 strict inequalities over families gp3+pl4+pl5 (min slack 37717); by Gordan no final polynomial of that form exists",
    "expected": null,
    "pass": true
   },
@@ -47,7 +47,7 @@
    "checker": "checkcert",
    "is_control": true,
    "accepted": true,
-   "diagnosis": "Gordan vector with 63 terms, total weight 6433",
+   "diagnosis": "Gordan vector with 60 terms, total weight 2022",
    "expected": null,
    "pass": true
   },
@@ -65,7 +65,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (1, 2, 6, 8) (-1)",
+   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (2, 3, 4, 7) (1)",
    "expected": "does not cancel",
    "pass": true
   },
@@ -74,7 +74,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "term 1 is not the dominating term of {'kind': 'gp3', 'L': [3, 4], 'abcd': [1, 6, 7, 9]} (term 2 is)",
+   "diagnosis": "term 1 is not the dominating term of {'kind': 'gp3', 'L': [6, 9], 'abcd': [2, 3, 4, 5]} (term 2 is)",
    "expected": "not the dominating term",
    "pass": true
   },
@@ -83,7 +83,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (1, 2, 4, 9) (-204)",
+   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (1, 2, 3, 7) (-77)",
    "expected": "does not cancel",
    "pass": true
   },
@@ -92,7 +92,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "term 1 is not the dominating term of {'kind': 'gp3', 'L': [1, 8], 'abcd': [2, 6, 7, 9]} (term 0 is)",
+   "diagnosis": "term 2 is not the dominating term of {'kind': 'gp3', 'L': [6, 9], 'abcd': [2, 3, 4, 5]} (term 0 is)",
    "expected": null,
    "pass": true
   },
@@ -137,7 +137,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "u fails inequality from {'kind': 'gp3', 'L': [1, 3], 'abcd': [2, 4, 5, 7]} (big term 2, dominated term 1): v.u = -123361",
+   "diagnosis": "u fails inequality from {'kind': 'gp3', 'L': [1, 4], 'abcd': [3, 5, 6, 7]} (big term 2, dominated term 1): v.u = -150874",
    "expected": "u fails inequality",
    "pass": true
   },
@@ -146,7 +146,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "u fails inequality from {'kind': 'gp3', 'L': [1, 2], 'abcd': [3, 4, 5, 6]} (big term 1, dominated term 2): v.u = -444103",
+   "diagnosis": "u fails inequality from {'kind': 'gp3', 'L': [1, 2], 'abcd': [3, 4, 5, 6]} (big term 1, dominated term 2): v.u = -188593",
    "expected": "u fails inequality",
    "pass": true
   },
@@ -200,7 +200,7 @@
    "checker": "checkcert",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (1, 2, 6, 8) (-1)",
+   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (2, 3, 4, 7) (1)",
    "expected": "does not cancel",
    "pass": true
   },
@@ -209,7 +209,7 @@
    "checker": "checkcert",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "term 2 is not the odd one out of relation ((1, 5); 4 6 7 8)",
+   "diagnosis": "term 1 is not the odd one out of relation ((1, 8); 2 4 6 7)",
    "expected": "not the odd one out",
    "pass": true
   },
@@ -218,7 +218,7 @@
    "checker": "checkcert",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "term 1 is not the odd one out of relation ((1, 8); 2 6 7 9)",
+   "diagnosis": "term 2 is not the odd one out of relation ((6, 9); 2 3 4 5)",
    "expected": null,
    "pass": true
   },
@@ -245,7 +245,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "the polynomial has both signs (2 positive, 7 negative coefficients)",
+   "diagnosis": "the polynomial has both signs (1 positive, 8 negative coefficients)",
    "expected": "both signs",
    "pass": true
   },
@@ -263,7 +263,7 @@
    "checker": "fpcheck",
    "is_control": false,
    "accepted": false,
-   "diagnosis": "the polynomial has both signs (2 positive, 2 negative coefficients)",
+   "diagnosis": "the polynomial has both signs (3 positive, 1 negative coefficients)",
    "expected": "both signs",
    "pass": true
   },
