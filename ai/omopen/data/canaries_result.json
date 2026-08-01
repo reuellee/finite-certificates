@@ -1,0 +1,280 @@
+{
+ "when": "2026-08-01T21:00:09",
+ "controls": 7,
+ "sabotages": 23,
+ "rejected_as_expected": 23,
+ "failures": 0,
+ "ALL_PASS": true,
+ "outcomes": [
+  {
+   "canary": "control: honest L0 Gordan vector",
+   "checker": "fpcheck",
+   "is_control": true,
+   "accepted": true,
+   "diagnosis": "Gordan vector, 91 inequalities, total weight 509200",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "control: honest L1 Gordan vector",
+   "checker": "fpcheck",
+   "is_control": true,
+   "accepted": true,
+   "diagnosis": "Gordan vector, 93 inequalities, total weight 38132415",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "control: honest no-BFP witness",
+   "checker": "fpcheck",
+   "is_control": true,
+   "accepted": true,
+   "diagnosis": "u satisfies all 8016 strict inequalities over families gp3+pl4+pl5 (min slack 44619); by Gordan no final polynomial of that form exists",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "control: honest realization",
+   "checker": "fpcheck",
+   "is_control": true,
+   "accepted": true,
+   "diagnosis": "all 126 brackets nonzero and correct",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "control: honest L0 Gordan, omreal schema",
+   "checker": "checkcert",
+   "is_control": true,
+   "accepted": true,
+   "diagnosis": "Gordan vector with 91 terms, total weight 509200",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "control: honest realization, omreal schema",
+   "checker": "checkcert",
+   "is_control": true,
+   "accepted": true,
+   "diagnosis": "all 126 brackets nonzero and correct",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "C1  one weight increased by 1",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (2, 3, 4, 6) (1)",
+   "expected": "does not cancel",
+   "pass": true
+  },
+  {
+   "canary": "C2  big and small swapped on one term",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "term 1 is not the dominating term of {'kind': 'gp3', 'L': [1, 7], 'abcd': [2, 3, 4, 9]} (term 2 is)",
+   "expected": "not the dominating term",
+   "pass": true
+  },
+  {
+   "canary": "C3  one inequality dropped",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (2, 3, 4, 8) (-15123)",
+   "expected": "does not cancel",
+   "pass": true
+  },
+  {
+   "canary": "C4  attached to a realizable class",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "term 1 is not the dominating term of {'kind': 'gp3', 'L': [2, 4], 'abcd': [3, 5, 6, 8]} (term 0 is)",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "C5  a zero weight",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "weight 0 is not positive",
+   "expected": "not positive",
+   "pass": true
+  },
+  {
+   "canary": "C6  a degenerate relation spec (A inside B: only two terms)",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "pl: fewer than three surviving terms",
+   "expected": "fewer than three",
+   "pass": true
+  },
+  {
+   "canary": "C7  a relation spec with a repeated element",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "pl: repeated element",
+   "expected": "repeated element",
+   "pass": true
+  },
+  {
+   "canary": "C8  a duplicated inequality",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "duplicate inequality",
+   "expected": "duplicate",
+   "pass": true
+  },
+  {
+   "canary": "C9  no-BFP witness with one coordinate corrupted",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "u fails inequality from {'kind': 'gp3', 'L': [1, 3], 'abcd': [2, 4, 5, 7]} (big term 2, dominated term 1): v.u = -401580",
+   "expected": "u fails inequality",
+   "pass": true
+  },
+  {
+   "canary": "C10 no-BFP witness attached to a class that HAS a BFP",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "u fails inequality from {'kind': 'gp3', 'L': [1, 2], 'abcd': [3, 4, 5, 6]} (big term 1, dominated term 2): v.u = -267721",
+   "expected": "u fails inequality",
+   "pass": true
+  },
+  {
+   "canary": "C11 witness that silently drops the three-term relations",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "families ['pl4', 'pl5'] do not include gp3, so this witness says nothing about biquadratic final polynomials",
+   "expected": "do not include gp3",
+   "pass": true
+  },
+  {
+   "canary": "C12 the trivial witness u = 1",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "u fails inequality from {'kind': 'gp3', 'L': [1, 2], 'abcd': [3, 4, 5, 6]} (big term 2, dominated term 0): v.u = 0",
+   "expected": "u fails inequality",
+   "pass": true
+  },
+  {
+   "canary": "C13a two columns swapped (relabelling applied to only one side)",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "bracket (1, 2, 3, 4) has the wrong sign",
+   "expected": "wrong sign",
+   "pass": true
+  },
+  {
+   "canary": "C13b one column negated (reorientation applied to only one side)",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "bracket (1, 2, 3, 5) has the wrong sign",
+   "expected": "wrong sign",
+   "pass": true
+  },
+  {
+   "canary": "C14 realization attached to a different realizable class",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "bracket (1, 3, 4, 6) has the wrong sign",
+   "expected": "wrong sign",
+   "pass": true
+  },
+  {
+   "canary": "C15 omreal-schema Gordan vector, one weight increased",
+   "checker": "checkcert",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "the weighted combination does not cancel: 4 nonzero coordinates, first at basis (2, 3, 4, 6) (1)",
+   "expected": "does not cancel",
+   "pass": true
+  },
+  {
+   "canary": "C16 omreal-schema, big and small swapped",
+   "checker": "checkcert",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "term 1 is not the odd one out of relation ((2, 5); 3 4 7 8)",
+   "expected": "not the odd one out",
+   "pass": true
+  },
+  {
+   "canary": "C17 omreal-schema Gordan vector on a realizable class",
+   "checker": "checkcert",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "term 1 is not the odd one out of relation ((2, 4); 3 5 6 8)",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "C18 realization with a zero column, omreal schema",
+   "checker": "checkcert",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "bracket (1, 2, 3, 4) vanishes: configuration is not uniform",
+   "expected": "vanishes",
+   "pass": true
+  },
+  {
+   "canary": "control: honest degree-2 final polynomial (rigged instance)",
+   "checker": "fpcheck",
+   "is_control": true,
+   "accepted": true,
+   "diagnosis": "final polynomial: 5 monomials, all coefficients negative",
+   "expected": null,
+   "pass": true
+  },
+  {
+   "canary": "C19 final polynomial with a spurious extra generator",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "the polynomial has both signs (2 positive, 7 negative coefficients)",
+   "expected": "both signs",
+   "pass": true
+  },
+  {
+   "canary": "C20 final polynomial attached to a realizable class",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "the polynomial has both signs (1 positive, 4 negative coefficients)",
+   "expected": "both signs",
+   "pass": true
+  },
+  {
+   "canary": "C21 final polynomial whose relation has been substituted",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "the polynomial has both signs (2 positive, 2 negative coefficients)",
+   "expected": "both signs",
+   "pass": true
+  },
+  {
+   "canary": "C22 degree-2 certificate carrying a degree-3 multiplier",
+   "checker": "fpcheck",
+   "is_control": false,
+   "accepted": false,
+   "diagnosis": "monomial of degree 3 in a degree-2 certificate",
+   "expected": "degree",
+   "pass": true
+  }
+ ]
+}

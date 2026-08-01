@@ -98,6 +98,8 @@ def main():
     if a.l1deg3:
         plan.append((3, 'L1'))
     out['runs'] = []
+    found_path = os.path.join(DATA, 'fp_found.jsonl')
+    open(found_path, 'w').close()
     for tag, (rows, CH) in pops.items():
         for (d, lv) in plan:
             hit = 0
@@ -108,6 +110,15 @@ def main():
                                            sup=sup[lv])
                 hit += cert is not None
                 last = info
+                if cert is not None:
+                    # ANY hit must be independently checkable, and a hit on a
+                    # REALIZABLE class would be fatal -- so every one is
+                    # written out with the population it came from.
+                    r = fpoly.fp_record(N, R, catalog.chi_string(c), cert,
+                                        d, sup[lv])
+                    r['population'] = tag
+                    with open(found_path, 'a') as fh:
+                        fh.write(json.dumps(r) + '\n')
             rec = {'population': tag, 'degree': d, 'level': lv,
                    'n': len(CH), 'found': hit,
                    'columns': last.get('ncol'), 'monomials': last.get('nmon'),

@@ -209,18 +209,39 @@ def run(a=None):
         FP = fpoly.fp_record(N, R, s_rig, fcert, 2, sup1)
         add('control: honest degree-2 final polynomial (rigged instance)',
             FP, 'fpcheck', None)
+        # NOTE.  Scaling ALL coefficients is not a sabotage -- c*P is a final
+        # polynomial whenever P is -- and after the sparsifying pass the
+        # rigged certificate collapses to a single generator, so "drop half
+        # the generators" is a no-op too.  The sabotages below survive both.
         c = copy.deepcopy(FP)
-        c['gens'][0]['c'] = [int(c['gens'][0]['c'][0]) * 3, 1]
-        add('C19 final polynomial with one coefficient tripled', c,
+        # The substitute must NOT itself be monochrome under the rigged sign
+        # vector, or swapping it in produces another valid certificate and
+        # the checker is right to accept it.  (That happened; see
+        # OPEN_ATTACK.md s7.2 on self-validating certificates.)
+        import gplib
+        other = None
+        for idt in sup1.idents:
+            if idt.spec == c['gens'][0]['rel'] or idt.spec['kind'] != 'pl':
+                continue
+            sg = gplib.term_signs(idt, rigged)
+            if not (all(v > 0 for v in sg) or all(v < 0 for v in sg)):
+                other = idt.spec
+                break
+        c['gens'].append({'rel': other, 'mult': [], 'c': [1, 1]})
+        add('C19 final polynomial with a spurious extra generator', c,
             'fpcheck', 'both signs')
         c = copy.deepcopy(FP)
         c['chi'] = s_wk
         add('C20 final polynomial attached to a realizable class', c,
             'fpcheck', 'both signs')
         c = copy.deepcopy(FP)
-        c['gens'] = c['gens'][:max(1, len(c['gens']) // 2)]
-        add('C21 final polynomial with half its generators dropped', c,
+        c['gens'][0]['rel'] = other
+        add('C21 final polynomial whose relation has been substituted', c,
             'fpcheck', 'both signs')
+        c = copy.deepcopy(FP)
+        c['gens'][0]['mult'] = [[1, 2, 3, 4]]
+        add('C22 degree-2 certificate carrying a degree-3 multiplier', c,
+            'fpcheck', 'degree')
     else:
         print('WARNING: the final-polynomial positive control did not fire; '
               'its canaries were skipped')
@@ -232,6 +253,7 @@ def run(a=None):
             fh.write(json.dumps(k) + '\n')
 
     nfail = 0
+    outcomes = []
     print('\n%-4s %-62s %-9s %s' % ('', 'canary', 'checker', 'result'))
     for k in cases:
         rec = k['record']
@@ -246,13 +268,24 @@ def run(a=None):
             good = k['expect'].lower() in msg.lower()
         if not good:
             nfail += 1
+        outcomes.append({'canary': k['canary'], 'checker': k['checker'],
+                         'is_control': control, 'accepted': bool(ok),
+                         'diagnosis': msg, 'expected': k['expect'],
+                         'pass': bool(good)})
         print('  %-4s %-60s %-9s %s: %s'
               % ('ok' if good else 'FAIL', k['canary'][:60], k['checker'],
                  'ACCEPTED' if ok else 'REJECTED', msg[:78]))
     ncan = sum(1 for k in cases if not k['canary'].startswith('control'))
+    summary = {'when': __import__('time').strftime('%Y-%m-%dT%H:%M:%S'),
+               'controls': len(cases) - ncan,
+               'sabotages': ncan, 'rejected_as_expected': ncan - nfail,
+               'failures': nfail, 'ALL_PASS': nfail == 0,
+               'outcomes': outcomes}
+    with open(os.path.join(DATA, 'canaries_result.json'), 'w') as fh:
+        json.dump(summary, fh, indent=1)
     print('\n%d controls accepted, %d sabotages rejected with the expected '
           'diagnosis, %d failures' % (len(cases) - ncan, ncan - nfail, nfail))
-    print('written: %s' % path)
+    print('written: %s and data/canaries_result.json' % path)
     return nfail
 
 

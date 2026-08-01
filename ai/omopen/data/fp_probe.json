@@ -1,0 +1,107 @@
+{
+ "when": "2026-08-01T20:55:36",
+ "limit": 25,
+ "deg2_L0_incidence": {
+  "monomials": 3780,
+  "columns": 1260,
+  "nonzeros": 3780,
+  "one_per_row": true
+ },
+ "positive_control": {
+  "found": true,
+  "generators": 1,
+  "seconds": 0.25
+ },
+ "runs": [
+  {
+   "population": "OPEN",
+   "degree": 2,
+   "level": "L0",
+   "n": 25,
+   "found": 0,
+   "columns": 1260,
+   "monomials": 3780,
+   "seconds_each": 0.02
+  },
+  {
+   "population": "OPEN",
+   "degree": 2,
+   "level": "L1",
+   "n": 25,
+   "found": 0,
+   "columns": 5544,
+   "monomials": 6615,
+   "seconds_each": 0.16
+  },
+  {
+   "population": "OPEN",
+   "degree": 3,
+   "level": "L0",
+   "n": 25,
+   "found": 0,
+   "columns": 158760,
+   "monomials": 288540,
+   "seconds_each": 6.52
+  },
+  {
+   "population": "NON_REALIZABLE",
+   "degree": 2,
+   "level": "L0",
+   "n": 25,
+   "found": 0,
+   "columns": 1260,
+   "monomials": 3780,
+   "seconds_each": 0.03
+  },
+  {
+   "population": "NON_REALIZABLE",
+   "degree": 2,
+   "level": "L1",
+   "n": 25,
+   "found": 3,
+   "columns": 5544,
+   "monomials": 6615,
+   "seconds_each": 0.18
+  },
+  {
+   "population": "NON_REALIZABLE",
+   "degree": 3,
+   "level": "L0",
+   "n": 25,
+   "found": 0,
+   "columns": 158760,
+   "monomials": 288540,
+   "seconds_each": 6.3
+  },
+  {
+   "population": "REALIZABLE",
+   "degree": 2,
+   "level": "L0",
+   "n": 25,
+   "found": 0,
+   "columns": 1260,
+   "monomials": 3780,
+   "seconds_each": 0.03
+  },
+  {
+   "population": "REALIZABLE",
+   "degree": 2,
+   "level": "L1",
+   "n": 25,
+   "found": 0,
+   "columns": 5544,
+   "monomials": 6615,
+   "seconds_each": 0.17
+  },
+  {
+   "population": "REALIZABLE",
+   "degree": 3,
+   "level": "L0",
+   "n": 25,
+   "found": 0,
+   "columns": 158760,
+   "monomials": 288540,
+   "seconds_each": 6.61
+  }
+ ]
+}

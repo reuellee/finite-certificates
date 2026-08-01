@@ -1,0 +1,7 @@
+sweep progress 2426068/9276595 (26.15%)
+  TODO                     6850527
+  REALIZABLE(walk)         2393416
+  REALIZABLE(repair)          2013
+  NON_REALIZABLE             30513
+  OPEN                         126
+wrote C:\Users\reuel\AppData\Local\Temp\claude\E--Projects\8f05ea6b-b743-4889-b448-362647b88861\scratchpad\finite-certificates\ai\omopen\data\open_set.txt (126 rows)

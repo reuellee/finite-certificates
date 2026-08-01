@@ -201,6 +201,34 @@ def relation_terms(spec, n, r, bidx):
 
 
 _IDCACHE = {}
+_POOL = {}
+
+
+def _bracket_pool(n, r, bas, trials, seed=20260801):
+    """A fixed pool of random integer r x n matrices and their exact bracket
+    vectors, computed ONCE and shared by every relation.
+
+    A relation is an identity iff it vanishes for all configurations, so
+    testing every relation against the same sample is legitimate and turns
+    the cost from (relations x trials x C(n,r)) determinants into
+    (trials x C(n,r)) -- the difference between minutes and hours on a
+    certificate with thousands of generators.  The matrices are drawn from a
+    fixed seed so the check is reproducible.
+    """
+    key = (n, r, trials, seed)
+    if key in _POOL:
+        return _POOL[key]
+    rnd = random.Random(seed ^ (n * 1000 + r))
+    out = []
+    while len(out) < trials:
+        X = [[rnd.randint(-25, 25) for _ in range(n)] for _ in range(r)]
+        br = [det_bareiss([[X[i][b - 1] for b in Bs] for i in range(r)])
+              for Bs in bas]
+        if any(v == 0 for v in br):
+            continue                      # keep the sample generic
+        out.append(br)
+    _POOL[key] = out
+    return out
 
 
 def check_is_identity(spec, n, r, bas, bidx, trials=40, seed=0):
@@ -213,11 +241,7 @@ def check_is_identity(spec, n, r, bas, bidx, trials=40, seed=0):
     except ValueError as e:
         _IDCACHE[key] = (False, str(e))
         return _IDCACHE[key]
-    rnd = random.Random(hash(key[0]) & 0xFFFFFFFF ^ seed)
-    for _ in range(trials):
-        X = [[rnd.randint(-25, 25) for _ in range(n)] for _ in range(r)]
-        br = [det_bareiss([[X[i][b - 1] for b in Bs] for i in range(r)])
-              for Bs in bas]
+    for br in _bracket_pool(n, r, bas, trials):
         s = 0
         for (e, i, j) in terms:
             s += e * br[i] * br[j]

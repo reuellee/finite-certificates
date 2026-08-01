@@ -9,10 +9,13 @@
 #   python validate.py --n 40
 #   python canaries.py
 #   python attack.py run --budget 60 --verify-identities
-#   python attack.py run --budget 900 --walk-depth 60 --fp
+#   python attack.py run --budget 600 --walk-depth 120 --fp
 #   python attack.py report
 
 __pycache__/
 *.pyc
 data/_*.jsonl
 data/*.tmp
+
+# scratch (the .md is the artifact of record; logs are ignored repo-wide)
+data/_*

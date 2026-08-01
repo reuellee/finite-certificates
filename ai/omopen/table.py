@@ -24,19 +24,36 @@ def load():
     return out
 
 
+def witnesses():
+    """chi -> the set of family-tuples for which a witness is on file."""
+    out = {}
+    p = os.path.join(HERE, 'data', 'certs_no_bfp.jsonl')
+    if os.path.exists(p):
+        with open(p) as fh:
+            for line in fh:
+                line = line.strip()
+                if line:
+                    r = json.loads(line)
+                    out.setdefault(r['chi'], set()).add(
+                        tuple(r.get('families', ())))
+    return out
+
+
 def main():
     res = load()
+    wit = witnesses()
     rows = sorted(res)
-    print('| row | depth | verdict | how | s | max&#124;entry&#124; | no-BFP witness |')
+    print('| row | depth | verdict | how | s | max&#124;entry&#124; | '
+          'no-FP witness (L0 / L1) |')
     print('|---|---|---|---|---|---|---|')
     for r in rows:
         d = res[r]
         how = (d.get('method') or '-').replace('weaponA:', '')
         note = d.get('note') or ''
         ent = note.split('<= ')[-1] if '<=' in note else '-'
-        wit = d['stages'].get('L0_witness', {}).get('found')
-        w = 'yes' if wit else ('n/a (realized first)' if
-                               d['verdict'] == 'REALIZABLE' else 'NO')
+        have = wit.get(d['chi'], set())
+        w = '%s / %s' % ('yes' if ('gp3',) in have else 'NO',
+                         'yes' if ('gp3', 'pl4', 'pl5') in have else 'NO')
         print('| %d | %d | %s | %s | %.1f | %s | %s |'
               % (r, d['depth'], d['verdict'], how, d['seconds'], ent, w))
     print()

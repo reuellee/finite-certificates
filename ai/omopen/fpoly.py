@@ -109,6 +109,43 @@ def build_system(idents, chi, degree, multipliers=None):
     return A, cols, mons
 
 
+def _sparsify(A, lam, tol=1e-7, cap=1200):
+    """Re-solve for the SPARSEST combination with the same effect.
+
+    A cone LP returns a vertex, and here the vertex runs to thousands of
+    generators even though the polynomial it produces has a handful of
+    monomials -- almost everything cancels.  Minimising the l1 norm of
+    lambda over the same feasible cone (with the objective value pinned
+    strictly negative) collapses it, which is the difference between a
+    certificate a reader can check by hand and a megabyte of JSON.
+    """
+    ncol = A.shape[1]
+    sup = [j for j in range(ncol) if abs(lam[j]) > tol]
+    if not sup or len(sup) > 8 * cap:
+        return lam
+    As = A[:, sup].tocsc()
+    keep = np.asarray((abs(As).sum(axis=1))).ravel() > 0
+    As = As[keep]
+    m, k = As.shape
+    # variables (p, n) >= 0 with lambda = p - n
+    from scipy.sparse import hstack, vstack, csr_matrix
+    top = hstack([As, -As])                      # A lambda <= 0
+    ones = csr_matrix(np.asarray(As.sum(axis=0)).reshape(1, -1))
+    bot = hstack([ones, -ones])                  # 1^T A lambda <= -1
+    M = vstack([top, bot]).tocsc()
+    b = np.zeros(m + 1)
+    b[-1] = -1.0
+    c = np.ones(2 * k)
+    res = linprog(c, A_ub=M, b_ub=b, bounds=[(0.0, 50.0)] * (2 * k),
+                  method='highs')
+    if not res.success:
+        return lam
+    x = np.asarray(res.x)
+    out = np.zeros(ncol)
+    out[sup] = x[:k] - x[k:]
+    return out
+
+
 def _lp(A, tol=1e-7):
     """min 1^T A lam  s.t.  A lam <= 0,  -1 <= lam <= 1.
 
@@ -329,7 +366,12 @@ def find_fp(chi, degree=2, level='L0', budget=BUDGET, multipliers=None,
     info['seconds'] = round(time.time() - t0, 2)
     if lam is None:
         return None, info
-    lamq = _exact_from_support(A, lam, tol)
+    lam2 = _sparsify(A, lam, tol)
+    info['support_raw'] = int((np.abs(lam) > tol).sum())
+    info['support_sparse'] = int((np.abs(lam2) > tol).sum())
+    lamq = _exact_from_support(A, lam2, tol)
+    if lamq is None:
+        lamq = _exact_from_support(A, lam, tol)
     if lamq is None:
         info['exact_failed'] = True
         info['seconds'] = round(time.time() - t0, 2)
