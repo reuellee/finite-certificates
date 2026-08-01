@@ -22,7 +22,7 @@ print(A.call("GET", f"projects/{P}/locations/global/licenseConfigs",
 PY
 ```
 
-Expect `licenseAssignmentState: ASSIGNED` for `reuellee@gmail.com` and a
+Expect `licenseAssignmentState: ASSIGNED` for the licence-holder account and a
 `SUBSCRIPTION_TIER_ENTERPRISE` licenceConfig in state `ACTIVE`. The
 subscription lapses **2026-09-01** (auto-renew off) — after that none of this
 applies.
@@ -139,7 +139,7 @@ Include, because it rules out everything the first-line script will suggest:
   the operation 404s on a subsequent GET;
 * that `:acquirePrograms` returns a literal `{}` indefinitely and no program
   ever reaches `EVALUATING`;
-* that the seat is `ASSIGNED` to `reuellee@gmail.com` against an `ACTIVE`
+* that the seat is `ASSIGNED` to the licence-holder account against an `ACTIVE`
   `SUBSCRIPTION_TIER_ENTERPRISE` licenceConfig;
 * that `gemini-3.1-pro-preview` is `MODEL_ENABLED` on the engine, that the
   AlphaEvolve daily token quotas are 1e8 (not zero), that
