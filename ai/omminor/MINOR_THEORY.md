@@ -227,8 +227,11 @@ all nine contractions against the (3,8) catalog.
 | uniform random sample over all 9,276,595 classes | 116 | 105 | **90.52%** | [83.81%, 94.62%] |
 
 **With ≥1 non-realizable contraction: 0 of 20,571 classes tested** (14,512
-of them non-realizable), across both corpora. Lemma K, confirmed
-extensionally.
+of them non-realizable), across both corpora. What is actually checked is
+that all 185,139 contractions are valid rank-3 chirotopes on 8 elements and
+that every one canonicalizes into the complete 135-class (3,8) catalog —
+whose members are, all 135 of them, certified realizable. Lemma K,
+confirmed extensionally rather than assumed.
 
 Number of non-realizable deletions per class (sweep prefix):
 
@@ -403,6 +406,30 @@ each is a genuine new excluded minor for realizability at n = 9.
 They are **8.88%** of the certified non-realizable classes in the prefix —
 matching, at 570× the sample size, the 2-of-25 (8%) that `SCOPING.md` §6.3
 reported from a hand sample.
+
+### 6.1 The list survives a falsification test that bypasses the pipeline
+
+A class lands on this list because all nine of its deletions were
+*identified*, by canonicalization, as realizable (4,8) classes. That
+identification is the one step whose failure would silently inflate the
+list. `verify_minimal.py` tests the claim without canonicalizing anything:
+
+> A realizable oriented matroid provably has **no** Gordan vector — the logs
+> of its brackets satisfy every strict inequality. So a single biquadratic
+> final polynomial found among the deletions of a minor-minimal class
+> refutes the list. Conversely each of the 24 obstructions has one, and
+> BFP-existence is a class invariant (§5.1), so the test is sharp both ways.
+
+| | |
+|---|---|
+| deletions of the 1,279 minimal classes | 11,511 (11,286 distinct labelled) |
+| put through a fresh BFP search | all of them, 14 ms each, 154 s at 2 workers |
+| **Gordan vectors found** | **0** |
+| positive control: deletions identified as one of the 24 | **60/60** produced a Gordan vector |
+
+Zero hits over 11,286 independent LPs, against a positive control that fires
+60 times out of 60. The minimal list does not depend on the canonicalizer
+being right.
 
 **Extrapolation, clearly labelled as one.** `SCOPING.md` §6.2 measures the
 catalogue-wide non-realizable density at 2.10% [1.64%, 2.68%] on a uniform
@@ -621,6 +648,7 @@ unless the weighting is corrected by the parent counts.
 | C2 deletions identified as one of the 24: run BFP directly on the deletion | 25/25 got a Gordan vector; `checkcert.py` accepted all |
 | C3 deletions identified as realizable: realize the deletion directly | 25/25 realized; `checkcert.py` accepted all |
 | C4 brute-force canonicalization over the **whole** group (8!·2⁸·2 elements; `bfcanon.py`, no shared code, no colour refinement, no sign lattice) | 12/12 land in the class the pipeline assigned, 12/12 separated from a random other class |
+| C5 (`verify_minimal.py`) every deletion of every minor-minimal class through a fresh BFP search — canonicalization not used | **0 Gordan vectors in 11,286 LPs**; positive control 60/60 |
 
 **Global checks, asserted on every row rather than sampled** (`minorsweep.py`):
 
@@ -663,14 +691,16 @@ with a reader that consumes only complete lines and records byte offsets.
 | `liftcert.py` | deletion certificate → 9-element certificate, plus the five lift sabotages |
 | `bfcanon.py` | independent brute-force group canonicalizer (spot-check only) |
 | `canaries.py` | the canary suite |
+| `verify_minimal.py` | the falsification test of §6.1 |
 | `cert47.py` | certificates for (4,5), (4,6), (4,7), (3,7) |
 | `rank3check.py` | the same question at (3,10), against published ground truth |
+| `ATLAS_SPEC.md` | design note: generalizing the coverage tree into a reusable property-slot artifact (task item 6, secondary) |
 | `data/minimal_sweep.txt` | **the minor-minimal list so far**, 1,279 canonical keys (tracked) |
 | `data/minimal_uniform.txt` | the 11 found in the uniform corpus (tracked) |
 | `data/certs_4_5.jsonl`, `certs_4_6.jsonl`, `certs_4_7.jsonl`, `certs_3_7.jsonl` | the new small-cell certificates (tracked) |
 | `data/lifted_certs.jsonl`, `data/lifted_canaries.jsonl` | the 80 lifted certificates and the 5 sabotages (tracked) |
 | `data/*.state.json` | the pinned data prefix — byte offsets, line counts, verdict tallies (tracked) |
-| `data/report_sweep.json`, `data/report_uniform.json`, `data/rank3check.json`, `data/fastminor.json` | machine-readable results (tracked) |
+| `data/report_sweep.json`, `data/report_uniform.json`, `data/rank3check.json`, `data/fastminor.json`, `data/verify_minimal.json` | machine-readable results (tracked) |
 
 Large regenerable artifacts are gitignored (`data/harvest_*.jsonl`,
 `data/minors_*.jsonl`, `data/certs_minimal_*.jsonl`, the identification

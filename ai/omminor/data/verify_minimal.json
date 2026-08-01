@@ -1,0 +1,11 @@
+{
+ "minimal_classes": 1279,
+ "deletions": 11511,
+ "distinct_deletions": 11286,
+ "gordan_vectors_found": 0,
+ "positive_control": [
+  60,
+  60
+ ],
+ "wall_s": 154.19712352752686
+}
