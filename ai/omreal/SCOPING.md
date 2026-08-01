@@ -298,23 +298,33 @@ running `ai/omgamma/runcat.py 3 10` **in a scratch copy** (omgamma itself
 was not touched). It produced exactly **312 356** classes — matching
 FMM13's published total independently, before any realizability work.
 
-The test, pre-committed before the run: **does the full A–E cascade find
-exactly 242 non-realizable classes with zero residue?**
+The test, pre-committed before the run: **how many of the 312 356 classes
+have a biquadratic final polynomial?**
 
-* 242 with zero residue → the BFP implementation and the realizer are
-  jointly complete at 300 000-class scale.
-* fewer than 242, with residue → there is a gap that would otherwise have
-  been carried silently into 9.28M classes.
+The full A–E cascade over the catalogue costs ~6 h on this box; a
+*BFP-only* sweep (`bfpsweep.py`) costs ~1.4 h and answers the same
+question, because a Gordan vector *proves* non-realizability and a
+realizable class provably cannot have one — cross-checked here on 1500+
+classes with zero false hits. So the BFP hit count is a lower bound on the
+non-realizable count, and if it equals the published 242 then BFP is
+complete on this catalogue and no realization search is needed to say so.
+
+* exactly 242 → BFP is complete at (3,10), at the same LP size as the
+  target, and the implementation is right at 300 000-class scale.
+* fewer than 242 → BFP misses non-realizable classes at this size — a gap
+  that would otherwise have been carried silently into 9.28M classes.
 * more than 242 → a false non-realizability certificate, which
-  `checkcert.py` must then have caught.
+  `checkcert.py` must then have caught (all hits are re-verified).
 
 **How far this generalises, stated in advance so it is not over-read
-later.** (3,10) has 720 three-term GP relations against (4,9)'s 1260, a
-different rank, and a non-realizable density of 0.077% against the 2.10%
-we measure at (4,9) — a factor of 27. A clean result at (3,10) confirms
-the *implementation* at scale. It does **not** establish BFP completeness
-at (4,9), which is a different rank with a 27× denser non-realizable
-population.
+later.** The two cases are almost exactly size-matched for BFP — (3,10)
+has 120 bases and 1260 three-term GP relations, (4,9) has 126 and 1260 —
+so this genuinely exercises the LP and the exact reconstruction at the
+target's scale. What differs is the *rank*, and the non-realizable
+density: 0.077% at (3,10) against the 2.10% we measure at (4,9), a factor
+of 27. So a clean result confirms the *implementation* at the right size.
+It does **not** establish BFP completeness at (4,9), which is a different
+rank with a 27× denser non-realizable population.
 
 <!--TEST310RESULT-->
 
@@ -392,9 +402,9 @@ Memory: 224 MB peak per worker, and that is almost entirely the 62 MB
 
 ### 6.2 Outcome rates on random (4,9) classes
 
-Combined uniform random samples, current pipeline (`--sample49`, seeds 1
-and 77), sampled after verifying the manifest hashes and after asserting
-every decoded key is a valid uniform chirotope:
+One uniform random sample (`--sample49 6000 --seed 1`, run as 6 shards and
+stopped at 3002 classes), drawn after verifying the manifest hashes and
+after asserting every decoded key is a valid uniform chirotope:
 
 **3002 distinct classes.**
 
@@ -764,6 +774,7 @@ count without its interval; the verdict lives inside that interval.
 | `checkcert.py` | **the checker.** Standard library only; imports nothing from this project or omgamma; different determinant algorithm from the producer |
 | `canaries.py` | the canary battery of §5 |
 | `diag.py` | residue diagnostics: deletion profiles, budget hammering |
+| `bfpsweep.py` | BFP-only sweep over a catalogue (the (3,10) completeness test) |
 | `aggregate.py` | shard aggregation, Wilson intervals, extrapolation |
 
 ```
