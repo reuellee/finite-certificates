@@ -108,9 +108,65 @@ def cmd_hammer(recs, limit, tries, sweeps, rerolls):
           'mean %.1f s/class' % (tries, sweeps, got, len(sel), float(np.mean(ts))))
 
 
+def cmd_mutant(recs, limit, kmax=20, attempts=3):
+    """Mutation warm-start, without the tree.
+
+    For a stuck class chi, pick a MUTABLE basis j -- one whose sign can be
+    flipped leaving a valid uniform chirotope -- realize the mutant
+    mu_j(chi) from scratch, and push that single wall.  This is the
+    tree-warm-start of SCOPING.md sec 9.2 done opportunistically: it
+    samples the mutant's realization space at points the stuck search
+    never visits, instead of hoping the stalled configuration happens to
+    sit near the wall.
+    """
+    g = rz.Geom(9, 4)
+    sel = [x for x in recs if x['verdict'] == 'RESIDUE'][:limit]
+    rng = np.random.default_rng(2026)
+    won, ts = 0, []
+    for i, rec in enumerate(sel):
+        chi = omdecode.signs_from_string(rec['chi'])
+        t0 = time.perf_counter()
+        muts = []
+        for j in range(g.M):
+            t = chi.copy()
+            t[j] = -t[j]
+            if omdecode.gp_check(9, 4, t[None, :])[0]:
+                muts.append(j)
+        rng.shuffle(muts)
+        hit = None
+        for j in muts[:kmax]:
+            chip = chi.copy()
+            chip[j] = -chip[j]
+            for a in range(attempts):
+                Z, _ = rz.realize(chip, g, tries=1, sweeps=15, rerolls=3,
+                                  wall_budget=0, seed=int(rng.integers(1 << 30)))
+                if Z is None:
+                    continue
+                X = Z.astype(np.float64)
+                X /= np.linalg.norm(X, axis=0, keepdims=True)
+                if len(rz._wrong(chi, X, g)) != 1:
+                    continue
+                if rz._cross_wall(chi, X, g, rng):
+                    Zi, _ = rz._rationalise(X, chi, g)
+                    if Zi is not None:
+                        hit = Zi
+                        break
+            if hit is not None:
+                break
+        ts.append(time.perf_counter() - t0)
+        if hit is not None:
+            assert np.array_equal(rz.exact_bracket_signs(hit, g), chi)
+            won += 1
+        print('  %d/%d  mutable bases %d  -> %s  (%.1fs)'
+              % (i + 1, len(sel), len(muts), 'REALIZED' if hit is not None
+                 else 'still stuck', ts[-1]), flush=True)
+    print('MUTANT WARM-START: %d/%d of the residue realized, mean %.1f s/class'
+          % (won, len(sel), float(np.mean(ts))))
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('cmd', choices=('deletions', 'hammer'))
+    ap.add_argument('cmd', choices=('deletions', 'hammer', 'mutant'))
     ap.add_argument('certs')
     ap.add_argument('--limit', type=int, default=40)
     ap.add_argument('--tries', type=int, default=60)
@@ -120,6 +176,8 @@ def main():
     recs = [json.loads(l) for l in open(a.certs) if l.strip()]
     if a.cmd == 'deletions':
         cmd_deletions(recs, a.limit)
+    elif a.cmd == 'mutant':
+        cmd_mutant(recs, a.limit)
     else:
         cmd_hammer(recs, a.limit, a.tries, a.sweeps, a.rerolls)
 

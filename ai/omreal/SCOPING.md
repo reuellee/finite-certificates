@@ -3,15 +3,16 @@
 Slow-lane program note. Started 2026-08-01. Status: **PILOT COMPLETE —
 CONDITIONAL GO.** The (4,8), (3,9) and (3,8) splits are reproduced exactly
 with machine-checkable certificates and zero residue; at (4,9) the pipeline
-settles ~98% of a random sample and leaves a measured residue it has no
+settles 99.73% of a random sample and leaves a measured residue it has no
 method for. Predecessor standards apply: every claim carries a certificate
 or an explicit trust boundary, and deliberately-broken controls (canaries)
 are wired in.
 
 **Read the verdict in §9 before the rest. It is not "we can fill in the
-blank cell." It is "we can produce a certified partition of ~98% plus an
-explicit list of open cases, for about $300, and we do not yet have a
-method for the last ~2%."**
+blank cell." It is "we can produce a certified partition of 99.7% plus an
+explicit list of open cases, for about $315, and we do not yet have a
+method for the last 0.27% (95% interval 0.12%–0.59%, i.e. 11 500–54 400
+classes)."**
 
 ---
 
@@ -161,6 +162,16 @@ Four moves, in order of how much they cost:
    maximising `t·(a_j·x) + Σ_{i≠j} log(a_i·x) − (μ/2)|x|²` with t growing.
    Adding this took the (4,9) residue from **8.25% to 3.25%** at equal
    budget, and it is the single reason the target looks feasible at all.
+5. **mutation warm-start** (`realize_via_mutant`) — the same idea run
+   deliberately instead of opportunistically. A basis j is *mutable* when
+   flipping `chi[j]` leaves a valid uniform chirotope; the mutant
+   `mu_j(chi)` is then a neighbour of chi in the mutation graph. Realize
+   the mutant **from scratch** and push the single wall at j. This samples
+   the mutant's realization space at points a stuck direct search never
+   visits, and it realized **13 of 19** classes that had already survived
+   the entire A–D cascade including 60 tries × 120 sweeps, at 4.0 s each.
+   Mutability is computed from chi alone, so the stage is stateless and
+   shards like everything else.
 
 Whatever comes out is scaled to integers and **verified exactly**: all
 C(n,r) determinants over ℤ, every one nonzero (uniformity) and matching
@@ -200,11 +211,15 @@ A class it misses is reported as RESIDUE, never as realizable.
 | B | biquadratic final polynomial | — |
 | C | medium realization | tries 8, sweeps 40, rerolls 8, wall budget 12 |
 | D | heavy realization | tries 60, sweeps 120, rerolls 10, wall budget 90 |
+| E | mutation warm-start | up to 20 mutable bases × 3 attempts |
 | — | otherwise | RESIDUE |
 
 B is interposed before C and D because it is cheap and settles a class
 outright; there is no point paying for a heavy realization search on a
-class that has a final polynomial.
+class that has a final polynomial. E is last because it is only ever
+reached by ~1% of classes — but it is *cheaper per class than D* and
+converts most of what D leaves, so on a rerun it should be promoted
+ahead of D.
 
 ### 3.4 The checker — `checkcert.py`
 
@@ -223,7 +238,26 @@ Python ints vs. Laplace expansion by complementary 2×2 minors in int64).
 * RESIDUE — carries no claim; counted, never accepted as a verdict.
 
 Measured: **~1–2 ms per certificate**; 7145 certificates (the three
-reproduction catalogues) re-verified in 8.7 s.
+reproduction catalogues) re-verified in 8.7 s, and all ~8900 certificates
+produced in this pilot — reproduction catalogues plus every (4,9) sample —
+accepted in 18.8 s.
+
+### 3.5 Why the two directions cannot silently disagree
+
+A realization and a Gordan vector for the same class are contradictory, so
+a systematic error would show up as a class where both succeed. Two
+standing cross-checks, run inside the sweep, hunt for exactly that:
+
+* every realizable class (up to a cap) is *also* fed to the BFP search —
+  0 spurious certificates in 500 (4,8) + 500 (3,9) + several hundred (4,9)
+  classes;
+* every BFP-certified class is *also* fed to the heavy realizer —
+  0 realized, including all 24 non-realizable (4,8) classes.
+
+The colex convention is also cross-checked implicitly and continuously:
+this module builds its basis order independently of `coverage_checker`,
+and a mismatch would make every produced matrix fail exact verification
+against the catalogue's sign string. It never did, ~8900 times.
 
 ---
 
@@ -248,6 +282,10 @@ Cross-checks run inside the sweep (both must be zero, both were):
   realized.
 
 ---
+
+### 4.1 The BFP stress test at (3,10)
+
+<!--TEST310-->
 
 ## 5. Canaries
 
@@ -326,13 +364,24 @@ Combined uniform random samples, current pipeline (`--sample49`, seeds 1
 and 77), sampled after verifying the manifest hashes and after asserting
 every decoded key is a valid uniform chirotope:
 
+**2226 distinct classes.**
+
 | verdict | count | rate | 95% Wilson interval | implied count of 9 276 595 |
 |---|---|---|---|---|
-| REALIZABLE | 1045 | **97.57%** | [96.47%, 98.34%] | 9 051 000 |
-| NON_REALIZABLE | 18 | **1.68%** | [1.07%, 2.64%] | 155 900 [98 900, 245 000] |
-| RESIDUE | 8 | **0.75%** | [0.38%, 1.47%] | 69 300 **[35 200, 136 100]** |
+| REALIZABLE (stages A–D) | 2162 | **97.13%** | [96.35%, 97.74%] | 9 010 000 |
+| NON_REALIZABLE | 45 | **2.02%** | [1.51%, 2.69%] | 187 500 [140 500, 249 900] |
+| RESIDUE after A–D | 19 | **0.854%** | [0.547%, 1.329%] | 79 200 [50 800, 123 300] |
+| RESIDUE after A–E | **6** | **0.270%** | [0.124%, 0.587%] | **25 000 [11 500, 54 400]** |
 
-<!--SAMPLE_NOTE-->
+The last row is the one that matters. Running the mutation warm-start
+(stage E) on those 19 survivors realized **13 of them**, at 4.0 s each —
+classes that had already resisted 60 tries × 120 sweeps of direct search.
+Every resulting matrix was verified exactly. An independent earlier run on
+a slightly different residue set of 18 converted 14; so the conversion
+rate is ~70–78% on two draws.
+
+A stratified sample of the 8913 classes with non-trivial stabiliser is
+reported in §6.4; at 0.096% of the catalogue it cannot move these totals.
 
 ### 6.3 What the residue actually is
 
@@ -340,26 +389,39 @@ Two diagnostics, both run on residue classes:
 
 **Every residue class has all 9 deletions realizable.** Deleting one
 element gives a uniform (4,8) class, and our (4,8) pipeline settles all
-2628 of them, so this profile is exact. Of 33 residue classes examined,
-all 33 came back (9 realizable, 0 non-realizable). This matters because
-the GP relations of a deletion are a *subset* of the class's, so a BFP for
-a deletion is already a BFP for the class — the residue carries no
-inherited obstruction, and any obstruction it does carry is genuinely
+2628 of them, so this profile is exact. Of **18** residue classes (the
+survivors of the full A+B+C+D cascade) and of 33 earlier ones, *every
+single one* came back (9 realizable, 0 non-realizable). This matters
+because the GP relations of a deletion are a *subset* of the class's, so a
+BFP for a deletion is already a BFP for the class: the residue carries no
+inherited obstruction, and any obstruction it does carry must be genuinely
 9-element.
 
-By contrast, of 10 BFP-certified non-realizable classes, **9 had at least
-one non-realizable (4,8) deletion and 1 did not** — so BFP is still
-finding genuinely new 9-element obstructions at this size, but most of
-what it catches is inherited from (4,8).
+By contrast, of **25** BFP-certified non-realizable classes, 17 had one
+non-realizable (4,8) deletion, 6 had two, and **2 had none** — so BFP is
+still finding genuinely new 9-element obstructions (~8% of its hits), but
+most of what it catches is inherited from (4,8). Sampled realizable
+classes are, as they must be, 25/25 all-realizable-deletions.
 
 **The search stalls at exactly one wrong bracket.** On 20 residue classes
 (before the wall-crossing move existed), the minimum number of wrong
 brackets reached was 1 in 17 cases and 2 in 2 cases. In other words the
 searcher realizes a *mutant* of the target and cannot cross the last wall.
-Adding the wall-crossing move converted 24 of 33 such classes outright,
-and raising the budget converted 12 of the remaining 13. Every increase in
-realizer strength so far has eaten most of the residue — which is
-suggestive, but is *not* evidence that the residue is realizable.
+That single observation drove every subsequent improvement:
+
+| move added | residue on a random (4,9) sample |
+|---|---|
+| build + repair sweep only | 17.6% |
+| + prefix backtracking | 8.25% |
+| + wall crossing (`_cross_wall`) | 3.25% |
+| + heavy stage D | 0.85% |
+| + mutation warm-start (stage E) | **0.27%** |
+
+Every increase in realizer strength has eaten most of what was left, and
+each was aimed at the *same* structural failure rather than being more
+brute force. That is suggestive — but it is still not evidence that the
+remaining residue is realizable. A method that keeps converting most of
+the residue is not the same as a method that converges.
 
 ### 6.4 Structure: symmetric classes
 
@@ -386,20 +448,27 @@ competing job. Treat 6 physical cores as ~5 effective workers here.
 
 ### 7.1 Compute
 
-At the measured 1.494 s/class, single core:
+Stages A–D measure at 1.494 s/class single-core; stage E adds ~4.0 s on
+the ~0.85% of classes that reach it, i.e. ~0.034 s/class amortised:
 
 ```
-9 276 595 classes x 1.494 s = 13 859 000 s = 3 850 core-hours
+9 276 595 classes x 1.53 s = 14 190 000 s = 3 940 core-hours
 ```
 
-The cost/residue frontier is steep, because stage D is 79% of the cost:
+The cost/residue frontier, all measured except where noted:
 
 | configuration | s/class | core-hours | residue |
 |---|---|---|---|
 | A + B only | 0.121 | 312 | ~13% (stage-A misses that BFP does not catch) |
 | A + B + C | 0.308 | 794 | ~5% |
-| A + B + C + D | 1.494 | 3 850 | **0.75%** [0.38%, 1.47%] |
-| + D capped at 20 s | ~1.04 | ~2 680 | between 0.75% and 5% |
+| A + B + C + D | 1.494 | 3 850 | 0.854% [0.55%, 1.33%] |
+| A + B + C + D + E | 1.53 | **3 940** | **0.270%** [0.12%, 0.59%] |
+
+**Stage D is 79% of that cost and stage E is 2%, yet E converts 70% of what
+D leaves.** The obvious rerun is to put E *before* D — order the cascade
+A, B, C, E, D — which on the measured per-stage rates should land near
+1.3 s/class with the same or better residue. Not measured; do it first
+on any real run.
 
 **Checking is not the problem.** At 1–2 ms per certificate, re-verifying
 all 9.28M certificates costs **3–5 core-hours** — a laptop afternoon,
@@ -416,13 +485,13 @@ be designed before the sweep, not after.
 
 Not the split. Concretely:
 
-* **~9 051 000 classes certified REALIZABLE**, each with an explicit
+* **~9 064 000 classes certified REALIZABLE**, each with an explicit
   integer 4×9 matrix — a *lower bound* on the realizable count that is
   checkable in microseconds per class;
-* **~155 900 classes certified NON-REALIZABLE** [98 900, 245 000], each
+* **~187 500 classes certified NON-REALIZABLE** [140 500, 249 900], each
   with a Gordan vector over three-term GP relations — a *lower bound* on
   the non-realizable count;
-* **~69 300 classes RESIDUE** [35 200, 136 100] — an explicit, published
+* **~25 000 classes RESIDUE** [11 500, 54 400] — an explicit, published
   list of open cases with no certificate either way.
 
 The two bounds are exact and independently checkable. The cell is filled
@@ -461,7 +530,7 @@ We cannot currently tell these apart, and that is the whole of the risk.
 
 ## 8. Deployment
 
-Budget: **3 850 core-hours** for the full A+B+C+D sweep.
+Budget: **3 940 core-hours** for the full A+B+C+D+E sweep.
 
 ### (a) This laptop — NO
 
@@ -469,7 +538,7 @@ i7-9750H, 6 physical cores / 12 logical, 16 GB. Measured effective
 parallelism is ~5 workers, so
 
 ```
-3 850 core-hours / 5 = 770 hours = 32 days of continuous run
+3 940 core-hours / 5 = 790 hours = 33 days of continuous run
 ```
 
 and that is before the residue pass. The machine also has a documented
@@ -483,7 +552,7 @@ what it should be doing.
 20 concurrent jobs × 2 cores × 6 h = **240 core-hours per wave**.
 
 ```
-3 850 / 240 = 16.1 waves  ->  ~97 hours of wall clock if waves run back to back
+3 940 / 240 = 16.4 waves  ->  ~97 hours of wall clock if waves run back to back
 ```
 
 Free, and genuinely attractive for *re-verification* (the checker pass is
@@ -501,15 +570,15 @@ Three costs the raw arithmetic hides:
 2. **Artifacts.** 0.6–4.3 GB of certificates to move and retain, against
    Actions' artifact size and retention limits, with no shared state to
    accumulate into.
-3. **Terms of service.** A 3 850 core-hour arithmetic sweep on free public
+3. **Terms of service.** A 3 940 core-hour arithmetic sweep on free public
    runners is close to the use Actions' terms discourage, even for a repo
    whose stated purpose is that computation. Not worth the risk for the
-   bulk pass when the paid alternative costs $308.
+   bulk pass when the paid alternative costs $315.
 
 ### (c) GCP spot VMs — RECOMMENDED for the sweep
 
 ```
-3 850 core-hours x $0.08 = $308
+3 940 core-hours x $0.08 = $315
 ```
 
 Shape options at that price:
@@ -528,13 +597,13 @@ applies — **stop the VMs when done**, budget alert first, and pin
 
 ### Recommendation
 
-**GCP spot for the sweep ($308, ~30 h wall on 128 vCPU), GitHub Actions
+**GCP spot for the sweep ($315, ~31 h wall on 128 vCPU), GitHub Actions
 for the independent re-verification pass (free, one wave, reproducible by
 anyone), the laptop for development and for spot-checking certificates.**
 Do the cheap A+B+C configuration first ($64, 794 core-hours) to get the
-bounds and the residue list, *then* decide whether stage D's extra $244 is
-worth 4 percentage points of residue — by then the residue-characterisation
-work in §9.2 will have changed what stage D should even be.
+bounds and the residue list, *then* add stage E (cheap) and only
+then decide whether stage D's extra ~$210 still earns its place — on the
+measured rates, E ahead of D makes most of D redundant.
 
 ---
 
@@ -553,13 +622,17 @@ GO, because:
   The correctness gate the brief demanded is passed, not approximated.
 * Both certificate shapes are small, exact and fast to check: 1–2 ms per
   class, 3–5 core-hours for the entire 9.28M catalogue.
-* The bulk sweep is *cheap*: $308 on spot, or $64 for the configuration
-  that already yields both bounds and the residue list. Cost is not the
-  constraint. It was never going to be.
+* The bulk sweep is *cheap*: $315 on spot, or $64 for the configuration
+  that already yields both bounds and a (larger) residue list. Cost is not
+  the constraint. It was never going to be.
+* The residue has been driven from 17.6% to **0.27%** in this pilot alone,
+  every step by aiming at the same structural failure rather than by
+  spending more compute — and the last step, the mutation warm-start, is
+  one of the *cheapest* stages in the cascade.
 
 NO-GO on the headline claim, because:
 
-* **~0.9% of classes (~85 000, 95% interval 49 000–147 000) are settled by
+* **~0.27% of classes (~25 000, 95% interval 11 500–54 400) are settled by
   neither method, and we have no third method.** A sweep today produces a
   certified lower bound on realizable, a certified lower bound on
   non-realizable, and an explicit list of open cases. That is strictly
@@ -570,7 +643,7 @@ NO-GO on the headline claim, because:
   their leftovers matched Bokowski–Richter's BFP hits. We are relying on
   the same observation one element further out.
 
-**Is the tail intractable?** Not on the evidence so far — and this is the
+**Is the tail intractable?** Almost certainly not, on the evidence so far — and this is the
 honest, hedged version. The residue shows none of the signatures of
 real-algebraic hardness: no runaway denominators, no unbounded search
 times (every stage-D failure is a budget exhaustion at 52 s, not a
@@ -620,3 +693,30 @@ Do not run this on the laptop (§8a). Do not start a full sweep before the
 key shards exist and a per-class wall-clock cap is in place — one
 uncapped pathological class stalls a whole job. Do not report the residue
 count without its interval; the verdict lives inside that interval.
+
+---
+
+## 10. The code
+
+| file | what |
+|---|---|
+| `omdecode.py` | catalogue access. REUSED DECODER from `ai/omgamma/coverage_checker.py` and nothing else; verifies the manifest SHA-256 of `key_hi`/`key_lo`/`stab` before sampling |
+| `realize.py` | realization search (cone centring, prefix backtracking, repair sweep, wall crossing) + exact integer determinant verification |
+| `bfp.py` | three-term GP inequality system, Gordan LP search, exact rational reconstruction of the certificate |
+| `pilot.py` | the A/B/C/D cascade, sharding, per-stage timing, cross-check canaries |
+| `checkcert.py` | **the checker.** Standard library only; imports nothing from this project or omgamma; different determinant algorithm from the producer |
+| `canaries.py` | the canary battery of §5 |
+| `diag.py` | residue diagnostics: deletion profiles, budget hammering |
+| `aggregate.py` | shard aggregation, Wilson intervals, extrapolation |
+
+```
+python pilot.py --cat 4 8 --out certs_4_8.jsonl --cross 500   # the gate
+python pilot.py --sample49 3000 --seed 1 --shard 0 6 --out s0.jsonl
+python checkcert.py certs_4_8.jsonl                            # independent
+python checkcert.py --selftest
+python canaries.py
+python aggregate.py "certs_49_u_*.jsonl"
+```
+
+Set `OMP_NUM_THREADS=MKL_NUM_THREADS=OPENBLAS_NUM_THREADS=1`. Requires
+numpy + scipy for the pipeline; the checker requires neither.

@@ -21,14 +21,25 @@ ANALYTIC CENTRE of the cone -- deliberately, not a vertex: a well-centred
 point keeps every bracket far from zero, which is what makes the later
 rounding to rationals succeed with small denominators.
 
-  build      place points r+1..n one at a time (each an easy cone problem)
+  build      place points r+1..n one at a time (each an easy cone problem),
+             BACKTRACKING on the prefix: when point k will not go on top of
+             the current sub-configuration, move to another point of the
+             deletion's realization space (`_repair_prefix`) rather than
+             restarting from scratch
   repair     coordinate descent: re-place each point in turn against all
-             C(n-1,r-1) of its constraints until no bracket is wrong
+             C(n-1,r-1) of its constraints, with a kick when stalled
+  cross      THE move that matters (`_cross_wall`): the search stalls
+             overwhelmingly at EXACTLY ONE wrong bracket, i.e. having
+             realized a MUTANT of the target.  Driving that one bracket
+             through zero while the other C(n,r)-1 hold is a smooth
+             problem (`cone_push`), and solving it took the measured (4,9)
+             residue from 8.25% to 3.25% at equal budget
   retry      random relabelling + random restarts
 
 `cone_center` also returns a best-effort point when the cone is empty (the
-minimiser of a smoothed hinge), which is what makes the repair sweep a
-genuine descent on the number of wrong brackets rather than a no-op.
+one with fewest violated constraints along the homotopy), which is what
+makes the repair sweep a genuine descent on the number of wrong brackets
+rather than a no-op.
 """
 
 import math
@@ -144,6 +155,34 @@ class Geom(object):
             mx = self.pt_rest[p].max(axis=1) if len(self.pt_rest[p]) else \
                 np.zeros(0, dtype=np.int64)
             self.pt_pref.append(mx)
+        self.GP = None
+
+    def build_gp(self):
+        """Three-term GP table: (i1,i2,i3,i4,i5,i6, s1,s2,s3), the terms
+        being s1*chi[i1]*chi[i2] + s2*chi[i3]*chi[i4] + s3*chi[i5]*chi[i6],
+        which must not be constant in sign."""
+        def ss(t):
+            a, g = list(t), 1
+            for i in range(1, len(a)):
+                j = i
+                while j > 0 and a[j - 1] > a[j]:
+                    a[j - 1], a[j] = a[j], a[j - 1]
+                    g = -g
+                    j -= 1
+            return tuple(a), g
+        rows = []
+        for L in combinations(range(self.n), self.r - 2):
+            rest = [x for x in range(self.n) if x not in L]
+            for a, b, c, d in combinations(rest, 4):
+                row, sg = [], []
+                for (x, y, z, w, ex) in ((a, b, c, d, 1), (a, c, b, d, -1),
+                                         (a, d, b, c, 1)):
+                    s1, g1 = ss(L + (x, y))
+                    s2, g2 = ss(L + (z, w))
+                    row += [self.bidx[s1], self.bidx[s2]]
+                    sg.append(ex * g1 * g2)
+                rows.append(row + sg)
+        self.GP = np.array(rows, dtype=np.int32)
 
     def relabel(self, chi, perm):
         """The chirotope of the configuration whose element i is the old
@@ -165,6 +204,22 @@ class Geom(object):
                     b -= 1
             out[j] = sg * chi[self.bidx[tuple(t)]]
         return out
+
+
+def _gp_ok(chi, geom):
+    """True iff chi satisfies every three-term Grassmann-Pluecker condition.
+
+    Built here from the definition rather than imported, so realize.py does
+    not depend on the decoder.
+    """
+    if geom.GP is None:
+        geom.build_gp()
+    C = geom.GP
+    c = np.asarray(chi, dtype=np.int32)
+    t0 = C[:, 6] * c[C[:, 0]] * c[C[:, 1]]
+    t1 = C[:, 7] * c[C[:, 2]] * c[C[:, 3]]
+    t2 = C[:, 8] * c[C[:, 4]] * c[C[:, 5]]
+    return not bool(np.any((t0 == t1) & (t1 == t2)))
 
 
 # ======================================================================
@@ -520,3 +575,51 @@ def realize(chi, geom, tries=6, seed=0, sweeps=40, rerolls=6, wall_budget=4):
             Z[0, :] *= -1
             return Z, info
     return None, info
+
+
+def realize_via_mutant(chi, geom, seed=0, kmax=20, attempts=3,
+                       tries=1, sweeps=15, rerolls=3):
+    """MUTATION WARM-START.  Realize chi by realizing a MUTANT and crossing.
+
+    A basis j is MUTABLE when flipping chi[j] leaves a valid uniform
+    chirotope; the mutant mu_j(chi) is then a neighbour of chi in the
+    mutation graph.  Realizing the mutant from scratch and pushing the
+    single wall at j samples the mutant's realization space at points a
+    stuck direct search never visits -- which is why this succeeds on
+    classes that survive a 60-try direct search.
+
+    Uses only chi itself (mutability is computed here), so it is stateless
+    and shards exactly like every other stage.  Given the catalogue's
+    mutation spanning tree one could instead reuse the PARENT's already
+    computed realization and skip the inner search entirely; that is the
+    stateful, cheaper variant discussed in SCOPING.md 9.2.
+    """
+    chi = np.asarray(chi, dtype=np.int8)
+    rng = np.random.default_rng(seed)
+    muts = []
+    for j in range(geom.M):
+        t = chi.copy()
+        t[j] = -t[j]
+        if _gp_ok(t, geom):
+            muts.append(j)
+    rng.shuffle(muts)
+    for j in muts[:kmax]:
+        chip = chi.copy()
+        chip[j] = -chip[j]
+        for _ in range(attempts):
+            Z, _ = realize(chip, geom, tries=tries, sweeps=sweeps,
+                           rerolls=rerolls, wall_budget=0,
+                           seed=int(rng.integers(1 << 30)))
+            if Z is None:
+                continue
+            X = Z.astype(np.float64)
+            X /= np.linalg.norm(X, axis=0, keepdims=True)
+            if len(_wrong(chi, X, geom)) != 1:
+                continue
+            if _cross_wall(chi, X, geom, rng):
+                Zi, D = _rationalise(X, chi, geom)
+                if Zi is not None:
+                    s = exact_bracket_signs(Zi, geom)
+                    if s is not None and np.array_equal(s, chi):
+                        return Zi, {'denom': D, 'mutant_basis': j}
+    return None, {'denom': None, 'mutable': len(muts)}

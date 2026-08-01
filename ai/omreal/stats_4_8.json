@@ -7,20 +7,30 @@
  "RESIDUE": 0,
  "by_stage": {
   "A": 2604,
-  "C": 0
+  "C": 0,
+  "D": 0,
+  "E": 0
  },
- "t_A_hit": 61.9148394074291,
- "t_A_miss": 22.7251571000088,
- "t_B_hit": 1.8217771998606622,
+ "t_A_hit": 62.180265402654186,
+ "t_A_miss": 19.732954900246114,
+ "t_B_hit": 1.7215524991042912,
  "t_B_miss": 0.0,
  "t_C_hit": 0.0,
  "t_C_miss": 0.0,
+ "t_D_hit": 0.0,
+ "t_D_miss": 0.0,
+ "t_E_hit": 0.0,
+ "t_E_miss": 0.0,
  "n_A_hit": 2604,
  "n_A_miss": 24,
  "n_B_hit": 24,
  "n_B_miss": 0,
  "n_C_hit": 0,
  "n_C_miss": 0,
+ "n_D_hit": 0,
+ "n_D_miss": 0,
+ "n_E_hit": 0,
+ "n_E_miss": 0,
  "bfp_support": [
   34,
   37,
@@ -57,17 +67,32 @@
  "stage_a": {
   "tries": 2,
   "sweeps": 15,
-  "rerolls": 3
+  "rerolls": 3,
+  "wall_budget": 3
  },
  "stage_c": {
-  "tries": 15,
-  "sweeps": 80,
-  "rerolls": 8
+  "tries": 8,
+  "sweeps": 40,
+  "rerolls": 8,
+  "wall_budget": 12
  },
+ "stage_d": {
+  "tries": 60,
+  "sweeps": 120,
+  "rerolls": 10,
+  "wall_budget": 90
+ },
+ "stage_e": {
+  "kmax": 20,
+  "attempts": 3
+ },
+ "dur_C": [],
+ "dur_D": [],
+ "dur_E": [],
  "cross_checked": 500,
  "cross_bfp_on_realizable": 0,
  "cross_realize_on_nonrealizable": 0,
  "residue_chi": [],
- "wall": 95.68525981903076,
+ "wall": 93.23401594161987,
  "label": "catalog (4,8)"
 }
