@@ -8,9 +8,11 @@
 #   python attack.py enumerate
 #   python validate.py --n 40
 #   python canaries.py
-#   python attack.py run --budget 60 --verify-identities
-#   python attack.py run --budget 600 --walk-depth 120 --fp
-#   python attack.py report
+#   python attack.py run --budget 60  --verify-identities
+#   python attack.py run --budget 240 --walk-depth 60  --fp   # escalate
+#   python attack.py run --budget 1800 --walk-depth 200 --fp   # if any remain
+#   python attack.py witness
+#   python attack.py report ; python table.py
 
 __pycache__/
 *.pyc

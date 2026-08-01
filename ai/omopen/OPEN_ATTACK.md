@@ -73,6 +73,15 @@ The strongest statement the run supports is in §11. The short version: the
 catalog the sweep has finished, and the machinery to keep it that way is a
 resumable command costing a few seconds per class.
 
+**And one actionable finding, since the sweep still has ~74% to run.** The
+A1 gate reproduces 40 of 40 REALIZABLE(**repair**) classes at a median of
+**0.30 s** — classes where the sweep's own wall crossing failed and its
+repair ladder had to run. One-point completion decides them faster *and*
+without a residue, because its inner step is a complete LP rather than a
+barrier method that can miss a feasible point. **Running weapon A as the
+ladder's last rung, or replacing `realize._cross_wall` with the completion
+LP, would very likely stop the sweep producing OPEN rows at all.** §11(4).
+
 ---
 
 ## 1. What an OPEN class is, and why it is the interesting one
@@ -403,17 +412,36 @@ sparsification, is **four generators over 8 monomials**, all coefficients
 −1:
 
 ```
-row 2904336, degree 2, level L1
-  c = -1   {"kind":"pl","A":[1,7,9],"B":[2,3,4,6,8]}
-  c = +1   {"kind":"pl","A":[2,3,4],"B":[1,6,7,8,9]}
-  c = -1   {"kind":"pl","A":[2,3,8],"B":[1,4,6,7,9]}
-  c = -1   {"kind":"pl","A":[6,7,9],"B":[1,2,3,4,8]}
+row 337599, degree 2, level L1     (data/fp_found.jsonl)
+  c = -1   {"kind":"pl","A":[1,3,7],"B":[2,5,6,8,9]}
+  c = -1   {"kind":"pl","A":[1,7,8],"B":[2,3,5,6,9]}
+  c = -1   {"kind":"pl","A":[2,6,9],"B":[1,3,5,7,8]}
+  c = -1   {"kind":"pl","A":[5,6,9],"B":[1,2,3,7,8]}
 ```
 
 Four five-term Plücker exchange relations whose y-expansions cancel down to
 eight monomials of one sign. `fpcheck.py` accepts it, and the raw LP support
-was 4,270 generators — the sparsifying pass (minimise ‖λ‖₁ over the same
+was ~4,270 generators — the sparsifying pass (minimise ‖λ‖₁ over the same
 cone) is what makes it a readable object rather than a megabyte of JSON.
+
+**These are second opinions, not new verdicts, and the file says so.** Every
+row in `data/fp_found.jsonl` carries `sweep_status` and
+`also_has_L0_gordan_vector`. Both hits in the saved sample are rows the
+sweep had already certified NON_REALIZABLE, and both independently yield a
+level-0 Gordan vector here (80 and 82 terms). So a final polynomial in this
+directory is a *second, independent* refutation of a class that was already
+refuted — which is why 3 in 25 is interesting rather than alarming. **No FP
+certificate anywhere in this work asserts non-realizability of a class not
+otherwise refuted.**
+
+**The rate is approximate, and the reason is worth knowing.** The control
+populations are drawn with `rng.choice` from `rows_with_status(...)`, and
+those arrays *grow while the sweep runs* — so the same seed picks different
+classes at different times and the probe is not bit-reproducible against a
+live sweep. The recorded run (`data/fp_probe.json`) found 3 of 25; a second
+draw later found 2 of 25. Read it as **roughly one in ten**, not as a
+fraction. (The OPEN population is read from the frozen snapshot file and
+*is* reproducible; `--limit 25` takes its first 25 rows, not all 126.)
 
 **Support beats degree.** Degree 3 over the three-term relations — a
 158,760-column LP, 220x the work — finds *nothing*, while degree 2 over the

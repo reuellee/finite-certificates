@@ -105,7 +105,7 @@ def main():
             hit = 0
             t0 = time.time()
             last = {}
-            for c in CH:
+            for row, c in zip(rows, CH):
                 cert, info = fpoly.find_fp(c, degree=d, level=lv,
                                            sup=sup[lv])
                 hit += cert is not None
@@ -117,6 +117,13 @@ def main():
                     r = fpoly.fp_record(N, R, catalog.chi_string(c), cert,
                                         d, sup[lv])
                     r['population'] = tag
+                    r['row'] = int(row)
+                    # the sweep's own verdict for this row, so a reader can
+                    # see at a glance whether the final polynomial is a
+                    # SECOND, independent refutation of a class already
+                    # refuted (population NON_REALIZABLE) or a new one
+                    r['sweep_status'] = catalog.STATUS[
+                        int(np.asarray(catalog.arrays()['st'])[int(row)])]
                     with open(found_path, 'a') as fh:
                         fh.write(json.dumps(r) + '\n')
             rec = {'population': tag, 'degree': d, 'level': lv,
