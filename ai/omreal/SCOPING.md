@@ -1098,3 +1098,81 @@ The theory that would be needed, stated as a specification:
   hypothesis (§6.3), so such a theorem would close the cell outright, and a
   counterexample to it would be the interesting object. This is the
   cheapest possible next question and nobody appears to have asked it.
+
+---
+
+## 13. The full sweep — launched 2026-08-01
+
+`sweep49.py`, all 9 276 595 classes, on the laptop, detached, **$0**.
+
+### 13.1 Pre-flight (all required before starting; all passed)
+
+| gate | result |
+|---|---|
+| canary battery A–E | **ALL PASSED** |
+| E1 corrupted parent realization | no certificate produced ✔ |
+| E2 wrong parent | no certificate produced ✔ |
+| E3 wrong recorded group element | no certificate produced ✔ |
+| (4,8) reproduction | **2604 / 24 / 0** — exact |
+| (3,9) reproduction | **4381 / 1 / 0** — exact |
+| certificates of both gates | accepted by `checkcert.py` |
+
+The three E canaries are new and they are the ones that matter for this
+run: they feed the crossing a parent matrix that does *not* realize the
+parent, a different row's matrix, and a corrupted group element, and
+require that **no accepted certificate comes out**. Acceptance is exact
+integer-determinant verification against the class's own sign string, so a
+bad input can only yield `None` or a rejected matrix — never a wrong
+answer silently recorded.
+
+### 13.2 Resource discipline
+
+* **4 workers** (`--workers 4`), BLAS threads pinned to 1 *before* numpy
+  loads — an earlier run lost ~15x to thread oversubscription.
+* Realizations live in a **1.34 GB int32 memmap**, not in RAM. First
+  launch had each worker privately loading ~305 MB of key and witness
+  arrays (~1.55 GB total); those are now `.npy` files opened with
+  `mmap_mode='r'` so all four workers share one copy. Measured after the
+  change: **525 MB private across all processes**, stable, ~2.9 GB RAM
+  free of 15.8 GB.
+* **Checkpoint = the status memmap**, flushed per chunk (8000 rows), so a
+  kill costs only the chunks in flight. Certificate shards are opened
+  append-only and truncated to their last complete line on resume, so a
+  mid-write kill cannot leave half a JSON record. Verified: the run has
+  already been stopped and resumed twice with no lost or duplicated work.
+* Output sharded (`sweep_state/certs/shard_NN.jsonl`), ~4.5 GB projected,
+  43.9 GB free.
+
+### 13.3 Progress at the time of writing
+
+| | |
+|---|---|
+| rows settled | 286 345 / 9 276 595 (3.1%) |
+| REALIZABLE by walk | 79 435 of the last wave |
+| REALIZABLE by repair | 25 |
+| NON_REALIZABLE (Gordan vector) | 463 |
+| **OPEN** | **1** |
+| marginal cost | **30.2 ms/class/core** |
+| projected remaining | **~19 h** |
+
+**The ETA printed in `sweep_run2.log` is optimistic and will self-correct.**
+Its cumulative rate divides elapsed-time-this-run by rows-done-including-
+those-carried-over-from-the-previous-run, so it understates cost while the
+resume offset is large. The per-wave "N rows in T s" figures are exact;
+take the marginal rate from those.
+
+Note the non-realizable rate so far (0.16%) is far below the 2.10%
+measured on a uniform sample (§6.2). That is expected, not a discrepancy:
+the walk proceeds by depth and the shallow tree is enriched in realizable
+classes. It should climb towards 2% as the deep waves — where most of the
+9.28M classes live — are reached.
+
+### 13.4 What gets reported when it finishes
+
+The realizable/non-realizable split; the OPEN set **enumerated, not
+summarised** (`sweep49.py report --enumerate-open` writes row, stabiliser
+and sign string for each); wall clock and core-hours actual against the
+70 core-hour estimate; and `checkcert.py` over every shard. An OPEN class
+is one the walk could not cross to *and* that BFP could not certify — that
+is the scientifically interesting set, and per §12.3 the prediction is
+that it is empty or nearly so.
