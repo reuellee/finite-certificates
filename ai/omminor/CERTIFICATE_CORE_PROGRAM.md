@@ -8,10 +8,11 @@ Research brief for the next oriented-matroid phase. Proposed 2026-08-02.
 freeze its certificate corpus, and use that corpus to test the following
 research target:
 
-> **Certificate-core cover problem.** Can the non-realizable classes in
-> \(UOM(4,9)\) be covered by a much smaller collection of partial
-> Grassmann--Plücker sign patterns, each carrying one exact
-> non-realizability certificate?
+> **Certificate-core cover problem.** Can the BFP-certified
+> non-realizable classes in \(UOM(4,9)\) be covered by a much smaller
+> collection of partial Grassmann--Plücker sign patterns, each carrying one
+> exact non-realizability certificate? If the completed sweep establishes
+> BFP completeness, this target is the entire non-realizable population.
 
 If the answer is strongly positive, those patterns become reusable pruning
 clauses for partial-chirotope and single-element-extension trees at
@@ -194,12 +195,17 @@ pruning power on a future extension tree.
 
 ## 5. Exact target statement
 
-Let \(\mathcal N_{4,9}\) be the final, independently certified set of
-non-realizable \(UOM(4,9)\) reorientation classes. Seek a set
-\(\mathcal C\) of core orbits such that
+Let \(\mathcal N^{\mathrm{BFP}}_{4,9}\) be the frozen set of
+\(UOM(4,9)\) reorientation classes carrying independently checked BFP
+certificates. If the completed sweep proves that every non-realizable class
+has a BFP, this is the full non-realizable population. Otherwise the
+unsettled or differently certified residue is outside the version-1 target
+and must be reported separately.
+
+Seek a set \(\mathcal C\) of core orbits such that
 
 \[
-\chi\in\mathcal N_{4,9}
+\chi\in\mathcal N^{\mathrm{BFP}}_{4,9}
 \quad\Longleftrightarrow\quad
 \chi\text{ matches a relabelled core }C\in\mathcal C.
 \]
@@ -330,7 +336,7 @@ The checker must:
 2. verify every positive dependence exactly;
 3. transport each core using the recorded permutation;
 4. recompute the matched class's BIG terms;
-5. verify every claimed non-realizable class has a valid pointer;
+5. verify every class in the declared BFP-covered corpus has a valid pointer;
 6. detect missing and duplicate catalogue keys; and
 7. reject any pointer attached to a nonmatching class.
 
@@ -390,8 +396,8 @@ completion engine.
 
 **Continue** if the measured result resembles either of these:
 
-- a small fraction of core orbits covers most of the BFP-certified
-  non-realizable population; or
+- a small fraction of core orbits covers most of
+  \(\mathcal N^{\mathrm{BFP}}_{4,9}\); or
 - cores trigger early enough that the completion-tree node count falls by
   orders of magnitude, even if the orbit library is not tiny.
 
