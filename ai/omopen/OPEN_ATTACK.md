@@ -77,7 +77,8 @@ resumable command costing a few seconds per class.
 A1 gate reproduces 40 of 40 REALIZABLE(**repair**) classes at a median of
 **0.30 s** — classes where the sweep's own wall crossing failed and its
 repair ladder had to run. One-point completion decides them faster *and*
-without a residue, because its inner step is a complete LP rather than a
+without a residue, because its inner step is an exactly-verified LP
+completion rather than a
 barrier method that can miss a feasible point. **Running weapon A as the
 ladder's last rung, or replacing `realize._cross_wall` with the completion
 LP, would very likely stop the sweep producing OPEN rows at all.** §11(4).
@@ -161,10 +162,28 @@ v_S defined by  det(x_{s1}, x_{s2}, x_{s3}, y) = <v_S, y>.
 ```
 
 So *"does this eight-point configuration extend to a realization of χ?"* is
-**one linear program in four variables**, and the LP is **complete**: if its
-optimum margin is ≤ 0 then no x_p completes this *Y*, definitively. The
-search has an exact oracle at the last step; the only heuristic left is
-which *Y* to try.
+**one linear program in four variables** — and *as an exact mathematical
+statement* that program is complete: the open cone is empty iff the exact
+optimum margin is 0, so an exact solver would decide extendibility of this
+*Y* definitively.
+
+**Scope of that claim in this implementation (independent review by
+GPT-5.6, 2026-08-02; accepted).** The LP here is solved in `float64` via
+`scipy.linprog`, so completeness holds for the *reformulation*, not for the
+code. Successes are exact — every accepted completion is re-verified in
+integer arithmetic over all 126 brackets, so no realization is ever minted
+by rounding. Failures are **heuristic**: float conversion of integer rows
+(deletion entries reach 2²², so 3×3 minors can exceed 2⁶⁸), solver
+tolerances at t ≈ 0, non-`success` statuses treated as failure, and the
+finite rounding/`_shrink` cap can each discard a genuine completion. The
+honest description is **exactly verified success, heuristic numerical
+failure**. Nothing downstream depends on the failure direction (§4 of the
+review; the code returns STILL_OPEN, never NON_REALIZABLE, on a weapon-A
+failure), and all 126 classes were decided by *success*, so no verdict in
+this document rests on an infeasibility claim. Closing the gap properly —
+exact rational feasibility (`Ax ≥ 1` after positive scaling) or an exact
+Gordan/Farkas dual certificate before declaring a cone empty — is required
+before any future run reports a class as STILL_OPEN on numerical grounds.
 
 Three consequences, and they are the reason this is stronger rather than
 merely bigger.
@@ -202,11 +221,22 @@ for each of the nine deletions p:
         randomised margin; accept on the completion margin, Metropolis tail.
 ```
 
-The acceptance rule is the piece that matters. The LP returns the best
-achievable margin for x_p *even when it is negative*, and that number is a
-real objective — it measures how far the eight-point configuration is from
-admitting the ninth point. Hill-climbing it converts the walk from diffusion
-into a descent. Measured on rows that survived a 60 s pass with the
+**CORRECTION (independent review by GPT-5.6, 2026-08-02; verified).** This
+section originally claimed the LP "returns the best achievable margin for
+x_p *even when it is negative*", and that hill-climbing that number turns
+the walk into a descent. **That is false.** The program is
+`max t s.t. (A/|a|)x >= t, |x|_inf <= cap, t <= 1`, and `x = 0, t = 0` is
+always feasible, so the exact optimum satisfies `t* >= 0` for every input:
+`t* > 0` exactly when this eight-point configuration extends, `t* = 0` when
+it does not. Negative values only ever arise from the floating-point
+solver. Consequently the exact margin is **flat at zero across all
+non-extendible configurations** and supplies no gradient among them; the
+acceptance rule is not the descent this section described.
+
+What remains true is the empirical observation, and it is now reported as
+just that — an effect whose mechanism is not established (the plausible
+remaining candidate is the blocker-guided move proposal, not the margin
+value). Measured on rows that survived a 60 s pass with the
 undirected walk: row 586623 survived 1,920 completion LPs and then fell in
 4.6 s; row 1213079 in 11.7 s; row 1200032 in 8.7 s. (Numbers corrected to
 match `run2.log` after review finding D2.)
@@ -885,7 +915,8 @@ Consequences, in decreasing strength.
    in its own right: **40 of 40 REALIZABLE(repair) classes reproduced, median
    0.30 s.** Those are classes where the sweep's wall crossing failed and its
    repair ladder had to run. One-point completion decides them faster *and*
-   without a residue, because its inner step is a complete LP rather than a
+   without a residue, because its inner step is an exactly-verified LP
+completion rather than a
    barrier method that can miss a feasible point. Swapping
    `realize._cross_wall` for the completion LP — or simply running weapon A
    as the ladder's last rung instead of `realize_via_mutant` — would very
