@@ -4,18 +4,18 @@ Research brief for the next oriented-matroid phase. Proposed 2026-08-02.
 
 ## Executive decision
 
-**Do not restart or restructure the live (UOM(4,9)) sweep.** Let it finish,
+**Do not restart or restructure the live \(UOM(4,9)\) sweep.** Let it finish,
 freeze its certificate corpus, and use that corpus to test the following
 research target:
 
 > **Certificate-core cover problem.** Can the non-realizable classes in
-> (UOM(4,9)) be covered by a much smaller collection of partial
+> \(UOM(4,9)\) be covered by a much smaller collection of partial
 > Grassmann--Plücker sign patterns, each carrying one exact
 > non-realizability certificate?
 
 If the answer is strongly positive, those patterns become reusable pruning
 clauses for partial-chirotope and single-element-extension trees at
-(UOM(4,10)) and beyond. If the cores are almost one-to-one with the full
+\(UOM(4,10)\) and beyond. If the cores are almost one-to-one with the full
 classes, stop: that is a compressed lookup table, not a structural theorem.
 
 The soundness theorem is elementary and finite-checkable. It is also not, by
@@ -31,7 +31,7 @@ The distinction below is load-bearing.
 | tree | child operation | are the child's constraints a superset? | does a refutation automatically persist? |
 |---|---|---:|---:|
 | mutation tree | replace one bracket sign by its opposite | no | no |
-| partial-chirotope completion tree | replace an unknown sign by (+) or (-) | yes | yes |
+| partial-chirotope completion tree | replace an unknown sign by \(+\) or \(-\) | yes | yes |
 | same-rank element-extension tree | add elements while retaining the old restriction | yes | yes |
 
 Realizable and non-realizable oriented matroids can be mutation neighbours.
@@ -52,60 +52,60 @@ descendants add information but never retract information.
 
 ## 2. The hereditary GP-core theorem
 
-Fix rank (r), ground set (E=[n]), and the colex bracket coordinates used
+Fix rank \(r\), ground set \(E=[n]\), and the colex bracket coordinates used
 by `ai/omreal/bfp.py`. A three-term Grassmann--Plücker relation has signed
 terms
 
-[
-T_0=[Lab][Lcd],qquad
-T_1=-[Lac][Lbd],qquad
+\[
+T_0=[Lab][Lcd],\qquad
+T_1=-[Lac][Lbd],\qquad
 T_2=[Lad][Lbc].
-]
+\]
 
 For a uniform chirotope, exactly one signed term is opposite to the other
 two. Call it the **BIG** term. In any realization its magnitude is the sum
 of the other two magnitudes, so for either SMALL term
 
-[
-|T_{m BIG}|>|T_{m SMALL}|.
-]
+\[
+|T_{\rm BIG}|>|T_{\rm SMALL}|.
+\]
 
-Writing (u_B=log|[B]|), this is a strict linear inequality
+Writing \(u_B=\log|[B]|\), this is a strict linear inequality
 
-[
-vmathbin{cdot}u>0,qquad
-v=e_p+e_q-e_s-e_tinmathbb Z^{inom nr}.
-]
+\[
+v\mathbin{\cdot}u>0,\qquad
+v=e_p+e_q-e_s-e_t\in\mathbb Z^{\binom nr}.
+\]
 
 ### Theorem (hereditary GP core)
 
-Let (P) be a partial uniform chirotope. Suppose (P) forces a finite list
-of GP comparisons (v_imathbin{cdot}u>0). If positive integers (w_i)
+Let \(P\) be a partial uniform chirotope. Suppose \(P\) forces a finite list
+of GP comparisons \(v_i\mathbin{\cdot}u>0\). If positive integers \(w_i\)
 satisfy
 
-[
-sum_i w_i v_i=0,
-]
+\[
+\sum_i w_i v_i=0,
+\]
 
 then:
 
-1. no realizable uniform chirotope completes (P);
-2. the same certificate refutes every descendant of (P) in any
+1. no realizable uniform chirotope completes \(P\);
+2. the same certificate refutes every descendant of \(P\) in any
    partial-chirotope completion tree; and
 3. the same certificate, embedded by zeros in the new bracket coordinates,
    refutes every same-rank element extension whose restriction completes
-   (P).
+   \(P\).
 
 **Proof.** A realization of any completion would give
 
-[
-0=left(sum_iw_iv_iight)mathbin{cdot}u
- =sum_iw_i(v_imathbin{cdot}u)>0,
-]
+\[
+0=\left(\sum_iw_iv_i\right)\mathbin{\cdot}u
+ =\sum_iw_i(v_i\mathbin{\cdot}u)>0,
+\]
 
 a contradiction. Descendants retain every forced comparison. A realization
 of an element extension restricts to a realization on the old elements, and
-the old GP relations are literally still present. (square)
+the old GP relations are literally still present. \(\square\)
 
 The finite certificate is:
 
@@ -131,11 +131,11 @@ mapping from canonical labels without retaining the permutation.
 
 ## 3. Universal positive-circuit formulation
 
-For fixed ((r,n)), form a universal integer matrix whose possible rows are
+For fixed \((r,n)\), form a universal integer matrix whose possible rows are
 
-[
-(	ext{GP relation},	ext{BIG term},	ext{SMALL term}).
-]
+\[
+(\text{GP relation},\text{BIG term},\text{SMALL term}).
+\]
 
 A full uniform chirotope selects two rows per GP relation: the two
 comparisons from its BIG term to its two SMALL terms. Gordan's theorem gives:
@@ -187,24 +187,24 @@ Accordingly, none of these is a publishable new headline:
 - the universal positive-circuit reformulation by itself.
 
 The potential contribution is an **exact, unexpectedly small core cover**
-of the previously unclassified (UOM(4,9)) cell, together with measured
+of the previously unclassified \(UOM(4,9)\) cell, together with measured
 pruning power on a future extension tree.
 
 ---
 
 ## 5. Exact target statement
 
-Let (mathcal N_{4,9}) be the final, independently certified set of
-non-realizable (UOM(4,9)) reorientation classes. Seek a set
-(mathcal C) of core orbits such that
+Let \(\mathcal N_{4,9}\) be the final, independently certified set of
+non-realizable \(UOM(4,9)\) reorientation classes. Seek a set
+\(\mathcal C\) of core orbits such that
 
-[
-chiinmathcal N_{4,9}
-quadLongleftrightarrowquad
-chi	ext{ matches a relabelled core }Cinmathcal C.
-]
+\[
+\chi\in\mathcal N_{4,9}
+\quad\Longleftrightarrow\quad
+\chi\text{ matches a relabelled core }C\in\mathcal C.
+\]
 
-Each (C) must carry an exact positive-circuit certificate. The reverse
+Each \(C\) must carry an exact positive-circuit certificate. The reverse
 implication is then mathematical soundness; the forward implication is the
 finite exhaustive coverage computation.
 
@@ -222,7 +222,7 @@ For a useful result, report at least:
 - actual node reduction and wall time on held-out completion/extension
   searches.
 
-A fixed-((4,9)) “iff” with nearly one core per class has no structural
+A fixed-\((4,9)\) “iff” with nearly one core per class has no structural
 content. Compression and early triggering are the result.
 
 ---
@@ -249,8 +249,8 @@ For every BFP certificate:
 
 1. rebuild each GP comparison independently from the class sign string;
 2. verify the named BIG term and the exact identity
-   (sum_iw_iv_i=0);
-3. merge duplicate ((	ext{relation},	ext{BIG})) conditions;
+   \(\sum_iw_iv_i=0\);
+3. merge duplicate \((\text{relation},\text{BIG})\) conditions;
 4. test whether the weighted row support is an inclusion-minimal positive
    dependence; and
 5. record the distinct bracket support and parity-condition rank.
@@ -299,7 +299,7 @@ A full class matches a core when every relation named by the core has the
 required BIG term. Then the identical weighted certificate applies.
 
 1. First measure literal labelled reuse.
-2. Canonicalize core signatures under (S_9).
+2. Canonicalize core signatures under \(S_9\).
 3. Retain the explicit permutation transporting each matched class to the
    canonical core.
 4. Build the class-to-core incidence relation.
@@ -309,7 +309,7 @@ required BIG term. Then the identical weighted certificate applies.
 7. test every core against certified realizable controls. A match is a
    blocking bug because a sound core cannot match a realization.
 
-Avoid materializing a (3780	imes9{,}276{,}595) dense incidence table.
+Avoid materializing a \(3780\times9{,}276{,}595\) dense incidence table.
 Batch classes, pack BIG-term values, and store only matches or bitsets for
 the non-realizable corpus.
 
@@ -319,7 +319,7 @@ Ship:
 
 - one canonical exact certificate per core orbit;
 - for every covered full class, a pointer
-  ((	ext{core id},	ext{element permutation}));
+  \((\text{core id},\text{element permutation})\);
 - the frozen catalogue hashes; and
 - a standalone checker sharing no GP-row or permutation code with the
   producer.
@@ -353,7 +353,7 @@ cores triggered, trigger depth, time spent matching, and net wall-time
 saving. Comparing only certificate counts is insufficient.
 
 Only after the fixed-cell experiment succeeds should the core matcher be
-inserted into a (UOM(4,10)) single-element-extension search.
+inserted into a \(UOM(4,10)\) single-element-extension search.
 
 ---
 
@@ -373,8 +373,8 @@ At minimum, the independent checker must reject:
 Positive controls should include:
 
 - a lifted certificate from each of several known non-realizable
-  (UOM(4,8)) deletions;
-- a minor-minimal (UOM(4,9)) BFP; and
+  \(UOM(4,8)\) deletions;
+- a minor-minimal \(UOM(4,9)\) BFP; and
 - the same core transported through nontrivial relabellings and
   reorientations.
 
@@ -419,8 +419,8 @@ claim. Record it before seeing the pilot result.
 
 The current checked-in prefix warns against optimism:
 
-- about 90.7% of certified non-realizable (UOM(4,9)) classes have one of
-  the 24 non-realizable (UOM(4,8)) deletions;
+- about 90.7% of certified non-realizable \(UOM(4,9)\) classes have one of
+  the 24 non-realizable \(UOM(4,8)\) deletions;
 - the remaining population is minor-minimal, generic and mostly
   minimum-symmetry;
 - sampled minor-minimal BFPs use about 73.5 weighted terms on average,
@@ -433,9 +433,9 @@ obstructions. The experiment earns its keep only if partial cores compress
 the hard minor-minimal remainder or fire substantially earlier than full
 minor identification.
 
-The live (UOM(4,9)) sweep invokes BFP on only about 1% of all classes in
+The live \(UOM(4,9)\) sweep invokes BFP on only about 1% of all classes in
 the measured prefix. This project is not expected to save the current run.
-Its intended payoff is structural compression and future (ngeq10)
+Its intended payoff is structural compression and future \(n\geq10\)
 pruning.
 
 ---
@@ -467,7 +467,7 @@ or the BFP-core pilot demonstrates strong compression.
   non-realizable.
 - Failure to match a core is not evidence of realizability.
 - Failure to find a BFP is not evidence of realizability.
-- A finite cover at ((4,9)) is not a finite excluded-obstruction theorem
+- A finite cover at \((4,9)\) is not a finite excluded-obstruction theorem
   for all sizes.
 - The hereditary theorem and use of partial-chirotope BFPs are not new.
 - A large list of nearly full class signatures is not a generating
