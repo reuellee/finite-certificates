@@ -1,0 +1,1405 @@
+{
+  "certificate_count": 126,
+  "certificate_file": "data/certs_realizable.jsonl",
+  "conclusion": [
+    "Float64 first failed in band <=2^30 (max matrix entries 5.61e+08..1.01e+09 and max LP coefficients 1.02e+08..3.48e+11).",
+    "The untransformed shipped sample had a 0.00% false-negative rate; the stress band at the run's reported 2^18 maximum had 0.00%.",
+    "At weaponA._shrink's 2^22 entry cap, the measured stress false-negative rate was 0.00% (0 of 72 feasible instances missed).",
+    "Float64 claimed feasible on 0 of 72 exact-infeasible controls; their Gordan supports ranged from 3 to 5 rows.",
+    "The 47,723 reported 'infeasible' LP calls are supported as numerically reliable at the tested repository magnitudes (0 of 72 misses at the cap), but they are not formal exact certificates and the exact noisy fraction cannot be recovered without their original row matrices."
+  ],
+  "experiment": "weaponA float64 completion LP versus exactlp rational oracle",
+  "gordan_certificate_summary": {
+    "l1_norm": {
+      "max": 19732170655694243680719246345,
+      "median": 24321611631,
+      "min": 106033
+    },
+    "l1_norm_bits": {
+      "max": 94,
+      "median": 35,
+      "min": 17
+    },
+    "max_coefficient": {
+      "max": 18078979344007093345122237175,
+      "median": 13794017820,
+      "min": 59124
+    },
+    "max_coefficient_bits": {
+      "max": 94,
+      "median": 34,
+      "min": 16
+    },
+    "n": 72,
+    "support": {
+      "max": 5,
+      "median": 3,
+      "min": 3
+    },
+    "vector_length": {
+      "max": 56,
+      "median": 56,
+      "min": 56
+    }
+  },
+  "gordan_certificates": [
+    {
+      "attempt": 3,
+      "certificate_index": 111,
+      "deleted_column": 0,
+      "l1_norm": 175359937,
+      "l1_norm_bits": 28,
+      "max_coefficient": 174033432,
+      "max_coefficient_bits": 28,
+      "perturbation": {
+        "column": 5,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 1,
+      "l1_norm": 31267798598,
+      "l1_norm_bits": 35,
+      "max_coefficient": 29179184133,
+      "max_coefficient_bits": 35,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 2,
+      "l1_norm": 1285658424306,
+      "l1_norm_bits": 41,
+      "max_coefficient": 1150575930865,
+      "max_coefficient_bits": 41,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 3,
+      "l1_norm": 2869264,
+      "l1_norm_bits": 22,
+      "max_coefficient": 2091705,
+      "max_coefficient_bits": 21,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 4,
+      "l1_norm": 580492211256509,
+      "l1_norm_bits": 50,
+      "max_coefficient": 416867481749925,
+      "max_coefficient_bits": 49,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 5,
+      "l1_norm": 48431007,
+      "l1_norm_bits": 26,
+      "max_coefficient": 35334860,
+      "max_coefficient_bits": 26,
+      "perturbation": {
+        "column": 2,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 6,
+      "l1_norm": 7151295528166,
+      "l1_norm_bits": 43,
+      "max_coefficient": 5787317759130,
+      "max_coefficient_bits": 43,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 7,
+      "l1_norm": 100412721,
+      "l1_norm_bits": 27,
+      "max_coefficient": 95836961,
+      "max_coefficient_bits": 27,
+      "perturbation": {
+        "column": 0,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 111,
+      "deleted_column": 8,
+      "l1_norm": 13368763172581343,
+      "l1_norm_bits": 54,
+      "max_coefficient": 6696624996768352,
+      "max_coefficient_bits": 53,
+      "perturbation": {
+        "column": 2,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 2,
+      "certificate_index": 88,
+      "deleted_column": 0,
+      "l1_norm": 134218239882751550909717446,
+      "l1_norm_bits": 87,
+      "max_coefficient": 121689491724864133677065583,
+      "max_coefficient_bits": 87,
+      "perturbation": {
+        "column": 2,
+        "kind": "column_shear",
+        "multiplier": -16,
+        "source": 1
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 2,
+      "certificate_index": 88,
+      "deleted_column": 1,
+      "l1_norm": 15319825,
+      "l1_norm_bits": 24,
+      "max_coefficient": 15022041,
+      "max_coefficient_bits": 24,
+      "perturbation": {
+        "column": 8,
+        "kind": "column_shear",
+        "multiplier": -4,
+        "source": 3
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 88,
+      "deleted_column": 2,
+      "l1_norm": 234706832,
+      "l1_norm_bits": 28,
+      "max_coefficient": 200044387,
+      "max_coefficient_bits": 28,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 88,
+      "deleted_column": 3,
+      "l1_norm": 45879433,
+      "l1_norm_bits": 26,
+      "max_coefficient": 20653114,
+      "max_coefficient_bits": 25,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 2,
+      "certificate_index": 88,
+      "deleted_column": 4,
+      "l1_norm": 63840674857258548,
+      "l1_norm_bits": 56,
+      "max_coefficient": 43725617451091862,
+      "max_coefficient_bits": 56,
+      "perturbation": {
+        "column": 0,
+        "kind": "column_shear",
+        "multiplier": -64,
+        "source": 3
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 88,
+      "deleted_column": 5,
+      "l1_norm": 413602191553343,
+      "l1_norm_bits": 49,
+      "max_coefficient": 318420515524730,
+      "max_coefficient_bits": 49,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 88,
+      "deleted_column": 6,
+      "l1_norm": 911118,
+      "l1_norm_bits": 20,
+      "max_coefficient": 383433,
+      "max_coefficient_bits": 19,
+      "perturbation": {
+        "column": 8,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 88,
+      "deleted_column": 7,
+      "l1_norm": 110147903260347465,
+      "l1_norm_bits": 57,
+      "max_coefficient": 107838961831743709,
+      "max_coefficient_bits": 57,
+      "perturbation": {
+        "column": 8,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 88,
+      "deleted_column": 8,
+      "l1_norm": 23435421555887778091208,
+      "l1_norm_bits": 75,
+      "max_coefficient": 16487567052101790497944,
+      "max_coefficient_bits": 74,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 0,
+      "l1_norm": 34373887470024926201,
+      "l1_norm_bits": 65,
+      "max_coefficient": 23096630318934514568,
+      "max_coefficient_bits": 65,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 1,
+      "l1_norm": 472722695,
+      "l1_norm_bits": 29,
+      "max_coefficient": 393256291,
+      "max_coefficient_bits": 29,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 2,
+      "l1_norm": 4524654251195,
+      "l1_norm_bits": 43,
+      "max_coefficient": 3580052369424,
+      "max_coefficient_bits": 42,
+      "perturbation": {
+        "column": 8,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 3,
+      "l1_norm": 34666651,
+      "l1_norm_bits": 26,
+      "max_coefficient": 23985015,
+      "max_coefficient_bits": 25,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 4,
+      "l1_norm": 743853,
+      "l1_norm_bits": 20,
+      "max_coefficient": 447869,
+      "max_coefficient_bits": 19,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 5,
+      "l1_norm": 248108579,
+      "l1_norm_bits": 28,
+      "max_coefficient": 175796742,
+      "max_coefficient_bits": 28,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 6,
+      "l1_norm": 32721107,
+      "l1_norm_bits": 25,
+      "max_coefficient": 32162891,
+      "max_coefficient_bits": 25,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 7,
+      "l1_norm": 129494153149062982,
+      "l1_norm_bits": 57,
+      "max_coefficient": 59064383557915008,
+      "max_coefficient_bits": 56,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 76,
+      "deleted_column": 8,
+      "l1_norm": 688771129,
+      "l1_norm_bits": 30,
+      "max_coefficient": 613859381,
+      "max_coefficient_bits": 30,
+      "perturbation": {
+        "column": 1,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 0,
+      "l1_norm": 3432583,
+      "l1_norm_bits": 22,
+      "max_coefficient": 2108484,
+      "max_coefficient_bits": 22,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 1,
+      "l1_norm": 170064355118249796021,
+      "l1_norm_bits": 68,
+      "max_coefficient": 96764794441963786886,
+      "max_coefficient_bits": 67,
+      "perturbation": {
+        "column": 8,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 2,
+      "l1_norm": 181210,
+      "l1_norm_bits": 18,
+      "max_coefficient": 72909,
+      "max_coefficient_bits": 17,
+      "perturbation": {
+        "column": 5,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 3,
+      "l1_norm": 24321611631,
+      "l1_norm_bits": 35,
+      "max_coefficient": 13794017820,
+      "max_coefficient_bits": 34,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 4,
+      "l1_norm": 1012122228849,
+      "l1_norm_bits": 40,
+      "max_coefficient": 413421673125,
+      "max_coefficient_bits": 39,
+      "perturbation": {
+        "column": 1,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 5,
+      "l1_norm": 106033,
+      "l1_norm_bits": 17,
+      "max_coefficient": 59124,
+      "max_coefficient_bits": 16,
+      "perturbation": {
+        "column": 2,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 6,
+      "l1_norm": 10469761702682,
+      "l1_norm_bits": 44,
+      "max_coefficient": 5106160180715,
+      "max_coefficient_bits": 43,
+      "perturbation": {
+        "column": 0,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 7,
+      "l1_norm": 4923520,
+      "l1_norm_bits": 23,
+      "max_coefficient": 4137895,
+      "max_coefficient_bits": 22,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 66,
+      "deleted_column": 8,
+      "l1_norm": 133077,
+      "l1_norm_bits": 18,
+      "max_coefficient": 113395,
+      "max_coefficient_bits": 17,
+      "perturbation": {
+        "column": 1,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 0,
+      "l1_norm": 237510245727980763220890078,
+      "l1_norm_bits": 88,
+      "max_coefficient": 213278226882105640419720449,
+      "max_coefficient_bits": 88,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 1,
+      "l1_norm": 2391208704636028019,
+      "l1_norm_bits": 62,
+      "max_coefficient": 1233559693423058463,
+      "max_coefficient_bits": 61,
+      "perturbation": {
+        "column": 0,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 2,
+      "l1_norm": 19732170655694243680719246345,
+      "l1_norm_bits": 94,
+      "max_coefficient": 18078979344007093345122237175,
+      "max_coefficient_bits": 94,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 3,
+      "l1_norm": 2207101795,
+      "l1_norm_bits": 32,
+      "max_coefficient": 2191756813,
+      "max_coefficient_bits": 32,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 4,
+      "l1_norm": 4376914330081916362874726548,
+      "l1_norm_bits": 92,
+      "max_coefficient": 4240336968341435633998742745,
+      "max_coefficient_bits": 92,
+      "perturbation": {
+        "column": 0,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 5,
+      "l1_norm": 24119906740095201474,
+      "l1_norm_bits": 65,
+      "max_coefficient": 10875177092398587827,
+      "max_coefficient_bits": 64,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 6,
+      "l1_norm": 4823801453326900031,
+      "l1_norm_bits": 63,
+      "max_coefficient": 4416823107586244676,
+      "max_coefficient_bits": 62,
+      "perturbation": {
+        "column": 0,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 7,
+      "l1_norm": 8393073119,
+      "l1_norm_bits": 33,
+      "max_coefficient": 3793543675,
+      "max_coefficient_bits": 32,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 112,
+      "deleted_column": 8,
+      "l1_norm": 1786869418,
+      "l1_norm_bits": 31,
+      "max_coefficient": 1497415461,
+      "max_coefficient_bits": 31,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 2,
+      "certificate_index": 25,
+      "deleted_column": 0,
+      "l1_norm": 739076,
+      "l1_norm_bits": 20,
+      "max_coefficient": 556990,
+      "max_coefficient_bits": 20,
+      "perturbation": {
+        "column": 1,
+        "kind": "column_shear",
+        "multiplier": -4,
+        "source": 2
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 25,
+      "deleted_column": 1,
+      "l1_norm": 5864467,
+      "l1_norm_bits": 23,
+      "max_coefficient": 3500936,
+      "max_coefficient_bits": 22,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 25,
+      "deleted_column": 2,
+      "l1_norm": 430167762512133147713,
+      "l1_norm_bits": 69,
+      "max_coefficient": 233446485659265189335,
+      "max_coefficient_bits": 68,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 2,
+      "certificate_index": 25,
+      "deleted_column": 3,
+      "l1_norm": 538213866331894048030,
+      "l1_norm_bits": 69,
+      "max_coefficient": 214209938878445491047,
+      "max_coefficient_bits": 68,
+      "perturbation": {
+        "column": 5,
+        "kind": "column_shear",
+        "multiplier": -64,
+        "source": 0
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 25,
+      "deleted_column": 4,
+      "l1_norm": 90470585,
+      "l1_norm_bits": 27,
+      "max_coefficient": 75218206,
+      "max_coefficient_bits": 27,
+      "perturbation": {
+        "column": 8,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 25,
+      "deleted_column": 5,
+      "l1_norm": 492259066,
+      "l1_norm_bits": 29,
+      "max_coefficient": 400659371,
+      "max_coefficient_bits": 29,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 25,
+      "deleted_column": 6,
+      "l1_norm": 17607954,
+      "l1_norm_bits": 25,
+      "max_coefficient": 12497408,
+      "max_coefficient_bits": 24,
+      "perturbation": {
+        "column": 0,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 25,
+      "deleted_column": 7,
+      "l1_norm": 333099537260526057508554,
+      "l1_norm_bits": 79,
+      "max_coefficient": 261493557562457455509300,
+      "max_coefficient_bits": 78,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 25,
+      "deleted_column": 8,
+      "l1_norm": 89284366,
+      "l1_norm_bits": 27,
+      "max_coefficient": 62399917,
+      "max_coefficient_bits": 26,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 0,
+      "l1_norm": 409492397,
+      "l1_norm_bits": 29,
+      "max_coefficient": 318632677,
+      "max_coefficient_bits": 29,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 1,
+      "l1_norm": 2365914367837900,
+      "l1_norm_bits": 52,
+      "max_coefficient": 1317053616469399,
+      "max_coefficient_bits": 51,
+      "perturbation": {
+        "column": 5,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 2,
+      "l1_norm": 99020797,
+      "l1_norm_bits": 27,
+      "max_coefficient": 87447607,
+      "max_coefficient_bits": 27,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 3,
+      "l1_norm": 491766673,
+      "l1_norm_bits": 29,
+      "max_coefficient": 452660080,
+      "max_coefficient_bits": 29,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 4,
+      "l1_norm": 12065132787392570486337,
+      "l1_norm_bits": 74,
+      "max_coefficient": 10133780116348186624000,
+      "max_coefficient_bits": 74,
+      "perturbation": {
+        "column": 8,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 5,
+      "l1_norm": 6050878589,
+      "l1_norm_bits": 33,
+      "max_coefficient": 5329889321,
+      "max_coefficient_bits": 33,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 6,
+      "l1_norm": 143582123399343802,
+      "l1_norm_bits": 57,
+      "max_coefficient": 119952371500248745,
+      "max_coefficient_bits": 57,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 7,
+      "l1_norm": 3219312254037212553,
+      "l1_norm_bits": 62,
+      "max_coefficient": 1676334455126956208,
+      "max_coefficient_bits": 61,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 89,
+      "deleted_column": 8,
+      "l1_norm": 666399024,
+      "l1_norm_bits": 30,
+      "max_coefficient": 366529061,
+      "max_coefficient_bits": 29,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 0,
+      "l1_norm": 15500125,
+      "l1_norm_bits": 24,
+      "max_coefficient": 13444735,
+      "max_coefficient_bits": 24,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 1,
+      "l1_norm": 619756,
+      "l1_norm_bits": 20,
+      "max_coefficient": 258704,
+      "max_coefficient_bits": 18,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 2,
+      "certificate_index": 13,
+      "deleted_column": 2,
+      "l1_norm": 46968729940125057,
+      "l1_norm_bits": 56,
+      "max_coefficient": 26199404080146528,
+      "max_coefficient_bits": 55,
+      "perturbation": {
+        "column": 3,
+        "kind": "column_shear",
+        "multiplier": -16,
+        "source": 1
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 3,
+      "l1_norm": 334638895747856,
+      "l1_norm_bits": 49,
+      "max_coefficient": 289262659508399,
+      "max_coefficient_bits": 49,
+      "perturbation": {
+        "column": 7,
+        "kind": "replace"
+      },
+      "support": 4,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 4,
+      "l1_norm": 119533530364254,
+      "l1_norm_bits": 47,
+      "max_coefficient": 66944924034375,
+      "max_coefficient_bits": 46,
+      "perturbation": {
+        "column": 1,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 5,
+      "l1_norm": 145720431833384987,
+      "l1_norm_bits": 58,
+      "max_coefficient": 48767576994031280,
+      "max_coefficient_bits": 56,
+      "perturbation": {
+        "column": 6,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 6,
+      "l1_norm": 21389498,
+      "l1_norm_bits": 25,
+      "max_coefficient": 8420983,
+      "max_coefficient_bits": 24,
+      "perturbation": {
+        "column": 1,
+        "kind": "replace"
+      },
+      "support": 3,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 7,
+      "l1_norm": 376471017973423,
+      "l1_norm_bits": 49,
+      "max_coefficient": 247174022358900,
+      "max_coefficient_bits": 48,
+      "perturbation": {
+        "column": 4,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    },
+    {
+      "attempt": 1,
+      "certificate_index": 13,
+      "deleted_column": 8,
+      "l1_norm": 9568189298160073,
+      "l1_norm_bits": 54,
+      "max_coefficient": 5475150590846206,
+      "max_coefficient_bits": 53,
+      "perturbation": {
+        "column": 3,
+        "kind": "replace"
+      },
+      "support": 5,
+      "vector_length": 56
+    }
+  ],
+  "infeasible_perturbation_trials": 80,
+  "seed": 20260802,
+  "selected_certificate_indices": [
+    111,
+    88,
+    76,
+    66,
+    112,
+    25,
+    89,
+    13
+  ],
+  "selected_natural_min_float_margins": [
+    0.00013957760555169632,
+    0.0006595016708623205,
+    0.0008739646642617481,
+    0.0012061527926287459,
+    0.0020305874878251183,
+    0.0036167069544611654,
+    0.006703063461403059,
+    0.012631648213889056
+  ],
+  "stress_band_upper_exponents": [
+    10,
+    18,
+    20,
+    22,
+    30,
+    40,
+    50,
+    60
+  ],
+  "stress_unimodular_steps_per_certificate": {
+    "<=2^10": [
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      5
+    ],
+    "<=2^20": [
+      2,
+      3,
+      3,
+      3,
+      2,
+      3,
+      3,
+      2
+    ],
+    "<=2^30": [
+      10,
+      10,
+      10,
+      10,
+      11,
+      11,
+      11,
+      10
+    ],
+    "<=2^40": [
+      14,
+      12,
+      13,
+      14,
+      13,
+      13,
+      13,
+      14
+    ],
+    "<=2^50": [
+      12,
+      14,
+      13,
+      13,
+      14,
+      13,
+      13,
+      12
+    ],
+    "<=2^60": [
+      15,
+      14,
+      14,
+      13,
+      13,
+      12,
+      12,
+      14
+    ],
+    "observed-run-max <=2^18": [
+      10,
+      9,
+      10,
+      11,
+      10,
+      10,
+      10,
+      10
+    ],
+    "repo-cap <=2^22": [
+      3,
+      3,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3
+    ]
+  },
+  "table": [
+    {
+      "band": "shipped",
+      "disagreements": 0,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.0,
+      "false_negatives": 0,
+      "float_exceptions": 0,
+      "float_says_feasible": 72,
+      "max_lp_coefficient_max": 132397980,
+      "max_lp_coefficient_min": 304794,
+      "max_x_entry_max": 1024,
+      "max_x_entry_min": 64,
+      "n": 72,
+      "population": "GROUND-TRUTH-FEASIBLE"
+    },
+    {
+      "band": "<=2^10",
+      "disagreements": 0,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.0,
+      "false_negatives": 0,
+      "float_exceptions": 0,
+      "float_says_feasible": 72,
+      "max_lp_coefficient_max": 132397980,
+      "max_lp_coefficient_min": 448032,
+      "max_x_entry_max": 1024,
+      "max_x_entry_min": 741,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "observed-run-max <=2^18",
+      "disagreements": 0,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.0,
+      "false_negatives": 0,
+      "float_exceptions": 0,
+      "float_says_feasible": 72,
+      "max_lp_coefficient_max": 3877072960,
+      "max_lp_coefficient_min": 5186816,
+      "max_x_entry_max": 194103,
+      "max_x_entry_min": 141225,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "<=2^20",
+      "disagreements": 0,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.0,
+      "false_negatives": 0,
+      "float_exceptions": 0,
+      "float_says_feasible": 72,
+      "max_lp_coefficient_max": 6266317080,
+      "max_lp_coefficient_min": 8561382,
+      "max_x_entry_max": 884807,
+      "max_x_entry_min": 529064,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "repo-cap <=2^22",
+      "disagreements": 0,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.0,
+      "false_negatives": 0,
+      "float_exceptions": 0,
+      "float_says_feasible": 72,
+      "max_lp_coefficient_max": 6429592096,
+      "max_lp_coefficient_min": 15538273,
+      "max_x_entry_max": 4074541,
+      "max_x_entry_min": 2116336,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "<=2^30",
+      "disagreements": 21,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.2916666666666667,
+      "false_negatives": 21,
+      "float_exceptions": 0,
+      "float_says_feasible": 51,
+      "max_lp_coefficient_max": 348099388464,
+      "max_lp_coefficient_min": 101808816,
+      "max_x_entry_max": 1006622140,
+      "max_x_entry_min": 560821599,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "<=2^40",
+      "disagreements": 50,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.6944444444444444,
+      "false_negatives": 50,
+      "float_exceptions": 0,
+      "float_says_feasible": 22,
+      "max_lp_coefficient_max": 18411159940255,
+      "max_lp_coefficient_min": 3076174827,
+      "max_x_entry_max": 1020194899101,
+      "max_x_entry_min": 552002106597,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "<=2^50",
+      "disagreements": 63,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.875,
+      "false_negatives": 63,
+      "float_exceptions": 0,
+      "float_says_feasible": 9,
+      "max_lp_coefficient_max": 1669744460653136,
+      "max_lp_coefficient_min": 328984178915,
+      "max_x_entry_max": 1034349820008272,
+      "max_x_entry_min": 579515574727961,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "<=2^60",
+      "disagreements": 63,
+      "exact_says_feasible": 72,
+      "false_negative_rate": 0.875,
+      "false_negatives": 63,
+      "float_exceptions": 0,
+      "float_says_feasible": 9,
+      "max_lp_coefficient_max": 16086431444520922,
+      "max_lp_coefficient_min": 1605779591803,
+      "max_x_entry_max": 950703831627954970,
+      "max_x_entry_min": 590095331801520456,
+      "n": 72,
+      "population": "STRESS-FEASIBLE"
+    },
+    {
+      "band": "one-column perturbation",
+      "disagreements": 0,
+      "exact_says_feasible": 0,
+      "false_negative_rate": null,
+      "false_negatives": 0,
+      "float_exceptions": 0,
+      "float_says_feasible": 0,
+      "max_lp_coefficient_max": 3409286340,
+      "max_lp_coefficient_min": 333640,
+      "max_x_entry_max": 65532,
+      "max_x_entry_min": 67,
+      "n": 72,
+      "population": "GENUINELY-INFEASIBLE"
+    }
+  ]
+}

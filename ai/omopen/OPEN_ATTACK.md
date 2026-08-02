@@ -1118,3 +1118,43 @@ five-term exchange families).
 * Pass-1 rows of `data/results.jsonl` were produced by an earlier attack.py
   revision (witness stages backfilled by later passes); the shipped code
   reproduces the verdicts but is not a byte-level replay of pass-1 rows.
+
+## Post-review measurement: how far can the float LP be trusted?
+
+Two studies, and they disagree in a way worth recording rather than
+averaging.
+
+**Study 1 (`review_scratch3/gapstudy.py`, built by GPT-5.6).** Inflates the
+shipped realizations by random unimodular transforms (det = +1 preserves
+every bracket sign, so feasibility is unchanged) and bins by max |entry|.
+Result: 0/72 false negatives on the shipped configurations, 0/72 at the
+`_shrink` cap of 2^22, first failures in the 2^30 band (29%), rising to
+87.5% by 2^50. Its conclusion was that the 47,723 reported infeasible LP
+calls are reliable at the magnitudes this repo actually uses.
+
+**Study 2 (`review_scratch3/spotcheck_gap.py`, written here as an
+independent check).** Same idea, but the transforms are *compounding shears*
+(multiplier 3, cycled through four coordinate pairs) — det = +1, so again
+feasibility is provably unchanged, but the configurations become
+progressively ill-conditioned. Result (`spotcheck_gap.log`): float agrees
+9/9 on the untransformed data, then **starts losing real completions at max
+|entry| ≈ 2^15.5**, and by 2^16–2^22 is finding only 2–6 of 9 — while the
+exact oracle returns FEASIBLE 9/9 throughout. **That failure onset is below
+the repo's own 2^22 cap.**
+
+**Reconciliation, and the honest conclusion.** Magnitude is not the
+governing variable; conditioning is. Note the arithmetic: the LP rows are
+3×3 minors, i.e. *cubic* in the configuration entries, so the 2^22 cap
+already implies row entries up to ~2^66 — far past the 2^53 where float64
+is exact. The method survives on real data not because the numbers are
+small but because search-produced configurations happen to be
+well-conditioned. Therefore:
+
+* the 47,723 infeasible calls are **supported on the tested population and
+  unsupported in general** — they are evidence, not certificates;
+* no claim in this document depends on them (every one of the 126 verdicts
+  came from an exactly-verified *success*);
+* **policy for future runs**: before a class is reported STILL_OPEN, the
+  deciding infeasibility must be re-confirmed by `exactlp.exact_feasible`,
+  which returns a Gordan certificate. Magnitude thresholds must not be used
+  as a proxy for numerical safety.
