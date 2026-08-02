@@ -1,0 +1,57 @@
+{
+ "per_shard": {
+  "shard_00.jsonl": {
+   "REALIZABLE": 1979495,
+   "NON_REALIZABLE": 41833,
+   "OTHER": 149
+  },
+  "shard_01.jsonl": {
+   "REALIZABLE": 1942907,
+   "NON_REALIZABLE": 41929,
+   "OTHER": 135
+  },
+  "shard_02.jsonl": {
+   "REALIZABLE": 1909136,
+   "NON_REALIZABLE": 40798,
+   "OTHER": 144
+  },
+  "shard_03.jsonl": {
+   "REALIZABLE": 1890936,
+   "NON_REALIZABLE": 41635,
+   "OTHER": 135
+  },
+  "shard_04.jsonl": {
+   "REALIZABLE": 280609,
+   "NON_REALIZABLE": 8002,
+   "OTHER": 16
+  },
+  "shard_05.jsonl": {
+   "REALIZABLE": 272353,
+   "NON_REALIZABLE": 7625,
+   "OTHER": 22
+  },
+  "shard_06.jsonl": {
+   "REALIZABLE": 272417,
+   "NON_REALIZABLE": 7564,
+   "OTHER": 19
+  },
+  "shard_07.jsonl": {
+   "REALIZABLE": 271134,
+   "NON_REALIZABLE": 7517,
+   "OTHER": 23
+  },
+  "shard_08.jsonl": {
+   "REALIZABLE": 253027,
+   "NON_REALIZABLE": 6877,
+   "OTHER": 16
+  },
+  "shard_root.jsonl": {
+   "REALIZABLE": 1
+  }
+ },
+ "total": {
+  "REALIZABLE": 9072015,
+  "NON_REALIZABLE": 203780,
+  "OTHER": 659
+ }
+}

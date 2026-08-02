@@ -1,0 +1,12 @@
+{
+ "workers": 3,
+ "records": 9276454,
+ "counts": {
+  "REALIZABLE": 9072015,
+  "NON_REALIZABLE": 203780,
+  "RESIDUE": 659
+ },
+ "big_path": 1665,
+ "rejected": 0,
+ "bad": []
+}

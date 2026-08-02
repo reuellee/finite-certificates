@@ -1,0 +1,23 @@
+{
+ "status_counts": {
+  "TODO": 0,
+  "REALIZABLE(walk)": 9060883,
+  "REALIZABLE(repair)": 11273,
+  "NON_REALIZABLE": 203780,
+  "OPEN": 659
+ },
+ "claimed_counts": {
+  "REALIZABLE(walk)": 9060883,
+  "REALIZABLE(repair)": 11273,
+  "NON_REALIZABLE": 203780,
+  "OPEN": 659,
+  "TODO": 0
+ },
+ "residue_records": 659,
+ "open_rows_st_dat": 659,
+ "only_in_residue": [],
+ "only_in_open": [],
+ "chi_mismatches": [],
+ "duplicate_row_field": false,
+ "ALL_OK": true
+}

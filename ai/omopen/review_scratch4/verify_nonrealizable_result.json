@@ -1,0 +1,8 @@
+{
+ "n_sampled": 5400,
+ "ok": 5400,
+ "bad": 0,
+ "terms_rebuilt": 362176,
+ "seconds": 5.6,
+ "bad_examples": []
+}

@@ -1,0 +1,224 @@
+[
+ {
+  "name": "S1 corrupted matrix entry",
+  "checker": "checkcert.py",
+  "accepted": false,
+  "msg": "bracket (1, 2, 3, 4) has sign -1, chirotope says +1",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S1 corrupted matrix entry",
+  "checker": "fpcheck.py",
+  "accepted": false,
+  "msg": "bracket (1, 2, 3, 4) has the wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S1 corrupted matrix entry",
+  "checker": "fastverify.py",
+  "accepted": false,
+  "msg": "bracket (0, 1, 2, 3) has the wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S1 corrupted matrix entry",
+  "checker": "mycodec (reviewer)",
+  "accepted": false,
+  "msg": "wrong sign at basis 0 (mycodec)",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (A gets B's matrix)",
+  "checker": "checkcert.py",
+  "accepted": false,
+  "msg": "bracket (1, 2, 5, 6) has sign +1, chirotope says -1",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (A gets B's matrix)",
+  "checker": "fpcheck.py",
+  "accepted": false,
+  "msg": "bracket (1, 2, 5, 6) has the wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (A gets B's matrix)",
+  "checker": "fastverify.py",
+  "accepted": false,
+  "msg": "bracket (0, 1, 4, 5) wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (A gets B's matrix)",
+  "checker": "mycodec (reviewer)",
+  "accepted": false,
+  "msg": "wrong sign at basis 9 (mycodec)",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (B gets A's matrix)",
+  "checker": "checkcert.py",
+  "accepted": false,
+  "msg": "bracket (1, 2, 5, 6) has sign -1, chirotope says +1",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (B gets A's matrix)",
+  "checker": "fpcheck.py",
+  "accepted": false,
+  "msg": "bracket (1, 2, 5, 6) has the wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (B gets A's matrix)",
+  "checker": "fastverify.py",
+  "accepted": false,
+  "msg": "bracket (0, 1, 4, 5) wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S2 payload swap (B gets A's matrix)",
+  "checker": "mycodec (reviewer)",
+  "accepted": false,
+  "msg": "wrong sign at basis 9 (mycodec)",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S3 flipped chi bit",
+  "checker": "checkcert.py",
+  "accepted": false,
+  "msg": "bracket (2, 4, 6, 8) has sign +1, chirotope says -1",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S3 flipped chi bit",
+  "checker": "fpcheck.py",
+  "accepted": false,
+  "msg": "bracket (2, 4, 6, 8) has the wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S3 flipped chi bit",
+  "checker": "fastverify.py",
+  "accepted": false,
+  "msg": "bracket (1, 3, 5, 7) wrong sign",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S3 flipped chi bit",
+  "checker": "mycodec (reviewer)",
+  "accepted": false,
+  "msg": "wrong sign at basis 49 (mycodec)",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S4 negative weight",
+  "checker": "checkcert.py",
+  "accepted": false,
+  "msg": "weight -3332 is not positive",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S4 negative weight (via bfp2gordan)",
+  "checker": "fpcheck.py",
+  "accepted": false,
+  "msg": "weight -3332 is not positive",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S5 certaudit ignores bad payload (by design/gap)",
+  "checker": "certaudit.py (key_of)",
+  "accepted": true,
+  "msg": "key_of extracted a key despite the sabotaged weight; certaudit never inspects bfp/matrix fields",
+  "expect_reject": null,
+  "pass": true,
+  "is_finding": true
+ },
+ {
+  "name": "S5 same record",
+  "checker": "checkcert.py",
+  "accepted": false,
+  "msg": "weight -999 is not positive",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S5 same record (via bfp2gordan)",
+  "checker": "fpcheck.py",
+  "accepted": false,
+  "msg": "weight -999 is not positive",
+  "expect_reject": true,
+  "pass": true
+ },
+ {
+  "name": "S6 truncated line (cut in the matrix (after chi))",
+  "checker": "checkcert.py",
+  "pass": true,
+  "msg": "JSONDecodeError: Expecting value: line 1 column 239 (char 238)",
+  "note": "raised loudly (good)"
+ },
+ {
+  "name": "S6 truncated line (cut in the matrix (after chi))",
+  "checker": "fpcheck.py",
+  "pass": true,
+  "msg": "JSONDecodeError: Expecting value: line 1 column 239 (char 238)",
+  "note": "raised loudly (good)"
+ },
+ {
+  "name": "S6 truncated line (cut in the matrix (after chi)), certaudit-style parse",
+  "checker": "certaudit.py (key_of)",
+  "pass": null,
+  "is_finding": true,
+  "msg": "key_of succeeded on a torn line"
+ },
+ {
+  "name": "S6 truncated line (cut before chi even starts)",
+  "checker": "checkcert.py",
+  "pass": true,
+  "msg": "JSONDecodeError: Unterminated string starting at: line 1 column 18 (char 17)",
+  "note": "raised loudly (good)"
+ },
+ {
+  "name": "S6 truncated line (cut before chi even starts)",
+  "checker": "fpcheck.py",
+  "pass": true,
+  "msg": "JSONDecodeError: Unterminated string starting at: line 1 column 18 (char 17)",
+  "note": "raised loudly (good)"
+ },
+ {
+  "name": "S6 truncated line (cut before chi even starts), certaudit-style parse",
+  "checker": "certaudit.py (key_of)",
+  "pass": true,
+  "msg": "ValueError: subsection not found"
+ },
+ {
+  "name": "S7 duplicate correctly detected",
+  "checker": "mycodec reconciliation",
+  "pass": true,
+  "msg": "dup_keys=[(4593808096387923470, 2152790715831187903)]"
+ },
+ {
+  "name": "S7 missing correctly detected",
+  "checker": "mycodec reconciliation",
+  "pass": true,
+  "msg": "missing={(4608864009077696104, 10301865731360677116)}"
+ }
+]

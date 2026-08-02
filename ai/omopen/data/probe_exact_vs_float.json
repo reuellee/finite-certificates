@@ -1,0 +1,45 @@
+{
+ "rows_sampled": [
+  902448,
+  1208882,
+  1592644,
+  2204680,
+  4289821,
+  4475757,
+  4500573,
+  5159768,
+  5307915,
+  5862420,
+  5928991,
+  9072423
+ ],
+ "steps": 40,
+ "seed": 20260802,
+ "regimes": {
+  "fresh": {
+   "n": 36,
+   "agree": 36,
+   "float_only": 0,
+   "exact_only": 0,
+   "float_median_s": 0.00200045108795166,
+   "exact_median_s": 0.018100857734680176
+  },
+  "store": {
+   "n": 48,
+   "agree": 48,
+   "float_only": 0,
+   "exact_only": 0,
+   "float_median_s": 0.002001166343688965,
+   "exact_median_s": 0.01899707317352295
+  },
+  "walk40": {
+   "n": 180,
+   "agree": 180,
+   "float_only": 0,
+   "exact_only": 0,
+   "float_median_s": 0.001999974250793457,
+   "exact_median_s": 0.018079280853271484
+  }
+ },
+ "disagreements": []
+}

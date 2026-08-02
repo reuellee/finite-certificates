@@ -1,0 +1,14 @@
+{
+ "worker": 0,
+ "nworkers": 3,
+ "seen": 3092155,
+ "counts": {
+  "REALIZABLE": 3024253,
+  "NON_REALIZABLE": 67684,
+  "RESIDUE": 218
+ },
+ "big_path": 561,
+ "n_bad": 0,
+ "bad": [],
+ "seconds": 563.0
+}

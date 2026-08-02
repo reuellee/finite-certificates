@@ -21,3 +21,12 @@ data/*.tmp
 
 # scratch (the .md is the artifact of record; logs are ignored repo-wide)
 data/_*
+
+# 2026-08-02 final-residue endgame broke the "everything is tens of kB"
+# assumption above: these are large regenerable working state from the
+# 659-class attack and its adversarial review, not the deliverable itself.
+# The deliverable is FINAL_RESIDUE.md + data/final_outcomes.tsv + the
+# certificate files already tracked above.
+data/child_start.npy
+data/child_order.npy
+data/nonreal/

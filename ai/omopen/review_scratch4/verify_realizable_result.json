@@ -1,0 +1,10 @@
+{
+ "n_sampled": 2500,
+ "ok": 2500,
+ "vanish": 0,
+ "wrong_sign": 0,
+ "malformed": 0,
+ "max_entry": 4096,
+ "seconds": 15.2,
+ "bad_examples": []
+}

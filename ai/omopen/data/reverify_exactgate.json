@@ -1,0 +1,27 @@
+{
+ "sample_percent": 100.0,
+ "seed": 20260802,
+ "bases": 126,
+ "relations": 1260,
+ "provenance": {
+  "ok": true,
+  "expected": {
+   "key_hi": "09517f6f381ae1aac8f67565b7d4d734e7528220b56c0f7b7911dcb9d1507d5e",
+   "key_lo": "0315f3ede71335778ec68e399beb819faecd8d7cc49de4ef7736ab9fca24439b",
+   "stab": "2c237034a1cda8a0dbfadafccd1af3f21729eac99745bcb673238955361f09a4"
+  },
+  "got": {
+   "key_hi": "09517f6f381ae1aac8f67565b7d4d734e7528220b56c0f7b7911dcb9d1507d5e",
+   "key_lo": "0315f3ede71335778ec68e399beb819faecd8d7cc49de4ef7736ab9fca24439b",
+   "stab": "2c237034a1cda8a0dbfadafccd1af3f21729eac99745bcb673238955361f09a4"
+  }
+ },
+ "realizable": {
+  "exactgate_realizable_e2_s0.jsonl": {
+   "records": 1,
+   "checked": 1,
+   "bad": []
+  }
+ },
+ "FAILURES": 0
+}
