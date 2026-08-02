@@ -17,24 +17,38 @@ not claim.*
 > — *Oriented Matroids Today*, EJC Dynamic Survey **DS4 v4 (2024)**, §on
 > deciding realizability.
 
-**SCOPE CAVEAT — added 2026-08-02, and it is load-bearing.** A second DS4
-passage describes Richter-Gebert's example as *non-uniform*: "Another
-interesting example is Richter-Gebert's [RG96b] **non-uniform** Ω+14 with
-the same parameters, which additionally has rational realizations and a
-non-realizable symmetry." If the BFP-free Ω⁻₁₄ is likewise non-uniform,
-then **incompleteness may not be established for UNIFORM oriented matroids
-at all**, and our (4,9) claim would sit against a genuinely open uniform
-question rather than a known-false general one. Do not write either framing
-until the primary source (Richter-Gebert, *Two interesting oriented
-matroids*, Documenta Math. 1 (1996) 137–152, open access) is read. This is
-the single most important literature item for the writeup.
+**SCOPE CAVEAT — RESOLVED 2026-08-02 against primary text.** Fetched
+Richter-Gebert's actual paper (Documenta Math. 1 (1996) 137–148, DOI
+10.4171/DM/7, via ems.press — full PDF, not a summary) and read it directly.
+Confirmed:
 
-Related, and consistent with the non-uniform reading: GPT-5.6 reports that
-paper's Theorem 5.1 as — if χ₀, χ₊, χ₋ differ in exactly one basis with
-values 0, +, −, and χ₀ and χ₋ are realizable while χ₊ is not, then χ₊ has
-**no** BFP. Note χ₀ has a zero basis, hence is non-uniform, while χ₊ is
-uniform. **Unverified against the primary source**; if true it both
-explains the Ω± naming and hands us a targeted search (below).
+* **Ω⁺₁₄/Ω⁻₁₄ are non-uniform.** Abstract: "we present two closely related
+  oriented matroids Ω⁺₁₄ and Ω⁻₁₄ of rank 3 with 14 elements... Ω⁺₁₄ and
+  Ω⁻₁₄ differ in exactly one basis orientation." Definition 4.3 states its
+  BFP formalism "is more general than the one given in [2], where only
+  **the uniform case (no zero determinants) was considered**" — i.e. this
+  paper's own constructions deliberately go beyond uniform, consistent
+  with DS4 independently calling Ω⁺₁₄ non-uniform.
+* **Theorem 5.1 has no uniformity hypothesis.** Verbatim: "Let χ₀, χ₊, χ₋
+  be three oriented matroids that differ in exactly one basis μ ∈ C(E,3)
+  with χ_σ(μ) = σ. If χ₀ and χ₋ are realizable and χ₊ is not, then χ₊
+  cannot have a biquadratic final polynomial." Corollary 5.2 applies it
+  to Ω⁻₁₄ using a third matroid Ω⁰₁₄ (also realizable) as χ₀.
+
+**Consequence for the (4,9) writeup**: do not claim "BFP-completeness is
+known to fail for uniform oriented matroids" — that is not established by
+Ω⁻₁₄. What *is* established: BFP is incomplete for oriented matroids in
+general (this non-uniform example), and Theorem 5.1's mechanism is stated
+generally enough that a uniform instance is not ruled out — meaning the
+(4,9) result should be framed as resolving a genuinely open **uniform**
+question, not confirming a known-false general one. This is the stronger,
+more interesting framing, and it is now primary-source-verified rather
+than inferred.
+
+*Provenance note*: this correction and Theorem 5.1's statement were
+originally reported by GPT-5.6 via a repo PR (`ai/omreal/SCOPING.md`,
+merged 2026-08-02, see repo history); independently re-verified here
+against the primary PDF before being trusted.
 
 So the known landscape **in rank 3** is:
 
