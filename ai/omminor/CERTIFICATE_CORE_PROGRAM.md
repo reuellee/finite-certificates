@@ -2,6 +2,25 @@
 
 Research brief for the next oriented-matroid phase. Proposed 2026-08-02.
 
+## Pilot outcome (2026-08-02)
+
+The preregistered raw-core experiment has now been run on a deterministic
+64-class sample of the tracked minor-minimal prefix. It **fails the gate**:
+the best three emitted cores cover only 6/64 classes, greedy needs 54 cores
+for 90%, and training cores cover 2/36 held-out classes. Exhaustive
+relabelling is included, and 206 exact realizable controls have zero matches.
+
+A stronger fixed-labelling test searched the *entire common GP system* of all
+2,016 class pairs, rather than comparing arbitrary emitted LP supports. Exact
+Gordan alternatives show that only one pair has any common BFP; the other
+2,015 carry strict integer witnesses. See [`CORE_PILOT.md`](CORE_PILOT.md) and
+its independent verifiers.
+
+**Operational update:** do not scale stages 1 and 3 unchanged to the full
+minor-minimal corpus. At most one bounded alternative-certificate experiment
+combining common-system search with selected relative relabellings is
+justified. If it also fails, pivot to the two-sided extension-atlas target.
+
 ## Executive decision
 
 **Do not restart or restructure the live \(UOM(4,9)\) sweep.** Let it finish,
