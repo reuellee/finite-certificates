@@ -96,7 +96,7 @@ that `ai/omgamma` uses, so our catalogue counts the same objects.
 | OM(4,8) all simple | 181 472 total, 177 504 / 3 968 | FMM13 Thm 1.1(a) — *this* was FMM13's new contribution at (4,8); the uniform split was already Bokowski–Richter 1990 |
 | OM(3,9) all simple | 461 053 total, 460 779 / 274 | FMM13 Thm 1.1(b) |
 | BFP completeness, empirically | a biquadratic final polynomial exists for **every** non-realizable class in OM(4,8), OM(3,9), OM(6,9), uniform (3,10) and uniform (3,11) | FMM13 §5 ("Surprisingly, the biquadratic final polynomial method … can detect all non-realizable oriented matroids in these classes"); DS4 §3.4 |
-| smallest BFP-resistant example | OM(3,14) (Richter-Gebert Ω<sup>−</sup><sub>14</sub>); one on 12 points announced by Scheucher | FMM13 §5; DS4 |
+| first published BFP-resistant example | **non-uniform** OM(3,14) (Richter-Gebert Ω<sup>−</sup><sub>14</sub>); a 12-point example is announced by Scheucher, but DS4 does not state its uniformity or give a chirotope | [Richter-Gebert 1996](https://doi.org/10.4171/DM/7); DS4 §3.4 |
 | Mnëv universality | bites already at **rank 3** — there is no rank below which realizability is provably easy | DS4 §3.1 |
 
 Two further facts that shape the design:
@@ -232,8 +232,30 @@ used. The LP (scipy/HiGHS) is only the *search*: the emitted `w` is
 recomputed in exact rational arithmetic on the LP's support and shipped as
 integers.
 
-BFP is **provably incomplete** (Richter-Gebert's Ω<sup>−</sup><sub>14</sub>).
-A class it misses is reported as RESIDUE, never as realizable.
+BFP is **provably incomplete for oriented matroids in general**, but the
+published counterexample does not establish incompleteness on the uniform
+subclass used by this sweep.  In the primary paper Richter-Gebert defines
+Ω<sup>σ</sup><sub>14</sub> by changing only the bracket `(12,13,14)` of a
+fixed configuration `X0`.  The same construction has other zero brackets:
+for example `x6 = x5x2 ∧ x1x4`, so `[1,4,6] = 0` in both
+Ω<sup>+</sup><sub>14</sub> and Ω<sup>−</sup><sub>14</sub>.  Both endpoints are
+therefore non-uniform.  DS4's announced 12-point example is not accompanied
+there by a uniformity claim or a published chirotope.  On the sources
+checked here, **do not claim that BFP incompleteness is known for uniform
+oriented matroids**.
+
+Theorem 5.1 of the same paper has no uniformity hypothesis.  It treats
+rank-3 oriented matroids `chi0`, `chi+`, and `chi-` that agree off one
+triple `mu`, with `chi_sigma(mu) = sigma`: if `chi0` and `chi-` are
+realizable and `chi+` is not, then `chi+` has no BFP.  Its proof uses the
+forced zero `[mu] = 0` in a realization of `chi0`, but it does not require
+another zero bracket.  The theorem is therefore compatible with uniform
+signed endpoints, but the Ω-pair does not supply them.  The paper proves
+only rank 3; no arbitrary-rank extension is assumed here.
+
+Operationally nothing changes: failure to find a BFP is not a realization
+certificate.  A class the method misses is reported as RESIDUE, never as
+realizable.
 
 ### 3.3 The cascade
 

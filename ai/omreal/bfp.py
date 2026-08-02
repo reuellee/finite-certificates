@@ -27,9 +27,12 @@ emitted is recomputed in exact rational arithmetic on the LP's support and
 shipped as integers, so `checkcert.py` can verify it with integer
 arithmetic alone.
 
-BFP IS INCOMPLETE.  A class with no biquadratic final polynomial may still
-be non-realizable (Richter-Gebert exhibits such oriented matroids); the
-pipeline reports those as RESIDUE, never as realizable.
+BFP IS INCOMPLETE FOR ORIENTED MATROIDS IN GENERAL.  Richter-Gebert's
+published rank-(3,14) example is non-uniform, so it does not by itself
+settle completeness on the uniform subclass processed here.  This search
+makes no completeness assumption: failure to find a certificate is not a
+realization proof, and the pipeline reports it as RESIDUE, never as
+realizable.
 """
 
 import math
