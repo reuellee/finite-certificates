@@ -17,6 +17,25 @@ not claim.*
 > — *Oriented Matroids Today*, EJC Dynamic Survey **DS4 v4 (2024)**, §on
 > deciding realizability.
 
+**SCOPE CAVEAT — added 2026-08-02, and it is load-bearing.** A second DS4
+passage describes Richter-Gebert's example as *non-uniform*: "Another
+interesting example is Richter-Gebert's [RG96b] **non-uniform** Ω+14 with
+the same parameters, which additionally has rational realizations and a
+non-realizable symmetry." If the BFP-free Ω⁻₁₄ is likewise non-uniform,
+then **incompleteness may not be established for UNIFORM oriented matroids
+at all**, and our (4,9) claim would sit against a genuinely open uniform
+question rather than a known-false general one. Do not write either framing
+until the primary source (Richter-Gebert, *Two interesting oriented
+matroids*, Documenta Math. 1 (1996) 137–152, open access) is read. This is
+the single most important literature item for the writeup.
+
+Related, and consistent with the non-uniform reading: GPT-5.6 reports that
+paper's Theorem 5.1 as — if χ₀, χ₊, χ₋ differ in exactly one basis with
+values 0, +, −, and χ₀ and χ₋ are realizable while χ₊ is not, then χ₊ has
+**no** BFP. Note χ₀ has a zero basis, hence is non-uniform, while χ₊ is
+uniform. **Unverified against the primary source**; if true it both
+explains the Ω± naming and hands us a targeted search (below).
+
 So the known landscape **in rank 3** is:
 
 | uniform rank 3 | status of BFP certificates |
