@@ -111,13 +111,21 @@ def main():
         print('  FALSIFIED: deletion %d (of class %s, element %d) has a %d-term '
               'Gordan vector' % (j, keys[owners[0] // 9], owners[0] % 9 + 1, t))
 
-    # positive control: deletions that ARE one of the 24 must give a vector
+    # positive control: deletions that ARE one of the 24 must give a vector.
+    # Needs minors_sweep.jsonl, a large regenerable artifact that is
+    # deliberately gitignored (see the artifact table in MINOR_THEORY.md);
+    # skip cleanly rather than crash when it hasn't been regenerated.
     pos_ok = pos_n = 0
-    if a.positive_control:
+    minors_path = os.path.join(OUT, 'minors_sweep.jsonl')
+    if a.positive_control and not os.path.exists(minors_path):
+        print('positive control: SKIPPED (minors_sweep.jsonl not present — '
+              'regenerable, gitignored; run the omminor pipeline to produce '
+              'it locally). The falsification test above is unaffected.')
+    elif a.positive_control:
         import bfp as bfpmod
         gp = bfpmod.GPSystem(8, 4)
         rows = []
-        for line in open(os.path.join(OUT, 'minors_sweep.jsonl')):
+        for line in open(minors_path):
             r = json.loads(line)
             if r['verdict'] == 'NON_REALIZABLE' and r['del_nonreal']:
                 rows.append(r)
