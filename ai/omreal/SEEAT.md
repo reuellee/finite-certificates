@@ -5,7 +5,14 @@ realizations of one deletion into finitely many *derived-oriented-matroid
 charts*, and it makes extension feasibility constant on each chart.  The
 proposed strengthening to four charts for `UOM(4,8)` is **false**: catalog row
 2599 has 97,224 realizable uniform extensions, while four charts can cover at
-most 96,576.  A compact exact-matrix certificate proves the counterexample.
+most 96,576.  Two compact exact-matrix certificates now prove
+
+\[
+       \boxed{5\ \leq\ w(2599)\ \leq\ 178},
+\]
+
+where `w(M)` is the minimum number of realization charts whose topes cover all
+realizable uniform single-element extensions of `M`.
 
 The generic-arrangement input is standard; the certificate architecture is the
 part relevant to the census.  The distinction matters: finiteness is a theorem,
@@ -306,28 +313,75 @@ regions, and connectedness of the realizable extension poset does not imply
 one either.  The exact counterexample shows that neither fact can be upgraded
 to a four-chart bound in this cell.
 
-## 6. The actual next target
+## 6. A certified 178-chart upper bound
 
-The theorem removes the conceptual obstacle; atlas width is now the only hard
-quantity.  The next experiment should not rerun realizability searches.  It
-should:
+The lower bound is accompanied by an explicit upper bound; it does not rely on
+exhausting all derived sign strata.  The certificate
+`data/seeat_parent2599_upper178.npz` contains 178 integer `4x8` matrices.  Each
+matrix realizes parent 2599.  For each of the parent's 97,224 abstract
+extension signatures, it also stores
 
-1. search for a five-chart cover of row 2599, which is now the first possible
-   width;
-2. enumerate the derived topes of the already stored exact `(4,8)` matrices;
-3. canonicalize the resulting `(4,9)` extensions and take the union over all
-   nine deletions and, separately, the dual contraction charts;
-4. measure uncovered catalog classes;
-5. add a new realization of a parent only when it covers many previously
-   uncovered classes; and
-6. seek a semialgebraic cover certificate only after the empirical atlas width
-   is known.
+1. the index of one of those matrices, and
+2. an integer point `x` whose 56 derived brackets have exactly that signature.
+
+Consequently the selected charts cover every abstract extension.  Since the
+lower certificate proves every abstract extension realizable, this is exactly
+the required realization-atlas cover.
+
+> **Explicit upper-bound theorem.**  The realizability-atlas width of `(4,8)`
+> catalog row 2599 is at most 178.  Combined with the four-chart obstruction,
+>
+> \[
+>          \boxed{5\leq w(2599)\leq178}.
+> \]
+
+*Proof.*  For every stored chart, recompute the 70 parent brackets and check
+that their signs equal row 2599.  For every one of the 97,224 extension
+signatures, recompute the 56 integer dot products `a_I(Y)x` using its assigned
+chart and point.  The certificate has no zero dot product and all signs agree.
+Thus every signature occurs in one of the 178 chart tope sets.  QED.
+
+`verify_seeat_upper_bound.py` performs precisely those checks in exact integer
+arithmetic.  It enumerates the extension signatures independently and runs no
+LP, nonlinear realization search, chamber enumeration, or set-cover heuristic:
+
+```console
+python ai/omreal/verify_seeat_upper_bound.py
+```
+
+The search that found the cover is deliberately outside the trust boundary.
+It sampled 256 exact parent realizations, expanded them through eight labeled
+parent-symmetry representatives, and obtained 1,848 distinct candidate chart
+tope sets.  Greedy covering followed by reverse deletion selected 178 symmetry
+images arising from 35 underlying parent arrangements.  This explains the
+certificate's provenance but proves no optimality: 178 is only the best
+explicit upper bound found in that finite bank.
+
+## 7. The actual next target
+
+The theorem removes the conceptual obstacle; tightening
+`5 <= w(2599) <= 178` is now a finite covering problem.  The next experiment
+should not rerun realizability searches.  It should:
+
+1. quotient both signatures and charts by antipodality and the labeled parent
+   automorphism group;
+2. solve exact set-cover instances on the already enumerated incidence matrix,
+   using feasible covers for upper bounds and dual packings for lower bounds;
+3. isolate the rare signatures left at the tail of greedy covering and search
+   for positive-circuit incompatibilities proving that specified groups cannot
+   share one chart;
+4. enlarge the parent-chart bank only when a new exact realization covers many
+   previously uncovered signatures; and
+5. seek a semialgebraic or topological certificate excluding small covers only
+   after its finite obstruction is stated explicitly.
 
 That computation is arrangement enumeration plus canonical set union.  It
-contains no nonlinear realization attempt per child.  If a small chart bank
-covers the census, the remaining theorem problem is sharply stated: certify
-that its derived sign strata exhaust each nine-dimensional parent realization
-space.
+contains no nonlinear realization attempt per child.  A cover from any chart
+bank is already a theorem once exact points are stored.  A lower bound is
+harder: it must apply to *all* realizations of the parent, not merely to the
+1,848 sampled chart types.  The universal lexicographic core gives the first
+such obstruction; a circuit, semialgebraic, or topological refinement of that
+universal overlap is the next theoretical target.
 
 ## References
 
