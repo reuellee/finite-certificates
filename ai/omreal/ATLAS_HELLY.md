@@ -7,11 +7,13 @@ It is still a conjecture.  Two proof shortcuts that would have made it nearly
 formal are now ruled out below: neither convex private LP fibers nor sparse
 Gordan circuits impose a dimension-only Helly bound, and smooth individual
 derived walls do not control their multiple intersections.  On the positive
-side, Section 11 proves a sharp COM--Helly theorem reducing the desired bound
-to one precise support-state property, while Section 12 gives an exact
-classification and a regularity theorem for every possible derived wall.
-Section 13 weakens the remaining support-state target to a finite feasible-COM
-completion problem and proves that wall topology alone cannot close it.
+side, Section 11 proves a sharp COM--Helly theorem and its stronger integral
+COM--Leray form, reducing the desired bound to one precise support-state
+property, while Section 12 gives an exact classification and a regularity
+theorem for every possible derived wall.
+Section 13 isolates a finite feasible-COM completion target, proves that wall
+topology alone cannot close it, and shows that the completion target is a
+strictly stronger high-risk conjecture rather than an equivalent reformulation.
 The main unconditional conclusion is already useful:
 
 > For a normalized realization space of dimension `D`, every jointly
@@ -271,7 +273,9 @@ A riskier high-payoff strengthening is that every reduced compatibility
 complex here is rationally `9`-Leray.  That statement is combinatorially
 natural and would unlock fractional-Helly machinery.  It is not the headline
 conjecture, and (5) is only one sufficient route to it when strengthened from
-the single diagonal to the full homology tail (8).
+the single diagonal to the full homology tail (8).  Section 11 shows that any
+rank-nine COM-completion proof would automatically establish the still
+stronger integral `9`-Leray statement.
 
 A direct counterexample to the core conjecture is a minimal family `T` of at
 least eleven extensions, certified by
@@ -720,6 +724,62 @@ The bound is sharp: the lopsided COM with topes
 `2^[d+1] minus {[d+1]}` has rank `d` and its full coordinate set is a minimal
 nonface of size `d+1`.
 
+The same bridge in fact has a stronger topological consequence.  A complex
+is **integrally `d`-Leray** when every induced subcomplex has zero reduced
+integral homology in dimensions `d` and above.
+
+> **COM--Leray theorem.**  If `C` is the tope family of a COM of rank at most
+> `d`, then `K(C)` is integrally `d`-Leray.
+
+**Proof.**  Deleting coordinates preserves COMs and does not increase rank,
+and
+
+\[
+                 K(C)[A]=K(C\mathbin{\backslash}(E\setminus A)).
+\]
+
+It is therefore enough to prove the homology vanishing for `K(C)` itself.
+Let `L` be the covector system of the COM.  Bandelt--Chepoi--Knauer construct
+from `L` a contractible regular cell complex `Delta(L)`; see their Proposition
+15 and the preceding cell construction in
+[COMs: Complexes of Oriented Matroids](https://arxiv.org/abs/1507.06111).
+Every cell in that construction is the ball associated with an oriented-
+matroid face of `L`, and its dimension is the rank of that face.  A face cannot
+have rank above `rank(L)<=d`, so `dim Delta(L)<=d`.
+
+For a coordinate `e`, let `Delta_e^+` be the cell subcomplex belonging to the
+positive topal fiber `L_e^+={X in L:X_e=+}`.  More generally, every nonempty
+intersection
+
+\[
+           \bigcap_{e\in S}\Delta_e^+
+\]
+
+is the cell complex of the fixed-positive fiber `L_S^+`.  Fibers of a COM are
+COMs (their Lemma 4), so Proposition 15 makes every such intersection
+contractible.  These really are cell subcomplexes: if a covector is positive
+on `S`, its entire COM face preserves those fixed nonzero signs.  The
+intersection is nonempty exactly when some tope is positive on `S`: a
+covector positive on `S` can be composed with any tope to obtain such a tope.
+Hence the nerve of `{Delta_e^+:e in E}` is exactly `K(C)`.  The nerve theorem
+gives
+
+\[
+              K(C)\simeq U:=\bigcup_{e\in E}\Delta_e^+.
+\]
+
+The union `U` is a subcomplex of the contractible `d`-dimensional complex
+`Delta(L)`.  It has no cells above dimension `d`.  Moreover a cellular
+`d`-cycle in `U` is a `d`-cycle in `Delta(L)`; the latter has zero `H_d` and
+no `(d+1)`-chains, so that cycle is zero.  Thus
+`H_tilde_i(U;Z)=0` for every `i>=d`.  Applying the same argument after every
+coordinate deletion proves the induced-subcomplex assertion.  QED.
+
+The COM--Helly theorem follows again by applying this to the boundary sphere
+induced by a minimal nonface.  The Leray conclusion is strictly more
+informative: `FCC_9(M)` would force the full compatibility complex to be
+integrally `9`-Leray, not merely to have cores of size at most ten.
+
 For a parent `M`, define the complete support-state class
 
 \[
@@ -894,7 +954,7 @@ smoothness of complex rank-four realization spaces through nine elements
 that step: smooth real loci and their open sign regions can still be
 disconnected or carry homology.
 
-## 13. The weakest finite COM target presently sufficient
+## 13. A finite COM target, and its limitation
 
 Even perfect simultaneous-wall topology would not by itself close the gap.
 Take the LP family (17)--(19) and replace its base by
@@ -927,19 +987,150 @@ following strictly weaker completion property is sufficient.
 > tope family `C_M`, on the dominance-reduced extension coordinates, such
 > that
 > \[
->       \mathcal C_M\subseteq K_{\mathbb R}(M)
+>       C_M\subseteq K_{\mathbb R}(M)
 > \]
 > and `C_M` contains every maximal face of `K_R(M)`.
 
-> **COM-completion implication.**  If `FCC_9(M)` holds, then
-> `h(M)<=10`.
+> **COM-completion implication.**  If `FCC_9(M)` holds, then `K_R(M)` is
+> integrally `9`-Leray and, in particular, `h(M)<=10`.
 
 **Proof.**  Because every member of `C_M` is a feasible face and
 `K_R(M)` is downward closed,
 `K(C_M) subseteq K_R(M)`.  Conversely, every face of the finite complex
 `K_R(M)` is contained in a maximal face, and every maximal face is a member
 of `C_M`.  Hence `K_R(M) subseteq K(C_M)`.  The two complexes are equal, so
-the COM--Helly theorem with `d=9` gives the claim.  QED.
+the COM--Leray theorem with `d=9` gives the claim.  QED.
+
+The resulting implication chain locates the more economical topological
+target:
+
+\[
+ \mathrm{FCC}_9(M)
+ \Longrightarrow K_{\mathbb R}(M)\text{ integrally 9-Leray}
+ \Longrightarrow K_{\mathbb R}(M)\text{ rationally 9-Leray}
+ \Longrightarrow h(M)\le10.                            \tag{28}
+\]
+
+Only the last conclusion is needed for ten-locality.  Thus the full homology
+tail (8) with `k=9`, which proves the rational-Leray middle statement, is a
+weaker direct target than constructing a COM completion.  No reverse arrow
+in (28) is being assumed.
+
+For any finite simplicial complex `K`, call the minimum possible rank in this
+kind of completion `cr_COM(K)`.  Such a completion always exists: view the
+whole down-set `K` as a set family.  A coordinate set `A` is shattered by
+this family exactly when `A in K`.  Indeed, membership gives all traces by
+downward closure, while shattering gives a member of `K` containing `A` and
+hence `A in K`.  Thus `K` is an ample (lopsided) set system, hence the tope
+family of a COM, of rank `max{|Q|:Q in K}`.  Together with the proof just
+given and the COM--Leray theorem, this shows
+
+\[
+ \max\bigl(\ell_{\mathbb Z}(K),
+            \operatorname{VCdim}(\operatorname{Facets}(K))\bigr)
+ \le \operatorname{cr}_{\rm COM}(K)
+ \le \max_{Q\in K}|Q|.                                 \tag{29}
+\]
+
+Here `ell_Z(K)` is the least `d` for which `K` is integrally `d`-Leray; in
+particular `h(K)-1<=ell_Z(K)`.  The second lower bound holds because every
+completion contains every facet, and adding topes cannot destroy a shattered
+set.  Thus `FCC_9(M)` is precisely a rank-compression claim for the canonical
+ample completion `K_R(M)`.  The reverse control by Helly number fails
+completely: completion rank can exceed it by an arbitrarily large amount.
+
+> **Cross-polytope gap theorem.**  For every `m>=1` there is a simplicial
+> complex `K_m` with
+> \[
+>       h(K_m)=2,\qquad \operatorname{cr}_{\rm COM}(K_m)=m.       \tag{30}
+> \]
+
+**Proof.**  On the `2m` coordinates
+`{x_i^0,x_i^1:1<=i<=m}`, let `K_m` consist of the sets containing at most one
+member of every pair `{x_i^0,x_i^1}`.  Its minimal nonfaces are exactly those
+`m` pairs.  Its maximal faces are
+
+\[
+ F_\epsilon=\{x_i^{\epsilon_i}:1\le i\le m\},
+ \qquad \epsilon\in\{0,1\}^m.                         \tag{31}
+\]
+
+Put `X={x_1^1,...,x_m^1}`.  The traces `F_epsilon intersection X`, as
+`epsilon` varies, are all `2^m` subsets of `X`.  Hence any `C` containing all
+the maximal faces shatters `X`.  COM rank equals the VC dimension of its tope
+family, so `rank(C)>=m`; see
+[Knauer--Marc](https://arxiv.org/abs/1701.05525).  Conversely,
+the family of all `F_epsilon` is the tope family of the rank-`m` oriented
+matroid obtained from the `m` coordinate hyperplanes by replacing each
+element with an antiparallel copy.  Its downward closure is exactly `K_m`.
+Thus its rank gives the matching upper bound in (30).  Topologically, `K_m`
+is the boundary of the `m`-dimensional cross-polytope, so
+`ell_Z(K_m)=m`; the COM--Leray lower bound is sharp here as well.  QED.
+
+The VC lower bound in (29) is independent of that homology obstruction.  In
+fact, even integral `1`-Lerayness and pairwise minimal nonfaces do not bound
+COM-completion rank.
+
+> **Split-graph gap theorem.**  For every `m>=1` there is a flag simplicial
+> complex `J_m` such that
+> \[
+>   h(J_m)=2,\qquad \ell_{\mathbb Z}(J_m)=1,\qquad
+>   \operatorname{cr}_{\rm COM}(J_m)=m.                 \tag{32}
+> \]
+
+**Proof.**  Let `X={x_1,...,x_m}` be a clique.  For every `P subseteq X`, add
+an independent vertex `y_P` adjacent exactly to the vertices of `P`, and let
+`J_m` be the clique complex of the resulting split graph.  Its facets are
+
+\[
+                       P\mathbin{\cup}\{y_P\},\qquad P\subseteq X.
+\]
+
+Their traces on `X` are all subsets of `X`, so (29) gives
+`cr_COM(J_m)>=m`.  The graph is chordal: an induced cycle of length at least
+four would contain two nonconsecutive clique vertices, hence a chord.  Every
+induced subgraph is again chordal, and the clique complex of each connected
+chordal graph collapses along a perfect-elimination ordering.  Thus every
+induced subcomplex of `J_m` has zero reduced homology in dimensions at least
+one.  Since `J_m` has nonedges, `ell_Z(J_m)=1`; flagness also gives `h(J_m)=2`.
+
+For the matching upper bound, take the concept family
+
+\[
+   C_m=2^X\mathbin{\cup}
+       \{P\mathbin{\cup}\{y_P\}:P\subseteq X\}.
+\]
+
+Its one-inclusion graph `G_m` is the `m`-cube on `2^X` with one private
+pendant edge attached at every cube vertex.  Distances in this graph equal
+Hamming distances between the displayed concepts, so `G_m` is a partial
+cube.  We verify the antipodally gated condition.  Suppose an antipodal convex
+subgraph `A` contains a pendant vertex `z` with cube neighbor `p`.  A singleton
+is gated, so assume `A` has another vertex; convexity then puts `p` in `A`.  If
+`A` contains anything beyond the edge `zp`, then the interval from `z` to its
+antipode contains `p`.  But an interval from `p` can contain the leaf `z` only
+when its other endpoint is `z`; consequently `p` cannot have an antipode whose
+interval is all of `A`, a contradiction.  Thus `A` is a singleton or `zp`.
+Any antipodal convex subgraph avoiding the leaves is a convex subgraph of a
+cube, hence a subcube.  Singletons, the edge `zp`, and every subcube are gated
+in `G_m`: for a vertex of the cube use ordinary coordinate projection, and
+for a pendant vertex first pass to its cube neighbor.  Therefore `G_m` is
+antipodally gated.  By
+[Knauer--Marc's characterization](https://arxiv.org/abs/1701.05525), `C_m` is
+the tope family of a COM.
+
+It shatters `X`, but it cannot shatter `m+1` coordinates.  A set of that size
+must contain a `y`-coordinate; no concept contains two of them, and only one
+concept contains any fixed `y_P`, so the required traces cannot all occur.
+Its COM rank is therefore `m`.  Finally,
+`C_m subseteq J_m` and it contains every facet, proving the upper bound in
+(32).  QED.
+
+Thus `FCC_9(M)` is a high-risk special-structure conjecture, not a reformulation
+of Extension--Helly and not the weakest possible remaining lemma.  A necessary
+falsification gate is immediate: if the maximal feasible supports of one
+parent shatter ten dominance-reduced extension coordinates, then `FCC_9(M)`
+is false even though the ten-local Helly conjecture may still hold.
 
 Only maximal **generic** support states are needed to test `FCC_9(M)`.  If
 `Y` lies on a derived wall, choose one strict-inequality witness column for
@@ -966,7 +1157,7 @@ ambient Grassmannian.  For an open coordinate orthant `O subset R^N`, put
 Then
 
 \[
-             A_O\simeq\operatorname{Gr}_{\mathbb R}(k-1,N-1).    \tag{28}
+             A_O\simeq\operatorname{Gr}_{\mathbb R}(k-1,N-1).    \tag{33}
 \]
 
 Indeed, use the incidence space of pairs `(L,[v])` with `[v] in P(O)` and
