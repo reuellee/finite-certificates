@@ -219,6 +219,54 @@ for index, edges in enumerate(representatives):
             sp.diff(RESIDUAL[index], pivot), product(derivative_brackets)
         )
 
+# Orbits 46 and 47 are two views of one localization wall.  Their first
+# three normals all annihilate y_1.  The only nonzero maximal cofactor of
+# that 4-by-3 matrix is the common residual R, while a fixed 2-by-2 minor is
+# a unit.  Thus their rank drops from three to exactly two on R = 0.
+shared = representatives[46][:3]
+assert shared == representatives[47][:3] == (
+    (0, 1, 2), (0, 3, 4), (0, 5, 6)
+)
+shared_matrix = sp.Matrix.hstack(*(normals[edge] for edge in shared))
+shared_maximal_minors = [
+    sp.expand(shared_matrix.extract(rows, range(3)).det())
+    for rows in combinations(range(4), 3)
+]
+assert shared_maximal_minors == [0, 0, 0, RESIDUAL[46]]
+assert shared_matrix.extract((1, 3), (0, 1)).det() == 1
+
+# Every fourth triple not containing vertex 1 lifts the same localization
+# determinant, multiplied by its nonzero parent bracket.  Fourth triples
+# containing vertex 1 give precisely the structural zero case.
+for edge in triples:
+    lifted = derived(shared + (edge,))
+    if 0 in edge:
+        assert lifted == 0
+    else:
+        parent_bracket = bracket((0,) + edge)
+        assert parent_bracket != 0
+        assert equal_up_to_sign(lifted, parent_bracket * RESIDUAL[46])
+
+# An exact uniform point on the common wall.
+wall_point = {
+    a: 2, b: 3, c: 5,
+    d: 7, e: sp.Rational(46, 5), f: 11,
+    g: 13, h: 17, i: 19,
+}
+wall_matrix = sp.Matrix([
+    [1, 0, 0, 0, 1, 1, 1, 1],
+    [0, 1, 0, 0, 1, 2, 7, 13],
+    [0, 0, 1, 0, 1, 3, sp.Rational(46, 5), 17],
+    [0, 0, 0, 1, 1, 5, 11, 19],
+])
+assert Y.subs(wall_point) == wall_matrix
+assert RESIDUAL[46].subs(wall_point) == 0
+assert shared_matrix.subs(wall_point).rank() == 2
+wall_brackets = [
+    wall_matrix[:, basis].det() for basis in combinations(range(8), 4)
+]
+assert len(wall_brackets) == 70 and all(value != 0 for value in wall_brackets)
+
 # Exhaustion plus the exact identities certifies the converse structural
 # statement: precisely the predicate-positive incidence types vanish.
 assert {
@@ -233,3 +281,4 @@ print(
     "PASS: 367290 four-sets -> 52 orbits = "
     "14 zero + 25 bracket-unit + 13 smooth residual"
 )
+print("PASS: orbit-46/47 localization wall and exact uniform witness")
