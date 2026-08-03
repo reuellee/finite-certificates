@@ -10,6 +10,8 @@ derived walls do not control their multiple intersections.  On the positive
 side, Section 11 proves a sharp COM--Helly theorem reducing the desired bound
 to one precise support-state property, while Section 12 gives an exact
 classification and a regularity theorem for every possible derived wall.
+Section 13 weakens the remaining support-state target to a finite feasible-COM
+completion problem and proves that wall topology alone cannot close it.
 The main unconditional conclusion is already useful:
 
 > For a normalized realization space of dimension `D`, every jointly
@@ -891,3 +893,90 @@ smoothness of complex rank-four realization spaces through nine elements
 ([Corey--Luber, Theorem 1.3](https://arxiv.org/abs/2307.11915)) does not supply
 that step: smooth real loci and their open sign regions can still be
 disconnected or carry homology.
+
+## 13. The weakest finite COM target presently sufficient
+
+Even perfect simultaneous-wall topology would not by itself close the gap.
+Take the LP family (17)--(19) and replace its base by
+`(0,m) times R^8`.  Its distinct internal walls are parallel affine
+hyperplanes in a convex nine-manifold and give a regular pseudohyperplane cell
+decomposition.  Nevertheless
+
+\[
+ F_i=((0,i-1)\mathbin\cup(i,m))\times\mathbb R^8
+\]
+
+has an arbitrarily large minimal empty family.  Thus normal crossings,
+regular-CW structure, or Alexander duality applied only to the derived walls
+cannot prove Extension--Helly.  A proof must also control how extension
+feasibility labels the wall chambers.  Naive codimension counting already
+fails inside the exact classification: residual types 46 and 47 have the same
+factor
+
+\[
+ q=af-bf-cd+ce,
+\]
+
+although their full determinants are respectively, up to sign,
+`[1246]q` and `[1248]q`.
+
+The raw support-state class (20) need not itself be proved to be a COM.  The
+following strictly weaker completion property is sufficient.
+
+> **Feasible COM Completion, `FCC_9(M)`.**  There is a rank-at-most-nine COM
+> tope family `C_M`, on the dominance-reduced extension coordinates, such
+> that
+> \[
+>       \mathcal C_M\subseteq K_{\mathbb R}(M)
+> \]
+> and `C_M` contains every maximal face of `K_R(M)`.
+
+> **COM-completion implication.**  If `FCC_9(M)` holds, then
+> `h(M)<=10`.
+
+**Proof.**  Because every member of `C_M` is a feasible face and
+`K_R(M)` is downward closed,
+`K(C_M) subseteq K_R(M)`.  Conversely, every face of the finite complex
+`K_R(M)` is contained in a maximal face, and every maximal face is a member
+of `C_M`.  Hence `K_R(M) subseteq K(C_M)`.  The two complexes are equal, so
+the COM--Helly theorem with `d=9` gives the claim.  QED.
+
+Only maximal **generic** support states are needed to test `FCC_9(M)`.  If
+`Y` lies on a derived wall, choose one strict-inequality witness column for
+each signature in its finite support `T(Y) intersection E(M)`.  All those
+inequalities persist under one sufficiently small perturbation of `Y`.
+The perturbation may also be chosen off every non-identically-zero derived
+wall.  Therefore `T(Y)` is contained in a generic support state, and a maximal
+face cannot occur only on a degenerate stratum.
+
+This gives a finite COM-completion problem rather than a simultaneous-wall
+topology problem: enumerate maximal generic supports, add only certified
+feasible subfaces needed as Hamming bridges, check that the resulting
+one-inclusion graph is an antipodally gated partial cube, and check that its
+COM rank is at most nine.  Failure of the *raw* support graph to be a COM would
+not refute this completion target.
+
+There is also a sharp warning against moving the argument to the whole
+ambient Grassmannian.  For an open coordinate orthant `O subset R^N`, put
+
+\[
+ A_O=\{L\in\operatorname{Gr}_{\mathbb R}(k,N):L\cap O\ne\varnothing\}.
+\]
+
+Then
+
+\[
+             A_O\simeq\operatorname{Gr}_{\mathbb R}(k-1,N-1).    \tag{28}
+\]
+
+Indeed, use the incidence space of pairs `(L,[v])` with `[v] in P(O)` and
+`[v] subset L`.  Projection to the open simplex `P(O)` has fiber
+`Gr_R(k-1,N-1)`.  Projection to `A_O` has a nonempty open convex-polytope
+fiber; a continuous analytic-center section and straight-line contraction
+make it a homotopy equivalence.  At `(k,N)=(4,56)`, the ambient orthant locus
+therefore has the homotopy type of `Gr_R(3,55)`, not of a cell.  Any acyclicity
+proof must use the special third-compound pullback (23) and the fixed parent
+realization chamber.  An ambient compatible affine chart does make `A_O`
+star-shaped, but its straight-line contraction generally leaves the
+third-compound image; an intrinsic compound-chart lifting theorem would be a
+different sufficient bridge.
