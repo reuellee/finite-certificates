@@ -92,3 +92,40 @@ python ai/omreal/verify_seeat_width7.py
 Both certificates embed their exact realization witnesses.  Their negative
 claims use only uniform chirotope GP signs; sampled charts are not part of the
 trust boundary.
+
+## Exact eight-coordinate chart-support cube
+
+`seeat_parent2599_shatter8.npz` certifies that the raw chart-support concept
+class for row 2599 shatters eight extension signatures.  It contains one
+exact `4x8` parent chart for each of the 256 binary patterns, an integer
+strict-cone witness for every supported bit, and nonnegative integer Gordan
+weights for every unsupported bit.
+
+SHA-256: `d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb`
+
+```console
+python ai/omreal/verify_seeat_shatter8.py
+```
+
+This certificate concerns raw support states.  It does not assert that the
+maximal faces of the compatibility complex shatter the same coordinates and
+therefore does not, by itself, lower-bound feasible-COM completion rank.
+
+## Exact deletion-fiber nonconvexity
+
+`seeat_parent2599_residence_nonconvex.npz` gives two integer positions of one
+deleted row-2599 parent column that support the same extension signature, and
+proves with a positive Gordan dependence that their vector midpoint does not.
+All three positions independently reproduce the parent chirotope.  The two
+positive extension witnesses and the midpoint dependence are checked using
+integer arithmetic only.
+
+SHA-256: `a7c4e85b4be56c078b96c6f6ff0a314c3daf5abc382fa76fdc1da4b7177645a6`
+
+```console
+python ai/omreal/verify_seeat_residence_nonconvex.py
+```
+
+The certificate rules out an ordinary convex-Helly proof applied fiberwise
+after deleting one parent element.  It does not disprove the 8--9--10
+Extension--Helly Conjecture.

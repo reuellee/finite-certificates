@@ -14,6 +14,9 @@ theorem for every possible derived wall.
 Section 13 isolates a finite feasible-COM completion target, proves that wall
 topology alone cannot close it, and shows that the completion target is a
 strictly stronger high-risk conjecture rather than an equivalent reformulation.
+It also records exact row-2599 certificates for an eight-coordinate raw
+support cube and for nonconvexity inside one deletion-residence fiber; both
+results sharpen the proof boundary without settling the conjecture.
 The main unconditional conclusion is already useful:
 
 > For a normalized realization space of dimension `D`, every jointly
@@ -219,7 +222,15 @@ larger minimal nonface.  If the second edge class is empty, this bounded-arity
 hypergraph has the same independent sets and colorings as `H_min(M)`; after
 deleting nonminimal edges, it is exactly `H_min(M)`.
 
-## 4. The finite conjecture to test
+## 4. The 8--9--10 Extension--Helly conjecture
+
+The working name for the catalog-sized statement is the **8--9--10
+Extension--Helly Conjecture**: eight parent elements leave nine normalized
+realization parameters, and the claim is that every incompatibility has a
+ten-element witness.  If proved, the result will be called the **8--9--10
+Extension--Helly Theorem**, with the descriptive subtitle *ten-locality for
+`UOM(4,8)` extension atlases*.  The numerical name is specific to this finite
+cell; formula (7) is the corresponding higher-rank research program.
 
 The direct statement that saves computation is the following.
 
@@ -237,6 +248,12 @@ not that brute-force exhaustion is presently cheap:
 > \[
 >       \widetilde H_{9-|S|}(F_S;\mathbb Q)=0.           \tag{5}
 > \]
+
+For proof planning, (5) is the **Nine-Diagonal Vanishing Lemma**.  The word
+“lemma” is aspirational until it is proved; its nine entries are displayed in
+the table in Section 3.  It is the weakest currently isolated topological
+bridge to the named 8--9--10 theorem, whereas `FCC_9` would prove the stronger
+integral Leray statement.
 
 This strengthening is intentionally quantified over every internal antichain
 of proper regions, not only globally minimal regions from `E(M)`.  Therefore
@@ -1131,6 +1148,50 @@ of Extension--Helly and not the weakest possible remaining lemma.  A necessary
 falsification gate is immediate: if the maximal feasible supports of one
 parent shatter ten dominance-reduced extension coordinates, then `FCC_9(M)`
 is false even though the ten-local Helly conjecture may still hold.
+
+An exact row-2599 experiment distinguishes maximal faces from raw chart
+supports.  Eight realizable extension signatures were selected, and one exact
+integer parent chart was found for every one of their `2^8=256` support
+patterns.  For each supported bit the certificate contains an integer point
+in the corresponding strict extension cone.  For each unsupported bit it
+contains nonnegative integer Gordan weights annihilating the signed derived
+normals.  Thus the **raw chart-support concept class** has VC dimension at
+least eight.
+
+This does *not* prove that the facets of `K_R(M)` shatter those coordinates,
+and therefore does not lower-bound `cr_COM(K_R(M))`: a feasible COM completion
+may omit intermediate chart-support states and retain only maximal faces.
+The distinction corrects the tempting but invalid inference from a shattered
+sample of charts to a lower bound for every completion.  The exact result is
+still a useful proof boundary: the raw support states cannot themselves be a
+COM of rank at most seven.
+
+```console
+python ai/omreal/verify_seeat_shatter8.py
+```
+
+A second exact row-2599 certificate rules out a more geometric shortcut.
+Delete parent element 1 and fix the other seven columns.  There are two
+integer positions `u,v` of the deleted column that both realize `M` and both
+support one fixed extension signature.  The vector midpoint `u+v` still
+realizes `M`, but the signed derived normals there have a positive Gordan
+dependence.  Hence that extension is infeasible at the midpoint.
+
+> **Residence nonconvexity proposition.**  Even for a fixed realizable
+> `UOM(4,7)` deletion, an extension-feasibility region inside the convex
+> three-dimensional residence fiber of the eighth parent element need not be
+> convex.
+
+```console
+python ai/omreal/verify_seeat_residence_nonconvex.py
+```
+
+Consequently the attractive decomposition `9=6+3` does not turn the desired
+bound into ordinary convex Helly on a six-dimensional deletion base and a
+three-dimensional residence fiber.  Strong Euclideanness of the abstract
+seven-element deletion does not repair this missing real-geometric
+convexity.  Any deletion-based proof must control the topology of these
+nonconvex fiber regions rather than assume it away.
 
 Only maximal **generic** support states are needed to test `FCC_9(M)`.  If
 `Y` lies on a derived wall, choose one strict-inequality witness column for
