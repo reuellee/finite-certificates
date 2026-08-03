@@ -746,6 +746,7 @@ with a reader that consumes only complete lines and records byte offsets.
 | `cert47.py` | certificates for (4,5), (4,6), (4,7), (3,7) |
 | `rank3check.py` | the same question at (3,10), against published ground truth |
 | `ATLAS_SPEC.md` | design note: generalizing the coverage tree into a reusable property-slot artifact (task item 6, secondary) |
+| `CORE_PILOT.md` | follow-up finite-certificate experiment: emitted BFP cores fail the preregistered compression gate on a deterministic 64-class minor-minimal sample |
 | `data/minimal_ext.txt` | **the minor-minimal list so far**, 1,758 canonical keys at 19.12% of the catalog (tracked) |
 | `data/minimal_sweep.txt` | the 1,279 at the frozen 15.58% prefix — a subset of the above, and the list every ancillary analysis was run against (tracked) |
 | `data/minimal_uniform.txt` | the 11 found in the uniform corpus (tracked) |
