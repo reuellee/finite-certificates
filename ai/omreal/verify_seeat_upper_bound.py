@@ -111,7 +111,7 @@ def main():
 
     print("PASS all 97,224 extension signatures assigned with exact integer points")
     print("THEOREM: atlas width(parent 2599) <= 178")
-    print("COMBINED WITH LOWER BOUND: 5 <= atlas width(parent 2599) <= 178")
+    print("UPPER-BOUND CERTIFICATE COMPLETE")
 
 
 if __name__ == "__main__":

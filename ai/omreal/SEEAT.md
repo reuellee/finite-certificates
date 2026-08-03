@@ -5,10 +5,10 @@ realizations of one deletion into finitely many *derived-oriented-matroid
 charts*, and it makes extension feasibility constant on each chart.  The
 proposed strengthening to four charts for `UOM(4,8)` is **false**: catalog row
 2599 has 97,224 realizable uniform extensions, while four charts can cover at
-most 96,576.  Two compact exact-matrix certificates now prove
+most 96,576.  Compact exact certificates now prove
 
 \[
-       \boxed{5\ \leq\ w(2599)\ \leq\ 178},
+       \boxed{7\ \leq\ w(2599)\ \leq\ 178},
 \]
 
 where `w(M)` is the minimum number of realization charts whose topes cover all
@@ -329,10 +329,11 @@ lower certificate proves every abstract extension realizable, this is exactly
 the required realization-atlas cover.
 
 > **Explicit upper-bound theorem.**  The realizability-atlas width of `(4,8)`
-> catalog row 2599 is at most 178.  Combined with the four-chart obstruction,
+> catalog row 2599 is at most 178.  Combined with the chromatic obstruction in
+> Section 7,
 >
 > \[
->          \boxed{5\leq w(2599)\leq178}.
+>          \boxed{7\leq w(2599)\leq178}.
 > \]
 
 *Proof.*  For every stored chart, recompute the 70 parent brackets and check
@@ -357,10 +358,138 @@ images arising from 35 underlying parent arrangements.  This explains the
 certificate's provenance but proves no optimality: 178 is only the best
 explicit upper bound found in that finite bank.
 
-## 7. The actual next target
+## 7. A topological lower-bound machine
+
+There is a sound way for algebraic topology to exclude five charts, and
+possibly many widths at once, but it is not the homotopy type of the parent
+realization space.  Let `Rext(M)` be the realizable uniform single-element
+extension signatures of `M`.  Define the **nonamalgamation graph** `G_M` on
+`Rext(M)` by joining `sigma` and `tau` if there is no uniform rank-`r` oriented
+matroid on `E union {p,q}` whose two one-element restrictions are the
+prescribed extensions.
+
+> **Simultaneous-extension chromatic bound.**  For every subgraph `H` of
+> `G_M` with no isolated vertices,
+>
+> \[
+> w(M)\ \geq\ \chi(G_M)\ \geq\ \chi(H)\ \geq\
+> \operatorname{ind}_{\mathbb Z_2}B(H)+2,
+> \]
+>
+> where `B(H)` is the box complex and `ind` is the least dimension `d` for
+> which there is an equivariant map from `B(H)` to the antipodal sphere
+> `S^d`.
+
+*Proof.*  Suppose `Y_1,...,Y_k` are charts covering `Rext(M)`, and color every
+signature by one chart that realizes it.  If `sigma` and `tau` receive the
+same chart `Y`, choose a realizing column `x` for `sigma`.  The feasible
+columns for `tau` form a nonempty open cone.  Choose `z` in that cone but
+outside the finite union of hyperplanes spanned by the `(r-1)`-subsets of the
+columns of `(Y,x)`.  Every forbidden hyperplane is proper because `(Y,x)` is
+uniform.  Then `(Y,x,z)` is a uniform real two-element amalgam.  Thus every
+color class is independent in `G_M`, proving `w(M) >= chi(G_M)`.
+
+An `m`-coloring of `H` is a graph homomorphism `H -> K_m`.  Functoriality of
+the box complex gives a `Z_2`-map `B(H) -> B(K_m)`, while `B(K_m)` is
+equivariantly homotopy equivalent to antipodal `S^(m-2)`.  Hence
+`ind B(H) <= m-2`, proving the remaining inequality.  QED.
+
+For row 2599, every proposed edge of `G_M` has a small finite certificate.  A
+rank-4 chirotope on ten elements has 210 bracket signs.  The parent fixes 70,
+and the two extensions fix `56+56`, leaving only the 28 mixed signs
+
+\[
+       \chi(i,j,p,q),\qquad 1\leq i<j\leq8.
+\]
+
+The three-term Grassmann--Pluecker axioms give a 28-variable SAT instance.
+An LRAT proof of its unsatisfiability certifies an edge using no real algebra,
+sampled chart, or realization search.  Even smaller certificates often work:
+an ordered list of GP relations can force mixed signs one at a time and end
+with a relation whose three signed products are equal.  In an exact pilot, all
+986 nonamalgamation edges found among 256 sampled projective signatures had
+such branch-free propagation traces.  This proves that the graph is
+nontrivial and the edge oracle is cheap; it does not prove that the graph is
+six-chromatic.  Indeed, that pilot subgraph has an explicit four-coloring.
+
+### An exact seven-chromatic obstruction
+
+The finite search did more than exclude five charts.  Among 220 projective
+extension signatures it found a subgraph `H` with 3,472 certified
+nonamalgamation edges and
+
+\[
+                       \chi(H)=7.
+\]
+
+The 68-KB certificate `data/seeat_parent2599_width7.npz` contains one exact
+parent matrix and completion point for every vertex, a branch-free GP
+propagation contradiction for every edge, a full positive two-extension
+control, a six-clique used to break color symmetry, a 14,791-node exhaustive
+proof tree refuting six colors, and an explicit seven-coloring.
+
+> **Chromatic lower-bound theorem.**  The realizability-atlas width of `(4,8)`
+> catalog row 2599 is at least seven.  In particular, neither five nor six
+> realization charts suffice, and
+>
+> \[
+>                         \boxed{7\leq w(2599)\leq178}.
+> \]
+
+*Proof.*  The exact matrices and points prove that all 220 graph vertices are
+realizable extensions.  The GP traces prove that every graph edge is a
+universal nonamalgamable pair.  By the simultaneous-extension chromatic bound,
+`w(2599) >= chi(H)`.  The finite coloring proof gives `chi(H) >= 7`; the stored
+seven-coloring gives equality.  Section 6 supplies the upper bound.  QED.
+
+The standalone verifier reconstructs the 3,150 rank-4 GP relations, checks all
+220 exact realizations and all 3,472 edge traces, replays every live branch of
+the six-color refutation, and checks the seven-color witness:
+
+```console
+python ai/omreal/verify_seeat_width7.py
+```
+
+SHA-256: `ec7ef2ad9f37467e00a5ea739d67f90c4c53b304f4d82d47ac72591a58477dc7`.
+The companion 3.7-KB certificate checked by `verify_seeat_k6.py` isolates the
+six-clique: its 15 edge proofs already give `w(2599) >= 6` and serve as a fast
+canary.  The six-clique alone gives only six; the full graph's exact
+non-6-colorability is the strictly stronger step.
+
+Equivariant topology remains the general machine.  A finite subcomplex of
+`B(H)` with a quotient cocycle `alpha` and a cycle `z` satisfying
+`<alpha^d,z>=1` proves `w_1^d != 0` and hence `w(M) >= d+2`.  The six-clique is
+the basic `d=4` obstruction.  The stronger bound seven currently comes from
+the exact coloring certificate; no claim that `w_1^5` is nonzero is made.
+
+### Why ordinary homotopy does not see the width
+
+Let `K_M` be the compatibility complex whose faces are sets of signatures
+simultaneously feasible over one parent realization.  Every one of the 2,624
+universal lexicographic signatures is a cone vertex: adjoining it to a face
+preserves that face.  If `L` is this universal core, then
+
+\[
+          K_M=\Delta^{2623}*K_M[\operatorname{Rext}(M)\setminus L],
+\]
+
+so `K_M` is contractible.  Its ordinary homology, homotopy type, and
+Lusternik--Schnirelmann category can therefore be trivial while its atlas
+width is at least seven.  This is not a technical gap: those invariants measure
+a cover of one topological space, whereas an atlas is a finite point
+transversal for a family of feasibility regions.  The box complex retains the
+coloring obstruction that the ordinary nerve forgets.
+
+The chromatic method is sufficient, not complete.  A failed box-index search
+would not prove that seven charts exist.  If pairwise incompatibility reaches
+its limit, the same perturbation proof extends to a hypergraph whose
+hyperedges are finite sets admitting no common uniform amalgam; a certified
+non-7-colorable core would prove `w(M) >= 8`.
+
+## 8. The actual next target
 
 The theorem removes the conceptual obstacle; tightening
-`5 <= w(2599) <= 178` is now a finite covering problem.  The next experiment
+`7 <= w(2599) <= 178` is now a finite covering problem.  The next experiment
 should not rerun realizability searches.  It should:
 
 1. quotient both signatures and charts by antipodality and the labeled parent
@@ -371,9 +500,12 @@ should not rerun realizability searches.  It should:
    for positive-circuit incompatibilities proving that specified groups cannot
    share one chart;
 4. enlarge the parent-chart bank only when a new exact realization covers many
-   previously uncovered signatures; and
-5. seek a semialgebraic or topological certificate excluding small covers only
-   after its finite obstruction is stated explicitly.
+   previously uncovered signatures;
+5. enlarge the exact nonamalgamation graph and seek a non-7-colorable core or
+   a `w_1^6` box-index witness, moving to higher-order forbidden cores only if
+   pairwise incompatibility is too weak; and
+6. seek a semialgebraic cover certificate only after its finite obstruction is
+   stated explicitly.
 
 That computation is arrangement enumeration plus canonical set union.  It
 contains no nonlinear realization attempt per child.  A cover from any chart
@@ -391,4 +523,7 @@ universal overlap is the next theoretical target.
 * B. Sturmfels, G. M. Ziegler, *Extension spaces of oriented matroids*,
   Discrete & Computational Geometry 10 (1993), 23–45,
   [open preprint](https://www.mi.fu-berlin.de/math/groups/discgeom/ziegler/Preprintfiles/020PREPRINT.pdf).
+* J. Matousek, G. M. Ziegler, *Topological lower bounds for the chromatic
+  number: A hierarchy*, Jahresbericht der DMV 106 (2004), 71–90,
+  [arXiv:math/0208072](https://arxiv.org/abs/math/0208072).
 * T. Zaslavsky, *Facing up to arrangements*, Memoirs of the AMS 154 (1975).
