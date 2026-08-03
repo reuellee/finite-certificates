@@ -19,6 +19,11 @@ part relevant to the census.  The distinction matters: finiteness is a theorem,
 while a useful small atlas remains a concrete computational and theoretical
 target.
 
+The follow-up [`ATLAS_HELLY.md`](ATLAS_HELLY.md) identifies the exact
+compatibility nerve behind atlas width.  It proves an unconditional
+small-core-or-homology dichotomy and proposes a finite Helly conjecture for all
+realizable `UOM(4,8)` parents.
+
 ## 1. The derived arrangement
 
 Let `M` be a realizable uniform oriented matroid of rank `r` on a labeled set
