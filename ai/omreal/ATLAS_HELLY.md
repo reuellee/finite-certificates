@@ -977,6 +977,8 @@ make it a homotopy equivalence.  At `(k,N)=(4,56)`, the ambient orthant locus
 therefore has the homotopy type of `Gr_R(3,55)`, not of a cell.  Any acyclicity
 proof must use the special third-compound pullback (23) and the fixed parent
 realization chamber.  An ambient compatible affine chart does make `A_O`
-star-shaped, but its straight-line contraction generally leaves the
-third-compound image; an intrinsic compound-chart lifting theorem would be a
-different sufficient bridge.
+star-shaped: on `L=row[I_k|B]`, put
+`(B_0)_(ij)=sigma_i sigma_(k+j)`; if `p` witnesses `B`, the same `p` witnesses
+`(1-t)B+tB_0`.  This straight-line contraction generally leaves the
+third-compound image, however.  An intrinsic compound-chart lifting theorem
+would be a different sufficient bridge.
