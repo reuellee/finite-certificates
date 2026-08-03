@@ -3,6 +3,13 @@
 **Status.**  This note separates one finite conjecture from several unconditional
 theorems.  The conjecture is deliberately catalog-sized: it concerns all
 2,604 realizable `UOM(4,8)` reorientation classes, not only parent row 2599.
+It is still a conjecture.  Two proof shortcuts that would have made it nearly
+formal are now ruled out below: neither convex private LP fibers nor sparse
+Gordan circuits impose a dimension-only Helly bound, and smooth individual
+derived walls do not control their multiple intersections.  On the positive
+side, Section 11 proves a sharp COM--Helly theorem reducing the desired bound
+to one precise support-state property, while Section 12 gives an exact
+classification and a regularity theorem for every possible derived wall.
 The main unconditional conclusion is already useful:
 
 > For a normalized realization space of dimension `D`, every jointly
@@ -523,6 +530,43 @@ empty family.  Each is defined by one strict quadratic inequality, yet `m` is
 arbitrary.  Any dimension-only proof of (7) must therefore use special
 oriented-matroid extension structure; semialgebraicity alone cannot prove it.
 
+The obstruction persists in exactly the shared/private LP format used by
+extension feasibility.  Let `a=i-1`, `b=i`, give the `i`th constraint a private
+variable `p=(u,v,s,t)`, and use the five rows
+
+\[
+\begin{split}
+ r_1&=(1,0,0,0),\\
+ r_2&=(-1,x-a,0,0),\\
+ r_3&=(-1,x-b,0,0),\\
+ r_4&=(0,0,1,0),\qquad r_5=(0,0,0,1).
+\end{split}                                             \tag{17}
+\]
+
+Require `r_j(x) p>0` for all five rows.  The matrix is affine in the one shared
+parameter `x`, has rank four everywhere, and every feasible private fiber is
+an open convex cone.  Nevertheless its feasible base region is exactly
+
+\[
+                 F_i=(0,i-1)\cup(i,m).                  \tag{18}
+\]
+
+Indeed, for `a<x<b`, Gordan's alternative has the exact positive dependence
+
+\[
+       r_1+(b-x)r_2+(x-a)r_3=0;                         \tag{19}
+\]
+
+at the endpoints use `r_1+r_2=0` or `r_1+r_3=0`.  For `x<a`, take
+`p=(epsilon,-1,1,1)` with `0<epsilon<a-x`; for `x>b`, take
+`p=(epsilon,1,1,1)` with `0<epsilon<x-b`.  Thus (18) follows.  The regions are
+proper and pairwise incomparable, their total intersection is empty, and
+deleting region `i` leaves `(i-1,i)`.  Pointwise infeasibility even has a
+Gordan circuit of support at most three.  Consequently a proof based only on
+Caratheodory support size, affine parameter dependence, full column rank, or
+convex private fibers cannot prove Extension--Helly.  It must use identities
+special to the 56 normals derived from one `UOM(4,8)` parent.
+
 ### Core arity is not atlas width
 
 A bound `h(M)<=10` says every minimal compatibility constraint has arity at
@@ -611,3 +655,239 @@ There are three success levels, in increasing strength.
 The first is finitely falsifiable, and any produced witness is auditable; the
 second is the useful general theorem; the third identifies the true
 theoretical boundary.
+
+## 11. A sharp conditional theorem from COM structure
+
+There is now a precise combinatorial bridge which, if established for the
+chart-support states, proves the conjecture with the desired constant.  Recall
+that a complex of oriented matroids (COM) has a tope graph which is a partial
+cube.  Knauer and Marc prove that these are exactly the **antipodally gated**
+partial cubes: every antipodal convex subgraph has a gate from every outside
+vertex.  They also identify COM rank with the largest cube obtainable by
+contracting edge classes; see [their Theorem 1.1 and Lemma
+4.2](https://arxiv.org/abs/1701.05525).
+
+> **COM--Helly theorem.**  Let `C subseteq 2^E` be the tope set of a COM of
+> rank at most `d`, encoding a positive sign by membership.  Form
+> \[
+>       K(C)=\{S\subseteq E:S\subseteq Q\text{ for some }Q\in C\}.
+> \]
+> Every minimal nonface of `K(C)` has size at most `d+1`.
+
+**Proof.**  Let `R` be a minimal nonface of size `m`.  The case `m=1` is
+immediate.  If `m=2`, its two singleton witnesses take opposite signs in each
+restricted coordinate.  Strong elimination supplies a covector with zero in
+one of them; deleting the other coordinate gives `{+,-,0}`, so the COM has
+rank at least one and `m<=d+1`.  Assume `m>=3` and delete the
+coordinates outside `R`.  For every `i in R`,
+minimality supplies a tope positive on `R minus {i}`.  It must be negative at
+`i`, since no tope is positive on all of `R`.  Reorient all coordinates.
+The restricted tope system therefore contains every singleton `{i}` but not
+the empty set.  To justify the latter carefully, undo the reorientation: an
+all-negative tope after reorientation would be all-positive on `R` before it,
+and composition with any original tope would extend it to an original tope
+positive on all of `R`.  The restriction is simple: singleton patterns rule
+out constants, and a third singleton rules out both parallel and antiparallel
+coordinate pairs.  Deletion and reorientation preserve COMs.
+
+We claim inductively that every nonempty proper subset `A` of `R` is a tope.
+Singletons are present.  For two singletons `{a}` and `{b}`, partial-cube
+isometry supplies a length-two cube path.  Its middle vertex is either the
+missing empty set or `{a,b}`, so `{a,b}` is present.
+
+Now let `3<=|A|<m`, assume all smaller nonempty subsets occur, and suppose `A`
+does not.  The induced graph on
+
+\[
+                     2^A\setminus\{\varnothing,A\}
+\]
+
+is convex: a cube geodesic between two of its vertices fixes every coordinate
+outside `A`, and the only other possible vertices are the two assumed missing
+ones.  It is antipodal under `B mapsto A minus B`.  Hence it must be gated.
+Choose `ell in R minus A`.  The outside vertex `{ell}` has every singleton
+`{a}`, `a in A`, as a nearest vertex, all at distance two.  It has no unique
+gate, a contradiction.  This proves the claim.
+
+Fix `ell in R`.  Deleting coordinate `ell` now produces every vertex of the
+cube on `R minus {ell}`: use tope `U` for a nonempty trace `U`, and `{ell}` for
+the empty trace.  Thus the tope graph contracts to `Q_(m-1)`, so its COM rank
+is at least `m-1`.  Therefore `m<=d+1`.  QED.
+
+The bound is sharp: the lopsided COM with topes
+`2^[d+1] minus {[d+1]}` has rank `d` and its full coordinate set is a minimal
+nonface of size `d+1`.
+
+For a parent `M`, define the complete support-state class
+
+\[
+ \mathcal Q(M)=\{T(Y)\cap E(M):Y\in\mathcal R(M)\}.     \tag{20}
+\]
+
+There is an exact compound-Grassmannian description of (20), valid in every
+rank.  Let the rows of an `r by n` realization matrix `Y` be
+`v_1,...,v_r`, let `V=row(Y)`, and, for `p=(p_1,...,p_r)`, set
+
+\[
+ q_Y(p)=\sum_{j=1}^r(-1)^{j+r}p_j
+ v_1\wedge\cdots\wedge\widehat v_j\wedge\cdots\wedge v_r
+ \in\bigwedge^{r-1}V.                                  \tag{21}
+\]
+
+The `I={i_1<...<i_(r-1)}` coordinate of (21) is
+
+\[
+ \sum_j(-1)^{j+r}p_j\det Y_{[r]\setminus j,I}
+   =\det(y_{i_1},...,y_{i_{r-1}},p)                    \tag{22}
+\]
+
+by Laplace expansion.  The `r` omitted-row wedges form a basis of
+`wedge^(r-1) V`, so `q_Y` is a linear isomorphism.  If `O_sigma` denotes the
+open coordinate orthant prescribed by an extension signature, then
+
+\[
+ F_\sigma=\{Y\in\mathcal R(M):
+       \bigwedge^{r-1}\operatorname{row}(Y)\cap O_\sigma
+       \ne\varnothing\}.                                  \tag{23}
+\]
+
+Positive column rescaling acts by positive coordinate rescaling on the wedge,
+so (23) is well-defined on normalized projective realization space.  For a
+family `S`, the incidence space (2) is exactly the space of `Y` (with
+`V=row(Y)`) together with
+independently chosen points
+`q_sigma in wedge^(r-1)V intersection O_sigma`.  This
+removes the private columns from the formulation without changing their
+convex fibers.  At `(4,8)`, Extension--Helly is therefore a Helly statement
+for open-orthant hits by the third-compound four-plane `wedge^3 V` as `V`
+varies over the nine-dimensional positive-diagonal quotient (equivalently,
+a projective-frame slice) of one oriented Grassmannian stratum.
+
+Derived-degenerate realizations may be included in (20) without changing the
+compatibility complex: any finite set of uniform extensions feasible at a
+degenerate `Y` remains feasible after a sufficiently small generic
+perturbation, because all of its determinant inequalities are strict.  The
+COM--Helly theorem proves Extension--Helly if `Q(M)` is the tope set of a COM
+of rank at most nine.  Equivalently, after the usual COM simplification of
+constant, parallel, and antiparallel coordinates, its one-inclusion graph
+must be an antipodally gated partial cube with no cube contraction above
+dimension nine.
+
+This last sentence is a **reduction, not a proved property of (20)**.  A local
+derived mutation, even with its degenerate bridge state, does not establish
+global partial-cube distances or gatedness; nor does a nine-dimensional
+parameterization by itself bound VC/COM rank.  These are now the exact two
+claims a COM proof must establish or falsify.
+
+The standard realizable-COM construction does not fill this gap.  It starts
+with a fixed hyperplane arrangement restricted to an open convex set; see
+[Bandelt--Chepoi--Knauer](https://arxiv.org/abs/1507.06111).  Here both the
+adjoint arrangement and its topes vary with `Y`, and
+[Falk](https://doi.org/10.1090/S0002-9939-1994-1209098-1) shows that even the
+intersection lattice and complement topology of a discriminantal arrangement
+can depend on the chosen realization.  Commuting this variation with the
+inverse-locus quantifier in (20) is precisely the new work required.
+[Sturmfels--Ziegler's](https://doi.org/10.1007/BF02573961) connectedness of the
+poset of realizable one-element extensions does not commute it: that theorem
+varies the extension over a fixed abstract parent, whereas (20) fixes several
+extension signatures and varies the common parent realization.
+
+## 12. Exact derived-wall classification and one-wall regularity
+
+The local geometry needed by that bridge can be settled completely.  For a
+uniform ordered configuration `Y=(y_1,...,y_8)` in `R^4`, put
+
+\[
+ a_I(v)=\det(y_i,y_j,y_k,v),\qquad I=\{i,j,k\},
+\]
+
+and for four distinct triples `E={I_1,...,I_4}` put
+
+\[
+                 D_E(Y)=\det(a_{I_1},...,a_{I_4}).      \tag{24}
+\]
+
+> **Derived-wall theorem.**  Up to relabeling the eight parent elements and
+> permuting the four triples, there are exactly 52 incidence types in (24).
+> Fourteen are identically zero: exactly those in which all four triples share
+> a label or some three triples share a pair.  On the uniform locus, 25 more
+> are everywhere nonzero because `D_E` is, up to sign, a monomial in parent
+> brackets.  The remaining 13 have a genuine nonconstant residual factor.
+>
+> If `D_E` is not identically zero, then at every uniform `Y` with `D_E(Y)=0`
+> the four normals have rank exactly three and `dD_E|_Y` is nonzero.  Hence
+> every genuine derived wall is a smooth cooriented hypersurface in every
+> normalized `UOM(4,8)` realization cell.
+
+The finite classification is independently reproducible with
+[`verify_derived_walls.py`](verify_derived_walls.py).  It exhausts all
+`binom(56,4)=367,290` four-sets, obtains the 52 orbits from a complete incidence
+invariant, and verifies all bracket factorizations in exact symbolic
+arithmetic.  It finds `14+25+13=52`; no sampling or floating point is used.
+
+Here is the exact proof.  The two structural patterns vanish for elementary
+linear-algebra reasons.  If all four triples contain `e`, their normals lie in
+the three-space annihilating `y_e`.  If three contain `{e,f}`, those three
+normals lie in the two-space annihilating `span(y_e,y_f)`.
+
+For the converse and the counts, every uniform configuration can, after the
+same relabeling used for an orbit representative, be normalized to
+
+\[
+ Y=[e_1,e_2,e_3,e_4,(1,1,1,1),(1,a,b,c),
+                    (1,d,e,f),(1,g,h,i)].              \tag{25}
+\]
+
+All divisions used here are by parent brackets, hence are valid on the
+uniform locus.  The exact checker enumerates the 52 incidence orbits and
+expands (24) in the nine variables in (25).  The fourteen structural types
+are exactly the zero polynomials.  Each of the 25 fixed types is a signed
+parent-bracket monomial.  Every other type has
+
+\[
+                         D_E=\pm M_E q_E,               \tag{26}
+\]
+
+where `M_E` is a parent-bracket monomial and `q_E` is an irreducible residual
+coprime to every parent bracket.  The checker additionally verifies the
+following pivot derivatives, up to sign:
+
+| residual orbit | pivot derivative |
+|---:|---|
+| 36 | `partial_a q = [1237]` |
+| 37 | `partial_a q = [1257]` |
+| 38 | `partial_a q = [1278]` |
+| 39 | `partial_a q = [2378]` |
+| 41 | `partial_a q = [2457]` |
+| 42 | `partial_a q = [2478]` |
+| 44 | `partial_d q = [2356][1258]` |
+| 46, 47 | `partial_a q = [1237]` |
+| 48 | `partial_a q = 1` |
+| 49 | `partial_d q = 1` |
+| 50 | `partial_d q = [1238]` |
+| 51 | `partial_f q = [2468][1456]` |
+
+Every entry in the right column is nonzero on the uniform locus.  At a zero
+of (26), `q_E=0`, and therefore
+
+\[
+                  dD_E=\pm M_E\,dq_E\ne0.              \tag{27}
+\]
+
+This proves regularity in the normalized realization space directly.  It
+also proves that the four normals have rank exactly three: at rank at most
+two every three-by-three cofactor of their four-by-four matrix vanishes, so
+the differential of its determinant, and hence its pullback `dD_E`, would be
+zero.  The regular-value theorem now gives a smooth cooriented hypersurface.
+QED.
+
+This theorem settles one wall only.  Smooth hypersurfaces can still have
+disconnected sign regions and topologically complicated multiple
+intersections; the affine LP family (17)--(19) already demonstrates that
+smooth walls plus convex private fibers are insufficient.  The remaining
+Extension--Helly problem is therefore genuinely the global COM/gatedness or
+diagonal-homology step, not a hidden singular-wall issue.  The known
+smoothness of complex rank-four realization spaces through nine elements
+([Corey--Luber, Theorem 1.3](https://arxiv.org/abs/2307.11915)) does not supply
+that step: smooth real loci and their open sign regions can still be
+disconnected or carry homology.
