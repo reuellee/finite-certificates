@@ -48,9 +48,7 @@ DEFAULT_NONREAL = [
     os.path.join(HERE, 'data', 'core_minimal_sample.jsonl'),
 ]
 DEFAULT_REAL = [
-    os.path.join(REPO, 'ai', 'omopen', 'data',
-                 'validation_realizable.jsonl'),
-    os.path.join(REPO, 'ai', 'omopen', 'data', 'certs_realizable.jsonl'),
+    os.path.join(HERE, 'data', 'core_realizable_controls.jsonl'),
 ]
 DEFAULT_OUT = os.path.join(HERE, 'data', 'core_minimal_pilot.json.gz')
 

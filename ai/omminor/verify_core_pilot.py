@@ -2,10 +2,11 @@
 """Independent exact checker for ``data/core_minimal_pilot.json.gz``.
 
 This verifier imports no project module and does not trust the producer's GP
-tables, matching code, counts, or source-file summaries.  It rebuilds colex
-bases and all three-term relations, verifies every source Gordan vector with
-integer arithmetic, transports every emitted coverage pointer, and verifies
-the transported Gordan vector against the target chirotope.
+tables, matching code, counts, source-file summaries, or realizability labels.
+It rebuilds colex bases and all three-term relations, verifies every source
+Gordan vector and every realizable-control matrix with integer arithmetic,
+transports every emitted coverage pointer, and verifies the transported
+Gordan vector against the target chirotope.
 
 The pointer list is a *positive coverage certificate*.  This checker proves
 that every declared match is sound; it deliberately does not reproduce the
@@ -52,6 +53,33 @@ def chi_values(text, expected):
             raise ValueError('bad chirotope character')
         ans.append(1 if ch == '+' else -1)
     return ans
+
+
+def determinant(matrix):
+    """Exact recursive determinant for the 4-by-4 minors used here."""
+    if len(matrix) == 1:
+        return matrix[0][0]
+    total = 0
+    for column, value in enumerate(matrix[0]):
+        minor = [row[:column] + row[column + 1:] for row in matrix[1:]]
+        total += (-1 if column & 1 else 1) * value * determinant(minor)
+    return total
+
+
+def verify_realization(record):
+    """Verify that an integer 4-by-9 matrix has the declared chirotope."""
+    matrix = record.get('matrix')
+    if (not isinstance(matrix, list) or len(matrix) != 4 or
+            any(not isinstance(row, list) or len(row) != 9 for row in matrix) or
+            any(type(value) is not int for row in matrix for value in row)):
+        raise ValueError('malformed realizable-control matrix')
+    bases = bases_colex(9, 4)
+    expected = chi_values(record.get('chi'), len(bases))
+    for basis, sign in zip(bases, expected):
+        minor = [[row[column - 1] for column in basis] for row in matrix]
+        value = determinant(minor)
+        if value == 0 or (1 if value > 0 else -1) != sign:
+            raise ValueError('realizable-control matrix has wrong chirotope')
 
 
 def gp_triplet(L, Q, index):
@@ -169,28 +197,34 @@ def core_conditions(terms):
             for k in sorted(result)]
 
 
-def sha256_file(path):
-    digest = hashlib.sha256()
-    with open(path, 'rb') as fh:
-        while True:
-            block = fh.read(1048576)
-            if not block:
-                break
-            digest.update(block)
-    return digest.hexdigest()
-
-
 def source_records(report):
-    declared = {entry['path']: entry for entry in report['sources']}
+    declared = {}
+    for entry in report['sources']:
+        relative = entry['path']
+        if relative in declared:
+            raise ValueError('duplicate source declaration: ' + relative)
+        declared[relative] = entry
     loaded = {}
     for relative, meta in declared.items():
-        path = os.path.normpath(os.path.join(REPO, relative))
-        if os.path.commonpath((REPO, path)) != REPO:
+        repo_real = os.path.realpath(REPO)
+        path = os.path.realpath(os.path.join(REPO, relative))
+        if os.path.commonpath((repo_real, path)) != repo_real:
             raise ValueError('source path escapes repository')
-        if sha256_file(path) != meta['sha256'] or os.path.getsize(path) != meta['bytes']:
+        with open(path, 'rb') as fh:
+            raw = fh.read()
+        if (hashlib.sha256(raw).hexdigest() != meta['sha256'] or
+                len(raw) != meta['bytes']):
             raise ValueError('source hash or size mismatch: ' + relative)
-        with open(path) as fh:
-            loaded[relative] = [json.loads(line) for line in fh if line.strip()]
+        records = []
+        for line_number, line in enumerate(raw.splitlines(), 1):
+            if not line.strip():
+                raise ValueError('blank source record at %s:%d' %
+                                 (relative, line_number))
+            records.append(json.loads(line.decode('utf-8')))
+        for record in records:
+            if record.get('verdict') == 'REALIZABLE':
+                verify_realization(record)
+        loaded[relative] = records
     return loaded
 
 
@@ -237,7 +271,7 @@ def check_pointer(core, target_chi, permutation):
     return verify_bfp(target_chi, transported)
 
 
-def run_canaries(report, combined):
+def run_canaries(report, combined, loaded):
     failures = []
 
     def reject(name, ok):
@@ -278,6 +312,18 @@ def run_canaries(report, combined):
     reject('pointer transplanted to realizable control',
            check_pointer(core, combined[real_index]['chi'],
                          pointer['permutation'])[0])
+
+    first_real = report['realizable'][0]
+    bad_control = copy.deepcopy(
+        loaded[first_real['source']][int(first_real['line']) - 1])
+    for row in bad_control['matrix']:
+        row[0] = -row[0]
+    try:
+        verify_realization(bad_control)
+    except ValueError:
+        pass
+    else:
+        failures.append('sign-flipped realization matrix')
     return failures
 
 
@@ -397,7 +443,7 @@ def check(path):
     if report['go_no_go']['decision'] != expected_decision:
         raise ValueError('go/no-go decision mismatch')
 
-    canary_failures = run_canaries(report, combined)
+    canary_failures = run_canaries(report, combined, loaded)
     if canary_failures:
         raise ValueError('canaries failed: ' + ', '.join(canary_failures))
     print('core pilot: %d exact BFP cores, %d exact coverage pointers' %
@@ -405,7 +451,7 @@ def check(path):
     print('realizable controls: %d, false matches: 0' % len(real))
     print('greedy certified cover: %d cores cover %d/%d pilot non-realizable rows' %
           (len(chosen), len(nonreal) - len(missing), len(nonreal)))
-    print('five deliberate corruptions rejected')
+    print('six deliberate corruptions rejected')
     print('CORE PILOT CERTIFICATES ACCEPTED')
 
 

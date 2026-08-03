@@ -56,9 +56,15 @@ minor-minimal population. Its parent population is the depth-biased 19.12%
 prefix. The result is a bounded method test, not a catalogue-wide frequency
 estimate.
 
-The 206 realizable controls are the exact integer matrices in
-`ai/omopen/data/validation_realizable.jsonl` and
-`ai/omopen/data/certs_realizable.jsonl`.
+The 206 preregistered realizable controls are frozen in
+`data/core_realizable_controls.jsonl`.  This dedicated snapshot prevents later
+growth or regeneration of the completed-sweep artifacts from silently changing
+the pilot population.  It is the record-for-record concatenation of the 80
+validation and 126 certificate records used at source commit `95630b8`, with
+line endings normalized to LF and SHA-256
+`a2ce5aace93a9afd6832190901d048c450a9eb69388808f31d24bfd7664b60a5`.
+The independent verifier recomputes all 126 maximal minors of every stored
+integer matrix, so it does not trust the snapshot's `REALIZABLE` labels.
 
 ---
 
@@ -95,7 +101,8 @@ target. Every emitted match retains the explicit source-to-target permutation.
 rebuilds colex bases and GP relations, verifies every source positive
 dependence, transports every weighted certificate through the recorded
 permutation, and verifies it against the target. Thus each pointer is an exact
-subtree-pruning certificate. It also rejects five deliberate corruptions.
+subtree-pruning certificate. It also rejects six deliberate corruptions,
+including a sign-flipped realizability witness.
 
 The checker certifies every *reported positive match*. It does not reproduce
 the producer's exhaustive search for unreported matches. That asymmetry is
@@ -261,6 +268,7 @@ Files:
 |---|---|
 | `build_core_sample.py` | deterministic BFP regeneration; non-authoritative producer |
 | `data/core_minimal_sample.jsonl` | 64 exact source BFPs |
+| `data/core_realizable_controls.jsonl` | 206 frozen exact realizable controls |
 | `core_pilot.py` | exhaustive emitted-core matcher modulo \(S_9\) |
 | `data/core_minimal_pilot.json.gz` | cores, pointers, permutations and statistics |
 | `verify_core_pilot.py` | independent exact pointer checker |
