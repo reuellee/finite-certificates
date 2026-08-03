@@ -64,6 +64,7 @@ go straight to one without reading the rest. No verifier imports any other.
 |---|---|
 | Mutation-graph connectivity for all uniform oriented matroids with n ≤ 9, at both quotient and labelled level; corrected (4,9) class count 9,276,595 | [`ai/omgamma/`](ai/omgamma/) |
 | Minor-closure structure of (4,9) non-realizability: ~91% deletion-witnessed, ~10⁴ generic minimal obstructions, Proposition R (BFP lifting) | [`ai/omminor/`](ai/omminor/) |
+| Single-element extension atlas theorem (SEEAT), exact 26,112 one-chart capacity at (4,8), and exact certificates proving `7 <=` atlas width of catalog row 2599 `<= 178` | [`ai/omreal/SEEAT.md`](ai/omreal/SEEAT.md) |
 | The (4,9) realizability split via certified tree-walk transport, plus the endgame toolkit for the residual open classes — **in progress** | [`ai/omreal/`](ai/omreal/) |
 
 **Sparse autoencoders / interpretability**
