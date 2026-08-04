@@ -282,8 +282,9 @@ paths do not provide that coverage.
 ## 7. Trust boundaries
 
 The verifier recomputes all 178 tope sets and the resultant census.  It
-hash-pins, but does not rebuild, three prior certificate layers:
+hash-pins, but does not rebuild, four prior certificate layers:
 
+* `seeat_parent2599_upper178.npz`, the 178-chart row-2599 source bank;
 * the six local roadmap/graph NPZ files, whose source verifiers certify their
   geometric coverage and labels;
 * `DIAG9_GRAPH_row2599_factor_states.npz`, replayed independently by

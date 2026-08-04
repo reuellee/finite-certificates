@@ -2,7 +2,7 @@
 
 ## Verdict
 
-The theorem in `SECOND_DIAGONAL_SINGLE_REGION_H7.md` is sound.  I found no
+The theorem in `DIAG2_PIVOT_DUAL_SINGLE_BAD_ESCAPE.md` is sound.  I found no
 counterexample, quotient defect, orientation reversal, or unsupported
 duality step.
 

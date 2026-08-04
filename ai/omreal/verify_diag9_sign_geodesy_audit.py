@@ -269,7 +269,7 @@ def exact_support_masks(workers: int):
         results = map(enumerate_chart_topes, tasks)
         pool = None
     else:
-        pool = mp.get_context("fork").Pool(workers)
+        pool = mp.get_context().Pool(workers)
         results = pool.imap_unordered(enumerate_chart_topes, tasks)
     try:
         for chart_index, signatures in results:

@@ -609,7 +609,8 @@ mass-transfer matching—not higher-wall coherence.  See
    missing chamber coverage or adjacency.  Moreover, eliminating the 13
    canonical wall pivots against parent-bracket endpoints produces 142 new
    irreducible projection factors already in the first resultant layer, so a
-   recursive roadmap cannot close on the existing bracket/residual catalog.
+   projection recursion restricted to the existing bracket/residual catalog
+   cannot close without adding new factors.
    See `DIAG9_SIGN_GEODESY_AUDIT.md`,
    `DIAG9_GRAPH_GLOBAL_FACTOR_CENSUS.md` and
    `DIAG9_GRAPH_ROW2599_FACTOR_STATES.md`.
