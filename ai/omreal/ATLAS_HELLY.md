@@ -1637,6 +1637,39 @@ localization residual four-set.  In the latter two cases the derived-wall
 side theorem permits feasibility on at most one side.  Every case contradicts
 two-sided feasibility.
 
+The argument is pointwise, not only generic.  At an arbitrary multiwall
+point, the global derived-wall rank theorem still turns a nonstructural
+minimal four-circuit into an ordinary residual circuit.  A nonstructural
+minimal three-circuit can still be padded by a nonstructural fourth triple.
+That four-set is residual.  The fixed-unit identities for all nine ordinary
+residual types have four nonzero relation coefficients everywhere on their
+walls, so they cannot contain the zero-padded three-circuit; the exhaustive
+support classification therefore makes the four-set one of the four
+localization types.  The global side theorem then supplies a bad open sign
+half-neighborhood, and the finite union of the other walls cannot fill that
+half-neighborhood.  Hence every bad point is a limit of bad generic chambers.
+Equivalently, the label of every interior cell in a regular semialgebraic
+master refinement is the intersection of its locally incident chamber-germ
+labels.  This **all-strata gluing theorem** removes separate interior
+wall/node tope enumeration; it does not label compactification-boundary cells
+and does not imply that the supporting chamber set is connected.  The full
+proof and the necessary germ qualification are in
+`NINTH_DIAGONAL_SAFE_GRAPH.md`.
+
+The same labeled stratification gives a finite model for every diagonal, not
+only components.  After a simultaneous semialgebraic compactification and
+triangulation, the barycentric dual blocks whose incident chamber labels all
+contain `S` form a complex `D_S` with `F_S homotopy equivalent to D_S`.  A
+primal codimension-`j` simplex (or regular cell) contributes a dual `j`-cell.
+For `s<=8`, the target `H_(9-s)(F_S)` uses only codimensions
+`8-s,9-s,10-s`; diagonal eight needs the labeled chamber/wall/node complex
+and diagonal seven adds codimension three.  Diagonal nine instead uses
+codimensions zero and one with the augmented degree-zero boundary.  Label-safe
+discrete-Morse matchings in positive target degree reduce the universal
+all-`S` check to exact antichain-width tests in the dominance poset.  The
+proof, infinity treatment, matching certificate format, and exact row-2599
+codimension-two regression are in `DUAL_MASTER_CELL_PROGRAM.md`.
+
 Every component of the open set `F_S` meets a full-dimensional chamber.  A
 path in `F_S` can be perturbed to avoid codimension-two strata and cross the
 generic walls transversely, giving a path in `G_M[S]`.  Conversely (generic)
@@ -2970,6 +3003,20 @@ support drop is pencil-flexible and escapes, so the example blocks only a
 root-free frozen-support shortcut and is neither a global-defect-two example
 nor a 9DVL obstruction.
 
+`DIAG2_MOVING_WITNESS_SHEAR.md` removes this frozen-support failure whenever
+the two witnesses pass an exact signed compatibility test.  Under a column
+shear `g_t`, transport each signed Gordan three-form by
+`Lambda^3(g_t^(-1))`.  Functoriality preserves its kernel identity, and the
+test makes every newly generated replacement-triple coefficient
+nonnegative in the prescribed signature orthant.  The resulting ray remains
+simultaneous-bad until the first parent wall, or tends to a parallel-column
+boundary at infinity, so its entire component is noncompact.  The low-source
+count forces some ordered shear to have at most two colored sources.  All 65
+stored row-2599 hard occurrences and the parent-16 defect-two pair admit
+compatible shears, but an arbitrary-signing canary does not.  The remaining
+problem is to derive compatibility from realizable oriented-matroid extension
+constraints at every point, rather than from unsigned supports alone.
+
 Second, the entire single-piece column for diagonal three vanishes:
 
 \[
@@ -3418,8 +3465,11 @@ rational projective disk contains two coprime residual branches, with exactly
 All other residual restrictions, quotients, and parent brackets are excluded
 from the disk by exact bounds.  Its roadmap has four `26,112`-signature open
 cells, four `26,040`-signature wall arcs, and one `25,968`-signature node.
-The four-cell graph passes (40) and cut-SAT, and every finite signature-family
-support is empty or connected on the whole disk.  See
+The four-cell graph passes (40) and cut-SAT.  Its exact support masks and
+lower-stratum labels identify every individual local feasibility region with
+the whole square or one strict affine half-disk.  Every finite
+signature-family support is therefore empty or convex, hence contractible
+when nonempty.  See
 [`DIAG9_GRAPH_verify_row2599_node.py`](DIAG9_GRAPH_verify_row2599_node.py).
 
 The full factor census makes the master-roadmap input substantially smaller.

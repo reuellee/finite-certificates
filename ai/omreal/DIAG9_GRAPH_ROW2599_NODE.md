@@ -8,7 +8,8 @@ This artifact proves a complete local statement, not the ninth diagonal:
 > catalog parent 2599, the residual arrangement consists of exactly two
 > transverse smooth wall arcs.  Exact labels on its four chambers, four open
 > wall rays, and central node show that the common feasibility locus of every
-> finite family of signatures is connected or empty within this disk.
+> finite family of signatures is convex or empty within this disk, and hence
+> contractible whenever nonempty.
 
 The disk is the first certified row-2599 roadmap containing two **distinct
 global residual walls** and a genuine codimension-two crossing.  It exercises
@@ -141,6 +142,35 @@ The closure under arbitrary intersections is exactly
 Every nonzero mask in this list induces a connected subgraph of the
 four-cycle.  This proves the stated local theorem for **every finite family**,
 not only for nine-element antichains.
+
+There is a stronger conclusion which uses the wall and node labels, not only
+the chamber graph.  In the cyclic ordering above, the four proper masks are
+
+```text
+0011 = {q_0>0},   1100 = {q_0<0},
+1001 = {q_1>0},   0110 = {q_1<0}.
+```
+
+The exact adjacent-wall intersections show that each equality is an equality
+of subsets of the whole disk, including its lower-dimensional strata: a
+proper signature occurs on the wall separating its two supported chambers,
+but not on either boundary wall or at the node.  The full-mask signatures
+occur everywhere.  Thus every finite common-feasibility locus in the disk is
+the square intersected with strict affine halfspaces.  It is empty or convex,
+so every nonempty one is contractible.  In particular, the transverse node
+has no local `H_1` puncture for diagonal eight.
+
+The independent topological replay is
+
+```bash
+python ai/omreal/verify_dual_master_node.py
+```
+
+It imports none of the determinant or tope-generation code used by the main
+node verifier and includes deliberately invalid diagonal-mask and wall-gluing
+canaries.  The general dual-cell reduction which makes this a
+codimension-two diagonal-eight regression is in
+`DUAL_MASTER_CELL_PROGRAM.md`.
 
 The exported graph uses cycle edges
 

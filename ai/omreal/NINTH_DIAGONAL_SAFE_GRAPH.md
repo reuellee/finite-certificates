@@ -4,8 +4,9 @@
 
 This note does **not** prove the ninth entry of 9DVL. It replaces its
 connectivity question by an exact finite labeled-graph test, closes the local
-wall-gluing premise left open in the Atlas, and proves a small no-go theorem
-for a tempting mutation/deformation shortcut.
+wall-gluing premise left open in the Atlas, strengthens it to an all-strata
+label-reconstruction theorem, and proves a small no-go theorem for a tempting
+mutation/deformation shortcut.
 
 For a realizable UOM(4,8) parent \(M\), a nine-signature family \(S\), and
 
@@ -40,8 +41,11 @@ The exact reduction is:
 
 The key local point is that the gluing premise is automatic. At a generic
 residual wall, a signature supported by both adjacent chambers is supported
-on the wall. A minimal positive Gordan witness which would obstruct it is
-either a structural circuit persisting on both sides or one of the already
+on the wall.  More strongly, the label of every interior cell in a regular
+residual refinement is the intersection of its incident local chamber-germ
+labels.  A
+minimal positive Gordan witness which would obstruct either statement is
+either a structural circuit persisting nearby or one of the already
 certified one-sided residual wall circuits.
 
 ## 1. The master chamber graph
@@ -145,9 +149,12 @@ label of \(Q\), if one exists, and avoid each pair occurring as the
 intersection of two triples of \(Q\). There are at most three forbidden
 pairs, so among at least seven available labels there are many triples
 avoiding them. Now \(D_E(Y_0)=0\), so \(E\) is residual rather than fixed.
-The derived-wall rank theorem makes \(E\) rank three at \(Y_0\). Its unique
-circuit is the rank-two triple \(Q\), hence \(E\) is one of the four
-localization residual types.
+The exact residual support classification has nine ordinary types and four
+localization types. Every ordinary type has the fixed-unit identity (27a) of
+`ATLAS_HELLY.md`; on its wall all four coefficients are nonzero, so its
+unique relation cannot be the zero-padded relation on \(Q\). Hence \(E\) is
+one of the four localization types, whose designated exact three-circuit is
+\(Q\).
 
 In either nonstructural case, (5) says exactly that \(\sigma\) is aligned
 with the certified wall circuit, up to the irrelevant global circuit sign.
@@ -158,6 +165,70 @@ the wall and feasible on at most one residual sign side. This contradicts
 All cases contradict two-sided feasibility, proving (4). Labeled
 determinants sharing a residual factor cause no ambiguity because
 \(D_E=M_Eq\), with \(M_E\) nonzero and fixed-sign throughout \(X\). QED.
+
+The same proof has a stronger pointwise consequence once the global
+regularity and side theorems are used at intersections of walls.
+
+> **All-strata gluing theorem.**  Let `D` be the complete residual
+> discriminant in one normalized parent cell.  For every `Y_0 in X` and
+> every extension signature `sigma`,
+>
+> \[
+>  \sigma\in T(Y_0)
+>  \quad\Longleftrightarrow\quad
+>  \sigma\text{ is supported by every local master-chamber germ whose
+>  closure contains }Y_0.                                  \tag{4a}
+> \]
+>
+> Equivalently, every bad locus is the closure of its generic part:
+>
+> \[
+>        B_\sigma=\overline{B_\sigma\cap(X\setminus\mathcal D)}^{\,X}.
+>                                                               \tag{4b}
+> \]
+
+If `sigma` is feasible at `Y_0`, one strict witness remains feasible in a
+neighborhood, proving the forward implication in (4a).  Conversely, suppose
+it is bad and choose the support-minimal positive relation (5).  Supports of
+sizes one and two are impossible as above.  A five-circuit has all its
+four-by-four cofactors nonzero, so its positive sign persists in an open
+neighborhood and supplies a bad generic germ.  A structural three- or
+four-circuit has a nonzero circuit minor and its exact structural dependence;
+its positive signs likewise persist locally.
+
+For a nonstructural four-circuit, its determinant vanishes at `Y_0`.  It
+cannot be a fixed parent-bracket unit and is therefore residual.  The global
+derived-wall rank theorem makes it an ordinary exact four-circuit even when
+other residual factors vanish at `Y_0`.  The global side theorem puts all
+feasible charts on at most one sign side, so the other open side is bad.
+
+For a nonstructural three-circuit `Q`, choose a fourth triple `J` with
+`E=Q union {J}` nonstructural.  Again `D_E(Y_0)=0` is residual.  The global
+rank theorem gives `rank(E)=3`.  The fixed-unit identity for each of the nine
+ordinary residual types has all four relation coefficients nonzero
+everywhere on its wall, so no ordinary type can contain the zero-padded
+relation on `Q`.  The exhaustive residual support classification therefore
+makes `E` one of the four localization types, with `Q` as its designated
+three-circuit.  Its side theorem again supplies a bad open sign side.
+
+Every residual factor is smooth on the uniform parent cell.  At a multiwall
+point its chosen bad half-neighborhood is therefore nonempty, and the finite
+union of the other residual walls cannot fill it.  Generic bad points can be
+chosen arbitrarily close to `Y_0`, proving (4b) and the reverse implication
+in (4a).
+
+The word *germ* is essential.  A zero/sign word must be split into a regular
+semialgebraic refinement on which incident chamber germs are constant before
+assigning one cell label; connectedness of the raw zero/sign component is not
+enough.  Equation (4a) concerns the actual full-dimensional chamber germs
+incident to the point, not an unverified coarse global zero set.
+
+Consequently a complete master cellulation needs exact tope enumeration only
+on its full-dimensional chambers.  Every interior lower-cell label is the
+intersection of the labels of its incident chambers; compactification-boundary
+cells are instead deleted.  This does not prove that a signature's supporting
+chambers are connected or convex, so the global ninth-diagonal problem remains
+unchanged.
 
 The only finite combinatorial extension fact used in the three-circuit case
 can be independently checked without geometry. Among all

@@ -167,6 +167,21 @@ still escapes, so this is only a no-go for a root-free frozen-support argument,
 not an obstruction to 9DVL and not an example in the global defect-two class.
 See `SECOND_DIAGONAL_MATCHING_STAR_LOCAL_NO_GO.md`.
 
+A moving-witness shear removes the frozen-support failure in a precise
+conditional form.  If `T_t=T g_t` is a column shear, transport each signed
+Gordan three-form by `Lambda^3(g_t^(-1))`.  The kernel identity then persists
+exactly, while replacement triples may acquire nonnegative weight.  One XOR
+sign test on the two full signatures and their colored active supports
+selects a common parameter ray; that ray stays simultaneous-bad until its
+first parent wall, or tends to a parallel-column boundary at infinity.  Thus
+any component containing compatible witnesses is noncompact.  Every one of
+the 65 stored row-2599 hard occurrences passes (1,244 compatible rays in
+total), and the parent-16 defect-two pair has 22 compatible shears.  A proved
+low-source count forces some ordered shear to have at most two colored
+sources, but arbitrary signings can make all two-source XOR tests conflict,
+so universal compatibility still needs the oriented-matroid extension
+constraints.  See `DIAG2_MOVING_WITNESS_SHEAR.md` and its exact verifier.
+
 The block-Gordan compactification does not make a vertical Bland pivot proof
 automatic.  Its convex witness fiber has one degree-zero critical generator,
 so a matching confined to that fiber simply reconstructs the bad-locus
@@ -495,18 +510,41 @@ mass-transfer matching—not higher-wall coherence.  See
 
 ## Surviving strategies
 
-1. **Sparse-form quotient plus CAD.**  Column scaling removes all but
+1. **Labeled dual master-cell complex.**  Compactify the nine-dimensional
+   parent cell and triangulate it compatibly with the primitive residual
+   factors and infinity, retaining a regular refinement and its artificial
+   faces.  Label each interior cell by the complete tope set of its derived
+   oriented matroid.  For every family `S`, the barycentric dual
+   blocks whose labels contain `S` form a complex homotopy equivalent to
+   `F_S`.  For `s<=8`, the `s`-th diagonal uses only primal codimensions
+   `8-s,9-s,10-s`; diagonal nine instead has the augmented degree-zero graph
+   test.  In particular, diagonal eight is a codimension-two problem and
+   diagonal seven is a codimension-three problem.  A
+   label-preserving or antichain-width-safe discrete Morse matching can
+   certify all admissible families at once.  This bypasses the large
+   witness-support filtration; its first exact regression strengthens the
+   row-2599 transverse-node theorem from connectedness to contractibility for
+   every nonempty finite common support.  More generally, the all-strata
+   gluing theorem proves that every bad point is the limit of bad generic
+   chambers, even at singular or multiple wall intersections.  Hence every
+   interior lower-cell label is the intersection of its incident chamber
+   labels and no isolated local puncture can occur in the interior.  Infinity
+   cells are excluded, not intersection-labeled.  Global cycles, complete
+   codimension-two incidence, and infinity are the real
+   diagonal-eight targets.  See
+   `DUAL_MASTER_CELL_PROGRAM.md` and `verify_dual_master_node.py`.
+2. **Sparse-form quotient plus CAD.**  Column scaling removes all but
    `beta<=4` invariant positive weight ratios from every generic pair orbit.
    The remaining equations ask that fixed sparse three-vectors vanish in a
    four-dimensional quotient.  The finite task is a relative-cohomology/CAD
    computation on these `9+beta` quotient variables, including lower-support
    faces.
-2. **Real-tropical compactification after gauge.**  Pure column-torus paths
+3. **Real-tropical compactification after gauge.**  Pure column-torus paths
    are vertical gauge and cannot prove escape in `X`.  After quotienting
    them, nonzero real-tropical cones in the nine parent coordinates, bracket
    slacks, and invariant weight monomials detect genuine ends.  One must then
    compute the boundary incidence in degrees zero and one.
-3. **Stratified double contraction.**  A formal second contraction lowers the
+4. **Stratified double contraction.**  A formal second contraction lowers the
    base dimension from `6+2s` to `3+s`, but produces bilinear height fibers.
    Each fixed lift fiber is homotopy equivalent to an open subset of `R^5`,
    but that leaves three total-degree-seven Leray terms.  An exact constant-
@@ -514,12 +552,12 @@ mass-transfer matching—not higher-wall coherence.  See
    ruling out linewise acyclicity, and an exact allowed seven-circuit has a
    unique fixed-weight height, ruling out universal kernel escape.  A global
    relative-Leray theorem with exit specialization remains possible.
-4. **Bounded circuit descent.**  Diagonal `s` needs at most `(s+1)`-fold
+5. **Bounded circuit descent.**  Diagonal `s` needs at most `(s+1)`-fold
    circuit intersections.  For `s=4`, construct relative cellular cochains
    only for the support-sieve survivors and assemble total degrees
    `2 -> 3 -> 4`; this is an exact finite target rather than an `E_1`
    vanishing shortcut.
-5. **Ninth-diagonal master-chamber graph.**  Generic two-sided wall gluing is
+6. **Ninth-diagonal master-chamber graph.**  Generic two-sided wall gluing is
    now proved, so `pi_0(F_S)` is exactly the component set of the chamber
    graph induced by chambers supporting `S`.  For a spanning tree and a
    cross-pair `u,v`, put `E_uv=T(u) intersection T(v)`.  If every tree
@@ -550,8 +588,11 @@ mass-transfer matching—not higher-wall coherence.  See
    contains two coprime branches with `65+65` labeled occurrences and
    rank-two Jacobian.  Exact dominance excludes every other wall; the roadmap
    is a four-cycle of `26,112`-signature cells, four `26,040`-signature wall
-   arcs, and a `25,968`-signature node.  Every finite common support is empty
-   or connected, and both the sharp tree and cut-SAT checks pass.  What
+   arcs, and a `25,968`-signature node.  Exact lower-stratum labels identify
+   every individual support with the whole disk or one strict affine
+   half-disk.  Every finite common support is therefore empty or convex, and
+   hence contractible when nonempty; both the sharp tree and cut-SAT checks
+   also pass.  What
    remains is coverage of all local intersection types and then a
    full-dimensional roadmap for each parent.
    Globally, exact localization reduces the `84,840` labeled residual
@@ -560,7 +601,16 @@ mass-transfer matching—not higher-wall coherence.  See
    exact representative of every factor on the 178 stored row-2599 charts
    gives 178 distinct sign states; 10,844 factors vary, and the pairwise
    Hamming distances range from 1,125 to 5,600.  This is a rigorous chamber
-   lower bound, not adjacency or coverage.  See
+   lower bound, not adjacency or coverage.  A new exact recursive-tope audit
+   strengthens the sampled evidence: all 97,224 signatures give 39,366
+   distinct support traces, and every trace is exactly an intersection of
+   sampled residual-factor halfspaces.  The certified line, disk, and node
+   roadmaps are factor-isometric `P26`, `K2`, and `Q2`.  Neither fact supplies
+   missing chamber coverage or adjacency.  Moreover, eliminating the 13
+   canonical wall pivots against parent-bracket endpoints produces 142 new
+   irreducible projection factors already in the first resultant layer, so a
+   recursive roadmap cannot close on the existing bracket/residual catalog.
+   See `DIAG9_SIGN_GEODESY_AUDIT.md`,
    `DIAG9_GRAPH_GLOBAL_FACTOR_CENSUS.md` and
    `DIAG9_GRAPH_ROW2599_FACTOR_STATES.md`.
    Smooth transverse wall pairs supply the expected local four-cycle, but
@@ -584,13 +634,13 @@ mass-transfer matching—not higher-wall coherence.  See
    rational one-column chains are a complete positive certificate language.
    These results certify the displayed endpoint pair, not connectivity of its
    entire `F_S` or of every ninth-diagonal instance.
-6. **Feasible COM completion (a bypass, not a diagonal proof).**  A
+7. **Feasible COM completion (a bypass, not a diagonal proof).**  A
    rank-at-most-nine COM containing all maximal feasible support states would
    imply integral `9`-Lerayness of the compatibility complex and the desired
    ten-local Helly conclusion directly.  It would not prove the homology
    groups in (1) vanish.  This is a finite but stronger downstream target;
    existing exact examples rule out several naive partial-cube shortcuts.
-7. **Signed-gradient KKT sieve.**  Free-log convexity is exactly false, but a
+8. **Signed-gradient KKT sieve.**  Free-log convexity is exactly false, but a
    relatively compact generic residual chamber must satisfy the
    positive-dependence equation (6a).  For at most nine nonconstant sides,
    full column rank of
@@ -599,7 +649,7 @@ mass-transfer matching—not higher-wall coherence.  See
    semialgebraic kernel conditions on the actual `5+5` survivors is a sound
    second-diagonal filter.  It does not handle lower-dimensional boundary
    strata or the global `d_1` incidence map by itself.
-8. **Independent-witness frames.**  After projectivizing private columns, the
+9. **Independent-witness frames.**  After projectivizing private columns, the
    rank-at-most-three witness locus has codimension `s-3`.  General position
    identifies the diagonal group with the homology of the full-rank witness
    stratum for `s=7,8,9`.  This is only a reduction.  An exact proper
@@ -708,10 +758,15 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   exact proper incomparable row-2599 triple that needs the latter.
 - `BETA0_MIXED_ESCAPE.md`: exact closed-stratum escape theorem for all three
   stored row-2599 `4+5, beta=0` occurrences.
+- `DIAG2_MOVING_WITNESS_SHEAR.md` and its exact verifier: conditional
+  simultaneous component escape by inverse-exterior witness transport, the
+  low-source XOR reduction, 65 row-2599 hard occurrences, and the parent-16
+  defect-two regression.
 - `TORUS_TROPICAL_ESCAPE.md`: vertical-gauge no-go, exact face cones, and the
   quotient tropical strategy.
-- `NINTH_DIAGONAL_SAFE_GRAPH.md`: exact connectivity reduction and finite
-  budget-nine separator test.
+- `NINTH_DIAGONAL_SAFE_GRAPH.md`: exact connectivity reduction, finite
+  budget-nine separator test, and all-strata theorem reconstructing every
+  lower-cell label from its incident chamber germs.
 - `NINTH_COORDINATE_PATH_THEOREM.md`: universal incidence/coordinate-path and
   common-cone bridge theorems, with exact scope.
 - `NINTH_CANDIDATE_12_37_EXACT_PATH.md`: exact row-2599 proper-antichain audit
@@ -727,14 +782,21 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   certificates: a projectively embedded two-dimensional disk with complete
   residual coverage and one certified wall branch.
 - `DIAG9_GRAPH_verify_row2599_node.py` and its roadmap/graph NPZs: the first
-  complete transverse two-wall node with four exact cells and connected
+  complete transverse two-wall node with four exact cells and convex-or-empty
   all-family supports.
+- `DUAL_MASTER_CELL_PROGRAM.md` and `verify_dual_master_node.py`: the finite
+  dual-block truncation and Morse-certificate program, plus an independent
+  replay of the exact row-2599 codimension-two contractibility theorem.
 - `DIAG9_GRAPH_GLOBAL_FACTOR_CENSUS.md`, its exact replay, and NPZ: reduction
   of 84,840 labeled residual occurrences to 26,740 primitive global wall
   factors, including the exact common cubic at the 65-label crossing.
 - `DIAG9_GRAPH_ROW2599_FACTOR_STATES.md`, its exact replay, and NPZ: 178
   distinct exact residual sign states and the 10,844 varying-factor lower
   bound inside parent 2599.
+- `DIAG9_SIGN_GEODESY_AUDIT.md` and its exact verifier: factor-isometry of
+  the three certified local roadmaps, exact factor-halfspace closure of all
+  39,366 support traces on the 178 charts, and the 142-new-resultant no-go to
+  a projection recursion restricted to the existing equation catalog.
 - `DIAG9_GRAPH_COM_AUDIT.md` and its exact verifiers: the transverse local COM
   diamond and exact no-go to inferring global COM axioms from smoothness.
 - `DIAG9_GRAPH_REDUCIBILITY_AUDIT.md` and its exact verifier: the safe
