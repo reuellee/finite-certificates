@@ -111,7 +111,100 @@ This certificate concerns raw support states.  It does not assert that the
 maximal faces of the compatibility complex shatter the same coordinates and
 therefore does not, by itself, lower-bound feasible-COM completion rank.
 
-## Exact deletion-fiber nonconvexity
+The same exact artifact supplies a prototype for the Gordan--Koszul reduction
+in `ATLAS_HELLY.md`.  On its pattern-zero chart, the following checker proves
+that all eight stored infeasibility witnesses are support-minimal positive
+circuits in
+`ker(Lambda^3 Y)=ker(Y) wedge Lambda^2(Q^8)`, and classifies all of their
+four-row cofactors by the 52 derived-wall orbits.
+
+```console
+python ai/omreal/prototype_koszul_circuits.py
+```
+
+The signed generic-circuit checker applies the single-element-extension
+Grassmann--Pluecker axiom and the exact derived-wall factorization before any
+CAD.  It proves that all generic three-support pieces are empty, classifies
+the six generic structural four-support types and their localization
+cofactors, reduces the 73 unsigned shear-rigid `4+4` support-pair orbits to 39
+coarse signed types, and then proves that the pencil minimum-degree condition
+kills every generic `4+4` pair.  An exact shear-rigid positive pair on the
+pattern-zero chart shows why the stronger pencil condition is necessary; it
+is not a second-diagonal survivor.
+Its reported 95.5-percent unit-XOR rejection rate concerns only the eight
+prescribed signatures in this artifact; it is not a universal density
+estimate.
+
+```console
+python ai/omreal/verify_signed_circuit_filter.py
+```
+
+The size-five signed checker classifies all `2,021,992` generic supports by
+their number of residual cofactors, rejects the 370,552 all-unit supports,
+and verifies exact pencil-rigid positive survivors of both types `4+5` and
+`5+5`.  The exhaustive C++ verifier then counts the retained pencil-rigid
+support-pair orbits under `S_8` and stratifies them by the exact weight-gauge
+modulus `beta`: `4,260` of type `4+5` and `3,810,812` unordered of type
+`5+5`.
+
+```console
+python ai/omreal/verify_signed_heavy_filter.py
+g++ -O3 -std=c++17 ai/omreal/verify_signed_pencil_orbits.cpp -o /tmp/verify_signed_pencil_orbits
+/tmp/verify_signed_pencil_orbits
+```
+
+Positive parent-column rescaling acts linearly on logarithmic ratios of the
+stored Gordan weights.  The exact weight-gauge checker constructs the centered
+incidence matrix, verifies
+`beta=sum_j(|Q_j|-1)-rank(D)`, and produces primitive balanced exponent vectors
+for all invariant Laurent monomials on the 65 pencil-rigid pair occurrences
+in the 256 exact charts.  Zero-weight simplex faces are handled as smaller
+supports.
+
+```console
+python ai/omreal/verify_gordan_weight_gauge.py
+```
+
+The artifact also contains sharp fixed-deletion tests for the common-light
+exit lemma in `ATLAS_HELLY.md`.  One pair of proper incomparable signatures
+has a two-component residence exit, while one proper signature has a connected
+exit with first Betti number one.  The checker derives the circuit-cone
+inequalities, enumerates every normalized residence vertex over the rationals,
+builds the exit-facet nerves from exact face intersections, and computes their
+homology without LP or floating-point arithmetic.
+
+```console
+python ai/omreal/verify_common_light_exits.py
+```
+
+The simultaneous-shear checker proves the common-apex rank-three convexity
+mechanism on exact circuits, gives an exact nonconvex two-apex shear slice,
+and verifies nine distinct realizable proper signatures with simultaneous
+positive circuit pieces at one parent chart.  Every prefix of lengths two
+through nine is pencil-rigid and support-plane rigid at that chart.  The last
+condition is only an obstruction to plane-preserving shears; it does not
+certify a compact component or nonzero compact-support cohomology.
+
+```console
+python ai/omreal/verify_simultaneous_shears.py
+```
+
+The fourth-diagonal checker reuses the same exact eight-shatter artifact.  It
+selects four signatures, verifies all sixteen support patterns, and checks
+their positive support-minimal circuits and pencil-rigid prefixes.  Its
+independent finite census verifies that every Gordan support of at most five
+triples on seven labels has a degree-at-most-two escape label, and reduces the
+generic eight-label `H_c^3` single-piece source from `2,021,992` supports in
+`117` orbits to the `1,099,560` cover-all supports in `66` orbits.  These are
+the certified premises of the direct parent-`H_5` theorem and the fivefold
+fourth-diagonal reduction; the retained intersection is a no-go for
+incidence-only pruning, not a nonzero-cohomology claim.
+
+```console
+python ai/omreal/verify_fourth_diagonal_reduction.py
+```
+
+## Exact contraction-fiber nonconvexity
 
 `seeat_parent2599_residence_nonconvex.npz` gives two integer positions of one
 deleted row-2599 parent column that support the same extension signature, and
@@ -120,12 +213,247 @@ All three positions independently reproduce the parent chirotope.  The two
 positive extension witnesses and the midpoint dependence are checked using
 integer arithmetic only.
 
+The verifier derives a second extension column as the difference of the two
+endpoints.  It proves that this column has one strict uniform signature over
+the endpoints and midpoint, and that contracting it makes all three parent
+charts identical; after positive projective scaling, the third lift is the
+literal midpoint in that one contraction-height fiber.  Two additional exact
+charts, strict witnesses, and sparse Gordan dependences prove that the two
+extension regions are proper and incomparable.
+
 SHA-256: `a7c4e85b4be56c078b96c6f6ff0a314c3daf5abc382fa76fdc1da4b7177645a6`
 
 ```console
 python ai/omreal/verify_seeat_residence_nonconvex.py
 ```
 
+The same certificate also supports an exact double-contraction regression
+test.  Along the affine family `e(u)=2R+u(L-R)`, contracting the first
+extension and one fixed parent column gives a constant uniform rank-two
+quotient.  The second signature is feasible at the two ends, while exact
+Bernstein coefficients keep one positive Gordan circuit throughout
+`1/2<=u<=3/2`.  This proves a disconnected line slice of the projected model,
+not disconnection of the full double-lift fiber.
+
+```console
+python ai/omreal/verify_double_contraction_gap.py
+```
+
 The certificate rules out an ordinary convex-Helly proof applied fiberwise
-after deleting one parent element.  It does not disprove the 8--9--10
+after deleting one parent element and rules out naively iterating the
+contraction--height proof for a pair.  It does not disprove the 8--9--10
 Extension--Helly Conjecture.
+
+## Exact ninth-diagonal stress path
+
+`ninth_candidate_12_37_path.npz` certifies that charts 12 and 37 of
+`seeat_parent2599_upper178.npz` lie in one connected component of the common
+feasibility locus of nine displayed extension signatures.  The path consists
+of 22,711 rational segments: 11,701 one-column updates from chart 12, a
+3,009-segment bridge, and the reverse of 8,001 updates from chart 37.
+
+Every segment changes one homogeneous column.  All parent and extension
+determinants affected by that segment are therefore affine, so exact strict
+positivity at its two endpoints proves strict positivity throughout.  The
+verifier reconstructs both endpoint incidences, replays every update using
+integer determinants, and independently checks the intervening positive
+projective gauge changes.
+
+SHA-256: `8db38e00d9bf8701558c27cd4ede3e024db8953ea3ef9873bf0b4fc65ad6bcda`
+
+```console
+python ai/omreal/verify_ninth_candidate_path.py
+```
+
+By itself, this artifact refutes only a separator suggested by the finite
+178-chart sample.  It does not prove the ninth diagonal or coordinate
+reachability for every parent cell.  Its companion below supplies the
+separate global properness/incomparability proof for the nine regions.
+
+`ninth_candidate_12_37_antichain.npz` supplies the separate global
+properness/incomparability audit for the same nine signatures.  It contains
+seven row-2599 chart indices and, for each of their 63 chart/signature
+entries, either an integer feasible extension ray or a support-at-most-five
+positive integer Gordan relation.  The seven exact feasibility patterns
+contain both values in every column and distinguish all 72 ordered pairs.
+Thus every region is nonempty and proper, and neither region in any pair
+contains the other.
+
+SHA-256: `11ca66549982ec40ce8425d2caed45b418edb73c4eb415a45b39d57e481bd1e4`
+
+```console
+python ai/omreal/verify_ninth_candidate_antichain.py
+```
+
+Together, the two certificates prove that a genuine proper size-nine
+antichain has the displayed charts 12 and 37 in one common-feasibility
+component.  They do not prove that this whole common locus, or every
+ninth-diagonal common locus, is connected.
+
+## Second exact ninth-diagonal stress path
+
+`ninth_candidate_37_176_path.npz` is an independent stress test selected
+after enumerating the 26,112 derived-arrangement topes on each of the 178
+stored row-2599 charts.  It joins charts 37 and 176 inside the common
+feasibility locus of a different nine-signature family by 22,811 exact
+rational one-column segments: 11,701 updates from chart 37, a 3,009-segment
+bridge, and the reverse of 8,101 updates from chart 176.
+
+SHA-256: `3c37c3c0d5de159bec9d48eeaaf57bccbe07c2f3aeb0ede9d4b1ddbae2bd3507`
+
+`ninth_candidate_37_176_antichain.npz` independently proves that the same
+nine feasibility regions are nonempty, proper, and pairwise incomparable.
+Seven exact charts distinguish all 72 ordered region pairs; every one of the
+63 entries carries either an integer extension ray or a positive integer
+Gordan circuit.
+
+SHA-256: `fe7bb166b5a151262c665875d32de49d7e8a330cf11b26609458af6b2661a59f`
+
+```console
+python ai/omreal/verify_ninth_candidate_generic.py antichain \
+  ai/omreal/data/ninth_candidate_37_176_antichain.npz
+python ai/omreal/verify_ninth_candidate_generic.py path \
+  ai/omreal/data/ninth_candidate_37_176_path.npz
+```
+
+This second family again refutes only a separator in the finite chart sample.
+It is not evidence that the 178 charts form a chamber roadmap and does not
+prove the ninth diagonal.
+
+## Exact row-2599 coordinate-line roadmap
+
+`DIAG9_GRAPH_row2599_line_roadmap.npz` is the first geometrically complete
+labeled residual roadmap on a scoped subset of a parent realization space.
+For the exact line `Y(t)=Y_0+t E_(2,7)`, `-1/2<t<1/2`, it stores disjoint
+Sturm isolating intervals for every residual root, the 25 exact crossing
+parameters, and the complete signature labels of the resulting 26 cells.
+All 84,840 residual determinant occurrences are covered.  Every cell supports
+26,112 signatures, the union supports 26,232, and every signature support is
+empty, full, a prefix, or a suffix.
+
+SHA-256: `29a4542941a322da6846fcfb2d7eb3d427ac9f7cc4becd95b4b5cd754f3ae16b`
+
+`DIAG9_GRAPH_row2599_line_graph.npz` is the corresponding 26-vertex path
+quotient with its 50 nonconstant proper support rows.  It passes both the
+sharp pairwise-width tree theorem and the complete cut-SAT test.
+
+SHA-256: `e1c2b82b4da6b2180d1de7e5837d2a58da4dadf159b4631fa4b2810e42df52a5`
+
+The two-cell regression files isolate the exceptional crossing with 65
+labeled determinant occurrences:
+
+- `DIAG9_GRAPH_row2599_slice_roadmap.npz`, SHA-256
+  `b982fdc600729306b545005ff059e2c6603b4603525745078fd85b630f36a575`;
+- `DIAG9_GRAPH_row2599_slice_graph.npz`, SHA-256
+  `c0521f59aac563a4d7cbcd0405e90a3d4ae26fcf7b9239c9bfce296c6e031b1b`.
+
+```console
+python ai/omreal/DIAG9_GRAPH_verify_row2599_slice.py
+python ai/omreal/DIAG9_GRAPH_verify_row2599_slice_jacobian.py
+python ai/omreal/DIAG9_GRAPH_verify_row2599_line.py
+python ai/omreal/DIAG9_GRAPH_verify_tree_certificate.py \
+  ai/omreal/data/DIAG9_GRAPH_row2599_line_graph.npz
+python ai/omreal/DIAG9_GRAPH_cut_sat.py \
+  ai/omreal/data/DIAG9_GRAPH_row2599_line_graph.npz
+```
+
+The 65 gradients have exact rank one and are transverse to the line.  The
+separate global-factor certificate below now proves that these 65 occurrences
+share one primitive residual polynomial after parent-bracket localization.
+The roadmap is nevertheless complete only on this line.  Higher-dimensional
+residual roadmaps and then full nine-dimensional coverage remain necessary
+for the ninth diagonal.
+
+`DIAG9_GRAPH_row2599_disk_roadmap.npz` upgrades the exceptional crossing to
+the embedded projective square
+`W(s,u)=W+s E_(2,7)+u E_(1,7)`, `|s|,|u|<=1`.  All 65 center restrictions
+share one exact primitive linear gcd on this plane, all quotients are
+nonvanishing, and every other residual restriction and parent bracket is
+certified nonzero on the full square.  It stores the resulting two convex
+cells and their common wall segment.
+
+SHA-256: `8111a338e2169c4492ad0c5b7e03c9792d5c301c54f0f10a3ce20114db424486`
+
+`DIAG9_GRAPH_row2599_disk_graph.npz` is the corresponding labeled two-cell
+graph certificate.
+
+SHA-256: `c0521f59aac563a4d7cbcd0405e90a3d4ae26fcf7b9239c9bfce296c6e031b1b`
+
+```console
+python ai/omreal/DIAG9_GRAPH_verify_row2599_disk.py
+```
+
+This proves one wall branch on the chosen plane.  The global-factor census
+below independently identifies it as the restriction of one common
+irreducible residual factor in all nine projective coordinates.  A disk with
+two coprime branches is the next local roadmap test.
+
+`DIAG9_GRAPH_row2599_node_roadmap.npz` supplies that two-branch test.  It is a
+rational projective disk around a transverse node of two coprime residual
+factors.  Exactly `65+65` labeled occurrences lie on the branches, their
+Jacobian has rank two at the center, and exact dominance certificates exclude
+every other residual and parent wall from the disk.  The roadmap has four
+open cells, four wall arcs, and one node, with exact tope counts
+`4x26,112`, `4x26,040`, and `25,968` respectively.  All finite common
+signature supports are empty or connected on the disk.
+
+SHA-256: `ddec96b052b305d279b543be2af27e12f380f0dedc79ea434616c64b40cd8cea`
+
+`DIAG9_GRAPH_row2599_node_graph.npz` is its exact four-cycle chamber graph;
+both the sharp tree theorem and complete cut-SAT check pass.
+
+SHA-256: `b7f48c4f4f421ba88cf551a2ba16cbd024d63d0910ada701118c88e2e2b7e19f`
+
+```console
+python ai/omreal/DIAG9_GRAPH_verify_row2599_node.py
+python ai/omreal/DIAG9_GRAPH_verify_tree_certificate.py \
+  ai/omreal/data/DIAG9_GRAPH_row2599_node_graph.npz
+python ai/omreal/DIAG9_GRAPH_cut_sat.py \
+  ai/omreal/data/DIAG9_GRAPH_row2599_node_graph.npz
+```
+
+This is the first exact codimension-two local roadmap.  It is not a cover of
+the full parent realization cell.
+
+## Exact global residual-factor census
+
+`DIAG9_GRAPH_global_factor_census.npz` localizes all 84,840 labeled residual
+determinant occurrences by the 62 nonconstant parent brackets and stores the
+resulting 26,740 primitive factor classes.  Their exact multiplicities are
+`25,200 x 1`, `420 x 2`, `280 x 15`, and `840 x 65`.  The certificate also
+stores the occurrence-to-factor map, stripped bracket units, the old
+65-occurrence crossing, and its common global factor.
+
+SHA-256: `3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc`
+
+Semantic SHA-256:
+`8dd371e34f9af178c49d4d0152864a394a0b2defcf16e673ddf885feb6ec0071`
+
+```console
+python ai/omreal/DIAG9_GRAPH_global_factor_census.py
+```
+
+The replay re-expands every determinant and parent bracket over exact
+rational arithmetic and verifies the stored localization identities.  The
+factor census is not a chamber roadmap.
+
+## Exact row-2599 factor states
+
+`DIAG9_GRAPH_row2599_factor_states.npz` evaluates one exact determinant
+representative of every global factor on all 178 stored row-2599 charts.  It
+stores the packed `178 x 26,740` sign matrix, factor traces, the 10,844
+varying factor IDs, and the complete pairwise Hamming-distance matrix.  All
+178 states are distinct, with distances from 1,125 through 5,600.
+
+SHA-256: `f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf`
+
+Semantic SHA-256:
+`ab4aeed6eab31d6f4bfa68894b52e8086910076a25d7c7416c806f0529df8f0b`
+
+```console
+python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py
+```
+
+This proves at least 178 residual sign chambers and at least 10,844 factors
+meeting the row-2599 realization cell.  It does not certify adjacency or
+coverage.
