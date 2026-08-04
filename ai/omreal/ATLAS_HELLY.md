@@ -17,6 +17,14 @@ strictly stronger high-risk conjecture rather than an equivalent reformulation.
 It also records exact row-2599 certificates for an eight-coordinate raw
 support cube and for nonconvexity inside one deletion-residence fiber; both
 results sharpen the proof boundary without settling the conjecture.
+Section 4 now proves the one-color entry of the Nine-Diagonal Vanishing
+Lemma for every parent by a contraction--lift argument; the other eight
+entries remain open.  It also gives the boundary-corrected Alexander--Gordan
+exact sequence for those eight cases, deduces contractibility for 2,546 of
+the 2,604 parent realization cells, classifies the actual post-contraction
+direction walls, and supplies exact certificates showing why neither the
+52 one-wall labels nor simultaneous-contraction convexity completes the
+proof.
 The main unconditional conclusion is already useful:
 
 > For a normalized realization space of dimension `D`, every jointly
@@ -194,17 +202,17 @@ proper.  The theorem would give `F_T != empty`, a contradiction.  QED.
 
 For `UOM(4,8)`, the complete diagonal is
 
-| number of extensions in `S` | group whose nonvanishing witnesses topology |
-|---:|---:|
-| 1 | `H_tilde_8(F_S; Q)` |
-| 2 | `H_tilde_7(F_S; Q)` |
-| 3 | `H_tilde_6(F_S; Q)` |
-| 4 | `H_tilde_5(F_S; Q)` |
-| 5 | `H_tilde_4(F_S; Q)` |
-| 6 | `H_tilde_3(F_S; Q)` |
-| 7 | `H_tilde_2(F_S; Q)` |
-| 8 | `H_tilde_1(F_S; Q)` |
-| 9 | `H_tilde_0(F_S; Q)` (disconnectedness) |
+| number of extensions in `S` | group whose nonvanishing witnesses topology | status |
+|---:|---:|---|
+| 1 | `H_tilde_8(F_S; Q)` | proved below |
+| 2 | `H_tilde_7(F_S; Q)` | open |
+| 3 | `H_tilde_6(F_S; Q)` | open |
+| 4 | `H_tilde_5(F_S; Q)` | open |
+| 5 | `H_tilde_4(F_S; Q)` | open |
+| 6 | `H_tilde_3(F_S; Q)` | open |
+| 7 | `H_tilde_2(F_S; Q)` | open |
+| 8 | `H_tilde_1(F_S; Q)` | open |
+| 9 | `H_tilde_0(F_S; Q)` (disconnectedness) | open |
 
 Thus an obstruction of arity greater than ten forces one entry in this table
 to be nonzero.  This is unconditional, even if the conjecture in the next
@@ -263,6 +271,394 @@ a falsifier for the reduced core conjecture must certify membership in `E(M)`.
 The core dichotomy proves `DEHC(4,8)` implies the Extension-Helly Conjecture.
 The converse need not hold: (5) is a deliberately stronger, independently
 certifiable target.
+
+### The one-color diagonal is a theorem
+
+The first entry of (5) admits a uniform proof.  The argument is useful beyond
+this catalog because it identifies exactly what is lost when a second
+extension is added.
+
+> **Contraction--lift theorem.**  Let `M` be a realizable uniform rank-`r`
+> oriented matroid on `n` elements, let `sigma` be a realizable uniform
+> extension by `e`, put `N=M+sigma`, and put `C=N/e`.  Then
+>
+> \[
+>       F_\sigma\simeq U_\sigma
+>       \quad\text{for some open }
+>       U_\sigma\subseteq\mathcal R(C).                \tag{5a}
+> \]
+>
+> Consequently, with
+> \[
+>       D_C=(r-2)(n-r),
+> \]
+> one has
+> \[
+>       \widetilde H_i(F_\sigma;\mathbb Q)=0
+>       \qquad\text{for every }i\ge D_C.               \tag{5b}
+> \]
+
+**Proof.**  The incidence space `Z_{sigma}` from (2), modulo the harmless
+positive scaling of its private column, is the normalized realization space
+of `N`; the scaling factor is contractible.  Normalize `N` using a projective
+frame containing `e`, an ordered `(r-1)`-set of old elements, and one further
+old element, with the fixed frame signs dictated by `N`.  In these coordinates
+`e` is the last coordinate vector.  Every old column has the form
+
+\[
+                         y_i=(x_i,h_i),                 \tag{5c}
+\]
+
+and the `x_i` form the correspondingly normalized realization of the uniform
+rank-`(r-1)` contraction `C`.  The frame fixes the affine-height gauge.
+
+For fixed `x`, every bracket of `N` containing `e` already has the prescribed
+sign because `x` realizes `C`.  Every remaining bracket is a bracket of `M`,
+and expansion in the last row makes it an affine-linear function of the lift
+heights `h`.  Thus the fiber over `x` is either empty or an open convex
+polyhedron cut out by strict affine-linear inequalities.  Its nonempty image
+`U_sigma` is open: a feasible height vector remains feasible under a small
+change of `x`.
+
+The same local persistence supplies local constant-height sections.  A
+partition of unity and convex combination give a global continuous section
+over `U_sigma`; straight-line motion in each convex fiber is a strong
+deformation retraction onto its graph.  Together with the convex-fiber lemma
+for `Z_sigma -> F_sigma`, this proves (5a).
+
+Uniformity lets one use one fixed projective frame for `C`, so
+`R(C)` is an open subset of `R^(D_C)`.  Every component of an open subset of
+`R^(D_C)`, when `D_C>0`, is a noncompact `D_C`-manifold and therefore has zero
+ordinary top homology; there is no homology above its dimension.  The
+zero-dimensional case is immediate.  This proves (5b).  QED.
+
+At `(r,n)=(4,8)`, one has `D_C=2(8-4)=8`.  Therefore
+
+\[
+                  \boxed{\widetilde H_8(F_\sigma;\mathbb Q)=0}             \tag{5d}
+\]
+
+for every extension signature of every realizable `UOM(4,8)` parent.  More
+generally, when `n=2r`, the parent dimension is `(r-1)^2` and
+`D_C=r(r-2)=(r-1)^2-1`; hence the one-color diagonal always vanishes in the
+balanced cell.
+
+This proof does not iterate formally.  After contracting the first private
+column in `Z_S`, each other private column projects to a one-element extension
+of `C`, but its contraction signature is not specified by the original data.
+If those intermediate signatures are fixed, the remaining lift-height fiber
+is again convex.  The full space is obtained by gluing all such pieces across
+their rank-`(r-1)` discriminant strata.  Proving that this gluing contributes
+no class in degree `D-|S|` is exactly the remaining colored-elimination step
+for the other eight diagonals.  For an incomparable family, no projected
+private column can vanish: that would make it parallel to the contracted
+column and give the same extension region up to the irrelevant global sign.
+
+The reduction can nevertheless be stated exactly.  Choose `sigma_0 in S`,
+write `s=|S|`, and use the contraction frame from the proof.  Every other
+private column has coordinates
+
+\[
+                         p_j=(q_j,t_j).
+\]
+
+Pairwise incomparability implies `q_j != 0`: otherwise `p_j` is parallel to
+the contracted column and `F_(sigma_j)=F_(sigma_0)`.  Quotienting only by
+positive column scale therefore normalizes `q_j` to a point of the oriented
+sphere `S^(r-2)`; antipodal points remain distinct.  For fixed
+`(x,q_1,...,q_(s-1))`, expansion in the last row makes all parent and private
+brackets affine-linear jointly in the old lift heights and the `t_j`.
+The same convex-section proof gives
+
+> **Multi-contraction normal form.**  For every pairwise-incomparable `S`,
+> \[
+> F_S\simeq W_S,
+> \quad
+> W_S\text{ open in }
+> \mathcal R(C)\times(S^{r-2})^{s-1},                 \tag{5e}
+> \]
+> where membership in `W_S` is the feasibility of one explicit strict linear
+> system in the lift variables after the displayed base point is fixed.
+
+At `(4,8)`, the ambient manifold in (5e) has dimension
+
+\[
+                 8+2(s-1)=2s+6.                       \tag{5f}
+\]
+
+The ordinary dimension bound from (5f) proves only the already-settled case
+`s=1`; it does not imply the other diagonal vanishings.  Its value is that it
+isolates all nonlinearity in the gluing of intermediate rank-three extension
+directions.  A successful proof must contract the corresponding colored
+chains across that gluing, rather than assert convexity of `W_S`.
+
+The abstract extension--lifting bijection does not perform this contraction.
+It classifies compatible orientations for one fixed lifting and one fixed
+extension of an oriented matroid; it does not give a continuous choice while
+the realization `x`, the directions `q_j`, and their intermediate rank-three
+signatures cross discriminant strata.  See
+[Backman--Santos--Yuen, Theorem A](https://arxiv.org/abs/1904.03562).
+Using that theorem here without an additional gluing argument would reverse
+the needed quantifiers.
+
+The multi-contraction model is exact, but two further audits show that an
+interior wall contraction on `W_S` is not yet a complete proof target.  First,
+the 52 labels in Section 12 classify rank-four determinants of four derived
+normals before contraction.  They do not classify the rank-three direction
+walls, the mixed-color lift resultants, or even pairwise incidence between the
+original walls.  Second, a compactification-boundary term survives Alexander
+duality unless the topology of the parent realization cell is controlled.
+
+### The post-contraction wall alphabet is color-dependent
+
+After contracting the first private column, write the old rank-three columns
+as `x_1,...,x_8` and another private direction as `q`.  Its elementary
+direction walls are
+
+\[
+             \delta_{ab}(q)=\det(x_a,x_b,q)=0.
+\]
+
+Three pair normals have exactly five incidence types under `S_8`.  With
+brackets now denoting rank-three parent brackets, their exact determinants are
+as follows, up to a global sign.
+
+| graph of the three pairs | count | determinant |
+|---|---:|---|
+| triangle `ab,ac,bc` | 56 | `[abc]^2` |
+| star `ab,ac,ad` | 280 | `0` |
+| path `ab,bc,cd` | 840 | `[abc][bcd]` |
+| path plus edge `ab,bc,de` | 1,680 | `[abc][bde]` |
+| matching `ab,cd,ef` | 420 | `[abe][cdf]-[abf][cde]` |
+
+Only the matching type is a genuine direction discriminant on the uniform
+locus.  It is smooth there: in the standard normalized chart one coordinate
+derivative of its residual is a nonzero parent bracket.  The exhaustive exact
+check is [`verify_9dvl_postcontraction.py`](verify_9dvl_postcontraction.py).
+
+These five uncolored types are still not the full alphabet.  For `s` original
+extensions, the contraction normal form has `s+4` lift variables and a signed
+coefficient matrix
+
+\[
+ A_s(x,q)\in
+ \mathbb R^{(70+56(s-1))\mathbin\times(s+4)}.          \tag{5g}
+\]
+
+Its maximal minors include the direction walls and, once two remaining
+directions are present, irreducible mixed-color resultants.  One exact
+seven-by-seven minor is, up to sign,
+
+\[
+ \delta_{15}(q_1)\delta_{24}(q_2)
+ -\delta_{14}(q_1)\delta_{25}(q_2).                   \tag{5h}
+\]
+
+Thus the needed faces depend on labels and colors, not only on one-wall orbit
+types.  Even before contraction, two pairs with the same orbit multiset
+`{46,46}` can have opposite incidence behavior: one pair is the same nonempty
+wall, whereas another is disjoint throughout the uniform locus.  The latter
+claim follows from the exact localization identity
+
+\[
+ q_1-cq_2=-[1456][2367],
+\]
+
+whose right side is a unit there.  This is checked by
+[`verify_9dvl_wall_incidence.py`](verify_9dvl_wall_incidence.py).  Consequently
+the 52 one-wall labels cannot be the face poset of a chain contraction.
+
+Double contraction gives a useful local bound, but not the missing global
+vanishing.  Fix two independent private columns as the last two coordinate
+vectors and fix the projectivized rank-two quotient `V` of the eight old
+columns.  Modulo the two affine-height gauges, each contraction signature cuts
+out a pointed open polyhedral cone in
+
+\[
+                      Q=\mathbb R^8/\operatorname{row}(V).
+\]
+
+Its projectivization is a convex five-cell.  Write the two height classes as
+`a,b in Q`.  Every parent bracket has the bilinear form
+
+\[
+                  \Delta_I(V,a,b)=\det(V_I,a_I,b_I).   \tag{5i}
+\]
+
+For fixed `a`, all parent-sign inequalities are strict linear inequalities in
+`b`.  Projection to `a` therefore has convex fibers, and the same
+partition-of-unity argument as above proves that the fixed-`V` double-lift
+fiber is homotopy equivalent to the open set
+
+\[
+ P_V=\{a:\text{some admissible }b\text{ realizes the parent signs}\}
+      \subset\mathbb R^5.                              \tag{5j}
+\]
+
+In particular its ordinary homology vanishes in degrees at least five.  This
+is much weaker than the required global `H_7` vanishing: `V` varies through a
+five-dimensional stratified quotient space, and the mixed zero sets
+`det(p_0,p_1,y_i,y_j)=0` are unconstrained codimension-one walls that cannot be
+discarded.
+
+Nor can `P_V` be replaced by a convex set, even under the actual reduced
+9DVL hypotheses.  An exact `UOM(4,8)` certificate gives a proper,
+pairwise-incomparable pair of extension regions and two points of one fixed
+quotient fiber with the same parent and extension signs whose height midpoint
+reverses exactly one parent bracket.  Separate exact charts support each
+extension while a positive Gordan dependence excludes the other.  The
+integer-only check is
+[`verify_9dvl_double_contraction.py`](verify_9dvl_double_contraction.py).
+This rules out convex iteration; it neither constructs a homology class nor
+refutes the two-color case.
+
+### The Alexander--Gordan reduction has a boundary term
+
+There is nevertheless a finite exact reformulation of all eight open cases.
+For `S={sigma_1,...,sigma_s}`, let `A_i(Y)` be the `56 by 4` matrix whose rows
+are the derived normals signed by `sigma_i`, put
+
+\[
+ B_i=X\setminus F_{\sigma_i},\qquad
+ B_S=\bigcup_i B_i=X\setminus F_S,
+\]
+
+and define the normalized Gordan space
+
+\[
+\Gamma_S=\left\{(Y,z_1,\ldots,z_s):
+\begin{array}{l}
+Y\in X,\quad z_i\ge0,\quad A_i(Y)^Tz_i=0,\\
+\displaystyle\sum_{i,I}z_{i,I}=1
+\end{array}\right\}.                                  \tag{5k}
+\]
+
+Zero color blocks are allowed.  Hence a point of `Gamma_S` certifies that at
+least one extension in `S` is infeasible.
+
+> **Alexander--Gordan boundary theorem.**  For every `2 <= s <= 9` there is
+> a natural exact sequence, with rational coefficients,
+> \[
+> \widetilde H_{10-s}(X)
+> \longrightarrow H_c^{s-1}(\Gamma_S)
+> \longrightarrow \widetilde H_{9-s}(F_S)
+> \longrightarrow \widetilde H_{9-s}(X)
+> \longrightarrow H_c^s(\Gamma_S).                    \tag{5l}
+> \]
+
+**Proof.**  Gordan's theorem says that projection `Gamma_S -> B_S` is
+surjective.  Its fiber over `Y` is the intersection of the simplex
+`sum z=1` with homogeneous linear equations, hence is a nonempty compact
+convex polytope.  The projection is proper, so Vietoris--Begle gives
+
+\[
+                  H_c^*(B_S;\mathbb Q)
+                  \cong H_c^*(\Gamma_S;\mathbb Q).     \tag{5m}
+\]
+
+Put `K=S^9 minus X` and `D_S=S^9 minus F_S=K union B_S`.  Excision identifies
+`H^*(D_S,K)` with `H_c^*(B_S)`.  Alexander duality identifies
+
+\[
+\begin{aligned}
+\widetilde H^{s-1}(D_S)&\cong\widetilde H_{9-s}(F_S),\\
+\widetilde H^{s-2}(K)&\cong\widetilde H_{10-s}(X),\\
+\widetilde H^{s-1}(K)&\cong\widetilde H_{9-s}(X).
+\end{aligned}
+\]
+
+Substitution into the long exact sequence of `(D_S,K)` proves (5l).  QED.
+
+Exactness shows what must actually be proved.  The `S` case of 9DVL is
+equivalent to the first map below being surjective and the second being
+injective:
+
+\[
+\widetilde H_{10-s}(X)\longrightarrow H_c^{s-1}(\Gamma_S),
+\qquad
+\widetilde H_{9-s}(X)\longrightarrow H_c^s(\Gamma_S). \tag{5n}
+\]
+
+It is not currently justified to delete the two parent-space terms.  The
+standard small contractibility theorem concerns realizable uniform rank-three
+oriented matroids on at most nine elements, not rank four on eight elements;
+see the summary in
+[Richter-Gebert's handbook chapter](https://www.csun.edu/~ctoth/Handbook/chap6.pdf).
+The complete `UOM(4,8)` realizability classification of
+[Fukuda--Miyata--Moriyama](https://arxiv.org/abs/1204.0645) supplies no
+uniform contractibility theorem.
+
+The older exact classification does, however, settle most parent-boundary
+terms after one additional topological argument.
+
+> **Reducible-parent corollary.**  The 2,546 `UOM(4,8)` reorientation classes
+> certified by Corollary 4.9 of Bokowski--Richter have contractible normalized
+> realization spaces.  Thus, for each of those parents and every `2 <= s <= 9`,
+> (5l) reduces to
+> \[
+>       \widetilde H_{9-s}(F_S;\mathbb Q)
+>       \cong H_c^{s-1}(\Gamma_S;\mathbb Q).            \tag{5o}
+> \]
+
+**Proof.**  Their Definition 4.4 says that `M` is reducible by `p` only when
+*every* realization of `M minus p` extends to a realization of `M`; Theorem
+4.8 and Corollary 4.9 certify such a point in `M` or `M^*` for 2,546 classes.
+See
+[Bokowski--Richter, Section 4](https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/Richter-Gebert/Richter13.pdf).
+
+Normalize a deletion realization `Y` in one fixed projective frame.  The
+possible positions of `p` form a nonempty open convex polyhedron
+
+\[
+ C_Y=\{z:g_i(Y,z)>0\text{ for all brackets containing }p\}\subset\mathbb R^3.
+\]
+
+A continuous center can be chosen without assuming constant fiber
+combinatorics: the function
+
+\[
+ \phi_Y(z)=\tfrac12\lVert z\rVert^2-\sum_i\log g_i(Y,z)
+\]
+
+is proper and strictly convex on `C_Y`, so it has a unique minimizer `c(Y)`;
+the positive-definite Hessian and the implicit-function theorem make `c`
+continuous.  Straight-line motion to `c(Y)` is a fiberwise strong deformation
+retraction.  The deletion is a `UOM(4,7)`, whose Gale dual has rank three on
+seven elements and hence has contractible realization space by the small
+rank-three theorem.  Gale duality handles the classes for which `M^*` is the
+reducible member.  Therefore `R(M)` is contractible, and (5o) follows from
+(5l).  QED.
+
+The classification leaves 82 classes outside that reducibility test.  Its
+later perturbation arguments prove 58 of them realizable and 24
+nonrealizable, but do not say that every deletion realization extends.
+Accordingly, the parent terms in (5l) remain necessary for those 58 realizable
+parents.  Complex smoothness or irreducibility does not remove them: it does
+not imply that a real oriented sign cell is connected or acyclic.
+
+The interior part also has a precise finite filtration.  For nonempty
+`J subseteq S`, let
+
+\[
+G_J=\{(Y,(\lambda_i)_{i\in J}):
+Y\in X,\ \lambda_i\in\Delta^{55},\ A_i(Y)^T\lambda_i=0\}.
+\]
+
+Filtering (5k) by the support of the color masses gives
+
+\[
+ E_1^{p,q}=\bigoplus_{|J|=p+1}H_c^q(G_J;\mathbb Q)
+ \quad\Longrightarrow\quad H_c^{p+q}(\Gamma_S;\mathbb Q).       \tag{5p}
+\]
+
+On total degree `s-1`, its entries are `H_c^{s-|J|}(G_J)`.  Already for
+`s=2`, the unresolved associated-graded maps require both the cokernel in
+degree zero and the kernel in degree one of the two forgetful face maps to
+vanish.  No verified determinant identity currently proves either statement;
+higher `s` also has higher differentials.  The honest remaining target is
+therefore a **boundary-augmented multicolor contraction** proving (5n) and
+the relevant differentials in (5p).  An interior contraction using only the
+52 individual wall orbits would omit both mixed resultants and `K`.
 
 The exact algorithmic consequence of the headline conjecture is
 **ten-locality**: for every `A subset E(M)`,
