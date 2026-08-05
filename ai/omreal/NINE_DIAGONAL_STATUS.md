@@ -290,7 +290,22 @@ minors for `9,226`; exact common translations settle another `124`, and
 weighted-torus escapes settle four more.  Exact saturation plus a
 fiber-linear escape settles the seven type-`(49,49)` cases.  Thus every
 pair-wall component is noncompact for `9,361` orbits, leaving an honest
-residue of `115`, all among factor families 49--51.  The 66 pairs among the
+residue of `115`, all among factor families 49--51.  Two further exact
+closures reduce that residue to `4`: saturation (four cases) plus the
+affine-fiber argument (two cases) settle the six type-`(49,50)` orbits, and a
+single-variable refinement of the fixed-minor lemma -- affine in some
+coordinate after eliminating the first wall's pivot is on its own sufficient
+for noncompactness, no ideal saturation required -- closes all but four of
+the `6,890` candidate pairs across the five hard factor-type families at
+once.  The surviving honest residue is the four pairs
+`(50,7861),(50,7977),(50,12128),(50,20046)`, independently reconfirmed
+unresolved by every certificate family tried.  See
+`DIAG2_PIVOT_49_50_PAIR_SATURATION.md` and
+`DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md`.  None of this promotes diagonal two:
+pairwise noncompactness, however it is proved, does not by itself rule out a
+compact component assembled by gluing noncompact pieces through decorated
+transition cycles -- see item 6 below, which remains the actual open target.
+The 66 pairs among the
 12 displayed canonical polynomials are the smallest subtable of this result.
 Among the 220
 canonical triples, 170 have a direct bracket-product `3 by 3` minor and
@@ -774,6 +789,14 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG2_PIVOT_49_PAIR_SATURATION.md` and its exact verifier: localized
   critical ideals equal to one for all seven type-`(49,49)` residues and
   their componentwise fiber-linear noncompactness theorem.
+- `DIAG2_PIVOT_49_50_PAIR_SATURATION.md` and its exact verifier: the same
+  saturation for four of the six type-`(49,50)` residues, and the
+  affine-fiber argument for the other two.
+- `DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md` and its exact verifier: a
+  single-variable refinement of the fixed-minor lemma that closes 6,886 of
+  6,890 candidate pairs across all five hard factor-type families at once,
+  reducing the honest relative-label residue from 115 to the exact four
+  pairs `(50,7861),(50,7977),(50,12128),(50,20046)`.
 - `DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md` and its exact verifier: 171
   canonical rank-three certificates, four exact uniform rank-two witnesses,
   and the 45-triple saturation residue.
