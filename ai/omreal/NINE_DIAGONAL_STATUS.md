@@ -35,7 +35,7 @@ Exactly one of the nine entries is currently proved.
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
 | 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
-| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; 26,740 exact algebraic factor classes and proof-complete graph certificate, but no full-dimensional parent roadmap |
+| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; 26,740 exact algebraic factor classes, parent 860 selected by a catalog-wide empty-wall ranking, but no full-dimensional parent roadmap |
 
 The dual column is valid for all nine entries after importing the published
 contractibility statement for realizable oriented matroids on fewer than nine
@@ -192,6 +192,18 @@ at `[4567]=0` and `u=533/1228`.  Thus a theorem about arbitrary selected
 witnesses is false, while the sharper 112-direction escape-set intersection
 target survives strongly in this example.  See
 `DIAG2_WITNESS_EXCHANGE_AUDIT.md` and its two exact verifiers.
+
+That 112-direction target now has a circuit-free exact formulation.  For a
+fixed oriented shear, delete every transported signed normal whose replacement
+coefficient has the wrong direction.  Strict Gordan duality says the shear is
+an escape direction exactly when no complete derived-arrangement tope agrees
+with the extension signature on all retained rows.  This restriction test
+exhausts all 40,524 bad signatures at parent 16 and all 71,112 bad signatures
+at each of four hard row-2599 charts; every pair of escape sets intersects.
+The minimum sizes are 52 and 53, respectively, so cardinality alone does not
+prove the parent-16 case.  This is exact chart evidence and a proof-level
+reduction, not the universal chart theorem or the global compact-component
+assembly.  See `DIAG2_ESCAPE_SET_TOPE_REDUCTION.md`.
 
 Every individual residual factor wall nevertheless has a universal proper
 escape.  In an adapted global frame its equation is affine in one pivot with

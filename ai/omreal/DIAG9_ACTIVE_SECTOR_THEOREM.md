@@ -171,6 +171,14 @@ cell construction.  The 8,916 certified-empty factors have no walls; no
 extension-tope enumeration is needed on walls of the family-inactive
 factors.
 
+The same alternative-certificate calculation has now been evaluated from
+chirotope formulas on all 2,604 realizable catalog parents.  Parent 860 is the
+unique minimum of the resulting proof-safe candidate count: 10,320 factors
+are certified empty and 16,420 remain candidates, versus 17,824 candidates at
+parent 2599.  A direct determinant replay at the stored integer parent-860
+matrix independently reproduces the count.  See
+`DIAG9_PARENT_RANKING.md` and `verify_diag9_parent_ranking.py`.
+
 The endpoint pairs differ in 5,198 and 3,320 complete factor coordinates.
 All of those differing factors are inactive for the corresponding family,
 as the theorem requires; the committed exact incidence paths cross only
