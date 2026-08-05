@@ -3383,12 +3383,15 @@ smallest realizable Farkas obstruction escapes, but no global stratified
 termination theorem follows.  See
 [`DIAG2_PIVOT_CONE_FARKAS.md`](DIAG2_PIVOT_CONE_FARKAS.md).
 
-The canonical representative pair classification is nevertheless complete.
-After identifying types 46 and 47, every one of the 66 pairs of the remaining
-12 residual polynomials has a `2 by 2` Jacobian minor equal, up to sign, to a
-product of parent brackets.  Distinct representative gradients are therefore
-independent everywhere on the uniform locus.  Among the 220 canonical
-triples, 170 have a direct bracket-product `3 by 3` minor and `(36,38,42)`
+The pair classification is now almost complete even with arbitrary relative
+labels.  The `84,840` occurrences localize to `26,740` factors in six `S_8`
+orbits and `9,476` unordered distinct factor-pair orbits.  Exhaustive
+projective reframing gives a bracket-product `2 by 2` minor for `9,226`;
+common affine translations and weighted tori certify 128 more.  Hence every
+pair-wall component is noncompact for `9,354` orbits, with an honest
+122-orbit residue in factor families 49--51.  The earlier 66 pairs among 12
+canonical formulas are a subtable.  Among the 220 canonical triples, 170
+have a direct bracket-product `3 by 3` minor and `(36,38,42)`
 has a two-minor sequential saturation certificate.  Four triples have exact
 uniform rank-two witnesses: `(37,41,46)`, `(37,46,49)`, `(39,48,50)`, and
 `(41,46,49)`.  The other 45 remain unclassified.  Rank drop alone does not
@@ -3397,7 +3400,8 @@ not lie in all three Farkas-oriented halfspaces.  The common triple-wall case
 `(39,48,50)` has positive relation
 `dq39+3dq48+2dq50=0`, but an exact tangent segment preserves all three
 positive wall circuits and reaches the parent wall `[2478]=0`.  The
-certificates do not cover relative labeled `S_8` overlaps.  See
+triple certificates do not cover relative labeled `S_8` overlaps.  See
+[`DIAG2_PIVOT_LABELED_PAIR_THEOREM.md`](DIAG2_PIVOT_LABELED_PAIR_THEOREM.md),
 [`DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md`](DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md)
 [`DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md`](DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md),
 and [`DIAG2_PIVOT_REPRESENTATIVE_TRIPLE_FARKAS.md`](DIAG2_PIVOT_REPRESENTATIVE_TRIPLE_FARKAS.md).

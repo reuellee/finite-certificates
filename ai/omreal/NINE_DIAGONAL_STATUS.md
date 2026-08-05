@@ -282,11 +282,15 @@ label preserves both bad witnesses until `[5678]=0`.  Thus a strict cone
 field is false globally, while the certified obstruction itself escapes.
 See `DIAG2_PIVOT_CONE_FARKAS.md`.
 
-For the 12 distinct canonical residual polynomials (types 46 and 47 have the
-same polynomial), all 66 pairwise Jacobian-rank questions are settled
-exactly: each pair has a `2 by 2` minor equal, up to sign, to a product of
-one to four parent brackets.  Distinct representative gradients are
-therefore independent everywhere on the uniform locus.  Among the 220
+The former relative-label pair gap is now reduced exactly.  The `84,840`
+labeled occurrences give `26,740` localized residual factors in six full
+`S_8` orbits and `9,476` unordered distinct factor-pair orbits.  Exhausting
+all canonical projective frames gives bracket-product `2 by 2` Jacobian
+minors for `9,226`; exact common translations settle another `124`, and
+weighted-torus escapes settle four more.  Thus every pair-wall component is
+noncompact for `9,354` orbits, leaving an honest residue of `122`, all among
+factor families 49--51.  The 66 pairs among the 12 displayed canonical
+polynomials are the smallest subtable of this result.  Among the 220
 canonical triples, 170 have a direct bracket-product `3 by 3` minor and
 `(36,38,42)` has a short two-minor saturation certificate.  Four triples
 have exact uniform rank-two witnesses—`(37,41,46)`, `(37,46,49)`,
@@ -296,10 +300,12 @@ on the three relevant oriented halfspaces simultaneously.  The sole common
 triple-wall witness, `(39,48,50)`, has the positive gradient relation
 `dq39+3dq48+2dq50=0`, but an exact tangent path preserves all three positive
 wall circuits and reaches `[2478]=0`.  This is not yet the labeled theorem:
-relative `S_8` overlaps are unclassified.  See
+relative labeled triple overlaps are unclassified.  See
 `DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md` and
 `DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md`, and
-`DIAG2_PIVOT_REPRESENTATIVE_TRIPLE_FARKAS.md`.
+`DIAG2_PIVOT_REPRESENTATIVE_TRIPLE_FARKAS.md`; the full pair census and its
+three exact certificate families are in
+`DIAG2_PIVOT_LABELED_PAIR_THEOREM.md`.
 
 Double contraction also has a sharper exact boundary.  In its six-dimensional
 one-row Koszul normal system, an all-bilinear minimal positive circuit has at
@@ -759,6 +765,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md` and its exact verifier: all 66
   bracket-product Jacobian certificates for distinct canonical residual
   pairs, with the labeled-pair and triple boundary stated explicitly.
+- `DIAG2_PIVOT_LABELED_PAIR_THEOREM.md` and its exact verifier: all 9,476
+  unordered relative-label factor-pair orbits, 9,226 projective-frame
+  bracket-minor certificates, 128 affine/torus escapes, and the exact
+  122-orbit saturation residue.
 - `DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md` and its exact verifier: 171
   canonical rank-three certificates, four exact uniform rank-two witnesses,
   and the 45-triple saturation residue.
