@@ -138,6 +138,14 @@ a nonzero nonnegative dependence.  This is one restricted Gordan-feasibility
 test.  The universal local target is therefore a finite 112-bit set-system
 statement rather than compatibility of arbitrary supports.
 
+Strict Gordan duality sharpens this further: the restricted system has such a
+dependence precisely when no complete tope of the 56-row derived arrangement
+agrees with `rho` on all retained rows.  Thus one exact complete-tope table
+computes every escape set at a chart by restriction hashing.  The exhaustive
+parent-16 and hard row-2599 audits are in
+`DIAG2_ESCAPE_SET_TOPE_REDUCTION.md` and
+`verify_diag2_escape_set_topes.py`.
+
 For the exact falsifier,
 
 \[

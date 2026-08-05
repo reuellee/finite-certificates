@@ -244,10 +244,15 @@ relabeled a ninth-diagonal proof.
 
 ## 6. Strongest safe next computation
 
+The catalog-wide empty-wall audit in `DIAG9_PARENT_RANKING.md` selects catalog
+parent 860 as the unique proof-safe first target: 10,320 of its 26,740
+primitive factor walls are certified empty, leaving 16,420 candidates.  This
+is a ranking upper bound, not a proof that the remaining walls meet the cell.
+
 The right order is now:
 
-1. build and certify one complete master roadmap for the smallest parent
-   cell, not parent 2599;
+1. build and certify one complete master roadmap for parent 860, not parent
+   2599;
 2. quotient equal support rows and derive the inclusion poset by (1);
 3. search for a sharp tree certificate using $E_{uv}$, never $C_e$;
 4. if no tree passes, run the complete cut-SAT test from
