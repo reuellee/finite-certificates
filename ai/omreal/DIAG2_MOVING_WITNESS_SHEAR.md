@@ -14,9 +14,10 @@ parent-16 defect-two example. That finite evidence is not a universal census.
 
 > **Status.** This note does **not** prove diagonal two. What is still missing
 > is a proof that every point of every relevant simultaneous-bad component
-> admits a compatible pair of witnesses, or a different global argument.
-> Arbitrary signings can fail compatibility; the verifier contains such a
-> negative canary.
+> admits *some* compatible pair of witnesses, or a different global argument.
+> `DIAG2_WITNESS_EXCHANGE_AUDIT.md` gives a valid realizable pair for which
+> one preselected witness pair is incompatible, then repairs it by one
+> circuit exchange.  Thus arbitrary-witness compatibility is false.
 
 ## 1. Signed Gordan forms
 
@@ -275,7 +276,9 @@ counts the ordered pairs with \(m=2\), then
 Thus any obstruction is forced into many two-source XOR conflicts. Equation
 (18) is a proved reduction, not a proof that one of those XOR tests passes.
 The negative canary below shows that arbitrary full signings can make every
-ordered shear fail.
+ordered shear fail.  The stronger realizable witness-pair obstruction and
+its exact exchange repair are recorded separately in
+`DIAG2_WITNESS_EXCHANGE_AUDIT.md`.
 
 ## 6. Exact finite census
 
@@ -359,8 +362,12 @@ The direct escape route is now reduced to the following precise question.
 > extension signatures, can one choose two support-minimal nonnegative Gordan
 > witnesses for which at least one ordered shear passes (4)?
 
-The row-2599 and parent-16 checks are positive evidence. The low-source
-identity (17), XOR test (5), and invalid-signing canary delimit the finite
-obstruction. No argument presently excludes that obstruction for all valid
+Equivalently, do the two 112-direction escape sets defined in
+`DIAG2_WITNESS_EXCHANGE_AUDIT.md` always intersect?  The new parent-16 audit
+proves that a legitimate preselected circuit pair can fail all 56 ordered
+shears, so quantifying over the witness polytopes is essential.  It also
+proves that this pair is the unique incompatible one among all 646,880
+minimal-circuit pairs at that chart and that a one-circuit exchange repairs
+it.  No argument presently proves escape-set intersection for all valid
 extensions and all realizable parents, so the nine-diagonal ledger remains
 unchanged.

@@ -48,6 +48,12 @@ minimal positive Gordan witness which would obstruct either statement is
 either a structural circuit persisting nearby or one of the already
 certified one-sided residual wall circuits.
 
+The companion `DIAG9_ACTIVE_SECTOR_THEOREM.md` refines (2) for one chosen
+family: factors with no aligned wall circuit for any family member may be
+contracted, and common feasibility is a union of components of the remaining
+strict active sector.  This substantially shrinks the hard row-2599 tests but
+does not supply the missing sector-connectivity theorem.
+
 ## 1. The master chamber graph
 
 For triples \(I\subset[8]\), let \(a_I(Y)\) be the 56 derived normals. For

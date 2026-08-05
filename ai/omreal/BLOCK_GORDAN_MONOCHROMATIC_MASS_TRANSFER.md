@@ -2,27 +2,26 @@
 
 ## Outcome
 
-One half of the remaining codimension-one block-Gordan gap has a universal
-resolution, and the other half closes exactly for the hard row-2599 node.
-Let a path cross one generic residual wall and suppose one or more signature
-blocks lose their positive witnesses there.
+The remaining codimension-one block-Gordan gap now has a universal local
+resolution.  Let a path cross one generic residual wall and suppose one or
+more signature blocks lose their positive witnesses there.
 
 1. Some block is bad on the receiving side.  All mass in the dying blocks
    transfers linearly to a normalized witness in that receiving block.
-2. No block is bad on the receiving side.  If the dying blocks have a common
-   positive wall circuit `P`, retarget each block inside its convex Gordan
-   fiber to `P`.  Since `P` has only three or four derived normals, one
-   parent label has support degree at most one.  The projective-plane-pencil
-   lemma gives a common proper escape to the nonuniform parent boundary.
+2. No block is bad on the receiving side.  Retarget every dying block to its
+   positive wall circuit.  The circuits need not be the same: their labeled
+   occurrences share the crossed global residual factor, and every component
+   of that factor wall is noncompact.  Fixed bracket-unit circuit
+   coefficients keep every block bad along a common proper wall escape.
 
 Thus an individual dying block never needs a same-block circuit on the
-feasible side.  Moreover, a compact component cannot terminate at an
-all-block loss whose blocks share a wall circuit.  The exact hard row-2599
-triple does share such a circuit, so its monochromatic node loss is removed.
+feasible side.  Moreover, a compact component cannot terminate at any
+all-block loss over one global factor, even when the blocks use different
+labeled wall circuits.  The exact hard row-2599 triple shares a circuit and
+remains a particularly small regression case.
 
-This does **not** prove that arbitrary simultaneous losses attached to
-different labeled wall circuits have a common escape, that the resulting
-global matching is acyclic, or that any diagonal vanishes.  The pair
+This does **not** prove that the resulting global matching is acyclic or that
+any diagonal vanishes.  Noncompact walls can enclose bounded chambers.  The pair
 `H_c^1` and triple `H_c^0` terms for `s=3` remain open as global incidence
 problems.
 
@@ -67,10 +66,10 @@ Mayer--Vietoris block differential, not a defect in face compatibility.
 All faces which do not contain the receiver remain governed by the relative
 acyclic-carrier induction.
 
-## 2. The common-circuit all-die case
+## 2. The all-die case over one global factor
 
-Assume there is no receiving block and every dying block contains the same
-positive wall circuit `P` at the wall.  It has
+First suppose every dying block contains the same positive wall circuit `P`
+at the wall.  It has
 
 \[
                    |P|=4\quad\hbox{(ordinary wall)},\qquad
@@ -115,13 +114,28 @@ applies to an individual occurrence of all 13 residual wall types.  The
 verifier checks their representative wall circuits individually; their
 minimum support-label degree is always zero or one.
 
-This qualification is essential.  One global parent-wall factor can have
-many labeled determinant occurrences.  Different dying blocks might a
-priori use different positive circuits among those occurrences.  The small
-support of each circuit separately does not force the union of all chosen
-circuits to have a light label.  A universal all-die theorem therefore still
-requires either a common-circuit result for each global factor or a new
-multi-circuit escape.
+The common-circuit qualification is no longer needed.  By
+`RESIDUAL_STRATUM_NONCOMPACTNESS.md`, choose any labeled occurrence of the
+crossed global factor and put it in its adapted projective-frame gauge.  Its
+residual equation is affine in one pivot coordinate with a nowhere-zero
+parent-bracket-product slope.  The whole wall is therefore a graph over an
+open subset of `R^8`, and none of its connected components is compact.
+
+For every labeled occurrence of that same factor, the ordinary four-circuit
+or localization three-circuit has coefficients whose signs are fixed
+products of parent brackets.  Its positive relation at the crossing stays a
+positive dependence along the entire factor-wall component, including at
+intersections with other residual walls; support-minimality there is not
+needed.  Retarget each dying block inside its convex wall fiber to its own
+wall circuit, normalize those bracket-unit coefficients continuously, and
+follow a proper semialgebraic curve from the crossing in the common wall
+component.  This gives a simultaneous escape even when the union of the
+different circuits is pencil-rigid.
+
+> **Global-factor all-die theorem.**  At every generic residual wall, a
+> dying block face either transfers to a receiving bad block by (3), or all
+> dying blocks have a common proper escape along the crossed global-factor
+> wall.  The blocks need not share one unsigned circuit.
 
 ## 3. Exact row-2599 antichain test
 
@@ -189,12 +203,11 @@ attachment, not the pure simultaneous-loss star (7)--(10).
 
 ## 4. What remains
 
-Combining this note with `BLOCK_GORDAN_ALL_CODIM_COHERENCE.md` removes
-receiver-present monochromatic walls and the hard row-2599 all-die node as
-separate local obstructions.  The remaining proof obligation includes:
+Combining this note with `BLOCK_GORDAN_ALL_CODIM_COHERENCE.md` and
+`RESIDUAL_STRATUM_NONCOMPACTNESS.md` removes every receiver-present wall and
+every one-factor all-die wall as separate local obstructions.  The remaining
+proof obligation includes:
 
-- prove a common-circuit or multi-circuit escape at every all-die global
-  factor;
 - choose receivers and escapes on a finite proper subdivision;
 - prove the induced matching has no directed cycle;
 - verify properness at every parent-boundary end; and
