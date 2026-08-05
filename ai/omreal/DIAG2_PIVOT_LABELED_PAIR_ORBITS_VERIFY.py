@@ -68,7 +68,7 @@ EXPECTED_DIGEST = "df05bba9f0fa40f4ec5efa9296c40e44fecae06fae8bb0ae1b9f81706556b
 EXPECTED_ALL_FRAME_CERTIFICATES = 918
 EXPECTED_TRANSLATION_ESCAPES = 124
 EXPECTED_SCALING_ESCAPES = 4
-EXPECTED_ALL_FRAME_RESIDUE = 122
+EXPECTED_PRE_SATURATION_RESIDUE = 122
 EXPECTED_ALL_FRAME_DIGEST = "08d948e990c21a1ab7520e72f1ce885f36652273d953b95edb4caeba90ad7263"
 
 
@@ -926,7 +926,7 @@ def main():
             raise AssertionError("translation-escape count changed")
         if scaling_count != EXPECTED_SCALING_ESCAPES:
             raise AssertionError("scaling-escape count changed")
-        if len(residue) != EXPECTED_ALL_FRAME_RESIDUE:
+        if len(residue) != EXPECTED_PRE_SATURATION_RESIDUE:
             raise AssertionError("all-frame pair residue changed")
         if digest != EXPECTED_ALL_FRAME_DIGEST:
             raise AssertionError("all-frame labeled-pair semantic digest changed")
@@ -982,9 +982,20 @@ def main():
         print("PASS additional certificates after full frame exhaustion:", all_frame_count)
         print("PASS common affine-translation escapes:", translation_count)
         print("PASS common weighted-torus escapes:", scaling_count)
-    print("STATUS full exact residue:", len(residue))
-    print("STATUS residue by unordered factor-orbit types:", dict(sorted(residue_types.items())))
-    print("PASS reframed certificates by (anchor type, swapped):", dict(sorted(reframe_modes.items())))
+    status_label = (
+        "pre-saturation exact residue"
+        if args.all_frames
+        else "full exact residue"
+    )
+    print("STATUS", status_label + ":", len(residue))
+    print(
+        "STATUS residue by unordered factor-orbit types:",
+        dict(sorted(residue_types.items())),
+    )
+    print(
+        "PASS reframed certificates by (anchor type, swapped):",
+        dict(sorted(reframe_modes.items())),
+    )
     print("SEMANTIC SHA256:", digest)
     print("THEOREM every certified labeled pair-wall component is noncompact")
     print("CAVEAT residue means no listed certificate, not rank drop or compactness")

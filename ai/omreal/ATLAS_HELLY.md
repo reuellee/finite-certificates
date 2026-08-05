@@ -3387,10 +3387,12 @@ The pair classification is now almost complete even with arbitrary relative
 labels.  The `84,840` occurrences localize to `26,740` factors in six `S_8`
 orbits and `9,476` unordered distinct factor-pair orbits.  Exhaustive
 projective reframing gives a bracket-product `2 by 2` minor for `9,226`;
-common affine translations and weighted tori certify 128 more.  Hence every
-pair-wall component is noncompact for `9,354` orbits, with an honest
-122-orbit residue in factor families 49--51.  The earlier 66 pairs among 12
-canonical formulas are a subtable.  Among the 220 canonical triples, 170
+common affine translations and weighted tori certify 128 more.  Exact
+critical-ideal saturation and a fiber-linear escape certify the seven
+type-`(49,49)` cases.  Hence every pair-wall component is noncompact for
+`9,361` orbits, with an honest 115-orbit residue in factor families 49--51.
+The earlier 66 pairs among 12 canonical formulas are a subtable.  Among the
+220 canonical triples, 170
 have a direct bracket-product `3 by 3` minor and `(36,38,42)`
 has a two-minor sequential saturation certificate.  Four triples have exact
 uniform rank-two witnesses: `(37,41,46)`, `(37,46,49)`, `(39,48,50)`, and
@@ -3402,7 +3404,8 @@ not lie in all three Farkas-oriented halfspaces.  The common triple-wall case
 positive wall circuits and reaches the parent wall `[2478]=0`.  The
 triple certificates do not cover relative labeled `S_8` overlaps.  See
 [`DIAG2_PIVOT_LABELED_PAIR_THEOREM.md`](DIAG2_PIVOT_LABELED_PAIR_THEOREM.md),
-[`DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md`](DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md)
+[`DIAG2_PIVOT_49_PAIR_SATURATION.md`](DIAG2_PIVOT_49_PAIR_SATURATION.md),
+[`DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md`](DIAG2_PIVOT_REPRESENTATIVE_GRADIENTS.md),
 [`DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md`](DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md),
 and [`DIAG2_PIVOT_REPRESENTATIVE_TRIPLE_FARKAS.md`](DIAG2_PIVOT_REPRESENTATIVE_TRIPLE_FARKAS.md).
 

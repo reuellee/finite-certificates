@@ -1,4 +1,4 @@
-# Noncompact residual strata from bracket-unit Jacobian minors
+# Noncompact residual strata from exact escape certificates
 
 ## Outcome
 
@@ -11,8 +11,8 @@ was not previously recorded.
    **canonical representative** residual polynomials is noncompact.
 3. The same conclusion holds for the `170` canonical representative triples
    having one displayed bracket-product `3 by 3` Jacobian minor.
-4. For arbitrary relative labelings, the conclusion holds for `9,354` of
-   the `9,476` unordered distinct residual-factor pair orbits.  Exactly 122
+4. For arbitrary relative labelings, the conclusion holds for `9,361` of
+   the `9,476` unordered distinct residual-factor pair orbits.  Exactly 115
    factor-family-49--51 orbits remain open.
 
 The first statement closes the formerly open *multi-circuit all-die escape at
@@ -207,9 +207,12 @@ localizing the `84,840` labeled occurrences at the parent brackets, there are
 `26,740` distinct factors in six `S_8` orbits and `9,476` unordered distinct
 factor-pair orbits.  Projective reframing supplies a fixed bracket-product
 minor for `9,226`.  Common affine translations settle 124 more and common
-weighted tori settle four, proving noncompactness for `9,354`.  The exact
-122-orbit residue is not inferred to have rank drops or compact components.
-See `DIAG2_PIVOT_LABELED_PAIR_THEOREM.md`.
+weighted tori settle four.  Exact localized critical-ideal saturation and a
+fiber-linear escape settle the seven type-`(49,49)` cases, proving
+noncompactness for `9,361`.  The exact 115-orbit residue is not inferred to
+have rank drops or compact components.  See
+`DIAG2_PIVOT_LABELED_PAIR_THEOREM.md` and
+`DIAG2_PIVOT_49_PAIR_SATURATION.md`.
 
 The `170` triple conclusion remains a representative-normalization theorem.
 Three independently labeled factors generally require relative permutations,

@@ -287,10 +287,12 @@ labeled occurrences give `26,740` localized residual factors in six full
 `S_8` orbits and `9,476` unordered distinct factor-pair orbits.  Exhausting
 all canonical projective frames gives bracket-product `2 by 2` Jacobian
 minors for `9,226`; exact common translations settle another `124`, and
-weighted-torus escapes settle four more.  Thus every pair-wall component is
-noncompact for `9,354` orbits, leaving an honest residue of `122`, all among
-factor families 49--51.  The 66 pairs among the 12 displayed canonical
-polynomials are the smallest subtable of this result.  Among the 220
+weighted-torus escapes settle four more.  Exact saturation plus a
+fiber-linear escape settles the seven type-`(49,49)` cases.  Thus every
+pair-wall component is noncompact for `9,361` orbits, leaving an honest
+residue of `115`, all among factor families 49--51.  The 66 pairs among the
+12 displayed canonical polynomials are the smallest subtable of this result.
+Among the 220
 canonical triples, 170 have a direct bracket-product `3 by 3` minor and
 `(36,38,42)` has a short two-minor saturation certificate.  Four triples
 have exact uniform rank-two witnesses—`(37,41,46)`, `(37,46,49)`,
@@ -767,8 +769,11 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   pairs, with the labeled-pair and triple boundary stated explicitly.
 - `DIAG2_PIVOT_LABELED_PAIR_THEOREM.md` and its exact verifier: all 9,476
   unordered relative-label factor-pair orbits, 9,226 projective-frame
-  bracket-minor certificates, 128 affine/torus escapes, and the exact
-  122-orbit saturation residue.
+  bracket-minor certificates, 128 affine/torus escapes, seven fiber-linear
+  saturation escapes, and the exact 115-orbit residue.
+- `DIAG2_PIVOT_49_PAIR_SATURATION.md` and its exact verifier: localized
+  critical ideals equal to one for all seven type-`(49,49)` residues and
+  their componentwise fiber-linear noncompactness theorem.
 - `DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md` and its exact verifier: 171
   canonical rank-three certificates, four exact uniform rank-two witnesses,
   and the 45-triple saturation residue.
