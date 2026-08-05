@@ -55,6 +55,10 @@ jobs:
         run: >-
           PYTHONDONTWRITEBYTECODE=1 python
           ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py --all-frames
+      - name: Saturate the seven type-(49,49) pair residues
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ai/omreal/verify_diag2_pivot_49_pair_saturation.py
 
   maxout-capstone:
     name: maxout (3,5) capstone checks

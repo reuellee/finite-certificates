@@ -32,7 +32,7 @@ There are exactly
 \]
 
 unordered `S_8`-orbits of pairs of **distinct** residual factors.  Of these,
-`9,354` have an exact proper escape certificate:
+`9,361` have an exact proper escape certificate:
 
 | certificate | pair orbits |
 |---|---:|
@@ -41,27 +41,27 @@ unordered `S_8`-orbits of pairs of **distinct** residual factors.  Of these,
 | bracket-product minor after full stabilizer-frame exhaustion | 918 |
 | common affine-translation escape | 124 |
 | common weighted-torus escape | 4 |
-| **certified noncompact** | **9,354** |
-| honest residue | **122** |
+| type-`(49,49)` fiber-linear saturation | 7 |
+| **certified noncompact** | **9,361** |
+| honest residue | **115** |
 
 Thus every connected component of the common zero set is noncompact for
-`98.713%` of all relative-label factor-pair orbits.  This is a theorem about
+`98.786%` of all relative-label factor-pair orbits.  This is a theorem about
 the exact pair equations, not sampled parent charts.
 
-The remaining 122 orbits are concentrated in the last three factor families:
+The remaining 115 orbits are concentrated in the last three factor families:
 
 | unordered factor-orbit types | residue |
 |---|---:|
-| `(49,49)` | 7 |
 | `(49,50)` | 6 |
 | `(49,51)` | 12 |
 | `(50,50)` | 32 |
 | `(50,51)` | 38 |
 | `(51,51)` | 27 |
-| **total** | **122** |
+| **total** | **115** |
 
 No residue is asserted to contain a rank drop or a compact component.  It
-means only that the three certificate families above did not settle it.
+means only that the four certificate families above did not settle it.
 
 ## 1. The factor action and pair-orbit census
 
@@ -181,6 +181,36 @@ nonzero weight vector therefore defines a nonconstant, injective curve.
 Intersecting it with the open parent cell gives the same proper-interval
 escape as above.
 
+### 3.3 Type-`(49,49)` saturation and fiber-linear escape
+
+The seven type-`(49,49)` residues admit a common graph reduction after an
+exact stabilizer reframe.  The first wall is
+
+\[
+                   q_{49}=bf+d-b-f=0,
+\]
+
+so substitute `d=b+f-bf` into the second factor and call the primitive
+restricted polynomial `r`.  In all seven cases the exact localized critical
+ideal
+
+\[
+ \langle r,r_a,r_b,r_c,r_e,r_f,r_g,r_h,r_i\rangle:
+                 \left(\prod_B[B]\right)^\infty
+\]
+
+is the unit ideal.  Bounded integer pseudo-reduction needs at most 22 basis
+elements and 19 S-pairs.  Hence the original two gradients have rank two
+throughout the uniform common-zero locus.
+
+Moreover, every restricted `r` is affine-linear in `g`.  If the `g`
+coefficient vanishes at a zero, the whole local `g`-fiber gives a proper
+escape.  If it does not vanish on a hypothetical compact component,
+projection dropping `g` maps that component locally diffeomorphically to a
+nonempty subset of `R^7` which would be both open and compact, an
+impossibility.  Thus all seven pair-wall components are noncompact.  See
+`DIAG2_PIVOT_49_PAIR_SATURATION.md` and its exact verifier.
+
 ## 4. Exact verification
 
 Run
@@ -201,17 +231,29 @@ The checker independently reconstructs:
 6. every weighted-homogeneity identity.
 
 The full run is intentionally exhaustive and is assigned its own CI job.
-Its pinned semantic digest, covering the ordered orbit table, chosen
-certificates, affine directions, torus weights, and residue, is
+Its pinned pre-saturation semantic digest covers the ordered orbit table,
+chosen certificates, affine directions, torus weights, and residue:
 
 ```text
 08d948e990c21a1ab7520e72f1ce885f36652273d953b95edb4caeba90ad7263
 ```
 
+That checker deliberately stops at its 122-orbit three-family residue.  Run
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag2_pivot_49_pair_saturation.py
+```
+
+to reconstruct the seven type-`(49,49)` cases, their stabilizer-equivalent
+targets, every localized ideal trace, and the fiber-linearity check.  The two
+verifiers together prove the `9,361/9,476` theorem above.
+
 ## 5. Consequence and boundary
 
-This closes the former relative-label caveat for all but 122 exact pair
+This closes the former relative-label caveat for all but 115 exact pair
 orbits and removes every pair residue involving factor orbits 36, 38, or 48.
+It also removes the entire type-`(49,49)` slice.
 It is a substantial input to the signed residual-wall transition graph.
 
 It does **not** promote diagonal two.  Noncompact individual wall and
@@ -219,7 +261,7 @@ pair-wall strata can still assemble into a compact simultaneous-bad
 component through a cycle of chambers, wall faces, and witness transfers.
 The remaining proof target is therefore global acyclicity of that decorated
 transition complex.  Algebraically, the next bounded local task is the
-uniform-locus saturation of the Jacobian ideals for the 122 listed residue
-orbits, beginning with the seven `(49,49)` cases.  Failure of a bounded
+uniform-locus saturation of the Jacobian ideals for the 115 listed residue
+orbits, beginning with the six `(49,50)` cases.  Failure of a bounded
 certificate search must continue to be recorded as residue rather than as a
 geometric obstruction.
