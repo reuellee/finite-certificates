@@ -267,7 +267,7 @@ def main():
     print("PASS sequential uniform-rank certificate for (36,38,42)")
     print("PASS exact uniform rank-two witnesses for", tuple(RANK_DROP_WITNESSES))
     print("STATUS 171 rank-three, 4 rank-drop, 45 open among 220 canonical triples")
-    print("CAVEAT no relative labeled S_8 classification and no diagonal-two proof")
+    print("CAVEAT no relative labeled triple classification and no diagonal-two proof")
 
 
 if __name__ == "__main__":

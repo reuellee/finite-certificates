@@ -11,6 +11,9 @@ was not previously recorded.
    **canonical representative** residual polynomials is noncompact.
 3. The same conclusion holds for the `170` canonical representative triples
    having one displayed bracket-product `3 by 3` Jacobian minor.
+4. For arbitrary relative labelings, the conclusion holds for `9,354` of
+   the `9,476` unordered distinct residual-factor pair orbits.  Exactly 122
+   factor-family-49--51 orbits remain open.
 
 The first statement closes the formerly open *multi-circuit all-die escape at
 one global factor*.  If several signature blocks die at the same global
@@ -199,10 +202,18 @@ saturation certificate, not one globally fixed minor, so the compactness
 conclusion is not asserted for it.  Nor is it asserted for the four rank-drop
 triples or the `45` unclassified triples.
 
-These are representative-normalization theorems.  Two independently labeled
-factor occurrences generally require a relative permutation, so the `66`
-pair and `170` triple conclusions must not be advertised as a full labeled
-`S_8` census.
+The pair statement now has a separate full relative-label census.  After
+localizing the `84,840` labeled occurrences at the parent brackets, there are
+`26,740` distinct factors in six `S_8` orbits and `9,476` unordered distinct
+factor-pair orbits.  Projective reframing supplies a fixed bracket-product
+minor for `9,226`.  Common affine translations settle 124 more and common
+weighted tori settle four, proving noncompactness for `9,354`.  The exact
+122-orbit residue is not inferred to have rank drops or compact components.
+See `DIAG2_PIVOT_LABELED_PAIR_THEOREM.md`.
+
+The `170` triple conclusion remains a representative-normalization theorem.
+Three independently labeled factors generally require relative permutations,
+so it must not be advertised as a full labeled `S_8` triple census.
 
 They concern components of the full geometric common zero set inside `X`.
 After deleting its intersections with the other residual factors, a generic

@@ -36,7 +36,9 @@ tangent omitted-label escape.
 This theorem is deliberately scoped.  A second labeled wall occurrence is
 obtained by a relative `S_8` relabeling, not merely by choosing another one of
 the thirteen canonical representatives.  The current certificate table does
-not classify all such relative labeled overlaps.
+not by itself classify all such relative labeled overlaps.  That finite gap
+is now treated in `DIAG2_PIVOT_LABELED_PAIR_THEOREM.md`: 9,354 of the exact
+9,476 factor-pair orbits are certified noncompact, with 122 left as residue.
 
 ## Exact certificates
 
@@ -92,8 +94,8 @@ The remaining finite tasks are therefore:
 
 1. saturate each of the 45 still-open representative triple ideals by the
    product of parent brackets;
-2. enumerate relative labeled pair and triple overlaps up to simultaneous
-   `S_8`; and
+2. saturate the exact 122-orbit relative-label pair residue and enumerate
+   relative labeled triple overlaps up to simultaneous `S_8`; and
 3. for every surviving positive dependence, recover the signed circuit data
    and test for a common lower-support tangent escape.
 

@@ -119,7 +119,7 @@ PASS exact bracket-product 3-minors for 170 canonical triples
 PASS sequential uniform-rank certificate for (36,38,42)
 PASS exact uniform rank-two witnesses for ((37, 41, 46), (37, 46, 49), (39, 48, 50), (41, 46, 49))
 STATUS 171 rank-three, 4 rank-drop, 45 open among 220 canonical triples
-CAVEAT no relative labeled S_8 classification and no diagonal-two proof
+CAVEAT no relative labeled triple classification and no diagonal-two proof
 ```
 
 ## Consequence for the strict-cone program
