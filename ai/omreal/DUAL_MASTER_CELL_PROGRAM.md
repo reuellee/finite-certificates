@@ -107,6 +107,15 @@ the all-strata gluing theorem in Section 4, labels every *interior* refinement
 cell.  Cells in `A_inf` are excluded rather than assigned intersection
 labels.
 
+For a fixed family rather than the universal all-family complex, the
+cellulation can be much smaller.  `DIAG9_ACTIVE_SECTOR_THEOREM.md` proves
+that only residual factors carrying a wall circuit aligned with some member
+of `S` can change common feasibility.  The inactive factors may be omitted
+and `F_S` is a union of components of the resulting strict active sector.
+This is a family-adaptive reduction, not a replacement for the universal
+master complex: a factor inactive for one family may be active for another,
+and an active sector may still carry global cycles.
+
 ## 2. Proof of the dual master-cell theorem
 
 For an interior simplex `tau`---equivalently, one not contained in
@@ -295,6 +304,27 @@ boundary-at-infinity deletion correctly, and prove that the resulting
 cell-induced subcomplexes have no one-cycles.  Individually harmless cells
 can still assemble into a global cycle.
 
+There is now a complementary exact infinity statement in codimension one.
+Every labeled residual wall is a graph over an open subset of `R^8`, after
+its adapted global projective-frame normalization, and hence none of its
+components is compact.  Fixed bracket-unit Jacobian minors give the same
+conclusion for all 66 canonical pair strata and 170 canonical triple strata.
+This concerns full geometric zero-set components, not the generic cells
+obtained after cutting them by every other wall.  It also does not vanish the
+top compact-support class of a noncompact manifold: `H_c^d(R^d)` is already
+nonzero.  Thus it neither makes the root-residence sets connected nor removes
+a global one-cycle assembled through incidence cancellation.  See
+`RESIDUAL_STRATUM_NONCOMPACTNESS.md`.
+
+That limitation is sharp.  The same note gives an exact contractible
+nine-dimensional semialgebraic parent with eight proper incomparable strict
+sides, literal all-strata gluing, and a fixed unit Jacobian minor for every
+subfamily, but whose eightfold intersection retracts to an annulus.  Thus
+even noncompactness of every common-zero component does not make the present
+abstract axioms imply diagonal eight.  A proof must use the third-compound
+restrictions to control the topology of multiwall projection domains and
+their infinity/resultant strata.
+
 This also explains the repeated block-Gordan difficulty.  At a generic
 smooth wall each individual `B_rho` is locally empty, the whole ball, the
 wall, or one closed side.  A large multi-circuit all-die carrier is not exotic
@@ -363,10 +393,13 @@ individually harmless nodes.
    labels.  Do not enumerate witness-support carriers which already collapse
    at the base level.
 5. Pursue the moving-witness transport lemma separately for diagonal two,
-   where the dual method would require strata through codimension eight.
-6. For diagonal nine, either prove residual sign-geodesy, which would make
-   every signature support chamber-convex, or complete only the labeled
-   codimension-one roadmap and use the existing exact graph verifier.
+   where the dual method would require strata through codimension eight.  The
+   surviving local target is pairwise intersection of the 112-direction
+   escape sets, not compatibility of arbitrary chosen witnesses.
+6. For diagonal nine, first discard all family-inactive factors.  Then prove
+   the active sector connected, or build its family-specific roadmap and
+   show that at most one component is feasible.  Residual sign-geodesy
+   remains a stronger universal alternative.
 
 The witness-frame reduction remains a valid cross-check for diagonals seven
 through nine, but it raises the ambient dimension from nine to `9+3s` and

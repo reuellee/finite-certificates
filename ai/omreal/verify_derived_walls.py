@@ -215,9 +215,10 @@ for index, edges in enumerate(representatives):
             if parent != 0
         )
         pivot, derivative_brackets = PIVOT[index]
-        assert equal_up_to_sign(
-            sp.diff(RESIDUAL[index], pivot), product(derivative_brackets)
-        )
+        derivative = sp.expand(sp.diff(RESIDUAL[index], pivot))
+        assert sp.degree(RESIDUAL[index], pivot) == 1
+        assert pivot not in derivative.free_symbols
+        assert equal_up_to_sign(derivative, product(derivative_brackets))
 
 # Orbits 46 and 47 are two views of one localization wall.  Their first
 # three normals all annihilate y_1.  The only nonzero maximal cofactor of
@@ -281,4 +282,5 @@ print(
     "PASS: 367290 four-sets -> 52 orbits = "
     "14 zero + 25 bracket-unit + 13 smooth residual"
 )
+print("PASS: all 13 residuals are affine in a bracket-unit pivot")
 print("PASS: orbit-46/47 localization wall and exact uniform witness")

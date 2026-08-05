@@ -29,13 +29,13 @@ Exactly one of the nine entries is currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | open; single-region `H_7` now vanishes integrally, so the only target is absence of compact components in `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; the complete single-piece `E_1^(0,2)` column vanishes; simple-wall carriers and common-circuit mass transfers are exact, leaving multi-circuit/global cycles |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; the complete single-piece `E_1^(0,2)` column vanishes and every one-factor all-die wall escapes, leaving global incidence cycles |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
 | 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
-| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; 26,740 exact global wall factors and proof-complete graph certificate, but no full-dimensional parent roadmap |
+| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; 26,740 exact algebraic factor classes and proof-complete graph certificate, but no full-dimensional parent roadmap |
 
 The dual column is valid for all nine entries after importing the published
 contractibility statement for realizable oriented matroids on fewer than nine
@@ -181,6 +181,30 @@ low-source count forces some ordered shear to have at most two colored
 sources, but arbitrary signings can make all two-source XOR tests conflict,
 so universal compatibility still needs the oriented-matroid extension
 constraints.  See `DIAG2_MOVING_WITNESS_SHEAR.md` and its exact verifier.
+
+That last qualification is now exact even inside the realizable extension
+domain.  A proper incomparable parent-16 pair has one legitimate strict
+`5+5` witness choice for which all 56 elementary shears conflict.  Complete
+enumeration finds 622 and 1,040 positive minimal circuits and proves that the
+displayed pair is the unique incompatible one among all 646,880 choices.
+Replacing one circuit triple gives the unique shear `5 -> 8`, which escapes
+at `[4567]=0` and `u=533/1228`.  Thus a theorem about arbitrary selected
+witnesses is false, while the sharper 112-direction escape-set intersection
+target survives strongly in this example.  See
+`DIAG2_WITNESS_EXCHANGE_AUDIT.md` and its two exact verifiers.
+
+Every individual residual factor wall nevertheless has a universal proper
+escape.  In an adapted global frame its equation is affine in one pivot with
+a nowhere-zero parent-bracket-product slope, so the wall is a graph over an
+open subset of `R^8` and has no compact component.  The fixed-minor argument
+also rules out compact common-zero components for all 66 pairs and 170
+direct-minor triples of canonical residual representatives.  Most
+importantly for the block resolution, signatures using different labeled
+wall circuits of one global factor remain bad along the whole wall.  This
+closes the multi-circuit all-die escape at one factor.  It does not rule out
+a compact simultaneous-bad chamber enclosed by several noncompact wall
+pieces, and the representative pair/triple tables do not cover relative
+`S_8` labelings.  See `RESIDUAL_STRATUM_NONCOMPACTNESS.md`.
 
 The block-Gordan compactification does not make a vertical Bland pivot proof
 automatic.  Its convex witness fiber has one degree-zero critical generator,
@@ -493,20 +517,21 @@ same-wall pair pieces therefore have a plane-pencil escape.  A strict
 row-2599 three-block occurrence with degree vector `(4,4,6,4,5,5,3,5)` is
 pencil-rigid, so the analogous triple claim is false.
 
-The full block resolution nevertheless repairs many monochromatic losses.
+The full block resolution repairs every codimension-one monochromatic loss.
 If another block is bad on the receiving side, all dying mass transfers
-linearly to a normalized witness in that block.  If every block dies but the
-dying blocks share one labeled wall circuit `P`, convex retargeting moves all
-of them to `P`; its at most 12 parent-label incidences give a common
-degree-at-most-one pencil escape.  A proper pairwise-incomparable row-2599
-triple has no receiving block but shares the localization circuit
-`123/356/348`, so this all-die escape closes its local star integrally.  A
-global factor can carry several labeled wall circuits, however, and their
-union need not have a light label.  The remaining middle-diagonal problem is
-therefore a multi-circuit all-die escape plus a proper, globally acyclic
-mass-transfer matching—not higher-wall coherence.  See
+linearly to a normalized witness in that block.  If every block dies, convex
+retargeting moves each block to its own positive wall circuit.  All labeled
+occurrences share the crossed global factor; their fixed bracket-unit
+positive dependences persist on its whole wall, and every wall component is
+noncompact.  They therefore have a simultaneous proper escape even when the
+circuits differ and their union is pencil-rigid.  The exact row-2599 common-
+circuit triple remains a small regression case, not a separate hypothesis.
+The remaining middle-diagonal problem is a proper, globally acyclic
+mass-transfer matching and its incidence cycles—not a multi-circuit all-die
+escape or higher-wall coherence.  See
 `BLOCK_GORDAN_MONOCHROMATIC_WALL_STARS.md` and
-`BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md`.
+`BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md`, together with
+`RESIDUAL_STRATUM_NONCOMPACTNESS.md`.
 
 ## Surviving strategies
 
@@ -614,6 +639,19 @@ mass-transfer matching—not higher-wall coherence.  See
    See `DIAG9_SIGN_GEODESY_AUDIT.md`,
    `DIAG9_GRAPH_GLOBAL_FACTOR_CENSUS.md` and
    `DIAG9_GRAPH_ROW2599_FACTOR_STATES.md`.
+   There is now a family-adaptive proof-level reduction before any roadmap is
+   built.  A factor is active for a signature exactly when one of its labeled
+   wall circuits is aligned with that signature.  Imposing the consistent
+   allowed signs of the factors active for a family gives a sector `H_S`,
+   and `F_S` is a union of connected components of `H_S`; inactive-factor
+   walls cannot change feasibility and may be contracted.  Conflicting
+   transported circuit identities first certify 8,916 row-2599 factor walls
+   empty, leaving 17,824 candidates; the two hard nine-families then use only
+   3,539 and 3,638 candidate-active factors.
+   Their endpoints differ on 5,198 and 3,320 full factor signs but on zero
+   active signs, explaining why the exact paths safely cross thousands of
+   walls.  This does not prove that an active sector is connected or handle
+   infinity.  See `DIAG9_ACTIVE_SECTOR_THEOREM.md` and its exact verifier.
    Smooth transverse wall pairs supply the expected local four-cycle, but
    exact semialgebraic countermodels show that smoothness alone implies
    neither global COM face symmetry/strong elimination nor support
@@ -755,8 +793,8 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   monochromatic examples for all 13 types, the universal same-wall pair
   escape, and a strict pencil-rigid triple obstruction.
 - `BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md` and its exact verifier:
-  universal receiver-block transfer, common-circuit all-die escape, and the
-  exact proper incomparable row-2599 triple that needs the latter.
+  universal receiver-block transfer, common-global-factor all-die escape,
+  and the exact proper incomparable row-2599 regression triple.
 - `BETA0_MIXED_ESCAPE.md`: exact closed-stratum escape theorem for all three
   stored row-2599 `4+5, beta=0` occurrences.
 - `DIAG2_MOVING_WITNESS_SHEAR.md` and its exact verifier: conditional
@@ -788,6 +826,9 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DUAL_MASTER_CELL_PROGRAM.md` and `verify_dual_master_node.py`: the finite
   dual-block truncation and Morse-certificate program, plus an independent
   replay of the exact row-2599 codimension-two contractibility theorem.
+- `RESIDUAL_STRATUM_NONCOMPACTNESS.md` and its exact verifiers: global graph
+  charts for individual walls, fixed-minor pair/triple noncompactness, the
+  common-factor all-die escape, and the sharp arity-eight abstract no-go.
 - `DIAG9_GRAPH_GLOBAL_FACTOR_CENSUS.md`, its exact replay, and NPZ: reduction
   of 84,840 labeled residual occurrences to 26,740 primitive global wall
   factors, including the exact common cubic at the 65-label crossing.
@@ -798,6 +839,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   the three certified local roadmaps, exact factor-halfspace closure of all
   39,366 support traces on the 178 charts, and the 142-new-resultant no-go to
   a projection recursion restricted to the existing equation catalog.
+- `DIAG9_ACTIVE_SECTOR_THEOREM.md` and its exact verifier: the theorem that
+  common feasibility is a union of active-sector components, plus the exact
+  8,916-factor empty-wall certificate and 3,539/3,638 candidate-active
+  reductions for the two hard row-2599 families.
 - `DIAG9_GRAPH_COM_AUDIT.md` and its exact verifiers: the transverse local COM
   diamond and exact no-go to inferring global COM axioms from smoothness.
 - `DIAG9_GRAPH_REDUCIBILITY_AUDIT.md` and its exact verifier: the safe
@@ -805,6 +850,9 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   reducibility induction.
 - `NINTH_CANDIDATE_37_176_EXACT_PATH.md` with the two corresponding files in
   `data/`: a second exact proper nine-antichain path, with 22,811 segments.
+- `DIAG2_WITNESS_EXCHANGE_AUDIT.md` and its two exact verifiers: a realizable
+  arbitrary-witness compatibility falsifier, its one-circuit repair, the
+  complete 646,880-pair circuit census, and the 112-direction set target.
 - `WITNESS_FRAME_STRATIFICATION.md` and
   `verify_witness_frame_stratification.py`: codimension reduction to the
   independent-witness stratum for `s=7,8,9`, plus an exact full-frame affine

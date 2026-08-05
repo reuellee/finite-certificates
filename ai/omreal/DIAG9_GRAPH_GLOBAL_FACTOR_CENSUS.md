@@ -159,3 +159,11 @@ This reduction does not establish which of the 26,740 walls meet a given
 parent realization cell, which wall intersections are nonempty, or whether
 the resulting labeled chamber graph satisfies the ninth-diagonal tree/cut
 certificate.  Those are the remaining geometric coverage tasks.
+
+There is now a parent-specific first filter.  For parent 2599,
+`verify_diag9_active_sector.py` retains every transported fixed-unit circuit
+identity.  Conflicting coefficient sign patterns prove that 8,916 primitive
+factor walls are empty in that parent cell, leaving 17,824 candidates.  This
+does not assert that every remaining candidate wall meets the cell, and the
+8,916 count must not be transferred to a different parent chirotope without
+recomputing its bracket-unit signs.  See `DIAG9_ACTIVE_SECTOR_THEOREM.md`.

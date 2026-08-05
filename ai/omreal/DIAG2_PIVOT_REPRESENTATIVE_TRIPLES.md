@@ -97,6 +97,15 @@ certificate of this simple form; `(36,38,42)` and the four witnesses above
 are then handled separately.  The remaining 45 canonical triples are left
 explicitly open rather than inferred from floating-point searches.
 
+Each of the 170 direct certificates also rules out a compact component of
+the corresponding common-zero set.  Projection to the six coordinates
+complementary to its fixed nonzero minor is a local diffeomorphism, so the
+image of a hypothetical compact component would be both compact and a
+nonempty open subset of `R^6`.  This conclusion does not extend merely from
+the multi-minor rank certificate for `(36,38,42)`, and it does not classify
+relative labeled `S_8` occurrences.  See
+`RESIDUAL_STRATUM_NONCOMPACTNESS.md`.
+
 Run
 
 ```console

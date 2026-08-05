@@ -198,6 +198,7 @@ def main():
     print("PASS distinct residual representative types:", kinds)
     print("PASS exact nonzero parent-bracket Jacobian minors for all", count, "pairs")
     print("THEOREM distinct representative gradients are independent on the uniform locus")
+    print("THEOREM every canonical pair-wall component is noncompact")
     print("THEOREM the only representative size-two coincidence is q_46=q_47")
     print("CAVEAT relative labeled S_8 overlaps and the open triple list are not classified")
 

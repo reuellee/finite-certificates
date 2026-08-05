@@ -22,6 +22,14 @@ statement.  The 178 charts have neither chamber coverage nor certified
 adjacency.  Thus this audit proves neither residual sign-geodesy, a global
 partial cube, nor the ninth diagonal.
 
+`DIAG9_ACTIVE_SECTOR_THEOREM.md` now gives a family-adaptive reduction that
+does not require sign-geodesy: discard every factor having no wall circuit
+aligned with the chosen family.  Common feasibility is a union of connected
+components of the remaining strict active sector.  This reduces the two hard
+row-2599 families to 3,539 and 3,638 candidate-active factors after 8,916
+factor walls are certified empty, but still does not prove those sectors
+connected.
+
 Replay all three statements with
 
 ```console

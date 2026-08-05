@@ -14,6 +14,14 @@ brackets.  It is therefore nonzero throughout every uniform parent cell.
 Consequently the gradients of two **distinct representative residual
 polynomials** are linearly independent on the uniform locus.
 
+There is also a topological consequence.  On the common zero set, projection
+to the seven coordinates complementary to the displayed minor is a local
+diffeomorphism.  The image of any connected component is a nonempty open
+subset of `R^7`; it cannot be compact.  Hence every common-zero component of
+two distinct canonical representative walls is noncompact.  This still does
+not classify relative labeled overlaps.  See
+`RESIDUAL_STRATUM_NONCOMPACTNESS.md`.
+
 Thus the representative size-two Farkas classification is complete:
 
 * distinct representative types always have a nonempty common strict cone;

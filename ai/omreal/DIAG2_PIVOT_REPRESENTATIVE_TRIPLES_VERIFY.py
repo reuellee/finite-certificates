@@ -263,6 +263,7 @@ def main():
     verify_36_38_42_certificate(residual, brackets)
     verify_rank_drop_witnesses(residual, brackets)
     print("PASS exact bracket-product 3-minors for", len(direct), "canonical triples")
+    print("THEOREM all 170 direct-minor triple-wall components are noncompact")
     print("PASS sequential uniform-rank certificate for (36,38,42)")
     print("PASS exact uniform rank-two witnesses for", tuple(RANK_DROP_WITNESSES))
     print("STATUS 171 rank-three, 4 rank-drop, 45 open among 220 canonical triples")
