@@ -377,7 +377,29 @@ This is a local theorem only.  It neither classifies all codimension-two
 strata of parent 2599 nor rules out a global one-cycle assembled from many
 individually harmless nodes.
 
-## 6. Revised attack order
+## 6. Parent-860 counterexample-guided routing pilot
+
+The first exact implementation of the heuristic-to-certificate loop is now
+available for parent 860.  A complete coordinate-star roadmap has 23 generic
+cells, 22 exactly isolated residual crossings, 26,264 supported signatures,
+and 12 proper support masks.  It immediately falsifies the naive rule that
+each individual feasibility support is a connected subtree: one signature
+has three star components.
+
+The failure is productive rather than terminal.  Ten exact residual-free
+same-state chords and six counterexample-selected cross-state chords give a
+24-chamber embedded network on which every finite intersection of the 12
+proper masks is connected.  Every chord is audited against all 26,740 factors
+and all parent brackets; one two-wall chord contributes the only new generic
+cell.  See `DIAG9_PARENT860_CEGIS_ROUTING.md` and its two exact checkers.
+
+This is training evidence for a component-aware routing/Morse rule, not the
+dual master complex itself.  The network has no full-dimensional coverage,
+codimension-two closure, or boundary-at-infinity data.  Its sharp lesson is
+that a fixed tree is too rigid, while an exact counterexample-guided chord
+rule can repair all observed intersections with a small factor-local library.
+
+## 7. Revised attack order
 
 1. Construct a complete regular chamber/wall/node refinement, retaining its
    artificial faces and the projective boundary-at-infinity subcomplex, for

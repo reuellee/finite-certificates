@@ -74,7 +74,13 @@ error in the catalog-wide evaluator.
 ## Consequence and boundary
 
 Parent 860 is now the justified engineering target for the first
-proof-carrying master roadmap.  The next calculation must still:
+proof-carrying master roadmap.  The first exact heuristic-to-certificate
+pilot is now complete on a bounded coordinate-star network: 23 exact chambers
+and 22 crossings expose a minimal one-signature no-go to tree routing, and a
+16-chord CEGIS repair makes every finite support intersection connected on a
+24-chamber augmented network.  See `DIAG9_PARENT860_CEGIS_ROUTING.md`.
+
+The next calculation must still:
 
 1. add the projection resultants and boundary equations needed for a complete
    compactified cell decomposition;
@@ -86,7 +92,8 @@ proof-carrying master roadmap.  The next calculation must still:
 
 The ranking therefore reduces the first roadmap input by 1,404 primitive
 factors relative to parent 2599.  It does not prove the ninth diagonal for
-parent 860 or for the catalog.
+parent 860 or for the catalog.  The repaired network is not a coverage
+certificate for the full parent cell.
 
 ## Exact verification
 
