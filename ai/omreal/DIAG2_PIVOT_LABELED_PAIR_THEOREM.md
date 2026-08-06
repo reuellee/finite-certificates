@@ -271,9 +271,14 @@ ideal saturation at all, closes 6,886 of the 6,890 candidate pairs across
 all five hard factor-type families in `DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md`
 -- taking the honest residue from 115 to exactly four pairs:
 `(50,7861),(50,7977),(50,12128),(50,20046)`, independently reconfirmed
-unresolved by every certificate family here. Failure of a bounded
-certificate search must continue to be recorded as residue rather than as a
-geometric obstruction -- these four remain exactly that, not a rank drop or
-a compact component. None of this closes the transition-graph acyclicity
-question above; it only shrinks the population of pair-wall pieces that
-question would need to glue.
+unresolved by every certificate family here. All four are exact plane conics
+in a shared coordinate pair; `DIAG2_CONIC_FACTORIZATION_ESCAPE.md` shows
+`(50,7977)`'s conic discriminant is an exact perfect square (ruling out a
+bounded ellipse) but this is a partial reduction, not a closure -- the
+natural escape ray only touches the zero locus at its starting point for a
+generic point of the conic, so `(50,7977)` remains open. Failure of a
+bounded certificate search must continue to be recorded as residue rather
+than as a geometric obstruction -- all four remain exactly that, not a rank
+drop or a compact component. None of this closes the transition-graph
+acyclicity question above; it only shrinks the population of pair-wall
+pieces that question would need to glue.

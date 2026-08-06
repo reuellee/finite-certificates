@@ -297,10 +297,17 @@ single-variable refinement of the fixed-minor lemma -- affine in some
 coordinate after eliminating the first wall's pivot is on its own sufficient
 for noncompactness, no ideal saturation required -- closes all but four of
 the `6,890` candidate pairs across the five hard factor-type families at
-once.  The surviving honest residue is the four pairs
-`(50,7861),(50,7977),(50,12128),(50,20046)`, independently reconfirmed
-unresolved by every certificate family tried.  See
-`DIAG2_PIVOT_49_50_PAIR_SATURATION.md` and
+once.  All four surviving exceptions are exact plane conics in the same
+coordinate pair `(a,c)`.  One of them, `(50,7977)`, has a conic discriminant
+that is an exact perfect square (hence never negative, so never a bounded
+ellipse) -- a genuine partial reduction, but not a closure: the natural
+escape ray this suggests is a transversal probe at a generic point, not a
+path along the zero locus, so `(50,7977)` remains open along with the other
+three, `(50,7861),(50,12128),(50,20046)`, whose discriminants genuinely
+change sign.  All four were independently reconfirmed unresolved by every
+certificate family tried.  See
+`DIAG2_PIVOT_49_50_PAIR_SATURATION.md`,
+`DIAG2_CONIC_FACTORIZATION_ESCAPE.md` (the reduction, honestly scoped), and
 `DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md`.  None of this promotes diagonal two:
 pairwise noncompactness, however it is proved, does not by itself rule out a
 compact component assembled by gluing noncompact pieces through decorated
@@ -797,6 +804,15 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   6,890 candidate pairs across all five hard factor-type families at once,
   reducing the honest relative-label residue from 115 to the exact four
   pairs `(50,7861),(50,7977),(50,12128),(50,20046)`.
+- `DIAG2_CONIC_FACTORIZATION_ESCAPE.md` and its exact verifier: a genuine
+  partial reduction, not a closure, for pairs whose restricted polynomial is
+  a plane conic in two coordinates rather than affine in one; shows
+  `(50,7977)`'s conic discriminant is an exact perfect square (ruling out a
+  bounded ellipse) but documents, rather than closes, the remaining gap (the
+  natural escape ray is a transversal probe, not a path on the zero locus)
+  after adversarial review caught an earlier overclaimed version.  The
+  honest residue is unchanged at the four pairs
+  `(50,7861),(50,7977),(50,12128),(50,20046)`.
 - `DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md` and its exact verifier: 171
   canonical rank-three certificates, four exact uniform rank-two witnesses,
   and the 45-triple saturation residue.

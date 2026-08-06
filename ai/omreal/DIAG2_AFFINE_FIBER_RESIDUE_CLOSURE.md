@@ -130,6 +130,18 @@ in `FOURTH_DIAGONAL_FIVEFOLD.md`) or a targeted ideal saturation in the style
 of `verify_diag2_pivot_49_pair_saturation.py` are the natural next attempts;
 neither is carried out here.
 
+**Update:** all four turn out to be exact plane conics in the same
+coordinate pair `(a,c)`, which is precisely the two-plane/pencil structure
+named above. `DIAG2_CONIC_FACTORIZATION_ESCAPE.md` shows `(50,7977)`'s conic
+discriminant is an exact perfect square (ruling out a bounded ellipse
+identically) -- a genuine partial reduction, but adversarial review found
+the step from "the discriminant rules out an ellipse" to "the pair is
+noncompact" has a real gap (the natural escape ray is a transversal probe at
+a generic point, not a path along the zero locus), so `(50,7977)` is **not
+yet closed**. All four exceptions remain open residue. The other three's
+discriminants genuinely change sign, so even a repaired version of the
+`(50,7977)` argument would not apply to them without a separate case.
+
 ## 5. Exact verification
 
 The checker independently reconstructs the 13 canonical residual polynomials
