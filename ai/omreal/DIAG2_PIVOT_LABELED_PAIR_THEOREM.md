@@ -260,8 +260,25 @@ It does **not** promote diagonal two.  Noncompact individual wall and
 pair-wall strata can still assemble into a compact simultaneous-bad
 component through a cycle of chambers, wall faces, and witness transfers.
 The remaining proof target is therefore global acyclicity of that decorated
-transition complex.  Algebraically, the next bounded local task is the
-uniform-locus saturation of the Jacobian ideals for the 115 listed residue
-orbits, beginning with the six `(49,50)` cases.  Failure of a bounded
-certificate search must continue to be recorded as residue rather than as a
-geometric obstruction.
+transition complex.
+
+The bounded local task named above -- saturating the Jacobian ideals of the
+115 residue orbits -- is now mostly done. The six `(49,50)` cases close in
+`DIAG2_PIVOT_49_50_PAIR_SATURATION.md` (four by saturation, two by a cheaper
+argument below). That cheaper argument turns out to generalize: a
+single-variable affine-fiber refinement of the fixed-minor lemma, needing no
+ideal saturation at all, closes 6,886 of the 6,890 candidate pairs across
+all five hard factor-type families in `DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md`
+-- taking the honest residue from 115 to exactly four pairs:
+`(50,7861),(50,7977),(50,12128),(50,20046)`, independently reconfirmed
+unresolved by every certificate family here. All four are exact plane conics
+in a shared coordinate pair; `DIAG2_CONIC_FACTORIZATION_ESCAPE.md` shows
+`(50,7977)`'s conic discriminant is an exact perfect square (ruling out a
+bounded ellipse) but this is a partial reduction, not a closure -- the
+natural escape ray only touches the zero locus at its starting point for a
+generic point of the conic, so `(50,7977)` remains open. Failure of a
+bounded certificate search must continue to be recorded as residue rather
+than as a geometric obstruction -- all four remain exactly that, not a rank
+drop or a compact component. None of this closes the transition-graph
+acyclicity question above; it only shrinks the population of pair-wall
+pieces that question would need to glue.
