@@ -70,6 +70,9 @@ EXPECTED_TRANSLATION_ESCAPES = 124
 EXPECTED_SCALING_ESCAPES = 4
 EXPECTED_PRE_SATURATION_RESIDUE = 122
 EXPECTED_ALL_FRAME_DIGEST = "08d948e990c21a1ab7520e72f1ce885f36652273d953b95edb4caeba90ad7263"
+EXPECTED_ALL_FRAME_RESIDUE_DIGEST = (
+    "74af790d75ad03b25d6cd1b490f23f67ad38b343a4ec9876b7eac19fc6aa60bb"
+)
 
 
 def occurrence_representatives():
@@ -930,6 +933,9 @@ def main():
             raise AssertionError("all-frame pair residue changed")
         if digest != EXPECTED_ALL_FRAME_DIGEST:
             raise AssertionError("all-frame labeled-pair semantic digest changed")
+        residue_digest = hashlib.sha256(repr(tuple(residue)).encode("ascii")).hexdigest()
+        if residue_digest != EXPECTED_ALL_FRAME_RESIDUE_DIGEST:
+            raise AssertionError("all-frame pair-residue list changed")
 
     (
         _representatives,

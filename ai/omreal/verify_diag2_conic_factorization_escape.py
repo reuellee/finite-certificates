@@ -170,9 +170,10 @@ def main():
         f"NOT give a whole-line escape at a generic point"
     )
 
-    print("STATUS certified relative-label pair orbits: 9472/9476 (unchanged by this file); residue: 4")
+    print("STATUS canonical-presentation method: 9472/9476 (unchanged by this file); exceptions: 4")
+    print("STATUS complete stabilizer-aware pair theorem: 9476/9476 (verified separately)")
     print("CAVEAT: this file does NOT close (50,7977) -- see the GAP line above and the .md section 1")
-    print("CAVEAT: diagonal two still requires global decorated transition-cycle acyclicity")
+    print("CAVEAT: diagonal two still requires universal common-shear overlap or another global argument")
 
 
 if __name__ == "__main__":

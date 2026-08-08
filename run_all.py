@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Run every verify_*.py in the tree; exit nonzero if any fails.
 
---fast skips the slow verifiers (druzkowski ~5-8 min, sae_circuit ~3-5 min,
-diag2_pivot_49_50_pair_saturation ~4-5 min).
+--fast skips the slow verifiers, including the three expensive diagonal-two
+atlas/mutation/saturation replays.
 """
 import os, subprocess, sys
 
 SLOW = {
+    "verify_diag2_escape_set_atlas178.py",
+    "verify_diag2_escape_set_mutation_square.py",
+    "verify_diag2_pivot_49_50_pair_saturation.py",
     "verify_druzkowski.py",
     "verify_sae_circuit.py",
-    "verify_diag2_pivot_49_50_pair_saturation.py",
 }
 fast = "--fast" in sys.argv
 root = os.path.dirname(os.path.abspath(__file__))

@@ -164,10 +164,14 @@ The sharpened moving-witness question is:
 > incomparable pair of extension signatures bad at `T`, must their two
 > escape-direction sets intersect?
 
-A positive answer would give a proper shear escape from every point of every
-simultaneous-bad component.  It would still have to be integrated coherently
-with the global compact-support/matching argument; (2) alone is not promoted
-to diagonal two.
+A positive answer would finish diagonal two.  Indeed, choose any point of a
+putative compact simultaneous-bad component.  A common direction and two
+witnesses give the proper moving-witness ray of
+`DIAG2_MOVING_WITNESS_SHEAR.md`; every finite initial segment remains in the
+same connected component, while the ray approaches a parent boundary or
+projective infinity.  This contradicts compactness.  No coherent choice of
+directions at different points is required.  Equation (2) is not promoted
+here only because its universal validity is still open.
 
 The set formulation suggests two exact attacks: an oriented-matroid theorem
 forcing pairwise intersection of the restricted Gordan systems, or a finite

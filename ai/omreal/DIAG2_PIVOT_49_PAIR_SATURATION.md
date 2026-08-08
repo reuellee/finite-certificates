@@ -8,7 +8,8 @@ ideal, so the two residual gradients have rank two everywhere on the uniform
 common-zero locus.  A fiber-linear argument then proves that every connected
 component of every one of the seven pair walls is noncompact.
 
-This raises the exact relative-label pair theorem from `9,354` to
+At this checkpoint, the result raised the exact relative-label pair theorem
+from `9,354` to
 
 \[
                          \boxed{9,361/9,476}
@@ -16,6 +17,11 @@ This raises the exact relative-label pair theorem from `9,354` to
 
 certified noncompact pair orbits (`98.786%`) and reduces the honest residue
 from `122` to `115`.  In particular, no type-`(49,49)` pair remains.
+
+The later iterated affine-fiber theorem in
+`DIAG2_PIVOT_ALL_PAIR_FIBERS.md` subsumes these seven noncompactness results
+and settles all `9,476/9,476` pair orbits.  The saturation here remains the
+stronger independent smoothness certificate for this slice.
 
 This is a local pair-wall theorem.  It does not promote diagonal two: compact
 simultaneous-bad sets can still be assembled through decorated cycles of
@@ -163,13 +169,14 @@ Expected final status:
 
 ```text
 THEOREM all seven type-(49,49) pair-wall components are smooth and noncompact
-STATUS certified relative-label pair orbits: 9361/9476; residue: 115
+HISTORICAL CHECKPOINT certified pair orbits: 9361/9476; residue: 115
+CURRENT PAIR THEOREM certified pair orbits: 9476/9476; residue: 0
 CAVEAT diagonal two still requires global decorated transition-cycle acyclicity
 ```
 
-## 5. Updated boundary
+## 5. Historical residue and current boundary
 
-The remaining pair residue is
+At this checkpoint, the remaining pair residue was
 
 | unordered factor-orbit types | residue |
 |---|---:|
@@ -180,7 +187,6 @@ The remaining pair residue is
 | `(51,51)` | 27 |
 | **total** | **115** |
 
-No remaining case is asserted to have a rank drop or a compact component.
-The next global proof target remains acyclicity of the component-decorated
-transition complex; the next bounded local target, if pursued first, is the
-six-case type-`(49,50)` saturation slice.
+The later affine-fiber theorem closes all 115 of those cases without needing
+smoothness.  The global proof target remains acyclicity of the
+component-decorated transition complex.

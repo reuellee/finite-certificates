@@ -59,6 +59,10 @@ jobs:
         run: >-
           PYTHONDONTWRITEBYTECODE=1 python
           ai/omreal/verify_diag2_pivot_49_pair_saturation.py
+      - name: Close all 122 pair residues by affine fibers
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ai/omreal/verify_diag2_pivot_all_pair_fibers.py
 
   nine-dvl-parent860-pilot:
     name: 9DVL parent-860 CEGIS routing pilot

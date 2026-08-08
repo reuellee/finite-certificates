@@ -524,7 +524,8 @@ def main():
         ],
     )
     print("THEOREM all seven type-(49,49) pair-wall components are smooth and noncompact")
-    print("STATUS certified relative-label pair orbits: 9361/9476; residue: 115")
+    print("HISTORICAL CHECKPOINT certified pair orbits: 9361/9476; residue: 115")
+    print("CURRENT PAIR THEOREM certified pair orbits: 9476/9476; residue: 0")
     print("CAVEAT diagonal two still requires global decorated transition-cycle acyclicity")
 
 

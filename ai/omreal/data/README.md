@@ -1,5 +1,29 @@
 # SEEAT certificate data
 
+## Complete diagonal-two residual-pair classification
+
+`DIAG2_PIVOT_pair_classification.npz` is the compact classification of all
+`9,476` unordered relative-label residual-factor pair orbits.  It contains
+the canonical anchor family, second factor ID, and certificate-mode code for
+each orbit in the exact order reconstructed by
+`DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py`.
+
+SHA-256: `a12680b52ace15096437e5cbcfcbdb6d888c9d61a2bccf8a2d336fa5be6b7025`
+
+| array | meaning |
+|---|---|
+| `pair_kind` | canonical first-factor orbit label |
+| `pair_second_factor` | exact localized second-factor ID |
+| `classification` | `0` residue, `1` primary minor, `2` alternate canonical frame, `3` full stabilizer frame, `4` translation, `5` torus |
+
+The 122 mode-zero entries are not unresolved: the independent affine-fiber
+checker reconstructs a stabilizer-equivalent graph presentation for every
+one and proves the full `9,476/9,476` pair-wall theorem.
+
+```console
+python ai/omreal/verify_diag2_pivot_all_pair_fibers.py
+```
+
 ## Parent-860 counterexample-guided routing pilot
 
 `DIAG9_GRAPH_parent860_coordinate_star.npz` is the complete labeled roadmap
@@ -486,3 +510,27 @@ python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py
 This proves at least 178 residual sign chambers and at least 10,844 factors
 meeting the row-2599 realization cell.  It does not certify adjacency or
 coverage.
+
+## Diagonal-two escape sets on all 178 stored charts
+
+`DIAG2_ESCAPE_SET_atlas178_summary.json` stores the exact per-chart summaries
+from the complete moving-witness escape-set replay on the same 178 row-2599
+charts.  For each chart it records the semantic digest of all 71,112 bad-
+signature masks, the minimum mask size and multiplicity, and an exact pair
+witness attaining the minimum intersection.  Every one of the
+12,657,936 reconstructed masks belongs to a pairwise-intersecting family;
+the global minimum mask size is 53 and the global minimum pair overlap is 6.
+
+SHA-256:
+`1417b3f1172c469e8072b418f878e5875a29d40a3fe6fe6a404f384aa6c8b36d`
+
+Semantic SHA-256:
+`d255845e6b246865ed3c50a61c001ec8701d3b22fffd218087d955ac0854d111`
+
+```console
+python ai/omreal/verify_diag2_escape_set_atlas178.py --workers 8
+```
+
+The checker recomputes every mask and verifies the stored summary.  As with
+the source chart bank, this is an exact point-sample theorem, not a residual-
+chamber coverage certificate and not a promotion of diagonal two.
