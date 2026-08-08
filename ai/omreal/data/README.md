@@ -1,5 +1,34 @@
 # SEEAT certificate data
 
+## Parent-860 counterexample-guided routing pilot
+
+`DIAG9_GRAPH_parent860_coordinate_star.npz` is the complete labeled roadmap
+on the nine coordinate segments of radius `10^-4` through the normalized
+exact parent-860 chart.  It stores 23 generic chamber labels, all 22 exact
+residual root boxes, crossing-factor features, and the shortest disconnected
+support witness.
+
+SHA-256: `9274371ec45baee318cd160f931344f37dc5031acc13d63c16099534b8896f4b`
+
+`DIAG9_GRAPH_parent860_coordinate_star_graph.npz` is the corresponding
+23-vertex, 22-edge labeled tree quotient.
+
+SHA-256: `b295cceb3d97477f9b8c874b3d22b6a09d13d79bc4d3fa5daf14156bd9a03f55`
+
+`DIAG9_GRAPH_parent860_star_repair.npz` stores the 16 exact CEGIS chords,
+their complete residual root isolation, the one new generic chamber label,
+and the connected all-family support closure of the resulting network.
+
+SHA-256: `f3ebf1f3a9b458663a12b042e68194aa24c4b55689cf85344e2d98f81aec3d11`
+
+```console
+python ai/omreal/DIAG9_GRAPH_parent860_star.py
+python ai/omreal/DIAG9_GRAPH_parent860_star_repair.py
+```
+
+These files are exact on their embedded one-dimensional network.  They do not
+certify coverage of the full parent realization cell.
+
 `seeat_parent2599_realizations.npz` is the compact certificate refuting the
 proposed four-chart bound for `UOM(4,8)`.  It contains:
 

@@ -35,7 +35,7 @@ Exactly one of the nine entries is currently proved.
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
 | 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
-| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; 26,740 exact algebraic factor classes, parent 860 selected by a catalog-wide empty-wall ranking, but no full-dimensional parent roadmap |
+| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 now has an exact 23-chamber coordinate-star no-go and a 24-chamber all-family CEGIS repair network, but no full-dimensional parent roadmap |
 
 The dual column is valid for all nine entries after importing the published
 contractibility statement for realizable oriented matroids on fewer than nine
@@ -599,7 +599,12 @@ escape or higher-wall coherence.  See
    cells are excluded, not intersection-labeled.  Global cycles, complete
    codimension-two incidence, and infinity are the real
    diagonal-eight targets.  See
-   `DUAL_MASTER_CELL_PROGRAM.md` and `verify_dual_master_node.py`.
+   `DUAL_MASTER_CELL_PROGRAM.md` and `verify_dual_master_node.py`.  The first
+   parent-860 heuristic-to-exact pilot additionally falsifies connected-tree
+   routing with one signature, repairs that obstruction and a subsequent pair
+   obstruction by 16 all-factor-certified chords, and obtains connected
+   finite intersections on its exact 24-chamber training network.  It is not
+   a coverage theorem; see `DIAG9_PARENT860_CEGIS_ROUTING.md`.
 2. **Sparse-form quotient plus CAD.**  Column scaling removes all but
    `beta<=4` invariant positive weight ratios from every generic pair orbit.
    The remaining equations ask that fixed sparse three-vectors vanish in a
@@ -892,6 +897,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DUAL_MASTER_CELL_PROGRAM.md` and `verify_dual_master_node.py`: the finite
   dual-block truncation and Morse-certificate program, plus an independent
   replay of the exact row-2599 codimension-two contractibility theorem.
+- `DIAG9_PARENT860_CEGIS_ROUTING.md`, its two exact checkers, and three NPZ
+  artifacts: a 23-chamber coordinate-star no-go to naive tree routing and a
+  16-chord, 24-chamber network with connected support for every finite family
+  on that network, without a claim of full parent-cell coverage.
 - `RESIDUAL_STRATUM_NONCOMPACTNESS.md` and its exact verifiers: global graph
   charts for individual walls, fixed-minor pair/triple noncompactness, the
   common-factor all-die escape, and the sharp arity-eight abstract no-go.
