@@ -3,6 +3,9 @@
 
 --fast skips the slow verifiers, including the three expensive diagonal-two
 atlas/mutation/saturation replays.
+
+--ci-delegated skips only verifiers that the required GitHub workflow runs in
+their own jobs.  With no flag this script continues to run every verifier.
 """
 import os, subprocess, sys
 
@@ -13,7 +16,11 @@ SLOW = {
     "verify_druzkowski.py",
     "verify_sae_circuit.py",
 }
+CI_DELEGATED = {
+    "verify_diag2_escape_set_atlas178.py",
+}
 fast = "--fast" in sys.argv
+ci_delegated = "--ci-delegated" in sys.argv
 root = os.path.dirname(os.path.abspath(__file__))
 
 fails, ran, skipped = [], 0, 0
@@ -24,6 +31,10 @@ for dirpath, _, files in os.walk(root):
         if fast and f in SLOW:
             skipped += 1
             print(f"SKIP  {f} (--fast)")
+            continue
+        if ci_delegated and f in CI_DELEGATED:
+            skipped += 1
+            print(f"SKIP  {f} (--ci-delegated; separate required CI job)")
             continue
         path = os.path.join(dirpath, f)
         r = subprocess.run([sys.executable, path], cwd=dirpath,
