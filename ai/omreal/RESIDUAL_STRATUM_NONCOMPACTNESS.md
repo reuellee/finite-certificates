@@ -11,9 +11,9 @@ was not previously recorded.
    **canonical representative** residual polynomials is noncompact.
 3. The same conclusion holds for the `170` canonical representative triples
    having one displayed bracket-product `3 by 3` Jacobian minor.
-4. For arbitrary relative labelings, the conclusion holds for `9,361` of
-   the `9,476` unordered distinct residual-factor pair orbits.  Exactly 115
-   factor-family-49--51 orbits remain open.
+4. For arbitrary relative labelings, the conclusion holds for all `9,476`
+   unordered distinct residual-factor pair orbits.  No local pair residue
+   remains.
 
 The first statement closes the formerly open *multi-circuit all-die escape at
 one global factor*.  If several signature blocks die at the same global
@@ -207,11 +207,12 @@ localizing the `84,840` labeled occurrences at the parent brackets, there are
 `26,740` distinct factors in six `S_8` orbits and `9,476` unordered distinct
 factor-pair orbits.  Projective reframing supplies a fixed bracket-product
 minor for `9,226`.  Common affine translations settle 124 more and common
-weighted tori settle four.  Exact localized critical-ideal saturation and a
-fiber-linear escape settle the seven type-`(49,49)` cases, proving
-noncompactness for `9,361`.  The exact 115-orbit residue is not inferred to
-have rank drops or compact components.  See
-`DIAG2_PIVOT_LABELED_PAIR_THEOREM.md` and
+weighted tori settle four.  Iterated affine-fiber graph presentations settle
+all 122 remaining orbits, proving noncompactness for `9,476/9,476`.  The
+seven type-`(49,49)` cases additionally have an independent localized
+critical-ideal saturation and smoothness proof.  See
+`DIAG2_PIVOT_LABELED_PAIR_THEOREM.md`,
+`DIAG2_PIVOT_ALL_PAIR_FIBERS.md`, and
 `DIAG2_PIVOT_49_PAIR_SATURATION.md`.
 
 The `170` triple conclusion remains a representative-normalization theorem.

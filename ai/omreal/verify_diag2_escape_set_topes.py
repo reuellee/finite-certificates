@@ -389,7 +389,7 @@ def main():
         )
         print("SEMANTIC", result["label"], result["digest"])
     print("THEOREM AUDIT escape membership equals a complete-tope restriction test")
-    print("SCOPE exact chart-level evidence; universal chart theorem and global assembly remain open")
+    print("SCOPE exact chart-level evidence; universal uniform-chart theorem remains open")
 
 
 if __name__ == "__main__":

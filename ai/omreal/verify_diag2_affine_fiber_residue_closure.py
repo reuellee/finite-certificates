@@ -382,11 +382,12 @@ def main():
         raise AssertionError("the four exceptions are not genuinely unresolved by prior certificates")
     print("PASS: all four exceptions independently reconfirmed unresolved by every prior certificate family")
     print(
-        "STATUS certified relative-label pair orbits: 9472/9476 "
-        "(9361 prior + 111 newly closed here, all within the former 115-orbit residue); residue: 4"
+        "STATUS canonical-presentation method: 9472/9476 "
+        "(9361 prior + 111 newly closed here); method-local exceptions: 4"
     )
+    print("STATUS complete stabilizer-aware pair theorem: 9476/9476 (verified separately)")
     print("CAVEAT: pair-wall noncompactness (by any method) does not by itself promote diagonal two")
-    print("CAVEAT: diagonal two still requires global decorated transition-cycle acyclicity")
+    print("CAVEAT: diagonal two still requires universal common-shear overlap or another global argument")
 
 
 if __name__ == "__main__":
