@@ -67,10 +67,11 @@ already succeeds without subdivision.  Since Bernstein basis functions are
 nonnegative and sum to one on `[0,1]`, these exact rational coefficient signs
 prove that no other wall meets any segment.  Each sample is therefore joined
 to, and lies in, its claimed local chamber germ.  The segment-certificate
-digest is
+serialization uses the intrinsic quadrant-sign order rather than caller-local
+sample labels.  Its digest is
 
 ```text
-09de27c3c7460eee5ef8ffa5a3bab4c64dbe9337444aeeffa519751696b7ee0a
+00b4816dc519aef84b90e285b8ebd4aded75e5675a0a0a639e72a23d31e6071d
 ```
 
 The parent-2599 square instead consumes the already hash-pinned exact roadmap

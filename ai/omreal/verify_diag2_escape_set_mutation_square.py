@@ -50,7 +50,7 @@ EXPECTED_BAD = 48_914
 EXPECTED_COMMON_BAD = 48_842
 EXPECTED_DIGEST = "cfcaa8d8794655e9b8c480b40156ed044904530aa30354d0f52785403eb289ef"
 EXPECTED_GERM_DIGEST = (
-    "09de27c3c7460eee5ef8ffa5a3bab4c64dbe9337444aeeffa519751696b7ee0a"
+    "00b4816dc519aef84b90e285b8ebd4aded75e5675a0a0a639e72a23d31e6071d"
 )
 EXPECTED_GERM_COUNTS = {
     "segments": 4,
@@ -62,6 +62,7 @@ EXPECTED_GERM_COUNTS = {
     "maximum_subdivision_depth": 0,
     "subdivision_leaves": 107_232,
 }
+GERM_SIGN_PAIR_ORDER = ((1, 1), (1, -1), (-1, -1), (-1, 1))
 
 
 def poly_trim(polynomial):
@@ -209,8 +210,16 @@ def verify_local_germ_segments(factor_polynomials, factor_ids, values, sign_pair
     """
     if set(values) != set(sign_pairs):
         raise AssertionError("segment sample/sign labels disagree")
+    pair_names = {}
+    for name, pair in sign_pairs.items():
+        pair = tuple(pair)
+        if pair in pair_names:
+            raise AssertionError(f"duplicate local-germ sign pair {pair}")
+        pair_names[pair] = name
+    if set(pair_names) != set(GERM_SIGN_PAIR_ORDER):
+        raise AssertionError(f"wrong local-germ sign pairs {tuple(pair_names)}")
     target_ids = set(factor_ids)
-    digest = hashlib.sha256(b"diag2-generic-37-44-local-germs-v1\0")
+    digest = hashlib.sha256(b"diag2-generic-37-44-local-germs-v2\0")
     residual_checks = 0
     parent_checks = 0
     maximum_residual_degree = 0
@@ -218,10 +227,10 @@ def verify_local_germ_segments(factor_polynomials, factor_ids, values, sign_pair
     maximum_subdivision_depth = 0
     subdivision_leaves = 0
 
-    for name in sign_pairs:
+    for expected_target_signs in GERM_SIGN_PAIR_ORDER:
+        name = pair_names[expected_target_signs]
         point = values[name]
-        expected_target_signs = sign_pairs[name]
-        digest.update(str(name).encode("ascii") + b"\0")
+        digest.update(bytes(sign + 1 for sign in expected_target_signs))
         for factor_id, polynomial in enumerate(factor_polynomials):
             restricted = segment_polynomial(polynomial, CENTER, point)
             update_polynomial_digest(digest, restricted)
