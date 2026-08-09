@@ -214,6 +214,46 @@ This remains a point-bank theorem, not chamber coverage.  See
 `DIAG2_ESCAPE_SET_TOPE_REDUCTION.md` and
 `DIAG2_ESCAPE_SET_ATLAS178.md`.
 
+The same finite theorem has now been replayed at one exact integer
+realization of every one of the 2,604 realizable `UOM(4,8)` catalog parents.
+It covers 106,957,822 bad extensions and 2,241,206,348,415 unordered
+within-parent pairs.  All pairs intersect, with global minimum escape size 52
+and global minimum overlap six.  The audit deliberately retains the 154
+representatives whose derived arrangements are residually degenerate, as
+well as the 2,450 generic ones.  Its matrix- and independent-extension-census
+pinned digest is
+`58b5a8cb8f6e36466efabb6dc6a4ba1b9bf9f812f5899f5138d6abc96c2c8a18`.
+This is a point transversal across parent chirotopes, not coverage inside any
+one realization space.  See `DIAG2_COMMON_SHEAR_PARENT2604.md` and its exact
+verifier.
+
+Two exact reductions sharpen the surviving universal target.  Global
+reorientation of the extension element preserves every mask,
+`E_T(-rho)=E_T(rho)`, so finite searches may quotient antipodal signatures.
+Independently, nonescape is certified by inclusion-minimal source-local tope
+separators.  Each such separator covers at most five of one source's fourteen
+directions, and a disjoint pair is exactly an eight-source cover by the two
+minimal-separator families.  Parent 16 compresses 2,063,096 raw separators to
+287,560 minimal ones, with at most six per signature/source, and has no such
+cover.  The remaining proof problem is to exclude the eight-source cover from
+the extension GP axioms and derived covector elimination uniformly.  See
+`DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal and separator
+verifiers.
+
+Mutation-stable evidence also survives substantially stronger tests.  At the
+generic type-`37/44` square, every pair among 48,770 signatures bad in all
+four cells has one shear valid throughout the square; robust masks have size
+at least 52 and overlap at least eight.  The independently coverage-certified
+parent-2599 node gives 70,968 common-bad signatures, minimum robust size 53,
+and minimum robust overlap eleven.  Finally, exact two-sided audits at one
+generic edge of every one of the thirteen canonical residual incidence types
+cover 557,578 common-bad records and 12,091,441,965 decorated pairs; every
+robust pair overlaps in at least nine directions.  Exact local-germ segment
+certificates tie the generic samples to their wall germs.  These are local
+canonical-incidence theorems, not the 84,840 labeled-occurrence theorem or a
+covered parent-cell graph.  See `DIAG2_ROBUST_MUTATION_SQUARES.md` and
+`DIAG2_CANONICAL_ROBUST_EDGES.md`.
+
 Every individual residual factor wall nevertheless has a universal proper
 escape.  In an adapted global frame its equation is affine in one pivot with
 a nowhere-zero parent-bracket-product slope, so the wall is a graph over an
@@ -874,6 +914,22 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   simultaneous component escape by inverse-exterior witness transport, the
   low-source XOR reduction, 65 row-2599 hard occurrences, and the parent-16
   defect-two regression.
+- `DIAG2_ESCAPE_SET_TOPE_REDUCTION.md`, `DIAG2_ESCAPE_SET_ATLAS178.md`, and
+  their exact verifiers: the complete-tope restriction criterion, 112-shear
+  masks, and pairwise intersection on all 178 stored parent-2599 charts.
+- `DIAG2_COMMON_SHEAR_PARENT2604.md`, its compiled exact kernel, strict
+  summary, and verifier: one matrix-pinned representative of all 2,604
+  realizable parent chirotopes, 106,957,822 bad signatures, and a global
+  six-direction pair-overlap margin.
+- `DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal/separator verifiers:
+  universal sign-reversal symmetry, minimal source-local separator
+  compression, and the exact eight-source-cover obstruction.
+- `DIAG2_ROBUST_MUTATION_SQUARES.md` and its exact verifier: fixed-direction
+  common shears across two complete four-cell residual squares, including
+  wall/node limits and exact local-germ provenance.
+- `DIAG2_CANONICAL_ROBUST_EDGES.md` and its exact verifier: all thirteen
+  canonical residual incidence types pass a two-sided robust-mask audit,
+  covering 12,091,441,965 decorated pairs with minimum overlap nine.
 - `TORUS_TROPICAL_ESCAPE.md`: vertical-gauge no-go, exact face cones, and the
   quotient tropical strategy.
 - `NINTH_DIAGONAL_SAFE_GRAPH.md`: exact connectivity reduction, finite

@@ -177,7 +177,98 @@ cfcaa8d8794655e9b8c480b40156ed044904530aa30354d0f52785403eb289ef
 They are an exact local theorem and a no-go for a tempting shortcut, not a
 global chamber-coverage result.
 
-## 5. Remaining proof target
+## 5. Robust common shears across two exact mutation squares
+
+Chamberwise intersection survives a stronger finite mutation test.  For a
+signature bad in all four cells of a transverse residual-wall square, put
+
+\[
+                  E_\square(\rho)=\bigcap_{c\in Q_2}E_c(\rho).
+\]
+
+At the generic canonical type-`37/44` node, all 48,770 signatures bad in all
+four cells have robust masks of size at least 52, and every two robust masks
+overlap in at least eight directions.  At the independently
+coverage-certified parent-2599 `Q_2` node, the corresponding figures are
+70,968 signatures, minimum robust size 53, and minimum robust overlap eleven.
+
+Thus every signature pair decorating either complete four-cycle has one
+fixed oriented shear valid in all four chambers.  Escape masks are constant
+inside a residual sign chamber because its factor signs determine the
+derived-row oriented matroid.  After normalizing positive-kernel weights to
+sum to one, compactness of the weight simplex shows that a robust direction
+also persists to the intervening walls and transverse node.
+
+The exact replay and both semantic digests are in
+`DIAG2_ROBUST_MUTATION_SQUARES.md` and
+`verify_diag2_robust_mutation_squares.py`.
+
+A complementary two-sided audit constructs one exact generic edge for each
+of the thirteen canonical residual incidence types.  All 557,578 common-bad
+records and 12,091,441,965 within-edge pairs pass; robust masks have size at
+least 52 and pairwise overlap at least nine.  See
+`DIAG2_CANONICAL_ROBUST_EDGES.md` and its verifier.  Together these results
+test every canonical mutation mechanism and two complete local squares, not
+all 84,840 labeled occurrences or any complete parent-cell graph.
+
+## 6. Two exact reductions of the escape-set problem
+
+Global reversal of all 56 extension signs preserves every escape direction:
+
+\[
+                            E_T(-\rho)=E_T(\rho).
+\]
+
+The transport deletion partition is unchanged, and antipodal complete topes
+give the same restriction obstruction.  This is a universal algebraic
+reduction: finite screens may quotient bad signatures by antipodal pairs,
+provided they separately prove every representative mask nonempty.  It does
+not constrain the intersection of two nonantipodal masks.  The independent
+parent-16 regression is
+`verify_diag2_escape_antipodal_symmetry.py`.
+
+The minimal-separator lemma gives a second, different compression.  For each
+bad signature and source label, discard every source-local tope disagreement
+which contains another one.  At parent 16 this reduces 2,063,096 raw
+separators to 287,560 minimal separators, and the maximum family for one
+signature/source drops from 282 to six.  Each minimal separator can cover at
+most five of the fourteen nonescape directions from its source.
+
+Consequently a disjoint escape pair is equivalent to an **eight-source
+cover**: at every one of the eight source labels, the two signatures'
+minimal-separator covers must jointly contain all fourteen directions.  The
+exact parent-16 audit reconstructs every escape mask and finds no such cover.
+The reduction and checker are `DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and
+`verify_diag2_escape_minimal_separators.py`.  The remaining theorem is to
+exclude this eight-block cover for every realizable chart, not merely the
+stored parent-16 point.
+
+## 7. One-chart transversal across the realizable parent catalog
+
+A separate exact screen now proves the common-shear intersection property at
+one stored integer realization of each of the 2,604 realizable `UOM(4,8)`
+catalog parents.  Across 106,957,822 bad extensions and
+2,241,206,348,415 unordered within-parent pairs, the global minimum escape
+size is 52 and the global minimum pair overlap is six.  The audit includes
+2,450 generic derived arrangements and 154 representatives on residual
+derived degeneracies.  Its strict matrix- and extension-census-pinned digest
+is
+
+```text
+58b5a8cb8f6e36466efabb6dc6a4ba1b9bf9f812f5899f5138d6abc96c2c8a18
+```
+
+The default verifier checks the stored summary and replays three exact
+sentinels; the expensive full point-transversal replay is explicit.  See
+`DIAG2_COMMON_SHEAR_PARENT2604.md` and
+`verify_diag2_common_shear_parent2604.py`.
+
+This theorem addresses parent-chirotope diversity but not realization-space
+diversity inside one parent.  It is not a residual-chamber atlas, does not
+control every labeled wall stratum, and does not by itself promote diagonal
+two.
+
+## 8. Remaining proof target
 
 The diagonal-two frontier can now be stated without the earlier ambiguity:
 

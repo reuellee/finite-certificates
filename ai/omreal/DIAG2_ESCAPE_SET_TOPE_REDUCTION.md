@@ -57,6 +57,46 @@ compatibility of that subsupport.  Thus this tope formulation computes the
 same set `E_T(rho)` defined by minimal witnesses in
 `DIAG2_WITNESS_EXCHANGE_AUDIT.md`.
 
+## Antipodal sign-reversal lemma
+
+Write `-rho` for the global sign reversal of the 56 extension signs.  This is
+the extension obtained by reorienting the ninth element.  At every fixed
+parent chart `T`,
+
+\[
+                         E_T(-\rho)=E_T(\rho).             \tag{2}
+\]
+
+Indeed, for every transported row,
+
+\[
+ \alpha_{-\rho}(I;e,f)
+ =-\operatorname{sort}(I-e+f)(-\rho(I))(-\rho(I-e+f))
+ =\alpha_\rho(I;e,f).
+\]
+
+Thus `rho` and `-rho` retain exactly the same unsigned rows for each oriented
+shear.  The complete topes of the central derived arrangement occur in
+antipodal pairs.  A complete tope agrees with `-rho` on all retained rows if
+and only if its antipode agrees with `rho` there.  The complete-tope escape
+characterization therefore gives (2), direction by direction.
+
+Validity and chart goodness also occur in antipodal pairs: the uniform
+single-element-extension axioms are preserved by reorienting the new element,
+and `rho` is a complete derived tope exactly when `-rho` is.  Consequently a
+finite pairwise-intersection audit may compute one representative of every
+pair `{rho,-rho}`.  It must additionally check that every representative mask
+is nonempty, because the two distinct antipodal signatures have the same
+mask; pairwise intersection among distinct representatives then implies it
+for the full bad family.
+
+This is a universal exact reduction, not a common-shear theorem.  It halves
+the masks that must be evaluated at any chart but says nothing by itself
+about whether two nonantipodal masks intersect.  The independent regression
+`verify_diag2_escape_antipodal_symmetry.py` reconstructs the parent-16 tope
+table, checks antipodal closure, and pins the equality on five structurally
+different bad signatures and their reversals.
+
 ## Exact exhaustive audits
 
 The exact recursive arrangement enumerator supplies an integer witness for
@@ -162,6 +202,12 @@ Run the CI-sized audit with:
 
 ```console
 python ai/omreal/verify_diag2_escape_set_topes.py
+```
+
+Run the focused sign-reversal regression with:
+
+```console
+python ai/omreal/verify_diag2_escape_antipodal_symmetry.py
 ```
 
 Replay all 19 selected parent-2599 charts with:

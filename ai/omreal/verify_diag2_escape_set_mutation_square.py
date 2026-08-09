@@ -15,7 +15,7 @@ from __future__ import annotations
 from fractions import Fraction
 import hashlib
 from itertools import combinations
-from math import lcm
+from math import comb, lcm
 
 import DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY as labeled
 import DIAG9_GRAPH_exact_topes as exact_topes
@@ -49,6 +49,238 @@ EXPECTED_VALID = 75_026
 EXPECTED_BAD = 48_914
 EXPECTED_COMMON_BAD = 48_842
 EXPECTED_DIGEST = "cfcaa8d8794655e9b8c480b40156ed044904530aa30354d0f52785403eb289ef"
+EXPECTED_GERM_DIGEST = (
+    "09de27c3c7460eee5ef8ffa5a3bab4c64dbe9337444aeeffa519751696b7ee0a"
+)
+EXPECTED_GERM_COUNTS = {
+    "segments": 4,
+    "target_linear_checks": 8,
+    "residual_sign_checks": 106_952,
+    "parent_sign_checks": 280,
+    "maximum_residual_degree": 3,
+    "maximum_parent_degree": 1,
+    "maximum_subdivision_depth": 0,
+    "subdivision_leaves": 107_232,
+}
+
+
+def poly_trim(polynomial):
+    answer = [Fraction(value) for value in polynomial]
+    while len(answer) > 1 and not answer[-1]:
+        answer.pop()
+    return tuple(answer or (Fraction(0),))
+
+
+def poly_add(left, right):
+    size = max(len(left), len(right))
+    return poly_trim(
+        (left[index] if index < len(left) else 0)
+        + (right[index] if index < len(right) else 0)
+        for index in range(size)
+    )
+
+
+def poly_multiply(left, right):
+    answer = [Fraction(0)] * (len(left) + len(right) - 1)
+    for left_degree, left_value in enumerate(left):
+        for right_degree, right_value in enumerate(right):
+            answer[left_degree + right_degree] += left_value * right_value
+    return poly_trim(answer)
+
+
+def poly_determinant(matrix):
+    """Exact determinant over Q[t], used only for parent brackets."""
+    if not matrix:
+        return (Fraction(1),)
+    answer = (Fraction(0),)
+    for column, entry in enumerate(matrix[0]):
+        minor = [row[:column] + row[column + 1 :] for row in matrix[1:]]
+        term = poly_multiply(entry, poly_determinant(minor))
+        if column & 1:
+            term = tuple(-value for value in term)
+        answer = poly_add(answer, term)
+    return poly_trim(answer)
+
+
+def segment_polynomial(polynomial, left, right):
+    """Substitute ``left+t*(right-left)`` into a sparse 9-variate polynomial."""
+    answer = (Fraction(0),)
+    for monomial, coefficient in polynomial.items():
+        term = (Fraction(coefficient),)
+        for variable, exponent in zip(VARIABLES, monomial, strict=True):
+            if not exponent:
+                continue
+            origin = left[variable]
+            delta = right[variable] - origin
+            factor = tuple(
+                Fraction(comb(exponent, degree))
+                * origin ** (exponent - degree)
+                * delta**degree
+                for degree in range(exponent + 1)
+            )
+            term = poly_multiply(term, factor)
+        answer = poly_add(answer, term)
+    return poly_trim(answer)
+
+
+def bernstein_coefficients(polynomial):
+    """Power-to-Bernstein conversion on [0,1], in the actual degree."""
+    degree = len(polynomial) - 1
+    return tuple(
+        sum(
+            polynomial[power]
+            * Fraction(comb(index, power), comb(degree, power))
+            for power in range(index + 1)
+        )
+        for index in range(degree + 1)
+    )
+
+
+def subdivide_bernstein_half(coefficients):
+    """Exact de Casteljau subdivision of Bernstein data at t=1/2."""
+    levels = [tuple(coefficients)]
+    while len(levels[-1]) > 1:
+        previous = levels[-1]
+        levels.append(
+            tuple(
+                (previous[index] + previous[index + 1]) / 2
+                for index in range(len(previous) - 1)
+            )
+        )
+    degree = len(coefficients) - 1
+    left = tuple(levels[level][0] for level in range(degree + 1))
+    right = tuple(levels[degree - index][index] for index in range(degree + 1))
+    return left, right
+
+
+def certify_bernstein_sign(polynomial, desired, maximum_depth=16):
+    """Prove a strict sign on [0,1] by exact subdivided Bernstein hulls."""
+    if desired not in (-1, 1):
+        raise AssertionError("desired sign must be +/-1")
+    initial = bernstein_coefficients(poly_trim(polynomial))
+
+    def recurse(coefficients, depth):
+        if all(desired * value > 0 for value in coefficients):
+            return depth, 1
+        if depth == maximum_depth:
+            raise AssertionError(
+                "Bernstein sign subdivision did not certify the segment"
+            )
+        left, right = subdivide_bernstein_half(coefficients)
+        left_depth, left_leaves = recurse(left, depth + 1)
+        right_depth, right_leaves = recurse(right, depth + 1)
+        return max(left_depth, right_depth), left_leaves + right_leaves
+
+    return recurse(initial, 0)
+
+
+def segment_parent_bracket(left, right, basis):
+    left_columns = standard_columns(left)
+    right_columns = standard_columns(right)
+    matrix = [
+        [
+            poly_trim(
+                (
+                    left_columns[column][row],
+                    right_columns[column][row] - left_columns[column][row],
+                )
+            )
+            for column in basis
+        ]
+        for row in range(4)
+    ]
+    return poly_determinant(matrix)
+
+
+def update_polynomial_digest(digest, polynomial):
+    digest.update(len(polynomial).to_bytes(2, "little"))
+    for coefficient in polynomial:
+        digest.update(str(coefficient.numerator).encode("ascii") + b"/")
+        digest.update(str(coefficient.denominator).encode("ascii") + b";")
+
+
+def verify_local_germ_segments(factor_polynomials, factor_ids, values, sign_pairs):
+    """Certify that four exact samples lie in the four local node germs.
+
+    Every non-target residual factor and all 70 parent brackets receive a
+    strict exact Bernstein sign certificate on the radial segment from
+    ``CENTER``.  The two target factors are checked to be the intended linear
+    transverse coordinates on each segment.
+    """
+    if set(values) != set(sign_pairs):
+        raise AssertionError("segment sample/sign labels disagree")
+    target_ids = set(factor_ids)
+    digest = hashlib.sha256(b"diag2-generic-37-44-local-germs-v1\0")
+    residual_checks = 0
+    parent_checks = 0
+    maximum_residual_degree = 0
+    maximum_parent_degree = 0
+    maximum_subdivision_depth = 0
+    subdivision_leaves = 0
+
+    for name in sign_pairs:
+        point = values[name]
+        expected_target_signs = sign_pairs[name]
+        digest.update(str(name).encode("ascii") + b"\0")
+        for factor_id, polynomial in enumerate(factor_polynomials):
+            restricted = segment_polynomial(polynomial, CENTER, point)
+            update_polynomial_digest(digest, restricted)
+            maximum_residual_degree = max(
+                maximum_residual_degree, len(restricted) - 1
+            )
+            if factor_id in target_ids:
+                target_index = factor_ids.index(factor_id)
+                expected = (
+                    Fraction(0),
+                    expected_target_signs[target_index] * EPSILON,
+                )
+                if restricted != expected:
+                    raise AssertionError(
+                        f"target factor {factor_id} is not the intended linear "
+                        f"coordinate on segment {name}: {restricted}"
+                    )
+                continue
+            desired = 1 if restricted[0] > 0 else -1
+            if not restricted[0]:
+                raise AssertionError(
+                    f"nontarget residual factor {factor_id} vanishes at CENTER"
+                )
+            depth, leaves = certify_bernstein_sign(restricted, desired)
+            maximum_subdivision_depth = max(maximum_subdivision_depth, depth)
+            subdivision_leaves += leaves
+            residual_checks += 1
+
+        for basis in combinations(range(8), 4):
+            restricted = segment_parent_bracket(CENTER, point, basis)
+            update_polynomial_digest(digest, restricted)
+            maximum_parent_degree = max(maximum_parent_degree, len(restricted) - 1)
+            desired = 1 if restricted[0] > 0 else -1
+            if not restricted[0]:
+                raise AssertionError(f"parent bracket {basis} vanishes at CENTER")
+            depth, leaves = certify_bernstein_sign(restricted, desired)
+            maximum_subdivision_depth = max(maximum_subdivision_depth, depth)
+            subdivision_leaves += leaves
+            parent_checks += 1
+
+    report = {
+        "segments": len(values),
+        "target_linear_checks": len(values) * len(factor_ids),
+        "residual_sign_checks": residual_checks,
+        "parent_sign_checks": parent_checks,
+        "maximum_residual_degree": maximum_residual_degree,
+        "maximum_parent_degree": maximum_parent_degree,
+        "maximum_subdivision_depth": maximum_subdivision_depth,
+        "subdivision_leaves": subdivision_leaves,
+        "digest": digest.hexdigest(),
+    }
+    if (
+        {key: report[key] for key in EXPECTED_GERM_COUNTS}
+        != EXPECTED_GERM_COUNTS
+    ):
+        raise AssertionError(f"generic local-germ certificate counts changed: {report}")
+    if report["digest"] != EXPECTED_GERM_DIGEST:
+        raise AssertionError(f"generic local-germ certificate changed: {report}")
+    return report
 
 
 def evaluate(polynomial, values):
@@ -146,6 +378,9 @@ def main():
         name: adjacent_point(first, second, factors)
         for name, (first, second) in sign_pairs.items()
     }
+    germ_report = verify_local_germ_segments(
+        factor_polynomials, factor_ids, values, sign_pairs
+    )
     matrices = {name: integer_matrix(point) for name, point in values.items()}
     parent_signs = exact_topes.parent_signs(matrices["++"])
     for name, matrix in matrices.items():
@@ -254,6 +489,7 @@ def main():
     if EXPECTED_DIGEST is not None and digest != EXPECTED_DIGEST:
         raise AssertionError(f"mutation-square digest changed: {digest}")
     print("PASS exact generic node has only residual factors 2342/3487")
+    print("PASS four sample segments stay in their local node germs:", germ_report)
     print("PASS four adjacent chambers have 26,112 topes and only intended edge flips")
     print("PASS all 48,914 bad-signature escape families pairwise intersect; minimum 8")
     print("PASS each generic edge exchanges 72 topes per side:", tuple(edge_reports))
