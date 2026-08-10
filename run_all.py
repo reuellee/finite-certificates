@@ -19,6 +19,7 @@ SLOW = {
     "verify_diag2_escape_set_mutation_square.py",
     "verify_diag2_extremal_coordinate_survey.py",
     "verify_diag2_extremal_safe_loss_edge.py",
+    "verify_diag2_extremal_undominated_birth_edge.py",
     "verify_diag2_pivot_49_50_pair_saturation.py",
     "verify_diag2_robust_mutation_squares.py",
     "verify_druzkowski.py",

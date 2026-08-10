@@ -268,6 +268,18 @@ undominated separator births as the sharper remaining transition target; it
 is not parent-cell coverage and does not promote diagonal two.  See
 `DIAG2_EXTREMAL_SEPARATOR_BIFURCATIONS.md` and its two exact verifiers.
 
+The next exact edge reaches that sharper class.  On the same parent-187
+`e`-line, reversing isolated type-`49` factor `23604` births singleton row
+`1` at sources `1`, `2`, and `4` while size-two separator `{30,33}` remains
+at sources `6` and `7`.  The destination is therefore mixed rather than
+four-singleton, and the affected escape mask genuinely shrinks `67 -> 61`.
+All six lost directions were common with the fixed partner, but nine common
+directions survive, so pair overlap changes `15 -> 9`.  The birth-budget
+lemma now reduces the transition search to births whose separator-cover loss
+budget can meet the incoming overlap.  This is one exact labeled edge, not a
+classification or a proof of diagonal two.  See
+`DIAG2_EXTREMAL_UNDOMINATED_BIRTH.md` and its exact verifier.
+
 Mutation-stable evidence also survives substantially stronger tests.  At the
 generic type-`37/44` square, every pair among 48,770 signatures bad in all
 four cells has one shear valid throughout the square; robust masks have size
@@ -959,6 +971,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG2_EXTREMAL_SEPARATOR_BIFURCATIONS.md` and its two exact verifiers:
   separator-dominance monotonicity on an isolated extremal type-50 edge and
   the 216-chart, 648-pair three-parent bifurcation survey.
+- `DIAG2_EXTREMAL_UNDOMINATED_BIRTH.md` and its exact verifier: a mixed
+  undominated singleton birth on an isolated type-49 edge, the exact
+  `67 -> 61` mask loss and `15 -> 9` pair-overlap transition, and the
+  birth-budget reduction to potentially gap-closing births.
 - `DIAG2_ROBUST_MUTATION_SQUARES.md` and its exact verifier: fixed-direction
   common shears across two complete four-cell residual squares, including
   wall/node limits and exact local-germ provenance.
