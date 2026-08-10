@@ -1,5 +1,13 @@
 # Diagonal 2: escape sets from complete topes
 
+> **Promotion update.**  The pointwise intersection needed on any
+> hypothetical compact component is now proved at its forced nonstructural
+> support drop in `DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md`.  The
+> complete-tope masks below
+> remain exact computational evidence and repair the two selected-witness
+> counterexamples, but a global mask atlas is no longer needed.  Diagonal two
+> is proved integrally.
+
 ## The reduction
 
 Fix a uniform rank-four parent chart `T`, an extension signature `rho` which
@@ -171,30 +179,31 @@ outside the uniform parent cell.  If `C` were compact, its image in the
 Hausdorff projective-configuration compactification would be closed and would
 contain that boundary limit, a contradiction.
 
-Therefore a universal escape-set intersection theorem directly proves that
+Therefore the exchange-saturated escape-set intersection theorem proves that
 every simultaneous-bad component is noncompact and closes diagonal two.  It
 does **not** require a continuous choice of direction, a global vector field,
 or a separate gluing argument between pointwise directions.  The decorated
-wall-cycle program remains an alternative route if the common-shear theorem
-fails.
+wall-cycle program is retained only as a historical alternative route.
 
-## What remains
+## Historical remaining target, now closed
 
-The local diagonal-two target is now a finite set-system assertion:
+The local diagonal-two target at this checkpoint was a finite set-system
+assertion:
 
 > At every realizable uniform parent chart, do the escape sets of every
 > relevant proper incomparable bad-signature pair intersect?
 
-A disjoint exact pair would refute the elementary-shear strategy even after
-all witness exchanges.  A universal intersection theorem would, by the
-one-point component escape criterion above, finish diagonal two directly.
-No diagonal is promoted here because the present chart audits do not prove
-that universal theorem.
+A disjoint exact pair would have refuted the elementary-shear strategy even
+after all witness exchanges.  The exchange-saturated theorem proves the
+needed intersection at every nonstructural support drop, while the
+persistent-circuit clopen alternative forces every hypothetical compact
+component to contain such a drop.  By the one-point component escape
+criterion above, this finishes diagonal two directly.
 
-The most promising theoretical handles are the covector-elimination axioms
-behind the complete-tope restrictions and the unusually strong lower bounds
-52 and 53.  Pure cardinality is insufficient at parent 16, so any proof must
-also use overlap structure.
+The most promising handles at that checkpoint were the covector-elimination
+axioms behind the complete-tope restrictions and the unusually strong lower
+bounds 52 and 53.  Pure cardinality was already insufficient at parent 16,
+so a global-mask proof would also have needed overlap structure.
 
 ## Exact verification
 

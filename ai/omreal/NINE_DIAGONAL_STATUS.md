@@ -23,12 +23,12 @@ regions are proper and pairwise incomparable.  Several reductions below,
 including the duality and master-chamber graph theorem, hold for arbitrary
 finite `S` and are therefore stated in that stronger form.
 
-Exactly one of the nine entries is currently proved.
+Exactly two of the nine entries are currently proved.
 
 | `s` | primal group in (1) | exact dual target | status |
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
-| 2 | `H_7(F_S)` | `H_c^1(B_S)` | open; single-region `H_7` now vanishes integrally, so the only target is absence of compact components in `B_sigma intersection B_tau` |
+| 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
 | 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; the complete single-piece `E_1^(0,2)` column vanishes and every one-factor all-die wall escapes, leaving global incidence cycles |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -66,7 +66,7 @@ to the rank-four, nine-element extension specified by `sigma` gives
 
 Properness of `F_sigma` is unnecessary.
 
-## Exact second-diagonal target
+## Proved second diagonal
 
 Compact-support Mayer--Vietoris gives
 
@@ -109,12 +109,45 @@ for every signature `rho`.  Consequently (4) collapses integrally to
        \cong H_c^0(B_\sigma\cap B_\tau;\mathbb Z).                \tag{4c}
 \]
 
-Thus exactly one assertion remains for diagonal two: every simultaneous-bad
-locus `B_sigma intersection B_tau` has no compact connected component.  The
-formerly separate restriction-map obstruction is zero.
+The exchange-saturated support-drop theorem now proves the remaining
+assertion: every simultaneous-bad locus
+`B_sigma intersection B_tau` has no compact connected component.  At a
+nonstructural minimal three- or four-circuit, an exact all-strata support
+classification and conic witness exchange produce a common moving-witness
+shear.  If a hypothetical compact component avoided every such circuit,
+strict five-circuits and structural small circuits would persist locally,
+making the component clopen in the connected noncompact parent space.
+
+The only source-hard finite residue consists of eight localization `3+5`
+formulas, three ordinary `4+4` formulas, and ten necessary ordinary `4+5`
+supports.  The first two classes are UNSAT.  All ten supports in the last
+class are wall-disjoint; conic exchange forces a new positive circuit sharing
+one wall triple, a contradiction.  The exact theorem and replay are in
+`DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md`; the signed certificate has
+semantic digest
+
+```text
+4546a2e7ba03c1c9dd63abbe65195fc348accf9bf91ccaa773072f1fcae9df38
+```
+
+Combining this with (4c) gives
+
+\[
+ H_c^1(B_\sigma\cup B_\tau;\mathbb Z)=0,
+ \qquad
+ \boxed{\widetilde H_7(F_{\{\sigma,\tau\}};\mathbb Z)=0}.       \tag{4d}
+\]
+
+The formerly separate restriction-map obstruction is zero.
 The quotient-level Gale identification and every orientation, gauge, and
 duality step have been independently reconstructed in
 `SECOND_DIAGONAL_SINGLE_REGION_H7_AUDIT.md`.
+
+### Historical circuit-cover reductions
+
+The reductions below record the route to the final support-drop theorem and
+remain useful for later diagonals; statements of an open compact-component
+residue in those checkpoint notes are superseded by (4d).
 
 Gordan and Caratheodory give a finite closed cover of every bad locus by
 circuit pieces `C_(rho,Q)`.  Zero-padding makes the size-five pieces cofinal:
@@ -124,7 +157,7 @@ circuit pieces `C_(rho,Q)`.  Zero-padding makes the size-five pieces cofinal:
 \]
 
 Every single piece has `H_c^0=H_c^1=0`.  The circuit-cover calculation of the
-remaining compact-component obstruction is
+then-remaining compact-component obstruction was
 
 \[
  H_c^1(B_S)\cong\ker\!\left[
@@ -235,8 +268,9 @@ separators.  Each such separator covers at most five of one source's fourteen
 directions, and a disjoint pair is exactly an eight-source cover by the two
 minimal-separator families.  Parent 16 compresses 2,063,096 raw separators to
 287,560 minimal ones, with at most six per signature/source, and has no such
-cover.  The remaining proof problem is to exclude the eight-source cover from
-the extension GP axioms and derived covector elimination uniformly.  See
+cover.  At that checkpoint, the remaining proof problem was to exclude the
+eight-source cover from the extension GP axioms and derived covector
+elimination uniformly.  See
 `DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal and separator
 verifiers.
 
@@ -275,9 +309,10 @@ at sources `6` and `7`.  The destination is therefore mixed rather than
 four-singleton, and the affected escape mask genuinely shrinks `67 -> 61`.
 All six lost directions were common with the fixed partner, but nine common
 directions survive, so pair overlap changes `15 -> 9`.  The birth-budget
-lemma now reduces the transition search to births whose separator-cover loss
-budget can meet the incoming overlap.  This is one exact labeled edge, not a
-classification or a proof of diagonal two.  See
+lemma for pairs already simultaneously bad now reduces the transition search
+to separator births whose cover-loss budget can meet the incoming overlap.
+This is one exact labeled edge, not a classification or a proof of diagonal
+two.  See
 `DIAG2_EXTREMAL_UNDOMINATED_BIRTH.md` and its exact verifier.
 
 The complete standard `e`-coordinate slice through parent 187 is now covered
@@ -293,6 +328,21 @@ This closes budget-tight births on one complete coordinate slice, not the
 parent cell, and does not promote diagonal two.  See
 `DIAG2_EXTREMAL_LINE_TRANSITION_CENSUS.md` and its exact verifier.
 
+The next parent-187 target is now an exact two-dimensional object rather than
+an arbitrary rectangle.  The full `d/e` parent-cell slice is a bounded convex
+hexagon; all `26,740` residual restrictions have total degree at most two,
+and the `24,750` nonconstant equations are pairwise nonproportional.  Exact
+parent-unit factorization reduces the ten central-line seed circuits to a
+global `164`-membership/`142`-factor link census and an effective disk
+frontier of `160` memberships in `139` nonconstant factors.  Ten selected
+intersections on six seed factors are isolated in exact rational rectangles:
+each contains one transverse two-wall node and no other residual wall, and
+the resulting forty complete chamber tables preserve overlap at least six
+for the three tracked pairs.  These boxes do not cover a collar or the
+hexagon and do not promote diagonal two.  See
+`DIAG2_EXTREMAL_TRANSITION_DISK_FRONTIER.md`,
+`DIAG2_EXTREMAL_TRANSITION_DISK_SEEDS.md`, and their exact verifiers.
+
 Mutation-stable evidence also survives substantially stronger tests.  At the
 generic type-`37/44` square, every pair among 48,770 signatures bad in all
 four cells has one shear valid throughout the square; robust masks have size
@@ -306,6 +356,33 @@ certificates tie the generic samples to their wall germs.  These are local
 canonical-incidence theorems, not the 84,840 labeled-occurrence theorem or a
 covered parent-cell graph.  See `DIAG2_ROBUST_MUTATION_SQUARES.md` and
 `DIAG2_CANONICAL_ROBUST_EDGES.md`.
+
+The generic support-drop obstruction is now reduced much further than the
+raw wall-star census.  For localization births, all 32 labeled source-hard
+`3+5` partners form eight decorated wall-occurrence orbits, and shared-parent
+Grassmann--Pluecker constraints plus conflict on all 56 ordered shears make
+all eight exact formulas UNSAT.  For ordinary births, the exact source-hard
+support census has 53 wall-stabilizer orbits; signed GP and shear constraints
+reduce these to 23, and fixed-unit wall/partner cofactor identities leave ten
+necessary `4+5` candidates of types `41,49,50,51`.  The exhaustive ordinary
+four-partner scan leaves only three labeled source-hard cases in two orbits;
+the strengthened shared-parent signed formulas make all three UNSAT.  The ten
+`4+5` candidates' selected wall and partner cofactors
+touch exactly 35 primitive residual factors; this is not a full escape-mask
+chamber atlas.  Exact uniform generic wall points realize one type-50 and one
+type-51 candidate, and both selected circuit pairs have no compatible shear,
+disproving the stronger arbitrary-selected-witness theorem.  Exact two-sided
+perturbations certify transverse support-drop germs, while reciprocal
+same-parent-chirotope child matrices prove that both signature pairs have
+nonempty, proper, incomparable feasibility regions.  Their complete escape-mask
+intersections have sizes 51 and 80.  At the type-50 point, the original pair
+is the unique incompatible choice among all 208,262 positive minimal-circuit
+pairs, and one circuit exchange gives twelve compatible shears.  These are
+not disjoint-mask pairs.  The final verifier also proves that all ten rigid
+`4+5` supports are wall-disjoint; the exchange-saturated theorem uses that
+fact to cover simultaneous lower-wall strata and promote diagonal two.  See
+`DIAG2_GENERIC_BIRTH_PATTERN_REDUCTION.md`,
+`DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md`, and their exact verifiers.
 
 Every individual residual factor wall nevertheless has a universal proper
 escape.  In an adapted global frame its equation is affine in one pivot with
@@ -358,8 +435,9 @@ along the residual wall's canonical pivot coordinate, the incoming cofactor
 is affine with fixed nonzero bracket slope and cannot recur.  Therefore every
 compact strict spoke must meet a genuine residual wall for a different
 cofactor before it can reach the parent boundary.  Each first wall has 30--52
-strict paddings.  The remaining target is consequently global acyclicity of
-this iterated signed wall graph, not a larger first-wall Euler calculation.
+strict paddings.  In that approach the then-remaining target was global
+acyclicity of this iterated signed wall graph, not a larger first-wall Euler
+calculation.
 See `DIAG2_PIVOT_ALL_COMPACT_SECOND_WALL.md`.
 
 Two exact tests delimit that global step.  Every one of the 13 residual types
@@ -399,9 +477,10 @@ to anchor its type-51 factor).  Thus iterated affine-fiber graphs settle all
 pair-wall component is noncompact in all `9,476` relative-label orbits, with
 no local pair residue.  The perfect-square conic reduction for `(50,7977)`
 remains an independently checked partial result, not the argument used for
-its final closure.  None of these local pair theorems alone promotes diagonal
-two; the universal common-shear intersection theorem is the primary remaining
-target, with decorated transition-cycle acyclicity retained as an alternative.
+its final closure.  None of these local pair theorems alone promoted diagonal
+two; the universal common-shear intersection theorem was the primary
+remaining target.  The later exchange-saturated support-drop theorem closes
+that target without decorated transition-cycle acyclicity.
 The 66 pairs among the
 12 displayed canonical polynomials are the smallest subtable of this result.
 Among the 220
@@ -863,6 +942,11 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `SECOND_DIAGONAL_SINGLE_REGION_H7_AUDIT.md` and its exact checker:
   independent reconstruction of the Gale quotient, complementary-minor
   signs, sharp escape, and supported-duality degrees.
+- `DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md` and the exact generic-birth
+  support/signed verifiers: the all-strata pointwise exchange theorem,
+  clopen compact-component alternative, three ordinary `4+4` UNSAT
+  certificates, ten wall-disjoint `4+5` residues, and the integral proof of
+  diagonal two.
 - `SECOND_DIAGONAL_DEFECT_TWO.md`: matching-star dichotomy, exact proper
   incomparable defect-two pair, and its certified pointwise boundary escape.
 - `SECOND_DIAGONAL_MATCHING_STAR_LOCAL_NO_GO.md`: exact warning that a local
@@ -988,12 +1072,28 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   undominated singleton birth on an isolated type-49 edge, the exact
   `67 -> 61` mask loss and `15 -> 9` pair-overlap transition, and the
   birth-budget reduction to potentially gap-closing births.
+- `DIAG2_EXTREMAL_LINE_TRANSITION_CENSUS.md` and its exact verifier: complete
+  exact coverage of the parent-187 `e`-line, 1,721 residual walls, and no
+  overlap below six among the three tracked extremal pairs.
+- `DIAG2_EXTREMAL_TRANSITION_DISK_FRONTIER.md`,
+  `DIAG2_EXTREMAL_TRANSITION_DISK_SEEDS.md`, and their two exact verifiers:
+  the bounded parent-187 `d/e` hexagon, effective 139-factor link frontier,
+  and ten wall-exclusive transverse seed nodes with forty complete chamber
+  tables, without collar or disk coverage.
 - `DIAG2_ROBUST_MUTATION_SQUARES.md` and its exact verifier: fixed-direction
   common shears across two complete four-cell residual squares, including
   wall/node limits and exact local-germ provenance.
 - `DIAG2_CANONICAL_ROBUST_EDGES.md` and its exact verifier: all thirteen
   canonical residual incidence types pass a two-sided robust-mask audit,
   covering 12,091,441,965 decorated pairs with minimum overlap nine.
+- `DIAG2_GENERIC_BIRTH_PATTERN_REDUCTION.md` and its five exact verifiers:
+  the 32-to-eight localization UNSAT quotient, the ordinary
+  `53 -> 23 -> 10` signed support reduction, the exact 35-factor selected-pair
+  cofactor footprint, the two-orbit distinct-second-wall `4+4` residue, two
+  transverse realized selected-witness obstructions with proper incomparable
+  signature pairs whose masks intersect in 51 and 80 directions, and the
+  exhaustive 208,262-pair type-50 circuit-exchange repair, without universal
+  wall-sector closure.
 - `TORUS_TROPICAL_ESCAPE.md`: vertical-gauge no-go, exact face cones, and the
   quotient tropical strategy.
 - `NINTH_DIAGONAL_SAFE_GRAPH.md`: exact connectivity reduction, finite
@@ -1074,4 +1174,4 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   rank certificate showing the hard triple has only scalar common tensor
   stabilizers.
 
-No artifact in this list claims that entries `s=2,...,9` are proved.
+No artifact in this list claims that entries `s=3,...,9` are proved.

@@ -12,12 +12,14 @@ The hypotheses hold for every one of the 65 pencil-rigid \(4+5\) or \(5+5\)
 occurrences in the exact row-2599 shatter certificate, and for the exact
 parent-16 defect-two example. That finite evidence is not a universal census.
 
-> **Status.** This note does **not** prove diagonal two. What is still missing
-> is a proof that every point of every relevant simultaneous-bad component
-> admits *some* compatible pair of witnesses, or a different global argument.
-> `DIAG2_WITNESS_EXCHANGE_AUDIT.md` gives a valid realizable pair for which
-> one preselected witness pair is incompatible, then repairs it by one
-> circuit exchange.  Thus arbitrary-witness compatibility is false.
+> **Status.** This note proves the moving-witness implication used by diagonal
+> two; it is not a standalone universal-existence theorem.  The formerly
+> missing supply of compatible witnesses at every compact-component support
+> drop is now proved in `DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md`, and the two
+> notes together close diagonal two.  `DIAG2_WITNESS_EXCHANGE_AUDIT.md` still
+> gives a valid realizable pair for which one preselected witness pair is
+> incompatible, then repairs it by one circuit exchange.  Thus
+> arbitrary-witness compatibility remains false.
 
 ## 1. Signed Gordan forms
 
@@ -244,8 +246,10 @@ closed. The boundary limit of the sequence in (15) would then belong to
 > component of \(B_\rho\cap B_\eta\) has a pair of sign-compatible Gordan
 > witnesses, then that component is noncompact.
 
-Thus the remaining issue is universal existence of compatible witnesses,
-not properness of the ray after such witnesses have been found.
+Thus the remaining issue at this stage was existence of compatible witnesses,
+not properness of the ray after such witnesses had been found.  The support-
+drop and clopen arguments in `DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md` now
+supply exactly the existence needed for compact components.
 
 ## 5. A finite low-source reduction
 
@@ -354,20 +358,27 @@ Run:
 python ai/omreal/verify_diag2_moving_witness_shear.py
 ~~~
 
-## 7. Remaining rigorous target
+## 7. Former rigorous target, now closed where needed
 
-The direct escape route is now reduced to the following precise question.
+Before the support-drop theorem, the direct escape route was reduced to the
+following precise question.
 
 > At every point of every simultaneous-bad locus for two valid realizable
 > extension signatures, can one choose two support-minimal nonnegative Gordan
 > witnesses for which at least one ordered shear passes (4)?
 
-Equivalently, do the two 112-direction escape sets defined in
+The universal pointwise version asks equivalently whether the two
+112-direction escape sets defined in
 `DIAG2_WITNESS_EXCHANGE_AUDIT.md` always intersect?  The new parent-16 audit
 proves that a legitimate preselected circuit pair can fail all 56 ordered
 shears, so quantifying over the witness polytopes is essential.  It also
 proves that this pair is the unique incompatible one among all 646,880
 minimal-circuit pairs at that chart and that a one-circuit exchange repairs
-it.  No argument presently proves escape-set intersection for all valid
-extensions and all realizable parents, so the nine-diagonal ledger remains
-unchanged.
+it.
+
+The universal pointwise question is stronger than diagonal two needs and is
+not claimed.  `DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md` proves intersection
+at every nonstructural minimal three/four support drop.  Its persistent-
+circuit clopen alternative proves that every hypothetical compact
+simultaneous-bad component must contain such a drop.  The component-escape
+corollary above therefore closes diagonal two and raises the ledger to `2/9`.
