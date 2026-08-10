@@ -1,4 +1,11 @@
-# A single-variable escape closes all but four of the labeled-pair residue
+# A canonical single-variable escape closes all but four pair presentations
+
+> **Subsequent status.**  This verifier's four canonical-presentation
+> exceptions are all closed in `DIAG2_PIVOT_ALL_PAIR_FIBERS.md` by changing
+> to stabilizer-equivalent graph presentations (and reversing `(50,20046)`
+> to anchor its type-51 factor).  Thus the complete local pair theorem is
+> `9,476/9,476`; the four cases below are exceptions only to this narrower
+> independent method.
 
 ## Result
 
@@ -103,44 +110,34 @@ the whole sweep runs in single-digit seconds.
 ## 3. Scope: this does not promote diagonal two
 
 Pair-wall noncompactness -- by any method, including this one -- is
-necessary but not sufficient for diagonal two. A compact simultaneous-bad
-component could still be assembled by gluing several individually-noncompact
-pair-wall pieces together across points where *two different* residual
-factors vanish simultaneously -- an internal transition between walls, not a
-parent-bracket boundary. Crossing another residual factor's zero locus does
-not remove a point from `X` (which is the uniform realizable cell where all
-70 parent brackets are nonzero -- see `RESIDUAL_STRATUM_NONCOMPACTNESS.md`
-section 2, "All parent brackets are nonzero in a uniform parent cell"), so it
-does not by itself constitute an escape; it is exactly
-the "decorated transition" mechanism `NINE_DIAGONAL_STATUS.md` section
-"Surviving strategies" item 6 and `DIAG2_PIVOT_ALL_COMPACT_SECOND_WALL.md`
-describe, and closing that global gluing/cycling question is untouched by
-this checker.
+necessary but not sufficient for diagonal two.  The primary remaining route
+is now the universal common-shear intersection theorem in
+`DIAG2_ESCAPE_SET_ATLAS178.md`, which would give one proper ray in every
+simultaneous-bad component.  Excluding compact assembly through the decorated
+transition complex remains an alternative route and is untouched by this
+checker.
 
-## 4. The four true exceptions
+## 4. The four exceptions to this canonical presentation
 
 `(50,7861)`, `(50,7977)`, `(50,12128)` are type `(50,50)`; `(50,20046)` is
 type `(50,51)`. None is affine in any of its eight non-pivot coordinates
-after `q_50` elimination, so neither lemma in section 2 applies directly to
-them. This does not mean they are compact -- it means every certificate tried
-so far (five families from `DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py`, plus
-this one) fails to settle them. A genuine two-plane/pencil argument (moving
-two coordinates jointly, as used for the fourth-diagonal cover-all supports
-in `FOURTH_DIAGONAL_FIVEFOLD.md`) or a targeted ideal saturation in the style
-of `verify_diag2_pivot_49_pair_saturation.py` are the natural next attempts;
-neither is carried out here.
+after the fixed canonical `q_50` elimination, so neither lemma in section 2
+applies in that presentation. This never implied compactness.  The later
+all-pair verifier settles them by stabilizer-equivalent presentations, while
+the conic calculations below remain an independent structural check.
 
-**Update:** all four turn out to be exact plane conics in the same
+**Independent conic reduction:** all four turn out to be exact plane conics in the same
 coordinate pair `(a,c)`, which is precisely the two-plane/pencil structure
 named above. `DIAG2_CONIC_FACTORIZATION_ESCAPE.md` shows `(50,7977)`'s conic
 discriminant is an exact perfect square (ruling out a bounded ellipse
 identically) -- a genuine partial reduction, but adversarial review found
 the step from "the discriminant rules out an ellipse" to "the pair is
 noncompact" has a real gap (the natural escape ray is a transversal probe at
-a generic point, not a path along the zero locus), so `(50,7977)` is **not
-yet closed**. All four exceptions remain open residue. The other three's
-discriminants genuinely change sign, so even a repaired version of the
-`(50,7977)` argument would not apply to them without a separate case.
+a generic point, not a path along the zero locus), so this argument does
+**not** close `(50,7977)`. The other three's discriminants genuinely change
+sign, so even a repaired version of this conic argument would not apply to
+them without a separate case.  These facts are not needed by the later
+stabilizer-aware affine closure.
 
 ## 5. Exact verification
 
@@ -165,8 +162,10 @@ PASS: 6886/6890 candidate pairs are affine in some non-pivot variable
 THEOREM: every one of those 6886 pair-wall common-zero loci is noncompact
 STATUS exceptions (not affine in any variable): [(50, 7861), (50, 7977), (50, 12128), (50, 20046)]
 PASS: all four exceptions independently reconfirmed unresolved by every prior certificate family
+STATUS canonical-presentation method: 9472/9476; method-local exceptions: 4
+STATUS complete stabilizer-aware pair theorem: 9476/9476 (verified separately)
 CAVEAT: pair-wall noncompactness (by any method) does not by itself promote diagonal two
-CAVEAT: diagonal two still requires global decorated transition-cycle acyclicity
+CAVEAT: diagonal two still requires universal common-shear overlap or another global argument
 ```
 
 ## 6. Relation to the six `(49,50)` cases

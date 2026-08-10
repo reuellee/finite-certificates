@@ -2,8 +2,8 @@
 
 ## Result
 
-The relative-label gap in the residual-wall Jacobian program is now finite
-and almost completely certified.
+The relative-label gap in the residual-wall Jacobian program is completely
+certified.
 
 The exact global census has `84,840` labeled residual determinant
 occurrences.  After dividing parent-bracket units, these give `26,740`
@@ -31,8 +31,8 @@ There are exactly
                   \boxed{9,476}
 \]
 
-unordered `S_8`-orbits of pairs of **distinct** residual factors.  Of these,
-`9,361` have an exact proper escape certificate:
+unordered `S_8`-orbits of pairs of **distinct** residual factors.  Every one
+has an exact proper escape certificate:
 
 | certificate | pair orbits |
 |---|---:|
@@ -41,27 +41,30 @@ unordered `S_8`-orbits of pairs of **distinct** residual factors.  Of these,
 | bracket-product minor after full stabilizer-frame exhaustion | 918 |
 | common affine-translation escape | 124 |
 | common weighted-torus escape | 4 |
-| type-`(49,49)` fiber-linear saturation | 7 |
-| **certified noncompact** | **9,361** |
-| honest residue | **115** |
+| iterated affine-fiber graph | 122 |
+| **certified noncompact** | **9,476** |
+| honest residue | **0** |
 
-Thus every connected component of the common zero set is noncompact for
-`98.786%` of all relative-label factor-pair orbits.  This is a theorem about
-the exact pair equations, not sampled parent charts.
+Thus every connected component of the common zero set is noncompact for all
+relative-label factor-pair orbits.  This is a theorem about the exact pair
+equations, not sampled parent charts.
 
-The remaining 115 orbits are concentrated in the last three factor families:
+Before the affine-fiber closure, the first five certificate families left
+122 orbits concentrated in the last three factor families:
 
-| unordered factor-orbit types | residue |
+| unordered factor-orbit types | pre-affine residue |
 |---|---:|
+| `(49,49)` | 7 |
 | `(49,50)` | 6 |
 | `(49,51)` | 12 |
 | `(50,50)` | 32 |
 | `(50,51)` | 38 |
 | `(51,51)` | 27 |
-| **total** | **115** |
+| **total** | **122** |
 
-No residue is asserted to contain a rank drop or a compact component.  It
-means only that the four certificate families above did not settle it.
+All 122 admit a stabilizer-equivalent iterated affine-fiber presentation.
+The seven type-`(49,49)` cases also have the stronger independent saturation
+and smoothness theorem below, but are not counted twice.
 
 ## 1. The factor action and pair-orbit census
 
@@ -211,6 +214,25 @@ nonempty subset of `R^7` which would be both open and compact, an
 impossibility.  Thus all seven pair-wall components are noncompact.  See
 `DIAG2_PIVOT_49_PAIR_SATURATION.md` and its exact verifier.
 
+### 3.4 Complete iterated affine-fiber closure
+
+The same graph idea works without a critical-ideal or smoothness hypothesis
+for all 122 pre-affine residues.  Put the first factor in its canonical graph
+frame.  Types 49, 50, and 51 have pivots `d`, `d`, and `f`, with slopes
+`1`, `[1238]`, and (up to sign) `[1456][2468]`.  These slopes never vanish on
+a uniform parent cell.  Solve the anchor equation, restrict the partner to
+the resulting open graph domain in `R^8`, and clear the bracket-unit
+denominator.
+
+For each residue, a stabilizer-equivalent presentation makes the restricted
+partner affine in at least one remaining graph coordinate.  If its
+coefficient vanishes at a zero, the entire open vertical fiber is present.
+Otherwise the zero set is locally the graph over an open subset of `R^7`.
+A hypothetical compact component is impossible in either case.  Exactly one
+orbit, `(50,20046)`, requires reversing the pair and using its type-51 factor
+as the graph anchor.  See `DIAG2_PIVOT_ALL_PAIR_FIBERS.md` and its exact
+verifier.
+
 ## 4. Exact verification
 
 Run
@@ -242,43 +264,50 @@ That checker deliberately stops at its 122-orbit three-family residue.  Run
 
 ```console
 PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag2_pivot_all_pair_fibers.py
+```
+
+to verify the committed all-orbit classification, reconstruct every graph
+substitution and stabilizer presentation, and prove the complete
+`9,476/9,476` theorem.  Its pinned semantic digest is
+
+```text
+4b6c4c6f7517401d558ad4314c08270e8f309976ecb1de7c678838d3084be80c
+```
+
+For the stronger smoothness result on the seven type-`(49,49)` cases, run
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
   ai/omreal/verify_diag2_pivot_49_pair_saturation.py
 ```
 
-to reconstruct the seven type-`(49,49)` cases, their stabilizer-equivalent
-targets, every localized ideal trace, and the fiber-linearity check.  The two
-verifiers together prove the `9,361/9,476` theorem above.
+to reconstruct their stabilizer-equivalent targets, every localized ideal
+trace, and the fiber-linearity check.
 
 ## 5. Consequence and boundary
 
-This closes the former relative-label caveat for all but 115 exact pair
-orbits and removes every pair residue involving factor orbits 36, 38, or 48.
-It also removes the entire type-`(49,49)` slice.
-It is a substantial input to the signed residual-wall transition graph.
+This closes the relative-label factor-pair caveat completely.  A
+diagonal-two counterexample cannot be an isolated compact component of one
+residual factor-pair zero set.  The result is a substantial input to the
+signed residual-wall transition graph.
 
 It does **not** promote diagonal two.  Noncompact individual wall and
 pair-wall strata can still assemble into a compact simultaneous-bad
-component through a cycle of chambers, wall faces, and witness transfers.
-The remaining proof target is therefore global acyclicity of that decorated
-transition complex.
+component through chambers, wall faces, and witness transfers.  The primary
+remaining target is the universal common-shear intersection theorem; global
+acyclicity of the decorated transition complex remains an alternative route.
 
-The bounded local task named above -- saturating the Jacobian ideals of the
-115 residue orbits -- is now mostly done. The six `(49,50)` cases close in
-`DIAG2_PIVOT_49_50_PAIR_SATURATION.md` (four by saturation, two by a cheaper
-argument below). That cheaper argument turns out to generalize: a
-single-variable affine-fiber refinement of the fixed-minor lemma, needing no
-ideal saturation at all, closes 6,886 of the 6,890 candidate pairs across
-all five hard factor-type families in `DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md`
--- taking the honest residue from 115 to exactly four pairs:
-`(50,7861),(50,7977),(50,12128),(50,20046)`, independently reconfirmed
-unresolved by every certificate family here. All four are exact plane conics
-in a shared coordinate pair; `DIAG2_CONIC_FACTORIZATION_ESCAPE.md` shows
-`(50,7977)`'s conic discriminant is an exact perfect square (ruling out a
-bounded ellipse) but this is a partial reduction, not a closure -- the
-natural escape ray only touches the zero locus at its starting point for a
-generic point of the conic, so `(50,7977)` remains open. Failure of a
-bounded certificate search must continue to be recorded as residue rather
-than as a geometric obstruction -- all four remain exactly that, not a rank
-drop or a compact component. None of this closes the transition-graph
-acyclicity question above; it only shrinks the population of pair-wall
-pieces that question would need to glue.
+There are two useful independent views of the former 122-orbit residue.  The
+canonical-presentation saturation and affine-fiber verifiers first close 118
+and leave exactly four pairs,
+`(50,7861),(50,7977),(50,12128),(50,20046)`.  All four are exact plane conics
+in a shared coordinate pair, and `DIAG2_CONIC_FACTORIZATION_ESCAPE.md`
+records a genuine but explicitly incomplete perfect-square-discriminant
+reduction for `(50,7977)`.  The stronger all-pair verifier then changes the
+presentation within the appropriate stabilizer (and reverses `(50,20046)`
+to anchor its type-51 factor); this makes every one of the four restricted
+polynomials affine in a graph coordinate.  Thus the final local pair
+classification is `9,476/9,476`, with no algebraic residue.  The conic note
+remains valuable independent structure but is not used to close the four
+cases.

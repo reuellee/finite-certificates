@@ -1,17 +1,29 @@
 #!/usr/bin/env python3
 """Run every verify_*.py in the tree; exit nonzero if any fails.
 
---fast skips the slow verifiers (druzkowski ~5-8 min, sae_circuit ~3-5 min,
-diag2_pivot_49_50_pair_saturation ~4-5 min).
+--fast skips the slow verifiers, including the expensive diagonal-two
+atlas, canonical-edge, mutation-square, separator, and saturation replays.
+
+--ci-delegated skips only verifiers that the required GitHub workflow runs in
+their own jobs.  With no flag this script continues to run every verifier.
 """
 import os, subprocess, sys
 
 SLOW = {
+    "verify_diag2_canonical_robust_edges.py",
+    "verify_diag2_escape_minimal_separators.py",
+    "verify_diag2_escape_set_atlas178.py",
+    "verify_diag2_escape_set_mutation_square.py",
+    "verify_diag2_pivot_49_50_pair_saturation.py",
+    "verify_diag2_robust_mutation_squares.py",
     "verify_druzkowski.py",
     "verify_sae_circuit.py",
-    "verify_diag2_pivot_49_50_pair_saturation.py",
+}
+CI_DELEGATED = {
+    "verify_diag2_escape_set_atlas178.py",
 }
 fast = "--fast" in sys.argv
+ci_delegated = "--ci-delegated" in sys.argv
 root = os.path.dirname(os.path.abspath(__file__))
 
 fails, ran, skipped = [], 0, 0
@@ -22,6 +34,10 @@ for dirpath, _, files in os.walk(root):
         if fast and f in SLOW:
             skipped += 1
             print(f"SKIP  {f} (--fast)")
+            continue
+        if ci_delegated and f in CI_DELEGATED:
+            skipped += 1
+            print(f"SKIP  {f} (--ci-delegated; separate required CI job)")
             continue
         path = os.path.join(dirpath, f)
         r = subprocess.run([sys.executable, path], cwd=dirpath,

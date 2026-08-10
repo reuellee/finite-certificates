@@ -202,8 +202,57 @@ exhausts all 40,524 bad signatures at parent 16 and all 71,112 bad signatures
 at each of four hard row-2599 charts; every pair of escape sets intersects.
 The minimum sizes are 52 and 53, respectively, so cardinality alone does not
 prove the parent-16 case.  This is exact chart evidence and a proof-level
-reduction, not the universal chart theorem or the global compact-component
-assembly.  See `DIAG2_ESCAPE_SET_TOPE_REDUCTION.md`.
+reduction, not the universal chart theorem.  A common direction at one point
+already supplies a proper ray inside that point's connected simultaneous-bad
+component, so the universal escape-set intersection theorem would finish
+diagonal two directly; no additional direction-gluing theorem is needed.
+The exhaustive extension of the audit to all 178 stored parent-2599 charts
+gives minimum escape-set size 53 and minimum pair overlap 6, with aggregate
+digest
+`d255845e6b246865ed3c50a61c001ec8701d3b22fffd218087d955ac0854d111`.
+This remains a point-bank theorem, not chamber coverage.  See
+`DIAG2_ESCAPE_SET_TOPE_REDUCTION.md` and
+`DIAG2_ESCAPE_SET_ATLAS178.md`.
+
+The same finite theorem has now been replayed at one exact integer
+realization of every one of the 2,604 realizable `UOM(4,8)` catalog parents.
+It covers 106,957,822 bad extensions and 2,241,206,348,415 unordered
+within-parent pairs.  All pairs intersect, with global minimum escape size 52
+and global minimum overlap six.  The audit deliberately retains the 154
+representatives whose derived arrangements are residually degenerate, as
+well as the 2,450 generic ones.  Its matrix- and independent-extension-census
+pinned digest is
+`58b5a8cb8f6e36466efabb6dc6a4ba1b9bf9f812f5899f5138d6abc96c2c8a18`.
+This is a point transversal across parent chirotopes, not coverage inside any
+one realization space.  See `DIAG2_COMMON_SHEAR_PARENT2604.md` and its exact
+verifier.
+
+Two exact reductions sharpen the surviving universal target.  Global
+reorientation of the extension element preserves every mask,
+`E_T(-rho)=E_T(rho)`, so finite searches may quotient antipodal signatures.
+Independently, nonescape is certified by inclusion-minimal source-local tope
+separators.  Each such separator covers at most five of one source's fourteen
+directions, and a disjoint pair is exactly an eight-source cover by the two
+minimal-separator families.  Parent 16 compresses 2,063,096 raw separators to
+287,560 minimal ones, with at most six per signature/source, and has no such
+cover.  The remaining proof problem is to exclude the eight-source cover from
+the extension GP axioms and derived covector elimination uniformly.  See
+`DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal and separator
+verifiers.
+
+Mutation-stable evidence also survives substantially stronger tests.  At the
+generic type-`37/44` square, every pair among 48,770 signatures bad in all
+four cells has one shear valid throughout the square; robust masks have size
+at least 52 and overlap at least eight.  The independently coverage-certified
+parent-2599 node gives 70,968 common-bad signatures, minimum robust size 53,
+and minimum robust overlap eleven.  Finally, exact two-sided audits at one
+generic edge of every one of the thirteen canonical residual incidence types
+cover 557,578 common-bad records and 12,091,441,965 decorated pairs; every
+robust pair overlaps in at least nine directions.  Exact local-germ segment
+certificates tie the generic samples to their wall germs.  These are local
+canonical-incidence theorems, not the 84,840 labeled-occurrence theorem or a
+covered parent-cell graph.  See `DIAG2_ROBUST_MUTATION_SQUARES.md` and
+`DIAG2_CANONICAL_ROBUST_EDGES.md`.
 
 Every individual residual factor wall nevertheless has a universal proper
 escape.  In an adapted global frame its equation is affine in one pivot with
@@ -282,36 +331,24 @@ label preserves both bad witnesses until `[5678]=0`.  Thus a strict cone
 field is false globally, while the certified obstruction itself escapes.
 See `DIAG2_PIVOT_CONE_FARKAS.md`.
 
-The former relative-label pair gap is now reduced exactly.  The `84,840`
+The former relative-label pair gap is now closed exactly.  The `84,840`
 labeled occurrences give `26,740` localized residual factors in six full
 `S_8` orbits and `9,476` unordered distinct factor-pair orbits.  Exhausting
 all canonical projective frames gives bracket-product `2 by 2` Jacobian
 minors for `9,226`; exact common translations settle another `124`, and
-weighted-torus escapes settle four more.  Exact saturation plus a
-fiber-linear escape settles the seven type-`(49,49)` cases.  Thus every
-pair-wall component is noncompact for `9,361` orbits, leaving an honest
-residue of `115`, all among factor families 49--51.  Two further exact
-closures reduce that residue to `4`: saturation (four cases) plus the
-affine-fiber argument (two cases) settle the six type-`(49,50)` orbits, and a
-single-variable refinement of the fixed-minor lemma -- affine in some
-coordinate after eliminating the first wall's pivot is on its own sufficient
-for noncompactness, no ideal saturation required -- closes all but four of
-the `6,890` candidate pairs across the five hard factor-type families at
-once.  All four surviving exceptions are exact plane conics in the same
-coordinate pair `(a,c)`.  One of them, `(50,7977)`, has a conic discriminant
-that is an exact perfect square (hence never negative, so never a bounded
-ellipse) -- a genuine partial reduction, but not a closure: the natural
-escape ray this suggests is a transversal probe at a generic point, not a
-path along the zero locus, so `(50,7977)` remains open along with the other
-three, `(50,7861),(50,12128),(50,20046)`, whose discriminants genuinely
-change sign.  All four were independently reconfirmed unresolved by every
-certificate family tried.  See
-`DIAG2_PIVOT_49_50_PAIR_SATURATION.md`,
-`DIAG2_CONIC_FACTORIZATION_ESCAPE.md` (the reduction, honestly scoped), and
-`DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md`.  None of this promotes diagonal two:
-pairwise noncompactness, however it is proved, does not by itself rule out a
-compact component assembled by gluing noncompact pieces through decorated
-transition cycles -- see item 6 below, which remains the actual open target.
+weighted-torus escapes settle four more.  A separate saturation theorem
+settles the seven type-`(49,49)` cases.  The canonical-presentation
+affine-fiber sweep closes another `111` and leaves exactly four conic pairs:
+`(50,7861),(50,7977),(50,12128),(50,20046)`.  Finally, stabilizer-equivalent
+graph presentations make all four affine as well (with `(50,20046)` reversed
+to anchor its type-51 factor).  Thus iterated affine-fiber graphs settle all
+122 cases left after the first three certificate families, and every
+pair-wall component is noncompact in all `9,476` relative-label orbits, with
+no local pair residue.  The perfect-square conic reduction for `(50,7977)`
+remains an independently checked partial result, not the argument used for
+its final closure.  None of these local pair theorems alone promotes diagonal
+two; the universal common-shear intersection theorem is the primary remaining
+target, with decorated transition-cycle acyclicity retained as an alternative.
 The 66 pairs among the
 12 displayed canonical polynomials are the smallest subtable of this result.
 Among the 220
@@ -796,8 +833,11 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   pairs, with the labeled-pair and triple boundary stated explicitly.
 - `DIAG2_PIVOT_LABELED_PAIR_THEOREM.md` and its exact verifier: all 9,476
   unordered relative-label factor-pair orbits, 9,226 projective-frame
-  bracket-minor certificates, 128 affine/torus escapes, seven fiber-linear
-  saturation escapes, and the exact 115-orbit residue.
+  bracket-minor certificates, 128 affine/torus escapes, and the exact
+  122-orbit affine-fiber closure.
+- `DIAG2_PIVOT_ALL_PAIR_FIBERS.md` and its exact verifier: complete
+  `9,476/9,476` pair-wall noncompactness, including all former
+  factor-family-49--51 residues.
 - `DIAG2_PIVOT_49_PAIR_SATURATION.md` and its exact verifier: localized
   critical ideals equal to one for all seven type-`(49,49)` residues and
   their componentwise fiber-linear noncompactness theorem.
@@ -807,17 +847,19 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md` and its exact verifier: a
   single-variable refinement of the fixed-minor lemma that closes 6,886 of
   6,890 candidate pairs across all five hard factor-type families at once,
-  reducing the honest relative-label residue from 115 to the exact four
-  pairs `(50,7861),(50,7977),(50,12128),(50,20046)`.
+  reducing that canonical-presentation verifier's residue from 115 to the
+  exact four pairs `(50,7861),(50,7977),(50,12128),(50,20046)`; the stronger
+  stabilizer-aware all-pair theorem above subsequently closes all four.
 - `DIAG2_CONIC_FACTORIZATION_ESCAPE.md` and its exact verifier: a genuine
   partial reduction, not a closure, for pairs whose restricted polynomial is
   a plane conic in two coordinates rather than affine in one; shows
   `(50,7977)`'s conic discriminant is an exact perfect square (ruling out a
   bounded ellipse) but documents, rather than closes, the remaining gap (the
   natural escape ray is a transversal probe, not a path on the zero locus)
-  after adversarial review caught an earlier overclaimed version.  The
-  honest residue is unchanged at the four pairs
-  `(50,7861),(50,7977),(50,12128),(50,20046)`.
+  after adversarial review caught an earlier overclaimed version.  This
+  checker leaves the same four method-local exceptions, all of which are
+  subsequently closed by `DIAG2_PIVOT_ALL_PAIR_FIBERS.md` using different
+  stabilizer-equivalent affine presentations.
 - `DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md` and its exact verifier: 171
   canonical rank-three certificates, four exact uniform rank-two witnesses,
   and the 45-triple saturation residue.
@@ -872,6 +914,22 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   simultaneous component escape by inverse-exterior witness transport, the
   low-source XOR reduction, 65 row-2599 hard occurrences, and the parent-16
   defect-two regression.
+- `DIAG2_ESCAPE_SET_TOPE_REDUCTION.md`, `DIAG2_ESCAPE_SET_ATLAS178.md`, and
+  their exact verifiers: the complete-tope restriction criterion, 112-shear
+  masks, and pairwise intersection on all 178 stored parent-2599 charts.
+- `DIAG2_COMMON_SHEAR_PARENT2604.md`, its compiled exact kernel, strict
+  summary, and verifier: one matrix-pinned representative of all 2,604
+  realizable parent chirotopes, 106,957,822 bad signatures, and a global
+  six-direction pair-overlap margin.
+- `DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal/separator verifiers:
+  universal sign-reversal symmetry, minimal source-local separator
+  compression, and the exact eight-source-cover obstruction.
+- `DIAG2_ROBUST_MUTATION_SQUARES.md` and its exact verifier: fixed-direction
+  common shears across two complete four-cell residual squares, including
+  wall/node limits and exact local-germ provenance.
+- `DIAG2_CANONICAL_ROBUST_EDGES.md` and its exact verifier: all thirteen
+  canonical residual incidence types pass a two-sided robust-mask audit,
+  covering 12,091,441,965 decorated pairs with minimum overlap nine.
 - `TORUS_TROPICAL_ESCAPE.md`: vertical-gauge no-go, exact face cones, and the
   quotient tropical strategy.
 - `NINTH_DIAGONAL_SAFE_GRAPH.md`: exact connectivity reduction, finite

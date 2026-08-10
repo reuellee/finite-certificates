@@ -2,7 +2,7 @@
 
 ## The reduction
 
-Fix a generic rank-four parent chart `T`, an extension signature `rho` which
+Fix a uniform rank-four parent chart `T`, an extension signature `rho` which
 is bad at `T`, and an oriented elementary column shear
 
 \[
@@ -57,6 +57,46 @@ compatibility of that subsupport.  Thus this tope formulation computes the
 same set `E_T(rho)` defined by minimal witnesses in
 `DIAG2_WITNESS_EXCHANGE_AUDIT.md`.
 
+## Antipodal sign-reversal lemma
+
+Write `-rho` for the global sign reversal of the 56 extension signs.  This is
+the extension obtained by reorienting the ninth element.  At every fixed
+parent chart `T`,
+
+\[
+                         E_T(-\rho)=E_T(\rho).             \tag{2}
+\]
+
+Indeed, for every transported row,
+
+\[
+ \alpha_{-\rho}(I;e,f)
+ =-\operatorname{sort}(I-e+f)(-\rho(I))(-\rho(I-e+f))
+ =\alpha_\rho(I;e,f).
+\]
+
+Thus `rho` and `-rho` retain exactly the same unsigned rows for each oriented
+shear.  The complete topes of the central derived arrangement occur in
+antipodal pairs.  A complete tope agrees with `-rho` on all retained rows if
+and only if its antipode agrees with `rho` there.  The complete-tope escape
+characterization therefore gives (2), direction by direction.
+
+Validity and chart goodness also occur in antipodal pairs: the uniform
+single-element-extension axioms are preserved by reorienting the new element,
+and `rho` is a complete derived tope exactly when `-rho` is.  Consequently a
+finite pairwise-intersection audit may compute one representative of every
+pair `{rho,-rho}`.  It must additionally check that every representative mask
+is nonempty, because the two distinct antipodal signatures have the same
+mask; pairwise intersection among distinct representatives then implies it
+for the full bad family.
+
+This is a universal exact reduction, not a common-shear theorem.  It halves
+the masks that must be evaluated at any chart but says nothing by itself
+about whether two nonantipodal masks intersect.  The independent regression
+`verify_diag2_escape_antipodal_symmetry.py` reconstructs the parent-16 tope
+table, checks antipodal closure, and pins the equality on five structurally
+different bad signatures and their reversals.
+
 ## Exact exhaustive audits
 
 The exact recursive arrangement enumerator supplies an integer witness for
@@ -108,18 +148,48 @@ intersecting escape sets and minimum size 53.  This is deliberately described
 as exact chart evidence, not a universal theorem: the stored charts are not a
 certified atlas of all parent chambers.
 
+## Component closure: no further direction gluing is needed
+
+The proper-ray statement in `DIAG2_MOVING_WITNESS_SHEAR.md` has a stronger
+consequence than the earlier version of this note recorded.
+
+> **One-point component escape criterion.**  Let `C` be a connected component
+> of `B_rho intersection B_eta`.  If there is one `T in C` with
+>
+> ```text
+> E_T(rho) intersection E_T(eta) != empty,
+> ```
+>
+> then `C` is noncompact.
+
+Choose a common oriented shear and one compatible witness for each signature.
+The moving-witness lemma transports both witnesses on the same half-ray until
+the first parent wall, or to a parallel-column boundary at infinity.  Every
+finite initial segment is connected, contains `T`, and lies in the
+simultaneous-bad locus, hence the whole half-ray lies in `C`.  Its limit is
+outside the uniform parent cell.  If `C` were compact, its image in the
+Hausdorff projective-configuration compactification would be closed and would
+contain that boundary limit, a contradiction.
+
+Therefore a universal escape-set intersection theorem directly proves that
+every simultaneous-bad component is noncompact and closes diagonal two.  It
+does **not** require a continuous choice of direction, a global vector field,
+or a separate gluing argument between pointwise directions.  The decorated
+wall-cycle program remains an alternative route if the common-shear theorem
+fails.
+
 ## What remains
 
 The local diagonal-two target is now a finite set-system assertion:
 
-> At every realizable generic parent chart, do the escape sets of every
+> At every realizable uniform parent chart, do the escape sets of every
 > relevant proper incomparable bad-signature pair intersect?
 
 A disjoint exact pair would refute the elementary-shear strategy even after
-all witness exchanges.  A universal intersection theorem would make every
-simultaneous-bad point locally escape along some parent shear, but one global
-step would remain: assemble those pointwise directions to exclude a compact
-component of `B_rho intersection B_eta`.  No diagonal is promoted here.
+all witness exchanges.  A universal intersection theorem would, by the
+one-point component escape criterion above, finish diagonal two directly.
+No diagonal is promoted here because the present chart audits do not prove
+that universal theorem.
 
 The most promising theoretical handles are the covector-elimination axioms
 behind the complete-tope restrictions and the unusually strong lower bounds
@@ -134,11 +204,26 @@ Run the CI-sized audit with:
 python ai/omreal/verify_diag2_escape_set_topes.py
 ```
 
+Run the focused sign-reversal regression with:
+
+```console
+python ai/omreal/verify_diag2_escape_antipodal_symmetry.py
+```
+
 Replay all 19 selected parent-2599 charts with:
 
 ```console
 python ai/omreal/verify_diag2_escape_set_topes.py --stress
 ```
+
+The separate exhaustive source-bank audit checks all 178 stored exact
+parent-2599 charts and the quantitative minimum pair overlap:
+
+```console
+python ai/omreal/verify_diag2_escape_set_atlas178.py
+```
+
+See `DIAG2_ESCAPE_SET_ATLAS178.md` for its exact scope and digest.
 
 The verifier independently enumerates all abstract extensions and all exact
 arrangement topes, computes every escape mask, proves pairwise intersection

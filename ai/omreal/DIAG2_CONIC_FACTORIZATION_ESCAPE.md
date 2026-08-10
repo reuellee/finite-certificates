@@ -2,11 +2,12 @@
 
 ## Status
 
-**This does not close `(50,7977)`.** An earlier version of this note claimed
-it did; adversarial review (agy) caught a real gap in the argument, confirmed
-independently below, and the claim is retracted to what is actually proven.
-All four exceptions from `DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md` --
-`(50,7861)`, `(50,7977)`, `(50,12128)`, `(50,20046)` -- remain open residue.
+**This conic argument does not close `(50,7977)`.** An earlier version of
+this note claimed it did; adversarial review (agy) caught a real gap in the
+argument, confirmed independently below, and the claim is retracted to what
+is actually proven.  Separately, `DIAG2_PIVOT_ALL_PAIR_FIBERS.md` later closes
+all four canonical-presentation exceptions by stabilizer-equivalent affine
+graphs.  Nothing below is used for that closure.
 
 What *is* proven, exactly, and kept here because it is a genuine partial
 result worth recording: for `(50,7977)`, after eliminating `q_50`'s pivot,
@@ -117,7 +118,8 @@ PASS: restricted polynomial is an exact plane conic in (a,c)
 PASS: conic discriminant B^2-4AC is exactly S^2 for the displayed S (never negative)
 REDUCTION: (50,7977)'s (a,c)-conic is never a bounded ellipse; this does NOT yet prove
            noncompactness -- see section 1 for the specific gap
-STATUS certified relative-label pair orbits: 9472/9476 (unchanged); residue: 4
-CAVEAT: all four exceptions in DIAG2_AFFINE_FIBER_RESIDUE_CLOSURE.md remain open
-CAVEAT: diagonal two still requires global decorated transition-cycle acyclicity
+STATUS canonical-presentation method: 9472/9476 (unchanged); exceptions: 4
+STATUS complete stabilizer-aware pair theorem: 9476/9476 (verified separately)
+CAVEAT: this conic argument closes none of the four method-local exceptions
+CAVEAT: diagonal two still requires universal common-shear overlap or another global argument
 ```

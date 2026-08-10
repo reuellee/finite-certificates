@@ -19,7 +19,7 @@ jobs:
   suite:
     name: verifier suite (complete)
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,11 +27,11 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: python -m pip install --upgrade pip numpy scipy sympy
-      # The COMPLETE suite, not --fast: the slow verifiers are the only
-      # readers of some committed artifacts, so skipping them would let a
-      # pull request delete or corrupt those artifacts and still go green.
-      - name: Run every verifier
-        run: python run_all.py
+      # This remains the complete suite except for the 178-chart replay,
+      # which has its own required job below so its exact 20+ minute audit is
+      # not killed by run_all.py's per-verifier timeout.
+      - name: Run every non-delegated verifier
+        run: python run_all.py --ci-delegated
       # Some verifiers regenerate committed artifacts. If regeneration does
       # not reproduce what is committed, that is a signal worth seeing;
       # informational only, since generation need not be byte-stable.
@@ -39,6 +39,22 @@ jobs:
         if: always()
         continue-on-error: true
         run: git diff --stat -- . ':!*.log'
+
+  nine-dvl-diag2-atlas:
+    name: 9DVL diagonal-two 178-chart escape audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy
+      - name: Rebuild all 12,657,936 exact escape masks
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ai/omreal/verify_diag2_escape_set_atlas178.py --workers 8
 
   nine-dvl-labeled-pairs:
     name: 9DVL relative-label pair audit
@@ -59,6 +75,10 @@ jobs:
         run: >-
           PYTHONDONTWRITEBYTECODE=1 python
           ai/omreal/verify_diag2_pivot_49_pair_saturation.py
+      - name: Close all 122 pair residues by affine fibers
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ai/omreal/verify_diag2_pivot_all_pair_fibers.py
 
   nine-dvl-parent860-pilot:
     name: 9DVL parent-860 CEGIS routing pilot
