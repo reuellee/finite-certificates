@@ -2,7 +2,7 @@
 """Run every verify_*.py in the tree; exit nonzero if any fails.
 
 --fast skips the slow verifiers, including the expensive diagonal-two
-atlas, canonical-edge, mutation-square, separator, and saturation replays.
+atlases, canonical-edge, mutation-square, separator, and saturation replays.
 
 --ci-delegated skips only verifiers that the required GitHub workflow runs in
 their own jobs.  With no flag this script continues to run every verifier.
@@ -12,6 +12,9 @@ import os, subprocess, sys
 SLOW = {
     "verify_diag2_canonical_robust_edges.py",
     "verify_diag2_escape_minimal_separators.py",
+    "verify_diag2_near_counterexample_atlas.py",
+    "verify_diag2_near_counterexample_separators.py",
+    "verify_diag2_singleton_four_obstruction.py",
     "verify_diag2_escape_set_atlas178.py",
     "verify_diag2_escape_set_mutation_square.py",
     "verify_diag2_pivot_49_50_pair_saturation.py",
