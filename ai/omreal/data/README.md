@@ -534,3 +534,49 @@ python ai/omreal/verify_diag2_escape_set_atlas178.py --workers 8
 The checker recomputes every mask and verifies the stored summary.  As with
 the source chart bank, this is an exact point-sample theorem, not a residual-
 chamber coverage certificate and not a promotion of diagonal two.
+
+## Diagonal-two overlap-at-most-eight atlas
+
+`DIAG2_NEAR_COUNTEREXAMPLE_atlas8.json.gz` stores every antipodal
+bad-signature pair orbit with escape overlap at most eight at the exact
+representative of each of the 2,604 realizable parent chirotopes.  There are
+1,154 pair orbits in 875 parents, representing 4,616 raw pairs, with overlap
+histogram `{6: 212, 7: 50, 8: 892}`.  The record digests are cross-checked
+against the complete all-parent screen.
+
+SHA-256:
+`73983fbd9eb1a6765ba815af1c3e6af401a235919643903de7ef62a80e8013a1`
+
+Semantic SHA-256:
+`377ca807cd8a3034677638ed55431ef83cce4cffa237834f3c530ec838f742ee`
+
+```console
+python ai/omreal/verify_diag2_near_counterexample_atlas.py
+```
+
+The default replay validates the complete artifact and reconstructs three
+sentinel parents exactly.  A `--full` run reconstructs the complete atlas.
+This is an exact point transversal, not realization-chamber coverage.
+
+## Diagonal-two near-pair separator profiles
+
+`DIAG2_NEAR_COUNTEREXAMPLE_separators8.json.gz` stores the exact
+inclusion-minimal source-local separator profiles of all 2,307 distinct
+near-pair endpoint signatures.  Its 27,684 minimal separators are all
+singletons: every endpoint has exactly four mutation triples and twelve
+source-local occurrences.  The artifact also stores each retained pair's
+eight sourcewise common-escape masks.
+
+SHA-256:
+`3010b3fbbdb3e914ffb4d7843f92f9162853c2ecb2b7d9e076e68f8ce31c4ad1`
+
+Semantic SHA-256:
+`543fed1a543f9a596e243548c2d05b0b3f4f20da5d82116f3136b1936413a16e`
+
+```console
+python ai/omreal/verify_diag2_near_counterexample_separators.py
+```
+
+The default replay validates the complete artifact and exactly reconstructs
+three sentinel parents.  The separator census has the same point-sample scope
+as the near-pair atlas.

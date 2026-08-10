@@ -240,6 +240,22 @@ the extension GP axioms and derived covector elimination uniformly.  See
 `DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal and separator
 verifiers.
 
+The complete overlap-at-most-eight residue across all 2,604 parent samples is
+now extracted rather than represented only by its minimum.  It contains 1,154
+antipodal pair orbits in 875 parents, with overlap histogram
+`{6: 212, 7: 50, 8: 892}`.  Every one of the 2,307 distinct endpoint
+signatures has exactly four singleton mutation triples as its complete
+minimal-separator family; there are no larger minimal separators.  In that
+entire four-singleton regime the surviving universal cover is impossible:
+a disjoint pair would force a linear three-uniform `8_3` configuration, the
+29,400 colored configurations have three symmetry orbits, and the shared-
+parent rank-four Grassmann--Pluecker system is UNSAT for each orbit.  Hence a
+counterexample must first cross a separator bifurcation, gaining or losing a
+mutation neighbor or acquiring a non-singleton separator.  This conditional
+theorem does not rule out those bifurcated regimes and does not promote
+diagonal two.  See `DIAG2_NEAR_COUNTEREXAMPLE_OBSTRUCTION.md` and its three
+exact verifiers.
+
 Mutation-stable evidence also survives substantially stronger tests.  At the
 generic type-`37/44` square, every pair among 48,770 signatures bad in all
 four cells has one shear valid throughout the square; robust masks have size
@@ -924,6 +940,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal/separator verifiers:
   universal sign-reversal symmetry, minimal source-local separator
   compression, and the exact eight-source-cover obstruction.
+- `DIAG2_NEAR_COUNTEREXAMPLE_OBSTRUCTION.md` and its three exact verifiers:
+  the complete overlap-at-most-eight atlas, exact four-singleton separator
+  profiles, and the shared-parent GP obstruction for all three colored
+  linear-`8_3` symmetry types.
 - `DIAG2_ROBUST_MUTATION_SQUARES.md` and its exact verifier: fixed-direction
   common shears across two complete four-cell residual squares, including
   wall/node limits and exact local-germ provenance.
