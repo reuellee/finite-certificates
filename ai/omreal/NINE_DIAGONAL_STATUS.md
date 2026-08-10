@@ -256,6 +256,18 @@ theorem does not rule out those bifurcated regimes and does not promote
 diagonal two.  See `DIAG2_NEAR_COUNTEREXAMPLE_OBSTRUCTION.md` and its three
 exact verifiers.
 
+The first exact separator-bifurcation attack isolates a labeled type-`50`
+edge at extremal parent 187.  Every new minimal separator on the bifurcated
+side contains an old one, so the separator-dominance lemma makes all six
+tracked escape masks monotone; one extremal pair moves from overlap six to
+nine and the other two stay at six.  A deterministic `216`-chart survey at
+the three parents carrying three overlap-six pair orbits gives `648` tracked
+observations: `495` remain simultaneously bad, none falls below six, and all
+`65` non-singleton observations have overlap at least nine.  This identifies
+undominated separator births as the sharper remaining transition target; it
+is not parent-cell coverage and does not promote diagonal two.  See
+`DIAG2_EXTREMAL_SEPARATOR_BIFURCATIONS.md` and its two exact verifiers.
+
 Mutation-stable evidence also survives substantially stronger tests.  At the
 generic type-`37/44` square, every pair among 48,770 signatures bad in all
 four cells has one shear valid throughout the square; robust masks have size
@@ -944,6 +956,9 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   the complete overlap-at-most-eight atlas, exact four-singleton separator
   profiles, and the shared-parent GP obstruction for all three colored
   linear-`8_3` symmetry types.
+- `DIAG2_EXTREMAL_SEPARATOR_BIFURCATIONS.md` and its two exact verifiers:
+  separator-dominance monotonicity on an isolated extremal type-50 edge and
+  the 216-chart, 648-pair three-parent bifurcation survey.
 - `DIAG2_ROBUST_MUTATION_SQUARES.md` and its exact verifier: fixed-direction
   common shears across two complete four-cell residual squares, including
   wall/node limits and exact local-germ provenance.
