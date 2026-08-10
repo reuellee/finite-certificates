@@ -280,6 +280,19 @@ budget can meet the incoming overlap.  This is one exact labeled edge, not a
 classification or a proof of diagonal two.  See
 `DIAG2_EXTREMAL_UNDOMINATED_BIRTH.md` and its exact verifier.
 
+The complete standard `e`-coordinate slice through parent 187 is now covered
+wall by wall.  Exact Sturm isolation gives `1,721` residual roots and `1,722`
+open chambers.  Across all `5,166` observations of the three extremal pairs,
+`4,159` remain simultaneously bad, `1,007` lose an endpoint, the minimum
+overlap remains six, and every non-singleton observation has overlap at least
+nine.  Only six still-bad pair transitions change overlap; their high-to-low
+profiles and total loss budgets are `15 -> 9 / 6`, `12 -> 6 / 6`, and
+`9 -> 6 / 5 or 6`, so none can spend the full incoming overlap.  Two other
+walls birth or kill a bad pair on sides already carrying overlap 12 or 9.
+This closes budget-tight births on one complete coordinate slice, not the
+parent cell, and does not promote diagonal two.  See
+`DIAG2_EXTREMAL_LINE_TRANSITION_CENSUS.md` and its exact verifier.
+
 Mutation-stable evidence also survives substantially stronger tests.  At the
 generic type-`37/44` square, every pair among 48,770 signatures bad in all
 four cells has one shear valid throughout the square; robust masks have size
