@@ -19,7 +19,9 @@ jobs:
   suite:
     name: verifier suite (complete)
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    # The complete serial replay now exceeds 90 minutes even though each
+    # verifier remains below run_all.py's 20-minute per-process ceiling.
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

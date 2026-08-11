@@ -7,8 +7,8 @@ closest open entry, but it has two independent unresolved obligations:
 
 1. triple `H_c^0`: exclude compact components for the remaining primitive
    factor triples; and
-2. pair `H_c^1`: prove split exactness of the signed exclusive-pair end
-   complex.
+2. pair `H_c^1`: prove middle exactness of a coverage-certified
+   exclusive-pair end complex.
 
 The new single-bad theorem removes the third possible obligation entirely:
 
@@ -58,6 +58,53 @@ Accordingly the next triple certificate must include the concurrence-chart
 frontiers and sheet attachments; support signs or a raw discriminant alone
 cannot decide compactness.
 
+A proposed Gale-dual shortcut has also been rejected exactly.  The displayed
+bracket formulas are normalized-chart identities with unequal column
+multidegrees, so termwise Pluecker complementation omits the independent
+column rescalings needed to normalize a Gale kernel.  At exact isolated wall
+centers for all six residual factor kinds, the original factor vanishes but
+the naively complemented equation is nonzero after the normalized Gale
+involution.  This rules out that affinity scan, not Gale duality itself; any
+future dual construction must transport the full labeled occurrence
+determinant with all normalization weights retained.
+
+That corrected construction has now been screened on the six pinned hard
+triples.  Across all `241,920` simultaneous `S_8` images it produces no
+common three-coordinate affinity block, no triangular unit graph, and no
+survivor among `20,321,280` coordinate Jacobian minors or `365,783,040`
+sparse decomposable-minor sums.  The last two are rigorous necessary-filter
+no-gos for the tested parent-unit families, not ideal-saturation theorems.
+Thus corrected Gale plus reframing does not rescue any hard canary by the
+existing affine/unit methods; boundary-aware dual or Coble transformations
+remain logically open.
+
+The standard coordinate-center Cremona involution has now been excluded just
+as sharply.  On the source coordinate torus it is componentwise inversion,
+so even its 17 novel target-nonuniform bracket divisors have singleton fibers
+and supply no exceptional motion.  Exact all-`S_8` canary screens again find
+no common square-affine block or triangular unit graph.  This is a bounded
+no-go for the standard marking, not a theorem against longer Coble/Weyl words.
+
+Literal contraction of three private extension columns also requires a
+stratified treatment.  An exact row-2599 family crosses one and only one
+rank-one quotient loop wall while the private triple stays independent and
+all prescribed brackets remain strict.  Separately, two decomposable
+alternating three-forms give a `6+6+6` separately convex model homotopy
+equivalent to `SO(3) x SO(3)`, with nonzero `H_6`.  Thus a contraction proof
+must retain every loop-specialization face and use the full occurrence
+coupling; fixed uniform strata or separate convexity cannot prove the target.
+
+There is nevertheless a positive loop-completion theorem on the
+simultaneous-feasible side.  If the 56 signature traces of three private
+extensions meet all four antipodal sign classes, every realizing private
+triple is independent.  Retaining all eight quotient loop walls then gives a
+contractible oriented-span image; the ambient loop complex has f-vector
+`(128,352,336,112)`.  The criterion holds for `1,625,014/1,750,540` triples
+in the stored 220-signature family.  Its scope is decisive: these private
+cones exist over `F_1 intersect F_2 intersect F_3` and are empty on the
+triple-bad locus, so a dual Gordan-block or Alexander/Leray bridge is still
+needed before this topology can address triple `H_c^0`.
+
 ## Exact state of the pair endpoint
 
 For
@@ -75,7 +122,8 @@ the remaining alternating pair differential has the canonical decomposition
  \to\ker H_c^1(D)\to\ker\beta\to0.
 \]
 
-On a common finite relative cellular model this is a three-term cochain
+On a common finite relative cellular model this is a three-term integral
+cochain
 complex
 
 \[
@@ -83,13 +131,17 @@ complex
                      \mathop{\longrightarrow}^{M}C^2.
 \]
 
-The coefficient-universal target is a split contraction
-`h_2 M+N h_1=I_(C^1)`.  Same-factor root and occurrence choices can be
+For the rational 9DVL target it is enough to prove middle exactness after
+reduction modulo two.  Indeed `MN=0` and
+`rank_F2(N)+rank_F2(M)=dim C1` force the same rank equality over `Q`.
+Thus signs and Smith-unit bookkeeping are optional, while geometric
+coverage, zero-weight faces, multiplicity parity, triple-relative exits, and
+parent infinity remain mandatory.  Same-factor root and occurrence choices can be
 eliminated through degree one by unit pivots on their proved generic strata,
-but the signed specialization and infinity blocks are not yet constructed
+but the specialization and infinity blocks are not yet constructed
 globally.
 
-The exact tapered two-dimensional ribbon is a useful negative canary.  Its
+The exact tapered two-dimensional ribbon remains a useful frontier canary.  Its
 cellular matrices have
 
 ```text
@@ -97,12 +149,21 @@ N : 12098 x 4917, rank 4917
 M :  7180 x 12098, rank 7180
 ```
 
-and leave one free middle class, supported in `H_c^1(E_02)`.  Local product
-charts do not remove it: the 39 coincident one-dimensional factor crossings
-split transversely.  More generally, `S^7 x R` is an orientable semialgebraic
-eight-manifold locally modeled on `I x R^7` but has `H_c^1=Q`.  Thus a Thom
-shift requires a **proper exhaustive filtration** whose strata have the
-needed compact-support vanishing, not merely local smooth product charts.
+and leave one free middle class, supported in `H_c^1(E_02)`.  A complete
+bottom-edge replay finds five shears common to all 50 exact witness-support
+pairs along the relevant end.  The required two-parameter audit is now also
+complete for this canary.  It restricts all 26,740 residual factors, covers
+all 84,840 labeled wall occurrences with fixed parent-unit certificates, and
+finds 1,707 active block-1 factors.  Tensor Bernstein coefficients put the
+only seven possible zeros on the triple-relative side or the double
+parent-wall corner.  Hence the actual residence component is a proper
+relative quadrilateral, and the signed product-strip attachment kills the
+unique class integrally.
+
+This repairs the row-2599 canary, but it does not supply the global atlas:
+other components and parent cells still require complete two-parameter
+frontiers and incidence coverage.  The dependency-free rectangle model
+continues to show why pointwise first exits alone are invalid.
 
 ## Routes retired by exact counterexamples
 
@@ -123,7 +184,15 @@ The following are not current proof routes:
 * local root connectivity or same-factor occurrence `H_1` alone: these
   remove choice fibers but do not determine signed end incidence;
 * a local `I x R^7` Thom argument: it does not control global ends or
-  exceptional fibers.
+  exceptional fibers;
+* a globally fixed triangular label order: a GP-valid type-49 wall has 22
+  common compatible roots, all pointing upward for one fixed order, and
+  equivariance transfers the obstruction to every fixed order;
+* termwise Gale complementation of normalized bracket formulas: it changes
+  their zero sets because the formulas are not column-multihomogeneous; and
+* pointwise tangential first exits: without a full two-parameter frontier
+  they need not assemble into a closed proper strip (the completed frontier
+  repairs the row-2599 canary only).
 
 ## Recommended next certificate
 
@@ -133,9 +202,9 @@ remaining work products should be finite, boundary-aware objects:
 1. a concurrence-chart roadmap for the `1,819,789` triple residue, retaining
    rank drops, interpolation/gauge frontiers, parent infinity, and sheet
    attachment; and
-2. a chamber-decorated receiver/end atlas populating the signed blocks of
-   `N,M`, followed by an exact rational-rank and integral Smith/contraction
-   replay.
+2. a chamber-decorated receiver/end atlas populating `N,M`, including every
+   two-parameter jump frontier, followed by the exact mod-two middle-rank
+   replay sufficient for the rational target.
 
 Discovery tools may use modular fingerprints, SAT, and sampled charts, but a
 theorem entry must end in exact positive identities or a complete finite

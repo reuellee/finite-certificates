@@ -31,6 +31,11 @@ SLOW = {
     "verify_diag2_robust_mutation_squares.py",
     "verify_diag3_ordered_root_atlas178.py",
     "verify_diag3_all_pair_affine_compression.py",
+    "verify_diag3_pair_factor_root_switch.py",
+    "verify_diag3_pair_atlas_tangential_fill.py",
+    "verify_diag3_pair_tangential_frontier.py",
+    "verify_diag3_projective_column_fiber_scan.py",
+    "verify_diag3_triple_gale_canary_no_go.py",
     "verify_druzkowski.py",
     "verify_sae_circuit.py",
 }
