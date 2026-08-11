@@ -29,11 +29,14 @@ SLOW = {
     "verify_diag2_generic_birth_type51_exchange_repair.py",
     "verify_diag2_pivot_49_50_pair_saturation.py",
     "verify_diag2_robust_mutation_squares.py",
+    "verify_diag3_ordered_root_atlas178.py",
+    "verify_diag3_all_pair_affine_compression.py",
     "verify_druzkowski.py",
     "verify_sae_circuit.py",
 }
 CI_DELEGATED = {
     "verify_diag2_escape_set_atlas178.py",
+    "verify_diag3_ordered_root_atlas178.py",
 }
 fast = "--fast" in sys.argv
 ci_delegated = "--ci-delegated" in sys.argv

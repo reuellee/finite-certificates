@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; the complete single-piece `E_1^(0,2)` column vanishes and every one-factor all-die wall escapes, leaving global incidence cycles |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; the complete single-piece `E_1^(0,2)` column vanishes; triple `H_c^0` reduces conditionally to 79,102,449 three-factor orbits and already has an exact internal discriminant wall, while pair `H_c^1` still lacks a proper global carrier contraction |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -562,6 +562,48 @@ spectral-sequence differentials are still necessary.  See
 `THREE_SHEAR_SINGLE_PIECE_REDUCTION.md` and
 `THIRD_DIAGONAL_E1_REDUCTION.md`.
 
+There is now a sharp conditional support-drop theorem for the triple column.
+If every connected component of every common zero set of at most three
+distinct primitive residual factors is noncompact, then every triple-bad
+component is noncompact.  The same nested-component proof applies to three
+fixed closed circuit pieces, so the hypothesis would kill `E_1^(2,0)`
+termwise.  The hypotheses are proved for zero, one, and two factors, including
+all `9,476` relative-label pair orbits.  Burnside reconstruction shows that
+the missing three-factor endpoint has `79,102,449` unordered `S_8`-orbits;
+the existing pair certificates do not imply it.  See
+`DIAG3_TRIPLE_FACTOR_REDUCTION.md`.
+
+The factor-pair endpoint now has a uniform alternate compression: after
+graphing either member with a parent-bracket-unit slope, every one of the
+`9,476` pair orbits makes the other factor affine in a remaining coordinate.
+This reproves pair-stratum noncompactness with one certificate family.  The
+graph helper was also audited to preserve the common normalization of
+`A*x+B`; independently primitive-normalizing `A` and `B` flips only the
+constant for types `36`, `38`, and `51`.  The corrected original 122-orbit
+digest is `af0fa699771292f5cca65510f32cf5c007034f4c9fdac5c3c3a49f0dfcd65846`,
+and the all-pair compression digest is
+`a28270e870ff2cb2a81a25a395f573fa95de63dc46b52a212a22779e92445847`.
+
+That uniform pair graph does not extend to triples.  Four exact triples have
+no graph presentation making the two remaining equations jointly affine in
+two coordinates; three also have no common affine three-plane and no
+affine-linear symmetry preserving the displayed generators' constant span.
+In the first case, exact number-field
+arithmetic exhibits a sign-changing quadratic discriminant root while all
+62 nonconstant parent brackets remain nonzero.  Thus discriminant/resultant
+projection walls genuinely cross parent-cell interiors and must be included
+in any complete triple classifier.  See `DIAG3_AFFINE_FIBER_FRONTIER.md`.
+
+For the pair column, full ordered two-root transport is materially stronger
+than the failed common-light and same-source tests.  On the stored
+minimum-overlap bad pair at each of all `178` exact row-2599 charts, the exact
+escape-choice graph is connected, has at least nine joint carrier edges, and
+has minimum vertex degree two.  A commuting-only graph is disconnected at
+chart 57 and is repaired only by the bilinear ordered Bruhat transport.  This
+is a point-bank theorem, not parent-cell coverage: face specialization,
+proper overlap cofinality, and a degree-one global chain contraction remain
+unproved.  See `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md`.
+
 ## Exact fourth-diagonal reduction
 
 Compact-support Cech descent has a general truncation: diagonal `s` is
@@ -1016,6 +1058,12 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   split--remerge obstruction to extending it to cover-all supports.
 - `THIRD_DIAGONAL_SUPPORT_FILTER_AUDIT.md`: independent symbolic/rational
   reconstruction of the generic support census.
+- `DIAG3_TRIPLE_FACTOR_REDUCTION.md` and its exact Burnside verifier:
+  nested support-drop reduction of triple compact components to at most
+  three primitive factor walls, plus the exact `79,102,449`-orbit endpoint.
+- `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md` and its exact verifier: full ordered
+  two-root `Lambda^3` carrier graphs on all 178 stored minimum-overlap pairs,
+  including the chart-57 commuting-only disconnect and bilinear repair.
 - `FOURTH_DIAGONAL_FIVEFOLD.md`: direct parent `H_5` escape, all-diagonal
   `(s+1)`-fold truncation, fourth-diagonal top-fiber sieve, and exact no-go.
 - `BLOCK_GORDAN_AUDIT.md`, `BLOCK_GORDAN_FORMAL_NO_GO.py`, and
