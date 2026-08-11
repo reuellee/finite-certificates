@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; the complete single-piece `E_1^(0,2)` column vanishes; triple `H_c^0` reduces conditionally to 79,102,449 three-factor orbits and already has an exact internal discriminant wall, while pair `H_c^1` still lacks a proper global carrier contraction |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,282,660/79,102,449` triple-factor orbits, leaving `1,819,789`; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex but still lacks its global signed frontier atlas |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -533,17 +533,34 @@ filter for the `5+5` residue, not a proof of diagonal two.  See
 
 ## Exact third-diagonal reduction
 
+The strongest current single-signature theorem is now
+
+\[
+                   H_c^q(B_\rho;R)=0
+                   \qquad(0\le q\le2)                         \tag{7}
+\]
+
+for every coefficient ring `R`.  Filter the proper normalized Gordan
+resolution by the **actual coordinate faces** of its convex witness fibers.
+A fiber `k`-face uses at most `5+k` normals.  In total degree at most two,
+only `k=0,1,2` occur, with support unions of at most five, six, and seven
+triples.  Support-plane residence motions kill the corresponding base groups
+through degrees two, one, and zero.  Constant-rank kernel charts, the
+face-orientation local system, and the support/rank frontier order make this
+an integral compact-support filtration argument rather than a cover
+heuristic.  See `DIAG3_SINGLE_BAD_TWO_SKELETON.md`.
+
 The total-degree-two circuit-cover row consists of single-piece `H_c^2`,
 pairwise `H_c^1`, and triple-intersection `H_c^0` groups.  The first of these
 three columns is now proved to vanish in full, not only generically:
 
 \[
                    H_c^q(C_{\rho,Q};\mathbb Q)=0
-                   \qquad (q=0,1,2,\ |Q|\le5).        \tag{7}
+                   \qquad (q=0,1,2,\ |Q|\le5).        \tag{7a}
 \]
 
 If `Q` omits a label, the existing three-dimensional deletion fiber proves
-(7).  If it covers all eight labels, incidence counting supplies a
+(7a).  If it covers all eight labels, incidence counting supplies a
 degree-one label `e` and a label `g` outside its unique triple with degree at
 most two.  Moving `e` through its two-dimensional support plane and `g`
 through its one-dimensional support-plane pencil gives three-dimensional
@@ -570,8 +587,39 @@ fixed closed circuit pieces, so the hypothesis would kill `E_1^(2,0)`
 termwise.  The hypotheses are proved for zero, one, and two factors, including
 all `9,476` relative-label pair orbits.  Burnside reconstruction shows that
 the missing three-factor endpoint has `79,102,449` unordered `S_8`-orbits;
-the existing pair certificates do not imply it.  See
-`DIAG3_TRIPLE_FACTOR_REDUCTION.md`.
+the existing pair certificates do not imply it.  Projective reframing,
+support-plane forests, triangular unit graphs, and exact parent-unit Jacobian
+minors now prove component noncompactness for
+
+\[
+                         \boxed{77,282,660}
+\]
+
+of those orbits.  The positive replay consists of `74,767,375` jointly affine
+orbits, `26,927` moving-column degree-two orbits, `2,410,414` degree-three
+forest orbits, `12,333` triangular unit-graph orbits, and `65,550` further
+unit-minor orbits.  A separate exact constant-plane replay closes 61 more
+orbits in role frame 1119.  The first unit-minor family uses exact identities
+from 79 role frames;
+the separate maximality search exhausted all 1,120 role frames and has a
+304-frame zero tail.  Exactly `1,819,789` degree-four orbits remain.  See
+`DIAG3_TRIPLE_FACTOR_REDUCTION.md` and
+`DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`.
+
+The tested deterministic full colored occurrence/support key gives no
+quotient: it was singleton on the `1,819,850`-orbit pre-constant-plane source,
+hence also on the current subset.  This does not exclude a different
+algebraically sufficient invariant.
+On its sparse concurrence chart, the three equations reduce locally to four
+bilinear equations over a six-parameter base, but the projection genuinely
+ramifies inside the uniform parent cell.  A CAS-produced degree-20 RUR has a
+stored branch which is verified exactly and isolates such a corank-one
+ramification point with all 70
+parent brackets nonzero; outward interval evaluation of all 26,740 primitive
+factors proves that only the selected three vanish.  Thus the point is neither
+a parent-boundary point nor a forced fourth-factor point.  The concurrence
+chart is a useful lower-degree endpoint, not a proof of component
+noncompactness or eventual boundary escape.
 
 The factor-pair endpoint now has a uniform alternate compression: after
 graphing either member with a parent-bracket-unit slope, every one of the
@@ -603,6 +651,39 @@ chart 57 and is repaired only by the bilinear ordered Bruhat transport.  This
 is a point-bank theorem, not parent-cell coverage: face specialization,
 proper overlap cofinality, and a degree-one global chain contraction remain
 unproved.  See `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md`.
+
+The remaining pair differential is now exact.  Put
+`T=B_0 intersection B_1 intersection B_2` and
+`E_ij=(B_i intersection B_j) minus T`.  Under the proved pair `H_c^0`
+vanishing and the still-required triple `H_c^0` vanishing, its kernel fits in
+
+\[
+ 0\longrightarrow\bigoplus_{ij}H_c^1(E_{ij};R)
+ \longrightarrow\ker H_c^1(D)
+ \longrightarrow\ker\beta\longrightarrow0,           \tag{7b}
+\]
+
+where `beta` is the signed frontier map from the two balanced copies of
+`H_c^1(T)` to the three `H_c^2(E_ij)`.  A finite relative cellular model gives
+explicit differentials `N,M`; coefficient-universal vanishing is equivalent
+to a split contraction `h_2 M+N h_1=I`.  Pointwise noncompactness, connected
+root-choice graphs, and vanishing of the active-boundary union do not imply
+this rank condition.  The exact missing input is a proper, chamber-complete
+signed end-incidence atlas, including factor intersections and infinity.
+See `DIAG3_PAIR_DIFFERENTIAL_ENDS.md`.
+
+The smallest covered two-dimensional normal ribbon does not supply that
+atlas.  Its relative matrices have sizes `12098 by 4917` and
+`7180 by 12098`, with maximal ranks `4917` and `7180` over both `F_2` and
+`Q`, leaving one free middle class in the exclusive stratum `E_02`.  A pinned
+representative uses 242 edges and records a block-zero birth/end imbalance.
+This is a slice theorem, not an ambient counterexample, but local
+`interval times R^7` charts cannot remove it formally: `S^7 times R` has
+exactly that local dimension pattern and nonzero `H_c^1`.  A valid tangential
+shift by the current stratumwise route would follow from a proper exhaustive
+filtration whose strata have `H_c^0=H_c^1=0`, including exceptional fibers
+and infinity.  See
+`DIAG3_PAIR_TANGENTIAL_SHIFT_AUDIT.md`.
 
 ## Exact fourth-diagonal reduction
 
@@ -1056,11 +1137,45 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   third-diagonal single-piece column vanishes below compact-support degree
   three, the safe omitted-support degree-three upgrade, and the exact
   split--remerge obstruction to extending it to cover-all supports.
+- `DIAG3_SINGLE_BAD_TWO_SKELETON.md` and its verifier: the proper
+  coordinate-face filtration proving `H_c^q(B_rho;R)=0` for `q<=2`, every
+  ring, plus the same low-degree theorem for every primitive residual wall.
 - `THIRD_DIAGONAL_SUPPORT_FILTER_AUDIT.md`: independent symbolic/rational
   reconstruction of the generic support census.
 - `DIAG3_TRIPLE_FACTOR_REDUCTION.md` and its exact Burnside verifier:
   nested support-drop reduction of triple compact components to at most
   three primitive factor walls, plus the exact `79,102,449`-orbit endpoint.
+- `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`, its Python/C++ replayers,
+  and compact data: exact positive component escapes for `77,282,660` triple
+  orbits, leaving `1,819,789`, with negative-search maximality kept separate
+  from the replayed identities.
+- `DIAG3_CONCURRENCE_NORMAL_FORM.md` and its verifier: the four-bilinear
+  generic concurrence chart, exact degree-20 internal ramification RUR, and
+  the all-26,740-factor proof that the ramification point has no fourth
+  residual factor.
+- `DIAG3_PAIR_DIFFERENTIAL_ENDS.md` and its verifier: the exclusive-pair and
+  balanced-end exact sequence, explicit relative cochain matrices `N,M`, and
+  coefficient-universal split-contraction criterion.
+- `DIAG3_PAIR_LOCAL_ROOT_SWITCH.md` and
+  `DIAG3_PAIR_FACTOR_ROOT_SWITCH.md`, with their exact SAT/cellular replays:
+  universal single-wall root switching and generic same-factor two-signing
+  root/occurrence contractions, with frontier and higher-cycle scopes kept
+  explicit.
+- `DIAG3_PAIR_FOUR_RAY_REFINEMENT.md`,
+  `DIAG3_PAIR_RECEIVER_END_CANARY.md`, and their exact verifiers: the complete
+  one-dimensional factor-star/end census and its primitive free residue.
+- `DIAG3_PAIR_TANGENTIAL_SHIFT_AUDIT.md` and its exact ribbon replay: the
+  two-dimensional `E_02` survivor, sharp local-product no-go, and sufficient
+  proper-filtration replacement.
+- `DIAG3_JOINED_FLOW_TRIANGLE.md` and its verifier: the integral local
+  flow-triangle two-skeleton, its primitive top relation, and the proof that
+  the missing mixed three-cell cannot bypass triple-intersection
+  noncompactness.
+- `DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md`: the dimension-matched
+  multiconvex-fiber audit and sharp `S^6` obstruction to inferring the target
+  homology from fixed-row convexity.
+- `DIAG3_STRATEGY_CHECKPOINT.md`: the bounded route/tooling audit, retired
+  shortcuts, and the two finite frontier-aware certificates still required.
 - `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md` and its exact verifier: full ordered
   two-root `Lambda^3` carrier graphs on all 178 stored minimum-overlap pairs,
   including the chart-57 commuting-only disconnect and bilinear repair.

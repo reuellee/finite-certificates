@@ -100,6 +100,7 @@ def main():
         "DIAG9_GRAPH_row2599_line_graph.npz",
         "DIAG9_GRAPH_row2599_node_graph.npz",
         "DIAG9_GRAPH_row2599_slice_graph.npz",
+        "DIAG9_GRAPH_parent860_coordinate_star_graph.npz",
     }
     if set(graph_files) != certified_subroadmaps:
         raise AssertionError(

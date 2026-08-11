@@ -43,6 +43,15 @@ unordered `S_8`-orbits.  No theorem in the repository proves noncompactness
 for all of them.  Consequently this note is a conditional reduction, not a
 proof of the third diagonal.
 
+For one fixed signature triple the endpoint can be sharpened.  Only factor
+triples which can be matched to the three signatures through aligned labeled
+wall occurrences can be produced by the induction below.  There is no
+further allowed-side or sector inequality on the common zero set.  Across
+all possible extension signatures this sharpening gives no occurrence-level
+Grassmann--Pluecker exclusion: every nonempty residual occurrence wall is
+locally aligned with an actual realizable extension tope.  The precise
+statement and proof are in Section 1.
+
 The same theorem holds, with the same proof, after replacing any `B_i` by a
 fixed closed circuit piece `C_(rho_i,Q_i)`.  At each point choose a
 support-minimal dependence **inside** `Q_i`.  A persistent circuit remains
@@ -93,6 +102,82 @@ After localization, several labeled residual occurrences can define the
 same primitive factor.  Encountering another such occurrence does not add a
 new equation to (1); equation (4) instead makes its signature automatic on
 the current factor stratum.
+
+### Active-factor sharpening and its exact limit
+
+For a valid extension signature `sigma`, let
+
+\[
+ A_\sigma=\{f:\text{some labeled occurrence of }f
+                 \text{ is circuit-aligned with }\sigma\}.       \tag{4a}
+\]
+
+Run the nested induction of Section 2 while recording which unassigned
+signature introduced each new factor.  If it reaches three distinct factors,
+then, after ordering the signatures, they satisfy
+
+\[
+                         f_i\in A_{\sigma_i},\qquad i=1,2,3.      \tag{4b}
+\]
+
+Indeed every new factor is introduced by an aligned circuit of an unassigned
+signature.  If one factor certifies two new signatures, at most two factors
+are needed and the already-proved pair endpoint applies.  Thus in the
+three-factor case the three introduction steps give the matching (4b).
+This is the minimal proof-safe sharpening for a prescribed signature triple.
+For a fixed circuit piece `C_(sigma,Q)`, replace `A_sigma` by the subset whose
+aligned occurrence circuit is contained in `Q`; the same introduction-step
+argument applies termwise.
+
+It is not a restriction to an allowed **sector**.  Once `f in A_sigma`, the
+fixed-unit identities give `H_f subset B_sigma`, including all intersections
+with the other factor walls.  At the endpoint every `q_f` equals zero, so an
+inequality `epsilon_(sigma,f) q_f>0` is false rather than an extra condition.
+The active-sector theorem describes the feasible complement of active walls;
+it does not cut down their zero strata.
+
+Nor does occurrence-level extension realizability remove a nonempty wall.
+This follows from a local converse to the wall-side theorem.
+
+> **Local aligned-tope lemma.** Let `Y in X intersection H_f`, and fix any
+> labeled occurrence `E` of `f`.  Either of the two antipodal signings of the
+> unique wall circuit supported on `E` is the restriction of a realizable
+> uniform single-element extension signature of the parent chirotope of `X`.
+
+For an ordinary occurrence, the exact fixed-unit identities make all four
+circuit cofactors nonzero at every point of the wall.  Thus the four selected
+normals have rank exactly three at `Y` and a unique dependence.  Because
+`D_E=(nonzero unit) q_f` is a nonzero polynomial and `X` is open, there are
+arbitrarily small displacements `Y(t) in X` with `D_E(Y(t))` nonzero; the four
+normals then form a basis.  Reorient them by the signs of their wall
+dependence.  The inverse image of the positive orthant under this basis is a
+nonempty open cone in the extension-column space.  A finite union of the
+other 52 derived hyperplanes cannot cover that cone, so a point outside their
+union gives a complete uniform extension tope with the required restriction.
+
+For a localization occurrence the exact localization coefficients make the
+distinguished three wall normals an exact rank-two circuit at `Y`.  At an
+arbitrarily close point off the same occurrence wall, its four-normal
+determinant is nonzero, so the distinguished three normals are independent.
+Their prescribed strict sign cone is again a nonempty open subset of the
+four-dimensional extension-column space, and the same hyperplane-avoidance
+argument completes it to a uniform tope.  Replacing the column by its negative
+supplies the antipodal choice.  In both cases the nearby parent stays in `X`,
+so the resulting sign vector is an actual realizable extension of the same
+parent chirotope and automatically satisfies every extension
+Grassmann--Pluecker axiom.  QED.
+
+At a simultaneous factor intersection this construction may be performed
+independently for the three factors: the three missing extension columns are
+independent and may use different nearby parent realizations in `X` to prove
+individual validity.  Consequently the fixed circuit signs and the extension
+Grassmann--Pluecker axioms do not impose a mixed sign identity on the three
+factor equations and cannot, by themselves, forbid a compact component of
+their common zero set.  They can still prune factors for one **prescribed**
+signature triple through (4b).  Counting that smaller family requires a
+global active-factor atlas, including the distinction between dominance-
+reduced extension regions; it is not an occurrence-support or local-GP
+calculation.
 
 ## 2. Nested compact-component induction
 

@@ -580,3 +580,61 @@ python ai/omreal/verify_diag2_near_counterexample_separators.py
 The default replay validates the complete artifact and exactly reconstructs
 three sentinel parents.  The separator census has the same point-sample scope
 as the near-pair atlas.
+
+## Diagonal-three compact Morse certificates
+
+`DIAG3_morse_unit_minor_certificates.bin` stores 65,550 exact role-frame
+Jacobian-minor identities.  Each record gives the original factor triple,
+one of the 1,120 role-frame indices, three minor columns, the sign, and the
+parent-bracket product.  Exactly 79 frames carry witnesses; the exhaustive
+screen's last first witness is frame 815.
+
+SHA-256:
+`afe01d6d94bc4b8ce133cbe0d14ceb01d9dd72514f9ed7a59b73d5f6b4299734`
+
+`DIAG3_triangular_features.bin` stores the zero-coordinate and exact
+parent-unit-derivative masks used to remove 12,333 union-degree-four triples
+before the role sweep.
+
+SHA-256:
+`7fae9da26cf7391d2dc3b00e55faabdf4556d4badc9a2f8c4ace3ecc29d7f136`
+
+```console
+python ai/omreal/verify_diag3_projective_column_fiber_scan.py --morse-only
+```
+
+Passing `--morse-union4` with the exported union-degree-four bucket also
+rechecks every positive triangular feature, regenerates the pinned
+1,885,400-row source, and verifies that all compact Morse records lie in it.
+The compact 79-frame artifact proves only its positive closure count; the
+claim of maximality for this unit-minor screen comes from the separate full
+1,120-frame exhaustion.  The checker records that construction accounting
+but does not present it as a replay of the negative search.
+
+`DIAG3_frame1119_constant_shear.json` stores 61 additional exact identities
+from signed sums and differences of coordinate minors sharing two columns in
+role frame 1119.  The records are distinct in original orbit coordinates and
+the checker proves that all 61 fail every affine reframe, have minimum
+support-union degree four, fail the triangular test, and are disjoint from
+the 65,550 compact Morse records.  This is a one-frame positive artifact, not
+an exhaustive constant-`GL9` scan.
+
+SHA-256:
+`1cece61ff1a551faaeefc0062267e24266d264d9e19748d40fa5a74db9ce0be3`
+
+```console
+python ai/omreal/verify_diag3_frame1119_constant_shear.py
+```
+
+`DIAG3_pair_tapered_ribbon.json` stores the compact factor order and exact
+three-signature statuses needed to reconstruct the two-dimensional tapered
+normal-slice ribbon.  It intentionally omits the algebraic root isolators,
+which are already checked by the four-ray refinement; its theorem is the
+signed cellular incidence and rank calculation on that fixed subdivision.
+
+SHA-256:
+`7e32badfcdf200fa3bb284db1502c8435bc7732bc973e4e55aa894c81372763f`
+
+```console
+python ai/omreal/verify_diag3_pair_tapered_ribbon.py
+```

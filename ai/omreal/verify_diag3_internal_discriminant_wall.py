@@ -45,6 +45,13 @@ MINIMAL = (
 LOWER = Fraction(-7_769, 1_000)
 UPPER = Fraction(-7_768, 1_000)
 EXPECTED_DIGEST = "10ed199125e6d6caba04306add891456ee190c30b7f011414166b6a9aaa95241"
+UNION4_MOVING_LABEL = 2  # projective label 3, in zero-based coordinates
+UNION4_OCCURRENCE_LABELS = (
+    ("123", "145", "246", "378"),
+    ("126", "257", "367", "458"),
+    ("245", "157", "348", "168"),
+)
+EXPECTED_UNION4_COLORS = (1, 1, 2, 4)
 
 
 def clean(values):
@@ -330,6 +337,17 @@ def coefficients_in(polynomial, variable, maximum):
     return tuple(poly.clean(item) for item in answer)
 
 
+def occurrence_from_labels(labels):
+    return tuple(
+        sorted(
+            labeled.TRIPLE_INDEX[
+                tuple(sorted(int(character) - 1 for character in label))
+            ]
+            for label in labels
+        )
+    )
+
+
 def main():
     if gcd(*map(abs, MINIMAL)) != 1:
         raise AssertionError("minimal polynomial is not primitive")
@@ -345,6 +363,36 @@ def main():
         raise AssertionError("the algebraic root is not sign-changing")
 
     occurrences, occurrence_factor, factor_polynomial = labeled.factor_polynomials()
+    selected_occurrences = tuple(
+        occurrence_from_labels(labels) for labels in UNION4_OCCURRENCE_LABELS
+    )
+    if any(
+        occurrence_factor[occurrence] != factor
+        for factor, occurrence in zip(
+            FACTOR_IDS, selected_occurrences, strict=True
+        )
+    ):
+        raise AssertionError("union-four occurrence/factor assignment changed")
+    incident_normals = tuple(
+        frozenset(
+            normal
+            for normal in occurrence
+            if UNION4_MOVING_LABEL in labeled.TRIPLES[normal]
+        )
+        for occurrence in selected_occurrences
+    )
+    incident_union = tuple(sorted(set().union(*incident_normals)))
+    colors = tuple(
+        sorted(
+            sum(
+                (normal in incident_normals[row]) << row
+                for row in range(3)
+            )
+            for normal in incident_union
+        )
+    )
+    if colors != EXPECTED_UNION4_COLORS:
+        raise AssertionError("internal discriminant union-four core changed")
     factor_occurrence = labeled.factor_action_is_well_defined(
         occurrences, occurrence_factor
     )
@@ -481,6 +529,7 @@ def main():
     print("PASS unique sign-changing root interval:", LOWER, UPPER)
     print("PASS specialized quadratic discriminant:", primitive_discriminant)
     print("PASS exact triple factors vanish:", FACTOR_IDS)
+    print("PASS union-four incidence colors:", colors)
     print("PASS nonconstant parent brackets remain nonzero:", len(bracket_values))
     print("PASS final c-quadratic has an exact double root")
     print("SEMANTIC", digest)
