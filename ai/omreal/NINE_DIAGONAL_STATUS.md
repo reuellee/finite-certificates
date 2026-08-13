@@ -23,13 +23,13 @@ regions are proper and pairwise incomparable.  Several reductions below,
 including the duality and master-chamber graph theorem, hold for arbitrary
 finite `S` and are therefore stated in that stronger form.
 
-Exactly one of the nine entries is currently proved.
+Exactly two of the nine entries are currently proved.
 
 | `s` | primal group in (1) | exact dual target | status |
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
-| 2 | `H_7(F_S)` | `H_c^1(B_S)` | open; single-region `H_7` now vanishes integrally, so the only target is absence of compact components in `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; the complete single-piece `E_1^(0,2)` column vanishes and every one-factor all-die wall escapes, leaving global incidence cycles |
+| 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,282,660/79,102,449` triple-factor orbits, leaving `1,819,789`; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no global frontier atlas exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -66,7 +66,7 @@ to the rank-four, nine-element extension specified by `sigma` gives
 
 Properness of `F_sigma` is unnecessary.
 
-## Exact second-diagonal target
+## Proved second diagonal
 
 Compact-support Mayer--Vietoris gives
 
@@ -109,12 +109,45 @@ for every signature `rho`.  Consequently (4) collapses integrally to
        \cong H_c^0(B_\sigma\cap B_\tau;\mathbb Z).                \tag{4c}
 \]
 
-Thus exactly one assertion remains for diagonal two: every simultaneous-bad
-locus `B_sigma intersection B_tau` has no compact connected component.  The
-formerly separate restriction-map obstruction is zero.
+The exchange-saturated support-drop theorem now proves the remaining
+assertion: every simultaneous-bad locus
+`B_sigma intersection B_tau` has no compact connected component.  At a
+nonstructural minimal three- or four-circuit, an exact all-strata support
+classification and conic witness exchange produce a common moving-witness
+shear.  If a hypothetical compact component avoided every such circuit,
+strict five-circuits and structural small circuits would persist locally,
+making the component clopen in the connected noncompact parent space.
+
+The only source-hard finite residue consists of eight localization `3+5`
+formulas, three ordinary `4+4` formulas, and ten necessary ordinary `4+5`
+supports.  The first two classes are UNSAT.  All ten supports in the last
+class are wall-disjoint; conic exchange forces a new positive circuit sharing
+one wall triple, a contradiction.  The exact theorem and replay are in
+`DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md`; the signed certificate has
+semantic digest
+
+```text
+4546a2e7ba03c1c9dd63abbe65195fc348accf9bf91ccaa773072f1fcae9df38
+```
+
+Combining this with (4c) gives
+
+\[
+ H_c^1(B_\sigma\cup B_\tau;\mathbb Z)=0,
+ \qquad
+ \boxed{\widetilde H_7(F_{\{\sigma,\tau\}};\mathbb Z)=0}.       \tag{4d}
+\]
+
+The formerly separate restriction-map obstruction is zero.
 The quotient-level Gale identification and every orientation, gauge, and
 duality step have been independently reconstructed in
 `SECOND_DIAGONAL_SINGLE_REGION_H7_AUDIT.md`.
+
+### Historical circuit-cover reductions
+
+The reductions below record the route to the final support-drop theorem and
+remain useful for later diagonals; statements of an open compact-component
+residue in those checkpoint notes are superseded by (4d).
 
 Gordan and Caratheodory give a finite closed cover of every bad locus by
 circuit pieces `C_(rho,Q)`.  Zero-padding makes the size-five pieces cofinal:
@@ -124,7 +157,7 @@ circuit pieces `C_(rho,Q)`.  Zero-padding makes the size-five pieces cofinal:
 \]
 
 Every single piece has `H_c^0=H_c^1=0`.  The circuit-cover calculation of the
-remaining compact-component obstruction is
+then-remaining compact-component obstruction was
 
 \[
  H_c^1(B_S)\cong\ker\!\left[
@@ -235,8 +268,9 @@ separators.  Each such separator covers at most five of one source's fourteen
 directions, and a disjoint pair is exactly an eight-source cover by the two
 minimal-separator families.  Parent 16 compresses 2,063,096 raw separators to
 287,560 minimal ones, with at most six per signature/source, and has no such
-cover.  The remaining proof problem is to exclude the eight-source cover from
-the extension GP axioms and derived covector elimination uniformly.  See
+cover.  At that checkpoint, the remaining proof problem was to exclude the
+eight-source cover from the extension GP axioms and derived covector
+elimination uniformly.  See
 `DIAG2_ESCAPE_MINIMAL_SEPARATORS.md` and the antipodal and separator
 verifiers.
 
@@ -268,6 +302,47 @@ undominated separator births as the sharper remaining transition target; it
 is not parent-cell coverage and does not promote diagonal two.  See
 `DIAG2_EXTREMAL_SEPARATOR_BIFURCATIONS.md` and its two exact verifiers.
 
+The next exact edge reaches that sharper class.  On the same parent-187
+`e`-line, reversing isolated type-`49` factor `23604` births singleton row
+`1` at sources `1`, `2`, and `4` while size-two separator `{30,33}` remains
+at sources `6` and `7`.  The destination is therefore mixed rather than
+four-singleton, and the affected escape mask genuinely shrinks `67 -> 61`.
+All six lost directions were common with the fixed partner, but nine common
+directions survive, so pair overlap changes `15 -> 9`.  The birth-budget
+lemma for pairs already simultaneously bad now reduces the transition search
+to separator births whose cover-loss budget can meet the incoming overlap.
+This is one exact labeled edge, not a classification or a proof of diagonal
+two.  See
+`DIAG2_EXTREMAL_UNDOMINATED_BIRTH.md` and its exact verifier.
+
+The complete standard `e`-coordinate slice through parent 187 is now covered
+wall by wall.  Exact Sturm isolation gives `1,721` residual roots and `1,722`
+open chambers.  Across all `5,166` observations of the three extremal pairs,
+`4,159` remain simultaneously bad, `1,007` lose an endpoint, the minimum
+overlap remains six, and every non-singleton observation has overlap at least
+nine.  Only six still-bad pair transitions change overlap; their high-to-low
+profiles and total loss budgets are `15 -> 9 / 6`, `12 -> 6 / 6`, and
+`9 -> 6 / 5 or 6`, so none can spend the full incoming overlap.  Two other
+walls birth or kill a bad pair on sides already carrying overlap 12 or 9.
+This closes budget-tight births on one complete coordinate slice, not the
+parent cell, and does not promote diagonal two.  See
+`DIAG2_EXTREMAL_LINE_TRANSITION_CENSUS.md` and its exact verifier.
+
+The next parent-187 target is now an exact two-dimensional object rather than
+an arbitrary rectangle.  The full `d/e` parent-cell slice is a bounded convex
+hexagon; all `26,740` residual restrictions have total degree at most two,
+and the `24,750` nonconstant equations are pairwise nonproportional.  Exact
+parent-unit factorization reduces the ten central-line seed circuits to a
+global `164`-membership/`142`-factor link census and an effective disk
+frontier of `160` memberships in `139` nonconstant factors.  Ten selected
+intersections on six seed factors are isolated in exact rational rectangles:
+each contains one transverse two-wall node and no other residual wall, and
+the resulting forty complete chamber tables preserve overlap at least six
+for the three tracked pairs.  These boxes do not cover a collar or the
+hexagon and do not promote diagonal two.  See
+`DIAG2_EXTREMAL_TRANSITION_DISK_FRONTIER.md`,
+`DIAG2_EXTREMAL_TRANSITION_DISK_SEEDS.md`, and their exact verifiers.
+
 Mutation-stable evidence also survives substantially stronger tests.  At the
 generic type-`37/44` square, every pair among 48,770 signatures bad in all
 four cells has one shear valid throughout the square; robust masks have size
@@ -281,6 +356,33 @@ certificates tie the generic samples to their wall germs.  These are local
 canonical-incidence theorems, not the 84,840 labeled-occurrence theorem or a
 covered parent-cell graph.  See `DIAG2_ROBUST_MUTATION_SQUARES.md` and
 `DIAG2_CANONICAL_ROBUST_EDGES.md`.
+
+The generic support-drop obstruction is now reduced much further than the
+raw wall-star census.  For localization births, all 32 labeled source-hard
+`3+5` partners form eight decorated wall-occurrence orbits, and shared-parent
+Grassmann--Pluecker constraints plus conflict on all 56 ordered shears make
+all eight exact formulas UNSAT.  For ordinary births, the exact source-hard
+support census has 53 wall-stabilizer orbits; signed GP and shear constraints
+reduce these to 23, and fixed-unit wall/partner cofactor identities leave ten
+necessary `4+5` candidates of types `41,49,50,51`.  The exhaustive ordinary
+four-partner scan leaves only three labeled source-hard cases in two orbits;
+the strengthened shared-parent signed formulas make all three UNSAT.  The ten
+`4+5` candidates' selected wall and partner cofactors
+touch exactly 35 primitive residual factors; this is not a full escape-mask
+chamber atlas.  Exact uniform generic wall points realize one type-50 and one
+type-51 candidate, and both selected circuit pairs have no compatible shear,
+disproving the stronger arbitrary-selected-witness theorem.  Exact two-sided
+perturbations certify transverse support-drop germs, while reciprocal
+same-parent-chirotope child matrices prove that both signature pairs have
+nonempty, proper, incomparable feasibility regions.  Their complete escape-mask
+intersections have sizes 51 and 80.  At the type-50 point, the original pair
+is the unique incompatible choice among all 208,262 positive minimal-circuit
+pairs, and one circuit exchange gives twelve compatible shears.  These are
+not disjoint-mask pairs.  The final verifier also proves that all ten rigid
+`4+5` supports are wall-disjoint; the exchange-saturated theorem uses that
+fact to cover simultaneous lower-wall strata and promote diagonal two.  See
+`DIAG2_GENERIC_BIRTH_PATTERN_REDUCTION.md`,
+`DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md`, and their exact verifiers.
 
 Every individual residual factor wall nevertheless has a universal proper
 escape.  In an adapted global frame its equation is affine in one pivot with
@@ -333,8 +435,9 @@ along the residual wall's canonical pivot coordinate, the incoming cofactor
 is affine with fixed nonzero bracket slope and cannot recur.  Therefore every
 compact strict spoke must meet a genuine residual wall for a different
 cofactor before it can reach the parent boundary.  Each first wall has 30--52
-strict paddings.  The remaining target is consequently global acyclicity of
-this iterated signed wall graph, not a larger first-wall Euler calculation.
+strict paddings.  In that approach the then-remaining target was global
+acyclicity of this iterated signed wall graph, not a larger first-wall Euler
+calculation.
 See `DIAG2_PIVOT_ALL_COMPACT_SECOND_WALL.md`.
 
 Two exact tests delimit that global step.  Every one of the 13 residual types
@@ -374,9 +477,10 @@ to anchor its type-51 factor).  Thus iterated affine-fiber graphs settle all
 pair-wall component is noncompact in all `9,476` relative-label orbits, with
 no local pair residue.  The perfect-square conic reduction for `(50,7977)`
 remains an independently checked partial result, not the argument used for
-its final closure.  None of these local pair theorems alone promotes diagonal
-two; the universal common-shear intersection theorem is the primary remaining
-target, with decorated transition-cycle acyclicity retained as an alternative.
+its final closure.  None of these local pair theorems alone promoted diagonal
+two; the universal common-shear intersection theorem was the primary
+remaining target.  The later exchange-saturated support-drop theorem closes
+that target without decorated transition-cycle acyclicity.
 The 66 pairs among the
 12 displayed canonical polynomials are the smallest subtable of this result.
 Among the 220
@@ -429,17 +533,34 @@ filter for the `5+5` residue, not a proof of diagonal two.  See
 
 ## Exact third-diagonal reduction
 
+The strongest current single-signature theorem is now
+
+\[
+                   H_c^q(B_\rho;R)=0
+                   \qquad(0\le q\le2)                         \tag{7}
+\]
+
+for every coefficient ring `R`.  Filter the proper normalized Gordan
+resolution by the **actual coordinate faces** of its convex witness fibers.
+A fiber `k`-face uses at most `5+k` normals.  In total degree at most two,
+only `k=0,1,2` occur, with support unions of at most five, six, and seven
+triples.  Support-plane residence motions kill the corresponding base groups
+through degrees two, one, and zero.  Constant-rank kernel charts, the
+face-orientation local system, and the support/rank frontier order make this
+an integral compact-support filtration argument rather than a cover
+heuristic.  See `DIAG3_SINGLE_BAD_TWO_SKELETON.md`.
+
 The total-degree-two circuit-cover row consists of single-piece `H_c^2`,
 pairwise `H_c^1`, and triple-intersection `H_c^0` groups.  The first of these
 three columns is now proved to vanish in full, not only generically:
 
 \[
                    H_c^q(C_{\rho,Q};\mathbb Q)=0
-                   \qquad (q=0,1,2,\ |Q|\le5).        \tag{7}
+                   \qquad (q=0,1,2,\ |Q|\le5).        \tag{7a}
 \]
 
 If `Q` omits a label, the existing three-dimensional deletion fiber proves
-(7).  If it covers all eight labels, incidence counting supplies a
+(7a).  If it covers all eight labels, incidence counting supplies a
 degree-one label `e` and a label `g` outside its unique triple with degree at
 most two.  Moving `e` through its two-dimensional support plane and `g`
 through its one-dimensional support-plane pencil gives three-dimensional
@@ -457,6 +578,189 @@ annihilate them termwise, so global constructible-sheaf support and
 spectral-sequence differentials are still necessary.  See
 `THREE_SHEAR_SINGLE_PIECE_REDUCTION.md` and
 `THIRD_DIAGONAL_E1_REDUCTION.md`.
+
+There is now a sharp conditional support-drop theorem for the triple column.
+If every connected component of every common zero set of at most three
+distinct primitive residual factors is noncompact, then every triple-bad
+component is noncompact.  The same nested-component proof applies to three
+fixed closed circuit pieces, so the hypothesis would kill `E_1^(2,0)`
+termwise.  The hypotheses are proved for zero, one, and two factors, including
+all `9,476` relative-label pair orbits.  Burnside reconstruction shows that
+the missing three-factor endpoint has `79,102,449` unordered `S_8`-orbits;
+the existing pair certificates do not imply it.  Projective reframing,
+support-plane forests, triangular unit graphs, and exact parent-unit Jacobian
+minors now prove component noncompactness for
+
+\[
+                         \boxed{77,282,660}
+\]
+
+of those orbits.  The positive replay consists of `74,767,375` jointly affine
+orbits, `26,927` moving-column degree-two orbits, `2,410,414` degree-three
+forest orbits, `12,333` triangular unit-graph orbits, and `65,550` further
+unit-minor orbits.  A separate exact constant-plane replay closes 61 more
+orbits in role frame 1119.  The first unit-minor family uses exact identities
+from 79 role frames;
+the separate maximality search exhausted all 1,120 role frames and has a
+304-frame zero tail.  Exactly `1,819,789` degree-four orbits remain.  See
+`DIAG3_TRIPLE_FACTOR_REDUCTION.md` and
+`DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`.
+
+The tested deterministic full colored occurrence/support key gives no
+quotient: it was singleton on the `1,819,850`-orbit pre-constant-plane source,
+hence also on the current subset.  This does not exclude a different
+algebraically sufficient invariant.
+On its sparse concurrence chart, the three equations reduce locally to four
+bilinear equations over a six-parameter base, but the projection genuinely
+ramifies inside the uniform parent cell.  A CAS-produced degree-20 RUR has a
+stored branch which is verified exactly and isolates such a corank-one
+ramification point with all 70
+parent brackets nonzero; outward interval evaluation of all 26,740 primitive
+factors proves that only the selected three vanish.  Thus the point is neither
+a parent-boundary point nor a forced fourth-factor point.  The concurrence
+chart is a useful lower-degree endpoint, not a proof of component
+noncompactness or eventual boundary escape.
+
+Naive Gale complementation does not close this residue.  The six displayed
+bracket formulas are normalized-chart identities with unequal column
+multidegrees.  Termwise complementary-minor substitution therefore omits the
+independent column rescalings required to return the Gale kernel to the
+standard chart.  Exact isolated wall centers for all six factor kinds satisfy
+the original equation, while the proposed complemented equation is nonzero
+after the normalized Gale involution.  A valid dual calculation must instead
+transport the full labeled occurrence determinant with every normalization
+weight.  See `DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md` and
+`verify_diag3_gale_normalization_no_go.py`.
+
+The corrected full-occurrence pullback has also been screened exactly on the
+six pinned hard triples.  All `241,920` simultaneous `S_8` images have zero
+common three-coordinate affinity blocks and zero triangular unit graphs.
+Necessary parent-unit tests leave no survivor among `20,321,280` coordinate
+Jacobian minors or `365,783,040` sparse decomposable-minor sums.  These are
+bounded no-go results for the existing affine/unit families, not an
+ideal-saturation theorem or a proof against boundary-stratified Gale/Coble
+methods.  See `DIAG3_TRIPLE_GALE_CANARY_NO_GO.md` and its Python/C++ replay.
+
+The standard coordinate-center Cremona involution is also a bounded no-go.
+On the source coordinate torus it is componentwise inversion, so the 17
+novel target-nonuniform bracket divisors have singleton fibers rather than
+positive-dimensional exceptional fibers.  Exact all-`S_8` screens again find
+no square-affine or triangular certificate on the six hard triples.  See
+`DIAG3_TRIPLE_CREMONA_FRONTIER_NO_GO.md` and its exact replay.
+
+An unstratified triple-contraction shortcut fails for a different reason.
+An honest row-2599 lifted family crosses exactly one rank-one quotient loop
+wall while all prescribed brackets remain strict and the three private
+columns stay independent.  Moreover, two decomposable alternating three-
+forms give a separately convex `6+6+6` model homotopy equivalent to
+`SO(3) x SO(3)`, with `H_6=Z`.  Any contraction proof must therefore retain
+the loop-specialization complex and exploit the full occurrence coupling.
+See `DIAG3_TRIPLE_CONTRACTION_NO_GO.md`.
+
+On the simultaneous-feasible side, the loop faces can be completed exactly.
+If the three signature traces meet all four antipodal sign classes, every
+realizing private triple is independent and the full oriented-span image is
+contractible after all quotient loop faces are retained.  The exact ambient
+loop complex has f-vector `(128,352,336,112)`, and the condition holds for
+`1,625,014/1,750,540` triples in the stored 220-signature family.  This is a
+positive contraction-domain theorem, but it lives over
+`F_1 intersection F_2 intersection F_3`; the private cones are empty on the
+triple-bad locus, so it does not change `H_c^0(B_1 intersection B_2
+intersection B_3)` without a new dual bridge.  See
+`DIAG3_PRIVATE_TRIPLE_LOOP_COMPLETION.md`.
+
+The factor-pair endpoint now has a uniform alternate compression: after
+graphing either member with a parent-bracket-unit slope, every one of the
+`9,476` pair orbits makes the other factor affine in a remaining coordinate.
+This reproves pair-stratum noncompactness with one certificate family.  The
+graph helper was also audited to preserve the common normalization of
+`A*x+B`; independently primitive-normalizing `A` and `B` flips only the
+constant for types `36`, `38`, and `51`.  The corrected original 122-orbit
+digest is `af0fa699771292f5cca65510f32cf5c007034f4c9fdac5c3c3a49f0dfcd65846`,
+and the all-pair compression digest is
+`a28270e870ff2cb2a81a25a395f573fa95de63dc46b52a212a22779e92445847`.
+
+That uniform pair graph does not extend to triples.  Four exact triples have
+no graph presentation making the two remaining equations jointly affine in
+two coordinates; three also have no common affine three-plane and no
+affine-linear symmetry preserving the displayed generators' constant span.
+In the first case, exact number-field
+arithmetic exhibits a sign-changing quadratic discriminant root while all
+62 nonconstant parent brackets remain nonzero.  Thus discriminant/resultant
+projection walls genuinely cross parent-cell interiors and must be included
+in any complete triple classifier.  See `DIAG3_AFFINE_FIBER_FRONTIER.md`.
+
+For the pair column, full ordered two-root transport is materially stronger
+than the failed common-light and same-source tests.  On the stored
+minimum-overlap bad pair at each of all `178` exact row-2599 charts, the exact
+escape-choice graph is connected, has at least nine joint carrier edges, and
+has minimum vertex degree two.  A commuting-only graph is disconnected at
+chart 57 and is repaired only by the bilinear ordered Bruhat transport.  This
+is a point-bank theorem, not parent-cell coverage: face specialization,
+proper overlap cofinality, and a degree-one global chain contraction remain
+unproved.  See `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md`.
+
+The remaining pair differential is now exact.  Put
+`T=B_0 intersection B_1 intersection B_2` and
+`E_ij=(B_i intersection B_j) minus T`.  Under the proved pair `H_c^0`
+vanishing and the still-required triple `H_c^0` vanishing, its kernel fits in
+
+\[
+ 0\longrightarrow\bigoplus_{ij}H_c^1(E_{ij};R)
+ \longrightarrow\ker H_c^1(D)
+ \longrightarrow\ker\beta\longrightarrow0,           \tag{7b}
+\]
+
+where `beta` is the signed frontier map from the two balanced copies of
+`H_c^1(T)` to the three `H_c^2(E_ij)`.  A finite relative cellular model gives
+explicit differentials `N,M`; coefficient-universal vanishing is equivalent
+to a split contraction `h_2 M+N h_1=I`.  Pointwise noncompactness, connected
+root-choice graphs, and vanishing of the active-boundary union do not imply
+this rank condition.  The exact missing input is a proper, chamber-complete
+signed end-incidence atlas, including factor intersections and infinity.
+See `DIAG3_PAIR_DIFFERENTIAL_ENDS.md`.
+
+The actual target has rational coefficients, so the final algebra can be
+smaller.  If the integral cellular matrices satisfy `MN=0` and their
+reductions obey
+
+```text
+rank_F2(N) + rank_F2(M) = dim_F2(C1),
+```
+
+then rational ranks are at least the mod-two ranks while `MN=0` bounds their
+sum by `dim C1`; equality, and hence rational middle exactness, follows.
+This removes orientation signs and Smith-unit conditions from a sufficient
+certificate.  It does not remove coverage, zero witness faces,
+specialization parity, triple-relative exits, or parent infinity.  A fixed
+triangular label order cannot supply that coverage: one exact GP-valid
+type-49 wall has 22 common roots, all ascending for the chosen order, and
+`S_8` equivariance transfers the obstruction to every fixed order.  See
+`DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md` and
+`verify_diag3_pair_fixed_order_no_go.py`.
+
+The smallest covered two-dimensional normal ribbon still does not supply the
+global atlas.  Its relative matrices have sizes `12098 by 4917` and
+`7180 by 12098`, with maximal ranks `4917` and `7180` over both `F_2` and
+`Q`, leaving one free middle class in the exclusive stratum `E_02`.  A pinned
+representative uses 242 edges and records a block-zero birth/end imbalance.
+Along its complete attaching end, an exact replay reduces 2,855 stored
+segments to 50 witness-support pairs and finds five common oriented shears;
+`8 -> 3,+` is transverse with determinant `-63617`.
+
+The missing two-parameter audit is now complete for this canary.  It covers
+all 84,840 labeled wall occurrences, restricts all 26,740 residual factors,
+and leaves 1,707 active block-1 factors.  Tensor Bernstein coefficients put
+their only seven possible zeros on the triple-relative side or the double
+parent-wall corner.  Thus the actual residence domain is a proper relative
+quadrilateral, and the signed product-strip attachment kills the unique
+middle class integrally.  Pointwise first-exit intervals can still jump in
+general—the exact rectangle regression realizes the failure—but it does not
+occur in this completely audited strip.  A global theorem still needs the
+same coverage for every pair component and parent cell.  See
+`DIAG3_PAIR_TANGENTIAL_SHIFT_AUDIT.md`,
+`DIAG3_PAIR_ATLAS_TANGENTIAL_FILL.md`, and
+`verify_diag3_tangential_first_exit_no_go.py`.
 
 ## Exact fourth-diagonal reduction
 
@@ -838,6 +1142,11 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `SECOND_DIAGONAL_SINGLE_REGION_H7_AUDIT.md` and its exact checker:
   independent reconstruction of the Gale quotient, complementary-minor
   signs, sharp escape, and supported-duality degrees.
+- `DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md` and the exact generic-birth
+  support/signed verifiers: the all-strata pointwise exchange theorem,
+  clopen compact-component alternative, three ordinary `4+4` UNSAT
+  certificates, ten wall-disjoint `4+5` residues, and the integral proof of
+  diagonal two.
 - `SECOND_DIAGONAL_DEFECT_TWO.md`: matching-star dichotomy, exact proper
   incomparable defect-two pair, and its certified pointwise boundary escape.
 - `SECOND_DIAGONAL_MATCHING_STAR_LOCAL_NO_GO.md`: exact warning that a local
@@ -905,8 +1214,68 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   third-diagonal single-piece column vanishes below compact-support degree
   three, the safe omitted-support degree-three upgrade, and the exact
   split--remerge obstruction to extending it to cover-all supports.
+- `DIAG3_SINGLE_BAD_TWO_SKELETON.md` and its verifier: the proper
+  coordinate-face filtration proving `H_c^q(B_rho;R)=0` for `q<=2`, every
+  ring, plus the same low-degree theorem for every primitive residual wall.
 - `THIRD_DIAGONAL_SUPPORT_FILTER_AUDIT.md`: independent symbolic/rational
   reconstruction of the generic support census.
+- `DIAG3_TRIPLE_FACTOR_REDUCTION.md` and its exact Burnside verifier:
+  nested support-drop reduction of triple compact components to at most
+  three primitive factor walls, plus the exact `79,102,449`-orbit endpoint.
+- `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`, its Python/C++ replayers,
+  and compact data: exact positive component escapes for `77,282,660` triple
+  orbits, leaving `1,819,789`, with negative-search maximality kept separate
+  from the replayed identities.
+- `DIAG3_CONCURRENCE_NORMAL_FORM.md` and its verifier: the four-bilinear
+  generic concurrence chart, exact degree-20 internal ramification RUR, and
+  the all-26,740-factor proof that the ramification point has no fourth
+  residual factor.
+- `DIAG3_PAIR_DIFFERENTIAL_ENDS.md` and its verifier: the exclusive-pair and
+  balanced-end exact sequence, explicit relative cochain matrices `N,M`, and
+  coefficient-universal split-contraction criterion.
+- `DIAG3_PAIR_LOCAL_ROOT_SWITCH.md` and
+  `DIAG3_PAIR_FACTOR_ROOT_SWITCH.md`, with their exact SAT/cellular replays:
+  universal single-wall root switching and generic same-factor two-signing
+  root/occurrence contractions, with frontier and higher-cycle scopes kept
+  explicit.
+- `DIAG3_PAIR_FOUR_RAY_REFINEMENT.md`,
+  `DIAG3_PAIR_RECEIVER_END_CANARY.md`, and their exact verifiers: the complete
+  one-dimensional factor-star/end census and its primitive free residue.
+- `DIAG3_PAIR_TANGENTIAL_SHIFT_AUDIT.md` and its exact ribbon replay: the
+  two-dimensional `E_02` survivor, sharp local-product no-go, and sufficient
+  proper-filtration replacement.
+- `DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md` and its exact regressions: the
+  invariant triple/pair obligations, the sufficient mod-two pair criterion,
+  fixed-order root no-go, and normalized-Gale zero-locus no-go.
+- `DIAG3_TRIPLE_GALE_CANARY_NO_GO.md` and its Python/C++ replay: corrected
+  full-occurrence Gale pullbacks and all-`S_8` hard-canary no-gos for the
+  existing square-affine, triangular, coordinate-unit, and sparse-plane
+  certificate families.
+- `DIAG3_PAIR_ATLAS_TANGENTIAL_FILL.md` and its exact verifiers: the complete
+  bottom-edge and two-parameter frontier audit, the genuine proper
+  row-2599 strip contraction, and the retained generic first-exit jump
+  regression.  This fills one canary, not the global pair complex.
+- `DIAG3_TRIPLE_CREMONA_FRONTIER_NO_GO.md` and its exact verifier: the full
+  standard-Cremona target-bracket classification, source-uniform frontier
+  witnesses, torus-isomorphism obstruction, and bounded hard-canary screens.
+- `DIAG3_TRIPLE_CONTRACTION_NO_GO.md` and its exact verifier: the
+  decomposable alternating `H_6` model and the honest one-loop specialization
+  showing why a contraction proof needs the complete loop-face complex.
+- `DIAG3_PRIVATE_TRIPLE_LOOP_COMPLETION.md` and its exact verifier: the
+  four-trace private-independence theorem, complete 928-cell ambient loop
+  complex, catalog census, and explicit good-locus/triple-bad scope firewall.
+- `DIAG3_JOINED_FLOW_TRIANGLE.md` and its verifier: the integral local
+  flow-triangle two-skeleton, its primitive top relation, and the proof that
+  the missing mixed three-cell cannot bypass triple-intersection
+  noncompactness.
+- `DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md`: the dimension-matched
+  multiconvex-fiber audit and sharp `S^6` obstruction to inferring the target
+  homology from fixed-row convexity.
+- `DIAG3_STRATEGY_CHECKPOINT.md`: the bounded route/tooling audit, retired
+  shortcuts, and the two finite frontier-aware certificates still required.
+- `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md` and its exact verifier: full ordered
+  two-root `Lambda^3` carrier graphs on all 178 stored minimum-overlap pairs,
+  including the chart-57 commuting-only disconnect and bilinear repair.
 - `FOURTH_DIAGONAL_FIVEFOLD.md`: direct parent `H_5` escape, all-diagonal
   `(s+1)`-fold truncation, fourth-diagonal top-fiber sieve, and exact no-go.
 - `BLOCK_GORDAN_AUDIT.md`, `BLOCK_GORDAN_FORMAL_NO_GO.py`, and
@@ -959,12 +1328,32 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG2_EXTREMAL_SEPARATOR_BIFURCATIONS.md` and its two exact verifiers:
   separator-dominance monotonicity on an isolated extremal type-50 edge and
   the 216-chart, 648-pair three-parent bifurcation survey.
+- `DIAG2_EXTREMAL_UNDOMINATED_BIRTH.md` and its exact verifier: a mixed
+  undominated singleton birth on an isolated type-49 edge, the exact
+  `67 -> 61` mask loss and `15 -> 9` pair-overlap transition, and the
+  birth-budget reduction to potentially gap-closing births.
+- `DIAG2_EXTREMAL_LINE_TRANSITION_CENSUS.md` and its exact verifier: complete
+  exact coverage of the parent-187 `e`-line, 1,721 residual walls, and no
+  overlap below six among the three tracked extremal pairs.
+- `DIAG2_EXTREMAL_TRANSITION_DISK_FRONTIER.md`,
+  `DIAG2_EXTREMAL_TRANSITION_DISK_SEEDS.md`, and their two exact verifiers:
+  the bounded parent-187 `d/e` hexagon, effective 139-factor link frontier,
+  and ten wall-exclusive transverse seed nodes with forty complete chamber
+  tables, without collar or disk coverage.
 - `DIAG2_ROBUST_MUTATION_SQUARES.md` and its exact verifier: fixed-direction
   common shears across two complete four-cell residual squares, including
   wall/node limits and exact local-germ provenance.
 - `DIAG2_CANONICAL_ROBUST_EDGES.md` and its exact verifier: all thirteen
   canonical residual incidence types pass a two-sided robust-mask audit,
   covering 12,091,441,965 decorated pairs with minimum overlap nine.
+- `DIAG2_GENERIC_BIRTH_PATTERN_REDUCTION.md` and its five exact verifiers:
+  the 32-to-eight localization UNSAT quotient, the ordinary
+  `53 -> 23 -> 10` signed support reduction, the exact 35-factor selected-pair
+  cofactor footprint, the two-orbit distinct-second-wall `4+4` residue, two
+  transverse realized selected-witness obstructions with proper incomparable
+  signature pairs whose masks intersect in 51 and 80 directions, and the
+  exhaustive 208,262-pair type-50 circuit-exchange repair, without universal
+  wall-sector closure.
 - `TORUS_TROPICAL_ESCAPE.md`: vertical-gauge no-go, exact face cones, and the
   quotient tropical strategy.
 - `NINTH_DIAGONAL_SAFE_GRAPH.md`: exact connectivity reduction, finite
@@ -1045,4 +1434,4 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   rank certificate showing the hard triple has only scalar common tensor
   stabilizers.
 
-No artifact in this list claims that entries `s=2,...,9` are proved.
+No artifact in this list claims that entries `s=3,...,9` are proved.

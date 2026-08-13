@@ -40,7 +40,7 @@ EXPECTED_CERTIFICATE_SHA256 = (
 )
 EXPECTED_MODE_COUNTS = {0: 122, 1: 7_217, 2: 1_091, 3: 918, 4: 124, 5: 4}
 EXPECTED_REANCHORED = ((50, 20_046),)
-EXPECTED_DIGEST = "4b6c4c6f7517401d558ad4314c08270e8f309976ecb1de7c678838d3084be80c"
+EXPECTED_DIGEST = "af0fa699771292f5cca65510f32cf5c007034f4c9fdac5c3c3a49f0dfcd65846"
 PIVOT = {49: 3, 50: 3, 51: 5}
 VARIABLES = "abcdefghi"
 ZERO_MONOMIAL = (0,) * 9
@@ -74,14 +74,15 @@ def power(polynomial, exponent):
 def pivot_split(polynomial, pivot):
     if any(monomial[pivot] > 1 for monomial in polynomial):
         raise AssertionError("canonical residual anchor is not pivot-affine")
-    slope = primitive(gradient.derivative(polynomial, pivot))
-    constant = primitive(
-        {
-            monomial: coefficient
-            for monomial, coefficient in polynomial.items()
-            if monomial[pivot] == 0
-        }
-    )
+    # Preserve the common normalization of slope and constant.  Normalizing
+    # them independently can flip only one sign (types 36, 38, and 51 do
+    # exactly that), replacing A*x+B=0 by the wrong graph A*x-B=0.
+    slope = gradient.derivative(polynomial, pivot)
+    constant = {
+        monomial: coefficient
+        for monomial, coefficient in polynomial.items()
+        if monomial[pivot] == 0
+    }
     if not slope:
         raise AssertionError("canonical residual anchor has zero graph slope")
     return slope, constant
@@ -141,6 +142,10 @@ def candidate_presentations(
     pivot = PIVOT[anchor_kind]
     anchor = canonical[anchor_kind]
     slope, constant = pivot_split(factor_polynomial[anchor], pivot)
+    if poly.add(
+        poly.multiply(slope, poly.variable(pivot)), constant
+    ) != factor_polynomial[anchor]:
+        raise AssertionError(f"type-{anchor_kind} graph split changed the equation")
     if slope != expected_anchor_slope(anchor_kind):
         raise AssertionError(f"type-{anchor_kind} graph slope changed")
     numerator = poly.negative(constant)

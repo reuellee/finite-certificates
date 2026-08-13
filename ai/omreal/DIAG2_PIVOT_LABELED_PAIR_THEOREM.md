@@ -272,7 +272,7 @@ substitution and stabilizer presentation, and prove the complete
 `9,476/9,476` theorem.  Its pinned semantic digest is
 
 ```text
-4b6c4c6f7517401d558ad4314c08270e8f309976ecb1de7c678838d3084be80c
+af0fa699771292f5cca65510f32cf5c007034f4c9fdac5c3c3a49f0dfcd65846
 ```
 
 For the stronger smoothness result on the seven type-`(49,49)` cases, run

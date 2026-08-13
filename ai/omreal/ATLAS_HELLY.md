@@ -3,8 +3,10 @@
 **Status.**  This note separates one finite conjecture from several unconditional
 theorems.  The conjecture is deliberately catalog-sized: it concerns all
 2,604 realizable `UOM(4,8)` reorientation classes, not only parent row 2599.
-The first of its nine diagonal entries is now a theorem, integrally; the other
-eight entries and the resulting ten-locality statement remain conjectural.
+The first two of its nine diagonal entries are now theorems, integrally; the
+other seven entries and the resulting ten-locality statement remain
+conjectural.  Section 4.2 records the exchange-saturated support-drop proof of
+the second entry.
 Two proof shortcuts that would have made the remaining entries nearly
 formal are now ruled out below: neither convex private LP fibers nor sparse
 Gordan circuits impose a dimension-only Helly bound, and smooth individual
@@ -202,7 +204,7 @@ For `UOM(4,8)`, the complete diagonal is
 | number of extensions in `S` | group whose nonvanishing witnesses topology |
 |---:|---:|
 | 1 | `H_tilde_8(F_S; Q)` -- **vanishes integrally (proved below)** |
-| 2 | `H_tilde_7(F_S; Q)` |
+| 2 | `H_tilde_7(F_S; Q)` -- **vanishes integrally (proved below)** |
 | 3 | `H_tilde_6(F_S; Q)` |
 | 4 | `H_tilde_5(F_S; Q)` |
 | 5 | `H_tilde_4(F_S; Q)` |
@@ -254,11 +256,12 @@ not that brute-force exhaustion is presently cheap:
 >       \widetilde H_{9-|S|}(F_S;\mathbb Q)=0.           \tag{5}
 > \]
 
-For proof planning, (5) is the **Nine-Diagonal Vanishing Lemma (9DVL)**.  One
-of its nine entries is the theorem in Section 4.1; "lemma" remains aspirational
-for the other eight entries displayed in the table in Section 3.  It is the
-weakest currently isolated topological bridge to the named 8--9--10 theorem,
-whereas `FCC_9` would prove the stronger integral Leray statement.
+For proof planning, (5) is the **Nine-Diagonal Vanishing Lemma (9DVL)**.  Two
+of its nine entries are the theorems in Sections 4.1--4.2; "lemma" remains
+aspirational for the other seven entries displayed in the table in Section 3.
+It is the weakest currently isolated topological bridge to the named
+8--9--10 theorem, whereas `FCC_9` would prove the stronger integral Leray
+statement.
 
 This strengthening is intentionally quantified over every internal antichain
 of proper regions, not only globally minimal regions from `E(M)`.  Therefore
@@ -579,13 +582,27 @@ Consequently (5h) collapses to
        \cong H_c^0(B_\sigma\cap B_\tau;\mathbb Z).        \tag{5h''}
 \]
 
-Thus the second diagonal now has exactly one target: `B_sigma intersection
-B_tau` has no compact connected component.  Convexity of the simultaneous
-primal lift fiber is false and is not used here.  The complete proof and an
-exact sharp six-normal regression are in
+The exchange-saturated support-drop theorem proves that final target:
+`B_sigma intersection B_tau` has no compact connected component.  A
+nonstructural minimal three- or four-circuit gives a common moving-witness
+shear after exact support classification and conic circuit exchange.  If a
+hypothetical compact component avoided such circuits, persistent
+five-circuits and structural small circuits would make it clopen in the
+connected noncompact parent space.  Consequently
+
+\[
+ H_c^1(B_\sigma\cup B_\tau;\mathbb Z)=0,
+ \qquad \widetilde H_7(F_{\{\sigma,\tau\}};\mathbb Z)=0.
+\]
+
+Convexity of the simultaneous primal lift fiber is false and is not used.
+The single-region proof and exact sharp six-normal regression are in
 [`DIAG2_PIVOT_DUAL_SINGLE_BAD_ESCAPE.md`](DIAG2_PIVOT_DUAL_SINGLE_BAD_ESCAPE.md)
 and
 [`DIAG2_PIVOT_DUAL_SINGLE_BAD_ESCAPE.py`](DIAG2_PIVOT_DUAL_SINGLE_BAD_ESCAPE.py).
+The pointwise exchange, all-strata classification, clopen alternative, and
+finite replays are in
+[`DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md`](DIAG2_EXCHANGE_SATURATED_SUPPORT_DROP.md).
 
 ### 4.3 Exact Gordan--Koszul resolution
 
@@ -2984,8 +3001,9 @@ would be a different sufficient bridge.
 
 ## 13. Post-atlas diagonal refinements
 
-Several later exact results sharpen the open diagonal program without changing
-the honest score of one proved entry.
+Several later exact results sharpen the open diagonal program.  The
+exchange-saturated support-drop theorem now raises the honest score to two
+proved entries.
 
 First, every pencil-rigid union of two cofinal five-supports has global minimum
 partner defect `d(U)` equal to one or two.  If `d(U)=2`, a degree-three label
@@ -3105,8 +3123,8 @@ Equation (35) is a sound finite signed-gradient obstruction: full column rank
 excludes it for at most nine walls, while a ten-wall rank-nine matrix must have
 a strictly positive kernel.  It remains only a filter on generic `5+5`
 chambers.  It neither controls their lower-dimensional boundary incidence nor
-proves the compact-component differential injective, so diagonal two remains
-open.
+proves the compact-component differential injective.  This route alone did
+not close diagonal two; the exchange-saturated theorem in Section 4.2 does.
 
 ## 14. Block-Gordan and graph-certificate audit
 
@@ -3529,5 +3547,5 @@ charts-12/37 path, this supplies two independent regressions, not a proof of
 diagonal nine.  See
 [`DIAG9_GRAPH_ROW2599_ROADMAP.md`](DIAG9_GRAPH_ROW2599_ROADMAP.md).
 
-The honest status after these audits is unchanged: (3) is proved, while
-`s=2,...,9` remain open.
+The honest current status is that the entries `s=1,2` are proved integrally,
+while `s=3,...,9` remain open.

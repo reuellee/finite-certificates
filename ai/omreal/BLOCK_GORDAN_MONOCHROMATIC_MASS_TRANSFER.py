@@ -166,7 +166,8 @@ def main():
     print("PASS: bad/feasible auxiliary counts=" + str(counts))
     print("PASS: coincident-loss block incidence is integrally acyclic")
     print("THEOREM: the row-2599 all-block loss has a common pencil escape")
-    print("SCOPE: partner transfer is universal; a common wall circuit is not yet universal")
+    print("SCOPE: this checker replays transfer algebra, 13 light wall supports, and one common-circuit triple")
+    print("SCOPE: arbitrary-occurrence same-factor escape is the analytic RESIDUAL_STRATUM_NONCOMPACTNESS corollary")
 
 
 if __name__ == "__main__":

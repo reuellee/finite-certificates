@@ -55,8 +55,10 @@ fiber
 \]
 
 then lies in `Z`, and its interval component through `(x,w)` lies in `K`.
-That interval either is unbounded or approaches the boundary of `U`, both
-contradicting compactness of `K` inside `U`.
+That interval is a connected component of the fixed vertical fiber, hence is
+closed in that fiber; the fixed fiber is closed in `Z`.  It is noncompact
+(it is either unbounded or approaches the boundary of `U`), so it cannot be
+a closed subset of compact `K`.
 
 Otherwise `C` is nowhere zero on `K`.  Compactness would make `|C|` bounded
 away from zero there.  Near `K`, projection to `w` identifies `Z` with
@@ -160,8 +162,13 @@ a12680b52ace15096437e5cbcfcbdb6d888c9d61a2bccf8a2d336fa5be6b7025
 and the pinned semantic digest of all 122 selected restricted polynomials is
 
 ```text
-4b6c4c6f7517401d558ad4314c08270e8f309976ecb1de7c678838d3084be80c
+af0fa699771292f5cca65510f32cf5c007034f4c9fdac5c3c3a49f0dfcd65846
 ```
+
+The graph split retains the common normalization of `A*x+B`; it does not
+primitive-normalize `A` and `B` independently.  The latter operation flips
+only `B` for a type-51 anchor and would substitute the wrong graph.  The
+digest above pins the corrected, equation-preserving substitution.
 
 The exhaustive all-frame generator remains the independent source of the
 classification artifact:

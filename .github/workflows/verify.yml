@@ -19,7 +19,9 @@ jobs:
   suite:
     name: verifier suite (complete)
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    # The complete serial replay now exceeds 90 minutes even though each
+    # verifier remains below run_all.py's 20-minute per-process ceiling.
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,8 +29,8 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: python -m pip install --upgrade pip numpy scipy sympy
-      # This remains the complete suite except for the 178-chart replay,
-      # which has its own required job below so its exact 20+ minute audit is
+      # This remains the complete suite except for the two 178-chart replays,
+      # which have their own required job below so the exact atlas audits are
       # not killed by run_all.py's per-verifier timeout.
       - name: Run every non-delegated verifier
         run: python run_all.py --ci-delegated
@@ -55,6 +57,10 @@ jobs:
         run: >-
           PYTHONDONTWRITEBYTECODE=1 python
           ai/omreal/verify_diag2_escape_set_atlas178.py --workers 8
+      - name: Rebuild the ordered two-root carrier graphs
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ai/omreal/verify_diag3_ordered_root_atlas178.py --workers 4
 
   nine-dvl-labeled-pairs:
     name: 9DVL relative-label pair audit
