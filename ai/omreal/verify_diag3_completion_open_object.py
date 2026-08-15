@@ -144,6 +144,24 @@ def main() -> None:
         closed
     )
 
+    critical_gate = triple["fullspace_critical_h1_gate"]
+    assert critical_gate["status"] == "FAIL_CLOSED"
+    assert critical_gate["formal_equation_count"] == 59
+    assert critical_gate["nonzero_height_minor_count"] == 52
+    assert critical_gate["nonzero_height_minor_terms"] == 14_681
+    assert critical_gate["raw_coordinate_boundary_component_dimensions"] == [4, 4]
+    critical_system = HERE.parent.parent / critical_gate["system"]
+    assert sha256(critical_system) == critical_gate["system_sha256"]
+    critical_manifest = json.loads(
+        (HERE.parent.parent / critical_gate["manifest"]).read_text()
+    )
+    assert critical_manifest["semantic_sha256"] == critical_gate["semantic_digest"]
+    assert critical_manifest["decision"]["status"] == "FAIL_CLOSED"
+    assert critical_manifest["theorem_accounting"]["score_after"] == "2/9"
+    assert critical_manifest["theorem_accounting"][
+        "final_unresolved_triple_orbits"
+    ] == unresolved
+
     for layer in (
         sequential, double, extension, generic, minor, direct, primitive,
         support3,

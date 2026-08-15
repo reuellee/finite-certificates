@@ -123,6 +123,18 @@ attachment.  The gate manifest and dependency-free replay are recorded in
 `DIAG3_TRIPLE_FULLSPACE_FEASIBILITY_GATE.md`.  No triple row is closed by this
 negative checkpoint.
 
+That obligation has now been instantiated in the nine-variable factor chart.
+For the unique leanest coordinate height `b`, the tracked exact object has all
+three residual equations and all 56 formal height-kernel minors: 52 are
+nonzero degree-eight polynomials with 14,681 terms.  An independently coded
+sparse determinant replay verifies every coefficient.  It also proves that
+the raw critical ideal contains exactly two maximum-dimensional coordinate four-spaces,
+each supported on 23 parent walls.  Thus the unsaturated ideal is visibly not
+zero-dimensional and a raw CAS solve is inadmissible.  The new fail-closed
+gate is `DIAG3_TRIPLE_FULLSPACE_CRITICAL_H1_GATE.md`; the next object must
+decorate and attach every saturated wall, chart, rank, extra-factor, and
+infinity component.  No triple row is closed by this checkpoint.
+
 A proposed Gale-dual shortcut has also been rejected exactly.  The displayed
 bracket formulas are normalized-chart identities with unequal column
 multidegrees, so termwise Pluecker complementation omits the independent
@@ -302,9 +314,10 @@ The following are not current proof routes:
 Keep diagonal three.  Do not launch another orbitwise CAS sweep.  The two
 remaining work products should be finite, boundary-aware objects:
 
-1. a concurrence-chart roadmap for the `1,162,302` triple residue, retaining
-   rank drops, interpolation/gauge frontiers, parent infinity, and sheet
-   attachment; and
+1. a component-decorated saturation and roadmap beginning with the exact
+   height-`b` hard-canary system, retaining every parent wall, chart divisor,
+   rank drop, extra-factor frontier, infinity face, and sheet attachment,
+   before any compression across the `1,162,302` triple residue; and
 2. a coverage-certified labelled regular master closure poset, its genuine
    infinity subcomplex and barycentric order-two incidence, followed by the
    exact mod-two middle-rank replay sufficient for the rational target.

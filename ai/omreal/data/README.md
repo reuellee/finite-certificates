@@ -771,6 +771,28 @@ PYTHONDONTWRITEBYTECODE=1 python \
 This is a positive 57-row increment, not an exhaustive primitive-direction
 search.  The triple obligation remains open.
 
+## Diagonal-three full-space height-`b` critical gate
+
+`DIAG3_triple_fullspace_critical_h1.json` is the complete deterministic sparse
+critical system for the hard presentation `(5563,16134,19284)`, which maps to
+canonical row `(5563,4373,23221)`.  It stores the three residual equations and
+all 56 formal `3x3` Jacobian minors away from the height column `b`, including
+four identically zero minors.  The 364,486-byte artifact has SHA-256
+`c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8`.
+
+The independent replay reconstructs every sparse determinant and proves that
+the raw ideal contains two maximum-dimensional coordinate boundary
+components, each lying on 23 parent walls.  This is a fail-closed saturation
+gate, not a triple closure; the ledger remains `2/9`.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_triple_fullspace_critical_h1.py
+```
+
+The manifest semantic digest is
+`3cd9f4106c0a3299a22493f9375791d05d4a9f2ca3bcf17b63b88f83483aefea`.
+
 ## Row-2599 `p01` tangent collar
 
 The global pair-closure manifest now records an exact four-stage nonradial

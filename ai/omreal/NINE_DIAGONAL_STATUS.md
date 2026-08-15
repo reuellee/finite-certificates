@@ -650,6 +650,17 @@ a parent-boundary point nor a forced fourth-factor point.  The concurrence
 chart is a useful lower-degree endpoint, not a proof of component
 noncompactness or eventual boundary escape.
 
+The corresponding full nine-variable factor-chart critical system is now
+tracked for the hard canonical row `(5563,4373,23221)`.  The unique leanest
+coordinate height `b` has 52 nonzero degree-eight minors with 14,681 terms,
+and an independent sparse determinant implementation replays all 59 formal
+equations exactly.  The unsaturated critical ideal contains two
+maximum-dimensional coordinate four-spaces, each lying on 23 parent walls, so it is provably not
+zero-dimensional.  This is a fail-closed gate: it forces the next computation
+to retain explicit parent-wall, chart, rank, extra-factor, and infinity
+attachments, and it closes no triple row.  See
+`DIAG3_TRIPLE_FULLSPACE_CRITICAL_H1_GATE.md`.
+
 Naive Gale complementation does not close this residue.  The six displayed
 bracket formulas are normalized-chart identities with unequal column
 multidegrees.  Termwise complementary-minor substitution therefore omits the
