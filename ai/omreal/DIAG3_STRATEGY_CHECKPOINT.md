@@ -32,8 +32,15 @@ positive certificate layers are disjoint:
 | triangular sequential unit graphs | `12,333` |
 | role-frame parent-unit Jacobian minors | `65,550` |
 | frame-1119 constant decomposable planes | `61` |
-| **total** | **`77,282,660`** |
-| **unresolved** | **`1,819,789`** |
+| parent-unit graph plus square jointly affine fiber | `180,886` |
+| type-49/pivots-1,3,5 double graph | `108,864` |
+| generic all-chart double-graph increment | `308,964` |
+| graph-restricted unit minor, disjoint from the full double graph | `20` |
+| fully cleared direct-final affinity after two unit graphs | `58,673` |
+| primitive final directions, disjoint from direct-final affinity | `23` |
+| support-three primitive final directions, disjoint from prior final layers | `57` |
+| **total** | **`77,940,147`** |
+| **unresolved** | **`1,162,302`** |
 
 Every polynomial identity counted here is replayed exactly over the integers;
 the degree-two/three layers instead combine exact incidence classifications
@@ -44,6 +51,52 @@ the positive coordinate-minor certificates, while exhaustion of that
 coordinate-minor family used all 1,120 role frames.  The 61 constant-plane
 certificates are a positive screen of frame 1119 only, not an exhaustive
 general-linear search.
+
+The sequential-affine layer exhausts all twelve canonical factor formulas,
+all `45` parent-unit graph pivots, all three anchor orders, and the complete
+canonical stabilizer cosets.  Its tracked `180,886`-record witness stream is
+independently replayed without the producer's affinity masks and is checked
+against the exact source partition.  It is a proved structural layer, not a
+sample or negative-search maximality claim.
+
+On its exact residue, a two-stage graph theorem closes `417,828` rows.  The
+canonical type-49 charts with pivots `1`, `3`, and `5` close `108,864`: pivot
+`3` closes `107,778`, and the disjoint pivot-1/5 extension closes `1,086`.
+The generic certificate contributes another `308,964` rows, disjoint from
+the already accepted double-graph and unit-minor rows.  Independent exact
+replay reconstructs every first graph, restricted-parent unit slope,
+final-coordinate independence identity, third-factor affinity identity, and
+the degree-transfer regressions.  The generic artifact has SHA-256
+`8a61846547b6a8ab1984a7ebe8273fd7326316c8a83c040af377a6251b21937c`
+and semantic digest
+`b82343d4aaf5225a6c1efaa454f5a8bad2622e4cd24f9d75603456393cbe0a1f`.
+A separate fixed two-by-two Jacobian-minor layer closes `117` rows; `97`
+overlap the pivot-3 double-graph layer and none overlaps either later
+double-graph increment, so it contributes only `20` further rows.  The exact
+all-family union has `417,848` rows and leaves `1,221,055`, whose canonical
+source-order SHA-256 is
+`432854b7f00b57c5cf0009033e3ddfd3f4cb702bafed8fad2e5e69b369f30597`.
+These are positive structural certificates; the construction census over 45
+first-graph charts is not used as a negative maximality theorem.
+
+Three stricter final-equation layers then close `58,753` further rows.  The
+direct-final certificate retains `128,198` witness occurrences from ten
+canonical charts and forms the fully denominator-cleared third equation
+after two parent-unit graphs.  Exact affinity in a remaining coordinate
+closes a priority union of `58,673` rows.  Its SHA-256 is
+`6ed192d1dd2f814ae914349ec2dbcc654ffb663669b85f1b289fa37feb147f26`
+and its block-stream semantic digest is
+`7cd37ee421c651563bb6dbeae45b6711b71839893ba53abfb7240b1e165f2b1a`.
+The primitive-direction certificate applies the same theorem after a
+unimodular two-coordinate change and adds `23` disjoint rows; its SHA-256 is
+`af0d1964840975e324d2c0181e732142ccd4e35c88ab4fc2702b6c70e6389bde`.
+A support-three unimodular-direction extension adds another `57` disjoint
+rows; its SHA-256 is
+`c900dd68143d6228847124e4bc5891f440e0d116e2aabbaf2f0e28647f9fdbb3`.
+Hostile full-record and source replay passed all three layers.  Their exact
+union leaves `1,162,302` rows, whose packed source-order digest is
+`a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4`.
+None of these positive screens is used as a maximality claim.
 
 The tested deterministic full colored occurrence/support key gives no
 compression: it is singleton on the unresolved set.  A different
@@ -165,6 +218,35 @@ other components and parent cells still require complete two-parameter
 frontiers and incidence coverage.  The dependency-free rectangle model
 continues to show why pointwise first exits alone are invalid.
 
+The separate row-2599 flow-triangle canary now also has all three relative
+pair-wall collars.  The exceptional `p01` edge is repaired by an exact
+four-stage nonradial tangent path on `[1234]`, `[1367]`, and `[2467]`; its
+semantic digest is
+`e3df18c1a98ccca9e022832e3656c7e2ae3a9c7c822a153c7fc40e9519e08016`.
+Five exact bivariate patches now join the nonrelative swept face `K(p01)` to
+that collar while retaining both bad-block circuits.  Their product with the
+block-mass interval has ordinary boundary
+`+K(p01)-Q(p01,block0)+Q(p01,block1)`; every other face is relative, collapsed, or
+paired internally.  A separate dense-bivariate implementation independently
+replays the construction.  The simpler two-stage `p12` and `p20` collars give
+two more independently replayed comparison prisms.  The honest local counts
+are therefore `3/3` relative pair collars and `3/6` complete singular pair
+comparison incidences.  A four-patch `H2` prism then joins the two block-2
+pair-edge disks literally, with boundary
+`+K(h2)-Q(p12,block2)+Q(p20,block2)`.  The total is now `4/6`; `H0`, `H1`,
+and the primitive mixed `J` remain open, so there are still zero mixed `d3`
+cells.
+
+There is now a smaller invariant construction target.  One closure-complete,
+signature-labelled regular subdivision of the compactified parent base
+computes all triple and exclusive-pair subcomplexes directly.  Its
+barycentric two-skeleton canonically supplies an integral signed lift and
+`MN=0`, so a separate sign search is unnecessary.  The existing 178-point
+bank cannot be promoted to that object: its exact audit has zero certified
+global adjacency edges, strict closure pairs or triples, and infinity cells.
+The first missing block is the coverage-certified global cell universe named
+in `data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json`.
+
 ## Routes retired by exact counterexamples
 
 The following are not current proof routes:
@@ -199,12 +281,12 @@ The following are not current proof routes:
 Keep diagonal three.  Do not launch another orbitwise CAS sweep.  The two
 remaining work products should be finite, boundary-aware objects:
 
-1. a concurrence-chart roadmap for the `1,819,789` triple residue, retaining
+1. a concurrence-chart roadmap for the `1,162,302` triple residue, retaining
    rank drops, interpolation/gauge frontiers, parent infinity, and sheet
    attachment; and
-2. a chamber-decorated receiver/end atlas populating `N,M`, including every
-   two-parameter jump frontier, followed by the exact mod-two middle-rank
-   replay sufficient for the rational target.
+2. a coverage-certified labelled regular master closure poset, its genuine
+   infinity subcomplex and barycentric order-two incidence, followed by the
+   exact mod-two middle-rank replay sufficient for the rational target.
 
 Discovery tools may use modular fingerprints, SAT, and sampled charts, but a
 theorem entry must end in exact positive identities or a complete finite

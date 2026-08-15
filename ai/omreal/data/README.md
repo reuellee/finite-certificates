@@ -626,6 +626,40 @@ SHA-256:
 python ai/omreal/verify_diag3_frame1119_constant_shear.py
 ```
 
+`DIAG3_triple_sequential_affine_certificates.bin` stores the `180,886`
+positive parent-unit graph plus square-affine-fiber witnesses in the next
+triple layer.  The independent verifier reconstructs every label action,
+canonical alignment, stabilizer transport, graph equation, parent-unit
+slope, and jointly affine residual pair without importing the census
+builder's masks.
+
+SHA-256:
+`7e9ad80ae55c1f51dda7f7dc584dac8eefe41197124914cb83aab3cf0a2b719e`
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_triple_sequential_affine_certificates.py
+```
+
+`DIAG3_triple_unit_minor_after_graph_certificates.bin` stores `234` exact
+type-49/pivot-3 target-pair identities.  Each record gives a fixed two-by-two
+Jacobian minor of the two cleared graph-restricted residual equations and its
+complete signed product of graph-restricted parent brackets.  These positive
+identities map to `117` rows of the sequential-affine residue.  The artifact
+does not claim an exhaustive unit-minor search.  Exactly `97` of the `117`
+rows also occur in the pivot-3 double-graph certificate below, while none
+occurs in its pivot-1/5 extension. The artifact still adds only `20` rows
+after the complete positive double-graph union; their exact combined union
+closes `417,848` rows and leaves `1,221,055`.
+
+SHA-256:
+`9889d40c9fdc4c23817a28e94b311cec1673b4e4dfd3e072dace17ff49ffd97a`
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_triple_unit_minor_after_graph.py
+```
+
 `DIAG3_pair_tapered_ribbon.json` stores the compact factor order and exact
 three-signature statuses needed to reconstruct the two-dimensional tapered
 normal-slice ribbon.  It intentionally omits the algebraic root isolators,
@@ -637,4 +671,197 @@ SHA-256:
 
 ```console
 python ai/omreal/verify_diag3_pair_tapered_ribbon.py
+```
+# Diagonal-three double-graph certificates
+
+`DIAG3_triple_double_graph_type49_pivot3_certificates.bin` stores the compact
+exact witnesses for the `107,778`-row type-49/pivot-3 double-graph layer.
+`../verify_diag3_triple_double_graph_scan.py` independently reconstructs all
+integer graph identities and degree conditions. The file has 2,936,122
+bytes and SHA-256
+`52c9fec437378098e06a37c74396230b8e501b22bf8c7c5df07ef131e9aaa9c0`.
+`DIAG3_triple_double_graph_type49_extension_certificates.bin` stores the
+disjoint 1,086-row increment from type-49 pivots 1 and 5. It has 31,884 bytes
+and SHA-256
+`1dc677cd3d46d774c7ba629606ec9b9483e1fda8c97e048033989f4498787873`.
+`DIAG3_triple_double_graph_generic_certificates.bin` stores the disjoint
+308,964-row positive increment found in the other first-graph charts. It has
+9,718,836 bytes and SHA-256
+`8a61846547b6a8ab1984a7ebe8273fd7326316c8a83c040af377a6251b21937c`;
+its ordered semantic digest is
+`b82343d4aaf5225a6c1efaa454f5a8bad2622e4cd24f9d75603456393cbe0a1f`.
+The three double-graph artifacts close `417,828` distinct source rows.  With
+the `20` unit-minor-only rows above, the exact all-family union closes
+`417,848` and leaves `1,221,055`.  Hashing those remaining rows in canonical
+source order gives
+`432854b7f00b57c5cf0009033e3ddfd3f4cb702bafed8fad2e5e69b369f30597`.
+
+## Diagonal-three direct-final-affinity certificate
+
+`DIAG3_triple_direct_final_affinity_certificates.bin` stores `128,198`
+exact witness occurrences from ten canonical charts after two parent-unit
+graphs.  Unlike the earlier cheap final-coordinate mask, each witness forms
+the fully denominator-cleared third equation and checks its affinity
+directly.  Cross-chart duplicates are retained for audit; their exact
+priority union contains `58,673` rows of the pinned `1,221,055`-row source
+and leaves `1,162,382`.  The artifact has `4,212,318` bytes and SHA-256
+`6ed192d1dd2f814ae914349ec2dbcc654ffb663669b85f1b289fa37feb147f26`.
+Its block-stream semantic digest is
+`7cd37ee421c651563bb6dbeae45b6711b71839893ba53abfb7240b1e165f2b1a`,
+and the remaining rows' packed source-order digest is
+`44ff9f5f0ea6c332c0382717533f5fa4b8e4b8af3d72024f9d4b0c74e6448dda`.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_triple_direct_final_affinity.py \
+  --source-residue /tmp/diag3-triple-work/diag3_current_residue_1221055.bin
+```
+
+This is a positive construction layer only.  It does not make a maximality
+claim for charts not represented in the certificate and does not close the
+remaining triple obligation.
+
+## Diagonal-three primitive-final-direction certificate
+
+`DIAG3_triple_primitive_final_direction_certificates.bin` stores `23` exact
+rows outside the frozen `58,673`-row direct-final union.  After the same two
+parent-unit graphs, each record reconstructs the full denominator-cleared
+third equation and proves it affine along a primitive direction
+`e_i +/- e_j`.  The associated two-coordinate change is unimodular.  The
+artifact has `711` bytes and SHA-256
+`af0d1964840975e324d2c0181e732142ccd4e35c88ab4fc2702b6c70e6389bde`;
+its record-stream semantic digest is
+`8917815ae6b4c65c83b74e09d5ee8f3f18f237d9bd493fce04094ca3d8f0f055`.
+The direct-plus-primitive union contains `58,696` source rows and leaves
+`1,162,359`, whose packed source-order digest is
+`6c477d76ec0173ab340db4c9f5b783d3638393d0714e58440bae35b143b02b6a`.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_triple_primitive_final_direction.py \
+  --post-double-residue \
+  /tmp/diag3-triple-work/diag3_post_double_graph_residue.bin
+```
+
+This is a positive 23-row increment, not an exhaustive primitive-direction
+search.  The triple obligation remains open.
+
+## Diagonal-three support-three primitive-final certificate
+
+`DIAG3_triple_primitive_final_support3_certificates.bin` stores `57` exact
+rows disjoint from the prior direct-final plus support-two union of `58,696`.
+After two parent-unit graphs, each record reconstructs the fully cleared third
+equation and proves it affine along a primitive direction
+`e_i +/- e_j +/- e_k`.  The associated three-coordinate change is
+unimodular.  The 1,771-byte artifact has SHA-256
+`c900dd68143d6228847124e4bc5891f440e0d116e2aabbaf2f0e28647f9fdbb3`
+and semantic digest
+`71df56d10ebd93be6f4c59f626d38d9a992264b2cbaf74fe0070618fed4a0de0`.
+The combined union contains `58,753` rows and leaves `1,162,302`, whose
+packed source-order digest is
+`a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4`.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_triple_primitive_final_support3.py \
+  --post-double-residue \
+  /tmp/diag3-triple-work/diag3_post_double_graph_residue.bin
+```
+
+This is a positive 57-row increment, not an exhaustive primitive-direction
+search.  The triple obligation remains open.
+
+## Row-2599 `p01` tangent collar
+
+The global pair-closure manifest now records an exact four-stage nonradial
+relative collar for the previously exceptional `p01` edge.  It carries no
+separate data artifact: the verifier derives its rational endpoints from the
+pinned row-2599 source and checks every polynomial segment over `Q`.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_row2599_p01_tangent_collar.py
+```
+
+Its semantic digest is
+`e3df18c1a98ccca9e022832e3656c7e2ae3a9c7c822a153c7fc40e9519e08016`.
+An independently coded dense-polynomial replay has digest
+`82dda129bef8f52ce4c41fbc8b31e9a316419953bb89a9eaaf8983f9ab1379f8`.
+All three local pair edges now have relative wall collars, but no complete
+mixed `d3` cell is claimed.
+
+## Row-2599 `p01` comparison prism
+
+Five exact bivariate patches join the stored nonrelative `K(p01)` sweep to
+the tangent collar.  Tensor Bernstein replay preserves all 70 parent signs
+and both transported Gordan circuits.  After taking the block-mass product,
+the signed ordinary boundary is exactly
+`+K(p01)-Q(p01,block0)+Q(p01,block1)`; the remaining faces are relative, collapsed,
+or paired internally.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_row2599_p01_comparison_prism.py
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_COMPARISON_PRISM.py
+```
+
+The producer and independent dense-bivariate semantic digests are
+`0b015361e1c75007f025e90921fa5f295616b0e3e8d4bbf941e5161545e433c7` and
+`acca3573a369139c9a142592febcaa55ce453eeb10c1d52631ac5b226129127b`.
+This is one of six local comparison incidences, not a mixed `d3` or global
+master-subdivision certificate.  Its two named singleton lateral disks still
+need literal gluing to the future `H0` and `H1` comparison prisms.
+
+## Row-2599 `p12` and `p20` comparison prisms
+
+Two exact patches per pair edge join the stored `p12` and `p20` sweeps to
+their certified two-stage relative collars.  Producer and independent dense
+replays preserve all parent signs and both incident circuits.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_row2599_p12_p20_comparison_prisms.py
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P12_P20_COMPARISON_PRISMS.py
+```
+
+Their semantic digests are
+`48871bfbc021051f4f672eaf6372ecd5d1d0f0324005648b8d471e130b60e8f8` and
+`930d28e2fbc1990cb68e403b034b3ec7aa440a455b5017a13aa1426e1336dba4`.
+The three pair-edge comparison prisms supply six distinct singleton lateral
+disks.
+
+## Row-2599 `H2` comparison prism
+
+Four exact trivariate patches join the block-2 disks from `p12` and `p20`
+literally, with signed ordinary boundary
+`+K(h2)-Q(p12,block2)+Q(p20,block2)`.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_row2599_h2_comparison_prism.py
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H2_COMPARISON_PRISM.py
+```
+
+The producer and independent semantic digests are
+`4027e41a519953200e205f4e7ab2453a83122822d6ca2ed60bb649cd60afc7a7` and
+`55539702e53abdcf15a1173a549699d87427f85881d66db881ff33c98586934b`.
+The local comparison ledger is now `4/6`; `H0`, `H1`, mixed `J`, and global
+coverage remain open.
+
+## Diagonal-three completion open object
+
+`DIAG3_COMPLETION_OPEN_OBJECT.json` is the machine-readable resumption record
+for the still-open third diagonal.  It pins the authoritative PR-17 base, the
+exact union arithmetic and hashes for all stabilized positive triple layers,
+the current residual obligation, the missing global pair-closure
+object, both acceptance contracts, and deterministic replay commands.  Its
+status is deliberately `OPEN`; it is not a completion certificate and does
+not change the honest `2/9` ledger.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_completion_open_object.py
 ```

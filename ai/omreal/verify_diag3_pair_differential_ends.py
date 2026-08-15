@@ -257,6 +257,24 @@ def build_fiber_complex(triple, pairs):
     return n_matrix, m_matrix
 
 
+def middle_rank_gate(n_matrix, m_matrix, prime: int = 2):
+    """Require an integral complex and replay middle exactness modulo prime.
+
+    The diagonal-three rational target uses ``prime=2``.  The integral
+    ``MN=0`` check is indispensable: ranks of arbitrary matrices after
+    reduction do not certify a rational cochain complex.
+    """
+
+    if not is_zero(multiply(m_matrix, n_matrix)):
+        raise AssertionError("middle-rank gate received a non-complex: MN != 0")
+    middle_dimension = len(n_matrix)
+    ranks = (rank_mod_p(n_matrix, prime), rank_mod_p(m_matrix, prime))
+    defect = middle_dimension - sum(ranks)
+    if defect < 0:
+        raise AssertionError("MN=0 but modular ranks exceed the middle dimension")
+    return ranks, defect
+
+
 def derived_h1_rank(triple, pairs) -> tuple[int, int, int]:
     """Compute sum H1(E_ij) + ker(beta) directly over Q."""
 
@@ -467,6 +485,8 @@ def replay_block_complex() -> None:
     n_exact, m_exact = build_fiber_complex(acyclic_triple, acyclic_pairs)
     assert (shape(n_exact), shape(m_exact)) == ((10, 5), (5, 10))
     assert len(n_exact) - rank_q(n_exact) - rank_q(m_exact) == 0
+    mod2_ranks, mod2_defect = middle_rank_gate(n_exact, m_exact)
+    assert (mod2_ranks, mod2_defect) == ((5, 5), 0)
     n_units, bar_units = split_exact_replay(n_exact, m_exact)
     assert (n_units, bar_units) == (5, 5)
 
@@ -477,9 +497,21 @@ def replay_block_complex() -> None:
     assert rank_q(nonunit) == 1 and rank_mod_p(nonunit, 2) == 0
     assert units == 0 and reduced == nonunit
 
+    # These arbitrary matrices look exact after reduction modulo two, but
+    # their displayed integral product is 2.  The signed-lift gate must stop
+    # before considering their modular ranks.
+    try:
+        middle_rank_gate([[1]], [[2]])
+    except AssertionError as error:
+        assert "MN != 0" in str(error)
+    else:
+        raise AssertionError("mod-two ranks bypassed the integral lift gate")
+
     print("PASS (19),(22),(23): signed integral blocks have MN=0")
     print("PASS (24): direct/formula H1 ranks agree at 3 = 3 + 0")
     print("PASS (25),(26): unit ranks N/barM=5/5 and integral contraction identity")
+    print("PASS rational gate: integral MN=0 and mod-two middle ranks 5+5=10")
+    print("PASS false-lift canary N=[1],M=[2]: rejected before modular rank")
     print("PASS nonunit canary [2]: Z-injective, Q-full-rank, not coefficient-universal")
 
 

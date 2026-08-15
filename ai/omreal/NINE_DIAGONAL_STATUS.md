@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,282,660/79,102,449` triple-factor orbits, leaving `1,819,789`; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no global frontier atlas exists |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -592,7 +592,7 @@ support-plane forests, triangular unit graphs, and exact parent-unit Jacobian
 minors now prove component noncompactness for
 
 \[
-                         \boxed{77,282,660}
+                         \boxed{77,940,147}
 \]
 
 of those orbits.  The positive replay consists of `74,767,375` jointly affine
@@ -602,9 +602,38 @@ unit-minor orbits.  A separate exact constant-plane replay closes 61 more
 orbits in role frame 1119.  The first unit-minor family uses exact identities
 from 79 role frames;
 the separate maximality search exhausted all 1,120 role frames and has a
-304-frame zero tail.  Exactly `1,819,789` degree-four orbits remain.  See
-`DIAG3_TRIPLE_FACTOR_REDUCTION.md` and
-`DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`.
+304-frame zero tail.  A subsequent exhaustive all-canonical-kind,
+all-parent-unit-pivot graph scan closes `180,886` further rows by a square
+jointly affine fiber, including every rank-drop fiber.  Its tracked compact
+certificate is independently replayed row by row and leaves exactly
+`1,638,903` degree-four orbits.  On that residue, canonical type-49
+double-graph charts at pivots `1`, `3`, and `5` close `108,864` rows: the
+pivot-3 certificate closes `107,778`, and the disjoint pivot-1/5 extension
+closes `1,086`.  A generic all-chart double-graph certificate adds `308,964`
+disjoint rows, for `417,828` double-graph rows in total.  A graph-restricted
+unit-minor layer closes `117`, of which `97` overlap the pivot-3 certificate;
+its remaining `20` are outside every double-graph certificate.  The exact
+all-family union closes `417,848` and leaves `1,221,055`, with canonical
+source-order residue digest
+`432854b7f00b57c5cf0009033e3ddfd3f4cb702bafed8fad2e5e69b369f30597`.
+On that exact source, the direct-final certificate forms the fully cleared
+third equation after two parent-unit graphs and closes a `58,673`-row
+priority union by exact final-coordinate affinity.  Unimodular primitive
+final-direction extensions on supports two and three add respectively `23`
+and `57` disjoint rows.  Their combined `58,753` rows leave `1,162,302`, with
+packed source-order residue digest
+`a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4`.
+Hostile full-record/source replay passed all three artifacts; none of these
+positive screens is promoted to a negative maximality theorem.
+See
+`DIAG3_TRIPLE_FACTOR_REDUCTION.md`,
+`DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`,
+`DIAG3_TRIPLE_SEQUENTIAL_AFFINE_COMPRESSION.md`,
+`DIAG3_TRIPLE_DOUBLE_GRAPH_COMPRESSION.md`,
+`DIAG3_TRIPLE_UNIT_MINOR_AFTER_GRAPH.md`,
+`DIAG3_TRIPLE_DIRECT_FINAL_AFFINITY.md`,
+`DIAG3_TRIPLE_PRIMITIVE_FINAL_DIRECTION.md`, and
+`DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md`.
 
 The tested deterministic full colored occurrence/support key gives no
 quotient: it was singleton on the `1,819,850`-orbit pre-constant-plane source,
@@ -700,7 +729,7 @@ is a point-bank theorem, not parent-cell coverage: face specialization,
 proper overlap cofinality, and a degree-one global chain contraction remain
 unproved.  See `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md`.
 
-The remaining pair differential is now exact.  Put
+The remaining pair differential now has an exact algebraic reduction.  Put
 `T=B_0 intersection B_1 intersection B_2` and
 `E_ij=(B_i intersection B_j) minus T`.  Under the proved pair `H_c^0`
 vanishing and the still-required triple `H_c^0` vanishing, its kernel fits in
@@ -738,6 +767,18 @@ type-49 wall has 22 common roots, all ascending for the chosen order, and
 `S_8` equivariance transfers the obstruction to every fixed order.  See
 `DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md` and
 `verify_diag3_pair_fixed_order_no_go.py`.
+
+A single labelled regular master subdivision of the compactified parent base
+is now known to be sufficient.  Proper convex Gordan fibers can be quotiented
+before forming the pair differential; the barycentric two-skeleton of the
+master closure poset then supplies canonical integral signs and `MN=0`.
+Only original cells, comparable pairs, strict three-cell chains, complete
+bad-signature labels, and the genuine infinity subcomplex are needed.  This
+is a structural compiler, not the missing input: an exact closure audit shows
+that the existing 178 row-2599 charts have zero certified global adjacency,
+closure, or infinity cells and cannot be decoded into that master object.
+See `DIAG3_PAIR_GLOBAL_MASTER_QUOTIENT.md` and the machine-readable open
+object `data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json`.
 
 The smallest covered two-dimensional normal ribbon still does not supply the
 global atlas.  Its relative matrices have sizes `12098 by 4917` and
@@ -1222,10 +1263,16 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG3_TRIPLE_FACTOR_REDUCTION.md` and its exact Burnside verifier:
   nested support-drop reduction of triple compact components to at most
   three primitive factor walls, plus the exact `79,102,449`-orbit endpoint.
-- `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`, its Python/C++ replayers,
-  and compact data: exact positive component escapes for `77,282,660` triple
-  orbits, leaving `1,819,789`, with negative-search maximality kept separate
-  from the replayed identities.
+- `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`,
+  `DIAG3_TRIPLE_SEQUENTIAL_AFFINE_COMPRESSION.md`,
+  `DIAG3_TRIPLE_DOUBLE_GRAPH_COMPRESSION.md`,
+  `DIAG3_TRIPLE_UNIT_MINOR_AFTER_GRAPH.md`,
+  `DIAG3_TRIPLE_DIRECT_FINAL_AFFINITY.md`,
+  `DIAG3_TRIPLE_PRIMITIVE_FINAL_DIRECTION.md`, and
+  `DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md`, their replayers, and compact
+  data: exact positive component escapes for `77,940,147` triple orbits,
+  leaving `1,162,302`, with negative-search maximality kept separate from
+  the replayed identities.
 - `DIAG3_CONCURRENCE_NORMAL_FORM.md` and its verifier: the four-bilinear
   generic concurrence chart, exact degree-20 internal ramification RUR, and
   the all-26,740-factor proof that the ramification point has no fourth
@@ -1244,6 +1291,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG3_PAIR_TANGENTIAL_SHIFT_AUDIT.md` and its exact ribbon replay: the
   two-dimensional `E_02` survivor, sharp local-product no-go, and sufficient
   proper-filtration replacement.
+- `DIAG3_PAIR_GLOBAL_MASTER_QUOTIENT.md` and its exact replayers: the
+  master-poset quotient, canonical barycentric integral lift, covered local
+  rank regressions, and machine-readable proof that the existing row-2599
+  records contain no global closure/infinity complex.
 - `DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md` and its exact regressions: the
   invariant triple/pair obligations, the sufficient mod-two pair criterion,
   fixed-order root no-go, and normalized-Gale zero-locus no-go.
@@ -1268,6 +1319,20 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   flow-triangle two-skeleton, its primitive top relation, and the proof that
   the missing mixed three-cell cannot bypass triple-intersection
   noncompactness.
+- `DIAG3_ROW2599_P01_TANGENT_COLLAR.md` and its verifier: an exact nonradial
+  four-stage repair of the exceptional `p01` relative pair-wall collar.  All
+  three pair edges now have local relative collars.
+- `DIAG3_ROW2599_P01_COMPARISON_PRISM.md` and two independent exact verifiers:
+  five rational bivariate patches certify the first complete singular
+  comparison incidence with boundary
+  `+K(p01)-Q(p01,block0)+Q(p01,block1)`.
+- `DIAG3_ROW2599_PAIR_COMPARISON_PRISMS.md` and two independent exact
+  verifiers: two patches each certify the `p12` and `p20` incidences.  The
+  pair-edge comparison subtotal is `3/6`; the next bullet records the first
+  singleton gluing.
+- `DIAG3_ROW2599_H2_COMPARISON_PRISM.md` and two independent exact verifiers:
+  four trivariate patches join the two block-2 pair laterals literally.  The
+  local count is `4/6`; `H0`, `H1`, and the mixed `d3` cell remain open.
 - `DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md`: the dimension-matched
   multiconvex-fiber audit and sharp `S^6` obstruction to inferring the target
   homology from fixed-row convexity.

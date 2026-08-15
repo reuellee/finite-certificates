@@ -1,0 +1,195 @@
+{
+  "format": "diag3-completion-open-object-v1",
+  "status": "OPEN",
+  "ledger_score": "2/9",
+  "authoritative_remote_base": {
+    "repository": "reuellee/finite-certificates",
+    "branch": "main",
+    "commit": "f4fcce6a5d1a49d6607ba858a1f0b0090af72f44",
+    "merged_pull_request": 17
+  },
+  "completion_rule": "Do not promote diagonal three until both the triple compact-component obligation and the global exclusive-pair middle-exactness obligation are closed with exhaustive, independently replayed evidence.",
+  "triple_obligation": {
+    "status": "OPEN",
+    "universe_count": 79102449,
+    "proved_noncompact_count": 77940147,
+    "unresolved_count": 1162302,
+    "new_layers_after_pr17": {
+      "sequential_affine": {
+        "closed_count": 180886,
+        "certificate": "ai/omreal/data/DIAG3_triple_sequential_affine_certificates.bin",
+        "certificate_sha256": "7e9ad80ae55c1f51dda7f7dc584dac8eefe41197124914cb83aab3cf0a2b719e",
+        "certificate_bytes": 2713302,
+        "witness_semantic_digest": "d27735abc8601c04b1114786d2a044af1acf8b99c253aee347ab101c4bb5368b",
+        "residue_count": 1638903,
+        "residue_sha256": "5ba2314c94ba115d5bf5e975e68412e3f4b44e2c65df51b757f6150a3352d4e1",
+        "residue_semantic_digest": "d78a529cdb3e920b76b4b420114e24065c7e9e7cb2ef2a904b1a1e952c567270"
+      },
+      "double_graph_type49_pivot3": {
+        "closed_count": 107778,
+        "certificate": "ai/omreal/data/DIAG3_triple_double_graph_type49_pivot3_certificates.bin",
+        "certificate_sha256": "52c9fec437378098e06a37c74396230b8e501b22bf8c7c5df07ef131e9aaa9c0",
+        "certificate_bytes": 2936122,
+        "semantic_digest": "98619fff126cc4e10331735fe691cde7f8e3a4f4983b31c63fbf5cd50616c5c9"
+      },
+      "double_graph_type49_pivot1_5_extension": {
+        "closed_count": 1086,
+        "disjoint_from_pivot3": true,
+        "disjoint_from_unit_minor": true,
+        "certificate": "ai/omreal/data/DIAG3_triple_double_graph_type49_extension_certificates.bin",
+        "certificate_sha256": "1dc677cd3d46d774c7ba629606ec9b9483e1fda8c97e048033989f4498787873",
+        "certificate_bytes": 31884,
+        "semantic_digest": "a00a00cb16f238abecc8c625fa6334fc907f088e8906bada529384a59f5589e3"
+      },
+      "double_graph_type49_pivot1_3_5": {
+        "closed_count": 108864,
+        "pivot3_count": 107778,
+        "pivot1_5_increment": 1086
+      },
+      "double_graph_generic_all_chart_increment": {
+        "closed_count": 308964,
+        "disjoint_from_prior_accepted_union": true,
+        "certificate": "ai/omreal/data/DIAG3_triple_double_graph_generic_certificates.bin",
+        "certificate_sha256": "8a61846547b6a8ab1984a7ebe8273fd7326316c8a83c040af377a6251b21937c",
+        "certificate_bytes": 9718836,
+        "semantic_digest": "b82343d4aaf5225a6c1efaa454f5a8bad2622e4cd24f9d75603456393cbe0a1f"
+      },
+      "double_graph_all_certificates": {
+        "closed_count": 417828,
+        "type49_count": 108864,
+        "generic_increment": 308964
+      },
+      "unit_minor_after_graph": {
+        "standalone_closed_count": 117,
+        "overlap_with_double_graph": 97,
+        "overlap_with_pivot3": 97,
+        "overlap_with_pivot1_5_extension": 0,
+        "increment_after_double_graph": 20,
+        "identity_count": 234,
+        "certificate": "ai/omreal/data/DIAG3_triple_unit_minor_after_graph_certificates.bin",
+        "certificate_sha256": "9889d40c9fdc4c23817a28e94b311cec1673b4e4dfd3e072dace17ff49ffd97a",
+        "certificate_bytes": 3458,
+        "identity_semantic_digest": "15b761934f6fb98d036f1820e99b3c6012ea4134ae5746579dac874280537e15",
+        "row_semantic_digest": "8dabe7ae8baf1bf6ce7d8dbac7621a4e6810860717fd3c4a39700db018b22e79"
+      },
+      "double_graph_union_unit_minor": {
+        "closed_count": 417848,
+        "independently_checked_overlap": 97,
+        "residue_count": 1221055,
+        "residue_semantic_digest": "432854b7f00b57c5cf0009033e3ddfd3f4cb702bafed8fad2e5e69b369f30597"
+      },
+      "direct_final_affinity": {
+        "witness_occurrence_count": 128198,
+        "closed_count": 58673,
+        "source_count": 1221055,
+        "residue_count": 1162382,
+        "certificate": "ai/omreal/data/DIAG3_triple_direct_final_affinity_certificates.bin",
+        "certificate_sha256": "6ed192d1dd2f814ae914349ec2dbcc654ffb663669b85f1b289fa37feb147f26",
+        "certificate_bytes": 4212318,
+        "stream_semantic_digest": "7cd37ee421c651563bb6dbeae45b6711b71839893ba53abfb7240b1e165f2b1a",
+        "residue_semantic_digest": "44ff9f5f0ea6c332c0382717533f5fa4b8e4b8af3d72024f9d4b0c74e6448dda"
+      },
+      "primitive_final_direction": {
+        "closed_count": 23,
+        "disjoint_from_direct_final_affinity": true,
+        "certificate": "ai/omreal/data/DIAG3_triple_primitive_final_direction_certificates.bin",
+        "certificate_sha256": "af0d1964840975e324d2c0181e732142ccd4e35c88ab4fc2702b6c70e6389bde",
+        "certificate_bytes": 711,
+        "stream_semantic_digest": "8917815ae6b4c65c83b74e09d5ee8f3f18f237d9bd493fce04094ca3d8f0f055",
+        "row_semantic_digest": "a1af2ac4e6ff2b9e9037ebc8f9bf969485acda4ce5f50adaeb0ab24f96a4e971"
+      },
+      "direct_primitive_final_union": {
+        "closed_count": 58696,
+        "direct_final_count": 58673,
+        "primitive_final_increment": 23,
+        "residue_count": 1162359,
+        "residue_semantic_digest": "6c477d76ec0173ab340db4c9f5b783d3638393d0714e58440bae35b143b02b6a"
+      },
+      "primitive_final_support3": {
+        "closed_count": 57,
+        "disjoint_from_direct_and_support2": true,
+        "certificate": "ai/omreal/data/DIAG3_triple_primitive_final_support3_certificates.bin",
+        "certificate_sha256": "c900dd68143d6228847124e4bc5891f440e0d116e2aabbaf2f0e28647f9fdbb3",
+        "certificate_bytes": 1771,
+        "stream_semantic_digest": "71df56d10ebd93be6f4c59f626d38d9a992264b2cbaf74fe0070618fed4a0de0",
+        "row_semantic_digest": "4aa31365ba2f8dd9f429b5dd5ffbbc735f161c68dc5605372a597892da65965b"
+      },
+      "all_final_affinity_union": {
+        "closed_count": 58753,
+        "direct_support2_count": 58696,
+        "support3_increment": 57,
+        "residue_count": 1162302,
+        "residue_semantic_digest": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4"
+      }
+    },
+    "smallest_open_lemma": "Give an exhaustive exact noncompactness certificate for every row in the pinned 1,162,302-row residue after all direct and primitive final-affinity layers; the current preferred architecture is a boundary-stratified concurrence roadmap or a distinct exact structural certificate for that complement.",
+    "acceptance_tests": [
+      "the source universe and every successive residue form exact disjoint partitions with zero missing or duplicate rows",
+      "each positive certificate replays over Z and transfers through the complete symmetry cosets on the open parent cell",
+      "rank-drop, interpolation, gauge, parent-wall and infinity strata are included rather than saturated away",
+      "the final unresolved count is zero",
+      "an independently implemented verifier reproduces the final partition and all theorem hypotheses"
+    ],
+    "replay_commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_sequential_affine_certificates.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_double_graph_scan.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_unit_minor_after_graph.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_direct_final_affinity.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_primitive_final_direction.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_primitive_final_support3.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_sequential_affine_certificates.py --union4 /tmp/diag3-triple-work/diag3_union_degree4.bin",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_double_graph_scan.py --sequential-residue /tmp/diag3-triple-work/diag3_all_unit_anchor_residue.bin",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_unit_minor_after_graph.py --sequential-residue /tmp/diag3-triple-work/diag3_all_unit_anchor_residue.bin",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_direct_final_affinity.py --source-residue /tmp/diag3-triple-work/diag3_post_double_graph_residue.bin",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_primitive_final_direction.py --post-double-residue /tmp/diag3-triple-work/diag3_post_double_graph_residue.bin",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_primitive_final_support3.py --post-double-residue /tmp/diag3-triple-work/diag3_post_double_graph_residue.bin"
+    ]
+  },
+  "pair_obligation": {
+    "status": "OPEN",
+    "integral_lift_status": "CONDITIONAL_ON_GLOBAL_REGULAR_CLOSURE_POSET",
+    "middle_exactness_status": "NOT_COMPUTABLE_GLOBALLY_FROM_CURRENT_DATA",
+    "global_closure_manifest": "ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
+    "global_closure_observation_digest": "27e55460f7bb22f1ec278d67c7441fd06e6a455c32605d00a1bb57b294edf85b",
+    "current_data": {
+      "generic_sample_states": 178,
+      "certified_global_adjacencies": 0,
+      "certified_global_strict_closure_pairs": 0,
+      "certified_global_strict_closure_triples": 0,
+      "certified_parent_infinity_cells": 0,
+      "row2599_local_relative_pair_wall_collars": 3,
+      "row2599_local_complete_comparison_incidences": 4
+    },
+    "smallest_open_object": "row2599_compactified_labelled_order2_v1",
+    "first_missing_block": "coverage_certified_global_cell_universe",
+    "smallest_open_lemma": "Construct a coverage-wide, face-natural proper mixed-block three-cell whose primitive relative boundary supplies the missing d3 column, with every other face certified at genuine parent infinity and with compatibility across zero-block, zero-witness and residual-wall cospans; then prove globally that im(d3)=ker(d2).",
+    "known_obstruction": "The exact row-2599 Cech cocycle evaluates to one on the ordered-root loop, so every construction using only singleton-block ordered-root carrier cells fails over Z, Q and F2.",
+    "acceptance_tests": [
+      "the compactified labelled regular cell universe covers the entire normalized parent space with zero unexplained cases",
+      "all strict closure pairs and triples and the genuine infinity subcomplex are independently certified",
+      "barycentric signed incidences satisfy d_squared=0 over Z",
+      "the bad-set labels are closed subcomplexes and construct T and every exclusive-pair E_ij without local-scope boundary substitutions",
+      "for every admissible profile triple rank_F2(N)+rank_F2(M)=dim(C1)",
+      "the regular signed closure poset supplies an applicable integral lift, so the mod-two rank conclusion rigorously implies the rational target"
+    ],
+    "replay_commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_master_quotient.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_joined_flow_triangle.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_p01_tangent_collar.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_TANGENT_COLLAR.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_p01_comparison_prism.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_COMPARISON_PRISM.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_p12_p20_comparison_prisms.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P12_P20_COMPARISON_PRISMS.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h2_comparison_prism.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H2_COMPARISON_PRISM.py"
+    ]
+  },
+  "hostile_audit": {
+    "path": "ai/omreal/review_scratch/DIAG3_HOSTILE_AUDIT_F4FCCE6.md",
+    "verdict": "PASS_FOR_STABILIZED_POSITIVE_LAYERS_ONLY",
+    "completion_verdict": "DIAGONAL_THREE_REMAINS_OPEN_AT_2_OF_9"
+  },
+  "next_command": "PYTHONPATH=/tmp/diag3-pydeps PYTHONDONTWRITEBYTECODE=1 python run_all.py --fast"
+}
