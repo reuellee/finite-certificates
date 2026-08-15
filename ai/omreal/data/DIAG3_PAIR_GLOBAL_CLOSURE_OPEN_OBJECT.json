@@ -371,6 +371,17 @@
       "literal_pair_laterals": ["Q(p12,block2)", "Q(p20,block2)"],
       "scope": "one exact singular singleton comparison chain in the row-2599 chart-zero canary; H0, H1, primitive J, regular master subdivision, and global coverage remain open"
     },
+    "h1_radial_gap": {
+      "status": "EXACT_FAIL_CLOSED",
+      "verifier": "ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
+      "semantic_digest": "046e51a271bf169c499e3473d5bf399724f6e22a23612a7b2d31ef660c01cbcc",
+      "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H1_RADIAL_GAP.py",
+      "independent_semantic_digest": "7f8b7ac35c9f6a7e5580ec40ccde6140b95814ac6a25b2051fb83f01a603eee7",
+      "positive_screen": "four radial-copy patches preserve all parent signs and the block-one Gordan circuit",
+      "exact_obstruction": "the second two-stage radial p01 boundary segment has no identically-zero parent bracket and therefore is not relative",
+      "literal_certified_p01_wall_sequence": ["1234", "1234", "1367", "2467", "2467"],
+      "scope": "the H1 comparison incidence remains missing; the comparison count remains 4/6"
+    },
     "comparison_incidences": [
       {
         "id": "S01_to_common_ray",
@@ -434,7 +445,7 @@
         "orientation and signed incidence equal to the primitive d3 column",
         "compatibility of the six comparison prisms on every shared lower face"
       ],
-      "smallest_bounded_checkpoint_gap": "construct the H1 comparison prism joining Q(p01,block1) to Q(p12,block1) through the exact first-wall rectangle; H0 additionally requires its certified outer cap. The scalar radial filler and direct planar p01 wall slide remain exactly falsified"
+      "smallest_bounded_checkpoint_gap": "construct a literal compatibility homotopy from the five-stage nonradial Q(p01,block1) disk, including its [1367] detour, to Q(p12,block1); H0 additionally requires its certified outer cap. The new four-patch radial copy preserves signs and block-one circuits but is exactly nonrelative on its second p01 stage"
     },
     "acceptance_test": "construct the six comparison incidences and one regular relative 3-cell whose integral boundary is exactly (-1,1,1,1,1,1,1), with no untagged frontier face"
   },
@@ -448,6 +459,10 @@
     "next_construction_target": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactified_labelled_order2.npz",
     "smallest_next_mathematical_task": "Choose and pin the finite compactification chart atlas and its exact overlap/infinity coverage proof; export the 17824 row-2599 candidate-factor IDs with an independent verifier; only then run a deterministic regular-cell generator.",
     "dependency_preflight_command": "python -m pip install --target /tmp/diag3_sympy_1_13_3 sympy==1.13.3 && PYTHONPATH=/tmp/diag3_sympy_1_13_3 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_active_sector.py",
+    "local_gap_replay_commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H1_RADIAL_GAP.py"
+    ],
     "upstream_replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_inventory.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_seeat_upper_bound.py",

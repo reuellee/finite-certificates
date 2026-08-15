@@ -111,6 +111,18 @@ Accordingly the next triple certificate must include the concurrence-chart
 frontiers and sheet attachments; support signs or a raw discriminant alone
 cannot decide compactness.
 
+The first full-space feasibility gate is now explicit for the hard canonical
+row `(5563,4373,23221)`.  It verifies the `S_8` map from the certified slice
+presentation `(5563,16134,19284)` and rejects a direct slice promotion.  The
+pinned slice has four equations in five geometric variables, so one fiber
+determinant is a complete coordinate-height critical equation there.  The
+full concurrence chart has four equations in ten variables and instead needs
+`C(9,4)=126` height-kernel minors for one coordinate height (or the equivalent
+Lagrange system), together with every saturation frontier and sheet
+attachment.  The gate manifest and dependency-free replay are recorded in
+`DIAG3_TRIPLE_FULLSPACE_FEASIBILITY_GATE.md`.  No triple row is closed by this
+negative checkpoint.
+
 A proposed Gale-dual shortcut has also been rejected exactly.  The displayed
 bracket formulas are normalized-chart identities with unequal column
 multidegrees, so termwise Pluecker complementation omits the independent
@@ -236,6 +248,15 @@ pair-edge disks literally, with boundary
 `+K(h2)-Q(p12,block2)+Q(p20,block2)`.  The total is now `4/6`; `H0`, `H1`,
 and the primitive mixed `J` remain open, so there are still zero mixed `d3`
 cells.
+
+The literal `H2`-to-`H1` radial copy has now been screened exactly and
+independently.  All four candidate patches preserve the 70 parent signs and
+the block-one Gordan circuit, but the second radial `p01` boundary segment is
+not contained in any parent wall.  The certified `p01` disk instead has five
+literal stages on `[1234]`, `[1367]`, and `[2467]`, so it cannot be silently
+replaced by the generic two-stage face.  This pins a compatibility obstruction
+rather than a new comparison incidence; the count remains `4/6`.  The replay
+and semantic digests are in `DIAG3_ROW2599_H1_RADIAL_GAP.md`.
 
 There is now a smaller invariant construction target.  One closure-complete,
 signature-labelled regular subdivision of the compactified parent base

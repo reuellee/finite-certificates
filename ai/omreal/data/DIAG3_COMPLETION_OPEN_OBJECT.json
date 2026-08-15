@@ -122,6 +122,17 @@
         "residue_semantic_digest": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4"
       }
     },
+    "fullspace_feasibility_gate": {
+      "status": "FAIL_CLOSED",
+      "canonical_row": [5563, 4373, 23221],
+      "named_presentation": [5563, 16134, 19284],
+      "manifest": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+      "verifier": "ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py",
+      "semantic_digest": "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace",
+      "slice_geometry": "four equations in five variables; one fiber determinant is a coordinate-height critical equation only after five base coordinates are fixed",
+      "full_concurrence_geometry": "four equations in ten variables; one coordinate height requires 126 height-kernel maximal minors",
+      "decision": "the existing pinned critical census has no component-to-slice lift and closes no full triple orbit"
+    },
     "smallest_open_lemma": "Give an exhaustive exact noncompactness certificate for every row in the pinned 1,162,302-row residue after all direct and primitive final-affinity layers; the current preferred architecture is a boundary-stratified concurrence roadmap or a distinct exact structural certificate for that complement.",
     "acceptance_tests": [
       "the source universe and every successive residue form exact disjoint partitions with zero missing or duplicate rows",
@@ -137,6 +148,7 @@
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_direct_final_affinity.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_primitive_final_direction.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_primitive_final_support3.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_sequential_affine_certificates.py --union4 /tmp/diag3-triple-work/diag3_union_degree4.bin",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_double_graph_scan.py --sequential-residue /tmp/diag3-triple-work/diag3_all_unit_anchor_residue.bin",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_unit_minor_after_graph.py --sequential-residue /tmp/diag3-triple-work/diag3_all_unit_anchor_residue.bin",
@@ -183,7 +195,9 @@
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_p12_p20_comparison_prisms.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P12_P20_COMPARISON_PRISMS.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h2_comparison_prism.py",
-      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H2_COMPARISON_PRISM.py"
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H2_COMPARISON_PRISM.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H1_RADIAL_GAP.py"
     ]
   },
   "hostile_audit": {
