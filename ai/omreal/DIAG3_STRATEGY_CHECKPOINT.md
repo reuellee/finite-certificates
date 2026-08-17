@@ -135,6 +135,57 @@ gate is `DIAG3_TRIPLE_FULLSPACE_CRITICAL_H1_GATE.md`; the next object must
 decorate and attach every saturated wall, chart, rank, extra-factor, and
 infinity component.  No triple row is closed by this checkpoint.
 
+The first boundary-stratified successor is now exact.  Localizing first at
+`[1378]=di-fg` gives `b=(di-fg)/(i-f)` with a replayed triangular chain-rule
+equivalence.  On the parent cell, the unit entries
+
+```text
+H_d=i(i-f),       dR2/da=[2357][2458][1267]
+```
+
+reduce the 21 parent-cell critical minors to the six minors `M_da*`; fifteen
+integer column-elimination identities verify the equivalence after precisely
+those named localizations.  Removing only named `i` and `i-f` factors leaves
+3,172 terms, and the 341-term `ae` member is the sparsest height-independent
+two-wall rank-drop equation.  Six exact etale wall charts then isolate
+`[1468]` and `[5678]` as the next candidate attachments.  Complete `F3`,
+`F5`, `F7`, and `F9` discovery censuses place every localized critical point
+on their union, but bounded modular Groebner pilots still exhibit rapid
+fill-in.  This is a structural reduction and a sharply formulated rational
+saturation target, not a characteristic-zero certificate; the score remains
+`2/9`.  See `DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md`.
+
+The recommended exact pilot has now been executed up to its fill-in stopping
+rule.  Native F4 saturation and separate-inverse presentations did not finish
+the first large-prime computation, so no modular unit identity or rational
+reconstruction was claimed.  The useful successor is instead a replayed
+factored rank-drop branch:
+
+```text
+coefficient_a(K_ae) = [2357][2458](i-f) P,
+E_e = C + 2e(i-f)L,
+```
+
+with primitive `P` and `L` having respectively 12 and 60 terms and no parent
+bracket divisor.  The exact graph-compatibility identity
+`B K0 - A K1 = B E_e - B_e E` attaches the `ae` rank-drop divisor to the
+seven-variable hypersurface.  The `P=0` frontier has now been sharpened to a
+transverse `c` graph by
+
+```text
+P=-f[1378]F+c(i-f)Q,   Q-fF=[1357][1258].
+```
+
+Thus its coefficient `Q` cannot vanish on `P=0`.  The factor `L` is
+quadratic in `h` with parent-unit leading coefficient, so its degree cannot
+drop in the parent cell.  A finite aligned-sign subatlas covers every
+unlabelled parent type after an existential reframe, but a full frame audit
+correctly rejects promotion to the hard-canary orbit: the triple stabilizer
+is trivial, and only `17,105,952/104,993,280` raw frame-parent presentations
+receive that sign certificate.  This improves the branch architecture but
+closes no triple orbit; the score and unresolved census are unchanged.  See
+`DIAG3_TRIPLE_RANK_DROP_SIGN_ATLAS.md`.
+
 A proposed Gale-dual shortcut has also been rejected exactly.  The displayed
 bracket formulas are normalized-chart identities with unequal column
 multidegrees, so termwise Pluecker complementation omits the independent
@@ -314,10 +365,24 @@ The following are not current proof routes:
 Keep diagonal three.  Do not launch another orbitwise CAS sweep.  The two
 remaining work products should be finite, boundary-aware objects:
 
-1. a component-decorated saturation and roadmap beginning with the exact
-   height-`b` hard-canary system, retaining every parent wall, chart divisor,
-   rank drop, extra-factor frontier, infinity face, and sheet attachment,
-   before any compression across the `1,162,302` triple residue; and
+1. an explicit rational saturation certificate beginning with the exact
+   six-minor two-pivot hard-canary system.  The immediate algebraic target is
+   the corrected localization
+
+   ```text
+   (Jcrit : U0^infinity) : ([1468][5678])^infinity = <1>,
+   U0=[1378][2378][1238][2357][2458][1267],
+   ```
+
+   The two displayed target walls are parent units on the open uniform cell.
+   Consequently a unit certificate already excludes smooth and singular
+   height extrema and proves the narrow no-compact-component statement for
+   this canary.  Split first into the exact `P!=0` `a` graph and the
+   transverse `P=0` `c` graph; the latter has no `Q=0` subbranch.  Treat
+   `L=0` next as a quadratic `h` cover with unit leading coefficient and
+   isolate its discriminant before restarting saturation.  Recursive wall
+   attachments are needed only before any global
+   compression across the `1,162,302` triple residue; and
 2. a coverage-certified labelled regular master closure poset, its genuine
    infinity subcomplex and barycentric order-two incidence, followed by the
    exact mod-two middle-rank replay sufficient for the rational target.

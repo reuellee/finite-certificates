@@ -661,6 +661,47 @@ to retain explicit parent-wall, chart, rank, extra-factor, and infinity
 attachments, and it closes no triple row.  See
 `DIAG3_TRIPLE_FULLSPACE_CRITICAL_H1_GATE.md`.
 
+The first exact boundary-stratified successor localizes at `[1378]=di-fg`
+and verifies the full chain-rule equivalence after
+`b=(di-fg)/(i-f)`.  Two parent-unit entries,
+`H_d=i(i-f)` and `dR2/da=[2357][2458][1267]`, then reduce the 21
+parent-cell critical minors to six `M_da*` minors; fifteen exact integer
+column identities prove that no complementary critical branch is discarded.
+After stripping only named parent-unit factors, the six generators have
+3,172 terms in total.  The 341-term `ae` residual rank-drop equation is the
+sparsest of the four height-independent two-wall charts, while six exact
+etale Jacobians make `[1468]` and `[5678]` simultaneous wall coordinates.
+Complete `F3`, `F5`, `F7`, and `F9` censuses support their union as the next
+critical attachment, but this remains modular discovery.  The exact open
+target is
+
+```text
+(Jcrit : U0^infinity) : ([1468][5678])^infinity = <1>,
+U0=[1378][2378][1238][2357][2458][1267].
+```
+
+The target walls are not included in `U0`, but they are parent units on the
+open uniform cell.  A unit certificate for the displayed localization would
+therefore prove the narrow no-compact-component statement for this canary;
+their separate strata, overlap, and infinity attachments are needed only if
+the calculation is promoted into a global residue-wide template.
+
+The factored rank-drop successor now gives two exact charts.  On `P!=0` the
+rank-drop equation is an `a` graph.  On `P=0`, the identities
+
+```text
+P=-f[1378]F+c(i-f)Q,   Q-fF=[1357][1258]
+```
+
+prove that `Q` cannot vanish, so the entire divisor is a transverse `c`
+graph with no coefficient-drop subbranch.  The remaining factor `L` is
+quadratic in `h` with parent-unit leading coefficient.  An exhaustive sign
+atlas covers only `17,105,952/104,993,280` raw frame-parent presentations;
+the hard triple has trivial `S_8` stabilizer, so an existential parent
+reframe cannot be promoted to an orbit theorem.  See
+`DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md`,
+`DIAG3_TRIPLE_RANK_DROP_SIGN_ATLAS.md`, and their exact replays.
+
 Naive Gale complementation does not close this residue.  The six displayed
 bracket formulas are normalized-chart identities with unequal column
 multidegrees.  Termwise complementary-minor substitution therefore omits the
