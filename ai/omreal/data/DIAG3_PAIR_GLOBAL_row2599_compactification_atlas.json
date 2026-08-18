@@ -1,0 +1,47 @@
+{
+  "format": "diag3-pair-global-row2599-compactification-atlas-v1",
+  "parent_index": 2599,
+  "source_sha256": {
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a"
+  },
+  "model": "product_of_three_closed_positive_projective_3_simplices",
+  "moving_columns": [6, 7, 8],
+  "normalized_coordinate_signs": [
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+    [1, 1, 1, 1]
+  ],
+  "chart_atlas": {
+    "gauge_rows": [1, 2, 3, 4],
+    "chart_count": 64,
+    "ordered_transition_count": 4096,
+    "ordered_triple_cocycle_count": 262144,
+    "coordinates_per_chart": 9
+  },
+  "face_supports": {
+    "one_simplex_nonempty_supports": 15,
+    "product_support_strata": 3375,
+    "standard_affine_infinity_support_strata": 2863
+  },
+  "boundary_divisors": [
+    {"moving_column": 6, "coordinate_row": 1, "parent_bracket": "2346", "determinant_sign": -1},
+    {"moving_column": 6, "coordinate_row": 2, "parent_bracket": "1346", "determinant_sign": 1},
+    {"moving_column": 6, "coordinate_row": 3, "parent_bracket": "1246", "determinant_sign": -1},
+    {"moving_column": 6, "coordinate_row": 4, "parent_bracket": "1236", "determinant_sign": 1},
+    {"moving_column": 7, "coordinate_row": 1, "parent_bracket": "2347", "determinant_sign": -1},
+    {"moving_column": 7, "coordinate_row": 2, "parent_bracket": "1347", "determinant_sign": 1},
+    {"moving_column": 7, "coordinate_row": 3, "parent_bracket": "1247", "determinant_sign": -1},
+    {"moving_column": 7, "coordinate_row": 4, "parent_bracket": "1237", "determinant_sign": 1},
+    {"moving_column": 8, "coordinate_row": 1, "parent_bracket": "2348", "determinant_sign": -1},
+    {"moving_column": 8, "coordinate_row": 2, "parent_bracket": "1348", "determinant_sign": 1},
+    {"moving_column": 8, "coordinate_row": 3, "parent_bracket": "1248", "determinant_sign": -1},
+    {"moving_column": 8, "coordinate_row": 4, "parent_bracket": "1238", "determinant_sign": 1}
+  ],
+  "standard_chart": {
+    "gauge_rows": [1, 1, 1],
+    "infinity_parent_brackets": ["2346", "2347", "2348"]
+  },
+  "scope": "ambient compactification atlas and genuine infinity labels; no residual-factor subdivision or global master-cell coverage claim",
+  "semantic_sha256": "3ea49efc628a88fda99e4070cbf43317b78cc45813beaba753c4404e961fa769"
+}

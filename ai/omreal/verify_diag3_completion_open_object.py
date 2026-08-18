@@ -161,6 +161,17 @@ def main() -> None:
     assert critical_manifest["theorem_accounting"][
         "final_unresolved_triple_orbits"
     ] == unresolved
+    koszul = triple["factored_koszul_gate"]
+    assert koszul["status"] == "BOUNDED_ROUTE_EXHAUSTED"
+    assert koszul["exact_directional_minor_count"] == 10
+    assert koszul["primitive_minor_term_range"] == [18_459, 37_222]
+    assert koszul["degree_14_macaulay"] == {
+        "target_count": 88,
+        "F2_rank": 5_202,
+        "F2_hits": 0,
+        "F3_rank": 5_202,
+        "F3_hits": 0,
+    }
 
     for layer in (
         sequential, double, extension, generic, minor, direct, primitive,
@@ -183,6 +194,16 @@ def main() -> None:
     assert closure["smallest_open_object"]["first_missing_block"] == pair["first_missing_block"]
     assert pair["current_data"]["row2599_local_relative_pair_wall_collars"] == 3
     assert pair["current_data"]["row2599_local_complete_comparison_incidences"] == 4
+    assert pair["current_data"]["row2599_candidate_factor_input_count"] == 17_824
+    assert pair["current_data"]["row2599_compactification_model"] == "(Delta^3)^3"
+    assert pair["current_data"]["row2599_compactification_chart_count"] == 64
+    preflight = closure["global_generator_preflight"]
+    assert preflight["status"] == "GENERATOR_INPUTS_READY_REGULAR_CELL_UNIVERSE_MISSING"
+    candidate_path = HERE.parent.parent / preflight["candidate_factor_artifact"]
+    assert candidate_path.stat().st_size == preflight["candidate_factor_artifact_bytes"]
+    assert sha256(candidate_path) == preflight["candidate_factor_artifact_sha256"]
+    atlas_path = HERE.parent.parent / preflight["compactification_atlas"]
+    assert sha256(atlas_path) == preflight["compactification_atlas_sha256"]
     assert closure["row2599_flow_triangle_mixed_d3"][
         "certified_relative_pair_wall_collar_count"
     ] == 3

@@ -702,6 +702,26 @@ reframe cannot be promoted to an orbit theorem.  See
 `DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md`,
 `DIAG3_TRIPLE_RANK_DROP_SIGN_ATLAS.md`, and their exact replays.
 
+The direct quadratic-cover continuation has now been exhausted exactly.
+All seven `h` resultants of `L` with the critical generators retain
+primitive parts of `5,320` to `59,449` terms after every nonconstant
+parent-bracket factor is removed.  On the `P=0` graph, `P=L=0` reduces to a
+105-term finite-cover equation; its primitive quadratic-in-`d`
+discriminant is positive on 2,162 and negative on 442 of the 2,604 exact
+parent representatives.  This retires expanded pairwise resultants and a
+universal discriminant-sign proof, while leaving structured simultaneous
+syzygies and the topology-first completion route open.  See
+`DIAG3_TRIPLE_QUADRATIC_COVER_NO_GO.md`.
+
+The final bounded structure-preserving algebraic pass rewrites
+`E=H0+eH1+e^2H2` on `L=0` and verifies all five directional identities
+exactly.  None of the ten three-by-three directional minors is a parent-unit
+product: their primitive cores have 18,459--37,222 terms.  The complete
+degree-14 short-target Macaulay pieces have rank 5,202 and zero hits over both
+`F2` and `F3`.  This is not a rational nonexistence theorem, but it triggers
+the bounded stop rule and moves active effort to the topology-first route.
+See `DIAG3_TRIPLE_FACTORED_KOSZUL_GATE.md`.
+
 Naive Gale complementation does not close this residue.  The six displayed
 bracket formulas are normalized-chart identities with unequal column
 multidegrees.  Termwise complementary-minor substitution therefore omits the
@@ -1161,6 +1181,16 @@ escape or higher-wall coherence.  See
    active signs, explaining why the exact paths safely cross thousands of
    walls.  This does not prove that an active sector is connected or handle
    infinity.  See `DIAG9_ACTIVE_SECTOR_THEOREM.md` and its exact verifier.
+   The sorted 17,824-factor complement is now a 71,316-byte hash-pinned input
+   independently replayed from the row-2599 integer realization.  The ambient
+   compactification is also fixed: the three moving positive projective
+   columns give `(Delta^3)^3`, covered by 64 exact gauge charts.  All 262,144
+   chart cocycles hold, and the three standard infinity divisors are the
+   genuine parent walls `[2346]`, `[2347]`, and `[2348]`.  The remaining gap
+   is now the deterministic sign-invariant regular-cell generator, not its
+   factor universe or compactification.  See
+   `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
+   `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md`.
    Smooth transverse wall pairs supply the expected local four-cycle, but
    exact semialgebraic countermodels show that smoothness alone implies
    neither global COM face symmetry/strong elimination nor support
@@ -1390,6 +1420,15 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   homology from fixed-row convexity.
 - `DIAG3_STRATEGY_CHECKPOINT.md`: the bounded route/tooling audit, retired
   shortcuts, and the two finite frontier-aware certificates still required.
+- `DIAG3_TRIPLE_QUADRATIC_COVER_NO_GO.md` and its exact verifier: all seven
+  direct `L` resultants expand after parent-factor stripping, and the
+  reduced `P=L=0` discriminant has both signs on the exact parent atlas.
+- `DIAG3_TRIPLE_FACTORED_KOSZUL_GATE.md`: exact three-function directional
+  reduction, exhaustive ten-minor audit, and the bounded algebraic stop rule.
+- `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
+  `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md`: independently verified
+  17,824-factor generator input and the exact 64-chart `(Delta^3)^3`
+  compactification with genuine parent-wall infinity.
 - `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md` and its exact verifier: full ordered
   two-root `Lambda^3` carrier graphs on all 178 stored minimum-overlap pairs,
   including the chart-57 commuting-only disconnect and bilinear repair.

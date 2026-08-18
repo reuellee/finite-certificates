@@ -46,6 +46,10 @@ PINNED_SHA256 = {
         "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
     "DIAG9_GRAPH_global_factor_census.npz":
         "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+    "DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin":
+        "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json":
+        "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
     "DIAG9_GRAPH_row2599_factor_states.npz":
         "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
     "DIAG9_GRAPH_row2599_slice_roadmap.npz":
@@ -505,7 +509,8 @@ def verify_manifest(path: Path, observed) -> dict:
         raise AssertionError("first missing global block changed")
     preflight = payload.get("global_generator_preflight", {})
     if (
-        preflight.get("status") != "NO_COVERAGE_GENERATOR_OR_COMPACTIFICATION_ATLAS"
+        preflight.get("status")
+        != "GENERATOR_INPUTS_READY_REGULAR_CELL_UNIVERSE_MISSING"
         or preflight.get("universal_residual_factor_count") != 26_740
         or preflight.get("row2599_certified_empty_factor_count") != 8_916
         or preflight.get("row2599_candidate_factor_count") != 17_824
@@ -513,6 +518,25 @@ def verify_manifest(path: Path, observed) -> dict:
         != "ai/omreal/DIAG9_GRAPH_inventory.py"
         or preflight.get("empty_wall_verifier")
         != "ai/omreal/verify_diag9_active_sector.py"
+        or preflight.get("candidate_factor_artifact")
+        != "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin"
+        or preflight.get("candidate_factor_artifact_sha256")
+        != "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f"
+        or preflight.get("candidate_factor_artifact_bytes") != 71_316
+        or preflight.get("candidate_factor_verifier")
+        != "ai/omreal/verify_diag3_pair_global_candidate_factors.py"
+        or preflight.get("compactification_atlas")
+        != "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json"
+        or preflight.get("compactification_atlas_sha256")
+        != "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364"
+        or preflight.get("compactification_atlas_semantic_digest")
+        != "3ea49efc628a88fda99e4070cbf43317b78cc45813beaba753c4404e961fa769"
+        or preflight.get("compactification_atlas_verifier")
+        != "ai/omreal/verify_diag3_pair_global_compactification_atlas.py"
+        or preflight.get("compactification_model") != "(Delta^3)^3"
+        or preflight.get("compactification_chart_count") != 64
+        or preflight.get("standard_chart_infinity_parent_brackets")
+        != ["2346", "2347", "2348"]
         or preflight.get("hostile_temporary_dependency_replay") != {
             "diagnostic_only": True,
             "python": "3.12.13",
@@ -776,7 +800,7 @@ def main():
         preflight["row2599_candidate_factor_count"],
         "after",
         preflight["row2599_certified_empty_factor_count"],
-        "certified-empty walls; compactification atlas/export still missing",
+        "certified-empty walls; candidate input and compactification atlas ready; cell generator missing",
     )
     local_d3 = payload["row2599_flow_triangle_mixed_d3"]
     print(

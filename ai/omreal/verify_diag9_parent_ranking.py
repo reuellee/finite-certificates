@@ -16,10 +16,12 @@ No sampled residual sign is used for the catalog ranking.
 from __future__ import annotations
 
 from collections import Counter, defaultdict
+import argparse
 import hashlib
 from itertools import permutations
 import json
 from pathlib import Path
+import struct
 
 import numpy as np
 
@@ -104,6 +106,9 @@ EXPECTED_PARENT860_MATRIX = (
     (-8, -4, 5, 4, 8, 1, 1, -2),
     (-4, -3, -8, -5, 3, 8, 4, 3),
 )
+CANDIDATE_MAGIC = b"D3PFC001"
+CANDIDATE_PARENT = 2_599
+CANDIDATE_COUNT = 17_824
 
 
 def parse_blocks(text: str, size: int) -> tuple[tuple[int, ...], ...]:
@@ -388,6 +393,13 @@ def direct_parent_check(record, formulas, certificates, foursets, occurrence_fac
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--export-row2599",
+        type=Path,
+        help="optional binary export of the sorted row-2599 candidate factor IDs",
+    )
+    arguments = parser.parse_args()
     records = [
         json.loads(line)
         for line in CERTIFICATES.open(encoding="utf-8")
@@ -498,6 +510,33 @@ def main():
     ranking_digest = digest.hexdigest()
     if ranking_digest != EXPECTED_RANKING_DIGEST:
         raise AssertionError(f"ranking semantic digest changed: {ranking_digest}")
+
+    row2599_position = parent_position[CANDIDATE_PARENT]
+    row2599_candidates = tuple(
+        factor
+        for factor, conflict_bits in enumerate(factor_conflict_bits)
+        if not (conflict_bits >> row2599_position) & 1
+    )
+    if len(row2599_candidates) != CANDIDATE_COUNT:
+        raise AssertionError("wrong row-2599 candidate factor count")
+    if arguments.export_row2599 is not None:
+        header = struct.pack(
+            "<8sIII",
+            CANDIDATE_MAGIC,
+            CANDIDATE_PARENT,
+            len(factor_conflict_bits),
+            len(row2599_candidates),
+        )
+        payload = header + np.asarray(
+            row2599_candidates, dtype="<u4"
+        ).tobytes()
+        arguments.export_row2599.write_bytes(payload)
+        print(
+            "EXPORTED",
+            arguments.export_row2599,
+            len(payload),
+            hashlib.sha256(payload).hexdigest(),
+        )
 
     direct_parent_check(
         records[860], formulas, certificates, foursets, occurrence_factor

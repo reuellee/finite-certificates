@@ -360,32 +360,52 @@ The following are not current proof routes:
   they need not assemble into a closed proper strip (the completed frontier
   repairs the row-2599 canary only).
 
+The direct quadratic-cover continuation is now retired as well.  The exact
+checker `verify_diag3_triple_quadratic_cover_no_go.py` forms all seven
+pairwise `h` resultants with `L` and exhaustively removes parent-bracket
+factors.  Their primitive parts have `5,320` to `59,449` terms, so none is a
+compression.  On the transverse `P=0` graph, `P=L=0` reduces exactly to a
+105-term finite-cover equation `S=0`; its reduced quadratic-in-`d`
+discriminant takes both signs on the 2,604 exact parent representatives.
+Consequently neither expanded direct resultants nor a universal
+discriminant-sign argument is a viable next step.  See
+`DIAG3_TRIPLE_QUADRATIC_COVER_NO_GO.md`.
+
+The bounded factored successor is complete as well.  On `L=0`, the checker
+rewrites `E=H0+eH1+e^2H2` and verifies that `(1,e,e^2)` annihilates the
+three-by-five directional Jacobian.  All ten direct minors retain primitive
+cores of `18,459` to `37,222` terms.  A complete degree-14 search of 88 short
+localized targets has zero hits over both `F2` and `F3`; a bounded native
+localization run resumes basis growth.  These modular misses are not a
+rational no-go, but they meet the predeclared stop condition.  See
+`DIAG3_TRIPLE_FACTORED_KOSZUL_GATE.md`.
+
 ## Recommended next certificate
 
-Keep diagonal three.  Do not launch another orbitwise CAS sweep.  The two
-remaining work products should be finite, boundary-aware objects:
+Keep diagonal three.  Do not launch another orbitwise CAS sweep.  The active
+work product is now the boundary-aware global closure object.
 
-1. an explicit rational saturation certificate beginning with the exact
-   six-minor two-pivot hard-canary system.  The immediate algebraic target is
-   the corrected localization
+The exact rational saturation target remains mathematically valid:
 
-   ```text
-   (Jcrit : U0^infinity) : ([1468][5678])^infinity = <1>,
-   U0=[1378][2378][1238][2357][2458][1267],
-   ```
+```text
+(Jcrit : U0^infinity) : ([1468][5678])^infinity = <1>,
+U0=[1378][2378][1238][2357][2458][1267].
+```
 
-   The two displayed target walls are parent units on the open uniform cell.
-   Consequently a unit certificate already excludes smooth and singular
-   height extrema and proves the narrow no-compact-component statement for
-   this canary.  Split first into the exact `P!=0` `a` graph and the
-   transverse `P=0` `c` graph; the latter has no `Q=0` subbranch.  Treat
-   `L=0` next as a quadratic `h` cover with unit leading coefficient and
-   isolate its discriminant before restarting saturation.  Recursive wall
-   attachments are needed only before any global
-   compression across the `1,162,302` triple residue; and
-2. a coverage-certified labelled regular master closure poset, its genuine
-   infinity subcomplex and barycentric order-two incidence, followed by the
-   exact mod-two middle-rank replay sufficient for the rational target.
+The two target walls are parent units, so a rational unit certificate would
+still close the narrow canary.  The bounded structure-preserving attempt did
+not find one, however, and its exact reduction is now preserved for a future
+new idea rather than wider bounds.
+
+Active work moves to a coverage-certified labelled regular master closure
+poset, its genuine infinity subcomplex and barycentric order-two incidence,
+followed by the exact mod-two middle-rank replay.  Its two prerequisite inputs
+are now fixed: the independently verified 17,824 candidate-factor IDs and an
+exact 64-chart `(Delta^3)^3` compactification.  Every infinity divisor of the
+standard chart is a genuine parent wall.  See
+`DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
+`DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md`.  The next missing block is the
+deterministic sign-invariant regular-cell generator itself.
 
 Discovery tools may use modular fingerprints, SAT, and sampled charts, but a
 theorem entry must end in exact positive identities or a complete finite

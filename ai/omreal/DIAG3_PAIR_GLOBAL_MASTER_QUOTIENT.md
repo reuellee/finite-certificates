@@ -387,26 +387,27 @@ The resumption preflight is now more precise.  Exact replay of
 primitive residual factors have empty wall sections in parent 2599, leaving
 `17,824` candidate factor equations for a universal row-2599 generator.  This
 is a proof-safe parent-specific reduction; it does not say that all `17,824`
-remaining walls meet the cell.  The current verifier computes the sorted
-empty-wall set only in memory and does not export it as a separately
-hash-pinned generator input.  Moreover its symbolic classification import
-requires SymPy, while the repository does not pin a dependency version.  A
-hostile replay passed under Python `3.12.13`, SymPy `1.13.3`, and mpmath
-`1.3.0`; that temporary replay does not substitute for a durable dependency
-lock or an independent exported-list verifier.
+remaining walls meet the cell.  The sorted complement is now exported as the
+71,316-byte artifact
+`data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin` and is independently
+replayed from direct determinants of the stored row-2599 integer realization.
+This removes the earlier dependency/export gap.
 
-Accordingly the first global generator data are, in order:
+The compactification choice is now fixed as well.  After normalizing the
+first five columns, each of the three moving columns lies in a positive
+projective 3-simplex.  Their product `(Delta^3)^3` has 64 gauge charts; all
+transition cocycles and all twelve coordinate-divisor/parent-wall identities
+are exact.  In particular the standard affine infinity divisors are
+`[2346]`, `[2347]`, and `[2348]`, so no artificial infinity face is added.
 
-1. a finite projective/reciprocal compactification chart atlas for the full
-   normalized nine-dimensional parent cell, including exact transition,
-   overlap-coverage, and genuine infinity-face certificates;
-2. a hash-pinned list of the `17,824` candidate row-2599 factors after the
-   certified-empty filter, checked independently of the producer; and
-3. a deterministic sign-invariant regular-cell generator on those charts,
-   followed by independent coverage and regularity replay.
+Thus the first two generator inputs are complete.  The remaining first block
+is a deterministic sign-invariant regular-cell generator on the pinned 64
+charts and 17,824 factors, followed by independent coverage and regularity
+replay.
 
 A bounded standard-chart CAD, a point bank, or a coordinate-path network
-fails item 1 and therefore cannot be promoted to the global master poset.
+still cannot be promoted to the global master poset because it does not
+continue every generated cell onto the pinned simplex-face atlas.
 
 The pinned observation digest is
 
