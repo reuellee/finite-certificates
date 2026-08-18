@@ -74,9 +74,12 @@ residual factors.  The next generator input is now completely specified:
 2. the independently verified 17,824-factor candidate list; and
 3. the exact sparse factor polynomials already stored in the global census.
 
-The next mathematical target is a deterministic sign-invariant regular-cell
-generator inside this fixed atlas, beginning with the standard chart and
-requiring exact continuation onto every simplex face before promotion.
+The first deterministic generator layer is now complete.  Exact
+multihomogeneous Bernstein restrictions eliminate 42,547,692 of 60,156,000
+candidate factor--face tasks on this atlas.  The next mathematical target is
+face-compatible adaptive exact subdivision of the remaining 17,608,308 mixed
+restrictions, with exact continuation onto every simplex face before
+promotion.  See `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.
 
 ## Replay
 

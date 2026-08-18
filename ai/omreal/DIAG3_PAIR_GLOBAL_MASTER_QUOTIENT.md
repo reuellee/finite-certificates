@@ -400,10 +400,17 @@ transition cocycles and all twelve coordinate-divisor/parent-wall identities
 are exact.  In particular the standard affine infinity divisors are
 `[2346]`, `[2347]`, and `[2348]`, so no artificial infinity face is added.
 
-Thus the first two generator inputs are complete.  The remaining first block
-is a deterministic sign-invariant regular-cell generator on the pinned 64
-charts and 17,824 factors, followed by independent coverage and regularity
-replay.
+Thus the first two generator inputs are complete.  The first deterministic
+generator layer is complete too.  Canonical multihomogeneous Bernstein
+restriction on all 3,375 support faces classifies all 60,156,000
+factor--face pairs: 34,437,486 are identically zero, 8,110,206 are
+sign-definite and wall-free, and only 17,608,308 remain mixed.  This deletes
+70.7289% of the face tasks before subdivision.  See
+`DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.
+
+The remaining first block is a face-compatible adaptive exact subdivision
+of the mixed restrictions, followed by independent coverage, regularity and
+strict-closure replay.
 
 A bounded standard-chart CAD, a point bank, or a coordinate-path network
 still cannot be promoted to the global master poset because it does not

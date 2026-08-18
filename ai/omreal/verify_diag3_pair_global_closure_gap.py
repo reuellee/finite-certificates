@@ -50,6 +50,8 @@ PINNED_SHA256 = {
         "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
     "DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json":
         "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "DIAG3_PAIR_GLOBAL_row2599_face_bernstein_atlas.json":
+        "5d8029d930cea0708f00c90cac69f87de7579118cd48a6995caf7b3be26e0822",
     "DIAG9_GRAPH_row2599_factor_states.npz":
         "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
     "DIAG9_GRAPH_row2599_slice_roadmap.npz":
@@ -510,7 +512,7 @@ def verify_manifest(path: Path, observed) -> dict:
     preflight = payload.get("global_generator_preflight", {})
     if (
         preflight.get("status")
-        != "GENERATOR_INPUTS_READY_REGULAR_CELL_UNIVERSE_MISSING"
+        != "FACE_BERNSTEIN_PRUNING_READY_ADAPTIVE_SUBDIVISION_MISSING"
         or preflight.get("universal_residual_factor_count") != 26_740
         or preflight.get("row2599_certified_empty_factor_count") != 8_916
         or preflight.get("row2599_candidate_factor_count") != 17_824
@@ -537,6 +539,22 @@ def verify_manifest(path: Path, observed) -> dict:
         or preflight.get("compactification_chart_count") != 64
         or preflight.get("standard_chart_infinity_parent_brackets")
         != ["2346", "2347", "2348"]
+        or preflight.get("face_bernstein_atlas")
+        != "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_face_bernstein_atlas.json"
+        or preflight.get("face_bernstein_atlas_sha256")
+        != "5d8029d930cea0708f00c90cac69f87de7579118cd48a6995caf7b3be26e0822"
+        or preflight.get("face_bernstein_semantic_digest")
+        != "1bd501a4a2b08eebd55d39c078fed07c526308a53bbefb21823531843ca0da8b"
+        or preflight.get("face_bernstein_verifier")
+        != "ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py"
+        or preflight.get("compactification_support_face_count") != 3_375
+        or preflight.get("candidate_factor_face_pair_count") != 60_156_000
+        or preflight.get("bernstein_identically_zero_pair_count") != 34_437_486
+        or preflight.get("bernstein_wall_free_pair_count") != 8_110_206
+        or preflight.get("bernstein_mixed_pair_count") != 17_608_308
+        or preflight.get("bernstein_eliminated_pair_count") != 42_547_692
+        or preflight.get("bernstein_face_state_stream_sha256")
+        != "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b"
         or preflight.get("hostile_temporary_dependency_replay") != {
             "diagnostic_only": True,
             "python": "3.12.13",
@@ -800,7 +818,14 @@ def main():
         preflight["row2599_candidate_factor_count"],
         "after",
         preflight["row2599_certified_empty_factor_count"],
-        "certified-empty walls; candidate input and compactification atlas ready; cell generator missing",
+        "certified-empty walls; candidate input and compactification atlas ready",
+    )
+    print(
+        "PASS Bernstein face gate eliminated",
+        preflight["bernstein_eliminated_pair_count"],
+        "of",
+        preflight["candidate_factor_face_pair_count"],
+        "factor-face tasks; adaptive subdivision remains",
     )
     local_d3 = payload["row2599_flow_triangle_mixed_d3"]
     print(

@@ -1186,11 +1186,15 @@ escape or higher-wall coherence.  See
    compactification is also fixed: the three moving positive projective
    columns give `(Delta^3)^3`, covered by 64 exact gauge charts.  All 262,144
    chart cocycles hold, and the three standard infinity divisors are the
-   genuine parent walls `[2346]`, `[2347]`, and `[2348]`.  The remaining gap
-   is now the deterministic sign-invariant regular-cell generator, not its
-   factor universe or compactification.  See
+   genuine parent walls `[2346]`, `[2347]`, and `[2348]`.  Canonical
+   multihomogeneous Bernstein restriction across all 3,375 support faces now
+   eliminates 42,547,692 of 60,156,000 factor--face tasks exactly; 17,608,308
+   mixed restrictions remain.  The remaining gap is the face-compatible
+   adaptive regular-cell subdivision, not its factor universe,
+   compactification, or first face-pruning layer.  See
    `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
-   `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md`.
+   `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md` and
+   `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.
    Smooth transverse wall pairs supply the expected local four-cycle, but
    exact semialgebraic countermodels show that smoothness alone implies
    neither global COM face symmetry/strong elimination nor support
@@ -1425,10 +1429,12 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   reduced `P=L=0` discriminant has both signs on the exact parent atlas.
 - `DIAG3_TRIPLE_FACTORED_KOSZUL_GATE.md`: exact three-function directional
   reduction, exhaustive ten-minor audit, and the bounded algebraic stop rule.
-- `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
-  `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md`: independently verified
-  17,824-factor generator input and the exact 64-chart `(Delta^3)^3`
-  compactification with genuine parent-wall infinity.
+- `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md`,
+  `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md`, and
+  `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`: independently verified
+  17,824-factor generator input, the exact 64-chart `(Delta^3)^3`
+  compactification with genuine parent-wall infinity, and exact deletion of
+  42,547,692 of 60,156,000 factor--face subdivision tasks.
 - `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md` and its exact verifier: full ordered
   two-root `Lambda^3` carrier graphs on all 178 stored minimum-overlap pairs,
   including the chart-57 commuting-only disconnect and bilinear repair.

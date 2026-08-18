@@ -200,7 +200,7 @@
     ]
   },
   "global_generator_preflight": {
-    "status": "GENERATOR_INPUTS_READY_REGULAR_CELL_UNIVERSE_MISSING",
+    "status": "FACE_BERNSTEIN_PRUNING_READY_ADAPTIVE_SUBDIVISION_MISSING",
     "inventory_verifier": "ai/omreal/DIAG9_GRAPH_inventory.py",
     "inventory_result": "no NPZ contains a full nine-dimensional master roadmap",
     "universal_residual_factor_count": 26740,
@@ -226,11 +226,22 @@
     "compactification_model": "(Delta^3)^3",
     "compactification_chart_count": 64,
     "standard_chart_infinity_parent_brackets": ["2346", "2347", "2348"],
+    "face_bernstein_atlas": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_face_bernstein_atlas.json",
+    "face_bernstein_atlas_sha256": "5d8029d930cea0708f00c90cac69f87de7579118cd48a6995caf7b3be26e0822",
+    "face_bernstein_semantic_digest": "1bd501a4a2b08eebd55d39c078fed07c526308a53bbefb21823531843ca0da8b",
+    "face_bernstein_verifier": "ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
+    "compactification_support_face_count": 3375,
+    "candidate_factor_face_pair_count": 60156000,
+    "bernstein_identically_zero_pair_count": 34437486,
+    "bernstein_wall_free_pair_count": 8110206,
+    "bernstein_mixed_pair_count": 17608308,
+    "bernstein_eliminated_pair_count": 42547692,
+    "bernstein_face_state_stream_sha256": "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b",
     "proof_critical_export_gap": "CLOSED: the sorted 17824-factor candidate universe is hash-pinned and independently replayed from direct row-2599 determinants",
     "first_generator_data": [
-      "one deterministic sign-invariant regular-cell generator over the pinned 64-chart compactification and 17824 candidate factors, with an independent coverage/regularity verifier"
+      "one face-compatible adaptive exact subdivision of the 17608308 mixed Bernstein restrictions, with independent sibling-coverage, common-face, regularity, strict-closure, and infinity-subcomplex verification"
     ],
-    "warning": "A bounded standard-chart CAD or a point/coordinate-path network is not a compactified global master poset."
+    "warning": "Bernstein pruning is a proof-safe generator preflight, not a compactified global master poset; mixed restrictions are not asserted to contain walls."
   },
   "row2599_flow_triangle_mixed_d3": {
     "status": "OPEN",
@@ -475,7 +486,7 @@
     "command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
     "expected_terminal_status": "OPEN row2599_compactified_labelled_order2_v1 coverage_certified_global_cell_universe",
     "next_construction_target": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactified_labelled_order2.npz",
-    "smallest_next_mathematical_task": "Construct a deterministic sign-invariant regular-cell generator over the pinned 64-chart (Delta^3)^3 compactification and the independently certified 17824-factor input, beginning in the standard chart and continuing every cell onto the exact simplex-face atlas.",
+    "smallest_next_mathematical_task": "Construct a face-compatible adaptive exact subdivision of the 17608308 mixed Bernstein restrictions, stopping only at sign-invariant cells and independently replaying sibling coverage, common-face inheritance, regularity, strict closure, and genuine infinity.",
     "dependency_preflight_command": "python -m pip install --target /tmp/diag3_sympy_1_13_3 sympy==1.13.3 && PYTHONPATH=/tmp/diag3_sympy_1_13_3 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_active_sector.py",
     "local_gap_replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
@@ -484,6 +495,7 @@
     "upstream_replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_candidate_factors.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_inventory.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_seeat_upper_bound.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py",

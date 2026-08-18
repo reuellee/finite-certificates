@@ -400,12 +400,17 @@ new idea rather than wider bounds.
 Active work moves to a coverage-certified labelled regular master closure
 poset, its genuine infinity subcomplex and barycentric order-two incidence,
 followed by the exact mod-two middle-rank replay.  Its two prerequisite inputs
-are now fixed: the independently verified 17,824 candidate-factor IDs and an
+are fixed: the independently verified 17,824 candidate-factor IDs and an
 exact 64-chart `(Delta^3)^3` compactification.  Every infinity divisor of the
-standard chart is a genuine parent wall.  See
+standard chart is a genuine parent wall.  The first deterministic generator
+layer is now exact as well: canonical multihomogeneous Bernstein restrictions
+on all 3,375 support faces eliminate 42,547,692 of 60,156,000 factor--face
+tasks, leaving 17,608,308 mixed restrictions.  See
 `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
-`DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md`.  The next missing block is the
-deterministic sign-invariant regular-cell generator itself.
+`DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md` and
+`DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.  The next missing block is the
+face-compatible adaptive subdivision of those mixed restrictions, followed
+by regular-cell coverage and strict closure.
 
 Discovery tools may use modular fingerprints, SAT, and sampled charts, but a
 theorem entry must end in exact positive identities or a complete finite

@@ -49,7 +49,9 @@ PYTHONDONTWRITEBYTECODE=1 python \
   ai/omreal/verify_diag3_pair_global_candidate_factors.py
 ```
 
-The next missing generator block is now singular: choose and pin the finite
-projective/reciprocal compactification chart atlas, including exact overlap
-coverage and genuine infinity faces.  Only after that should the 17,824
-candidate polynomials be passed to a deterministic regular-cell generator.
+The compactification atlas is now fixed, and the first generator layer has
+been executed.  Canonical multihomogeneous Bernstein restriction on all
+3,375 support faces eliminates 42,547,692 of 60,156,000 factor--face tasks.
+See `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.  The remaining input is the
+17,608,308 mixed restrictions requiring face-compatible adaptive exact
+subdivision.
