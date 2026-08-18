@@ -408,9 +408,16 @@ sign-definite and wall-free, and only 17,608,308 remain mixed.  This deletes
 70.7289% of the face tasks before subdivision.  See
 `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.
 
-The remaining first block is a face-compatible adaptive exact subdivision
-of the mixed restrictions, followed by independent coverage, regularity and
-strict-closure replay.
+The signed parent-bracket successor now excludes 3,364 of 3,375 support
+strata and proves all eleven survivors nonempty by exact rational witnesses.
+Only 70,218 mixed residual restrictions remain on those supports.  The
+ambient support one-skeleton is two intervals with no active residual wall,
+and the sole two-face is the unit square split by `a=h`.  See
+`DIAG3_PAIR_GLOBAL_PARENT_FACE_GATE.md`.
+
+The remaining first block is a face-compatible exact subdivision of the two
+surviving four-dimensional supports, followed by the higher-dimensional
+supports and independent coverage, regularity and strict-closure replay.
 
 A bounded standard-chart CAD, a point bank, or a coordinate-path network
 still cannot be promoted to the global master poset because it does not

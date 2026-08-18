@@ -1189,12 +1189,16 @@ escape or higher-wall coherence.  See
    genuine parent walls `[2346]`, `[2347]`, and `[2348]`.  Canonical
    multihomogeneous Bernstein restriction across all 3,375 support faces now
    eliminates 42,547,692 of 60,156,000 factor--face tasks exactly; 17,608,308
-   mixed restrictions remain.  The remaining gap is the face-compatible
-   adaptive regular-cell subdivision, not its factor universe,
-   compactification, or first face-pruning layer.  See
+   mixed restrictions remain.  The signed parent-face gate then excludes
+   3,364 of 3,375 supports and reduces the mixed residue to 70,218.  Its
+   support one-skeleton has two residual-wall-free edges, and the sole
+   two-face is the unit square split by `a=h`.  The remaining gap begins with
+   the two surviving four-dimensional supports, not the factor universe,
+   compactification, face pruning, or support dimensions at most two.  See
    `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
    `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md` and
-   `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.
+   `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md` and
+   `DIAG3_PAIR_GLOBAL_PARENT_FACE_GATE.md`.
    Smooth transverse wall pairs supply the expected local four-cycle, but
    exact semialgebraic countermodels show that smoothness alone implies
    neither global COM face symmetry/strong elimination nor support
@@ -1435,6 +1439,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   17,824-factor generator input, the exact 64-chart `(Delta^3)^3`
   compactification with genuine parent-wall infinity, and exact deletion of
   42,547,692 of 60,156,000 factor--face subdivision tasks.
+- `DIAG3_PAIR_GLOBAL_PARENT_FACE_GATE.md`: exact exclusion of 3,364 of 3,375
+  compactification supports, reduction to 70,218 mixed restrictions, the
+  residual-wall-free support one-skeleton, and the diagonal two-face
+  cellulation.
 - `DIAG3_PAIR_CARRIER_GRAPH_AUDIT.md` and its exact verifier: full ordered
   two-root `Lambda^3` carrier graphs on all 178 stored minimum-overlap pairs,
   including the chart-57 commuting-only disconnect and bilinear repair.

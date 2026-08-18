@@ -77,9 +77,11 @@ residual factors.  The next generator input is now completely specified:
 The first deterministic generator layer is now complete.  Exact
 multihomogeneous Bernstein restrictions eliminate 42,547,692 of 60,156,000
 candidate factor--face tasks on this atlas.  The next mathematical target is
-face-compatible adaptive exact subdivision of the remaining 17,608,308 mixed
-restrictions, with exact continuation onto every simplex face before
-promotion.  See `DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.
+parent-feasibility restriction of the face atlas.  That successor now proves
+that only eleven support strata are nonempty and leaves 70,218 mixed
+restrictions.  The next unresolved support dimension is four.  See
+`DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md` and
+`DIAG3_PAIR_GLOBAL_PARENT_FACE_GATE.md`.
 
 ## Replay
 

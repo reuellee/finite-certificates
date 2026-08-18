@@ -408,9 +408,12 @@ on all 3,375 support faces eliminate 42,547,692 of 60,156,000 factor--face
 tasks, leaving 17,608,308 mixed restrictions.  See
 `DIAG3_PAIR_GLOBAL_CANDIDATE_FACTOR_INPUT.md` and
 `DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md` and
-`DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.  The next missing block is the
-face-compatible adaptive subdivision of those mixed restrictions, followed
-by regular-cell coverage and strict closure.
+`DIAG3_PAIR_GLOBAL_FACE_BERNSTEIN_ATLAS.md`.  The exact parent-feasibility
+gate now excludes 3,364 of 3,375 support strata, leaves
+70,218 mixed restrictions on eleven exactly witnessed nonempty supports, and
+completes the support one-skeleton and sole two-face.  The next missing block
+is the paired four-dimensional subdivision, followed by regular-cell coverage
+and strict closure.  See `DIAG3_PAIR_GLOBAL_PARENT_FACE_GATE.md`.
 
 Discovery tools may use modular fingerprints, SAT, and sampled charts, but a
 theorem entry must end in exact positive identities or a complete finite

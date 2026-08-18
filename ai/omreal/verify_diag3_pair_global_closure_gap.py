@@ -52,6 +52,8 @@ PINNED_SHA256 = {
         "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
     "DIAG3_PAIR_GLOBAL_row2599_face_bernstein_atlas.json":
         "5d8029d930cea0708f00c90cac69f87de7579118cd48a6995caf7b3be26e0822",
+    "DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json":
+        "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
     "DIAG9_GRAPH_row2599_factor_states.npz":
         "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
     "DIAG9_GRAPH_row2599_slice_roadmap.npz":
@@ -512,7 +514,7 @@ def verify_manifest(path: Path, observed) -> dict:
     preflight = payload.get("global_generator_preflight", {})
     if (
         preflight.get("status")
-        != "FACE_BERNSTEIN_PRUNING_READY_ADAPTIVE_SUBDIVISION_MISSING"
+        != "PARENT_FACE_GATE_READY_DIMENSION4_SUBDIVISION_MISSING"
         or preflight.get("universal_residual_factor_count") != 26_740
         or preflight.get("row2599_certified_empty_factor_count") != 8_916
         or preflight.get("row2599_candidate_factor_count") != 17_824
@@ -555,6 +557,25 @@ def verify_manifest(path: Path, observed) -> dict:
         or preflight.get("bernstein_eliminated_pair_count") != 42_547_692
         or preflight.get("bernstein_face_state_stream_sha256")
         != "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b"
+        or preflight.get("parent_face_gate")
+        != "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json"
+        or preflight.get("parent_face_gate_sha256")
+        != "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401"
+        or preflight.get("parent_face_gate_semantic_digest")
+        != "3be26a3ff6849043a43b8e56cc3ac29a05cc9c955b2a0fbe41b74ba4c742c106"
+        or preflight.get("parent_face_gate_verifier")
+        != "ai/omreal/verify_diag3_pair_global_parent_face_gate.py"
+        or preflight.get("parent_face_state_stream_sha256")
+        != "e4f15408f786c26c34b4d721d7973aedc6e206a7382e5a92ce839f8c732be9f5"
+        or preflight.get("excluded_support_face_count") != 3_364
+        or preflight.get("nonexcluded_support_face_count") != 11
+        or preflight.get("excluded_candidate_factor_face_pair_count") != 59_959_936
+        or preflight.get("remaining_candidate_factor_face_pair_count") != 196_064
+        or preflight.get("remaining_mixed_residual_restriction_count") != 70_218
+        or preflight.get("support_one_skeleton")
+        != {"vertices": 3, "edges": 2, "active_residual_walls": 0}
+        or preflight.get("support_two_face_cellulation")
+        != {"vertices": 4, "edges": 5, "faces": 2, "dividing_wall": "a=h"}
         or preflight.get("hostile_temporary_dependency_replay") != {
             "diagnostic_only": True,
             "python": "3.12.13",
@@ -826,6 +847,15 @@ def main():
         "of",
         preflight["candidate_factor_face_pair_count"],
         "factor-face tasks; adaptive subdivision remains",
+    )
+    print(
+        "PASS parent-face gate excluded",
+        preflight["excluded_support_face_count"],
+        "supports;",
+        preflight["remaining_mixed_residual_restriction_count"],
+        "mixed restrictions remain on",
+        preflight["nonexcluded_support_face_count"],
+        "supports",
     )
     local_d3 = payload["row2599_flow_triangle_mixed_d3"]
     print(

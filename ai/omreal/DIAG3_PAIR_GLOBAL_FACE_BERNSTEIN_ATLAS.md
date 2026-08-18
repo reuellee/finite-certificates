@@ -84,10 +84,14 @@ The manifest semantic digest is
 ## Consequence for the generator
 
 The global generator must no longer treat the 17,824 factors as active on
-every simplex face.  Its next deterministic block is:
+every simplex face.  The parent-feasibility successor now eliminates 3,364
+of the 3,375 support strata and reduces the mixed residue to 70,218.  See
+`DIAG3_PAIR_GLOBAL_PARENT_FACE_GATE.md`.  On the remaining strata its next
+deterministic block is:
 
 1. inherit the exact three-state table on every support face;
-2. recursively subdivide only mixed restrictions, using rational
+2. recursively subdivide only mixed restrictions on parent-nonempty faces,
+   using rational
    face-compatible Bernstein transformations;
 3. stop a branch when every inherited factor is zero or sign-definite;
 4. retain every structurally zero factor as a closed wall label;

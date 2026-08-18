@@ -1,0 +1,112 @@
+{
+  "format": "diag3-pair-global-row2599-parent-face-gate-v1",
+  "parent_index": 2599,
+  "compactification_model": "(Delta^3)^3",
+  "stored_parent_samples": 178,
+  "normalized_parent_sign_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+  "parent_bracket_face_state_counts": {
+    "zero": 70061,
+    "right": 81648,
+    "wrong": 38448,
+    "mixed": 46093
+  },
+  "support_face_classification_counts": {
+    "excluded": 3364,
+    "ambiguous": 10,
+    "contained": 1
+  },
+  "dimension_histogram": {
+    "0": {"excluded": 63, "contained": 1},
+    "1": {"excluded": 286, "ambiguous": 2},
+    "2": {"excluded": 623, "ambiguous": 1},
+    "3": {"excluded": 840},
+    "4": {"excluded": 766, "ambiguous": 2},
+    "5": {"excluded": 491, "ambiguous": 1},
+    "6": {"excluded": 218, "ambiguous": 2},
+    "7": {"excluded": 66},
+    "8": {"excluded": 11, "ambiguous": 1},
+    "9": {"ambiguous": 1}
+  },
+  "canonical_exclusion_witness_histogram": {
+    "1256": 900,
+    "1257": 660,
+    "1258": 484,
+    "1267": 176,
+    "1268": 112,
+    "1278": 112,
+    "1356": 210,
+    "1357": 70,
+    "1358": 90,
+    "1367": 20,
+    "1368": 64,
+    "1378": 4,
+    "1456": 98,
+    "1457": 102,
+    "1458": 50,
+    "1467": 40,
+    "2356": 21,
+    "2357": 6,
+    "2358": 20,
+    "2367": 2,
+    "2368": 7,
+    "2456": 15,
+    "2457": 25,
+    "2458": 30,
+    "2467": 8,
+    "2468": 2,
+    "2478": 1,
+    "2567": 2,
+    "3456": 15,
+    "3457": 8,
+    "3467": 4,
+    "3468": 2,
+    "3478": 3,
+    "3578": 1
+  },
+  "parent_face_state_stream_sha256": "e4f15408f786c26c34b4d721d7973aedc6e206a7382e5a92ce839f8c732be9f5",
+  "nonexcluded_support_faces": [
+    {"support": [1,1,1], "dimension": 0, "classification": "contained", "witness": ["0","0","0","0","0","0","0","0","0"], "witness_zero_parent_brackets": 53, "residual_states": [17824,0,0]},
+    {"support": [1,1,5], "dimension": 1, "classification": "ambiguous", "witness": ["0","0","0","0","0","0","0","1/2","0"], "witness_zero_parent_brackets": 44, "residual_states": [17529,295,0]},
+    {"support": [3,1,1], "dimension": 1, "classification": "ambiguous", "witness": ["1/2","0","0","0","0","0","0","0","0"], "witness_zero_parent_brackets": 44, "residual_states": [17527,297,0]},
+    {"support": [3,1,5], "dimension": 2, "classification": "ambiguous", "witness": ["1/2","0","0","0","0","0","0","1/2","0"], "witness_zero_parent_brackets": 32, "residual_states": [15268,2221,335]},
+    {"support": [3,1,15], "dimension": 4, "classification": "ambiguous", "witness": ["1/2","0","0","0","0","0","1/2","1/2","1/2"], "witness_zero_parent_brackets": 33, "residual_states": [12298,1530,3996]},
+    {"support": [3,3,7], "dimension": 4, "classification": "ambiguous", "witness": ["1/2","0","0","1/2","0","0","1/2","1/2","0"], "witness_zero_parent_brackets": 33, "residual_states": [12168,1635,4021]},
+    {"support": [3,3,15], "dimension": 5, "classification": "ambiguous", "witness": ["1/2","0","0","1/2","0","0","1/2","1/2","1/2"], "witness_zero_parent_brackets": 32, "residual_states": [9244,1214,7366]},
+    {"support": [7,7,7], "dimension": 6, "classification": "ambiguous", "witness": ["1/2","1/2","0","1/2","1/2","0","1/2","1/2","0"], "witness_zero_parent_brackets": 41, "residual_states": [7816,192,9816]},
+    {"support": [15,1,15], "dimension": 6, "classification": "ambiguous", "witness": ["1/2","1/2","1/2","0","0","0","1/2","1/2","1/2"], "witness_zero_parent_brackets": 41, "residual_states": [8472,171,9181]},
+    {"support": [15,7,15], "dimension": 8, "classification": "ambiguous", "witness": ["71/81","67/100","1/2","48/91","36/71","0","43/60","87/94","35/53"], "witness_zero_parent_brackets": 1, "residual_states": [0,145,17679]},
+    {"support": [15,15,15], "dimension": 9, "classification": "ambiguous", "witness": ["1/2","1/2","1/2","1/2","1/2","1/2","1/2","1/2","1/2"], "witness_zero_parent_brackets": 44, "residual_states": [0,0,17824]}
+  ],
+  "nonexcluded_support_face_count": 11,
+  "excluded_support_face_count": 3364,
+  "excluded_candidate_factor_face_pair_count": 59959936,
+  "remaining_candidate_factor_face_pair_count": 196064,
+  "remaining_mixed_residual_restriction_count": 70218,
+  "support_one_skeleton": {
+    "vertices": 3,
+    "edges": 2,
+    "edge_parameter_interval": "[0,1]"
+  },
+  "support_two_face": {
+    "support": [3,1,5],
+    "parent_domain": "0<=a<=1, 0<=h<=1",
+    "parent_mixed_equations": ["1-h", "1-a", "a+h-a*h"],
+    "mixed_residual_factor_count": 335,
+    "unique_restricted_polynomial_count": 16,
+    "wall_class_factor_counts": {
+      "a=1": 113,
+      "a=h": 53,
+      "h=1": 113,
+      "origin-only": 56
+    },
+    "regular_diagonal_cellulation": {"vertices": 4, "edges": 5, "faces": 2}
+  },
+  "source_sha256": {
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f"
+  },
+  "scope": "exact parent-feasibility support-face gate and ambient support one-skeleton; internal parent/residual master cells inside nonexcluded faces remain open",
+  "semantic_sha256": "3be26a3ff6849043a43b8e56cc3ac29a05cc9c955b2a0fbe41b74ba4c742c106"
+}

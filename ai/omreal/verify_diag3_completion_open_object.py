@@ -204,9 +204,21 @@ def main() -> None:
     assert pair["current_data"]["row2599_bernstein_face_state_stream_sha256"] == (
         "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b"
     )
+    assert pair["current_data"]["row2599_parent_face_excluded_support_count"] == 3_364
+    assert pair["current_data"]["row2599_parent_face_nonexcluded_support_count"] == 11
+    assert pair["current_data"]["row2599_parent_face_remaining_mixed_count"] == 70_218
+    assert pair["current_data"]["row2599_parent_face_state_stream_sha256"] == (
+        "e4f15408f786c26c34b4d721d7973aedc6e206a7382e5a92ce839f8c732be9f5"
+    )
+    assert pair["current_data"]["row2599_support_one_skeleton"] == {
+        "vertices": 3, "edges": 2, "active_residual_walls": 0
+    }
+    assert pair["current_data"]["row2599_support_two_face_cellulation"] == {
+        "vertices": 4, "edges": 5, "faces": 2, "dividing_wall": "a=h"
+    }
     preflight = closure["global_generator_preflight"]
     assert preflight["status"] == (
-        "FACE_BERNSTEIN_PRUNING_READY_ADAPTIVE_SUBDIVISION_MISSING"
+        "PARENT_FACE_GATE_READY_DIMENSION4_SUBDIVISION_MISSING"
     )
     candidate_path = HERE.parent.parent / preflight["candidate_factor_artifact"]
     assert candidate_path.stat().st_size == preflight["candidate_factor_artifact_bytes"]
@@ -215,6 +227,8 @@ def main() -> None:
     assert sha256(atlas_path) == preflight["compactification_atlas_sha256"]
     bernstein_path = HERE.parent.parent / preflight["face_bernstein_atlas"]
     assert sha256(bernstein_path) == preflight["face_bernstein_atlas_sha256"]
+    parent_face_path = HERE.parent.parent / preflight["parent_face_gate"]
+    assert sha256(parent_face_path) == preflight["parent_face_gate_sha256"]
     assert closure["row2599_flow_triangle_mixed_d3"][
         "certified_relative_pair_wall_collar_count"
     ] == 3

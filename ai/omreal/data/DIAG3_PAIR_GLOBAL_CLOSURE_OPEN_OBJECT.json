@@ -200,7 +200,7 @@
     ]
   },
   "global_generator_preflight": {
-    "status": "FACE_BERNSTEIN_PRUNING_READY_ADAPTIVE_SUBDIVISION_MISSING",
+    "status": "PARENT_FACE_GATE_READY_DIMENSION4_SUBDIVISION_MISSING",
     "inventory_verifier": "ai/omreal/DIAG9_GRAPH_inventory.py",
     "inventory_result": "no NPZ contains a full nine-dimensional master roadmap",
     "universal_residual_factor_count": 26740,
@@ -237,11 +237,23 @@
     "bernstein_mixed_pair_count": 17608308,
     "bernstein_eliminated_pair_count": 42547692,
     "bernstein_face_state_stream_sha256": "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b",
+    "parent_face_gate": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json",
+    "parent_face_gate_sha256": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "parent_face_gate_semantic_digest": "3be26a3ff6849043a43b8e56cc3ac29a05cc9c955b2a0fbe41b74ba4c742c106",
+    "parent_face_gate_verifier": "ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
+    "parent_face_state_stream_sha256": "e4f15408f786c26c34b4d721d7973aedc6e206a7382e5a92ce839f8c732be9f5",
+    "excluded_support_face_count": 3364,
+    "nonexcluded_support_face_count": 11,
+    "excluded_candidate_factor_face_pair_count": 59959936,
+    "remaining_candidate_factor_face_pair_count": 196064,
+    "remaining_mixed_residual_restriction_count": 70218,
+    "support_one_skeleton": {"vertices": 3, "edges": 2, "active_residual_walls": 0},
+    "support_two_face_cellulation": {"vertices": 4, "edges": 5, "faces": 2, "dividing_wall": "a=h"},
     "proof_critical_export_gap": "CLOSED: the sorted 17824-factor candidate universe is hash-pinned and independently replayed from direct row-2599 determinants",
     "first_generator_data": [
-      "one face-compatible adaptive exact subdivision of the 17608308 mixed Bernstein restrictions, with independent sibling-coverage, common-face, regularity, strict-closure, and infinity-subcomplex verification"
+      "face-compatible exact subdivisions of supports (3,1,15) and (3,3,7), with 3996 and 4021 mixed restrictions, followed by independent sibling-coverage, common-face, regularity, strict-closure, and parent-frontier verification"
     ],
-    "warning": "Bernstein pruning is a proof-safe generator preflight, not a compactified global master poset; mixed restrictions are not asserted to contain walls."
+    "warning": "The parent-face gate and completed support cells are proof-safe generator layers, not the internal compactified global master poset; mixed restrictions are not asserted to contain walls."
   },
   "row2599_flow_triangle_mixed_d3": {
     "status": "OPEN",
@@ -486,7 +498,7 @@
     "command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
     "expected_terminal_status": "OPEN row2599_compactified_labelled_order2_v1 coverage_certified_global_cell_universe",
     "next_construction_target": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactified_labelled_order2.npz",
-    "smallest_next_mathematical_task": "Construct a face-compatible adaptive exact subdivision of the 17608308 mixed Bernstein restrictions, stopping only at sign-invariant cells and independently replaying sibling coverage, common-face inheritance, regularity, strict closure, and genuine infinity.",
+    "smallest_next_mathematical_task": "Construct compatible exact subdivisions of the two surviving four-dimensional supports (3,1,15) and (3,3,7), quotienting monomial multiples and inheriting the completed support edges and diagonal two-face before any higher-dimensional promotion.",
     "dependency_preflight_command": "python -m pip install --target /tmp/diag3_sympy_1_13_3 sympy==1.13.3 && PYTHONPATH=/tmp/diag3_sympy_1_13_3 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_active_sector.py",
     "local_gap_replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
@@ -496,6 +508,7 @@
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_candidate_factors.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_inventory.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_seeat_upper_bound.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py",
