@@ -1,0 +1,520 @@
+{
+  "format": "diag3-pair-global-closure-open-object-v1",
+  "status": "OPEN",
+  "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
+  "claim": {
+    "can_decode_a_global_regular_poset_from_existing_records": false,
+    "can_use_existing_polynomials_as_input_to_a_new_exact_decomposition": true,
+    "precise_scope": "The pinned point bank and scoped roadmaps do not contain a coverage-certified global cell universe, strict closure relations, or parent-infinity subcomplex. This is a certificate deficit, not an impossibility theorem for exact CAD or roadmap construction."
+  },
+  "input_artifacts": [
+    {
+      "path": "ai/omreal/data/seeat_parent2599_upper178.npz",
+      "sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+      "role": "178 generic parent points and a cover of the 97224 extension signatures"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz",
+      "sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+      "role": "exact sparse definitions of 26740 residual factor polynomials"
+    },
+    {
+      "path": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin",
+      "sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+      "role": "sorted proof-safe input universe of 17824 candidate residual factors after 8916 independently replayed empty walls"
+    },
+    {
+      "path": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json",
+      "sha256": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+      "role": "exact 64-chart (Delta^3)^3 compactification atlas with transition cocycles and genuine parent-wall infinity labels"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz",
+      "sha256": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
+      "role": "factor signs at the 178 generic points, with no adjacency assertion"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_row2599_slice_roadmap.npz",
+      "sha256": "b982fdc600729306b545005ff059e2c6603b4603525745078fd85b630f36a575",
+      "role": "one chart-zero one-dimensional crossing germ"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_row2599_line_roadmap.npz",
+      "sha256": "29a4542941a322da6846fcfb2d7eb3d427ac9f7cc4becd95b4b5cd754f3ae16b",
+      "role": "one chart-zero complete coordinate-line roadmap"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_row2599_disk_roadmap.npz",
+      "sha256": "8111a338e2169c4492ad0c5b7e03c9792d5c301c54f0f10a3ce20114db424486",
+      "role": "one chart-zero two-dimensional single-wall disk"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_row2599_node_roadmap.npz",
+      "sha256": "ddec96b052b305d279b543be2af27e12f380f0dedc79ea434616c64b40cd8cea",
+      "role": "one chart-zero two-dimensional transverse-node disk"
+    },
+    {
+      "path": "ai/omreal/data/ninth_candidate_12_37_path.npz",
+      "sha256": "8db38e00d9bf8701558c27cd4ede3e024db8953ea3ef9873bf0b4fc65ad6bcda",
+      "role": "parent-resident path retaining nine selected feasible signatures"
+    },
+    {
+      "path": "ai/omreal/data/ninth_candidate_37_176_path.npz",
+      "sha256": "3c37c3c0d5de159bec9d48eeaaf57bccbe07c2f3aeb0ede9d4b1ddbae2bd3507",
+      "role": "second parent-resident path retaining nine selected feasible signatures"
+    }
+  ],
+  "observation_digest": "27e55460f7bb22f1ec278d67c7441fd06e6a455c32605d00a1bb57b294edf85b",
+  "observations": {
+    "atlas_assignment_count": 97224,
+    "atlas_assignment_nonempty_chart_count": 178,
+    "atlas_chart_count": 178,
+    "certified_adjacency_edges_between_distinct_atlas_charts": 0,
+    "certified_global_strict_closure_pairs": 0,
+    "certified_global_strict_closure_triples": 0,
+    "certified_parent_infinity_cells": 0,
+    "chart_zero_minimum_other_hamming": 1197,
+    "complete_line_cell_count": 26,
+    "complete_line_distinct_factor_count": 25,
+    "complete_line_source_cell": 11,
+    "complete_line_wall_count": 25,
+    "distinct_sample_factor_sign_states": 178,
+    "known_generic_chamber_lower_bound_after_line": 203,
+    "local_roadmap_source_charts": {
+      "disk": 0,
+      "line": 0,
+      "node": 0,
+      "slice": 0
+    },
+    "minimum_hamming_pairs": [
+      [36, 167],
+      [163, 175],
+      [164, 173],
+      [165, 172],
+      [166, 171],
+      [169, 174]
+    ],
+    "minimum_hamming_straight_segment_parent_exits": [
+      {
+        "left_chart": 36,
+        "parent_brackets_with_internal_zero": 38,
+        "right_chart": 167,
+        "total_internal_parent_bracket_roots": 76
+      },
+      {
+        "left_chart": 163,
+        "parent_brackets_with_internal_zero": 38,
+        "right_chart": 175,
+        "total_internal_parent_bracket_roots": 76
+      },
+      {
+        "left_chart": 164,
+        "parent_brackets_with_internal_zero": 38,
+        "right_chart": 173,
+        "total_internal_parent_bracket_roots": 76
+      },
+      {
+        "left_chart": 165,
+        "parent_brackets_with_internal_zero": 38,
+        "right_chart": 172,
+        "total_internal_parent_bracket_roots": 76
+      },
+      {
+        "left_chart": 166,
+        "parent_brackets_with_internal_zero": 38,
+        "right_chart": 171,
+        "total_internal_parent_bracket_roots": 76
+      },
+      {
+        "left_chart": 169,
+        "parent_brackets_with_internal_zero": 32,
+        "right_chart": 174,
+        "total_internal_parent_bracket_roots": 64
+      }
+    ],
+    "parent_index": 2599,
+    "residual_factor_count": 26740,
+    "sample_hamming_maximum": 5600,
+    "sample_hamming_minimum": 1125,
+    "sample_hamming_zero_or_one_pairs": 0,
+    "stress_path_endpoints": [
+      [12, 37],
+      [37, 176]
+    ],
+    "stress_path_selected_signature_count_each": 9,
+    "varying_factor_count_on_sample": 10844
+  },
+  "non_reconstruction_reasons": [
+    {
+      "id": "signature_cover_is_not_parameter_cover",
+      "statement": "The assignment array proves that every abstract extension signature is feasible at some stored point. It supplies no cover of the nine-dimensional parent realization cell."
+    },
+    {
+      "id": "no_sample_adjacencies",
+      "statement": "All 178 point sign states are distinct and every pair differs in at least 1125 primitive factor signs. Hence no pair is certified as two generic chambers sharing a one-factor wall facet."
+    },
+    {
+      "id": "local_scopes_have_one_source",
+      "statement": "The slice, line, disk, and node all have source_chart=0 and no global cell IDs, continuation map, global closure pairs, or infinity cells."
+    },
+    {
+      "id": "stress_paths_are_not_roadmaps",
+      "statement": "The two stored paths connect only charts 12--37--176 and preserve nine selected feasibility conditions. They do not isolate all residual events or record master-cell incidences."
+    },
+    {
+      "id": "canonical_straight_bridges_fail_parent_residence",
+      "statement": "Every minimum-Hamming straight interpolation hits parent-bracket zeroes in its interior, so none supplies even a parent-resident direct bridge."
+    },
+    {
+      "id": "regular_subdivision_requires_a_generator",
+      "statement": "Even fixed factor polynomials admit many regular refinements. A canonical certificate requires a pinned compactification and deterministic exact cell generator; no unique refinement is recoverable from samples alone."
+    }
+  ],
+  "smallest_open_object": {
+    "id": "row2599_compactified_labelled_order2_v1",
+    "parent_index": 2599,
+    "status": "MISSING",
+    "first_missing_block": "coverage_certified_global_cell_universe",
+    "purpose": "Supply precisely the two-skeleton of the barycentric order complex needed to build integral N and M, while retaining enough source geometry to prove that the poset is exhaustive and regular.",
+    "required_blocks": [
+      "pinned exact compactification charts covering the entire normalized parent cell and all of its infinity faces",
+      "canonical generator for every semialgebraic master cell, with exact cell witnesses and no unexplained cells",
+      "coverage, disjointness, and no-duplicate certificates for the global cell universe",
+      "regular-ball closure certificates and exact cell dimensions",
+      "all strict closure-comparable cell pairs and every strict three-cell chain",
+      "an explicit parent-infinity subcomplex; no artificial local-scope boundary may be tagged as infinity",
+      "for every residual factor, either sign-invariant cell labels or an exact proof that its wall misses the parent",
+      "complete 97224-signature feasible/bad labels on chambers and independently checked lower-cell gluing",
+      "embeddings of all 178 point germs and the existing line, disk, and node cells into the global IDs",
+      "pinned counts, hashes, dependency versions, deterministic build command, and an independent verifier"
+    ],
+    "acceptance_tests": [
+      "zero uncovered parameter points and zero unexplained generated cells",
+      "each of the 178 generic samples belongs to exactly one open master chamber",
+      "all 26 complete-line chambers and all 25 line wall incidences embed without identification loss",
+      "every stored local boundary is continued globally or proved to be genuine parent infinity",
+      "strict closure is acyclic, dimension-decreasing, transitive, and complete",
+      "the declared infinity cells form a subcomplex",
+      "barycentric signed incidences generated from closure chains satisfy d_squared=0 over Z",
+      "all bad-signature membership columns are closed subcomplexes"
+    ]
+  },
+  "global_generator_preflight": {
+    "status": "PARENT_FACE_GATE_READY_DIMENSION4_SUBDIVISION_MISSING",
+    "inventory_verifier": "ai/omreal/DIAG9_GRAPH_inventory.py",
+    "inventory_result": "no NPZ contains a full nine-dimensional master roadmap",
+    "universal_residual_factor_count": 26740,
+    "row2599_certified_empty_factor_count": 8916,
+    "row2599_candidate_factor_count": 17824,
+    "empty_wall_verifier": "ai/omreal/verify_diag9_active_sector.py",
+    "clean_environment_replay": "BLOCKED: SymPy is imported by verify_derived_walls.py but no repository dependency version is pinned",
+    "hostile_temporary_dependency_replay": {
+      "diagnostic_only": true,
+      "python": "3.12.13",
+      "sympy": "1.13.3",
+      "mpmath": "1.3.0",
+      "result": "PASS 8916 certified-empty and 17824 candidate row-2599 factors"
+    },
+    "candidate_factor_artifact": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin",
+    "candidate_factor_artifact_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "candidate_factor_artifact_bytes": 71316,
+    "candidate_factor_verifier": "ai/omreal/verify_diag3_pair_global_candidate_factors.py",
+    "compactification_atlas": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json",
+    "compactification_atlas_sha256": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "compactification_atlas_semantic_digest": "3ea49efc628a88fda99e4070cbf43317b78cc45813beaba753c4404e961fa769",
+    "compactification_atlas_verifier": "ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
+    "compactification_model": "(Delta^3)^3",
+    "compactification_chart_count": 64,
+    "standard_chart_infinity_parent_brackets": ["2346", "2347", "2348"],
+    "face_bernstein_atlas": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_face_bernstein_atlas.json",
+    "face_bernstein_atlas_sha256": "5d8029d930cea0708f00c90cac69f87de7579118cd48a6995caf7b3be26e0822",
+    "face_bernstein_semantic_digest": "1bd501a4a2b08eebd55d39c078fed07c526308a53bbefb21823531843ca0da8b",
+    "face_bernstein_verifier": "ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
+    "compactification_support_face_count": 3375,
+    "candidate_factor_face_pair_count": 60156000,
+    "bernstein_identically_zero_pair_count": 34437486,
+    "bernstein_wall_free_pair_count": 8110206,
+    "bernstein_mixed_pair_count": 17608308,
+    "bernstein_eliminated_pair_count": 42547692,
+    "bernstein_face_state_stream_sha256": "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b",
+    "parent_face_gate": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json",
+    "parent_face_gate_sha256": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "parent_face_gate_semantic_digest": "3be26a3ff6849043a43b8e56cc3ac29a05cc9c955b2a0fbe41b74ba4c742c106",
+    "parent_face_gate_verifier": "ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
+    "parent_face_state_stream_sha256": "e4f15408f786c26c34b4d721d7973aedc6e206a7382e5a92ce839f8c732be9f5",
+    "excluded_support_face_count": 3364,
+    "nonexcluded_support_face_count": 11,
+    "excluded_candidate_factor_face_pair_count": 59959936,
+    "remaining_candidate_factor_face_pair_count": 196064,
+    "remaining_mixed_residual_restriction_count": 70218,
+    "support_one_skeleton": {"vertices": 3, "edges": 2, "active_residual_walls": 0},
+    "support_two_face_cellulation": {"vertices": 4, "edges": 5, "faces": 2, "dividing_wall": "a=h"},
+    "proof_critical_export_gap": "CLOSED: the sorted 17824-factor candidate universe is hash-pinned and independently replayed from direct row-2599 determinants",
+    "first_generator_data": [
+      "face-compatible exact subdivisions of supports (3,1,15) and (3,3,7), with 3996 and 4021 mixed restrictions, followed by independent sibling-coverage, common-face, regularity, strict-closure, and parent-frontier verification"
+    ],
+    "warning": "The parent-face gate and completed support cells are proof-safe generator layers, not the internal compactified global master poset; mixed restrictions are not asserted to contain walls."
+  },
+  "row2599_flow_triangle_mixed_d3": {
+    "status": "OPEN",
+    "scope": "one exact chart-zero three-signature canary; not a global pair-frontier cover",
+    "source": {
+      "path": "ai/omreal/data/seeat_parent2599_upper178.npz",
+      "sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+      "chart": 0,
+      "parent_index": 2599
+    },
+    "signatures": [
+      14988895318912,
+      3405195891438080,
+      40418075143643136
+    ],
+    "certified_boundary_faces": [
+      "T",
+      "S01",
+      "S12",
+      "S20",
+      "H0",
+      "H1",
+      "H2"
+    ],
+    "primitive_required_d3_column": [-1, 1, 1, 1, 1, 1, 1],
+    "pair_roots": [[2, 8, -1], [1, 2, -1], [1, 3, 1]],
+    "certified_common_proper_ray": {
+      "moving_column": 7,
+      "direction": [81, -262, 91, 86],
+      "endpoint_parameter": [23597311, 105015122],
+      "relative_endpoint": "parent:2467",
+      "only_endpoint_parent_bracket": "2467",
+      "persistent_circuit_indices": [
+        [0, 19, 21, 37, 38],
+        [0, 9, 27, 30, 35],
+        [0, 11, 17, 24, 40]
+      ],
+      "persistent_circuit_labels": [
+        ["123", "456", "137", "238", "148"],
+        ["123", "345", "257", "167", "128"],
+        ["123", "136", "256", "247", "348"]
+      ],
+      "verifier": "ai/omreal/verify_diag3_row2599_common_proper_escape.py",
+      "mathematical_role": "proper local H_c^0/component generator, not a d3 cell"
+    },
+    "bounded_tapered_cube_checkpoint": {
+      "status": "EXACT_POSITIVE_BUT_NOT_A_COMPARISON_INCIDENCE",
+      "parameter_domain": "[0,1]^3",
+      "root_endpoint_parameters": [
+        [1221971981, 1769366234],
+        [42214994, 2183619501],
+        [425791163, 1286992887]
+      ],
+      "ordered_root_pairs": [
+        [0, 2], [2, 0], [0, 1], [1, 0], [1, 2], [2, 1]
+      ],
+      "root_amplitudes": "(1-s)*x*U_i,(1-s)*y*U_j",
+      "certified_statements": [
+        "all 70 prescribed parent signs are weakly preserved on each cube",
+        "one fixed strict positive circuit persists on each block cube",
+        "the common-ray apex face collapses at s=1",
+        "the five valid ordered-sector origin components are exact: H1 and H2 are first-wall rectangles and H0 is a first square plus one exact bounded outer cap",
+        "the H0 outer cap and both positive column-gauge witness interfaces are exact",
+        "all six pair/singleton Gordan-witness seams agree literally and the common [2467] apex sections form the block-mass triangle boundary",
+        "the signed raw sweeps leave the primitive comparison cycle (-1,-1,-1,1,-1,-1)"
+      ],
+      "uncertified_statements": [
+        "a mixed base-space filler for the primitive comparison cycle",
+        "the H0 and H1 singleton comparison prisms joining the remaining four distinct pair-edge lateral disks",
+        "coverage or specialization beyond the one row-2599 chart-zero canary"
+      ],
+      "verifiers": [
+        "ai/omreal/verify_diag3_row2599_common_proper_escape.py",
+        "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_ORDERED_SECTOR_ROADMAP.py"
+      ],
+      "ordered_sector_semantic_digest": "5941481177b36052e3e59bf08fa44cddadaa415fe761e091a2e8d8b2299ffc1c"
+    },
+    "falsified_common_root_shortcut": {
+      "candidate_root": [1, 3, 1],
+      "status": "FALSE_FOR_THE_FIXED_BLOCK1_WITNESS",
+      "transport_alpha_conflict": [
+        {"derived_row_index": 30, "label": "167", "alpha": -1},
+        {"derived_row_index": 35, "label": "128", "alpha": 1}
+      ],
+      "reason": "fresh pointwise circuit positivity does not supply inverse-exterior transported-witness naturality"
+    },
+    "p01_tangent_collar": {
+      "status": "RELATIVE_PAIR_WALL_COLLAR_CERTIFIED_BUT_FULL_INCIDENCE_MISSING",
+      "verifier": "ai/omreal/verify_diag3_row2599_p01_tangent_collar.py",
+      "semantic_digest": "e3df18c1a98ccca9e022832e3656c7e2ae3a9c7c822a153c7fc40e9519e08016",
+      "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_TANGENT_COLLAR.py",
+      "independent_semantic_digest": "82dda129bef8f52ce4c41fbc8b31e9a316419953bb89a9eaaf8983f9ab1379f8",
+      "incident_blocks": [0, 1],
+      "offplane_entry": {"row_zero_based": 0, "column_label": 6},
+      "tangent_advance": [9, 160],
+      "stages": [
+        {"name": "source_to_witness", "relative_wall": "1234"},
+        {"name": "offplane_to_1367", "relative_wall": "1234", "endpoint_wall": "1367"},
+        {"name": "1367_to_2467", "relative_wall": "1367", "endpoint_wall": "2467"},
+        {"name": "2467_graph_to_common_apex", "relative_wall": "2467", "positive_projective_gauge": "column 2"}
+      ],
+      "certified_statements": [
+        "all 70 prescribed parent signs hold on every segment",
+        "each segment is contained in a genuine parent-frontier wall",
+        "blocks 0 and 1 retain exact nonnegative Gordan cofactor circuits",
+        "the off-plane derivative enters the block-0 bad side at the former witness wall",
+        "all segment seams are literal or exact positive projective-column gauges",
+        "the final endpoint is the pre-existing common [2467] apex"
+      ],
+      "uncertified_statement": "a compatible regular-master-cell realization and cancellation of the comparison prism's two named singleton lateral disks"
+    },
+    "p01_comparison_prism": {
+      "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_NAMED_LATERALS",
+      "verifier": "ai/omreal/verify_diag3_row2599_p01_comparison_prism.py",
+      "semantic_digest": "0b015361e1c75007f025e90921fa5f295616b0e3e8d4bbf941e5161545e433c7",
+      "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_COMPARISON_PRISM.py",
+      "independent_semantic_digest": "acca3573a369139c9a142592febcaa55ce453eeb10c1d52631ac5b226129127b",
+      "patch_count": 5,
+      "incident_blocks": [0, 1],
+      "ordinary_boundary": {"K(p01)": 1, "Q(p01,block0)": -1, "Q(p01,block1)": 1},
+      "relative_collar_face_count": 5,
+      "internal_face_pair_count": 4,
+      "collapsed_relative_endpoint_face_count": 2,
+      "certified_statements": [
+        "all 70 prescribed parent signs hold on all five bivariate patches",
+        "blocks 0 and 1 retain exact nonnegative Gordan cofactor circuits",
+        "the five v=0 faces are exactly the stored K(p01) subdivision",
+        "every v=1 face lies identically on a named parent wall",
+        "the four internal patch faces cancel and both endpoint faces collapse on the parent frontier",
+        "the remaining ordinary faces are exactly the named singleton disks with coefficients -1 and +1"
+      ],
+      "scope": "one exact singular comparison chain in the row-2599 chart-zero canary; the singleton lateral disks, primitive J, regular master subdivision, and global coverage remain open"
+    },
+    "p12_p20_comparison_prisms": {
+      "status": "TWO_SINGULAR_COMPARISON_PRISMS_CERTIFIED_WITH_NAMED_LATERALS",
+      "verifier": "ai/omreal/verify_diag3_row2599_p12_p20_comparison_prisms.py",
+      "semantic_digest": "48871bfbc021051f4f672eaf6372ecd5d1d0f0324005648b8d471e130b60e8f8",
+      "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P12_P20_COMPARISON_PRISMS.py",
+      "independent_semantic_digest": "930d28e2fbc1990cb68e403b034b3ec7aa440a455b5017a13aa1426e1336dba4",
+      "patches_per_prism": 2,
+      "ordinary_boundaries": {
+        "p12": {"K(p12)": 1, "Q(p12,block1)": -1, "Q(p12,block2)": 1},
+        "p20": {"K(p20)": 1, "Q(p20,block2)": -1, "Q(p20,block0)": 1}
+      },
+      "scope": "two exact singular comparison chains in the row-2599 chart-zero canary; their singleton lateral disks are distinct, with the block-2 pair now joined by H2 and blocks 0/1 still open"
+    },
+    "h2_comparison_prism": {
+      "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_LITERAL_PAIR_LATERALS",
+      "verifier": "ai/omreal/verify_diag3_row2599_h2_comparison_prism.py",
+      "semantic_digest": "4027e41a519953200e205f4e7ab2453a83122822d6ca2ed60bb649cd60afc7a7",
+      "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H2_COMPARISON_PRISM.py",
+      "independent_semantic_digest": "55539702e53abdcf15a1173a549699d87427f85881d66db881ff33c98586934b",
+      "patch_count": 4,
+      "incident_block": 2,
+      "ordinary_boundary": {"K(h2)": 1, "Q(p12,block2)": -1, "Q(p20,block2)": 1},
+      "literal_pair_laterals": ["Q(p12,block2)", "Q(p20,block2)"],
+      "scope": "one exact singular singleton comparison chain in the row-2599 chart-zero canary; H0, H1, primitive J, regular master subdivision, and global coverage remain open"
+    },
+    "h1_radial_gap": {
+      "status": "EXACT_FAIL_CLOSED",
+      "verifier": "ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
+      "semantic_digest": "046e51a271bf169c499e3473d5bf399724f6e22a23612a7b2d31ef660c01cbcc",
+      "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H1_RADIAL_GAP.py",
+      "independent_semantic_digest": "7f8b7ac35c9f6a7e5580ec40ccde6140b95814ac6a25b2051fb83f01a603eee7",
+      "positive_screen": "four radial-copy patches preserve all parent signs and the block-one Gordan circuit",
+      "exact_obstruction": "the second two-stage radial p01 boundary segment has no identically-zero parent bracket and therefore is not relative",
+      "literal_certified_p01_wall_sequence": ["1234", "1234", "1367", "2467", "2467"],
+      "scope": "the H1 comparison incidence remains missing; the comparison count remains 4/6"
+    },
+    "comparison_incidences": [
+      {
+        "id": "S01_to_common_ray",
+        "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_NAMED_LATERALS",
+        "certified_wall_collar": "a four-stage nonradial path on [1234], [1367], and [2467] leaves the false direct plane at the block-0 witness wall",
+        "ordinary_boundary": {"K(p01)": 1, "Q(p01,block0)": -1, "Q(p01,block1)": 1}
+      },
+      {
+        "id": "S12_to_common_ray",
+        "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_NAMED_LATERALS",
+        "certified_wall_collar": "[1358] to [1358] intersect [2467], then remove the root amplitude on [2467]",
+        "ordinary_boundary": {"K(p12)": 1, "Q(p12,block1)": -1, "Q(p12,block2)": 1}
+      },
+      {
+        "id": "S20_to_common_ray",
+        "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_NAMED_LATERALS",
+        "certified_wall_collar": "[1256] to [1256] intersect [2467], then remove the root amplitude on [2467]",
+        "ordinary_boundary": {"K(p20)": 1, "Q(p20,block2)": -1, "Q(p20,block0)": 1}
+      },
+      {"id": "H0_to_common_ray", "status": "MISSING"},
+      {"id": "H1_to_common_ray", "status": "MISSING"},
+      {
+        "id": "H2_to_common_ray",
+        "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_LITERAL_PAIR_LATERALS",
+        "ordinary_boundary": {"K(h2)": 1, "Q(p12,block2)": -1, "Q(p20,block2)": 1}
+      }
+    ],
+    "certified_comparison_incidence_count": 4,
+    "certified_relative_pair_wall_collar_count": 3,
+    "required_comparison_incidence_count": 6,
+    "certified_mixed_d3_cell_count": 0,
+    "parent_wall_collar_attempt": {
+      "status": "FALSE_AS_A_THREE_EDGE_COMMON_COSPAN",
+      "successful_edges": ["p12", "p20"],
+      "exceptional_edge": "p01",
+      "p01_source_wall": "1234",
+      "p01_critical_parameters": {
+        "block0_witness_wall": [83503134767238851186305349765512866, 43552580189648394406194000441042241],
+        "first_additional_parent_corner_1367": [3797676243957714, 1934663274435289],
+        "fixed_root_target_2467": [150232380670800142796191902, 36368055566722865061946027]
+      },
+      "exact_block0_good_point": {
+        "common_parameter": [6927675939086631471463822597403349151993134, 3570727927424046863174470630365553354928359],
+        "strict_tope_covector": [10000, 177, -7015, 368],
+        "minimum_signed_dot": 5966575
+      },
+      "later_relative_corner": {
+        "walls": ["1234", "1367", "2467"],
+        "root_parameter": [74520518780897, 5145156267709928],
+        "block0_strict_two_circuit": ["136", "167"]
+      },
+      "scope": "This falsifies the direct three-edge two-parameter parent-wall cospan, not every higher-dimensional parent-boundary cap. A separate nonradial tangent construction repairs p01 and now supports one exact singular comparison prism. The six-prism signed assembly and mixed J remain open."
+    },
+    "exact_missing_generator": {
+      "name": "the H0 and H1 singleton comparison prisms joining the four remaining pair-edge lateral disks, followed by the primitive J assembly",
+      "required_data": [
+        "a regular bad-locus prism from each K(pij) and K(hi) face to its chosen relative representative",
+        "continuous block-Gordan witnesses including zero-block and zero-weight faces",
+        "all residual-factor subdivisions on each comparison family",
+        "every parent-boundary and parameter-infinity face",
+        "orientation and signed incidence equal to the primitive d3 column",
+        "compatibility of the six comparison prisms on every shared lower face"
+      ],
+      "smallest_bounded_checkpoint_gap": "construct a literal compatibility homotopy from the five-stage nonradial Q(p01,block1) disk, including its [1367] detour, to Q(p12,block1); H0 additionally requires its certified outer cap. The new four-patch radial copy preserves signs and block-one circuits but is exactly nonrelative on its second p01 stage"
+    },
+    "acceptance_test": "construct the six comparison incidences and one regular relative 3-cell whose integral boundary is exactly (-1,1,1,1,1,1,1), with no untagged frontier face"
+  },
+  "global_follow_on": {
+    "statement": "Completing the row-2599 object is a pilot and a necessary adversarial test, not the full diagonal-three pair proof. Compatible objects for every required parent source orbit, followed by the global profile-triple middle-rank replay, remain necessary.",
+    "next_rank_gate": "For every admissible membership-profile triple, verify rank_F2(N)+rank_F2(M)=dim(C1); the certified closure poset then supplies the integral signed lift and MN=0."
+  },
+  "resumption": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
+    "expected_terminal_status": "OPEN row2599_compactified_labelled_order2_v1 coverage_certified_global_cell_universe",
+    "next_construction_target": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactified_labelled_order2.npz",
+    "smallest_next_mathematical_task": "Construct compatible exact subdivisions of the two surviving four-dimensional supports (3,1,15) and (3,3,7), quotienting monomial multiples and inheriting the completed support edges and diagonal two-face before any higher-dimensional promotion.",
+    "dependency_preflight_command": "python -m pip install --target /tmp/diag3_sympy_1_13_3 sympy==1.13.3 && PYTHONPATH=/tmp/diag3_sympy_1_13_3 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_active_sector.py",
+    "local_gap_replay_commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_H1_RADIAL_GAP.py"
+    ],
+    "upstream_replay_commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_candidate_factors.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_inventory.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_seeat_upper_bound.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_verify_row2599_line.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_verify_row2599_disk.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_verify_row2599_node.py"
+    ]
+  }
+}

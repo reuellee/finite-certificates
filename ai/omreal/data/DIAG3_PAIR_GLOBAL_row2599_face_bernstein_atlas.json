@@ -1,0 +1,72 @@
+{
+  "format": "diag3-pair-global-row2599-face-bernstein-v1",
+  "parent_index": 2599,
+  "compactification_model": "(Delta^3)^3",
+  "candidate_count": 17824,
+  "face_count": 3375,
+  "infinity_face_count": 2863,
+  "factor_face_pair_count": 60156000,
+  "state_counts": {
+    "zero": 34437486,
+    "definite": 8110206,
+    "mixed": 17608308
+  },
+  "dimension_histogram": {
+    "0": {"faces": 64, "zero": 1101856, "definite": 38880, "mixed": 0},
+    "1": {"faces": 288, "zero": 4678345, "definite": 387696, "mixed": 67271},
+    "2": {"faces": 624, "zero": 9026928, "definite": 1415124, "mixed": 680124},
+    "3": {"faces": 840, "zero": 9928451, "definite": 2455804, "mixed": 2587905},
+    "4": {"faces": 768, "zero": 6560733, "definite": 2284886, "mixed": 4843213},
+    "5": {"faces": 492, "zero": 2556021, "definite": 1172842, "mixed": 5040545},
+    "6": {"faces": 220, "zero": 537631, "definite": 314184, "mixed": 3069465},
+    "7": {"faces": 66, "zero": 47521, "definite": 38797, "mixed": 1090066},
+    "8": {"faces": 12, "zero": 0, "definite": 1993, "mixed": 211895},
+    "9": {"faces": 1, "zero": 0, "definite": 0, "mixed": 17824}
+  },
+  "active_factor_range_per_face": [0, 17824],
+  "zero_factor_range_per_face": [0, 17824],
+  "definite_factor_range_per_face": [0, 6470],
+  "unique_signed_factor_face_profiles": 17824,
+  "maximum_signed_profile_multiplicity": 1,
+  "unique_active_factor_sets_on_faces": 3240,
+  "factors_active_on_no_proper_face": 0,
+  "multidegree_histogram": {
+    "0,0,2": 4,
+    "0,1,1": 44,
+    "0,1,2": 132,
+    "0,2,0": 4,
+    "0,2,1": 114,
+    "0,2,2": 258,
+    "1,0,1": 52,
+    "1,0,2": 124,
+    "1,1,0": 38,
+    "1,1,1": 1248,
+    "1,1,2": 2046,
+    "1,2,0": 120,
+    "1,2,1": 2016,
+    "1,2,2": 2380,
+    "2,0,0": 4,
+    "2,0,1": 126,
+    "2,0,2": 246,
+    "2,1,0": 120,
+    "2,1,1": 2016,
+    "2,1,2": 2380,
+    "2,2,0": 270,
+    "2,2,1": 2408,
+    "2,2,2": 1674
+  },
+  "face_state_stream_sha256": "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b",
+  "source_sha256": {
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc"
+  },
+  "state_semantics": {
+    "zero": "no homogenized monomial survives the relative face; the factor vanishes identically there",
+    "definite": "all surviving Bernstein coefficients have one sign; the factor wall misses the relative face",
+    "mixed": "both signs survive; exact subdivision or a stronger positivity certificate is still required"
+  },
+  "eliminated_factor_face_pairs": 42547692,
+  "eliminated_fraction": "42547692/60156000",
+  "scope": "exact compactification-face pruning for the regular-cell generator; no mixed face restriction is asserted to contain a wall and no global master cell is generated",
+  "semantic_sha256": "1bd501a4a2b08eebd55d39c078fed07c526308a53bbefb21823531843ca0da8b"
+}

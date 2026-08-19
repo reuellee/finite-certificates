@@ -1,0 +1,61 @@
+{
+  "canonical_row": [5563, 4373, 23221],
+  "decision": {
+    "accepted": false,
+    "comparison": "slice_to_fullspace",
+    "reason": "the pinned fiber determinant is not a full-space coordinate-height critical system",
+    "status": "FAIL_CLOSED"
+  },
+  "existing_slice": {
+    "fixed_base_coordinates": 5,
+    "geometric_dimension": 1,
+    "geometric_equations": 4,
+    "geometric_variables": 5,
+    "msolve_equations": 7,
+    "msolve_inverse_variables": ["sat", "denominator_saturation"],
+    "msolve_variables": 7,
+    "ramification_minors": 1
+  },
+  "full_concurrence_chart": {
+    "all_six_base_height_tests": 756,
+    "coordinate_height_kernel_columns": 9,
+    "coordinate_height_rank_minors": 126,
+    "equations": 4,
+    "expected_dimension": 6,
+    "jacobian_columns": 10,
+    "jacobian_maximal_minors": 210,
+    "variables": 10
+  },
+  "full_factor_chart": {
+    "coordinate_height_kernel_columns": 8,
+    "coordinate_height_rank_minors": 56,
+    "equations": 3,
+    "expected_dimension": 6,
+    "variables": 9
+  },
+  "missing_acceptance_obligations": [
+    "materialize one complete full-space critical system for a fixed height",
+    "saturate parent, chart, interpolation, concurrence-rank, occurrence-rank, projective-infinity, and extra-factor frontiers",
+    "prove the saturated critical ideal complete and zero-dimensional",
+    "classify every real critical point by parent chamber",
+    "attach every in-chamber critical point to a parent boundary or chart infinity",
+    "close the complete S8 orbit of the canonical row"
+  ],
+  "named_presentation": [5563, 16134, 19284],
+  "schema": "diag3-triple-fullspace-feasibility-gate-v1",
+  "semantic_sha256": "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace",
+  "source_sha256": {
+    "DIAG3_CONCURRENCE_NORMAL_FORM.md": "baefb5b97bee299e27ac315c5f453530a15563554c0c9cb01fa94a6baec2f86a",
+    "DIAG3_TRIPLE_CONCURRENCE_LOCAL_FOLD_CELL.md": "ca0117d4e1864bce25c33d88bd210ceef7bc93c77be4b954a9dd8249e4836a01",
+    "DIAG3_concurrence_ramification_complete.msolve": "a13bd2e95337ff571ff577ec83ed1515c57764e579e28ef61a10bfce3b94f09d",
+    "verify_diag3_concurrence_normal_form.py": "7de860984de6e6df8752029676e6069862cc975b4dd8af82b351a5add9a790e7",
+    "verify_diag3_triple_concurrence_local_fold_cell.py": "80239eaeda1497d5c57598ceb28c8ad9ee2cf1d92c3a17255d4ff234f45a3ef6"
+  },
+  "theorem_accounting": {
+    "comparison_incidences_after": "4/6",
+    "comparison_incidences_before": "4/6",
+    "final_unresolved_triple_orbits": 1162302,
+    "score_after": "2/9",
+    "score_before": "2/9"
+  }
+}
