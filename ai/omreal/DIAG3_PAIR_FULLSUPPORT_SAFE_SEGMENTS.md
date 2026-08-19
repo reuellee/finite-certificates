@@ -26,6 +26,10 @@ The 6,980-factor residue has one constant sign on all 178 stored interior realiz
 
 A first exact positive-cone search using signed parent brackets, including positive monomial multipliers within the residual multidegree envelope, did not certify the initial residue cases. Thus the next target should be a stronger algebraic sign-implication certificate or a direct exact feasibility attack on symmetry representatives of the 6,980-factor residue, not additional point-bank path search.
 
+## Merge-gate review
+
+An independent replay rechecked the candidate-factor determinant certificate, compactification atlas, full face-Bernstein atlas, the new 105-segment certificate, and both diagonal-three open-object ledgers. The open ledgers still report the missing coverage-certified global master closure complex and keep the nine-diagonal score at `2/9`. The parent-face replay had already passed before its permanent Drive checkpoint was published; a fresh combined replay exceeded the interactive execution window, so absence of a GitHub status is not described as a successful CI run.
+
 ## Accounting
 
 - full-support candidate factors: 17,824
