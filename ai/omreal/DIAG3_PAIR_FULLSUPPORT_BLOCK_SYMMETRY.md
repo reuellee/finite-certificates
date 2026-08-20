@@ -36,9 +36,22 @@ The previous 6,980-factor residue was not invariant under moving-column permutat
 
 The surviving 994 factors comprise only multiplicity-1 and multiplicity-15 global factors. All multiplicity-2 and multiplicity-65 candidate factors are now certified interior-nonempty.
 
+Intersecting the 994-factor residue with full `S3` zero-set orbits reduces the next feasibility workload to **264 classes**. Their residue-class size histogram is
+
+```text
+size 1: 40
+size 2: 20
+size 3: 101
+size 4: 2
+size 5: 3
+size 6: 98
+```
+
+The non-divisor class sizes occur because some members of a full polynomial `S3` orbit are outside the row-2599 candidate set; this quotient is a workload partition, not a claim that the candidate set itself is an `S3`-set.
+
 ## Next target
 
-The next exact target is the 994-factor residue. The efficient route is to quotient it by the same exact `S3` action, attack one representative per surviving zero-set orbit with exact feasibility/sign-implication methods, and transport every result back across its orbit. Point-bank sampling alone should not be used to classify any residue factor as empty.
+Attack one representative from each of the **264 surviving zero-set classes** with exact feasibility/sign-implication methods. Any representative proved interior-nonempty can be transported across every residue member of its full parent-symmetry orbit. Point-bank sampling alone must not classify a residue factor as empty.
 
 ## Honest ledger
 
