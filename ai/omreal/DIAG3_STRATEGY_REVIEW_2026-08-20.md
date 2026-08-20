@@ -1,49 +1,94 @@
-# Diagonal-three strategy review — 2026-08-20
+# Diagonal-three strategy review — corrected 2026-08-20 checkpoint
 
 ## Current certified frontier
 
-The proof ledger remains 2/9. For diagonal three, the full-support residual-factor universe has 17,824 candidate zero sets. Exact parent-safe segment witnesses prove 10,844 of them meet the strict row-2599 parent interior. Exact `S3` moving-column symmetry transports those witnesses to 5,986 more factors, leaving 994 unresolved factors in 264 intersections with full `S3` zero-set orbits.
+The proof ledger remains 2/9. The strict row-2599 full-support residual-factor
+universe contains 17,824 candidates. The exact feasibility ledger is now
 
-No unresolved factor is classified empty.
+```text
+interior-nonempty by parent-safe segments    10,844
+empty by exact parent-positive identities     1,177
+unresolved                                    5,803
+```
 
-## Strategy review
+No unresolved factor is classified empty or nonempty.
 
-The research program should distinguish two obligations that were previously easy to conflate:
+## Adversarial correction
 
-1. **wall feasibility:** determine which residual zero sets genuinely meet the strict parent cell;
-2. **global topology:** construct enough coverage-certified nonrelative incidence data to prove the middle relative complex exact.
+The apparent reduction from 6,980 segment-open factors to a 994-factor `S3`
+residue was invalid. Lex-leading-positive primitive normalization erased the
+difference between a parent polynomial and its negative. The corrected
+directed-primitive audit proves only unsigned divisor symmetry. Every
+nonidentity moving-column permutation flips 19–27 of the 63 distinct signed
+parent inequalities, and every one of the 525 nonidentity transports of the
+105 witness segments leaves the signed row-2599 cell.
 
-The recent reductions make finishing wall feasibility cheap enough to remain the immediate target. It would be premature, however, to infer that resolving all 994 factors proves diagonal three. Even a complete wall census leaves chamber connectivity, simultaneous intersections, closure incidences, receiver labels, and the middle-rank identity.
+Accordingly:
 
-### Best immediate target
+- the claimed 5,986 symmetry-transported wall crossings are withdrawn;
+- there is no 994-factor proof frontier and no valid 264-class quotient;
+- the last valid nonemptiness theorem remains the 10,844-wall segment
+  certificate; and
+- moving-column permutations may be used only conditionally on explicit
+  sign-preserving polynomial identities.
 
-Attack the 264 surviving symmetry workloads, but do it in a fail-fast hierarchy rather than launching 264 independent CADs:
+This correction is proof-progress: it removes a false route before it can
+contaminate the 9DVL ledger or a global closure complex.
 
-1. canonicalize the 994 residual polynomials by multidegree, support, coefficient pattern, stabilizer, and global multiplicity;
-2. test low-degree exact sign implications first, including products/sums of target-signed parent brackets and coordinate-positive multipliers;
-3. for classes not decided algebraically, search exact rational parent-interior witnesses and one-parameter parent-safe curves for opposite residual signs;
-4. escalate only the stubborn representatives to exact semialgebraic feasibility/CAD;
-5. transport every proved nonemptiness or sign-definiteness result through the exact parent symmetry and keep undecided classes explicit.
+## New exact positive-identity theorem
 
-This ordering is objectively preferable because cheap certificates can eliminate whole classes, every successful result transports, and expensive quantifier elimination is reserved for the irreducible residue.
+The direct screen represents 965 base-open residual factors as strict sums of
+products of target-signed parent brackets. A fixed bank of short
+coordinate-shifted and parent-monomial identities, together with only those
+algebraic transports whose summands retain a common sign, expands the exact
+fixed-sign set to 1,177 factors.
 
-### Strategic pivot criterion
+Floating-point linear programming is discovery-only. Every accepted identity
+is expanded over the integers and compared literally with the target
+residual polynomial. The fixed-sign set is also checked to be disjoint from
+all exact segment-crossed factors.
 
-Do **not** spend indefinitely trying to classify every last wall. After the cheap algebraic and exact-curve passes, compare the remaining wall classes with the topology obligation. If a small stubborn residue remains but its zero sets are irrelevant to the pair differential or can be absorbed by a coverage theorem, pivot directly to the nonrelative master closure complex. Wall classification is a means, not the theorem.
+## Best next wall-feasibility target
 
-### Global target after feasibility
+Run one bounded global extension of the positive cone on the 5,803-factor
+residue:
 
-The proof-bearing object should be a coverage-certified relative complex, not a sampled chamber atlas. Required data are:
+1. allow one positive chart-coordinate multiplier on a parent-bracket
+   product;
+2. accept only unit-coefficient identities that replay over the integers;
+3. pin the exact factor-ID and residue digests;
+4. stop after that degree-one multiplier layer rather than launching
+   unbounded cone growth or 5,803 independent CAD jobs.
 
-- nonrelative parent-interior cells and codimension-one incidences;
-- simultaneous residual-wall intersections where they alter incidence;
-- exact parent-boundary/infinity frontier tags, with internal boundary subdivisions quotiented away;
-- receiver/bad-signature labels needed by the pair differential;
-- independent coverage and `d^2=0` replay;
-- exact middle-rank/kernel calculation, preferably mod two first because that suffices for the rational vanishing target already recorded in the status ledger.
+This is the best immediate wall target because the certificate language has
+already succeeded on 1,177 factors, the extension is finite and fail-closed,
+and it tests whether the remaining residue yields to the same structural
+idea at modest cost.
 
-The 178-chart point bank remains useful for witness discovery but must not be treated as global chamber coverage.
+## Pivot criterion and theorem-level target
+
+Wall classification is not diagonal three. After the bounded multiplier
+layer, compare its yield with the global topology obligation. If a large
+residue remains, stop widening the cone and move to the coverage-certified
+nonrelative master closure complex.
+
+That proof-bearing object must contain:
+
+- exact parent-interior cells and codimension-one incidences;
+- simultaneous residual-wall intersections where they change incidence;
+- exact parent-boundary/infinity tags, quotienting internal boundary
+  subdivisions;
+- receiver and bad-signature labels for the pair differential;
+- independent coverage and `d^2=0` replay; and
+- the exact middle-rank calculation, preferably mod two first.
+
+The 178-chart point bank remains witness discovery data, not global chamber
+coverage. The corrected signed-parent audit must be a gate in every future
+transport or symmetry reduction.
 
 ## Research decision
 
-Continue the 264-class feasibility attack now. In parallel, design the master-complex schema so that the feasibility work records exactly the data the topology proof will consume. Reassess after the first exact class census rather than assuming complete CAD of every survivor is necessary.
+Preserve the corrected 10,844/1,177/5,803 ledger, execute only the bounded
+degree-one positive-multiplier screen next, and then reassess against the
+master-complex obligation. Diagonal three remains open and the honest score
+is **2/9**.

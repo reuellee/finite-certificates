@@ -24,7 +24,12 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_fullsupport_safe_se
 
 The 6,980-factor residue has one constant sign on all 178 stored interior realizations. A deterministic rational interior walk added 2,322 additional exact row-2599 points by single-coordinate parent-safe steps and found no new sign crossing among those 6,980 factors. This is evidence only, not an infeasibility proof, and is deliberately excluded from the theorem certificate.
 
-A first exact positive-cone search using signed parent brackets, including positive monomial multipliers within the residual multidegree envelope, did not certify the initial residue cases. Thus the next target should be a stronger algebraic sign-implication certificate or a direct exact feasibility attack on symmetry representatives of the 6,980-factor residue, not additional point-bank path search.
+A subsequent global exact positive-cone screen certifies 1,177 of the 6,980
+segment-open factors as fixed-sign and therefore empty in the strict parent
+cell. A proposed moving-column symmetry quotient was rejected because it does
+not preserve the signed row-2599 cell. The corrected follow-up theorem and
+no-go are recorded in `DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md` and
+`DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md`.
 
 ## Merge-gate review
 
@@ -34,7 +39,9 @@ An independent replay rechecked the candidate-factor determinant certificate, co
 
 - full-support candidate factors: 17,824
 - exact interior-nonempty factors: 10,844
-- unresolved factors: 6,980
+- unresolved factors at this certificate stage: 6,980
+- subsequent exact fixed-sign empty factors: 1,177
+- current unresolved factors after the sign theorem: 5,803
 - relative-boundary mixed restrictions already removed from the chain-generator obligation: 52,394
 - 9DVL score: **2/9**
 
