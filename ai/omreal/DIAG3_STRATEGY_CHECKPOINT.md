@@ -415,6 +415,16 @@ completes the support one-skeleton and sole two-face.  The next missing block
 is the paired four-dimensional subdivision, followed by regular-cell coverage
 and strict closure.  See `DIAG3_PAIR_GLOBAL_PARENT_FACE_GATE.md`.
 
+The full-support feasibility layer now has a corrected exact ledger:
+10,844 factors have parent-safe interior crossings, 1,177 have fixed-sign
+empty-zero-set identities in the target-signed parent brackets, and 5,803
+remain unresolved. A proposed moving-column `S3` reduction was rejected by
+directed-sign replay: every nonidentity permutation flips 19--27 primitive
+signed parent inequalities and every one of the 525 transported nonidentity
+witness segments leaves the parent cell. There is therefore no valid
+994-factor symmetry residue. See `DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md`
+and `DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md`.
+
 Discovery tools may use modular fingerprints, SAT, and sampled charts, but a
 theorem entry must end in exact positive identities or a complete finite
 relative boundary complex.  CAS jobs should be restarted only after a

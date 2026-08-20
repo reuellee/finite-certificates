@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -1165,9 +1165,23 @@ escape or higher-wall coherence.  See
    irreducible projection factors already in the first resultant layer, so a
    projection recursion restricted to the existing bracket/residual catalog
    cannot close without adding new factors.
+   The full-support feasibility audit now adds an exact complementary
+   theorem.  Positive identities in the target-signed parent brackets prove
+   that 1,177 of the 6,980 segment-open candidates have empty zero sets in
+   the strict row-2599 parent cell, leaving 5,803 explicit unknowns.  The
+   direct parent-product subfamily contains 965 factors; floating-point cone
+   search is discovery-only and every accepted identity is replayed by
+   literal integer polynomial equality.  An adversarial directed-sign audit
+   also corrects a false shortcut: moving-column permutations preserve only
+   the unsigned parent-divisor arrangement, flip 19--27 of the 63 distinct
+   signed parent inequalities, and send all 525 nonidentity transports of
+   the 105 safe segments outside the row-2599 cell.  Hence there is no valid
+   994-factor symmetry residue or 264-class quotient.
    See `DIAG9_SIGN_GEODESY_AUDIT.md`,
    `DIAG9_GRAPH_GLOBAL_FACTOR_CENSUS.md` and
-   `DIAG9_GRAPH_ROW2599_FACTOR_STATES.md`.
+   `DIAG9_GRAPH_ROW2599_FACTOR_STATES.md` and
+   `DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md` and
+   `DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md`.
    There is now a family-adaptive proof-level reduction before any roadmap is
    built.  A factor is active for a signature exactly when one of its labeled
    wall circuits is aligned with that signature.  Imposing the consistent
@@ -1562,6 +1576,12 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG9_GRAPH_ROW2599_FACTOR_STATES.md`, its exact replay, and NPZ: 178
   distinct exact residual sign states and the 10,844 varying-factor lower
   bound inside parent 2599.
+- `DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md` and its exact verifier: the
+  directed-sign correction proving that unsigned moving-column symmetry does
+  not preserve the row-2599 parent cell, including the 525-segment no-go.
+- `DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md` and its exact verifier:
+  1,177 fixed-sign empty-zero-set certificates, leaving 5,803 full-support
+  factors unresolved without a symmetry quotient.
 - `DIAG9_SIGN_GEODESY_AUDIT.md` and its exact verifier: factor-isometry of
   the three certified local roadmaps, exact factor-halfspace closure of all
   39,366 support traces on the 178 charts, and the 142-new-resultant no-go to
