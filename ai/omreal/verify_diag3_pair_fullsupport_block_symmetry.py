@@ -2,13 +2,14 @@
 """Exact S3 moving-column symmetry closure of row-2599 full-support walls.
 
 The preceding 105-segment certificate proves 10,844 candidate residual walls
-meet the strict parent interior.  This checker proves that the strict parent
+meet the strict parent interior. This checker proves that the strict parent
 cell is invariant under every permutation of the three moving columns and
 transports those certified zero sets through that exact S3 action.
 
 No factor in the final residue is called empty.
 """
 from __future__ import annotations
+from collections import Counter
 from itertools import permutations
 import hashlib, json
 from pathlib import Path
@@ -24,10 +25,10 @@ EXPECTED_BASE_OPEN_SHA256='72de0ff0ba439e00a54e8fdb16a1505d4d7a8fbfaf7f42c00030f
 EXPECTED_CLOSED=16830
 EXPECTED_RESIDUE=994
 EXPECTED_RESIDUE_SHA256='c330ba558fedd9b0502c8e96b35cecf179e2ec5b2eb5324893a374c4f09039cf'
+EXPECTED_RESIDUE_CLASSES=264
+EXPECTED_CLASS_SIZE_HIST={1:40,2:20,3:101,4:2,5:3,6:98}
 
-def primitive_key(poly):
- return tuple(sorted(global_factors.primitive(poly).items()))
-
+def primitive_key(poly): return tuple(sorted(global_factors.primitive(poly).items()))
 def transform(poly,perm):
  out={}
  for monomial,coefficient in poly.items():
@@ -36,12 +37,8 @@ def transform(poly,perm):
    for row in range(3): target[3*perm[block]+row]=monomial[3*block+row]
   target=tuple(target); out[target]=out.get(target,0)+coefficient
  return global_factors.primitive(out)
-
 def base_open_ids(points,polynomials,candidates):
- # Reconstruct the exact theorem partition from the preceding certificate.
- # Float signs only propose an edge; each proposed crossing is rechecked exactly.
- xs=np.asarray([[float(v) for v in point] for point in points])
- values=base.factor_value_table(xs); open_ids=[]
+ xs=np.asarray([[float(v) for v in point] for point in points]); values=base.factor_value_table(xs); open_ids=[]
  import verify_diag2_canonical_robust_edges as evaluator
  for factor_id in candidates:
   witness=False
@@ -53,14 +50,11 @@ def base_open_ids(points,polynomials,candidates):
  digest=hashlib.sha256(','.join(map(str,open_ids)).encode('ascii')).hexdigest()
  if len(open_ids)!=EXPECTED_BASE_OPEN or digest!=EXPECTED_BASE_OPEN_SHA256: raise AssertionError('base 105-segment partition changed')
  return tuple(open_ids)
-
 def main():
- # First replay the load-bearing exact segment theorem, including all 70 parent inequalities.
  base.main()
  records=[json.loads(line) for line in (HERE/'certs_4_8.jsonl').read_text().splitlines() if line]
- parents,_=gate.parent_polynomials(records[2599])
+ parents,_=gate.parent_polynomials(records[2599]); perms=tuple(permutations(range(3)))
  signed_parent={primitive_key({m:target*c for m,c in poly.items()}) for _label,target,poly,_terms in parents}
- perms=tuple(permutations(range(3)))
  if len(signed_parent)!=63: raise AssertionError('signed parent polynomial census changed')
  for perm in perms:
   transported={primitive_key(transform({m:target*c for m,c in poly.items()},perm)) for _label,target,poly,_terms in parents}
@@ -68,20 +62,29 @@ def main():
  candidates=gate.parse_candidates(); candidate_set=set(candidates)
  _occ,_map,polynomials=labeled.factor_polynomials(); factor_index={primitive_key(poly):i for i,poly in enumerate(polynomials)}
  if len(factor_index)!=26740: raise AssertionError('factor zero-set keys are not unique')
+ def transport_id(factor_id,perm): return factor_index[primitive_key(transform(polynomials[factor_id],perm))]
  with np.load(gate.POINT_BANK,allow_pickle=False) as source: matrices=np.asarray(source['chart_matrix'],dtype=np.int64)
  points=tuple(gate.normalized_values(matrix.tolist()) for matrix in matrices)
- open_ids=set(base_open_ids(points,polynomials,candidates)); crossed=candidate_set-open_ids
- closure=set()
+ open_ids=set(base_open_ids(points,polynomials,candidates)); crossed=candidate_set-open_ids; closure=set()
  for factor_id in crossed:
   for perm in perms:
-   transported=factor_index[primitive_key(transform(polynomials[factor_id],perm))]
+   transported=transport_id(factor_id,perm)
    if transported in candidate_set: closure.add(transported)
- residue=tuple(sorted(candidate_set-closure)); digest=hashlib.sha256(','.join(map(str,residue)).encode('ascii')).hexdigest()
+ residue=tuple(sorted(candidate_set-closure)); residue_set=set(residue); digest=hashlib.sha256(','.join(map(str,residue)).encode('ascii')).hexdigest()
  if len(closure)!=EXPECTED_CLOSED or len(residue)!=EXPECTED_RESIDUE or digest!=EXPECTED_RESIDUE_SHA256: raise AssertionError((len(closure),len(residue),digest))
+ # Quotient the unresolved workload by equality of full S3 zero-set orbits.
+ seen=set(); class_sizes=[]
+ for factor_id in residue:
+  if factor_id in seen: continue
+  full_orbit={transport_id(factor_id,perm) for perm in perms}; residue_class=full_orbit & residue_set
+  seen.update(residue_class); class_sizes.append(len(residue_class))
+ histogram=dict(sorted(Counter(class_sizes).items()))
+ if len(seen)!=EXPECTED_RESIDUE or len(class_sizes)!=EXPECTED_RESIDUE_CLASSES or histogram!=EXPECTED_CLASS_SIZE_HIST: raise AssertionError((len(seen),len(class_sizes),histogram))
  print('PASS exact S3 invariance of the strict row-2599 parent cell')
  print('PASS',EXPECTED_CLOSED,'of 17824 candidate residual walls certified interior-nonempty')
  print('NEW',EXPECTED_CLOSED-(len(candidates)-EXPECTED_BASE_OPEN),'walls obtained by symmetry transport')
  print('OPEN',EXPECTED_RESIDUE,'candidate factors retained without emptiness/nonemptiness claim')
+ print('OPEN_CLASSES',EXPECTED_RESIDUE_CLASSES,'S3 zero-set classes',histogram)
  print('OPEN_SHA256',digest)
  print('SCOPE exact nonemptiness transport only; diagonal three remains open')
 if __name__=='__main__': main()
