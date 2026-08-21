@@ -1,6 +1,9 @@
 {
   "format": "diag3-completion-open-object-v1",
   "status": "OPEN",
+  "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+  "current_decision_ledger_git_blob": "547c532ed172aa53197d7288eb09c73929f094cd",
+  "current_state_note": "Historical proof object. Current target selection and post-PR19 full-support accounting live in current_decision_ledger.",
   "ledger_score": "2/9",
   "authoritative_remote_base": {
     "repository": "reuellee/finite-certificates",
@@ -124,16 +127,8 @@
     },
     "fullspace_feasibility_gate": {
       "status": "FAIL_CLOSED",
-      "canonical_row": [
-        5563,
-        4373,
-        23221
-      ],
-      "named_presentation": [
-        5563,
-        16134,
-        19284
-      ],
+      "canonical_row": [5563, 4373, 23221],
+      "named_presentation": [5563, 16134, 19284],
       "manifest": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
       "verifier": "ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py",
       "semantic_digest": "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace",
@@ -143,16 +138,8 @@
     },
     "fullspace_critical_h1_gate": {
       "status": "FAIL_CLOSED",
-      "canonical_row": [
-        5563,
-        4373,
-        23221
-      ],
-      "named_presentation": [
-        5563,
-        16134,
-        19284
-      ],
+      "canonical_row": [5563, 4373, 23221],
+      "named_presentation": [5563, 16134, 19284],
       "height_variable": "b",
       "system": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
       "system_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
@@ -162,10 +149,7 @@
       "formal_equation_count": 59,
       "nonzero_height_minor_count": 52,
       "nonzero_height_minor_terms": 14681,
-      "raw_coordinate_boundary_component_dimensions": [
-        4,
-        4
-      ],
+      "raw_coordinate_boundary_component_dimensions": [4, 4],
       "decision": "the raw critical ideal is not zero-dimensional; every saturation must retain a verified attachment for each removed boundary component"
     },
     "quadratic_cover_direct_elimination_no_go": {
@@ -173,10 +157,7 @@
       "verifier": "ai/omreal/verify_diag3_triple_quadratic_cover_no_go.py",
       "note": "ai/omreal/DIAG3_TRIPLE_QUADRATIC_COVER_NO_GO.md",
       "direct_resultant_count": 7,
-      "primitive_resultant_term_range": [
-        5320,
-        59449
-      ],
+      "primitive_resultant_term_range": [5320, 59449],
       "p_l_intersection_terms": 105,
       "reduced_discriminant_terms": 315,
       "parent_representative_sign_census": {
@@ -192,10 +173,7 @@
       "verifier": "ai/omreal/verify_diag3_triple_factored_koszul_gate.py",
       "note": "ai/omreal/DIAG3_TRIPLE_FACTORED_KOSZUL_GATE.md",
       "exact_directional_minor_count": 10,
-      "primitive_minor_term_range": [
-        18459,
-        37222
-      ],
+      "primitive_minor_term_range": [18459, 37222],
       "degree_14_macaulay": {
         "target_count": 88,
         "F2_rank": 5202,
@@ -246,35 +224,26 @@
       "certified_parent_infinity_cells": 0,
       "row2599_candidate_factor_input_count": 17824,
       "row2599_candidate_factor_artifact_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
-      "row2599_compactification_model": "(Delta^3)^3",
-      "row2599_compactification_chart_count": 64,
-      "row2599_compactification_semantic_digest": "3ea49efc628a88fda99e4070cbf43317b78cc45813beaba753c4404e961fa769",
-      "row2599_compactification_support_face_count": 3375,
-      "row2599_bernstein_factor_face_pair_count": 60156000,
-      "row2599_bernstein_eliminated_pair_count": 42547692,
-      "row2599_bernstein_mixed_pair_count": 17608308,
-      "row2599_bernstein_face_state_stream_sha256": "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b",
-      "row2599_parent_face_excluded_support_count": 3364,
-      "row2599_parent_face_nonexcluded_support_count": 11,
-      "row2599_parent_face_remaining_mixed_count": 70218,
-      "row2599_parent_face_state_stream_sha256": "e4f15408f786c26c34b4d721d7973aedc6e206a7382e5a92ce839f8c732be9f5",
-      "row2599_support_one_skeleton": {
-        "vertices": 3,
-        "edges": 2,
-        "active_residual_walls": 0
-      },
-      "row2599_support_two_face_cellulation": {
-        "vertices": 4,
-        "edges": 5,
-        "faces": 2,
-        "dividing_wall": "a=h"
-      },
+    "row2599_compactification_model": "(Delta^3)^3",
+    "row2599_compactification_chart_count": 64,
+    "row2599_compactification_semantic_digest": "3ea49efc628a88fda99e4070cbf43317b78cc45813beaba753c4404e961fa769",
+    "row2599_compactification_support_face_count": 3375,
+    "row2599_bernstein_factor_face_pair_count": 60156000,
+    "row2599_bernstein_eliminated_pair_count": 42547692,
+    "row2599_bernstein_mixed_pair_count": 17608308,
+    "row2599_bernstein_face_state_stream_sha256": "292b16a874914134657a6d09a26d5bdde239d2e6989fe7c23234b90ac698f82b",
+    "row2599_parent_face_excluded_support_count": 3364,
+    "row2599_parent_face_nonexcluded_support_count": 11,
+    "row2599_parent_face_remaining_mixed_count": 70218,
+    "row2599_parent_face_state_stream_sha256": "e4f15408f786c26c34b4d721d7973aedc6e206a7382e5a92ce839f8c732be9f5",
+    "row2599_support_one_skeleton": {"vertices": 3, "edges": 2, "active_residual_walls": 0},
+    "row2599_support_two_face_cellulation": {"vertices": 4, "edges": 5, "faces": 2, "dividing_wall": "a=h"},
       "row2599_local_relative_pair_wall_collars": 3,
       "row2599_local_complete_comparison_incidences": 4
     },
     "smallest_open_object": "row2599_compactified_labelled_order2_v1",
     "first_missing_block": "coverage_certified_global_cell_universe",
-    "smallest_open_lemma": "Construct compatible exact subdivisions of the surviving four-dimensional supports (3,1,15) and (3,3,7), with 3,996 and 4,021 mixed restrictions after the parent-face gate reduced the compactification to eleven nonempty supports and completed dimensions zero through two; then continue through the higher supports and independently prove coverage, regularity, strict closure, and the parent-frontier subcomplex before computing im(d3)=ker(d2).",
+  "smallest_open_lemma": "Construct compatible exact subdivisions of the surviving four-dimensional supports (3,1,15) and (3,3,7), with 3,996 and 4,021 mixed restrictions after the parent-face gate reduced the compactification to eleven nonempty supports and completed dimensions zero through two; then continue through the higher supports and independently prove coverage, regularity, strict closure, and the parent-frontier subcomplex before computing im(d3)=ker(d2).",
     "known_obstruction": "The exact row-2599 Cech cocycle evaluates to one on the ordered-root loop, so every construction using only singleton-block ordered-root carrier cells fails over Z, Q and F2.",
     "acceptance_tests": [
       "the compactified labelled regular cell universe covers the entire normalized parent space with zero unexplained cases",
@@ -287,10 +256,10 @@
     "replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_master_quotient.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
-      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_candidate_factors.py",
-      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
-      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
-      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
+    "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_candidate_factors.py",
+    "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
+    "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
+    "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_joined_flow_triangle.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_p01_tangent_collar.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_TANGENT_COLLAR.py",
@@ -309,8 +278,5 @@
     "verdict": "PASS_FOR_STABILIZED_POSITIVE_LAYERS_ONLY",
     "completion_verdict": "DIAGONAL_THREE_REMAINS_OPEN_AT_2_OF_9"
   },
-  "next_command": "PYTHONPATH=/tmp/diag3-pydeps PYTHONDONTWRITEBYTECODE=1 python run_all.py --fast",
-  "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "547c532ed172aa53197d7288eb09c73929f094cd",
-  "current_state_note": "Historical proof object. Current target selection and post-PR19 full-support accounting live in current_decision_ledger."
+  "next_command": "PYTHONPATH=/tmp/diag3-pydeps PYTHONDONTWRITEBYTECODE=1 python run_all.py --fast"
 }
