@@ -175,10 +175,10 @@ def main() -> None:
     )
     assert ledger["selected_target"] == "fullsupport_master_closure_compiler"
 
-    digest = sha256(LEDGER_PATH)
+    digest = git_blob_sha1(LEDGER_PATH)
     for historical in (completion, closure):
         assert historical["current_decision_ledger"] == POINTER
-        assert historical["current_decision_ledger_sha256"] == digest
+        assert historical["current_decision_ledger_git_blob"] == digest
 
     assert ledger["process_gates"] == {
         "canonical_state_first": True,
@@ -199,7 +199,7 @@ def main() -> None:
         "SELECTED fullsupport_master_closure_compiler score",
         selected[0]["priority_score"],
     )
-    print("LEDGER_SHA256", digest)
+    print("LEDGER_GIT_BLOB", digest)
 
 
 if __name__ == "__main__":
