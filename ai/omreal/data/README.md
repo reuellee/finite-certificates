@@ -484,6 +484,52 @@ python ai/omreal/verify_diag3_pair_master_closure_multibox_canary.py
 
 This is a local gluing-method canary, not global row-2599 coverage.
 
+`DIAG3_PAIR_MASTER_CLOSURE_FIRST_EVENT.json` expands the same exact parent
+plane to the declared 64-box ceiling and crosses the first residual event
+outside the original two-branch disk.  Exact source replay identifies the
+unique new affine occurrence at derived rows `(2,8,22,49)` and proves every
+other residual event factor and all 70 parent brackets nonzero on the domain.
+The 64 boxes comprise 42 no-wall, 20 one-wall and two transverse two-wall
+boxes.  Their 171 boundary words glue to a 399-cell regular-CW atlas whose
+399/1118/720 barycentric complex has zero middle residue for all 512 ordered
+signature-profile triples.  Thirteen hostile mutations are rejected.
+
+```console
+python ai/omreal/build_diag3_pair_master_closure_first_event.py
+python ai/omreal/verify_diag3_pair_master_closure_first_event.py
+```
+
+This proves that the compiler crosses one genuinely new wall without
+projection growth.  It is still a local two-dimensional theorem, not a cover
+of the nine-dimensional row-2599 parent cell.
+
+`DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json` is the complete exact residual
+roadmap on the minimum-Hamming certified parent-safe segment leaving chart 0.
+It proves that all 70 parent brackets remain strict, screens all 17,824
+candidate factors by exact Sturm counts, and orders 1,237 rationally isolated
+sign crossings.  Replaying those flips reconstructs the stored chart-89 factor
+state.  The path has 2,477 regular-CW cells, 1,179 single-occurrence events and
+58 compound events.  It does not by itself claim global parent-cell coverage.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_transition.py
+python ai/omreal/verify_diag3_pair_parent_source_transition.py
+```
+
+`DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json` continues the complete 26,112-tope
+label set across all 1,238 open chambers of that path.  It applies exact
+antipodal simplicial mutations at all 1,179 single-occurrence events and
+re-enumerates the arrangement only after the 58 compound events.  The final
+state equals the independently stored raw chart-89 labels.  The 97,224
+extension signatures give 2,458 path profiles, with feasibility-transition
+census `87208, 9490, 512, 14` for zero through three changes.  This is complete
+one-path label continuation, not global row-2599 coverage.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_labels.py
+python ai/omreal/verify_diag3_pair_parent_source_labels.py
+```
+
 ## Exact global residual-factor census
 
 `DIAG9_GRAPH_global_factor_census.npz` localizes all 84,840 labeled residual

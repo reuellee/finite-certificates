@@ -172,13 +172,64 @@ internal seams retained as ordinary cells.  Ten hostile corruptions are
 rejected.
 
 This completes the bounded gluing-method canary, not global row-2599
-coverage.  The next experiment is a first-new-event expansion in the same
-two-dimensional parent plane with a ceiling of 64 boxes.  It must either glue
-a second exact residual event cluster or preserve the first unclassified box
-or projection-growth frontier; it may not automatically widen into a full
-nine-dimensional decomposition.
+coverage.
+
+## First-new-event stage completed
+
+The declared 64-box experiment has now crossed the first residual event not
+belonging to the original two pinned branches.  Exact dominance over all
+84,840 labelled restrictions proves that derived-row fourset
+`(2,8,22,49)` carries the unique new affine factor on the normalized
+`|q0|,|q1| <= 64*10^12` domain; every other event factor and all 70 parent
+brackets remain nonzero.  The new branch meets the old `q1=0` branch
+transversely.
+
+The atlas has 42 no-wall, 20 one-wall and two transverse two-wall boxes, 171
+atomic boundary words, 133 shared gluings and a 399-cell regular-CW
+refinement.  Six exact chamber witnesses give eight complete signature
+profiles.  All `8^3=512` ordered profile triples have zero middle residue on
+the 399/1118/720 barycentric complex, and thirteen hostile corruptions are
+rejected.
+
+This is the first positive scaling result beyond the original safe disk, but
+it remains local to one two-dimensional plane.  Further enlargement of that
+same plane is now subordinated.  The next proof-bearing experiment must test
+source generalization: a bounded transition from chart zero to a genuinely
+distinct row-2599 parent germ, with exact overlap coverage or a preserved
+first failed source object.  The 178-point assignment is not a parameter-space
+cover.
 
 See `DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md` and
 `verify_diag3_pair_master_closure_node_canary.py`, then
 `DIAG3_PAIR_MASTER_CLOSURE_MULTIBOX_CANARY.md` and
-`verify_diag3_pair_master_closure_multibox_canary.py`.
+`verify_diag3_pair_master_closure_multibox_canary.py`, then
+`DIAG3_PAIR_MASTER_CLOSURE_FIRST_EVENT.md` and
+`verify_diag3_pair_master_closure_first_event.py`.
+
+## Exact parent-source transition completed
+
+The source-generalization experiment now connects chart 0 to distinct chart
+89.  Among the 57 certified parent-safe straight segments leaving chart 0,
+this segment has the minimum exact endpoint factor-state Hamming distance,
+1,197.  All 70 parent brackets remain strict on the closed segment.
+
+Complete exact Sturm screening of the 17,824 candidate residual factors finds
+16,607 root-free restrictions, 1,197 one-root restrictions, and 20 two-root
+restrictions.  The resulting 1,237 root events have pairwise ordered rational
+isolating intervals and are all sign crossings.  Applying their flips exactly
+reconstructs the stored chart-89 factor state.  The induced regular CW path
+has 2,477 cells and 2,476 strict closure pairs, with empty parent infinity.
+
+This is a decisive source-change canary, not global coverage.  The subsequent
+label-continuation certificate now handles all 1,179 single-occurrence events
+by exact antipodal simplicial mutations and all 58 compound events by exact
+post-event arrangement enumeration.  Every one of the 1,238 chambers has
+26,112 labels, the final state equals the stored raw chart-89 tope set, and
+the 97,224 extension signatures induce 2,458 exact path profiles.  The next
+bounded target is a coverage-oriented graph of compatible source transitions
+with genuine parent-infinity attachments.  The honest score remains `2/9`.
+See
+`DIAG3_PAIR_PARENT_SOURCE_TRANSITION.md` and
+`verify_diag3_pair_parent_source_transition.py`, then
+`DIAG3_PAIR_PARENT_SOURCE_LABELS.md` and
+`verify_diag3_pair_parent_source_labels.py`.

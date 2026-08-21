@@ -230,11 +230,104 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_master_closure_multibox_canary.py",
         ],
     }
+    first_event = progress["third_first_new_event_atlas"]
+    assert first_event == {
+        "status": "PROVED",
+        "scope": "one exact 64-box two-dimensional full-support atlas crossing the first new residual event in the row-2599 parent plane",
+        "boxes": 64,
+        "no_wall_boxes": 42,
+        "one_wall_boxes": 20,
+        "transverse_two_wall_boxes": 2,
+        "unclassified_boxes": 0,
+        "first_new_event_derived_rows": [2, 8, 22, 49],
+        "atomic_boundary_word_segments": 171,
+        "shared_boundary_segments_glued": 133,
+        "regular_cw_cells": 399,
+        "vertices": 110,
+        "edges": 199,
+        "chambers": 90,
+        "barycentric_vertices": 399,
+        "barycentric_edges": 1118,
+        "barycentric_triangles": 720,
+        "labelled_residual_occurrences_replayed": 84_840,
+        "parent_brackets_replayed": 70,
+        "extension_signatures_accounted": 97_224,
+        "signature_profile_count": 8,
+        "ordered_profile_triples_replayed": 512,
+        "nonexact_profile_triples_with_scope_boundary_ordinary": 0,
+        "parent_infinity_cells": 0,
+        "hostile_corruptions_rejected": 13,
+        "rank_semantic_sha256": "48140daf03371353de766d719e3812219b4612fce87bdeb8b2efc67ed50e7d06",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_FIRST_EVENT.md",
+            "ai/omreal/data/DIAG3_PAIR_MASTER_CLOSURE_FIRST_EVENT.json",
+            "ai/omreal/verify_diag3_pair_master_closure_first_event.py",
+        ],
+    }
+    source_transition = progress["fourth_parent_source_transition"]
+    assert source_transition == {
+        "status": "PROVED",
+        "scope": "one exact parent-resident straight segment from row-2599 chart 0 to distinct chart 89",
+        "selection_rule": "minimum exact factor-state Hamming distance among the 57 certified parent-safe chart-zero segments",
+        "endpoint_factor_hamming_distance": 1197,
+        "parent_brackets_replayed": 70,
+        "candidate_factors_replayed": 17_824,
+        "root_free_factors": 16_607,
+        "one_root_factors": 1_197,
+        "two_root_factors": 20,
+        "rooted_factors": 1_217,
+        "ordered_root_events": 1_237,
+        "simple_single_occurrence_events": 1_179,
+        "compound_events": 58,
+        "occurrence_multiplicity_census": {"1": 1_179, "2": 13, "15": 6, "65": 39},
+        "regular_cw_cells": 2_477,
+        "strict_closure_pairs": 2_476,
+        "parent_infinity_cells": 0,
+        "first_compound_event_index": 38,
+        "first_compound_factor_id": 8_652,
+        "events_semantic_sha256": "19683a1b46c3dab4f51b770cd7af9237b3c323b7c8f6d0a3d4101a13d890472b",
+        "factor_state_sequence_sha256": "68fe63818b53e20a51ca7b4580acfad399a40aa4052bea51f43595a49999e9b4",
+        "hostile_corruptions_rejected": 9,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_PARENT_SOURCE_TRANSITION.md",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json",
+            "ai/omreal/verify_diag3_pair_parent_source_transition.py",
+        ],
+    }
+    source_labels = progress["fifth_parent_source_label_continuation"]
+    assert source_labels == {
+        "status": "PROVED",
+        "scope": "complete exact signature-label continuation over all open chambers of the row-2599 chart-0-to-chart-89 path",
+        "generic_chambers": 1_238,
+        "extension_signature_universe": 97_224,
+        "labels_per_generic_chamber": 26_112,
+        "simple_simplicial_mutations": 1_179,
+        "compound_exact_reenumerations": 58,
+        "compound_delta_census": {
+            "multiplicity_2_lost_gained_4": 13,
+            "multiplicity_15_lost_gained_10": 6,
+            "multiplicity_65_lost_gained_72": 39,
+        },
+        "distinct_signature_profiles": 2_458,
+        "profile_transition_count_census": {"0": 87_208, "1": 9_490, "2": 512, "3": 14},
+        "never_feasible_signatures": 66_000,
+        "all_chamber_persistent_signatures": 21_208,
+        "raw_chart_89_label_state_reconstructed": True,
+        "chamber_label_digests_sha256": "40c9198f55b4fedf27918aeb908bf79f86ad264302599479b881b8f7828d6ce9",
+        "event_label_semantic_sha256": "05dc4bca07c35faf568cc65898ba798a72b3150a47fcd92e766b4f8c1f4e6c05",
+        "profile_semantic_sha256": "b201f42b71aa32ac92f790f1419a3e542e1f9e890869664bbac6b4014ce9a4d3",
+        "hostile_corruptions_rejected": 10,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_PARENT_SOURCE_LABELS.md",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json",
+            "ai/omreal/verify_diag3_pair_parent_source_labels.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "bounded first-new-event expansion in the same exact two-dimensional parent plane"
+        "coverage-oriented exact source graph"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -263,6 +356,9 @@ def main() -> None:
     )
     print("PASS first proof-producing master-closure canary: 17 cells / 216 ranks")
     print("PASS second multi-box master-closure canary: 9 boxes / 81 cells / 216 ranks")
+    print("PASS third first-event master-closure atlas: 64 boxes / 399 cells / 512 ranks")
+    print("PASS fourth parent-source transition: 1237 events / 2477 cells / 58 compound")
+    print("PASS fifth source-label continuation: 1238 chambers / 2458 profiles / exact endpoint")
     print("LEDGER_GIT_BLOB", digest)
 
 
