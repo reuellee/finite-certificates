@@ -1,0 +1,209 @@
+{
+  "format": "diag3-research-decision-ledger-v1",
+  "status": "ACTIVE",
+  "as_of": "2026-08-21",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "default_branch": "main",
+    "audited_commit": "e4ca567f829bd0e887e98efb05a3ed9437ba69d5",
+    "merged_pull_request": 19
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [
+      1,
+      2
+    ],
+    "active_diagonal": 3,
+    "promotion_rule": "Diagonal three advances only when both invariant obligations below are closed with independently replayed exact evidence."
+  },
+  "invariant_obligations": [
+    {
+      "id": "diag3_triple_hc0",
+      "statement": "H_c^0(B_0 intersection B_1 intersection B_2; Q) = 0",
+      "status": "OPEN",
+      "sufficient_route_in_use": "exclude compact components for every source triple",
+      "universe_count": 79102449,
+      "proved_noncompact_count": 77940147,
+      "unresolved_count": 1162302,
+      "accounting_identity": "79102449-77940147=1162302",
+      "smallest_missing_proof_object": "boundary-stratified semialgebraic component roadmap or a different exact theorem covering the unresolved source",
+      "evidence": [
+        "ai/omreal/DIAG3_STRATEGY_CHECKPOINT.md",
+        "ai/omreal/data/DIAG3_COMPLETION_OPEN_OBJECT.json"
+      ]
+    },
+    {
+      "id": "diag3_pair_hc1",
+      "statement": "The alternating pair-to-triple restriction map is injective over Q",
+      "status": "OPEN",
+      "sufficient_route_in_use": "coverage-certified integral relative complex with mod-two middle exactness",
+      "parent_pilot": 2599,
+      "current_global_adjacencies": 0,
+      "current_global_strict_closure_pairs": 0,
+      "current_global_strict_closure_triples": 0,
+      "current_parent_infinity_cells": 0,
+      "smallest_missing_proof_object": "coverage-certified nonrelative full-support master closure complex with genuine relative frontier tags",
+      "evidence": [
+        "ai/omreal/DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md",
+        "ai/omreal/DIAG3_PAIR_GLOBAL_MASTER_QUOTIENT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json"
+      ]
+    }
+  ],
+  "row2599_fullsupport_ledger": {
+    "compactification": "(Delta^3)^3",
+    "support_count": 3375,
+    "proper_relative_support_count": 3374,
+    "possible_nonrelative_supports": [
+      [
+        15,
+        15,
+        15
+      ]
+    ],
+    "parent_face_mixed_restriction_count": 70218,
+    "relative_boundary_mixed_restriction_count": 52394,
+    "fullsupport_factor_count": 17824,
+    "exact_interior_nonempty_count": 10844,
+    "exact_empty_count": 1177,
+    "unresolved_feasibility_count": 5803,
+    "master_generator_active_wall_upper_bound": 16647,
+    "identities": [
+      "52394+17824=70218",
+      "10844+1177+5803=17824",
+      "10844+5803=16647"
+    ],
+    "digests": {
+      "empty_factor_ids": "f9022c922d56c69ea541d6098cea89004bdfcff73b01a411a159a78b5c369484",
+      "unresolved_factor_ids": "0c85f0e7370963df311a5a7d04e175e4a801b79c54fe0600a69bb777bf30a76a",
+      "relative_boundary_collapse": "65b425e0a9507dd536b59e770f3c43f5eb025381b2ca2e75eb009e93d022b02a"
+    },
+    "evidence": [
+      "ai/omreal/DIAG3_PAIR_RELATIVE_BOUNDARY_COLLAPSE.md",
+      "ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md",
+      "ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md"
+    ]
+  },
+  "retired_or_subordinated_targets": [
+    {
+      "id": "proper_support_dimension4_subdivision",
+      "status": "RETIRED",
+      "reason": "All 3374 proper supports lie in the relative subspace; their internal residual subdivisions generate zero relative chains.",
+      "regression": "ai/omreal/verify_diag3_pair_relative_boundary_collapse.py"
+    },
+    {
+      "id": "moving_column_s3_quotient",
+      "status": "RETIRED",
+      "reason": "Nonidentity moving-column permutations fail the signed row-2599 parent-cell gate.",
+      "withdrawn_counts": {
+        "transported_witnesses": 5986,
+        "residue_factors": 994,
+        "quotient_classes": 264,
+        "failed_nonidentity_segment_transports": 525
+      },
+      "regression": "ai/omreal/verify_diag3_pair_fullsupport_block_symmetry.py"
+    },
+    {
+      "id": "standalone_degree_one_positive_multiplier_screen",
+      "status": "SUBORDINATED",
+      "reason": "It can prune candidate walls but cannot close the invariant pair obligation; run it only as one bounded preprocessing layer integrated into the master-closure generator.",
+      "stop_rule": "One multiplier layer only; preserve exact yield and residue digests; do not widen if a large residue remains."
+    },
+    {
+      "id": "unbounded_triple_orbitwise_cas",
+      "status": "RETIRED",
+      "reason": "Bounded structure-preserving saturation and Koszul routes met their declared stopping conditions without a rational certificate.",
+      "regression": "ai/omreal/verify_diag3_triple_factored_koszul_gate.py"
+    }
+  ],
+  "target_score_formula": "4*proof_criticality + 3*branch_elimination + 2*readiness + 2*decisiveness - 2*cost - 2*failure_risk",
+  "candidate_targets": [
+    {
+      "id": "fullsupport_master_closure_compiler",
+      "proof_criticality": 5,
+      "branch_elimination": 5,
+      "readiness": 4,
+      "decisiveness": 5,
+      "cost": 5,
+      "failure_risk": 4,
+      "priority_score": 35,
+      "selected": true,
+      "exact_question": "Can a deterministic exact generator and independent verifier produce a coverage-certified order-two closure object for the strict row-2599 full-support parent interior, with every escape to a parent wall tagged relative?",
+      "first_stage": "Pin the v1 cell/closure certificate schema, active wall input, coverage obligations, canaries, and fail-fast projection/roadmap resource ceiling.",
+      "success_consequence": "Proceed from the row-2599 pilot to compatible parent-source objects and the global mod-two middle-rank replay.",
+      "failure_consequence": "Record the exact obstruction or projection-growth frontier and switch the generator architecture; do not return to boundary-support CAD or sample adjacency."
+    },
+    {
+      "id": "triple_boundary_stratified_roadmap_canary",
+      "proof_criticality": 5,
+      "branch_elimination": 4,
+      "readiness": 2,
+      "decisiveness": 4,
+      "cost": 5,
+      "failure_risk": 5,
+      "priority_score": 24,
+      "selected": false,
+      "exact_question": "Can the pinned hard-canary critical system be completed with all parent-wall, rank, chart, extra-factor and infinity attachments?"
+    },
+    {
+      "id": "standalone_degree_one_multiplier_screen",
+      "proof_criticality": 1,
+      "branch_elimination": 2,
+      "readiness": 5,
+      "decisiveness": 3,
+      "cost": 2,
+      "failure_risk": 2,
+      "priority_score": 18,
+      "selected": false,
+      "exact_question": "How many of the 5803 feasibility-unknown factors admit one-layer positive-coordinate multiplier identities?"
+    }
+  ],
+  "selected_target": "fullsupport_master_closure_compiler",
+  "selected_target_contract": {
+    "result_statuses": [
+      "PROVED",
+      "REFUTED",
+      "BOUNDED_NO_GO",
+      "EVIDENCE_ONLY",
+      "OPEN"
+    ],
+    "discovery_tools_allowed": [
+      "exact rational search",
+      "modular fingerprints",
+      "SAT/SMT",
+      "CAS",
+      "exact real quantifier elimination"
+    ],
+    "theorem_acceptance": "Exact coverage, disjointness, regularity, strict closure, infinity-subcomplex, label-closure and d_squared=0 certificates with independent replay.",
+    "canaries": [
+      "reject an unsigned moving-column transport that flips a signed parent factor",
+      "reject a local-scope outer boundary mislabeled as parent infinity",
+      "reject a closure relation that is not dimension-decreasing",
+      "reject a corrupted empty-factor or residue digest",
+      "reject a sampled chart bank presented as parameter-space coverage"
+    ],
+    "resource_stop_rule": "Every generator pilot must declare a finite projection/roadmap layer and preserve the exact frontier on timeout; no silent bound widening."
+  },
+  "process_gates": {
+    "canonical_state_first": true,
+    "independent_verifier_required": true,
+    "negative_canary_required": true,
+    "exact_scope_labels_required": true,
+    "default_branch_and_drive_checkpoint_required_at_cycle_end": true,
+    "theorem_score_promotion_requires_all_invariant_obligations_closed": true
+  },
+  "historical_open_objects": [
+    {
+      "path": "ai/omreal/data/DIAG3_COMPLETION_OPEN_OBJECT.json",
+      "role": "proof artifact and historical accumulation",
+      "current_state_pointer_required": true
+    },
+    {
+      "path": "ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
+      "role": "proof artifact and historical generator preflight",
+      "current_state_pointer_required": true
+    }
+  ]
+}
