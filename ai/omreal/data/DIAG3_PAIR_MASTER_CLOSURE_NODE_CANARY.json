@@ -1,0 +1,939 @@
+{
+  "format": "diag3-pair-master-closure-certificate-v1",
+  "status": "LOCAL_EXACT_CANARY",
+  "scope": {
+    "parent_index": 2599,
+    "compactification": "(Delta^3)^3",
+    "support": [
+      15,
+      15,
+      15
+    ],
+    "claim": "complete labelled regular-CW closure object on one exact two-dimensional full-support disk",
+    "local_parameter_coverage": "COMPLETE",
+    "global_parameter_coverage": "NOT_CLAIMED",
+    "scope_boundary_policy": "ordinary cells; never parent infinity"
+  },
+  "inputs": {
+    "source_commit": "e4ca567f829bd0e887e98efb05a3ed9437ba69d5",
+    "node_roadmap_path": "ai/omreal/data/DIAG9_GRAPH_row2599_node_roadmap.npz",
+    "node_roadmap_sha256": "ddec96b052b305d279b543be2af27e12f380f0dedc79ea434616c64b40cd8cea",
+    "candidate_factor_path": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin",
+    "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "candidate_factor_count": 17824,
+    "exact_interior_nonempty_count": 10844,
+    "exact_empty_count": 1177,
+    "unresolved_feasibility_count": 5803,
+    "active_wall_upper_bound": 16647,
+    "exact_empty_factor_digest": "f9022c922d56c69ea541d6098cea89004bdfcff73b01a411a159a78b5c369484",
+    "unresolved_factor_digest": "0c85f0e7370963df311a5a7d04e175e4a801b79c54fe0600a69bb777bf30a76a",
+    "target_signed_parent_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+  },
+  "generator": {
+    "backend": "pinned_transverse_node_to_regular_cw_v1",
+    "build_command": "python ai/omreal/build_diag3_pair_master_closure_node_canary.py",
+    "producer_role": "translation only; theorem gates are replayed by the independent verifier"
+  },
+  "coverage_evidence": {
+    "kind": "exact_two_affine_branch_partition",
+    "labelled_residual_occurrence_universe": 84840,
+    "parent_bracket_count": 70,
+    "geometry": {
+      "cell_coordinate_system": "x=s-center_s, y=u-center_u",
+      "branch_coordinate_system": "original affine parameters s,u",
+      "domain": {
+        "kind": "closed_square",
+        "radius": "1/1000"
+      },
+      "center": {
+        "s": "5455638564396767806348493946599/3394705968860801647269075678720",
+        "u": "1631359879664336977038655284413/1697352984430400823634537839360"
+      },
+      "branch_affine": [
+        [
+          -8406719710014481,
+          5934554455910656,
+          -1176454877277824
+        ],
+        [
+          -30838233534021888,
+          9738264925739162,
+          15802240330472297
+        ]
+      ],
+      "branch_occurrence_counts": [
+        65,
+        65
+      ],
+      "branch_quotient_degree_counts": [
+        [
+          32,
+          33
+        ],
+        [
+          32,
+          33
+        ]
+      ],
+      "transverse_jacobian": "105235885034684851065341346040320",
+      "dominance_margins": {
+        "other_margin": "59660984923497009863930871344289908850373956705025/11076265907589991762853491013495358778478172987792",
+        "branch0_margin": "31070614434869202946595039532555983225/13821290749269089346732496445232576",
+        "branch1_margin": "55464724498960225839079342532405821625/22131106622794224179041285072279296",
+        "bracket_margin": "31070614434869202946595039532555983225/13821290749269089346732496445232576"
+      }
+    }
+  },
+  "cells": [
+    {
+      "id": "v",
+      "dimension": 0,
+      "kind": "residual_node",
+      "witness": [
+        "0",
+        "0"
+      ],
+      "boundary": [],
+      "incident_chambers": [
+        "c0",
+        "c1",
+        "c2",
+        "c3"
+      ]
+    },
+    {
+      "id": "p0",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness": [
+        "9191053728733/46363706686802000",
+        "1/1000"
+      ],
+      "boundary": [],
+      "incident_chambers": [
+        "c0",
+        "c3"
+      ]
+    },
+    {
+      "id": "p1",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness": [
+        "1/1000",
+        "-4869132462869581/7901120165236148500"
+      ],
+      "boundary": [],
+      "incident_chambers": [
+        "c0",
+        "c1"
+      ]
+    },
+    {
+      "id": "p2",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness": [
+        "-9191053728733/46363706686802000",
+        "-1/1000"
+      ],
+      "boundary": [],
+      "incident_chambers": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "p3",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness": [
+        "-1/1000",
+        "4869132462869581/7901120165236148500"
+      ],
+      "boundary": [],
+      "incident_chambers": [
+        "c2",
+        "c3"
+      ]
+    },
+    {
+      "id": "w0",
+      "dimension": 1,
+      "kind": "residual_wall_ray",
+      "witness": [
+        "9191053728733/92727413373604000",
+        "1/2000"
+      ],
+      "boundary": [
+        "v",
+        "p0"
+      ],
+      "incident_chambers": [
+        "c0",
+        "c3"
+      ]
+    },
+    {
+      "id": "w3",
+      "dimension": 1,
+      "kind": "residual_wall_ray",
+      "witness": [
+        "1/2000",
+        "-4869132462869581/15802240330472297000"
+      ],
+      "boundary": [
+        "v",
+        "p1"
+      ],
+      "incident_chambers": [
+        "c0",
+        "c1"
+      ]
+    },
+    {
+      "id": "w1",
+      "dimension": 1,
+      "kind": "residual_wall_ray",
+      "witness": [
+        "-9191053728733/92727413373604000",
+        "-1/2000"
+      ],
+      "boundary": [
+        "v",
+        "p2"
+      ],
+      "incident_chambers": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "w2",
+      "dimension": 1,
+      "kind": "residual_wall_ray",
+      "witness": [
+        "-1/2000",
+        "4869132462869581/15802240330472297000"
+      ],
+      "boundary": [
+        "v",
+        "p3"
+      ],
+      "incident_chambers": [
+        "c2",
+        "c3"
+      ]
+    },
+    {
+      "id": "b0",
+      "dimension": 1,
+      "kind": "scope_boundary_arc",
+      "witness": [
+        "1/1000",
+        "1/1000"
+      ],
+      "boundary": [
+        "p0",
+        "p1"
+      ],
+      "incident_chambers": [
+        "c0"
+      ]
+    },
+    {
+      "id": "b1",
+      "dimension": 1,
+      "kind": "scope_boundary_arc",
+      "witness": [
+        "1/1000",
+        "-1/1000"
+      ],
+      "boundary": [
+        "p1",
+        "p2"
+      ],
+      "incident_chambers": [
+        "c1"
+      ]
+    },
+    {
+      "id": "b2",
+      "dimension": 1,
+      "kind": "scope_boundary_arc",
+      "witness": [
+        "-1/1000",
+        "-1/1000"
+      ],
+      "boundary": [
+        "p2",
+        "p3"
+      ],
+      "incident_chambers": [
+        "c2"
+      ]
+    },
+    {
+      "id": "b3",
+      "dimension": 1,
+      "kind": "scope_boundary_arc",
+      "witness": [
+        "-1/1000",
+        "1/1000"
+      ],
+      "boundary": [
+        "p3",
+        "p0"
+      ],
+      "incident_chambers": [
+        "c3"
+      ]
+    },
+    {
+      "id": "c0",
+      "dimension": 2,
+      "kind": "open_chamber",
+      "witness": [
+        "1/2000",
+        "1/2000"
+      ],
+      "boundary": [
+        "w0",
+        "b0",
+        "w3"
+      ],
+      "incident_chambers": [
+        "c0"
+      ]
+    },
+    {
+      "id": "c1",
+      "dimension": 2,
+      "kind": "open_chamber",
+      "witness": [
+        "1/2000",
+        "-1/2000"
+      ],
+      "boundary": [
+        "w3",
+        "b1",
+        "w1"
+      ],
+      "incident_chambers": [
+        "c1"
+      ]
+    },
+    {
+      "id": "c2",
+      "dimension": 2,
+      "kind": "open_chamber",
+      "witness": [
+        "-1/2000",
+        "-1/2000"
+      ],
+      "boundary": [
+        "w1",
+        "b2",
+        "w2"
+      ],
+      "incident_chambers": [
+        "c2"
+      ]
+    },
+    {
+      "id": "c3",
+      "dimension": 2,
+      "kind": "open_chamber",
+      "witness": [
+        "-1/2000",
+        "1/2000"
+      ],
+      "boundary": [
+        "w2",
+        "b3",
+        "w0"
+      ],
+      "incident_chambers": [
+        "c3"
+      ]
+    }
+  ],
+  "strict_closure_pairs": [
+    [
+      "b0",
+      "p0"
+    ],
+    [
+      "b0",
+      "p1"
+    ],
+    [
+      "b1",
+      "p1"
+    ],
+    [
+      "b1",
+      "p2"
+    ],
+    [
+      "b2",
+      "p2"
+    ],
+    [
+      "b2",
+      "p3"
+    ],
+    [
+      "b3",
+      "p0"
+    ],
+    [
+      "b3",
+      "p3"
+    ],
+    [
+      "c0",
+      "b0"
+    ],
+    [
+      "c0",
+      "p0"
+    ],
+    [
+      "c0",
+      "p1"
+    ],
+    [
+      "c0",
+      "v"
+    ],
+    [
+      "c0",
+      "w0"
+    ],
+    [
+      "c0",
+      "w3"
+    ],
+    [
+      "c1",
+      "b1"
+    ],
+    [
+      "c1",
+      "p1"
+    ],
+    [
+      "c1",
+      "p2"
+    ],
+    [
+      "c1",
+      "v"
+    ],
+    [
+      "c1",
+      "w1"
+    ],
+    [
+      "c1",
+      "w3"
+    ],
+    [
+      "c2",
+      "b2"
+    ],
+    [
+      "c2",
+      "p2"
+    ],
+    [
+      "c2",
+      "p3"
+    ],
+    [
+      "c2",
+      "v"
+    ],
+    [
+      "c2",
+      "w1"
+    ],
+    [
+      "c2",
+      "w2"
+    ],
+    [
+      "c3",
+      "b3"
+    ],
+    [
+      "c3",
+      "p0"
+    ],
+    [
+      "c3",
+      "p3"
+    ],
+    [
+      "c3",
+      "v"
+    ],
+    [
+      "c3",
+      "w0"
+    ],
+    [
+      "c3",
+      "w2"
+    ],
+    [
+      "w0",
+      "p0"
+    ],
+    [
+      "w0",
+      "v"
+    ],
+    [
+      "w1",
+      "p2"
+    ],
+    [
+      "w1",
+      "v"
+    ],
+    [
+      "w2",
+      "p3"
+    ],
+    [
+      "w2",
+      "v"
+    ],
+    [
+      "w3",
+      "p1"
+    ],
+    [
+      "w3",
+      "v"
+    ]
+  ],
+  "strict_three_cell_chains": [
+    [
+      "c0",
+      "b0",
+      "p0"
+    ],
+    [
+      "c0",
+      "b0",
+      "p1"
+    ],
+    [
+      "c0",
+      "w0",
+      "p0"
+    ],
+    [
+      "c0",
+      "w0",
+      "v"
+    ],
+    [
+      "c0",
+      "w3",
+      "p1"
+    ],
+    [
+      "c0",
+      "w3",
+      "v"
+    ],
+    [
+      "c1",
+      "b1",
+      "p1"
+    ],
+    [
+      "c1",
+      "b1",
+      "p2"
+    ],
+    [
+      "c1",
+      "w1",
+      "p2"
+    ],
+    [
+      "c1",
+      "w1",
+      "v"
+    ],
+    [
+      "c1",
+      "w3",
+      "p1"
+    ],
+    [
+      "c1",
+      "w3",
+      "v"
+    ],
+    [
+      "c2",
+      "b2",
+      "p2"
+    ],
+    [
+      "c2",
+      "b2",
+      "p3"
+    ],
+    [
+      "c2",
+      "w1",
+      "p2"
+    ],
+    [
+      "c2",
+      "w1",
+      "v"
+    ],
+    [
+      "c2",
+      "w2",
+      "p3"
+    ],
+    [
+      "c2",
+      "w2",
+      "v"
+    ],
+    [
+      "c3",
+      "b3",
+      "p0"
+    ],
+    [
+      "c3",
+      "b3",
+      "p3"
+    ],
+    [
+      "c3",
+      "w0",
+      "p0"
+    ],
+    [
+      "c3",
+      "w0",
+      "v"
+    ],
+    [
+      "c3",
+      "w2",
+      "p3"
+    ],
+    [
+      "c3",
+      "w2",
+      "v"
+    ]
+  ],
+  "scope_boundary_subcomplex": [
+    "p0",
+    "p1",
+    "p2",
+    "p3",
+    "b0",
+    "b1",
+    "b2",
+    "b3"
+  ],
+  "parent_infinity_subcomplex": [],
+  "signature_profile_source": {
+    "universe_count": 97224,
+    "semantic_sha256": "effbe085a31121f0254cedab4ffab3ad9c706a4b5f7af4a1cda293aec7c8c726",
+    "profiles": [
+      {
+        "feasible_chamber_mask": 0,
+        "signature_count": 70968,
+        "bad_cells": [
+          "v",
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "w0",
+          "w3",
+          "w1",
+          "w2",
+          "b0",
+          "b1",
+          "b2",
+          "b3",
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 3,
+        "signature_count": 72,
+        "bad_cells": [
+          "v",
+          "p0",
+          "p2",
+          "p3",
+          "w0",
+          "w1",
+          "w2",
+          "b2",
+          "b3",
+          "c2",
+          "c3"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 6,
+        "signature_count": 72,
+        "bad_cells": [
+          "v",
+          "p0",
+          "p1",
+          "p3",
+          "w0",
+          "w3",
+          "w2",
+          "b0",
+          "b3",
+          "c0",
+          "c3"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 9,
+        "signature_count": 72,
+        "bad_cells": [
+          "v",
+          "p1",
+          "p2",
+          "p3",
+          "w3",
+          "w1",
+          "w2",
+          "b1",
+          "b2",
+          "c1",
+          "c2"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 12,
+        "signature_count": 72,
+        "bad_cells": [
+          "v",
+          "p0",
+          "p1",
+          "p2",
+          "w0",
+          "w3",
+          "w1",
+          "b0",
+          "b1",
+          "c0",
+          "c1"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 15,
+        "signature_count": 25968,
+        "bad_cells": []
+      }
+    ]
+  },
+  "integral_boundary": {
+    "orientation_rule": "spokes point from v to p_i; scope arcs point p_i to p_(i+1); chamber boundary is spoke_i + arc_i - spoke_(i+1)",
+    "c0_basis": [
+      "v",
+      "p0",
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "c1_basis": [
+      "w0",
+      "w3",
+      "w1",
+      "w2",
+      "b0",
+      "b1",
+      "b2",
+      "b3"
+    ],
+    "c2_basis": [
+      "c0",
+      "c1",
+      "c2",
+      "c3"
+    ],
+    "d1_entries": [
+      [
+        "v",
+        "w0",
+        -1
+      ],
+      [
+        "p0",
+        "w0",
+        1
+      ],
+      [
+        "v",
+        "w3",
+        -1
+      ],
+      [
+        "p1",
+        "w3",
+        1
+      ],
+      [
+        "v",
+        "w1",
+        -1
+      ],
+      [
+        "p2",
+        "w1",
+        1
+      ],
+      [
+        "v",
+        "w2",
+        -1
+      ],
+      [
+        "p3",
+        "w2",
+        1
+      ],
+      [
+        "p0",
+        "b0",
+        -1
+      ],
+      [
+        "p1",
+        "b0",
+        1
+      ],
+      [
+        "p1",
+        "b1",
+        -1
+      ],
+      [
+        "p2",
+        "b1",
+        1
+      ],
+      [
+        "p2",
+        "b2",
+        -1
+      ],
+      [
+        "p3",
+        "b2",
+        1
+      ],
+      [
+        "p3",
+        "b3",
+        -1
+      ],
+      [
+        "p0",
+        "b3",
+        1
+      ]
+    ],
+    "d2_entries": [
+      [
+        "w0",
+        "c0",
+        1
+      ],
+      [
+        "b0",
+        "c0",
+        1
+      ],
+      [
+        "w3",
+        "c0",
+        -1
+      ],
+      [
+        "w3",
+        "c1",
+        1
+      ],
+      [
+        "b1",
+        "c1",
+        1
+      ],
+      [
+        "w1",
+        "c1",
+        -1
+      ],
+      [
+        "w1",
+        "c2",
+        1
+      ],
+      [
+        "b2",
+        "c2",
+        1
+      ],
+      [
+        "w2",
+        "c2",
+        -1
+      ],
+      [
+        "w2",
+        "c3",
+        1
+      ],
+      [
+        "b3",
+        "c3",
+        1
+      ],
+      [
+        "w0",
+        "c3",
+        -1
+      ]
+    ]
+  },
+  "verifier": {
+    "command": "python ai/omreal/verify_diag3_pair_master_closure_node_canary.py",
+    "recomputes": [
+      "all 84,840 restricted residual determinants",
+      "all 70 parent brackets",
+      "both branch quotients and the transverse Jacobian",
+      "all 97,224 extension-signature profiles",
+      "the regular-CW closure and integral d_squared identity",
+      "all 216 ordered profile-triple middle ranks with scope boundary retained"
+    ]
+  }
+}

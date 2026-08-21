@@ -2,7 +2,7 @@
   "format": "diag3-completion-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "547c532ed172aa53197d7288eb09c73929f094cd",
+  "current_decision_ledger_git_blob": "124e3dcd07ade921e28b49f0aee8dc40941d2bd2",
   "current_state_note": "Historical proof object. Current target selection and post-PR19 full-support accounting live in current_decision_ledger.",
   "ledger_score": "2/9",
   "authoritative_remote_base": {

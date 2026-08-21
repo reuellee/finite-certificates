@@ -140,6 +140,26 @@ not replace the generated coverage certificate.
 
 This checkpoint also implements the version-one certificate schema and a
 small exact regular-cell fixture whose independent verifier rejects six
-hostile corruptions. The next code-bearing checkpoint should connect that
-interface to one bounded proof-producing roadmap or critical-point backend on
-a full-support canary before attempting a large row-2599 decomposition.
+hostile corruptions.
+
+## First proof-producing canary completed
+
+The schema has now been connected to the existing exact row-2599 transverse
+node.  The producer emits a 17-cell regular-CW object on one covered
+two-dimensional full-support disk: five vertices, eight edges and four
+chambers.  The independent verifier recomputes all 84,840 labelled residual
+restrictions, all 70 parent brackets and the complete 97,224-signature profile
+map.  It retains the artificial square boundary as ordinary cells, proves the
+true parent-infinity subcomplex empty, reconstructs integral incidence, and
+finds zero middle rank for all 216 ordered local membership-profile triples.
+Seven hostile corruptions are rejected.
+
+This is the first end-to-end proof-producing instance of the selected
+compiler architecture, but it is local and does not close either invariant
+diagonal-three obligation.  The next bounded stage is a multi-box
+two-dimensional full-support roadmap with exact boundary-word gluing.  It
+must stop with a preserved unclassified-box or projection-growth frontier
+rather than automatically widening to a full nine-dimensional decomposition.
+
+See `DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md` and
+`verify_diag3_pair_master_closure_node_canary.py`.

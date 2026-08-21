@@ -176,6 +176,35 @@ def main() -> None:
         row["priority_score"] for row in candidates
     )
     assert ledger["selected_target"] == "fullsupport_master_closure_compiler"
+    progress = ledger["selected_target_progress"]
+    assert progress["schema_interface"] == "COMPLETE"
+    canary = progress["first_proof_producing_canary"]
+    assert canary == {
+        "status": "PROVED",
+        "scope": "one exact two-dimensional full-support disk in row 2599",
+        "regular_cw_cells": 17,
+        "vertices": 5,
+        "edges": 8,
+        "chambers": 4,
+        "labelled_residual_occurrences_replayed": 84_840,
+        "parent_brackets_replayed": 70,
+        "extension_signatures_accounted": 97_224,
+        "ordered_profile_triples_replayed": 216,
+        "nonexact_profile_triples_with_scope_boundary_ordinary": 0,
+        "parent_infinity_cells": 0,
+        "hostile_corruptions_rejected": 7,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md",
+            "ai/omreal/data/DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.json",
+            "ai/omreal/verify_diag3_pair_master_closure_node_canary.py",
+        ],
+    }
+    assert progress["theorem_effect"] == (
+        "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
+    )
+    assert progress["next_stage"].startswith(
+        "bounded multi-box two-dimensional full-support roadmap"
+    )
 
     digest = git_blob_sha1(LEDGER_PATH)
     for historical in (completion, closure):
@@ -201,6 +230,7 @@ def main() -> None:
         "SELECTED fullsupport_master_closure_compiler score",
         selected[0]["priority_score"],
     )
+    print("PASS first proof-producing master-closure canary: 17 cells / 216 ranks")
     print("LEDGER_GIT_BLOB", digest)
 
 

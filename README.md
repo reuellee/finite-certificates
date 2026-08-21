@@ -59,6 +59,8 @@ The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candi
 
 Current target selection is governed by the machine-checked [`DIAG3_RESEARCH_DECISION_LEDGER.json`](ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json) and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md). The applied August 21 decision retires proper-support CAD and selects the proof-bearing full-support master-closure compiler; see [`DIAG3_DECISION_2026-08-21.md`](ai/omreal/DIAG3_DECISION_2026-08-21.md).
 
+The compiler now has its first proof-producing instance: a generated [`17-cell exact master-closure object`](ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md) on one coverage-certified two-dimensional full-support disk in row 2599. Its verifier replays all 84,840 labelled residual occurrences, all 97,224 extension signatures and all 216 local profile-triple ranks while keeping the artificial disk boundary distinct from true parent infinity. This is an end-to-end local canary, not global parent-cell coverage.
+
 ## Verification
 
 Requirements for the complete suite are Python 3 plus `numpy`, `scipy`, and `sympy`; see [`requirements.txt`](requirements.txt). Many individual verifiers are standard-library only.
