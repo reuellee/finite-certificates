@@ -1,6 +1,9 @@
 {
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
+  "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+  "current_decision_ledger_git_blob": "547c532ed172aa53197d7288eb09c73929f094cd",
+  "current_state_note": "Historical generator preflight. The proper-support dimension-four target is superseded by the exact relative-boundary collapse; current target selection lives in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {
     "can_decode_a_global_regular_poset_from_existing_records": false,
@@ -87,30 +90,12 @@
       "slice": 0
     },
     "minimum_hamming_pairs": [
-      [
-        36,
-        167
-      ],
-      [
-        163,
-        175
-      ],
-      [
-        164,
-        173
-      ],
-      [
-        165,
-        172
-      ],
-      [
-        166,
-        171
-      ],
-      [
-        169,
-        174
-      ]
+      [36, 167],
+      [163, 175],
+      [164, 173],
+      [165, 172],
+      [166, 171],
+      [169, 174]
     ],
     "minimum_hamming_straight_segment_parent_exits": [
       {
@@ -156,14 +141,8 @@
     "sample_hamming_minimum": 1125,
     "sample_hamming_zero_or_one_pairs": 0,
     "stress_path_endpoints": [
-      [
-        12,
-        37
-      ],
-      [
-        37,
-        176
-      ]
+      [12, 37],
+      [37, 176]
     ],
     "stress_path_selected_signature_count_each": 9,
     "varying_factor_count_on_sample": 10844
@@ -249,11 +228,7 @@
     "compactification_atlas_verifier": "ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
     "compactification_model": "(Delta^3)^3",
     "compactification_chart_count": 64,
-    "standard_chart_infinity_parent_brackets": [
-      "2346",
-      "2347",
-      "2348"
-    ],
+    "standard_chart_infinity_parent_brackets": ["2346", "2347", "2348"],
     "face_bernstein_atlas": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_face_bernstein_atlas.json",
     "face_bernstein_atlas_sha256": "5d8029d930cea0708f00c90cac69f87de7579118cd48a6995caf7b3be26e0822",
     "face_bernstein_semantic_digest": "1bd501a4a2b08eebd55d39c078fed07c526308a53bbefb21823531843ca0da8b",
@@ -275,17 +250,8 @@
     "excluded_candidate_factor_face_pair_count": 59959936,
     "remaining_candidate_factor_face_pair_count": 196064,
     "remaining_mixed_residual_restriction_count": 70218,
-    "support_one_skeleton": {
-      "vertices": 3,
-      "edges": 2,
-      "active_residual_walls": 0
-    },
-    "support_two_face_cellulation": {
-      "vertices": 4,
-      "edges": 5,
-      "faces": 2,
-      "dividing_wall": "a=h"
-    },
+    "support_one_skeleton": {"vertices": 3, "edges": 2, "active_residual_walls": 0},
+    "support_two_face_cellulation": {"vertices": 4, "edges": 5, "faces": 2, "dividing_wall": "a=h"},
     "proof_critical_export_gap": "CLOSED: the sorted 17824-factor candidate universe is hash-pinned and independently replayed from direct row-2599 determinants",
     "first_generator_data": [
       "face-compatible exact subdivisions of supports (3,1,15) and (3,3,7), with 3996 and 4021 mixed restrictions, followed by independent sibling-coverage, common-face, regularity, strict-closure, and parent-frontier verification"
@@ -304,7 +270,7 @@
     "signatures": [
       14988895318912,
       3405195891438080,
-      40418075143643140
+      40418075143643136
     ],
     "certified_boundary_faces": [
       "T",
@@ -315,91 +281,23 @@
       "H1",
       "H2"
     ],
-    "primitive_required_d3_column": [
-      -1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "pair_roots": [
-      [
-        2,
-        8,
-        -1
-      ],
-      [
-        1,
-        2,
-        -1
-      ],
-      [
-        1,
-        3,
-        1
-      ]
-    ],
+    "primitive_required_d3_column": [-1, 1, 1, 1, 1, 1, 1],
+    "pair_roots": [[2, 8, -1], [1, 2, -1], [1, 3, 1]],
     "certified_common_proper_ray": {
       "moving_column": 7,
-      "direction": [
-        81,
-        -262,
-        91,
-        86
-      ],
-      "endpoint_parameter": [
-        23597311,
-        105015122
-      ],
+      "direction": [81, -262, 91, 86],
+      "endpoint_parameter": [23597311, 105015122],
       "relative_endpoint": "parent:2467",
       "only_endpoint_parent_bracket": "2467",
       "persistent_circuit_indices": [
-        [
-          0,
-          19,
-          21,
-          37,
-          38
-        ],
-        [
-          0,
-          9,
-          27,
-          30,
-          35
-        ],
-        [
-          0,
-          11,
-          17,
-          24,
-          40
-        ]
+        [0, 19, 21, 37, 38],
+        [0, 9, 27, 30, 35],
+        [0, 11, 17, 24, 40]
       ],
       "persistent_circuit_labels": [
-        [
-          "123",
-          "456",
-          "137",
-          "238",
-          "148"
-        ],
-        [
-          "123",
-          "345",
-          "257",
-          "167",
-          "128"
-        ],
-        [
-          "123",
-          "136",
-          "256",
-          "247",
-          "348"
-        ]
+        ["123", "456", "137", "238", "148"],
+        ["123", "345", "257", "167", "128"],
+        ["123", "136", "256", "247", "348"]
       ],
       "verifier": "ai/omreal/verify_diag3_row2599_common_proper_escape.py",
       "mathematical_role": "proper local H_c^0/component generator, not a d3 cell"
@@ -408,44 +306,12 @@
       "status": "EXACT_POSITIVE_BUT_NOT_A_COMPARISON_INCIDENCE",
       "parameter_domain": "[0,1]^3",
       "root_endpoint_parameters": [
-        [
-          1221971981,
-          1769366234
-        ],
-        [
-          42214994,
-          2183619501
-        ],
-        [
-          425791163,
-          1286992887
-        ]
+        [1221971981, 1769366234],
+        [42214994, 2183619501],
+        [425791163, 1286992887]
       ],
       "ordered_root_pairs": [
-        [
-          0,
-          2
-        ],
-        [
-          2,
-          0
-        ],
-        [
-          0,
-          1
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          1,
-          2
-        ],
-        [
-          2,
-          1
-        ]
+        [0, 2], [2, 0], [0, 1], [1, 0], [1, 2], [2, 1]
       ],
       "root_amplitudes": "(1-s)*x*U_i,(1-s)*y*U_j",
       "certified_statements": [
@@ -469,23 +335,11 @@
       "ordered_sector_semantic_digest": "5941481177b36052e3e59bf08fa44cddadaa415fe761e091a2e8d8b2299ffc1c"
     },
     "falsified_common_root_shortcut": {
-      "candidate_root": [
-        1,
-        3,
-        1
-      ],
+      "candidate_root": [1, 3, 1],
       "status": "FALSE_FOR_THE_FIXED_BLOCK1_WITNESS",
       "transport_alpha_conflict": [
-        {
-          "derived_row_index": 30,
-          "label": "167",
-          "alpha": -1
-        },
-        {
-          "derived_row_index": 35,
-          "label": "128",
-          "alpha": 1
-        }
+        {"derived_row_index": 30, "label": "167", "alpha": -1},
+        {"derived_row_index": 35, "label": "128", "alpha": 1}
       ],
       "reason": "fresh pointwise circuit positivity does not supply inverse-exterior transported-witness naturality"
     },
@@ -495,38 +349,14 @@
       "semantic_digest": "e3df18c1a98ccca9e022832e3656c7e2ae3a9c7c822a153c7fc40e9519e08016",
       "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_TANGENT_COLLAR.py",
       "independent_semantic_digest": "82dda129bef8f52ce4c41fbc8b31e9a316419953bb89a9eaaf8983f9ab1379f8",
-      "incident_blocks": [
-        0,
-        1
-      ],
-      "offplane_entry": {
-        "row_zero_based": 0,
-        "column_label": 6
-      },
-      "tangent_advance": [
-        9,
-        160
-      ],
+      "incident_blocks": [0, 1],
+      "offplane_entry": {"row_zero_based": 0, "column_label": 6},
+      "tangent_advance": [9, 160],
       "stages": [
-        {
-          "name": "source_to_witness",
-          "relative_wall": "1234"
-        },
-        {
-          "name": "offplane_to_1367",
-          "relative_wall": "1234",
-          "endpoint_wall": "1367"
-        },
-        {
-          "name": "1367_to_2467",
-          "relative_wall": "1367",
-          "endpoint_wall": "2467"
-        },
-        {
-          "name": "2467_graph_to_common_apex",
-          "relative_wall": "2467",
-          "positive_projective_gauge": "column 2"
-        }
+        {"name": "source_to_witness", "relative_wall": "1234"},
+        {"name": "offplane_to_1367", "relative_wall": "1234", "endpoint_wall": "1367"},
+        {"name": "1367_to_2467", "relative_wall": "1367", "endpoint_wall": "2467"},
+        {"name": "2467_graph_to_common_apex", "relative_wall": "2467", "positive_projective_gauge": "column 2"}
       ],
       "certified_statements": [
         "all 70 prescribed parent signs hold on every segment",
@@ -545,15 +375,8 @@
       "independent_verifier": "ai/omreal/review_scratch/DIAG3_HOSTILE_VERIFY_ROW2599_P01_COMPARISON_PRISM.py",
       "independent_semantic_digest": "acca3573a369139c9a142592febcaa55ce453eeb10c1d52631ac5b226129127b",
       "patch_count": 5,
-      "incident_blocks": [
-        0,
-        1
-      ],
-      "ordinary_boundary": {
-        "K(p01)": 1,
-        "Q(p01,block0)": -1,
-        "Q(p01,block1)": 1
-      },
+      "incident_blocks": [0, 1],
+      "ordinary_boundary": {"K(p01)": 1, "Q(p01,block0)": -1, "Q(p01,block1)": 1},
       "relative_collar_face_count": 5,
       "internal_face_pair_count": 4,
       "collapsed_relative_endpoint_face_count": 2,
@@ -575,16 +398,8 @@
       "independent_semantic_digest": "930d28e2fbc1990cb68e403b034b3ec7aa440a455b5017a13aa1426e1336dba4",
       "patches_per_prism": 2,
       "ordinary_boundaries": {
-        "p12": {
-          "K(p12)": 1,
-          "Q(p12,block1)": -1,
-          "Q(p12,block2)": 1
-        },
-        "p20": {
-          "K(p20)": 1,
-          "Q(p20,block2)": -1,
-          "Q(p20,block0)": 1
-        }
+        "p12": {"K(p12)": 1, "Q(p12,block1)": -1, "Q(p12,block2)": 1},
+        "p20": {"K(p20)": 1, "Q(p20,block2)": -1, "Q(p20,block0)": 1}
       },
       "scope": "two exact singular comparison chains in the row-2599 chart-zero canary; their singleton lateral disks are distinct, with the block-2 pair now joined by H2 and blocks 0/1 still open"
     },
@@ -596,15 +411,8 @@
       "independent_semantic_digest": "55539702e53abdcf15a1173a549699d87427f85881d66db881ff33c98586934b",
       "patch_count": 4,
       "incident_block": 2,
-      "ordinary_boundary": {
-        "K(h2)": 1,
-        "Q(p12,block2)": -1,
-        "Q(p20,block2)": 1
-      },
-      "literal_pair_laterals": [
-        "Q(p12,block2)",
-        "Q(p20,block2)"
-      ],
+      "ordinary_boundary": {"K(h2)": 1, "Q(p12,block2)": -1, "Q(p20,block2)": 1},
+      "literal_pair_laterals": ["Q(p12,block2)", "Q(p20,block2)"],
       "scope": "one exact singular singleton comparison chain in the row-2599 chart-zero canary; H0, H1, primitive J, regular master subdivision, and global coverage remain open"
     },
     "h1_radial_gap": {
@@ -615,13 +423,7 @@
       "independent_semantic_digest": "7f8b7ac35c9f6a7e5580ec40ccde6140b95814ac6a25b2051fb83f01a603eee7",
       "positive_screen": "four radial-copy patches preserve all parent signs and the block-one Gordan circuit",
       "exact_obstruction": "the second two-stage radial p01 boundary segment has no identically-zero parent bracket and therefore is not relative",
-      "literal_certified_p01_wall_sequence": [
-        "1234",
-        "1234",
-        "1367",
-        "2467",
-        "2467"
-      ],
+      "literal_certified_p01_wall_sequence": ["1234", "1234", "1367", "2467", "2467"],
       "scope": "the H1 comparison incidence remains missing; the comparison count remains 4/6"
     },
     "comparison_incidences": [
@@ -629,48 +431,26 @@
         "id": "S01_to_common_ray",
         "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_NAMED_LATERALS",
         "certified_wall_collar": "a four-stage nonradial path on [1234], [1367], and [2467] leaves the false direct plane at the block-0 witness wall",
-        "ordinary_boundary": {
-          "K(p01)": 1,
-          "Q(p01,block0)": -1,
-          "Q(p01,block1)": 1
-        }
+        "ordinary_boundary": {"K(p01)": 1, "Q(p01,block0)": -1, "Q(p01,block1)": 1}
       },
       {
         "id": "S12_to_common_ray",
         "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_NAMED_LATERALS",
         "certified_wall_collar": "[1358] to [1358] intersect [2467], then remove the root amplitude on [2467]",
-        "ordinary_boundary": {
-          "K(p12)": 1,
-          "Q(p12,block1)": -1,
-          "Q(p12,block2)": 1
-        }
+        "ordinary_boundary": {"K(p12)": 1, "Q(p12,block1)": -1, "Q(p12,block2)": 1}
       },
       {
         "id": "S20_to_common_ray",
         "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_NAMED_LATERALS",
         "certified_wall_collar": "[1256] to [1256] intersect [2467], then remove the root amplitude on [2467]",
-        "ordinary_boundary": {
-          "K(p20)": 1,
-          "Q(p20,block2)": -1,
-          "Q(p20,block0)": 1
-        }
+        "ordinary_boundary": {"K(p20)": 1, "Q(p20,block2)": -1, "Q(p20,block0)": 1}
       },
-      {
-        "id": "H0_to_common_ray",
-        "status": "MISSING"
-      },
-      {
-        "id": "H1_to_common_ray",
-        "status": "MISSING"
-      },
+      {"id": "H0_to_common_ray", "status": "MISSING"},
+      {"id": "H1_to_common_ray", "status": "MISSING"},
       {
         "id": "H2_to_common_ray",
         "status": "SINGULAR_COMPARISON_PRISM_CERTIFIED_WITH_LITERAL_PAIR_LATERALS",
-        "ordinary_boundary": {
-          "K(h2)": 1,
-          "Q(p12,block2)": -1,
-          "Q(p20,block2)": 1
-        }
+        "ordinary_boundary": {"K(h2)": 1, "Q(p12,block2)": -1, "Q(p20,block2)": 1}
       }
     ],
     "certified_comparison_incidence_count": 4,
@@ -679,53 +459,23 @@
     "certified_mixed_d3_cell_count": 0,
     "parent_wall_collar_attempt": {
       "status": "FALSE_AS_A_THREE_EDGE_COMMON_COSPAN",
-      "successful_edges": [
-        "p12",
-        "p20"
-      ],
+      "successful_edges": ["p12", "p20"],
       "exceptional_edge": "p01",
       "p01_source_wall": "1234",
       "p01_critical_parameters": {
-        "block0_witness_wall": [
-          8.350313476723885e+34,
-          4.355258018964839e+34
-        ],
-        "first_additional_parent_corner_1367": [
-          3797676243957714,
-          1934663274435289
-        ],
-        "fixed_root_target_2467": [
-          1.5023238067080014e+26,
-          3.6368055566722865e+25
-        ]
+        "block0_witness_wall": [83503134767238851186305349765512866, 43552580189648394406194000441042241],
+        "first_additional_parent_corner_1367": [3797676243957714, 1934663274435289],
+        "fixed_root_target_2467": [150232380670800142796191902, 36368055566722865061946027]
       },
       "exact_block0_good_point": {
-        "common_parameter": [
-          6.927675939086631e+42,
-          3.570727927424047e+42
-        ],
-        "strict_tope_covector": [
-          10000,
-          177,
-          -7015,
-          368
-        ],
+        "common_parameter": [6927675939086631471463822597403349151993134, 3570727927424046863174470630365553354928359],
+        "strict_tope_covector": [10000, 177, -7015, 368],
         "minimum_signed_dot": 5966575
       },
       "later_relative_corner": {
-        "walls": [
-          "1234",
-          "1367",
-          "2467"
-        ],
-        "root_parameter": [
-          74520518780897,
-          5145156267709928
-        ],
-        "block0_strict_two_circuit": [
-          "136",
-          "167"
-        ]
+        "walls": ["1234", "1367", "2467"],
+        "root_parameter": [74520518780897, 5145156267709928],
+        "block0_strict_two_circuit": ["136", "167"]
       },
       "scope": "This falsifies the direct three-edge two-parameter parent-wall cospan, not every higher-dimensional parent-boundary cap. A separate nonradial tangent construction repairs p01 and now supports one exact singular comparison prism. The six-prism signed assembly and mixed J remain open."
     },
@@ -769,8 +519,5 @@
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_verify_row2599_disk.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_verify_row2599_node.py"
     ]
-  },
-  "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "547c532ed172aa53197d7288eb09c73929f094cd",
-  "current_state_note": "Historical generator preflight. The proper-support dimension-four target is superseded by the exact relative-boundary collapse; current target selection lives in current_decision_ledger."
+  }
 }
