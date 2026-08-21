@@ -138,6 +138,8 @@ not replace the generated coverage certificate.
 - linked historical open objects back to the canonical ledger;
 - selected the proof-bearing master-closure compiler as the next target.
 
-The next code-bearing checkpoint should implement the version-one certificate
-schema and a smallest hostile coverage canary before attempting a large
-row-2599 decomposition.
+This checkpoint also implements the version-one certificate schema and a
+small exact regular-cell fixture whose independent verifier rejects six
+hostile corruptions. The next code-bearing checkpoint should connect that
+interface to one bounded proof-producing roadmap or critical-point backend on
+a full-support canary before attempting a large row-2599 decomposition.
