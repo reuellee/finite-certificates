@@ -1,0 +1,5661 @@
+{
+  "format": "diag3-pair-master-closure-multibox-certificate-v1",
+  "status": "LOCAL_EXACT_MULTIBOX_CANARY",
+  "scope": {
+    "parent_index": 2599,
+    "compactification": "(Delta^3)^3",
+    "support": [
+      15,
+      15,
+      15
+    ],
+    "claim": "complete exact 3x3 multi-box regular-CW closure atlas inside one two-dimensional row-2599 full-support disk",
+    "local_parameter_coverage": "COMPLETE",
+    "global_parameter_coverage": "NOT_CLAIMED",
+    "scope_boundary_policy": "ordinary cells; never parent infinity",
+    "atlas_seam_policy": "ordinary cells; exact boundary-word gluing only"
+  },
+  "inputs": {
+    "source_commit": "0e3195ff7d0b672c5693b168e43c44ae9306da57",
+    "node_roadmap_path": "ai/omreal/data/DIAG9_GRAPH_row2599_node_roadmap.npz",
+    "node_roadmap_sha256": "ddec96b052b305d279b543be2af27e12f380f0dedc79ea434616c64b40cd8cea",
+    "candidate_factor_path": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin",
+    "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "candidate_factor_count": 17824,
+    "exact_empty_factor_digest": "f9022c922d56c69ea541d6098cea89004bdfcff73b01a411a159a78b5c369484",
+    "unresolved_factor_digest": "0c85f0e7370963df311a5a7d04e175e4a801b79c54fe0600a69bb777bf30a76a",
+    "target_signed_parent_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+  },
+  "generator": {
+    "backend": "exact_branch_coordinate_3x3_grid_v1",
+    "build_command": "python ai/omreal/build_diag3_pair_master_closure_multibox_canary.py",
+    "producer_role": "deterministic translation; all proof gates are independently replayed"
+  },
+  "coverage_evidence": {
+    "kind": "exact_branch_coordinate_multibox_partition",
+    "labelled_residual_occurrence_universe": 84840,
+    "parent_bracket_count": 70,
+    "branch_matrix": [
+      [
+        5934554455910656,
+        -1176454877277824
+      ],
+      [
+        9738264925739162,
+        15802240330472297
+      ]
+    ],
+    "branch_matrix_determinant": "105235885034684851065341346040320",
+    "axis_scale": "1000000000000",
+    "box_levels": [
+      "-3000000000000",
+      "-1000000000000",
+      "1000000000000",
+      "3000000000000"
+    ],
+    "cell_levels": [
+      "-3000000000000",
+      "-1000000000000",
+      "0",
+      "1000000000000",
+      "3000000000000"
+    ],
+    "source_disk_radius": "1/1000",
+    "domain_cell_coordinate_vertices": [
+      [
+        "-6632302815527391015625000/13702589197224589982466321099",
+        "1485824402276760156250000/13702589197224589982466321099"
+      ],
+      [
+        "-1904399147551363671875000/4567529732408196660822107033",
+        "2040731690318986718750000/4567529732408196660822107033"
+      ],
+      [
+        "1904399147551363671875000/4567529732408196660822107033",
+        "-2040731690318986718750000/4567529732408196660822107033"
+      ],
+      [
+        "6632302815527391015625000/13702589197224589982466321099",
+        "-1485824402276760156250000/13702589197224589982466321099"
+      ]
+    ],
+    "domain_max_abs_cell_coordinate": "6632302815527391015625000/13702589197224589982466321099",
+    "classification_census": {
+      "no_wall": 4,
+      "one_wall": 4,
+      "transverse_two_wall": 1
+    }
+  },
+  "stop_contract": {
+    "declared_box_ceiling": 9,
+    "used_boxes": 9,
+    "ceiling_status": "WITHIN_CEILING",
+    "unclassified_boxes": [],
+    "higher_specialization_boxes": [],
+    "maximum_simultaneous_residual_branches": 2,
+    "automatic_enlargement": false,
+    "next_failure_policy": "preserve the first unclassified box or projection-growth frontier"
+  },
+  "boxes": [
+    {
+      "id": "box_0_0",
+      "q0_interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "q1_interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "classification": "no_wall",
+      "active_branch_events": [],
+      "closure_cells": [
+        "p0_0",
+        "p0_1",
+        "p1_0",
+        "p1_1",
+        "h0_0",
+        "h0_1",
+        "v0_0",
+        "v1_0",
+        "f0_0"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_0_0",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_1_0",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_1_0",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_0_0",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_0_1",
+      "q0_interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "q1_interval": [
+        "-1000000000000",
+        "1000000000000"
+      ],
+      "classification": "one_wall",
+      "active_branch_events": [
+        1
+      ],
+      "closure_cells": [
+        "p0_1",
+        "p0_2",
+        "p0_3",
+        "p1_1",
+        "p1_2",
+        "p1_3",
+        "h0_1",
+        "h0_2",
+        "h0_3",
+        "v0_1",
+        "v0_2",
+        "v1_1",
+        "v1_2",
+        "f0_1",
+        "f0_2"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_1_0",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_1_1",
+            "orientation": 1
+          },
+          {
+            "segment": "seg_v_1_2",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_2_0",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_0_1",
+            "orientation": -1
+          },
+          {
+            "segment": "seg_v_0_2",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_0_2",
+      "q0_interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "q1_interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "classification": "no_wall",
+      "active_branch_events": [],
+      "closure_cells": [
+        "p0_3",
+        "p0_4",
+        "p1_3",
+        "p1_4",
+        "h0_3",
+        "h0_4",
+        "v0_3",
+        "v1_3",
+        "f0_3"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_2_0",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_1_3",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_3_0",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_0_3",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_1_0",
+      "q0_interval": [
+        "-1000000000000",
+        "1000000000000"
+      ],
+      "q1_interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "classification": "one_wall",
+      "active_branch_events": [
+        0
+      ],
+      "closure_cells": [
+        "p1_0",
+        "p1_1",
+        "p2_0",
+        "p2_1",
+        "p3_0",
+        "p3_1",
+        "h1_0",
+        "h1_1",
+        "h2_0",
+        "h2_1",
+        "v1_0",
+        "v2_0",
+        "v3_0",
+        "f1_0",
+        "f2_0"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_0_1",
+            "orientation": 1
+          },
+          {
+            "segment": "seg_h_0_2",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_2_0",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_1_1",
+            "orientation": -1
+          },
+          {
+            "segment": "seg_h_1_2",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_1_0",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_1_1",
+      "q0_interval": [
+        "-1000000000000",
+        "1000000000000"
+      ],
+      "q1_interval": [
+        "-1000000000000",
+        "1000000000000"
+      ],
+      "classification": "transverse_two_wall",
+      "active_branch_events": [
+        0,
+        1
+      ],
+      "closure_cells": [
+        "p1_1",
+        "p1_2",
+        "p1_3",
+        "p2_1",
+        "p2_2",
+        "p2_3",
+        "p3_1",
+        "p3_2",
+        "p3_3",
+        "h1_1",
+        "h1_2",
+        "h1_3",
+        "h2_1",
+        "h2_2",
+        "h2_3",
+        "v1_1",
+        "v1_2",
+        "v2_1",
+        "v2_2",
+        "v3_1",
+        "v3_2",
+        "f1_1",
+        "f1_2",
+        "f2_1",
+        "f2_2"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_1_1",
+            "orientation": 1
+          },
+          {
+            "segment": "seg_h_1_2",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_2_1",
+            "orientation": 1
+          },
+          {
+            "segment": "seg_v_2_2",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_2_1",
+            "orientation": -1
+          },
+          {
+            "segment": "seg_h_2_2",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_1_1",
+            "orientation": -1
+          },
+          {
+            "segment": "seg_v_1_2",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_1_2",
+      "q0_interval": [
+        "-1000000000000",
+        "1000000000000"
+      ],
+      "q1_interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "classification": "one_wall",
+      "active_branch_events": [
+        0
+      ],
+      "closure_cells": [
+        "p1_3",
+        "p1_4",
+        "p2_3",
+        "p2_4",
+        "p3_3",
+        "p3_4",
+        "h1_3",
+        "h1_4",
+        "h2_3",
+        "h2_4",
+        "v1_3",
+        "v2_3",
+        "v3_3",
+        "f1_3",
+        "f2_3"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_2_1",
+            "orientation": 1
+          },
+          {
+            "segment": "seg_h_2_2",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_2_3",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_3_1",
+            "orientation": -1
+          },
+          {
+            "segment": "seg_h_3_2",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_1_3",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_2_0",
+      "q0_interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "q1_interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "classification": "no_wall",
+      "active_branch_events": [],
+      "closure_cells": [
+        "p3_0",
+        "p3_1",
+        "p4_0",
+        "p4_1",
+        "h3_0",
+        "h3_1",
+        "v3_0",
+        "v4_0",
+        "f3_0"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_0_3",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_3_0",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_1_3",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_2_0",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_2_1",
+      "q0_interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "q1_interval": [
+        "-1000000000000",
+        "1000000000000"
+      ],
+      "classification": "one_wall",
+      "active_branch_events": [
+        1
+      ],
+      "closure_cells": [
+        "p3_1",
+        "p3_2",
+        "p3_3",
+        "p4_1",
+        "p4_2",
+        "p4_3",
+        "h3_1",
+        "h3_2",
+        "h3_3",
+        "v3_1",
+        "v3_2",
+        "v4_1",
+        "v4_2",
+        "f3_1",
+        "f3_2"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_1_3",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_3_1",
+            "orientation": 1
+          },
+          {
+            "segment": "seg_v_3_2",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_2_3",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_2_1",
+            "orientation": -1
+          },
+          {
+            "segment": "seg_v_2_2",
+            "orientation": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "box_2_2",
+      "q0_interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "q1_interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "classification": "no_wall",
+      "active_branch_events": [],
+      "closure_cells": [
+        "p3_3",
+        "p3_4",
+        "p4_3",
+        "p4_4",
+        "h3_3",
+        "h3_4",
+        "v3_3",
+        "v4_3",
+        "f3_3"
+      ],
+      "boundary_words": {
+        "bottom": [
+          {
+            "segment": "seg_h_2_3",
+            "orientation": 1
+          }
+        ],
+        "right": [
+          {
+            "segment": "seg_v_3_3",
+            "orientation": 1
+          }
+        ],
+        "top": [
+          {
+            "segment": "seg_h_3_3",
+            "orientation": -1
+          }
+        ],
+        "left": [
+          {
+            "segment": "seg_v_2_3",
+            "orientation": -1
+          }
+        ]
+      }
+    }
+  ],
+  "boundary_word_segments": [
+    {
+      "id": "seg_v_0_0",
+      "axis": "vertical",
+      "fixed": "-3000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_0",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_0_1",
+      "axis": "vertical",
+      "fixed": "-3000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_1",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_0_2",
+      "axis": "vertical",
+      "fixed": "-3000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_1",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_0_3",
+      "axis": "vertical",
+      "fixed": "-3000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_2",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_1_0",
+      "axis": "vertical",
+      "fixed": "-1000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_0",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_1_0",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_1_1",
+      "axis": "vertical",
+      "fixed": "-1000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_1",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_1_1",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_1_2",
+      "axis": "vertical",
+      "fixed": "-1000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_1",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_1_1",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_1_3",
+      "axis": "vertical",
+      "fixed": "-1000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_2",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_1_2",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_2_0",
+      "axis": "vertical",
+      "fixed": "1000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_0",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_2_0",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_2_1",
+      "axis": "vertical",
+      "fixed": "1000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_1",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_2_1",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_2_2",
+      "axis": "vertical",
+      "fixed": "1000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_1",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_2_1",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_2_3",
+      "axis": "vertical",
+      "fixed": "1000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_2",
+          "side": "right",
+          "orientation": 1
+        },
+        {
+          "box": "box_2_2",
+          "side": "left",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_3_0",
+      "axis": "vertical",
+      "fixed": "3000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_0",
+          "side": "right",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_3_1",
+      "axis": "vertical",
+      "fixed": "3000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_1",
+          "side": "right",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_3_2",
+      "axis": "vertical",
+      "fixed": "3000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_1",
+          "side": "right",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_v_3_3",
+      "axis": "vertical",
+      "fixed": "3000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_2",
+          "side": "right",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_0_0",
+      "axis": "horizontal",
+      "fixed": "-3000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_0",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_0_1",
+      "axis": "horizontal",
+      "fixed": "-3000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_0",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_0_2",
+      "axis": "horizontal",
+      "fixed": "-3000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_0",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_0_3",
+      "axis": "horizontal",
+      "fixed": "-3000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_0",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_1_0",
+      "axis": "horizontal",
+      "fixed": "-1000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_0",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_0_1",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_1_1",
+      "axis": "horizontal",
+      "fixed": "-1000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_0",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_1_1",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_1_2",
+      "axis": "horizontal",
+      "fixed": "-1000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_0",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_1_1",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_1_3",
+      "axis": "horizontal",
+      "fixed": "-1000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        -1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_0",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_2_1",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_2_0",
+      "axis": "horizontal",
+      "fixed": "1000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_1",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_0_2",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_2_1",
+      "axis": "horizontal",
+      "fixed": "1000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_1",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_1_2",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_2_2",
+      "axis": "horizontal",
+      "fixed": "1000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_1",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_1_2",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_2_3",
+      "axis": "horizontal",
+      "fixed": "1000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_1",
+          "side": "top",
+          "orientation": -1
+        },
+        {
+          "box": "box_2_2",
+          "side": "bottom",
+          "orientation": 1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_3_0",
+      "axis": "horizontal",
+      "fixed": "3000000000000",
+      "interval": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_0_2",
+          "side": "top",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_3_1",
+      "axis": "horizontal",
+      "fixed": "3000000000000",
+      "interval": [
+        "-1000000000000",
+        "0"
+      ],
+      "open_segment_sign_word": [
+        -1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_2",
+          "side": "top",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_3_2",
+      "axis": "horizontal",
+      "fixed": "3000000000000",
+      "interval": [
+        "0",
+        "1000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_1_2",
+          "side": "top",
+          "orientation": -1
+        }
+      ]
+    },
+    {
+      "id": "seg_h_3_3",
+      "axis": "horizontal",
+      "fixed": "3000000000000",
+      "interval": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "open_segment_sign_word": [
+        1,
+        1
+      ],
+      "incidents": [
+        {
+          "box": "box_2_2",
+          "side": "top",
+          "orientation": -1
+        }
+      ]
+    }
+  ],
+  "cells": [
+    {
+      "id": "p0_0",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-6632302815527391015625000/13702589197224589982466321099",
+        "1485824402276760156250000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "p0_1",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-18977803073708873046875000/41107767591673769947398963297",
+        "9093843875510480468750000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "p0_2",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "-6172750129090741015625000/13702589197224589982466321099",
+        "3804009736616860156250000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "p0_3",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-18058697700835573046875000/41107767591673769947398963297",
+        "13730214544190680468750000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "p0_4",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-1904399147551363671875000/4567529732408196660822107033",
+        "2040731690318986718750000/4567529732408196660822107033"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "p1_0",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-7551408188400691015625000/41107767591673769947398963297",
+        "-3150546266403439843750000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "p1_1",
+      "dimension": 0,
+      "kind": "atlas_seam_vertex",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-6632302815527391015625000/41107767591673769947398963297",
+        "1485824402276760156250000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "p1_2",
+      "dimension": 0,
+      "kind": "atlas_seam_residual_crossing",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "-6172750129090741015625000/41107767591673769947398963297",
+        "3804009736616860156250000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "p1_3",
+      "dimension": 0,
+      "kind": "atlas_seam_vertex",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-1904399147551363671875000/13702589197224589982466321099",
+        "2040731690318986718750000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "p1_4",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-4794092069780791015625000/41107767591673769947398963297",
+        "10758565739637160156250000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "p2_0",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness_branch_coordinates": [
+        "0",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-459552686436650000000000/13702589197224589982466321099",
+        "-2318185334340100000000000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "p2_1",
+      "dimension": 0,
+      "kind": "atlas_seam_residual_crossing",
+      "witness_branch_coordinates": [
+        "0",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-459552686436650000000000/41107767591673769947398963297",
+        "-2318185334340100000000000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "p2_2",
+      "dimension": 0,
+      "kind": "residual_node",
+      "witness_branch_coordinates": [
+        "0",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "0",
+        "0"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "p2_3",
+      "dimension": 0,
+      "kind": "atlas_seam_residual_crossing",
+      "witness_branch_coordinates": [
+        "0",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "459552686436650000000000/41107767591673769947398963297",
+        "2318185334340100000000000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "p2_4",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness_branch_coordinates": [
+        "0",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "459552686436650000000000/13702589197224589982466321099",
+        "2318185334340100000000000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "p3_0",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "4794092069780791015625000/41107767591673769947398963297",
+        "-10758565739637160156250000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "p3_1",
+      "dimension": 0,
+      "kind": "atlas_seam_vertex",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "1904399147551363671875000/13702589197224589982466321099",
+        "-2040731690318986718750000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "p3_2",
+      "dimension": 0,
+      "kind": "atlas_seam_residual_crossing",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "6172750129090741015625000/41107767591673769947398963297",
+        "-3804009736616860156250000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "p3_3",
+      "dimension": 0,
+      "kind": "atlas_seam_vertex",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "6632302815527391015625000/41107767591673769947398963297",
+        "-1485824402276760156250000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "p3_4",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "7551408188400691015625000/41107767591673769947398963297",
+        "3150546266403439843750000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "p4_0",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "1904399147551363671875000/4567529732408196660822107033",
+        "-2040731690318986718750000/4567529732408196660822107033"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "p4_1",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "18058697700835573046875000/41107767591673769947398963297",
+        "-13730214544190680468750000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "p4_2",
+      "dimension": 0,
+      "kind": "scope_boundary_residual_endpoint",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "6172750129090741015625000/13702589197224589982466321099",
+        "-3804009736616860156250000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "p4_3",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "18977803073708873046875000/41107767591673769947398963297",
+        "-9093843875510480468750000/41107767591673769947398963297"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "p4_4",
+      "dimension": 0,
+      "kind": "scope_boundary_vertex",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "6632302815527391015625000/13702589197224589982466321099",
+        "-1485824402276760156250000/13702589197224589982466321099"
+      ],
+      "boundary": [],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "h0_0",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-13724158317491432031250000/41107767591673769947398963297",
+        "653463470213420312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_0",
+        "p1_0"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "h0_1",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-1422783660513125781250000/4567529732408196660822107033",
+        "587759348765957812500000/4567529732408196660822107033"
+      ],
+      "boundary": [
+        "p0_1",
+        "p1_1"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "h0_2",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "-12345500258181482031250000/41107767591673769947398963297",
+        "7608019473233720312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_2",
+        "p1_2"
+      ],
+      "incident_residual_chambers": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "h0_3",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-11885947571744832031250000/41107767591673769947398963297",
+        "9926204807573820312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_3",
+        "p1_3"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "h0_4",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-10966842198871532031250000/41107767591673769947398963297",
+        "14562575476254020312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_4",
+        "p1_4"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "h1_0",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-4465033123855320507812500/41107767591673769947398963297",
+        "-5052551134711869921875000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p1_0",
+        "p2_0"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "h1_1",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-1181975916994006835937500/13702589197224589982466321099",
+        "-138726822010556640625000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "p1_1",
+        "p2_1"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "h1_2",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "-3086375064545370507812500/41107767591673769947398963297",
+        "1902004868308430078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p1_2",
+        "p2_2"
+      ],
+      "incident_residual_chambers": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "h1_3",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-2626822378108720507812500/41107767591673769947398963297",
+        "4220190202648530078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p1_3",
+        "p2_3"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "h1_4",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-1707717005235420507812500/41107767591673769947398963297",
+        "8856560871328730078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p1_4",
+        "p2_4"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "h2_0",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "1707717005235420507812500/41107767591673769947398963297",
+        "-8856560871328730078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_0",
+        "p3_0"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "h2_1",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "2626822378108720507812500/41107767591673769947398963297",
+        "-4220190202648530078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_1",
+        "p3_1"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "h2_2",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "3086375064545370507812500/41107767591673769947398963297",
+        "-1902004868308430078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_2",
+        "p3_2"
+      ],
+      "incident_residual_chambers": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "h2_3",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "1181975916994006835937500/13702589197224589982466321099",
+        "138726822010556640625000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "p2_3",
+        "p3_3"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "h2_4",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "4465033123855320507812500/41107767591673769947398963297",
+        "5052551134711869921875000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_4",
+        "p3_4"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "h3_0",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "-3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "10966842198871532031250000/41107767591673769947398963297",
+        "-14562575476254020312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p3_0",
+        "p4_0"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "h3_1",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "-1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "11885947571744832031250000/41107767591673769947398963297",
+        "-9926204807573820312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p3_1",
+        "p4_1"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "h3_2",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "0"
+      ],
+      "witness_cell_coordinates": [
+        "12345500258181482031250000/41107767591673769947398963297",
+        "-7608019473233720312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p3_2",
+        "p4_2"
+      ],
+      "incident_residual_chambers": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "h3_3",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "1000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "1422783660513125781250000/4567529732408196660822107033",
+        "-587759348765957812500000/4567529732408196660822107033"
+      ],
+      "boundary": [
+        "p3_3",
+        "p4_3"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "h3_4",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "3000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "13724158317491432031250000/41107767591673769947398963297",
+        "-653463470213420312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p3_4",
+        "p4_4"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "v0_0",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-19437355760145523046875000/41107767591673769947398963297",
+        "6775658541170380468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_0",
+        "p0_1"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "v0_1",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-18748026730490548046875000/41107767591673769947398963297",
+        "10252936542680530468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_1",
+        "p0_2"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "v0_2",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-18288474044053898046875000/41107767591673769947398963297",
+        "12571121877020630468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_2",
+        "p0_3"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "v0_3",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "-3000000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-17599145014398923046875000/41107767591673769947398963297",
+        "16048399878530780468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p0_3",
+        "p0_4"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "v1_0",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-2363951833988013671875000/13702589197224589982466321099",
+        "-277453644021113281250000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "p1_0",
+        "p1_1"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "v1_1",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-711391830256562890625000/4567529732408196660822107033",
+        "293879674382978906250000/4567529732408196660822107033"
+      ],
+      "boundary": [
+        "p1_1",
+        "p1_2"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "v1_2",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-5942973785872416015625000/41107767591673769947398963297",
+        "4963102403786910156250000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p1_2",
+        "p1_3"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "v1_3",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "-1000000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-5253644756217441015625000/41107767591673769947398963297",
+        "8440380405297060156250000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p1_3",
+        "p1_4"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "v2_0",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "0",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-919105372873300000000000/41107767591673769947398963297",
+        "-4636370668680200000000000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_0",
+        "p2_1"
+      ],
+      "incident_residual_chambers": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "v2_1",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "0",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-229776343218325000000000/41107767591673769947398963297",
+        "-1159092667170050000000000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_1",
+        "p2_2"
+      ],
+      "incident_residual_chambers": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "v2_2",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "0",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "229776343218325000000000/41107767591673769947398963297",
+        "1159092667170050000000000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_2",
+        "p2_3"
+      ],
+      "incident_residual_chambers": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "v2_3",
+      "dimension": 1,
+      "kind": "residual_wall_segment",
+      "witness_branch_coordinates": [
+        "0",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "919105372873300000000000/41107767591673769947398963297",
+        "4636370668680200000000000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p2_3",
+        "p2_4"
+      ],
+      "incident_residual_chambers": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "v3_0",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "5253644756217441015625000/41107767591673769947398963297",
+        "-8440380405297060156250000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p3_0",
+        "p3_1"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "v3_1",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "5942973785872416015625000/41107767591673769947398963297",
+        "-4963102403786910156250000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p3_1",
+        "p3_2"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "v3_2",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "711391830256562890625000/4567529732408196660822107033",
+        "-293879674382978906250000/4567529732408196660822107033"
+      ],
+      "boundary": [
+        "p3_2",
+        "p3_3"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "v3_3",
+      "dimension": 1,
+      "kind": "atlas_seam_segment",
+      "witness_branch_coordinates": [
+        "1000000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "2363951833988013671875000/13702589197224589982466321099",
+        "277453644021113281250000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "p3_3",
+        "p3_4"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "v4_0",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "17599145014398923046875000/41107767591673769947398963297",
+        "-16048399878530780468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p4_0",
+        "p4_1"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "v4_1",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "18288474044053898046875000/41107767591673769947398963297",
+        "-12571121877020630468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p4_1",
+        "p4_2"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "v4_2",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "18748026730490548046875000/41107767591673769947398963297",
+        "-10252936542680530468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p4_2",
+        "p4_3"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "v4_3",
+      "dimension": 1,
+      "kind": "scope_boundary_segment",
+      "witness_branch_coordinates": [
+        "3000000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "19437355760145523046875000/41107767591673769947398963297",
+        "-6775658541170380468750000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "p4_3",
+        "p4_4"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "f0_0",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-13264605631054782031250000/41107767591673769947398963297",
+        "2971648804553520312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h0_0",
+        "v1_0",
+        "h0_1",
+        "v0_0"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "f0_1",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-12575276601399807031250000/41107767591673769947398963297",
+        "6448926806063670312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h0_1",
+        "v1_1",
+        "h0_2",
+        "v0_1"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "f0_2",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-4038574638321052343750000/13702589197224589982466321099",
+        "2922370713467923437500000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "h0_2",
+        "v1_2",
+        "h0_3",
+        "v0_2"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "f0_3",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-2000000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-3808798295102727343750000/13702589197224589982466321099",
+        "4081463380637973437500000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "h0_3",
+        "v1_3",
+        "h0_4",
+        "v0_3"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "f1_0",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-4005480437418670507812500/41107767591673769947398963297",
+        "-2734365800371769921875000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h1_0",
+        "v2_0",
+        "h1_1",
+        "v1_0"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "f1_1",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-3316151407763695507812500/41107767591673769947398963297",
+        "742912201138380078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h1_1",
+        "v2_1",
+        "h1_2",
+        "v1_1"
+      ],
+      "incident_residual_chambers": [
+        2
+      ]
+    },
+    {
+      "id": "f1_2",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-952199573775681835937500/13702589197224589982466321099",
+        "1020365845159493359375000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "h1_2",
+        "v2_2",
+        "h1_3",
+        "v1_2"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "f1_3",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "-500000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "-240807743519118945312500/4567529732408196660822107033",
+        "726486170776514453125000/4567529732408196660822107033"
+      ],
+      "boundary": [
+        "h1_3",
+        "v2_3",
+        "h1_4",
+        "v1_3"
+      ],
+      "incident_residual_chambers": [
+        3
+      ]
+    },
+    {
+      "id": "f2_0",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "240807743519118945312500/4567529732408196660822107033",
+        "-726486170776514453125000/4567529732408196660822107033"
+      ],
+      "boundary": [
+        "h2_0",
+        "v3_0",
+        "h2_1",
+        "v2_0"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "f2_1",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "952199573775681835937500/13702589197224589982466321099",
+        "-1020365845159493359375000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "h2_1",
+        "v3_1",
+        "h2_2",
+        "v2_1"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "f2_2",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "3316151407763695507812500/41107767591673769947398963297",
+        "-742912201138380078125000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h2_2",
+        "v3_2",
+        "h2_3",
+        "v2_2"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "f2_3",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "500000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "4005480437418670507812500/41107767591673769947398963297",
+        "2734365800371769921875000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h2_3",
+        "v3_3",
+        "h2_4",
+        "v2_3"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "f3_0",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "-2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "3808798295102727343750000/13702589197224589982466321099",
+        "-4081463380637973437500000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "h3_0",
+        "v4_0",
+        "h3_1",
+        "v3_0"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "f3_1",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "-500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "4038574638321052343750000/13702589197224589982466321099",
+        "-2922370713467923437500000/13702589197224589982466321099"
+      ],
+      "boundary": [
+        "h3_1",
+        "v4_1",
+        "h3_2",
+        "v3_1"
+      ],
+      "incident_residual_chambers": [
+        1
+      ]
+    },
+    {
+      "id": "f3_2",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "500000000000"
+      ],
+      "witness_cell_coordinates": [
+        "12575276601399807031250000/41107767591673769947398963297",
+        "-6448926806063670312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h3_2",
+        "v4_2",
+        "h3_3",
+        "v3_2"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    },
+    {
+      "id": "f3_3",
+      "dimension": 2,
+      "kind": "open_residual_chamber_piece",
+      "witness_branch_coordinates": [
+        "2000000000000",
+        "2000000000000"
+      ],
+      "witness_cell_coordinates": [
+        "13264605631054782031250000/41107767591673769947398963297",
+        "-2971648804553520312500000/41107767591673769947398963297"
+      ],
+      "boundary": [
+        "h3_3",
+        "v4_3",
+        "h3_4",
+        "v3_3"
+      ],
+      "incident_residual_chambers": [
+        0
+      ]
+    }
+  ],
+  "strict_closure_pairs": [
+    [
+      "f0_0",
+      "h0_0"
+    ],
+    [
+      "f0_0",
+      "h0_1"
+    ],
+    [
+      "f0_0",
+      "p0_0"
+    ],
+    [
+      "f0_0",
+      "p0_1"
+    ],
+    [
+      "f0_0",
+      "p1_0"
+    ],
+    [
+      "f0_0",
+      "p1_1"
+    ],
+    [
+      "f0_0",
+      "v0_0"
+    ],
+    [
+      "f0_0",
+      "v1_0"
+    ],
+    [
+      "f0_1",
+      "h0_1"
+    ],
+    [
+      "f0_1",
+      "h0_2"
+    ],
+    [
+      "f0_1",
+      "p0_1"
+    ],
+    [
+      "f0_1",
+      "p0_2"
+    ],
+    [
+      "f0_1",
+      "p1_1"
+    ],
+    [
+      "f0_1",
+      "p1_2"
+    ],
+    [
+      "f0_1",
+      "v0_1"
+    ],
+    [
+      "f0_1",
+      "v1_1"
+    ],
+    [
+      "f0_2",
+      "h0_2"
+    ],
+    [
+      "f0_2",
+      "h0_3"
+    ],
+    [
+      "f0_2",
+      "p0_2"
+    ],
+    [
+      "f0_2",
+      "p0_3"
+    ],
+    [
+      "f0_2",
+      "p1_2"
+    ],
+    [
+      "f0_2",
+      "p1_3"
+    ],
+    [
+      "f0_2",
+      "v0_2"
+    ],
+    [
+      "f0_2",
+      "v1_2"
+    ],
+    [
+      "f0_3",
+      "h0_3"
+    ],
+    [
+      "f0_3",
+      "h0_4"
+    ],
+    [
+      "f0_3",
+      "p0_3"
+    ],
+    [
+      "f0_3",
+      "p0_4"
+    ],
+    [
+      "f0_3",
+      "p1_3"
+    ],
+    [
+      "f0_3",
+      "p1_4"
+    ],
+    [
+      "f0_3",
+      "v0_3"
+    ],
+    [
+      "f0_3",
+      "v1_3"
+    ],
+    [
+      "f1_0",
+      "h1_0"
+    ],
+    [
+      "f1_0",
+      "h1_1"
+    ],
+    [
+      "f1_0",
+      "p1_0"
+    ],
+    [
+      "f1_0",
+      "p1_1"
+    ],
+    [
+      "f1_0",
+      "p2_0"
+    ],
+    [
+      "f1_0",
+      "p2_1"
+    ],
+    [
+      "f1_0",
+      "v1_0"
+    ],
+    [
+      "f1_0",
+      "v2_0"
+    ],
+    [
+      "f1_1",
+      "h1_1"
+    ],
+    [
+      "f1_1",
+      "h1_2"
+    ],
+    [
+      "f1_1",
+      "p1_1"
+    ],
+    [
+      "f1_1",
+      "p1_2"
+    ],
+    [
+      "f1_1",
+      "p2_1"
+    ],
+    [
+      "f1_1",
+      "p2_2"
+    ],
+    [
+      "f1_1",
+      "v1_1"
+    ],
+    [
+      "f1_1",
+      "v2_1"
+    ],
+    [
+      "f1_2",
+      "h1_2"
+    ],
+    [
+      "f1_2",
+      "h1_3"
+    ],
+    [
+      "f1_2",
+      "p1_2"
+    ],
+    [
+      "f1_2",
+      "p1_3"
+    ],
+    [
+      "f1_2",
+      "p2_2"
+    ],
+    [
+      "f1_2",
+      "p2_3"
+    ],
+    [
+      "f1_2",
+      "v1_2"
+    ],
+    [
+      "f1_2",
+      "v2_2"
+    ],
+    [
+      "f1_3",
+      "h1_3"
+    ],
+    [
+      "f1_3",
+      "h1_4"
+    ],
+    [
+      "f1_3",
+      "p1_3"
+    ],
+    [
+      "f1_3",
+      "p1_4"
+    ],
+    [
+      "f1_3",
+      "p2_3"
+    ],
+    [
+      "f1_3",
+      "p2_4"
+    ],
+    [
+      "f1_3",
+      "v1_3"
+    ],
+    [
+      "f1_3",
+      "v2_3"
+    ],
+    [
+      "f2_0",
+      "h2_0"
+    ],
+    [
+      "f2_0",
+      "h2_1"
+    ],
+    [
+      "f2_0",
+      "p2_0"
+    ],
+    [
+      "f2_0",
+      "p2_1"
+    ],
+    [
+      "f2_0",
+      "p3_0"
+    ],
+    [
+      "f2_0",
+      "p3_1"
+    ],
+    [
+      "f2_0",
+      "v2_0"
+    ],
+    [
+      "f2_0",
+      "v3_0"
+    ],
+    [
+      "f2_1",
+      "h2_1"
+    ],
+    [
+      "f2_1",
+      "h2_2"
+    ],
+    [
+      "f2_1",
+      "p2_1"
+    ],
+    [
+      "f2_1",
+      "p2_2"
+    ],
+    [
+      "f2_1",
+      "p3_1"
+    ],
+    [
+      "f2_1",
+      "p3_2"
+    ],
+    [
+      "f2_1",
+      "v2_1"
+    ],
+    [
+      "f2_1",
+      "v3_1"
+    ],
+    [
+      "f2_2",
+      "h2_2"
+    ],
+    [
+      "f2_2",
+      "h2_3"
+    ],
+    [
+      "f2_2",
+      "p2_2"
+    ],
+    [
+      "f2_2",
+      "p2_3"
+    ],
+    [
+      "f2_2",
+      "p3_2"
+    ],
+    [
+      "f2_2",
+      "p3_3"
+    ],
+    [
+      "f2_2",
+      "v2_2"
+    ],
+    [
+      "f2_2",
+      "v3_2"
+    ],
+    [
+      "f2_3",
+      "h2_3"
+    ],
+    [
+      "f2_3",
+      "h2_4"
+    ],
+    [
+      "f2_3",
+      "p2_3"
+    ],
+    [
+      "f2_3",
+      "p2_4"
+    ],
+    [
+      "f2_3",
+      "p3_3"
+    ],
+    [
+      "f2_3",
+      "p3_4"
+    ],
+    [
+      "f2_3",
+      "v2_3"
+    ],
+    [
+      "f2_3",
+      "v3_3"
+    ],
+    [
+      "f3_0",
+      "h3_0"
+    ],
+    [
+      "f3_0",
+      "h3_1"
+    ],
+    [
+      "f3_0",
+      "p3_0"
+    ],
+    [
+      "f3_0",
+      "p3_1"
+    ],
+    [
+      "f3_0",
+      "p4_0"
+    ],
+    [
+      "f3_0",
+      "p4_1"
+    ],
+    [
+      "f3_0",
+      "v3_0"
+    ],
+    [
+      "f3_0",
+      "v4_0"
+    ],
+    [
+      "f3_1",
+      "h3_1"
+    ],
+    [
+      "f3_1",
+      "h3_2"
+    ],
+    [
+      "f3_1",
+      "p3_1"
+    ],
+    [
+      "f3_1",
+      "p3_2"
+    ],
+    [
+      "f3_1",
+      "p4_1"
+    ],
+    [
+      "f3_1",
+      "p4_2"
+    ],
+    [
+      "f3_1",
+      "v3_1"
+    ],
+    [
+      "f3_1",
+      "v4_1"
+    ],
+    [
+      "f3_2",
+      "h3_2"
+    ],
+    [
+      "f3_2",
+      "h3_3"
+    ],
+    [
+      "f3_2",
+      "p3_2"
+    ],
+    [
+      "f3_2",
+      "p3_3"
+    ],
+    [
+      "f3_2",
+      "p4_2"
+    ],
+    [
+      "f3_2",
+      "p4_3"
+    ],
+    [
+      "f3_2",
+      "v3_2"
+    ],
+    [
+      "f3_2",
+      "v4_2"
+    ],
+    [
+      "f3_3",
+      "h3_3"
+    ],
+    [
+      "f3_3",
+      "h3_4"
+    ],
+    [
+      "f3_3",
+      "p3_3"
+    ],
+    [
+      "f3_3",
+      "p3_4"
+    ],
+    [
+      "f3_3",
+      "p4_3"
+    ],
+    [
+      "f3_3",
+      "p4_4"
+    ],
+    [
+      "f3_3",
+      "v3_3"
+    ],
+    [
+      "f3_3",
+      "v4_3"
+    ],
+    [
+      "h0_0",
+      "p0_0"
+    ],
+    [
+      "h0_0",
+      "p1_0"
+    ],
+    [
+      "h0_1",
+      "p0_1"
+    ],
+    [
+      "h0_1",
+      "p1_1"
+    ],
+    [
+      "h0_2",
+      "p0_2"
+    ],
+    [
+      "h0_2",
+      "p1_2"
+    ],
+    [
+      "h0_3",
+      "p0_3"
+    ],
+    [
+      "h0_3",
+      "p1_3"
+    ],
+    [
+      "h0_4",
+      "p0_4"
+    ],
+    [
+      "h0_4",
+      "p1_4"
+    ],
+    [
+      "h1_0",
+      "p1_0"
+    ],
+    [
+      "h1_0",
+      "p2_0"
+    ],
+    [
+      "h1_1",
+      "p1_1"
+    ],
+    [
+      "h1_1",
+      "p2_1"
+    ],
+    [
+      "h1_2",
+      "p1_2"
+    ],
+    [
+      "h1_2",
+      "p2_2"
+    ],
+    [
+      "h1_3",
+      "p1_3"
+    ],
+    [
+      "h1_3",
+      "p2_3"
+    ],
+    [
+      "h1_4",
+      "p1_4"
+    ],
+    [
+      "h1_4",
+      "p2_4"
+    ],
+    [
+      "h2_0",
+      "p2_0"
+    ],
+    [
+      "h2_0",
+      "p3_0"
+    ],
+    [
+      "h2_1",
+      "p2_1"
+    ],
+    [
+      "h2_1",
+      "p3_1"
+    ],
+    [
+      "h2_2",
+      "p2_2"
+    ],
+    [
+      "h2_2",
+      "p3_2"
+    ],
+    [
+      "h2_3",
+      "p2_3"
+    ],
+    [
+      "h2_3",
+      "p3_3"
+    ],
+    [
+      "h2_4",
+      "p2_4"
+    ],
+    [
+      "h2_4",
+      "p3_4"
+    ],
+    [
+      "h3_0",
+      "p3_0"
+    ],
+    [
+      "h3_0",
+      "p4_0"
+    ],
+    [
+      "h3_1",
+      "p3_1"
+    ],
+    [
+      "h3_1",
+      "p4_1"
+    ],
+    [
+      "h3_2",
+      "p3_2"
+    ],
+    [
+      "h3_2",
+      "p4_2"
+    ],
+    [
+      "h3_3",
+      "p3_3"
+    ],
+    [
+      "h3_3",
+      "p4_3"
+    ],
+    [
+      "h3_4",
+      "p3_4"
+    ],
+    [
+      "h3_4",
+      "p4_4"
+    ],
+    [
+      "v0_0",
+      "p0_0"
+    ],
+    [
+      "v0_0",
+      "p0_1"
+    ],
+    [
+      "v0_1",
+      "p0_1"
+    ],
+    [
+      "v0_1",
+      "p0_2"
+    ],
+    [
+      "v0_2",
+      "p0_2"
+    ],
+    [
+      "v0_2",
+      "p0_3"
+    ],
+    [
+      "v0_3",
+      "p0_3"
+    ],
+    [
+      "v0_3",
+      "p0_4"
+    ],
+    [
+      "v1_0",
+      "p1_0"
+    ],
+    [
+      "v1_0",
+      "p1_1"
+    ],
+    [
+      "v1_1",
+      "p1_1"
+    ],
+    [
+      "v1_1",
+      "p1_2"
+    ],
+    [
+      "v1_2",
+      "p1_2"
+    ],
+    [
+      "v1_2",
+      "p1_3"
+    ],
+    [
+      "v1_3",
+      "p1_3"
+    ],
+    [
+      "v1_3",
+      "p1_4"
+    ],
+    [
+      "v2_0",
+      "p2_0"
+    ],
+    [
+      "v2_0",
+      "p2_1"
+    ],
+    [
+      "v2_1",
+      "p2_1"
+    ],
+    [
+      "v2_1",
+      "p2_2"
+    ],
+    [
+      "v2_2",
+      "p2_2"
+    ],
+    [
+      "v2_2",
+      "p2_3"
+    ],
+    [
+      "v2_3",
+      "p2_3"
+    ],
+    [
+      "v2_3",
+      "p2_4"
+    ],
+    [
+      "v3_0",
+      "p3_0"
+    ],
+    [
+      "v3_0",
+      "p3_1"
+    ],
+    [
+      "v3_1",
+      "p3_1"
+    ],
+    [
+      "v3_1",
+      "p3_2"
+    ],
+    [
+      "v3_2",
+      "p3_2"
+    ],
+    [
+      "v3_2",
+      "p3_3"
+    ],
+    [
+      "v3_3",
+      "p3_3"
+    ],
+    [
+      "v3_3",
+      "p3_4"
+    ],
+    [
+      "v4_0",
+      "p4_0"
+    ],
+    [
+      "v4_0",
+      "p4_1"
+    ],
+    [
+      "v4_1",
+      "p4_1"
+    ],
+    [
+      "v4_1",
+      "p4_2"
+    ],
+    [
+      "v4_2",
+      "p4_2"
+    ],
+    [
+      "v4_2",
+      "p4_3"
+    ],
+    [
+      "v4_3",
+      "p4_3"
+    ],
+    [
+      "v4_3",
+      "p4_4"
+    ]
+  ],
+  "strict_three_cell_chains": [
+    [
+      "f0_0",
+      "h0_0",
+      "p0_0"
+    ],
+    [
+      "f0_0",
+      "h0_0",
+      "p1_0"
+    ],
+    [
+      "f0_0",
+      "h0_1",
+      "p0_1"
+    ],
+    [
+      "f0_0",
+      "h0_1",
+      "p1_1"
+    ],
+    [
+      "f0_0",
+      "v0_0",
+      "p0_0"
+    ],
+    [
+      "f0_0",
+      "v0_0",
+      "p0_1"
+    ],
+    [
+      "f0_0",
+      "v1_0",
+      "p1_0"
+    ],
+    [
+      "f0_0",
+      "v1_0",
+      "p1_1"
+    ],
+    [
+      "f0_1",
+      "h0_1",
+      "p0_1"
+    ],
+    [
+      "f0_1",
+      "h0_1",
+      "p1_1"
+    ],
+    [
+      "f0_1",
+      "h0_2",
+      "p0_2"
+    ],
+    [
+      "f0_1",
+      "h0_2",
+      "p1_2"
+    ],
+    [
+      "f0_1",
+      "v0_1",
+      "p0_1"
+    ],
+    [
+      "f0_1",
+      "v0_1",
+      "p0_2"
+    ],
+    [
+      "f0_1",
+      "v1_1",
+      "p1_1"
+    ],
+    [
+      "f0_1",
+      "v1_1",
+      "p1_2"
+    ],
+    [
+      "f0_2",
+      "h0_2",
+      "p0_2"
+    ],
+    [
+      "f0_2",
+      "h0_2",
+      "p1_2"
+    ],
+    [
+      "f0_2",
+      "h0_3",
+      "p0_3"
+    ],
+    [
+      "f0_2",
+      "h0_3",
+      "p1_3"
+    ],
+    [
+      "f0_2",
+      "v0_2",
+      "p0_2"
+    ],
+    [
+      "f0_2",
+      "v0_2",
+      "p0_3"
+    ],
+    [
+      "f0_2",
+      "v1_2",
+      "p1_2"
+    ],
+    [
+      "f0_2",
+      "v1_2",
+      "p1_3"
+    ],
+    [
+      "f0_3",
+      "h0_3",
+      "p0_3"
+    ],
+    [
+      "f0_3",
+      "h0_3",
+      "p1_3"
+    ],
+    [
+      "f0_3",
+      "h0_4",
+      "p0_4"
+    ],
+    [
+      "f0_3",
+      "h0_4",
+      "p1_4"
+    ],
+    [
+      "f0_3",
+      "v0_3",
+      "p0_3"
+    ],
+    [
+      "f0_3",
+      "v0_3",
+      "p0_4"
+    ],
+    [
+      "f0_3",
+      "v1_3",
+      "p1_3"
+    ],
+    [
+      "f0_3",
+      "v1_3",
+      "p1_4"
+    ],
+    [
+      "f1_0",
+      "h1_0",
+      "p1_0"
+    ],
+    [
+      "f1_0",
+      "h1_0",
+      "p2_0"
+    ],
+    [
+      "f1_0",
+      "h1_1",
+      "p1_1"
+    ],
+    [
+      "f1_0",
+      "h1_1",
+      "p2_1"
+    ],
+    [
+      "f1_0",
+      "v1_0",
+      "p1_0"
+    ],
+    [
+      "f1_0",
+      "v1_0",
+      "p1_1"
+    ],
+    [
+      "f1_0",
+      "v2_0",
+      "p2_0"
+    ],
+    [
+      "f1_0",
+      "v2_0",
+      "p2_1"
+    ],
+    [
+      "f1_1",
+      "h1_1",
+      "p1_1"
+    ],
+    [
+      "f1_1",
+      "h1_1",
+      "p2_1"
+    ],
+    [
+      "f1_1",
+      "h1_2",
+      "p1_2"
+    ],
+    [
+      "f1_1",
+      "h1_2",
+      "p2_2"
+    ],
+    [
+      "f1_1",
+      "v1_1",
+      "p1_1"
+    ],
+    [
+      "f1_1",
+      "v1_1",
+      "p1_2"
+    ],
+    [
+      "f1_1",
+      "v2_1",
+      "p2_1"
+    ],
+    [
+      "f1_1",
+      "v2_1",
+      "p2_2"
+    ],
+    [
+      "f1_2",
+      "h1_2",
+      "p1_2"
+    ],
+    [
+      "f1_2",
+      "h1_2",
+      "p2_2"
+    ],
+    [
+      "f1_2",
+      "h1_3",
+      "p1_3"
+    ],
+    [
+      "f1_2",
+      "h1_3",
+      "p2_3"
+    ],
+    [
+      "f1_2",
+      "v1_2",
+      "p1_2"
+    ],
+    [
+      "f1_2",
+      "v1_2",
+      "p1_3"
+    ],
+    [
+      "f1_2",
+      "v2_2",
+      "p2_2"
+    ],
+    [
+      "f1_2",
+      "v2_2",
+      "p2_3"
+    ],
+    [
+      "f1_3",
+      "h1_3",
+      "p1_3"
+    ],
+    [
+      "f1_3",
+      "h1_3",
+      "p2_3"
+    ],
+    [
+      "f1_3",
+      "h1_4",
+      "p1_4"
+    ],
+    [
+      "f1_3",
+      "h1_4",
+      "p2_4"
+    ],
+    [
+      "f1_3",
+      "v1_3",
+      "p1_3"
+    ],
+    [
+      "f1_3",
+      "v1_3",
+      "p1_4"
+    ],
+    [
+      "f1_3",
+      "v2_3",
+      "p2_3"
+    ],
+    [
+      "f1_3",
+      "v2_3",
+      "p2_4"
+    ],
+    [
+      "f2_0",
+      "h2_0",
+      "p2_0"
+    ],
+    [
+      "f2_0",
+      "h2_0",
+      "p3_0"
+    ],
+    [
+      "f2_0",
+      "h2_1",
+      "p2_1"
+    ],
+    [
+      "f2_0",
+      "h2_1",
+      "p3_1"
+    ],
+    [
+      "f2_0",
+      "v2_0",
+      "p2_0"
+    ],
+    [
+      "f2_0",
+      "v2_0",
+      "p2_1"
+    ],
+    [
+      "f2_0",
+      "v3_0",
+      "p3_0"
+    ],
+    [
+      "f2_0",
+      "v3_0",
+      "p3_1"
+    ],
+    [
+      "f2_1",
+      "h2_1",
+      "p2_1"
+    ],
+    [
+      "f2_1",
+      "h2_1",
+      "p3_1"
+    ],
+    [
+      "f2_1",
+      "h2_2",
+      "p2_2"
+    ],
+    [
+      "f2_1",
+      "h2_2",
+      "p3_2"
+    ],
+    [
+      "f2_1",
+      "v2_1",
+      "p2_1"
+    ],
+    [
+      "f2_1",
+      "v2_1",
+      "p2_2"
+    ],
+    [
+      "f2_1",
+      "v3_1",
+      "p3_1"
+    ],
+    [
+      "f2_1",
+      "v3_1",
+      "p3_2"
+    ],
+    [
+      "f2_2",
+      "h2_2",
+      "p2_2"
+    ],
+    [
+      "f2_2",
+      "h2_2",
+      "p3_2"
+    ],
+    [
+      "f2_2",
+      "h2_3",
+      "p2_3"
+    ],
+    [
+      "f2_2",
+      "h2_3",
+      "p3_3"
+    ],
+    [
+      "f2_2",
+      "v2_2",
+      "p2_2"
+    ],
+    [
+      "f2_2",
+      "v2_2",
+      "p2_3"
+    ],
+    [
+      "f2_2",
+      "v3_2",
+      "p3_2"
+    ],
+    [
+      "f2_2",
+      "v3_2",
+      "p3_3"
+    ],
+    [
+      "f2_3",
+      "h2_3",
+      "p2_3"
+    ],
+    [
+      "f2_3",
+      "h2_3",
+      "p3_3"
+    ],
+    [
+      "f2_3",
+      "h2_4",
+      "p2_4"
+    ],
+    [
+      "f2_3",
+      "h2_4",
+      "p3_4"
+    ],
+    [
+      "f2_3",
+      "v2_3",
+      "p2_3"
+    ],
+    [
+      "f2_3",
+      "v2_3",
+      "p2_4"
+    ],
+    [
+      "f2_3",
+      "v3_3",
+      "p3_3"
+    ],
+    [
+      "f2_3",
+      "v3_3",
+      "p3_4"
+    ],
+    [
+      "f3_0",
+      "h3_0",
+      "p3_0"
+    ],
+    [
+      "f3_0",
+      "h3_0",
+      "p4_0"
+    ],
+    [
+      "f3_0",
+      "h3_1",
+      "p3_1"
+    ],
+    [
+      "f3_0",
+      "h3_1",
+      "p4_1"
+    ],
+    [
+      "f3_0",
+      "v3_0",
+      "p3_0"
+    ],
+    [
+      "f3_0",
+      "v3_0",
+      "p3_1"
+    ],
+    [
+      "f3_0",
+      "v4_0",
+      "p4_0"
+    ],
+    [
+      "f3_0",
+      "v4_0",
+      "p4_1"
+    ],
+    [
+      "f3_1",
+      "h3_1",
+      "p3_1"
+    ],
+    [
+      "f3_1",
+      "h3_1",
+      "p4_1"
+    ],
+    [
+      "f3_1",
+      "h3_2",
+      "p3_2"
+    ],
+    [
+      "f3_1",
+      "h3_2",
+      "p4_2"
+    ],
+    [
+      "f3_1",
+      "v3_1",
+      "p3_1"
+    ],
+    [
+      "f3_1",
+      "v3_1",
+      "p3_2"
+    ],
+    [
+      "f3_1",
+      "v4_1",
+      "p4_1"
+    ],
+    [
+      "f3_1",
+      "v4_1",
+      "p4_2"
+    ],
+    [
+      "f3_2",
+      "h3_2",
+      "p3_2"
+    ],
+    [
+      "f3_2",
+      "h3_2",
+      "p4_2"
+    ],
+    [
+      "f3_2",
+      "h3_3",
+      "p3_3"
+    ],
+    [
+      "f3_2",
+      "h3_3",
+      "p4_3"
+    ],
+    [
+      "f3_2",
+      "v3_2",
+      "p3_2"
+    ],
+    [
+      "f3_2",
+      "v3_2",
+      "p3_3"
+    ],
+    [
+      "f3_2",
+      "v4_2",
+      "p4_2"
+    ],
+    [
+      "f3_2",
+      "v4_2",
+      "p4_3"
+    ],
+    [
+      "f3_3",
+      "h3_3",
+      "p3_3"
+    ],
+    [
+      "f3_3",
+      "h3_3",
+      "p4_3"
+    ],
+    [
+      "f3_3",
+      "h3_4",
+      "p3_4"
+    ],
+    [
+      "f3_3",
+      "h3_4",
+      "p4_4"
+    ],
+    [
+      "f3_3",
+      "v3_3",
+      "p3_3"
+    ],
+    [
+      "f3_3",
+      "v3_3",
+      "p3_4"
+    ],
+    [
+      "f3_3",
+      "v4_3",
+      "p4_3"
+    ],
+    [
+      "f3_3",
+      "v4_3",
+      "p4_4"
+    ]
+  ],
+  "scope_boundary_subcomplex": [
+    "p0_0",
+    "p0_1",
+    "p0_2",
+    "p0_3",
+    "p0_4",
+    "p1_0",
+    "p1_4",
+    "p2_0",
+    "p2_4",
+    "p3_0",
+    "p3_4",
+    "p4_0",
+    "p4_1",
+    "p4_2",
+    "p4_3",
+    "p4_4",
+    "h0_0",
+    "h0_4",
+    "h1_0",
+    "h1_4",
+    "h2_0",
+    "h2_4",
+    "h3_0",
+    "h3_4",
+    "v0_0",
+    "v0_1",
+    "v0_2",
+    "v0_3",
+    "v4_0",
+    "v4_1",
+    "v4_2",
+    "v4_3"
+  ],
+  "atlas_seam_subcomplex": [
+    "p0_1",
+    "p0_3",
+    "p1_0",
+    "p1_1",
+    "p1_2",
+    "p1_3",
+    "p1_4",
+    "p2_1",
+    "p2_3",
+    "p3_0",
+    "p3_1",
+    "p3_2",
+    "p3_3",
+    "p3_4",
+    "p4_1",
+    "p4_3",
+    "h0_1",
+    "h0_3",
+    "h1_1",
+    "h1_3",
+    "h2_1",
+    "h2_3",
+    "h3_1",
+    "h3_3",
+    "v1_0",
+    "v1_1",
+    "v1_2",
+    "v1_3",
+    "v3_0",
+    "v3_1",
+    "v3_2",
+    "v3_3"
+  ],
+  "residual_wall_subcomplex": [
+    "p0_2",
+    "p1_2",
+    "p2_0",
+    "p2_1",
+    "p2_2",
+    "p2_3",
+    "p2_4",
+    "p3_2",
+    "p4_2",
+    "h0_2",
+    "h1_2",
+    "h2_2",
+    "h3_2",
+    "v2_0",
+    "v2_1",
+    "v2_2",
+    "v2_3"
+  ],
+  "parent_infinity_subcomplex": [],
+  "signature_profile_source": {
+    "universe_count": 97224,
+    "semantic_sha256": "446a32e43413e49c57ed81d11e0c8177c968ff0d471b88c3d838df0be106e5d2",
+    "profiles": [
+      {
+        "feasible_chamber_mask": 0,
+        "signature_count": 70968,
+        "bad_cells": [
+          "p0_0",
+          "p0_1",
+          "p0_2",
+          "p0_3",
+          "p0_4",
+          "p1_0",
+          "p1_1",
+          "p1_2",
+          "p1_3",
+          "p1_4",
+          "p2_0",
+          "p2_1",
+          "p2_2",
+          "p2_3",
+          "p2_4",
+          "p3_0",
+          "p3_1",
+          "p3_2",
+          "p3_3",
+          "p3_4",
+          "p4_0",
+          "p4_1",
+          "p4_2",
+          "p4_3",
+          "p4_4",
+          "h0_0",
+          "h0_1",
+          "h0_2",
+          "h0_3",
+          "h0_4",
+          "h1_0",
+          "h1_1",
+          "h1_2",
+          "h1_3",
+          "h1_4",
+          "h2_0",
+          "h2_1",
+          "h2_2",
+          "h2_3",
+          "h2_4",
+          "h3_0",
+          "h3_1",
+          "h3_2",
+          "h3_3",
+          "h3_4",
+          "v0_0",
+          "v0_1",
+          "v0_2",
+          "v0_3",
+          "v1_0",
+          "v1_1",
+          "v1_2",
+          "v1_3",
+          "v2_0",
+          "v2_1",
+          "v2_2",
+          "v2_3",
+          "v3_0",
+          "v3_1",
+          "v3_2",
+          "v3_3",
+          "v4_0",
+          "v4_1",
+          "v4_2",
+          "v4_3",
+          "f0_0",
+          "f0_1",
+          "f0_2",
+          "f0_3",
+          "f1_0",
+          "f1_1",
+          "f1_2",
+          "f1_3",
+          "f2_0",
+          "f2_1",
+          "f2_2",
+          "f2_3",
+          "f3_0",
+          "f3_1",
+          "f3_2",
+          "f3_3"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 3,
+        "signature_count": 72,
+        "bad_cells": [
+          "p0_0",
+          "p0_1",
+          "p0_2",
+          "p0_3",
+          "p0_4",
+          "p1_0",
+          "p1_1",
+          "p1_2",
+          "p1_3",
+          "p1_4",
+          "p2_0",
+          "p2_1",
+          "p2_2",
+          "p2_3",
+          "p2_4",
+          "h0_0",
+          "h0_1",
+          "h0_2",
+          "h0_3",
+          "h0_4",
+          "h1_0",
+          "h1_1",
+          "h1_2",
+          "h1_3",
+          "h1_4",
+          "v0_0",
+          "v0_1",
+          "v0_2",
+          "v0_3",
+          "v1_0",
+          "v1_1",
+          "v1_2",
+          "v1_3",
+          "v2_0",
+          "v2_1",
+          "v2_2",
+          "v2_3",
+          "f0_0",
+          "f0_1",
+          "f0_2",
+          "f0_3",
+          "f1_0",
+          "f1_1",
+          "f1_2",
+          "f1_3"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 6,
+        "signature_count": 72,
+        "bad_cells": [
+          "p0_2",
+          "p0_3",
+          "p0_4",
+          "p1_2",
+          "p1_3",
+          "p1_4",
+          "p2_2",
+          "p2_3",
+          "p2_4",
+          "p3_2",
+          "p3_3",
+          "p3_4",
+          "p4_2",
+          "p4_3",
+          "p4_4",
+          "h0_2",
+          "h0_3",
+          "h0_4",
+          "h1_2",
+          "h1_3",
+          "h1_4",
+          "h2_2",
+          "h2_3",
+          "h2_4",
+          "h3_2",
+          "h3_3",
+          "h3_4",
+          "v0_2",
+          "v0_3",
+          "v1_2",
+          "v1_3",
+          "v2_2",
+          "v2_3",
+          "v3_2",
+          "v3_3",
+          "v4_2",
+          "v4_3",
+          "f0_2",
+          "f0_3",
+          "f1_2",
+          "f1_3",
+          "f2_2",
+          "f2_3",
+          "f3_2",
+          "f3_3"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 9,
+        "signature_count": 72,
+        "bad_cells": [
+          "p0_0",
+          "p0_1",
+          "p0_2",
+          "p1_0",
+          "p1_1",
+          "p1_2",
+          "p2_0",
+          "p2_1",
+          "p2_2",
+          "p3_0",
+          "p3_1",
+          "p3_2",
+          "p4_0",
+          "p4_1",
+          "p4_2",
+          "h0_0",
+          "h0_1",
+          "h0_2",
+          "h1_0",
+          "h1_1",
+          "h1_2",
+          "h2_0",
+          "h2_1",
+          "h2_2",
+          "h3_0",
+          "h3_1",
+          "h3_2",
+          "v0_0",
+          "v0_1",
+          "v1_0",
+          "v1_1",
+          "v2_0",
+          "v2_1",
+          "v3_0",
+          "v3_1",
+          "v4_0",
+          "v4_1",
+          "f0_0",
+          "f0_1",
+          "f1_0",
+          "f1_1",
+          "f2_0",
+          "f2_1",
+          "f3_0",
+          "f3_1"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 12,
+        "signature_count": 72,
+        "bad_cells": [
+          "p2_0",
+          "p2_1",
+          "p2_2",
+          "p2_3",
+          "p2_4",
+          "p3_0",
+          "p3_1",
+          "p3_2",
+          "p3_3",
+          "p3_4",
+          "p4_0",
+          "p4_1",
+          "p4_2",
+          "p4_3",
+          "p4_4",
+          "h2_0",
+          "h2_1",
+          "h2_2",
+          "h2_3",
+          "h2_4",
+          "h3_0",
+          "h3_1",
+          "h3_2",
+          "h3_3",
+          "h3_4",
+          "v2_0",
+          "v2_1",
+          "v2_2",
+          "v2_3",
+          "v3_0",
+          "v3_1",
+          "v3_2",
+          "v3_3",
+          "v4_0",
+          "v4_1",
+          "v4_2",
+          "v4_3",
+          "f2_0",
+          "f2_1",
+          "f2_2",
+          "f2_3",
+          "f3_0",
+          "f3_1",
+          "f3_2",
+          "f3_3"
+        ]
+      },
+      {
+        "feasible_chamber_mask": 15,
+        "signature_count": 25968,
+        "bad_cells": []
+      }
+    ]
+  },
+  "integral_boundary": {
+    "orientation_rule": "horizontal and vertical edges point in increasing q0 and q1; each rectangle is counterclockwise",
+    "c0_basis": [
+      "p0_0",
+      "p0_1",
+      "p0_2",
+      "p0_3",
+      "p0_4",
+      "p1_0",
+      "p1_1",
+      "p1_2",
+      "p1_3",
+      "p1_4",
+      "p2_0",
+      "p2_1",
+      "p2_2",
+      "p2_3",
+      "p2_4",
+      "p3_0",
+      "p3_1",
+      "p3_2",
+      "p3_3",
+      "p3_4",
+      "p4_0",
+      "p4_1",
+      "p4_2",
+      "p4_3",
+      "p4_4"
+    ],
+    "c1_basis": [
+      "h0_0",
+      "h0_1",
+      "h0_2",
+      "h0_3",
+      "h0_4",
+      "h1_0",
+      "h1_1",
+      "h1_2",
+      "h1_3",
+      "h1_4",
+      "h2_0",
+      "h2_1",
+      "h2_2",
+      "h2_3",
+      "h2_4",
+      "h3_0",
+      "h3_1",
+      "h3_2",
+      "h3_3",
+      "h3_4",
+      "v0_0",
+      "v0_1",
+      "v0_2",
+      "v0_3",
+      "v1_0",
+      "v1_1",
+      "v1_2",
+      "v1_3",
+      "v2_0",
+      "v2_1",
+      "v2_2",
+      "v2_3",
+      "v3_0",
+      "v3_1",
+      "v3_2",
+      "v3_3",
+      "v4_0",
+      "v4_1",
+      "v4_2",
+      "v4_3"
+    ],
+    "c2_basis": [
+      "f0_0",
+      "f0_1",
+      "f0_2",
+      "f0_3",
+      "f1_0",
+      "f1_1",
+      "f1_2",
+      "f1_3",
+      "f2_0",
+      "f2_1",
+      "f2_2",
+      "f2_3",
+      "f3_0",
+      "f3_1",
+      "f3_2",
+      "f3_3"
+    ],
+    "d1_entries": [
+      [
+        "p0_0",
+        "h0_0",
+        -1
+      ],
+      [
+        "p1_0",
+        "h0_0",
+        1
+      ],
+      [
+        "p0_1",
+        "h0_1",
+        -1
+      ],
+      [
+        "p1_1",
+        "h0_1",
+        1
+      ],
+      [
+        "p0_2",
+        "h0_2",
+        -1
+      ],
+      [
+        "p1_2",
+        "h0_2",
+        1
+      ],
+      [
+        "p0_3",
+        "h0_3",
+        -1
+      ],
+      [
+        "p1_3",
+        "h0_3",
+        1
+      ],
+      [
+        "p0_4",
+        "h0_4",
+        -1
+      ],
+      [
+        "p1_4",
+        "h0_4",
+        1
+      ],
+      [
+        "p1_0",
+        "h1_0",
+        -1
+      ],
+      [
+        "p2_0",
+        "h1_0",
+        1
+      ],
+      [
+        "p1_1",
+        "h1_1",
+        -1
+      ],
+      [
+        "p2_1",
+        "h1_1",
+        1
+      ],
+      [
+        "p1_2",
+        "h1_2",
+        -1
+      ],
+      [
+        "p2_2",
+        "h1_2",
+        1
+      ],
+      [
+        "p1_3",
+        "h1_3",
+        -1
+      ],
+      [
+        "p2_3",
+        "h1_3",
+        1
+      ],
+      [
+        "p1_4",
+        "h1_4",
+        -1
+      ],
+      [
+        "p2_4",
+        "h1_4",
+        1
+      ],
+      [
+        "p2_0",
+        "h2_0",
+        -1
+      ],
+      [
+        "p3_0",
+        "h2_0",
+        1
+      ],
+      [
+        "p2_1",
+        "h2_1",
+        -1
+      ],
+      [
+        "p3_1",
+        "h2_1",
+        1
+      ],
+      [
+        "p2_2",
+        "h2_2",
+        -1
+      ],
+      [
+        "p3_2",
+        "h2_2",
+        1
+      ],
+      [
+        "p2_3",
+        "h2_3",
+        -1
+      ],
+      [
+        "p3_3",
+        "h2_3",
+        1
+      ],
+      [
+        "p2_4",
+        "h2_4",
+        -1
+      ],
+      [
+        "p3_4",
+        "h2_4",
+        1
+      ],
+      [
+        "p3_0",
+        "h3_0",
+        -1
+      ],
+      [
+        "p4_0",
+        "h3_0",
+        1
+      ],
+      [
+        "p3_1",
+        "h3_1",
+        -1
+      ],
+      [
+        "p4_1",
+        "h3_1",
+        1
+      ],
+      [
+        "p3_2",
+        "h3_2",
+        -1
+      ],
+      [
+        "p4_2",
+        "h3_2",
+        1
+      ],
+      [
+        "p3_3",
+        "h3_3",
+        -1
+      ],
+      [
+        "p4_3",
+        "h3_3",
+        1
+      ],
+      [
+        "p3_4",
+        "h3_4",
+        -1
+      ],
+      [
+        "p4_4",
+        "h3_4",
+        1
+      ],
+      [
+        "p0_0",
+        "v0_0",
+        -1
+      ],
+      [
+        "p0_1",
+        "v0_0",
+        1
+      ],
+      [
+        "p0_1",
+        "v0_1",
+        -1
+      ],
+      [
+        "p0_2",
+        "v0_1",
+        1
+      ],
+      [
+        "p0_2",
+        "v0_2",
+        -1
+      ],
+      [
+        "p0_3",
+        "v0_2",
+        1
+      ],
+      [
+        "p0_3",
+        "v0_3",
+        -1
+      ],
+      [
+        "p0_4",
+        "v0_3",
+        1
+      ],
+      [
+        "p1_0",
+        "v1_0",
+        -1
+      ],
+      [
+        "p1_1",
+        "v1_0",
+        1
+      ],
+      [
+        "p1_1",
+        "v1_1",
+        -1
+      ],
+      [
+        "p1_2",
+        "v1_1",
+        1
+      ],
+      [
+        "p1_2",
+        "v1_2",
+        -1
+      ],
+      [
+        "p1_3",
+        "v1_2",
+        1
+      ],
+      [
+        "p1_3",
+        "v1_3",
+        -1
+      ],
+      [
+        "p1_4",
+        "v1_3",
+        1
+      ],
+      [
+        "p2_0",
+        "v2_0",
+        -1
+      ],
+      [
+        "p2_1",
+        "v2_0",
+        1
+      ],
+      [
+        "p2_1",
+        "v2_1",
+        -1
+      ],
+      [
+        "p2_2",
+        "v2_1",
+        1
+      ],
+      [
+        "p2_2",
+        "v2_2",
+        -1
+      ],
+      [
+        "p2_3",
+        "v2_2",
+        1
+      ],
+      [
+        "p2_3",
+        "v2_3",
+        -1
+      ],
+      [
+        "p2_4",
+        "v2_3",
+        1
+      ],
+      [
+        "p3_0",
+        "v3_0",
+        -1
+      ],
+      [
+        "p3_1",
+        "v3_0",
+        1
+      ],
+      [
+        "p3_1",
+        "v3_1",
+        -1
+      ],
+      [
+        "p3_2",
+        "v3_1",
+        1
+      ],
+      [
+        "p3_2",
+        "v3_2",
+        -1
+      ],
+      [
+        "p3_3",
+        "v3_2",
+        1
+      ],
+      [
+        "p3_3",
+        "v3_3",
+        -1
+      ],
+      [
+        "p3_4",
+        "v3_3",
+        1
+      ],
+      [
+        "p4_0",
+        "v4_0",
+        -1
+      ],
+      [
+        "p4_1",
+        "v4_0",
+        1
+      ],
+      [
+        "p4_1",
+        "v4_1",
+        -1
+      ],
+      [
+        "p4_2",
+        "v4_1",
+        1
+      ],
+      [
+        "p4_2",
+        "v4_2",
+        -1
+      ],
+      [
+        "p4_3",
+        "v4_2",
+        1
+      ],
+      [
+        "p4_3",
+        "v4_3",
+        -1
+      ],
+      [
+        "p4_4",
+        "v4_3",
+        1
+      ]
+    ],
+    "d2_entries": [
+      [
+        "h0_0",
+        "f0_0",
+        1
+      ],
+      [
+        "v1_0",
+        "f0_0",
+        1
+      ],
+      [
+        "h0_1",
+        "f0_0",
+        -1
+      ],
+      [
+        "v0_0",
+        "f0_0",
+        -1
+      ],
+      [
+        "h0_1",
+        "f0_1",
+        1
+      ],
+      [
+        "v1_1",
+        "f0_1",
+        1
+      ],
+      [
+        "h0_2",
+        "f0_1",
+        -1
+      ],
+      [
+        "v0_1",
+        "f0_1",
+        -1
+      ],
+      [
+        "h0_2",
+        "f0_2",
+        1
+      ],
+      [
+        "v1_2",
+        "f0_2",
+        1
+      ],
+      [
+        "h0_3",
+        "f0_2",
+        -1
+      ],
+      [
+        "v0_2",
+        "f0_2",
+        -1
+      ],
+      [
+        "h0_3",
+        "f0_3",
+        1
+      ],
+      [
+        "v1_3",
+        "f0_3",
+        1
+      ],
+      [
+        "h0_4",
+        "f0_3",
+        -1
+      ],
+      [
+        "v0_3",
+        "f0_3",
+        -1
+      ],
+      [
+        "h1_0",
+        "f1_0",
+        1
+      ],
+      [
+        "v2_0",
+        "f1_0",
+        1
+      ],
+      [
+        "h1_1",
+        "f1_0",
+        -1
+      ],
+      [
+        "v1_0",
+        "f1_0",
+        -1
+      ],
+      [
+        "h1_1",
+        "f1_1",
+        1
+      ],
+      [
+        "v2_1",
+        "f1_1",
+        1
+      ],
+      [
+        "h1_2",
+        "f1_1",
+        -1
+      ],
+      [
+        "v1_1",
+        "f1_1",
+        -1
+      ],
+      [
+        "h1_2",
+        "f1_2",
+        1
+      ],
+      [
+        "v2_2",
+        "f1_2",
+        1
+      ],
+      [
+        "h1_3",
+        "f1_2",
+        -1
+      ],
+      [
+        "v1_2",
+        "f1_2",
+        -1
+      ],
+      [
+        "h1_3",
+        "f1_3",
+        1
+      ],
+      [
+        "v2_3",
+        "f1_3",
+        1
+      ],
+      [
+        "h1_4",
+        "f1_3",
+        -1
+      ],
+      [
+        "v1_3",
+        "f1_3",
+        -1
+      ],
+      [
+        "h2_0",
+        "f2_0",
+        1
+      ],
+      [
+        "v3_0",
+        "f2_0",
+        1
+      ],
+      [
+        "h2_1",
+        "f2_0",
+        -1
+      ],
+      [
+        "v2_0",
+        "f2_0",
+        -1
+      ],
+      [
+        "h2_1",
+        "f2_1",
+        1
+      ],
+      [
+        "v3_1",
+        "f2_1",
+        1
+      ],
+      [
+        "h2_2",
+        "f2_1",
+        -1
+      ],
+      [
+        "v2_1",
+        "f2_1",
+        -1
+      ],
+      [
+        "h2_2",
+        "f2_2",
+        1
+      ],
+      [
+        "v3_2",
+        "f2_2",
+        1
+      ],
+      [
+        "h2_3",
+        "f2_2",
+        -1
+      ],
+      [
+        "v2_2",
+        "f2_2",
+        -1
+      ],
+      [
+        "h2_3",
+        "f2_3",
+        1
+      ],
+      [
+        "v3_3",
+        "f2_3",
+        1
+      ],
+      [
+        "h2_4",
+        "f2_3",
+        -1
+      ],
+      [
+        "v2_3",
+        "f2_3",
+        -1
+      ],
+      [
+        "h3_0",
+        "f3_0",
+        1
+      ],
+      [
+        "v4_0",
+        "f3_0",
+        1
+      ],
+      [
+        "h3_1",
+        "f3_0",
+        -1
+      ],
+      [
+        "v3_0",
+        "f3_0",
+        -1
+      ],
+      [
+        "h3_1",
+        "f3_1",
+        1
+      ],
+      [
+        "v4_1",
+        "f3_1",
+        1
+      ],
+      [
+        "h3_2",
+        "f3_1",
+        -1
+      ],
+      [
+        "v3_1",
+        "f3_1",
+        -1
+      ],
+      [
+        "h3_2",
+        "f3_2",
+        1
+      ],
+      [
+        "v4_2",
+        "f3_2",
+        1
+      ],
+      [
+        "h3_3",
+        "f3_2",
+        -1
+      ],
+      [
+        "v3_2",
+        "f3_2",
+        -1
+      ],
+      [
+        "h3_3",
+        "f3_3",
+        1
+      ],
+      [
+        "v4_3",
+        "f3_3",
+        1
+      ],
+      [
+        "h3_4",
+        "f3_3",
+        -1
+      ],
+      [
+        "v3_3",
+        "f3_3",
+        -1
+      ]
+    ]
+  },
+  "verifier": {
+    "command": "python ai/omreal/verify_diag3_pair_master_closure_multibox_canary.py",
+    "recomputes": [
+      "all 84,840 residual restrictions and 70 parent brackets",
+      "exact branch-coordinate containment in the certified source disk",
+      "all nine box classifications and every atomic shared-boundary sign word",
+      "the 81-cell regular-CW closure and integral d_squared identity",
+      "all 97,224 extension-signature profiles",
+      "all 216 ordered profile-triple ranks on the barycentric two-skeleton"
+    ]
+  }
+}

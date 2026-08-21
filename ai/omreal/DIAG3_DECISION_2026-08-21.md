@@ -156,10 +156,29 @@ Seven hostile corruptions are rejected.
 
 This is the first end-to-end proof-producing instance of the selected
 compiler architecture, but it is local and does not close either invariant
-diagonal-three obligation.  The next bounded stage is a multi-box
-two-dimensional full-support roadmap with exact boundary-word gluing.  It
-must stop with a preserved unclassified-box or projection-growth frontier
-rather than automatically widening to a full nine-dimensional decomposition.
+diagonal-three obligation.
+
+## Exact multi-box stage completed
+
+The next bounded stage has also been executed.  In the two exact residual
+branch coordinates, a declared `3 x 3` atlas contains four no-wall boxes,
+four one-wall boxes and one transverse two-wall box.  Thirty-two atomic
+boundary-word segments certify every box boundary; the sixteen shared
+segments agree exactly with opposite orientations.  The glued refinement has
+25 vertices, 40 edges and 16 chambers, and its barycentric two-skeleton has
+81 vertices, 208 edges and 128 triangles.  All 216 ordered profile triples
+again have zero middle residue with the artificial outer boundary and the
+internal seams retained as ordinary cells.  Ten hostile corruptions are
+rejected.
+
+This completes the bounded gluing-method canary, not global row-2599
+coverage.  The next experiment is a first-new-event expansion in the same
+two-dimensional parent plane with a ceiling of 64 boxes.  It must either glue
+a second exact residual event cluster or preserve the first unclassified box
+or projection-growth frontier; it may not automatically widen into a full
+nine-dimensional decomposition.
 
 See `DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md` and
-`verify_diag3_pair_master_closure_node_canary.py`.
+`verify_diag3_pair_master_closure_node_canary.py`, then
+`DIAG3_PAIR_MASTER_CLOSURE_MULTIBOX_CANARY.md` and
+`verify_diag3_pair_master_closure_multibox_canary.py`.

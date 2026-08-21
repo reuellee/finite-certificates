@@ -468,6 +468,22 @@ python ai/omreal/DIAG9_GRAPH_cut_sat.py \
 This is the first exact codimension-two local roadmap.  It is not a cover of
 the full parent realization cell.
 
+`DIAG3_PAIR_MASTER_CLOSURE_MULTIBOX_CANARY.json` refines a strict
+branch-coordinate subdomain of that disk into a declared `3 x 3` box atlas.
+It records four no-wall boxes, four one-wall boxes, one transverse two-wall
+box, 32 atomic boundary sign words, an 81-cell regular-CW closure and complete
+signature-profile labels.  Its independent verifier reconstructs the exact
+geometry and all 216 barycentric profile-triple ranks and rejects ten hostile
+corruptions.  The outer boundary and internal seams are ordinary cells; the
+parent-infinity subcomplex is empty.
+
+```console
+python ai/omreal/build_diag3_pair_master_closure_multibox_canary.py
+python ai/omreal/verify_diag3_pair_master_closure_multibox_canary.py
+```
+
+This is a local gluing-method canary, not global row-2599 coverage.
+
 ## Exact global residual-factor census
 
 `DIAG9_GRAPH_global_factor_census.npz` localizes all 84,840 labeled residual

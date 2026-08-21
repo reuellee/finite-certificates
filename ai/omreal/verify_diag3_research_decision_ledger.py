@@ -199,11 +199,42 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_master_closure_node_canary.py",
         ],
     }
+    multibox = progress["second_multibox_canary"]
+    assert multibox == {
+        "status": "PROVED",
+        "scope": "one exact 3x3 two-dimensional full-support atlas inside the row-2599 transverse-node disk",
+        "boxes": 9,
+        "no_wall_boxes": 4,
+        "one_wall_boxes": 4,
+        "transverse_two_wall_boxes": 1,
+        "unclassified_boxes": 0,
+        "atomic_boundary_word_segments": 32,
+        "shared_boundary_segments_glued": 16,
+        "regular_cw_cells": 81,
+        "vertices": 25,
+        "edges": 40,
+        "chambers": 16,
+        "barycentric_vertices": 81,
+        "barycentric_edges": 208,
+        "barycentric_triangles": 128,
+        "labelled_residual_occurrences_replayed": 84_840,
+        "parent_brackets_replayed": 70,
+        "extension_signatures_accounted": 97_224,
+        "ordered_profile_triples_replayed": 216,
+        "nonexact_profile_triples_with_scope_boundary_ordinary": 0,
+        "parent_infinity_cells": 0,
+        "hostile_corruptions_rejected": 10,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_MULTIBOX_CANARY.md",
+            "ai/omreal/data/DIAG3_PAIR_MASTER_CLOSURE_MULTIBOX_CANARY.json",
+            "ai/omreal/verify_diag3_pair_master_closure_multibox_canary.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "bounded multi-box two-dimensional full-support roadmap"
+        "bounded first-new-event expansion in the same exact two-dimensional parent plane"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -231,6 +262,7 @@ def main() -> None:
         selected[0]["priority_score"],
     )
     print("PASS first proof-producing master-closure canary: 17 cells / 216 ranks")
+    print("PASS second multi-box master-closure canary: 9 boxes / 81 cells / 216 ranks")
     print("LEDGER_GIT_BLOB", digest)
 
 
