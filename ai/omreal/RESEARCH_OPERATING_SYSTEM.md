@@ -108,7 +108,7 @@ For each theorem target, store a directed acyclic graph with:
 
 A large residual count is not itself an invariant obligation. For example,
 individual triple-factor rows are one sufficient route to triple
-`H_c^0)-vanishing; the invariant target is absence of compact triple-bad
+`H_c^0`-vanishing; the invariant target is absence of compact triple-bad
 components.
 
 ## Target selection
