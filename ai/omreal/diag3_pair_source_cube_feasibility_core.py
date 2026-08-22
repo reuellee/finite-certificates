@@ -50,7 +50,13 @@ def multiply_trivariate(left, right):
     return clean(answer)
 
 
-def restrict_cube(polynomial, source, target):
+def restrict_cube(
+    polynomial,
+    source,
+    target,
+    starts=BLOCK_STARTS,
+    ends=BLOCK_ENDS,
+):
     answer = {}
     for exponent, coefficient in polynomial.items():
         term = {(0, 0, 0): Fraction(coefficient)}
@@ -60,10 +66,10 @@ def restrict_cube(polynomial, source, target):
             block = variable // 3
             index = [0, 0, 0]
             index[block] = 1
-            start = source[variable] + BLOCK_STARTS[block] * (
+            start = source[variable] + starts[block] * (
                 target[variable] - source[variable]
             )
-            change = (BLOCK_ENDS[block] - BLOCK_STARTS[block]) * (
+            change = (ends[block] - starts[block]) * (
                 target[variable] - source[variable]
             )
             linear = {(0, 0, 0): start, tuple(index): change}

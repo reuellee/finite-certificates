@@ -985,6 +985,22 @@ The producer and independent semantic digests are
 The local comparison ledger is now `4/6`; `H0`, `H1`, mixed `J`, and global
 coverage remain open.
 
+## Chart-0/chart-152 source staircase
+
+`DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE_0_152.json` records five exact
+parent-resident source boxes of total normalized volume `373/512`.  It
+classifies all 89,120 box-factor restrictions, with 5,106 distinct factors
+occurring on at least one box and 12,718 zero-free on every box.  Exact graph
+and coordinate-adaptive critical-system arguments prove every boxwise wall
+component reaches the union of the five box boundaries.  Internal seams are
+part of that declared source skeleton; global parent-cell coverage remains
+open.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_pair_source_staircase_coverage.py
+```
+
 ## Diagonal-three completion open object
 
 `DIAG3_COMPLETION_OPEN_OBJECT.json` is the machine-readable resumption record

@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on one exact chart-0-to-chart-152 source square and one attached three-parameter half-cube all 17,824 restrictions are decided locally and every occurring wall component is boundary-attached; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on an exact chart-0-to-chart-152 source square and a five-box source staircase of volume `373/512`, all local restrictions are decided and every boxwise wall component reaches the declared source skeleton; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -1330,6 +1330,22 @@ the half-cube boundary.  This is complete coverage on one source volume, not
 global coverage of the nine-dimensional parent cell.  See
 `DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md`.
 
+The parent-safe source volume now extends further as a five-box staircase.
+Its dyadic steps have `u` intervals `[0,1/8]`, `[1/8,1/4]`, `[1/4,3/8]`,
+`[3/8,1/2]`, and `[1/2,1]`, with respective `w` heights `1/64`, `5/16`,
+`5/8`, `7/8`, and `1`; `v` spans `[0,1]` throughout.  Exact trilinear
+parent replay proves all five boxes strict, and their disjoint-interior volume
+is `373/512` of the hybrid cube.  Tensor Bernstein replay decides all 89,120
+box-factor restrictions.  Their union has 5,106 distinct occurring factors
+and 12,718 factors zero-free on every box.  Graph projection covers 12,276
+box occurrences and exact coordinate-adaptive critical systems cover the
+remaining 1,859.  One factor, 9,954 on the fourth box, correctly retains an
+inconclusive first derivative pair and closes with an alternate exact pair;
+no obligation is hidden by a deeper timeout.  Thus every boxwise wall
+component reaches the union of box boundaries.  Internal seams remain part
+of this declared source skeleton, and no full-parent missed-component theorem
+is claimed.  See `DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md`.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1648,6 +1664,10 @@ global coverage of the nine-dimensional parent cell.  See
   record, builder, and independent hostile verifier: an exact no-go for the
   naïve full block cube and complete wall feasibility on its parent-safe
   half-cube replacement.
+- `DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md`, its compact JSON record, builder,
+  and independent hostile verifier: five exact parent-safe boxes of total
+  volume `373/512`, complete classification of 89,120 restrictions, and
+  boxwise wall-component attachment to the declared source skeleton.
 - `DIAG9_SIGN_GEODESY_AUDIT.md` and its exact verifier: factor-isometry of
   the three certified local roadmaps, exact factor-halfspace closure of all
   39,366 support traces on the 178 charts, and the 142-new-resultant no-go to

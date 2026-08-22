@@ -549,11 +549,58 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py",
         ],
     }
+    staircase = progress["twelfth_pair_source_staircase_component_coverage"]
+    assert staircase == {
+        "status": "PROVED",
+        "scope": "exact parent residence, wall feasibility, and boxwise wall-component coverage on a five-box chart-0/chart-152 source staircase",
+        "source_boxes": 5,
+        "exact_parameter_volume": "373/512",
+        "parent_bracket_box_restrictions_replayed": 350,
+        "strict_parent_vertices_replayed": 40,
+        "box_factor_restrictions_replayed": 89_120,
+        "box_occurring_wall_census": [1_546, 2_069, 2_770, 3_300, 4_450],
+        "distinct_staircase_occurring_walls": 5_106,
+        "zero_free_on_all_staircase_boxes": 12_718,
+        "unresolved_box_factor_restrictions": 0,
+        "graph_type_box_occurrences": 12_276,
+        "fully_triquadratic_box_occurrences": 1_859,
+        "adaptive_critical_systems_proved_empty": 1_859,
+        "adaptive_critical_systems_unresolved": 0,
+        "alternate_derivative_pair_selections": 1,
+        "preserved_inconclusive_derivative_pair_attempts": 1,
+        "maximum_total_critical_subboxes_visited_for_one_factor": 48,
+        "boxwise_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_ITS_SOURCE_BOX_BOUNDARY",
+        "source_skeleton": "UNION_OF_ALL_FIVE_BOX_BOUNDARIES",
+        "staircase_global_boundary_coverage": "NOT_CLAIMED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "staircase_occurring_factor_ids_sha256": "e51aea503481b62b028dbf94628cbb629ab493ad41b08aa0143c9d82708ee357",
+        "staircase_zero_free_factor_ids_sha256": "2e6693ec80ada175f1b534f2b4155735a8281a79c692e3f7bc294e60bd6a5089",
+        "box_classification_semantic_sha256": [
+            "61a61fb2eb81fd1f69739bc6dcd000a8acffcf0025b7459f784f8939badbdc6b",
+            "5030b7cc03a3ec3da99f27a2c5421a4e733e625c3889c9b43c3f3e0ad861b095",
+            "a7bf40a18f916a8e0d81404b901de4fdd8657cbf05686d9bec72eea3962b938e",
+            "c0a9dc2f09640a0ad688202fb6ec93c1d9b94ebfc0a1d6069d9ded22b0afe6e7",
+            "152c16f19053901214c455aa4281cb20c8c5b4c91adde999e4d30bd5c3c21637",
+        ],
+        "box_critical_semantic_sha256": [
+            "4ccf29178a0000d9d7e5b520c034b3c8e5638272ed9210536b9df7dbd856cdd5",
+            "03dd4e5ae288a36127fa7d89c3a800f7f9ded8d55d829c1a6597da2aefb4a5b5",
+            "e3c26fbfe2254a590b81a23fca668dea56f13073a9cea997c51a6ce1e3993fac",
+            "02f44a46d7a0f090bea63d3c1ca8d82ec1294c136695b4d5bff484c1eadc8ae6",
+            "23d4c04c8809405b2b8a204cc683e6faf3fb182d155709019d622f2bcae4835a",
+        ],
+        "hostile_corruptions_rejected": 14,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md",
+            "ai/omreal/data/DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE_0_152.json",
+            "ai/omreal/verify_diag3_pair_source_staircase_coverage.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "extend exact wall-component coverage from the certified source square"
+        "prove that every row-2599 parent-interior wall component meets the certified 373/512"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -588,6 +635,7 @@ def main() -> None:
     print("PASS sixth source block bridge: 3 segments / 5612 events / 11231 cells")
     print("PASS ninth triple escape-language audit: 1162302 scaling no-gos / 5 ideal-flow no-gos")
     print("PASS tenth source-square coverage: 3763 occurring walls / 0 missed components")
+    print("PASS twelfth source staircase: 5 boxes / 89120 restrictions / volume 373/512")
     print("PASS eleventh source half-cube: all 4450 wall components boundary-attached")
     print("LEDGER_GIT_BLOB", digest)
 

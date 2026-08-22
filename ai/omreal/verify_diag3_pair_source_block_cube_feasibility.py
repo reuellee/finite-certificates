@@ -41,14 +41,14 @@ def product_poly(left, right):
     return trim(answer)
 
 
-def pullback(polynomial, source, target):
+def pullback(polynomial, source, target, starts=STARTS, ends=ENDS):
     answer = {}
     for exponents, coefficient in polynomial.items():
         term = {(0, 0, 0): Fraction(coefficient)}
         for variable, exponent in enumerate(exponents):
             block = variable // 3
-            start = source[variable] + STARTS[block] * (target[variable] - source[variable])
-            slope = (ENDS[block] - STARTS[block]) * (target[variable] - source[variable])
+            start = source[variable] + starts[block] * (target[variable] - source[variable])
+            slope = (ends[block] - starts[block]) * (target[variable] - source[variable])
             index = [0, 0, 0]
             index[block] = 1
             factor = {(0, 0, 0): start, tuple(index): slope}

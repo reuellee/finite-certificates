@@ -19,8 +19,8 @@ jobs:
   suite:
     name: verifier suite (complete)
     runs-on: ubuntu-latest
-    # The complete serial replay now exceeds 90 minutes even though each
-    # verifier remains below run_all.py's 20-minute per-process ceiling.
+    # The complete serial replay exceeds 90 minutes. Verifiers known to exceed
+    # run_all.py's 20-minute per-process ceiling run in required jobs below.
     timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
@@ -29,9 +29,10 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: python -m pip install --upgrade pip numpy scipy sympy
-      # This remains the complete suite except for the two 178-chart replays,
-      # which have their own required job below so the exact atlas audits are
-      # not killed by run_all.py's per-verifier timeout.
+      # This remains the complete suite except for the two 178-chart replays
+      # and the source block-label continuation replay. They have required
+      # jobs below so exact audits are not killed by run_all.py's per-verifier
+      # timeout.
       - name: Run every non-delegated verifier
         run: python run_all.py --ci-delegated
       # Some verifiers regenerate committed artifacts. If regeneration does
@@ -85,6 +86,22 @@ jobs:
         run: >-
           PYTHONDONTWRITEBYTECODE=1 python
           ai/omreal/verify_diag2_pivot_all_pair_fibers.py
+
+  nine-dvl-source-block-labels:
+    name: 9DVL source block-label continuation audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy
+      - name: Replay all 5,615 labelled source-bridge chambers
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ai/omreal/verify_diag3_pair_parent_source_block_labels.py
 
   nine-dvl-parent860-pilot:
     name: 9DVL parent-860 CEGIS routing pilot

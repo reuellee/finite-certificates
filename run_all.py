@@ -49,6 +49,7 @@ SLOW = {
 CI_DELEGATED = {
     "verify_diag2_escape_set_atlas178.py",
     "verify_diag3_ordered_root_atlas178.py",
+    "verify_diag3_pair_parent_source_block_labels.py",
 }
 fast = "--fast" in sys.argv
 ci_delegated = "--ci-delegated" in sys.argv

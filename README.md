@@ -38,6 +38,7 @@ For diagonal 3, the exact research pipeline has now:
 - thereby classified **12,021 of 17,824** full-support candidates exactly—10,844 interior-nonempty and 1,177 empty—leaving **5,803 explicitly unresolved**;
 - built a complete exact two-parameter source square from chart 0 toward chart 152: all 70 parent brackets stay strict, all 17,824 residual restrictions are decided on the square, and every one of the 3,763 occurring wall components is proved to meet its boundary;
 - rejected the naïve three-block source cube at two exact parent-invalid vertices, then certified the parent-safe half-cube `[1/2,1] x [0,1] x [0,1]`, where all 17,824 restrictions are again decided exactly (4,450 occurring and 13,374 zero-free);
+- enlarged that volume to a five-box parent-safe staircase occupying exactly `373/512` of the normalized hybrid cube; all 89,120 box-factor restrictions are decided, 5,106 distinct factors occur somewhere on the staircase, and every boxwise wall component meets the declared source skeleton;
 - preserved the main missing obligation honestly: a coverage-certified global nonrelative master closure complex and the final relative middle-rank replay.
 
 The selected route is the coverage-certified nonrelative master-closure compiler.  The 5,803-factor residue remains an input gap, but standalone wall classification is subordinated because it cannot by itself prove diagonal three.
@@ -75,6 +76,8 @@ The first exact [`source-square component-coverage certificate`](ai/omreal/DIAG3
 
 The source object now also has exact [`three-parameter half-cube component coverage`](ai/omreal/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md). The full `[0,1]^3` block cube is false: two hybrid vertices leave the signed parent cell. Its parent-safe replacement `[1/2,1] x [0,1] x [0,1]` overlaps the source square and contains chart 152. Exact tensor Bernstein replay decides all 17,824 restrictions on this volume—13,374 zero-free and 4,450 occurring, with zero unresolved. A graph-projection theorem covers 3,889 occurring surfaces; all 561 remaining triquadratic projection-critical systems are exactly empty. Hence every occurring wall component meets the half-cube boundary. The independent replay rejects 11 hostile corruptions.
 
+That volume has now been enlarged to an exact [`five-box source staircase`](ai/omreal/DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md) of normalized volume `373/512`. Across 89,120 box-factor restrictions, 5,106 distinct factors occur somewhere and 12,718 are zero-free on every box. Graph projection and 1,859 adaptive exact critical-system exclusions prove that every boxwise component reaches the union of box boundaries. Internal seams remain part of this declared source skeleton, so global parent-cell missed-component coverage is still open and the theorem score remains 2/9.
+
 ## Verification
 
 Requirements for the complete suite are Python 3 plus `numpy`, `scipy`, and `sympy`; see [`requirements.txt`](requirements.txt). Many individual verifiers are standard-library only.
@@ -101,6 +104,7 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_boundary_att
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_boundary_labels.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_square_coverage.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_staircase_coverage.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.py
 ```
 
@@ -111,7 +115,7 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.p
 | Maxout polytopes | **`max f₀(3,5)=42`**; `(4,4)` and `(4,6)` resolved; `(3,8)` achievability certified | [`ai/maxout/`](ai/maxout/) |
 | OM mutation graphs | Connected for every uniform OM rank with `n <= 9`; corrected `(4,9)` class count | [`ai/omgamma/`](ai/omgamma/) |
 | OM non-realizability | Minor-closure census, generic minimal obstructions, Proposition R | [`ai/omminor/`](ai/omminor/) |
-| 9DVL / realizability | **2/9 proved**; diagonal 3 has an exact source square with all 17,824 restrictions decided locally and every occurring component boundary-attached; global coverage remains open | [`ai/omreal/`](ai/omreal/) |
+| 9DVL / realizability | **2/9 proved**; diagonal 3 has a five-box exact source staircase of volume `373/512`, with all 89,120 box-factor restrictions decided and every boxwise component attached to the source skeleton; global coverage remains open | [`ai/omreal/`](ai/omreal/) |
 | SEEAT | Single-element extension atlas theorem; exact one-chart capacity 26,112; row-2599 atlas width bounded `7 <= width <= 178` | [`ai/omreal/SEEAT.md`](ai/omreal/SEEAT.md) |
 | SAE absorption | Exact failures of feature-absorption identification | [`ai/absorption-metric/`](ai/absorption-metric/) |
 | SAE identifiability | Conditional-rate and semantic-grounding non-identifiability results | [`ai/sae-unidentifiability/`](ai/sae-unidentifiability/), [`ai/sae-grounding/`](ai/sae-grounding/) |
