@@ -227,6 +227,9 @@ def reconstruct():
     occurring = []
     zero_free = []
     unresolved = []
+    occurring_degrees = Counter()
+    graph_type_occurring = []
+    fully_triquadratic_occurring = []
     maximum_visited = 0
     semantic = sha256(b"diag3-source-block-cube-wall-feasibility-v1\0")
     for factor_id in candidates:
@@ -243,6 +246,11 @@ def reconstruct():
         maximum_visited = max(maximum_visited, visited)
         if status == "NONEMPTY_CORNER":
             occurring.append(factor_id)
+            occurring_degrees[degrees] += 1
+            if min(degrees) <= 1:
+                graph_type_occurring.append(factor_id)
+            else:
+                fully_triquadratic_occurring.append(factor_id)
         elif status.startswith("EMPTY_"):
             zero_free.append(factor_id)
         else:
@@ -313,6 +321,25 @@ def reconstruct():
             ),
             "classification_semantic_sha256": semantic.hexdigest(),
         },
+        "wall_component_preflight": {
+            "occurring_tridegree_census": {
+                ",".join(map(str, degrees)): count
+                for degrees, count in sorted(occurring_degrees.items())
+            },
+            "graph_type_occurring_walls": len(graph_type_occurring),
+            "graph_type_component_conclusion": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+            "graph_type_argument": "If p is affine in one parameter, a coefficient-drop zero gives a full boundary-meeting fiber; otherwise projection is a local graph, so a compact interior component would have a nonempty compact-open image in R^2.",
+            "fully_triquadratic_occurring_walls": len(fully_triquadratic_occurring),
+            "fully_triquadratic_component_coverage": "OPEN",
+            "graph_type_factor_ids_sha256": digest_ids(
+                b"diag3-source-block-half-cube-graph-type-factor-ids-v1",
+                graph_type_occurring,
+            ),
+            "fully_triquadratic_factor_ids_sha256": digest_ids(
+                b"diag3-source-block-half-cube-triquadratic-factor-ids-v1",
+                fully_triquadratic_occurring,
+            ),
+        },
         "theorem_effect": "Exact parent residence and wall feasibility on one source block half-cube; wall-component coverage, global pair coverage, and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
     }
 
@@ -323,6 +350,9 @@ def validate(candidate, expected):
     assert candidate["wall_feasibility"]["occurring_walls"] == 4_450
     assert candidate["wall_feasibility"]["zero_free_walls"] == 13_374
     assert candidate["wall_feasibility"]["unresolved_walls"] == 0
+    assert candidate["wall_component_preflight"]["graph_type_occurring_walls"] == 3_889
+    assert candidate["wall_component_preflight"]["fully_triquadratic_occurring_walls"] == 561
+    assert candidate["wall_component_preflight"]["fully_triquadratic_component_coverage"] == "OPEN"
     assert candidate["naive_full_cube_no_go"]["parent_safe_block_vertices"] == 6
     assert len(candidate["naive_full_cube_no_go"]["failed_block_vertices"]) == 2
     assert candidate["scope"]["wall_component_coverage"] == "NOT_CLAIMED"
@@ -345,6 +375,7 @@ def main():
         (("wall_feasibility", "zero_free_walls"), 13_373),
         (("wall_feasibility", "unresolved_walls"), 1),
         (("wall_feasibility", "classification_semantic_sha256"), "0" * 64),
+        (("wall_component_preflight", "fully_triquadratic_occurring_walls"), 560),
     ):
         mutation = deepcopy(stored)
         target = mutation
@@ -364,6 +395,7 @@ def main():
     print("PASS exact parent residence on the chart-0/chart-152 block half-cube")
     print("PASS 17,824 wall restrictions: 4,450 occurring / 13,374 zero-free / 0 unresolved")
     print("PASS maximum 25 dyadic subboxes visited for one wall")
+    print("PASS graph theorem covers 3,889 occurring surfaces; 561 triquadratics remain")
     print("SEMANTIC", expected["wall_feasibility"]["classification_semantic_sha256"])
     print(f"PASS {rejected}/{len(mutations)} hostile corruptions rejected")
     print("SCOPE wall-component and global parent-cell coverage remain open; honest 9DVL 2/9")

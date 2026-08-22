@@ -252,6 +252,9 @@ def build_record(progress=False):
     occurring = []
     zero_free = []
     unresolved = []
+    occurring_degrees = Counter()
+    graph_type_occurring = []
+    fully_triquadratic_occurring = []
     semantic = sha256(b"diag3-source-block-cube-wall-feasibility-v1\0")
     maximum_visited = 0
     for offset, factor_id in enumerate(candidates, start=1):
@@ -269,6 +272,11 @@ def build_record(progress=False):
         maximum_visited = max(maximum_visited, visited)
         if status == "NONEMPTY_CORNER":
             occurring.append(factor_id)
+            occurring_degrees[degrees] += 1
+            if min(degrees) <= 1:
+                graph_type_occurring.append(factor_id)
+            else:
+                fully_triquadratic_occurring.append(factor_id)
         elif status.startswith("EMPTY_"):
             zero_free.append(factor_id)
         else:
@@ -340,6 +348,25 @@ def build_record(progress=False):
                 b"diag3-source-block-cube-unresolved-factor-ids-v1", unresolved
             ),
             "classification_semantic_sha256": semantic.hexdigest(),
+        },
+        "wall_component_preflight": {
+            "occurring_tridegree_census": {
+                ",".join(map(str, degrees)): count
+                for degrees, count in sorted(occurring_degrees.items())
+            },
+            "graph_type_occurring_walls": len(graph_type_occurring),
+            "graph_type_component_conclusion": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+            "graph_type_argument": "If p is affine in one parameter, a coefficient-drop zero gives a full boundary-meeting fiber; otherwise projection is a local graph, so a compact interior component would have a nonempty compact-open image in R^2.",
+            "fully_triquadratic_occurring_walls": len(fully_triquadratic_occurring),
+            "fully_triquadratic_component_coverage": "OPEN",
+            "graph_type_factor_ids_sha256": id_digest(
+                b"diag3-source-block-half-cube-graph-type-factor-ids-v1",
+                graph_type_occurring,
+            ),
+            "fully_triquadratic_factor_ids_sha256": id_digest(
+                b"diag3-source-block-half-cube-triquadratic-factor-ids-v1",
+                fully_triquadratic_occurring,
+            ),
         },
         "theorem_effect": "Exact parent residence and wall feasibility on one source block half-cube; wall-component coverage, global pair coverage, and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
     }

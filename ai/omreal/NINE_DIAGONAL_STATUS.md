@@ -1318,9 +1318,12 @@ parent-safe vertices: `(0,0,1)` violates `[1268]`, while `(0,1,1)` violates
 `[1/2,1] x [0,1] x [0,1]` is parent-resident, overlaps the source square,
 and contains chart 152.  Tensor Bernstein replay decides all 17,824 residual
 restrictions on this volume: 13,374 are zero-free, 4,450 occur, and zero are
-unresolved.  This proves volume feasibility, not surface-component coverage.
-The next gate is the bounded critical system
-`p = partial_v p = partial_w p = 0` for those 4,450 occurring walls.  See
+unresolved.  Of the occurring restrictions, 3,889 are affine in at least one
+parameter.  The coefficient-drop/full-fiber alternative and local graph
+projection prove that every component of each such surface reaches the
+boundary.  Exactly 561 fully triquadratic surfaces remain.  The next gate is
+the bounded critical system `p = partial_v p = partial_w p = 0` for those 561
+walls.  See
 `DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md`.
 
 ## Exact artifacts

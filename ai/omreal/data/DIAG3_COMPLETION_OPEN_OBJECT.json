@@ -2,7 +2,7 @@
   "format": "diag3-completion-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "430ad283606c49a5bc4c94bc1c9692dbf4745d0a",
+  "current_decision_ledger_git_blob": "dcfb12f5338682759e898642c00a9431938774a0",
   "current_state_note": "Historical proof object. Current target selection, exact source-square component coverage, and source half-cube feasibility live in current_decision_ledger.",
   "ledger_score": "2/9",
   "authoritative_remote_base": {

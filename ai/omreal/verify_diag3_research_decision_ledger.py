@@ -529,9 +529,14 @@ def main() -> None:
         "occurring_walls": 4_450,
         "unresolved_walls": 0,
         "maximum_subboxes_visited_for_one_wall": 25,
-        "wall_component_coverage": "NOT_CLAIMED",
+        "graph_type_occurring_walls": 3_889,
+        "graph_type_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+        "fully_triquadratic_occurring_walls": 561,
+        "fully_triquadratic_component_coverage": "OPEN",
+        "graph_type_factor_ids_sha256": "87f98bd5d74697556cddc0809131ad54047e597a5b674b2a6cdc8b93c97984c3",
+        "fully_triquadratic_factor_ids_sha256": "483908d8ece34b330e5942c3cedf32c013c9f3e23d1b8487249e17208e332802",
         "classification_semantic_sha256": "d3761de31661811d27c1340ab175c1c47431dfbf59c7993b7747bbbbcb622381",
-        "hostile_corruptions_rejected": 9,
+        "hostile_corruptions_rejected": 10,
         "evidence": [
             "ai/omreal/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md",
             "ai/omreal/data/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY_0_152.json",
@@ -577,7 +582,7 @@ def main() -> None:
     print("PASS sixth source block bridge: 3 segments / 5612 events / 11231 cells")
     print("PASS ninth triple escape-language audit: 1162302 scaling no-gos / 5 ideal-flow no-gos")
     print("PASS tenth source-square coverage: 3763 occurring walls / 0 missed components")
-    print("PASS eleventh source half-cube feasibility: 4450 occurring / 13374 zero-free")
+    print("PASS eleventh source half-cube: 3889 graph-covered / 561 triquadratic open")
     print("LEDGER_GIT_BLOB", digest)
 
 

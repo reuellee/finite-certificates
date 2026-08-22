@@ -20,10 +20,10 @@ full-support residual restrictions is decided exactly on this half-cube:
 | unresolved | `0` |
 
 This is exact feasibility coverage of a three-dimensional source volume.  It
-does not yet prove that every connected component of an occurring wall
-surface meets the half-cube boundary, and it is not coverage of the full
-nine-dimensional parent cell.  The honest 9DVL score therefore remains
-`2/9`.
+also proves boundary attachment for every component of 3,889 graph-type
+occurring surfaces.  Component coverage remains open for exactly 561 fully
+triquadratic surfaces, and the object is not coverage of the full
+nine-dimensional parent cell.  The honest 9DVL score therefore remains `2/9`.
 
 ## The naïve full cube is false
 
@@ -74,6 +74,32 @@ and the classification semantic digest is
 d3761de31661811d27c1340ab175c1c47431dfbf59c7993b7747bbbbcb622381
 ```
 
+## Graph-type component theorem
+
+Exactly 3,889 of the 4,450 occurring restrictions have degree at most one in
+at least one parameter.  Every component of each such zero set meets the
+half-cube boundary.
+
+Indeed, write a restriction affine in the first parameter as
+
+```text
+p(u,v,w) = a(v,w)u + b(v,w).
+```
+
+If `a=b=0` at a zero, the entire `u` fiber lies in the zero set and reaches
+the boundary.  Otherwise `a` is nonzero along any hypothetical interior
+compact component, so projection to the `(v,w)` plane is locally a graph.
+The image of that component would then be both nonempty and open, but also
+compact.  No such subset of `R^2` exists.  The same argument applies after
+permuting the three parameters.
+
+This exact degree sieve leaves 561 restrictions of tridegree `(2,2,2)`.  Its
+hard-residue factor-ID digest is
+
+```text
+483908d8ece34b330e5942c3cedf32c013c9f3e23d1b8487249e17208e332802
+```
+
 ## Replay and next gate
 
 Build the compact record with
@@ -91,12 +117,12 @@ PYTHONDONTWRITEBYTECODE=1 python \
 ```
 
 The verifier reconstructs the exact three-variable pullbacks and Bernstein
-subdivision without importing the producer core.  It also rejects nine
-corruptions, including promotion to the invalid full cube and a false
-wall-component coverage claim.
+subdivision without importing the producer core.  It also rejects ten
+corruptions, including promotion to the invalid full cube, a false complete
+wall-component claim, and a falsified 561-wall hard residue.
 
 The next bounded proof object is a surface-component oracle.  For each of the
-4,450 occurring triquadratic restrictions, a compact interior surface
+561 occurring triquadratic restrictions, a compact interior surface
 component would force a projection-critical solution of
 
 ```text

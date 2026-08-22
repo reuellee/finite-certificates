@@ -2,7 +2,7 @@
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "430ad283606c49a5bc4c94bc1c9692dbf4745d0a",
+  "current_decision_ledger_git_blob": "dcfb12f5338682759e898642c00a9431938774a0",
   "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the current component-coverage quotient and source half-cube frontier live in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {
