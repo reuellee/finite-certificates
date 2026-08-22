@@ -61,7 +61,7 @@ def main() -> None:
 
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-21"
+    assert ledger["as_of"] == "2026-08-22"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
@@ -155,6 +155,20 @@ def main() -> None:
         "status": "RETIRED",
         "reason": "Five pinned hard triples give full-rank 585-column systems for arbitrary quadratic vector fields with affine-linear ideal multipliers.",
         "regression": "ai/omreal/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
+    }
+    assert retired["full_sign_invariant_source_square_arrangement"] == {
+        "id": "full_sign_invariant_source_square_arrangement",
+        "status": "SUBORDINATED",
+        "reason": "Two disjoint exact boundary-order families already force 618120 intersecting curve pairs on the chart-0-to-chart-152 source square; full sign-arrangement materialization is not needed for missed-component coverage.",
+        "replacement": "component-coverage quotient certified by exact Bernstein feasibility and projection-discriminant replay",
+        "regression": "ai/omreal/verify_diag3_pair_source_square_coverage.py",
+    }
+    assert retired["naive_full_source_block_cube"] == {
+        "id": "naive_full_source_block_cube",
+        "status": "RETIRED",
+        "reason": "Two of eight chart-0/chart-152 hybrid block vertices leave the signed row-2599 parent cell: (0,0,1) fails [1268], while (0,1,1) fails [1268] and [5678].",
+        "replacement": "the exact parent-safe [1/2,1] x [0,1] x [0,1] block half-cube",
+        "regression": "ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py",
     }
     assert retired["moving_column_s3_quotient"]["withdrawn_counts"] == {
         "transported_witnesses": 5_986,
@@ -475,11 +489,60 @@ def main() -> None:
             "ai/omreal/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
         ],
     }
+    square = progress["tenth_pair_source_square_component_coverage"]
+    assert square == {
+        "status": "PROVED",
+        "scope": "exact wall-component coverage on one parent-resident two-parameter square joining row-2599 charts 0 and 152 in two moving-column blocks",
+        "parent_brackets_replayed": 70,
+        "strict_square_corners": 4,
+        "candidate_factors_replayed": 17_824,
+        "zero_free_walls": 14_061,
+        "occurring_walls": 3_763,
+        "unresolved_walls": 0,
+        "graph_type_walls": 2_531,
+        "biquadratic_walls": 1_232,
+        "squarefree_projection_discriminants": 1_232,
+        "compact_oval_candidates": 0,
+        "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_SQUARE_BOUNDARY",
+        "forced_intersecting_curve_pairs": 618_120,
+        "full_sign_invariant_arrangement": "SUBORDINATED",
+        "classification_semantic_sha256": "4b400742a6516d41209f548ceb9a97d3ff6fddc916f913b8a8b6c412f98045cc",
+        "critical_semantic_sha256": "4791e9d4270e9d1e3f4ebf8a6687228572f5bce9a24de91130d2e82a380a246b",
+        "boundary_semantic_sha256": "bb64fa529b5926d72a2c183e633147957145c4058fa8bd9557586637359d6d70",
+        "hostile_corruptions_rejected": 12,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_SOURCE_SQUARE_COVERAGE.md",
+            "ai/omreal/data/DIAG3_PAIR_SOURCE_SQUARE_COVERAGE_0_152.json",
+            "ai/omreal/verify_diag3_pair_source_square_coverage.py",
+        ],
+    }
+    half_cube = progress["eleventh_pair_source_block_half_cube_feasibility"]
+    assert half_cube == {
+        "status": "PROVED",
+        "scope": "exact parent residence and wall feasibility on the chart-0/chart-152 block box [1/2,1] x [0,1] x [0,1]",
+        "naive_full_cube_safe_vertices": 6,
+        "naive_full_cube_failed_vertices": 2,
+        "parent_brackets_replayed": 70,
+        "strict_half_cube_vertices": 8,
+        "candidate_factors_replayed": 17_824,
+        "zero_free_walls": 13_374,
+        "occurring_walls": 4_450,
+        "unresolved_walls": 0,
+        "maximum_subboxes_visited_for_one_wall": 25,
+        "wall_component_coverage": "NOT_CLAIMED",
+        "classification_semantic_sha256": "d3761de31661811d27c1340ab175c1c47431dfbf59c7993b7747bbbbcb622381",
+        "hostile_corruptions_rejected": 9,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md",
+            "ai/omreal/data/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY_0_152.json",
+            "ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "prove missed-component coverage for the exact labelled source-boundary skeleton"
+        "prove a bounded projection-critical surface-component oracle"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -513,6 +576,8 @@ def main() -> None:
     print("PASS fifth source-label continuation: 1238 chambers / 2458 profiles / exact endpoint")
     print("PASS sixth source block bridge: 3 segments / 5612 events / 11231 cells")
     print("PASS ninth triple escape-language audit: 1162302 scaling no-gos / 5 ideal-flow no-gos")
+    print("PASS tenth source-square coverage: 3763 occurring walls / 0 missed components")
+    print("PASS eleventh source half-cube feasibility: 4450 occurring / 13374 zero-free")
     print("LEDGER_GIT_BLOB", digest)
 
 

@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on one exact chart-0-to-chart-152 source square all 17,824 restrictions are decided and every occurring wall component is boundary-attached; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -1284,6 +1284,45 @@ regions are nonempty, proper, and pairwise incomparable.  This confirms that
 the first path was not an isolated numerical accident, but it still refutes
 only a sampled separator: 178 point charts are not a chamber roadmap.
 
+### Exact source-square component coverage
+
+The coverage program now has one complete two-parameter theorem rather than
+only paths and local disks.  Starting at row-2599 chart 0, independently
+interpolate moving-column blocks 6 and 7 toward chart 152 while leaving block
+8 fixed.  Every one of the 70 parent brackets is bilinear with four positive
+corner Bernstein coefficients, so the entire closed unit square remains in
+the strict parent cell.
+
+Exact tensor Bernstein subdivision classifies all 17,824 residual
+restrictions on this square: 14,061 are zero-free, 3,763 occur, and none are
+unresolved.  Among the occurring walls, 2,531 are graph type.  The remaining
+1,232 biquadratics have squarefree projection discriminants; an exact Sturm
+census finds no positive interval bounded by two interior critical values.
+Therefore no occurring wall has a compact component in the square: every
+component meets its boundary.
+
+This is deliberately a component-coverage quotient, not a sign-invariant
+arrangement.  Boundary order already forces 618,120 distinct curve pairs to
+intersect, making full arrangement materialization strategically
+disproportionate.  The certificate does not show that every wall component
+in the full nine-dimensional parent cell meets this source square.  The next
+pair-side object is the full three-parameter chart-0-to-chart-152 block cube,
+followed by global source-skeleton missed-component coverage.  The honest
+score remains `2/9`; the independent 1,162,302-row triple residue is also
+unchanged.  See `DIAG3_PAIR_SOURCE_SQUARE_COVERAGE.md`.
+
+The attempted three-parameter extension exposed and repaired a genuine
+parent-cell obstruction.  The full `[0,1]^3` hybrid block cube has only six
+parent-safe vertices: `(0,0,1)` violates `[1268]`, while `(0,1,1)` violates
+`[1268]` and `[5678]`.  The exact half-cube
+`[1/2,1] x [0,1] x [0,1]` is parent-resident, overlaps the source square,
+and contains chart 152.  Tensor Bernstein replay decides all 17,824 residual
+restrictions on this volume: 13,374 are zero-free, 4,450 occur, and zero are
+unresolved.  This proves volume feasibility, not surface-component coverage.
+The next gate is the bounded critical system
+`p = partial_v p = partial_w p = 0` for those 4,450 occurring walls.  See
+`DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md`.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1594,6 +1633,14 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md` and its exact verifier:
   1,177 fixed-sign empty-zero-set certificates, leaving 5,803 full-support
   factors unresolved without a symmetry quotient.
+- `DIAG3_PAIR_SOURCE_SQUARE_COVERAGE.md`, its compact JSON record, builder,
+  and independent hostile verifier: exact parent residence, complete local
+  feasibility for all 17,824 restrictions, and boundary attachment of every
+  one of the 3,763 occurring wall components on the source square.
+- `DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md`, its compact JSON
+  record, builder, and independent hostile verifier: an exact no-go for the
+  naïve full block cube and complete wall feasibility on its parent-safe
+  half-cube replacement.
 - `DIAG9_SIGN_GEODESY_AUDIT.md` and its exact verifier: factor-isometry of
   the three certified local roadmaps, exact factor-halfspace closure of all
   39,366 support traces on the 178 charts, and the 142-new-resultant no-go to

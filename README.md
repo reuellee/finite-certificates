@@ -36,6 +36,8 @@ For diagonal 3, the exact research pipeline has now:
 - caught and corrected a tempting false symmetry reduction: moving-column permutations preserve the unsigned bracket-divisor arrangement but flip **19–27** of the 63 distinct signed parent inequalities, and all **525/525** nonidentity transported witness segments leave the row-2599 cell;
 - proved by exact parent-positive polynomial identities that **1,177** of the 6,980 segment-open factors have empty strict-parent zero sets;
 - thereby classified **12,021 of 17,824** full-support candidates exactly—10,844 interior-nonempty and 1,177 empty—leaving **5,803 explicitly unresolved**;
+- built a complete exact two-parameter source square from chart 0 toward chart 152: all 70 parent brackets stay strict, all 17,824 residual restrictions are decided on the square, and every one of the 3,763 occurring wall components is proved to meet its boundary;
+- rejected the naïve three-block source cube at two exact parent-invalid vertices, then certified the parent-safe half-cube `[1/2,1] x [0,1] x [0,1]`, where all 17,824 restrictions are again decided exactly (4,450 occurring and 13,374 zero-free);
 - preserved the main missing obligation honestly: a coverage-certified global nonrelative master closure complex and the final relative middle-rank replay.
 
 The selected route is the coverage-certified nonrelative master-closure compiler.  The 5,803-factor residue remains an input gap, but standalone wall classification is subordinated because it cannot by itself prove diagonal three.
@@ -69,6 +71,10 @@ The coverage-oriented source graph now also has an [`exact three-block bridge`](
 
 The bridge now has [`complete exact label continuation`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_BLOCK_LABELS.md): 5,319 antipodal simplicial mutations and 293 exact compound re-enumerations label all 5,615 generic chambers and reconstruct the raw chart-152 tope set. A separate [`genuine parent-boundary attachment`](ai/omreal/DIAG3_PAIR_PARENT_BOUNDARY_ATTACHMENT.md) continues chart 89 through 1,517 ordered residual crossings to `[1237]=0`. The other 69 parent brackets stay positive, no residual factor vanishes at the endpoint, and all 1,518 open-ray chambers carry exact 26,112-label sets before the endpoint is quotiented as relative infinity. These certificates add exact source and frontier incidence, but not missed-component or global parent-cell coverage; the score remains 2/9.
 
+The first exact [`source-square component-coverage certificate`](ai/omreal/DIAG3_PAIR_SOURCE_SQUARE_COVERAGE.md) now fills two independent block parameters between charts 0 and 152 while fixing the third block at chart 0. Tensor Bernstein replay proves the whole square remains in the strict parent cell and classifies all 17,824 residual restrictions there: 14,061 are zero-free, 3,763 occur, and none remain unresolved. A projection-discriminant audit then proves every occurring wall component reaches the square boundary. Two disjoint boundary-order families already force 618,120 intersecting curve pairs, so full sign-arrangement construction is subordinated to the much smaller component-coverage quotient. This is complete coverage of one square, not of the nine-dimensional parent cell; the score remains 2/9.
+
+The source object now also has an exact [`three-parameter half-cube`](ai/omreal/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md). The full `[0,1]^3` block cube is false: two hybrid vertices leave the signed parent cell. Its parent-safe replacement `[1/2,1] x [0,1] x [0,1]` overlaps the source square and contains chart 152. Exact tensor Bernstein replay decides all 17,824 restrictions on this volume—13,374 zero-free and 4,450 occurring, with zero unresolved—and rejects nine hostile corruptions. Surface-component coverage on this half-cube is the next bounded gate and is not claimed yet.
+
 ## Verification
 
 Requirements for the complete suite are Python 3 plus `numpy`, `scipy`, and `sympy`; see [`requirements.txt`](requirements.txt). Many individual verifiers are standard-library only.
@@ -93,6 +99,8 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_fullsupport_parent_
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_source_block_labels.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_boundary_attachment.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_boundary_labels.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_square_coverage.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.py
 ```
 
@@ -103,7 +111,7 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.p
 | Maxout polytopes | **`max f₀(3,5)=42`**; `(4,4)` and `(4,6)` resolved; `(3,8)` achievability certified | [`ai/maxout/`](ai/maxout/) |
 | OM mutation graphs | Connected for every uniform OM rank with `n <= 9`; corrected `(4,9)` class count | [`ai/omgamma/`](ai/omgamma/) |
 | OM non-realizability | Minor-closure census, generic minimal obstructions, Proposition R | [`ai/omminor/`](ai/omminor/) |
-| 9DVL / realizability | **2/9 proved**; diagonal 3 has 12,021/17,824 full-support factors classified exactly and 5,803 unresolved | [`ai/omreal/`](ai/omreal/) |
+| 9DVL / realizability | **2/9 proved**; diagonal 3 has an exact source square with all 17,824 restrictions decided locally and every occurring component boundary-attached; global coverage remains open | [`ai/omreal/`](ai/omreal/) |
 | SEEAT | Single-element extension atlas theorem; exact one-chart capacity 26,112; row-2599 atlas width bounded `7 <= width <= 178` | [`ai/omreal/SEEAT.md`](ai/omreal/SEEAT.md) |
 | SAE absorption | Exact failures of feature-absorption identification | [`ai/absorption-metric/`](ai/absorption-metric/) |
 | SAE identifiability | Conditional-rate and semantic-grounding non-identifiability results | [`ai/sae-unidentifiability/`](ai/sae-unidentifiability/), [`ai/sae-grounding/`](ai/sae-grounding/) |

@@ -1,7 +1,7 @@
 {
   "format": "diag3-research-decision-ledger-v1",
   "status": "ACTIVE",
-  "as_of": "2026-08-21",
+  "as_of": "2026-08-22",
   "repository": {
     "full_name": "reuellee/finite-certificates",
     "default_branch": "main",
@@ -128,6 +128,20 @@
       "status": "RETIRED",
       "reason": "Five pinned hard triples give full-rank 585-column systems for arbitrary quadratic vector fields with affine-linear ideal multipliers.",
       "regression": "ai/omreal/verify_diag3_triple_quadratic_ideal_flow_no_go.py"
+    },
+    {
+      "id": "full_sign_invariant_source_square_arrangement",
+      "status": "SUBORDINATED",
+      "reason": "Two disjoint exact boundary-order families already force 618120 intersecting curve pairs on the chart-0-to-chart-152 source square; full sign-arrangement materialization is not needed for missed-component coverage.",
+      "replacement": "component-coverage quotient certified by exact Bernstein feasibility and projection-discriminant replay",
+      "regression": "ai/omreal/verify_diag3_pair_source_square_coverage.py"
+    },
+    {
+      "id": "naive_full_source_block_cube",
+      "status": "RETIRED",
+      "reason": "Two of eight chart-0/chart-152 hybrid block vertices leave the signed row-2599 parent cell: (0,0,1) fails [1268], while (0,1,1) fails [1268] and [5678].",
+      "replacement": "the exact parent-safe [1/2,1] x [0,1] x [0,1] block half-cube",
+      "regression": "ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py"
     }
   ],
   "target_score_formula": "4*proof_criticality + 3*branch_elimination + 2*readiness + 2*decisiveness - 2*cost - 2*failure_risk",
@@ -486,8 +500,55 @@
         "ai/omreal/verify_diag3_triple_quadratic_ideal_flow_no_go.py"
       ]
     },
+    "tenth_pair_source_square_component_coverage": {
+      "status": "PROVED",
+      "scope": "exact wall-component coverage on one parent-resident two-parameter square joining row-2599 charts 0 and 152 in two moving-column blocks",
+      "parent_brackets_replayed": 70,
+      "strict_square_corners": 4,
+      "candidate_factors_replayed": 17824,
+      "zero_free_walls": 14061,
+      "occurring_walls": 3763,
+      "unresolved_walls": 0,
+      "graph_type_walls": 2531,
+      "biquadratic_walls": 1232,
+      "squarefree_projection_discriminants": 1232,
+      "compact_oval_candidates": 0,
+      "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_SQUARE_BOUNDARY",
+      "forced_intersecting_curve_pairs": 618120,
+      "full_sign_invariant_arrangement": "SUBORDINATED",
+      "classification_semantic_sha256": "4b400742a6516d41209f548ceb9a97d3ff6fddc916f913b8a8b6c412f98045cc",
+      "critical_semantic_sha256": "4791e9d4270e9d1e3f4ebf8a6687228572f5bce9a24de91130d2e82a380a246b",
+      "boundary_semantic_sha256": "bb64fa529b5926d72a2c183e633147957145c4058fa8bd9557586637359d6d70",
+      "hostile_corruptions_rejected": 12,
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_SOURCE_SQUARE_COVERAGE.md",
+        "ai/omreal/data/DIAG3_PAIR_SOURCE_SQUARE_COVERAGE_0_152.json",
+        "ai/omreal/verify_diag3_pair_source_square_coverage.py"
+      ]
+    },
+    "eleventh_pair_source_block_half_cube_feasibility": {
+      "status": "PROVED",
+      "scope": "exact parent residence and wall feasibility on the chart-0/chart-152 block box [1/2,1] x [0,1] x [0,1]",
+      "naive_full_cube_safe_vertices": 6,
+      "naive_full_cube_failed_vertices": 2,
+      "parent_brackets_replayed": 70,
+      "strict_half_cube_vertices": 8,
+      "candidate_factors_replayed": 17824,
+      "zero_free_walls": 13374,
+      "occurring_walls": 4450,
+      "unresolved_walls": 0,
+      "maximum_subboxes_visited_for_one_wall": 25,
+      "wall_component_coverage": "NOT_CLAIMED",
+      "classification_semantic_sha256": "d3761de31661811d27c1340ab175c1c47431dfbf59c7993b7747bbbbcb622381",
+      "hostile_corruptions_rejected": 9,
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md",
+        "ai/omreal/data/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY_0_152.json",
+        "ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "prove missed-component coverage for the exact labelled source-boundary skeleton or replace it with a coverage-certified global master complex; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "prove a bounded projection-critical surface-component oracle for the 4450 occurring walls on the exact chart-0-to-chart-152 block half-cube, then extend missed-component coverage over the global labelled source-boundary skeleton; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "selected_target_contract": {
     "result_statuses": [
