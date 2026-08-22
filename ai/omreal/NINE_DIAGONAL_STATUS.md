@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on one exact chart-0-to-chart-152 source square all 17,824 restrictions are decided and every occurring wall component is boundary-attached; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on one exact chart-0-to-chart-152 source square and one attached three-parameter half-cube all 17,824 restrictions are decided locally and every occurring wall component is boundary-attached; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -1323,7 +1323,11 @@ parameter.  The coefficient-drop/full-fiber alternative and local graph
 projection prove that every component of each such surface reaches the
 boundary.  Exactly 561 fully triquadratic surfaces remain.  The next gate is
 the bounded critical system `p = partial_v p = partial_w p = 0` for those 561
-walls.  See
+walls.  Exact tensor Bernstein subdivision proves all 561 systems empty:
+552 at depth zero and the last at depth four, with no system visiting more
+than 81 subboxes.  Thus every component of all 4,450 occurring walls meets
+the half-cube boundary.  This is complete coverage on one source volume, not
+global coverage of the nine-dimensional parent cell.  See
 `DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md`.
 
 ## Exact artifacts

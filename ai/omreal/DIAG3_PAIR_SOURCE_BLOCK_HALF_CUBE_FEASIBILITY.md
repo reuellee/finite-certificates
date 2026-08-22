@@ -1,4 +1,4 @@
-# Diagonal three: exact source block half-cube feasibility
+# Diagonal three: exact source block half-cube component coverage
 
 ## Result
 
@@ -19,11 +19,10 @@ full-support residual restrictions is decided exactly on this half-cube:
 | occurs by an exact dyadic-corner witness | `4,450` |
 | unresolved | `0` |
 
-This is exact feasibility coverage of a three-dimensional source volume.  It
-also proves boundary attachment for every component of 3,889 graph-type
-occurring surfaces.  Component coverage remains open for exactly 561 fully
-triquadratic surfaces, and the object is not coverage of the full
-nine-dimensional parent cell.  The honest 9DVL score therefore remains `2/9`.
+This is exact feasibility and wall-component coverage on a three-dimensional
+source volume.  Every component of every one of the 4,450 occurring walls
+meets the half-cube boundary.  The object is not coverage of the full
+nine-dimensional parent cell, so the honest 9DVL score remains `2/9`.
 
 ## The naïve full cube is false
 
@@ -100,6 +99,38 @@ hard-residue factor-ID digest is
 483908d8ece34b330e5942c3cedf32c013c9f3e23d1b8487249e17208e332802
 ```
 
+## Fully triquadratic critical-system theorem
+
+Let `C` be a compact component of `p=0` contained in the half-cube interior.
+The first coordinate attains an extremum on `C`.  At a regular extremum the
+Lagrange multiplier equations force
+
+```text
+p = partial_v p = partial_w p = 0;
+```
+
+at a singular extremum all three partial derivatives vanish, so the same
+system still holds.  Thus excluding this system is sufficient to exclude a
+compact interior component.
+
+For all 561 fully triquadratic occurring restrictions, exact tensor
+Bernstein subdivision proves the three-polynomial critical system empty on
+the closed half-cube.  The depth census is
+
+```text
+depth 0: 552,  depth 1: 4,  depth 2: 3,  depth 3: 1,  depth 4: 1.
+```
+
+No system is unresolved, and no system visits more than 81 subboxes.  The
+critical-system semantic digest is
+
+```text
+214c653a6ffdec28a89a0f824c44e0b01658b60627825fd92032509aea7f855c
+```
+
+Combining this with the graph-type theorem proves that every component of
+all 4,450 occurring walls meets the half-cube boundary.
+
 ## Replay and next gate
 
 Build the compact record with
@@ -117,20 +148,13 @@ PYTHONDONTWRITEBYTECODE=1 python \
 ```
 
 The verifier reconstructs the exact three-variable pullbacks and Bernstein
-subdivision without importing the producer core.  It also rejects ten
+subdivision without importing the producer core.  It also rejects eleven
 corruptions, including promotion to the invalid full cube, a false complete
 wall-component claim, and a falsified 561-wall hard residue.
 
-The next bounded proof object is a surface-component oracle.  For each of the
-561 occurring triquadratic restrictions, a compact interior surface
-component would force a projection-critical solution of
-
-```text
-p = partial_v p = partial_w p = 0.
-```
-
-The next gate will eliminate or isolate these systems exactly on the
-half-cube, retaining explicit unresolved factor IDs if the declared
-projection budget is exceeded.  Only after that local component theorem is
-proved should the source-volume complex be extended toward global
-missed-component coverage.
+The local surface-component oracle is complete.  The next gate is to cover a
+larger family of parent-resident source volumes and prove that every wall
+component in the full row-2599 parent cell meets the resulting source
+skeleton.  Only that global missed-component theorem, followed by construction
+and exact middle-rank replay of the relative master complex, can close the
+pair-side invariant obligation.

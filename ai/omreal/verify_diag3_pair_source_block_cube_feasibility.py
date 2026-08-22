@@ -17,6 +17,7 @@ import sys
 HERE = Path(__file__).resolve().parent
 CERTIFICATE = HERE / "data" / "DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY_0_152.json"
 MAX_DEPTH = 8
+MAX_CRITICAL_DEPTH = 5
 STARTS = (Fraction(1, 2), Fraction(0), Fraction(0))
 ENDS = (Fraction(1), Fraction(1), Fraction(1))
 
@@ -179,6 +180,48 @@ def digest_ids(domain, identifiers):
     return digest.hexdigest()
 
 
+def derivative(polynomial, axis):
+    answer = {}
+    for index, coefficient in polynomial.items():
+        if index[axis]:
+            target = list(index)
+            target[axis] -= 1
+            answer[tuple(target)] = coefficient * index[axis]
+    return trim(answer)
+
+
+def critical_system_empty(polynomials):
+    agenda = [(tuple(controls(polynomial) for polynomial in polynomials), 0)]
+    deepest = 0
+    visited = 0
+    while agenda:
+        system, depth = agenda.pop()
+        visited += 1
+        excluded = False
+        for control, _shape in system:
+            control_signs = signs(control.values())
+            if 0 not in control_signs and len(control_signs) == 1:
+                excluded = True
+                break
+        if excluded:
+            continue
+        deepest = max(deepest, depth)
+        if depth >= MAX_CRITICAL_DEPTH:
+            return False, deepest, visited
+        families = [subcubes(control, shape) for control, shape in system]
+        for child_index in range(8):
+            agenda.append(
+                (
+                    tuple(
+                        (family[child_index], system[equation][1])
+                        for equation, family in enumerate(families)
+                    ),
+                    depth + 1,
+                )
+            )
+    return True, deepest, visited
+
+
 def fraction_text(value):
     return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
 
@@ -230,6 +273,7 @@ def reconstruct():
     occurring_degrees = Counter()
     graph_type_occurring = []
     fully_triquadratic_occurring = []
+    fully_triquadratic_polynomials = {}
     maximum_visited = 0
     semantic = sha256(b"diag3-source-block-cube-wall-feasibility-v1\0")
     for factor_id in candidates:
@@ -251,6 +295,7 @@ def reconstruct():
                 graph_type_occurring.append(factor_id)
             else:
                 fully_triquadratic_occurring.append(factor_id)
+                fully_triquadratic_polynomials[factor_id] = cube
         elif status.startswith("EMPTY_"):
             zero_free.append(factor_id)
         else:
@@ -262,9 +307,28 @@ def reconstruct():
         semantic.update(status.encode("ascii") + b"\0")
         semantic.update(repr(normalized_integer(cube)).encode("ascii"))
 
+    critical_depth_census = Counter()
+    critical_maximum_visited = 0
+    critical_semantic = sha256(b"diag3-source-block-half-cube-critical-system-v1\0")
+    critical_unresolved = []
+    for factor_id in fully_triquadratic_occurring:
+        polynomial = fully_triquadratic_polynomials[factor_id]
+        derivatives = (derivative(polynomial, 1), derivative(polynomial, 2))
+        empty, depth, visited = critical_system_empty((polynomial, *derivatives))
+        critical_depth_census[depth] += 1
+        critical_maximum_visited = max(critical_maximum_visited, visited)
+        if not empty:
+            critical_unresolved.append(factor_id)
+        critical_semantic.update(factor_id.to_bytes(4, "little"))
+        critical_semantic.update(bytes((empty, depth)))
+        critical_semantic.update(visited.to_bytes(8, "little"))
+        for equation in (polynomial, *derivatives):
+            critical_semantic.update(repr(normalized_integer(equation)).encode("ascii"))
+    assert not critical_unresolved
+
     return {
-        "format": "diag3-pair-source-block-half-cube-feasibility-v1",
-        "status": "EXACT_SOURCE_BLOCK_HALF_CUBE_WALL_FEASIBILITY",
+        "format": "diag3-pair-source-block-half-cube-component-coverage-v2",
+        "status": "EXACT_SOURCE_BLOCK_HALF_CUBE_WALL_COMPONENT_COVERAGE",
         "scope": {
             "parent_index": 2599,
             "source_chart": 0,
@@ -274,7 +338,7 @@ def reconstruct():
             "block_parameter_intervals": ["1/2..1", "0..1", "0..1"],
             "parent_parameter_coverage": "COMPLETE_ON_SOURCE_BLOCK_HALF_CUBE",
             "wall_feasibility_coverage": "COMPLETE_EXCEPT_EXPLICIT_UNRESOLVED",
-            "wall_component_coverage": "NOT_CLAIMED",
+            "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
             "global_parent_cell_coverage": "NOT_CLAIMED",
         },
         "parent_cube": {
@@ -330,7 +394,15 @@ def reconstruct():
             "graph_type_component_conclusion": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
             "graph_type_argument": "If p is affine in one parameter, a coefficient-drop zero gives a full boundary-meeting fiber; otherwise projection is a local graph, so a compact interior component would have a nonempty compact-open image in R^2.",
             "fully_triquadratic_occurring_walls": len(fully_triquadratic_occurring),
-            "fully_triquadratic_component_coverage": "OPEN",
+            "fully_triquadratic_critical_systems_proved_empty": len(fully_triquadratic_occurring),
+            "fully_triquadratic_critical_systems_unresolved": 0,
+            "critical_depth_census": {
+                str(depth): count for depth, count in sorted(critical_depth_census.items())
+            },
+            "maximum_critical_subboxes_visited": critical_maximum_visited,
+            "fully_triquadratic_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+            "all_occurring_wall_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+            "critical_semantic_sha256": critical_semantic.hexdigest(),
             "graph_type_factor_ids_sha256": digest_ids(
                 b"diag3-source-block-half-cube-graph-type-factor-ids-v1",
                 graph_type_occurring,
@@ -340,7 +412,7 @@ def reconstruct():
                 fully_triquadratic_occurring,
             ),
         },
-        "theorem_effect": "Exact parent residence and wall feasibility on one source block half-cube; wall-component coverage, global pair coverage, and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
+        "theorem_effect": "Exact parent residence, complete wall feasibility, and wall-component boundary coverage on one source block half-cube; global pair coverage and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
     }
 
 
@@ -352,10 +424,22 @@ def validate(candidate, expected):
     assert candidate["wall_feasibility"]["unresolved_walls"] == 0
     assert candidate["wall_component_preflight"]["graph_type_occurring_walls"] == 3_889
     assert candidate["wall_component_preflight"]["fully_triquadratic_occurring_walls"] == 561
-    assert candidate["wall_component_preflight"]["fully_triquadratic_component_coverage"] == "OPEN"
+    assert candidate["wall_component_preflight"]["fully_triquadratic_critical_systems_proved_empty"] == 561
+    assert candidate["wall_component_preflight"]["fully_triquadratic_critical_systems_unresolved"] == 0
+    assert candidate["wall_component_preflight"]["critical_depth_census"] == {
+        "0": 552,
+        "1": 4,
+        "2": 3,
+        "3": 1,
+        "4": 1,
+    }
+    assert candidate["wall_component_preflight"]["maximum_critical_subboxes_visited"] == 81
+    assert candidate["wall_component_preflight"]["all_occurring_wall_component_coverage"] == "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY"
     assert candidate["naive_full_cube_no_go"]["parent_safe_block_vertices"] == 6
     assert len(candidate["naive_full_cube_no_go"]["failed_block_vertices"]) == 2
-    assert candidate["scope"]["wall_component_coverage"] == "NOT_CLAIMED"
+    assert candidate["scope"]["wall_component_coverage"] == (
+        "EVERY_OCCURRING_WALL_COMPONENT_MEETS_HALF_CUBE_BOUNDARY"
+    )
     assert candidate["scope"]["global_parent_cell_coverage"] == "NOT_CLAIMED"
 
 
@@ -376,6 +460,7 @@ def main():
         (("wall_feasibility", "unresolved_walls"), 1),
         (("wall_feasibility", "classification_semantic_sha256"), "0" * 64),
         (("wall_component_preflight", "fully_triquadratic_occurring_walls"), 560),
+        (("wall_component_preflight", "fully_triquadratic_critical_systems_unresolved"), 1),
     ):
         mutation = deepcopy(stored)
         target = mutation
@@ -395,10 +480,11 @@ def main():
     print("PASS exact parent residence on the chart-0/chart-152 block half-cube")
     print("PASS 17,824 wall restrictions: 4,450 occurring / 13,374 zero-free / 0 unresolved")
     print("PASS maximum 25 dyadic subboxes visited for one wall")
-    print("PASS graph theorem covers 3,889 occurring surfaces; 561 triquadratics remain")
+    print("PASS graph theorem covers 3,889 surfaces; 561/561 triquadratic critical systems empty")
+    print("PASS every occurring wall component meets the half-cube boundary")
     print("SEMANTIC", expected["wall_feasibility"]["classification_semantic_sha256"])
     print(f"PASS {rejected}/{len(mutations)} hostile corruptions rejected")
-    print("SCOPE wall-component and global parent-cell coverage remain open; honest 9DVL 2/9")
+    print("SCOPE component coverage on one half-cube; global parent-cell coverage remains open; honest 9DVL 2/9")
 
 
 if __name__ == "__main__":

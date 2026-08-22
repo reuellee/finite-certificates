@@ -1,5 +1,5 @@
 {
-  "format": "diag3-pair-source-block-half-cube-feasibility-v1",
+  "format": "diag3-pair-source-block-half-cube-component-coverage-v2",
   "naive_full_cube_no_go": {
     "decision": "REJECT_FULL_[0,1]^3_CUBE; RETAIN_PARENT_SAFE_[1/2,1]x[0,1]x[0,1]_HALF_CUBE",
     "failed_block_vertices": [
@@ -72,19 +72,31 @@
       1,
       2
     ],
-    "wall_component_coverage": "NOT_CLAIMED",
+    "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
     "wall_feasibility_coverage": "COMPLETE_EXCEPT_EXPLICIT_UNRESOLVED"
   },
-  "status": "EXACT_SOURCE_BLOCK_HALF_CUBE_WALL_FEASIBILITY",
-  "theorem_effect": "Exact parent residence and wall feasibility on one source block half-cube; wall-component coverage, global pair coverage, and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
+  "status": "EXACT_SOURCE_BLOCK_HALF_CUBE_WALL_COMPONENT_COVERAGE",
+  "theorem_effect": "Exact parent residence, complete wall feasibility, and wall-component boundary coverage on one source block half-cube; global pair coverage and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
   "wall_component_preflight": {
-    "fully_triquadratic_component_coverage": "OPEN",
+    "all_occurring_wall_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+    "critical_depth_census": {
+      "0": 552,
+      "1": 4,
+      "2": 3,
+      "3": 1,
+      "4": 1
+    },
+    "critical_semantic_sha256": "214c653a6ffdec28a89a0f824c44e0b01658b60627825fd92032509aea7f855c",
+    "fully_triquadratic_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+    "fully_triquadratic_critical_systems_proved_empty": 561,
+    "fully_triquadratic_critical_systems_unresolved": 0,
     "fully_triquadratic_factor_ids_sha256": "483908d8ece34b330e5942c3cedf32c013c9f3e23d1b8487249e17208e332802",
     "fully_triquadratic_occurring_walls": 561,
     "graph_type_argument": "If p is affine in one parameter, a coefficient-drop zero gives a full boundary-meeting fiber; otherwise projection is a local graph, so a compact interior component would have a nonempty compact-open image in R^2.",
     "graph_type_component_conclusion": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
     "graph_type_factor_ids_sha256": "87f98bd5d74697556cddc0809131ad54047e597a5b674b2a6cdc8b93c97984c3",
     "graph_type_occurring_walls": 3889,
+    "maximum_critical_subboxes_visited": 81,
     "occurring_tridegree_census": {
       "0,0,2": 2,
       "0,1,1": 11,

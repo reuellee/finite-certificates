@@ -526,7 +526,7 @@
         "ai/omreal/verify_diag3_pair_source_square_coverage.py"
       ]
     },
-    "eleventh_pair_source_block_half_cube_feasibility": {
+    "eleventh_pair_source_block_half_cube_component_coverage": {
       "status": "PROVED",
       "scope": "exact parent residence and wall feasibility on the chart-0/chart-152 block box [1/2,1] x [0,1] x [0,1]",
       "naive_full_cube_safe_vertices": 6,
@@ -541,11 +541,23 @@
       "graph_type_occurring_walls": 3889,
       "graph_type_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
       "fully_triquadratic_occurring_walls": 561,
-      "fully_triquadratic_component_coverage": "OPEN",
+      "fully_triquadratic_critical_systems_proved_empty": 561,
+      "fully_triquadratic_critical_systems_unresolved": 0,
+      "critical_depth_census": {
+        "0": 552,
+        "1": 4,
+        "2": 3,
+        "3": 1,
+        "4": 1
+      },
+      "maximum_critical_subboxes_visited": 81,
+      "fully_triquadratic_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+      "all_occurring_wall_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
       "graph_type_factor_ids_sha256": "87f98bd5d74697556cddc0809131ad54047e597a5b674b2a6cdc8b93c97984c3",
       "fully_triquadratic_factor_ids_sha256": "483908d8ece34b330e5942c3cedf32c013c9f3e23d1b8487249e17208e332802",
       "classification_semantic_sha256": "d3761de31661811d27c1340ab175c1c47431dfbf59c7993b7747bbbbcb622381",
-      "hostile_corruptions_rejected": 10,
+      "critical_semantic_sha256": "214c653a6ffdec28a89a0f824c44e0b01658b60627825fd92032509aea7f855c",
+      "hostile_corruptions_rejected": 11,
       "evidence": [
         "ai/omreal/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md",
         "ai/omreal/data/DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY_0_152.json",
@@ -553,7 +565,7 @@
       ]
     },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "prove a bounded projection-critical surface-component oracle for the 561 fully triquadratic occurring walls on the exact chart-0-to-chart-152 block half-cube, then extend missed-component coverage over the global labelled source-boundary skeleton; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "extend exact wall-component coverage from the certified source square and block half-cube to a source-volume family covering every row-2599 parent-interior wall component, then build and replay the global labelled relative master complex; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "selected_target_contract": {
     "result_statuses": [

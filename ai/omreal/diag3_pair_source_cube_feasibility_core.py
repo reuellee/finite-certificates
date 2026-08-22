@@ -16,13 +16,14 @@ import sys
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
 OUTPUT = DATA / "DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY_0_152.json"
-FORMAT = "diag3-pair-source-block-half-cube-feasibility-v1"
-STATUS = "EXACT_SOURCE_BLOCK_HALF_CUBE_WALL_FEASIBILITY"
+FORMAT = "diag3-pair-source-block-half-cube-component-coverage-v2"
+STATUS = "EXACT_SOURCE_BLOCK_HALF_CUBE_WALL_COMPONENT_COVERAGE"
 SOURCE_CHART = 0
 TARGET_CHART = 152
 BLOCK_STARTS = (Fraction(1, 2), Fraction(0), Fraction(0))
 BLOCK_ENDS = (Fraction(1), Fraction(1), Fraction(1))
 MAX_BERNSTEIN_DEPTH = 8
+MAX_CRITICAL_DEPTH = 5
 
 sys.path.insert(0, str(HERE))
 import DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY as labeled  # noqa: E402
@@ -198,6 +199,49 @@ def id_digest(domain, identifiers):
     return digest.hexdigest()
 
 
+def derivative(polynomial, axis):
+    answer = {}
+    for index, coefficient in polynomial.items():
+        if index[axis]:
+            target = list(index)
+            target[axis] -= 1
+            answer[tuple(target)] = coefficient * index[axis]
+    return clean(answer)
+
+
+def exclude_critical_system(polynomials):
+    initial = tuple(bernstein_control(polynomial) for polynomial in polynomials)
+    stack = [(initial, 0)]
+    deepest = 0
+    visited = 0
+    while stack:
+        system, depth = stack.pop()
+        visited += 1
+        if any(
+            0 not in sign_set(control.values())
+            and len(sign_set(control.values())) == 1
+            for control, _shape in system
+        ):
+            continue
+        deepest = max(deepest, depth)
+        if depth >= MAX_CRITICAL_DEPTH:
+            return False, deepest, visited
+        children = [
+            bernstein_children(control, shape) for control, shape in system
+        ]
+        for child_index in range(8):
+            stack.append(
+                (
+                    tuple(
+                        (family[child_index], system[equation][1])
+                        for equation, family in enumerate(children)
+                    ),
+                    depth + 1,
+                )
+            )
+    return True, deepest, visited
+
+
 def build_record(progress=False):
     _matrices, points, _packed, _states, _hamming, _multiplicity = transition.exact_inputs()
     source = points[SOURCE_CHART]
@@ -255,6 +299,7 @@ def build_record(progress=False):
     occurring_degrees = Counter()
     graph_type_occurring = []
     fully_triquadratic_occurring = []
+    fully_triquadratic_polynomials = {}
     semantic = sha256(b"diag3-source-block-cube-wall-feasibility-v1\0")
     maximum_visited = 0
     for offset, factor_id in enumerate(candidates, start=1):
@@ -277,6 +322,7 @@ def build_record(progress=False):
                 graph_type_occurring.append(factor_id)
             else:
                 fully_triquadratic_occurring.append(factor_id)
+                fully_triquadratic_polynomials[factor_id] = cube
         elif status.startswith("EMPTY_"):
             zero_free.append(factor_id)
         else:
@@ -290,6 +336,32 @@ def build_record(progress=False):
         if progress and offset % 2000 == 0:
             print(f"classified {offset}/{len(candidates)} cube walls", flush=True)
 
+    critical_depth_census = Counter()
+    critical_maximum_visited = 0
+    critical_semantic = sha256(
+        b"diag3-source-block-half-cube-critical-system-v1\0"
+    )
+    critical_unresolved = []
+    for factor_id in fully_triquadratic_occurring:
+        polynomial = fully_triquadratic_polynomials[factor_id]
+        derivatives = (derivative(polynomial, 1), derivative(polynomial, 2))
+        empty, depth, visited = exclude_critical_system(
+            (polynomial, *derivatives)
+        )
+        critical_depth_census[depth] += 1
+        critical_maximum_visited = max(critical_maximum_visited, visited)
+        if not empty:
+            critical_unresolved.append(factor_id)
+        critical_semantic.update(factor_id.to_bytes(4, "little"))
+        critical_semantic.update(bytes((empty, depth)))
+        critical_semantic.update(visited.to_bytes(8, "little"))
+        for equation in (polynomial, *derivatives):
+            critical_semantic.update(repr(canonical_integer(equation)).encode("ascii"))
+    if critical_unresolved:
+        raise AssertionError(
+            f"unresolved half-cube critical systems: {critical_unresolved}"
+        )
+
     return {
         "format": FORMAT,
         "status": STATUS,
@@ -302,7 +374,7 @@ def build_record(progress=False):
             "block_parameter_intervals": ["1/2..1", "0..1", "0..1"],
             "parent_parameter_coverage": "COMPLETE_ON_SOURCE_BLOCK_HALF_CUBE",
             "wall_feasibility_coverage": "COMPLETE_EXCEPT_EXPLICIT_UNRESOLVED",
-            "wall_component_coverage": "NOT_CLAIMED",
+            "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
             "global_parent_cell_coverage": "NOT_CLAIMED",
         },
         "parent_cube": {
@@ -358,7 +430,15 @@ def build_record(progress=False):
             "graph_type_component_conclusion": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
             "graph_type_argument": "If p is affine in one parameter, a coefficient-drop zero gives a full boundary-meeting fiber; otherwise projection is a local graph, so a compact interior component would have a nonempty compact-open image in R^2.",
             "fully_triquadratic_occurring_walls": len(fully_triquadratic_occurring),
-            "fully_triquadratic_component_coverage": "OPEN",
+            "fully_triquadratic_critical_systems_proved_empty": len(fully_triquadratic_occurring),
+            "fully_triquadratic_critical_systems_unresolved": 0,
+            "critical_depth_census": {
+                str(depth): count for depth, count in sorted(critical_depth_census.items())
+            },
+            "maximum_critical_subboxes_visited": critical_maximum_visited,
+            "fully_triquadratic_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+            "all_occurring_wall_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+            "critical_semantic_sha256": critical_semantic.hexdigest(),
             "graph_type_factor_ids_sha256": id_digest(
                 b"diag3-source-block-half-cube-graph-type-factor-ids-v1",
                 graph_type_occurring,
@@ -368,5 +448,5 @@ def build_record(progress=False):
                 fully_triquadratic_occurring,
             ),
         },
-        "theorem_effect": "Exact parent residence and wall feasibility on one source block half-cube; wall-component coverage, global pair coverage, and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
+        "theorem_effect": "Exact parent residence, complete wall feasibility, and wall-component boundary coverage on one source block half-cube; global pair coverage and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
     }
