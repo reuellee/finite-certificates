@@ -530,6 +530,56 @@ python ai/omreal/build_diag3_pair_parent_source_labels.py
 python ai/omreal/verify_diag3_pair_parent_source_labels.py
 ```
 
+`DIAG3_PAIR_PARENT_SOURCE_BLOCK_BRIDGE_0_152.json` is the first exact source
+bridge beyond the 105-edge straight forest.  It audits that forest's 73
+components and selects chart 152 among six direct block-bridge candidates by
+minimum three-segment length and then minimum endpoint factor-state Hamming
+distance.  Replacing moving columns 6, 7 and 8 one at a time keeps all 70
+parent brackets strict and connects chart zero to a previously isolated germ.
+
+All 17,824 factors are screened on each segment.  The certificate records
+5,612 ordered simple crossings, a reconstructed chart-152 factor state, an
+11,231-cell regular-CW path, and exact overlap with the existing labelled path
+at chart zero.  It does not claim global parent-cell coverage or parent
+infinity.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_block_bridge.py
+python ai/omreal/verify_diag3_pair_parent_source_block_bridge.py
+```
+
+`DIAG3_PAIR_PARENT_SOURCE_BLOCK_LABELS_0_152.json` continues all 26,112
+extension labels across the bridge's 5,612 residual events. It records 5,319
+antipodal simplicial mutations, 293 exact compound re-enumerations, 5,615
+generic chamber label digests, two preserved equal-label waypoint seams and
+9,326 complete signature profiles. The replay reconstructs the independently
+stored raw chart-152 tope set and rejects 12 hostile corruptions.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_block_labels.py
+python ai/omreal/verify_diag3_pair_parent_source_block_labels.py
+```
+
+`DIAG3_PAIR_PARENT_BOUNDARY_ATTACHMENT_89_1237.json` is the first exact source
+attachment to genuine parent infinity. It selects the unique parent-safe finite
+coordinate ray from labelled charts 0, 89 and 152, proves that `[1237]` alone
+vanishes while 69 parent brackets remain positive, isolates 1,517 residual
+crossings, and proves that no candidate residual factor vanishes at the
+endpoint.
+
+`DIAG3_PAIR_PARENT_BOUNDARY_LABELS_89_1237.json` transports the complete label
+set through all 1,518 open-ray chambers using 1,454 simple mutations and 63
+compound re-enumerations. It independently reconstructs the last incident
+chamber near the endpoint and places `[1237]=0` in the relative infinity
+subcomplex.
+
+```console
+python ai/omreal/build_diag3_pair_parent_boundary_attachment.py
+python ai/omreal/verify_diag3_pair_parent_boundary_attachment.py
+python ai/omreal/build_diag3_pair_parent_boundary_labels.py
+python ai/omreal/verify_diag3_pair_parent_boundary_labels.py
+```
+
 ## Exact global residual-factor census
 
 `DIAG9_GRAPH_global_factor_census.npz` localizes all 84,840 labeled residual

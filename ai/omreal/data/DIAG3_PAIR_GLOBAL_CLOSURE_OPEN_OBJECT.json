@@ -2,7 +2,7 @@
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "01abaa07196fe2769969e27e8e53ef46d6b04591",
+  "current_decision_ledger_git_blob": "db7e37931b96fb34c6cbb929de7c5703443c51fb",
   "current_state_note": "Historical generator preflight. The proper-support dimension-four target is superseded by the exact relative-boundary collapse; current target selection lives in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {

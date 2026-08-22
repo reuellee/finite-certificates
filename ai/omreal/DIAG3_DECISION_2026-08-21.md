@@ -233,3 +233,51 @@ See
 `verify_diag3_pair_parent_source_transition.py`, then
 `DIAG3_PAIR_PARENT_SOURCE_LABELS.md` and
 `verify_diag3_pair_parent_source_labels.py`.
+
+## Coverage-oriented block bridge completed
+
+The straight source-transition skeleton is now audited as a 105-edge forest
+with component census `105, 2, 1 x 71`.  This is not a connectivity
+obstruction.  Because every parent bracket is affine in one moving column,
+the verifier can replace columns 6, 7 and 8 one at a time and certify each
+closed segment by exact endpoint signs plus Bernstein replay.
+
+Six straight-isolated germs admit a direct three-block bridge from chart zero.
+The objective rule minimizes certified segment count and then exact endpoint
+factor-state Hamming distance; it selects chart 152 at distance 3,384 with
+block order `(6,7,8)`.  All four waypoints are strict parent-interior and avoid
+every candidate residual wall.
+
+Complete exact Sturm screening of all 17,824 factors on all three segments
+orders 5,612 simple crossings.  Their flips reconstruct chart 152, producing
+an 11,231-cell regular-CW path.  The bridge meets the labelled chart-0-to-89
+path at the exact common chart-zero vertex and raw 26,112-label set.  This
+embeds one formerly isolated germ but does not cover the parent cell or attach
+parent infinity.  The next bounded stage is full label continuation across the
+bridge, followed by genuine compactification-boundary attachments.  The honest
+score remains `2/9`.
+
+## Block-bridge labels and first genuine boundary attachment completed
+
+The full bridge-label successor crosses all 5,612 events with 5,319 antipodal
+simplicial mutations and 293 exact compound re-enumerations. Every one of the
+5,615 generic chambers has 26,112 labels in the complete 97,224-signature
+universe, both internal waypoint seams are retained, and the final state equals
+the independently stored raw chart-152 tope set. The exact profile quotient has
+9,326 classes.
+
+The source skeleton now also reaches a genuine compactification boundary.
+Among all 29 parent-safe single-divisor coordinate rays from the 178 stored
+charts, chart 89 gives the unique candidate from the currently labelled source
+vertices 0, 89 and 152. It reaches `[1237]=0`; all other 69 parent brackets
+remain positive and none of the 17,824 residual candidates vanishes at the
+endpoint. The ray has 1,517 ordered simple residual crossings and 1,518 open
+chambers. Exact label continuation uses 1,454 antipodal mutations and 63
+compound re-enumerations, and a fresh endpoint-near enumeration reconstructs
+the last chamber. The endpoint is correctly removed in the relative
+parent-infinity subcomplex.
+
+These are proof-bearing source and frontier additions, not parent-cell
+coverage. The next pair target is a missed-component certificate or an
+equivalent structural global-closure theorem. The independent triple residue
+also remains 1,162,302, so the honest score remains `2/9`.

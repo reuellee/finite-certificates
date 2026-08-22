@@ -63,6 +63,10 @@ The compiler now has three proof-producing local atlases.  The generated [`17-ce
 
 The new [`exact chart-0-to-chart-89 source transition`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_TRANSITION.md) changes the parent germ along the objectively smallest parent-safe chart-zero edge.  Exact Sturm replay screens all 17,824 factors, orders 1,237 simple root crossings, and reconstructs the chart-89 factor state over a 2,477-cell regular CW path.  Its [`complete label continuation`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_LABELS.md) transports the 26,112-tope set across all 1,238 chambers using 1,179 antipodal simplicial mutations and 58 exact compound updates.  It reconstructs the independently stored raw chart-89 label state and yields 2,458 exact signature profiles.  Global parent-cell coverage remains open, so the honest theorem score is still 2/9.
 
+The coverage-oriented source graph now also has an [`exact three-block bridge`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_BLOCK_BRIDGE.md) from chart zero to chart 152, which was isolated in the 105-edge straight-segment forest.  Replacing moving columns 6, 7 and 8 one at a time keeps all 70 parent brackets strict.  Exact Sturm replay screens all 17,824 residual factors on each segment, orders 5,612 simple crossings, reconstructs the chart-152 factor state and produces an 11,231-cell regular-CW path.  The bridge glues to the labelled chart-0-to-chart-89 path at their exact common chart-zero vertex and raw 26,112-label set.  It embeds one new germ but is not parameter-space coverage; the score remains 2/9.
+
+The bridge now has [`complete exact label continuation`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_BLOCK_LABELS.md): 5,319 antipodal simplicial mutations and 293 exact compound re-enumerations label all 5,615 generic chambers and reconstruct the raw chart-152 tope set. A separate [`genuine parent-boundary attachment`](ai/omreal/DIAG3_PAIR_PARENT_BOUNDARY_ATTACHMENT.md) continues chart 89 through 1,517 ordered residual crossings to `[1237]=0`. The other 69 parent brackets stay positive, no residual factor vanishes at the endpoint, and all 1,518 open-ray chambers carry exact 26,112-label sets before the endpoint is quotiented as relative infinity. These certificates add exact source and frontier incidence, but not missed-component or global parent-cell coverage; the score remains 2/9.
+
 ## Verification
 
 Requirements for the complete suite are Python 3 plus `numpy`, `scipy`, and `sympy`; see [`requirements.txt`](requirements.txt). Many individual verifiers are standard-library only.
@@ -84,6 +88,9 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_relative_boundary_c
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_fullsupport_safe_segment_walls.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_fullsupport_block_symmetry.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_fullsupport_parent_product_signs.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_source_block_labels.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_boundary_attachment.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_parent_boundary_labels.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.py
 ```
 

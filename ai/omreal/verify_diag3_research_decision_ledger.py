@@ -323,11 +323,120 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_parent_source_labels.py",
         ],
     }
+    block_bridge = progress["sixth_parent_source_block_bridge"]
+    assert block_bridge == {
+        "status": "PROVED",
+        "scope": "one exact three-segment one-column-at-a-time bridge from row-2599 chart 0 to formerly straight-isolated chart 152",
+        "straight_edges_audited": 105,
+        "straight_component_census": {"1": 71, "2": 1, "105": 1},
+        "direct_block_bridge_candidates": 6,
+        "selection_rule": "minimum certified one-column segment count, then minimum endpoint factor-state Hamming distance, then target chart index",
+        "selected_target_chart": 152,
+        "selected_block_order": [0, 1, 2],
+        "endpoint_factor_hamming_distance": 3_384,
+        "parent_brackets_replayed": 70,
+        "generic_waypoints": 4,
+        "candidate_factor_segment_restrictions": 53_472,
+        "ordered_root_events": 5_612,
+        "occurrence_multiplicity_census": {"1": 5_319, "2": 66, "15": 46, "65": 181},
+        "regular_cw_cells": 11_231,
+        "strict_closure_pairs": 11_230,
+        "parent_infinity_cells": 0,
+        "shared_chart_zero_labels": 26_112,
+        "events_semantic_sha256": "7a80560cfc7544f1d114b33c2c9205d35a09400d6385029f2a93e05fe6f50102",
+        "factor_state_sequence_sha256": "f64480d5b7138a7f92e440b5daa93f2c7e14598aca1be9a607e550bcda6c74aa",
+        "hostile_corruptions_rejected": 12,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_PARENT_SOURCE_BLOCK_BRIDGE.md",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_BLOCK_BRIDGE_0_152.json",
+            "ai/omreal/verify_diag3_pair_parent_source_block_bridge.py",
+        ],
+    }
+    block_labels = progress["seventh_parent_source_block_label_continuation"]
+    assert block_labels == {
+        "status": "PROVED",
+        "scope": "complete exact signature-label continuation over all open chambers of the three-segment row-2599 chart-0-to-chart-152 block bridge",
+        "generic_chambers": 5_615,
+        "extension_signature_universe": 97_224,
+        "labels_per_generic_chamber": 26_112,
+        "simple_simplicial_mutations": 5_319,
+        "compound_exact_reenumerations": 293,
+        "compound_delta_census": {
+            "multiplicity_2_lost_gained_4": 66,
+            "multiplicity_15_lost_gained_10": 46,
+            "multiplicity_65_lost_gained_72": 181,
+        },
+        "internal_equal_label_waypoints": 2,
+        "distinct_signature_profiles": 9_326,
+        "profile_transition_count_census": {
+            "0": 62_080,
+            "1": 23_496,
+            "2": 9_914,
+            "3": 1_486,
+            "4": 234,
+            "5": 14,
+        },
+        "never_feasible_signatures": 51_114,
+        "all_chamber_persistent_signatures": 10_966,
+        "raw_chart_152_label_state_reconstructed": True,
+        "chamber_label_digests_sha256": "e0657cdf67205ffbc0f8a15ecbf98b6fabe4861e397bb85588651fa0cc585875",
+        "event_label_semantic_sha256": "e65b6cc7cccf07fb66b590ef6a86fec947f51c2bdcf8c8974cd04be30b6f58b6",
+        "profile_semantic_sha256": "b6aa84e62805531e4f32ed63ba5a389011ff607288bfbec4ce64b0394731a796",
+        "hostile_corruptions_rejected": 12,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_PARENT_SOURCE_BLOCK_LABELS.md",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_BLOCK_LABELS_0_152.json",
+            "ai/omreal/verify_diag3_pair_parent_source_block_labels.py",
+        ],
+    }
+    boundary = progress["eighth_parent_boundary_attachment"]
+    assert boundary == {
+        "status": "PROVED",
+        "scope": "exact fully labelled row-2599 chart-89 coordinate ray to the genuine relative parent divisor [1237]=0",
+        "stored_coordinate_rays_audited": 1_602,
+        "parent_safe_single_divisor_rays": 29,
+        "labelled_source_candidate_rays": 1,
+        "source_chart": 89,
+        "moving_column": 7,
+        "coordinate_row": 4,
+        "target_parent_bracket": "1237",
+        "parent_brackets_replayed": 70,
+        "strict_parent_brackets_at_endpoint": 69,
+        "candidate_factors_replayed": 17_824,
+        "root_free_factors": 16_307,
+        "one_root_factors": 1_517,
+        "endpoint_zero_residual_factors": 0,
+        "ordered_root_events": 1_517,
+        "occurrence_multiplicity_census": {"1": 1_454, "2": 16, "15": 6, "65": 41},
+        "regular_cw_cells": 3_037,
+        "strict_closure_pairs": 3_036,
+        "parent_infinity_cells": 1,
+        "generic_chambers": 1_518,
+        "labels_per_generic_chamber": 26_112,
+        "simple_simplicial_mutations": 1_454,
+        "compound_exact_reenumerations": 63,
+        "distinct_signature_profiles": 3_029,
+        "profile_transition_count_census": {"0": 85_452, "1": 11_576, "2": 196},
+        "never_feasible_signatures": 65_128,
+        "all_chamber_persistent_signatures": 20_324,
+        "last_open_chamber_reconstructed": True,
+        "events_semantic_sha256": "211f60ef3a445c16e35cae40cba270ec5f552152dccc99a1abfbd4c0a84d1bf1",
+        "event_label_semantic_sha256": "5ce4cd3124c42e8d64e032acaa2e5047c9a6319c0535c1d2607ff58ec08b4812",
+        "profile_semantic_sha256": "102a36f099781ba36f8df85c4a042e5bceb72d0abc08be84bcbf8a32fcbf3778",
+        "hostile_corruptions_rejected": 24,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_PARENT_BOUNDARY_ATTACHMENT.md",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_BOUNDARY_ATTACHMENT_89_1237.json",
+            "ai/omreal/verify_diag3_pair_parent_boundary_attachment.py",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_BOUNDARY_LABELS_89_1237.json",
+            "ai/omreal/verify_diag3_pair_parent_boundary_labels.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "coverage-oriented exact source graph"
+        "prove missed-component coverage for the exact labelled source-boundary skeleton"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -359,6 +468,7 @@ def main() -> None:
     print("PASS third first-event master-closure atlas: 64 boxes / 399 cells / 512 ranks")
     print("PASS fourth parent-source transition: 1237 events / 2477 cells / 58 compound")
     print("PASS fifth source-label continuation: 1238 chambers / 2458 profiles / exact endpoint")
+    print("PASS sixth source block bridge: 3 segments / 5612 events / 11231 cells")
     print("LEDGER_GIT_BLOB", digest)
 
 
