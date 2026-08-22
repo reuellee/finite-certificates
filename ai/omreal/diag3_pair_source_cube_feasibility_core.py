@@ -3,11 +3,10 @@
 
 from __future__ import annotations
 
-from collections import Counter, defaultdict
+from collections import Counter
 from fractions import Fraction
 from hashlib import sha256
 from itertools import product
-from math import comb, gcd, lcm
 from pathlib import Path
 import json
 import sys
@@ -29,6 +28,7 @@ sys.path.insert(0, str(HERE))
 import DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY as labeled  # noqa: E402
 import diag3_pair_parent_source_block_bridge_core as bridge  # noqa: E402
 import diag3_pair_parent_source_transition_core as transition  # noqa: E402
+import exact_semialgebraic as exact  # noqa: E402
 import verify_diag3_pair_global_parent_face_gate as gate  # noqa: E402
 
 
@@ -38,16 +38,11 @@ def fraction_text(value: Fraction) -> str:
 
 
 def clean(polynomial):
-    return {monomial: value for monomial, value in polynomial.items() if value}
+    return exact.clean(polynomial)
 
 
 def multiply_trivariate(left, right):
-    answer = {}
-    for first_index, first in left.items():
-        for second_index, second in right.items():
-            index = tuple(a + b for a, b in zip(first_index, second_index))
-            answer[index] = answer.get(index, Fraction(0)) + first * second
-    return clean(answer)
+    return exact.multiply(left, right)
 
 
 def restrict_cube(
@@ -57,195 +52,60 @@ def restrict_cube(
     starts=BLOCK_STARTS,
     ends=BLOCK_ENDS,
 ):
-    answer = {}
-    for exponent, coefficient in polynomial.items():
-        term = {(0, 0, 0): Fraction(coefficient)}
-        for variable, power in enumerate(exponent):
-            if not power:
-                continue
-            block = variable // 3
-            index = [0, 0, 0]
-            index[block] = 1
-            start = source[variable] + starts[block] * (
-                target[variable] - source[variable]
-            )
-            change = (ends[block] - starts[block]) * (
-                target[variable] - source[variable]
-            )
-            linear = {(0, 0, 0): start, tuple(index): change}
-            for _ in range(power):
-                term = multiply_trivariate(term, linear)
-        for monomial, value in term.items():
-            answer[monomial] = answer.get(monomial, Fraction(0)) + value
-    return clean(answer)
+    constants = []
+    coefficients = []
+    for variable in range(len(source)):
+        block = variable // 3
+        difference = target[variable] - source[variable]
+        constants.append(source[variable] + starts[block] * difference)
+        row = [Fraction(0)] * 3
+        row[block] = (ends[block] - starts[block]) * difference
+        coefficients.append(row)
+    return exact.affine_pullback(polynomial, constants, coefficients)
 
 
 def evaluate_trivariate(polynomial, values):
-    return sum(
-        coefficient * values[0] ** i * values[1] ** j * values[2] ** k
-        for (i, j, k), coefficient in polynomial.items()
-    )
+    return exact.evaluate(polynomial, values)
 
 
 def evaluate_coordinate_polynomial(polynomial, values):
-    answer = Fraction(0)
-    for exponent, coefficient in polynomial.items():
-        term = Fraction(coefficient)
-        for coordinate, power in zip(values, exponent):
-            term *= coordinate**power
-        answer += term
-    return answer
+    return exact.evaluate(polynomial, values)
 
 
 def canonical_integer(polynomial):
-    denominator = 1
-    for value in polynomial.values():
-        denominator = lcm(denominator, Fraction(value).denominator)
-    integer = {
-        monomial: int(Fraction(value) * denominator)
-        for monomial, value in polynomial.items()
-    }
-    divisor = 0
-    for value in integer.values():
-        divisor = gcd(divisor, abs(value))
-    divisor = max(divisor, 1)
-    integer = {monomial: value // divisor for monomial, value in integer.items()}
-    if integer[max(integer)] < 0:
-        integer = {monomial: -value for monomial, value in integer.items()}
-    return tuple(sorted(integer.items()))
+    return exact.canonical_integer(polynomial)
 
 
 def bernstein_control(polynomial):
-    degrees = tuple(max(index[axis] for index in polynomial) for axis in range(3))
-    control = {}
-    for target_index in product(*(range(degree + 1) for degree in degrees)):
-        value = Fraction(0)
-        for source_index, coefficient in polynomial.items():
-            if all(source_index[axis] <= target_index[axis] for axis in range(3)):
-                weight = Fraction(1)
-                for axis in range(3):
-                    weight *= Fraction(
-                        comb(target_index[axis], source_index[axis]),
-                        comb(degrees[axis], source_index[axis]),
-                    )
-                value += coefficient * weight
-        control[target_index] = value
-    return control, tuple(degree + 1 for degree in degrees)
-
-
-def split_curve(values):
-    rows = [list(values)]
-    while len(rows[-1]) > 1:
-        rows.append(
-            [(left + right) / 2 for left, right in zip(rows[-1], rows[-1][1:])]
-        )
-    return (
-        tuple(row[0] for row in rows),
-        tuple(row[-1] for row in reversed(rows)),
-    )
+    return exact.bernstein_control(polynomial)
 
 
 def split_axis(control, shape, axis):
-    groups = defaultdict(dict)
-    for index, value in control.items():
-        fixed = index[:axis] + index[axis + 1 :]
-        groups[fixed][index[axis]] = value
-    left = {}
-    right = {}
-    for fixed, row in groups.items():
-        values = tuple(row[position] for position in range(shape[axis]))
-        first, second = split_curve(values)
-        for position, value in enumerate(first):
-            index = fixed[:axis] + (position,) + fixed[axis:]
-            left[index] = value
-        for position, value in enumerate(second):
-            index = fixed[:axis] + (position,) + fixed[axis:]
-            right[index] = value
-    return left, right
+    return exact.split_axis(control, shape, axis)
 
 
 def bernstein_children(control, shape):
-    pieces = [control]
-    for axis in range(3):
-        pieces = [half for piece in pieces for half in split_axis(piece, shape, axis)]
-    return tuple(pieces)
+    return exact.bernstein_children(control, shape)
 
 
 def sign_set(values):
-    return {1 if value > 0 else -1 if value < 0 else 0 for value in values}
+    return exact.sign_set(values)
 
 
 def classify_bernstein(control, shape):
-    stack = [(control, 0)]
-    maximum_depth = 0
-    visited = 0
-    vertices = tuple(
-        product(*((0, length - 1) if length > 1 else (0,) for length in shape))
-    )
-    while stack:
-        current, depth = stack.pop()
-        visited += 1
-        control_signs = sign_set(current.values())
-        if 0 not in control_signs and len(control_signs) == 1:
-            continue
-        corner_signs = sign_set(current[index] for index in vertices)
-        if 0 in corner_signs or {-1, 1} <= corner_signs:
-            return "NONEMPTY_CORNER", depth, visited
-        maximum_depth = max(maximum_depth, depth)
-        if depth >= MAX_BERNSTEIN_DEPTH:
-            return "UNRESOLVED", maximum_depth, visited
-        stack.extend((child, depth + 1) for child in bernstein_children(current, shape))
-    return "EMPTY_BERNSTEIN", maximum_depth, visited
+    return exact.classify_zero_set(control, shape, max_depth=MAX_BERNSTEIN_DEPTH)
 
 
 def id_digest(domain, identifiers):
-    digest = sha256(domain + b"\0")
-    for identifier in identifiers:
-        digest.update(int(identifier).to_bytes(4, "little"))
-    return digest.hexdigest()
+    return exact.id_digest(domain, identifiers)
 
 
 def derivative(polynomial, axis):
-    answer = {}
-    for index, coefficient in polynomial.items():
-        if index[axis]:
-            target = list(index)
-            target[axis] -= 1
-            answer[tuple(target)] = coefficient * index[axis]
-    return clean(answer)
+    return exact.derivative(polynomial, axis)
 
 
 def exclude_critical_system(polynomials):
-    initial = tuple(bernstein_control(polynomial) for polynomial in polynomials)
-    stack = [(initial, 0)]
-    deepest = 0
-    visited = 0
-    while stack:
-        system, depth = stack.pop()
-        visited += 1
-        if any(
-            0 not in sign_set(control.values())
-            and len(sign_set(control.values())) == 1
-            for control, _shape in system
-        ):
-            continue
-        deepest = max(deepest, depth)
-        if depth >= MAX_CRITICAL_DEPTH:
-            return False, deepest, visited
-        children = [
-            bernstein_children(control, shape) for control, shape in system
-        ]
-        for child_index in range(8):
-            stack.append(
-                (
-                    tuple(
-                        (family[child_index], system[equation][1])
-                        for equation, family in enumerate(children)
-                    ),
-                    depth + 1,
-                )
-            )
-    return True, deepest, visited
+    return exact.exclude_system(polynomials, max_depth=MAX_CRITICAL_DEPTH)
 
 
 def build_record(progress=False):

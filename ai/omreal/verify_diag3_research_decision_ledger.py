@@ -170,6 +170,13 @@ def main() -> None:
         "replacement": "the exact parent-safe [1/2,1] x [0,1] x [0,1] block half-cube",
         "regression": "ai/omreal/verify_diag3_pair_source_block_cube_feasibility.py",
     }
+    assert retired["universal_chart0_chart152_source_family_incidence"] == {
+        "id": "universal_chart0_chart152_source_family_incidence",
+        "status": "RETIRED",
+        "reason": "Exactly 5390 factors with certified row-2599 parent-interior sign crossings are zero-free on the entire chart-0/chart-152 three-parameter source cube, so no refinement confined to that cube can meet every global wall.",
+        "replacement": "genuinely distinct source families with a global incidence theorem, or a direct coverage-certified parent-cell roadmap/master complex",
+        "regression": "ai/omreal/verify_diag3_pair_source_family_incidence_no_go.py",
+    }
     assert retired["moving_column_s3_quotient"]["withdrawn_counts"] == {
         "transported_witnesses": 5_986,
         "residue_factors": 994,
@@ -202,6 +209,25 @@ def main() -> None:
         row["priority_score"] for row in candidates
     )
     assert ledger["selected_target"] == "fullsupport_master_closure_compiler"
+    infrastructure = ledger["research_infrastructure"]["exact_semialgebraic_toolkit"]
+    assert infrastructure == {
+        "status": "EXTRACTED_AND_CANARY_VERIFIED",
+        "arithmetic": "EXACT_RATIONAL",
+        "decision_policy": "FAIL_CLOSED",
+        "parameter_dimension": "ARBITRARY_POSITIVE_DIMENSION",
+        "analytic_canaries": 5,
+        "hostile_semantic_mutations_rejected": 8,
+        "compact_component_negative_canary": "INTERIOR_SPHERE_REFUSES_CRITICAL_EXCLUSION",
+        "producer_reuse": "SOURCE_CUBE_AND_STAIRCASE",
+        "independent_certificate_replay": "STILL_REQUIRED",
+        "global_topology_from_local_boxes": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md",
+            "ai/omreal/exact_semialgebraic/README.md",
+            "ai/omreal/data/EXACT_SEMIALGEBRAIC_TOOLKIT_CANARIES.json",
+            "ai/omreal/verify_exact_semialgebraic_toolkit.py",
+        ],
+    }
     progress = ledger["selected_target_progress"]
     assert progress["schema_interface"] == "COMPLETE"
     canary = progress["first_proof_producing_canary"]
@@ -596,11 +622,109 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_source_staircase_coverage.py",
         ],
     }
+    ambient_cube = progress["thirteenth_pair_full_hybrid_cube_ambient_topology"]
+    assert ambient_cube == {
+        "status": "PROVED",
+        "scope": "exact ambient zero-set topology for all residual restrictions on the full chart-0/chart-152 three-parameter hybrid cube; parent residence is not claimed",
+        "candidate_factors_replayed": 17_824,
+        "zero_free_walls": 12_247,
+        "occurring_walls": 5_577,
+        "unresolved_walls": 0,
+        "graph_type_occurring_walls": 4_898,
+        "fully_triquadratic_occurring_walls": 679,
+        "adaptive_critical_systems_proved_empty": 679,
+        "adaptive_critical_systems_unresolved": 0,
+        "alternate_derivative_pair_selections": 3,
+        "preserved_inconclusive_derivative_pair_attempts": 4,
+        "maximum_subboxes_visited_for_one_wall": 89,
+        "maximum_total_critical_subboxes_visited_for_one_factor": 352,
+        "parent_safe_cube_vertices": 6,
+        "parent_failed_cube_vertices": 2,
+        "full_cube_component_coverage": "EVERY_OCCURRING_RESTRICTED_WALL_COMPONENT_MEETS_FULL_HYBRID_CUBE_BOUNDARY",
+        "source_subregion_transfer": "EVERY_RESTRICTED_WALL_COMPONENT_IN_A_PARENT_SAFE_SOURCE_STAIRCASE_MEETS_ITS_TRUE_OUTER_BOUNDARY",
+        "internal_seams_required": False,
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "occurring_factor_ids_sha256": "ca6e3d7911be1cc341fb4a40369542eadb8c526bd3c81a3f449037e97cfa425b",
+        "zero_free_factor_ids_sha256": "3eab27338a090d6001e6d7d374d50d6983aeafe1967fac37b5b857f8ca168419",
+        "classification_semantic_sha256": "5e290f7aab3da48706f326b1bb89a867b737efb3af354a182e679c62cbe1454d",
+        "critical_semantic_sha256": "a7f8f690c855982e8eee416e97f8f7aa444646b0a3c1c964db15920ed6b6548e",
+        "hostile_corruptions_rejected": 13,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_FULL_HYBRID_CUBE_TOPOLOGY.md",
+            "ai/omreal/data/DIAG3_PAIR_FULL_HYBRID_CUBE_TOPOLOGY_0_152.json",
+            "ai/omreal/verify_diag3_pair_full_hybrid_cube_topology.py",
+        ],
+    }
+    staircase8 = progress["fourteenth_pair_source_staircase8_yield_gate"]
+    assert staircase8 == {
+        "status": "PROVED_AND_STOPPED",
+        "scope": "exact parent residence, complete wall feasibility, and true outer-boundary component coverage on an eight-box chart-0/chart-152 source staircase",
+        "source_boxes": 8,
+        "exact_parameter_volume": "12817/16384",
+        "previous_exact_parameter_volume": "373/512",
+        "exact_volume_gain": "881/16384",
+        "parent_bracket_box_restrictions_replayed": 560,
+        "strict_parent_vertices_replayed": 64,
+        "box_factor_restrictions_replayed": 142_592,
+        "box_occurring_wall_census": [1_320, 1_677, 1_982, 2_314, 2_637, 2_956, 3_232, 4_610],
+        "distinct_staircase_occurring_walls": 5_139,
+        "zero_free_on_all_staircase_boxes": 12_685,
+        "unresolved_box_factor_restrictions": 0,
+        "additional_distinct_occurring_walls_over_five_box_staircase": 33,
+        "outer_boundary_component_coverage": "EVERY_RESTRICTED_WALL_COMPONENT_MEETS_STAIRCASE_OUTER_BOUNDARY",
+        "internal_seams_required": False,
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "further_dyadic_refinement": "STOPPED_LOW_YIELD",
+        "staircase_occurring_factor_ids_sha256": "9e439b58569770fcacfef7a3b6b74b182e68453b020a1e7fceb8bc31f9954bc8",
+        "staircase_zero_free_factor_ids_sha256": "0edd74b10c6263a5e92c00cb977902b7df38d52341d9fa1df7fac75d111b4ad4",
+        "box_classification_semantic_sha256": [
+            "5875b9ab05e129b1c7ce247a0b18a4ad31022dc10d5225e61a8fbe6661a5b4cd",
+            "4184f86ff37bcd4b70afeeb98a26e544cb66c85e995dc325af27c1f32b04d3eb",
+            "d16e1786faf172544199823991425fa794fee8fb97e3d58de3e3a9cea6ba3d0c",
+            "0f8703e58ebe007a6b80d4df497373309de30c811a34fff0f03ca4761b85d996",
+            "88421ea4b083691796e3199ed5f79b7fcf27a7a4b3e2162cbddb67dd1f79a65d",
+            "88c9781db00f79b57c88c28d8b0075fdded6e2767473cfea1dd9c08755436a2a",
+            "59434a320e45bc51fda7d988e7b0e7e95c8cb3cfd9ba4c8aae00c0864984edc4",
+            "a82d60f2674d0d8595036365b2534d7c62da1edc7e175ca9c9323a3ea6ce9277",
+        ],
+        "hostile_corruptions_rejected": 12,
+        "evidence": [
+            "ai/omreal/DIAG3_DECISION_2026-08-22.md",
+            "ai/omreal/DIAG3_PAIR_SOURCE_STAIRCASE8_COVERAGE.md",
+            "ai/omreal/data/DIAG3_PAIR_SOURCE_STAIRCASE8_COVERAGE_0_152.json",
+            "ai/omreal/verify_diag3_pair_source_staircase8_coverage.py",
+        ],
+    }
+    incidence_no_go = progress["fifteenth_pair_source_family_incidence_no_go"]
+    assert incidence_no_go == {
+        "status": "PROVED_NO_GO",
+        "scope": "exact comparison of known row-2599 parent-interior wall crossings with the complete chart-0/chart-152 full-source-cube occurrence set",
+        "candidate_factors": 17_824,
+        "parent_safe_segments": 105,
+        "known_parent_interior_walls": 10_844,
+        "source_cube_occurring_walls": 5_577,
+        "known_parent_walls_meeting_source_cube": 5_454,
+        "known_parent_walls_zero_free_on_source_cube": 5_390,
+        "source_cube_walls_not_crossed_by_safe_segments": 123,
+        "least_counterexample_factor_id": 5,
+        "least_counterexample_parent_safe_segment_charts": [0, 2],
+        "known_parent_walls_zero_free_on_source_cube_sha256": "26cce16d217d55e01081dad817d13778d2c797724659bcebd51555eb66855382",
+        "known_parent_walls_meeting_source_cube_sha256": "ef52b6bf65c9eda5b5a198c1e9e15ed275d90c7dffa083b9e928e294e60a2d66",
+        "retired_target": "PROVE_EVERY_GLOBAL_WALL_COMPONENT_MEETS_CHART0_CHART152_SOURCE_FAMILY",
+        "replacement_target": "ADD_GENUINELY_DISTINCT_SOURCE_FAMILIES_OR_BUILD_A_DIRECT_GLOBAL_ROADMAP_MASTER_COMPLEX",
+        "global_pair_obligation": "OPEN",
+        "hostile_corruptions_rejected": 11,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md",
+            "ai/omreal/data/DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO_0_152.json",
+            "ai/omreal/verify_diag3_pair_source_family_incidence_no_go.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "prove that every row-2599 parent-interior wall component meets the certified 373/512"
+        "build a direct coverage-certified row-2599 parent-cell roadmap/master complex"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -637,6 +761,9 @@ def main() -> None:
     print("PASS tenth source-square coverage: 3763 occurring walls / 0 missed components")
     print("PASS twelfth source staircase: 5 boxes / 89120 restrictions / volume 373/512")
     print("PASS eleventh source half-cube: all 4450 wall components boundary-attached")
+    print("PASS thirteenth ambient cube: 5577 occurring walls / true boundary coverage")
+    print("PASS fourteenth staircase yield gate: 8 boxes / volume 12817/16384 / +33 factors")
+    print("PASS fifteenth source-family no-go: 5390 known parent walls miss the source cube")
     print("LEDGER_GIT_BLOB", digest)
 
 

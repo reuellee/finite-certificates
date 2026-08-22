@@ -16,6 +16,11 @@ The machine-readable companion is
 `data/DIAG3_RESEARCH_DECISION_LEDGER.json`. Its verifier is
 `verify_diag3_research_decision_ledger.py`.
 
+The reusable implementation and methodological lessons extracted from the
+source-square and source-cube work are documented in
+`EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`.  That producer toolkit does not
+replace independent certificate replay.
+
 ## Standing principal-investigator prompt
 
 > Act as principal investigator, proof engineer, adversarial referee, and

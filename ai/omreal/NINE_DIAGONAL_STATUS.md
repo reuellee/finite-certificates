@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on an exact chart-0-to-chart-152 source square and a five-box source staircase of volume `373/512`, all local restrictions are decided and every boxwise wall component reaches the declared source skeleton; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on the chart-0-to-chart-152 three-parameter hybrid cube all 17,824 residual restrictions are decided and every occurring restricted-wall component reaches the cube boundary, but 5,390 known parent walls are zero-free on that source cube, refuting universal incidence with it; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -1342,9 +1342,48 @@ box occurrences and exact coordinate-adaptive critical systems cover the
 remaining 1,859.  One factor, 9,954 on the fourth box, correctly retains an
 inconclusive first derivative pair and closes with an alternate exact pair;
 no obligation is hidden by a deeper timeout.  Thus every boxwise wall
-component reaches the union of box boundaries.  Internal seams remain part
-of this declared source skeleton, and no full-parent missed-component theorem
-is claimed.  See `DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md`.
+component reaches the union of box boundaries.  This was the original
+five-box scope; the ambient theorem below now removes the internal seams from
+the component conclusion.  No full-parent missed-component theorem is
+claimed.  See `DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md`.
+
+The full hybrid cube is parent-invalid at two vertices, but its residual
+polynomial topology is nevertheless exact.  Tensor Bernstein replay decides
+all 17,824 full-cube restrictions: 12,247 are zero-free, 5,577 occur, and none
+remain unresolved.  Graph projection covers 4,898 occurring walls.  Adaptive
+critical systems cover all 679 fully triquadratic walls, including four
+preserved inconclusive first-axis attempts closed by alternate pairs.  Hence
+every occurring restricted-wall component meets the full cube boundary.  A
+semialgebraic path-transfer lemma then proves that every component inside any
+closed parent-safe source staircase meets that staircase's true outer
+boundary.  Internal seams are no longer required.  This remains a theorem on
+one three-parameter source family, not coverage of the nine-dimensional
+parent cell.  See `DIAG3_PAIR_FULL_HYBRID_CUBE_TOPOLOGY.md`.
+
+A final bounded source-volume experiment consolidates the proposed 16-slab
+refinement into eight boxes: full height is already parent-safe from
+`u=7/16`, so the last nine slabs merge into one box.  The exact staircase
+occupies volume `12817/16384`; all 142,592 box-factor restrictions are
+decided, with 5,139 distinct occurring factors and 12,685 zero-free on every
+box.  The ambient theorem gives true outer-boundary coverage.  The extra
+`881/16384` volume adds only 33 factors over the five-box staircase, so the
+predeclared yield gate stops further dyadic refinement.  The next pair target
+is the global missed-component theorem, not a 32- or 64-step staircase.  See
+`DIAG3_PAIR_SOURCE_STAIRCASE8_COVERAGE.md` and
+`DIAG3_DECISION_2026-08-22.md`.
+
+The required falsification pass then rules out the stronger hoped-for source
+incidence theorem.  Of the 10,844 factors with exact sign crossings on 105
+certified parent-safe chart segments, only 5,454 occur on the full
+chart-0/chart-152 source cube.  The remaining 5,390 are exactly zero-free on
+that entire cube.  Factor 5 is already a compact witness: it has opposite
+exact signs at charts 0 and 2 on a parent-safe segment, while its full-source
+restriction has a one-signed Bernstein net at depth zero.  Hence no finer
+staircase inside this cube can meet every global wall.  The proposed universal
+source-family missed-component theorem is retired; the pair branch now needs
+genuinely distinct source families with a coverage theorem or a direct global
+roadmap/master complex.  See
+`DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md`.
 
 ## Exact artifacts
 
@@ -1668,6 +1707,22 @@ is claimed.  See `DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md`.
   and independent hostile verifier: five exact parent-safe boxes of total
   volume `373/512`, complete classification of 89,120 restrictions, and
   boxwise wall-component attachment to the declared source skeleton.
+- `DIAG3_PAIR_FULL_HYBRID_CUBE_TOPOLOGY.md`, its compact JSON record, builder,
+  and independent hostile verifier: complete exact classification of all
+  17,824 restrictions on the ambient three-parameter hybrid cube and true
+  outer-boundary attachment for every source-staircase component.
+- `DIAG3_PAIR_SOURCE_STAIRCASE8_COVERAGE.md`, its compact JSON record, builder,
+  and independent hostile verifier: exact volume `12817/16384`, complete
+  classification of 142,592 restrictions, true outer-boundary coverage, and
+  the low-yield stop after only 33 additional factors.
+- `DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md`, its compact JSON record,
+  builder, and independent hostile verifier: 5,390 exact parent-interior walls
+  zero-free on the full chart-0/chart-152 source cube, retiring universal
+  incidence with that family.
+- `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
+  `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
+  fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
+  critical-system certificates without weakening independent replay.
 - `DIAG9_SIGN_GEODESY_AUDIT.md` and its exact verifier: factor-isometry of
   the three certified local roadmaps, exact factor-halfspace closure of all
   39,366 support traces on the 178 charts, and the 142-new-resultant no-go to

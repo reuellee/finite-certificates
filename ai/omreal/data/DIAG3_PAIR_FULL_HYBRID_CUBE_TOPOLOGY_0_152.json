@@ -1,0 +1,177 @@
+{
+  "format": "diag3-pair-full-hybrid-cube-topology-v1",
+  "parent_residence_no_go": {
+    "failed_signed_vertex_values": [
+      {
+        "block_vertex": [
+          0,
+          0,
+          1
+        ],
+        "bracket": "1268",
+        "signed_value": "-77272616135123203611432688503321436/1925505679957090128860829177978493717"
+      },
+      {
+        "block_vertex": [
+          0,
+          1,
+          1
+        ],
+        "bracket": "1268",
+        "signed_value": "-77272616135123203611432688503321436/1925505679957090128860829177978493717"
+      },
+      {
+        "block_vertex": [
+          0,
+          1,
+          1
+        ],
+        "bracket": "5678",
+        "signed_value": "-929360211425105293908494089941712422408880484870280845/765913296193213840556526718538008281332162062983615515616"
+      }
+    ],
+    "failed_vertices": 2,
+    "parent_brackets": 70,
+    "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "parent_safe_vertices": 6,
+    "restriction_tridegree_census": {
+      "0,0,0": 8,
+      "0,0,1": 9,
+      "0,1,0": 9,
+      "0,1,1": 10,
+      "1,0,0": 9,
+      "1,0,1": 10,
+      "1,1,0": 10,
+      "1,1,1": 5
+    },
+    "tested_signed_vertex_values": 560
+  },
+  "scope": {
+    "ambient_hybrid_cube_coverage": "COMPLETE",
+    "block_parameter_intervals": [
+      "0..1",
+      "0..1",
+      "0..1"
+    ],
+    "global_parent_cell_coverage": "NOT_CLAIMED",
+    "parent_index": 2599,
+    "parent_residence": "FALSE_AT_TWO_VERTICES_AND_NOT_REQUIRED_FOR_THIS_AMBIENT_TOPOLOGY_CLAIM",
+    "source_chart": 0,
+    "target_chart": 152,
+    "varying_column_blocks": [
+      0,
+      1,
+      2
+    ],
+    "wall_component_coverage": "EVERY_OCCURRING_RESTRICTED_WALL_COMPONENT_MEETS_FULL_HYBRID_CUBE_BOUNDARY"
+  },
+  "status": "EXACT_AMBIENT_HYBRID_CUBE_WALL_COMPONENT_COVERAGE",
+  "theorem_effect": "Removes internal box seams from the source-staircase wall-component claim, but does not prove that every global row-2599 parent-cell wall component meets the source family; honest 9DVL score remains 2/9.",
+  "transfer": {
+    "internal_seams_required": false,
+    "lemma": "For a closed semialgebraic subregion S of the hybrid cube, a component of Z intersect S that avoids boundary(S) would be a full-cube component avoiding the cube boundary; semialgebraic components are path connected.",
+    "source_staircase_effect": "EVERY_RESTRICTED_WALL_COMPONENT_IN_ANY_PARENT_SAFE_SOURCE_STAIRCASE_MEETS_ITS_TRUE_OUTER_BOUNDARY"
+  },
+  "wall_component_coverage": {
+    "adaptive_critical_systems_proved_empty": 679,
+    "adaptive_critical_systems_unresolved": 0,
+    "conclusion": "EVERY_OCCURRING_RESTRICTED_WALL_COMPONENT_MEETS_FULL_HYBRID_CUBE_BOUNDARY",
+    "critical_attempt_result_census": {
+      "EMPTY": 679,
+      "UNRESOLVED": 4
+    },
+    "critical_semantic_sha256": "a7f8f690c855982e8eee416e97f8f7aa444646b0a3c1c964db15920ed6b6548e",
+    "fully_triquadratic_factor_ids_sha256": "8270322d555583c5375b6797b20019f57cf0600df9ee37c0f9c26fa3b43a2191",
+    "fully_triquadratic_occurring_walls": 679,
+    "graph_type_factor_ids_sha256": "07b7e6c6b5ae14b0a5302f4b3d4b6810d733b47fe1fb15806bdf86cb95e6e743",
+    "graph_type_occurring_walls": 4898,
+    "maximum_subboxes_visited_for_one_critical_attempt": 209,
+    "maximum_total_subboxes_visited_for_one_factor": 352,
+    "occurring_tridegree_census": {
+      "0,0,2": 2,
+      "0,1,1": 11,
+      "0,1,2": 47,
+      "0,2,0": 1,
+      "0,2,1": 39,
+      "0,2,2": 93,
+      "1,0,1": 29,
+      "1,0,2": 43,
+      "1,1,0": 14,
+      "1,1,1": 361,
+      "1,1,2": 525,
+      "1,2,0": 46,
+      "1,2,1": 554,
+      "1,2,2": 703,
+      "2,0,1": 51,
+      "2,0,2": 111,
+      "2,1,0": 43,
+      "2,1,1": 553,
+      "2,1,2": 783,
+      "2,2,0": 129,
+      "2,2,1": 760,
+      "2,2,2": 679
+    },
+    "selected_critical_depth_census": {
+      "0": 640,
+      "1": 23,
+      "2": 10,
+      "3": 4,
+      "4": 2
+    },
+    "selected_derivative_axis_pair_census": {
+      "0,1": 1,
+      "0,2": 2,
+      "1,2": 676
+    }
+  },
+  "wall_feasibility": {
+    "candidate_factors": 17824,
+    "classification_depth_census": {
+      "EMPTY_BERNSTEIN:0": 12234,
+      "EMPTY_BERNSTEIN:1": 10,
+      "EMPTY_BERNSTEIN:2": 1,
+      "EMPTY_BERNSTEIN:3": 2,
+      "NONEMPTY_CORNER:0": 5556,
+      "NONEMPTY_CORNER:1": 13,
+      "NONEMPTY_CORNER:2": 5,
+      "NONEMPTY_CORNER:3": 2,
+      "NONEMPTY_CORNER:4": 1
+    },
+    "classification_semantic_sha256": "5e290f7aab3da48706f326b1bb89a867b737efb3af354a182e679c62cbe1454d",
+    "maximum_subboxes_visited_for_one_wall": 89,
+    "occurring_factor_ids_sha256": "ca6e3d7911be1cc341fb4a40369542eadb8c526bd3c81a3f449037e97cfa425b",
+    "occurring_walls": 5577,
+    "restriction_tridegree_census": {
+      "0,0,2": 4,
+      "0,1,1": 44,
+      "0,1,2": 132,
+      "0,2,0": 4,
+      "0,2,1": 114,
+      "0,2,2": 258,
+      "1,0,1": 52,
+      "1,0,2": 124,
+      "1,1,0": 38,
+      "1,1,1": 1248,
+      "1,1,2": 2046,
+      "1,2,0": 120,
+      "1,2,1": 2016,
+      "1,2,2": 2380,
+      "2,0,0": 4,
+      "2,0,1": 126,
+      "2,0,2": 246,
+      "2,1,0": 120,
+      "2,1,1": 2016,
+      "2,1,2": 2380,
+      "2,2,0": 270,
+      "2,2,1": 2408,
+      "2,2,2": 1674
+    },
+    "status_census": {
+      "EMPTY_BERNSTEIN": 12247,
+      "NONEMPTY_CORNER": 5577
+    },
+    "unresolved_walls": 0,
+    "zero_free_factor_ids_sha256": "3eab27338a090d6001e6d7d374d50d6983aeafe1967fac37b5b857f8ca168419",
+    "zero_free_walls": 12247
+  }
+}
