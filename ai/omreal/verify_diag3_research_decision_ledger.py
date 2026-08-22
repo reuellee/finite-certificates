@@ -144,6 +144,18 @@ def main() -> None:
 
     retired = {row["id"]: row for row in ledger["retired_or_subordinated_targets"]}
     assert retired["proper_support_dimension4_subdivision"]["status"] == "RETIRED"
+    assert retired["common_normalized_coordinate_scaling"] == {
+        "id": "common_normalized_coordinate_scaling",
+        "status": "RETIRED",
+        "reason": "Every one of the 1162302 final-residue exponent-difference systems has rank nine already over F2, so no nonzero common diagonal weight exists.",
+        "regression": "ai/omreal/verify_diag3_triple_common_scaling_no_go.py",
+    }
+    assert retired["universal_quadratic_ideal_preserving_flow"] == {
+        "id": "universal_quadratic_ideal_preserving_flow",
+        "status": "RETIRED",
+        "reason": "Five pinned hard triples give full-rank 585-column systems for arbitrary quadratic vector fields with affine-linear ideal multipliers.",
+        "regression": "ai/omreal/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
+    }
     assert retired["moving_column_s3_quotient"]["withdrawn_counts"] == {
         "transported_witnesses": 5_986,
         "residue_factors": 994,
@@ -432,6 +444,37 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_parent_boundary_labels.py",
         ],
     }
+    scaling = progress["ninth_triple_escape_language_audit"]
+    assert scaling == {
+        "status": "PROVED_NO_GO",
+        "scope": "exhaustive common diagonal-scaling audit on the final triple residue plus a bounded low-degree ideal-flow regression on five hard triples",
+        "final_residue_rows": 1_162_302,
+        "final_residue_sha256": "34eee303b7981594805958f5dda79058880af66b54f685035ff9c16ee0073cd9",
+        "factor_exponent_rank_census": {
+            "1": 330,
+            "3": 936,
+            "4": 3_600,
+            "5": 2_448,
+            "6": 6_240,
+            "7": 4_944,
+            "8": 4_912,
+            "9": 3_330,
+        },
+        "full_common_weight_rank_over_f2": 1_162_302,
+        "nontrivial_common_scalings": 0,
+        "common_scaling_semantic_sha256": "d83b42d9a5bd05536829e75e3dd507efa8c2855962a18eed85080c7048e63b9e",
+        "hard_ideal_flow_triples": 5,
+        "quadratic_vector_field_unknowns": 495,
+        "affine_multiplier_unknowns": 90,
+        "hard_system_rank_census": {"585": 5},
+        "quadratic_ideal_flow_semantic_sha256": "c5eb24d2f574e65d848f5238d895fc38fc7baaa2a84ec6c3bed402d49bda51a0",
+        "theorem_effect": "Retires two escape languages without reducing the 1162302-row residue; honest 9DVL score remains 2/9.",
+        "evidence": [
+            "ai/omreal/DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md",
+            "ai/omreal/verify_diag3_triple_common_scaling_no_go.py",
+            "ai/omreal/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
@@ -469,6 +512,7 @@ def main() -> None:
     print("PASS fourth parent-source transition: 1237 events / 2477 cells / 58 compound")
     print("PASS fifth source-label continuation: 1238 chambers / 2458 profiles / exact endpoint")
     print("PASS sixth source block bridge: 3 segments / 5612 events / 11231 cells")
+    print("PASS ninth triple escape-language audit: 1162302 scaling no-gos / 5 ideal-flow no-gos")
     print("LEDGER_GIT_BLOB", digest)
 
 

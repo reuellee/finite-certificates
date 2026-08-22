@@ -625,6 +625,13 @@ packed source-order residue digest
 `a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4`.
 Hostile full-record/source replay passed all three artifacts; none of these
 positive screens is promoted to a negative maximality theorem.
+An exhaustive exponent-difference replay on the final residue now proves
+that all `1,162,302` rows have common-weight rank nine already over `F_2`.
+Thus no row admits a nontrivial common diagonal scaling in the normalized
+coordinates.  A stronger bounded hard-canary calculation gives full rank
+`585/585` for arbitrary quadratic vector fields with affine-linear ideal
+multipliers on five hard triples.  These are strategy no-go certificates;
+they do not reduce the residue or change the theorem score.
 See
 `DIAG3_TRIPLE_FACTOR_REDUCTION.md`,
 `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`,
@@ -633,7 +640,8 @@ See
 `DIAG3_TRIPLE_UNIT_MINOR_AFTER_GRAPH.md`,
 `DIAG3_TRIPLE_DIRECT_FINAL_AFFINITY.md`,
 `DIAG3_TRIPLE_PRIMITIVE_FINAL_DIRECTION.md`, and
-`DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md`.
+`DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md`, and
+`DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md`.
 
 The tested deterministic full colored occurrence/support key gives no
 quotient: it was singleton on the `1,819,850`-orbit pre-constant-plane source,
@@ -1377,6 +1385,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   data: exact positive component escapes for `77,940,147` triple orbits,
   leaving `1,162,302`, with negative-search maximality kept separate from
   the replayed identities.
+- `DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md` and its two exact replayers:
+  exhaustive full-rank rejection of common normalized-coordinate scalings on
+  all `1,162,302` final rows, plus five full-rank hard-canary rejections of
+  quadratic ideal-preserving vector fields with affine multipliers.
 - `DIAG3_CONCURRENCE_NORMAL_FORM.md` and its verifier: the four-bilinear
   generic concurrence chart, exact degree-20 internal ramification RUR, and
   the all-26,740-factor proof that the ramification point has no fourth
