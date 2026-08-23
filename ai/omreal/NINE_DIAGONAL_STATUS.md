@@ -1424,6 +1424,14 @@ evaluations factor through seven already projected factors; no boundary event
 was missing.  The remaining base step is the 1,693 algebraic-section fibers
 and their incidence maps to these stacks.
 
+Of those algebraic fibers, 1,022 are now complete simple transversal
+crossings.  Each is exactly one adjacent swap of two root labels; the swapped
+pair's raw resultant contains the section factor with multiplicity one, while
+no coefficient, discriminant, or `u=1` event occurs.  They contribute 84,794
+root-point cells and 85,816 strips.  The exact remaining frontier is 406
+sections with no visible stack change, 251 complex same-count transitions,
+and 14 root-count changes.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1778,6 +1786,10 @@ and their incidence maps to these stacks.
   compact shards, manifest, builder, and standard-library hostile verifier:
   exact ordered base stacks over all 1,694 open `t` sectors and 265,962
   certified open-sector cells.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_SIMPLE_SECTION_LIFT.md`, its compact JSON
+  record, builder, and standard-library hostile verifier: 1,022 exact
+  transversal algebraic fibers and 170,610 section cells, leaving 671 harder
+  sections.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive

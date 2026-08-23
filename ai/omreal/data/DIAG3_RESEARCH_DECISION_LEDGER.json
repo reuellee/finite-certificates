@@ -888,8 +888,38 @@
         "ai/omreal/verify_diag3_pair_global_four_support_open_sector_lift.py"
       ]
     },
+    "twenty_first_pair_first_four_support_simple_section_lift": {
+      "status": "PROVED",
+      "scope": "complete exact algebraic-section fibers and local crossing attachments for every simple adjacent-transposition event between certified open-sector root stacks",
+      "ordered_t_sections": 1693,
+      "simple_transversal_crossing_sections": 1022,
+      "resultant_multiplicity_one_sections": 1022,
+      "sections_with_coefficient_discriminant_or_u1_event": 0,
+      "section_u_root_points": 84794,
+      "section_u_strips": 85816,
+      "section_base_cells": 170610,
+      "minimum_adjacent_sector_root_count": 54,
+      "maximum_adjacent_sector_root_count": 109,
+      "remaining_algebraic_t_sections": 671,
+      "remaining_section_census": {
+        "complex_same_count_transition": 251,
+        "no_visible_stack_change": 406,
+        "root_count_change": 14
+      },
+      "crossings_sha256": "310760fd22ddec3a67961923bdff00f8cb42bacb89c0a0b216eed3549d8f59ec",
+      "semantic_sha256": "37606875618910dd79dd110e7369c6487a3a81ffa21aefe2f0743ea095f800fd",
+      "hostile_corruptions_rejected": 12,
+      "remaining_algebraic_t_section_lifts": "NOT_YET_CONSTRUCTED",
+      "v_fiber_lift": "NOT_YET_CONSTRUCTED",
+      "global_parent_cell_coverage": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_SIMPLE_SECTION_LIFT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_SIMPLE_SECTION_LIFT.json",
+        "ai/omreal/verify_diag3_pair_global_four_support_simple_section_lift.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "lift the 114 base curve factors in u over the 1693 exactly ordered algebraic t sections and attach those fibers to the 265962 certified open-sector base cells, then lift the 22 degree-at-most-two v fibers, glue both covered square-pyramid supports to their completed faces, and emit regular cells plus closure data under the pinned resource ceilings; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "resolve the remaining 671 algebraic t sections (406 with no visible stack change, 251 complex same-count transitions, and 14 root-count changes) and attach them to the 265962 open-sector plus 170610 completed simple-section base cells, then lift the 22 degree-at-most-two v fibers, glue both covered square-pyramid supports to their completed faces, and emit regular cells plus closure data under the pinned resource ceilings; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {

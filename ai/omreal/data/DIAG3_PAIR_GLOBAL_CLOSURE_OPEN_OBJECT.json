@@ -2,8 +2,8 @@
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "931832f2d0ca2ae546b373922eb3139b47ae11bf",
-  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support parent domains are exactly covered, their 1693 interior t sections are ordered, and all 265962 base cells over the 1694 open t sectors are certified in current_decision_ledger.",
+  "current_decision_ledger_git_blob": "b2f87c8a6c2e81e7a309f56cbc0e976b3547f2d4",
+  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support parent domains are exactly covered, all 265962 open-sector base cells are certified, and 1022 simple algebraic fibers add 170610 cells with 671 harder sections remaining in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {
     "can_decode_a_global_regular_poset_from_existing_records": false,
@@ -203,7 +203,7 @@
     ]
   },
   "global_generator_preflight": {
-    "status": "FOUR_SUPPORT_OPEN_SECTORS_LIFTED_ALGEBRAIC_SECTION_LIFT_MISSING",
+    "status": "FOUR_SUPPORT_SIMPLE_SECTIONS_LIFTED_671_ALGEBRAIC_SECTIONS_MISSING",
     "inventory_verifier": "ai/omreal/DIAG9_GRAPH_inventory.py",
     "inventory_result": "no NPZ contains a full nine-dimensional master roadmap",
     "universal_residual_factor_count": 26740,
@@ -259,9 +259,10 @@
       "the complete first fiber projection has 255 obligations and 136 distinct boundary-reduced base polynomials",
       "the complete second projection has 6061 nonconstant obligations, 2554 distinct squarefree univariate polynomials, 2333 factor polynomials, and 1693 interior factor-root incidences",
       "all 1693 interior roots are distinct, exactly isolated over rational endpoints, and globally ordered into 19 rational plus 1674 irrational t sections",
-      "all 114 base curves are exactly lifted over all 1694 open t sectors, producing 132134 ordered u-root sections, 133828 strips, and 265962 open-sector base cells"
+      "all 114 base curves are exactly lifted over all 1694 open t sectors, producing 132134 ordered u-root sections, 133828 strips, and 265962 open-sector base cells",
+      "1022 simple transversal algebraic sections are exactly lifted to 84794 root-point cells and 85816 strips; 671 algebraic sections remain"
     ],
-    "warning": "The parent-face gate, square-pyramid coverage, bounded projection family, ordered t sections, and open-sector base cells are proof-safe generator layers, not the internal compactified global master poset; algebraic-section fibers, v lifting, global gluing, and closure data remain missing."
+    "warning": "The parent-face gate, square-pyramid coverage, bounded projection family, ordered t sections, open-sector base cells, and 1022 simple algebraic fibers are proof-safe generator layers, not the internal compactified global master poset; 671 algebraic fibers, v lifting, global gluing, and closure data remain missing."
   },
   "row2599_flow_triangle_mixed_d3": {
     "status": "OPEN",
@@ -506,7 +507,7 @@
     "command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
     "expected_terminal_status": "OPEN row2599_compactified_labelled_order2_v1 coverage_certified_global_cell_universe",
     "next_construction_target": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactified_labelled_order2.npz",
-    "smallest_next_mathematical_task": "Lift the 114 base curve factors over the 1693 algebraic t sections and attach them to the 265962 certified open-sector base cells, lift the 22 degree-at-most-two v fibers, then glue both covered square-pyramid supports to their completed faces.",
+    "smallest_next_mathematical_task": "Resolve the remaining 671 algebraic t sections (406 unchanged, 251 complex same-count, 14 count-changing), attach them to the certified open-sector and simple-section cells, lift the 22 degree-at-most-two v fibers, then glue both covered square-pyramid supports to their completed faces.",
     "dependency_preflight_command": "python -m pip install --target /tmp/diag3_sympy_1_13_3 sympy==1.13.3 && PYTHONPATH=/tmp/diag3_sympy_1_13_3 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_active_sector.py",
     "local_gap_replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
