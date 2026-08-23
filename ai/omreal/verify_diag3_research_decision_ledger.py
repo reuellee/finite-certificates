@@ -187,7 +187,7 @@ def main() -> None:
         "status"
     ] == "SUBORDINATED"
     assert closure["global_generator_preflight"]["status"] == (
-        "FOUR_SUPPORT_ROOTS_ORDERED_BASE_LIFT_MISSING"
+        "FOUR_SUPPORT_OPEN_SECTORS_LIFTED_ALGEBRAIC_SECTION_LIFT_MISSING"
     )
 
     candidates = ledger["candidate_targets"]
@@ -829,11 +829,44 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_root_isolation.py",
         ],
     }
+    open_sector_lift = progress["twentieth_pair_first_four_support_open_sector_lift"]
+    assert open_sector_lift == {
+        "status": "PROVED",
+        "scope": "complete exact ordered u-root stacks and sign-invariant base cells over every open t sector of the first two covered four-support domains",
+        "base_curve_factors": 114,
+        "ordered_t_sections": 1_693,
+        "open_t_sectors": 1_694,
+        "specialized_base_factor_instances": 193_116,
+        "specialization_interior_root_count_census": {"0": 66_720, "1": 120_658, "2": 5_738},
+        "open_sector_u_root_sections": 132_134,
+        "open_sector_u_strips": 133_828,
+        "open_sector_base_cells": 265_962,
+        "minimum_roots_in_one_t_sector": 54,
+        "maximum_roots_in_one_t_sector": 109,
+        "nonconstant_u1_boundary_evaluations": 28,
+        "distinct_projection_factors_covering_u1_boundary": 7,
+        "missing_u1_boundary_factors": 0,
+        "dyadic_endpoint_exponent": 48,
+        "maximum_interval_span_numerator": 257,
+        "minimum_within_sector_certified_gap": "11005/281474976710656",
+        "sectors_sha256": "31fdab22ac2846a0180113bd627ccb367c08c5cc4e7f205ec5bad331123e0dcb",
+        "semantic_sha256": "15c549ea4245cd85fa8546bfd859a77ccdf0bdfda805182aaa30727519f701c7",
+        "artifact_shards": 32,
+        "hostile_corruptions_rejected": 12,
+        "algebraic_t_section_base_lift": "NOT_YET_CONSTRUCTED",
+        "v_fiber_lift": "NOT_YET_CONSTRUCTED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_SECTOR_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_SECTOR_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_open_sector_lift.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "lift the 114 base curve factors in u over the 1694 open t sectors"
+        "lift the 114 base curve factors in u over the 1693 exactly ordered algebraic t sections"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -877,6 +910,7 @@ def main() -> None:
     print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
     print("PASS eighteenth base projection: 6061 obligations -> 2554 polynomials -> 1693 root incidences")
     print("PASS nineteenth root isolation: 1693 distinct globally ordered t sections")
+    print("PASS twentieth open-sector lift: 193116 specializations -> 265962 base cells")
     print("LEDGER_GIT_BLOB", digest)
 
 

@@ -1415,6 +1415,15 @@ replay remain open, so the honest score remains `2/9`. See
 `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md` and
 `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ROOT_ISOLATION.md`.
 
+The next exact lift is complete on every open `t` sector.  All 114 base
+factors are specialized at rational samples in all 1,694 sectors, for 193,116
+exact specializations.  Standard-library Sturm replay certifies 132,134
+ordered `u`-root sections and 133,828 open strips, hence 265,962 open-sector
+base cells.  A bounded-square audit proves that all 28 nonconstant `u=1`
+evaluations factor through seven already projected factors; no boundary event
+was missing.  The remaining base step is the 1,693 algebraic-section fibers
+and their incidence maps to these stacks.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1765,6 +1774,10 @@ replay remain open, so the honest score remains `2/9`. See
   interval catalog, builder, and standard-library hostile verifier: exact
   isolation, cross-factor deduplication, and global ordering of all 1,693
   interior `t` sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_SECTOR_LIFT.md`, its 32 hash-pinned
+  compact shards, manifest, builder, and standard-library hostile verifier:
+  exact ordered base stacks over all 1,694 open `t` sectors and 265,962
+  certified open-sector cells.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive

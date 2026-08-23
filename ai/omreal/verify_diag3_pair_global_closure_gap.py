@@ -514,7 +514,7 @@ def verify_manifest(path: Path, observed) -> dict:
     preflight = payload.get("global_generator_preflight", {})
     if (
         preflight.get("status")
-        != "FOUR_SUPPORT_ROOTS_ORDERED_BASE_LIFT_MISSING"
+        != "FOUR_SUPPORT_OPEN_SECTORS_LIFTED_ALGEBRAIC_SECTION_LIFT_MISSING"
         or preflight.get("universal_residual_factor_count") != 26_740
         or preflight.get("row2599_certified_empty_factor_count") != 8_916
         or preflight.get("row2599_candidate_factor_count") != 17_824
