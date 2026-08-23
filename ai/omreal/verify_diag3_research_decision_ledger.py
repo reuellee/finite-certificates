@@ -187,7 +187,7 @@ def main() -> None:
         "status"
     ] == "SUBORDINATED"
     assert closure["global_generator_preflight"]["status"] == (
-        "FOUR_SUPPORT_SIMPLE_SECTIONS_LIFTED_671_ALGEBRAIC_SECTIONS_MISSING"
+        "FOUR_SUPPORT_1385_SECTIONS_LIFTED_308_ALGEBRAIC_SECTIONS_MISSING"
     )
 
     candidates = ledger["candidate_targets"]
@@ -893,11 +893,40 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_simple_section_lift.py",
         ],
     }
+    invisible_section_lift = progress["twenty_second_pair_first_four_support_invisible_section_lift"]
+    assert invisible_section_lift == {
+        "status": "PROVED",
+        "scope": "complete exact constant-stack algebraic fibers for every unchanged adjacent stack carrying one raw-simple nonboundary projection event",
+        "completed_constant_stack_sections": 363,
+        "raw_event_kind_census": {"coefficient": 1, "discriminant": 6, "resultant": 356},
+        "raw_event_multiplicity_one_sections": 363,
+        "u_boundary_event_sections": 0,
+        "section_u_root_points": 21_076,
+        "section_u_strips": 21_439,
+        "section_base_cells": 42_515,
+        "remaining_algebraic_t_sections": 308,
+        "remaining_section_census": {
+            "complex_unchanged_stack": 43,
+            "complex_same_count_transition": 251,
+            "root_count_change": 14,
+        },
+        "completed_sha256": "b9e80ba2911b61213319095a7cef74a9fc92c68f0030b249bfd15c6c7876c1fe",
+        "semantic_sha256": "d3451e30200e05f0b7900d56dc471aa8fb740f0519315541634fb455ed99bb5f",
+        "hostile_corruptions_rejected": 11,
+        "remaining_algebraic_t_section_lifts": "NOT_YET_CONSTRUCTED",
+        "v_fiber_lift": "NOT_YET_CONSTRUCTED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_INVISIBLE_SECTION_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_INVISIBLE_SECTION_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_invisible_section_lift.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "resolve the remaining 671 algebraic t sections"
+        "resolve the remaining 308 algebraic t sections"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -943,6 +972,7 @@ def main() -> None:
     print("PASS nineteenth root isolation: 1693 distinct globally ordered t sections")
     print("PASS twentieth open-sector lift: 193116 specializations -> 265962 base cells")
     print("PASS twenty-first simple-section lift: 1022 fibers -> 170610 base cells")
+    print("PASS twenty-second constant-stack lift: 363 fibers -> 42515 base cells")
     print("LEDGER_GIT_BLOB", digest)
 
 

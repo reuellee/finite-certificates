@@ -1432,6 +1432,13 @@ root-point cells and 85,816 strips.  The exact remaining frontier is 406
 sections with no visible stack change, 251 complex same-count transitions,
 and 14 root-count changes.
 
+Another 363 algebraic sections have identical adjacent stacks and exactly one
+raw multiplicity-one nonboundary event: 356 resultants, six discriminants,
+and one intermediate coefficient.  Exact replay proves the event cannot alter
+the interior `u` fiber, completing 21,076 root points and 21,439 strips.  The
+remaining algebraic frontier is now 43 complex unchanged stacks, 251 complex
+same-count transitions, and 14 root-count changes.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1790,6 +1797,10 @@ and 14 root-count changes.
   record, builder, and standard-library hostile verifier: 1,022 exact
   transversal algebraic fibers and 170,610 section cells, leaving 671 harder
   sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_INVISIBLE_SECTION_LIFT.md`, its compact
+  JSON record, builder, and standard-library hostile verifier: 363 exact
+  constant-stack algebraic fibers and 42,515 section cells, leaving 308
+  harder sections.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive

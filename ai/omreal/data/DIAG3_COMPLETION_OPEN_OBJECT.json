@@ -2,8 +2,8 @@
   "format": "diag3-completion-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "b2f87c8a6c2e81e7a309f56cbc0e976b3547f2d4",
-  "current_state_note": "Historical proof object. Current target selection, exact four-support coverage and projection, 265962 open-sector base cells, and 170610 cells on 1022 simple algebraic fibers live in current_decision_ledger; 671 harder sections remain.",
+  "current_decision_ledger_git_blob": "1779a5b717bcd4a3189ad88b9e72c5b021161e87",
+  "current_state_note": "Historical proof object. Current target selection, exact four-support coverage/projection, 265962 open-sector cells, and 213125 cells on 1385 completed algebraic fibers live in current_decision_ledger; 308 harder sections remain.",
   "ledger_score": "2/9",
   "authoritative_remote_base": {
     "repository": "reuellee/finite-certificates",
