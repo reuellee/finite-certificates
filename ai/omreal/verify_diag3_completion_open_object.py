@@ -218,7 +218,7 @@ def main() -> None:
     }
     preflight = closure["global_generator_preflight"]
     assert preflight["status"] == (
-        "FOUR_SUPPORT_1625_SECTIONS_LIFTED_68_ALGEBRAIC_SECTIONS_MISSING"
+        "FOUR_SUPPORT_1665_SECTIONS_LIFTED_28_ALGEBRAIC_SECTIONS_MISSING"
     )
     candidate_path = HERE.parent.parent / preflight["candidate_factor_artifact"]
     assert candidate_path.stat().st_size == preflight["candidate_factor_artifact_bytes"]

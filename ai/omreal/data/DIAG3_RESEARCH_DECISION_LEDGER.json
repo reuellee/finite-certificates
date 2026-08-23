@@ -980,8 +980,41 @@
         "ai/omreal/verify_diag3_pair_global_four_support_multi_section_lift.py"
       ]
     },
+    "twenty_fourth_pair_first_four_support_regular_residual_section_lift": {
+      "status": "PROVED",
+      "scope": "complete exact algebraic-section fibers for unchanged stacks carrying only multiplicity-one resultants and same-count transitions carrying multiplicity-one resultants plus harmless non-leading coefficient events",
+      "completed_sections": 40,
+      "completed_unchanged_sections": 36,
+      "completed_same_count_sections": 4,
+      "raw_events": 197,
+      "simple_resultant_events": 193,
+      "harmless_nonleading_coefficient_events": 4,
+      "visible_inversion_edges": 30,
+      "invisible_simple_resultant_events": 163,
+      "interior_collision_groups": 12,
+      "section_u_root_points": 2285,
+      "section_u_strips": 2325,
+      "section_base_cells": 4610,
+      "remaining_algebraic_t_sections": 28,
+      "remaining_section_census": {
+        "complex_unchanged_stack": 7,
+        "complex_same_count_transition": 7,
+        "root_count_change": 14
+      },
+      "completed_sha256": "5a4b84280cc75b8ca8c57b0c2417b56f6dea10c0a3b2cff06200e1199d488e66",
+      "semantic_sha256": "54f278c42390c7de75a2ce1ddfe57f0b6e4e8f489de54e29f4845466add4e7ed",
+      "hostile_corruptions_rejected": 13,
+      "remaining_algebraic_t_section_lifts": "NOT_YET_CONSTRUCTED",
+      "v_fiber_lift": "NOT_YET_CONSTRUCTED",
+      "global_parent_cell_coverage": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_RESIDUAL_SECTION_LIFT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_RESIDUAL_SECTION_LIFT.json",
+        "ai/omreal/verify_diag3_pair_global_four_support_regular_residual_section_lift.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "resolve the remaining 68 algebraic t sections (43 complex unchanged stacks, 11 exceptional same-count transitions, and 14 root-count changes) and attach them to the 265962 open-sector plus 170610 transversal plus 42515 constant-stack plus 40084 multi-crossing section cells, then lift the 22 degree-at-most-two v fibers, glue both covered square-pyramid supports to their completed faces, and emit regular cells plus closure data under the pinned resource ceilings; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "resolve the remaining 28 algebraic t sections (7 complex unchanged stacks, 7 exceptional same-count transitions, and 14 root-count changes) and attach them to the 265962 open-sector plus 170610 transversal plus 42515 constant-stack plus 40084 multi-crossing plus 4610 regular-residual section cells, then lift the 22 degree-at-most-two v fibers, glue both covered square-pyramid supports to their completed faces, and emit regular cells plus closure data under the pinned resource ceilings; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {
