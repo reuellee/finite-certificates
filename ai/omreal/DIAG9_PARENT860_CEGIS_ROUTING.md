@@ -50,7 +50,7 @@ support patterns is connected.
 
 This is an exact theorem about the embedded network.  It is not a complete
 parent-space roadmap and does not promote diagonal nine or change the honest
-9DVL score of `1/9`.
+9DVL score of `2/9`.
 
 ## 1. Exact parent-860 coordinate star
 
@@ -184,10 +184,17 @@ not show that the `16` chords cover other chambers, that every parent-860
 feasibility component meets the network, or that the same rule works for any
 other parent.
 
-The next target is to enlarge this network adversarially and attach its
-codimension-two wall/node cells.  A useful rule must compress the discovered
-chords into label- and factor-local features, survive new directions, and
-then emit a width-safe Forman matching or augmented connectivity certificate.
-Only after geometric coverage and infinity are certified can such a rule
-contribute to a diagonal-nine proof; codimension-two closure is also the first
-real test for diagonal eight.
+The first codimension-two attachment is now exact: the rational parent-860
+`(h,i)` disk in `DIAG9_PARENT860_TRANSVERSE_NODE.md` contains precisely two
+transverse residual branches, and every finite common-feasibility locus on it
+is empty or convex.  That closes the local-node regression but not the
+coverage gap.
+
+The machine-checked next target is therefore a coverage-certified expansion
+of this node across the selected two-dimensional parent-860 plane.  The
+generator must classify every wall component and chamber/wall/node incidence,
+and must stop with an exact frontier on a missed component, unresolved
+projection factor, or loss of parent containment.  Only after dimension
+raising, geometric coverage, and infinity are certified can the construction
+contribute to a diagonal-nine proof.  See
+`data/DIAG9_RESEARCH_DECISION_LEDGER.json`.
