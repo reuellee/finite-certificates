@@ -1406,13 +1406,14 @@ The complete second projection factors the 136 polynomials to 114 base curve
 factors and constructs all 6,061 nonconstant coefficient, discriminant, and
 pair-resultant obligations. Boundary reduction and squarefree quotient leave
 2,554 distinct univariate polynomials and 2,333 factor polynomials of maximum
-degree ten. An independent standard-library Sturm replay counts 1,693
-interior factor-root incidences, an exact upper bound on the number of
-distinct interior `t` sections. Root isolation and ordering, the lifted cells,
-face-compatible gluing, global closure data, and middle-rank replay remain
-open, so the honest score remains `2/9`. See
+degree ten. Exact rational isolation followed by an independent
+standard-library Sturm replay proves that all 1,693 interior factor-root
+incidences are distinct and globally ordered: 19 are rational sections and
+1,674 are irrational sections in pairwise disjoint rational intervals.
+The lifted cells, face-compatible gluing, global closure data, and middle-rank
+replay remain open, so the honest score remains `2/9`. See
 `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md` and
-`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md`.
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ROOT_ISOLATION.md`.
 
 ## Exact artifacts
 
@@ -1760,6 +1761,10 @@ open, so the honest score remains `2/9`. See
   catalog, builder, and standard-library hostile verifier: complete second
   projection to 2,554 squarefree univariate polynomials and an exact 1,693
   interior factor-root incidence frontier.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ROOT_ISOLATION.md`, its compact ordered
+  interval catalog, builder, and standard-library hostile verifier: exact
+  isolation, cross-factor deduplication, and global ordering of all 1,693
+  interior `t` sections.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive

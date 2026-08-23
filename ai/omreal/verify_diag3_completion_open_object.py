@@ -218,7 +218,7 @@ def main() -> None:
     }
     preflight = closure["global_generator_preflight"]
     assert preflight["status"] == (
-        "FOUR_SUPPORT_SECOND_PROJECTION_READY_ROOT_ISOLATION_MISSING"
+        "FOUR_SUPPORT_ROOTS_ORDERED_BASE_LIFT_MISSING"
     )
     candidate_path = HERE.parent.parent / preflight["candidate_factor_artifact"]
     assert candidate_path.stat().st_size == preflight["candidate_factor_artifact_bytes"]

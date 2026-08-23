@@ -187,7 +187,7 @@ def main() -> None:
         "status"
     ] == "SUBORDINATED"
     assert closure["global_generator_preflight"]["status"] == (
-        "FOUR_SUPPORT_SECOND_PROJECTION_READY_ROOT_ISOLATION_MISSING"
+        "FOUR_SUPPORT_ROOTS_ORDERED_BASE_LIFT_MISSING"
     )
 
     candidates = ledger["candidate_targets"]
@@ -804,11 +804,36 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_base_projection.py",
         ],
     }
+    root_isolation = progress["nineteenth_pair_first_four_support_root_isolation"]
+    assert root_isolation == {
+        "status": "PROVED",
+        "scope": "complete exact isolation, deduplication, and global ordering of every interior root in the four-support second-projection factor catalog",
+        "source_univariate_factor_polynomials": 2_333,
+        "source_factor_root_incidences": 1_693,
+        "factors_with_interior_sections": 1_442,
+        "distinct_interior_t_sections": 1_693,
+        "rational_sections": 19,
+        "irrational_sections": 1_674,
+        "requested_interval_width_ceiling": "1/281474976710656",
+        "minimum_certified_gap": "500506336/3173419554501589",
+        "maximum_endpoint_numerator_bits": 32,
+        "maximum_endpoint_denominator_bits": 33,
+        "sections_sha256": "e4060d9c578ed2148c7c22d8b26c669d578ca8d9cb63c9d558fd9d3a0f23c90d",
+        "semantic_sha256": "2f285bf8c2c2a5f01a86981cbe11cc601dfd73538ab7181da5d80647445ebc67",
+        "hostile_corruptions_rejected": 11,
+        "base_sign_invariant_cad": "NOT_YET_CONSTRUCTED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ROOT_ISOLATION.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ROOT_ISOLATION.json.gz",
+            "ai/omreal/verify_diag3_pair_global_four_support_root_isolation.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "isolate and order the at-most-1693 interior t sections"
+        "lift the 114 base curve factors in u over the 1694 open t sectors"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -851,6 +876,7 @@ def main() -> None:
     print("PASS sixteenth four-support gate: 8017 restrictions -> 94 zero sets -> 22 walls")
     print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
     print("PASS eighteenth base projection: 6061 obligations -> 2554 polynomials -> 1693 root incidences")
+    print("PASS nineteenth root isolation: 1693 distinct globally ordered t sections")
     print("LEDGER_GIT_BLOB", digest)
 
 
