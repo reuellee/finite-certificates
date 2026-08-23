@@ -1,0 +1,57 @@
+{
+  "format": "mathematical-prospecting-ledger-v1",
+  "honest_9dvl_score": "2/9",
+  "resource_split": {
+    "proof_bearing_9dvl_percent": 80,
+    "prospecting_percent": 20
+  },
+  "promotion_requires": [
+    "explicit_claim_boundary",
+    "exact_hashed_inputs",
+    "independent_replay",
+    "negative_canary",
+    "holdout_or_transfer_test",
+    "prior_art_audit",
+    "concrete_application",
+    "adversarial_agent_review"
+  ],
+  "expeditions": [
+    {
+      "id": "MP-001",
+      "title": "Extension-path alternation",
+      "status": "OBSERVATION",
+      "discovery_object": "row2599-chart-0-to-89",
+      "retrospective_comparison_object": "row2599-chart-0-to-152-three-block-order-012",
+      "holdout_object": null,
+      "registered_observable": "membership alternation spectrum of 97224 extension signatures",
+      "resource_ceiling": "one exact replay of each pinned path and each of the three parent-safe chart-0-to-chart-152 block orders",
+      "overclaims_forbidden": [
+        "global row-2599 parent-cell invariant",
+        "all-oriented-matroids theorem",
+        "9DVL theorem-score change"
+      ],
+      "retrospective_outcome": {
+        "shared_exceptional_core_candidate": "REFUTED",
+        "valid_block_orders": [
+          [0, 1, 2],
+          [0, 2, 1],
+          [1, 0, 2]
+        ],
+        "restricted_block_order_minimax": 5,
+        "strict_tail_dominator": [1, 0, 2],
+        "application": "smaller replay and exceptional-history certificate within the pinned route class"
+      },
+      "artifacts": [
+        "ai/scouting/MATHEMATICAL_PROSPECTING_PROTOCOL.md",
+        "ai/scouting/MP001_EXTENSION_PATH_ALTERNATION.md",
+        "ai/scouting/explore_extension_path_alternation.py",
+        "ai/scouting/verify_extension_path_alternation.py",
+        "ai/scouting/data/EXTENSION_PATH_ALTERNATION_MANIFEST.json",
+        "ai/scouting/data/EXTENSION_PATH_ALTERNATION_SOURCE.json",
+        "ai/scouting/data/EXTENSION_PATH_ALTERNATION_BLOCK.json",
+        "ai/scouting/data/EXTENSION_PATH_ALTERNATION_ORDER_021.json",
+        "ai/scouting/data/EXTENSION_PATH_ALTERNATION_ORDER_102.json"
+      ]
+    }
+  ]
+}
