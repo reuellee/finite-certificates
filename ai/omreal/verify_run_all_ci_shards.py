@@ -24,17 +24,29 @@ def literal_set(tree, name):
     raise AssertionError(f"missing literal set {name}")
 
 
+def literal_dict(tree, name):
+    for node in tree.body:
+        if isinstance(node, ast.Assign):
+            if any(isinstance(target, ast.Name) and target.id == name for target in node.targets):
+                return dict(ast.literal_eval(node.value))
+    raise AssertionError(f"missing literal dict {name}")
+
+
 def direct_selected():
     tree = ast.parse(RUN_ALL.read_text(encoding="utf-8"))
     delegated = literal_set(tree, "CI_DELEGATED")
+    external = set(literal_dict(tree, "EXTERNAL_INPUT"))
     discovered = {
         path.relative_to(ROOT).as_posix()
         for path in ROOT.rglob("verify_*.py")
         if path.is_file()
     }
-    return discovered, {
-        path for path in discovered if Path(path).name not in delegated
+    selected = {
+        path
+        for path in discovered
+        if Path(path).name not in delegated | external
     }
+    return discovered, selected, delegated, external
 
 
 def manifest(count):
@@ -77,8 +89,10 @@ def audit(payload, expected, count):
 
 
 def main():
-    discovered, selected = direct_selected()
-    if len(discovered - selected) != 3:
+    discovered, selected, delegated, external = direct_selected()
+    if len(delegated) != 3 or len(external) != 1:
+        raise AssertionError("nonsharded verifier census changed")
+    if len(discovered - selected) != len(delegated | external):
         raise AssertionError("delegated verifier census changed")
     digests = {}
     for count in COUNTS:
@@ -87,7 +101,8 @@ def main():
         digests[str(count)] = payload["partition_sha256"]
     print("PASS deterministic shard manifests", digests)
     print("PASS exact union/disjointness", len(selected), "selected verifiers")
-    print("PASS delegated verifier census", len(discovered - selected))
+    print("PASS delegated verifier census", len(delegated))
+    print("PASS explicit external-input verifier census", len(external))
 
 
 if __name__ == "__main__":

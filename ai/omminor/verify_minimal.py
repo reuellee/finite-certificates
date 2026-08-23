@@ -64,6 +64,8 @@ def main():
     ap.add_argument('--positive-control', type=int, default=25,
                     help='also run on this many deletions KNOWN to be one of '
                          'the 24; every one must produce a Gordan vector')
+    ap.add_argument('--report',
+                    help='optional JSON report path; verification is read-only by default')
     a = ap.parse_args()
 
     keys = [l.strip() for l in open(a.minimal) if l.strip()]
@@ -146,10 +148,10 @@ def main():
            'minimal_classes': len(keys), 'deletions': 9 * len(keys),
            'distinct_deletions': len(U), 'gordan_vectors_found': len(allhits),
            'positive_control': [pos_ok, pos_n], 'wall_s': el}
-    stem = os.path.basename(a.minimal).replace('minimal_', '').replace('.txt', '')
-    outp = os.path.join(OUT, 'verify_minimal_%s.json' % stem)
-    json.dump(res, open(outp, 'w'), indent=1)
-    print('wrote %s' % outp)
+    if a.report:
+        with open(a.report, 'w') as output:
+            json.dump(res, output, indent=1)
+        print('wrote %s' % a.report)
     ok = len(allhits) == 0 and pos_ok == pos_n
     print('\n%s' % ('MINIMAL LIST CONFIRMED (no deletion of any minor-minimal '
                     'class has a biquadratic final polynomial)' if ok

@@ -61,7 +61,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Confirm all deterministic shards passed
-        run: echo 'All verifier shards and the exact shard coverage audit passed.'
+        run: echo 'All self-contained verifier shards and the exact shard coverage audit passed; pinned external-artifact replays remain explicit direct commands.'
 
   nine-dvl-diag2-atlas:
     name: 9DVL diagonal-two 178-chart escape audit

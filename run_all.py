@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Run every verify_*.py in the tree; exit nonzero if any fails.
+"""Run every self-contained verify_*.py in the tree; exit nonzero if any fails.
 
 --fast skips the slow verifiers, including the expensive diagonal-two
 atlases, canonical-edge, mutation-square, separator, and saturation replays.
 
---ci-delegated skips only verifiers that the required GitHub workflow runs in
-their own jobs.  With no flag this script continues to run every verifier.
+--ci-delegated additionally skips verifiers that the required GitHub workflow
+runs in their own jobs.  Verifiers that deliberately require a regenerable
+external artifact are always reported and skipped; invoke those directly with
+the pinned argument documented in their proof note.
 ``--shard INDEX/COUNT`` deterministically partitions the selected verifier
 universe.  The unsharded command remains exhaustive.  ``--list-shards COUNT``
 emits the exact partition without running verifiers so CI can independently
@@ -64,6 +66,12 @@ CI_DELEGATED = {
     "verify_diag3_ordered_root_atlas178.py",
     "verify_diag3_pair_parent_source_block_labels.py",
 }
+EXTERNAL_INPUT = {
+    "verify_diag3_triple_common_scaling_no_go.py": (
+        "requires pinned 6,973,816-byte final-residue argument; "
+        "direct replay documented in DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md"
+    ),
+}
 ROOT = Path(__file__).resolve().parent
 TIMEOUT_SECONDS = 1_200
 
@@ -102,7 +110,9 @@ def selected(paths, *, fast: bool, ci_delegated: bool):
     skipped = []
     for path in paths:
         reason = None
-        if fast and path.name in SLOW:
+        if path.name in EXTERNAL_INPUT:
+            reason = EXTERNAL_INPUT[path.name]
+        elif fast and path.name in SLOW:
             reason = "--fast"
         elif ci_delegated and path.name in CI_DELEGATED:
             reason = "--ci-delegated; separate required CI job"
