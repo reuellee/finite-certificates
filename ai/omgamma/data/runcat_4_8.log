@@ -1,6 +1,0 @@
-(r=4) n=4: 1 class
-(r=4) n=5: 1 classes   [16 extensions, 0.0s, 2.00 ms/ext]
-(r=4) n=6: 1 classes   [120 extensions, 2.7s, 22.37 ms/ext]
-(r=4) n=7: 11 classes   [908 extensions, 4.1s, 4.52 ms/ext]
-(r=4) n=8: 2628 classes   [81648 extensions, 306.2s, 3.75 ms/ext]
-total 313.1s

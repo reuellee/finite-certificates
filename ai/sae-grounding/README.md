@@ -1,7 +1,7 @@
 # Internal causal relevance does not identify a semantic causal ontology
 
 `intervention_grounding_gap.md` — `verify_intervention_grounding.py` (**31 exact
-checks**). Gemini adversarial review: VERIFIED-SOUND.
+checks**).
 
 An exact theorem: two structural causal models with fixed named concepts, identical
 labels, and the same invertible activation produce **identical transcript distributions

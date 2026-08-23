@@ -1,7 +1,6 @@
 # Counterexamples to published optimizer convergence claims
 
-`optimizer_counterexamples.md` — two verifiers. Gemini adversarial review:
-VERIFIED-SOUND.
+`optimizer_counterexamples.md` — two exact verifiers.
 
 - **Muon** — the deployed Newton–Schulz coefficients falsify the coverage claim of
   arXiv:2601.19156, with exact certificates M1–M3 (`verify_muon_ns.py`).

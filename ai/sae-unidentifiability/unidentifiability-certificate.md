@@ -1,8 +1,8 @@
 # Finite certificates of ρ-unidentifiability under gated absorption, and the boundary where audits become possible
 
-**Date:** 2026-07-25 (rev 2, same day — after adversarial review, Gemini 2.5 Pro,
-`~/finite-certificates/reviews/GEMINI_unidentifiability_review.md`, verdict BLOCKING;
-this revision resolves its central objection by **construction** — Certificate C, §3.5 —
+**Date:** 2026-07-25 (rev 2, same day — after a blocking adversarial review;
+the raw transcript is preserved in repository history, and this revision resolves
+its central objection by **construction** — Certificate C, §3.5 —
 and applies its five scoping corrections, each marked "(review)" below.)
 **Status:** theory note; every numbered claim is verified sympy-exactly by
 `theory/verify_unidentifiability.py` (49/49 PASS, exit 0). Nothing here is empirical.

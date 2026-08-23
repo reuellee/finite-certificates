@@ -1,11 +1,9 @@
 # Review: "The Intervention-Grounding Gap" (SAE identifiability series, 2026-07-25)
 
 **Reviewer:** Claude (rigorous-math review pass), 2026-07-25
-**Materials:** `/tmp/igg_note.md` (docx conversion); repo standards from
-`/home/reuellee_gmail_com/finite-certificates/README.md`; sibling result
-`/home/reuellee_gmail_com/sae-identifiability/notes/unidentifiability-certificate.md` and its
-BLOCKING review `/home/reuellee_gmail_com/finite-certificates/reviews/GEMINI_unidentifiability_review.md`.
-**Independent verifier:** `/tmp/igg_review/verify_intervention_grounding.py` — reconstructed
+**Materials:** the intervention-grounding note, repository standards, the sibling
+unidentifiability result, and its archived blocking review.
+**Independent verifier:** `verify_intervention_grounding.py` — reconstructed
 from the note's stated parameters, exact `Fraction` arithmetic, **31/31 PASS, exit 0**.
 
 **VERDICT: INCLUDE AFTER REVISIONS (all minor except one repo-standard gap: the claimed

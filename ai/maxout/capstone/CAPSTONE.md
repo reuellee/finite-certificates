@@ -453,7 +453,7 @@ confirmation (§1).
   independently written half checks only specialization at U_ints —
   which provably cannot detect a multiplier that is a Gordan vector at
   U_ints but not cell-wide. The defect was raised as finding 1 of
-  `reviews/GPT_repo_audit_2026-07.md` and closed by writing
+  the July 2026 repository audit and closed by writing
   `capstone/independent_audit.py` from scratch (§2, §4 step 3), which
   re-proves the whole library by a different algorithm, agrees with the
   old auditor on every shared count, and additionally proves the

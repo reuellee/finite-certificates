@@ -82,6 +82,37 @@ def main():
     )
     assert node["hostile_corruptions_rejected"] == 4
 
+    frontier = ledger["exact_plane_projection_frontier"]
+    assert frontier["status"] == "PROVED"
+    assert frontier["primitive_global_factors"] == 26_740
+    assert (
+        frontier["constant_restrictions"]
+        + frontier["constant_sign_nonconstant_exclusions"]
+        + frontier["boundary_only_factors"]
+        + frontier["open_triangle_factors"]
+        == 26_740
+    )
+    assert (
+        frontier["constant_sign_nonconstant_exclusions"]
+        + frontier["boundary_only_factors"]
+        + frontier["open_triangle_factors"]
+        == frontier["distinct_irreducible_plane_restrictions"]
+    )
+    assert frontier["closed_triangle_factors"] == (
+        frontier["boundary_only_factors"] + frontier["open_triangle_factors"]
+    )
+    assert frontier["all_open_curve_pairs"] == (
+        frontier["open_triangle_factors"]
+        * (frontier["open_triangle_factors"] - 1)
+        // 2
+    )
+    assert frontier["exactly_excluded_curve_pairs"] + frontier["candidate_curve_pairs"] == (
+        frontier["all_open_curve_pairs"]
+    )
+    assert frontier["semantic_sha256"] == (
+        "cbcee4e0e7a7e757b9751f06349337d14206e102e4afaffd5abdd3833718a0fd"
+    )
+
     candidates = ledger["candidate_targets"]
     assert len({row["id"] for row in candidates}) == len(candidates)
     for row in candidates:
@@ -114,6 +145,7 @@ def main():
     check_evidence(ledger)
     print("PASS diagonal-nine score and global obligation remain fail-closed")
     print("PASS parent-860 local checkpoint accounting and evidence")
+    print("PASS parent-860 exact plane projection frontier accounting and evidence")
     print("PASS selected target has the unique maximum priority and a stop rule")
     print("SCOPE score remains 2/9; no parent-space coverage is claimed")
 

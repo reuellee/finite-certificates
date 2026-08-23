@@ -32,6 +32,14 @@ point may be used to *search*; it is never used to *justify*. A result is not
 "done" because a program printed it — it is done when an independent program,
 sharing no code with the one that produced it, re-derives it exactly.
 
+The public tree is a proof surface, not a lab notebook. Commit material that a
+reader needs to understand or replay a claim: concise theorem/status notes,
+generators, pinned compact certificates, independent verifiers, and curated
+adjudications when they materially change a result. Keep raw model transcripts,
+temporary reviewer workspaces, tool logs, local recovery bundles, and replaceable
+search output outside Git. Distill any accepted finding into the relevant result
+note or verifier before relying on it.
+
 ## The bar for a contribution
 
 Whatever you send, the same standard applies to it as to everything already
@@ -72,18 +80,26 @@ here:
 
 ## Checks
 
-Every pull request runs the verifier suite in CI. You can run the same thing
-locally before sending:
+Every pull request runs repository-policy checks and the exact verifiers selected by
+its changed proof inputs. Slow verifiers and the large named audits run when their
+declared inputs change; manual and weekly CI replays the exhaustive suite. The stable
+final check fails if a required targeted job is skipped. The complete routing contract
+is in [`docs/VERIFICATION.md`](docs/VERIFICATION.md).
+
+Run the relevant tier locally before sending:
 
 ```
-python run_all.py --fast     # the quick suite (local iteration)
-python run_all.py            # everything — this is what CI runs
+python verify_repository_structure.py
+python ops/ci/check_ci_policy.py
+python run_all.py --fast     # bounded local iteration
+python run_all.py            # exhaustive self-contained verifier replay
 ```
 
 Note that `run_all.py` is not read-only: a few verifiers regenerate the
 artifacts they check, so your working tree may show diffs afterwards.
 
-A green run is necessary, not sufficient: results are read by a human too.
+A green run is necessary, not sufficient: routing and exact execution are independent
+controls, while the mathematical scope still has to be read and reviewed.
 
 ## Style
 

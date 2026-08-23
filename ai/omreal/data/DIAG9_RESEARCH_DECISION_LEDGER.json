@@ -68,6 +68,36 @@
       "ai/omreal/data/DIAG9_GRAPH_parent860_node_graph.npz"
     ]
   },
+  "exact_plane_projection_frontier": {
+    "status": "PROVED",
+    "scope": "the closure and interior of the complete normalized parent-860 (h,i) plane triangle with the other seven coordinates fixed",
+    "parent_triangle": "12164/31931 <= i <= h <= 1858210/2854579",
+    "distinct_parent_halfspaces": 31,
+    "primitive_global_factors": 26740,
+    "constant_restrictions": 1990,
+    "distinct_irreducible_plane_restrictions": 24750,
+    "closed_triangle_factors": 1745,
+    "boundary_only_factors": 192,
+    "open_triangle_factors": 1553,
+    "constant_sign_nonconstant_exclusions": 23005,
+    "bernstein_depth": 8,
+    "all_open_curve_pairs": 1205128,
+    "exactly_excluded_curve_pairs": 727317,
+    "candidate_curve_pairs": 477811,
+    "distinct_primitive_pair_resultants": 396369,
+    "resultants_with_open_horizontal_roots": 393522,
+    "total_open_horizontal_roots_by_polynomial": 402031,
+    "semantic_sha256": "cbcee4e0e7a7e757b9751f06349337d14206e102e4afaffd5abdd3833718a0fd",
+    "theorem_effect": "The selected plane is completely classified through the univariate projection frontier, but no chamber atlas, labels, common-i validation, or diagonal-nine connectivity theorem is claimed.",
+    "evidence": [
+      "ai/omreal/DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md",
+      "ai/omreal/DIAG9_GRAPH_parent860_plane_projection.py",
+      "ai/omreal/DIAG9_GRAPH_parent860_plane_bernstein_cover.py",
+      "ai/omreal/DIAG9_GRAPH_parent860_plane_resultant_frontier.py",
+      "ai/omreal/verify_diag9_parent860_plane_projection.py",
+      "ai/omreal/data/DIAG9_GRAPH_parent860_plane_projection_frontier.json"
+    ]
+  },
   "bounded_no_go_results": [
     {
       "id": "parent860_coordinate_star_tree_routing",
@@ -82,6 +112,13 @@
       "statement": "The 24-chamber repaired network has connected finite support intersections but is not a parent-space coverage certificate.",
       "replacement": "coverage-certified atlas expansion from the transverse node",
       "evidence": "ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md"
+    },
+    {
+      "id": "parent860_monolithic_plane_cad",
+      "status": "PROJECTION_GROWTH_STOP",
+      "statement": "The selected plane cannot responsibly proceed as one unsharded monolithic CAD after exact projection exposes 396,369 distinct pair resultants and 402,031 open horizontal roots counted per polynomial.",
+      "replacement": "deterministic sharded root isolation, cross-polynomial deduplication, and common-i validation before chamber lifting",
+      "evidence": "ai/omreal/DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md"
     }
   ],
   "target_score_formula": "4*proof_criticality + 3*branch_elimination + 2*readiness + 2*decisiveness - 2*cost - 2*failure_risk",
@@ -95,12 +132,28 @@
       "cost": 5,
       "failure_risk": 4,
       "priority_score": 35,
-      "selected": true,
+      "selected": false,
       "exact_question": "Can the exact transverse-node disk be expanded to a coverage-certified parent-860 two-dimensional atlas that classifies every wall component and all chamber/wall/node incidences in the selected plane?",
       "success_consequence": "Use the atlas as the first coverage-bearing slice in a dimension-raising parent-860 roadmap.",
       "failure_consequence": "Preserve the exact missed component, singularity, or projection-growth frontier and change decomposition strategy rather than widening blindly.",
       "resource_ceiling": "one selected coordinate plane, exact factor isolation and projection closure only; stop before a full nine-dimensional CAD",
       "stop_rule": "Stop on an unresolved projection factor, a missed component, or loss of parent containment; emit the exact frontier."
+    },
+    {
+      "id": "parent860_sharded_resultant_isolation",
+      "proof_criticality": 5,
+      "branch_elimination": 5,
+      "readiness": 5,
+      "decisiveness": 5,
+      "cost": 4,
+      "failure_risk": 3,
+      "priority_score": 41,
+      "selected": true,
+      "exact_question": "After deterministic sharding, how many of the 393,522 root-bearing resultants yield distinct algebraic h sections carrying a common i coordinate in the open parent triangle?",
+      "success_consequence": "Emit the complete event-section catalog needed for the first coverage-certified chamber lift.",
+      "failure_consequence": "Preserve the exact unresolved algebraic family or shard ceiling and change to a component-roadmap quotient before any chamber claim.",
+      "resource_ceiling": "32 deterministic shards; degree at most four; no tope enumeration or chamber lifting until common-i validation is complete",
+      "stop_rule": "Stop on an unisolated root family, cross-polynomial equality not decidable from exact algebra, common-i ambiguity, or a shard exceeding the pinned runtime/artifact ceiling."
     },
     {
       "id": "more_adversarial_network_directions",
@@ -127,7 +180,7 @@
       "exact_question": "Can all 2604 parents be compactified, decomposed, labeled, and connectivity-certified directly?"
     }
   ],
-  "selected_target": "parent860_coverage_certified_2d_atlas",
+  "selected_target": "parent860_sharded_resultant_isolation",
   "promotion_gates": [
     "complete signed parent-cell coverage",
     "complete residual wall and lower-stratum incidence",

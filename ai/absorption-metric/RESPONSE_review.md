@@ -1,4 +1,8 @@
-# Response to `reviews/GEMINI_splitting_inflation_review.md`
+# Response to the archived splitting-inflation review
+
+The raw cross-model review transcript is preserved in repository history rather
+than shipped on the proof surface. This adjudication records every finding that
+changed or challenged the result.
 
 Verdict returned: **SOUND**, with one [BLOCKING], two [FIX] and two [MINOR]. Every
 item is adjudicated below. Three changed the artifact materially; one is rejected on
