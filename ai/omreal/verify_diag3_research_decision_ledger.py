@@ -187,7 +187,7 @@ def main() -> None:
         "status"
     ] == "SUBORDINATED"
     assert closure["global_generator_preflight"]["status"] == (
-        "PARENT_FACE_GATE_READY_DIMENSION4_SUBDIVISION_MISSING"
+        "FOUR_SUPPORT_PROJECTION_READY_BASE_CAD_MISSING"
     )
 
     candidates = ledger["candidate_targets"]
@@ -215,10 +215,10 @@ def main() -> None:
         "arithmetic": "EXACT_RATIONAL",
         "decision_policy": "FAIL_CLOSED",
         "parameter_dimension": "ARBITRARY_POSITIVE_DIMENSION",
-        "analytic_canaries": 5,
-        "hostile_semantic_mutations_rejected": 8,
-        "compact_component_negative_canary": "INTERIOR_SPHERE_REFUSES_CRITICAL_EXCLUSION",
-        "producer_reuse": "SOURCE_CUBE_AND_STAIRCASE",
+        "analytic_canaries": 8,
+        "hostile_semantic_mutations_rejected": 10,
+        "compact_component_negative_canary": "INTERIOR_SPHERES_REFUSE_BOX_CRITICAL_EXCLUSION_AND_SIMPLEX_EMPTY_CLASSIFICATION",
+        "producer_reuse": "SOURCE_CUBE_STAIRCASE_AND_FOUR_SUPPORT_SIMPLEX_GATE",
         "independent_certificate_replay": "STILL_REQUIRED",
         "global_topology_from_local_boxes": "NOT_CLAIMED",
         "evidence": [
@@ -720,11 +720,63 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_source_family_incidence_no_go.py",
         ],
     }
+    four_support = progress["sixteenth_pair_first_four_support_gate"]
+    assert four_support == {
+        "status": "PROVED",
+        "scope": "complete exact parent-domain coverage and residual-wall feasibility on the first two nominally four-dimensional row-2599 supports (3,1,15) and (3,3,7)",
+        "supports": [[3, 1, 15], [3, 3, 7]],
+        "forced_parent_equalities": ["g=i", "d=g"],
+        "actual_parent_dimension": 3,
+        "common_parent_domain": "0<=g<=a<=1 and 0<=g<=h<=1",
+        "coverage_tetrahedra_per_support": 2,
+        "independent_rational_coverage_points": 2_125,
+        "parent_brackets_replayed_per_support": 70,
+        "ambient_mixed_residual_restrictions": 8_017,
+        "distinct_parent_reduced_zero_sets": 94,
+        "distinct_active_remainders_before_positive_quotient": 26,
+        "distinct_active_walls_after_positive_quotient": 22,
+        "active_interior_factor_union_count": 436,
+        "unresolved_interior_zero_sets": 0,
+        "active_wall_catalog_sha256": "b3ee1a1e6c0ae0cbf9baaf5733f5569f89cf6282bd7da731a06fdc207db9f1e9",
+        "hostile_corruptions_rejected": 12,
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_gate.py",
+        ],
+    }
+    projection = progress["seventeenth_pair_first_four_support_projection"]
+    assert projection == {
+        "status": "PROVED",
+        "scope": "complete first fiber-projection family for the 22 active wall equations on the two covered square-pyramid parent domains",
+        "cube_parameterization": "a=t+(1-t)u, g=t, h=t+(1-t)v",
+        "independent_rational_bijection_points": 5_372,
+        "active_walls": 22,
+        "base_only_walls": 1,
+        "linear_fiber_walls": 20,
+        "quadratic_fiber_walls": 1,
+        "higher_degree_fiber_walls": 0,
+        "raw_projection_obligations": 255,
+        "distinct_boundary_reduced_projection_polynomials": 136,
+        "maximum_base_bidegree": [4, 5],
+        "projection_polynomial_ceiling": 100_000,
+        "ceiling_not_triggered": True,
+        "semantic_sha256": "fccd155814c3311d14a4988417c64335c551af14552a2265e428fbd3f00d500a",
+        "hostile_corruptions_rejected": 12,
+        "base_sign_invariant_cad": "NOT_YET_CONSTRUCTED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_projection.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "build a direct coverage-certified row-2599 parent-cell roadmap/master complex"
+        "construct an exact sign-invariant CAD/roadmap for the 136"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -764,6 +816,8 @@ def main() -> None:
     print("PASS thirteenth ambient cube: 5577 occurring walls / true boundary coverage")
     print("PASS fourteenth staircase yield gate: 8 boxes / volume 12817/16384 / +33 factors")
     print("PASS fifteenth source-family no-go: 5390 known parent walls miss the source cube")
+    print("PASS sixteenth four-support gate: 8017 restrictions -> 94 zero sets -> 22 walls")
+    print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
     print("LEDGER_GIT_BLOB", digest)
 
 

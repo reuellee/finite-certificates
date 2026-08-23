@@ -2,8 +2,8 @@
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "e8c7d88d100c42c53cd44fa808eb96cf828c4c00",
-  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the current component-coverage quotient and source half-cube frontier live in current_decision_ledger.",
+  "current_decision_ledger_git_blob": "5d92d3b5c95df0d2bea054213b459c1412ce0767",
+  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support parent domains are now exactly covered and reduced to a bounded 136-polynomial base projection problem in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {
     "can_decode_a_global_regular_poset_from_existing_records": false,
@@ -203,7 +203,7 @@
     ]
   },
   "global_generator_preflight": {
-    "status": "PARENT_FACE_GATE_READY_DIMENSION4_SUBDIVISION_MISSING",
+    "status": "FOUR_SUPPORT_PROJECTION_READY_BASE_CAD_MISSING",
     "inventory_verifier": "ai/omreal/DIAG9_GRAPH_inventory.py",
     "inventory_result": "no NPZ contains a full nine-dimensional master roadmap",
     "universal_residual_factor_count": 26740,
@@ -254,9 +254,11 @@
     "support_two_face_cellulation": {"vertices": 4, "edges": 5, "faces": 2, "dividing_wall": "a=h"},
     "proof_critical_export_gap": "CLOSED: the sorted 17824-factor candidate universe is hash-pinned and independently replayed from direct row-2599 determinants",
     "first_generator_data": [
-      "face-compatible exact subdivisions of supports (3,1,15) and (3,3,7), with 3996 and 4021 mixed restrictions, followed by independent sibling-coverage, common-face, regularity, strict-closure, and parent-frontier verification"
+      "the supports (3,1,15) and (3,3,7) are exact square-pyramid parent domains covered by two tetrahedra each",
+      "8017 ambient mixed restrictions reduce to 94 parent-reduced zero sets and 22 active interior wall equations with zero unresolved classifications",
+      "the complete first fiber projection has 255 obligations and 136 distinct boundary-reduced base polynomials"
     ],
-    "warning": "The parent-face gate and completed support cells are proof-safe generator layers, not the internal compactified global master poset; mixed restrictions are not asserted to contain walls."
+    "warning": "The parent-face gate, square-pyramid coverage, and bounded projection family are proof-safe generator layers, not the internal compactified global master poset; the sign-invariant base CAD, lifted cells, global gluing, and closure data remain missing."
   },
   "row2599_flow_triangle_mixed_d3": {
     "status": "OPEN",
@@ -501,7 +503,7 @@
     "command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
     "expected_terminal_status": "OPEN row2599_compactified_labelled_order2_v1 coverage_certified_global_cell_universe",
     "next_construction_target": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactified_labelled_order2.npz",
-    "smallest_next_mathematical_task": "Construct compatible exact subdivisions of the two surviving four-dimensional supports (3,1,15) and (3,3,7), quotienting monomial multiples and inheriting the completed support edges and diagonal two-face before any higher-dimensional promotion.",
+    "smallest_next_mathematical_task": "Construct an exact sign-invariant CAD or equivalent roadmap for the 136 boundary-reduced (u,t) projection polynomials, then lift the 22 degree-at-most-two v fibers and glue both covered square-pyramid supports to their completed faces.",
     "dependency_preflight_command": "python -m pip install --target /tmp/diag3_sympy_1_13_3 sympy==1.13.3 && PYTHONPATH=/tmp/diag3_sympy_1_13_3 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_active_sector.py",
     "local_gap_replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
@@ -512,6 +514,8 @@
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_compactification_atlas.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support_gate.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support_projection.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_inventory.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_seeat_upper_bound.py",
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py",

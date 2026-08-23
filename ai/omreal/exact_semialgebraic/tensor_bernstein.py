@@ -12,7 +12,7 @@ from collections import defaultdict
 from fractions import Fraction
 from hashlib import sha256
 from itertools import product
-from math import comb, gcd, lcm
+from math import comb, factorial, gcd, lcm
 
 
 def clean(polynomial):
@@ -151,6 +151,128 @@ def bernstein_control(polynomial):
                 value += coefficient * weight
         control[target_index] = value
     return control, tuple(degree + 1 for degree in degrees)
+
+
+def _weak_compositions(total, length):
+    if length == 1:
+        yield (total,)
+        return
+    for first in range(total + 1):
+        for tail in _weak_compositions(total - first, length - 1):
+            yield (first,) + tail
+
+
+def simplex_bernstein_control(polynomial, degree=None):
+    """Convert a power-basis polynomial to Bernstein controls on a simplex.
+
+    The domain is ``t_j >= 0`` and ``sum(t_j) <= 1``.  Controls are indexed
+    by ``(alpha_0,...,alpha_d)`` with total ``degree``; ``alpha_0`` belongs to
+    the slack barycentric coordinate.  The conversion is exact and works in
+    arbitrary positive dimension.
+    """
+
+    polynomial = clean(polynomial)
+    if not polynomial:
+        raise ValueError("the zero polynomial has no sign certificate")
+    dimension = len(next(iter(polynomial)))
+    if not dimension or any(len(index) != dimension for index in polynomial):
+        raise ValueError("polynomial exponent tuples must have one common positive dimension")
+    minimum_degree = max(map(sum, polynomial))
+    degree = minimum_degree if degree is None else int(degree)
+    if degree < minimum_degree:
+        raise ValueError("simplex Bernstein degree is below polynomial total degree")
+
+    homogeneous = defaultdict(Fraction)
+    for exponent, coefficient in polynomial.items():
+        deficit = degree - sum(exponent)
+        for addition in _weak_compositions(deficit, dimension + 1):
+            alpha = (addition[0],) + tuple(
+                exponent[axis] + addition[axis + 1]
+                for axis in range(dimension)
+            )
+            multinomial = factorial(deficit)
+            for value in addition:
+                multinomial //= factorial(value)
+            homogeneous[alpha] += Fraction(coefficient) * multinomial
+
+    controls = {}
+    for alpha in _weak_compositions(degree, dimension + 1):
+        multinomial = factorial(degree)
+        for value in alpha:
+            multinomial //= factorial(value)
+        controls[alpha] = homogeneous[alpha] / multinomial
+    return controls, degree
+
+
+def _longest_simplex_edge(vertices):
+    best = None
+    for left in range(len(vertices)):
+        for right in range(left + 1, len(vertices)):
+            squared = sum(
+                (vertices[left][axis] - vertices[right][axis]) ** 2
+                for axis in range(len(vertices[left]))
+            )
+            candidate = (squared, -left, -right)
+            if best is None or candidate > best[0]:
+                best = candidate, left, right
+    return best[1], best[2]
+
+
+def classify_simplex_zero_set(polynomial, vertices, max_depth=8):
+    """Certify zero-set emptiness/nonemptiness on a rational simplex.
+
+    Ambiguous simplices are bisected along their deterministic longest edge.
+    A one-signed Bernstein hull proves emptiness; opposite or zero vertex
+    values prove nonemptiness by continuity.  Exhausting ``max_depth`` returns
+    ``UNRESOLVED`` rather than inferring a result numerically.
+    """
+
+    polynomial = clean(polynomial)
+    if not polynomial:
+        return "IDENTICALLY_ZERO", 0, 1
+    source_dimension = len(next(iter(polynomial)))
+    vertices = tuple(tuple(Fraction(value) for value in vertex) for vertex in vertices)
+    if len(vertices) != source_dimension + 1:
+        raise ValueError("a full simplex needs dimension + 1 vertices")
+    if any(len(vertex) != source_dimension for vertex in vertices):
+        raise ValueError("simplex vertices have the wrong dimension")
+
+    stack = [(vertices, 0)]
+    deepest = 0
+    visited = 0
+    while stack:
+        current, depth = stack.pop()
+        visited += 1
+        values = tuple(evaluate(polynomial, vertex) for vertex in current)
+        vertex_signs = sign_set(values)
+        if 0 in vertex_signs or {-1, 1} <= vertex_signs:
+            return "NONEMPTY_VERTEX", depth, visited
+
+        base = current[0]
+        rows = tuple(
+            tuple(current[target + 1][axis] - base[axis] for target in range(source_dimension))
+            for axis in range(source_dimension)
+        )
+        pulled = affine_pullback(polynomial, base, rows)
+        controls, _degree = simplex_bernstein_control(pulled)
+        control_signs = sign_set(controls.values())
+        if 0 not in control_signs and len(control_signs) == 1:
+            continue
+        deepest = max(deepest, depth)
+        if depth >= max_depth:
+            return "UNRESOLVED", deepest, visited
+        left, right = _longest_simplex_edge(current)
+        midpoint = tuple(
+            (current[left][axis] + current[right][axis]) / 2
+            for axis in range(source_dimension)
+        )
+        first = list(current)
+        second = list(current)
+        first[left] = midpoint
+        second[right] = midpoint
+        stack.append((tuple(first), depth + 1))
+        stack.append((tuple(second), depth + 1))
+    return "EMPTY_BERNSTEIN", deepest, visited
 
 
 def _split_curve(values):

@@ -6,6 +6,7 @@ from .tensor_bernstein import (
     bernstein_children,
     bernstein_control,
     canonical_integer,
+    classify_simplex_zero_set,
     classify_zero_set,
     clean,
     derivative,
@@ -13,6 +14,7 @@ from .tensor_bernstein import (
     exclude_system,
     id_digest,
     multiply,
+    simplex_bernstein_control,
     sign_set,
     split_axis,
 )
@@ -23,6 +25,7 @@ __all__ = (
     "bernstein_children",
     "bernstein_control",
     "canonical_integer",
+    "classify_simplex_zero_set",
     "classify_zero_set",
     "clean",
     "derivative",
@@ -30,6 +33,7 @@ __all__ = (
     "exclude_system",
     "id_digest",
     "multiply",
+    "simplex_bernstein_control",
     "sign_set",
     "split_axis",
 )

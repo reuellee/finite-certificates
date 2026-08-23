@@ -40,6 +40,8 @@ For diagonal 3, the exact research pipeline has now:
 - rejected the naïve three-block source cube at two exact parent-invalid vertices, then certified the parent-safe half-cube `[1/2,1] x [0,1] x [0,1]`, where all 17,824 restrictions are again decided exactly (4,450 occurring and 13,374 zero-free);
 - enlarged that volume to an eight-box parent-safe staircase occupying exactly `12817/16384` of the normalized hybrid cube; all 142,592 box-factor restrictions are decided, 5,139 distinct factors occur, and every component meets the true outer boundary by transfer from the exact ambient full-cube topology theorem;
 - refuted the tempting global-incidence target for that source family: 5,390 factors with exact parent-interior crossings are zero-free on the entire chart-0/chart-152 hybrid cube, so no finer staircase inside it can cover every global wall;
+- covered the first two surviving four-support parent domains `(3,1,15)` and `(3,3,7)` exactly as two-tetrahedron square pyramids, reducing **8,017** mixed restrictions to **94** parent-reduced zero sets and then **22** active wall equations with zero unresolved classifications;
+- constructed the complete first fiber projection for those 22 walls: one base-only, 20 linear-fiber, and one quadratic-fiber wall yield **255** projection obligations and only **136** distinct boundary-reduced base polynomials, well below the pinned 100,000-polynomial ceiling;
 - preserved the main missing obligation honestly: a coverage-certified global nonrelative master closure complex and the final relative middle-rank replay.
 
 The selected route is the coverage-certified nonrelative master-closure compiler. The 5,803-factor residue remains an input gap, but standalone wall classification and further chart-0/chart-152 staircase refinement are subordinated because neither can by itself prove diagonal three.
@@ -63,7 +65,7 @@ The principal oriented-matroid program is the realizability/topology project in 
 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
-Current target selection is governed by the machine-checked [`DIAG3_RESEARCH_DECISION_LEDGER.json`](ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json) and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md). The August 22 decision preserves the exact ambient-topology gain, stops low-yield dyadic staircase refinement, and redirects work to the global missed-component theorem; see [`DIAG3_DECISION_2026-08-22.md`](ai/omreal/DIAG3_DECISION_2026-08-22.md).
+Current target selection is governed by the machine-checked [`DIAG3_RESEARCH_DECISION_LEDGER.json`](ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json) and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md). The August 22 decision preserves the exact ambient-topology gain, stops low-yield dyadic staircase refinement, and redirects work to the direct global roadmap/master-complex route; see [`DIAG3_DECISION_2026-08-22.md`](ai/omreal/DIAG3_DECISION_2026-08-22.md).
 
 The procedures developed along this route are also maintained as a research output. The [`exact semialgebraic certificate method`](ai/omreal/EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md) and its standard-library toolkit provide reusable rational affine pullback, tensor Bernstein subdivision, fail-closed system exclusion, analytic negative canaries, semantic certificates, and producer/verifier separation.
 
@@ -85,6 +87,8 @@ The final [`eight-box source staircase`](ai/omreal/DIAG3_PAIR_SOURCE_STAIRCASE8_
 
 The subsequent [`source-family incidence no-go`](ai/omreal/DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md) makes that stop structural. Of 10,844 factors with exact crossings on 105 certified parent-safe segments, only 5,454 occur on the full chart-0/chart-152 source cube; the other 5,390 are exactly zero-free there. Thus universal incidence with this source family is false. The pair branch must add genuinely distinct sources with a coverage theorem or construct the global roadmap/master complex directly.
 
+The direct route now has its first coverage-bearing higher-support checkpoint. On supports `(3,1,15)` and `(3,3,7)`, opposite signed parent brackets force `g=i` and `d=g`; both weak parent closures become the same square pyramid `0<=g<=a<=1`, `0<=g<=h<=1`, covered exactly by two rational tetrahedra. The [`four-support gate`](ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md) independently replays all 70 parent brackets on each support and compresses 8,017 mixed restrictions to 22 active interior walls with zero unresolved classes. Its [`bounded fiber projection`](ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md) reduces the next arrangement stage to 136 exact `(u,t)` polynomials of maximum bidegree `(4,5)`. The base CAD, lifted cells, global gluing, and middle-rank replay remain open, so the score remains 2/9.
+
 ## Verification
 
 Requirements for the complete suite are Python 3 plus `numpy`, `scipy`, and `sympy`; see [`requirements.txt`](requirements.txt). Many individual verifiers are standard-library only.
@@ -92,9 +96,11 @@ Requirements for the complete suite are Python 3 plus `numpy`, `scipy`, and `sym
 ```bash
 python3 run_all.py
 python3 run_all.py --fast
+python3 run_all.py --list-shards 4
+python3 run_all.py --ci-delegated --shard 0/4
 ```
 
-`run_all.py` discovers the repository's `verify_*.py` scripts and fails if a required replay fails. Some verifiers regenerate committed artifacts, so a verification run can leave an informational working-tree diff.
+`run_all.py` discovers the repository's `verify_*.py` scripts and fails if a required replay fails. CI uses a deterministic weighted four-shard partition with an independently checked exact union/disjointness contract; the aggregate job retains the stable `verifier suite (complete)` name. Per-verifier progress is unbuffered, and each shard has a 120-minute allowance. Some verifiers regenerate committed artifacts, so a verification run can leave an informational working-tree diff.
 
 Useful diagonal-three replays include:
 
@@ -115,7 +121,10 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_staircase_co
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_full_hybrid_cube_topology.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_staircase8_coverage.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_source_family_incidence_no_go.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support_gate.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support_projection.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_exact_semialgebraic_toolkit.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_run_all_ci_shards.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.py
 ```
 
@@ -126,7 +135,7 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.p
 | Maxout polytopes | **`max f₀(3,5)=42`**; `(4,4)` and `(4,6)` resolved; `(3,8)` achievability certified | [`ai/maxout/`](ai/maxout/) |
 | OM mutation graphs | Connected for every uniform OM rank with `n <= 9`; corrected `(4,9)` class count | [`ai/omgamma/`](ai/omgamma/) |
 | OM non-realizability | Minor-closure census, generic minimal obstructions, Proposition R | [`ai/omminor/`](ai/omminor/) |
-| 9DVL / realizability | **2/9 proved**; exact ambient source-cube topology and an eight-box parent-safe staircase are complete, but 5,390 known parent walls miss that source cube, forcing a multi-source or direct global-roadmap architecture | [`ai/omreal/`](ai/omreal/) |
+| 9DVL / realizability | **2/9 proved**; the first two four-support parent domains have exact square-pyramid coverage and a bounded 136-polynomial projection family, but the base CAD, lifted global closure complex, and both diagonal-three invariant obligations remain open | [`ai/omreal/`](ai/omreal/) |
 | SEEAT | Single-element extension atlas theorem; exact one-chart capacity 26,112; row-2599 atlas width bounded `7 <= width <= 178` | [`ai/omreal/SEEAT.md`](ai/omreal/SEEAT.md) |
 | SAE absorption | Exact failures of feature-absorption identification | [`ai/absorption-metric/`](ai/absorption-metric/) |
 | SAE identifiability | Conditional-rate and semantic-grounding non-identifiability results | [`ai/sae-unidentifiability/`](ai/sae-unidentifiability/), [`ai/sae-grounding/`](ai/sae-grounding/) |

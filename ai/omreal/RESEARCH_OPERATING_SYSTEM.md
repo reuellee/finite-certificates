@@ -167,6 +167,16 @@ a decision consequence is not a research result.
 9. Conduct an adversarial scope review.
 10. Update the ledger, prose, repository, and Drive checkpoint.
 
+## Runtime-isolation policy
+
+The complete verifier suite is partitioned by deterministic weighted greedy
+sharding. The shard-contract verifier must independently reconstruct the
+selected verifier universe and prove exact union, pairwise disjointness, and
+determinism. CI runs each shard with unbuffered per-verifier progress and an
+explicit per-shard allowance; a stable aggregate job preserves the branch
+protection interface. Cancelling one monolithic job at a platform time limit
+is an infrastructure result, not a failed mathematical assertion.
+
 ## Tool policy
 
 - Exact rational/integer code is the primary trust boundary.

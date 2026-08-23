@@ -1385,6 +1385,27 @@ genuinely distinct source families with a coverage theorem or a direct global
 roadmap/master complex.  See
 `DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md`.
 
+The direct roadmap route now has a coverage-bearing first-four-support gate.
+On supports `(3,1,15)` and `(3,3,7)`, opposite signed parent brackets force
+the equalities `g=i` and `d=g`. Each weak parent closure is therefore the
+same square pyramid `0<=g<=a<=1`, `0<=g<=h<=1`, not a genuinely
+four-dimensional domain. Two exact rational tetrahedra cover each pyramid
+and inherit the completed `(3,1,5)` base. Independent replay checks all 70
+parent brackets on each support and reduces 8,017 ambient mixed restrictions
+to 94 parent-reduced zero sets and then 22 active interior wall equations,
+with zero unresolved classifications.
+
+The bounded fiber projection uses `a=t+(1-t)u`, `g=t`,
+`h=t+(1-t)v`. The 22 active walls split into one base-only, 20 `v`-linear,
+and one `v`-quadratic equation. The complete first projection family has 255
+nonzero obligations and only 136 distinct boundary-reduced `(u,t)`
+polynomials, of maximum bidegree `(4,5)`. This is below the declared
+100,000-polynomial ceiling. The exact base CAD, lifted cells,
+face-compatible gluing, global closure data, and middle-rank replay remain
+open, so the honest score remains `2/9`. See
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md` and
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md`.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1719,6 +1740,14 @@ roadmap/master complex.  See
   builder, and independent hostile verifier: 5,390 exact parent-interior walls
   zero-free on the full chart-0/chart-152 source cube, retiring universal
   incidence with that family.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md`, its compact JSON record, builder,
+  and independent hostile verifier: exact two-tetrahedron coverage of the
+  first two four-support parent domains and compression of 8,017 mixed
+  restrictions to 22 active walls with zero unresolved classes.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md`, its compact JSON record,
+  builder, and independent hostile verifier: complete first fiber projection
+  of the 22 walls to 136 boundary-reduced base polynomials under the pinned
+  resource ceiling.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive

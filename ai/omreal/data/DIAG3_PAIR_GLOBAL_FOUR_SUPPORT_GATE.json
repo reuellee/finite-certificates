@@ -1,0 +1,1086 @@
+{
+  "active_wall_catalog": [
+    {
+      "id": 0,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "polynomial": [
+        {
+          "coefficient": "-2",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-2",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            2,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            2,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "polynomial": [
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            2,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            2,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1",
+          "exponent": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "combined_compression": {
+    "active_interior_factor_union_count": 436,
+    "active_interior_factor_union_sha256": "b88ad7eafeadb3573399dba201ea7dd49bcc91968b6ad275a29e16a9f9bbda8c",
+    "active_wall_catalog_sha256": "b3ee1a1e6c0ae0cbf9baaf5733f5569f89cf6282bd7da731a06fdc207db9f1e9",
+    "ambient_mixed_restrictions": 8017,
+    "classification_stream_sha256": "e91db7803ea02ce5d12ec303bce38a5975466b6fce3f6883a624145afa36dbf3",
+    "common_active_walls_after_positive_quotient": 4,
+    "common_parent_reduced_zero_sets": 14,
+    "distinct_active_remainders_before_positive_quotient": 26,
+    "distinct_active_walls_after_positive_quotient": 22,
+    "distinct_parent_reduced_zero_sets": 94,
+    "unresolved_interior_zero_sets": 0
+  },
+  "common_square_pyramid": {
+    "boundary_facets": [
+      "g=0",
+      "a=1",
+      "h=1",
+      "a=g",
+      "h=g"
+    ],
+    "common_inherited_base": "g=0 is the completed (3,1,5) square split by a=h",
+    "coordinates": [
+      "a",
+      "g",
+      "h"
+    ],
+    "domain": "0<=g<=a<=1 and 0<=g<=h<=1",
+    "shared_interior_triangle": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "tetrahedra": [
+      [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    ],
+    "tetrahedron_count": 2,
+    "vertices": {
+      "a": [
+        1,
+        0,
+        0
+      ],
+      "ah": [
+        1,
+        0,
+        1
+      ],
+      "h": [
+        0,
+        0,
+        1
+      ],
+      "o": [
+        0,
+        0,
+        0
+      ],
+      "top": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "format": "diag3-pair-global-row2599-four-support-gate-v1",
+  "inputs": {
+    "candidate_factor_count": 17824,
+    "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "normalized_parent_sign_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "parent_face_gate_semantic_sha256": "3be26a3ff6849043a43b8e56cc3ac29a05cc9c955b2a0fbe41b74ba4c742c106"
+  },
+  "parent_domains": [
+    {
+      "ambient_dimension": 4,
+      "coordinates": [
+        "a",
+        "g",
+        "h"
+      ],
+      "domain": "0<=g<=a<=1 and 0<=g<=h<=1",
+      "equality": "g=i",
+      "identically_zero_parent_restrictions": 25,
+      "nonnegative_parent_restrictions": 45,
+      "opposite_parent_brackets": [
+        "1358",
+        "3578"
+      ],
+      "parent_brackets_replayed": 70,
+      "parent_control_stream_sha256": "b99b6bdd8f4b5b13583d8cc767a66f29f7219ae0921203017462f38eb9fe8804",
+      "parent_dimension": 3,
+      "support": [
+        3,
+        1,
+        15
+      ]
+    },
+    {
+      "ambient_dimension": 4,
+      "coordinates": [
+        "a",
+        "g",
+        "h"
+      ],
+      "domain": "0<=g<=a<=1 and 0<=g<=h<=1",
+      "equality": "d=g",
+      "identically_zero_parent_restrictions": 25,
+      "nonnegative_parent_restrictions": 45,
+      "opposite_parent_brackets": [
+        "3478",
+        "3578"
+      ],
+      "parent_brackets_replayed": 70,
+      "parent_control_stream_sha256": "63ebae770f75b0bd01e15905f4dbb4c1a0e436cf00d192afa20de6d002e4da14",
+      "parent_dimension": 3,
+      "support": [
+        3,
+        3,
+        7
+      ]
+    }
+  ],
+  "resource_contract": {
+    "maximum_atomic_tetrahedra": 1000000,
+    "maximum_unique_projection_polynomials": 100000,
+    "next_stage": "face-compatible exact arrangement of 22 walls on two tetrahedra per support",
+    "stop_rule": "emit BOUNDED_NO_GO with exact growth frontier before either ceiling; do not fall back to sample adjacency or the retired single-source cube"
+  },
+  "scope": {
+    "compactification": "(Delta^3)^3",
+    "global_parent_cell_coverage": "NOT_CLAIMED",
+    "honest_9dvl_score": "2/9",
+    "parent_index": 2599,
+    "parent_parameter_coverage": "COMPLETE_ON_BOTH_FIRST_FOUR_SUPPORT_PARENT_CLOSURES",
+    "residual_arrangement_cellulation": "NOT_YET_CONSTRUCTED",
+    "residual_interior_feasibility": "COMPLETE_ON_BOTH_SQUARE_PYRAMIDS"
+  },
+  "status": "PROVED",
+  "support_residual_analyses": [
+    {
+      "active_interior_factor_ids_sha256": "2f655db67528c6cc87e7be90c53213f61fa580c6f377edd2e7f39be442b76ab8",
+      "ambient_mixed_residual_restrictions": 3996,
+      "distinct_active_remainders_before_positive_quotient": 25,
+      "distinct_active_walls_after_positive_quotient": 16,
+      "distinct_parent_reduced_zero_sets": 68,
+      "facet_factor_census": {
+        "a=1": 3,
+        "a=g": 3,
+        "h=1": 4,
+        "h=g": 16
+      },
+      "interior_class_census": {
+        "empty": 43,
+        "nonempty": 25,
+        "unresolved": 0
+      },
+      "interior_factor_census": {
+        "empty": 3093,
+        "nonempty": 328
+      },
+      "parent_equality_state_census": {
+        "identically_zero": 548,
+        "mixed": 3421,
+        "one_signed": 27
+      },
+      "support": [
+        3,
+        1,
+        15
+      ]
+    },
+    {
+      "active_interior_factor_ids_sha256": "1701d74baaba30543ddb38fd284ae78b3c023f7abfb96e3865fff742e6b46083",
+      "ambient_mixed_residual_restrictions": 4021,
+      "distinct_active_remainders_before_positive_quotient": 16,
+      "distinct_active_walls_after_positive_quotient": 10,
+      "distinct_parent_reduced_zero_sets": 40,
+      "facet_factor_census": {
+        "a=1": 2,
+        "a=g": 23,
+        "h=1": 3,
+        "h=g": 3
+      },
+      "interior_class_census": {
+        "empty": 24,
+        "nonempty": 16,
+        "unresolved": 0
+      },
+      "interior_factor_census": {
+        "empty": 3139,
+        "nonempty": 197
+      },
+      "parent_equality_state_census": {
+        "identically_zero": 656,
+        "mixed": 3336,
+        "one_signed": 29
+      },
+      "support": [
+        3,
+        3,
+        7
+      ]
+    }
+  ],
+  "theorem_effect": "The first two nominally four-dimensional support tasks are coverage-certified three-dimensional square pyramids; 8017 mixed restrictions reduce to 22 exact interior wall equations, but their arrangement and the global pair complex remain open; honest 9DVL score remains 2/9."
+}

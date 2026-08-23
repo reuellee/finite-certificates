@@ -48,6 +48,8 @@ rational coefficients.  It currently exposes:
 - primitive integer normalization for stable semantic hashing;
 - power-to-tensor-Bernstein conversion on the unit box;
 - exact midpoint de Casteljau subdivision in arbitrary dimension;
+- power-to-simplex-Bernstein conversion on rational simplices;
+- deterministic longest-edge simplex bisection in arbitrary dimension;
 - a zero-set classifier with two proof-bearing outcomes:
   `EMPTY_BERNSTEIN` and `NONEMPTY_CORNER`;
 - simultaneous-equation exclusion by subdivision; and
@@ -90,7 +92,10 @@ logical outcomes:
 - a noncompact 3D hyperboloid-like surface whose selected critical system is
   exactly empty; and
 - an interior sphere, whose compact component forces the critical-system
-  method to refuse an emptiness proof.
+  method to refuse an emptiness proof;
+- positive and crossing triangle polynomials exercising simplex controls; and
+- an interior tetrahedral sphere that forces the simplex classifier to remain
+  unresolved rather than confusing budget exhaustion with emptiness.
 
 The sphere is the essential negative canary: accepting it would turn the main
 component-coverage argument into a false-proof engine.

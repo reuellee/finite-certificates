@@ -85,26 +85,46 @@ See `DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md`.
 The reusable research machinery is now a first-class artifact rather than
 duplicated implementation detail.  `exact_semialgebraic/` exposes exact
 sparse-polynomial affine pullback, canonical integer normalization,
-arbitrary-dimensional tensor Bernstein subdivision, fail-closed zero-set and
-system exclusion, and adaptive critical axes.
+arbitrary-dimensional tensor and simplex Bernstein subdivision, fail-closed
+zero-set and system exclusion, and adaptive critical axes.
 
-The analytic canary certificate includes a strictly positive quadratic, a
-crossing line, a subdivision-required circle, a noncompact 3D zero set whose
-critical system is empty, and an interior sphere whose compact component must
-remain unresolved.  Eight hostile semantic mutations are rejected.  The
-existing source-cube producer now uses this package and reproduces the stored
-five-box certificate byte-semantically; independent verifiers continue to use
-separately written logic.
+The analytic canary certificate now exercises tensor boxes and rational
+simplices: positive and crossing examples, a subdivision-required circle, a
+noncompact 3D zero set whose critical system is empty, and box/tetrahedron
+interior spheres whose compact components must remain unresolved.  Ten
+hostile semantic mutations are rejected.  The existing source-cube producer
+and the first-four-support producer reuse this package; independent verifiers
+continue to use separately written logic.
 
 See `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md` for the complete reusable
 procedure and trust-boundary rules.
+
+## Direct four-support checkpoint
+
+The direct roadmap route now has its first coverage-bearing higher-support
+result. Opposite signed parent inequalities collapse supports `(3,1,15)` and
+`(3,3,7)` from nominal dimension four to the same three-dimensional square
+pyramid `0<=g<=a<=1`, `0<=g<=h<=1`. Two rational tetrahedra cover each parent
+domain exactly and inherit the completed `(3,1,5)` base. Exact classification
+reduces 8,017 mixed restrictions to 94 parent-reduced zero sets and 22 active
+interior walls, with no unresolved classes.
+
+The first complete fiber projection then yields one base-only, 20 linear, and
+one quadratic wall. Its 255 exact projection obligations quotient to 136
+distinct `(u,t)` polynomials of maximum bidegree `(4,5)`, below the pinned
+100,000-polynomial ceiling. This validates the architecture but does not yet
+construct the base CAD, lifted cells, or global closure complex. See
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md` and
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md`.
 
 ## Next proof-bearing target
 
 The pair branch now needs one of the following, in priority order:
 
-1. a direct coverage-certified semialgebraic roadmap/master complex in the
-   parent cell that does not route all walls through this one source family;
+1. an exact sign-invariant CAD or equivalent roadmap for the 136
+   boundary-reduced base polynomials, followed by exact lifting of the 22
+   degree-at-most-two fibers and face-compatible gluing of both covered
+   square-pyramid supports;
 2. a bounded collection of genuinely distinct source families together with
    an exact global incidence theorem for their union; or
 3. a different structural reduction that replaces source incidence and

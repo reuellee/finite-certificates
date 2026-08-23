@@ -108,6 +108,99 @@
         }
       ]
     },
+    "compact_sphere_simplex_3d_hostile": {
+      "analytic_fact": "the radius-1/8 sphere centered at (1/4,1/4,1/4) lies inside the tetrahedron",
+      "analytic_witness": [
+        "3/8",
+        "1/4",
+        "1/4"
+      ],
+      "classification": {
+        "depth": 5,
+        "status": "UNRESOLVED",
+        "visited": 6
+      },
+      "polynomial": [
+        {
+          "coefficient": "11/64",
+          "exponent": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "exponent": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "exponent": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "exponent": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            2,
+            0,
+            0
+          ]
+        }
+      ],
+      "vertices": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
     "crossing_line_2d": {
       "analytic_witness": [
         "0",
@@ -140,6 +233,54 @@
             0
           ]
         }
+      ]
+    },
+    "crossing_line_simplex_2d": {
+      "analytic_witness": [
+        "1/3",
+        "0"
+      ],
+      "classification": {
+        "depth": 0,
+        "status": "NONEMPTY_VERTEX",
+        "visited": 1
+      },
+      "polynomial": [
+        {
+          "coefficient": "-1/3",
+          "exponent": [
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            1,
+            0
+          ]
+        }
+      ],
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
       ]
     },
     "interior_circle_2d": {
@@ -311,12 +452,58 @@
           ]
         }
       ]
+    },
+    "positive_quadratic_simplex_2d": {
+      "analytic_fact": "p=1+x^2+y^2 is strictly positive on the triangle",
+      "classification": {
+        "depth": 0,
+        "status": "EMPTY_BERNSTEIN",
+        "visited": 1
+      },
+      "polynomial": [
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": "1",
+          "exponent": [
+            2,
+            0
+          ]
+        }
+      ],
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
     }
   },
-  "format": "exact-semialgebraic-toolkit-canaries-v1",
+  "format": "exact-semialgebraic-toolkit-canaries-v2",
   "scope": {
     "global_topology_from_local_boxes": "NOT_CLAIMED",
     "independent_certificate_replay": "STILL_REQUIRED",
-    "producer_library": "exact_semialgebraic/tensor_bernstein.py"
+    "producer_library": "exact_semialgebraic/tensor_bernstein.py",
+    "simplex_subdivision": "DETERMINISTIC_LONGEST_EDGE_BISECTION"
   }
 }

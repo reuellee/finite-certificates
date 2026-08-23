@@ -32,6 +32,13 @@ def classify(polynomial, max_depth=8):
     return {"status": status, "depth": depth, "visited": visited}
 
 
+def classify_simplex(polynomial, vertices, max_depth=8):
+    status, depth, visited = exact.classify_simplex_zero_set(
+        polynomial, vertices, max_depth=max_depth
+    )
+    return {"status": status, "depth": depth, "visited": visited}
+
+
 def critical(polynomial, axis_sets, max_depth=5):
     result = exact.adaptive_critical_exclusion(
         polynomial, axis_sets, max_depth=max_depth
@@ -88,8 +95,24 @@ def build_record():
         (0, 0, 2): Fraction(1),
     }
     axis_sets = ((0, 1), (0, 2), (1, 2))
+    triangle = ((0, 0), (1, 0), (0, 1))
+    tetrahedron = ((0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1))
+    simplex_crossing = {
+        (0, 0): Fraction(-1, 3),
+        (1, 0): Fraction(1),
+        (0, 1): Fraction(1),
+    }
+    simplex_sphere = {
+        (0, 0, 0): Fraction(11, 64),
+        (1, 0, 0): Fraction(-1, 2),
+        (0, 1, 0): Fraction(-1, 2),
+        (0, 0, 1): Fraction(-1, 2),
+        (2, 0, 0): Fraction(1),
+        (0, 2, 0): Fraction(1),
+        (0, 0, 2): Fraction(1),
+    }
     return {
-        "format": "exact-semialgebraic-toolkit-canaries-v1",
+        "format": "exact-semialgebraic-toolkit-canaries-v2",
         "arithmetic": "EXACT_RATIONAL",
         "decision_policy": "FAIL_CLOSED",
         "examples": {
@@ -122,11 +145,31 @@ def build_record():
                 "critical_exclusion": critical(sphere, axis_sets),
                 "analytic_fact": "p=0 is the radius-1/4 sphere centered at (1/2,1/2,1/2)",
             },
+            "positive_quadratic_simplex_2d": {
+                "polynomial": polynomial_text(positive),
+                "vertices": [list(vertex) for vertex in triangle],
+                "classification": classify_simplex(positive, triangle),
+                "analytic_fact": "p=1+x^2+y^2 is strictly positive on the triangle",
+            },
+            "crossing_line_simplex_2d": {
+                "polynomial": polynomial_text(simplex_crossing),
+                "vertices": [list(vertex) for vertex in triangle],
+                "classification": classify_simplex(simplex_crossing, triangle),
+                "analytic_witness": ["1/3", "0"],
+            },
+            "compact_sphere_simplex_3d_hostile": {
+                "polynomial": polynomial_text(simplex_sphere),
+                "vertices": [list(vertex) for vertex in tetrahedron],
+                "classification": classify_simplex(simplex_sphere, tetrahedron, max_depth=5),
+                "analytic_witness": ["3/8", "1/4", "1/4"],
+                "analytic_fact": "the radius-1/8 sphere centered at (1/4,1/4,1/4) lies inside the tetrahedron",
+            },
         },
         "scope": {
             "producer_library": "exact_semialgebraic/tensor_bernstein.py",
             "independent_certificate_replay": "STILL_REQUIRED",
             "global_topology_from_local_boxes": "NOT_CLAIMED",
+            "simplex_subdivision": "DETERMINISTIC_LONGEST_EDGE_BISECTION",
         },
     }
 

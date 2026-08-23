@@ -37,6 +37,9 @@ def validate(candidate, expected):
     assert examples["interior_circle_2d"]["classification"]["depth"] > 0
     assert examples["noncompact_hyperboloid_3d"]["critical_exclusion"]["proved_empty"] is True
     assert examples["compact_sphere_3d_hostile"]["critical_exclusion"]["proved_empty"] is False
+    assert examples["positive_quadratic_simplex_2d"]["classification"]["status"] == "EMPTY_BERNSTEIN"
+    assert examples["crossing_line_simplex_2d"]["classification"]["status"] == "NONEMPTY_VERTEX"
+    assert examples["compact_sphere_simplex_3d_hostile"]["classification"]["status"] == "UNRESOLVED"
     assert candidate["scope"]["independent_certificate_replay"] == "STILL_REQUIRED"
     assert candidate["scope"]["global_topology_from_local_boxes"] == "NOT_CLAIMED"
 
@@ -52,6 +55,8 @@ def main():
         "interior_circle_2d",
         "noncompact_hyperboloid_3d",
         "compact_sphere_3d_hostile",
+        "crossing_line_simplex_2d",
+        "compact_sphere_simplex_3d_hostile",
     ):
         example = stored["examples"][name]
         polynomial = parse_polynomial(example["polynomial"])
@@ -78,6 +83,8 @@ def main():
         (("examples", "interior_circle_2d", "classification", "depth"), 0),
         (("examples", "noncompact_hyperboloid_3d", "critical_exclusion", "proved_empty"), False),
         (("examples", "compact_sphere_3d_hostile", "critical_exclusion", "proved_empty"), True),
+        (("examples", "positive_quadratic_simplex_2d", "classification", "status"), "NONEMPTY_VERTEX"),
+        (("examples", "compact_sphere_simplex_3d_hostile", "classification", "status"), "EMPTY_BERNSTEIN"),
         (("scope", "independent_certificate_replay"), "NOT_REQUIRED"),
         (("scope", "global_topology_from_local_boxes"), "PROVED"),
     ):
@@ -99,6 +106,7 @@ def main():
     print("PASS 2D empty, crossing, and subdivision-required occurrence canaries")
     print("PASS 3D noncompact critical-system exclusion")
     print("PASS compact-sphere hostile canary remains unresolved")
+    print("PASS exact simplex Bernstein and longest-edge subdivision canaries")
     print(f"PASS {rejected}/{len(mutations)} hostile semantic mutations rejected")
     print("SCOPE producer toolkit only; independent certificate replay remains required")
 
