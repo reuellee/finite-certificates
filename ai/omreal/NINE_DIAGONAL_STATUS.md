@@ -35,7 +35,7 @@ Exactly two of the nine entries are currently proved.
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
 | 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
-| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 now has an exact 23-chamber coordinate-star no-go, a 24-chamber all-family CEGIS repair network, and a complete transverse two-wall disk on which every finite common-feasibility locus is empty or convex, but no coverage-certified parent roadmap |
+| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 has an exact 23-chamber coordinate-star no-go, a 24-chamber all-family CEGIS repair network, and a complete transverse two-wall disk with local convexity; its selected plane is now classified exactly as 1,553 open curves plus 192 boundary-only curves, but the 396,369-resultant/402,031-horizontal-root projection frontier still lacks common-coordinate validation, chamber lifting, infinity, and parent-space coverage |
 
 The dual column is valid for all nine entries after importing the published
 contractibility statement for realizable oriented matroids on fewer than nine
@@ -1102,10 +1102,17 @@ escape or higher-wall coherence.  See
    rays have 26,110, 26,110, 26,040 and 26,040 labels, and its node has
    26,038.  The only proper support masks are the four cyclic halfspaces, so
    every finite common-feasibility locus on the disk is empty or convex.
-   This remains local, and the machine-checked next target is coverage of the
-   selected parent-860 plane, not score promotion.  See
+   The complete selected plane projection is now exact as well: the parent
+   cell is the triangle `12164/31931 < i < h < 1858210/2854579`; only 1,553
+   factor curves meet its interior and 192 meet only its boundary.  A
+   depth-eight Bernstein cover and all candidate pair resultants expose a
+   396,369-polynomial frontier with 402,031 open horizontal roots counted per
+   primitive polynomial.  The projection-growth stop rule therefore replaces
+   monolithic CAD by sharded isolation, cross-polynomial deduplication, and
+   common-`i` validation.  No chamber coverage or score promotion follows. See
    `DIAG9_PARENT860_CEGIS_ROUTING.md`,
    `DIAG9_PARENT860_TRANSVERSE_NODE.md`, and
+   `DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md`, and
    `data/DIAG9_RESEARCH_DECISION_LEDGER.json`.
 2. **Sparse-form quotient plus CAD.**  Column scaling removes all but
    `beta<=4` invariant positive weight ratios from every generic pair orbit.

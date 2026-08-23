@@ -190,11 +190,13 @@ transverse residual branches, and every finite common-feasibility locus on it
 is empty or convex.  That closes the local-node regression but not the
 coverage gap.
 
-The machine-checked next target is therefore a coverage-certified expansion
-of this node across the selected two-dimensional parent-860 plane.  The
-generator must classify every wall component and chamber/wall/node incidence,
-and must stop with an exact frontier on a missed component, unresolved
-projection factor, or loss of parent containment.  Only after dimension
-raising, geometric coverage, and infinity are certified can the construction
-contribute to a diagonal-nine proof.  See
+That coverage expansion has now classified the complete selected plane through
+its univariate projection frontier.  Exact restriction leaves 1,553 open
+factor curves; their interaction closure produces 396,369 distinct pair
+resultants and 402,031 open horizontal roots counted per polynomial, triggering
+the predeclared projection-growth stop.  The next target is deterministic
+sharded isolation, deduplication, and common-`i` validation before any chamber
+lift.  Only after geometric coverage, labels, dimension raising, and infinity
+are certified can the construction contribute to a diagonal-nine proof.  See
+`DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md` and
 `data/DIAG9_RESEARCH_DECISION_LEDGER.json`.

@@ -181,6 +181,15 @@ explicit per-shard allowance; a stable aggregate job preserves the branch
 protection interface. Cancelling one monolithic job at a platform time limit
 is an infrastructure result, not a failed mathematical assertion.
 
+The parent-860 plane projection is the current concrete application of this
+policy.  Its exact depth-eight Bernstein cover leaves 477,811 candidate curve
+pairs, whose 396,369 distinct primitive resultants carry 402,031 open
+horizontal roots counted per polynomial.  The monolithic-plane-CAD stop rule
+has therefore fired.  The decision ledger permits only deterministic sharded
+root isolation, cross-polynomial deduplication, and common-coordinate
+validation next; chamber lifting is forbidden until that event catalog is
+complete and exact.
+
 ## Tool policy
 
 - Exact rational/integer code is the primary trust boundary.

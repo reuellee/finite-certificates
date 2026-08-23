@@ -122,10 +122,11 @@ that every component in parent 860 meets the disk, cover the selected plane,
 attach genuine parent infinity, cover another parent, or advance the 9DVL
 score beyond `2/9`.
 
-The machine-checked decision ledger therefore selects a bounded next target:
-expand this node into a coverage-certified two-dimensional parent-860 atlas,
-classifying every residual component and every chamber/wall/node incidence in
-the selected plane.  Stop at the first exact missed component, unresolved
-projection factor, or loss of parent containment; preserve that frontier
-instead of silently widening to a full nine-dimensional CAD.  See
+That bounded expansion has now reached its predeclared projection-growth stop.
+The complete parent triangle contains 1,553 open factor curves and its exact
+interaction closure produces 396,369 distinct pair resultants with 402,031
+open horizontal roots counted per polynomial.  The successor target is
+deterministic sharded isolation and common-coordinate validation, not an
+unsharded monolithic CAD.  See
+`DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md` and
 `data/DIAG9_RESEARCH_DECISION_LEDGER.json`.

@@ -84,21 +84,23 @@ branches, four chambers, four wall rays and one node, and every finite common
 support is empty or convex.  See `DIAG9_PARENT860_CEGIS_ROUTING.md` and
 `DIAG9_PARENT860_TRANSVERSE_NODE.md`.
 
-The next calculation must still:
+The selected plane now has a complete factor and pair-resultant projection
+frontier: 1,553 curves meet the open parent triangle, and their exact
+interaction prefilter produces 396,369 distinct pair resultants with 402,031
+open horizontal roots counted per polynomial.  The next calculation must
+still:
 
-1. add the projection resultants and boundary equations needed for a complete
-   compactified cell decomposition;
-2. prove coverage and adjacency, rather than sampling chambers;
-3. compute exact derived-arrangement tope labels on every generic chamber;
-4. run the sharp pairwise tree certificate or complete cut-SAT test; and
-5. retain any candidate factor until geometry, not absence of a conflict,
-   proves it empty.
+1. isolate and deduplicate those algebraic sections in deterministic shards;
+2. validate which roots carry a common `i` inside the parent triangle;
+3. prove coverage and adjacency, rather than sampling chambers;
+4. compute or transport exact derived-arrangement tope labels on every generic
+   chamber; and
+5. run the sharp pairwise tree certificate or complete cut-SAT test.
 
-The bounded first step is now pinned by
-`data/DIAG9_RESEARCH_DECISION_LEDGER.json`: expand the transverse node to a
-coverage-certified two-dimensional atlas in the selected parent-860 plane,
-and stop with an exact frontier rather than widening directly to a
-nine-dimensional CAD.
+The pinned projection-growth stop and successor target are recorded in
+`DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md` and
+`data/DIAG9_RESEARCH_DECISION_LEDGER.json`; widening directly to a
+nine-dimensional CAD remains forbidden.
 
 The ranking therefore reduces the first roadmap input by 1,404 primitive
 factors relative to parent 2599.  It does not prove the ninth diagonal for
