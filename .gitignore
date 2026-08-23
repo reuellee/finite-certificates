@@ -5,6 +5,13 @@ __pycache__/
 # full prompts, and the curated REVIEW_*.md files are the artifact of record.
 *.log
 *.err
+
+# Local recovery bundles and raw model-review transcripts are operational or
+# archival material, not proof dependencies.  Accepted findings must be
+# distilled into the relevant result note, certificate, or verifier.
+/backups/
+/reviews/
+
 # Resumable-audit scratch state (the committed report is the record); the
 # file is removed automatically after a clean full run.
 ai/maxout/capstone/independent_audit_progress.json

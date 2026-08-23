@@ -7,7 +7,7 @@ Conjecture, each decided by an explicit witness with a cheap independent verifie
 
 **The n = 2 boundary** (`n2_analysis.md`, `verify_n2.py`). No Keller map of generic
 degree 2 exists in **any** dimension — the quadratic case of Campbell (1973), with a
-short proof. Gemini adversarial review: VERIFIED-SOUND. A counterexample at n = 2 would
+short proof. A counterexample at n = 2 would
 need generic degree μ ≥ 5 and degree > 100. A new checkable statement: a degree-4
 Keller map forces Galois closure S₄ or A₄.
 

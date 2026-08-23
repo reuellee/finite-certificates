@@ -32,6 +32,14 @@ point may be used to *search*; it is never used to *justify*. A result is not
 "done" because a program printed it — it is done when an independent program,
 sharing no code with the one that produced it, re-derives it exactly.
 
+The public tree is a proof surface, not a lab notebook. Commit material that a
+reader needs to understand or replay a claim: concise theorem/status notes,
+generators, pinned compact certificates, independent verifiers, and curated
+adjudications when they materially change a result. Keep raw model transcripts,
+temporary reviewer workspaces, tool logs, local recovery bundles, and replaceable
+search output outside Git. Distill any accepted finding into the relevant result
+note or verifier before relying on it.
+
 ## The bar for a contribution
 
 Whatever you send, the same standard applies to it as to everything already
