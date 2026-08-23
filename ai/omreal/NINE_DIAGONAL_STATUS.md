@@ -1400,11 +1400,19 @@ The bounded fiber projection uses `a=t+(1-t)u`, `g=t`,
 and one `v`-quadratic equation. The complete first projection family has 255
 nonzero obligations and only 136 distinct boundary-reduced `(u,t)`
 polynomials, of maximum bidegree `(4,5)`. This is below the declared
-100,000-polynomial ceiling. The exact base CAD, lifted cells,
+100,000-polynomial ceiling.
+
+The complete second projection factors the 136 polynomials to 114 base curve
+factors and constructs all 6,061 nonconstant coefficient, discriminant, and
+pair-resultant obligations. Boundary reduction and squarefree quotient leave
+2,554 distinct univariate polynomials and 2,333 factor polynomials of maximum
+degree ten. An independent standard-library Sturm replay counts 1,693
+interior factor-root incidences, an exact upper bound on the number of
+distinct interior `t` sections. Root isolation and ordering, the lifted cells,
 face-compatible gluing, global closure data, and middle-rank replay remain
 open, so the honest score remains `2/9`. See
 `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md` and
-`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md`.
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md`.
 
 ## Exact artifacts
 
@@ -1748,6 +1756,10 @@ open, so the honest score remains `2/9`. See
   builder, and independent hostile verifier: complete first fiber projection
   of the 22 walls to 136 boundary-reduced base polynomials under the pinned
   resource ceiling.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md`, its exact factor
+  catalog, builder, and standard-library hostile verifier: complete second
+  projection to 2,554 squarefree univariate polynomials and an exact 1,693
+  interior factor-root incidence frontier.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive

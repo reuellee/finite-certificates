@@ -797,8 +797,39 @@
         "ai/omreal/verify_diag3_pair_global_four_support_projection.py"
       ]
     },
+    "eighteenth_pair_first_four_support_base_projection": {
+      "status": "PROVED",
+      "scope": "complete coefficient-discriminant-resultant projection of the 136 first-projection base polynomials to the t axis, with exact factorization replay and Sturm root-incidence census",
+      "source_projection_polynomials": 136,
+      "nonconstant_source_polynomials": 135,
+      "distinct_base_curve_factors": 114,
+      "base_factor_occurrences": 170,
+      "nonconstant_projection_obligations": 6061,
+      "projection_kind_census": {
+        "coefficient": 128,
+        "discriminant": 69,
+        "pair_resultant": 5864
+      },
+      "identically_zero_pair_resultants": 0,
+      "distinct_squarefree_boundary_reduced_projection_polynomials": 2554,
+      "distinct_univariate_factor_polynomials": 2333,
+      "maximum_univariate_degree": 10,
+      "interior_factor_root_incidences": 1693,
+      "distinct_interior_t_sections_upper_bound": 1693,
+      "projection_polynomial_ceiling": 100000,
+      "ceiling_not_triggered": true,
+      "semantic_sha256": "985acacf6df251330a7dcc857a4d9d4e32d13862fa2b0bbb34b3bbc90f0eab08",
+      "hostile_corruptions_rejected": 12,
+      "base_sign_invariant_cad": "NOT_YET_CONSTRUCTED",
+      "global_parent_cell_coverage": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.json.gz",
+        "ai/omreal/verify_diag3_pair_global_four_support_base_projection.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "construct an exact sign-invariant CAD/roadmap for the 136 boundary-reduced (u,t) projection polynomials, lift the 22 degree-at-most-two v fibers, glue both covered square-pyramid supports to their completed faces, and emit regular cells plus closure data under the pinned resource ceilings; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "isolate and order the at-most-1693 interior t sections, lift the 114 base curve factors in u and the 22 degree-at-most-two v fibers, glue both covered square-pyramid supports to their completed faces, and emit regular cells plus closure data under the pinned resource ceilings; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {

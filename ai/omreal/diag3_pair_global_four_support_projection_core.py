@@ -123,7 +123,7 @@ def degree_census(polynomials):
     return {",".join(map(str, degree)): count for degree, count in sorted(answer.items())}
 
 
-def build_record():
+def build_record(*, include_catalog=False):
     source = json.loads(SOURCE.read_text())
     if source["format"] != gate_core.FORMAT or source["status"] != "PROVED":
         raise AssertionError("four-support source gate changed")
@@ -223,7 +223,7 @@ def build_record():
         ).encode("ascii")
     ).hexdigest()
 
-    return {
+    record = {
         "format": FORMAT,
         "status": "PROVED",
         "scope": {
@@ -274,3 +274,6 @@ def build_record():
         },
         "theorem_effect": "The 22-wall square-pyramid arrangement admits a bounded exact fiber architecture: one base-only wall, 20 v-linear walls, one v-quadratic wall, and a finite boundary-reduced base projection family; this passes the projection ceiling but does not yet construct the base CAD or global master complex; honest 9DVL score remains 2/9.",
     }
+    if include_catalog:
+        record["projection"]["catalog"] = projection_catalog
+    return record

@@ -187,7 +187,7 @@ def main() -> None:
         "status"
     ] == "SUBORDINATED"
     assert closure["global_generator_preflight"]["status"] == (
-        "FOUR_SUPPORT_PROJECTION_READY_BASE_CAD_MISSING"
+        "FOUR_SUPPORT_SECOND_PROJECTION_READY_ROOT_ISOLATION_MISSING"
     )
 
     candidates = ledger["candidate_targets"]
@@ -772,11 +772,43 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_projection.py",
         ],
     }
+    base_projection = progress["eighteenth_pair_first_four_support_base_projection"]
+    assert base_projection == {
+        "status": "PROVED",
+        "scope": "complete coefficient-discriminant-resultant projection of the 136 first-projection base polynomials to the t axis, with exact factorization replay and Sturm root-incidence census",
+        "source_projection_polynomials": 136,
+        "nonconstant_source_polynomials": 135,
+        "distinct_base_curve_factors": 114,
+        "base_factor_occurrences": 170,
+        "nonconstant_projection_obligations": 6_061,
+        "projection_kind_census": {
+            "coefficient": 128,
+            "discriminant": 69,
+            "pair_resultant": 5_864,
+        },
+        "identically_zero_pair_resultants": 0,
+        "distinct_squarefree_boundary_reduced_projection_polynomials": 2_554,
+        "distinct_univariate_factor_polynomials": 2_333,
+        "maximum_univariate_degree": 10,
+        "interior_factor_root_incidences": 1_693,
+        "distinct_interior_t_sections_upper_bound": 1_693,
+        "projection_polynomial_ceiling": 100_000,
+        "ceiling_not_triggered": True,
+        "semantic_sha256": "985acacf6df251330a7dcc857a4d9d4e32d13862fa2b0bbb34b3bbc90f0eab08",
+        "hostile_corruptions_rejected": 12,
+        "base_sign_invariant_cad": "NOT_YET_CONSTRUCTED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.json.gz",
+            "ai/omreal/verify_diag3_pair_global_four_support_base_projection.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "construct an exact sign-invariant CAD/roadmap for the 136"
+        "isolate and order the at-most-1693 interior t sections"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -818,6 +850,7 @@ def main() -> None:
     print("PASS fifteenth source-family no-go: 5390 known parent walls miss the source cube")
     print("PASS sixteenth four-support gate: 8017 restrictions -> 94 zero sets -> 22 walls")
     print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
+    print("PASS eighteenth base projection: 6061 obligations -> 2554 polynomials -> 1693 root incidences")
     print("LEDGER_GIT_BLOB", digest)
 
 

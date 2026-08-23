@@ -60,17 +60,24 @@ its declared stop gate.
 
 The next exact construction is now sharply defined:
 
-1. construct a sign-invariant CAD or equivalent roadmap for the 136 projection
-   polynomials on the closed `(u,t)` square;
-2. lift the one base-only, twenty linear, and one quadratic fiber walls in `v`;
-3. identify the collapsed `t=1` boundary with the pyramid apex;
-4. glue the result to the completed `t=0` base and between the two parent
+1. factor and project the 136 polynomials to the `t` axis (**complete**);
+2. isolate and order the resulting `t` sections and lift the 114 base curve
+   factors in `u`;
+3. lift the one base-only, twenty linear, and one quadratic fiber walls in `v`;
+4. identify the collapsed `t=1` boundary with the pyramid apex;
+5. glue the result to the completed `t=0` base and between the two parent
    supports;
-5. emit regular cells, closure pairs, three-cell chains, and wall labels.
+6. emit regular cells, closure pairs, three-cell chains, and wall labels.
 
 This certificate chooses and validates the projection architecture. It does not
 yet construct the base CAD, lifted arrangement, or global master complex. The
 honest 9DVL score remains `2/9`.
+
+The first item is now complete in
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md`: 114 base factors yield
+2,554 distinct squarefree univariate projection polynomials, 2,333 factor
+polynomials, and at most 1,693 interior `t` sections. Exact root isolation,
+ordering, and lifting remain open.
 
 ## Replay
 

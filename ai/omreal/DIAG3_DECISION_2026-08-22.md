@@ -112,19 +112,23 @@ interior walls, with no unresolved classes.
 The first complete fiber projection then yields one base-only, 20 linear, and
 one quadratic wall. Its 255 exact projection obligations quotient to 136
 distinct `(u,t)` polynomials of maximum bidegree `(4,5)`, below the pinned
-100,000-polynomial ceiling. This validates the architecture but does not yet
-construct the base CAD, lifted cells, or global closure complex. See
+100,000-polynomial ceiling. The complete second projection factors these to
+114 base curves and constructs 6,061 nonconstant coefficient, discriminant,
+and pair-resultant obligations. They reduce to 2,554 distinct squarefree
+univariate polynomials and 2,333 factor polynomials of maximum degree ten.
+Standard-library Sturm replay gives 1,693 interior factor-root incidences.
+This validates the full projection frontier but does not yet isolate or order
+the roots, construct the lifted cells, or build the global closure complex. See
 `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md` and
-`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md`.
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md`.
 
 ## Next proof-bearing target
 
 The pair branch now needs one of the following, in priority order:
 
-1. an exact sign-invariant CAD or equivalent roadmap for the 136
-   boundary-reduced base polynomials, followed by exact lifting of the 22
-   degree-at-most-two fibers and face-compatible gluing of both covered
-   square-pyramid supports;
+1. exact isolation and ordering of the at-most-1,693 interior `t` sections,
+   followed by lifting of the 114 base curve factors, the 22 degree-at-most-two
+   fibers, and face-compatible gluing of both covered square-pyramid supports;
 2. a bounded collection of genuinely distinct source families together with
    an exact global incidence theorem for their union; or
 3. a different structural reduction that replaces source incidence and
