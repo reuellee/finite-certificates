@@ -13,7 +13,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 
-from classify_changes import FORMAT, classify  # noqa: E402
+from classify_changes import FORMAT, classify, run_all  # noqa: E402
 from check_gate_results import (  # noqa: E402
     ALWAYS_JOBS,
     FLAG_TO_JOB,
@@ -24,6 +24,8 @@ from check_gate_results import (  # noqa: E402
 
 
 WORKFLOW = ROOT / ".github" / "workflows" / "verify.yml"
+EXPECTED_FAST_COUNT = 94
+EXPECTED_FAST_MANIFEST = "4d03cbec17aaeae99329800c8c14664f5d827a48da5ec18a168956139015bf06"
 WORKING_DIRECTORIES = (
     ROOT,
     ROOT / "ai" / "maxout",
@@ -86,6 +88,11 @@ def classifier_canaries() -> None:
     assert "ai/omreal/verify_diag2_escape_set_atlas178.py" not in shared["slow_verifiers"]
     full = classify((), "schedule")
     assert full["full"] is True and full["proof_change"] is False
+
+    fast, _ = run_all.selected(run_all.discover(), fast=True, ci_delegated=True)
+    manifest = run_all.shard_manifest(run_all.shard_partition(fast, 1))
+    assert len(fast) == EXPECTED_FAST_COUNT
+    assert manifest["partition_sha256"] == EXPECTED_FAST_MANIFEST
 
 
 def workflow_contract() -> None:

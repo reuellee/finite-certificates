@@ -13,8 +13,8 @@ shards are still a deterministic disjoint cover.
 [`ops/ci/classify_changes.py`](../ops/ci/classify_changes.py) then routes changed proof
 inputs:
 
-- executable proof or certificate inputs run the bounded suite with dedicated-job
-  verifiers excluded;
+- executable proof or certificate inputs run a pinned 94-verifier bounded suite with
+  dedicated-job verifiers excluded;
 - a directly changed slow verifier, or a slow verifier that directly imports a changed
   sibling module, is replayed explicitly;
 - maxout capstone inputs run the independent 132,560-certificate audit;
@@ -32,9 +32,12 @@ modules such as `DIAG9_GRAPH_exact_topes.py` deliberately activate every expensi
 audit known to depend on them. Routing changes ship with executable canaries in
 [`ops/ci/check_ci_policy.py`](../ops/ci/check_ci_policy.py).
 
-When adding a new expensive verifier, add it to `run_all.py`'s `SLOW` set and, if it
-needs special arguments or data, give it a named job and a routing canary. The weekly
-full replay remains a backstop for undeclared or indirect dependencies.
+The bounded-suite manifest is pinned by the CI-policy canary. Its cost classification
+was calibrated from a successful exhaustive run: replays taking at least ten seconds
+join `run_all.py`'s `SLOW` set. When adding a verifier, make a conscious fast/slow
+decision; if it needs special arguments or data, give it a named job and a routing
+canary. The weekly full replay remains a backstop for undeclared or indirect
+dependencies.
 
 ## 3. Full replay
 
