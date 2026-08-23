@@ -61,7 +61,7 @@ def main() -> None:
 
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-22"
+    assert ledger["as_of"] == "2026-08-23"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
@@ -187,7 +187,7 @@ def main() -> None:
         "status"
     ] == "SUBORDINATED"
     assert closure["global_generator_preflight"]["status"] == (
-        "FOUR_SUPPORT_1385_SECTIONS_LIFTED_308_ALGEBRAIC_SECTIONS_MISSING"
+        "FOUR_SUPPORT_1625_SECTIONS_LIFTED_68_ALGEBRAIC_SECTIONS_MISSING"
     )
 
     candidates = ledger["candidate_targets"]
@@ -922,11 +922,42 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_invisible_section_lift.py",
         ],
     }
+    multi_section_lift = progress["twenty_third_pair_first_four_support_multi_section_lift"]
+    assert multi_section_lift == {
+        "status": "PROVED",
+        "scope": "complete exact algebraic-section fibers for every remaining same-count transition carrying only raw multiplicity-one pair-resultant events and no coefficient, discriminant, or u-boundary event",
+        "completed_same_count_sections": 240,
+        "raw_resultant_events": 1_549,
+        "visible_inversion_edges": 1_390,
+        "interior_collision_groups": 549,
+        "all_raw_event_multiplicities_one": True,
+        "sections_with_coefficient_discriminant_or_boundary_event": 0,
+        "section_u_root_points": 19_922,
+        "section_u_strips": 20_162,
+        "section_base_cells": 40_084,
+        "remaining_algebraic_t_sections": 68,
+        "remaining_section_census": {
+            "complex_unchanged_stack": 43,
+            "complex_same_count_transition": 11,
+            "root_count_change": 14,
+        },
+        "completed_sha256": "a7004fa157e7a34a496c595fb5a7e7a43f50ab4830d61afe00f201f63481586a",
+        "semantic_sha256": "1908a66a87b2cb75bc09b676e138c5d2a399ff6aacf662df36c72fc32027976a",
+        "hostile_corruptions_rejected": 12,
+        "remaining_algebraic_t_section_lifts": "NOT_YET_CONSTRUCTED",
+        "v_fiber_lift": "NOT_YET_CONSTRUCTED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_MULTI_SECTION_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_MULTI_SECTION_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_multi_section_lift.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "resolve the remaining 308 algebraic t sections"
+        "resolve the remaining 68 algebraic t sections"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -973,6 +1004,7 @@ def main() -> None:
     print("PASS twentieth open-sector lift: 193116 specializations -> 265962 base cells")
     print("PASS twenty-first simple-section lift: 1022 fibers -> 170610 base cells")
     print("PASS twenty-second constant-stack lift: 363 fibers -> 42515 base cells")
+    print("PASS twenty-third multi-crossing lift: 240 fibers -> 40084 base cells -> 68-section frontier")
     print("LEDGER_GIT_BLOB", digest)
 
 

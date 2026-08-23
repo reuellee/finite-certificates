@@ -2,8 +2,8 @@
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "1779a5b717bcd4a3189ad88b9e72c5b021161e87",
-  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support domains have 265962 open-sector cells and 213125 cells on 1385 completed algebraic fibers, with 308 harder sections remaining in current_decision_ledger.",
+  "current_decision_ledger_git_blob": "d23465eee89e604e22a8034c936833bb91b08896",
+  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support domains have 265962 open-sector cells and 253209 cells on 1625 completed algebraic fibers, with 68 harder sections remaining in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {
     "can_decode_a_global_regular_poset_from_existing_records": false,
@@ -203,7 +203,7 @@
     ]
   },
   "global_generator_preflight": {
-    "status": "FOUR_SUPPORT_1385_SECTIONS_LIFTED_308_ALGEBRAIC_SECTIONS_MISSING",
+    "status": "FOUR_SUPPORT_1625_SECTIONS_LIFTED_68_ALGEBRAIC_SECTIONS_MISSING",
     "inventory_verifier": "ai/omreal/DIAG9_GRAPH_inventory.py",
     "inventory_result": "no NPZ contains a full nine-dimensional master roadmap",
     "universal_residual_factor_count": 26740,
@@ -263,7 +263,7 @@
       "1022 simple transversal algebraic sections are exactly lifted to 84794 root-point cells and 85816 strips",
       "363 raw-simple constant-stack algebraic sections add 21076 root points and 21439 strips; 308 algebraic sections remain"
     ],
-    "warning": "The parent-face gate, square-pyramid coverage, bounded projection family, ordered t sections, open-sector base cells, and 1385 completed algebraic fibers are proof-safe generator layers, not the internal compactified global master poset; 308 algebraic fibers, v lifting, global gluing, and closure data remain missing."
+    "warning": "The parent-face gate, square-pyramid coverage, bounded projection family, ordered t sections, open-sector base cells, and 1625 completed algebraic fibers are proof-safe generator layers, not the internal compactified global master poset; 68 algebraic fibers, v lifting, global gluing, and closure data remain missing."
   },
   "row2599_flow_triangle_mixed_d3": {
     "status": "OPEN",

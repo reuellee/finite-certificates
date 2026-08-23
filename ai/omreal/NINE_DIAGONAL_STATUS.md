@@ -1801,6 +1801,10 @@ same-count transitions, and 14 root-count changes.
   JSON record, builder, and standard-library hostile verifier: 363 exact
   constant-stack algebraic fibers and 42,515 section cells, leaving 308
   harder sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_MULTI_SECTION_LIFT.md`, its compact JSON
+  record, builder, and standard-library hostile verifier: 240 exact
+  simultaneous pure-resultant fibers, 549 collision cliques, and 40,084
+  section cells, leaving 68 harder sections.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
