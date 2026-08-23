@@ -11,18 +11,28 @@ false-negative canaries for the CI router, and proves that the exhaustive verifi
 shards are still a deterministic disjoint cover.
 
 [`ops/ci/classify_changes.py`](../ops/ci/classify_changes.py) then routes changed proof
-inputs:
+inputs. Every non-document path under `ai/` or `jacobian/` fails closed as a proof
+input, including deletions, rename sources, and unfamiliar certificate formats; a
+pull request's own ignore rules cannot weaken that classification.
 
 - executable proof or certificate inputs run a pinned 94-verifier bounded suite with
   dedicated-job verifiers excluded;
-- a directly changed slow verifier, or a slow verifier that directly imports a changed
-  sibling module, is replayed explicitly;
+- a directly changed slow verifier, a slow verifier anywhere in the repository that
+  directly imports a changed module, or a slow verifier declared for a committed
+  artifact is replayed explicitly;
+- undeclared non-code proof artifacts conservatively activate all exhaustive shards
+  and every dedicated 9DVL job; maxout artifacts instead activate the independent
+  capstone audit;
 - maxout capstone inputs run the independent 132,560-certificate audit;
-- the expensive 9DVL atlas, labelled-pair, source-block, and parent-860 jobs run only
-  when one of their declared inputs changes.
+- the expensive 9DVL atlas, labelled-pair, source-block, and parent-860 jobs run when
+  one of their declared inputs changes or the exhaustive fallback is activated.
+- a change to the one external-input verifier is rejected until its pinned 6.97 MB
+  residue is made replayable in required CI; syntax-only validation is not accepted
+  as proof replay.
 
-Markdown, logs, workflow prose, and other non-proof files do not start mathematical
-replays. The final job, `verifier suite (complete)`, is stable for branch protection
+Markdown and workflow prose do not start mathematical replays. Files outside the
+proof trees do not either, except the pinned root inputs `requirements.txt` and
+`run_all.py`. The final job, `verifier suite (complete)`, is stable for branch protection
 and fails if any job required by the computed plan was skipped, cancelled, or failed.
 
 ## 2. Targeted exact audits
@@ -31,6 +41,15 @@ The path groups are conservative dependency declarations, not timing hints. Shar
 modules such as `DIAG9_GRAPH_exact_topes.py` deliberately activate every expensive
 audit known to depend on them. Routing changes ship with executable canaries in
 [`ops/ci/check_ci_policy.py`](../ops/ci/check_ci_policy.py).
+
+Committed inputs used only by slow verifiers are pinned in
+`SLOW_INPUT_DEPENDENCIES`. New certificate formats need no extension allowlist: an
+unmapped artifact outside maxout takes the exhaustive fallback until its exact
+dependency is added with a negative canary; maxout artifacts take the independent
+capstone route. Each committed witness in the exact Jacobian reduction chain
+(`deg3_map.py`, `cubic_map.py`, and the 368-dimensional `druzkowski_map.py`) is checked
+against exact reconstruction rather than silently overwritten; regeneration requires
+an explicit command-line flag.
 
 The bounded-suite manifest is pinned by the CI-policy canary. Its cost classification
 was calibrated from a successful exhaustive run: replays taking at least ten seconds
@@ -49,7 +68,8 @@ A Monday schedule and every manual workflow dispatch run:
 - the generator-coupled secondary maxout audit.
 
 The shard-contract verifier proves the exact union and disjointness of the selected
-suite before those jobs begin. The one verifier requiring a separately pinned external
+suite before those jobs begin and pins its full verifier census and manifest, so a
+deleted verifier cannot silently shrink the suite. The one verifier requiring a separately pinned external
 artifact remains an explicit direct command documented with that result.
 
 ## Local use

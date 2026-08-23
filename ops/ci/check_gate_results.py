@@ -10,15 +10,19 @@ import os
 FLAG_TO_JOB = {
     "proof_change": "fast-suite",
     "slow_changed": "changed-slow-verifiers",
+    "external_changed": "external-input-verifier-policy",
 }
 FULL_OR_FLAG_TO_JOB = {
     "maxout": "maxout-capstone",
+}
+FULL_EXHAUSTIVE_OR_FLAG_TO_JOB = {
     "diag2_atlas": "nine-dvl-diag2-atlas",
     "labeled_pairs": "nine-dvl-labeled-pairs",
     "source_block_labels": "nine-dvl-source-block-labels",
     "parent860": "nine-dvl-parent860-pilot",
 }
-FULL_JOBS = ("suite-shards", "full-audit")
+EXHAUSTIVE_JOBS = ("suite-shards",)
+FULL_JOBS = ("full-audit",)
 ALWAYS_JOBS = ("plan", "quick-gate")
 
 
@@ -43,13 +47,23 @@ def audit(plan: dict[str, object], results: dict[str, object]) -> list[str]:
         wanted = "success" if expected else "skipped"
         if result(job) != wanted:
             failures.append(f"{job}: expected {wanted}, got {result(job)}")
+    exhaustive = full or truth(plan["exhaustive"])
     for flag, job in FULL_OR_FLAG_TO_JOB.items():
         expected = full or truth(plan[flag])
         wanted = "success" if expected else "skipped"
         if result(job) != wanted:
             failures.append(f"{job}: expected {wanted}, got {result(job)}")
+    for flag, job in FULL_EXHAUSTIVE_OR_FLAG_TO_JOB.items():
+        expected = exhaustive or truth(plan[flag])
+        wanted = "success" if expected else "skipped"
+        if result(job) != wanted:
+            failures.append(f"{job}: expected {wanted}, got {result(job)}")
     for job in FULL_JOBS:
         wanted = "success" if full else "skipped"
+        if result(job) != wanted:
+            failures.append(f"{job}: expected {wanted}, got {result(job)}")
+    for job in EXHAUSTIVE_JOBS:
+        wanted = "success" if exhaustive else "skipped"
         if result(job) != wanted:
             failures.append(f"{job}: expected {wanted}, got {result(job)}")
 

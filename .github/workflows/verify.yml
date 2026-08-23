@@ -25,8 +25,10 @@ jobs:
     timeout-minutes: 5
     outputs:
       full: ${{ steps.plan.outputs.full }}
+      exhaustive: ${{ steps.plan.outputs.exhaustive }}
       proof_change: ${{ steps.plan.outputs.proof_change }}
       slow_changed: ${{ steps.plan.outputs.slow_changed }}
+      external_changed: ${{ steps.plan.outputs.external_changed }}
       maxout: ${{ steps.plan.outputs.maxout }}
       diag2_atlas: ${{ steps.plan.outputs.diag2_atlas }}
       labeled_pairs: ${{ steps.plan.outputs.labeled_pairs }}
@@ -122,6 +124,17 @@ jobs:
           ops/ci/run_changed_slow_verifiers.py
           --base "$CI_BASE_SHA" --head "$CI_HEAD_SHA"
 
+  external-input-verifier-policy:
+    name: external-input verifier replay policy
+    needs: [plan, quick-gate]
+    if: needs.plan.outputs.external_changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require a replayable pinned input before verifier changes
+        run: python ops/ci/reject_external_verifier_change.py
+
   maxout-capstone:
     name: maxout (3,5) capstone checks
     needs: [plan, quick-gate]
@@ -159,7 +172,10 @@ jobs:
   nine-dvl-diag2-atlas:
     name: 9DVL diagonal-two 178-chart escape audit
     needs: [plan, quick-gate]
-    if: needs.plan.outputs.full == 'true' || needs.plan.outputs.diag2_atlas == 'true'
+    if: >-
+      needs.plan.outputs.full == 'true' ||
+      needs.plan.outputs.exhaustive == 'true' ||
+      needs.plan.outputs.diag2_atlas == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -183,7 +199,10 @@ jobs:
   nine-dvl-labeled-pairs:
     name: 9DVL relative-label pair audit
     needs: [plan, quick-gate]
-    if: needs.plan.outputs.full == 'true' || needs.plan.outputs.labeled_pairs == 'true'
+    if: >-
+      needs.plan.outputs.full == 'true' ||
+      needs.plan.outputs.exhaustive == 'true' ||
+      needs.plan.outputs.labeled_pairs == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -211,7 +230,10 @@ jobs:
   nine-dvl-source-block-labels:
     name: 9DVL source block-label continuation audit
     needs: [plan, quick-gate]
-    if: needs.plan.outputs.full == 'true' || needs.plan.outputs.source_block_labels == 'true'
+    if: >-
+      needs.plan.outputs.full == 'true' ||
+      needs.plan.outputs.exhaustive == 'true' ||
+      needs.plan.outputs.source_block_labels == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -231,7 +253,10 @@ jobs:
   nine-dvl-parent860-pilot:
     name: 9DVL parent-860 CEGIS routing pilot
     needs: [plan, quick-gate]
-    if: needs.plan.outputs.full == 'true' || needs.plan.outputs.parent860 == 'true'
+    if: >-
+      needs.plan.outputs.full == 'true' ||
+      needs.plan.outputs.exhaustive == 'true' ||
+      needs.plan.outputs.parent860 == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -255,7 +280,7 @@ jobs:
   suite-shards:
     name: exhaustive verifier shard ${{ matrix.shard }}/4
     needs: [plan, quick-gate]
-    if: needs.plan.outputs.full == 'true'
+    if: needs.plan.outputs.full == 'true' || needs.plan.outputs.exhaustive == 'true'
     strategy:
       fail-fast: false
       matrix:
@@ -309,6 +334,7 @@ jobs:
       - quick-gate
       - fast-suite
       - changed-slow-verifiers
+      - external-input-verifier-policy
       - maxout-capstone
       - nine-dvl-diag2-atlas
       - nine-dvl-labeled-pairs
