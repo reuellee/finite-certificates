@@ -1,4 +1,8 @@
-# Response to `reviews/GEMINI_indistinguishability_review.md`
+# Response to the archived indistinguishability review
+
+The raw cross-model review transcript is preserved in repository history rather
+than shipped on the proof surface. This adjudication records every substantive
+finding and the independent checks performed in response.
 
 Verdict returned: **SOUND**, five findings, all [MINOR], no [BLOCKING] and no [FIX].
 

@@ -28,15 +28,31 @@ Construction (self-certifying variant of the Druzkowski/Gorni-Zampieri pairing):
     y_p != y_q (equality would force p = A y_p = A y_q = q).  Same for r.
 Hence G is a Druzkowski Keller map on C^m that is NOT injective, hence not an
 automorphism: an explicit counterexample to JC in Druzkowski's reduced form.
-All checks below are in exact rational arithmetic.
+All checks below are in exact rational arithmetic.  The default mode also
+requires the committed ``druzkowski_map.py`` to equal the reconstructed witness;
+use ``--regenerate-artifact`` only when intentionally updating that artifact.
 """
+import argparse
+from pathlib import Path
 import random
 import sympy as sp
 
+from artifact_io import read_literal_assignments
+
 random.seed(7)
 
-ns = {}
-exec(open('cubic_map.py').read(), ns)
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument(
+    "--regenerate-artifact",
+    action="store_true",
+    help="replace the committed witness with the exact reconstruction",
+)
+arguments = parser.parse_args()
+
+ns = read_literal_assignments(
+    Path(__file__).with_name("cubic_map.py"),
+    {"N", "components", "points"},
+)
 n = ns['N']
 V = [sp.Symbol('v%d' % i) for i in range(n)]
 F = [sp.expand(sp.sympify(c, dict((str(v), v) for v in V))) for c in ns['components']]
@@ -177,11 +193,38 @@ for trial in range(2):
     print("Sylvester RHS det(I_n + A D B) =", det_small, "| det JF(Ay) =", det_JF)
     ok &= (det_small == 1 and det_JF == 1)
 
-print("PASS" if ok else "FAIL")
+artifact = Path(__file__).with_name("druzkowski_map.py")
+expected = {
+    "m": m,
+    "C": [[str(C[i, j]) for j in range(m)] for i in range(m)],
+    "points": [[str(c) for c in list(yv)] for yv in ys],
+}
 
-with open('druzkowski_map.py', 'w') as f:
-    f.write("# Auto-generated: explicit Druzkowski counterexample G = y + (Cy)^{*3}\n")
-    f.write("m = %d\n" % m)
-    f.write("C = %r\n" % [[str(C[i, j]) for j in range(m)] for i in range(m)])
-    f.write("points = %r\n" % [[str(c) for c in list(yv)] for yv in ys])
-print("wrote druzkowski_map.py")
+
+def render_artifact(values):
+    return (
+        "# Auto-generated: explicit Druzkowski counterexample G = y + (Cy)^{*3}\n"
+        f"m = {values['m']}\n"
+        f"C = {values['C']!r}\n"
+        f"points = {values['points']!r}\n"
+    )
+
+
+if arguments.regenerate_artifact:
+    if ok:
+        artifact.write_text(render_artifact(expected), encoding="utf-8")
+        print("wrote", artifact.name)
+    else:
+        print("refusing to regenerate artifact after a failed exact check")
+else:
+    try:
+        committed = read_literal_assignments(artifact, set(expected))
+        artifact_ok = committed == expected
+    except (OSError, SyntaxError, ValueError) as exc:
+        artifact_ok = False
+        print("committed artifact error:", exc)
+    print("committed artifact matches exact reconstruction:", artifact_ok)
+    ok &= artifact_ok
+
+print("PASS" if ok else "FAIL")
+raise SystemExit(0 if ok else 1)

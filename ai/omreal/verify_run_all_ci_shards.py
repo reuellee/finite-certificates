@@ -14,6 +14,18 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 RUN_ALL = ROOT / "run_all.py"
 COUNTS = (1, 2, 4, 7)
+EXPECTED_DELEGATED = {
+    "verify_diag2_escape_set_atlas178.py",
+    "verify_diag2_pivot_49_pair_saturation.py",
+    "verify_diag2_pivot_all_pair_fibers.py",
+    "verify_diag3_ordered_root_atlas178.py",
+    "verify_diag3_pair_parent_source_block_labels.py",
+}
+EXPECTED_EXTERNAL = {"verify_diag3_triple_common_scaling_no_go.py"}
+EXPECTED_SELECTED_COUNT = 199
+EXPECTED_ONE_SHARD_DIGEST = (
+    "a784ed06ba3015e85b714f6d825188160d090d399893abdb7436c39b95cae0c4"
+)
 
 
 def literal_set(tree, name):
@@ -90,7 +102,11 @@ def audit(payload, expected, count):
 
 def main():
     discovered, selected, delegated, external = direct_selected()
-    if len(delegated) != 3 or len(external) != 1:
+    if len(selected) != EXPECTED_SELECTED_COUNT:
+        raise AssertionError(
+            f"selected verifier census changed: {len(selected)} != {EXPECTED_SELECTED_COUNT}"
+        )
+    if delegated != EXPECTED_DELEGATED or external != EXPECTED_EXTERNAL:
         raise AssertionError("nonsharded verifier census changed")
     if len(discovered - selected) != len(delegated | external):
         raise AssertionError("delegated verifier census changed")
@@ -99,6 +115,8 @@ def main():
         payload = manifest(count)
         audit(payload, selected, count)
         digests[str(count)] = payload["partition_sha256"]
+    if digests["1"] != EXPECTED_ONE_SHARD_DIGEST:
+        raise AssertionError("selected verifier manifest changed")
     print("PASS deterministic shard manifests", digests)
     print("PASS exact union/disjointness", len(selected), "selected verifiers")
     print("PASS delegated verifier census", len(delegated))

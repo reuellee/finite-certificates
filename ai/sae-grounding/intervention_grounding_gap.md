@@ -395,11 +395,10 @@ fine-tuned.
 
 The construction can be embedded directly in the hierarchical
 two-concept distribution used in the companion SAE-identifiability
-analysis (the companion observational certificate is, after two
-adversarial review rounds, VERIFIED-SOUND in revised form -- its
-Certificate C uses a support-irreducible pair -- and lives in the same
-repository; the present corollary uses only the shared distribution and
-is independent of the companion's claims). At the exact absorption wall,
+analysis (the companion's revised Certificate C uses a support-irreducible
+pair and lives in the same repository; the present corollary uses only the
+shared distribution and is independent of the companion's claims). At the
+exact absorption wall,
 let
 
 Pr(P=0,C=0)=1-p0-q, Pr(1,0)=p0, Pr(1,1)=q, Pr(0,1)=0.

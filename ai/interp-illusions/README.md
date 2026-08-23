@@ -1,6 +1,6 @@
 # Four exact minimal networks on which standard interpretability methods lie
 
-`certificates.md` — four verifiers. Gemini adversarial review: VERIFIED-SOUND.
+`certificates.md` — four exact verifiers.
 
 Each is a smallest-known explicit network on which a widely used interpretability
 method returns a confidently wrong answer:

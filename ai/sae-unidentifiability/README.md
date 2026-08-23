@@ -1,7 +1,8 @@
 # An absorbed feature's conditional rate is unidentifiable without labels
 
 `unidentifiability-certificate.md` — `verify_unidentifiability.py` (**49 exact
-checks**). Gemini adversarial review: round 1 BLOCKING → revised → VERIFIED-SOUND.
+checks**). A blocking adversarial objection was resolved by the revised Certificate C
+construction and exact replay.
 
 Finite certificates that the conditional rate ρ of an absorbed child feature cannot be
 recovered from activations alone. The construction culminates in **Certificate C**

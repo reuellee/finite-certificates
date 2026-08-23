@@ -10,8 +10,8 @@ answered by the experiment's own design and is downgraded.
 
 Inputs: `Causal_Ontology_Coherence_Inversion_Report.pdf`,
 `EMPIRICAL_VERIFICATION_DOSSIER.md` (4,900 lines, appendices A–Q, 120 SAEs),
-`AUDIT_REPORT.md` + `audit_dossier.py` (this directory),
-`reviews/GEMINI_coherence_transfer_audit_review.md`.
+`AUDIT_REPORT.md` + `audit_dossier.py` (this directory), and the archived
+cross-model review whose material findings are adjudicated below.
 
 ---
 

@@ -1,7 +1,6 @@
 # Coherence penalties provably distort the features they are meant to fix
 
-`overcomplete_coherence.md` — `verify_overcomplete_coherence.py`. Gemini adversarial
-review: VERIFIED-SOUND.
+`overcomplete_coherence.md` — `verify_overcomplete_coherence.py`.
 
 At λ = 1/5, β = 1/16, an explicit rational **5-12-13 frame strictly beats every 3-atom
 dictionary containing the true features** under the Gram penalty. The class-wide
