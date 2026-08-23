@@ -1,0 +1,134 @@
+{
+  "format": "extension-path-alternation-manifest-v1",
+  "expedition": "MP-001",
+  "status": "OBSERVATION",
+  "status_reason": "The finite computations are exact and structurally checked, but the expedition was retrospective and has no registered holdout or transfer path.",
+  "scope": {
+    "parent_cell": 2599,
+    "signature_universe": 97224,
+    "source_chart": 0,
+    "target_chart": 152,
+    "path_family": "all parent-safe three-block column orders between the pinned chart-0 and chart-152 representatives",
+    "valid_block_orders": [
+      [0, 1, 2],
+      [0, 2, 1],
+      [1, 0, 2]
+    ],
+    "excluded_claims": [
+      "optimality over arbitrary paths in the parent cell",
+      "a global row-2599 invariant",
+      "a theorem about all oriented matroids",
+      "continuous connected-component counts without wall and waypoint semantics",
+      "novelty of binary total variation, run counts, or consecutive-ones language",
+      "any change to the honest 9DVL score"
+    ]
+  },
+  "provenance": {
+    "producer": {
+      "path": "ai/scouting/explore_extension_path_alternation.py",
+      "sha256": "be07ba1068bf364e00ab1c8d85dcfdd06bad41ae64593c57294b696aee027c12"
+    },
+    "inputs": [
+      {
+        "path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json",
+        "sha256": "87f2d7ce337651cea498cc50d36c1b53c8b2294aef54ceac89f0fcc552c7b2d2"
+      },
+      {
+        "path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json",
+        "sha256": "c6071484960d8bde8c0140aac40ec2a065cc7597d23fcadb3503b25d87f5466a"
+      },
+      {
+        "path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_BLOCK_BRIDGE_0_152.json",
+        "sha256": "b5af4b5e31c814ddd6aad1d095c80b35e6f79e55d1228df3b1400a9c44845337"
+      },
+      {
+        "path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_BLOCK_LABELS_0_152.json",
+        "sha256": "63b2df38eb82fb126d659cc7150080b55108eb00a29dff639cd556c38750c4da"
+      },
+      {
+        "path": "ai/omreal/data/seeat_parent2599_upper178.npz",
+        "sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a"
+      },
+      {
+        "path": "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz",
+        "sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc"
+      },
+      {
+        "path": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin",
+        "sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f"
+      },
+      {
+        "path": "ai/omreal/certs_4_8.jsonl",
+        "sha256": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b"
+      }
+    ]
+  },
+  "results": [
+    {
+      "path": "ai/scouting/data/EXTENSION_PATH_ALTERNATION_SOURCE.json",
+      "sha256": "d04db088ad60de0a7f87a79e6d0809b58343e87e07eb4a7c055bfe3abf8e537e",
+      "semantic_sha256": "498df04680724fc1c491ccc8a0f8172611df08abeca07688d0207f43fffe1d17",
+      "path_id": "row2599-chart-0-to-89",
+      "events": 1237,
+      "transition_mass": 10556,
+      "endpoint_symmetric_difference": 9504,
+      "transition_spectrum": {"0": 87208, "1": 9490, "2": 512, "3": 14},
+      "tail_counts": {"1": 10016, "2": 526, "3": 14},
+      "maximum_alternation": 3,
+      "maximizer_count": 14
+    },
+    {
+      "path": "ai/scouting/data/EXTENSION_PATH_ALTERNATION_BLOCK.json",
+      "sha256": "2f0d85e1787e8d0a8f9a0c922cb0d094217aefb4a47b80d5d54b392bd9c34a20",
+      "semantic_sha256": "0d1243882d7700bc5edade065e65824d99f2e21cad043c96486594665d835531",
+      "path_id": "row2599-chart-0-to-152-three-block",
+      "block_order": [0, 1, 2],
+      "events": 5612,
+      "transition_mass": 48788,
+      "endpoint_symmetric_difference": 24996,
+      "transition_spectrum": {"0": 62080, "1": 23496, "2": 9914, "3": 1486, "4": 234, "5": 14},
+      "tail_counts": {"1": 35144, "2": 11648, "3": 1734, "4": 248, "5": 14},
+      "maximum_alternation": 5,
+      "maximizer_count": 14
+    },
+    {
+      "path": "ai/scouting/data/EXTENSION_PATH_ALTERNATION_ORDER_021.json",
+      "sha256": "5426487f98fa3c7c1f2f281f2c4fcd7e96ea90a0510aac0dd73b018b1a4c1773",
+      "semantic_sha256": "09ce6be22d2362b7f53829b7dc817aebf5f66584621ac28b900c5c6059195bd8",
+      "path_id": "row2599-chart-0-to-152-order-021",
+      "block_order": [0, 2, 1],
+      "events": 5970,
+      "transition_mass": 53436,
+      "endpoint_symmetric_difference": 24996,
+      "transition_spectrum": {"0": 60902, "1": 22378, "2": 11070, "3": 2598, "4": 256, "5": 20},
+      "tail_counts": {"1": 36322, "2": 13944, "3": 2874, "4": 276, "5": 20},
+      "maximum_alternation": 5,
+      "maximizer_count": 20
+    },
+    {
+      "path": "ai/scouting/data/EXTENSION_PATH_ALTERNATION_ORDER_102.json",
+      "sha256": "775011c7b0e6e41e65acc014aa9c73b2cc6945283014a68e28dfb7a332831411",
+      "semantic_sha256": "c8e6ff76727694e0bdc0b8a4eaa74a680871f6cac7c721738975b84a78f09998",
+      "path_id": "row2599-chart-0-to-152-order-102",
+      "block_order": [1, 0, 2],
+      "events": 5564,
+      "transition_mass": 46844,
+      "endpoint_symmetric_difference": 24996,
+      "transition_spectrum": {"0": 62990, "1": 23440, "2": 9110, "3": 1554, "4": 128, "5": 2},
+      "tail_counts": {"1": 34234, "2": 10794, "3": 1684, "4": 130, "5": 2},
+      "maximum_alternation": 5,
+      "maximizer_count": 2
+    }
+  ],
+  "finite_conclusions": {
+    "restricted_block_order_minimax": 5,
+    "strict_tail_dominator": [1, 0, 2],
+    "strict_tail_dominance_thresholds": [1, 2, 3, 4, 5],
+    "strictly_fewer_events_than_other_valid_orders": true,
+    "strictly_smaller_transition_mass_than_other_valid_orders": true,
+    "pairwise_disjoint_maximizer_sets_across_all_four_paths": true,
+    "retrospective_shared_exceptional_core_candidate": "REFUTED"
+  },
+  "application": "For this complete finite route class, choose order 102 to reduce exact replay work and the high-alternation certificate tail without increasing the bottleneck alternation.",
+  "honest_9dvl_score": "2/9"
+}
