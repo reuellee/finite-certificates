@@ -4,10 +4,10 @@
 --fast skips the slow verifiers, including the expensive diagonal-two
 atlases, canonical-edge, mutation-square, separator, and saturation replays.
 
---ci-delegated additionally skips verifiers that the required GitHub workflow
-runs in their own jobs.  Verifiers that deliberately require a regenerable
-external artifact are always reported and skipped; invoke those directly with
-the pinned argument documented in their proof note.
+--ci-delegated additionally skips verifiers that the GitHub workflow runs in
+dedicated change-aware or full-replay jobs. Verifiers that deliberately require
+a regenerable external artifact are always reported and skipped; invoke those
+directly with the pinned argument documented in their proof note.
 ``--shard INDEX/COUNT`` deterministically partitions the selected verifier
 universe.  The unsharded command remains exhaustive.  ``--list-shards COUNT``
 emits the exact partition without running verifiers so CI can independently
@@ -63,6 +63,8 @@ SLOW = {
 }
 CI_DELEGATED = {
     "verify_diag2_escape_set_atlas178.py",
+    "verify_diag2_pivot_49_pair_saturation.py",
+    "verify_diag2_pivot_all_pair_fibers.py",
     "verify_diag3_ordered_root_atlas178.py",
     "verify_diag3_pair_parent_source_block_labels.py",
 }
@@ -115,7 +117,7 @@ def selected(paths, *, fast: bool, ci_delegated: bool):
         elif fast and path.name in SLOW:
             reason = "--fast"
         elif ci_delegated and path.name in CI_DELEGATED:
-            reason = "--ci-delegated; separate required CI job"
+            reason = "--ci-delegated; dedicated change-aware/full CI job"
         if reason is None:
             chosen.append(path)
         else:

@@ -14,6 +14,14 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 RUN_ALL = ROOT / "run_all.py"
 COUNTS = (1, 2, 4, 7)
+EXPECTED_DELEGATED = {
+    "verify_diag2_escape_set_atlas178.py",
+    "verify_diag2_pivot_49_pair_saturation.py",
+    "verify_diag2_pivot_all_pair_fibers.py",
+    "verify_diag3_ordered_root_atlas178.py",
+    "verify_diag3_pair_parent_source_block_labels.py",
+}
+EXPECTED_EXTERNAL = {"verify_diag3_triple_common_scaling_no_go.py"}
 
 
 def literal_set(tree, name):
@@ -90,7 +98,7 @@ def audit(payload, expected, count):
 
 def main():
     discovered, selected, delegated, external = direct_selected()
-    if len(delegated) != 3 or len(external) != 1:
+    if delegated != EXPECTED_DELEGATED or external != EXPECTED_EXTERNAL:
         raise AssertionError("nonsharded verifier census changed")
     if len(discovered - selected) != len(delegated | external):
         raise AssertionError("delegated verifier census changed")

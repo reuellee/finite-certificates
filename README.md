@@ -47,9 +47,12 @@ python3 run_all.py --fast
 python3 run_all.py
 ```
 
-`run_all.py` discovers every `verify_*.py` script. CI partitions the selected suite
-into a deterministic, independently audited four-shard cover. Some verifiers
-regenerate committed artifacts, so a full replay may leave an informational diff.
+`run_all.py` discovers every `verify_*.py` script. Pull requests get a small structural
+gate plus exact checks selected from the changed proof surface; documentation-only
+changes do not rebuild millions of certificates. Manual dispatches and the weekly run
+replay the deterministic, independently audited four-shard cover and every dedicated
+large audit. See the [verification policy](docs/VERIFICATION.md) for the routing
+contract, canaries, and local commands.
 
 Useful direct checks:
 

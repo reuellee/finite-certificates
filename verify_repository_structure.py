@@ -13,6 +13,7 @@ ENTRY_POINTS = (
     "README.md",
     "CONTRIBUTING.md",
     "docs/RESEARCH_INDEX.md",
+    "docs/VERIFICATION.md",
     "ai/maxout/README.md",
     "ai/omgamma/README.md",
     "ai/omopen/FINAL_RESIDUE.md",
@@ -25,6 +26,7 @@ NAVIGATION_DOCS = (
     "README.md",
     "CONTRIBUTING.md",
     "docs/RESEARCH_INDEX.md",
+    "docs/VERIFICATION.md",
     "ai/omreal/README.md",
 )
 REQUIRED_IGNORES = frozenset({"/backups/", "/reviews/"})
