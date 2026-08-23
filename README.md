@@ -54,18 +54,23 @@ For diagonal 3, the exact research pipeline has now:
 
 The selected route is the coverage-certified nonrelative master-closure compiler. The 5,803-factor residue remains an input gap, but standalone wall classification and further chart-0/chart-152 staircase refinement are subordinated because neither can by itself prove diagonal three.
 
-The diagonal-nine pivot now has its first exact parent-860 codimension-two
-checkpoint.  On a rational `(h,i)` disk of radius `10^-6`, exactly two of all
-26,740 primitive residual factors occur and cross transversely.  Complete
-derived-tope enumeration produces four 26,112-label chambers, four wall rays,
-and a 26,038-label node.  Every finite common-feasibility locus on the disk is
-empty or convex; an independent verifier rejects four hostile corruptions.
-This is a local theorem, not parent-space coverage, so the score remains
-`2/9`.  The machine-checked
+The diagonal-nine pivot now has an exact parent-860 codimension-two checkpoint
+and a complete first plane-projection frontier.  On a rational `(h,i)` disk of
+radius `10^-6`, exactly two of all 26,740 primitive residual factors cross
+transversely, giving four fully labelled chambers and a local convexity
+theorem.  On the complete selected parent triangle, exact restriction and
+quadratic optimization reduce the global census to 1,553 open-triangle curves
+plus 192 boundary-only curves.  A depth-eight exact Bernstein cover excludes
+727,317 of 1,205,128 open-curve pairs, while the remaining pairs produce
+396,369 distinct degree-at-most-four resultants and 402,031 open horizontal
+roots counted per primitive polynomial.  This triggers the predeclared
+projection-growth stop: root isolation and common-coordinate validation must
+be sharded before chamber lifting.  Neither checkpoint is parent-space
+coverage, so the score remains `2/9`.  The machine-checked
 [`diagonal-nine decision ledger`](ai/omreal/data/DIAG9_RESEARCH_DECISION_LEDGER.json)
-selects coverage-certified expansion of this node in one parent-860 plane as
-the next bounded target; see
-[`DIAG9_PARENT860_TRANSVERSE_NODE.md`](ai/omreal/DIAG9_PARENT860_TRANSVERSE_NODE.md).
+selects that sharded isolation/validation stage as the next bounded target;
+see [`DIAG9_PARENT860_TRANSVERSE_NODE.md`](ai/omreal/DIAG9_PARENT860_TRANSVERSE_NODE.md)
+and [`DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md`](ai/omreal/DIAG9_PARENT860_PLANE_PROJECTION_FRONTIER.md).
 
 - [`ai/omreal/NINE_DIAGONAL_STATUS.md`](ai/omreal/NINE_DIAGONAL_STATUS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)
