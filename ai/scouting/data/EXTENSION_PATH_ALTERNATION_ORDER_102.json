@@ -1,0 +1,78 @@
+{
+  "block_order": [
+    1,
+    0,
+    2
+  ],
+  "compound_event_count": 275,
+  "endpoint_symmetric_difference": 24996,
+  "events": 5564,
+  "events_sha256": "5b7a906cb8b62023182a6776fc08404fabd0df5a2f864321fe136711e0fab10d",
+  "identities": {
+    "odd_alternation_signatures_equal_endpoint_symmetric_difference": true,
+    "transition_mass_equals_sum_of_event_symmetric_differences": true
+  },
+  "maximizer_count": 2,
+  "maximizers": [
+    {
+      "antipode": 58432476817129479,
+      "event_indices": [
+        40,
+        680,
+        2223,
+        3256,
+        4809
+      ],
+      "hex": "3067f8cff7fff8",
+      "signature": 13625117220798456
+    },
+    {
+      "antipode": 13625117220798456,
+      "event_indices": [
+        40,
+        680,
+        2223,
+        3256,
+        4809
+      ],
+      "hex": "cf980730080007",
+      "signature": 58432476817129479
+    }
+  ],
+  "maximizers_antipode_closed": true,
+  "maximum_alternation": 5,
+  "path_id": "row2599-chart-0-to-152-order-102",
+  "segment_event_census": [
+    1050,
+    2693,
+    1821
+  ],
+  "segment_factor_root_count_census": [
+    {
+      "0": 16774,
+      "1": 1050
+    },
+    {
+      "0": 15140,
+      "1": 2675,
+      "2": 9
+    },
+    {
+      "0": 16008,
+      "1": 1811,
+      "2": 5
+    }
+  ],
+  "segments": 3,
+  "semantic_sha256": "c8e6ff76727694e0bdc0b8a4eaa74a680871f6cac7c721738975b84a78f09998",
+  "signature_universe": 97224,
+  "transition_mass": 46844,
+  "transition_spectrum": {
+    "0": 62990,
+    "1": 23440,
+    "2": 9110,
+    "3": 1554,
+    "4": 128,
+    "5": 2
+  }
+}
