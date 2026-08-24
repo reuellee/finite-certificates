@@ -987,11 +987,40 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_regular_residual_section_lift.py",
         ],
     }
+    final_sections = progress["twenty_fifth_pair_first_four_support_final_section_lift"]
+    assert final_sections == {
+        "status": "PROVED",
+        "scope": "complete exact base lifts for all final higher-multiplicity and count-changing algebraic t sections using ordered degree-at-most-four number-field Sturm certificates",
+        "completed_sections": 28,
+        "section_kind_census": {
+            "count_change": 14,
+            "same_count": 7,
+            "unchanged": 7,
+        },
+        "minimal_degree_census": {"1": 6, "2": 11, "3": 9, "4": 2},
+        "vertical_zero_factor_incidences": 1,
+        "boundary_zero_factor_incidences": 33,
+        "section_u_root_points": 1_862,
+        "section_u_strips": 1_890,
+        "section_base_cells": 3_752,
+        "all_1693_algebraic_t_section_base_lifts": "COMPLETE",
+        "remaining_algebraic_t_sections": 0,
+        "sections_sha256": "244b48f6824fdfc524505b2d669b6dcd9ff028d0f8d9247fe1cafacb093458e2",
+        "semantic_sha256": "312a564de346a75c9393446fbaf32a4a2e97ffe50f5665983fade0d9210da859",
+        "hostile_corruptions_rejected": 12,
+        "v_fiber_lift": "NOT_YET_CONSTRUCTED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_FINAL_SECTION_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_FINAL_SECTION_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_final_section_lift.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "resolve the remaining 28 algebraic t sections"
+        "lift the 22 original walls"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1040,6 +1069,7 @@ def main() -> None:
     print("PASS twenty-second constant-stack lift: 363 fibers -> 42515 base cells")
     print("PASS twenty-third multi-crossing lift: 240 fibers -> 40084 base cells -> 68-section frontier")
     print("PASS twenty-fourth regular-residual lift: 40 fibers -> 4610 base cells -> 28-section frontier")
+    print("PASS twenty-fifth final-section lift: 28 fibers -> 3752 base cells -> 0-section frontier")
     print("LEDGER_GIT_BLOB", digest)
 
 

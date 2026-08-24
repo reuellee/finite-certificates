@@ -1439,6 +1439,28 @@ the interior `u` fiber, completing 21,076 root points and 21,439 strips.  The
 remaining algebraic frontier is now 43 complex unchanged stacks, 251 complex
 same-count transitions, and 14 root-count changes.
 
+The simultaneous and regular residual lifts then complete another 280
+sections.  The first tranche resolves 240 pure-resultant same-count fibers by
+proving that 1,390 visible inversions decompose into 549 exact collision
+cliques.  The second resolves 36 unchanged and four same-count fibers whose
+193 resultants are simple and whose four coefficient events are strictly
+non-leading.  Together they add 44,694 base cells and reduce the exact
+algebraic frontier to 28 sections.
+
+The final 28 fibers are now complete by an ordered-number-field Sturm
+certificate.  Their section parameters have degrees at most four.  For each
+selected real embedding, standard-library exact arithmetic in `Q[t]/(q)`
+reconstructs all 114 specialized base factors, proves every common-root owner
+group by a polynomial gcd, and matches every factor's total Sturm count to its
+claimed disjoint rational `u` intervals.  This uniformly covers 14 root-count
+changes, seven exceptional same-count transitions, seven complex unchanged
+stacks, one vertical-zero incidence, and 33 bounded-boundary incidences.  It
+adds 1,862 root points and 1,890 strips, so all 1,693 algebraic `t` sections
+are complete at the base level.  The next pair obligation is the lift of the
+one base-only, 20 linear, and one quadratic original wall in `v`, followed by
+face-compatible gluing, labels, and middle-rank replay.  None of those later
+obligations is claimed here; the honest 9DVL score remains `2/9`.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1810,6 +1832,11 @@ same-count transitions, and 14 root-count changes.
   unchanged plus four same-count regular residual fibers, 193 simple
   resultants, four harmless non-leading coefficient events, and 4,610 section
   cells, leaving 28 harder sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_FINAL_SECTION_LIFT.md`, its rational
+  interval/owner catalog, builder, and independent standard-library
+  number-field Sturm verifier: all final 28 algebraic fibers, 3,752 section
+  cells, one vertical and 33 boundary degeneracies, leaving zero algebraic
+  `t` sections unresolved.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
