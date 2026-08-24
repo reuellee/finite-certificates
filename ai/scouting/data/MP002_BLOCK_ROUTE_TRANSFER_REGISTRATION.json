@@ -1,0 +1,111 @@
+{
+  "format": "mathematical-prospecting-registration-v1",
+  "expedition_id": "MP-002",
+  "title": "Block-route event-count transfer",
+  "status": "REGISTERED_BEFORE_HOLDOUT_OBSERVATION",
+  "registered_date": "2026-08-24",
+  "honest_9dvl_score": "2/9",
+  "object_selection": {
+    "parent": 2599,
+    "source_chart": 0,
+    "excluded_prior_endpoints": [
+      89,
+      152
+    ],
+    "eligible_endpoint_rule": "at least two of the six one-column-at-a-time block orders have every waypoint strictly inside all 70 signed parent brackets",
+    "selection_rule": "minimum endpoint residual-factor-state Hamming distance, then minimum chart index",
+    "eligible_endpoint_count": 13,
+    "eligible_endpoint_frontier": [
+      [1812, 66, ["102", "120", "210"]],
+      [2038, 19, ["120", "210"]],
+      [2859, 151, ["012", "021"]],
+      [3298, 107, ["012", "021", "102", "120", "201", "210"]],
+      [3536, 133, ["021", "201"]],
+      [3634, 149, ["012", "021"]],
+      [3864, 86, ["012", "021", "201"]],
+      [4110, 104, ["012", "021", "102", "120", "201", "210"]],
+      [4142, 127, ["012", "021", "102", "120", "201", "210"]],
+      [4378, 153, ["012", "021", "201"]],
+      [4675, 79, ["120", "210"]],
+      [4729, 60, ["012", "021"]],
+      [4881, 7, ["120", "201", "210"]]
+    ],
+    "eligible_endpoint_frontier_sha256": "8dbc8a8505f12767a9f3cdfa8a9cb1b1cdf359a33ae6a6c323d80ab6ad4d5f3d",
+    "selected_target_chart": 66,
+    "selected_endpoint_hamming_distance": 1812,
+    "registered_valid_orders": [
+      "102",
+      "120",
+      "210"
+    ]
+  },
+  "registered_observables": {
+    "phase_a_route_cost": [
+      "exact interior wall-event count",
+      "segment event census",
+      "compound-event count"
+    ],
+    "phase_b_holdout": [
+      "membership alternation spectrum on the 97224-signature universe",
+      "maximum alternation",
+      "all nonzero alternation tail counts",
+      "transition mass"
+    ]
+  },
+  "prediction_protocol": {
+    "phase_a": "generate exact wall events for all three registered routes without constructing or inspecting any extension-label history",
+    "predictor": "the route with the fewest exact wall events; break an event-count tie by lexicographically smallest order",
+    "freeze_gate": "commit the predicted order and all three event counts before any phase-b label continuation",
+    "transfer_success": "the frozen predicted route weakly minimizes every nonzero alternation tail among the three held-out routes and is strictly smaller at at least one threshold",
+    "transfer_refutation": "some other registered route has a strictly smaller alternation tail at any threshold",
+    "secondary_statistics": "maximum alternation and transition mass are reported but do not replace the tail criterion"
+  },
+  "resource_contract": {
+    "routes": 3,
+    "maximum_events_per_route": 10000,
+    "maximum_total_events": 25000,
+    "exact_replays_per_route": 1,
+    "worker_ceiling": 6,
+    "hard_stops": [
+      "a registered waypoint leaves the strict parent cell",
+      "a factor-state endpoint mismatch occurs",
+      "an event isolation interval overlaps its successor",
+      "a route exceeds 10000 events",
+      "the three routes exceed 25000 total events",
+      "phase-b labels are inspected before the prediction freeze commit"
+    ]
+  },
+  "claim_boundary": {
+    "possible_success_status": "EXACT_FINITE_FACT after independent replay and prior-art review",
+    "possible_failure_status": "REFUTED transfer candidate with the exact held-out counterexample retained",
+    "excluded_claims": [
+      "all block-route classes",
+      "all endpoints in the row-2599 parent cell",
+      "all oriented matroids",
+      "a general equivalence between wall-event count and alternation",
+      "any change to the honest 9DVL score"
+    ]
+  },
+  "pinned_inputs": [
+    {
+      "path": "ai/omreal/certs_4_8.jsonl",
+      "sha256": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b"
+    },
+    {
+      "path": "ai/omreal/data/seeat_parent2599_upper178.npz",
+      "sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz",
+      "sha256": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf"
+    },
+    {
+      "path": "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz",
+      "sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc"
+    },
+    {
+      "path": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin",
+      "sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f"
+    }
+  ]
+}

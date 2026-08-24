@@ -147,6 +147,7 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.p
 | Maxout polytopes | **`max f₀(3,5)=42`**; `(4,4)` and `(4,6)` resolved; `(3,8)` achievability certified | [`ai/maxout/`](ai/maxout/) |
 | OM mutation graphs | Connected for every uniform OM rank with `n <= 9`; corrected `(4,9)` class count | [`ai/omgamma/`](ai/omgamma/) |
 | OM non-realizability | Minor-closure census, generic minimal obstructions, Proposition R | [`ai/omminor/`](ai/omminor/) |
+| Mathematical prospecting | MP-002 exactly refutes transfer from minimum wall-event count to minimum alternation tails on a preregistered three-route holdout; the tail Pareto frontier has two routes | [`ai/scouting/MP002_BLOCK_ROUTE_TRANSFER.md`](ai/scouting/MP002_BLOCK_ROUTE_TRANSFER.md) |
 | 9DVL / realizability | **2/9 proved**; the first two four-support domains have a complete 527,533-cell base CAD, the open-base-cell `v` lift certifies 4,496,636 cells, and the regular algebraic-`u` lift adds 3,739,392 cells over 120,174/132,134 sections; the exact 11,960-section residue, algebraic-`t` `v` lifts, global gluing, labels, middle-rank replay, and both diagonal-three invariant obligations remain open | [`ai/omreal/`](ai/omreal/) |
 | SEEAT | Single-element extension atlas theorem; exact one-chart capacity 26,112; row-2599 atlas width bounded `7 <= width <= 178` | [`ai/omreal/SEEAT.md`](ai/omreal/SEEAT.md) |
 | SAE absorption | Exact failures of feature-absorption identification | [`ai/absorption-metric/`](ai/absorption-metric/) |

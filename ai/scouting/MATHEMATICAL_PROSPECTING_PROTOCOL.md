@@ -182,3 +182,28 @@ The result, manifest, verifier, and application are recorded in
 `MP001_EXTENSION_PATH_ALTERNATION.md`.  Because this was retrospective and no
 holdout or transfer path was registered, MP-001 remains `OBSERVATION` rather
 than entering the durable result index.
+
+## Expedition 002: block-route event-count transfer
+
+### Registered transfer
+
+MP-002 mechanically selected the unused row-2599 chart-0-to-chart-66 endpoint
+and its complete class of three parent-safe block orders before constructing
+any new extension-label history.  The exact wall-event minimum, frozen in a
+separate commit, predicted order `102` would weakly minimize every nonzero
+alternation tail among orders `102`, `120`, and `210`.
+
+### Held-out outcome
+
+The candidate is `REFUTED`.  Order `102` uses 4,228 exact wall events and has
+824 signatures with alternation at least three.  Order `120` uses 4,362 events
+but has only 476 signatures in that tail.  The exact gap is 348.  Both routes
+tail-dominate `210`, so the finite tail Pareto frontier is `{102, 120}` and the
+restricted minimax alternation remains five.
+
+The retained application is methodological and concrete: certificate-route
+selection must keep wall-event count and the alternation-tail vector as
+separate Pareto coordinates.  Full quantifiers, chronology, exact records,
+prior-art boundary, hostile verifier, and replay commands are in
+`MP002_BLOCK_ROUTE_TRANSFER.md`.  The result has no effect on the 9DVL theorem
+score.

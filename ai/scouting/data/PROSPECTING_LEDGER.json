@@ -52,6 +52,49 @@
         "ai/scouting/data/EXTENSION_PATH_ALTERNATION_ORDER_021.json",
         "ai/scouting/data/EXTENSION_PATH_ALTERNATION_ORDER_102.json"
       ]
+    },
+    {
+      "id": "MP-002",
+      "title": "Block-route event-count transfer",
+      "status": "REFUTED",
+      "discovery_source": "MP-001 chart-0-to-chart-152 block-route comparison",
+      "holdout_object": "row2599-chart-0-to-66 all parent-safe three-block orders",
+      "holdout_selection_rule": "minimum endpoint factor-state Hamming distance among previously unused endpoints with at least two parent-safe block orders, then chart index",
+      "registered_valid_orders": [
+        [1, 0, 2],
+        [1, 2, 0],
+        [2, 1, 0]
+      ],
+      "registered_observable": "whether the minimum exact wall-event route weakly minimizes every nonzero extension-membership alternation tail",
+      "resource_ceiling": "three routes, at most 10000 events per route and 25000 total events, one observational exact continuation per route; the independent verification replay is outside the discovery budget",
+      "prediction_freeze_required_before_label_continuation": true,
+      "outcome": {
+        "frozen_prediction": "102",
+        "exact_counterexample": "order 102 uses 4228 events but has 824 signatures with alternation at least 3; order 120 uses 4362 events but has only 476 such signatures",
+        "tail_gap": 348,
+        "tail_pareto_frontier": [
+          [1, 0, 2],
+          [1, 2, 0]
+        ],
+        "restricted_minimax_alternation": 5,
+        "application": "retain event count and the alternation-tail vector as separate Pareto coordinates for certificate-route selection",
+        "honest_9dvl_score_effect": "NONE"
+      },
+      "artifacts": [
+        "ai/scouting/MP002_BLOCK_ROUTE_TRANSFER.md",
+        "ai/scouting/REVIEW_MP002_BLOCK_ROUTE_TRANSFER_2026-08-24.md",
+        "ai/scouting/explore_block_route_transfer.py",
+        "ai/scouting/build_mp002_holdout_history_archive.py",
+        "ai/scouting/build_mp002_block_route_transfer_manifest.py",
+        "ai/scouting/verify_mp002_block_route_transfer.py",
+        "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_REGISTRATION.json",
+        "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_PREDICTION.json",
+        "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_ORDER_102.json",
+        "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_ORDER_120.json",
+        "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_ORDER_210.json",
+        "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_MANIFEST.json",
+        "ai/scouting/data/MP002_HOLDOUT_HISTORY.tar.gz"
+      ]
     }
   ]
 }
