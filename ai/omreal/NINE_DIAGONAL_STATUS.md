@@ -1421,8 +1421,8 @@ exact specializations.  Standard-library Sturm replay certifies 132,134
 ordered `u`-root sections and 133,828 open strips, hence 265,962 open-sector
 base cells.  A bounded-square audit proves that all 28 nonconstant `u=1`
 evaluations factor through seven already projected factors; no boundary event
-was missing.  The remaining base step is the 1,693 algebraic-section fibers
-and their incidence maps to these stacks.
+was missing.  The algebraic-section base fibers described below now complete
+the base CAD; their incidence maps remain part of the later global gluing.
 
 Of those algebraic fibers, 1,022 are now complete simple transversal
 crossings.  Each is exactly one adjacent swap of two root labels; the swapped
@@ -1438,6 +1438,37 @@ and one intermediate coefficient.  Exact replay proves the event cannot alter
 the interior `u` fiber, completing 21,076 root points and 21,439 strips.  The
 remaining algebraic frontier is now 43 complex unchanged stacks, 251 complex
 same-count transitions, and 14 root-count changes.
+
+The simultaneous and regular residual lifts then complete another 280
+sections.  The first tranche resolves 240 pure-resultant same-count fibers by
+proving that 1,390 visible inversions decompose into 549 exact collision
+cliques.  The second resolves 36 unchanged and four same-count fibers whose
+193 resultants are simple and whose four coefficient events are strictly
+non-leading.  Together they add 44,694 base cells and reduce the exact
+algebraic frontier to 28 sections.
+
+The final 28 fibers are now complete by an ordered-number-field Sturm
+certificate.  Their section parameters have degrees at most four.  For each
+selected real embedding, standard-library exact arithmetic in `Q[t]/(q)`
+reconstructs all 114 specialized base factors, proves every common-root owner
+group by a polynomial gcd, and matches every factor's total Sturm count to its
+claimed disjoint rational `u` intervals.  This uniformly covers 14 root-count
+changes, seven exceptional same-count transitions, seven complex unchanged
+stacks, one vertical-zero incidence, and 33 bounded-boundary incidences.  It
+adds 1,862 root points and 1,890 strips, so all 1,693 algebraic `t` sections
+are complete at the base level.
+
+The open-base-cell portion of the `v` lift is also complete.  Exact rational replay orders all
+22 original walls over every one of the 133,828 full-dimensional base cells
+lying in an open `t` sector and open `u` strip.  The 2,082 distinct order
+signatures contain 2,181,404 interior `v`-root sections and 2,315,232 open
+`v` strips, for 4,496,636 lifted cells.  A separate factorization audit proves
+all 44 `v=0,1` endpoint evaluations are already controlled by the base or
+univariate projection catalogs.  The next pair obligation is the lift over
+the 132,134 algebraic `u`-section fibers in the open `t` sectors, followed by
+the algebraic `t`-section base cells, face-compatible gluing, labels, and
+middle-rank replay.  None of those later obligations is claimed here; the
+honest 9DVL score remains `2/9`.
 
 ## Exact artifacts
 
@@ -1810,6 +1841,15 @@ same-count transitions, and 14 root-count changes.
   unchanged plus four same-count regular residual fibers, 193 simple
   resultants, four harmless non-leading coefficient events, and 4,610 section
   cells, leaving 28 harder sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_FINAL_SECTION_LIFT.md`, its rational
+  interval/owner catalog, builder, and independent standard-library
+  number-field Sturm verifier: all final 28 algebraic fibers, 3,752 section
+  cells, one vertical and 33 boundary degeneracies, leaving zero algebraic
+  `t` sections unresolved.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_CELL_V_LIFT.md`, its 32 hash-pinned
+  shards, builder, and independent standard-library exact-rational verifier:
+  all 133,828 full-dimensional open base cells lifted through the 22 original
+  walls to 4,496,636 certified cells, with 40/40 hostile mutations rejected.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
