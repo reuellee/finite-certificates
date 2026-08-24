@@ -24,7 +24,9 @@ Mutation graphs of uniform oriented matroids are connected at every rank for `n 
 
 ### 3. Nine-Diagonal Vanishing Lemma: 2 of 9 diagonals proved
 
-The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally. Diagonal 3 is the active frontier.
+The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally.
+Diagonal 3 remains incomplete; the current bounded research pivot attacks the
+connectivity-only ninth diagonal without changing that score.
 
 For diagonal 3, the exact research pipeline has now:
 
@@ -52,6 +54,19 @@ For diagonal 3, the exact research pipeline has now:
 - preserved the main missing obligation honestly: a coverage-certified global nonrelative master closure complex and the final relative middle-rank replay.
 
 The selected route is the coverage-certified nonrelative master-closure compiler. The 5,803-factor residue remains an input gap, but standalone wall classification and further chart-0/chart-152 staircase refinement are subordinated because neither can by itself prove diagonal three.
+
+The diagonal-nine pivot now has its first exact parent-860 codimension-two
+checkpoint.  On a rational `(h,i)` disk of radius `10^-6`, exactly two of all
+26,740 primitive residual factors occur and cross transversely.  Complete
+derived-tope enumeration produces four 26,112-label chambers, four wall rays,
+and a 26,038-label node.  Every finite common-feasibility locus on the disk is
+empty or convex; an independent verifier rejects four hostile corruptions.
+This is a local theorem, not parent-space coverage, so the score remains
+`2/9`.  The machine-checked
+[`diagonal-nine decision ledger`](ai/omreal/data/DIAG9_RESEARCH_DECISION_LEDGER.json)
+selects coverage-certified expansion of this node in one parent-860 plane as
+the next bounded target; see
+[`DIAG9_PARENT860_TRANSVERSE_NODE.md`](ai/omreal/DIAG9_PARENT860_TRANSVERSE_NODE.md).
 
 - [`ai/omreal/NINE_DIAGONAL_STATUS.md`](ai/omreal/NINE_DIAGONAL_STATUS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)

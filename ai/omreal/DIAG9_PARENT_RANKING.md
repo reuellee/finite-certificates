@@ -78,7 +78,11 @@ proof-carrying master roadmap.  The first exact heuristic-to-certificate
 pilot is now complete on a bounded coordinate-star network: 23 exact chambers
 and 22 crossings expose a minimal one-signature no-go to tree routing, and a
 16-chord CEGIS repair makes every finite support intersection connected on a
-24-chamber augmented network.  See `DIAG9_PARENT860_CEGIS_ROUTING.md`.
+24-chamber augmented network.  The first genuine codimension-two cell is also
+complete: an exact `(h,i)` disk contains precisely two transverse residual
+branches, four chambers, four wall rays and one node, and every finite common
+support is empty or convex.  See `DIAG9_PARENT860_CEGIS_ROUTING.md` and
+`DIAG9_PARENT860_TRANSVERSE_NODE.md`.
 
 The next calculation must still:
 
@@ -89,6 +93,12 @@ The next calculation must still:
 4. run the sharp pairwise tree certificate or complete cut-SAT test; and
 5. retain any candidate factor until geometry, not absence of a conflict,
    proves it empty.
+
+The bounded first step is now pinned by
+`data/DIAG9_RESEARCH_DECISION_LEDGER.json`: expand the transverse node to a
+coverage-certified two-dimensional atlas in the selected parent-860 plane,
+and stop with an exact frontier rather than widening directly to a
+nine-dimensional CAD.
 
 The ranking therefore reduces the first roadmap input by 1,404 primitive
 factors relative to parent 2599.  It does not prove the ninth diagonal for

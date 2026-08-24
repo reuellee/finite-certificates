@@ -1,0 +1,140 @@
+{
+  "format": "diag9-research-decision-ledger-v1",
+  "status": "ACTIVE",
+  "as_of": "2026-08-23",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "audited_base_commit": "7444c7b365946ee3a6fa29466f648d48d7422d9a"
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "active_diagonal": 9,
+    "invariant_target": "For every realizable parent and every admissible nine-family, the common feasibility locus is empty or connected.",
+    "promotion_rule": "Diagonal nine advances only after coverage, infinity, labels, and connectivity are independently certified for every realizable parent and every admissible nine-family."
+  },
+  "global_obligation": {
+    "status": "OPEN",
+    "realizable_parent_classes": 2604,
+    "parents_with_complete_compactified_labeled_roadmap": 0,
+    "smallest_missing_proof_object": "a coverage-certified compactified labeled roadmap for parent 860",
+    "coverage_required": true,
+    "infinity_required": true,
+    "all_family_connectivity_required": true
+  },
+  "parent860_input": {
+    "selection_status": "PROOF_SAFE_FIRST_TARGET",
+    "primitive_global_factors": 26740,
+    "certified_empty_factors": 10320,
+    "candidate_factors": 16420,
+    "identity": "10320+16420=26740",
+    "evidence": [
+      "ai/omreal/DIAG9_PARENT_RANKING.md",
+      "ai/omreal/verify_diag9_parent_ranking.py"
+    ]
+  },
+  "exact_local_checkpoint": {
+    "status": "PROVED",
+    "scope": "the closed l_infinity disk of radius 1/1000000 in the normalized parent-860 (h,i) plane centered at the exact intersection of factors 15250 and 19721",
+    "active_factors": [15250, 19721],
+    "active_factor_types": [49, 36],
+    "active_factor_multiplicities": [1, 65],
+    "other_factors_excluded": 26738,
+    "parent_brackets_excluded": 70,
+    "chambers": 4,
+    "wall_rays": 4,
+    "nodes": 1,
+    "chamber_tope_count": 26112,
+    "wall_tope_counts": [26110, 26110, 26040, 26040],
+    "node_tope_count": 26038,
+    "proper_support_patterns": [3, 6, 9, 12],
+    "support_pattern_multiplicity": {
+      "3": 2,
+      "6": 72,
+      "9": 72,
+      "12": 2,
+      "15": 26038
+    },
+    "intersection_closure": [0, 1, 2, 3, 4, 6, 8, 9, 12, 15],
+    "local_theorem": "Every finite common-feasibility locus on the disk is empty or convex, hence connected and contractible when nonempty.",
+    "semantic_sha256": "b7080a332d7b80127ae362bbfa2d5806fbe153d24245ef002d4867df6e1e274d",
+    "hostile_corruptions_rejected": 4,
+    "evidence": [
+      "ai/omreal/DIAG9_PARENT860_TRANSVERSE_NODE.md",
+      "ai/omreal/DIAG9_GRAPH_verify_parent860_node.py",
+      "ai/omreal/verify_diag9_parent860_node_topology.py",
+      "ai/omreal/data/DIAG9_GRAPH_parent860_node_roadmap.npz",
+      "ai/omreal/data/DIAG9_GRAPH_parent860_node_graph.npz"
+    ]
+  },
+  "bounded_no_go_results": [
+    {
+      "id": "parent860_coordinate_star_tree_routing",
+      "status": "FALSIFIED",
+      "statement": "Individual feasibility supports need not be connected on the natural parent-860 coordinate star.",
+      "replacement": "counterexample-guided exact chords followed by coverage-bearing cell expansion",
+      "evidence": "ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md"
+    },
+    {
+      "id": "parent860_repaired_network_as_coverage",
+      "status": "NOT_CLAIMED",
+      "statement": "The 24-chamber repaired network has connected finite support intersections but is not a parent-space coverage certificate.",
+      "replacement": "coverage-certified atlas expansion from the transverse node",
+      "evidence": "ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md"
+    }
+  ],
+  "target_score_formula": "4*proof_criticality + 3*branch_elimination + 2*readiness + 2*decisiveness - 2*cost - 2*failure_risk",
+  "candidate_targets": [
+    {
+      "id": "parent860_coverage_certified_2d_atlas",
+      "proof_criticality": 5,
+      "branch_elimination": 5,
+      "readiness": 4,
+      "decisiveness": 5,
+      "cost": 5,
+      "failure_risk": 4,
+      "priority_score": 35,
+      "selected": true,
+      "exact_question": "Can the exact transverse-node disk be expanded to a coverage-certified parent-860 two-dimensional atlas that classifies every wall component and all chamber/wall/node incidences in the selected plane?",
+      "success_consequence": "Use the atlas as the first coverage-bearing slice in a dimension-raising parent-860 roadmap.",
+      "failure_consequence": "Preserve the exact missed component, singularity, or projection-growth frontier and change decomposition strategy rather than widening blindly.",
+      "resource_ceiling": "one selected coordinate plane, exact factor isolation and projection closure only; stop before a full nine-dimensional CAD",
+      "stop_rule": "Stop on an unresolved projection factor, a missed component, or loss of parent containment; emit the exact frontier."
+    },
+    {
+      "id": "more_adversarial_network_directions",
+      "proof_criticality": 3,
+      "branch_elimination": 3,
+      "readiness": 5,
+      "decisiveness": 4,
+      "cost": 2,
+      "failure_risk": 2,
+      "priority_score": 31,
+      "selected": false,
+      "exact_question": "Do more sampled exact directions expose a smaller support-connectivity obstruction to the current CEGIS network?"
+    },
+    {
+      "id": "all_parent_global_roadmap",
+      "proof_criticality": 5,
+      "branch_elimination": 5,
+      "readiness": 1,
+      "decisiveness": 3,
+      "cost": 5,
+      "failure_risk": 5,
+      "priority_score": 23,
+      "selected": false,
+      "exact_question": "Can all 2604 parents be compactified, decomposed, labeled, and connectivity-certified directly?"
+    }
+  ],
+  "selected_target": "parent860_coverage_certified_2d_atlas",
+  "promotion_gates": [
+    "complete signed parent-cell coverage",
+    "complete residual wall and lower-stratum incidence",
+    "exact complete chamber labels",
+    "genuine parent infinity",
+    "all admissible nine-family connectivity",
+    "all 2604 realizable parent classes",
+    "independent replay and hostile canaries"
+  ]
+}

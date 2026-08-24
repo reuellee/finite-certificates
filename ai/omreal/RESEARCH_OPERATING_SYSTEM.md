@@ -12,9 +12,12 @@ This document is the standing operating framework for theorem-oriented work in
 3. allowing superseded targets to survive in old notes or machine-readable
    checkpoints and silently regain authority.
 
-The machine-readable companion is
-`data/DIAG3_RESEARCH_DECISION_LEDGER.json`. Its verifier is
-`verify_diag3_research_decision_ledger.py`.
+The machine-readable companions are
+`data/DIAG3_RESEARCH_DECISION_LEDGER.json` and
+`data/DIAG9_RESEARCH_DECISION_LEDGER.json`. Their verifiers are
+`verify_diag3_research_decision_ledger.py` and
+`verify_diag9_research_decision_ledger.py`.  Each governs its own active
+diagonal branch; neither may promote the shared theorem score independently.
 
 The reusable implementation and methodological lessons extracted from the
 source-square and source-cube work are documented in
@@ -85,9 +88,10 @@ of a higher level.
 
 ## Canonical state rule
 
-The decision ledger is the only current target selector. Older notes and open
-objects remain valuable audit trails, but any current-status consumer must
-follow their `current_decision_ledger` pointer.
+The decision ledger for an active diagonal is its only current target
+selector. Older notes and open objects remain valuable audit trails, but any
+current-status consumer must follow the corresponding machine-readable
+ledger.
 
 Every material update must satisfy:
 

@@ -35,7 +35,7 @@ Exactly two of the nine entries are currently proved.
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
 | 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
-| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 now has an exact 23-chamber coordinate-star no-go and a 24-chamber all-family CEGIS repair network, but no full-dimensional parent roadmap |
+| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 now has an exact 23-chamber coordinate-star no-go, a 24-chamber all-family CEGIS repair network, and a complete transverse two-wall disk on which every finite common-feasibility locus is empty or convex, but no coverage-certified parent roadmap |
 
 The dual column is valid for all nine entries after importing the published
 contractibility statement for realizable oriented matroids on fewer than nine
@@ -1094,7 +1094,19 @@ escape or higher-wall coherence.  See
    routing with one signature, repairs that obstruction and a subsequent pair
    obstruction by 16 all-factor-certified chords, and obtains connected
    finite intersections on its exact 24-chamber training network.  It is not
-   a coverage theorem; see `DIAG9_PARENT860_CEGIS_ROUTING.md`.
+   a coverage theorem.  A new exact `(h,i)` disk centered on the intersection
+   of factors 15250 and 19721 supplies the first genuine parent-860
+   codimension-two cell.  Exact dominance excludes all other 26,738 factors
+   and all 70 parent brackets; the two primitive normals have nonzero
+   determinant.  Its four chambers have 26,112 labels each, its four wall
+   rays have 26,110, 26,110, 26,040 and 26,040 labels, and its node has
+   26,038.  The only proper support masks are the four cyclic halfspaces, so
+   every finite common-feasibility locus on the disk is empty or convex.
+   This remains local, and the machine-checked next target is coverage of the
+   selected parent-860 plane, not score promotion.  See
+   `DIAG9_PARENT860_CEGIS_ROUTING.md`,
+   `DIAG9_PARENT860_TRANSVERSE_NODE.md`, and
+   `data/DIAG9_RESEARCH_DECISION_LEDGER.json`.
 2. **Sparse-form quotient plus CAD.**  Column scaling removes all but
    `beta<=4` invariant positive weight ratios from every generic pair orbit.
    The remaining equations ask that fixed sparse three-vectors vanish in a
