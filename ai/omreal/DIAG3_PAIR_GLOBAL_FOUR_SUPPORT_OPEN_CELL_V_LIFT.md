@@ -71,9 +71,7 @@ imports neither SymPy nor the producer.  It:
    `u`-strip samples from the prior Sturm-isolated base lift;
 3. recomputes all linear roots and compares the quadratic roots by exact sign
    tests around the vertex;
-4. validates exact filenames, floor partitions, embedded metadata, coverage,
-   canonical JSON, and deterministic gzip bytes for both 32-shard manifests;
-   and
+4. reassembles and hashes all 32 deterministic shards; and
 5. rejects 40/40 hostile claim mutations.
 
 Replay:
