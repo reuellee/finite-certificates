@@ -2,8 +2,8 @@
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "32720331ace2122390cd368c354af4fcefaf1231",
-  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support domains have 265962 open-sector cells and 257819 cells on 1665 completed algebraic fibers, with 28 harder sections remaining in current_decision_ledger.",
+  "current_decision_ledger_git_blob": "412f836a0e34a496c49c0951529877f93fde7a56",
+  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support domains have 265962 open-sector cells and 261571 cells on all 1693 algebraic fibers, with v lifting and global gluing remaining in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {
     "can_decode_a_global_regular_poset_from_existing_records": false,
@@ -261,9 +261,11 @@
       "all 1693 interior roots are distinct, exactly isolated over rational endpoints, and globally ordered into 19 rational plus 1674 irrational t sections",
       "all 114 base curves are exactly lifted over all 1694 open t sectors, producing 132134 ordered u-root sections, 133828 strips, and 265962 open-sector base cells",
       "1022 simple transversal algebraic sections are exactly lifted to 84794 root-point cells and 85816 strips",
-      "363 raw-simple constant-stack algebraic sections add 21076 root points and 21439 strips; 308 algebraic sections remain"
+      "363 raw-simple constant-stack algebraic sections add 21076 root points and 21439 strips",
+      "240 simultaneous multi-crossing sections and 40 regular residual sections add 44694 base cells",
+      "the final 28 higher-multiplicity and count-changing sections add 1862 root points and 1890 strips; all 1693 algebraic t sections are complete at the base level"
     ],
-    "warning": "The parent-face gate, square-pyramid coverage, bounded projection family, ordered t sections, open-sector base cells, and 1665 completed algebraic fibers are proof-safe generator layers, not the internal compactified global master poset; 28 algebraic fibers, v lifting, global gluing, and closure data remain missing."
+    "warning": "The parent-face gate, square-pyramid coverage, bounded projection family, ordered t sections, open-sector base cells, and all 1693 algebraic-section base lifts are proof-safe generator layers, not the internal compactified global master poset; v lifting, global gluing, labels, middle-rank replay, and closure data remain missing."
   },
   "row2599_flow_triangle_mixed_d3": {
     "status": "OPEN",
@@ -508,7 +510,7 @@
     "command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_closure_gap.py --manifest ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json",
     "expected_terminal_status": "OPEN row2599_compactified_labelled_order2_v1 coverage_certified_global_cell_universe",
     "next_construction_target": "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactified_labelled_order2.npz",
-    "smallest_next_mathematical_task": "Resolve the remaining 308 algebraic t sections (43 complex unchanged, 251 complex same-count, 14 count-changing), attach them to the certified base cells, lift the 22 degree-at-most-two v fibers, then glue both covered square-pyramid supports to their completed faces.",
+    "smallest_next_mathematical_task": "Lift the 22 original walls (one base-only, 20 linear in v, and one quadratic in v) over the complete 527533-cell base CAD, then glue both covered square-pyramid supports to their completed faces and attach labels before middle-rank replay.",
     "dependency_preflight_command": "python -m pip install --target /tmp/diag3_sympy_1_13_3 sympy==1.13.3 && PYTHONPATH=/tmp/diag3_sympy_1_13_3 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_active_sector.py",
     "local_gap_replay_commands": [
       "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_row2599_h1_radial_gap.py",
