@@ -1044,11 +1044,48 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_open_cell_v_lift.py",
         ],
     }
+    regular_u_v_lift = progress[
+        "twenty_seventh_pair_first_four_support_regular_u_section_v_lift"
+    ]
+    assert regular_u_v_lift == {
+        "status": "PROVED",
+        "scope": "exact v-fiber lifts for every multiplicity-one raw-resultant algebraic u section with equal adjacent root counts and no coefficient, discriminant, or v-endpoint event over all open t sectors",
+        "open_t_sectors": 1_694,
+        "algebraic_u_sections_examined": 132_134,
+        "completed_sections": 120_174,
+        "unresolved_sections": 11_960,
+        "completed_fraction": "60087/66067",
+        "completed_raw_resultant_events": 183_374,
+        "visible_inversion_edges": 169_750,
+        "interior_collision_groups": 148_896,
+        "section_v_root_points": 1_809_609,
+        "section_open_v_strips": 1_929_783,
+        "lifted_cells": 3_739_392,
+        "residual_reason_census": {
+            "endpoint_and_count_change": 3_990,
+            "coefficient_only": 3_388,
+            "coefficient_endpoint_and_count_change": 2_888,
+            "coefficient_and_endpoint_equal_count": 1_694,
+        },
+        "partition_sha256": "1b3ed3501793744b1ebc01a3d930d458efff4e30690c520aaa3ec48d3d7c9dfc",
+        "semantic_sha256": "4caa3b63cfa4dd6e88b88076e0b4d6cd299822c7ff8680a73c6113f6ff3ff0ac",
+        "artifact_shards": 32,
+        "hostile_corruptions_rejected": 20,
+        "remaining_open_t_algebraic_u_section_v_lift": "NOT_YET_CONSTRUCTED",
+        "algebraic_t_section_v_lift": "NOT_YET_CONSTRUCTED",
+        "global_gluing_and_closure_data": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_U_SECTION_V_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_U_SECTION_V_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_regular_u_section_v_lift.py",
+            "ai/omreal/REVIEW_DIAG3_REGULAR_U_SECTION_V_LIFT_2026-08-24.md",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "lift the 22 original walls over the 132134 algebraic u-section fibers"
+        "resolve the exact 11960-section coefficient or endpoint/count-change residue"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1099,6 +1136,10 @@ def main() -> None:
     print("PASS twenty-fourth regular-residual lift: 40 fibers -> 4610 base cells -> 28-section frontier")
     print("PASS twenty-fifth final-section lift: 28 fibers -> 3752 base cells -> 0-section frontier")
     print("PASS twenty-sixth open-cell v lift: 133828 base cells -> 4496636 lifted cells")
+    print(
+        "PASS twenty-seventh regular algebraic-u v lift: "
+        "120174/132134 sections -> 3739392 lifted cells -> 11960-section residue"
+    )
     print("LEDGER_GIT_BLOB", digest)
 
 

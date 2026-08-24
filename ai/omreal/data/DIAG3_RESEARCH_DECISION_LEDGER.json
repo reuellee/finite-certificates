@@ -1073,8 +1073,42 @@
         "ai/omreal/verify_diag3_pair_global_four_support_open_cell_v_lift.py"
       ]
     },
+    "twenty_seventh_pair_first_four_support_regular_u_section_v_lift": {
+      "status": "PROVED",
+      "scope": "exact v-fiber lifts for every multiplicity-one raw-resultant algebraic u section with equal adjacent root counts and no coefficient, discriminant, or v-endpoint event over all open t sectors",
+      "open_t_sectors": 1694,
+      "algebraic_u_sections_examined": 132134,
+      "completed_sections": 120174,
+      "unresolved_sections": 11960,
+      "completed_fraction": "60087/66067",
+      "completed_raw_resultant_events": 183374,
+      "visible_inversion_edges": 169750,
+      "interior_collision_groups": 148896,
+      "section_v_root_points": 1809609,
+      "section_open_v_strips": 1929783,
+      "lifted_cells": 3739392,
+      "residual_reason_census": {
+        "endpoint_and_count_change": 3990,
+        "coefficient_only": 3388,
+        "coefficient_endpoint_and_count_change": 2888,
+        "coefficient_and_endpoint_equal_count": 1694
+      },
+      "partition_sha256": "1b3ed3501793744b1ebc01a3d930d458efff4e30690c520aaa3ec48d3d7c9dfc",
+      "semantic_sha256": "4caa3b63cfa4dd6e88b88076e0b4d6cd299822c7ff8680a73c6113f6ff3ff0ac",
+      "artifact_shards": 32,
+      "hostile_corruptions_rejected": 20,
+      "remaining_open_t_algebraic_u_section_v_lift": "NOT_YET_CONSTRUCTED",
+      "algebraic_t_section_v_lift": "NOT_YET_CONSTRUCTED",
+      "global_gluing_and_closure_data": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_U_SECTION_V_LIFT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_U_SECTION_V_LIFT.json",
+        "ai/omreal/verify_diag3_pair_global_four_support_regular_u_section_v_lift.py",
+        "ai/omreal/REVIEW_DIAG3_REGULAR_U_SECTION_V_LIFT_2026-08-24.md"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "lift the 22 original walls over the 132134 algebraic u-section fibers in the open t sectors, then lift all 261571 base cells over algebraic t sections; glue both covered square-pyramid supports to their completed faces, attach extension-signature labels, and emit regular cells plus closure data before the relative middle-rank replay; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "resolve the exact 11960-section coefficient or endpoint/count-change residue over open t sectors, then lift all 261571 base cells over algebraic t sections; glue both covered square-pyramid supports to their completed faces, attach extension-signature labels, and emit regular cells plus closure data before the relative middle-rank replay; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {
