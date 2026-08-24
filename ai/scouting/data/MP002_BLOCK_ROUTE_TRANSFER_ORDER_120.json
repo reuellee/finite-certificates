@@ -1,0 +1,83 @@
+{
+  "block_order": [
+    1,
+    2,
+    0
+  ],
+  "endpoint_symmetric_difference": 13484,
+  "events": 4362,
+  "identities": {
+    "odd_alternation_signatures_equal_endpoint_symmetric_difference": true,
+    "transition_mass_equals_sum_of_event_symmetric_differences": true
+  },
+  "maximizer_count": 2,
+  "maximizers": [
+    {
+      "antipode": 58539152050846720,
+      "event_indices": [
+        175,
+        515,
+        1844,
+        2339,
+        4234
+      ],
+      "hex": "3006f38c8e83ff",
+      "signature": 13518441987081215
+    },
+    {
+      "antipode": 13518441987081215,
+      "event_indices": [
+        175,
+        515,
+        1844,
+        2339,
+        4234
+      ],
+      "hex": "cff90c73717c00",
+      "signature": 58539152050846720
+    }
+  ],
+  "maximizers_antipode_closed": true,
+  "maximum_alternation": 5,
+  "path_id": "row2599-chart-0-to-66-order-120",
+  "phase_a_event_summary": {
+    "compound_event_count": 183,
+    "events": 4362,
+    "events_sha256": "61e2eca2281f78c3e6fe27d78ebfe672ba539ee32d61c2ce1d07b33070efbeba",
+    "order": "120",
+    "segment_event_census": [
+      2011,
+      757,
+      1594
+    ],
+    "segment_factor_root_count_census": [
+      {
+        "0": 15818,
+        "1": 2001,
+        "2": 5
+      },
+      {
+        "0": 17067,
+        "1": 757
+      },
+      {
+        "0": 16231,
+        "1": 1592,
+        "2": 1
+      }
+    ]
+  },
+  "prediction_semantic_sha256": "1194139f4064e0fb42f0605a2aea160e36533cc426ff5498c3cd9dab1be32222",
+  "segments": 3,
+  "semantic_sha256": "f0351621cddd213bdee0eaaa337793f1eba7618f361201f50ab08c23498a5e0d",
+  "signature_universe": 97224,
+  "transition_mass": 34864,
+  "transition_spectrum": {
+    "0": 73528,
+    "1": 13092,
+    "2": 10128,
+    "3": 390,
+    "4": 84,
+    "5": 2
+  }
+}
