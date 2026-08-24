@@ -1016,11 +1016,39 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_final_section_lift.py",
         ],
     }
+    open_cell_v_lift = progress["twenty_sixth_pair_first_four_support_open_cell_v_lift"]
+    assert open_cell_v_lift == {
+        "status": "PROVED",
+        "scope": "complete exact ordered v-root stacks for every full-dimensional base cell over an open t sector and open u strip",
+        "v_endpoint_evaluations": 44,
+        "missing_nonboundary_endpoint_factors": 0,
+        "open_t_sectors": 1_694,
+        "open_base_cells": 133_828,
+        "distinct_fiber_order_signatures": 2_082,
+        "minimum_interior_v_roots": 11,
+        "maximum_interior_v_roots": 20,
+        "interior_v_root_sections": 2_181_404,
+        "open_v_strips": 2_315_232,
+        "lifted_cells": 4_496_636,
+        "signature_catalog_sha256": "2ba0f70e9aab9dc5bdb9a2e1c741a982845f0f8d9059dd4503dd87104803892d",
+        "sector_signature_ids_sha256": "17ba454dffd6dbe26942a9da906befbb274f19f9de3635032f9c3e4667fbf6fb",
+        "semantic_sha256": "6de66f64ba4ab1cdd1d07880322e665de0eab09e5462eebd9d3040c565d2ffc3",
+        "artifact_shards": 32,
+        "hostile_corruptions_rejected": 40,
+        "open_t_algebraic_u_section_v_lift": "NOT_YET_CONSTRUCTED",
+        "algebraic_t_section_v_lift": "NOT_YET_CONSTRUCTED",
+        "global_gluing_and_closure_data": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_CELL_V_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_CELL_V_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_open_cell_v_lift.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "lift the 22 original walls"
+        "lift the 22 original walls over the 132134 algebraic u-section fibers"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1070,6 +1098,7 @@ def main() -> None:
     print("PASS twenty-third multi-crossing lift: 240 fibers -> 40084 base cells -> 68-section frontier")
     print("PASS twenty-fourth regular-residual lift: 40 fibers -> 4610 base cells -> 28-section frontier")
     print("PASS twenty-fifth final-section lift: 28 fibers -> 3752 base cells -> 0-section frontier")
+    print("PASS twenty-sixth open-cell v lift: 133828 base cells -> 4496636 lifted cells")
     print("LEDGER_GIT_BLOB", digest)
 
 

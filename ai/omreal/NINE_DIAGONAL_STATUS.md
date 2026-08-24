@@ -1421,8 +1421,8 @@ exact specializations.  Standard-library Sturm replay certifies 132,134
 ordered `u`-root sections and 133,828 open strips, hence 265,962 open-sector
 base cells.  A bounded-square audit proves that all 28 nonconstant `u=1`
 evaluations factor through seven already projected factors; no boundary event
-was missing.  The remaining base step is the 1,693 algebraic-section fibers
-and their incidence maps to these stacks.
+was missing.  The algebraic-section base fibers described below now complete
+the base CAD; their incidence maps remain part of the later global gluing.
 
 Of those algebraic fibers, 1,022 are now complete simple transversal
 crossings.  Each is exactly one adjacent swap of two root labels; the swapped
@@ -1456,10 +1456,20 @@ claimed disjoint rational `u` intervals.  This uniformly covers 14 root-count
 changes, seven exceptional same-count transitions, seven complex unchanged
 stacks, one vertical-zero incidence, and 33 bounded-boundary incidences.  It
 adds 1,862 root points and 1,890 strips, so all 1,693 algebraic `t` sections
-are complete at the base level.  The next pair obligation is the lift of the
-one base-only, 20 linear, and one quadratic original wall in `v`, followed by
-face-compatible gluing, labels, and middle-rank replay.  None of those later
-obligations is claimed here; the honest 9DVL score remains `2/9`.
+are complete at the base level.
+
+The open-base-cell portion of the `v` lift is also complete.  Exact rational
+replay orders all 22 original walls over every one of the 133,828
+full-dimensional base cells lying in an open `t` sector and open `u` strip.
+The 2,082 distinct order signatures contain 2,181,404 interior `v`-root
+sections and 2,315,232 open
+`v` strips, for 4,496,636 lifted cells.  A separate factorization audit proves
+all 44 `v=0,1` endpoint evaluations are already controlled by the base or
+univariate projection catalogs.  The next pair obligation is the lift over
+the 132,134 algebraic `u`-section fibers in the open `t` sectors, followed by
+the algebraic `t`-section base cells, face-compatible gluing, labels, and
+middle-rank replay.  None of those later obligations is claimed here; the
+honest 9DVL score remains `2/9`.
 
 ## Exact artifacts
 
@@ -1837,6 +1847,10 @@ obligations is claimed here; the honest 9DVL score remains `2/9`.
   number-field Sturm verifier: all final 28 algebraic fibers, 3,752 section
   cells, one vertical and 33 boundary degeneracies, leaving zero algebraic
   `t` sections unresolved.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_CELL_V_LIFT.md`, its 32 hash-pinned
+  shards, builder, and independent standard-library exact-rational verifier:
+  all 133,828 full-dimensional open base cells lifted through the 22 original
+  walls to 4,496,636 certified cells, with 40/40 hostile mutations rejected.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
