@@ -1458,11 +1458,10 @@ stacks, one vertical-zero incidence, and 33 bounded-boundary incidences.  It
 adds 1,862 root points and 1,890 strips, so all 1,693 algebraic `t` sections
 are complete at the base level.
 
-The open-base-cell portion of the `v` lift is also complete.  Exact rational
-replay orders all 22 original walls over every one of the 133,828
-full-dimensional base cells lying in an open `t` sector and open `u` strip.
-The 2,082 distinct order signatures contain 2,181,404 interior `v`-root
-sections and 2,315,232 open
+The open-base-cell portion of the `v` lift is also complete.  Exact rational replay orders all
+22 original walls over every one of the 133,828 full-dimensional base cells
+lying in an open `t` sector and open `u` strip.  The 2,082 distinct order
+signatures contain 2,181,404 interior `v`-root sections and 2,315,232 open
 `v` strips, for 4,496,636 lifted cells.  A separate factorization audit proves
 all 44 `v=0,1` endpoint evaluations are already controlled by the base or
 univariate projection catalogs.  The next pair obligation is the lift over
