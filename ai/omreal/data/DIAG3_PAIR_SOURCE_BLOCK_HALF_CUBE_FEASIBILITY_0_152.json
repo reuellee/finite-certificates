@@ -1,0 +1,173 @@
+{
+  "format": "diag3-pair-source-block-half-cube-component-coverage-v2",
+  "naive_full_cube_no_go": {
+    "decision": "REJECT_FULL_[0,1]^3_CUBE; RETAIN_PARENT_SAFE_[1/2,1]x[0,1]x[0,1]_HALF_CUBE",
+    "failed_block_vertices": [
+      {
+        "block_vertex": [
+          0,
+          0,
+          1
+        ],
+        "failed_parent_brackets": [
+          {
+            "bracket": "1268",
+            "signed_value": "-77272616135123203611432688503321436/1925505679957090128860829177978493717"
+          }
+        ]
+      },
+      {
+        "block_vertex": [
+          0,
+          1,
+          1
+        ],
+        "failed_parent_brackets": [
+          {
+            "bracket": "1268",
+            "signed_value": "-77272616135123203611432688503321436/1925505679957090128860829177978493717"
+          },
+          {
+            "bracket": "5678",
+            "signed_value": "-929360211425105293908494089941712422408880484870280845/765913296193213840556526718538008281332162062983615515616"
+          }
+        ]
+      }
+    ],
+    "parent_safe_block_vertices": 6,
+    "tested_block_vertices": 8
+  },
+  "parent_cube": {
+    "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+    "minimum_margin_bracket": "5678",
+    "minimum_signed_vertex_margin": "1923873060148349365333344163278294950688106825916862269195/6968279168765859521383280085258799343560010449024933961074368",
+    "parent_brackets": 70,
+    "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "restriction_tridegree_census": {
+      "0,0,0": 8,
+      "0,0,1": 9,
+      "0,1,0": 9,
+      "0,1,1": 10,
+      "1,0,0": 9,
+      "1,0,1": 10,
+      "1,1,0": 10,
+      "1,1,1": 5
+    },
+    "strict_vertices": 8
+  },
+  "scope": {
+    "block_parameter_intervals": [
+      "1/2..1",
+      "0..1",
+      "0..1"
+    ],
+    "global_parent_cell_coverage": "NOT_CLAIMED",
+    "parameter_domain": "closed unit cube mapped to block intervals [1/2,1] x [0,1] x [0,1]",
+    "parent_index": 2599,
+    "parent_parameter_coverage": "COMPLETE_ON_SOURCE_BLOCK_HALF_CUBE",
+    "source_chart": 0,
+    "target_chart": 152,
+    "varying_column_blocks": [
+      0,
+      1,
+      2
+    ],
+    "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+    "wall_feasibility_coverage": "COMPLETE_EXCEPT_EXPLICIT_UNRESOLVED"
+  },
+  "status": "EXACT_SOURCE_BLOCK_HALF_CUBE_WALL_COMPONENT_COVERAGE",
+  "theorem_effect": "Exact parent residence, complete wall feasibility, and wall-component boundary coverage on one source block half-cube; global pair coverage and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
+  "wall_component_preflight": {
+    "all_occurring_wall_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+    "critical_depth_census": {
+      "0": 552,
+      "1": 4,
+      "2": 3,
+      "3": 1,
+      "4": 1
+    },
+    "critical_semantic_sha256": "214c653a6ffdec28a89a0f824c44e0b01658b60627825fd92032509aea7f855c",
+    "fully_triquadratic_component_coverage": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+    "fully_triquadratic_critical_systems_proved_empty": 561,
+    "fully_triquadratic_critical_systems_unresolved": 0,
+    "fully_triquadratic_factor_ids_sha256": "483908d8ece34b330e5942c3cedf32c013c9f3e23d1b8487249e17208e332802",
+    "fully_triquadratic_occurring_walls": 561,
+    "graph_type_argument": "If p is affine in one parameter, a coefficient-drop zero gives a full boundary-meeting fiber; otherwise projection is a local graph, so a compact interior component would have a nonempty compact-open image in R^2.",
+    "graph_type_component_conclusion": "EVERY_COMPONENT_MEETS_HALF_CUBE_BOUNDARY",
+    "graph_type_factor_ids_sha256": "87f98bd5d74697556cddc0809131ad54047e597a5b674b2a6cdc8b93c97984c3",
+    "graph_type_occurring_walls": 3889,
+    "maximum_critical_subboxes_visited": 81,
+    "occurring_tridegree_census": {
+      "0,0,2": 2,
+      "0,1,1": 11,
+      "0,1,2": 47,
+      "0,2,0": 1,
+      "0,2,1": 39,
+      "0,2,2": 93,
+      "1,0,1": 24,
+      "1,0,2": 35,
+      "1,1,0": 9,
+      "1,1,1": 294,
+      "1,1,2": 437,
+      "1,2,0": 30,
+      "1,2,1": 444,
+      "1,2,2": 598,
+      "2,0,1": 33,
+      "2,0,2": 93,
+      "2,1,0": 19,
+      "2,1,1": 405,
+      "2,1,2": 622,
+      "2,2,0": 83,
+      "2,2,1": 570,
+      "2,2,2": 561
+    }
+  },
+  "wall_feasibility": {
+    "candidate_factors": 17824,
+    "classification_depth_census": {
+      "EMPTY_BERNSTEIN:0": 13370,
+      "EMPTY_BERNSTEIN:1": 4,
+      "NONEMPTY_CORNER:0": 4444,
+      "NONEMPTY_CORNER:1": 4,
+      "NONEMPTY_CORNER:2": 1,
+      "NONEMPTY_CORNER:4": 1
+    },
+    "classification_semantic_sha256": "d3761de31661811d27c1340ab175c1c47431dfbf59c7993b7747bbbbcb622381",
+    "maximum_subboxes_visited_for_one_wall": 25,
+    "occurring_factor_ids_sha256": "7f231091f50588799355a44e6442facb4b76ec341dda3f0e7c60d663aad5d94c",
+    "occurring_walls": 4450,
+    "restriction_tridegree_census": {
+      "0,0,2": 4,
+      "0,1,1": 44,
+      "0,1,2": 132,
+      "0,2,0": 4,
+      "0,2,1": 114,
+      "0,2,2": 258,
+      "1,0,1": 52,
+      "1,0,2": 124,
+      "1,1,0": 38,
+      "1,1,1": 1248,
+      "1,1,2": 2046,
+      "1,2,0": 120,
+      "1,2,1": 2016,
+      "1,2,2": 2380,
+      "2,0,0": 4,
+      "2,0,1": 126,
+      "2,0,2": 246,
+      "2,1,0": 120,
+      "2,1,1": 2016,
+      "2,1,2": 2380,
+      "2,2,0": 270,
+      "2,2,1": 2408,
+      "2,2,2": 1674
+    },
+    "status_census": {
+      "EMPTY_BERNSTEIN": 13374,
+      "NONEMPTY_CORNER": 4450
+    },
+    "unresolved_factor_ids_sha256": "13104c745d27a8d8d9556d0e9efb1c857984a860f581d4586ce6219ab1cdc61e",
+    "unresolved_walls": 0,
+    "zero_free_factor_ids_sha256": "9de5e297c8520c1c26c4c2828b9bcd6e932cb484adb46e341385fec41e221975",
+    "zero_free_walls": 13374
+  }
+}

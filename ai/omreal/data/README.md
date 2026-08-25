@@ -468,6 +468,118 @@ python ai/omreal/DIAG9_GRAPH_cut_sat.py \
 This is the first exact codimension-two local roadmap.  It is not a cover of
 the full parent realization cell.
 
+`DIAG3_PAIR_MASTER_CLOSURE_MULTIBOX_CANARY.json` refines a strict
+branch-coordinate subdomain of that disk into a declared `3 x 3` box atlas.
+It records four no-wall boxes, four one-wall boxes, one transverse two-wall
+box, 32 atomic boundary sign words, an 81-cell regular-CW closure and complete
+signature-profile labels.  Its independent verifier reconstructs the exact
+geometry and all 216 barycentric profile-triple ranks and rejects ten hostile
+corruptions.  The outer boundary and internal seams are ordinary cells; the
+parent-infinity subcomplex is empty.
+
+```console
+python ai/omreal/build_diag3_pair_master_closure_multibox_canary.py
+python ai/omreal/verify_diag3_pair_master_closure_multibox_canary.py
+```
+
+This is a local gluing-method canary, not global row-2599 coverage.
+
+`DIAG3_PAIR_MASTER_CLOSURE_FIRST_EVENT.json` expands the same exact parent
+plane to the declared 64-box ceiling and crosses the first residual event
+outside the original two-branch disk.  Exact source replay identifies the
+unique new affine occurrence at derived rows `(2,8,22,49)` and proves every
+other residual event factor and all 70 parent brackets nonzero on the domain.
+The 64 boxes comprise 42 no-wall, 20 one-wall and two transverse two-wall
+boxes.  Their 171 boundary words glue to a 399-cell regular-CW atlas whose
+399/1118/720 barycentric complex has zero middle residue for all 512 ordered
+signature-profile triples.  Thirteen hostile mutations are rejected.
+
+```console
+python ai/omreal/build_diag3_pair_master_closure_first_event.py
+python ai/omreal/verify_diag3_pair_master_closure_first_event.py
+```
+
+This proves that the compiler crosses one genuinely new wall without
+projection growth.  It is still a local two-dimensional theorem, not a cover
+of the nine-dimensional row-2599 parent cell.
+
+`DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json` is the complete exact residual
+roadmap on the minimum-Hamming certified parent-safe segment leaving chart 0.
+It proves that all 70 parent brackets remain strict, screens all 17,824
+candidate factors by exact Sturm counts, and orders 1,237 rationally isolated
+sign crossings.  Replaying those flips reconstructs the stored chart-89 factor
+state.  The path has 2,477 regular-CW cells, 1,179 single-occurrence events and
+58 compound events.  It does not by itself claim global parent-cell coverage.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_transition.py
+python ai/omreal/verify_diag3_pair_parent_source_transition.py
+```
+
+`DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json` continues the complete 26,112-tope
+label set across all 1,238 open chambers of that path.  It applies exact
+antipodal simplicial mutations at all 1,179 single-occurrence events and
+re-enumerates the arrangement only after the 58 compound events.  The final
+state equals the independently stored raw chart-89 labels.  The 97,224
+extension signatures give 2,458 path profiles, with feasibility-transition
+census `87208, 9490, 512, 14` for zero through three changes.  This is complete
+one-path label continuation, not global row-2599 coverage.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_labels.py
+python ai/omreal/verify_diag3_pair_parent_source_labels.py
+```
+
+`DIAG3_PAIR_PARENT_SOURCE_BLOCK_BRIDGE_0_152.json` is the first exact source
+bridge beyond the 105-edge straight forest.  It audits that forest's 73
+components and selects chart 152 among six direct block-bridge candidates by
+minimum three-segment length and then minimum endpoint factor-state Hamming
+distance.  Replacing moving columns 6, 7 and 8 one at a time keeps all 70
+parent brackets strict and connects chart zero to a previously isolated germ.
+
+All 17,824 factors are screened on each segment.  The certificate records
+5,612 ordered simple crossings, a reconstructed chart-152 factor state, an
+11,231-cell regular-CW path, and exact overlap with the existing labelled path
+at chart zero.  It does not claim global parent-cell coverage or parent
+infinity.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_block_bridge.py
+python ai/omreal/verify_diag3_pair_parent_source_block_bridge.py
+```
+
+`DIAG3_PAIR_PARENT_SOURCE_BLOCK_LABELS_0_152.json` continues all 26,112
+extension labels across the bridge's 5,612 residual events. It records 5,319
+antipodal simplicial mutations, 293 exact compound re-enumerations, 5,615
+generic chamber label digests, two preserved equal-label waypoint seams and
+9,326 complete signature profiles. The replay reconstructs the independently
+stored raw chart-152 tope set and rejects 12 hostile corruptions.
+
+```console
+python ai/omreal/build_diag3_pair_parent_source_block_labels.py
+python ai/omreal/verify_diag3_pair_parent_source_block_labels.py
+```
+
+`DIAG3_PAIR_PARENT_BOUNDARY_ATTACHMENT_89_1237.json` is the first exact source
+attachment to genuine parent infinity. It selects the unique parent-safe finite
+coordinate ray from labelled charts 0, 89 and 152, proves that `[1237]` alone
+vanishes while 69 parent brackets remain positive, isolates 1,517 residual
+crossings, and proves that no candidate residual factor vanishes at the
+endpoint.
+
+`DIAG3_PAIR_PARENT_BOUNDARY_LABELS_89_1237.json` transports the complete label
+set through all 1,518 open-ray chambers using 1,454 simple mutations and 63
+compound re-enumerations. It independently reconstructs the last incident
+chamber near the endpoint and places `[1237]=0` in the relative infinity
+subcomplex.
+
+```console
+python ai/omreal/build_diag3_pair_parent_boundary_attachment.py
+python ai/omreal/verify_diag3_pair_parent_boundary_attachment.py
+python ai/omreal/build_diag3_pair_parent_boundary_labels.py
+python ai/omreal/verify_diag3_pair_parent_boundary_labels.py
+```
+
 ## Exact global residual-factor census
 
 `DIAG9_GRAPH_global_factor_census.npz` localizes all 84,840 labeled residual
@@ -872,6 +984,22 @@ The producer and independent semantic digests are
 `55539702e53abdcf15a1173a549699d87427f85881d66db881ff33c98586934b`.
 The local comparison ledger is now `4/6`; `H0`, `H1`, mixed `J`, and global
 coverage remain open.
+
+## Chart-0/chart-152 source staircase
+
+`DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE_0_152.json` records five exact
+parent-resident source boxes of total normalized volume `373/512`.  It
+classifies all 89,120 box-factor restrictions, with 5,106 distinct factors
+occurring on at least one box and 12,718 zero-free on every box.  Exact graph
+and coordinate-adaptive critical-system arguments prove every boxwise wall
+component reaches the union of the five box boundaries.  Internal seams are
+part of that declared source skeleton; global parent-cell coverage remains
+open.
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/verify_diag3_pair_source_staircase_coverage.py
+```
 
 ## Diagonal-three completion open object
 

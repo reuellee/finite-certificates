@@ -1,0 +1,288 @@
+{
+  "format": "diag3-pair-master-closure-certificate-v1",
+  "status": "SCHEMA_CANARY",
+  "scope": {
+    "parent_index": 2599,
+    "compactification": "(Delta^3)^3",
+    "claim": "small exact regular-cell fixture for validating the v1 certificate interface; not row-2599 coverage",
+    "global_parameter_coverage_claimed": false
+  },
+  "inputs": {
+    "source_commit": "e4ca567f829bd0e887e98efb05a3ed9437ba69d5",
+    "active_factor_count": 0,
+    "factor_id_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "target_signed_parent_digest": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "generator": {
+    "backend": "exact_fixture",
+    "deterministic": true,
+    "build_command": "python ai/omreal/verify_diag3_pair_master_closure_certificate_v1.py",
+    "coverage_certificate_kind": "exact_semialgebraic_partition",
+    "uncovered_cases": 0,
+    "unexplained_cells": 0,
+    "sample_bank_used_as_coverage": false
+  },
+  "transport_gate": {
+    "signed_parent_cell_preserved": true,
+    "chart_domain_preserved": true,
+    "boundary_tags_preserved": true
+  },
+  "cells": [
+    {
+      "id": "v0",
+      "dimension": 0,
+      "relative": false,
+      "regular_ball": true,
+      "witness": [
+        "0",
+        "0"
+      ],
+      "boundary": []
+    },
+    {
+      "id": "v1",
+      "dimension": 0,
+      "relative": false,
+      "regular_ball": true,
+      "witness": [
+        "1",
+        "0"
+      ],
+      "boundary": []
+    },
+    {
+      "id": "v2",
+      "dimension": 0,
+      "relative": false,
+      "regular_ball": true,
+      "witness": [
+        "0",
+        "1"
+      ],
+      "boundary": []
+    },
+    {
+      "id": "e01",
+      "dimension": 1,
+      "relative": false,
+      "regular_ball": true,
+      "witness": [
+        "1/2",
+        "0"
+      ],
+      "boundary": [
+        "v0",
+        "v1"
+      ]
+    },
+    {
+      "id": "e12",
+      "dimension": 1,
+      "relative": false,
+      "regular_ball": true,
+      "witness": [
+        "1/2",
+        "1/2"
+      ],
+      "boundary": [
+        "v1",
+        "v2"
+      ]
+    },
+    {
+      "id": "e20",
+      "dimension": 1,
+      "relative": false,
+      "regular_ball": true,
+      "witness": [
+        "0",
+        "1/2"
+      ],
+      "boundary": [
+        "v2",
+        "v0"
+      ]
+    },
+    {
+      "id": "f012",
+      "dimension": 2,
+      "relative": false,
+      "regular_ball": true,
+      "witness": [
+        "1/3",
+        "1/3"
+      ],
+      "boundary": [
+        "e01",
+        "e12",
+        "e20"
+      ]
+    }
+  ],
+  "strict_closure_pairs": [
+    [
+      "e01",
+      "v0"
+    ],
+    [
+      "e01",
+      "v1"
+    ],
+    [
+      "e12",
+      "v1"
+    ],
+    [
+      "e12",
+      "v2"
+    ],
+    [
+      "e20",
+      "v2"
+    ],
+    [
+      "e20",
+      "v0"
+    ],
+    [
+      "f012",
+      "e01"
+    ],
+    [
+      "f012",
+      "e12"
+    ],
+    [
+      "f012",
+      "e20"
+    ],
+    [
+      "f012",
+      "v0"
+    ],
+    [
+      "f012",
+      "v1"
+    ],
+    [
+      "f012",
+      "v2"
+    ]
+  ],
+  "strict_three_cell_chains": [
+    [
+      "f012",
+      "e01",
+      "v0"
+    ],
+    [
+      "f012",
+      "e01",
+      "v1"
+    ],
+    [
+      "f012",
+      "e12",
+      "v1"
+    ],
+    [
+      "f012",
+      "e12",
+      "v2"
+    ],
+    [
+      "f012",
+      "e20",
+      "v2"
+    ],
+    [
+      "f012",
+      "e20",
+      "v0"
+    ]
+  ],
+  "parent_infinity_subcomplex": [
+    "v0"
+  ],
+  "bad_signature_membership": {
+    "sigma0": [
+      "v0"
+    ],
+    "sigma12": [
+      "v1",
+      "v2",
+      "e12"
+    ]
+  },
+  "integral_boundary": {
+    "c0_basis": [
+      "v0",
+      "v1",
+      "v2"
+    ],
+    "c1_basis": [
+      "e01",
+      "e12",
+      "e20"
+    ],
+    "c2_basis": [
+      "f012"
+    ],
+    "d1_entries": [
+      [
+        "v0",
+        "e01",
+        -1
+      ],
+      [
+        "v1",
+        "e01",
+        1
+      ],
+      [
+        "v1",
+        "e12",
+        -1
+      ],
+      [
+        "v2",
+        "e12",
+        1
+      ],
+      [
+        "v2",
+        "e20",
+        -1
+      ],
+      [
+        "v0",
+        "e20",
+        1
+      ]
+    ],
+    "d2_entries": [
+      [
+        "e01",
+        "f012",
+        1
+      ],
+      [
+        "e12",
+        "f012",
+        1
+      ],
+      [
+        "e20",
+        "f012",
+        1
+      ]
+    ]
+  },
+  "acceptance": {
+    "strict_closure_complete": true,
+    "infinity_is_subcomplex": true,
+    "bad_membership_closed": true,
+    "d_squared_zero_over_Z": true,
+    "independent_replay_required": true
+  }
+}

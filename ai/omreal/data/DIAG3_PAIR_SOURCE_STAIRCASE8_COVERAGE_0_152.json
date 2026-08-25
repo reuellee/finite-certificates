@@ -1,0 +1,628 @@
+{
+  "ambient_topology_dependency": {
+    "classification_semantic_sha256": "5e290f7aab3da48706f326b1bb89a867b737efb3af354a182e679c62cbe1454d",
+    "component_conclusion": "EVERY_OCCURRING_RESTRICTED_WALL_COMPONENT_MEETS_FULL_HYBRID_CUBE_BOUNDARY",
+    "critical_semantic_sha256": "a7f8f690c855982e8eee416e97f8f7aa444646b0a3c1c964db15920ed6b6548e",
+    "format": "diag3-pair-full-hybrid-cube-topology-v1",
+    "occurring_walls": 5577
+  },
+  "boxes": [
+    {
+      "block_parameter_intervals": [
+        "0..1/16",
+        "0..1",
+        "0..9/512"
+      ],
+      "box_id": "s00",
+      "exact_volume": "9/8192",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "3746948827678331326256440608597300765449855737/267659718807499970412622297738393493540857773645440",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 16504,
+          "NONEMPTY_CORNER:0": 1319,
+          "NONEMPTY_CORNER:1": 1
+        },
+        "classification_semantic_sha256": "5875b9ab05e129b1c7ce247a0b18a4ad31022dc10d5225e61a8fbe6661a5b4cd",
+        "maximum_subboxes_visited_for_one_wall": 9,
+        "occurring_factor_ids_sha256": "7ddd1d862168c124132e4910334aaccc4c0bc907e3717697aafeb450d1aff185",
+        "occurring_walls": 1320,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 16504,
+          "NONEMPTY_CORNER": 1320
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "32651c4cc0a81b96eba6af60b72e29df3e56ee0162d6d475f9be0be8750d82e4",
+        "zero_free_walls": 16504
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "1/16..1/8",
+        "0..1",
+        "0..103/512"
+      ],
+      "box_id": "s01",
+      "exact_volume": "103/8192",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "1564162244437975918621943856439154907017800031632559587/52365855289265489251425065944373231707063505425562086932480",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 16147,
+          "NONEMPTY_CORNER:0": 1676,
+          "NONEMPTY_CORNER:1": 1
+        },
+        "classification_semantic_sha256": "4184f86ff37bcd4b70afeeb98a26e544cb66c85e995dc325af27c1f32b04d3eb",
+        "maximum_subboxes_visited_for_one_wall": 2,
+        "occurring_factor_ids_sha256": "a88a4a1c898068fe10d2b2150938717dbfab69b9478bf4a051cb621f11d89b2d",
+        "occurring_walls": 1677,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 16147,
+          "NONEMPTY_CORNER": 1677
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "ad794d9fe4e2c5ffb2233768c7e97425a6849c194cb7c79ef9f48363b772eb95",
+        "zero_free_walls": 16147
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "1/8..3/16",
+        "0..1",
+        "0..379/1024"
+      ],
+      "box_id": "s02",
+      "exact_volume": "379/16384",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "314142279316313569869742423833863532993581608014031963/10473171057853097850285013188874646341412701085112417386496",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 15842,
+          "NONEMPTY_CORNER:0": 1980,
+          "NONEMPTY_CORNER:1": 1,
+          "NONEMPTY_CORNER:2": 1
+        },
+        "classification_semantic_sha256": "d16e1786faf172544199823991425fa794fee8fb97e3d58de3e3a9cea6ba3d0c",
+        "maximum_subboxes_visited_for_one_wall": 9,
+        "occurring_factor_ids_sha256": "bb2eab7035756a58906f2477d6dc11b45c63623c44484cfc056922d3e8998d4b",
+        "occurring_walls": 1982,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 15842,
+          "NONEMPTY_CORNER": 1982
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "b7501f1b348c22024589455255288a64c8ceaed55259d9d2299e9b3f24af9ba5",
+        "zero_free_walls": 15842
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "3/16..1/4",
+        "0..1",
+        "0..539/1024"
+      ],
+      "box_id": "s03",
+      "exact_volume": "539/16384",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "1156052052575044002168968233118007225479311493846205/303570175589944865225652556199265111345295683626446880768",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 15509,
+          "EMPTY_BERNSTEIN:1": 1,
+          "NONEMPTY_CORNER:0": 2314
+        },
+        "classification_semantic_sha256": "0f8703e58ebe007a6b80d4df497373309de30c811a34fff0f03ca4761b85d996",
+        "maximum_subboxes_visited_for_one_wall": 17,
+        "occurring_factor_ids_sha256": "375a31657937eda44cb1069ce580b27b80bd04ad2fb8e20ec1ffde4df5bd0b8d",
+        "occurring_walls": 2314,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 15510,
+          "NONEMPTY_CORNER": 2314
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "020ca3fa4f09c339cd48b0901f78e87747a6d99af5003bfff0cd93c019045095",
+        "zero_free_walls": 15510
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "1/4..5/16",
+        "0..1",
+        "0..343/512"
+      ],
+      "box_id": "s04",
+      "exact_volume": "343/8192",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "269094215387071092610872940710348988931258280687740563/13091463822316372312856266486093307926765876356390521733120",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 15187,
+          "NONEMPTY_CORNER:0": 2637
+        },
+        "classification_semantic_sha256": "88421ea4b083691796e3199ed5f79b7fcf27a7a4b3e2162cbddb67dd1f79a65d",
+        "maximum_subboxes_visited_for_one_wall": 9,
+        "occurring_factor_ids_sha256": "04691bfa94d356076ade51c34f780b25c602ab1a536885cd6bd42b7c0e2292ec",
+        "occurring_walls": 2637,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 15187,
+          "NONEMPTY_CORNER": 2637
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "308d730f76fac6a921b8998e52ea7490e643749f02ad90543e8507f6e3f81e26",
+        "zero_free_walls": 15187
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "5/16..3/8",
+        "0..1",
+        "0..823/1024"
+      ],
+      "box_id": "s05",
+      "exact_volume": "823/16384",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "444903681442249138891199144041857267120711370388639/142105441761914489149050382481338484958109919743723438080",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 14867,
+          "EMPTY_BERNSTEIN:3": 1,
+          "NONEMPTY_CORNER:0": 2955,
+          "NONEMPTY_CORNER:1": 1
+        },
+        "classification_semantic_sha256": "88c9781db00f79b57c88c28d8b0075fdded6e2767473cfea1dd9c08755436a2a",
+        "maximum_subboxes_visited_for_one_wall": 33,
+        "occurring_factor_ids_sha256": "fc2d352c460cce54ae7982f52948ca7351fb23d398b6996dc9bc2714c886acf7",
+        "occurring_walls": 2956,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 14868,
+          "NONEMPTY_CORNER": 2956
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "7db0aa0b92a0ddef1bd2ae18a6e4788b53c6b7dc9625caa80885d15628a0f1bd",
+        "zero_free_walls": 14868
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "3/8..7/16",
+        "0..1",
+        "0..475/512"
+      ],
+      "box_id": "s06",
+      "exact_volume": "475/8192",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "41905142074846109161474782605980688314621831151764391/8727642548210914875237510990728871951177250904260347822080",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 14590,
+          "EMPTY_BERNSTEIN:1": 2,
+          "NONEMPTY_CORNER:0": 3231,
+          "NONEMPTY_CORNER:1": 1
+        },
+        "classification_semantic_sha256": "59434a320e45bc51fda7d988e7b0e7e95c8cb3cfd9ba4c8aae00c0864984edc4",
+        "maximum_subboxes_visited_for_one_wall": 25,
+        "occurring_factor_ids_sha256": "270a820bd125f89c27a85a54de1b61e9bc36fbb5b69fd2111c4bc4ec633677e9",
+        "occurring_walls": 3232,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 14592,
+          "NONEMPTY_CORNER": 3232
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "efb406599bb7f966a424abba1033f7532b4cc87755c071b17a58f86f277df525",
+        "zero_free_walls": 14592
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "7/16..1",
+        "0..1",
+        "0..1"
+      ],
+      "box_id": "s07plus",
+      "exact_volume": "9/16",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "5678",
+        "minimum_signed_vertex_margin": "5011792217492837593353929912658365035740753130068220756555/55746233350126876171066240682070394748480083592199471688594944",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 13210,
+          "EMPTY_BERNSTEIN:1": 3,
+          "EMPTY_BERNSTEIN:2": 1,
+          "NONEMPTY_CORNER:0": 4599,
+          "NONEMPTY_CORNER:1": 7,
+          "NONEMPTY_CORNER:2": 2,
+          "NONEMPTY_CORNER:3": 1,
+          "NONEMPTY_CORNER:4": 1
+        },
+        "classification_semantic_sha256": "a82d60f2674d0d8595036365b2534d7c62da1edc7e175ca9c9323a3ea6ce9277",
+        "maximum_subboxes_visited_for_one_wall": 25,
+        "occurring_factor_ids_sha256": "b0bae2987b096d4bcacfca8ccc86ea16959c9f3ffcd3923a1a03c7d969326bea",
+        "occurring_walls": 4610,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 13214,
+          "NONEMPTY_CORNER": 4610
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "5496266c488d6e213a643d12ae3a1ee36a97e3579d665a8323940012394666ef",
+        "zero_free_walls": 13214
+      }
+    }
+  ],
+  "format": "diag3-pair-source-staircase8-coverage-v1",
+  "scope": {
+    "exact_parameter_volume": "12817/16384",
+    "global_parent_cell_coverage": "NOT_CLAIMED",
+    "internal_seams_required": false,
+    "parent_index": 2599,
+    "parent_parameter_coverage": "COMPLETE_ON_DECLARED_EIGHT_BOX_SOURCE_STAIRCASE",
+    "source_boxes": 8,
+    "source_chart": 0,
+    "target_chart": 152,
+    "varying_column_blocks": [
+      0,
+      1,
+      2
+    ],
+    "wall_component_coverage": "EVERY_RESTRICTED_WALL_COMPONENT_MEETS_STAIRCASE_OUTER_BOUNDARY",
+    "wall_feasibility_coverage": "COMPLETE_ON_EACH_SOURCE_BOX"
+  },
+  "status": "EXACT_SOURCE_STAIRCASE8_OUTER_BOUNDARY_COVERAGE",
+  "summary": {
+    "box_factor_restrictions_replayed": 142592,
+    "boxes": 8,
+    "global_missed_component_theorem": "OPEN",
+    "outer_boundary_component_coverage": "PROVED_BY_AMBIENT_FULL_CUBE_TRANSFER",
+    "parent_bracket_box_restrictions_replayed": 560,
+    "staircase_occurring_factor_ids_sha256": "9e439b58569770fcacfef7a3b6b74b182e68453b020a1e7fceb8bc31f9954bc8",
+    "staircase_occurring_walls": 5139,
+    "staircase_zero_free_factor_ids_sha256": "0edd74b10c6263a5e92c00cb977902b7df38d52341d9fa1df7fac75d111b4ad4",
+    "strict_parent_vertices_replayed": 64,
+    "unresolved_box_factor_restrictions": 0,
+    "zero_free_on_all_staircase_boxes": 12685
+  },
+  "theorem_effect": "Enlarges the exact parent-safe source volume to 12817/16384 and removes internal seams from component coverage, but adds only 33 distinct occurring factors and does not close the global parent-cell missed-component theorem; honest 9DVL score remains 2/9.",
+  "yield_gate": {
+    "additional_distinct_occurring_walls": 33,
+    "contains_five_box_staircase": true,
+    "decision": "STOP_FURTHER_DYADIC_STAIRCASE_REFINEMENT",
+    "exact_volume_gain": "881/16384",
+    "previous_distinct_occurring_walls": 5106,
+    "previous_exact_volume": "373/512",
+    "reason": "The exact volume gain adds too few distinct occurring factors to justify another refinement layer; the invariant gap is global missed-component coverage, not local box feasibility."
+  }
+}

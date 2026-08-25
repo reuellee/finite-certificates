@@ -1,0 +1,109 @@
+{
+  "boundary_complexity_frontier": {
+    "bottom_top_arc_walls": 1903,
+    "bottom_top_forced_intersecting_pairs": 607060,
+    "boundary_semantic_sha256": "bb64fa529b5926d72a2c183e633147957145c4058fa8bd9557586637359d6d70",
+    "decision": "SUBORDINATE_FULL_SIGN_INVARIANT_SQUARE_ARRANGEMENT; RETAIN_COMPONENT_COVERAGE_QUOTIENT",
+    "disjoint_forced_intersecting_pair_lower_bound": 618120,
+    "left_right_arc_walls": 220,
+    "left_right_forced_intersecting_pairs": 11060,
+    "overlapping_single_root_boxes": 0,
+    "root_census": {
+      "bottom:0": 998,
+      "bottom:1": 2756,
+      "bottom:2": 9,
+      "left:0": 2713,
+      "left:1": 1050,
+      "right:0": 2747,
+      "right:1": 1015,
+      "right:2": 1,
+      "top:0": 1079,
+      "top:1": 2675,
+      "top:2": 9
+    }
+  },
+  "format": "diag3-pair-source-square-component-coverage-v1",
+  "parent_square": {
+    "coverage_argument": "bilinear Bernstein coefficients are the four positive corner values",
+    "minimum_margin_bracket": "1268",
+    "minimum_signed_corner_margin": "1066724866772451496969732096/1456676456613330116338348238405",
+    "parent_brackets": 70,
+    "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "restriction_bidegree_census": {
+      "0,0": 17,
+      "0,1": 19,
+      "1,0": 19,
+      "1,1": 15
+    },
+    "strict_corners": 4
+  },
+  "scope": {
+    "fixed_column_block": 2,
+    "full_arrangement_cell_coverage": "NOT_CLAIMED",
+    "global_parent_cell_coverage": "NOT_CLAIMED",
+    "parameter_domain": "closed unit square",
+    "parent_index": 2599,
+    "parent_parameter_coverage": "COMPLETE_ON_SOURCE_SQUARE",
+    "source_chart": 0,
+    "target_chart": 152,
+    "varying_column_blocks": [
+      0,
+      1
+    ],
+    "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_SQUARE_BOUNDARY"
+  },
+  "status": "EXACT_SOURCE_SQUARE_WALL_COMPONENT_COVERAGE",
+  "theorem_effect": "Exact wall-component coverage on one parent-resident source square; global pair coverage and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
+  "wall_component_coverage": {
+    "ambiguous_tangent_boxes": 0,
+    "biquadratic_walls": 1232,
+    "boundary_hit_two_root_intervals": 0,
+    "compact_oval_candidates": 0,
+    "conclusion": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_SQUARE_BOUNDARY",
+    "critical_semantic_sha256": "4791e9d4270e9d1e3f4ebf8a6687228572f5bce9a24de91130d2e82a380a246b",
+    "discriminant_root_census": {
+      "0": 1009,
+      "1": 181,
+      "2": 42
+    },
+    "endpoint_projection_degeneracies": 0,
+    "graph_type_walls": 2531,
+    "positive_bounded_projection_intervals": 0,
+    "squarefree_projection_discriminants": 1232,
+    "two_root_bounded_projection_intervals": 0
+  },
+  "wall_feasibility": {
+    "candidate_factors": 17824,
+    "classification_depth_census": {
+      "EMPTY_BERNSTEIN:0": 14051,
+      "EMPTY_BERNSTEIN:1": 6,
+      "EMPTY_CONSTANT:0": 4,
+      "NONEMPTY_SIGN_CHANGE:0": 3748,
+      "NONEMPTY_SIGN_CHANGE:1": 10,
+      "NONEMPTY_SIGN_CHANGE:2": 4,
+      "NONEMPTY_SIGN_CHANGE:3": 1
+    },
+    "classification_semantic_sha256": "4b400742a6516d41209f548ceb9a97d3ff6fddc916f913b8a8b6c412f98045cc",
+    "occurring_factor_ids_sha256": "77d71cfc487a370c349d1277714ba033b2e60887a7df50e3518ec367ca49f02a",
+    "occurring_walls": 3763,
+    "restriction_bidegree_census": {
+      "0,0": 4,
+      "0,1": 176,
+      "0,2": 376,
+      "1,0": 176,
+      "1,1": 3332,
+      "1,2": 4516,
+      "2,0": 376,
+      "2,1": 4516,
+      "2,2": 4352
+    },
+    "status_census": {
+      "EMPTY_BERNSTEIN": 14057,
+      "EMPTY_CONSTANT": 4,
+      "NONEMPTY_SIGN_CHANGE": 3763
+    },
+    "unresolved_walls": 0,
+    "zero_free_factor_ids_sha256": "0a567014f5f59c950a3b48470e712b3b6e8f046a558b288fbeb948ad9fd32df5",
+    "zero_free_walls": 14061
+  }
+}

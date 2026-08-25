@@ -1,0 +1,631 @@
+{
+  "boxes": [
+    {
+      "block_parameter_intervals": [
+        "0..1/8",
+        "0..1",
+        "0..1/64"
+      ],
+      "box_id": "x0",
+      "exact_volume": "1/512",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "3138651817846620575925673467337385141197465457/33457464850937496301577787217299186692607221705680",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_component_coverage": {
+        "adaptive_critical_systems_proved_empty": 229,
+        "adaptive_critical_systems_unresolved": 0,
+        "conclusion": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_THIS_BOX_BOUNDARY",
+        "critical_attempt_result_census": {
+          "EMPTY": 229
+        },
+        "critical_semantic_sha256": "4ccf29178a0000d9d7e5b520c034b3c8e5638272ed9210536b9df7dbd856cdd5",
+        "fully_triquadratic_factor_ids_sha256": "aa876a6c153163bb5a48e11c2e4f0f5b9064f5cd27b0b0edd7b0fee397afde47",
+        "fully_triquadratic_occurring_walls": 229,
+        "graph_type_factor_ids_sha256": "780a4d85988d8aab2b04be4e5626dedaa91b366bd62566e94ec3440b1422a231",
+        "graph_type_occurring_walls": 1317,
+        "maximum_subboxes_visited_for_one_critical_attempt": 9,
+        "maximum_total_subboxes_visited_for_one_factor": 9,
+        "occurring_tridegree_census": {
+          "0,1,1": 2,
+          "0,1,2": 5,
+          "0,2,0": 1,
+          "0,2,1": 12,
+          "0,2,2": 19,
+          "1,0,1": 1,
+          "1,0,2": 4,
+          "1,1,0": 6,
+          "1,1,1": 80,
+          "1,1,2": 97,
+          "1,2,0": 26,
+          "1,2,1": 178,
+          "1,2,2": 204,
+          "2,0,1": 3,
+          "2,0,2": 13,
+          "2,1,0": 24,
+          "2,1,1": 147,
+          "2,1,2": 180,
+          "2,2,0": 52,
+          "2,2,1": 263,
+          "2,2,2": 229
+        },
+        "selected_critical_depth_census": {
+          "0": 229
+        },
+        "selected_derivative_axis_pair_census": {
+          "1,2": 229
+        }
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 16278,
+          "NONEMPTY_CORNER:0": 1544,
+          "NONEMPTY_CORNER:1": 2
+        },
+        "classification_semantic_sha256": "61a61fb2eb81fd1f69739bc6dcd000a8acffcf0025b7459f784f8939badbdc6b",
+        "maximum_subboxes_visited_for_one_wall": 9,
+        "occurring_factor_ids_sha256": "e8c50b04e18d9a13ffea57be7b914598e0bf8ea492184e80c189749cd8b6d6bf",
+        "occurring_walls": 1546,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 16278,
+          "NONEMPTY_CORNER": 1546
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "4a4b3f5b705087fe828d0f3fe87045331df571c8dfea1a361d056097217209d0",
+        "zero_free_walls": 16278
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "1/8..1/4",
+        "0..1",
+        "0..5/16"
+      ],
+      "box_id": "x1",
+      "exact_volume": "5/128",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "2122403975260462065097227015343181218626904146949050809/818216488894773269553516655380831745422867272274407608320",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_component_coverage": {
+        "adaptive_critical_systems_proved_empty": 289,
+        "adaptive_critical_systems_unresolved": 0,
+        "conclusion": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_THIS_BOX_BOUNDARY",
+        "critical_attempt_result_census": {
+          "EMPTY": 289
+        },
+        "critical_semantic_sha256": "03dd4e5ae288a36127fa7d89c3a800f7f9ded8d55d829c1a6597da2aefb4a5b5",
+        "fully_triquadratic_factor_ids_sha256": "c0445040839c2ccc7df248170402eb5394c04767920aab521b2498a36f54cffc",
+        "fully_triquadratic_occurring_walls": 289,
+        "graph_type_factor_ids_sha256": "a60b8ad56c47850a3cca39540f8e06beaff1b355bcfd49cd809839054932e020",
+        "graph_type_occurring_walls": 1780,
+        "maximum_subboxes_visited_for_one_critical_attempt": 9,
+        "maximum_total_subboxes_visited_for_one_factor": 9,
+        "occurring_tridegree_census": {
+          "0,1,1": 5,
+          "0,1,2": 14,
+          "0,2,0": 1,
+          "0,2,1": 20,
+          "0,2,2": 33,
+          "1,0,1": 4,
+          "1,0,2": 10,
+          "1,1,0": 8,
+          "1,1,1": 123,
+          "1,1,2": 156,
+          "1,2,0": 24,
+          "1,2,1": 228,
+          "1,2,2": 301,
+          "2,0,1": 4,
+          "2,0,2": 32,
+          "2,1,0": 27,
+          "2,1,1": 186,
+          "2,1,2": 250,
+          "2,2,0": 55,
+          "2,2,1": 299,
+          "2,2,2": 289
+        },
+        "selected_critical_depth_census": {
+          "0": 289
+        },
+        "selected_derivative_axis_pair_census": {
+          "1,2": 289
+        }
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 15754,
+          "EMPTY_BERNSTEIN:1": 1,
+          "NONEMPTY_CORNER:0": 2069
+        },
+        "classification_semantic_sha256": "5030b7cc03a3ec3da99f27a2c5421a4e733e625c3889c9b43c3f3e0ad861b095",
+        "maximum_subboxes_visited_for_one_wall": 17,
+        "occurring_factor_ids_sha256": "032d36d60804c360b3ccee0daca235209fd9667a87ded360cbbe290a952ca11a",
+        "occurring_walls": 2069,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 15755,
+          "NONEMPTY_CORNER": 2069
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "420c2aba4bac8d4db765dc8a9dfd8e305a62b9bdc168f444ffe3ef48304592c4",
+        "zero_free_walls": 15755
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "1/4..3/8",
+        "0..1",
+        "0..5/8"
+      ],
+      "box_id": "x2",
+      "exact_volume": "5/64",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "1268",
+        "minimum_signed_vertex_margin": "446523332934231574526855311049389825676096407264607161/204554122223693317388379163845207936355716818068601902080",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_component_coverage": {
+        "adaptive_critical_systems_proved_empty": 363,
+        "adaptive_critical_systems_unresolved": 0,
+        "conclusion": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_THIS_BOX_BOUNDARY",
+        "critical_attempt_result_census": {
+          "EMPTY": 363
+        },
+        "critical_semantic_sha256": "e3c26fbfe2254a590b81a23fca668dea56f13073a9cea997c51a6ce1e3993fac",
+        "fully_triquadratic_factor_ids_sha256": "ad8734bf6c405a51365bf1172ecb0ee352257e73dcda6a1de03162d468074133",
+        "fully_triquadratic_occurring_walls": 363,
+        "graph_type_factor_ids_sha256": "61bdb03c298415721d4bca4a1b6a10f8f336fbc97fe69ce47767e495dca3ac29",
+        "graph_type_occurring_walls": 2407,
+        "maximum_subboxes_visited_for_one_critical_attempt": 9,
+        "maximum_total_subboxes_visited_for_one_factor": 9,
+        "occurring_tridegree_census": {
+          "0,0,2": 1,
+          "0,1,1": 6,
+          "0,1,2": 27,
+          "0,2,0": 1,
+          "0,2,1": 27,
+          "0,2,2": 52,
+          "1,0,1": 10,
+          "1,0,2": 15,
+          "1,1,0": 7,
+          "1,1,1": 171,
+          "1,1,2": 242,
+          "1,2,0": 21,
+          "1,2,1": 304,
+          "1,2,2": 407,
+          "2,0,1": 15,
+          "2,0,2": 41,
+          "2,1,0": 20,
+          "2,1,1": 256,
+          "2,1,2": 358,
+          "2,2,0": 60,
+          "2,2,1": 366,
+          "2,2,2": 363
+        },
+        "selected_critical_depth_census": {
+          "0": 363
+        },
+        "selected_derivative_axis_pair_census": {
+          "1,2": 363
+        }
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 15054,
+          "NONEMPTY_CORNER:0": 2770
+        },
+        "classification_semantic_sha256": "a7bf40a18f916a8e0d81404b901de4fdd8657cbf05686d9bec72eea3962b938e",
+        "maximum_subboxes_visited_for_one_wall": 1,
+        "occurring_factor_ids_sha256": "9b9331a015ec9ed7af2e9a0e7e4c342b8caf843c9e29b03f60b4734657d80c59",
+        "occurring_walls": 2770,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 15054,
+          "NONEMPTY_CORNER": 2770
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "0f06eb6d685288d7b10d00e0e14fda24fa3a23cce55337b9adf059bb1fae527b",
+        "zero_free_walls": 15054
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "3/8..1/2",
+        "0..1",
+        "0..7/8"
+      ],
+      "box_id": "x3",
+      "exact_volume": "7/64",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "5678",
+        "minimum_signed_vertex_margin": "49492330782445062154420862377835075387464363622499681243354980828317999/50600754939529403052440178430335641465004061302369501106719501511078932480",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_component_coverage": {
+        "adaptive_critical_systems_proved_empty": 417,
+        "adaptive_critical_systems_unresolved": 0,
+        "conclusion": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_THIS_BOX_BOUNDARY",
+        "critical_attempt_result_census": {
+          "EMPTY": 417,
+          "UNRESOLVED": 1
+        },
+        "critical_semantic_sha256": "02f44a46d7a0f090bea63d3c1ca8d82ec1294c136695b4d5bff484c1eadc8ae6",
+        "fully_triquadratic_factor_ids_sha256": "f57adf223b845dd89157b04da1e749c385133139a191f031ff1a48b7805681b3",
+        "fully_triquadratic_occurring_walls": 417,
+        "graph_type_factor_ids_sha256": "14bad20941f8d1e1cbf46ad4305b44b2864bedf0c675498c3842eec3f032c108",
+        "graph_type_occurring_walls": 2883,
+        "maximum_subboxes_visited_for_one_critical_attempt": 47,
+        "maximum_total_subboxes_visited_for_one_factor": 48,
+        "occurring_tridegree_census": {
+          "0,0,2": 2,
+          "0,1,1": 8,
+          "0,1,2": 41,
+          "0,2,0": 1,
+          "0,2,1": 35,
+          "0,2,2": 80,
+          "1,0,1": 15,
+          "1,0,2": 23,
+          "1,1,0": 8,
+          "1,1,1": 207,
+          "1,1,2": 315,
+          "1,2,0": 22,
+          "1,2,1": 342,
+          "1,2,2": 488,
+          "2,0,1": 21,
+          "2,0,2": 57,
+          "2,1,0": 17,
+          "2,1,1": 287,
+          "2,1,2": 430,
+          "2,2,0": 58,
+          "2,2,1": 426,
+          "2,2,2": 417
+        },
+        "selected_critical_depth_census": {
+          "0": 417
+        },
+        "selected_derivative_axis_pair_census": {
+          "0,2": 1,
+          "1,2": 416
+        }
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 14521,
+          "EMPTY_BERNSTEIN:1": 3,
+          "NONEMPTY_CORNER:0": 3299,
+          "NONEMPTY_CORNER:2": 1
+        },
+        "classification_semantic_sha256": "c0a9dc2f09640a0ad688202fb6ec93c1d9b94ebfc0a1d6069d9ded22b0afe6e7",
+        "maximum_subboxes_visited_for_one_wall": 25,
+        "occurring_factor_ids_sha256": "e1443bf04abde7e71127c7f74da7914b7949601d1fad1a08da09bf51b015e98a",
+        "occurring_walls": 3300,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 14524,
+          "NONEMPTY_CORNER": 3300
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "8d66b550c82debe0ff61e8b773e4d2b31bccac2a6bc40709ebf6c1026bcd4ea8",
+        "zero_free_walls": 14524
+      }
+    },
+    {
+      "block_parameter_intervals": [
+        "1/2..1",
+        "0..1",
+        "0..1"
+      ],
+      "box_id": "x4",
+      "exact_volume": "1/2",
+      "parent_cube": {
+        "coverage_argument": "trilinear Bernstein coefficients are the eight positive vertex values",
+        "minimum_margin_bracket": "5678",
+        "minimum_signed_vertex_margin": "1923873060148349365333344163278294950688106825916862269195/6968279168765859521383280085258799343560010449024933961074368",
+        "parent_brackets": 70,
+        "parent_polynomial_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+        "restriction_tridegree_census": {
+          "0,0,0": 8,
+          "0,0,1": 9,
+          "0,1,0": 9,
+          "0,1,1": 10,
+          "1,0,0": 9,
+          "1,0,1": 10,
+          "1,1,0": 10,
+          "1,1,1": 5
+        },
+        "strict_vertices": 8
+      },
+      "wall_component_coverage": {
+        "adaptive_critical_systems_proved_empty": 561,
+        "adaptive_critical_systems_unresolved": 0,
+        "conclusion": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_THIS_BOX_BOUNDARY",
+        "critical_attempt_result_census": {
+          "EMPTY": 561
+        },
+        "critical_semantic_sha256": "23d4c04c8809405b2b8a204cc683e6faf3fb182d155709019d622f2bcae4835a",
+        "fully_triquadratic_factor_ids_sha256": "8cbb5a635dc7d09cb65527d16b5cfa825729ea0aa2b9950398ee96303e0142b5",
+        "fully_triquadratic_occurring_walls": 561,
+        "graph_type_factor_ids_sha256": "f918213d8360c8e03d15da02d36241b90907649323be4777744171d2468acebb",
+        "graph_type_occurring_walls": 3889,
+        "maximum_subboxes_visited_for_one_critical_attempt": 81,
+        "maximum_total_subboxes_visited_for_one_factor": 81,
+        "occurring_tridegree_census": {
+          "0,0,2": 2,
+          "0,1,1": 11,
+          "0,1,2": 47,
+          "0,2,0": 1,
+          "0,2,1": 39,
+          "0,2,2": 93,
+          "1,0,1": 24,
+          "1,0,2": 35,
+          "1,1,0": 9,
+          "1,1,1": 294,
+          "1,1,2": 437,
+          "1,2,0": 30,
+          "1,2,1": 444,
+          "1,2,2": 598,
+          "2,0,1": 33,
+          "2,0,2": 93,
+          "2,1,0": 19,
+          "2,1,1": 405,
+          "2,1,2": 622,
+          "2,2,0": 83,
+          "2,2,1": 570,
+          "2,2,2": 561
+        },
+        "selected_critical_depth_census": {
+          "0": 552,
+          "1": 4,
+          "2": 3,
+          "3": 1,
+          "4": 1
+        },
+        "selected_derivative_axis_pair_census": {
+          "1,2": 561
+        }
+      },
+      "wall_feasibility": {
+        "candidate_factors": 17824,
+        "classification_depth_census": {
+          "EMPTY_BERNSTEIN:0": 13370,
+          "EMPTY_BERNSTEIN:1": 4,
+          "NONEMPTY_CORNER:0": 4444,
+          "NONEMPTY_CORNER:1": 4,
+          "NONEMPTY_CORNER:2": 1,
+          "NONEMPTY_CORNER:4": 1
+        },
+        "classification_semantic_sha256": "152c16f19053901214c455aa4281cb20c8c5b4c91adde999e4d30bd5c3c21637",
+        "maximum_subboxes_visited_for_one_wall": 25,
+        "occurring_factor_ids_sha256": "fd24997cf7510895e46fa9e2a56e688de1dc9eb7509592b5d523f9f172b3f5ad",
+        "occurring_walls": 4450,
+        "restriction_tridegree_census": {
+          "0,0,2": 4,
+          "0,1,1": 44,
+          "0,1,2": 132,
+          "0,2,0": 4,
+          "0,2,1": 114,
+          "0,2,2": 258,
+          "1,0,1": 52,
+          "1,0,2": 124,
+          "1,1,0": 38,
+          "1,1,1": 1248,
+          "1,1,2": 2046,
+          "1,2,0": 120,
+          "1,2,1": 2016,
+          "1,2,2": 2380,
+          "2,0,0": 4,
+          "2,0,1": 126,
+          "2,0,2": 246,
+          "2,1,0": 120,
+          "2,1,1": 2016,
+          "2,1,2": 2380,
+          "2,2,0": 270,
+          "2,2,1": 2408,
+          "2,2,2": 1674
+        },
+        "status_census": {
+          "EMPTY_BERNSTEIN": 13374,
+          "NONEMPTY_CORNER": 4450
+        },
+        "unresolved_walls": 0,
+        "zero_free_factor_ids_sha256": "b56d10db45671e44238e38b2dc47794157b14077207345b5ae61a3e96af69b3e",
+        "zero_free_walls": 13374
+      }
+    }
+  ],
+  "format": "diag3-pair-source-staircase-component-coverage-v1",
+  "proof": {
+    "adaptive_critical_argument": "A compact component has an extremum in every coordinate; for any chosen omitted coordinate it contains a zero of p and the derivatives in the other two coordinates. One exactly empty chosen system therefore excludes compact components.",
+    "graph_type_argument": "A restriction affine in one parameter either contains a full boundary-meeting fiber or projects locally as a graph, excluding a compact interior component.",
+    "staircase_skeleton_argument": "Each boxwise wall component meets the union of the five box boundaries; internal seams remain part of this declared source skeleton."
+  },
+  "scope": {
+    "exact_parameter_volume": "373/512",
+    "full_hybrid_cube_volume_fraction": "373/512",
+    "global_parent_cell_coverage": "NOT_CLAIMED",
+    "parent_index": 2599,
+    "parent_parameter_coverage": "COMPLETE_ON_DECLARED_FIVE_BOX_SOURCE_STAIRCASE",
+    "source_boxes": 5,
+    "source_chart": 0,
+    "source_skeleton_coverage": "UNION_OF_ALL_FIVE_BOX_BOUNDARIES",
+    "staircase_global_boundary_coverage": "NOT_CLAIMED",
+    "target_chart": 152,
+    "varying_column_blocks": [
+      0,
+      1,
+      2
+    ],
+    "wall_component_coverage": "EVERY_OCCURRING_WALL_COMPONENT_MEETS_ITS_SOURCE_BOX_BOUNDARY",
+    "wall_feasibility_coverage": "COMPLETE_ON_EACH_SOURCE_BOX"
+  },
+  "status": "EXACT_SOURCE_STAIRCASE_BOXWISE_WALL_COMPONENT_COVERAGE",
+  "summary": {
+    "box_factor_restrictions_replayed": 89120,
+    "boxes": 5,
+    "boxwise_component_coverage": "PROVED",
+    "global_missed_component_theorem": "OPEN",
+    "parent_bracket_box_restrictions_replayed": 350,
+    "staircase_occurring_factor_ids_sha256": "e51aea503481b62b028dbf94628cbb629ab493ad41b08aa0143c9d82708ee357",
+    "staircase_occurring_walls": 5106,
+    "staircase_zero_free_factor_ids_sha256": "2e6693ec80ada175f1b534f2b4155735a8281a79c692e3f7bc294e60bd6a5089",
+    "strict_parent_vertices_replayed": 40,
+    "unresolved_box_factor_restrictions": 0,
+    "zero_free_on_all_staircase_boxes": 12718
+  },
+  "theorem_effect": "Exact parent residence, complete wall feasibility, and boxwise wall-component boundary coverage on a 373/512-volume source staircase; global pair coverage and the independent triple obligation remain open; honest 9DVL score remains 2/9."
+}

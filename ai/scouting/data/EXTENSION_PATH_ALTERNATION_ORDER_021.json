@@ -1,0 +1,295 @@
+{
+  "block_order": [
+    0,
+    2,
+    1
+  ],
+  "compound_event_count": 331,
+  "endpoint_symmetric_difference": 24996,
+  "events": 5970,
+  "events_sha256": "cdbd70eecc367a3e0bb96ad6a7a2e15f310ff7fb139bd745a82c55649b8cdae9",
+  "identities": {
+    "odd_alternation_signatures_equal_endpoint_symmetric_difference": true,
+    "transition_mass_equals_sum_of_event_symmetric_differences": true
+  },
+  "maximizer_count": 20,
+  "maximizers": [
+    {
+      "antipode": 72025144585911472,
+      "event_indices": [
+        1584,
+        2388,
+        3561,
+        4419,
+        4873
+      ],
+      "hex": "001d833a0f834f",
+      "signature": 32449452016463
+    },
+    {
+      "antipode": 71607890024892287,
+      "event_indices": [
+        2643,
+        3028,
+        4382,
+        5392,
+        5559
+      ],
+      "hex": "019900dff37880",
+      "signature": 449704013035648
+    },
+    {
+      "antipode": 70811109780695207,
+      "event_indices": [
+        581,
+        1255,
+        4446,
+        4481,
+        5081
+      ],
+      "hex": "046dabbb5ed758",
+      "signature": 1246484257232728
+    },
+    {
+      "antipode": 62614150189218928,
+      "event_indices": [
+        2088,
+        3742,
+        4163,
+        4778,
+        5197
+      ],
+      "hex": "218cc31c0f038f",
+      "signature": 9443443848709007
+    },
+    {
+      "antipode": 58433601090582528,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "3066f30c0c87ff",
+      "signature": 13623992947345407
+    },
+    {
+      "antipode": 58433600822147072,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "3066f31c0c87ff",
+      "signature": 13623993215780863
+    },
+    {
+      "antipode": 58433600486602752,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "3066f3300c87ff",
+      "signature": 13623993551325183
+    },
+    {
+      "antipode": 58433600352385024,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "3066f3380c87ff",
+      "signature": 13623993685542911
+    },
+    {
+      "antipode": 58433600285276160,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "3066f33c0c87ff",
+      "signature": 13623993752651775
+    },
+    {
+      "antipode": 58433583306733568,
+      "event_indices": [
+        1362,
+        2382,
+        3397,
+        4199,
+        4668
+      ],
+      "hex": "3066f7300c87ff",
+      "signature": 13624010731194367
+    },
+    {
+      "antipode": 13624010731194367,
+      "event_indices": [
+        1362,
+        2382,
+        3397,
+        4199,
+        4668
+      ],
+      "hex": "cf9908cff37800",
+      "signature": 58433583306733568
+    },
+    {
+      "antipode": 13623993752651775,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "cf990cc3f37800",
+      "signature": 58433600285276160
+    },
+    {
+      "antipode": 13623993685542911,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "cf990cc7f37800",
+      "signature": 58433600352385024
+    },
+    {
+      "antipode": 13623993551325183,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "cf990ccff37800",
+      "signature": 58433600486602752
+    },
+    {
+      "antipode": 13623993215780863,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "cf990ce3f37800",
+      "signature": 58433600822147072
+    },
+    {
+      "antipode": 13623992947345407,
+      "event_indices": [
+        1362,
+        2188,
+        3664,
+        4199,
+        4668
+      ],
+      "hex": "cf990cf3f37800",
+      "signature": 58433601090582528
+    },
+    {
+      "antipode": 9443443848709007,
+      "event_indices": [
+        2088,
+        3742,
+        4163,
+        4778,
+        5197
+      ],
+      "hex": "de733ce3f0fc70",
+      "signature": 62614150189218928
+    },
+    {
+      "antipode": 1246484257232728,
+      "event_indices": [
+        581,
+        1255,
+        4446,
+        4481,
+        5081
+      ],
+      "hex": "fb925444a128a7",
+      "signature": 70811109780695207
+    },
+    {
+      "antipode": 449704013035648,
+      "event_indices": [
+        2643,
+        3028,
+        4382,
+        5392,
+        5559
+      ],
+      "hex": "fe66ff200c877f",
+      "signature": 71607890024892287
+    },
+    {
+      "antipode": 32449452016463,
+      "event_indices": [
+        1584,
+        2388,
+        3561,
+        4419,
+        4873
+      ],
+      "hex": "ffe27cc5f07cb0",
+      "signature": 72025144585911472
+    }
+  ],
+  "maximizers_antipode_closed": true,
+  "maximum_alternation": 5,
+  "path_id": "row2599-chart-0-to-152-order-021",
+  "segment_event_census": [
+    2774,
+    1813,
+    1383
+  ],
+  "segment_factor_root_count_census": [
+    {
+      "0": 15059,
+      "1": 2756,
+      "2": 9
+    },
+    {
+      "0": 16013,
+      "1": 1809,
+      "2": 2
+    },
+    {
+      "0": 16443,
+      "1": 1379,
+      "2": 2
+    }
+  ],
+  "segments": 3,
+  "semantic_sha256": "09ce6be22d2362b7f53829b7dc817aebf5f66584621ac28b900c5c6059195bd8",
+  "signature_universe": 97224,
+  "transition_mass": 53436,
+  "transition_spectrum": {
+    "0": 60902,
+    "1": 22378,
+    "2": 11070,
+    "3": 2598,
+    "4": 256,
+    "5": 20
+  }
+}

@@ -29,7 +29,7 @@ Exactly two of the nine entries are currently proved.
 |---:|---|---|---|
 | 1 | `H_tilde_8(F_sigma)` | `H_c^0(B_sigma)` | **proved integrally** |
 | 2 | `H_7(F_S)` | `H_c^1(B_S)` | **proved integrally**; exchange-saturated support drop excludes every compact component of `B_sigma intersection B_tau` |
-| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
+| 3 | `H_6(F_S)` | `H_c^2(B_S)` | open; every single-bad group through `H_c^2` vanishes integrally; exact component escapes close `77,940,147/79,102,449` triple-factor orbits, leaving `1,162,302`; at the row-2599 full-support gate, 10,844/17,824 candidate walls are interior-nonempty, 1,177 have exact fixed-sign empty-zero-set certificates, and 5,803 remain unresolved globally; on the chart-0-to-chart-152 three-parameter hybrid cube all 17,824 residual restrictions are decided and every occurring restricted-wall component reaches the cube boundary, but 5,390 known parent walls are zero-free on that source cube, refuting universal incidence with it; the pair differential is reduced to an explicit exclusive-pair/balanced-end complex, and mod-two middle exactness would suffice for the rational target, but no coverage-certified global master closure complex exists |
 | 4 | `H_5(F_S)` | `H_c^3(B_S)` | open; exact fivefold complex; every omitted-label single piece vanishes through `H_c^3`, leaving only cover-all supports |
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
@@ -625,6 +625,13 @@ packed source-order residue digest
 `a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4`.
 Hostile full-record/source replay passed all three artifacts; none of these
 positive screens is promoted to a negative maximality theorem.
+An exhaustive exponent-difference replay on the final residue now proves
+that all `1,162,302` rows have common-weight rank nine already over `F_2`.
+Thus no row admits a nontrivial common diagonal scaling in the normalized
+coordinates.  A stronger bounded hard-canary calculation gives full rank
+`585/585` for arbitrary quadratic vector fields with affine-linear ideal
+multipliers on five hard triples.  These are strategy no-go certificates;
+they do not reduce the residue or change the theorem score.
 See
 `DIAG3_TRIPLE_FACTOR_REDUCTION.md`,
 `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`,
@@ -633,7 +640,8 @@ See
 `DIAG3_TRIPLE_UNIT_MINOR_AFTER_GRAPH.md`,
 `DIAG3_TRIPLE_DIRECT_FINAL_AFFINITY.md`,
 `DIAG3_TRIPLE_PRIMITIVE_FINAL_DIRECTION.md`, and
-`DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md`.
+`DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md`, and
+`DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md`.
 
 The tested deterministic full colored occurrence/support key gives no
 quotient: it was singleton on the `1,819,850`-orbit pre-constant-plane source,
@@ -1276,6 +1284,192 @@ regions are nonempty, proper, and pairwise incomparable.  This confirms that
 the first path was not an isolated numerical accident, but it still refutes
 only a sampled separator: 178 point charts are not a chamber roadmap.
 
+### Exact source-square component coverage
+
+The coverage program now has one complete two-parameter theorem rather than
+only paths and local disks.  Starting at row-2599 chart 0, independently
+interpolate moving-column blocks 6 and 7 toward chart 152 while leaving block
+8 fixed.  Every one of the 70 parent brackets is bilinear with four positive
+corner Bernstein coefficients, so the entire closed unit square remains in
+the strict parent cell.
+
+Exact tensor Bernstein subdivision classifies all 17,824 residual
+restrictions on this square: 14,061 are zero-free, 3,763 occur, and none are
+unresolved.  Among the occurring walls, 2,531 are graph type.  The remaining
+1,232 biquadratics have squarefree projection discriminants; an exact Sturm
+census finds no positive interval bounded by two interior critical values.
+Therefore no occurring wall has a compact component in the square: every
+component meets its boundary.
+
+This is deliberately a component-coverage quotient, not a sign-invariant
+arrangement.  Boundary order already forces 618,120 distinct curve pairs to
+intersect, making full arrangement materialization strategically
+disproportionate.  The certificate does not show that every wall component
+in the full nine-dimensional parent cell meets this source square.  The next
+pair-side object is the full three-parameter chart-0-to-chart-152 block cube,
+followed by global source-skeleton missed-component coverage.  The honest
+score remains `2/9`; the independent 1,162,302-row triple residue is also
+unchanged.  See `DIAG3_PAIR_SOURCE_SQUARE_COVERAGE.md`.
+
+The attempted three-parameter extension exposed and repaired a genuine
+parent-cell obstruction.  The full `[0,1]^3` hybrid block cube has only six
+parent-safe vertices: `(0,0,1)` violates `[1268]`, while `(0,1,1)` violates
+`[1268]` and `[5678]`.  The exact half-cube
+`[1/2,1] x [0,1] x [0,1]` is parent-resident, overlaps the source square,
+and contains chart 152.  Tensor Bernstein replay decides all 17,824 residual
+restrictions on this volume: 13,374 are zero-free, 4,450 occur, and zero are
+unresolved.  Of the occurring restrictions, 3,889 are affine in at least one
+parameter.  The coefficient-drop/full-fiber alternative and local graph
+projection prove that every component of each such surface reaches the
+boundary.  Exactly 561 fully triquadratic surfaces remain.  The next gate is
+the bounded critical system `p = partial_v p = partial_w p = 0` for those 561
+walls.  Exact tensor Bernstein subdivision proves all 561 systems empty:
+552 at depth zero and the last at depth four, with no system visiting more
+than 81 subboxes.  Thus every component of all 4,450 occurring walls meets
+the half-cube boundary.  This is complete coverage on one source volume, not
+global coverage of the nine-dimensional parent cell.  See
+`DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md`.
+
+The parent-safe source volume now extends further as a five-box staircase.
+Its dyadic steps have `u` intervals `[0,1/8]`, `[1/8,1/4]`, `[1/4,3/8]`,
+`[3/8,1/2]`, and `[1/2,1]`, with respective `w` heights `1/64`, `5/16`,
+`5/8`, `7/8`, and `1`; `v` spans `[0,1]` throughout.  Exact trilinear
+parent replay proves all five boxes strict, and their disjoint-interior volume
+is `373/512` of the hybrid cube.  Tensor Bernstein replay decides all 89,120
+box-factor restrictions.  Their union has 5,106 distinct occurring factors
+and 12,718 factors zero-free on every box.  Graph projection covers 12,276
+box occurrences and exact coordinate-adaptive critical systems cover the
+remaining 1,859.  One factor, 9,954 on the fourth box, correctly retains an
+inconclusive first derivative pair and closes with an alternate exact pair;
+no obligation is hidden by a deeper timeout.  Thus every boxwise wall
+component reaches the union of box boundaries.  This was the original
+five-box scope; the ambient theorem below now removes the internal seams from
+the component conclusion.  No full-parent missed-component theorem is
+claimed.  See `DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md`.
+
+The full hybrid cube is parent-invalid at two vertices, but its residual
+polynomial topology is nevertheless exact.  Tensor Bernstein replay decides
+all 17,824 full-cube restrictions: 12,247 are zero-free, 5,577 occur, and none
+remain unresolved.  Graph projection covers 4,898 occurring walls.  Adaptive
+critical systems cover all 679 fully triquadratic walls, including four
+preserved inconclusive first-axis attempts closed by alternate pairs.  Hence
+every occurring restricted-wall component meets the full cube boundary.  A
+semialgebraic path-transfer lemma then proves that every component inside any
+closed parent-safe source staircase meets that staircase's true outer
+boundary.  Internal seams are no longer required.  This remains a theorem on
+one three-parameter source family, not coverage of the nine-dimensional
+parent cell.  See `DIAG3_PAIR_FULL_HYBRID_CUBE_TOPOLOGY.md`.
+
+A final bounded source-volume experiment consolidates the proposed 16-slab
+refinement into eight boxes: full height is already parent-safe from
+`u=7/16`, so the last nine slabs merge into one box.  The exact staircase
+occupies volume `12817/16384`; all 142,592 box-factor restrictions are
+decided, with 5,139 distinct occurring factors and 12,685 zero-free on every
+box.  The ambient theorem gives true outer-boundary coverage.  The extra
+`881/16384` volume adds only 33 factors over the five-box staircase, so the
+predeclared yield gate stops further dyadic refinement.  The next pair target
+is the global missed-component theorem, not a 32- or 64-step staircase.  See
+`DIAG3_PAIR_SOURCE_STAIRCASE8_COVERAGE.md` and
+`DIAG3_DECISION_2026-08-22.md`.
+
+The required falsification pass then rules out the stronger hoped-for source
+incidence theorem.  Of the 10,844 factors with exact sign crossings on 105
+certified parent-safe chart segments, only 5,454 occur on the full
+chart-0/chart-152 source cube.  The remaining 5,390 are exactly zero-free on
+that entire cube.  Factor 5 is already a compact witness: it has opposite
+exact signs at charts 0 and 2 on a parent-safe segment, while its full-source
+restriction has a one-signed Bernstein net at depth zero.  Hence no finer
+staircase inside this cube can meet every global wall.  The proposed universal
+source-family missed-component theorem is retired; the pair branch now needs
+genuinely distinct source families with a coverage theorem or a direct global
+roadmap/master complex.  See
+`DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md`.
+
+The direct roadmap route now has a coverage-bearing first-four-support gate.
+On supports `(3,1,15)` and `(3,3,7)`, opposite signed parent brackets force
+the equalities `g=i` and `d=g`. Each weak parent closure is therefore the
+same square pyramid `0<=g<=a<=1`, `0<=g<=h<=1`, not a genuinely
+four-dimensional domain. Two exact rational tetrahedra cover each pyramid
+and inherit the completed `(3,1,5)` base. Independent replay checks all 70
+parent brackets on each support and reduces 8,017 ambient mixed restrictions
+to 94 parent-reduced zero sets and then 22 active interior wall equations,
+with zero unresolved classifications.
+
+The bounded fiber projection uses `a=t+(1-t)u`, `g=t`,
+`h=t+(1-t)v`. The 22 active walls split into one base-only, 20 `v`-linear,
+and one `v`-quadratic equation. The complete first projection family has 255
+nonzero obligations and only 136 distinct boundary-reduced `(u,t)`
+polynomials, of maximum bidegree `(4,5)`. This is below the declared
+100,000-polynomial ceiling.
+
+The complete second projection factors the 136 polynomials to 114 base curve
+factors and constructs all 6,061 nonconstant coefficient, discriminant, and
+pair-resultant obligations. Boundary reduction and squarefree quotient leave
+2,554 distinct univariate polynomials and 2,333 factor polynomials of maximum
+degree ten. Exact rational isolation followed by an independent
+standard-library Sturm replay proves that all 1,693 interior factor-root
+incidences are distinct and globally ordered: 19 are rational sections and
+1,674 are irrational sections in pairwise disjoint rational intervals.
+The lifted cells, face-compatible gluing, global closure data, and middle-rank
+replay remain open, so the honest score remains `2/9`. See
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md` and
+`DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ROOT_ISOLATION.md`.
+
+The next exact lift is complete on every open `t` sector.  All 114 base
+factors are specialized at rational samples in all 1,694 sectors, for 193,116
+exact specializations.  Standard-library Sturm replay certifies 132,134
+ordered `u`-root sections and 133,828 open strips, hence 265,962 open-sector
+base cells.  A bounded-square audit proves that all 28 nonconstant `u=1`
+evaluations factor through seven already projected factors; no boundary event
+was missing.  The algebraic-section base fibers described below now complete
+the base CAD; their incidence maps remain part of the later global gluing.
+
+Of those algebraic fibers, 1,022 are now complete simple transversal
+crossings.  Each is exactly one adjacent swap of two root labels; the swapped
+pair's raw resultant contains the section factor with multiplicity one, while
+no coefficient, discriminant, or `u=1` event occurs.  They contribute 84,794
+root-point cells and 85,816 strips.  The exact remaining frontier is 406
+sections with no visible stack change, 251 complex same-count transitions,
+and 14 root-count changes.
+
+Another 363 algebraic sections have identical adjacent stacks and exactly one
+raw multiplicity-one nonboundary event: 356 resultants, six discriminants,
+and one intermediate coefficient.  Exact replay proves the event cannot alter
+the interior `u` fiber, completing 21,076 root points and 21,439 strips.  The
+remaining algebraic frontier is now 43 complex unchanged stacks, 251 complex
+same-count transitions, and 14 root-count changes.
+
+The simultaneous and regular residual lifts then complete another 280
+sections.  The first tranche resolves 240 pure-resultant same-count fibers by
+proving that 1,390 visible inversions decompose into 549 exact collision
+cliques.  The second resolves 36 unchanged and four same-count fibers whose
+193 resultants are simple and whose four coefficient events are strictly
+non-leading.  Together they add 44,694 base cells and reduce the exact
+algebraic frontier to 28 sections.
+
+The final 28 fibers are now complete by an ordered-number-field Sturm
+certificate.  Their section parameters have degrees at most four.  For each
+selected real embedding, standard-library exact arithmetic in `Q[t]/(q)`
+reconstructs all 114 specialized base factors, proves every common-root owner
+group by a polynomial gcd, and matches every factor's total Sturm count to its
+claimed disjoint rational `u` intervals.  This uniformly covers 14 root-count
+changes, seven exceptional same-count transitions, seven complex unchanged
+stacks, one vertical-zero incidence, and 33 bounded-boundary incidences.  It
+adds 1,862 root points and 1,890 strips, so all 1,693 algebraic `t` sections
+are complete at the base level.
+
+The open-base-cell portion of the `v` lift is also complete.  Exact rational replay orders all
+22 original walls over every one of the 133,828 full-dimensional base cells
+lying in an open `t` sector and open `u` strip.  The 2,082 distinct order
+signatures contain 2,181,404 interior `v`-root sections and 2,315,232 open
+`v` strips, for 4,496,636 lifted cells.  A separate factorization audit proves
+all 44 `v=0,1` endpoint evaluations are already controlled by the base or
+univariate projection catalogs.  The next pair obligation is the lift over
+the 132,134 algebraic `u`-section fibers in the open `t` sectors, followed by
+the algebraic `t`-section base cells, face-compatible gluing, labels, and
+middle-rank replay.  None of those later obligations is claimed here; the
+honest 9DVL score remains `2/9`.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.
@@ -1377,6 +1571,10 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
   data: exact positive component escapes for `77,940,147` triple orbits,
   leaving `1,162,302`, with negative-search maximality kept separate from
   the replayed identities.
+- `DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md` and its two exact replayers:
+  exhaustive full-rank rejection of common normalized-coordinate scalings on
+  all `1,162,302` final rows, plus five full-rank hard-canary rejections of
+  quadratic ideal-preserving vector fields with affine multipliers.
 - `DIAG3_CONCURRENCE_NORMAL_FORM.md` and its verifier: the four-bilinear
   generic concurrence chart, exact degree-20 internal ramification RUR, and
   the all-26,740-factor proof that the ramification point has no fourth
@@ -1582,6 +1780,80 @@ only a sampled separator: 178 point charts are not a chamber roadmap.
 - `DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md` and its exact verifier:
   1,177 fixed-sign empty-zero-set certificates, leaving 5,803 full-support
   factors unresolved without a symmetry quotient.
+- `DIAG3_PAIR_SOURCE_SQUARE_COVERAGE.md`, its compact JSON record, builder,
+  and independent hostile verifier: exact parent residence, complete local
+  feasibility for all 17,824 restrictions, and boundary attachment of every
+  one of the 3,763 occurring wall components on the source square.
+- `DIAG3_PAIR_SOURCE_BLOCK_HALF_CUBE_FEASIBILITY.md`, its compact JSON
+  record, builder, and independent hostile verifier: an exact no-go for the
+  naïve full block cube and complete wall feasibility on its parent-safe
+  half-cube replacement.
+- `DIAG3_PAIR_SOURCE_STAIRCASE_COVERAGE.md`, its compact JSON record, builder,
+  and independent hostile verifier: five exact parent-safe boxes of total
+  volume `373/512`, complete classification of 89,120 restrictions, and
+  boxwise wall-component attachment to the declared source skeleton.
+- `DIAG3_PAIR_FULL_HYBRID_CUBE_TOPOLOGY.md`, its compact JSON record, builder,
+  and independent hostile verifier: complete exact classification of all
+  17,824 restrictions on the ambient three-parameter hybrid cube and true
+  outer-boundary attachment for every source-staircase component.
+- `DIAG3_PAIR_SOURCE_STAIRCASE8_COVERAGE.md`, its compact JSON record, builder,
+  and independent hostile verifier: exact volume `12817/16384`, complete
+  classification of 142,592 restrictions, true outer-boundary coverage, and
+  the low-yield stop after only 33 additional factors.
+- `DIAG3_PAIR_SOURCE_FAMILY_INCIDENCE_NO_GO.md`, its compact JSON record,
+  builder, and independent hostile verifier: 5,390 exact parent-interior walls
+  zero-free on the full chart-0/chart-152 source cube, retiring universal
+  incidence with that family.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md`, its compact JSON record, builder,
+  and independent hostile verifier: exact two-tetrahedron coverage of the
+  first two four-support parent domains and compression of 8,017 mixed
+  restrictions to 22 active walls with zero unresolved classes.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_PROJECTION.md`, its compact JSON record,
+  builder, and independent hostile verifier: complete first fiber projection
+  of the 22 walls to 136 boundary-reduced base polynomials under the pinned
+  resource ceiling.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_BASE_PROJECTION.md`, its exact factor
+  catalog, builder, and standard-library hostile verifier: complete second
+  projection to 2,554 squarefree univariate polynomials and an exact 1,693
+  interior factor-root incidence frontier.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ROOT_ISOLATION.md`, its compact ordered
+  interval catalog, builder, and standard-library hostile verifier: exact
+  isolation, cross-factor deduplication, and global ordering of all 1,693
+  interior `t` sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_SECTOR_LIFT.md`, its 32 hash-pinned
+  compact shards, manifest, builder, and standard-library hostile verifier:
+  exact ordered base stacks over all 1,694 open `t` sectors and 265,962
+  certified open-sector cells.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_SIMPLE_SECTION_LIFT.md`, its compact JSON
+  record, builder, and standard-library hostile verifier: 1,022 exact
+  transversal algebraic fibers and 170,610 section cells, leaving 671 harder
+  sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_INVISIBLE_SECTION_LIFT.md`, its compact
+  JSON record, builder, and standard-library hostile verifier: 363 exact
+  constant-stack algebraic fibers and 42,515 section cells, leaving 308
+  harder sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_MULTI_SECTION_LIFT.md`, its compact JSON
+  record, builder, and standard-library hostile verifier: 240 exact
+  simultaneous pure-resultant fibers, 549 collision cliques, and 40,084
+  section cells, leaving 68 harder sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_RESIDUAL_SECTION_LIFT.md`, its
+  compact JSON record, builder, and standard-library hostile verifier: 36
+  unchanged plus four same-count regular residual fibers, 193 simple
+  resultants, four harmless non-leading coefficient events, and 4,610 section
+  cells, leaving 28 harder sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_FINAL_SECTION_LIFT.md`, its rational
+  interval/owner catalog, builder, and independent standard-library
+  number-field Sturm verifier: all final 28 algebraic fibers, 3,752 section
+  cells, one vertical and 33 boundary degeneracies, leaving zero algebraic
+  `t` sections unresolved.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_CELL_V_LIFT.md`, its 32 hash-pinned
+  shards, builder, and independent standard-library exact-rational verifier:
+  all 133,828 full-dimensional open base cells lifted through the 22 original
+  walls to 4,496,636 certified cells, with 40/40 hostile mutations rejected.
+- `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
+  `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
+  fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
+  critical-system certificates without weakening independent replay.
 - `DIAG9_SIGN_GEODESY_AUDIT.md` and its exact verifier: factor-isometry of
   the three certified local roadmaps, exact factor-halfspace closure of all
   39,366 support traces on the 178 charts, and the 142-new-resultant no-go to

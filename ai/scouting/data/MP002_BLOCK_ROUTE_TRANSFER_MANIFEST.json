@@ -1,0 +1,186 @@
+{
+  "application": {
+    "certificate_route_selection": "wall-event count remains a useful replay-cost proxy and matches transition-mass order here, but it cannot replace the alternation tail vector when exceptional-history compression matters",
+    "recommended_objective": "retain event count and alternation tails as separate Pareto coordinates instead of scalarizing route quality by event count"
+  },
+  "claim": {
+    "counterexample": {
+      "predicted_order": "102",
+      "predicted_order_events": 4228,
+      "predicted_order_tail": 824,
+      "rival_order": "120",
+      "rival_order_events": 4362,
+      "rival_order_tail": 476,
+      "tail_gap": 348,
+      "threshold": 3
+    },
+    "registered_candidate": "the minimum exact wall-event route weakly minimizes every nonzero extension-membership alternation tail in the held-out three-route class",
+    "verdict": "REFUTED_BY_EXACT_HELD_OUT_COUNTEREXAMPLE"
+  },
+  "expedition_id": "MP-002",
+  "finite_class": {
+    "endpoint_factor_state_hamming_distance": 1812,
+    "event_count_order": [
+      "102",
+      "120",
+      "210"
+    ],
+    "parent": 2599,
+    "registered_valid_orders": [
+      "102",
+      "120",
+      "210"
+    ],
+    "restricted_minimax_alternation": 5,
+    "results": [
+      {
+        "events": 4228,
+        "maximizer_count": 2,
+        "maximum_alternation": 5,
+        "order": "102",
+        "path": "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_ORDER_102.json",
+        "semantic_sha256": "00b5de19c1fbcbcf34715b387fad479c4e0b6794dd2dff1e47bb82ab9b910bb8",
+        "sha256": "045249780faccef2881e4e5430c914b9fee8e1d822bc465a93c9e1ac87c3f658",
+        "tail_counts": {
+          "1": 22512,
+          "2": 9794,
+          "3": 824,
+          "4": 60,
+          "5": 2
+        },
+        "transition_mass": 33192,
+        "transition_spectrum": {
+          "0": 74712,
+          "1": 12718,
+          "2": 8970,
+          "3": 764,
+          "4": 58,
+          "5": 2
+        }
+      },
+      {
+        "events": 4362,
+        "maximizer_count": 2,
+        "maximum_alternation": 5,
+        "order": "120",
+        "path": "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_ORDER_120.json",
+        "semantic_sha256": "f0351621cddd213bdee0eaaa337793f1eba7618f361201f50ab08c23498a5e0d",
+        "sha256": "6dd8242b2c3ce1d831b51a0ad7167a55bb9024374d334b6fcfa7ba50e999355b",
+        "tail_counts": {
+          "1": 23696,
+          "2": 10604,
+          "3": 476,
+          "4": 86,
+          "5": 2
+        },
+        "transition_mass": 34864,
+        "transition_spectrum": {
+          "0": 73528,
+          "1": 13092,
+          "2": 10128,
+          "3": 390,
+          "4": 84,
+          "5": 2
+        }
+      },
+      {
+        "events": 4958,
+        "maximizer_count": 26,
+        "maximum_alternation": 5,
+        "order": "210",
+        "path": "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_ORDER_210.json",
+        "semantic_sha256": "db4afaa6a1d91562d839b10cd5642b97aa565ac906af173a19584e79d94b94e4",
+        "sha256": "cba5056077021f9a3555ac78370335ca48acb297552e613fa93f36c556d7b219",
+        "tail_counts": {
+          "1": 25948,
+          "2": 13824,
+          "3": 1624,
+          "4": 290,
+          "5": 26
+        },
+        "transition_mass": 41712,
+        "transition_spectrum": {
+          "0": 71276,
+          "1": 12124,
+          "2": 12200,
+          "3": 1334,
+          "4": 264,
+          "5": 26
+        }
+      }
+    ],
+    "source_chart": 0,
+    "tail_dominance": {
+      "102_over_120": false,
+      "102_over_210": true,
+      "120_over_102": false,
+      "120_over_210": true
+    },
+    "tail_pareto_frontier": [
+      "102",
+      "120"
+    ],
+    "target_chart": 66,
+    "transition_mass_order": [
+      "102",
+      "120",
+      "210"
+    ]
+  },
+  "format": "mp002-block-route-transfer-manifest-v1",
+  "holdout_protocol": {
+    "history_archive": {
+      "format": "minimal-shallow-git-object-store-v1",
+      "path": "ai/scouting/data/MP002_HOLDOUT_HISTORY.tar.gz",
+      "sha256": "a469a9b35b800c471c47c3d32ca772f5bc8a27b1ef4684b0ce760bcea6001f5a"
+    },
+    "phase_a_total_events": 13548,
+    "phase_b_result_paths_absent_at_prediction_freeze": true,
+    "prediction_freeze_git_commit": "4ddd987d4f2cbc55459f557fc578ee7dec55806e",
+    "prediction_semantic_sha256": "1194139f4064e0fb42f0605a2aea160e36533cc426ff5498c3cd9dab1be32222",
+    "prediction_sha256": "35320a3928fdbfb92f03f7f6a134721c4dd1406040e2d914f112533b3cde6166",
+    "registration_git_commit": "c818dd8415ffa3c1286f2d3200f93276f10ce98b",
+    "registration_sha256": "54ec6c3f549e4102fac7ccf4ba69d4c4a0572d5dd77c0fe628bcf3003f670e62",
+    "resource_accounting": {
+      "independent_verification_replay_outside_discovery_budget": 1,
+      "observational_exact_continuations_per_route": 1,
+      "worker_ceiling": 6
+    }
+  },
+  "honest_9dvl_score": "2/9",
+  "provenance": {
+    "current_reproducer": {
+      "path": "ai/scouting/explore_block_route_transfer.py",
+      "post_result_change": "worker-ceiling validation only",
+      "sha256": "ab268e5e57afb59dd6d77948018c731c5a738299074a75c035e8a8a32c2b0c87"
+    },
+    "prediction": {
+      "path": "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_PREDICTION.json",
+      "sha256": "35320a3928fdbfb92f03f7f6a134721c4dd1406040e2d914f112533b3cde6166"
+    },
+    "producer_at_prediction_freeze": {
+      "git_commit": "4ddd987d4f2cbc55459f557fc578ee7dec55806e",
+      "path": "ai/scouting/explore_block_route_transfer.py",
+      "sha256": "f8973ac6214317450b7b11348238217c2a2357852554f50ec0a1b30de685f1c3"
+    },
+    "registration": {
+      "path": "ai/scouting/data/MP002_BLOCK_ROUTE_TRANSFER_REGISTRATION.json",
+      "sha256": "54ec6c3f549e4102fac7ccf4ba69d4c4a0572d5dd77c0fe628bcf3003f670e62"
+    }
+  },
+  "scope": {
+    "9dvl_theorem_effect": "NONE",
+    "excluded_claims": [
+      "all block-route classes",
+      "all endpoints in the row-2599 parent cell",
+      "all oriented matroids",
+      "a general equivalence between wall-event count and alternation",
+      "any change to the honest 9DVL score"
+    ],
+    "novelty": "NOT_CLAIMED; the contribution is the exact counterexample and certificate-design consequence",
+    "result": "exact refutation on one preregistered held-out finite route class"
+  },
+  "semantic_sha256": "b73992542f897b711902cb979b24e417ef3d8e0e9a9662abfae6c7ff4c9b0e96",
+  "status": "REFUTED",
+  "title": "Block-route event-count transfer"
+}

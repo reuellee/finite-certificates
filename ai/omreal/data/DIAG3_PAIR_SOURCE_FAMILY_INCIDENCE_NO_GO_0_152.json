@@ -1,0 +1,61 @@
+{
+  "census": {
+    "accounting_identities": [
+      "5454+5390=10844",
+      "5454+123=5577",
+      "5577+12247=17824"
+    ],
+    "candidate_factors": 17824,
+    "known_parent_interior_walls": 10844,
+    "known_parent_walls_meeting_source_cube": 5454,
+    "known_parent_walls_zero_free_on_source_cube": 5390,
+    "source_cube_occurring_walls": 5577,
+    "source_cube_walls_not_crossed_by_safe_segments": 123,
+    "source_cube_zero_free_walls": 12247
+  },
+  "digests": {
+    "known_parent_interior_factor_ids_sha256": "f9a66e8f5ffd14dc6b34f9998b82c26422e2f9e1475f4466840f1e8e74b45d5a",
+    "known_parent_walls_meeting_source_cube_sha256": "ef52b6bf65c9eda5b5a198c1e9e15ed275d90c7dffa083b9e928e294e60a2d66",
+    "known_parent_walls_zero_free_on_source_cube_sha256": "26cce16d217d55e01081dad817d13778d2c797724659bcebd51555eb66855382",
+    "row2599_factor_state_semantic_sha256": "ab4aeed6eab31d6f4bfa68894b52e8086910076a25d7c7416c806f0529df8f0b",
+    "source_cube_occurring_factor_ids_sha256": "ca6e3d7911be1cc341fb4a40369542eadb8c526bd3c81a3f449037e97cfa425b",
+    "source_cube_walls_not_crossed_by_safe_segments_sha256": "16a8aa0c7aa1c49452dfc2b3f557453619027196aa0344f73200e45b114f3eca"
+  },
+  "format": "diag3-pair-source-family-incidence-no-go-v1",
+  "least_counterexample": {
+    "exact_left_value": "-5942693761781748559302426261917373873341022883136/156789202497608619096004927663680072772461575232025",
+    "exact_right_value": "21596804186712527155375843113579392967471575575910976/193862553041661978582623048285724306587858705805075715",
+    "factor_id": 5,
+    "opposite_endpoint_signs": true,
+    "parent_safe_segment_charts": [
+      0,
+      2
+    ],
+    "source_cube_classification_depth": 0,
+    "source_cube_restriction_primitive_integer": "(((0, 0, 0), 11551176136181138604140696272067752012550305248523444493216148914814257230660620288), ((0, 0, 1), -4020190632003117382113131034795107478501938776325695166007250964175506219985375549), ((0, 0, 2), -1210763881316717577626299031694280592425382690336748952872387669287614404850117104), ((0, 1, 0), 11589162136125404420121714243955700588460621496926342161365109262845102873394979397), ((0, 1, 1), -2539545617845861372476274189880407924642629793846360182975932299601071560873954346), ((0, 1, 2), 76373699666021470824042285132608022688957666499315027162412244253787209800300064))",
+    "source_cube_status": "EMPTY_BERNSTEIN",
+    "source_cube_subboxes_visited": 1
+  },
+  "proof": {
+    "conclusion": "For every factor in the 5390-element no-go set, at least one row-2599 parent-interior wall component exists and no component of that factor meets the chart-0/chart-152 source family.",
+    "parent_interior_occurrence": "Each known wall has opposite exact signs at the endpoints of a segment certified to remain in the strict row-2599 parent cell, so continuity gives a parent-interior zero.",
+    "source_family_nonincidence": "A one-signed tensor-Bernstein subdivision certifies the same factor zero-free on the entire full source cube."
+  },
+  "research_decision": {
+    "further_staircase_refinement": "RETIRED_FOR_GLOBAL_INCIDENCE",
+    "replacement_target": "ADD_GENUINELY_DISTINCT_SOURCE_FAMILIES_OR_BUILD_A_DIRECT_GLOBAL_ROADMAP_MASTER_COMPLEX",
+    "retired_target": "PROVE_EVERY_GLOBAL_WALL_COMPONENT_MEETS_CHART0_CHART152_SOURCE_FAMILY"
+  },
+  "scope": {
+    "decision": "REFUTED",
+    "global_pair_obligation": "OPEN",
+    "known_parent_wall_certificate": "105 exact parent-safe chart segments",
+    "parent_index": 2599,
+    "source_chart": 0,
+    "source_family": "full normalized three-parameter chart-0/chart-152 hybrid cube",
+    "target_chart": 152,
+    "universal_claim_tested": "EVERY_ROW2599_PARENT_INTERIOR_WALL_MEETS_THIS_SOURCE_FAMILY"
+  },
+  "status": "EXACT_UNIVERSAL_SOURCE_FAMILY_INCIDENCE_REFUTED",
+  "theorem_effect": "Refutes the proposed universal source-family incidence lemma without closing the global pair or triple obligation; honest 9DVL score remains 2/9."
+}

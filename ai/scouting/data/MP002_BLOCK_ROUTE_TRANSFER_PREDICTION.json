@@ -1,0 +1,95 @@
+{
+  "event_summaries": [
+    {
+      "compound_event_count": 171,
+      "events": 4228,
+      "events_sha256": "e997c2f5e5dc2c58f2451d3e15ef361f19e66364b8a3201fab1a85e0ece8e6ca",
+      "order": "102",
+      "segment_event_census": [
+        2011,
+        1491,
+        726
+      ],
+      "segment_factor_root_count_census": [
+        {
+          "0": 15818,
+          "1": 2001,
+          "2": 5
+        },
+        {
+          "0": 16333,
+          "1": 1491
+        },
+        {
+          "0": 17098,
+          "1": 726
+        }
+      ]
+    },
+    {
+      "compound_event_count": 183,
+      "events": 4362,
+      "events_sha256": "61e2eca2281f78c3e6fe27d78ebfe672ba539ee32d61c2ce1d07b33070efbeba",
+      "order": "120",
+      "segment_event_census": [
+        2011,
+        757,
+        1594
+      ],
+      "segment_factor_root_count_census": [
+        {
+          "0": 15818,
+          "1": 2001,
+          "2": 5
+        },
+        {
+          "0": 17067,
+          "1": 757
+        },
+        {
+          "0": 16231,
+          "1": 1592,
+          "2": 1
+        }
+      ]
+    },
+    {
+      "compound_event_count": 223,
+      "events": 4958,
+      "events_sha256": "5d72ba1154de64af804f6c283e501177445b070a71b5a75fed4c03d19db8e826",
+      "order": "210",
+      "segment_event_census": [
+        859,
+        2505,
+        1594
+      ],
+      "segment_factor_root_count_census": [
+        {
+          "0": 16965,
+          "1": 859
+        },
+        {
+          "0": 15321,
+          "1": 2501,
+          "2": 2
+        },
+        {
+          "0": 16231,
+          "1": 1592,
+          "2": 1
+        }
+      ]
+    }
+  ],
+  "expedition_id": "MP-002",
+  "format": "mp002-block-route-transfer-prediction-v1",
+  "holdout_alternation_observed": false,
+  "predicted_order": "102",
+  "prediction_rule": "the route with the fewest exact wall events; break an event-count tie by lexicographically smallest order",
+  "registration_git_commit": "c818dd8415ffa3c1286f2d3200f93276f10ce98b",
+  "registration_sha256": "54ec6c3f549e4102fac7ccf4ba69d4c4a0572d5dd77c0fe628bcf3003f670e62",
+  "semantic_sha256": "1194139f4064e0fb42f0605a2aea160e36533cc426ff5498c3cd9dab1be32222",
+  "status": "PREDICTION_FROZEN_PRE_LABEL_CONTINUATION",
+  "target_chart": 66,
+  "total_events": 13548
+}
