@@ -1221,11 +1221,53 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_algebraic_t_open_u_strip_v_lift.py",
         ],
     }
+    algebraic_t_regular_u_point_v_lift = progress[
+        "thirty_second_pair_first_four_support_algebraic_t_regular_u_point_v_lift"
+    ]
+    assert algebraic_t_regular_u_point_v_lift == {
+        "status": "PROVED",
+        "scope": "exact compound-resultant v lift for regular algebraic-t algebraic-u point fibers",
+        "prior_algebraic_t_u_point_cells": 129_939,
+        "completed_points": 118_001,
+        "remaining_points": 11_938,
+        "completed_raw_resultant_events": 182_648,
+        "visible_inversion_edges": 169_056,
+        "algebraic_collision_edges": 169_113,
+        "tangential_clique_completion_points": 9,
+        "tangential_clique_completion_edges": 14,
+        "connected_clique_completion_edges": 8,
+        "isolated_tangential_k2_edges": 6,
+        "interior_collision_groups": 148_041,
+        "section_v_root_points": 1_773_150,
+        "section_open_v_strips": 1_891_151,
+        "lifted_cells": 3_664_301,
+        "point_signature_catalog_entries": 4_721,
+        "remaining_reason_census": {
+            "coefficient_endpoint_count_change": 2_888,
+            "coefficient_endpoint_equal_count": 1_692,
+            "coefficient_only": 3_380,
+            "endpoint_count_change": 3_976,
+            "endpoint_equal_count": 2,
+        },
+        "partition_sha256": "48c7eaffa9f4badff5d22d5d4b1cee3423fee6d231910803afd8d372730ceb44",
+        "point_signature_catalog_sha256": "26401e885102d200c7a818c52b32d361807f126442a4dd0824a685ca0c184dbb",
+        "semantic_sha256": "3c6e1efad2193c4ab1a7d63a660bff97d100f45e518300f8b024564a23bd0fb1",
+        "artifact_shards": 32,
+        "hostile_corruptions_rejected": 28,
+        "regular_algebraic_t_u_point_v_lifts": "COMPLETE",
+        "remaining_algebraic_t_u_point_v_lifts": "NOT_YET_CONSTRUCTED",
+        "global_gluing_and_closure_data": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_REGULAR_U_POINT_V_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_REGULAR_U_POINT_V_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_algebraic_t_regular_u_point_v_lift.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "lift the remaining 129939 algebraic-t u-point base cells"
+        "lift the remaining 11938 coefficient/endpoint algebraic-t u-point fibers"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1295,6 +1337,10 @@ def main() -> None:
     print(
         "PASS thirty-first algebraic-t open-u-strip v lift: "
         "131632 base strips -> 4419172 lifted cells -> 129939 u-point-cell residue"
+    )
+    print(
+        "PASS thirty-second algebraic-t pure-resultant-u-point v lift: "
+        "118001 points -> 3664301 lifted cells -> 11938-point residue"
     )
     print("LEDGER_GIT_BLOB", digest)
 
