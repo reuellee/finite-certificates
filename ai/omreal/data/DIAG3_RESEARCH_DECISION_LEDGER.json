@@ -1107,8 +1107,114 @@
         "ai/omreal/REVIEW_DIAG3_REGULAR_U_SECTION_V_LIFT_2026-08-24.md"
       ]
     },
+    "twenty_eighth_pair_first_four_support_endpoint_u_section_v_lift": {
+      "status": "PROVED",
+      "scope": "exact endpoint attachments for every open-t algebraic-u section whose only non-regular feature is one multiplicity-one linear v-endpoint crossing",
+      "prior_residual_sections": 11960,
+      "completed_sections": 3990,
+      "remaining_sections": 7970,
+      "completed_factor_census": {
+        "12": 1194,
+        "57": 1694,
+        "86": 1102
+      },
+      "completed_raw_resultant_events": 10184,
+      "visible_inversion_edges": 9951,
+      "interior_collision_groups": 7747,
+      "section_v_root_points": 58239,
+      "section_open_v_strips": 62229,
+      "lifted_cells": 120468,
+      "remaining_reason_census": {
+        "coefficient_only": 3388,
+        "coefficient_endpoint_and_count_change": 2888,
+        "coefficient_and_endpoint_equal_count": 1694
+      },
+      "partition_sha256": "5460ed86cfecd79d89feb2766743d923575b6ed676b2b49cca59afd7ce8164a6",
+      "semantic_sha256": "20848c291db5f7a1cb81dfe74f64ac5e1e94b002ce1433fd897ae09c155fe04a",
+      "artifact_shards": 32,
+      "hostile_corruptions_rejected": 19,
+      "remaining_open_t_coefficient_event_u_section_v_lift": "NOT_YET_CONSTRUCTED",
+      "algebraic_t_section_v_lift": "NOT_YET_CONSTRUCTED",
+      "global_gluing_and_closure_data": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ENDPOINT_U_SECTION_V_LIFT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ENDPOINT_U_SECTION_V_LIFT.json",
+        "ai/omreal/verify_diag3_pair_global_four_support_endpoint_u_section_v_lift.py"
+      ]
+    },
+    "twenty_ninth_pair_first_four_support_coefficient_only_u_section_v_lift": {
+      "status": "PROVED",
+      "scope": "exact unbounded degree-drop analysis for every coefficient-only open-t algebraic-u section",
+      "prior_residual_sections": 7970,
+      "completed_sections": 3388,
+      "remaining_sections": 4582,
+      "completed_factor_census": {
+        "27": 1694,
+        "38": 1694
+      },
+      "simple_leading_coefficient_events": 3388,
+      "completed_raw_resultant_events": 11858,
+      "visible_inversion_edges": 10704,
+      "interior_collision_groups": 10704,
+      "section_v_root_points": 38214,
+      "section_open_v_strips": 41602,
+      "lifted_cells": 79816,
+      "remaining_reason_census": {
+        "coefficient_endpoint_and_count_change": 2888,
+        "coefficient_and_endpoint_equal_count": 1694
+      },
+      "partition_sha256": "238b8c106db4f9aff97df8cd71c52b0347d6fc2e0a1f13f9c3295315ce47593e",
+      "semantic_sha256": "0e46044a9d730459f3b848191c6cef62727e55eab456afe17e7f150656decbea",
+      "artifact_shards": 32,
+      "hostile_corruptions_rejected": 19,
+      "remaining_open_t_coefficient_endpoint_u_section_v_lift": "NOT_YET_CONSTRUCTED",
+      "algebraic_t_section_v_lift": "NOT_YET_CONSTRUCTED",
+      "global_gluing_and_closure_data": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_COEFFICIENT_ONLY_U_SECTION_V_LIFT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_COEFFICIENT_ONLY_U_SECTION_V_LIFT.json",
+        "ai/omreal/verify_diag3_pair_global_four_support_coefficient_only_u_section_v_lift.py"
+      ]
+    },
+    "thirtieth_pair_first_four_support_coefficient_endpoint_u_section_v_lift": {
+      "status": "PROVED",
+      "scope": "exact bounded degree-drop, endpoint-attachment, and fiber-wide-zero analysis for the final open-t algebraic-u sections",
+      "prior_residual_sections": 4582,
+      "completed_sections": 4582,
+      "remaining_open_t_algebraic_u_sections": 0,
+      "completed_factor_census": {
+        "35": 1694,
+        "56": 1694,
+        "72": 1194
+      },
+      "simple_coefficient_events": 6970,
+      "simple_endpoint_attachments": 10358,
+      "fiber_wide_zero_wall_sections": 1194,
+      "completed_raw_resultant_events": 21910,
+      "visible_inversion_edges": 14896,
+      "interior_collision_groups": 10586,
+      "section_v_root_points": 51794,
+      "section_open_v_strips": 56376,
+      "lifted_cells": 108170,
+      "cumulative_open_t_algebraic_u_sections": 132134,
+      "cumulative_section_v_root_points": 1957856,
+      "cumulative_section_open_v_strips": 2089990,
+      "cumulative_lifted_cells": 4047846,
+      "partition_sha256": "e9cb1628ea6a27112ccffe95dc8b53c87e7a99e6c49f6f147b74134cd411e192",
+      "semantic_sha256": "2fdb7b5da77d155d90d651d5a4f9d2a84c4237a208b5e6c05a686c029007d9dc",
+      "artifact_shards": 32,
+      "hostile_corruptions_rejected": 23,
+      "all_open_t_algebraic_u_section_v_lifts": "COMPLETE",
+      "algebraic_t_section_v_lift": "NOT_YET_CONSTRUCTED",
+      "global_gluing_and_closure_data": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_COEFFICIENT_ENDPOINT_U_SECTION_V_LIFT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_COEFFICIENT_ENDPOINT_U_SECTION_V_LIFT.json",
+        "ai/omreal/verify_diag3_pair_global_four_support_coefficient_endpoint_u_section_v_lift.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "resolve the exact 11960-section coefficient or endpoint/count-change residue over open t sectors, then lift all 261571 base cells over algebraic t sections; glue both covered square-pyramid supports to their completed faces, attach extension-signature labels, and emit regular cells plus closure data before the relative middle-rank replay; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "lift all 261571 base cells over algebraic t sections; glue those fibers and the completed 132134 open-t algebraic-u section fibers to the open-cell lifts across both covered square-pyramid supports, attach extension-signature labels, and emit regular cells plus closure data before the relative middle-rank replay; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {
