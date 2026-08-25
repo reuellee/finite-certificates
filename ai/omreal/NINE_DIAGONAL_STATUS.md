@@ -1464,11 +1464,23 @@ lying in an open `t` sector and open `u` strip.  The 2,082 distinct order
 signatures contain 2,181,404 interior `v`-root sections and 2,315,232 open
 `v` strips, for 4,496,636 lifted cells.  A separate factorization audit proves
 all 44 `v=0,1` endpoint evaluations are already controlled by the base or
-univariate projection catalogs.  The next pair obligation is the lift over
-the 132,134 algebraic `u`-section fibers in the open `t` sectors, followed by
-the algebraic `t`-section base cells, face-compatible gluing, labels, and
-middle-rank replay.  None of those later obligations is claimed here; the
-honest 9DVL score remains `2/9`.
+univariate projection catalogs.
+
+The algebraic-`u` portion over open `t` sectors is now complete for all
+132,134 sections.  First, 120,174 regular sections with only simple
+resultants yield 1,809,609 interior root points and 1,929,783 strips, or
+3,739,392 cells.  Exact endpoint attachment resolves 3,990 sections whose
+only non-regular feature is one simple linear root crossing `v=0` or `v=1`,
+adding 120,468 cells.  Exact unbounded degree-drop analysis then resolves all
+3,388 coefficient-only fibers and adds 79,816 cells.  The final 4,582
+coefficient-plus-endpoint fibers require endpoint constant zeros, unbounded
+leading-coefficient zeros, and—in 1,194 factor-72 sections—one degree-zero
+wall that vanishes on the complete `v` fiber.  They add 108,170 cells.  The
+complete algebraic-`u` lift therefore contains 1,957,856 interior root points,
+2,089,990 strips, and 4,047,846 cells, with zero open-`t` section residue.
+The next pair obligations are the algebraic-`t`-section `v` lifts over 261,571
+base cells, face-compatible gluing, labels, and middle-rank replay.  None of
+those later obligations is claimed here; the honest 9DVL score remains `2/9`.
 
 ## Exact artifacts
 
@@ -1850,6 +1862,23 @@ honest 9DVL score remains `2/9`.
   shards, builder, and independent standard-library exact-rational verifier:
   all 133,828 full-dimensional open base cells lifted through the 22 original
   walls to 4,496,636 certified cells, with 40/40 hostile mutations rejected.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_REGULAR_U_SECTION_V_LIFT.md`, its 32
+  hash-pinned shards, builder, and independent standard-library verifier:
+  120,174 regular algebraic-`u` fibers, 148,896 collision groups, and
+  3,739,392 lifted cells, leaving an exact 11,960-section residue.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ENDPOINT_U_SECTION_V_LIFT.md`, its 32
+  hash-pinned shards, builder, and independent standard-library verifier:
+  all 3,990 endpoint-only count-change fibers, 7,747 collision groups, and
+  120,468 lifted cells, leaving 7,970 coefficient-event sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_COEFFICIENT_ONLY_U_SECTION_V_LIFT.md`, its
+  32 hash-pinned shards, builder, and independent structural verifier: all
+  3,388 coefficient-only fibers, 10,704 collision groups, and 79,816 lifted
+  cells, leaving 4,582 coefficient-plus-endpoint sections.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_COEFFICIENT_ENDPOINT_U_SECTION_V_LIFT.md`,
+  its 32 hash-pinned shards, builder, and independent structural verifier:
+  all final 4,582 open-`t` algebraic-`u` fibers, 10,586 collision groups, and
+  108,170 lifted cells, leaving zero such sections unresolved and bringing
+  the cumulative algebraic-`u` lift to 4,047,846 cells.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
