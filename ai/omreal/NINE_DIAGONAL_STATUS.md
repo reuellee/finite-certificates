@@ -1478,9 +1478,20 @@ leading-coefficient zeros, and—in 1,194 factor-72 sections—one degree-zero
 wall that vanishes on the complete `v` fiber.  They add 108,170 cells.  The
 complete algebraic-`u` lift therefore contains 1,957,856 interior root points,
 2,089,990 strips, and 4,047,846 cells, with zero open-`t` section residue.
-The next pair obligations are the algebraic-`t`-section `v` lifts over 261,571
-base cells, face-compatible gluing, labels, and middle-rank replay.  None of
-those later obligations is claimed here; the honest 9DVL score remains `2/9`.
+The algebraic-`t` portion is also complete.  The open-`u` strips contribute
+4,419,172 cells, including the exact section-960 interior collision and
+section-1193 upper-endpoint exit.  The regular algebraic-`u` points add
+3,664,301 cells.  The final coefficient, endpoint, tangency, and compound
+resultant points add 307,146 cells, including the section-550 tangency at
+`(t,u,v)=(1/4,1/3,1)`.  These three checkpoints cover all 261,571
+algebraic-`t` base cells and add 8,390,619 lifted cells.
+
+Consequently the two covered square-pyramid supports now have a complete
+local inventory of 527,533 base cells and 16,935,101 lifted cells, with zero
+unresolved local `v` fibers.  The next pair obligations are face-compatible
+global gluing, complete extension-signature labels, true-infinity incidence,
+and the relative middle-rank replay.  Neither diagonal-three invariant
+obligation is closed; the honest 9DVL score remains `2/9`.
 
 ## Exact artifacts
 
@@ -1879,6 +1890,19 @@ those later obligations is claimed here; the honest 9DVL score remains `2/9`.
   all final 4,582 open-`t` algebraic-`u` fibers, 10,586 collision groups, and
   108,170 lifted cells, leaving zero such sections unresolved and bringing
   the cumulative algebraic-`u` lift to 4,047,846 cells.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_OPEN_U_STRIP_V_LIFT.md`, its
+  32 hash-pinned shards, builder, and independent verifier: all 131,632
+  open-`u` strips over algebraic `t`, 4,419,172 lifted cells, and exact
+  collision/endpoint treatment at sections 960 and 1193.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_REGULAR_U_POINT_V_LIFT.md`, its
+  32 hash-pinned shards, builder, and independent verifier: 118,001 regular
+  algebraic-`u` points over algebraic `t`, 148,041 collision groups, and
+  3,664,301 lifted cells.
+- `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_COEFFICIENT_ENDPOINT_U_POINT_V_LIFT.md`,
+  its 32 hash-pinned shards, builder, and independent verifier: the final
+  11,938 algebraic-`u` points, 29,203 collision groups, the exact section-550
+  endpoint tangency, and 307,146 lifted cells; all 261,571 algebraic-`t` base
+  cells are lifted to 8,390,619 cells.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive
