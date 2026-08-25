@@ -1,7 +1,7 @@
 {
   "format": "diag3-research-decision-ledger-v1",
   "status": "ACTIVE",
-  "as_of": "2026-08-23",
+  "as_of": "2026-08-25",
   "repository": {
     "full_name": "reuellee/finite-certificates",
     "default_branch": "main",

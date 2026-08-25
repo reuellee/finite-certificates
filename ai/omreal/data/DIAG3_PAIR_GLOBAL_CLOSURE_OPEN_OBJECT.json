@@ -2,8 +2,8 @@
   "format": "diag3-pair-global-closure-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "86ba6adc627e5a9e172c6b6bc3a5eefe205c6c81",
-  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support domains have a complete 527533-cell base CAD, 4496636 open-base-cell lifted cells, and 3739392 regular algebraic-u-section lifted cells. The exact 11960-section open-t residue, algebraic-t v lifts, and global gluing remain in current_decision_ledger.",
+  "current_decision_ledger_git_blob": "cf396f33d3d017f4be8c6de0123598c1a8610365",
+  "current_state_note": "Historical generator preflight. Proper-support subdivision is superseded by relative-boundary collapse; the first two surviving four-support domains have a complete 527533-cell base CAD, 4496636 open-base-cell lifted cells, and all 132134 algebraic-u-section v lifts (4047846 cells). Algebraic-t v lifts and global gluing remain in current_decision_ledger.",
   "relevant_commit": "dcdc3f809758bce15ebd20e580c9f27d9ad699a9",
   "claim": {
     "can_decode_a_global_regular_poset_from_existing_records": false,

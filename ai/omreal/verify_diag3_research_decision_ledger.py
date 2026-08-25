@@ -61,7 +61,7 @@ def main() -> None:
 
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-23"
+    assert ledger["as_of"] == "2026-08-25"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
