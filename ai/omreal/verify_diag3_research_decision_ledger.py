@@ -1185,11 +1185,47 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_coefficient_endpoint_u_section_v_lift.py",
         ],
     }
+    algebraic_t_open_u_v_lift = progress[
+        "thirty_first_pair_first_four_support_algebraic_t_open_u_strip_v_lift"
+    ]
+    assert algebraic_t_open_u_v_lift == {
+        "status": "PROVED",
+        "scope": "exact v lift for every open-u strip over all algebraic-t sections",
+        "algebraic_t_sections": 1_693,
+        "prior_algebraic_t_base_cells": 261_571,
+        "completed_open_u_strip_cells": 131_632,
+        "remaining_algebraic_t_u_point_cells": 129_939,
+        "unique_final_alignment_sections": 28,
+        "adjacent_signature_agreements": 131_549,
+        "exact_residual_strips": 83,
+        "event_census": {
+            "interior_collision": 48,
+            "transport": 131_549,
+            "upper_endpoint_exit": 35,
+        },
+        "section_v_root_points": 2_143_770,
+        "section_open_v_strips": 2_275_402,
+        "lifted_cells": 4_419_172,
+        "section_signature_catalog_entries": 2_125,
+        "partition_sha256": "f160d05c9b04d587679bd48234ca64b356dac93dace6075fb257a22f654db9ee",
+        "section_signature_catalog_sha256": "908aad6ec3adbea5ffd897302f219ead458912c826681fc7e0e92f130e1f6273",
+        "semantic_sha256": "794a839ba49b2418a541c7938131acd63fe16482ea8d187f0872fc3b1f2a80cf",
+        "artifact_shards": 32,
+        "hostile_corruptions_rejected": 24,
+        "algebraic_t_open_u_strip_v_lifts": "COMPLETE",
+        "algebraic_t_u_point_v_lifts": "NOT_YET_CONSTRUCTED",
+        "global_gluing_and_closure_data": "NOT_CLAIMED",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_OPEN_U_STRIP_V_LIFT.md",
+            "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_OPEN_U_STRIP_V_LIFT.json",
+            "ai/omreal/verify_diag3_pair_global_four_support_algebraic_t_open_u_strip_v_lift.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "lift all 261571 base cells over algebraic t sections"
+        "lift the remaining 129939 algebraic-t u-point base cells"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1255,6 +1291,10 @@ def main() -> None:
     print(
         "PASS thirtieth coefficient-endpoint algebraic-u v lift: "
         "4582 sections -> 108170 lifted cells -> 0-section residue"
+    )
+    print(
+        "PASS thirty-first algebraic-t open-u-strip v lift: "
+        "131632 base strips -> 4419172 lifted cells -> 129939 u-point-cell residue"
     )
     print("LEDGER_GIT_BLOB", digest)
 
