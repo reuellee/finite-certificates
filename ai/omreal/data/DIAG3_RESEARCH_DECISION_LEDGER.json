@@ -1285,8 +1285,63 @@
         "ai/omreal/verify_diag3_pair_global_four_support_algebraic_t_regular_u_point_v_lift.py"
       ]
     },
+    "thirty_third_pair_first_four_support_algebraic_t_coefficient_endpoint_u_point_v_lift": {
+      "status": "PROVED",
+      "scope": "exact coefficient, endpoint, fiber-wide-zero, tangency, and compound-resultant v lift for the final algebraic-t algebraic-u point fibers",
+      "prior_residual_points": 11938,
+      "completed_points": 11938,
+      "remaining_algebraic_t_u_points": 0,
+      "completed_raw_resultant_events": 44506,
+      "visible_inversion_edges": 36053,
+      "persistent_section_960_edges": 4,
+      "tangential_clique_completion_edges": 10,
+      "connected_clique_completion_edges": 6,
+      "isolated_tangential_k2_edges": 1,
+      "isolated_tangential_k3_edges": 3,
+      "algebraic_collision_edges": 36067,
+      "interior_collision_groups": 29203,
+      "special_endpoint_tangencies": 1,
+      "section_v_root_points": 147604,
+      "section_open_v_strips": 159542,
+      "lifted_cells": 307146,
+      "point_signature_catalog_entries": 418,
+      "cumulative_algebraic_t_base_cells": 261571,
+      "cumulative_algebraic_t_lifted_cells": 8390619,
+      "completed_reason_census": {
+        "coefficient_endpoint_count_change": 2888,
+        "coefficient_endpoint_equal_count": 1692,
+        "coefficient_only": 3380,
+        "endpoint_count_change": 3976,
+        "endpoint_equal_count": 2
+      },
+      "endpoint_tangency": {
+        "section_id": 550,
+        "point_id": 30,
+        "exact_t": "1/4",
+        "exact_u": "1/3",
+        "base_factor_id": 86,
+        "fiber_wall_id": 21,
+        "endpoint": 1,
+        "identity": "wall21(t=1/4,u,v=1)=-factor86(t=1/4,u)",
+        "factorization": "factor86(t=1/4,u)=(1-3u)^2/16",
+        "root_location": "v>=1 on both adjacent u strips; v=1 only at u=1/3"
+      },
+      "partition_sha256": "4354ba4d3c005cbe0732220d4eeff83f9ada201209f4aa5981c61bd1896e62ad",
+      "point_signature_catalog_sha256": "5c8c2de074d13ac41e5ed259f1ad9db02af060d0d9465611700a91283b2adeba",
+      "semantic_sha256": "20e32b1164509eb9b0151dc9e18737ade7f53add85e8826bf8bee811958b00bb",
+      "artifact_shards": 32,
+      "hostile_corruptions_rejected": 32,
+      "all_algebraic_t_u_point_v_lifts": "COMPLETE",
+      "all_algebraic_t_v_lifts": "COMPLETE",
+      "global_gluing_and_closure_data": "NOT_CLAIMED",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_COEFFICIENT_ENDPOINT_U_POINT_V_LIFT.md",
+        "ai/omreal/data/DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_ALGEBRAIC_T_COEFFICIENT_ENDPOINT_U_POINT_V_LIFT.json",
+        "ai/omreal/verify_diag3_pair_global_four_support_algebraic_t_coefficient_endpoint_u_point_v_lift.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "lift the remaining 11938 coefficient/endpoint algebraic-t u-point fibers; then glue all completed open and algebraic fibers across both covered square-pyramid supports, attach extension-signature labels, and emit regular cells plus closure data before the relative middle-rank replay; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
+    "next_stage": "glue all completed open and algebraic fibers across both covered square-pyramid supports, attach extension-signature labels, and emit regular cells plus strict closure data before the relative middle-rank replay; for the triple branch use a projection-critical or boundary-complete roadmap certificate rather than another global algebraic-action search"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {
