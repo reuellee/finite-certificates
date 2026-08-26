@@ -419,6 +419,24 @@ def build_record():
             "triple_branch_closed": False,
             "honest_9dvl_score": "2/9",
         },
+        "trust_boundary": {
+            "verifier_kind": "SEPARATELY_EMBODIED_STRUCTURAL_VERIFIER",
+            "shared_source_modules": [
+                "diag3_pair_parent_source_transition_core",
+                "verify_diag3_pair_fullsupport_safe_segment_walls",
+                "verify_diag3_pair_global_parent_face_gate",
+                "DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY",
+                "DIAG9_GRAPH_verify_row2599_slice",
+            ],
+            "shared_algorithmic_structure": (
+                "producer and verifier use near-parallel exact collar substitution "
+                "and tensor-Bernstein routines"
+            ),
+            "implementation_independence": "NOT_CLAIMED",
+            "external_sympy_reconstruction": (
+                "ADDITIONAL_REVIEW_AUDIT_NOT_PERSISTED_AS_A_REPOSITORY_VERIFIER"
+            ),
+        },
         "sources": {
             "point_bank_sha256": file_sha256(transition.POINT_BANK),
             "factor_states_sha256": file_sha256(transition.FACTOR_STATES),
@@ -481,7 +499,10 @@ def build_record():
             "retained_skeleton_cell": "w_zero",
             "meets_artificial_scope_boundary": ["w_minus", "w_plus"],
             "meets_parent_infinity": False,
-            "negative_canary": "a second component, a skeleton miss, or a parent-infinity label must be rejected",
+            "hostile_semantic_mutation_requirement": (
+                "a second component, a skeleton miss, or a parent-infinity "
+                "label must be rejected"
+            ),
         },
         "decision": {
             "result": "LOCAL_COMPONENT_GATE_PASSES",
@@ -490,7 +511,7 @@ def build_record():
             "theorem_effect": "No theorem-score promotion; the collar validates one exact full-support component-coverage contract only.",
         },
         "hostile_mutation_contract": [
-            "target factor", "target edge", "collar width", "wall coefficient",
+            "trust boundary", "target factor", "target edge", "collar width", "wall coefficient",
             "affine rank", "parent tensor", "extra component", "skeleton miss", "scope boundary",
             "false parent infinity", "global coverage", "extension labels", "incidence",
             "closure", "root isolation", "source digest", "score promotion",

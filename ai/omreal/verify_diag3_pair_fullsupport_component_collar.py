@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Independent replay of the factor-19069 full-support component collar.
+"""Separately embodied structural replay of the factor-19069 collar.
 
-This verifier does not import the producer.  It reconstructs the target
-selection, the exact two-parameter restrictions, every tensor-Bernstein
-positivity certificate, three algebraic root isolations, and the signed
-regular-CW incidence.  It then rejects re-sealed hostile semantic mutations.
+This verifier does not import the producer, but it shares the declared source
+modules and uses near-parallel substitution and tensor-Bernstein logic.  It
+reconstructs the target selection, exact restrictions, root isolations, and
+signed regular-CW incidence, then rejects re-sealed hostile mutations.
 """
 
 from __future__ import annotations
@@ -225,7 +225,7 @@ def exact_root_record(polynomial):
     }
 
 
-def independent_cell_replay():
+def structural_cell_replay():
     vertices = ["v00", "v10", "v11", "v01", "w_minus", "w_zero", "w_plus"]
     edges = [
         ("scope_bottom_left", "v00", "w_minus"),
@@ -250,7 +250,7 @@ def independent_cell_replay():
         ])
     d2 = [[face_vectors[face][edge] for face in faces] for edge in range(len(edges))]
     product = np.asarray(d1, dtype=int) @ np.asarray(d2, dtype=int)
-    require(not np.any(product), "independent d1*d2")
+    require(not np.any(product), "structural d1*d2 replay")
     oriented_edges = {name: [tail, head] for name, tail, head in edges}
     oriented_faces = {
         face: {
@@ -306,7 +306,10 @@ def recompute():
         ranked.append((max(sum(monomial) for monomial in polynomial), len(polynomial), factor_id, candidate_index))
     degree, term_count, factor_id, candidate_index = max(ranked)
     edge_index = int(np.flatnonzero(incidence[:, candidate_index])[0])
-    require((factor_id, edge_index, degree, term_count) == (19069, 39, 6, 108), "independent target selection")
+    require(
+        (factor_id, edge_index, degree, term_count) == (19069, 39, 6, 108),
+        "structural target selection replay",
+    )
     cover = json.loads(SEGMENT_COVER.read_text(encoding="utf-8"))
     require(edge_index in cover["source_bank"]["selected_edge_indices"], "retained target edge")
     records = [json.loads(line) for line in gate.CATALOG.read_text(encoding="utf-8").splitlines() if line]
@@ -328,7 +331,7 @@ def recompute():
             "immediately_larger_width_certified": False if winner else None,
         })
     exponent, axis = min((row["first_certified_exponent"], row["axis"]) for row in scan)
-    require((axis, exponent) == (4, 9), "independent collar selection")
+    require((axis, exponent) == (4, 9), "structural collar selection replay")
     radius = Fraction(1, 1 << exponent)
     parent_rows, wall, wall_checks = gate_collar(
         parents, factors[factor_id], first, second, axis, radius, emit=True
@@ -403,7 +406,7 @@ def recompute():
             },
             "root_isolation": roots,
         },
-        "complex": independent_cell_replay(),
+        "complex": structural_cell_replay(),
     }
 
 
@@ -427,6 +430,24 @@ def verify_record(record, replay):
         "triple_branch_closed": False,
         "honest_9dvl_score": "2/9",
     }, "scope and fail-closed limits")
+    require(record["trust_boundary"] == {
+        "verifier_kind": "SEPARATELY_EMBODIED_STRUCTURAL_VERIFIER",
+        "shared_source_modules": [
+            "diag3_pair_parent_source_transition_core",
+            "verify_diag3_pair_fullsupport_safe_segment_walls",
+            "verify_diag3_pair_global_parent_face_gate",
+            "DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY",
+            "DIAG9_GRAPH_verify_row2599_slice",
+        ],
+        "shared_algorithmic_structure": (
+            "producer and verifier use near-parallel exact collar substitution "
+            "and tensor-Bernstein routines"
+        ),
+        "implementation_independence": "NOT_CLAIMED",
+        "external_sympy_reconstruction": (
+            "ADDITIONAL_REVIEW_AUDIT_NOT_PERSISTED_AS_A_REPOSITORY_VERIFIER"
+        ),
+    }, "trust boundary")
     require(record["sources"] == replay["sources"], "source pins")
     require(record["target_selection"] == replay["target"], "target replay")
     require(record["collar_selection"] == replay["collar"], "collar replay")
@@ -442,7 +463,10 @@ def verify_record(record, replay):
         "retained_skeleton_cell": "w_zero",
         "meets_artificial_scope_boundary": ["w_minus", "w_plus"],
         "meets_parent_infinity": False,
-        "negative_canary": "a second component, a skeleton miss, or a parent-infinity label must be rejected",
+        "hostile_semantic_mutation_requirement": (
+            "a second component, a skeleton miss, or a parent-infinity "
+            "label must be rejected"
+        ),
     }, "component semantics")
     require(record["decision"] == {
         "result": "LOCAL_COMPONENT_GATE_PASSES",
@@ -451,7 +475,7 @@ def verify_record(record, replay):
         "theorem_effect": "No theorem-score promotion; the collar validates one exact full-support component-coverage contract only.",
     }, "decision scope")
     require(record["hostile_mutation_contract"] == [
-        "target factor", "target edge", "collar width", "wall coefficient",
+        "trust boundary", "target factor", "target edge", "collar width", "wall coefficient",
         "affine rank", "parent tensor", "extra component", "skeleton miss", "scope boundary",
         "false parent infinity", "global coverage", "extension labels", "incidence",
         "closure", "root isolation", "source digest", "score promotion",
@@ -473,6 +497,9 @@ def rejected(record, replay, label):
 
 def hostile_tests(record, replay):
     mutations = []
+    altered = deepcopy(record)
+    altered["trust_boundary"]["implementation_independence"] = "CLAIMED"
+    mutations.append((altered, "trust boundary"))
     altered = deepcopy(record); altered["target_selection"]["factor_id"] = 8399; mutations.append((altered, "target factor"))
     altered = deepcopy(record); altered["target_selection"]["unique_edge_index"] = 38; mutations.append((altered, "target edge"))
     altered = deepcopy(record); altered["collar_selection"]["selected_half_width"] = "1/256"; mutations.append((altered, "collar width"))
@@ -500,7 +527,7 @@ def main():
     replay = recompute()
     verify_record(record, replay)
     count = hostile_tests(record, replay)
-    print("PASS independent target selection: factor 19069, mandatory edge 39")
+    print("PASS structural target replay: factor 19069, mandatory edge 39")
     print("PASS 70 exact parent inequalities on the complete 2D collar")
     print("PASS unique monotone wall component, signed 17-cell CW roadmap, and d^2=0")
     print("PASS retained-skeleton hit; artificial boundary distinct from empty parent infinity")

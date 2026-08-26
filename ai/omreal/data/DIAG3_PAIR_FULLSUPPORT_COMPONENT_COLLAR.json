@@ -81,13 +81,13 @@
     ],
     "declared_scope_component_count": 1,
     "factor_id": 19069,
+    "hostile_semantic_mutation_requirement": "a second component, a skeleton miss, or a parent-infinity label must be rejected",
     "meets_artificial_scope_boundary": [
       "w_minus",
       "w_plus"
     ],
     "meets_parent_infinity": false,
     "meets_retained_source_skeleton": true,
-    "negative_canary": "a second component, a skeleton miss, or a parent-infinity label must be rejected",
     "retained_skeleton_cell": "w_zero"
   },
   "decision": {
@@ -981,6 +981,7 @@
   },
   "format": "diag3-pair-fullsupport-component-collar-v1",
   "hostile_mutation_contract": [
+    "trust boundary",
     "target factor",
     "target edge",
     "collar width",
@@ -1486,7 +1487,7 @@
     ],
     "triple_branch_closed": false
   },
-  "semantic_sha256": "38bcd95e2106bb5b730fa0b4fe6926690a1916d82b26974f5f4716ca505b4809",
+  "semantic_sha256": "560a2a1f6ad052652cc494f49c550633c6723981ffe7af4a620ad0be62157e9f",
   "sources": {
     "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
     "factor_census_sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
@@ -1510,5 +1511,18 @@
     ],
     "unique_edge_index": 39,
     "unique_segment_factor_count": 49
+  },
+  "trust_boundary": {
+    "external_sympy_reconstruction": "ADDITIONAL_REVIEW_AUDIT_NOT_PERSISTED_AS_A_REPOSITORY_VERIFIER",
+    "implementation_independence": "NOT_CLAIMED",
+    "shared_algorithmic_structure": "producer and verifier use near-parallel exact collar substitution and tensor-Bernstein routines",
+    "shared_source_modules": [
+      "diag3_pair_parent_source_transition_core",
+      "verify_diag3_pair_fullsupport_safe_segment_walls",
+      "verify_diag3_pair_global_parent_face_gate",
+      "DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY",
+      "DIAG9_GRAPH_verify_row2599_slice"
+    ],
+    "verifier_kind": "SEPARATELY_EMBODIED_STRUCTURAL_VERIFIER"
   }
 }

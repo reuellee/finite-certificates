@@ -86,10 +86,10 @@ edge orientations and the two chamber boundaries give integral matrices
 `d1,d2` with `d1*d2=0`.  The six artificial boundary arcs and their vertices
 form `scope_boundary_subcomplex`.  The true `parent_infinity_subcomplex` is
 empty because all seventy parent inequalities are strict on the closed
-collar.  A negative canary prevents the wall endpoint, component, or scope
-boundary from being relabelled as parent infinity.
+collar.  Re-sealed hostile semantic mutations require rejection if the wall
+endpoint, component, or scope boundary is relabelled as parent infinity.
 
-## Certificate and independent replay
+## Certificate and separately embodied structural replay
 
 Build the deterministic certificate with
 
@@ -98,21 +98,32 @@ PYTHONDONTWRITEBYTECODE=1 python \
   ai/omreal/build_diag3_pair_fullsupport_component_collar.py
 ```
 
-Replay it independently with
+Run the separately embodied structural verifier with
 
 ```console
 PYTHONDONTWRITEBYTECODE=1 python \
   ai/omreal/verify_diag3_pair_fullsupport_component_collar.py
 ```
 
-The verifier does not import the producer.  It independently reconstructs
-the 105-by-17,824 crossing incidence, target selection, all nine dyadic axis
-searches, seventy parent restrictions, the wall monotonicity inequalities,
-three Sturm isolations, closure poset, signed incidence, and source pins.  It
-rejects seventeen re-sealed hostile mutations, including a collapsed collar, a fabricated second
-component, a missing source-skeleton hit, false parent infinity, claimed
-global coverage, invented extension labels, corrupt incidence, and promotion
-to `3/9`.
+The verifier does not import the producer, but this is not implementation-
+independent replay.  Producer and verifier share
+`diag3_pair_parent_source_transition_core`,
+`verify_diag3_pair_fullsupport_safe_segment_walls`,
+`verify_diag3_pair_global_parent_face_gate`,
+`DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY`, and
+`DIAG9_GRAPH_verify_row2599_slice`.  They also use near-parallel exact collar-
+substitution and tensor-Bernstein routines.  Within that declared boundary,
+the verifier separately embodies the 105-by-17,824 incidence reconstruction,
+target and axis selection, seventy parent restrictions, wall inequalities,
+three Sturm isolations, closure poset, signed incidence, and source-pin checks.
+It rejects eighteen re-sealed hostile semantic mutations, including a false
+independence claim, collapsed collar, fabricated second component, missing
+source-skeleton hit, false parent infinity, global-coverage claim, invented
+extension labels, corrupt incidence, and promotion to `3/9`.
+
+An external SymPy reconstruction was an additional review audit.  It is not a
+persisted repository verifier and is not part of this certificate's standing
+trust claim.
 
 The certificate is
 `data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json`.
