@@ -543,6 +543,23 @@ python ai/omreal/build_diag3_pair_fullsupport_segment_cover.py
 python ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py
 ```
 
+`DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json` is the first exact
+missed-component pilot on a proof-bearing full-support wall.  A deterministic
+rule selects factor 19069, the degree-six, 108-monomial factor uniquely
+witnessed by retained edge 39.  All seventy parent brackets are strictly
+positive on an embedded rational two-dimensional collar, and exact
+tensor-Bernstein inequalities make the wall one monotone graph.  Its single
+component meets edge 39 and both artificial collar ends.  The stored 17-cell
+regular-CW roadmap has complete closure chains, signed incidence with
+`d^2=0`, and empty parent infinity.  The independent verifier rejects
+seventeen re-sealed mutations.  This is complete only on the declared collar;
+global components outside it and all extension-signature labels remain open.
+
+```console
+python ai/omreal/build_diag3_pair_fullsupport_component_collar.py
+python ai/omreal/verify_diag3_pair_fullsupport_component_collar.py
+```
+
 `DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json` is the complete exact residual
 roadmap on the minimum-Hamming certified parent-safe segment leaving chart 0.
 It proves that all 70 parent brackets remain strict, screens all 17,824

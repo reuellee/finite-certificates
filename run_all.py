@@ -50,6 +50,7 @@ SLOW = {
     "verify_diag3_pair_factor_root_switch.py",
     "verify_diag3_pair_global_atlas_schema.py",
     "verify_diag3_pair_fullsupport_parent_product_signs.py",
+    "verify_diag3_pair_fullsupport_component_collar.py",
     "verify_diag3_pair_fullsupport_segment_cover.py",
     "verify_diag3_pair_residual_wall_adjacency.py",
     "verify_diag3_pair_atlas_tangential_fill.py",
