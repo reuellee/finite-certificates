@@ -105,6 +105,26 @@ THEOREM_EFFECT = (
     "box-boundary reach is shown; no complete orbit, genuine parent boundary, "
     "or invariant obligation is covered, so the honest 9DVL score remains 2/9."
 )
+HOSTILE_MUTATIONS = [
+    "source_digest",
+    "named_presentation",
+    "canonical_row",
+    "center_coordinate",
+    "box_radius",
+    "parent_bracket_count",
+    "parent_bracket_interval",
+    "parent_bracket_sign",
+    "projection_columns",
+    "projection_minor_digest",
+    "projection_minor_interval",
+    "boundary_face_count",
+    "parent_infinity_claim",
+    "scope_orbit_transport",
+    "coupled_registration_global_rewrite",
+    "unknown_top_level_global_theorem",
+    "unknown_projection_global_parent_component_coverage",
+    "theorem_score",
+]
 
 
 def sha256(path: Path) -> str:
@@ -573,6 +593,78 @@ def verify_candidate(candidate, registration_payload=None):
     if candidate["semantic_sha256"] != semantic_digest(candidate):
         raise AssertionError("certificate semantic digest changed")
 
+    expected_candidate = {
+        "schema": SCHEMA,
+        "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
+        "registration_sha256": REGISTRATION_SHA256,
+        "authenticated_sources": expected_authenticated,
+        "scope": EXPECTED_DECLARED_SCOPE,
+        "box": expected_box,
+        "exact_zero_witness": {
+            "point": expected_box["center"],
+            "residual_values": ["0", "0", "0"],
+            "strictly_inside_box": True,
+        },
+        "parent_cell": {
+            "normalized_brackets": 70,
+            "sign_definite_brackets": 70,
+            "records": expected_records,
+            "consequence": (
+                "the entire closed box lies in one uniform normalized parent cell"
+            ),
+            "row2599_comparison": {
+                "reference_parent_index": 2599,
+                "reference_catalog_sha256": ROW2599_PARENT_CATALOG_SHA256,
+                "reference_normalized_parent_sign_sha256": (
+                    ROW2599_NORMALIZED_PARENT_SIGN_SHA256
+                ),
+                "reference_direct_parent_sign_sha256": (
+                    ROW2599_DIRECT_PARENT_SIGN_SHA256
+                ),
+                "reference_verification_command": (
+                    ROW2599_PARENT_GATE_VERIFY_COMMAND
+                ),
+                "sign_mismatch_count": 29,
+                "sign_mismatch_labels": ROW2599_MISMATCH_LABELS,
+                "same_uniform_parent_cell": False,
+                "consequence": (
+                    "the certified box is not in the row-2599 parent chamber"
+                ),
+            },
+        },
+        "projection": {**fixed_projection, **expected_projection_fields},
+        "topological_argument": {
+            "boundary_avoiding_component_is_smooth": True,
+            "boundary_avoiding_component_is_open_in_the_smooth_zero_set": True,
+            "projected_component_image_is_nonempty": True,
+            "projected_component_image_is_open_in_R6": True,
+            "boundary_avoiding_component_is_compact": True,
+            "projected_component_image_is_compact": True,
+            "contradiction": "no nonempty subset of R6 is both open and compact",
+        },
+        "boundary_accounting": {
+            "coordinate_faces": 18,
+            "internal_seams": 0,
+            "faces_accounted": faces,
+            "claimed_parent_infinity_faces": 0,
+            "claimed_parent_wall_faces": 0,
+            "face_classification": "ARTIFICIAL_SCOPE_BOUNDARY_ONLY",
+        },
+        "proof_consequence": EXPECTED_PROOF_CONSEQUENCE,
+        "non_consequences": EXPECTED_NON_CONSEQUENCES,
+        "theorem_accounting": {
+            "final_unresolved_triple_orbits_before": 1_162_302,
+            "final_unresolved_triple_orbits_after": 1_162_302,
+            "score_before": "2/9",
+            "score_after": "2/9",
+        },
+        "theorem_effect": THEOREM_EFFECT,
+        "hostile_mutations": HOSTILE_MUTATIONS,
+    }
+    expected_candidate["semantic_sha256"] = semantic_digest(expected_candidate)
+    if candidate != expected_candidate:
+        raise AssertionError("certificate exact schema or full reconstruction changed")
+
 
 def resign(candidate):
     candidate["semantic_sha256"] = semantic_digest(candidate)
@@ -624,9 +716,23 @@ def verify_hostile_mutations(certificate):
             json.dumps(registration, sort_keys=True).encode("utf-8"),
         )
     )
+    add(
+        "unknown_top_level_global_theorem",
+        lambda row: row.__setitem__(
+            "global_theorem", "ALL_UNRESOLVED_TRIPLE_ORBITS_CLOSED"
+        ),
+    )
+    add(
+        "unknown_projection_global_parent_component_coverage",
+        lambda row: row["projection"].__setitem__(
+            "global_parent_component_coverage", "COMPLETE"
+        ),
+    )
     add("theorem_score", lambda row: row["theorem_accounting"].__setitem__("score_after", "3/9"))
 
     declared = certificate["hostile_mutations"]
+    if declared != HOSTILE_MUTATIONS:
+        raise AssertionError("hostile mutation schema changed")
     if declared != [name for name, _candidate, _registration in mutations]:
         raise AssertionError("hostile mutation declaration changed")
     for name, candidate, registration_payload in mutations:

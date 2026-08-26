@@ -58,6 +58,26 @@ THEOREM_EFFECT = (
     "box-boundary reach is shown; no complete orbit, genuine parent boundary, "
     "or invariant obligation is covered, so the honest 9DVL score remains 2/9."
 )
+HOSTILE_MUTATIONS = [
+    "source_digest",
+    "named_presentation",
+    "canonical_row",
+    "center_coordinate",
+    "box_radius",
+    "parent_bracket_count",
+    "parent_bracket_interval",
+    "parent_bracket_sign",
+    "projection_columns",
+    "projection_minor_digest",
+    "projection_minor_interval",
+    "boundary_face_count",
+    "parent_infinity_claim",
+    "scope_orbit_transport",
+    "coupled_registration_global_rewrite",
+    "unknown_top_level_global_theorem",
+    "unknown_projection_global_parent_component_coverage",
+    "theorem_score",
+]
 
 
 def sha256(path: Path) -> str:
@@ -342,24 +362,7 @@ def main():
             "score_after": "2/9",
         },
         "theorem_effect": THEOREM_EFFECT,
-        "hostile_mutations": [
-            "source_digest",
-            "named_presentation",
-            "canonical_row",
-            "center_coordinate",
-            "box_radius",
-            "parent_bracket_count",
-            "parent_bracket_interval",
-            "parent_bracket_sign",
-            "projection_columns",
-            "projection_minor_digest",
-            "projection_minor_interval",
-            "boundary_face_count",
-            "parent_infinity_claim",
-            "scope_orbit_transport",
-            "coupled_registration_global_rewrite",
-            "theorem_score",
-        ],
+        "hostile_mutations": HOSTILE_MUTATIONS,
     }
     semantic_payload = dict(certificate)
     certificate["semantic_sha256"] = hashlib.sha256(

@@ -198,9 +198,11 @@ determinants, derivatives, normalized-bracket reconstruction, direct interval
 evaluation, and semantic hashing.  It rejects hostile changes to
 source identity, row identity, box, bracket accounting, projection, boundary
 scope, orbit scope, and theorem score.  It additionally rejects a direct false
-parent-infinity claim and a coupled registration-plus-certificate rewrite that
-tries to promote the local box to global coverage, for `16/16` total hostile
-mutations.
+parent-infinity claim, a coupled registration-plus-certificate rewrite that
+tries to promote the local box to global coverage, and re-sealed unknown
+top-level and nested projection theorem fields, for `18/18` total hostile
+mutations.  The final verifier comparison reconstructs the complete
+certificate object, so unknown keys in any section fail closed.
 
 An interior-sphere negative canary is also retained.  Its projection pivot
 derivative has interval `[-2,2]`, so the verifier refuses the sign
@@ -239,3 +241,9 @@ whose shared faces are replayed exactly, followed by a proof that every
 non-shared terminal face lies on a genuine parent boundary.  Orbit transport
 must remain separate until the stabilizer, chart denominator, parent-sign,
 and projection-minor transformations are all proved.
+
+This triple checkpoint does not retarget the pair branch.  During integration,
+retain the canonical pair routing from checkpoint `c692471`: continue the
+exact 40-edge full-support source cover (or replace it with a directly
+coverage-certified parent-cell roadmap), while keeping the section-960 and
+section-550 stars as compiler stress tests only.

@@ -1434,9 +1434,9 @@
       "claimed_parent_infinity_faces": 0,
       "component_coverage": "EVERY_RESTRICTED_TRIPLE_ZERO_COMPONENT_MEETS_THE_ARTIFICIAL_BOX_BOUNDARY",
       "compact_sphere_negative_canary": "REJECTED",
-      "hostile_corruptions_rejected": 16,
+      "hostile_corruptions_rejected": 18,
       "projection_minor_sha256": "c18832763e63aac645e61fdd23c40b0cd7ee9c371d7f8457ee9dfe5a3a5cbcea",
-      "semantic_sha256": "c14a850a03b4ab0028b41f5c2700e67470a45701e481470085123e0cdde6d43c",
+      "semantic_sha256": "b4f83b765dbf1db7919314844baac359fc29aaa3a626688208befa37c99e9f29",
       "unresolved_triple_orbits_before": 1162302,
       "unresolved_triple_orbits_after": 1162302,
       "triple_branch_compact_support_vanishing": "OPEN",
@@ -1451,7 +1451,7 @@
       ]
     },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "compile face-compatible closure, signed incidence, true-infinity membership, and complete extension-signature labels on the section-960 collision and section-550 endpoint-tangency stars before scaling across the completed two-support atlas; for the triple branch extend the proved local projection chart by exact shared-face box gluing and genuine parent-boundary attachment, without orbit transport until stabilizer and sign safety are proved"
+    "next_stage": "continue complete labels and component/closure attachments on the exact 40-edge full-support source cover, or replace the finite skeleton with a direct coverage-certified parent-cell roadmap; retain section-960 and section-550 only as compiler stress tests and retain the independent triple boundary-complete projection-critical roadmap route"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {

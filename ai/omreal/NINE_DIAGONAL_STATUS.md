@@ -1509,11 +1509,14 @@ on the synthetic schema, transverse-node, multibox, and first-event fixtures,
 but fails closed on reusing this inventory as-is: the lift manifests do not yet
 encode face-compatible closure, complete bad-signature labels, component
 specialization, or genuine parent-infinity incidence.  This is an input-
-contract no-go, not a no-go for boundary-aware roadmaps.  The next pair
-obligation is therefore a closure-and-label/roadmap microcompiler, beginning
-with the section-960 collision and section-550 endpoint-tangency stars,
-followed by the relative middle-rank replay.  Neither diagonal-three invariant
-obligation is closed; the honest 9DVL score remains `2/9`.
+contract no-go, not a no-go for boundary-aware roadmaps.  A subsequent exact
+target-selection audit retires the section-960 collision and section-550
+endpoint-tangency stars as proof-bearing pair targets because they lie on
+proper supports.  The canonical pair route instead continues complete labels
+and component/closure attachments on the exact 40-edge full-support source
+cover, or replaces that finite skeleton with a direct coverage-certified
+parent-cell roadmap.  Neither diagonal-three invariant obligation is closed;
+the honest 9DVL score remains `2/9`.
 
 A subsequent target-selection audit applies the exact relative-boundary
 theorem to that proposed scaling route.  Both stars lie wholly on proper

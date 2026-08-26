@@ -163,6 +163,8 @@
     "parent_infinity_claim",
     "scope_orbit_transport",
     "coupled_registration_global_rewrite",
+    "unknown_top_level_global_theorem",
+    "unknown_projection_global_parent_component_coverage",
     "theorem_score"
   ],
   "non_consequences": [
@@ -978,7 +980,7 @@
     "orbit_transport_claimed": false,
     "s8_sign_transport_claimed": false
   },
-  "semantic_sha256": "c14a850a03b4ab0028b41f5c2700e67470a45701e481470085123e0cdde6d43c",
+  "semantic_sha256": "b4f83b765dbf1db7919314844baac359fc29aaa3a626688208befa37c99e9f29",
   "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
   "theorem_accounting": {
     "final_unresolved_triple_orbits_after": 1162302,

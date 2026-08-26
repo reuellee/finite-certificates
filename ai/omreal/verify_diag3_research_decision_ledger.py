@@ -61,6 +61,24 @@ def main() -> None:
     closure = load(CLOSURE_PATH)
     triple_local_roadmap = load(TRIPLE_LOCAL_ROADMAP_PATH)
 
+    assert set(ledger) == {
+        "format",
+        "status",
+        "as_of",
+        "repository",
+        "theorem",
+        "invariant_obligations",
+        "row2599_fullsupport_ledger",
+        "retired_or_subordinated_targets",
+        "target_score_formula",
+        "candidate_targets",
+        "selected_target",
+        "selected_target_progress",
+        "research_infrastructure",
+        "selected_target_contract",
+        "process_gates",
+        "historical_open_objects",
+    }
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
     assert ledger["as_of"] == "2026-08-26"
@@ -70,9 +88,17 @@ def main() -> None:
         "audited_commit": "e4ca567f829bd0e887e98efb05a3ed9437ba69d5",
         "merged_pull_request": 19,
     }
+    assert ledger["theorem"] == {
+        "id": "9DVL",
+        "score": "2/9",
+        "proved_diagonals": [1, 2],
+        "active_diagonal": 3,
+        "promotion_rule": (
+            "Diagonal three advances only when both invariant obligations below "
+            "are closed with independently replayed exact evidence."
+        ),
+    }
     assert ledger["theorem"]["score"] == completion["ledger_score"] == "2/9"
-    assert ledger["theorem"]["proved_diagonals"] == [1, 2]
-    assert ledger["theorem"]["active_diagonal"] == 3
 
     obligations = ledger["invariant_obligations"]
     assert [row["id"] for row in obligations] == [
@@ -231,6 +257,46 @@ def main() -> None:
         ],
     }
     progress = ledger["selected_target_progress"]
+    assert set(progress) == {
+        "schema_interface",
+        "first_proof_producing_canary",
+        "second_multibox_canary",
+        "third_first_new_event_atlas",
+        "fourth_parent_source_transition",
+        "fifth_parent_source_label_continuation",
+        "sixth_parent_source_block_bridge",
+        "seventh_parent_source_block_label_continuation",
+        "eighth_parent_boundary_attachment",
+        "ninth_triple_escape_language_audit",
+        "tenth_pair_source_square_component_coverage",
+        "eleventh_pair_source_block_half_cube_component_coverage",
+        "twelfth_pair_source_staircase_component_coverage",
+        "thirteenth_pair_full_hybrid_cube_ambient_topology",
+        "fourteenth_pair_source_staircase8_yield_gate",
+        "fifteenth_pair_source_family_incidence_no_go",
+        "sixteenth_pair_first_four_support_gate",
+        "seventeenth_pair_first_four_support_projection",
+        "eighteenth_pair_first_four_support_base_projection",
+        "nineteenth_pair_first_four_support_root_isolation",
+        "twentieth_pair_first_four_support_open_sector_lift",
+        "twenty_first_pair_first_four_support_simple_section_lift",
+        "twenty_second_pair_first_four_support_invisible_section_lift",
+        "twenty_third_pair_first_four_support_multi_section_lift",
+        "twenty_fourth_pair_first_four_support_regular_residual_section_lift",
+        "twenty_fifth_pair_first_four_support_final_section_lift",
+        "twenty_sixth_pair_first_four_support_open_cell_v_lift",
+        "twenty_seventh_pair_first_four_support_regular_u_section_v_lift",
+        "twenty_eighth_pair_first_four_support_endpoint_u_section_v_lift",
+        "twenty_ninth_pair_first_four_support_coefficient_only_u_section_v_lift",
+        "thirtieth_pair_first_four_support_coefficient_endpoint_u_section_v_lift",
+        "thirty_first_pair_first_four_support_algebraic_t_open_u_strip_v_lift",
+        "thirty_second_pair_first_four_support_algebraic_t_regular_u_point_v_lift",
+        "thirty_third_pair_first_four_support_algebraic_t_coefficient_endpoint_u_point_v_lift",
+        "thirty_fourth_pair_component_cosheaf_strategy_pilot",
+        "thirty_fifth_triple_local_projection_roadmap_canary",
+        "theorem_effect",
+        "next_stage",
+    }
     assert progress["schema_interface"] == "COMPLETE"
     canary = progress["first_proof_producing_canary"]
     assert canary == {
@@ -1390,6 +1456,79 @@ def main() -> None:
         "s8_sign_transport_claimed": False,
         "global_parent_cell_coverage_claimed": False,
     }
+    expected_local_roadmap = {
+        "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
+        "scope": (
+            "one closed radius-1/128 rational nine-box in one normalized uniform-parent "
+            "cell distinct from row 2599 for named presentation (5563,16134,19284), "
+            "mapping to canonical unresolved row (5563,4373,23221); all 18 faces are "
+            "artificial scope boundary, with no S8 transport and no parent-infinity claim"
+        ),
+        "declared_scope": expected_local_scope,
+        "preregistered_before_formal_run": True,
+        "preregistration_sha256": (
+            "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3"
+        ),
+        "critical_system_sha256": (
+            "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+        ),
+        "source_mapping_gate_raw_sha256": (
+            "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692"
+        ),
+        "source_mapping_gate_semantic_sha256": (
+            "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace"
+        ),
+        "exact_zero_witness": [
+            "-19/28", "-23/7", "-27/14", "-5", "-4", "-3", "-1", "2", "4"
+        ],
+        "residual_equations": 3,
+        "ambient_variables": 9,
+        "restricted_zero_set_dimension": 6,
+        "parent_brackets_replayed": 70,
+        "sign_definite_parent_brackets": 70,
+        "uniform_parent_cell": True,
+        "same_as_row2599_parent_cell": False,
+        "row2599_parent_sign_mismatches": 29,
+        "projection_fiber_columns_zero_based": [3, 4, 7],
+        "projection_fiber_variables": ["d", "e", "h"],
+        "projection_minor_terms": 147,
+        "projection_minor_at_center": "-1000407/686",
+        "projection_minor_sign_on_box": -1,
+        "projection_critical_points_in_box": 0,
+        "boundary_faces_accounted": 18,
+        "internal_seams": 0,
+        "claimed_parent_wall_faces": 0,
+        "claimed_parent_infinity_faces": 0,
+        "component_coverage": (
+            "EVERY_RESTRICTED_TRIPLE_ZERO_COMPONENT_MEETS_THE_ARTIFICIAL_BOX_BOUNDARY"
+        ),
+        "compact_sphere_negative_canary": "REJECTED",
+        "hostile_corruptions_rejected": 18,
+        "projection_minor_sha256": (
+            "c18832763e63aac645e61fdd23c40b0cd7ee9c371d7f8457ee9dfe5a3a5cbcea"
+        ),
+        "semantic_sha256": (
+            "b4f83b765dbf1db7919314844baac359fc29aaa3a626688208befa37c99e9f29"
+        ),
+        "unresolved_triple_orbits_before": 1_162_302,
+        "unresolved_triple_orbits_after": 1_162_302,
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "pair_branch_injectivity": "OPEN",
+        "theorem_effect": (
+            "A nonvacuous smooth local triple-zero compiler fixture is proved in one "
+            "uniform parent chamber distinct from row 2599, but only artificial "
+            "box-boundary reach is shown; no complete orbit, genuine parent boundary, "
+            "or invariant obligation is covered, so the honest 9DVL score remains 2/9."
+        ),
+        "evidence": [
+            "ai/omreal/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.md",
+            "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_REGISTRATION.json",
+            "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json",
+            "ai/omreal/build_diag3_triple_local_roadmap_canary.py",
+            "ai/omreal/verify_diag3_triple_local_roadmap_canary.py",
+        ],
+    }
+    assert local_roadmap == expected_local_roadmap
     assert local_roadmap["scope"] == (
         "one closed radius-1/128 rational nine-box in one normalized uniform-parent "
         "cell distinct from row 2599 for named presentation (5563,16134,19284), "
@@ -1449,8 +1588,8 @@ def main() -> None:
         "EVERY_RESTRICTED_TRIPLE_ZERO_COMPONENT_MEETS_THE_ARTIFICIAL_BOX_BOUNDARY"
     )
     assert local_roadmap["compact_sphere_negative_canary"] == "REJECTED"
-    assert local_roadmap["hostile_corruptions_rejected"] == 16
-    assert len(triple_local_roadmap["hostile_mutations"]) == 16
+    assert local_roadmap["hostile_corruptions_rejected"] == 18
+    assert len(triple_local_roadmap["hostile_mutations"]) == 18
     assert local_roadmap["semantic_sha256"] == triple_local_roadmap["semantic_sha256"]
     assert local_roadmap["unresolved_triple_orbits_before"] == 1_162_302
     assert local_roadmap["unresolved_triple_orbits_after"] == 1_162_302
@@ -1465,8 +1604,12 @@ def main() -> None:
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
-    assert progress["next_stage"].startswith(
-        "compile face-compatible closure"
+    assert progress["next_stage"] == (
+        "continue complete labels and component/closure attachments on the exact "
+        "40-edge full-support source cover, or replace the finite skeleton with a "
+        "direct coverage-certified parent-cell roadmap; retain section-960 and "
+        "section-550 only as compiler stress tests and retain the independent "
+        "triple boundary-complete projection-critical roadmap route"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
