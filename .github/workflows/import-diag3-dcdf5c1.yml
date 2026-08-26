@@ -1,5 +1,7 @@
 name: import reviewed diagonal-three checkpoint
 
+# Transport retry marker: 2
+
 on:
   push:
     branches: [ops/import-diag3-dcdf5c1]
