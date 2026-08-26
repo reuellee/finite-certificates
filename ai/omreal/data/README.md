@@ -531,11 +531,16 @@ python ai/omreal/verify_diag3_component_cosheaf_pilot.py
 source-skeleton successor. It proves that both proposed component-cosheaf
 stress stars lie on proper supports and therefore add zero generators to the
 relative chain complex. On full support it reduces the 105 certified
-parent-safe source segments to an optimal 40-edge cover of all 10,844 known
-wall crossings. Unique-crossing factors force 34 edges; exhaustive replay of
-seven maximal optional incidence patterns proves that six additional edges
-are necessary and sufficient. The verifier rechecks all parent brackets and
-all exact endpoint sign crossings. It does not claim global wall-component or
+parent-safe source segments to an optimal 40-edge cover with one exact retained
+endpoint witness for each of 10,844 crossed factor classes.
+Unique-crossing factors force 34 edges; exhaustive replay of seven maximal
+optional incidence patterns proves that six additional edges are necessary and
+sufficient. There are 3 maximal-pattern covers and 28 raw six-edge optional
+covers. The verifier independently reproduces 412,093 original and 157,448
+retained edge-factor incidences, rechecks all parent brackets and exact endpoint
+witnesses, and requires a full-record semantic seal. It shares declared,
+hash-pinned accepted upstream source modules with the producer; it does not
+claim full raw-source independence, global wall-component coverage, or
 parent-cell coverage.
 
 ```console

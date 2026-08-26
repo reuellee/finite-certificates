@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent exact replay of the minimum full-support segment cover."""
+"""Separate exact checkpoint replay of the minimum full-support segment cover."""
 
 from __future__ import annotations
 
@@ -41,6 +41,18 @@ def digest_file(path: Path) -> str:
 def digest_ids(domain: bytes, identifiers) -> str:
     payload = ",".join(map(str, sorted(identifiers))).encode("ascii")
     return sha256(domain + b"\0" + payload).hexdigest()
+
+
+def canonical_digest(value) -> str:
+    return sha256(
+        json.dumps(value, sort_keys=True, separators=(",", ":")).encode("ascii")
+    ).hexdigest()
+
+
+def semantic_seal(record) -> str:
+    payload = deepcopy(record)
+    payload.pop("semantic_sha256", None)
+    return canonical_digest(payload)
 
 
 def require(condition, message):
@@ -198,6 +210,30 @@ def combinatorial_optimum(candidates, incidence):
         np.array_equal(incidence[list(selected)].any(axis=0), known),
         "cover equality",
     )
+    original_incidences = int(incidence.sum())
+    retained_incidences = int(incidence[list(selected)].sum())
+    require(
+        (original_incidences, retained_incidences) == (412_093, 157_448),
+        "edge-factor incidence accounting",
+    )
+    raw_optional = []
+    for edge_index in range(len(safe.EDGES)):
+        if edge_index in mandatory:
+            continue
+        mask = sum(
+            1 << position
+            for position, candidate_index in enumerate(remaining)
+            if incidence[edge_index, candidate_index]
+        )
+        if mask:
+            raw_optional.append((edge_index, mask))
+    raw_minimum_covers = 0
+    for choice in combinations(raw_optional, 6):
+        union = 0
+        for _edge_index, mask in choice:
+            union |= mask
+        raw_minimum_covers += union == full
+    require(raw_minimum_covers == 28, "raw minimum optional-edge cover census")
     return {
         "known": known,
         "multiplicity": multiplicity,
@@ -211,6 +247,9 @@ def combinatorial_optimum(candidates, incidence):
         "solutions": first_solutions,
         "optional": optional,
         "selected": selected,
+        "original_incidences": original_incidences,
+        "retained_incidences": retained_incidences,
+        "raw_minimum_covers": raw_minimum_covers,
     }
 
 
@@ -232,82 +271,15 @@ def replay_exact_assignment(selected, known, candidates, incidence, points):
     return assignment
 
 
-def verify_record(record):
-    global _REPLAY_CACHE
-    if _REPLAY_CACHE is None:
-        points, candidates, incidence = exact_inputs()
-        parent_digest = replay_parent_safety(points)
-        supports = replay_relative_scope()
-        proof = combinatorial_optimum(candidates, incidence)
-        assignment = replay_exact_assignment(
-            proof["selected"], proof["known"], candidates, incidence, points
-        )
-        _REPLAY_CACHE = candidates, parent_digest, supports, proof, assignment
-    candidates, parent_digest, supports, proof, assignment = _REPLAY_CACHE
-
-    require(
-        record["format"] == "diag3-pair-fullsupport-segment-cover-v1",
-        "format",
+def replay_record():
+    points, candidates, incidence = exact_inputs()
+    parent_digest = replay_parent_safety(points)
+    supports = replay_relative_scope()
+    proof = combinatorial_optimum(candidates, incidence)
+    assignment = replay_exact_assignment(
+        proof["selected"], proof["known"], candidates, incidence, points
     )
-    require(
-        record["status"] == "EXACT_OPTIMAL_KNOWN_WALL_SEGMENT_COVER",
-        "status",
-    )
-    require(record["scope"]["support"] == [15, 15, 15], "support")
-    require(record["scope"]["component_coverage"] == "NOT_CLAIMED", "scope")
-    require(record["scope"]["global_parent_cell_coverage"] == "NOT_CLAIMED", "scope")
-    require(record["scope"]["honest_9dvl_score"] == "2/9", "score")
-
-    require(
-        record["inputs"]
-        == {
-            "factor_state_sha256": digest_file(transition.FACTOR_STATES),
-            "candidate_factor_sha256": digest_file(gate.CANDIDATES),
-            "parent_sign_sha256": parent_digest,
-            "component_cosheaf_pilot_sha256": digest_file(PILOT),
-            "compactification_atlas_sha256": digest_file(ATLAS),
-        },
-        "input pins",
-    )
-    audit = record["target_selection_audit"]
-    require(audit["proper_relative_supports"] == 3_374, "relative support count")
-    require(audit["unique_possibly_nonrelative_support"] == [15, 15, 15], "relative partition")
-    require(audit["audited_pilot_supports"] == [list(row) for row in supports], "audit supports")
-    require(audit["relative_chain_generator_contribution"] == 0, "relative contribution")
-    require(audit["decision"] == "RETAIN_AS_COMPILER_STRESS_TESTS_ONLY", "target decision")
-
-    source = record["source_bank"]
-    require(source["original_edges"] == 105, "original edges")
-    require(source["known_crossed_factors"] == 10_844, "known factors")
-    require(source["selected_edges"] == 40, "selected edges")
-    require(source["edge_reduction"] == 65, "edge reduction")
-    require(source["edge_reduction_fraction"] == "13/21", "edge reduction fraction")
-    require(source["selected_edge_indices"] == list(proof["selected"]), "selected indices")
-    require(
-        source["selected_chart_pairs"]
-        == [list(safe.EDGES[index]) for index in proof["selected"]],
-        "selected charts",
-    )
-    require(
-        source["known_factor_ids_sha256"]
-        == digest_ids(
-            b"diag3-fullsupport-known-crossed-factors-v1",
-            (candidates[index] for index in np.where(proof["known"])[0]),
-        ),
-        "known-factor digest",
-    )
-    require(
-        source["selected_crossing_assignment_sha256"]
-        == sha256(repr(tuple(sorted(assignment.items()))).encode("ascii")).hexdigest(),
-        "assignment digest",
-    )
-
-    optimum = record["optimality"]
-    require(optimum["mandatory_edges"] == 34, "mandatory edges")
-    require(optimum["mandatory_edge_indices"] == proof["mandatory"], "mandatory indices")
-    require(optimum["mandatory_unique_factor_count"] == 49, "unique factor count")
-    require(optimum["mandatory_coverage"] == 10_815, "mandatory coverage")
-    expected_witnesses = [
+    mandatory_witnesses = [
         {
             "edge_index": edge,
             "charts": list(charts),
@@ -316,24 +288,6 @@ def verify_record(record):
         }
         for edge, charts, factor, count in proof["mandatory_rows"]
     ]
-    require(optimum["mandatory_witnesses"] == expected_witnesses, "mandatory witnesses")
-    require(optimum["remaining_factor_count"] == 29, "remaining count")
-    require(
-        optimum["remaining_factor_ids"]
-        == [candidates[index] for index in proof["remaining"]],
-        "remaining factors",
-    )
-    require(optimum["nonempty_optional_patterns"] == 21, "optional patterns")
-    require(
-        optimum["subsets_of_at_most_five_exhausted"]
-        == sum(len(tuple(combinations(proof["maximal"], size))) for size in range(6)),
-        "exhausted subset census",
-    )
-    require(optimum["covers_with_five_optional_patterns"] == 0, "five-edge no-go")
-    require(optimum["minimum_optional_edges"] == 6, "optional lower bound")
-    require(optimum["six_pattern_cover_count"] == 3, "optimal cover census")
-    require(optimum["canonical_optional_edge_indices"] == list(proof["optional"]), "canonical optional")
-
     maximal_rows = []
     for representative, mask, equivalent in proof["maximal"]:
         maximal_rows.append(
@@ -348,32 +302,158 @@ def verify_record(record):
                 ],
             }
         )
-    require(
-        optimum["inclusion_maximal_optional_patterns"] == maximal_rows,
-        "maximal pattern rows",
-    )
-    semantic_payload = {
-        "mandatory": proof["mandatory"],
-        "remaining": [candidates[index] for index in proof["remaining"]],
-        "maximal_patterns": maximal_rows,
-        "canonical_optional": list(proof["optional"]),
-        "selected": list(proof["selected"]),
+    expected = {
+        "format": "diag3-pair-fullsupport-segment-cover-v1",
+        "status": "EXACT_OPTIMAL_KNOWN_WALL_SEGMENT_COVER",
+        "scope": {
+            "parent_index": 2599,
+            "support": [15, 15, 15],
+            "source_bank": "105 exact strict-parent straight segments",
+            "coverage_claim": "ONE_EXACT_RETAINED_WITNESS_FOR_EACH_OF_10844_CROSSED_FACTOR_CLASSES",
+            "component_coverage": "NOT_CLAIMED",
+            "global_parent_cell_coverage": "NOT_CLAIMED",
+            "pair_branch_closed": False,
+            "triple_branch_closed": False,
+            "honest_9dvl_score": "2/9",
+        },
+        "inputs": {
+            "point_bank_sha256": digest_file(transition.POINT_BANK),
+            "factor_state_sha256": digest_file(transition.FACTOR_STATES),
+            "factor_census_sha256": digest_file(transition.FACTOR_CENSUS),
+            "factor_polynomial_source_sha256": digest_file(
+                Path(labeled.__file__)
+            ),
+            "candidate_factor_sha256": digest_file(gate.CANDIDATES),
+            "parent_catalog_sha256": digest_file(gate.CATALOG),
+            "source_edge_bank_sha256": canonical_digest(
+                [list(edge) for edge in safe.EDGES]
+            ),
+            "parent_sign_sha256": parent_digest,
+            "component_cosheaf_pilot_sha256": digest_file(PILOT),
+            "compactification_atlas_sha256": digest_file(ATLAS),
+        },
+        "trust_boundary": {
+            "checkpoint_verifier": "SEPARATELY_WRITTEN_CHECKPOINT_LOGIC_WITH_SHARED_ACCEPTED_SOURCE_MODULES",
+            "shared_accepted_dependencies": [
+                "DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.factor_polynomials",
+                "diag3_pair_parent_source_transition_core.exact_inputs",
+                "verify_diag2_canonical_robust_edges.evaluate",
+                "verify_diag3_pair_fullsupport_safe_segment_walls.segment_power/positive_unit/EDGES",
+                "verify_diag3_pair_global_parent_face_gate.parent_polynomials/parse_candidates",
+            ],
+            "upstream_exact_factor_state_replay": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py",
+            "scope": "The checkpoint verifier independently reimplements cover optimality and record validation, but authenticates and consumes the accepted factor-state, point-bank, factor-polynomial, parent, and edge-bank sources rather than rederiving every source inside this verifier.",
+        },
+        "target_selection_audit": {
+            "compactification": "(Delta^3)^3",
+            "proper_relative_supports": 3_374,
+            "unique_possibly_nonrelative_support": [15, 15, 15],
+            "audited_pilot_supports": [list(row) for row in supports],
+            "audited_stars": [
+                "section-960 wall-(1,6) interior collision",
+                "section-550 point-30 wall-21 endpoint tangency",
+            ],
+            "relative_chain_generator_contribution": 0,
+            "decision": "RETAIN_AS_COMPILER_STRESS_TESTS_ONLY",
+            "reason": (
+                "Both stars lie wholly in proper product-simplex supports, hence "
+                "inside the parent-boundary relative subspace; internal residual "
+                "subdivision there generates zero in C_*(K,K_infinity)."
+            ),
+        },
+        "source_bank": {
+            "original_edges": 105,
+            "known_crossed_factors": 10_844,
+            "original_edge_factor_crossing_incidences": proof["original_incidences"],
+            "selected_edges": 40,
+            "retained_edge_factor_crossing_incidences": proof["retained_incidences"],
+            "edge_reduction": 65,
+            "edge_reduction_fraction": "13/21",
+            "selected_edge_indices": list(proof["selected"]),
+            "selected_chart_pairs": [
+                list(safe.EDGES[index]) for index in proof["selected"]
+            ],
+            "known_factor_ids_sha256": digest_ids(
+                b"diag3-fullsupport-known-crossed-factors-v1",
+                (candidates[index] for index in np.where(proof["known"])[0]),
+            ),
+            "selected_crossing_assignment_sha256": sha256(
+                repr(tuple(sorted(assignment.items()))).encode("ascii")
+            ).hexdigest(),
+        },
+        "optimality": {
+            "mandatory_edges": 34,
+            "mandatory_edge_indices": proof["mandatory"],
+            "mandatory_unique_factor_count": 49,
+            "mandatory_coverage": 10_815,
+            "mandatory_witnesses": mandatory_witnesses,
+            "remaining_factor_count": 29,
+            "remaining_factor_ids": [
+                candidates[index] for index in proof["remaining"]
+            ],
+            "nonempty_optional_patterns": 21,
+            "inclusion_maximal_optional_patterns": maximal_rows,
+            "subsets_of_at_most_five_exhausted": sum(
+                len(tuple(combinations(proof["maximal"], size)))
+                for size in range(6)
+            ),
+            "covers_with_five_optional_patterns": 0,
+            "minimum_optional_edges": 6,
+            "six_maximal_pattern_cover_count": len(proof["solutions"]),
+            "raw_six_edge_optional_cover_count": proof["raw_minimum_covers"],
+            "canonical_optional_edge_indices": list(proof["optional"]),
+            "proof": (
+                "Unique-crossing factors force 34 distinct edges. Those edges "
+                "leave 29 factors. Every optional edge is contained in one of "
+                "seven maximal incidence patterns; exhaustive replay finds no "
+                "cover using at most five patterns and three maximal-pattern "
+                "covers using six. Direct raw-edge exhaustion finds 28 six-edge "
+                "optional covers."
+            ),
+        },
+        "decision": {
+            "retired_as_proof_bearing_next_step": (
+                "scale section-960/section-550 closure across the two proper supports"
+            ),
+            "retained_diagnostic": (
+                "use the two stars only when a split/merge or endpoint-specialization "
+                "compiler regression is specifically needed"
+            ),
+            "next_pair_action": (
+                "continue labels and component/closure attachments on the exact "
+                "40-edge full-support source cover, or replace it with a direct "
+                "coverage-certified parent-cell roadmap"
+            ),
+            "supersedes_historical_next_action": (
+                "DIAG3_COMPONENT_COSHEAF_PILOT.md section 'Evidence-selected next action'"
+            ),
+        },
+        "theorem_effect": (
+            "Removes 65 redundant edges from the exact known-wall source skeleton "
+            "and prevents a proper-support diagnostic from being mistaken for a "
+            "relative-chain advance. Global component coverage and the independent "
+            "triple obligation remain open; honest 9DVL score remains 2/9."
+        ),
     }
+    expected["semantic_sha256"] = semantic_seal(expected)
+    return expected
+
+
+def verify_record(record):
+    global _REPLAY_CACHE
+    if _REPLAY_CACHE is None:
+        _REPLAY_CACHE = replay_record()
+    require(record == _REPLAY_CACHE, "full exact record/schema replay")
     require(
-        record["semantic_sha256"]
-        == sha256(
-            json.dumps(
-                semantic_payload, sort_keys=True, separators=(",", ":")
-            ).encode("ascii")
-        ).hexdigest(),
-        "semantic digest",
+        record["semantic_sha256"] == semantic_seal(record),
+        "full-record semantic seal",
     )
-    require(
-        "40-edge full-support source cover"
-        in record["decision"]["next_pair_action"],
-        "next action",
-    )
-    require("2/9" in record["theorem_effect"], "honest theorem effect")
+
+
+def reseal(record):
+    """Seal a hostile record so rejection exercises semantics, not a stale hash."""
+    record["semantic_sha256"] = semantic_seal(record)
+    return record
 
 
 def main():
@@ -384,24 +464,45 @@ def main():
         (("format",), "corrupted"),
         (("status",), "PROVED_DIAGONAL_THREE"),
         (("scope", "component_coverage"), "GLOBAL"),
+        (("scope", "pair_branch_closed"), True),
+        (("scope", "triple_branch_closed"), True),
+        (
+            ("scope", "coverage_claim"),
+            "GLOBAL_PARENT_CELL_COMPONENT_COVERAGE",
+        ),
         (("scope", "honest_9dvl_score"), "3/9"),
         (("target_selection_audit", "relative_chain_generator_contribution"), 1),
         (("target_selection_audit", "decision"), "SCALE_GLOBALLY"),
+        (("target_selection_audit", "audited_stars"), []),
+        (("target_selection_audit", "reason"), "Both stars prove a new chain."),
         (("source_bank", "selected_edges"), 39),
         (("source_bank", "selected_edge_indices"), []),
         (("source_bank", "selected_crossing_assignment_sha256"), "0" * 64),
         (("optimality", "mandatory_edges"), 33),
         (("optimality", "covers_with_five_optional_patterns"), 1),
         (("optimality", "minimum_optional_edges"), 5),
-        (("semantic_sha256",), "0" * 64),
-        (("theorem_effect",), "diagonal three proved"),
+        (
+            ("decision", "retired_as_proof_bearing_next_step"),
+            "scale section-960/section-550 as a proof-bearing next step",
+        ),
+        (
+            ("decision", "retained_diagnostic"),
+            "use the stars as pair-branch generators",
+        ),
+        (
+            ("theorem_effect",),
+            "Diagonal three proved; archival honest score remains 2/9.",
+        ),
     ):
         mutation = deepcopy(stored)
         target = mutation
         for key in path[:-1]:
             target = target[key]
         target[path[-1]] = value
-        mutations.append(mutation)
+        mutations.append(reseal(mutation))
+    stale_seal = deepcopy(stored)
+    stale_seal["semantic_sha256"] = "0" * 64
+    mutations.append(stale_seal)
     rejected = 0
     for mutation in mutations:
         try:
@@ -410,10 +511,11 @@ def main():
             rejected += 1
     require(rejected == len(mutations), "hostile mutation rejection")
     print("PASS all 105 source edges independently remain in the strict parent cell")
-    print("PASS 34 forced edges cover 10,815/10,844 known crossing factors")
+    print("PASS 34 forced edges cover 10,815/10,844 crossed factor classes")
     print("PASS seven maximal optional patterns exhaust the 29-factor residue")
-    print("PASS no five-pattern cover; canonical six-pattern completion")
-    print("PASS exact 40-edge cover is optimal and replays all endpoint crossings")
+    print("PASS no five-pattern cover; 3 maximal-pattern and 28 raw six-edge covers")
+    print("PASS 412,093 original and 157,448 retained edge-factor incidences")
+    print("PASS exact 40-edge cover is optimal; one exact endpoint witness per class")
     print("PASS both proposed proper-support stars generate zero relative chains")
     print(f"PASS {rejected}/{len(mutations)} hostile corruptions rejected")
     print("SCOPE source-skeleton compression only; global components and triple branch open; honest 9DVL 2/9")

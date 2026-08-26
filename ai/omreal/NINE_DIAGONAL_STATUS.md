@@ -1507,12 +1507,15 @@ supports, and all 3,374 proper supports are contained in `K_infinity`;
 subdividing them therefore contributes zero generators to the relative chain
 complex.  They remain useful compiler regressions, but are retired as the
 proof-bearing next step.  On the nonrelative full support, the 105 certified
-parent-safe segments have an exact minimum 40-edge subcover preserving all
-10,844 known factor crossings: 49 unique-crossing factors force 34 edges,
-which cover 10,815 factors, and exhaustive replay of seven maximal incidence
-patterns proves that six further edges are necessary and sufficient for the
-29-factor residue.  This shrinks the source skeleton by 65 edges but does not
-prove global component coverage; the honest score remains `2/9`.  See
+parent-safe segments have an exact minimum 40-edge subcover retaining one
+exact witness for each of 10,844 crossed factor classes:
+49 unique-crossing factors force 34 edges, which cover 10,815 factors, and
+exhaustive replay of seven maximal incidence patterns proves that six further
+edges are necessary and sufficient for the 29-factor residue.  There are
+three maximal-pattern covers but 28 raw six-edge optional covers.  The exact
+incidence totals are 412,093 in the original bank and 157,448 in the retained
+bank.  This shrinks the source skeleton by 65 edges but does not prove global
+component coverage; the honest score remains `2/9`.  See
 `DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md`.
 
 ## Exact artifacts
@@ -1850,8 +1853,9 @@ prove global component coverage; the honest score remains `2/9`.  See
   zero-free on the full chart-0/chart-152 source cube, retiring universal
   incidence with that family.
 - `DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md`, its compact JSON record, builder,
-  and independent hostile verifier: an exact optimal 40-of-105 source-segment
-  cover retaining all 10,844 known full-support wall crossings, plus the
+  and separately written hostile verifier: an exact optimal 40-of-105
+  source-segment cover retaining one exact witness for all 10,844 crossed
+  full-support factor classes, plus the
   relative-boundary audit retiring the two proper-support stars as a
   proof-bearing scaling target.
 - `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md`, its compact JSON record, builder,

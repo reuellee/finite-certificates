@@ -3,8 +3,8 @@
 ## Result
 
 The 105 certified strict-parent row-2599 segments contain an exact minimum
-40-edge subbank that retains every one of the 10,844 already certified
-full-support residual-wall crossings.
+40-edge subbank that retains at least one exact opposite-sign endpoint witness
+for every one of the 10,844 crossed full-support residual-factor classes.
 
 This is a source-skeleton compression theorem, not a global component theorem.
 It neither proves that every component of a known wall meets the skeleton nor
@@ -15,7 +15,10 @@ open.  The honest Nine-Diagonal Vanishing Lemma score remains **2/9**.
 
 The packed chart signs and exact endpoint evaluations give a 105-by-17,824
 edge/factor incidence matrix.  Its nonzero columns are the 10,844 factors
-already known to meet the strict parent interior.
+already known to meet the strict parent interior.  There are 412,093
+edge-factor crossing incidences in the original bank and 157,448 in the
+retained bank; these counts are independently recomputed from the packed exact
+endpoint states.
 
 Forty-nine factors cross exactly one segment.  Their witnesses force 34
 distinct edges in every cover.  Those mandatory edges already cover 10,815
@@ -28,13 +31,16 @@ patterns.  Exhausting all subsets of these seven patterns gives:
 | optional patterns | covers of the 29-factor residue |
 |---:|---:|
 | at most 5 | 0 |
-| 6 | 3 |
+| 6 inclusion-maximal patterns | 3 |
+
+Expanding equivalent edges inside those patterns gives 28 raw six-edge
+optional covers.  Thus `3` counts maximal-pattern covers, not raw edge covers.
 
 Thus every cover needs at least `34 + 6 = 40` edges, and the emitted 40-edge
 cover is optimal.  It removes 65 of 105 source edges, a reduction of `13/21`,
-while preserving all known factor-zero witnesses.  The verifier evaluates an
-exact opposite-sign endpoint pair for every retained factor; packed signs are
-not the final trust boundary.
+while preserving one exact factor-zero witness per crossed factor class.  The
+verifier evaluates an exact opposite-sign endpoint pair for every class; packed
+signs are used for incidence discovery but are not the final witness check.
 
 ## Target-selection correction
 
@@ -69,11 +75,28 @@ PYTHONDONTWRITEBYTECODE=1 python \
   ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py
 ```
 
-The independent verifier recomputes all 105 parent-safe segments, the complete
-edge/factor incidence matrix, the mandatory-edge lower bound, the seven-pattern
-optional residue, the exhaustive no-five-edge result, and all 10,844 exact
-endpoint sign crossings.  It independently reconstructs the compactification
-support partition and rejects fourteen hostile semantic mutations.
+The separately written checkpoint verifier recomputes all 105 parent-safe
+segments, the complete edge/factor incidence matrix, the mandatory-edge lower
+bound, the seven-pattern optional residue, both the three maximal-pattern and
+28 raw-edge minimum-cover censuses, and one exact endpoint sign crossing for
+each of the 10,844 classes.  It reconstructs the compactification support
+partition, requires exact equality with the complete declared record schema,
+checks a full-record semantic seal, and rejects 21 hostile mutations.  The
+mutations are re-sealed before replay, so failures exercise semantics rather
+than merely detecting stale hashes.
+
+This is not full raw-source independence.  Producer and verifier share the
+declared, hash-pinned accepted point bank, factor-state and factor-census
+artifacts, polynomial source, parent catalog/candidate list, and 105-edge bank,
+plus the source helpers named in the JSON trust boundary.  The verifier's
+cover search, exact assignment, theorem/scope reconstruction, and hostile
+mutation logic are separate.  The accepted factor-state artifact can itself
+be replayed exactly with
+
+```console
+PYTHONDONTWRITEBYTECODE=1 python \
+  ai/omreal/DIAG9_GRAPH_row2599_factor_states.py
+```
 
 The generated certificate is
 `data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json`.

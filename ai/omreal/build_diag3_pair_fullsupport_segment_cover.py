@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Build an exact minimum cover of the known row-2599 wall crossings.
+"""Build an exact minimum witness cover of crossed row-2599 factor classes.
 
 The source bank consists of the 105 already certified parent-safe segments.
 This producer uses their exact endpoint factor signs to find the smallest
-subbank retaining every one of the 10,844 certified full-support wall
-crossings.  It also audits the theorem role of the latest proper-support
-component-cosheaf target.
+subbank retaining an exact wall-crossing witness for every one of the 10,844
+certified full-support factor classes.  It also audits the theorem role of the
+latest proper-support component-cosheaf target.
 """
 
 from __future__ import annotations
 
+from copy import deepcopy
 from hashlib import sha256
 from itertools import combinations, product
 import json
@@ -45,6 +46,18 @@ def file_sha256(path: Path) -> str:
 def id_digest(domain: bytes, identifiers) -> str:
     payload = ",".join(map(str, sorted(identifiers))).encode("ascii")
     return sha256(domain + b"\0" + payload).hexdigest()
+
+
+def canonical_digest(value) -> str:
+    return sha256(
+        json.dumps(value, sort_keys=True, separators=(",", ":")).encode("ascii")
+    ).hexdigest()
+
+
+def semantic_seal(record) -> str:
+    payload = deepcopy(record)
+    payload.pop("semantic_sha256", None)
+    return canonical_digest(payload)
 
 
 def load_signs():
@@ -255,6 +268,31 @@ def build_record():
     ):
         raise AssertionError("selected source bank is not the exact known-wall cover")
 
+    original_incidences = int(incidence.sum())
+    retained_incidences = int(incidence[list(selected)].sum())
+    if (original_incidences, retained_incidences) != (412_093, 157_448):
+        raise AssertionError("edge-factor incidence accounting changed")
+
+    raw_optional = []
+    for edge_index in range(len(safe.EDGES)):
+        if edge_index in mandatory:
+            continue
+        mask = sum(
+            1 << position
+            for position, candidate_index in enumerate(remaining_columns)
+            if incidence[edge_index, candidate_index]
+        )
+        if mask:
+            raw_optional.append((edge_index, mask))
+    raw_six_edge_cover_count = 0
+    for choice in combinations(raw_optional, minimum_optional):
+        union = 0
+        for _edge_index, mask in choice:
+            union |= mask
+        raw_six_edge_cover_count += union == full
+    if raw_six_edge_cover_count != 28:
+        raise AssertionError("raw minimum optional-edge cover census changed")
+
     _types, _terms, polynomials = labeled.factor_polynomials()
     witnesses = exact_selected_crossings(
         selected, incidence, candidates, points, polynomials
@@ -277,27 +315,14 @@ def build_record():
             }
         )
 
-    semantic_payload = {
-        "mandatory": mandatory,
-        "remaining": [candidates[index] for index in remaining_columns],
-        "maximal_patterns": maximal_rows,
-        "canonical_optional": list(canonical_optional),
-        "selected": list(selected),
-    }
-    semantic = sha256(
-        json.dumps(
-            semantic_payload, sort_keys=True, separators=(",", ":")
-        ).encode("ascii")
-    ).hexdigest()
-
-    return {
+    record = {
         "format": FORMAT,
         "status": "EXACT_OPTIMAL_KNOWN_WALL_SEGMENT_COVER",
         "scope": {
             "parent_index": 2599,
             "support": [15, 15, 15],
             "source_bank": "105 exact strict-parent straight segments",
-            "coverage_claim": "ALL_10844_ALREADY_CERTIFIED_FACTOR_ZERO_SETS",
+            "coverage_claim": "ONE_EXACT_RETAINED_WITNESS_FOR_EACH_OF_10844_CROSSED_FACTOR_CLASSES",
             "component_coverage": "NOT_CLAIMED",
             "global_parent_cell_coverage": "NOT_CLAIMED",
             "pair_branch_closed": False,
@@ -305,17 +330,40 @@ def build_record():
             "honest_9dvl_score": "2/9",
         },
         "inputs": {
+            "point_bank_sha256": file_sha256(transition.POINT_BANK),
             "factor_state_sha256": file_sha256(transition.FACTOR_STATES),
+            "factor_census_sha256": file_sha256(transition.FACTOR_CENSUS),
+            "factor_polynomial_source_sha256": file_sha256(
+                Path(labeled.__file__)
+            ),
             "candidate_factor_sha256": file_sha256(gate.CANDIDATES),
+            "parent_catalog_sha256": file_sha256(gate.CATALOG),
+            "source_edge_bank_sha256": canonical_digest(
+                [list(edge) for edge in safe.EDGES]
+            ),
             "parent_sign_sha256": parent_digest,
             "component_cosheaf_pilot_sha256": file_sha256(PILOT),
             "compactification_atlas_sha256": file_sha256(ATLAS),
+        },
+        "trust_boundary": {
+            "checkpoint_verifier": "SEPARATELY_WRITTEN_CHECKPOINT_LOGIC_WITH_SHARED_ACCEPTED_SOURCE_MODULES",
+            "shared_accepted_dependencies": [
+                "DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.factor_polynomials",
+                "diag3_pair_parent_source_transition_core.exact_inputs",
+                "verify_diag2_canonical_robust_edges.evaluate",
+                "verify_diag3_pair_fullsupport_safe_segment_walls.segment_power/positive_unit/EDGES",
+                "verify_diag3_pair_global_parent_face_gate.parent_polynomials/parse_candidates",
+            ],
+            "upstream_exact_factor_state_replay": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py",
+            "scope": "The checkpoint verifier independently reimplements cover optimality and record validation, but authenticates and consumes the accepted factor-state, point-bank, factor-polynomial, parent, and edge-bank sources rather than rederiving every source inside this verifier.",
         },
         "target_selection_audit": relative_scope_audit(),
         "source_bank": {
             "original_edges": len(safe.EDGES),
             "known_crossed_factors": int(known.sum()),
+            "original_edge_factor_crossing_incidences": original_incidences,
             "selected_edges": len(selected),
+            "retained_edge_factor_crossing_incidences": retained_incidences,
             "edge_reduction": len(safe.EDGES) - len(selected),
             "edge_reduction_fraction": "13/21",
             "selected_edge_indices": list(selected),
@@ -345,16 +393,18 @@ def build_record():
             ),
             "covers_with_five_optional_patterns": 0,
             "minimum_optional_edges": minimum_optional,
-            "six_pattern_cover_count": len(covers_by_size[6]),
+            "six_maximal_pattern_cover_count": len(covers_by_size[6]),
+            "raw_six_edge_optional_cover_count": raw_six_edge_cover_count,
             "canonical_optional_edge_indices": list(canonical_optional),
             "proof": (
                 "Unique-crossing factors force 34 distinct edges. Those edges "
                 "leave 29 factors. Every optional edge is contained in one of "
                 "seven maximal incidence patterns; exhaustive replay finds no "
-                "cover using at most five patterns and three covers using six."
+                "cover using at most five patterns and three maximal-pattern "
+                "covers using six. Direct raw-edge exhaustion finds 28 six-edge "
+                "optional covers."
             ),
         },
-        "semantic_sha256": semantic,
         "decision": {
             "retired_as_proof_bearing_next_step": (
                 "scale section-960/section-550 closure across the two proper supports"
@@ -368,6 +418,9 @@ def build_record():
                 "40-edge full-support source cover, or replace it with a direct "
                 "coverage-certified parent-cell roadmap"
             ),
+            "supersedes_historical_next_action": (
+                "DIAG3_COMPONENT_COSHEAF_PILOT.md section 'Evidence-selected next action'"
+            ),
         },
         "theorem_effect": (
             "Removes 65 redundant edges from the exact known-wall source skeleton "
@@ -376,6 +429,8 @@ def build_record():
             "triple obligation remain open; honest 9DVL score remains 2/9."
         ),
     }
+    record["semantic_sha256"] = semantic_seal(record)
+    return record
 
 
 def main():
