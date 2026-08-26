@@ -3,6 +3,8 @@ name: import reviewed diagonal-three checkpoint
 on:
   push:
     branches: [ops/import-diag3-dcdf5c1]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
