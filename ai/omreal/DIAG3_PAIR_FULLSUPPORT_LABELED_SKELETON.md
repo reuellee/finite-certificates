@@ -106,7 +106,7 @@ events against the label continuation.  The accepted raw SHA-256 values are:
 
 | dependency | SHA-256 |
 |---|---|
-| optimal cover | `acb8c7a9a140bbb803172164c9a04c3581338dd285953b2e5eff234edc21c1ec` |
+| optimal cover | `19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307` |
 | transition 0→89 | `87f2d7ce337651cea498cc50d36c1b53c8b2294aef54ceac89f0fcc552c7b2d2` |
 | label continuation 0→89 | `c6071484960d8bde8c0140aac40ec2a065cc7597d23fcadb3503b25d87f5466a` |
 

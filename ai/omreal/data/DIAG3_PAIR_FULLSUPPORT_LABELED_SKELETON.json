@@ -60767,7 +60767,7 @@
     "labels_path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json",
     "labels_sha256": "c6071484960d8bde8c0140aac40ec2a065cc7597d23fcadb3503b25d87f5466a",
     "minimum_cover_path": "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json",
-    "minimum_cover_sha256": "acb8c7a9a140bbb803172164c9a04c3581338dd285953b2e5eff234edc21c1ec",
+    "minimum_cover_sha256": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
     "profile_catalog_path": "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_PROFILES.json.gz",
     "profile_catalog_sha256": "25094cddf35754fd83f25fbea11e1b6bf8fd168781850f409ca3aa2ecf2c4223",
     "transition_path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json",
@@ -60790,7 +60790,7 @@
     ],
     "triple_branch_closed": false
   },
-  "semantic_sha256": "5f2fd3f21c8bc06b2a8d9a08d808844b54817bc259b18f6706f3d5f88b18c4ff",
+  "semantic_sha256": "4f355f6fcb5da7648d031e7ddc6e7d93d7fddd05c2caf0173c85404933df9a39",
   "status": "EXACT_PARTIAL_LABELED_SKELETON_BOUNDED_NO_GO",
   "theorem_effect": "Produces a complete labelled regular-CW contract on one of the forty optimal full-support cover edges and identifies the exact missing datum on the other thirty-nine. This is source-skeleton coverage, not parent-cell or component coverage; both diagonal-three obligations remain open and the honest 9DVL score remains 2/9.",
   "unrefined_minimum_source_graph": {

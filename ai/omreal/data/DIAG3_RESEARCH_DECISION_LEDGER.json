@@ -1397,7 +1397,42 @@
         "ai/omreal/verify_diag3_component_cosheaf_pilot.py"
       ]
     },
-    "thirty_fifth_triple_local_projection_roadmap_canary": {
+    "thirty_fifth_pair_fullsupport_segment_cover": {
+      "status": "PROVED",
+      "scope": "optimal exact subcover of the existing 105 strict-parent full-support segment bank retaining one exact witness for each crossed factor class, together with a relative-boundary target-selection audit; no global wall-component or parent-cell coverage claim",
+      "support": [15, 15, 15],
+      "original_source_edges": 105,
+      "selected_source_edges": 40,
+      "removed_source_edges": 65,
+      "known_crossed_factors_preserved": 10844,
+      "original_edge_factor_crossing_incidences": 412093,
+      "retained_edge_factor_crossing_incidences": 157448,
+      "mandatory_edges": 34,
+      "unique_crossing_factors": 49,
+      "mandatory_coverage": 10815,
+      "remaining_factors": 29,
+      "inclusion_maximal_optional_patterns": 7,
+      "minimum_optional_edges": 6,
+      "minimum_optional_pattern_cover_count": 3,
+      "raw_minimum_optional_edge_cover_count": 28,
+      "proper_relative_supports": 3374,
+      "audited_pilot_supports": [[3, 1, 15], [3, 3, 7]],
+      "audited_star_relative_chain_generators": 0,
+      "proper_support_scaling_decision": "RETAIN_AS_COMPILER_STRESS_TESTS_ONLY",
+      "component_coverage": "NOT_CLAIMED",
+      "global_parent_cell_coverage": "NOT_CLAIMED",
+      "pair_branch_injectivity": "OPEN",
+      "triple_branch_compact_support_vanishing": "OPEN",
+      "hostile_corruptions_rejected": 21,
+      "semantic_sha256": "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md",
+        "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json",
+        "ai/omreal/build_diag3_pair_fullsupport_segment_cover.py",
+        "ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py"
+      ]
+    },
+    "thirty_seventh_triple_local_projection_roadmap_canary": {
       "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
       "scope": "one closed radius-1/128 rational nine-box in one normalized uniform-parent cell distinct from row 2599 for named presentation (5563,16134,19284), mapping to canonical unresolved row (5563,4373,23221); all 18 faces are artificial scope boundary, with no S8 transport and no parent-infinity claim",
       "declared_scope": {
@@ -1469,7 +1504,7 @@
       "distinct_bad_membership_profiles": 2458,
       "source_profile_semantic_sha256": "b201f42b71aa32ac92f790f1419a3e542e1f9e890869664bbac6b4014ce9a4d3",
       "bad_membership_semantic_sha256": "63534ac7414e1dd75de1e69443ace5713aa4467bd2d6ca29d7758aee65ebf132",
-      "semantic_sha256": "5f2fd3f21c8bc06b2a8d9a08d808844b54817bc259b18f6706f3d5f88b18c4ff",
+      "semantic_sha256": "4f355f6fcb5da7648d031e7ddc6e7d93d7fddd05c2caf0173c85404933df9a39",
       "minimal_missing_datum": "complete ordered exact residual-root roadmap with coincident-event groups and exact 97224-signature continuation across every compound event on each of the 39 pending cover edges",
       "component_coverage": "NOT_CLAIMED",
       "global_parent_cell_coverage": "NOT_CLAIMED",
@@ -1485,7 +1520,7 @@
       ]
     },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "compile exact ordered residual roadmaps and compound-event extension-label continuation on the 39 pending edges of the optimal full-support source cover, while preserving that finite skeleton coverage is not parent-cell/component coverage; alternatively replace it with a direct coverage-certified parent-cell roadmap; retain the independent triple boundary-complete projection-critical roadmap route"
+    "next_stage": "compile exact ordered residual roadmaps and compound-event extension-label continuation on the 39 pending edges, then continue component/closure attachments on the exact 40-edge full-support source cover while preserving that finite skeleton coverage is not parent-cell/component coverage; alternatively replace it with a direct coverage-certified parent-cell roadmap; retain section-960 and section-550 only as compiler stress tests and retain the independent triple boundary-complete projection-critical roadmap route"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {
