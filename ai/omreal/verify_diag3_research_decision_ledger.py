@@ -61,7 +61,7 @@ def main() -> None:
 
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-25"
+    assert ledger["as_of"] == "2026-08-26"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
@@ -1378,49 +1378,37 @@ def main() -> None:
             "ai/omreal/verify_diag3_component_cosheaf_pilot.py",
         ],
     }
-    fullsupport_segment_cover = progress[
-        "thirty_fifth_pair_fullsupport_segment_cover"
+    local_roadmap = progress["thirty_fifth_triple_local_projection_roadmap_canary"]
+    assert local_roadmap["status"] == "PROVED_LOCAL_BOUNDARY_COVERAGE"
+    assert local_roadmap["preregistered_before_formal_run"] is True
+    assert local_roadmap["exact_zero_witness"] == [
+        "-19/28", "-23/7", "-27/14", "-5", "-4", "-3", "-1", "2", "4"
     ]
-    assert fullsupport_segment_cover == {
-        "status": "PROVED",
-        "scope": "optimal exact subcover of the existing 105 strict-parent full-support segment bank retaining one exact witness for each crossed factor class, together with a relative-boundary target-selection audit; no global wall-component or parent-cell coverage claim",
-        "support": [15, 15, 15],
-        "original_source_edges": 105,
-        "selected_source_edges": 40,
-        "removed_source_edges": 65,
-        "known_crossed_factors_preserved": 10_844,
-        "original_edge_factor_crossing_incidences": 412_093,
-        "retained_edge_factor_crossing_incidences": 157_448,
-        "mandatory_edges": 34,
-        "unique_crossing_factors": 49,
-        "mandatory_coverage": 10_815,
-        "remaining_factors": 29,
-        "inclusion_maximal_optional_patterns": 7,
-        "minimum_optional_edges": 6,
-        "minimum_optional_pattern_cover_count": 3,
-        "raw_minimum_optional_edge_cover_count": 28,
-        "proper_relative_supports": 3_374,
-        "audited_pilot_supports": [[3, 1, 15], [3, 3, 7]],
-        "audited_star_relative_chain_generators": 0,
-        "proper_support_scaling_decision": "RETAIN_AS_COMPILER_STRESS_TESTS_ONLY",
-        "component_coverage": "NOT_CLAIMED",
-        "global_parent_cell_coverage": "NOT_CLAIMED",
-        "pair_branch_injectivity": "OPEN",
-        "triple_branch_compact_support_vanishing": "OPEN",
-        "hostile_corruptions_rejected": 21,
-        "semantic_sha256": "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c",
-        "evidence": [
-            "ai/omreal/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md",
-            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json",
-            "ai/omreal/build_diag3_pair_fullsupport_segment_cover.py",
-            "ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py",
-        ],
-    }
+    assert local_roadmap["residual_equations"] == 3
+    assert local_roadmap["ambient_variables"] == 9
+    assert local_roadmap["restricted_zero_set_dimension"] == 6
+    assert local_roadmap["parent_brackets_replayed"] == 70
+    assert local_roadmap["sign_definite_parent_brackets"] == 70
+    assert local_roadmap["projection_fiber_columns_zero_based"] == [3, 4, 7]
+    assert local_roadmap["projection_minor_terms"] == 147
+    assert local_roadmap["projection_minor_at_center"] == "-1000407/686"
+    assert local_roadmap["projection_minor_sign_on_box"] == -1
+    assert local_roadmap["projection_critical_points_in_box"] == 0
+    assert local_roadmap["boundary_faces_accounted"] == 18
+    assert local_roadmap["internal_seams"] == 0
+    assert local_roadmap["claimed_parent_wall_faces"] == 0
+    assert local_roadmap["claimed_parent_infinity_faces"] == 0
+    assert local_roadmap["compact_sphere_negative_canary"] == "REJECTED"
+    assert local_roadmap["hostile_corruptions_rejected"] == 14
+    assert local_roadmap["unresolved_triple_orbits_before"] == 1_162_302
+    assert local_roadmap["unresolved_triple_orbits_after"] == 1_162_302
+    assert local_roadmap["triple_branch_compact_support_vanishing"] == "OPEN"
+    assert local_roadmap["pair_branch_injectivity"] == "OPEN"
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "continue complete labels and component/closure attachments on the exact 40-edge full-support source cover"
+        "compile face-compatible closure"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1454,16 +1442,13 @@ def main() -> None:
     print("PASS fifth source-label continuation: 1238 chambers / 2458 profiles / exact endpoint")
     print("PASS sixth source block bridge: 3 segments / 5612 events / 11231 cells")
     print("PASS ninth triple escape-language audit: 1162302 scaling no-gos / 5 ideal-flow no-gos")
+    print("PASS thirty-fifth triple local roadmap: 70 brackets / 18 faces / 0 critical points")
     print("PASS tenth source-square coverage: 3763 occurring walls / 0 missed components")
     print("PASS twelfth source staircase: 5 boxes / 89120 restrictions / volume 373/512")
     print("PASS eleventh source half-cube: all 4450 wall components boundary-attached")
     print("PASS thirteenth ambient cube: 5577 occurring walls / true boundary coverage")
     print("PASS fourteenth staircase yield gate: 8 boxes / volume 12817/16384 / +33 factors")
     print("PASS fifteenth source-family no-go: 5390 known parent walls miss the source cube")
-    print(
-        "PASS thirty-fifth optimal full-support source cover: "
-        "40/105 edges witness 10844 crossed factor classes"
-    )
     print("PASS sixteenth four-support gate: 8017 restrictions -> 94 zero sets -> 22 walls")
     print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
     print("PASS eighteenth base projection: 6061 obligations -> 2554 polynomials -> 1693 root incidences")
