@@ -503,6 +503,30 @@ This proves that the compiler crosses one genuinely new wall without
 projection growth.  It is still a local two-dimensional theorem, not a cover
 of the nine-dimensional row-2599 parent cell.
 
+`DIAG3_COMPONENT_COSHEAF_PILOT.json` compiles the relative schema,
+transverse-node, multibox, and first-event fixtures into explicit component
+records, specialization maps, signed `d^2=0` checks, and exact mod-two and
+rational pair-to-triple rank histograms.  The synthetic schema fixture retains
+one declared relative-infinity cell and tests the quotient interface; it is
+not a geometric parent-divisor certificate.  The other three fixtures declare
+empty parent-infinity subcomplexes.
+Its producer-independent verifier recomputes the first 8+216+216 ranks and
+authenticates the accepted 512-case first-event replay; it rejects fourteen
+re-sealed mutations.  All tested intersections have at most one component, so
+nontrivial split--merge behavior remains an explicit unexercised gate.  The
+certificate records 177 intersections, 406 maps, zero disconnected
+intersections or many-to-one maps, and 75 intersections with nonzero two-cell
+rank (maximum 90).  The same artifact authenticates the
+completed two-support lift counts and fails closed because those manifests do
+not expose the closure, complete labels, or infinity contract.  This is only
+an input-contract no-go for using the manifests as-is, not a no-go for
+constructing targeted boundary-aware roadmaps.
+
+```console
+python ai/omreal/build_diag3_component_cosheaf_pilot.py
+python ai/omreal/verify_diag3_component_cosheaf_pilot.py
+```
+
 `DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json` is the complete exact residual
 roadmap on the minimum-Hamming certified parent-safe segment leaving chart 0.
 It proves that all 70 parent brackets remain strict, screens all 17,824

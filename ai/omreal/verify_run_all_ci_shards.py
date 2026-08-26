@@ -13,7 +13,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 RUN_ALL = ROOT / "run_all.py"
-COUNTS = (1, 2, 4, 7)
+COUNTS = (1, 2, 4, 7, 8)
 
 
 def literal_set(tree, name):

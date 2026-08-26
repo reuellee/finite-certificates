@@ -1321,11 +1321,68 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_global_four_support_algebraic_t_coefficient_endpoint_u_point_v_lift.py",
         ],
     }
+    component_cosheaf_pilot = progress[
+        "thirty_fourth_pair_component_cosheaf_strategy_pilot"
+    ]
+    assert component_cosheaf_pilot == {
+        "status": "BOUNDED_NO_GO",
+        "scope": "component-cosheaf and first-Betti compiler on four fixed certificate fixtures, followed by a fail-closed input-contract audit of the completed first-two-support local lift inventory as-is; boundary-aware roadmaps themselves are not ruled out",
+        "pilot_supports": [[3, 1, 15], [3, 3, 7]],
+        "base_cells": 527_533,
+        "lifted_cells": 16_935_101,
+        "unresolved_local_v_fibers": 0,
+        "fixture_replay": {
+            "schema_relative": {"cells": 7, "strict_closure_pairs": 12, "strict_three_cell_chains": 6, "profiles": 2, "profile_intersections": 3, "specialization_maps": 2, "ordered_profile_triples": 8, "declared_infinity_cells": 1},
+            "transverse_node": {"cells": 17, "strict_closure_pairs": 40, "strict_three_cell_chains": 24, "profiles": 6, "profile_intersections": 41, "specialization_maps": 90, "ordered_profile_triples": 216, "declared_infinity_cells": 0},
+            "multibox": {"cells": 81, "strict_closure_pairs": 208, "strict_three_cell_chains": 128, "profiles": 6, "profile_intersections": 41, "specialization_maps": 90, "ordered_profile_triples": 216, "declared_infinity_cells": 0},
+            "first_event": {"cells": 399, "strict_closure_pairs": 1118, "strict_three_cell_chains": 720, "profiles": 8, "profile_intersections": 92, "specialization_maps": 224, "ordered_profile_triples": 512, "declared_infinity_cells": 0},
+        },
+        "fixture_limit_census": {
+            "distinct_profile_intersections": 177,
+            "component_specialization_maps": 406,
+            "disconnected_intersections": 0,
+            "many_to_one_component_maps": 0,
+            "nonzero_b1_intersections": 0,
+            "nonzero_d2_rank_intersections": 75,
+            "maximum_d2_rank_f2": 90,
+            "nonempty_declared_parent_infinity_fixtures": 1,
+        },
+        "rank_replay_trust": {
+            "independently_recomputed_by_pilot_verifier": ["schema_relative", "transverse_node", "multibox"],
+            "authenticated_accepted_dependency": ["first_event"],
+        },
+        "all_fixture_middle_residues_f2": 0,
+        "all_fixture_middle_residues_q": 0,
+        "all_fixture_signed_d_squared": 0,
+        "schema_relative_infinity": "DECLARED_INTERFACE_ONLY_NOT_GEOMETRIC_PARENT_DIVISOR",
+        "nontrivial_split_merge_fixture": "UNEXERCISED",
+        "compiler_result": "FAIL_CLOSED_BEFORE_COMPONENT_SPECIALIZATION",
+        "missing_input_contract": [
+            "face-compatible regular-cell identifiers",
+            "strict closure pairs and strict three-cell chains",
+            "true parent-infinity subcomplex",
+            "complete extension-signature bad-membership profiles",
+        ],
+        "promote_existing_manifests_as_master_closure_replacement": False,
+        "boundary_aware_roadmap_method": "OPEN_EXPERIMENT_NOT_TESTED_ON_EITHER_SUPPORT",
+        "safe_reuse": "post-closure component and homology compression",
+        "hostile_corruptions_rejected": 14,
+        "semantic_sha256": "1542e915e94b7f1937bde440d9b63951e95165510caac07ea5e2175154769d9f",
+        "global_gluing_and_closure_data": "NOT_CLAIMED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "evidence": [
+            "ai/omreal/DIAG3_COMPONENT_COSHEAF_PILOT.md",
+            "ai/omreal/data/DIAG3_COMPONENT_COSHEAF_PILOT.json",
+            "ai/omreal/build_diag3_component_cosheaf_pilot.py",
+            "ai/omreal/verify_diag3_component_cosheaf_pilot.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "glue all completed open and algebraic fibers"
+        "compile face-compatible closure"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1403,6 +1460,10 @@ def main() -> None:
     print(
         "PASS thirty-third algebraic-t coefficient-endpoint-u-point v lift: "
         "11938 points -> 307146 lifted cells -> zero local-v residue"
+    )
+    print(
+        "PASS thirty-fourth component-cosheaf pilot: four fixtures exact; "
+        "16935101-cell lift manifests fail the global compiler input contract"
     )
     print("LEDGER_GIT_BLOB", digest)
 

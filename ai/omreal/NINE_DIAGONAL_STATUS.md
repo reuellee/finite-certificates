@@ -1478,6 +1478,7 @@ leading-coefficient zeros, and—in 1,194 factor-72 sections—one degree-zero
 wall that vanishes on the complete `v` fiber.  They add 108,170 cells.  The
 complete algebraic-`u` lift therefore contains 1,957,856 interior root points,
 2,089,990 strips, and 4,047,846 cells, with zero open-`t` section residue.
+
 The algebraic-`t` portion is also complete.  The open-`u` strips contribute
 4,419,172 cells, including the exact section-960 interior collision and
 section-1193 upper-endpoint exit.  The regular algebraic-`u` points add
@@ -1488,9 +1489,16 @@ algebraic-`t` base cells and add 8,390,619 lifted cells.
 
 Consequently the two covered square-pyramid supports now have a complete
 local inventory of 527,533 base cells and 16,935,101 lifted cells, with zero
-unresolved local `v` fibers.  The next pair obligations are face-compatible
-global gluing, complete extension-signature labels, true-infinity incidence,
-and the relative middle-rank replay.  Neither diagonal-three invariant
+unresolved local `v` fibers.  The bounded component-cosheaf pilot reproduces
+component, signed-incidence, relative-infinity interface, and exact rank data
+on the synthetic schema, transverse-node, multibox, and first-event fixtures,
+but fails closed on reusing this inventory as-is: the lift manifests do not yet
+encode face-compatible closure, complete bad-signature labels, component
+specialization, or genuine parent-infinity incidence.  This is an input-
+contract no-go, not a no-go for boundary-aware roadmaps.  The next pair
+obligation is therefore a closure-and-label/roadmap microcompiler, beginning
+with the section-960 collision and section-550 endpoint-tangency stars,
+followed by the relative middle-rank replay.  Neither diagonal-three invariant
 obligation is closed; the honest 9DVL score remains `2/9`.
 
 ## Exact artifacts
@@ -1903,6 +1911,16 @@ obligation is closed; the honest 9DVL score remains `2/9`.
   11,938 algebraic-`u` points, 29,203 collision groups, the exact section-550
   endpoint tangency, and 307,146 lifted cells; all 261,571 algebraic-`t` base
   cells are lifted to 8,390,619 cells.
+- `DIAG3_COMPONENT_COSHEAF_PILOT.md`, its deterministic certificate,
+  producer, and independent verifier: exact component and `H_1` replay on
+  the relative schema, node, multibox, and first-event fixtures, including one
+  declared schema-relative infinity cell and 952 ordered rank computations,
+  plus a fail-closed proof that the completed 16,935,101-cell local inventory
+  does not yet expose
+  the closure, label, and infinity contract required for global rank.  The
+  no-go applies to using those manifests as-is, not to constructing new
+  boundary-aware roadmaps.  The fixtures exercise component specialization but
+  no nontrivial split or merge, which remains a promotion gate.
 - `EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md`, the standard-library
   `exact_semialgebraic` toolkit, and its analytic hostile canaries: reusable
   fail-closed affine pullback, tensor Bernstein subdivision, and adaptive

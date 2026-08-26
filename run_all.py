@@ -46,6 +46,7 @@ SLOW = {
     "verify_diag2_robust_mutation_squares.py",
     "verify_diag3_ordered_root_atlas178.py",
     "verify_diag3_all_pair_affine_compression.py",
+    "verify_diag3_component_cosheaf_pilot.py",
     "verify_diag3_pair_factor_root_switch.py",
     "verify_diag3_pair_global_atlas_schema.py",
     "verify_diag3_pair_fullsupport_parent_product_signs.py",

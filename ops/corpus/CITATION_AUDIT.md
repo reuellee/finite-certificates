@@ -265,3 +265,26 @@ of the table-extraction fix (`CORPUS.md` §8):
 
 Both are the intended use of the index: it does not decide mathematics, it
 puts the primary text in front of you so you stop paraphrasing from memory.
+
+---
+
+## 6. 2026-08-25 diagonal-three roadmap/cosheaf method audit
+
+The component-cosheaf pilot in
+`ai/omreal/DIAG3_COMPONENT_COSHEAF_PILOT.md` uses four methodological sources.
+The documents themselves, rather than search-result summaries, were inspected.
+
+| source | supported use in the pilot | limitation enforced by the certificate |
+|---|---|---|
+| Basu--Pollack--Roy, *Computing the first Betti number and describing the connected components of semi-algebraic sets*, [arXiv:math/0603248](https://arxiv.org/abs/math/0603248) | first-Betti computation from connected components of members and intersections of a suitable cover, together with the induced incidence construction | does **not** justify replacing overlap/two-cell incidence by the cycle space of a roadmap graph |
+| Basu--Roy, *Divide and Conquer Roadmap for Algebraic Sets*, [author PDF](https://www.math.purdue.edu/~sbasu/revision-18-jun-2014.pdf) | roadmap axioms meet every semialgebraically connected component and the relevant fiber components, reducing connectivity to a finite graph problem | supplies component access, not a cellular boundary matrix or `H_1` by itself |
+| Kishimoto--Yushima, *Cellular cosheaf homology are cosheaf homology*, [arXiv:2202.03659](https://arxiv.org/abs/2202.03659) | cellular cosheaf chains compute cosheaf/Borel--Moore homology on the stated cell-complex hypotheses | presupposes a certified regular/simplicial cell structure and specialization maps; it does not create missing closure or infinity data |
+| Forman, *Morse Theory for Cell Complexes*, Advances in Mathematics 134 (1998), 90--145, [DOI:10.1006/aima.1997.1650](https://doi.org/10.1006/aima.1997.1650) | discrete Morse matching can compress a certified cell complex while preserving homotopy/homology information | used only after coverage, labels, signed incidence, true infinity, and `d^2=0` are checked |
+
+**Audit verdict.**  All four citations support the roles assigned to them.
+None supports inferring global coverage from the completed local lift counts or
+inferring first homology from a roadmap graph alone.  The pilot consequently
+records an input-contract no-go for reusing the completed lift manifests
+as-is until the two-support atlas gains face-compatible closure, complete
+bad-signature membership, and genuine parent-infinity data.  Whether targeted
+boundary-aware roadmaps can produce that contract more cheaply remains open.

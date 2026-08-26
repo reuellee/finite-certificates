@@ -29,12 +29,15 @@ jobs:
         run: python ai/omreal/verify_run_all_ci_shards.py
 
   suite-shards:
-    name: verifier suite shard ${{ matrix.shard }}/4
+    name: verifier suite shard ${{ matrix.shard }}/8
     needs: suite-shard-contract
     strategy:
       fail-fast: false
+      # Eight shards keep the exact suite below the 120-minute per-job gate.
+      # Run 157's four-way partition passed every replay it reached, including
+      # the component-cosheaf pilot, but timed out before completing shard 0.
       matrix:
-        shard: [0, 1, 2, 3]
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -45,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip numpy scipy sympy
       - name: Run deterministic verifier shard
-        run: python -u run_all.py --ci-delegated --shard ${{ matrix.shard }}/4
+        run: python -u run_all.py --ci-delegated --shard ${{ matrix.shard }}/8
       # Some verifiers regenerate committed artifacts. If regeneration does
       # not reproduce what is committed, that is a signal worth seeing;
       # informational only, since generation need not be byte-stable.
