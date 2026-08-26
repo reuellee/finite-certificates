@@ -1486,7 +1486,7 @@
     ],
     "triple_branch_closed": false
   },
-  "semantic_sha256": "2918c1b6d703a7fbd82ed76b71c18174c4c3c3fb3545e485e08d715127df9f3b",
+  "semantic_sha256": "38bcd95e2106bb5b730fa0b4fe6926690a1916d82b26974f5f4716ca505b4809",
   "sources": {
     "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
     "factor_census_sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
@@ -1494,7 +1494,7 @@
     "parent_catalog_sha256": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
     "parent_sign_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
     "point_bank_sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
-    "segment_cover_sha256": "acb8c7a9a140bbb803172164c9a04c3581338dd285953b2e5eff234edc21c1ec"
+    "segment_cover_sha256": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307"
   },
   "status": "EXACT_LOCAL_COMPONENT_COVERAGE_PILOT",
   "target_selection": {

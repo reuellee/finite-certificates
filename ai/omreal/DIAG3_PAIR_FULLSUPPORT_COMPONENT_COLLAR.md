@@ -14,7 +14,11 @@ nine-dimensional parent cell.  Components disjoint from the collar remain
 untested, extension-signature labels are not constructed, the global
 missed-component gap remains open, and the honest 9DVL score remains **2/9**.
 
-## Preregistered target rule
+## Deterministic target rule
+
+This rule is deterministic and replayable.  It was fixed prospectively during
+the pilot execution, but no durable pre-result artifact records that choice,
+so this checkpoint does not claim formal preregistration.
 
 The optimal 40-edge source bank contains 34 mandatory edges forced by factors
 that cross exactly one of the original 105 certified strict-parent segments.
