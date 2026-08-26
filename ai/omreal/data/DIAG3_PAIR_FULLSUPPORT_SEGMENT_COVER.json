@@ -1,0 +1,833 @@
+{
+  "decision": {
+    "next_pair_action": "continue labels and component/closure attachments on the exact 40-edge full-support source cover, or replace it with a direct coverage-certified parent-cell roadmap",
+    "retained_diagnostic": "use the two stars only when a split/merge or endpoint-specialization compiler regression is specifically needed",
+    "retired_as_proof_bearing_next_step": "scale section-960/section-550 closure across the two proper supports",
+    "supersedes_historical_next_action": "DIAG3_COMPONENT_COSHEAF_PILOT.md section 'Evidence-selected next action'"
+  },
+  "format": "diag3-pair-fullsupport-segment-cover-v1",
+  "inputs": {
+    "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "compactification_atlas_sha256": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "component_cosheaf_pilot_sha256": "2fa847a3f7edf206db225d3a184f90c00c54b319ad2cdeaca39cb9ed9d5b0854",
+    "factor_census_sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+    "factor_polynomial_source_sha256": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "factor_state_sha256": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
+    "parent_catalog_sha256": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "parent_sign_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "point_bank_sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "source_edge_bank_sha256": "4c1bcb1d7b62935f0f3541fae4bf3c9d5e4184bd1aeda6d5a69fd34b7d13c005"
+  },
+  "optimality": {
+    "canonical_optional_edge_indices": [
+      16,
+      17,
+      22,
+      36,
+      37,
+      84
+    ],
+    "covers_with_five_optional_patterns": 0,
+    "inclusion_maximal_optional_patterns": [
+      {
+        "charts": [
+          0,
+          60
+        ],
+        "equivalent_edge_indices": [
+          16,
+          89
+        ],
+        "remaining_factor_ids": [
+          899
+        ],
+        "representative_edge_index": 16
+      },
+      {
+        "charts": [
+          0,
+          66
+        ],
+        "equivalent_edge_indices": [
+          17
+        ],
+        "remaining_factor_ids": [
+          6715,
+          16809
+        ],
+        "representative_edge_index": 17
+      },
+      {
+        "charts": [
+          0,
+          76
+        ],
+        "equivalent_edge_indices": [
+          22,
+          95
+        ],
+        "remaining_factor_ids": [
+          1689,
+          5434,
+          15203,
+          15310,
+          15340,
+          15372,
+          15556,
+          16953,
+          17243,
+          19998
+        ],
+        "representative_edge_index": 22
+      },
+      {
+        "charts": [
+          0,
+          109
+        ],
+        "equivalent_edge_indices": [
+          36
+        ],
+        "remaining_factor_ids": [
+          2750,
+          3938,
+          4561,
+          7694,
+          18668,
+          20056,
+          20528,
+          20805,
+          21302,
+          21346,
+          21982,
+          26129
+        ],
+        "representative_edge_index": 36
+      },
+      {
+        "charts": [
+          0,
+          111
+        ],
+        "equivalent_edge_indices": [
+          37
+        ],
+        "remaining_factor_ids": [
+          2750,
+          3938,
+          7694,
+          18633,
+          18668,
+          20056,
+          20528,
+          22395,
+          26129
+        ],
+        "representative_edge_index": 37
+      },
+      {
+        "charts": [
+          2,
+          6
+        ],
+        "equivalent_edge_indices": [
+          84
+        ],
+        "remaining_factor_ids": [
+          4561,
+          10435,
+          20056,
+          20528,
+          20805,
+          21302,
+          21982,
+          26022,
+          26129
+        ],
+        "representative_edge_index": 84
+      },
+      {
+        "charts": [
+          2,
+          20
+        ],
+        "equivalent_edge_indices": [
+          88
+        ],
+        "remaining_factor_ids": [
+          2750,
+          7694,
+          10435,
+          18633,
+          20056,
+          20528,
+          20805,
+          21302,
+          21346,
+          21982,
+          22395,
+          26129
+        ],
+        "representative_edge_index": 88
+      }
+    ],
+    "mandatory_coverage": 10815,
+    "mandatory_edge_indices": [
+      1,
+      4,
+      7,
+      12,
+      13,
+      15,
+      21,
+      24,
+      27,
+      30,
+      39,
+      45,
+      52,
+      60,
+      61,
+      62,
+      66,
+      67,
+      69,
+      71,
+      73,
+      80,
+      83,
+      86,
+      90,
+      92,
+      94,
+      96,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104
+    ],
+    "mandatory_edges": 34,
+    "mandatory_unique_factor_count": 49,
+    "mandatory_witnesses": [
+      {
+        "charts": [
+          0,
+          8
+        ],
+        "edge_index": 1,
+        "least_unique_factor_id": 13263,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          0,
+          19
+        ],
+        "edge_index": 4,
+        "least_unique_factor_id": 22820,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          0,
+          25
+        ],
+        "edge_index": 7,
+        "least_unique_factor_id": 11470,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          0,
+          46
+        ],
+        "edge_index": 12,
+        "least_unique_factor_id": 14362,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          0,
+          52
+        ],
+        "edge_index": 13,
+        "least_unique_factor_id": 5709,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          0,
+          56
+        ],
+        "edge_index": 15,
+        "least_unique_factor_id": 10869,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          0,
+          74
+        ],
+        "edge_index": 21,
+        "least_unique_factor_id": 105,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          0,
+          80
+        ],
+        "edge_index": 24,
+        "least_unique_factor_id": 6905,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          0,
+          89
+        ],
+        "edge_index": 27,
+        "least_unique_factor_id": 6549,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          0,
+          102
+        ],
+        "edge_index": 30,
+        "least_unique_factor_id": 21517,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          0,
+          113
+        ],
+        "edge_index": 39,
+        "least_unique_factor_id": 19069,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          0,
+          132
+        ],
+        "edge_index": 45,
+        "least_unique_factor_id": 119,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          0,
+          151
+        ],
+        "edge_index": 52,
+        "least_unique_factor_id": 9627,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          1,
+          31
+        ],
+        "edge_index": 60,
+        "least_unique_factor_id": 10061,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          1,
+          32
+        ],
+        "edge_index": 61,
+        "least_unique_factor_id": 13557,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          1,
+          37
+        ],
+        "edge_index": 62,
+        "least_unique_factor_id": 11260,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          1,
+          53
+        ],
+        "edge_index": 66,
+        "least_unique_factor_id": 8912,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          1,
+          59
+        ],
+        "edge_index": 67,
+        "least_unique_factor_id": 4431,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          1,
+          73
+        ],
+        "edge_index": 69,
+        "least_unique_factor_id": 17757,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          1,
+          77
+        ],
+        "edge_index": 71,
+        "least_unique_factor_id": 7578,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          1,
+          82
+        ],
+        "edge_index": 73,
+        "least_unique_factor_id": 22101,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          1,
+          119
+        ],
+        "edge_index": 80,
+        "least_unique_factor_id": 10942,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          2,
+          3
+        ],
+        "edge_index": 83,
+        "least_unique_factor_id": 17405,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          2,
+          12
+        ],
+        "edge_index": 86,
+        "least_unique_factor_id": 3745,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          2,
+          28
+        ],
+        "edge_index": 90,
+        "least_unique_factor_id": 7270,
+        "unique_factor_count": 3
+      },
+      {
+        "charts": [
+          2,
+          50
+        ],
+        "edge_index": 92,
+        "least_unique_factor_id": 12234,
+        "unique_factor_count": 3
+      },
+      {
+        "charts": [
+          2,
+          91
+        ],
+        "edge_index": 94,
+        "least_unique_factor_id": 14438,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          3,
+          30
+        ],
+        "edge_index": 96,
+        "least_unique_factor_id": 8399,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          4,
+          17
+        ],
+        "edge_index": 98,
+        "least_unique_factor_id": 16490,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          4,
+          22
+        ],
+        "edge_index": 99,
+        "least_unique_factor_id": 4651,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          5,
+          65
+        ],
+        "edge_index": 101,
+        "least_unique_factor_id": 5210,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          7,
+          33
+        ],
+        "edge_index": 102,
+        "least_unique_factor_id": 26113,
+        "unique_factor_count": 2
+      },
+      {
+        "charts": [
+          10,
+          61
+        ],
+        "edge_index": 103,
+        "least_unique_factor_id": 18038,
+        "unique_factor_count": 1
+      },
+      {
+        "charts": [
+          13,
+          161
+        ],
+        "edge_index": 104,
+        "least_unique_factor_id": 17530,
+        "unique_factor_count": 1
+      }
+    ],
+    "minimum_optional_edges": 6,
+    "nonempty_optional_patterns": 21,
+    "proof": "Unique-crossing factors force 34 distinct edges. Those edges leave 29 factors. Every optional edge is contained in one of seven maximal incidence patterns; exhaustive replay finds no cover using at most five patterns and three maximal-pattern covers using six. Direct raw-edge exhaustion finds 28 six-edge optional covers.",
+    "raw_six_edge_optional_cover_count": 28,
+    "remaining_factor_count": 29,
+    "remaining_factor_ids": [
+      899,
+      1689,
+      2750,
+      3938,
+      4561,
+      5434,
+      6715,
+      7694,
+      10435,
+      15203,
+      15310,
+      15340,
+      15372,
+      15556,
+      16809,
+      16953,
+      17243,
+      18633,
+      18668,
+      19998,
+      20056,
+      20528,
+      20805,
+      21302,
+      21346,
+      21982,
+      22395,
+      26022,
+      26129
+    ],
+    "six_maximal_pattern_cover_count": 3,
+    "subsets_of_at_most_five_exhausted": 120
+  },
+  "scope": {
+    "component_coverage": "NOT_CLAIMED",
+    "coverage_claim": "ONE_EXACT_RETAINED_WITNESS_FOR_EACH_OF_10844_CROSSED_FACTOR_CLASSES",
+    "global_parent_cell_coverage": "NOT_CLAIMED",
+    "honest_9dvl_score": "2/9",
+    "pair_branch_closed": false,
+    "parent_index": 2599,
+    "source_bank": "105 exact strict-parent straight segments",
+    "support": [
+      15,
+      15,
+      15
+    ],
+    "triple_branch_closed": false
+  },
+  "semantic_sha256": "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c",
+  "source_bank": {
+    "edge_reduction": 65,
+    "edge_reduction_fraction": "13/21",
+    "known_crossed_factors": 10844,
+    "known_factor_ids_sha256": "9f2096ed021164f232193f6725487fdeb736675f90b6491f72f077ce6fda3f9c",
+    "original_edge_factor_crossing_incidences": 412093,
+    "original_edges": 105,
+    "retained_edge_factor_crossing_incidences": 157448,
+    "selected_chart_pairs": [
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        25
+      ],
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        0,
+        60
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        0,
+        74
+      ],
+      [
+        0,
+        76
+      ],
+      [
+        0,
+        80
+      ],
+      [
+        0,
+        89
+      ],
+      [
+        0,
+        102
+      ],
+      [
+        0,
+        109
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        0,
+        113
+      ],
+      [
+        0,
+        132
+      ],
+      [
+        0,
+        151
+      ],
+      [
+        1,
+        31
+      ],
+      [
+        1,
+        32
+      ],
+      [
+        1,
+        37
+      ],
+      [
+        1,
+        53
+      ],
+      [
+        1,
+        59
+      ],
+      [
+        1,
+        73
+      ],
+      [
+        1,
+        77
+      ],
+      [
+        1,
+        82
+      ],
+      [
+        1,
+        119
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        2,
+        28
+      ],
+      [
+        2,
+        50
+      ],
+      [
+        2,
+        91
+      ],
+      [
+        3,
+        30
+      ],
+      [
+        4,
+        17
+      ],
+      [
+        4,
+        22
+      ],
+      [
+        5,
+        65
+      ],
+      [
+        7,
+        33
+      ],
+      [
+        10,
+        61
+      ],
+      [
+        13,
+        161
+      ]
+    ],
+    "selected_crossing_assignment_sha256": "cb3ff53cde0c908be40d44d8fe9af6c7cd22748b025bcf6e673bd76872c1c416",
+    "selected_edge_indices": [
+      1,
+      4,
+      7,
+      12,
+      13,
+      15,
+      16,
+      17,
+      21,
+      22,
+      24,
+      27,
+      30,
+      36,
+      37,
+      39,
+      45,
+      52,
+      60,
+      61,
+      62,
+      66,
+      67,
+      69,
+      71,
+      73,
+      80,
+      83,
+      84,
+      86,
+      90,
+      92,
+      94,
+      96,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104
+    ],
+    "selected_edges": 40
+  },
+  "status": "EXACT_OPTIMAL_KNOWN_WALL_SEGMENT_COVER",
+  "target_selection_audit": {
+    "audited_pilot_supports": [
+      [
+        3,
+        1,
+        15
+      ],
+      [
+        3,
+        3,
+        7
+      ]
+    ],
+    "audited_stars": [
+      "section-960 wall-(1,6) interior collision",
+      "section-550 point-30 wall-21 endpoint tangency"
+    ],
+    "compactification": "(Delta^3)^3",
+    "decision": "RETAIN_AS_COMPILER_STRESS_TESTS_ONLY",
+    "proper_relative_supports": 3374,
+    "reason": "Both stars lie wholly in proper product-simplex supports, hence inside the parent-boundary relative subspace; internal residual subdivision there generates zero in C_*(K,K_infinity).",
+    "relative_chain_generator_contribution": 0,
+    "unique_possibly_nonrelative_support": [
+      15,
+      15,
+      15
+    ]
+  },
+  "theorem_effect": "Removes 65 redundant edges from the exact known-wall source skeleton and prevents a proper-support diagnostic from being mistaken for a relative-chain advance. Global component coverage and the independent triple obligation remain open; honest 9DVL score remains 2/9.",
+  "trust_boundary": {
+    "checkpoint_verifier": "SEPARATELY_WRITTEN_CHECKPOINT_LOGIC_WITH_SHARED_ACCEPTED_SOURCE_MODULES",
+    "scope": "The checkpoint verifier independently reimplements cover optimality and record validation, but authenticates and consumes the accepted factor-state, point-bank, factor-polynomial, parent, and edge-bank sources rather than rederiving every source inside this verifier.",
+    "shared_accepted_dependencies": [
+      "DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.factor_polynomials",
+      "diag3_pair_parent_source_transition_core.exact_inputs",
+      "verify_diag2_canonical_robust_edges.evaluate",
+      "verify_diag3_pair_fullsupport_safe_segment_walls.segment_power/positive_unit/EDGES",
+      "verify_diag3_pair_global_parent_face_gate.parent_polynomials/parse_candidates"
+    ],
+    "upstream_exact_factor_state_replay": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/DIAG9_GRAPH_row2599_factor_states.py"
+  }
+}

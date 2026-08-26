@@ -527,6 +527,70 @@ python ai/omreal/build_diag3_component_cosheaf_pilot.py
 python ai/omreal/verify_diag3_component_cosheaf_pilot.py
 ```
 
+`DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json` is the exact target-selection and
+source-skeleton successor. It proves that both proposed component-cosheaf
+stress stars lie on proper supports and therefore add zero generators to the
+relative chain complex. On full support it reduces the 105 certified
+parent-safe source segments to an optimal 40-edge cover with one exact retained
+endpoint witness for each of 10,844 crossed factor classes.
+Unique-crossing factors force 34 edges; exhaustive replay of seven maximal
+optional incidence patterns proves that six additional edges are necessary and
+sufficient. There are 3 maximal-pattern covers and 28 raw six-edge optional
+covers. The verifier independently reproduces 412,093 original and 157,448
+retained edge-factor incidences, rechecks all parent brackets and exact endpoint
+witnesses, and requires a full-record semantic seal. It shares declared,
+hash-pinned accepted upstream source modules with the producer; it does not
+claim full raw-source independence, global wall-component coverage, or
+parent-cell coverage.
+
+```console
+python ai/omreal/build_diag3_pair_fullsupport_segment_cover.py
+python ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py
+```
+
+`DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json` is the first exact
+missed-component pilot on a proof-bearing full-support wall.  A deterministic
+rule selects factor 19069, the degree-six, 108-monomial factor uniquely
+witnessed by retained edge 39.  All seventy parent brackets are strictly
+positive on an embedded rational two-dimensional collar, and exact
+tensor-Bernstein inequalities make the wall one monotone graph.  Its single
+component meets edge 39 and both artificial collar ends.  The stored 17-cell
+regular-CW roadmap has complete closure chains, signed incidence with
+`d^2=0`, and empty parent infinity.  The separately embodied structural
+verifier hard-pins and exactly authenticates the c692 segment cover and rejects
+twenty re-sealed hostile semantic mutations, including coupled cover/collar
+substitution.  Producer and
+verifier share the transition, safe-wall, parent-gate, labelled-factor, and
+Sturm modules plus near-parallel exact substitution/Bernstein logic; full
+implementation independence is not claimed.  An external SymPy reconstruction
+was an additional review audit, not a persisted repository verifier.  This is
+complete only on the declared collar; global components outside it and all
+extension-signature labels remain open.
+
+```console
+python ai/omreal/build_diag3_pair_fullsupport_component_collar.py
+python ai/omreal/verify_diag3_pair_fullsupport_component_collar.py
+```
+
+`DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.json` and the deterministic packed
+profile catalog `DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_PROFILES.json.gz`
+compile selected minimum-cover edge 27 (row-2599 charts 0 to 89) into 1,239
+stable zero-cells, 1,238 oriented one-cells, all 2,476 strict faces, empty true
+parent infinity, and the complete 97,224-signature/2,458-profile bad-membership
+contract.  The artifact fails closed on the other 39 cover edges, listing each
+missing regular refinement explicitly; this is source-skeleton coverage only,
+not parent-cell or component coverage.  Profile IDs are assigned by the
+canonical lexicographic order of feasible-cell bitmaps.  The independent
+verifier hard-pins the accepted cover/transition/labels, checks the label-to-
+transition SHA-256 cross-pin and every event factor/multiplicity, and rejects
+16 hostile corruptions including re-sealed coupled-dependency and profile-ID
+permutation attacks.
+
+```bash
+python ai/omreal/build_diag3_pair_fullsupport_labeled_skeleton.py
+python ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py
+```
+
 `DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json` is the complete exact residual
 roadmap on the minimum-Hamming certified parent-safe segment leaving chart 0.
 It proves that all 70 parent brackets remain strict, screens all 17,824

@@ -1,5 +1,13 @@
 # Diagonal 3: boundary-aware roadmap/component-cosheaf pilot
 
+> **Superseded target-selection notice (2026-08-26).** The
+> “Evidence-selected next action” below is preserved as historical evidence,
+> but it is no longer the canonical proof-bearing route.  The exact relative-
+> boundary audit in `DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md` proves that both
+> proposed stars lie in `K_infinity` and contribute zero relative-chain
+> generators.  They remain compiler regressions; current pair work is on full
+> support.  The pilot's mathematical and negative results are unchanged.
+
 ## Decision
 
 **Input-contract no-go for reusing the completed lift manifests as-is;

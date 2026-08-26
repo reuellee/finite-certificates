@@ -632,6 +632,19 @@ coordinates.  A stronger bounded hard-canary calculation gives full rank
 `585/585` for arbitrary quadratic vector fields with affine-linear ideal
 multipliers on five hard triples.  These are strategy no-go certificates;
 they do not reduce the residue or change the theorem score.
+The same hard canary now has the first full-space local projection-roadmap
+certificate: on one radius-`1/128` rational nine-box, all 70 parent brackets
+and the fixed `(d,e,h)` residual Jacobian minor retain exact nonzero sign, and
+an exact triple-zero point lies in the box interior.  The box is contained in
+one uniform parent chamber, but that chamber is not row 2599: their direct
+bracket-sign vectors have 29 mismatches.  The common zero set is smooth of
+dimension six there, and projection to the other six coordinates is a local
+diffeomorphism.  A boundary-avoiding component and its projected image would
+therefore be nonempty and open, while compactness would make the projected
+image compact, which is impossible in `R^6`.  Thus every restricted component
+meets one of the 18 artificial box faces.  No face is identified with parent
+infinity and no complete orbit is covered, so the unresolved count remains
+unchanged.
 See
 `DIAG3_TRIPLE_FACTOR_REDUCTION.md`,
 `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`,
@@ -641,7 +654,8 @@ See
 `DIAG3_TRIPLE_DIRECT_FINAL_AFFINITY.md`,
 `DIAG3_TRIPLE_PRIMITIVE_FINAL_DIRECTION.md`, and
 `DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md`, and
-`DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md`.
+`DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md`, and
+`DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.md`.
 
 The tested deterministic full colored occurrence/support key gives no
 quotient: it was singleton on the `1,819,850`-orbit pre-constant-plane source,
@@ -1495,11 +1509,56 @@ on the synthetic schema, transverse-node, multibox, and first-event fixtures,
 but fails closed on reusing this inventory as-is: the lift manifests do not yet
 encode face-compatible closure, complete bad-signature labels, component
 specialization, or genuine parent-infinity incidence.  This is an input-
-contract no-go, not a no-go for boundary-aware roadmaps.  The next pair
-obligation is therefore a closure-and-label/roadmap microcompiler, beginning
-with the section-960 collision and section-550 endpoint-tangency stars,
-followed by the relative middle-rank replay.  Neither diagonal-three invariant
-obligation is closed; the honest 9DVL score remains `2/9`.
+contract no-go, not a no-go for boundary-aware roadmaps.  A subsequent exact
+target-selection audit retires the section-960 collision and section-550
+endpoint-tangency stars as proof-bearing pair targets because they lie on
+proper supports.  The canonical pair route instead continues complete labels
+and component/closure attachments on the exact 40-edge full-support source
+cover, or replaces that finite skeleton with a direct coverage-certified
+parent-cell roadmap.  Neither diagonal-three invariant obligation is closed;
+the honest 9DVL score remains `2/9`.
+
+A subsequent target-selection audit applies the exact relative-boundary
+theorem to that proposed scaling route.  Both stars lie wholly on proper
+supports, and all 3,374 proper supports are contained in `K_infinity`;
+subdividing them therefore contributes zero generators to the relative chain
+complex.  They remain useful compiler regressions, but are retired as the
+proof-bearing next step.  On the nonrelative full support, the 105 certified
+parent-safe segments have an exact minimum 40-edge subcover retaining one
+exact witness for each of 10,844 crossed factor classes:
+49 unique-crossing factors force 34 edges, which cover 10,815 factors, and
+exhaustive replay of seven maximal incidence patterns proves that six further
+edges are necessary and sufficient for the 29-factor residue.  There are
+three maximal-pattern covers but 28 raw six-edge optional covers.  The exact
+incidence totals are 412,093 in the original bank and 157,448 in the retained
+bank.  This shrinks the source skeleton by 65 edges but does not prove global
+component coverage; the honest score remains `2/9`.  See
+`DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md`.
+
+The first exact component-collar pilot on that proof-bearing full support
+selects factor 19,069, the degree-six, 108-monomial factor uniquely witnessed
+by retained edge 39.  On the declared rational two-dimensional collar, all 70
+parent brackets retain strict sign and exact tensor-Bernstein inequalities
+make the wall one monotone graph.  Its single declared-scope component meets
+edge 39 and both artificial collar ends; a signed 17-cell regular-CW roadmap
+has `d^2=0` and empty parent infinity.  The verifier hard-pins and exactly
+authenticates the c692 cover and rejects 20 re-sealed hostile mutations,
+including coupled cover/collar substitution.  This is only one local collar,
+not global parent-cell component coverage, and extension-signature labels are
+not constructed; the honest score remains `2/9`.  See
+`DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.md`.
+
+The first label-compatible regular subcomplex of that cover is now exact on
+selected edge 27, chart 0 to chart 89.  Its 1,237 ordered residual events give
+1,239 stable zero-cells, 1,238 oriented one-cells, all 2,476 strict faces,
+empty true parent infinity, and complete bad-membership profiles for all
+97,224 extension signatures (2,458 distinct profiles).  The other 39 cover
+edges are a machine-readable fail-closed residue: each still needs a complete
+ordered residual-root roadmap and exact label continuation across every
+compound event.  Even completing them would cover only the finite source
+skeleton, not every parent-cell component or the two-cells required for global
+first homology.  See `DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.md`; the honest
+score remains `2/9`.
 
 ## Exact artifacts
 
@@ -1606,6 +1665,13 @@ obligation is closed; the honest 9DVL score remains `2/9`.
   exhaustive full-rank rejection of common normalized-coordinate scalings on
   all `1,162,302` final rows, plus five full-rank hard-canary rejections of
   quadratic ideal-preserving vector fields with affine multipliers.
+- `DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.md`, its preregistration, producer,
+  independent verifier, and exact JSON certificate: one nonvacuous rational
+  nine-box on the canonical hard presentation, with all 70 parent brackets
+  and one fixed projection minor sign-certified.  The box lies in one uniform
+  chamber but differs from row 2599 on 29 bracket signs; every restricted
+  component reaches the artificial box boundary, but no parent-infinity or
+  orbit transport is claimed.
 - `DIAG3_CONCURRENCE_NORMAL_FORM.md` and its verifier: the four-bilinear
   generic concurrence chart, exact degree-20 internal ramification RUR, and
   the all-26,740-factor proof that the ramification point has no fourth
@@ -1835,6 +1901,12 @@ obligation is closed; the honest 9DVL score remains `2/9`.
   builder, and independent hostile verifier: 5,390 exact parent-interior walls
   zero-free on the full chart-0/chart-152 source cube, retiring universal
   incidence with that family.
+- `DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md`, its compact JSON record, builder,
+  and separately written hostile verifier: an exact optimal 40-of-105
+  source-segment cover retaining one exact witness for all 10,844 crossed
+  full-support factor classes, plus the
+  relative-boundary audit retiring the two proper-support stars as a
+  proof-bearing scaling target.
 - `DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_GATE.md`, its compact JSON record, builder,
   and independent hostile verifier: exact two-tetrahedron coverage of the
   first two four-support parent domains and compression of 8,017 mixed

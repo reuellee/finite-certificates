@@ -13,6 +13,8 @@ DATA = HERE / "data"
 LEDGER_PATH = DATA / "DIAG3_RESEARCH_DECISION_LEDGER.json"
 COMPLETION_PATH = DATA / "DIAG3_COMPLETION_OPEN_OBJECT.json"
 CLOSURE_PATH = DATA / "DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json"
+TRIPLE_LOCAL_ROADMAP_PATH = DATA / "DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json"
+COMPONENT_COLLAR_PATH = DATA / "DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json"
 POINTER = "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json"
 
 
@@ -58,19 +60,47 @@ def main() -> None:
     ledger = load(LEDGER_PATH)
     completion = load(COMPLETION_PATH)
     closure = load(CLOSURE_PATH)
+    triple_local_roadmap = load(TRIPLE_LOCAL_ROADMAP_PATH)
+    component_collar_certificate = load(COMPONENT_COLLAR_PATH)
 
+    assert set(ledger) == {
+        "format",
+        "status",
+        "as_of",
+        "repository",
+        "theorem",
+        "invariant_obligations",
+        "row2599_fullsupport_ledger",
+        "retired_or_subordinated_targets",
+        "target_score_formula",
+        "candidate_targets",
+        "selected_target",
+        "selected_target_progress",
+        "research_infrastructure",
+        "selected_target_contract",
+        "process_gates",
+        "historical_open_objects",
+    }
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-25"
+    assert ledger["as_of"] == "2026-08-26"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
         "audited_commit": "e4ca567f829bd0e887e98efb05a3ed9437ba69d5",
         "merged_pull_request": 19,
     }
+    assert ledger["theorem"] == {
+        "id": "9DVL",
+        "score": "2/9",
+        "proved_diagonals": [1, 2],
+        "active_diagonal": 3,
+        "promotion_rule": (
+            "Diagonal three advances only when both invariant obligations below "
+            "are closed with independently replayed exact evidence."
+        ),
+    }
     assert ledger["theorem"]["score"] == completion["ledger_score"] == "2/9"
-    assert ledger["theorem"]["proved_diagonals"] == [1, 2]
-    assert ledger["theorem"]["active_diagonal"] == 3
 
     obligations = ledger["invariant_obligations"]
     assert [row["id"] for row in obligations] == [
@@ -229,6 +259,49 @@ def main() -> None:
         ],
     }
     progress = ledger["selected_target_progress"]
+    assert set(progress) == {
+        "schema_interface",
+        "first_proof_producing_canary",
+        "second_multibox_canary",
+        "third_first_new_event_atlas",
+        "fourth_parent_source_transition",
+        "fifth_parent_source_label_continuation",
+        "sixth_parent_source_block_bridge",
+        "seventh_parent_source_block_label_continuation",
+        "eighth_parent_boundary_attachment",
+        "ninth_triple_escape_language_audit",
+        "tenth_pair_source_square_component_coverage",
+        "eleventh_pair_source_block_half_cube_component_coverage",
+        "twelfth_pair_source_staircase_component_coverage",
+        "thirteenth_pair_full_hybrid_cube_ambient_topology",
+        "fourteenth_pair_source_staircase8_yield_gate",
+        "fifteenth_pair_source_family_incidence_no_go",
+        "sixteenth_pair_first_four_support_gate",
+        "seventeenth_pair_first_four_support_projection",
+        "eighteenth_pair_first_four_support_base_projection",
+        "nineteenth_pair_first_four_support_root_isolation",
+        "twentieth_pair_first_four_support_open_sector_lift",
+        "twenty_first_pair_first_four_support_simple_section_lift",
+        "twenty_second_pair_first_four_support_invisible_section_lift",
+        "twenty_third_pair_first_four_support_multi_section_lift",
+        "twenty_fourth_pair_first_four_support_regular_residual_section_lift",
+        "twenty_fifth_pair_first_four_support_final_section_lift",
+        "twenty_sixth_pair_first_four_support_open_cell_v_lift",
+        "twenty_seventh_pair_first_four_support_regular_u_section_v_lift",
+        "twenty_eighth_pair_first_four_support_endpoint_u_section_v_lift",
+        "twenty_ninth_pair_first_four_support_coefficient_only_u_section_v_lift",
+        "thirtieth_pair_first_four_support_coefficient_endpoint_u_section_v_lift",
+        "thirty_first_pair_first_four_support_algebraic_t_open_u_strip_v_lift",
+        "thirty_second_pair_first_four_support_algebraic_t_regular_u_point_v_lift",
+        "thirty_third_pair_first_four_support_algebraic_t_coefficient_endpoint_u_point_v_lift",
+        "thirty_fourth_pair_component_cosheaf_strategy_pilot",
+        "thirty_fifth_pair_fullsupport_segment_cover",
+        "thirty_sixth_pair_fullsupport_labeled_skeleton",
+        "thirty_seventh_triple_local_projection_roadmap_canary",
+        "thirty_eighth_pair_fullsupport_component_collar",
+        "theorem_effect",
+        "next_stage",
+    }
     assert progress["schema_interface"] == "COMPLETE"
     canary = progress["first_proof_producing_canary"]
     assert canary == {
@@ -1378,11 +1451,268 @@ def main() -> None:
             "ai/omreal/verify_diag3_component_cosheaf_pilot.py",
         ],
     }
+    fullsupport_segment_cover = progress[
+        "thirty_fifth_pair_fullsupport_segment_cover"
+    ]
+    assert fullsupport_segment_cover == {
+        "status": "PROVED",
+        "scope": "optimal exact subcover of the existing 105 strict-parent full-support segment bank retaining one exact witness for each crossed factor class, together with a relative-boundary target-selection audit; no global wall-component or parent-cell coverage claim",
+        "support": [15, 15, 15],
+        "original_source_edges": 105,
+        "selected_source_edges": 40,
+        "removed_source_edges": 65,
+        "known_crossed_factors_preserved": 10_844,
+        "original_edge_factor_crossing_incidences": 412_093,
+        "retained_edge_factor_crossing_incidences": 157_448,
+        "mandatory_edges": 34,
+        "unique_crossing_factors": 49,
+        "mandatory_coverage": 10_815,
+        "remaining_factors": 29,
+        "inclusion_maximal_optional_patterns": 7,
+        "minimum_optional_edges": 6,
+        "minimum_optional_pattern_cover_count": 3,
+        "raw_minimum_optional_edge_cover_count": 28,
+        "proper_relative_supports": 3_374,
+        "audited_pilot_supports": [[3, 1, 15], [3, 3, 7]],
+        "audited_star_relative_chain_generators": 0,
+        "proper_support_scaling_decision": "RETAIN_AS_COMPILER_STRESS_TESTS_ONLY",
+        "component_coverage": "NOT_CLAIMED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "hostile_corruptions_rejected": 21,
+        "semantic_sha256": "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json",
+            "ai/omreal/build_diag3_pair_fullsupport_segment_cover.py",
+            "ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py",
+        ],
+    }
+    fullsupport_labeled_skeleton = progress[
+        "thirty_sixth_pair_fullsupport_labeled_skeleton"
+    ]
+    assert fullsupport_labeled_skeleton == {
+        "status": "BOUNDED_NO_GO",
+        "scope": "complete face-compatible regular-CW, signed-incidence, true-infinity, and 97224-extension bad-membership contract on selected optimal-cover edge 27 only; exact fail-closed input audit on the other 39 source edges; no parent-cell or wall-component coverage claim",
+        "support": [15, 15, 15],
+        "minimum_source_cover_edges": 40,
+        "fully_compiled_edges": 1,
+        "pending_edges": 39,
+        "compiled_edge_index": 27,
+        "compiled_chart_pair": [0, 89],
+        "ordered_residual_events": 1_237,
+        "zero_cells": 1_239,
+        "one_cells": 1_238,
+        "strict_closure_pairs": 2_476,
+        "strict_three_cell_chains": 0,
+        "parent_infinity_cells": 0,
+        "extension_signature_universe": 97_224,
+        "distinct_bad_membership_profiles": 2_458,
+        "source_profile_semantic_sha256": "b201f42b71aa32ac92f790f1419a3e542e1f9e890869664bbac6b4014ce9a4d3",
+        "bad_membership_semantic_sha256": "63534ac7414e1dd75de1e69443ace5713aa4467bd2d6ca29d7758aee65ebf132",
+        "semantic_sha256": "4f355f6fcb5da7648d031e7ddc6e7d93d7fddd05c2caf0173c85404933df9a39",
+        "minimal_missing_datum": "complete ordered exact residual-root roadmap with coincident-event groups and exact 97224-signature continuation across every compound event on each of the 39 pending cover edges",
+        "component_coverage": "NOT_CLAIMED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "hostile_corruptions_rejected": 16,
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.md",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.json",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_PROFILES.json.gz",
+            "ai/omreal/build_diag3_pair_fullsupport_labeled_skeleton.py",
+            "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py",
+        ],
+    }
+    component_collar = progress[
+        "thirty_eighth_pair_fullsupport_component_collar"
+    ]
+    assert component_collar == {
+        "status": "PROVED_LOCAL_COMPONENT_COVERAGE",
+        "scope": (
+            "one exact rational two-dimensional collar around retained full-support "
+            "edge 39 in row 2599; complete component accounting only inside the "
+            "declared collar, with no global parent-cell or extension-label claim"
+        ),
+        "support": [15, 15, 15],
+        "parent_index": 2599,
+        "factor_id": 19_069,
+        "retained_edge_index": 39,
+        "retained_edge_charts": [0, 113],
+        "declared_scope_dimension": 2,
+        "parent_brackets_replayed": 70,
+        "declared_scope_component_count": 1,
+        "regular_cw_cells": 17,
+        "meets_retained_source_skeleton": True,
+        "meets_artificial_scope_boundary": True,
+        "parent_infinity_cells": 0,
+        "segment_cover_sha256": (
+            "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307"
+        ),
+        "segment_cover_semantic_sha256": (
+            "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c"
+        ),
+        "semantic_sha256": (
+            "06e08fa71676c8f94dbe8918ed696611a09626976d4930d8603a8c87e40b908d"
+        ),
+        "hostile_corruptions_rejected": 20,
+        "implementation_independence": "NOT_CLAIMED",
+        "formal_preregistration": "NOT_CLAIMED",
+        "component_coverage": "COMPLETE_FOR_DECLARED_COLLAR_ONLY",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "extension_signature_labels": "NOT_CONSTRUCTED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "theorem_effect": (
+            "One full-support wall component is exactly certified on one declared "
+            "collar; no global component theorem or invariant obligation is closed, "
+            "so the honest 9DVL score remains 2/9."
+        ),
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.md",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json",
+            "ai/omreal/build_diag3_pair_fullsupport_component_collar.py",
+            "ai/omreal/verify_diag3_pair_fullsupport_component_collar.py",
+        ],
+    }
+    assert component_collar_certificate["semantic_sha256"] == component_collar[
+        "semantic_sha256"
+    ]
+    assert component_collar_certificate["sources"]["segment_cover_sha256"] == (
+        component_collar["segment_cover_sha256"]
+    )
+    assert component_collar_certificate["sources"]["segment_cover_semantic_sha256"] == (
+        component_collar["segment_cover_semantic_sha256"]
+    )
+    assert len(component_collar_certificate["hostile_mutation_contract"]) == 20
+    triple_local = progress[
+        "thirty_seventh_triple_local_projection_roadmap_canary"
+    ]
+    expected_triple_scope = {
+        "kind": "one closed rational box in one normalized uniform-parent cell",
+        "named_factor_presentation": [5563, 16134, 19284],
+        "canonical_unresolved_row": [5563, 4373, 23221],
+        "orbit_transport_claimed": False,
+        "s8_sign_transport_claimed": False,
+        "global_parent_cell_coverage_claimed": False,
+    }
+    assert triple_local == {
+        "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
+        "scope": (
+            "one closed radius-1/128 rational nine-box in one normalized uniform-parent "
+            "cell distinct from row 2599 for named presentation (5563,16134,19284), "
+            "mapping to canonical unresolved row (5563,4373,23221); all 18 faces are "
+            "artificial scope boundary, with no S8 transport and no parent-infinity claim"
+        ),
+        "declared_scope": expected_triple_scope,
+        "preregistered_before_formal_run": True,
+        "preregistration_sha256": (
+            "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3"
+        ),
+        "critical_system_sha256": (
+            "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+        ),
+        "source_mapping_gate_raw_sha256": (
+            "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692"
+        ),
+        "source_mapping_gate_semantic_sha256": (
+            "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace"
+        ),
+        "exact_zero_witness": [
+            "-19/28", "-23/7", "-27/14", "-5", "-4", "-3", "-1", "2", "4"
+        ],
+        "residual_equations": 3,
+        "ambient_variables": 9,
+        "restricted_zero_set_dimension": 6,
+        "parent_brackets_replayed": 70,
+        "sign_definite_parent_brackets": 70,
+        "uniform_parent_cell": True,
+        "same_as_row2599_parent_cell": False,
+        "row2599_parent_sign_mismatches": 29,
+        "projection_fiber_columns_zero_based": [3, 4, 7],
+        "projection_fiber_variables": ["d", "e", "h"],
+        "projection_minor_terms": 147,
+        "projection_minor_at_center": "-1000407/686",
+        "projection_minor_sign_on_box": -1,
+        "projection_critical_points_in_box": 0,
+        "boundary_faces_accounted": 18,
+        "internal_seams": 0,
+        "claimed_parent_wall_faces": 0,
+        "claimed_parent_infinity_faces": 0,
+        "component_coverage": (
+            "EVERY_RESTRICTED_TRIPLE_ZERO_COMPONENT_MEETS_THE_ARTIFICIAL_BOX_BOUNDARY"
+        ),
+        "compact_sphere_negative_canary": "REJECTED",
+        "hostile_corruptions_rejected": 18,
+        "projection_minor_sha256": (
+            "c18832763e63aac645e61fdd23c40b0cd7ee9c371d7f8457ee9dfe5a3a5cbcea"
+        ),
+        "semantic_sha256": (
+            "b4f83b765dbf1db7919314844baac359fc29aaa3a626688208befa37c99e9f29"
+        ),
+        "unresolved_triple_orbits_before": 1_162_302,
+        "unresolved_triple_orbits_after": 1_162_302,
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "pair_branch_injectivity": "OPEN",
+        "theorem_effect": (
+            "A nonvacuous smooth local triple-zero compiler fixture is proved in one "
+            "uniform parent chamber distinct from row 2599, but only artificial "
+            "box-boundary reach is shown; no complete orbit, genuine parent boundary, "
+            "or invariant obligation is covered, so the honest 9DVL score remains 2/9."
+        ),
+        "evidence": [
+            "ai/omreal/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.md",
+            "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_REGISTRATION.json",
+            "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json",
+            "ai/omreal/build_diag3_triple_local_roadmap_canary.py",
+            "ai/omreal/verify_diag3_triple_local_roadmap_canary.py",
+        ],
+    }
+    assert triple_local_roadmap["scope"] == expected_triple_scope
+    assert (
+        triple_local["preregistration_sha256"]
+        == triple_local_roadmap["registration_sha256"]
+        == "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3"
+    )
+    assert (
+        triple_local["critical_system_sha256"]
+        == triple_local_roadmap["authenticated_sources"]["critical_system_sha256"]
+        == "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+    )
+    source_mapping_gate = triple_local_roadmap["authenticated_sources"]["source_mapping_gate"]
+    assert triple_local["source_mapping_gate_raw_sha256"] == source_mapping_gate["raw_sha256"]
+    assert (
+        triple_local["source_mapping_gate_semantic_sha256"]
+        == source_mapping_gate["semantic_sha256"]
+    )
+    assert triple_local["semantic_sha256"] == triple_local_roadmap["semantic_sha256"]
+    row2599_comparison = triple_local_roadmap["parent_cell"]["row2599_comparison"]
+    assert row2599_comparison["reference_parent_index"] == 2599
+    assert row2599_comparison["same_uniform_parent_cell"] is False
+    assert row2599_comparison["sign_mismatch_count"] == 29
+    assert row2599_comparison["sign_mismatch_labels"] == [
+        "1236", "1237", "1246", "1247", "1256", "1257", "1258", "1267",
+        "1278", "1346", "1347", "1348", "1357", "1358", "1368", "1378",
+        "1457", "1467", "1468", "1478", "1567", "1568", "1578", "1678",
+        "2358", "2458", "2568", "2578", "5678",
+    ]
+    assert triple_local_roadmap["boundary_accounting"]["face_classification"] == (
+        "ARTIFICIAL_SCOPE_BOUNDARY_ONLY"
+    )
+    assert len(triple_local_roadmap["hostile_mutations"]) == 18
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
-    assert progress["next_stage"].startswith(
-        "compile face-compatible closure"
+    assert progress["next_stage"] == (
+        "compile exact ordered residual roadmaps and compound-event extension-label "
+        "continuation on the 39 pending edges, then continue component/closure attachments "
+        "on the exact 40-edge full-support source cover while preserving that finite "
+        "skeleton coverage is not parent-cell/component coverage; alternatively replace "
+        "it with a direct coverage-certified parent-cell roadmap; retain section-960 and "
+        "section-550 only as compiler stress tests and retain the independent triple "
+        "boundary-complete projection-critical roadmap route"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1415,6 +1745,7 @@ def main() -> None:
     print("PASS fourth parent-source transition: 1237 events / 2477 cells / 58 compound")
     print("PASS fifth source-label continuation: 1238 chambers / 2458 profiles / exact endpoint")
     print("PASS sixth source block bridge: 3 segments / 5612 events / 11231 cells")
+    print("PASS first full-support labelled skeleton: 1/40 edges / 2477 cells / 2458 profiles")
     print("PASS ninth triple escape-language audit: 1162302 scaling no-gos / 5 ideal-flow no-gos")
     print("PASS tenth source-square coverage: 3763 occurring walls / 0 missed components")
     print("PASS twelfth source staircase: 5 boxes / 89120 restrictions / volume 373/512")
@@ -1422,6 +1753,11 @@ def main() -> None:
     print("PASS thirteenth ambient cube: 5577 occurring walls / true boundary coverage")
     print("PASS fourteenth staircase yield gate: 8 boxes / volume 12817/16384 / +33 factors")
     print("PASS fifteenth source-family no-go: 5390 known parent walls miss the source cube")
+    print(
+        "PASS thirty-fifth optimal full-support source cover: "
+        "40/105 edges retain one exact witness for each of 10844 crossed factor classes; "
+        "edge-factor incidences 412093 -> 157448"
+    )
     print("PASS sixteenth four-support gate: 8017 restrictions -> 94 zero sets -> 22 walls")
     print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
     print("PASS eighteenth base projection: 6061 obligations -> 2554 polynomials -> 1693 root incidences")

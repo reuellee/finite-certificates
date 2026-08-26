@@ -1,0 +1,1001 @@
+{
+  "authenticated_sources": {
+    "canonical_unresolved_row": [
+      5563,
+      4373,
+      23221
+    ],
+    "critical_system_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "named_factor_presentation": [
+      5563,
+      16134,
+      19284
+    ],
+    "source_mapping_gate": {
+      "accepted_dependency_scope": "named presentation to canonical unresolved-row mapping only",
+      "path": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+      "raw_sha256": "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692",
+      "semantic_sha256": "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace",
+      "verification_command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py"
+    }
+  },
+  "boundary_accounting": {
+    "claimed_parent_infinity_faces": 0,
+    "claimed_parent_wall_faces": 0,
+    "coordinate_faces": 18,
+    "face_classification": "ARTIFICIAL_SCOPE_BOUNDARY_ONLY",
+    "faces_accounted": [
+      {
+        "side": "lower",
+        "variable": "a"
+      },
+      {
+        "side": "upper",
+        "variable": "a"
+      },
+      {
+        "side": "lower",
+        "variable": "b"
+      },
+      {
+        "side": "upper",
+        "variable": "b"
+      },
+      {
+        "side": "lower",
+        "variable": "c"
+      },
+      {
+        "side": "upper",
+        "variable": "c"
+      },
+      {
+        "side": "lower",
+        "variable": "d"
+      },
+      {
+        "side": "upper",
+        "variable": "d"
+      },
+      {
+        "side": "lower",
+        "variable": "e"
+      },
+      {
+        "side": "upper",
+        "variable": "e"
+      },
+      {
+        "side": "lower",
+        "variable": "f"
+      },
+      {
+        "side": "upper",
+        "variable": "f"
+      },
+      {
+        "side": "lower",
+        "variable": "g"
+      },
+      {
+        "side": "upper",
+        "variable": "g"
+      },
+      {
+        "side": "lower",
+        "variable": "h"
+      },
+      {
+        "side": "upper",
+        "variable": "h"
+      },
+      {
+        "side": "lower",
+        "variable": "i"
+      },
+      {
+        "side": "upper",
+        "variable": "i"
+      }
+    ],
+    "internal_seams": 0
+  },
+  "box": {
+    "all_coordinate_intervals_nonzero": true,
+    "boundary_faces": 18,
+    "center": [
+      "-19/28",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "-1",
+      "2",
+      "4"
+    ],
+    "closed": true,
+    "radius": "1/128",
+    "variables": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ]
+  },
+  "exact_zero_witness": {
+    "point": [
+      "-19/28",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "-1",
+      "2",
+      "4"
+    ],
+    "residual_values": [
+      "0",
+      "0",
+      "0"
+    ],
+    "strictly_inside_box": true
+  },
+  "hostile_mutations": [
+    "source_digest",
+    "named_presentation",
+    "canonical_row",
+    "center_coordinate",
+    "box_radius",
+    "parent_bracket_count",
+    "parent_bracket_interval",
+    "parent_bracket_sign",
+    "projection_columns",
+    "projection_minor_digest",
+    "projection_minor_interval",
+    "boundary_face_count",
+    "parent_infinity_claim",
+    "scope_orbit_transport",
+    "coupled_registration_global_rewrite",
+    "unknown_top_level_global_theorem",
+    "unknown_projection_global_parent_component_coverage",
+    "theorem_score"
+  ],
+  "non_consequences": [
+    "no component is proved to reach a genuine parent wall or parent infinity",
+    "no full parent cell is covered",
+    "no second representative and no S8 orbit is covered",
+    "the 1162302-row unresolved count is unchanged",
+    "the independent pair H_c^1 obligation is unchanged",
+    "the 9DVL score remains 2/9"
+  ],
+  "parent_cell": {
+    "consequence": "the entire closed box lies in one uniform normalized parent cell",
+    "normalized_brackets": 70,
+    "records": [
+      {
+        "interval": [
+          "1",
+          "1"
+        ],
+        "label": "1234",
+        "polynomial_sha256": "b140bcc929bdaab0bcdc4a16be90e0797269e11ac5c2644d6702d335b7f15018",
+        "sign": 1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "1",
+          "1"
+        ],
+        "label": "1235",
+        "polynomial_sha256": "b140bcc929bdaab0bcdc4a16be90e0797269e11ac5c2644d6702d335b7f15018",
+        "sign": 1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-1735/896",
+          "-1721/896"
+        ],
+        "label": "1236",
+        "polynomial_sha256": "96f0846d1e1ab8b7ca6d88d08cc86cb2da4ab8cbf85a16e6c1ddb4040f3730c0",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-385/128",
+          "-383/128"
+        ],
+        "label": "1237",
+        "polynomial_sha256": "5e5e732ec8dd7388ea4c3017abee7aad13dd38121c9c614f4d0defde48bcfda0",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "511/128",
+          "513/128"
+        ],
+        "label": "1238",
+        "polynomial_sha256": "772b8f20e3c1dd9b3dc54a7db786968ebd424ffec4dfceeec7593ebb3ff2e8c9",
+        "sign": 1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-1",
+          "-1"
+        ],
+        "label": "1245",
+        "polynomial_sha256": "1a8c09479b9a1b70b82b24ecd4eed83b8deea4511c985e77436bd9c7329a76a1",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "2937/896",
+          "2951/896"
+        ],
+        "label": "1246",
+        "polynomial_sha256": "4f652584b557e28ea5e306b43f18710176dc5f27762c9ac09dde74012b18260d",
+        "sign": 1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "511/128",
+          "513/128"
+        ],
+        "label": "1247",
+        "polynomial_sha256": "6e7ea068476c0708dee7a511df4179776b86c75e8172867d18c8b3e126fa17c5",
+        "sign": 1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-257/128",
+          "-255/128"
+        ],
+        "label": "1248",
+        "polynomial_sha256": "4d0988425944d97762e9f66f0931c7349acacbf67c00a975884e8386a4829493",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "601/448",
+          "615/448"
+        ],
+        "label": "1256",
+        "polynomial_sha256": "f8245c0bad1a20e75add4a7b146ae3325692c06d65946b3198a46df3d9f6d3fc",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "63/64",
+          "65/64"
+        ],
+        "label": "1257",
+        "polynomial_sha256": "542a04bfbca806d51ca7f0eb093062fc645073a5128f2266671d96f7a96cd476",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "127/64",
+          "129/64"
+        ],
+        "label": "1258",
+        "polynomial_sha256": "81f92f2faf409616a7798339a8286d6e7b3f54ac7ce3d0b96318c0fbe48fc4cf",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "3669/1792",
+          "573/256"
+        ],
+        "label": "1267",
+        "polynomial_sha256": "1053f63cab2da6816312efc0f08dd32c3dfebe06adfdbdb51f763c022cb447ac",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-16797/1792",
+          "-16483/1792"
+        ],
+        "label": "1268",
+        "polynomial_sha256": "fbbd4517d9c88e266794df458ee2a4c256c61fead330533cf173ddd12d585245",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-1293/128",
+          "-1267/128"
+        ],
+        "label": "1278",
+        "polynomial_sha256": "58c48f4eb636865900f96b65c4d983bf1231d909bccb4f962748106c447397ab",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "1",
+          "1"
+        ],
+        "label": "1345",
+        "polynomial_sha256": "b140bcc929bdaab0bcdc4a16be90e0797269e11ac5c2644d6702d335b7f15018",
+        "sign": 1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-615/896",
+          "-601/896"
+        ],
+        "label": "1346",
+        "polynomial_sha256": "3da7699c7419d073622f363483b8385bb3cc79aa0495481b9ae4ce2bfefe1678",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-641/128",
+          "-639/128"
+        ],
+        "label": "1347",
+        "polynomial_sha256": "e7681df818956317a09c574c0c00c49a1e1b99cca2f164080fbbee87423ed548",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-129/128",
+          "-127/128"
+        ],
+        "label": "1348",
+        "polynomial_sha256": "e68b32fafeb0924ff9d5c3b6dc7752a6fe9c805412b67f5b316567929c1b4960",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "79/64",
+          "81/64"
+        ],
+        "label": "1356",
+        "polynomial_sha256": "c63719f05946cf35c97ee42ada47d11d8cf1cf6d6513c1581f199d76f357a18e",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-129/64",
+          "-127/64"
+        ],
+        "label": "1357",
+        "polynomial_sha256": "253b0fc1dab94b7d5a1962ed3df8ea164d2713f828a23632f72cc4807914854f",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-321/64",
+          "-319/64"
+        ],
+        "label": "1358",
+        "polynomial_sha256": "e4e44c1294b5e69f05235002d0e98ca18d9b6904a939107f54fe01d51d781be2",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "26967/3584",
+          "27561/3584"
+        ],
+        "label": "1367",
+        "polynomial_sha256": "882fffa9dc863651a22fdbedf2e88b71e9456867d54921c707812543f95bcc44",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "262839/57344",
+          "269655/57344"
+        ],
+        "label": "1368",
+        "polynomial_sha256": "a8eb20ee46460c5eb445fa9e61350470636178f2e0316c4c2e5d05742408fdb9",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "187585/8192",
+          "189249/8192"
+        ],
+        "label": "1378",
+        "polynomial_sha256": "f9fdee6993b4de6b303f4373f505c097053676c7e13bbcb6f1753d8feae52970",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-1175/448",
+          "-1161/448"
+        ],
+        "label": "1456",
+        "polynomial_sha256": "91dd0b3ab494758ad4a293d69f337e7834d3babc4a579508fc41f0db630da1db",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "63/64",
+          "65/64"
+        ],
+        "label": "1457",
+        "polynomial_sha256": "70f490aaea128c18873d1ce146011f62e005c9b97cebab278ec00cc8a6cda70d",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "191/64",
+          "193/64"
+        ],
+        "label": "1458",
+        "polynomial_sha256": "72d79c155ae4843b5e2b2e2cc2c2cd82f96b59260f9189f2a2d7a0c232387558",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-49515/3584",
+          "-48789/3584"
+        ],
+        "label": "1467",
+        "polynomial_sha256": "9076aea21cc1190ac1bed4753eb63d410e594b5c7f3f60c650ffc8b5e2f1b571",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-38481/8192",
+          "-263127/57344"
+        ],
+        "label": "1468",
+        "polynomial_sha256": "e18ea7fb7ec36a9c19d040d637f8d35dc5b29381ec14c5f598908f569647927d",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-115457/8192",
+          "-113921/8192"
+        ],
+        "label": "1478",
+        "polynomial_sha256": "860328bec95cf733e0c3936a132de617619b13e92a27a4e286589ff8bd719530",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-7605/1792",
+          "-6603/1792"
+        ],
+        "label": "1567",
+        "polynomial_sha256": "260afbc0a0379e6779cc0eb963dddd6718ff3d12931e99d69e43204a8dce03cf",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-17001/1792",
+          "-16279/1792"
+        ],
+        "label": "1568",
+        "polynomial_sha256": "c0a9e745ac2b8b0ee8e15759f182be0b6684da1adabbc8c090b4cbad3cfdac85",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-83/64",
+          "-45/64"
+        ],
+        "label": "1578",
+        "polynomial_sha256": "17698f27816ac24b1ede19159c8ab7fea022554df2def6ef092e6a945d2d589d",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-314374485/7340032",
+          "-42720445/1048576"
+        ],
+        "label": "1678",
+        "polynomial_sha256": "4d5b5b52ff27e5a4c4e40b615847458873b585bf81f16095c499fa19ecacc280",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-1",
+          "-1"
+        ],
+        "label": "2345",
+        "polynomial_sha256": "1a8c09479b9a1b70b82b24ecd4eed83b8deea4511c985e77436bd9c7329a76a1",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-1",
+          "-1"
+        ],
+        "label": "2346",
+        "polynomial_sha256": "1a8c09479b9a1b70b82b24ecd4eed83b8deea4511c985e77436bd9c7329a76a1",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-1",
+          "-1"
+        ],
+        "label": "2347",
+        "polynomial_sha256": "1a8c09479b9a1b70b82b24ecd4eed83b8deea4511c985e77436bd9c7329a76a1",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-1",
+          "-1"
+        ],
+        "label": "2348",
+        "polynomial_sha256": "1a8c09479b9a1b70b82b24ecd4eed83b8deea4511c985e77436bd9c7329a76a1",
+        "sign": -1,
+        "terms": 1
+      },
+      {
+        "interval": [
+          "-2631/896",
+          "-2617/896"
+        ],
+        "label": "2356",
+        "polynomial_sha256": "b650c3b094320c0a3f9606d5f5e68036f40631d3222fe5a3cf01f1f7935a3d58",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-513/128",
+          "-511/128"
+        ],
+        "label": "2357",
+        "polynomial_sha256": "e0d2b0a5a66c468dcc6c3d860f606d69a554bb997c078fab47e9a71d6a00b8c0",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "383/128",
+          "385/128"
+        ],
+        "label": "2358",
+        "polynomial_sha256": "c126f46765a72756a080947c536b3258dbc19d91614715d6c2967fefb703888c",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-487/448",
+          "-473/448"
+        ],
+        "label": "2367",
+        "polynomial_sha256": "8c66f89776b6c93758d33ff2b86c7ca07f8f1a325e3c7f029c4d9ed0ed666ad7",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "2649/448",
+          "2663/448"
+        ],
+        "label": "2368",
+        "polynomial_sha256": "c8b135af04800021e475a0e8e63ec9d9db848e5a1486eaa9957ce90f0d120ac2",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "447/64",
+          "449/64"
+        ],
+        "label": "2378",
+        "polynomial_sha256": "9c554fbcb3ed1a726fc6a84b696783c49b7cc1bd4a5a0d4ebacdb9158a1a02a8",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "3833/896",
+          "3847/896"
+        ],
+        "label": "2456",
+        "polynomial_sha256": "b5847ccd08848b17345094109637b64a8c73937697f99f6822d24062c267a4ad",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "639/128",
+          "641/128"
+        ],
+        "label": "2457",
+        "polynomial_sha256": "4a724347a70b9d30c3ea2fcc4ea0e0ad10babd27ecd581771aa67a974dbb1d42",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-129/128",
+          "-127/128"
+        ],
+        "label": "2458",
+        "polynomial_sha256": "09ca9e323f600ede53046e80851faf23aae6dfe14b391b88624bc2d2b6525567",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "313/448",
+          "327/448"
+        ],
+        "label": "2467",
+        "polynomial_sha256": "9965930ed0f9be435f26bd93740d2b1cdcee0f7f0c25e3ae49895ebd5e179891",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-2375/448",
+          "-2361/448"
+        ],
+        "label": "2468",
+        "polynomial_sha256": "6f43877a2c9eebcfb17c38f33927f3d498f6dd611f3e0430878d8122409f9694",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-385/64",
+          "-383/64"
+        ],
+        "label": "2478",
+        "polynomial_sha256": "eabae683d8213d18cc1d14b38a47782c34b2824bc488d71c70dbdfa1f7e30aa2",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-4707/1792",
+          "-4253/1792"
+        ],
+        "label": "2567",
+        "polynomial_sha256": "411e4482179d18d71ad8d5c87419d6fa79eba0cf08bec745657d6bdee9aafae9",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "17579/1792",
+          "18005/1792"
+        ],
+        "label": "2568",
+        "polynomial_sha256": "df218b2161a302de7b7a61e7a4651678a63294b2c427137b75bb2a32eb2b6503",
+        "sign": 1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "1391/128",
+          "1425/128"
+        ],
+        "label": "2578",
+        "polynomial_sha256": "9016e20dc4ef0c6545deb1ab5b9e9317d93b1cf4582824c2278d490e576efc26",
+        "sign": 1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-1535/896",
+          "-1025/896"
+        ],
+        "label": "2678",
+        "polynomial_sha256": "38e92a423ffaef9dfadb99c18a523917724992c452c4c64b74df0b2a80eccdb3",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-1511/896",
+          "-1497/896"
+        ],
+        "label": "3456",
+        "polynomial_sha256": "7863377752aae138a2f4c6bbe5502cd3a374da87bb4ecec70d598b580344f614",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-769/128",
+          "-767/128"
+        ],
+        "label": "3457",
+        "polynomial_sha256": "ea131a2cb029fb7663f0782f8d89512836523d88b8ceb89028faf3d4ffa202bf",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-257/128",
+          "-255/128"
+        ],
+        "label": "3458",
+        "polynomial_sha256": "b287a6aae76f1f6becb9e6b10da3e69d4060e3bf25312e98ff93ab050d45aa25",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-1943/448",
+          "-1929/448"
+        ],
+        "label": "3467",
+        "polynomial_sha256": "3d0ac19adc3fbed4ddf12e695ecfbff8eae97ef95eb052d6bd69c953ce549c8d",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-151/448",
+          "-137/448"
+        ],
+        "label": "3468",
+        "polynomial_sha256": "e24428bedfb2c6f0614de903d008ba752bc42df963e63ed44ef695d7a5544e91",
+        "sign": -1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "255/64",
+          "257/64"
+        ],
+        "label": "3478",
+        "polynomial_sha256": "cc97211595566013130910a01ab6747b28854986105b649ec9546bddbbf215a1",
+        "sign": 1,
+        "terms": 2
+      },
+      {
+        "interval": [
+          "-39321/3584",
+          "-38503/3584"
+        ],
+        "label": "3567",
+        "polynomial_sha256": "6cd81ed34797774302a4edc6eacabbc404de101d03b9cc57670098bf1decc948",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-629847/57344",
+          "-619447/57344"
+        ],
+        "label": "3568",
+        "polynomial_sha256": "782a2a61fc943778d7920a90aa3e0c9f4560bffa61116181be2b260e60c1fcfd",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-214081/8192",
+          "-211905/8192"
+        ],
+        "label": "3578",
+        "polynomial_sha256": "a1da98ddd89efed1a64cf2ec3354d24122e0f932ae7cfb9f321dd7a1f55d6752",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-46965/1792",
+          "-46091/1792"
+        ],
+        "label": "3678",
+        "polynomial_sha256": "049307196f10baa9b099b949c1244b0acc661de2d1cc3035a5aa8cfc302be8ca",
+        "sign": -1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "61605/3584",
+          "62555/3584"
+        ],
+        "label": "4567",
+        "polynomial_sha256": "b6d56fa1d30caa1ff0d8df8753c9beb8060aae8955240960e9311df6494948b7",
+        "sign": 1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "582871/57344",
+          "592695/57344"
+        ],
+        "label": "4568",
+        "polynomial_sha256": "a0ba8e0fe96008d28118f262f63593bf8ae53be9ef32c8a9440ea11f4395eb72",
+        "sign": 1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "130049/8192",
+          "132097/8192"
+        ],
+        "label": "4578",
+        "polynomial_sha256": "95cc940713d83927366229aa550dfdad189a75e98eb6418b23a4192c68cdfab1",
+        "sign": 1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "40897/1792",
+          "41791/1792"
+        ],
+        "label": "4678",
+        "polynomial_sha256": "181ecf81713188d05fbbf1df97fe71f020c70dd9a1747d19cc5812395980c3e0",
+        "sign": 1,
+        "terms": 6
+      },
+      {
+        "interval": [
+          "-351803733/7340032",
+          "-325052715/7340032"
+        ],
+        "label": "5678",
+        "polynomial_sha256": "5398c0be7617bb482ea3bdd24f4a5ee1d39d07393e4c8a7b3187889ba436a0a3",
+        "sign": -1,
+        "terms": 24
+      }
+    ],
+    "row2599_comparison": {
+      "consequence": "the certified box is not in the row-2599 parent chamber",
+      "reference_catalog_sha256": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+      "reference_direct_parent_sign_sha256": "da921eb7d3a24d2fb642d966c1c1a3eb0159e98e2e16583ed05089915e561e4d",
+      "reference_normalized_parent_sign_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+      "reference_parent_index": 2599,
+      "reference_verification_command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
+      "same_uniform_parent_cell": false,
+      "sign_mismatch_count": 29,
+      "sign_mismatch_labels": [
+        "1236",
+        "1237",
+        "1246",
+        "1247",
+        "1256",
+        "1257",
+        "1258",
+        "1267",
+        "1278",
+        "1346",
+        "1347",
+        "1348",
+        "1357",
+        "1358",
+        "1368",
+        "1378",
+        "1457",
+        "1467",
+        "1468",
+        "1478",
+        "1567",
+        "1568",
+        "1578",
+        "1678",
+        "2358",
+        "2458",
+        "2568",
+        "2578",
+        "5678"
+      ]
+    },
+    "sign_definite_brackets": 70
+  },
+  "projection": {
+    "base_columns_zero_based": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      8
+    ],
+    "base_variables": [
+      "a",
+      "b",
+      "c",
+      "f",
+      "g",
+      "i"
+    ],
+    "critical_points_in_box": 0,
+    "fiber_columns_zero_based": [
+      3,
+      4,
+      7
+    ],
+    "fiber_variables": [
+      "d",
+      "e",
+      "h"
+    ],
+    "geometric_consequence": "the triple-zero set is smooth of dimension six near its box intersection and projection to the six base variables is a local diffeomorphism there",
+    "jacobian_minor_at_center": "-1000407/686",
+    "jacobian_minor_interval": [
+      "-554912474289739698651/193091834023510016",
+      "-1196518334587743667/27584547717644288"
+    ],
+    "jacobian_minor_sha256": "c18832763e63aac645e61fdd23c40b0cd7ee9c371d7f8457ee9dfe5a3a5cbcea",
+    "jacobian_minor_sign": -1,
+    "jacobian_minor_terms": 147
+  },
+  "proof_consequence": "Every connected component of the named triple-zero set restricted to the declared closed box meets one of its 18 boundary faces; the component through the center is nonvacuous.",
+  "registration_sha256": "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3",
+  "schema": "diag3-triple-local-roadmap-canary-v1",
+  "scope": {
+    "canonical_unresolved_row": [
+      5563,
+      4373,
+      23221
+    ],
+    "global_parent_cell_coverage_claimed": false,
+    "kind": "one closed rational box in one normalized uniform-parent cell",
+    "named_factor_presentation": [
+      5563,
+      16134,
+      19284
+    ],
+    "orbit_transport_claimed": false,
+    "s8_sign_transport_claimed": false
+  },
+  "semantic_sha256": "b4f83b765dbf1db7919314844baac359fc29aaa3a626688208befa37c99e9f29",
+  "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
+  "theorem_accounting": {
+    "final_unresolved_triple_orbits_after": 1162302,
+    "final_unresolved_triple_orbits_before": 1162302,
+    "score_after": "2/9",
+    "score_before": "2/9"
+  },
+  "theorem_effect": "A nonvacuous smooth local triple-zero compiler fixture is proved in one uniform parent chamber distinct from row 2599, but only artificial box-boundary reach is shown; no complete orbit, genuine parent boundary, or invariant obligation is covered, so the honest 9DVL score remains 2/9.",
+  "topological_argument": {
+    "boundary_avoiding_component_is_compact": true,
+    "boundary_avoiding_component_is_open_in_the_smooth_zero_set": true,
+    "boundary_avoiding_component_is_smooth": true,
+    "contradiction": "no nonempty subset of R6 is both open and compact",
+    "projected_component_image_is_compact": true,
+    "projected_component_image_is_nonempty": true,
+    "projected_component_image_is_open_in_R6": true
+  }
+}
