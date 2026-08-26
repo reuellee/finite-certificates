@@ -527,6 +527,22 @@ python ai/omreal/build_diag3_component_cosheaf_pilot.py
 python ai/omreal/verify_diag3_component_cosheaf_pilot.py
 ```
 
+`DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json` is the exact target-selection and
+source-skeleton successor. It proves that both proposed component-cosheaf
+stress stars lie on proper supports and therefore add zero generators to the
+relative chain complex. On full support it reduces the 105 certified
+parent-safe source segments to an optimal 40-edge cover of all 10,844 known
+wall crossings. Unique-crossing factors force 34 edges; exhaustive replay of
+seven maximal optional incidence patterns proves that six additional edges
+are necessary and sufficient. The verifier rechecks all parent brackets and
+all exact endpoint sign crossings. It does not claim global wall-component or
+parent-cell coverage.
+
+```console
+python ai/omreal/build_diag3_pair_fullsupport_segment_cover.py
+python ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py
+```
+
 `DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json` is the complete exact residual
 roadmap on the minimum-Hamming certified parent-safe segment leaving chart 0.
 It proves that all 70 parent brackets remain strict, screens all 17,824

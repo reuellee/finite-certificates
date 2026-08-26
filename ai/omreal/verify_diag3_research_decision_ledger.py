@@ -1378,11 +1378,46 @@ def main() -> None:
             "ai/omreal/verify_diag3_component_cosheaf_pilot.py",
         ],
     }
+    fullsupport_segment_cover = progress[
+        "thirty_fifth_pair_fullsupport_segment_cover"
+    ]
+    assert fullsupport_segment_cover == {
+        "status": "PROVED",
+        "scope": "optimal exact subcover of the existing 105 strict-parent full-support segment bank, together with a relative-boundary target-selection audit; no global wall-component or parent-cell coverage claim",
+        "support": [15, 15, 15],
+        "original_source_edges": 105,
+        "selected_source_edges": 40,
+        "removed_source_edges": 65,
+        "known_crossed_factors_preserved": 10_844,
+        "mandatory_edges": 34,
+        "unique_crossing_factors": 49,
+        "mandatory_coverage": 10_815,
+        "remaining_factors": 29,
+        "inclusion_maximal_optional_patterns": 7,
+        "minimum_optional_edges": 6,
+        "minimum_optional_cover_count": 3,
+        "proper_relative_supports": 3_374,
+        "audited_pilot_supports": [[3, 1, 15], [3, 3, 7]],
+        "audited_star_relative_chain_generators": 0,
+        "proper_support_scaling_decision": "RETAIN_AS_COMPILER_STRESS_TESTS_ONLY",
+        "component_coverage": "NOT_CLAIMED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "hostile_corruptions_rejected": 14,
+        "semantic_sha256": "3a94c4ad2a65e2d48fba29acb4f5db7c004f14c02956712593bc67d1d03ad83e",
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json",
+            "ai/omreal/build_diag3_pair_fullsupport_segment_cover.py",
+            "ai/omreal/verify_diag3_pair_fullsupport_segment_cover.py",
+        ],
+    }
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"].startswith(
-        "compile face-compatible closure"
+        "continue complete labels and component/closure attachments on the exact 40-edge full-support source cover"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1422,6 +1457,7 @@ def main() -> None:
     print("PASS thirteenth ambient cube: 5577 occurring walls / true boundary coverage")
     print("PASS fourteenth staircase yield gate: 8 boxes / volume 12817/16384 / +33 factors")
     print("PASS fifteenth source-family no-go: 5390 known parent walls miss the source cube")
+    print("PASS thirty-fifth optimal full-support source cover: 40/105 edges retain 10844 crossings")
     print("PASS sixteenth four-support gate: 8017 restrictions -> 94 zero sets -> 22 walls")
     print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
     print("PASS eighteenth base projection: 6061 obligations -> 2554 polynomials -> 1693 root incidences")
