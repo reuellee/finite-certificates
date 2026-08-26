@@ -981,6 +981,7 @@
   },
   "format": "diag3-pair-fullsupport-component-collar-v1",
   "hostile_mutation_contract": [
+    "extra top-level theorem",
     "trust boundary",
     "target factor",
     "target edge",
@@ -1487,7 +1488,7 @@
     ],
     "triple_branch_closed": false
   },
-  "semantic_sha256": "560a2a1f6ad052652cc494f49c550633c6723981ffe7af4a620ad0be62157e9f",
+  "semantic_sha256": "163bced8c3a2b484e7f66a9a553e01a2e225b578c79538de29144292fa01e8da",
   "sources": {
     "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
     "factor_census_sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",

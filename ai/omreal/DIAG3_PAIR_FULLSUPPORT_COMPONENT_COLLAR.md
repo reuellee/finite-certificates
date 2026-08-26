@@ -116,10 +116,11 @@ substitution and tensor-Bernstein routines.  Within that declared boundary,
 the verifier separately embodies the 105-by-17,824 incidence reconstruction,
 target and axis selection, seventy parent restrictions, wall inequalities,
 three Sturm isolations, closure poset, signed incidence, and source-pin checks.
-It rejects eighteen re-sealed hostile semantic mutations, including a false
-independence claim, collapsed collar, fabricated second component, missing
-source-skeleton hit, false parent infinity, global-coverage claim, invented
-extension labels, corrupt incidence, and promotion to `3/9`.
+It rejects nineteen re-sealed hostile semantic mutations, including an extra
+top-level theorem claim, false independence claim, collapsed collar,
+fabricated second component, missing source-skeleton hit, false parent
+infinity, global-coverage claim, invented extension labels, corrupt incidence,
+and promotion to `3/9`.
 
 An external SymPy reconstruction was an additional review audit.  It is not a
 persisted repository verifier and is not part of this certificate's standing

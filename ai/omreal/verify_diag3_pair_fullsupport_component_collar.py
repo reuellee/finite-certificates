@@ -411,6 +411,22 @@ def recompute():
 
 
 def verify_record(record, replay):
+    require(set(record) == {
+        "format",
+        "status",
+        "scope",
+        "trust_boundary",
+        "sources",
+        "target_selection",
+        "collar_selection",
+        "exact_parent_safety",
+        "exact_wall_graph",
+        "regular_cw_roadmap",
+        "component_coverage",
+        "decision",
+        "hostile_mutation_contract",
+        "semantic_sha256",
+    }, "exact top-level schema")
     require(record["semantic_sha256"] == seal(record), "semantic seal")
     require(record["format"] == FORMAT, "format")
     require(record["status"] == "EXACT_LOCAL_COMPONENT_COVERAGE_PILOT", "status")
@@ -475,7 +491,8 @@ def verify_record(record, replay):
         "theorem_effect": "No theorem-score promotion; the collar validates one exact full-support component-coverage contract only.",
     }, "decision scope")
     require(record["hostile_mutation_contract"] == [
-        "trust boundary", "target factor", "target edge", "collar width", "wall coefficient",
+        "extra top-level theorem", "trust boundary", "target factor",
+        "target edge", "collar width", "wall coefficient",
         "affine rank", "parent tensor", "extra component", "skeleton miss", "scope boundary",
         "false parent infinity", "global coverage", "extension labels", "incidence",
         "closure", "root isolation", "source digest", "score promotion",
@@ -497,6 +514,9 @@ def rejected(record, replay, label):
 
 def hostile_tests(record, replay):
     mutations = []
+    altered = deepcopy(record)
+    altered["global_theorem"] = "DIAGONAL_THREE_PROVED"
+    mutations.append((altered, "extra top-level theorem"))
     altered = deepcopy(record)
     altered["trust_boundary"]["implementation_independence"] = "CLAIMED"
     mutations.append((altered, "trust boundary"))

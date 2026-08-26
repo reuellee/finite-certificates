@@ -511,7 +511,8 @@ def build_record():
             "theorem_effect": "No theorem-score promotion; the collar validates one exact full-support component-coverage contract only.",
         },
         "hostile_mutation_contract": [
-            "trust boundary", "target factor", "target edge", "collar width", "wall coefficient",
+            "extra top-level theorem", "trust boundary", "target factor",
+            "target edge", "collar width", "wall coefficient",
             "affine rank", "parent tensor", "extra component", "skeleton miss", "scope boundary",
             "false parent infinity", "global coverage", "extension labels", "incidence",
             "closure", "root isolation", "source digest", "score promotion",
