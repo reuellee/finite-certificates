@@ -31,7 +31,9 @@ The new deterministic profile catalog materializes that semantic commitment:
 
 - every signature, in canonical increasing 56-bit order, has a packed profile
   ID;
-- the 2,458 distinct profiles store their complete feasible-one-cell bitmap;
+- profile IDs are the zero-based lexicographic ranks of the 2,458 distinct
+  feasible-one-cell bitmaps;
+- every profile stores its complete feasible-one-cell bitmap;
 - every profile stores the derived bad one-cell and bad zero-cell bitmaps;
 - a zero-cell is bad exactly when at least one incident open one-cell is bad,
   so every bad locus is a closed subcomplex of the path.
@@ -93,11 +95,23 @@ PYTHONDONTWRITEBYTECODE=1 python \
 ```
 
 The verifier does not import the producer.  It independently rebuilds every
-cell ID, strict face, orientation, chain rank, signature ordering, packed
-profile assignment, and closed bad subcomplex, and rejects fourteen hostile
-mutations.  The exact 1,237-root roadmap and 97,224-signature continuation are
-authenticated accepted dependencies rather than rederived a third time; their
-SHA-256 pins and semantic commitments are explicit in the new certificate.
+cell ID, strict face, orientation, chain rank, signature ordering, canonical
+lexicographic profile assignment, and closed bad subcomplex, and rejects
+sixteen hostile mutations.  Those include an internally re-sealed profile-ID
+permutation and a re-sealed coupled replacement of the transition and label
+objects.  The verifier hard-pins the accepted cover, transition, and label
+files, checks the label object's transition SHA-256 cross-pin, and compares
+the factor ID and occurrence multiplicity at every one of the 1,237 transition
+events against the label continuation.  The accepted raw SHA-256 values are:
+
+| dependency | SHA-256 |
+|---|---|
+| optimal cover | `acb8c7a9a140bbb803172164c9a04c3581338dd285953b2e5eff234edc21c1ec` |
+| transition 0→89 | `87f2d7ce337651cea498cc50d36c1b53c8b2294aef54ceac89f0fcc552c7b2d2` |
+| label continuation 0→89 | `c6071484960d8bde8c0140aac40ec2a065cc7597d23fcadb3503b25d87f5466a` |
+
+The exact 1,237-root roadmap and 97,224-signature continuation remain
+authenticated accepted dependencies rather than being rederived a third time.
 
 The artifacts are
 

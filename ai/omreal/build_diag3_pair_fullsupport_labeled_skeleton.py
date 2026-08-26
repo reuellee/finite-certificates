@@ -13,6 +13,7 @@ from __future__ import annotations
 
 from base64 import b64encode
 from collections import Counter
+from copy import deepcopy
 from hashlib import sha256
 import gzip
 import json
@@ -32,6 +33,9 @@ LABELS = DATA / "DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json"
 FORMAT = "diag3-pair-fullsupport-labeled-skeleton-v1"
 PROFILE_FORMAT = "diag3-pair-fullsupport-labeled-skeleton-profiles-v1"
 COMPILED_EDGE_INDEX = 27
+EXPECTED_COVER_SHA256 = "acb8c7a9a140bbb803172164c9a04c3581338dd285953b2e5eff234edc21c1ec"
+EXPECTED_TRANSITION_SHA256 = "87f2d7ce337651cea498cc50d36c1b53c8b2294aef54ceac89f0fcc552c7b2d2"
+EXPECTED_LABELS_SHA256 = "c6071484960d8bde8c0140aac40ec2a065cc7597d23fcadb3503b25d87f5466a"
 
 sys.path.insert(0, str(HERE))
 import diag3_pair_parent_source_labels_core as labels_core  # noqa: E402
@@ -48,6 +52,55 @@ def file_sha256(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def semantic_seal(record) -> str:
+    payload = deepcopy(record)
+    payload.pop("semantic_sha256", None)
+    return sha256(canonical_bytes(payload)).hexdigest()
+
+
+def require_accepted_dependencies(cover, transition, labels) -> None:
+    actual = {
+        "cover": file_sha256(COVER),
+        "transition": file_sha256(TRANSITION),
+        "labels": file_sha256(LABELS),
+    }
+    expected = {
+        "cover": EXPECTED_COVER_SHA256,
+        "transition": EXPECTED_TRANSITION_SHA256,
+        "labels": EXPECTED_LABELS_SHA256,
+    }
+    if actual != expected:
+        raise AssertionError("accepted cover/transition/labels source digest changed")
+    if labels["inputs"]["transition_certificate_sha256"] != actual["transition"]:
+        raise AssertionError("label continuation is not cross-pinned to the accepted transition")
+    if labels["inputs"]["transition_certificate"] != str(
+        TRANSITION.relative_to(HERE.parents[1])
+    ):
+        raise AssertionError("label continuation transition path changed")
+
+    transition_events = transition["residual_roadmap"]["events"]
+    label_events = labels["continuation"]["event_records"]
+    if len(transition_events) != len(label_events):
+        raise AssertionError("transition/label event census differs")
+    for event_index, (transition_event, label_event) in enumerate(
+        zip(transition_events, label_events, strict=True)
+    ):
+        expected_event = (
+            event_index,
+            int(transition_event["factor_id"]),
+            int(transition_event["occurrence_multiplicity"]),
+        )
+        actual_event = (
+            int(label_event["event_index"]),
+            int(label_event["factor_id"]),
+            int(label_event["occurrence_multiplicity"]),
+        )
+        if actual_event != expected_event:
+            raise AssertionError(
+                f"transition/label event identity differs at event {event_index}"
+            )
 
 
 def bit_payload(bits) -> bytes:
@@ -120,7 +173,13 @@ def profile_catalog(universe, packed_profiles, zero_count, one_count, source_dig
         payload = bytearray(row.tobytes())
         payload[-1] &= valid_last
         payloads.append(bytes(payload))
+    if tuple(map(int, universe)) != tuple(sorted(map(int, universe))):
+        raise AssertionError("extension signatures are not in canonical increasing order")
     unique = sorted(set(payloads))
+    if len(unique) != 2_458 or any(
+        left >= right for left, right in zip(unique, unique[1:])
+    ):
+        raise AssertionError("profile payloads are not distinct lexicographic IDs")
     profile_id = {payload: index for index, payload in enumerate(unique)}
     assignments = [profile_id[payload] for payload in payloads]
     counts = Counter(assignments)
@@ -184,6 +243,7 @@ def build_record(progress=False):
     cover = json.loads(COVER.read_text(encoding="utf-8"))
     transition = json.loads(TRANSITION.read_text(encoding="utf-8"))
     stored_labels = json.loads(LABELS.read_text(encoding="utf-8"))
+    require_accepted_dependencies(cover, transition, stored_labels)
     selected = tuple(map(int, cover["source_bank"]["selected_edge_indices"]))
     if len(selected) != 40 or COMPILED_EDGE_INDEX not in selected:
         raise AssertionError("minimum-cover edge selection changed")
@@ -215,17 +275,7 @@ def build_record(progress=False):
     cell_digest = sha256(canonical_bytes(cells)).hexdigest()
     closure_digest = sha256(canonical_bytes(closure)).hexdigest()
     incidence_digest = sha256(canonical_bytes(incidence)).hexdigest()
-    semantic_payload = {
-        "cover_semantic_sha256": cover["semantic_sha256"],
-        "compiled_edge": COMPILED_EDGE_INDEX,
-        "pending_edges": pending,
-        "cell_sha256": cell_digest,
-        "closure_sha256": closure_digest,
-        "incidence_sha256": incidence_digest,
-        "profile_source_sha256": catalog["source_signature_profile_semantic_sha256"],
-        "bad_membership_sha256": catalog["bad_membership_semantic_sha256"],
-    }
-    return {
+    record = {
         "format": FORMAT,
         "status": "EXACT_PARTIAL_LABELED_SKELETON_BOUNDED_NO_GO",
         "scope": {
@@ -324,7 +374,6 @@ def build_record(progress=False):
                 "ordinary stored interior chart vertices, not parent infinity."
             ),
         },
-        "semantic_sha256": sha256(canonical_bytes(semantic_payload)).hexdigest(),
         "theorem_effect": (
             "Produces a complete labelled regular-CW contract on one of the forty "
             "optimal full-support cover edges and identifies the exact missing datum on "
@@ -334,13 +383,16 @@ def build_record(progress=False):
         ),
         "verifier": {
             "command": "python ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py",
-            "hostile_corruptions": 14,
+            "hostile_corruptions": 16,
             "trust_boundary": (
-                "independent structural and profile-digest replay; exact path labels and "
-                "root roadmap are authenticated accepted dependencies"
+                "independent structural and profile-digest replay; the exact cover, path "
+                "roadmap, and path labels are hard-pinned accepted dependencies with "
+                "event-by-event transition/label cross-checking"
             ),
         },
     }
+    record["semantic_sha256"] = semantic_seal(record)
+    return record
 
 
 def main():

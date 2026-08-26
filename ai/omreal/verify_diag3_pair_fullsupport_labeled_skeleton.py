@@ -32,6 +32,9 @@ LABELS = DATA / "DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json"
 COMPILED_EDGE_INDEX = 27
 FORMAT = "diag3-pair-fullsupport-labeled-skeleton-v1"
 PROFILE_FORMAT = "diag3-pair-fullsupport-labeled-skeleton-profiles-v1"
+EXPECTED_COVER_SHA256 = "acb8c7a9a140bbb803172164c9a04c3581338dd285953b2e5eff234edc21c1ec"
+EXPECTED_TRANSITION_SHA256 = "87f2d7ce337651cea498cc50d36c1b53c8b2294aef54ceac89f0fcc552c7b2d2"
+EXPECTED_LABELS_SHA256 = "c6071484960d8bde8c0140aac40ec2a065cc7597d23fcadb3503b25d87f5466a"
 
 sys.path.insert(0, str(HERE))
 import four_chart_gate as extension_gate  # noqa: E402
@@ -53,6 +56,70 @@ def digest_file(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def semantic_seal(record) -> str:
+    payload = deepcopy(record)
+    payload.pop("semantic_sha256", None)
+    return sha256(canonical_bytes(payload)).hexdigest()
+
+
+def reseal(record):
+    record["semantic_sha256"] = semantic_seal(record)
+    return record
+
+
+def live_dependencies():
+    return {
+        "cover": json.loads(COVER.read_text(encoding="utf-8")),
+        "transition": json.loads(TRANSITION.read_text(encoding="utf-8")),
+        "labels": json.loads(LABELS.read_text(encoding="utf-8")),
+        "cover_sha256": digest_file(COVER),
+        "transition_sha256": digest_file(TRANSITION),
+        "labels_sha256": digest_file(LABELS),
+    }
+
+
+def validate_dependencies(dependencies):
+    cover = dependencies["cover"]
+    transition = dependencies["transition"]
+    labels = dependencies["labels"]
+    require(dependencies["cover_sha256"] == EXPECTED_COVER_SHA256, "accepted cover pin")
+    require(
+        dependencies["transition_sha256"] == EXPECTED_TRANSITION_SHA256,
+        "accepted transition pin",
+    )
+    require(dependencies["labels_sha256"] == EXPECTED_LABELS_SHA256, "accepted labels pin")
+    require(
+        labels["inputs"]["transition_certificate_sha256"]
+        == dependencies["transition_sha256"],
+        "label/transition digest cross-pin",
+    )
+    require(
+        labels["inputs"]["transition_certificate"]
+        == "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json",
+        "label/transition path cross-pin",
+    )
+    transition_events = transition["residual_roadmap"]["events"]
+    label_events = labels["continuation"]["event_records"]
+    require(len(transition_events) == len(label_events) == 1_237, "cross-pinned event census")
+    for event_index, (transition_event, label_event) in enumerate(
+        zip(transition_events, label_events, strict=True)
+    ):
+        require(
+            (
+                int(label_event["event_index"]),
+                int(label_event["factor_id"]),
+                int(label_event["occurrence_multiplicity"]),
+            )
+            == (
+                event_index,
+                int(transition_event["factor_id"]),
+                int(transition_event["occurrence_multiplicity"]),
+            ),
+            f"transition/label event identity {event_index}",
+        )
+    return cover, transition, labels
 
 
 def read_gzip_json(path: Path):
@@ -128,8 +195,27 @@ def exact_extension_universe():
 
 
 def validate_profiles(catalog, zero_count, one_count, accepted_semantic):
+    require(set(catalog) == {
+        "format",
+        "source_edge_index",
+        "signature_order",
+        "signature_universe_count",
+        "signature_universe_sha256",
+        "signature_profile_id_width_bytes",
+        "signature_profile_ids_base64",
+        "profile_count",
+        "profile_rows",
+        "bad_membership_rule",
+        "bad_membership_semantic_sha256",
+        "source_signature_profile_semantic_sha256",
+    }, "profile catalog schema")
     require(catalog["format"] == PROFILE_FORMAT, "profile format")
     require(catalog["source_edge_index"] == COMPILED_EDGE_INDEX, "profile edge")
+    require(
+        catalog["signature_order"]
+        == "ascending unsigned 56-bit row-2599 extension signature",
+        "signature order",
+    )
     require(catalog["signature_universe_count"] == 97_224, "profile universe count")
     require(catalog["signature_profile_id_width_bytes"] == 2, "profile ID width")
     require(catalog["profile_count"] == 2_458, "profile count")
@@ -159,6 +245,17 @@ def validate_profiles(catalog, zero_count, one_count, accepted_semantic):
     feasible_payloads = []
     bad_digest = sha256(b"diag3-fullsupport-labeled-skeleton-bad-membership-v1\0")
     for identifier, row in enumerate(rows):
+        require(
+            set(row)
+            == {
+                "profile_id",
+                "signature_count",
+                "feasible_one_cells_base64",
+                "bad_one_cells_base64",
+                "bad_zero_cells_base64",
+            },
+            "exact profile-row schema",
+        )
         require(row["profile_id"] == identifier, "ordered profile ID")
         require(row["signature_count"] == counts[identifier] > 0, "profile count map")
         feasible = b64decode(row["feasible_one_cells_base64"], validate=True)
@@ -203,8 +300,20 @@ def validate_profiles(catalog, zero_count, one_count, accepted_semantic):
         bad_digest.update(bad_one)
         bad_digest.update(bad_zero)
     require(
+        feasible_payloads == sorted(set(feasible_payloads)),
+        "canonical lexicographic profile-ID materialization",
+    )
+    require(
         catalog["bad_membership_semantic_sha256"] == bad_digest.hexdigest(),
         "bad-membership digest",
+    )
+    require(
+        catalog["bad_membership_rule"]
+        == (
+            "an open one-cell is bad iff its chamber is infeasible; a zero-cell "
+            "is bad iff at least one incident open one-cell is bad"
+        ),
+        "exact bad-membership rule",
     )
 
     semantic = sha256(b"diag3-row2599-path-label-profiles-v1\0")
@@ -219,41 +328,80 @@ def validate_profiles(catalog, zero_count, one_count, accepted_semantic):
     return bad_digest.hexdigest()
 
 
-def validate(record, catalog, check_profile_file=True):
-    cover = json.loads(COVER.read_text(encoding="utf-8"))
-    transition = json.loads(TRANSITION.read_text(encoding="utf-8"))
-    labels = json.loads(LABELS.read_text(encoding="utf-8"))
+def reseal_bad_membership(catalog):
+    raw_assignments = b64decode(catalog["signature_profile_ids_base64"], validate=True)
+    assignments = tuple(
+        int.from_bytes(raw_assignments[offset : offset + 2], "little")
+        for offset in range(0, len(raw_assignments), 2)
+    )
+    counts = Counter(assignments)
+    digest = sha256(b"diag3-fullsupport-labeled-skeleton-bad-membership-v1\0")
+    for identifier, row in enumerate(catalog["profile_rows"]):
+        digest.update(identifier.to_bytes(2, "little"))
+        digest.update(counts[identifier].to_bytes(4, "little"))
+        digest.update(b64decode(row["feasible_one_cells_base64"], validate=True))
+        digest.update(b64decode(row["bad_one_cells_base64"], validate=True))
+        digest.update(b64decode(row["bad_zero_cells_base64"], validate=True))
+    catalog["bad_membership_semantic_sha256"] = digest.hexdigest()
+    return catalog
+
+
+def validate(record, catalog, check_profile_file=True, dependencies=None):
+    dependencies = live_dependencies() if dependencies is None else dependencies
+    cover, transition, labels = validate_dependencies(dependencies)
     selected = tuple(map(int, cover["source_bank"]["selected_edge_indices"]))
     pending = [index for index in selected if index != COMPILED_EDGE_INDEX]
     require(len(selected) == 40 and len(pending) == 39, "cover partition")
     require(COMPILED_EDGE_INDEX in selected, "compiled cover membership")
     require(tuple(safe.EDGES[COMPILED_EDGE_INDEX]) == (0, 89), "compiled chart pair")
 
+    require(
+        set(record)
+        == {
+            "format",
+            "status",
+            "scope",
+            "inputs",
+            "unrefined_minimum_source_graph",
+            "compiled_regular_subcomplex",
+            "fail_closed_contract_audit",
+            "theorem_effect",
+            "verifier",
+            "semantic_sha256",
+        },
+        "exact skeleton schema",
+    )
     require(record["format"] == FORMAT, "format")
     require(
         record["status"] == "EXACT_PARTIAL_LABELED_SKELETON_BOUNDED_NO_GO",
         "status",
     )
     scope = record["scope"]
-    require(scope["support"] == [15, 15, 15], "full support")
-    require(scope["minimum_source_cover_edges"] == 40, "cover size")
-    require(scope["fully_compiled_cover_edges"] == 1, "compiled edge count")
-    require(scope["pending_cover_edges"] == 39, "pending edge count")
     require(
-        scope["skeleton_coverage"] == "COMPLETE_ONLY_ON_SELECTED_EDGE_27_CHART_0_TO_89",
-        "skeleton scope",
+        scope
+        == {
+            "parent_index": 2599,
+            "support": [15, 15, 15],
+            "minimum_source_cover_edges": 40,
+            "fully_compiled_cover_edges": 1,
+            "pending_cover_edges": 39,
+            "skeleton_coverage": "COMPLETE_ONLY_ON_SELECTED_EDGE_27_CHART_0_TO_89",
+            "parent_cell_component_coverage": "NOT_CLAIMED",
+            "global_parent_cell_coverage": "NOT_CLAIMED",
+            "pair_branch_closed": False,
+            "triple_branch_closed": False,
+            "honest_9dvl_score": "2/9",
+        },
+        "exact fail-closed scope",
     )
-    require(scope["parent_cell_component_coverage"] == "NOT_CLAIMED", "component scope")
-    require(scope["global_parent_cell_coverage"] == "NOT_CLAIMED", "parent scope")
-    require(scope["honest_9dvl_score"] == "2/9", "honest score")
 
     expected_inputs = {
         "minimum_cover_path": "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json",
-        "minimum_cover_sha256": digest_file(COVER),
+        "minimum_cover_sha256": dependencies["cover_sha256"],
         "transition_path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json",
-        "transition_sha256": digest_file(TRANSITION),
+        "transition_sha256": dependencies["transition_sha256"],
         "labels_path": "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_0_89.json",
-        "labels_sha256": digest_file(LABELS),
+        "labels_sha256": dependencies["labels_sha256"],
         "profile_catalog_path": "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_PROFILES.json.gz",
         "profile_catalog_sha256": digest_file(PROFILES),
     }
@@ -282,6 +430,25 @@ def validate(record, catalog, check_profile_file=True):
         for index in selected
     ]
     require(graph["coarse_edges"] == expected_edges, "machine-readable edge residue")
+    require(
+        graph["warning"]
+        == (
+            "These coarse source edges are exact parent-resident segments, "
+            "but an unsubdivided edge is not a label-compatible master cell."
+        ),
+        "coarse-edge warning",
+    )
+    require(
+        set(graph)
+        == {
+            "chart_vertex_count",
+            "chart_indices",
+            "coarse_edge_count",
+            "coarse_edges",
+            "warning",
+        },
+        "exact coarse graph schema",
+    )
 
     events = transition["residual_roadmap"]["events"]
     require(len(events) == 1_237, "accepted roadmap event count")
@@ -292,6 +459,24 @@ def validate(record, catalog, check_profile_file=True):
     )
     cells, zero, one, closure, incidence = exact_cell_contract(events)
     compiled = record["compiled_regular_subcomplex"]
+    require(
+        set(compiled)
+        == {
+            "compiled_source_edge_index",
+            "compiled_chart_pair",
+            "cells",
+            "cell_count_by_dimension",
+            "cells_sha256",
+            "strict_closure_pairs",
+            "strict_closure_pairs_sha256",
+            "strict_three_cell_chains",
+            "scope_endpoint_cells",
+            "parent_infinity_subcomplex",
+            "integral_boundary",
+            "signature_profile_source",
+        },
+        "exact compiled-subcomplex schema",
+    )
     require(compiled["compiled_source_edge_index"] == COMPILED_EDGE_INDEX, "compiled edge")
     require(compiled["compiled_chart_pair"] == [0, 89], "compiled endpoints")
     require(compiled["cells"] == cells, "stable regular cells")
@@ -303,6 +488,20 @@ def validate(record, catalog, check_profile_file=True):
     require(compiled["scope_endpoint_cells"] == [zero[0], zero[-1]], "scope endpoints")
     require(compiled["parent_infinity_subcomplex"] == [], "true parent infinity")
     boundary = compiled["integral_boundary"]
+    require(
+        set(boundary)
+        == {
+            "c0_basis",
+            "c1_basis",
+            "d1_entries",
+            "d1_entries_sha256",
+            "d_squared_zero",
+            "rank_d1",
+            "h0_rank",
+            "h1_rank",
+        },
+        "exact boundary schema",
+    )
     require(boundary["c0_basis"] == zero and boundary["c1_basis"] == one, "chain bases")
     require(boundary["d1_entries"] == incidence, "signed incidence")
     require(boundary["d1_entries_sha256"] == sha256(canonical_bytes(incidence)).hexdigest(), "incidence digest")
@@ -317,6 +516,18 @@ def validate(record, catalog, check_profile_file=True):
     accepted_semantic = labels["signature_profiles"]["semantic_sha256"]
     bad_digest = validate_profiles(catalog, len(zero), len(one), accepted_semantic)
     profile_source = compiled["signature_profile_source"]
+    require(
+        set(profile_source)
+        == {
+            "extension_signature_universe",
+            "generic_one_cells",
+            "distinct_profiles",
+            "source_semantic_sha256",
+            "bad_membership_semantic_sha256",
+            "all_bad_loci_closed_by_incidence_rule",
+        },
+        "exact profile-source schema",
+    )
     require(profile_source["extension_signature_universe"] == 97_224, "label universe")
     require(profile_source["generic_one_cells"] == len(one), "label chamber count")
     require(profile_source["distinct_profiles"] == 2_458, "label profile count")
@@ -325,31 +536,75 @@ def validate(record, catalog, check_profile_file=True):
     require(profile_source["all_bad_loci_closed_by_incidence_rule"] is True, "bad closure claim")
 
     audit = record["fail_closed_contract_audit"]
-    require(audit["result"] == "BOUNDED_NO_GO_FOR_PROMOTING_THE_40_EDGE_COVER_AS_IS", "no-go result")
-    require(audit["compiled_edge_indices"] == [COMPILED_EDGE_INDEX], "audit compiled")
-    require(audit["pending_edge_indices"] == pending, "audit pending")
-    require("ordered exact residual-root roadmap" in audit["minimal_missing_datum"], "minimal missing roadmap")
-    require("97,224 extension-signature labels" in audit["minimal_missing_datum"], "minimal missing labels")
-    require("EMPTY" in audit["parent_infinity_classification"], "infinity classification")
+    require(
+        audit
+        == {
+            "result": "BOUNDED_NO_GO_FOR_PROMOTING_THE_40_EDGE_COVER_AS_IS",
+            "compiled_edge_indices": [COMPILED_EDGE_INDEX],
+            "pending_edge_indices": pending,
+            "minimal_missing_datum": (
+                "For each pending source edge: the complete ordered exact residual-root "
+                "roadmap, including coincident-event groups, plus exact continuation of "
+                "the 97,224 extension-signature labels across every compound event."
+            ),
+            "fields_already_complete_on_edge_27": [
+                "globally stable regular cell IDs",
+                "strict closure pairs",
+                "strict three-cell chains (empty by dimension)",
+                "signed integral incidence",
+                "complete extension-signature bad-membership profiles",
+                "true parent-infinity membership",
+            ],
+            "parent_infinity_classification": (
+                "EMPTY: the exact signed-parent Bernstein certificate keeps the whole "
+                "closed segment strictly inside row 2599; its two path endpoints are "
+                "ordinary stored interior chart vertices, not parent infinity."
+            ),
+        },
+        "exact bounded no-go audit",
+    )
 
-    semantic_payload = {
-        "cover_semantic_sha256": cover["semantic_sha256"],
-        "compiled_edge": COMPILED_EDGE_INDEX,
-        "pending_edges": pending,
-        "cell_sha256": compiled["cells_sha256"],
-        "closure_sha256": compiled["strict_closure_pairs_sha256"],
-        "incidence_sha256": boundary["d1_entries_sha256"],
-        "profile_source_sha256": accepted_semantic,
-        "bad_membership_sha256": bad_digest,
-    }
-    require(record["semantic_sha256"] == sha256(canonical_bytes(semantic_payload)).hexdigest(), "semantic digest")
-    require("source-skeleton coverage, not parent-cell or component coverage" in record["theorem_effect"], "theorem scope")
-    require("2/9" in record["theorem_effect"], "theorem score")
+    theorem_effect = (
+        "Produces a complete labelled regular-CW contract on one of the forty "
+        "optimal full-support cover edges and identifies the exact missing datum on "
+        "the other thirty-nine. This is source-skeleton coverage, not parent-cell or "
+        "component coverage; both diagonal-three obligations remain open and the "
+        "honest 9DVL score remains 2/9."
+    )
+    require(record["theorem_effect"] == theorem_effect, "exact theorem scope")
+    require(
+        record["verifier"]
+        == {
+            "command": "python ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py",
+            "hostile_corruptions": 16,
+            "trust_boundary": (
+                "independent structural and profile-digest replay; the exact cover, path "
+                "roadmap, and path labels are hard-pinned accepted dependencies with "
+                "event-by-event transition/label cross-checking"
+            ),
+        },
+        "exact verifier contract",
+    )
+    require(
+        record["semantic_sha256"] == semantic_seal(record),
+        "full-record semantic seal",
+    )
 
 
-def expect_rejected(record, catalog, label, check_profile_file=True):
+def expect_rejected(
+    record,
+    catalog,
+    label,
+    check_profile_file=True,
+    dependencies=None,
+):
     try:
-        validate(record, catalog, check_profile_file=check_profile_file)
+        validate(
+            record,
+            catalog,
+            check_profile_file=check_profile_file,
+            dependencies=dependencies,
+        )
     except (AssertionError, KeyError, ValueError, TypeError):
         return
     raise AssertionError(f"hostile corruption survived: {label}")
@@ -358,65 +613,171 @@ def expect_rejected(record, catalog, label, check_profile_file=True):
 def main():
     record = json.loads(CERTIFICATE.read_text(encoding="utf-8"))
     catalog = read_gzip_json(PROFILES)
-    validate(record, catalog)
+    dependencies = live_dependencies()
+    validate(record, catalog, dependencies=dependencies)
 
     hostile = []
     corrupt = deepcopy(record)
     corrupt["status"] = "PROVED_DIAGONAL_THREE"
-    hostile.append((corrupt, catalog, "promoted partial status", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed promoted partial status", True, None)
+    )
     corrupt = deepcopy(record)
     corrupt["scope"]["parent_cell_component_coverage"] = "COMPLETE"
-    hostile.append((corrupt, catalog, "skeleton as component cover", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed skeleton as component cover", True, None)
+    )
     corrupt = deepcopy(record)
     corrupt["scope"]["honest_9dvl_score"] = "3/9"
-    hostile.append((corrupt, catalog, "dishonest score", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed dishonest score", True, None)
+    )
     corrupt = deepcopy(record)
     corrupt["compiled_regular_subcomplex"]["cells"].pop()
-    hostile.append((corrupt, catalog, "missing regular cell", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed missing regular cell", True, None)
+    )
     corrupt = deepcopy(record)
     corrupt["compiled_regular_subcomplex"]["strict_closure_pairs"].pop()
-    hostile.append((corrupt, catalog, "missing closure face", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed missing closure face", True, None)
+    )
     corrupt = deepcopy(record)
     corrupt["compiled_regular_subcomplex"]["integral_boundary"]["d1_entries"][0][2] = 1
-    hostile.append((corrupt, catalog, "unsigned orientation flip", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed orientation flip", True, None)
+    )
     corrupt = deepcopy(record)
     corrupt["compiled_regular_subcomplex"]["parent_infinity_subcomplex"] = ["row2599:chart:0"]
-    hostile.append((corrupt, catalog, "artificial endpoint as infinity", True))
+    hostile.append(
+        (
+            reseal(corrupt),
+            catalog,
+            "re-sealed artificial endpoint as infinity",
+            True,
+            None,
+        )
+    )
     corrupt = deepcopy(record)
     corrupt["fail_closed_contract_audit"]["pending_edge_indices"].pop()
-    hostile.append((corrupt, catalog, "erased pending edge", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed erased pending edge", True, None)
+    )
     corrupt = deepcopy(record)
-    next(row for row in corrupt["unrefined_minimum_source_graph"]["coarse_edges"] if row["edge_index"] != COMPILED_EDGE_INDEX)["label_compatible_regular_refinement"] = "COMPLETE"
-    hostile.append((corrupt, catalog, "unlabelled edge marked complete", True))
+    next(
+        row
+        for row in corrupt["unrefined_minimum_source_graph"]["coarse_edges"]
+        if row["edge_index"] != COMPILED_EDGE_INDEX
+    )["label_compatible_regular_refinement"] = "COMPLETE"
+    hostile.append(
+        (
+            reseal(corrupt),
+            catalog,
+            "re-sealed unlabelled edge marked complete",
+            True,
+            None,
+        )
+    )
     corrupt = deepcopy(record)
     corrupt["compiled_regular_subcomplex"]["integral_boundary"]["h1_rank"] = 1
-    hostile.append((corrupt, catalog, "false path homology", True))
+    hostile.append(
+        (reseal(corrupt), catalog, "re-sealed false path homology", True, None)
+    )
     corrupt_catalog = deepcopy(catalog)
     raw = bytearray(b64decode(corrupt_catalog["signature_profile_ids_base64"]))
     raw[:2] = (65_535).to_bytes(2, "little")
     corrupt_catalog["signature_profile_ids_base64"] = b64encode(raw).decode("ascii")
-    hostile.append((record, corrupt_catalog, "out-of-range profile assignment", False))
+    hostile.append(
+        (record, corrupt_catalog, "out-of-range profile assignment", False, None)
+    )
     corrupt_catalog = deepcopy(catalog)
     raw = bytearray(b64decode(corrupt_catalog["profile_rows"][0]["bad_one_cells_base64"]))
     raw[0] ^= 1
     corrupt_catalog["profile_rows"][0]["bad_one_cells_base64"] = b64encode(raw).decode("ascii")
-    hostile.append((record, corrupt_catalog, "corrupt bad one-cell label", False))
+    hostile.append(
+        (record, corrupt_catalog, "corrupt bad one-cell label", False, None)
+    )
     corrupt_catalog = deepcopy(catalog)
     corrupt_catalog["profile_rows"][0]["signature_count"] += 1
-    hostile.append((record, corrupt_catalog, "corrupt profile multiplicity", False))
+    hostile.append(
+        (record, corrupt_catalog, "corrupt profile multiplicity", False, None)
+    )
     corrupt = deepcopy(record)
     corrupt["semantic_sha256"] = "0" * 64
-    hostile.append((corrupt, catalog, "corrupt semantic commitment", True))
+    hostile.append((corrupt, catalog, "corrupt semantic commitment", True, None))
 
-    for corrupt_record, corrupt_catalog, label, check_file in hostile:
-        expect_rejected(corrupt_record, corrupt_catalog, label, check_file)
-    require(len(hostile) == 14, "hostile census")
+    # The replacement transition and labels agree with each other and the outer
+    # record is re-sealed.  Only the independent accepted dependency pins can
+    # distinguish this coupled substitution from the accepted proof objects.
+    corrupt_dependencies = deepcopy(dependencies)
+    corrupt_transition = corrupt_dependencies["transition"]
+    corrupt_labels = corrupt_dependencies["labels"]
+    corrupt_transition["residual_roadmap"]["events"][0]["factor_id"] += 1
+    corrupt_labels["continuation"]["event_records"][0]["factor_id"] += 1
+    corrupt_dependencies["transition_sha256"] = sha256(
+        canonical_bytes(corrupt_transition)
+    ).hexdigest()
+    corrupt_labels["inputs"]["transition_certificate_sha256"] = corrupt_dependencies[
+        "transition_sha256"
+    ]
+    corrupt_dependencies["labels_sha256"] = sha256(
+        canonical_bytes(corrupt_labels)
+    ).hexdigest()
+    corrupt = deepcopy(record)
+    corrupt["inputs"]["transition_sha256"] = corrupt_dependencies["transition_sha256"]
+    corrupt["inputs"]["labels_sha256"] = corrupt_dependencies["labels_sha256"]
+    hostile.append(
+        (
+            reseal(corrupt),
+            catalog,
+            "re-sealed coupled transition substitution and label cross-pin",
+            True,
+            corrupt_dependencies,
+        )
+    )
+
+    # Preserve the represented signature->profile semantics, counts, and bad
+    # digest while swapping IDs 0 and 1.  Canonical lexicographic materialization
+    # must reject this internally re-sealed but non-canonical catalog.
+    corrupt_catalog = deepcopy(catalog)
+    corrupt_catalog["profile_rows"][0], corrupt_catalog["profile_rows"][1] = (
+        corrupt_catalog["profile_rows"][1],
+        corrupt_catalog["profile_rows"][0],
+    )
+    corrupt_catalog["profile_rows"][0]["profile_id"] = 0
+    corrupt_catalog["profile_rows"][1]["profile_id"] = 1
+    raw = bytearray(b64decode(corrupt_catalog["signature_profile_ids_base64"]))
+    for offset in range(0, len(raw), 2):
+        identifier = int.from_bytes(raw[offset : offset + 2], "little")
+        if identifier in (0, 1):
+            raw[offset : offset + 2] = (1 - identifier).to_bytes(2, "little")
+    corrupt_catalog["signature_profile_ids_base64"] = b64encode(raw).decode("ascii")
+    reseal_bad_membership(corrupt_catalog)
+    hostile.append(
+        (
+            record,
+            corrupt_catalog,
+            "re-sealed profile 0/1 identifier permutation",
+            False,
+            None,
+        )
+    )
+
+    for corrupt_record, corrupt_catalog, label, check_file, corrupt_dependencies in hostile:
+        expect_rejected(
+            corrupt_record,
+            corrupt_catalog,
+            label,
+            check_file,
+            dependencies=corrupt_dependencies,
+        )
+    require(len(hostile) == 16, "hostile census")
     print("PASS exact 1,237-event regular refinement of selected cover edge 27")
     print("PASS 1,239 zero-cells + 1,238 one-cells, 2,476 strict faces, signed d1")
     print("PASS parent infinity empty; path endpoints retained as ordinary interior cells")
     print("PASS 97,224 signatures -> 2,458 complete closed bad-membership profiles")
     print("PASS machine-readable 39-edge missing-roadmap/compound-label residue")
-    print("PASS 14/14 hostile corruptions rejected")
+    print("PASS 16/16 hostile corruptions rejected")
     print("SCOPE one of forty source-skeleton edges; no parent-cell/component coverage; honest 9DVL 2/9")
 
 

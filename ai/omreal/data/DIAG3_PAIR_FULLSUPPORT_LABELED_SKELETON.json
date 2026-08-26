@@ -60790,7 +60790,7 @@
     ],
     "triple_branch_closed": false
   },
-  "semantic_sha256": "77135b745345ff80f8c7cf9dbb65f7a9e66071224f1b0a5365b26423049b67f0",
+  "semantic_sha256": "5f2fd3f21c8bc06b2a8d9a08d808844b54817bc259b18f6706f3d5f88b18c4ff",
   "status": "EXACT_PARTIAL_LABELED_SKELETON_BOUNDED_NO_GO",
   "theorem_effect": "Produces a complete labelled regular-CW contract on one of the forty optimal full-support cover edges and identifies the exact missing datum on the other thirty-nine. This is source-skeleton coverage, not parent-cell or component coverage; both diagonal-three obligations remain open and the honest 9DVL score remains 2/9.",
   "unrefined_minimum_source_graph": {
@@ -61212,7 +61212,7 @@
   },
   "verifier": {
     "command": "python ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py",
-    "hostile_corruptions": 14,
-    "trust_boundary": "independent structural and profile-digest replay; exact path labels and root roadmap are authenticated accepted dependencies"
+    "hostile_corruptions": 16,
+    "trust_boundary": "independent structural and profile-digest replay; the exact cover, path roadmap, and path labels are hard-pinned accepted dependencies with event-by-event transition/label cross-checking"
   }
 }

@@ -577,7 +577,12 @@ stable zero-cells, 1,238 oriented one-cells, all 2,476 strict faces, empty true
 parent infinity, and the complete 97,224-signature/2,458-profile bad-membership
 contract.  The artifact fails closed on the other 39 cover edges, listing each
 missing regular refinement explicitly; this is source-skeleton coverage only,
-not parent-cell or component coverage.
+not parent-cell or component coverage.  Profile IDs are assigned by the
+canonical lexicographic order of feasible-cell bitmaps.  The independent
+verifier hard-pins the accepted cover/transition/labels, checks the label-to-
+transition SHA-256 cross-pin and every event factor/multiplicity, and rejects
+16 hostile corruptions including re-sealed coupled-dependency and profile-ID
+permutation attacks.
 
 ```bash
 python ai/omreal/build_diag3_pair_fullsupport_labeled_skeleton.py
