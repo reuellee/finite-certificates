@@ -24,6 +24,8 @@ HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
 CERTIFICATE = DATA / "DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json"
 SEGMENT_COVER = DATA / "DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json"
+EXPECTED_SEGMENT_COVER_SHA256 = "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307"
+EXPECTED_SEGMENT_COVER_SEMANTIC_SHA256 = "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c"
 FORMAT = "diag3-pair-fullsupport-component-collar-v1"
 SEARCH_LIMIT = 24
 ROOT_WIDTH = Fraction(1, 1 << 32)
@@ -33,6 +35,7 @@ import DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY as labeled  # noqa: E402
 import DIAG9_GRAPH_verify_row2599_slice as sturm  # noqa: E402
 import diag3_pair_parent_source_transition_core as transition  # noqa: E402
 import verify_diag3_pair_fullsupport_safe_segment_walls as safe  # noqa: E402
+import verify_diag3_pair_fullsupport_segment_cover as segment_cover_verifier  # noqa: E402
 import verify_diag3_pair_global_parent_face_gate as gate  # noqa: E402
 
 
@@ -64,6 +67,15 @@ def seal(record):
     payload = deepcopy(record)
     payload.pop("semantic_sha256", None)
     return json_hash(payload)
+
+
+def validate_segment_cover_dependency(cover, raw_sha256):
+    require(raw_sha256 == EXPECTED_SEGMENT_COVER_SHA256, "accepted segment-cover raw pin")
+    require(
+        cover.get("semantic_sha256") == EXPECTED_SEGMENT_COVER_SEMANTIC_SHA256,
+        "accepted segment-cover semantic pin",
+    )
+    segment_cover_verifier.verify_record(cover)
 
 
 def trim(polynomial):
@@ -310,7 +322,9 @@ def recompute():
         (factor_id, edge_index, degree, term_count) == (19069, 39, 6, 108),
         "structural target selection replay",
     )
+    cover_digest = hash_file(SEGMENT_COVER)
     cover = json.loads(SEGMENT_COVER.read_text(encoding="utf-8"))
+    validate_segment_cover_dependency(cover, cover_digest)
     require(edge_index in cover["source_bank"]["selected_edge_indices"], "retained target edge")
     records = [json.loads(line) for line in gate.CATALOG.read_text(encoding="utf-8").splitlines() if line]
     parents, parent_digest = gate.parent_polynomials(records[2599])
@@ -355,7 +369,8 @@ def recompute():
         "factor_census_sha256": hash_file(transition.FACTOR_CENSUS),
         "candidate_factor_sha256": hash_file(transition.CANDIDATES),
         "parent_catalog_sha256": hash_file(gate.CATALOG),
-        "segment_cover_sha256": hash_file(SEGMENT_COVER),
+        "segment_cover_sha256": cover_digest,
+        "segment_cover_semantic_sha256": cover["semantic_sha256"],
         "parent_sign_sha256": parent_digest,
     }
     return {
@@ -495,7 +510,8 @@ def verify_record(record, replay):
         "target edge", "collar width", "wall coefficient",
         "affine rank", "parent tensor", "extra component", "skeleton miss", "scope boundary",
         "false parent infinity", "global coverage", "extension labels", "incidence",
-        "closure", "root isolation", "source digest", "score promotion",
+        "closure", "root isolation", "source digest", "coupled cover substitution",
+        "score promotion",
     ], "mutation contract")
 
 
@@ -539,7 +555,25 @@ def hostile_tests(record, replay):
     altered = deepcopy(record); altered["scope"]["honest_9dvl_score"] = "3/9"; mutations.append((altered, "score promotion"))
     for altered, label in mutations:
         rejected(reseal(altered), replay, label)
-    return len(mutations)
+    cover = json.loads(SEGMENT_COVER.read_text(encoding="utf-8"))
+    altered_cover = deepcopy(cover)
+    altered_cover["global_theorem"] = "DIAGONAL_THREE_PROVED"
+    altered_cover_bytes = (
+        json.dumps(altered_cover, indent=2, sort_keys=True) + "\n"
+    ).encode("utf-8")
+    altered_cover_digest = sha256(altered_cover_bytes).hexdigest()
+    altered_record = deepcopy(record)
+    altered_record["sources"]["segment_cover_sha256"] = altered_cover_digest
+    altered_replay = deepcopy(replay)
+    altered_replay["sources"]["segment_cover_sha256"] = altered_cover_digest
+    try:
+        validate_segment_cover_dependency(altered_cover, altered_cover_digest)
+        verify_record(reseal(altered_record), altered_replay)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("hostile mutation accepted: coupled cover substitution")
+    return len(mutations) + 1
 
 
 def main():

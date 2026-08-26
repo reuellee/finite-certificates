@@ -1535,6 +1535,19 @@ bank.  This shrinks the source skeleton by 65 edges but does not prove global
 component coverage; the honest score remains `2/9`.  See
 `DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md`.
 
+The first exact component-collar pilot on that proof-bearing full support
+selects factor 19,069, the degree-six, 108-monomial factor uniquely witnessed
+by retained edge 39.  On the declared rational two-dimensional collar, all 70
+parent brackets retain strict sign and exact tensor-Bernstein inequalities
+make the wall one monotone graph.  Its single declared-scope component meets
+edge 39 and both artificial collar ends; a signed 17-cell regular-CW roadmap
+has `d^2=0` and empty parent infinity.  The verifier hard-pins and exactly
+authenticates the c692 cover and rejects 20 re-sealed hostile mutations,
+including coupled cover/collar substitution.  This is only one local collar,
+not global parent-cell component coverage, and extension-signature labels are
+not constructed; the honest score remains `2/9`.  See
+`DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.md`.
+
 The first label-compatible regular subcomplex of that cover is now exact on
 selected edge 27, chart 0 to chart 89.  Its 1,237 ordered residual events give
 1,239 stable zero-cells, 1,238 oriented one-cells, all 2,476 strict faces,

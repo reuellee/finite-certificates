@@ -999,6 +999,7 @@
     "closure",
     "root isolation",
     "source digest",
+    "coupled cover substitution",
     "score promotion"
   ],
   "regular_cw_roadmap": {
@@ -1488,7 +1489,7 @@
     ],
     "triple_branch_closed": false
   },
-  "semantic_sha256": "163bced8c3a2b484e7f66a9a553e01a2e225b578c79538de29144292fa01e8da",
+  "semantic_sha256": "06e08fa71676c8f94dbe8918ed696611a09626976d4930d8603a8c87e40b908d",
   "sources": {
     "candidate_factor_sha256": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
     "factor_census_sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
@@ -1496,6 +1497,7 @@
     "parent_catalog_sha256": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
     "parent_sign_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
     "point_bank_sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "segment_cover_semantic_sha256": "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c",
     "segment_cover_sha256": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307"
   },
   "status": "EXACT_LOCAL_COMPONENT_COVERAGE_PILOT",

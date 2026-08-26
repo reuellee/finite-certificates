@@ -1519,6 +1519,40 @@
         "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py"
       ]
     },
+    "thirty_eighth_pair_fullsupport_component_collar": {
+      "status": "PROVED_LOCAL_COMPONENT_COVERAGE",
+      "scope": "one exact rational two-dimensional collar around retained full-support edge 39 in row 2599; complete component accounting only inside the declared collar, with no global parent-cell or extension-label claim",
+      "support": [15, 15, 15],
+      "parent_index": 2599,
+      "factor_id": 19069,
+      "retained_edge_index": 39,
+      "retained_edge_charts": [0, 113],
+      "declared_scope_dimension": 2,
+      "parent_brackets_replayed": 70,
+      "declared_scope_component_count": 1,
+      "regular_cw_cells": 17,
+      "meets_retained_source_skeleton": true,
+      "meets_artificial_scope_boundary": true,
+      "parent_infinity_cells": 0,
+      "segment_cover_sha256": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+      "segment_cover_semantic_sha256": "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c",
+      "semantic_sha256": "06e08fa71676c8f94dbe8918ed696611a09626976d4930d8603a8c87e40b908d",
+      "hostile_corruptions_rejected": 20,
+      "implementation_independence": "NOT_CLAIMED",
+      "formal_preregistration": "NOT_CLAIMED",
+      "component_coverage": "COMPLETE_FOR_DECLARED_COLLAR_ONLY",
+      "global_parent_cell_coverage": "NOT_CLAIMED",
+      "extension_signature_labels": "NOT_CONSTRUCTED",
+      "pair_branch_injectivity": "OPEN",
+      "triple_branch_compact_support_vanishing": "OPEN",
+      "theorem_effect": "One full-support wall component is exactly certified on one declared collar; no global component theorem or invariant obligation is closed, so the honest 9DVL score remains 2/9.",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.md",
+        "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json",
+        "ai/omreal/build_diag3_pair_fullsupport_component_collar.py",
+        "ai/omreal/verify_diag3_pair_fullsupport_component_collar.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
     "next_stage": "compile exact ordered residual roadmaps and compound-event extension-label continuation on the 39 pending edges, then continue component/closure attachments on the exact 40-edge full-support source cover while preserving that finite skeleton coverage is not parent-cell/component coverage; alternatively replace it with a direct coverage-certified parent-cell roadmap; retain section-960 and section-550 only as compiler stress tests and retain the independent triple boundary-complete projection-critical roadmap route"
   },

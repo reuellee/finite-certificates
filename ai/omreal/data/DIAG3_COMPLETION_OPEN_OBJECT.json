@@ -2,7 +2,7 @@
   "format": "diag3-completion-open-object-v1",
   "status": "OPEN",
   "current_decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-  "current_decision_ledger_git_blob": "e1bdbe738b41ae714f76e6aee3ee19b27479d5d1",
+  "current_decision_ledger_git_blob": "855732a2c79dcf412f2f72bf6694719e520f289e",
   "current_state_note": "Historical proof object. Current target selection, the complete 527533-cell four-support base CAD, the 4496636-cell open-base-cell v lift, all 132134 open-t algebraic-u-section v lifts (4047846 cells), and exact local v lifts for all 261571 algebraic-t base cells (8390619 cells) live in current_decision_ledger. The final 11938 coefficient/endpoint algebraic-t u-point fibers contribute 307146 cells; global gluing, labels, closure, middle-rank replay, and both diagonal-three invariant obligations remain.",
   "ledger_score": "2/9",
   "authoritative_remote_base": {

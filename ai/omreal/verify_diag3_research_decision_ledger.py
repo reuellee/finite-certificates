@@ -14,6 +14,7 @@ LEDGER_PATH = DATA / "DIAG3_RESEARCH_DECISION_LEDGER.json"
 COMPLETION_PATH = DATA / "DIAG3_COMPLETION_OPEN_OBJECT.json"
 CLOSURE_PATH = DATA / "DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json"
 TRIPLE_LOCAL_ROADMAP_PATH = DATA / "DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json"
+COMPONENT_COLLAR_PATH = DATA / "DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json"
 POINTER = "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json"
 
 
@@ -60,6 +61,7 @@ def main() -> None:
     completion = load(COMPLETION_PATH)
     closure = load(CLOSURE_PATH)
     triple_local_roadmap = load(TRIPLE_LOCAL_ROADMAP_PATH)
+    component_collar_certificate = load(COMPONENT_COLLAR_PATH)
 
     assert set(ledger) == {
         "format",
@@ -296,6 +298,7 @@ def main() -> None:
         "thirty_fifth_pair_fullsupport_segment_cover",
         "thirty_sixth_pair_fullsupport_labeled_skeleton",
         "thirty_seventh_triple_local_projection_roadmap_canary",
+        "thirty_eighth_pair_fullsupport_component_collar",
         "theorem_effect",
         "next_stage",
     }
@@ -1523,6 +1526,67 @@ def main() -> None:
             "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py",
         ],
     }
+    component_collar = progress[
+        "thirty_eighth_pair_fullsupport_component_collar"
+    ]
+    assert component_collar == {
+        "status": "PROVED_LOCAL_COMPONENT_COVERAGE",
+        "scope": (
+            "one exact rational two-dimensional collar around retained full-support "
+            "edge 39 in row 2599; complete component accounting only inside the "
+            "declared collar, with no global parent-cell or extension-label claim"
+        ),
+        "support": [15, 15, 15],
+        "parent_index": 2599,
+        "factor_id": 19_069,
+        "retained_edge_index": 39,
+        "retained_edge_charts": [0, 113],
+        "declared_scope_dimension": 2,
+        "parent_brackets_replayed": 70,
+        "declared_scope_component_count": 1,
+        "regular_cw_cells": 17,
+        "meets_retained_source_skeleton": True,
+        "meets_artificial_scope_boundary": True,
+        "parent_infinity_cells": 0,
+        "segment_cover_sha256": (
+            "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307"
+        ),
+        "segment_cover_semantic_sha256": (
+            "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c"
+        ),
+        "semantic_sha256": (
+            "06e08fa71676c8f94dbe8918ed696611a09626976d4930d8603a8c87e40b908d"
+        ),
+        "hostile_corruptions_rejected": 20,
+        "implementation_independence": "NOT_CLAIMED",
+        "formal_preregistration": "NOT_CLAIMED",
+        "component_coverage": "COMPLETE_FOR_DECLARED_COLLAR_ONLY",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "extension_signature_labels": "NOT_CONSTRUCTED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "theorem_effect": (
+            "One full-support wall component is exactly certified on one declared "
+            "collar; no global component theorem or invariant obligation is closed, "
+            "so the honest 9DVL score remains 2/9."
+        ),
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.md",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json",
+            "ai/omreal/build_diag3_pair_fullsupport_component_collar.py",
+            "ai/omreal/verify_diag3_pair_fullsupport_component_collar.py",
+        ],
+    }
+    assert component_collar_certificate["semantic_sha256"] == component_collar[
+        "semantic_sha256"
+    ]
+    assert component_collar_certificate["sources"]["segment_cover_sha256"] == (
+        component_collar["segment_cover_sha256"]
+    )
+    assert component_collar_certificate["sources"]["segment_cover_semantic_sha256"] == (
+        component_collar["segment_cover_semantic_sha256"]
+    )
+    assert len(component_collar_certificate["hostile_mutation_contract"]) == 20
     triple_local = progress[
         "thirty_seventh_triple_local_projection_roadmap_canary"
     ]

@@ -29,6 +29,8 @@ HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
 OUTPUT = DATA / "DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json"
 SEGMENT_COVER = DATA / "DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json"
+EXPECTED_SEGMENT_COVER_SHA256 = "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307"
+EXPECTED_SEGMENT_COVER_SEMANTIC_SHA256 = "8b7f3ae29406f8b4476c38e4932c7e0016f78856a6dee083ce2db93332c2583c"
 FORMAT = "diag3-pair-fullsupport-component-collar-v1"
 TARGET_FACTOR = 19_069
 TARGET_EDGE = 39
@@ -40,6 +42,7 @@ import DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY as labeled  # noqa: E402
 import DIAG9_GRAPH_verify_row2599_slice as sturm  # noqa: E402
 import diag3_pair_parent_source_transition_core as transition  # noqa: E402
 import verify_diag3_pair_fullsupport_safe_segment_walls as safe  # noqa: E402
+import verify_diag3_pair_fullsupport_segment_cover as segment_cover_verifier  # noqa: E402
 import verify_diag3_pair_global_parent_face_gate as gate  # noqa: E402
 
 
@@ -340,7 +343,13 @@ def build_record():
     edge_index = int(np.where(incidence[:, candidate_index])[0][0])
     if (factor_id, edge_index, degree, terms) != (TARGET_FACTOR, TARGET_EDGE, 6, 108):
         raise AssertionError("deterministic component-pilot target changed")
+    cover_digest = file_sha256(SEGMENT_COVER)
+    if cover_digest != EXPECTED_SEGMENT_COVER_SHA256:
+        raise AssertionError("accepted hardened segment-cover raw digest changed")
     cover = json.loads(SEGMENT_COVER.read_text(encoding="utf-8"))
+    segment_cover_verifier.verify_record(cover)
+    if cover["semantic_sha256"] != EXPECTED_SEGMENT_COVER_SEMANTIC_SHA256:
+        raise AssertionError("accepted hardened segment-cover semantic digest changed")
     if edge_index not in cover["source_bank"]["selected_edge_indices"]:
         raise AssertionError("target edge is absent from the optimal source cover")
 
@@ -443,7 +452,8 @@ def build_record():
             "factor_census_sha256": file_sha256(transition.FACTOR_CENSUS),
             "candidate_factor_sha256": file_sha256(transition.CANDIDATES),
             "parent_catalog_sha256": file_sha256(gate.CATALOG),
-            "segment_cover_sha256": file_sha256(SEGMENT_COVER),
+            "segment_cover_sha256": cover_digest,
+            "segment_cover_semantic_sha256": cover["semantic_sha256"],
             "parent_sign_sha256": parent_digest,
         },
         "target_selection": {
@@ -515,7 +525,8 @@ def build_record():
             "target edge", "collar width", "wall coefficient",
             "affine rank", "parent tensor", "extra component", "skeleton miss", "scope boundary",
             "false parent infinity", "global coverage", "extension labels", "incidence",
-            "closure", "root isolation", "source digest", "score promotion",
+            "closure", "root isolation", "source digest", "coupled cover substitution",
+            "score promotion",
         ],
     }
     record["semantic_sha256"] = semantic_seal(record)

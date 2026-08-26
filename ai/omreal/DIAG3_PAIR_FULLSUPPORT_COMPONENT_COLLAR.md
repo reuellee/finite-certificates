@@ -116,7 +116,9 @@ substitution and tensor-Bernstein routines.  Within that declared boundary,
 the verifier separately embodies the 105-by-17,824 incidence reconstruction,
 target and axis selection, seventy parent restrictions, wall inequalities,
 three Sturm isolations, closure poset, signed incidence, and source-pin checks.
-It rejects nineteen re-sealed hostile semantic mutations, including an extra
+It hard-pins the accepted c692 cover bytes and semantic seal, replays that
+cover's exact verifier contract, and rejects twenty re-sealed hostile semantic
+mutations, including a coupled cover-plus-collar substitution, an extra
 top-level theorem claim, false independence claim, collapsed collar,
 fabricated second component, missing source-skeleton hit, false parent
 infinity, global-coverage claim, invented extension labels, corrupt incidence,

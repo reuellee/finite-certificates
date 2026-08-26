@@ -557,7 +557,9 @@ tensor-Bernstein inequalities make the wall one monotone graph.  Its single
 component meets edge 39 and both artificial collar ends.  The stored 17-cell
 regular-CW roadmap has complete closure chains, signed incidence with
 `d^2=0`, and empty parent infinity.  The separately embodied structural
-verifier rejects nineteen re-sealed hostile semantic mutations.  Producer and
+verifier hard-pins and exactly authenticates the c692 segment cover and rejects
+twenty re-sealed hostile semantic mutations, including coupled cover/collar
+substitution.  Producer and
 verifier share the transition, safe-wall, parent-gate, labelled-factor, and
 Sturm modules plus near-parallel exact substitution/Bernstein logic; full
 implementation independence is not claimed.  An external SymPy reconstruction
