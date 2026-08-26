@@ -1450,8 +1450,42 @@
         "ai/omreal/verify_diag3_triple_local_roadmap_canary.py"
       ]
     },
+    "thirty_sixth_pair_fullsupport_labeled_skeleton": {
+      "status": "BOUNDED_NO_GO",
+      "scope": "complete face-compatible regular-CW, signed-incidence, true-infinity, and 97224-extension bad-membership contract on selected optimal-cover edge 27 only; exact fail-closed input audit on the other 39 source edges; no parent-cell or wall-component coverage claim",
+      "support": [15, 15, 15],
+      "minimum_source_cover_edges": 40,
+      "fully_compiled_edges": 1,
+      "pending_edges": 39,
+      "compiled_edge_index": 27,
+      "compiled_chart_pair": [0, 89],
+      "ordered_residual_events": 1237,
+      "zero_cells": 1239,
+      "one_cells": 1238,
+      "strict_closure_pairs": 2476,
+      "strict_three_cell_chains": 0,
+      "parent_infinity_cells": 0,
+      "extension_signature_universe": 97224,
+      "distinct_bad_membership_profiles": 2458,
+      "source_profile_semantic_sha256": "b201f42b71aa32ac92f790f1419a3e542e1f9e890869664bbac6b4014ce9a4d3",
+      "bad_membership_semantic_sha256": "63534ac7414e1dd75de1e69443ace5713aa4467bd2d6ca29d7758aee65ebf132",
+      "semantic_sha256": "77135b745345ff80f8c7cf9dbb65f7a9e66071224f1b0a5365b26423049b67f0",
+      "minimal_missing_datum": "complete ordered exact residual-root roadmap with coincident-event groups and exact 97224-signature continuation across every compound event on each of the 39 pending cover edges",
+      "component_coverage": "NOT_CLAIMED",
+      "global_parent_cell_coverage": "NOT_CLAIMED",
+      "pair_branch_injectivity": "OPEN",
+      "triple_branch_compact_support_vanishing": "OPEN",
+      "hostile_corruptions_rejected": 14,
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.md",
+        "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.json",
+        "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_PROFILES.json.gz",
+        "ai/omreal/build_diag3_pair_fullsupport_labeled_skeleton.py",
+        "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "continue complete labels and component/closure attachments on the exact 40-edge full-support source cover, or replace the finite skeleton with a direct coverage-certified parent-cell roadmap; retain section-960 and section-550 only as compiler stress tests and retain the independent triple boundary-complete projection-critical roadmap route"
+    "next_stage": "compile exact ordered residual roadmaps and compound-event extension-label continuation on the 39 pending edges of the optimal full-support source cover, while preserving that finite skeleton coverage is not parent-cell/component coverage; alternatively replace it with a direct coverage-certified parent-cell roadmap; retain the independent triple boundary-complete projection-critical roadmap route"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {

@@ -4,12 +4,14 @@
 from __future__ import annotations
 
 from collections import Counter
+from concurrent.futures import ProcessPoolExecutor
 from fractions import Fraction
 from hashlib import sha256
 from itertools import combinations
 from math import lcm
 from pathlib import Path
 import json
+import os
 import sys
 
 import numpy as np
@@ -145,7 +147,15 @@ def raw_extension_universe():
     return signatures
 
 
-def build_record(progress=False):
+def compound_label_state(task):
+    """Exact raw-label state for one rational post-compound sample."""
+    parent, reorientation = task
+    return tuple(
+        sorted(signature ^ reorientation for signature in topes.parent_topes(parent))
+    )
+
+
+def build_record(progress=False, include_profile_data=False):
     roadmap = json.loads(TRANSITION.read_text(encoding="utf-8"))
     events = roadmap["residual_roadmap"]["events"]
     if len(events) != 1_237:
@@ -202,6 +212,34 @@ def build_record(progress=False):
     event_records = []
     simple_preliminary = Counter()
     compound_delta = Counter()
+    compound_tasks = []
+    compound_indices = []
+    for event_index, event in enumerate(events):
+        if int(event["occurrence_multiplicity"]) == 1:
+            continue
+        right = Fraction(event["isolating_interval"][1])
+        next_left = (
+            Fraction(events[event_index + 1]["isolating_interval"][0])
+            if event_index + 1 < len(events)
+            else Fraction(1)
+        )
+        sample = (right + next_left) / 2
+        compound_indices.append(event_index)
+        compound_tasks.append((segment_parent(points, sample), reorientation))
+    workers = max(1, min(4, int(os.environ.get("DIAG3_LABEL_WORKERS", "4"))))
+    if progress:
+        print(
+            f"precomputing {len(compound_tasks)} exact compound label states "
+            f"with {workers} workers",
+            flush=True,
+        )
+    if workers == 1:
+        compound_rows = map(compound_label_state, compound_tasks)
+        compound_states = dict(zip(compound_indices, compound_rows, strict=True))
+    else:
+        with ProcessPoolExecutor(max_workers=workers) as executor:
+            compound_rows = executor.map(compound_label_state, compound_tasks)
+            compound_states = dict(zip(compound_indices, compound_rows, strict=True))
     for event_index, event in enumerate(events):
         factor_id = int(event["factor_id"])
         occurrences = factor_occurrences[factor_id]
@@ -213,15 +251,7 @@ def build_record(progress=False):
             simple_preliminary[preliminary] += 1
             method = "simplicial_basis_mutation"
         else:
-            right = Fraction(event["isolating_interval"][1])
-            next_left = (
-                Fraction(events[event_index + 1]["isolating_interval"][0])
-                if event_index + 1 < len(events)
-                else Fraction(1)
-            )
-            sample = (right + next_left) / 2
-            normalized = set(topes.parent_topes(segment_parent(points, sample)))
-            labels = {signature ^ reorientation for signature in normalized}
+            labels = set(compound_states[event_index])
             method = "exact_post_compound_tope_reenumeration"
         lost = before - labels
         gained = labels - before
@@ -274,7 +304,7 @@ def build_record(progress=False):
         event_digest.update(int(row["lost_labels"]).to_bytes(4, "little"))
         event_digest.update(bytes.fromhex(row["post_chamber_labels_sha256"]))
 
-    return {
+    record = {
         "format": FORMAT,
         "status": STATUS,
         "scope": {
@@ -328,3 +358,10 @@ def build_record(progress=False):
             "hostile_corruptions": 10,
         },
     }
+    if include_profile_data:
+        # The ordinary certificate commits to the complete mapping through
+        # ``signature_profiles.semantic_sha256``.  Downstream closure
+        # compilers may additionally need the actual packed mapping; return it
+        # in memory without changing the accepted JSON schema or bytes.
+        return record, universe, profiles
+    return record

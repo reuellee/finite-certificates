@@ -1535,6 +1535,18 @@ bank.  This shrinks the source skeleton by 65 edges but does not prove global
 component coverage; the honest score remains `2/9`.  See
 `DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md`.
 
+The first label-compatible regular subcomplex of that cover is now exact on
+selected edge 27, chart 0 to chart 89.  Its 1,237 ordered residual events give
+1,239 stable zero-cells, 1,238 oriented one-cells, all 2,476 strict faces,
+empty true parent infinity, and complete bad-membership profiles for all
+97,224 extension signatures (2,458 distinct profiles).  The other 39 cover
+edges are a machine-readable fail-closed residue: each still needs a complete
+ordered residual-root roadmap and exact label continuation across every
+compound event.  Even completing them would cover only the finite source
+skeleton, not every parent-cell component or the two-cells required for global
+first homology.  See `DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.md`; the honest
+score remains `2/9`.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.

@@ -570,6 +570,20 @@ python ai/omreal/build_diag3_pair_fullsupport_component_collar.py
 python ai/omreal/verify_diag3_pair_fullsupport_component_collar.py
 ```
 
+`DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.json` and the deterministic packed
+profile catalog `DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_PROFILES.json.gz`
+compile selected minimum-cover edge 27 (row-2599 charts 0 to 89) into 1,239
+stable zero-cells, 1,238 oriented one-cells, all 2,476 strict faces, empty true
+parent infinity, and the complete 97,224-signature/2,458-profile bad-membership
+contract.  The artifact fails closed on the other 39 cover edges, listing each
+missing regular refinement explicitly; this is source-skeleton coverage only,
+not parent-cell or component coverage.
+
+```bash
+python ai/omreal/build_diag3_pair_fullsupport_labeled_skeleton.py
+python ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton.py
+```
+
 `DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json` is the complete exact residual
 roadmap on the minimum-Hamming certified parent-safe segment leaving chart 0.
 It proves that all 70 parent brackets remain strict, screens all 17,824
