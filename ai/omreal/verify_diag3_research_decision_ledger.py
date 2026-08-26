@@ -1689,7 +1689,11 @@ def main() -> None:
     print("PASS thirteenth ambient cube: 5577 occurring walls / true boundary coverage")
     print("PASS fourteenth staircase yield gate: 8 boxes / volume 12817/16384 / +33 factors")
     print("PASS fifteenth source-family no-go: 5390 known parent walls miss the source cube")
-    print("PASS thirty-fifth optimal full-support source cover: 40/105 edges retain 10844 crossings")
+    print(
+        "PASS thirty-fifth optimal full-support source cover: "
+        "40/105 edges retain one exact witness for each of 10844 crossed factor classes; "
+        "edge-factor incidences 412093 -> 157448"
+    )
     print("PASS sixteenth four-support gate: 8017 restrictions -> 94 zero sets -> 22 walls")
     print("PASS seventeenth four-support projection: 255 obligations -> 136 base polynomials")
     print("PASS eighteenth base projection: 6061 obligations -> 2554 polynomials -> 1693 root incidences")
