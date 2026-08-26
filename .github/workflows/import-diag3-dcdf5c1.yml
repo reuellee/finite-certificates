@@ -1,0 +1,32 @@
+name: import reviewed diagonal-three checkpoint
+
+on:
+  push:
+    branches: [ops/import-diag3-dcdf5c1]
+
+permissions:
+  contents: write
+
+jobs:
+  import-reviewed-bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify and publish reviewed branch
+        env:
+          EXPECTED_BASE: fdf41bd8937ce7be787e76cfe198c67c1c991817
+          EXPECTED_HEAD: dcdf5c1516cfd94626ab61f7f43ed31a68ad79bc
+          TARGET_BRANCH: research/diag3-integrated-checkpoint-20260826
+        run: |
+          set -euo pipefail
+          bundle=ops/bundles/finite-certificates-diag3-integrated-dcdf5c1.bundle
+          git cat-file -e "${EXPECTED_BASE}^{commit}"
+          git bundle verify "$bundle"
+          git fetch "$bundle" \
+            "refs/heads/${TARGET_BRANCH}:refs/remotes/reviewed/diag3"
+          test "$(git rev-parse refs/remotes/reviewed/diag3)" = "$EXPECTED_HEAD"
+          git push origin \
+            "refs/remotes/reviewed/diag3:refs/heads/${TARGET_BRANCH}"
