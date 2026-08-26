@@ -13,6 +13,7 @@ DATA = HERE / "data"
 LEDGER_PATH = DATA / "DIAG3_RESEARCH_DECISION_LEDGER.json"
 COMPLETION_PATH = DATA / "DIAG3_COMPLETION_OPEN_OBJECT.json"
 CLOSURE_PATH = DATA / "DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json"
+TRIPLE_LOCAL_ROADMAP_PATH = DATA / "DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json"
 POINTER = "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json"
 
 
@@ -58,6 +59,7 @@ def main() -> None:
     ledger = load(LEDGER_PATH)
     completion = load(COMPLETION_PATH)
     closure = load(CLOSURE_PATH)
+    triple_local_roadmap = load(TRIPLE_LOCAL_ROADMAP_PATH)
 
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
@@ -1380,7 +1382,44 @@ def main() -> None:
     }
     local_roadmap = progress["thirty_fifth_triple_local_projection_roadmap_canary"]
     assert local_roadmap["status"] == "PROVED_LOCAL_BOUNDARY_COVERAGE"
+    expected_local_scope = {
+        "kind": "one closed rational box in one normalized uniform-parent cell",
+        "named_factor_presentation": [5563, 16134, 19284],
+        "canonical_unresolved_row": [5563, 4373, 23221],
+        "orbit_transport_claimed": False,
+        "s8_sign_transport_claimed": False,
+        "global_parent_cell_coverage_claimed": False,
+    }
+    assert local_roadmap["scope"] == (
+        "one closed radius-1/128 rational nine-box in one normalized uniform-parent "
+        "cell distinct from row 2599 for named presentation (5563,16134,19284), "
+        "mapping to canonical unresolved row (5563,4373,23221); all 18 faces are "
+        "artificial scope boundary, with no S8 transport and no parent-infinity claim"
+    )
+    assert local_roadmap["declared_scope"] == expected_local_scope
+    assert triple_local_roadmap["scope"] == expected_local_scope
     assert local_roadmap["preregistered_before_formal_run"] is True
+    assert (
+        local_roadmap["preregistration_sha256"]
+        == triple_local_roadmap["registration_sha256"]
+        == "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3"
+    )
+    assert (
+        local_roadmap["critical_system_sha256"]
+        == triple_local_roadmap["authenticated_sources"]["critical_system_sha256"]
+        == "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+    )
+    source_mapping_gate = triple_local_roadmap["authenticated_sources"]["source_mapping_gate"]
+    assert (
+        local_roadmap["source_mapping_gate_raw_sha256"]
+        == source_mapping_gate["raw_sha256"]
+        == "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692"
+    )
+    assert (
+        local_roadmap["source_mapping_gate_semantic_sha256"]
+        == source_mapping_gate["semantic_sha256"]
+        == "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace"
+    )
     assert local_roadmap["exact_zero_witness"] == [
         "-19/28", "-23/7", "-27/14", "-5", "-4", "-3", "-1", "2", "4"
     ]
@@ -1389,6 +1428,11 @@ def main() -> None:
     assert local_roadmap["restricted_zero_set_dimension"] == 6
     assert local_roadmap["parent_brackets_replayed"] == 70
     assert local_roadmap["sign_definite_parent_brackets"] == 70
+    assert local_roadmap["uniform_parent_cell"] is True
+    assert local_roadmap["same_as_row2599_parent_cell"] is False
+    assert local_roadmap["row2599_parent_sign_mismatches"] == 29
+    assert triple_local_roadmap["parent_cell"]["row2599_comparison"]["sign_mismatch_count"] == 29
+    assert triple_local_roadmap["parent_cell"]["row2599_comparison"]["same_uniform_parent_cell"] is False
     assert local_roadmap["projection_fiber_columns_zero_based"] == [3, 4, 7]
     assert local_roadmap["projection_minor_terms"] == 147
     assert local_roadmap["projection_minor_at_center"] == "-1000407/686"
@@ -1398,12 +1442,26 @@ def main() -> None:
     assert local_roadmap["internal_seams"] == 0
     assert local_roadmap["claimed_parent_wall_faces"] == 0
     assert local_roadmap["claimed_parent_infinity_faces"] == 0
+    assert triple_local_roadmap["boundary_accounting"]["face_classification"] == (
+        "ARTIFICIAL_SCOPE_BOUNDARY_ONLY"
+    )
+    assert local_roadmap["component_coverage"] == (
+        "EVERY_RESTRICTED_TRIPLE_ZERO_COMPONENT_MEETS_THE_ARTIFICIAL_BOX_BOUNDARY"
+    )
     assert local_roadmap["compact_sphere_negative_canary"] == "REJECTED"
-    assert local_roadmap["hostile_corruptions_rejected"] == 14
+    assert local_roadmap["hostile_corruptions_rejected"] == 16
+    assert len(triple_local_roadmap["hostile_mutations"]) == 16
+    assert local_roadmap["semantic_sha256"] == triple_local_roadmap["semantic_sha256"]
     assert local_roadmap["unresolved_triple_orbits_before"] == 1_162_302
     assert local_roadmap["unresolved_triple_orbits_after"] == 1_162_302
     assert local_roadmap["triple_branch_compact_support_vanishing"] == "OPEN"
     assert local_roadmap["pair_branch_injectivity"] == "OPEN"
+    assert local_roadmap["theorem_effect"] == triple_local_roadmap["theorem_effect"] == (
+        "A nonvacuous smooth local triple-zero compiler fixture is proved in one "
+        "uniform parent chamber distinct from row 2599, but only artificial "
+        "box-boundary reach is shown; no complete orbit, genuine parent boundary, "
+        "or invariant obligation is covered, so the honest 9DVL score remains 2/9."
+    )
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )

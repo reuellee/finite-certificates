@@ -22,10 +22,89 @@ HERE = Path(__file__).resolve().parent
 REGISTRATION = HERE / "data/DIAG3_TRIPLE_LOCAL_ROADMAP_REGISTRATION.json"
 SYSTEM = HERE / "data/DIAG3_triple_fullspace_critical_h1.json"
 SOURCE_GATE = HERE / "data/DIAG3_triple_fullspace_feasibility_gate.json"
+ROW2599_PARENT_CATALOG = HERE / "certs_4_8.jsonl"
 CERTIFICATE = HERE / "data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json"
 SCHEMA = "diag3-triple-local-roadmap-canary-v1"
 VARIABLES = tuple("abcdefghi")
 ZERO = (0,) * 9
+REGISTRATION_SHA256 = "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3"
+REGISTRATION_SCHEMA = "diag3-triple-local-roadmap-registration-v1"
+REGISTRATION_STATUS = "REGISTERED_BEFORE_FORMAL_CERTIFICATE_RUN"
+CRITICAL_SYSTEM_SHA256 = "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+SOURCE_GATE_RAW_SHA256 = "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692"
+SOURCE_GATE_SEMANTIC_SHA256 = "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace"
+SOURCE_GATE_VERIFY_COMMAND = (
+    "PYTHONDONTWRITEBYTECODE=1 python "
+    "ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py"
+)
+EXPECTED_DECLARED_SCOPE = {
+    "kind": "one closed rational box in one normalized uniform-parent cell",
+    "named_factor_presentation": [5563, 16134, 19284],
+    "canonical_unresolved_row": [5563, 4373, 23221],
+    "orbit_transport_claimed": False,
+    "s8_sign_transport_claimed": False,
+    "global_parent_cell_coverage_claimed": False,
+}
+EXPECTED_FINITE_ACCEPTANCE_CONTRACT = {
+    "success_status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
+    "success_conditions": [
+        "the three authenticated residual equations vanish exactly at the rational center",
+        "all 70 normalized parent brackets have exact sign-definite direct-monomial interval enclosures on the full closed box",
+        "the fixed 3-by-3 residual Jacobian minor has an exact sign-definite direct-monomial interval enclosure on the full closed box",
+        "the independent verifier reconstructs the source equations, 70 parent brackets, Jacobian minor, intervals, semantic digest, and all 18 boundary faces without importing the producer",
+        "every declared hostile mutation is rejected",
+    ],
+    "null_status": "BOUNDED_NO_GO",
+    "null_conditions": [
+        "the center is not an exact triple zero",
+        "some parent bracket interval contains zero",
+        "the fixed projection minor interval contains zero",
+        "independent replay or a hostile mutation test fails",
+    ],
+    "fail_closed_policy": (
+        "No adaptive radius reduction, pivot substitution, numerical tolerance, "
+        "or orbit enlargement is allowed in the formal run."
+    ),
+    "resource_ceiling": (
+        "300 wall-clock seconds and 1 GiB resident memory for each producer or verifier run"
+    ),
+}
+EXPECTED_PROOF_CONSEQUENCE = (
+    "Every connected component of the named triple-zero set restricted to the "
+    "declared closed box meets one of its 18 boundary faces; the component "
+    "through the center is nonvacuous."
+)
+EXPECTED_NON_CONSEQUENCES = [
+    "no component is proved to reach a genuine parent wall or parent infinity",
+    "no full parent cell is covered",
+    "no second representative and no S8 orbit is covered",
+    "the 1162302-row unresolved count is unchanged",
+    "the independent pair H_c^1 obligation is unchanged",
+    "the 9DVL score remains 2/9",
+]
+ROW2599_DIRECT_PARENT_SIGNS = tuple(
+    1 if bit == "1" else -1
+    for bit in "1111100000000011111111100001111111100000000111111000000000001000011111"
+)
+ROW2599_DIRECT_PARENT_SIGN_SHA256 = "da921eb7d3a24d2fb642d966c1c1a3eb0159e98e2e16583ed05089915e561e4d"
+ROW2599_PARENT_CATALOG_SHA256 = "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b"
+ROW2599_NORMALIZED_PARENT_SIGN_SHA256 = "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+ROW2599_PARENT_GATE_VERIFY_COMMAND = (
+    "PYTHONDONTWRITEBYTECODE=1 python "
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py"
+)
+ROW2599_MISMATCH_LABELS = [
+    "1236", "1237", "1246", "1247", "1256", "1257", "1258", "1267",
+    "1278", "1346", "1347", "1348", "1357", "1358", "1368", "1378",
+    "1457", "1467", "1468", "1478", "1567", "1568", "1578", "1678",
+    "2358", "2458", "2568", "2578", "5678",
+]
+THEOREM_EFFECT = (
+    "A nonvacuous smooth local triple-zero compiler fixture is proved in one "
+    "uniform parent chamber distinct from row 2599, but only artificial "
+    "box-boundary reach is shown; no complete orbit, genuine parent boundary, "
+    "or invariant obligation is covered, so the honest 9DVL score remains 2/9."
+)
 
 
 def sha256(path: Path) -> str:
@@ -152,6 +231,68 @@ def evaluate(polynomial, point):
     return total
 
 
+def solve_square(matrix, right_hand_side):
+    augmented = [
+        [Fraction(value) for value in row] + [Fraction(right_hand_side[index])]
+        for index, row in enumerate(matrix)
+    ]
+    size = len(augmented)
+    for column in range(size):
+        pivot = next(
+            (row for row in range(column, size) if augmented[row][column]),
+            None,
+        )
+        if pivot is None:
+            raise AssertionError("row-2599 normalization basis became singular")
+        augmented[column], augmented[pivot] = augmented[pivot], augmented[column]
+        scale = augmented[column][column]
+        augmented[column] = [value / scale for value in augmented[column]]
+        for row in range(size):
+            if row == column or not augmented[row][column]:
+                continue
+            scale = augmented[row][column]
+            augmented[row] = [
+                left - scale * right
+                for left, right in zip(
+                    augmented[row], augmented[column], strict=True
+                )
+            ]
+    return tuple(row[-1] for row in augmented)
+
+
+def row2599_direct_parent_signs():
+    records = [
+        json.loads(line)
+        for line in ROW2599_PARENT_CATALOG.read_text(encoding="utf-8").splitlines()
+        if line
+    ]
+    raw = records[2599]["matrix"]
+    if len(raw) != 4 or any(len(row) != 8 for row in raw):
+        raise AssertionError("row-2599 parent matrix shape changed")
+    basis = tuple(tuple(raw[row][column] for column in range(4)) for row in range(4))
+
+    def coordinates(column):
+        return solve_square(basis, tuple(raw[row][column] for row in range(4)))
+
+    anchor = coordinates(4)
+    if any(not value for value in anchor):
+        raise AssertionError("row-2599 anchor normalization changed")
+    point = []
+    for column in (5, 6, 7):
+        moving = coordinates(column)
+        gauge = moving[0] / anchor[0]
+        if not gauge:
+            raise AssertionError("row-2599 moving-column gauge changed")
+        point.extend((moving[row] / anchor[row]) / gauge for row in (1, 2, 3))
+    signs = tuple(
+        1 if evaluate(polynomial, point) > 0 else -1
+        for _label, polynomial in parent_brackets()
+    )
+    if any(not evaluate(polynomial, point) for _label, polynomial in parent_brackets()):
+        raise AssertionError("row-2599 reference acquired a zero bracket")
+    return signs
+
+
 def product_interval(left, right):
     candidates = (
         left[0] * right[0], left[0] * right[1],
@@ -207,32 +348,88 @@ def semantic_digest(candidate):
     ).hexdigest()
 
 
-def verify_candidate(candidate):
-    registration = json.loads(REGISTRATION.read_text(encoding="utf-8"))
+def verified_registration(registration_payload=None):
+    payload = REGISTRATION.read_bytes() if registration_payload is None else registration_payload
+    if hashlib.sha256(payload).hexdigest() != REGISTRATION_SHA256:
+        raise AssertionError("preregistration raw digest changed")
+    registration = json.loads(payload)
+    if registration["schema"] != REGISTRATION_SCHEMA:
+        raise AssertionError("preregistration schema changed")
+    if registration["status"] != REGISTRATION_STATUS:
+        raise AssertionError("preregistration status changed")
+    if registration["declared_scope"] != EXPECTED_DECLARED_SCOPE:
+        raise AssertionError("preregistered declared scope changed")
+    if registration["authenticated_inputs"] != {
+        "critical_system": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
+        "critical_system_sha256": CRITICAL_SYSTEM_SHA256,
+        "source_gate": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+        "source_gate_semantic_sha256": SOURCE_GATE_SEMANTIC_SHA256,
+    }:
+        raise AssertionError("preregistered source contract changed")
+    if registration["finite_acceptance_contract"] != EXPECTED_FINITE_ACCEPTANCE_CONTRACT:
+        raise AssertionError("preregistered finite acceptance contract changed")
+    if registration["proof_consequence_if_accepted"] != EXPECTED_PROOF_CONSEQUENCE:
+        raise AssertionError("preregistered proof consequence changed")
+    if registration["non_consequences"] != EXPECTED_NON_CONSEQUENCES:
+        raise AssertionError("preregistered non-consequences changed")
+    return registration
+
+
+def verify_candidate(candidate, registration_payload=None):
+    registration = verified_registration(registration_payload)
+    reconstructed_row2599_signs = row2599_direct_parent_signs()
+    if reconstructed_row2599_signs != ROW2599_DIRECT_PARENT_SIGNS:
+        raise AssertionError("row-2599 direct parent signs changed")
+    row2599_sign_digest = hashlib.sha256(
+        b"diag3-row2599-direct-parent-signs-v1\0"
+        + bytes(int(value > 0) for value in reconstructed_row2599_signs)
+    ).hexdigest()
+    if row2599_sign_digest != ROW2599_DIRECT_PARENT_SIGN_SHA256:
+        raise AssertionError("row-2599 direct parent-sign pin changed")
+    if sha256(ROW2599_PARENT_CATALOG) != ROW2599_PARENT_CATALOG_SHA256:
+        raise AssertionError("row-2599 parent catalog changed")
     source = json.loads(SYSTEM.read_text(encoding="ascii"))
     source_gate = json.loads(SOURCE_GATE.read_text(encoding="utf-8"))
     if candidate["schema"] != SCHEMA or candidate["status"] != "PROVED_LOCAL_BOUNDARY_COVERAGE":
         raise AssertionError("certificate schema or status changed")
-    if candidate["registration_sha256"] != sha256(REGISTRATION):
+    if candidate["registration_sha256"] != REGISTRATION_SHA256:
         raise AssertionError("registration digest changed")
-    if sha256(SYSTEM) != registration["authenticated_inputs"]["critical_system_sha256"]:
+    if sha256(SYSTEM) != CRITICAL_SYSTEM_SHA256:
         raise AssertionError("critical source no longer matches registration")
-    if source_gate["semantic_sha256"] != registration["authenticated_inputs"]["source_gate_semantic_sha256"]:
+    if sha256(SOURCE_GATE) != SOURCE_GATE_RAW_SHA256:
+        raise AssertionError("source-mapping gate raw digest changed")
+    if source_gate["semantic_sha256"] != SOURCE_GATE_SEMANTIC_SHA256:
         raise AssertionError("source gate no longer matches registration")
     authenticated = candidate["authenticated_sources"]
     expected_authenticated = {
-        "critical_system_sha256": sha256(SYSTEM),
-        "source_gate_semantic_sha256": source_gate["semantic_sha256"],
+        "critical_system_sha256": CRITICAL_SYSTEM_SHA256,
+        "source_mapping_gate": {
+            "path": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+            "raw_sha256": SOURCE_GATE_RAW_SHA256,
+            "semantic_sha256": SOURCE_GATE_SEMANTIC_SHA256,
+            "verification_command": SOURCE_GATE_VERIFY_COMMAND,
+            "accepted_dependency_scope": (
+                "named presentation to canonical unresolved-row mapping only"
+            ),
+        },
         "named_factor_presentation": source["named_presentation"],
         "canonical_unresolved_row": source_gate["canonical_row"],
     }
     if authenticated != expected_authenticated:
         raise AssertionError("authenticated source accounting changed")
-    if source["named_presentation"] != registration["declared_scope"]["named_factor_presentation"]:
+    if source["schema"] != "diag3-triple-fullspace-critical-system-v1":
+        raise AssertionError("critical-system schema changed")
+    if source_gate["schema"] != "diag3-triple-fullspace-feasibility-gate-v1":
+        raise AssertionError("source-mapping gate schema changed")
+    if source["named_presentation"] != EXPECTED_DECLARED_SCOPE["named_factor_presentation"]:
         raise AssertionError("named presentation no longer matches registration")
-    if source_gate["canonical_row"] != registration["declared_scope"]["canonical_unresolved_row"]:
+    if source["canonical_row"] != EXPECTED_DECLARED_SCOPE["canonical_unresolved_row"]:
+        raise AssertionError("critical-system canonical row changed")
+    if source_gate["named_presentation"] != EXPECTED_DECLARED_SCOPE["named_factor_presentation"]:
+        raise AssertionError("source gate named presentation changed")
+    if source_gate["canonical_row"] != EXPECTED_DECLARED_SCOPE["canonical_unresolved_row"]:
         raise AssertionError("canonical row no longer matches registration")
-    if candidate["scope"] != registration["declared_scope"]:
+    if candidate["scope"] != EXPECTED_DECLARED_SCOPE:
         raise AssertionError("declared scope changed")
     if candidate["scope"]["orbit_transport_claimed"] or candidate["scope"]["s8_sign_transport_claimed"]:
         raise AssertionError("local certificate was promoted across an unaudited orbit")
@@ -281,6 +478,29 @@ def verify_candidate(candidate):
     parent_summary = candidate["parent_cell"]
     if parent_summary["sign_definite_brackets"] != 70 or parent_summary["consequence"] != "the entire closed box lies in one uniform normalized parent cell":
         raise AssertionError("parent-cell consequence changed")
+    if len(ROW2599_DIRECT_PARENT_SIGNS) != len(expected_records):
+        raise AssertionError("row-2599 parent-sign reference changed")
+    row2599_mismatches = [
+        record["label"]
+        for record, row2599_sign in zip(
+            expected_records, reconstructed_row2599_signs, strict=True
+        )
+        if record["sign"] != row2599_sign
+    ]
+    if row2599_mismatches != ROW2599_MISMATCH_LABELS:
+        raise AssertionError("row-2599 parent-cell comparison changed")
+    if parent_summary["row2599_comparison"] != {
+        "reference_parent_index": 2599,
+        "reference_catalog_sha256": ROW2599_PARENT_CATALOG_SHA256,
+        "reference_normalized_parent_sign_sha256": ROW2599_NORMALIZED_PARENT_SIGN_SHA256,
+        "reference_direct_parent_sign_sha256": ROW2599_DIRECT_PARENT_SIGN_SHA256,
+        "reference_verification_command": ROW2599_PARENT_GATE_VERIFY_COMMAND,
+        "sign_mismatch_count": 29,
+        "sign_mismatch_labels": ROW2599_MISMATCH_LABELS,
+        "same_uniform_parent_cell": False,
+        "consequence": "the certified box is not in the row-2599 parent chamber",
+    }:
+        raise AssertionError("row-2599 comparison accounting changed")
 
     fixed_projection = registration["fixed_projection"]
     projection = candidate["projection"]
@@ -302,10 +522,26 @@ def verify_candidate(candidate):
         "jacobian_minor_interval": [encoded(minor_interval[0]), encoded(minor_interval[1])],
         "jacobian_minor_sign": minor_sign,
         "critical_points_in_box": 0,
+        "geometric_consequence": (
+            "the triple-zero set is smooth of dimension six near its box "
+            "intersection and projection to the six base variables is a local "
+            "diffeomorphism there"
+        ),
     }
     for key, value in expected_projection_fields.items():
         if projection[key] != value:
             raise AssertionError(f"projection replay changed: {key}")
+
+    if candidate["topological_argument"] != {
+        "boundary_avoiding_component_is_smooth": True,
+        "boundary_avoiding_component_is_open_in_the_smooth_zero_set": True,
+        "projected_component_image_is_nonempty": True,
+        "projected_component_image_is_open_in_R6": True,
+        "boundary_avoiding_component_is_compact": True,
+        "projected_component_image_is_compact": True,
+        "contradiction": "no nonempty subset of R6 is both open and compact",
+    }:
+        raise AssertionError("topological implication changed")
 
     faces = [
         {"variable": variable, "side": side}
@@ -318,11 +554,12 @@ def verify_candidate(candidate):
         "faces_accounted": faces,
         "claimed_parent_infinity_faces": 0,
         "claimed_parent_wall_faces": 0,
+        "face_classification": "ARTIFICIAL_SCOPE_BOUNDARY_ONLY",
     }:
         raise AssertionError("boundary accounting changed")
-    if candidate["proof_consequence"] != registration["proof_consequence_if_accepted"]:
+    if candidate["proof_consequence"] != EXPECTED_PROOF_CONSEQUENCE:
         raise AssertionError("proof consequence changed")
-    if candidate["non_consequences"] != registration["non_consequences"]:
+    if candidate["non_consequences"] != EXPECTED_NON_CONSEQUENCES:
         raise AssertionError("scope exclusions changed")
     if candidate["theorem_accounting"] != {
         "final_unresolved_triple_orbits_before": 1_162_302,
@@ -331,6 +568,8 @@ def verify_candidate(candidate):
         "score_after": "2/9",
     }:
         raise AssertionError("theorem accounting changed")
+    if candidate["theorem_effect"] != THEOREM_EFFECT:
+        raise AssertionError("theorem effect changed")
     if candidate["semantic_sha256"] != semantic_digest(candidate):
         raise AssertionError("certificate semantic digest changed")
 
@@ -347,7 +586,7 @@ def verify_hostile_mutations(certificate):
         candidate = deepcopy(certificate)
         mutate(candidate)
         resign(candidate)
-        mutations.append((name, candidate))
+        mutations.append((name, candidate, None))
 
     add("source_digest", lambda row: row["authenticated_sources"].__setitem__("critical_system_sha256", "0" * 64))
     add("named_presentation", lambda row: row["authenticated_sources"].__setitem__("named_factor_presentation", [5563, 16134, 19285]))
@@ -361,15 +600,38 @@ def verify_hostile_mutations(certificate):
     add("projection_minor_digest", lambda row: row["projection"].__setitem__("jacobian_minor_sha256", "f" * 64))
     add("projection_minor_interval", lambda row: row["projection"].__setitem__("jacobian_minor_interval", ["-1", "1"]))
     add("boundary_face_count", lambda row: row["boundary_accounting"].__setitem__("coordinate_faces", 17))
+    add("parent_infinity_claim", lambda row: row["boundary_accounting"].__setitem__("claimed_parent_infinity_faces", 18))
     add("scope_orbit_transport", lambda row: row["scope"].__setitem__("orbit_transport_claimed", True))
+    registration = json.loads(REGISTRATION.read_text(encoding="utf-8"))
+    registration["declared_scope"]["global_parent_cell_coverage_claimed"] = True
+    registration["proof_consequence_if_accepted"] = (
+        "Every component reaches true parent infinity and the full parent cell is covered."
+    )
+    registration["non_consequences"] = [
+        "the local box boundary is true parent infinity"
+    ]
+    coupled = deepcopy(certificate)
+    coupled["scope"] = registration["declared_scope"]
+    coupled["proof_consequence"] = registration["proof_consequence_if_accepted"]
+    coupled["non_consequences"] = registration["non_consequences"]
+    coupled["boundary_accounting"]["claimed_parent_infinity_faces"] = 18
+    coupled["boundary_accounting"]["face_classification"] = "TRUE_PARENT_INFINITY"
+    resign(coupled)
+    mutations.append(
+        (
+            "coupled_registration_global_rewrite",
+            coupled,
+            json.dumps(registration, sort_keys=True).encode("utf-8"),
+        )
+    )
     add("theorem_score", lambda row: row["theorem_accounting"].__setitem__("score_after", "3/9"))
 
     declared = certificate["hostile_mutations"]
-    if declared != [name for name, _candidate in mutations]:
+    if declared != [name for name, _candidate, _registration in mutations]:
         raise AssertionError("hostile mutation declaration changed")
-    for name, candidate in mutations:
+    for name, candidate, registration_payload in mutations:
         try:
-            verify_candidate(candidate)
+            verify_candidate(candidate, registration_payload=registration_payload)
         except (AssertionError, KeyError, TypeError, ValueError):
             continue
         raise AssertionError(f"hostile mutation accepted: {name}")

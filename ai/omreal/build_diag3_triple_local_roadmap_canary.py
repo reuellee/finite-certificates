@@ -27,9 +27,37 @@ import verify_diag3_triple_boundary_stratification as boundary  # noqa: E402
 REGISTRATION = HERE / "data/DIAG3_TRIPLE_LOCAL_ROADMAP_REGISTRATION.json"
 SYSTEM = HERE / "data/DIAG3_triple_fullspace_critical_h1.json"
 SOURCE_GATE = HERE / "data/DIAG3_triple_fullspace_feasibility_gate.json"
+ROW2599_PARENT_CATALOG = HERE / "certs_4_8.jsonl"
 OUTPUT = HERE / "data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json"
 SCHEMA = "diag3-triple-local-roadmap-canary-v1"
 ZERO = (0,) * 9
+REGISTRATION_SHA256 = "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3"
+REGISTRATION_SCHEMA = "diag3-triple-local-roadmap-registration-v1"
+REGISTRATION_STATUS = "REGISTERED_BEFORE_FORMAL_CERTIFICATE_RUN"
+CRITICAL_SYSTEM_SHA256 = "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+SOURCE_GATE_RAW_SHA256 = "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692"
+SOURCE_GATE_SEMANTIC_SHA256 = "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace"
+SOURCE_GATE_VERIFY_COMMAND = (
+    "PYTHONDONTWRITEBYTECODE=1 python "
+    "ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py"
+)
+ROW2599_DIRECT_PARENT_SIGNS = tuple(
+    1 if bit == "1" else -1
+    for bit in "1111100000000011111111100001111111100000000111111000000000001000011111"
+)
+ROW2599_DIRECT_PARENT_SIGN_SHA256 = "da921eb7d3a24d2fb642d966c1c1a3eb0159e98e2e16583ed05089915e561e4d"
+ROW2599_PARENT_CATALOG_SHA256 = "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b"
+ROW2599_NORMALIZED_PARENT_SIGN_SHA256 = "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+ROW2599_PARENT_GATE_VERIFY_COMMAND = (
+    "PYTHONDONTWRITEBYTECODE=1 python "
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py"
+)
+THEOREM_EFFECT = (
+    "A nonvacuous smooth local triple-zero compiler fixture is proved in one "
+    "uniform parent chamber distinct from row 2599, but only artificial "
+    "box-boundary reach is shown; no complete orbit, genuine parent boundary, "
+    "or invariant obligation is covered, so the honest 9DVL score remains 2/9."
+)
 
 
 def sha256(path: Path) -> str:
@@ -148,13 +176,31 @@ def sign(interval):
 
 
 def main():
+    row2599_sign_digest = hashlib.sha256(
+        b"diag3-row2599-direct-parent-signs-v1\0"
+        + bytes(int(value > 0) for value in ROW2599_DIRECT_PARENT_SIGNS)
+    ).hexdigest()
+    if row2599_sign_digest != ROW2599_DIRECT_PARENT_SIGN_SHA256:
+        raise AssertionError("row-2599 direct parent-sign pin changed")
+    if sha256(ROW2599_PARENT_CATALOG) != ROW2599_PARENT_CATALOG_SHA256:
+        raise AssertionError("row-2599 parent catalog changed")
+    if sha256(REGISTRATION) != REGISTRATION_SHA256:
+        raise AssertionError("preregistration raw digest changed")
     registration = json.loads(REGISTRATION.read_text(encoding="utf-8"))
-    if registration["schema"] != "diag3-triple-local-roadmap-registration-v1":
-        raise AssertionError("registration schema changed")
-    if sha256(SYSTEM) != registration["authenticated_inputs"]["critical_system_sha256"]:
+    if registration["schema"] != REGISTRATION_SCHEMA:
+        raise AssertionError("preregistration schema changed")
+    if registration["status"] != REGISTRATION_STATUS:
+        raise AssertionError("preregistration status changed")
+    if sha256(SYSTEM) != CRITICAL_SYSTEM_SHA256:
+        raise AssertionError("critical-system raw digest changed")
+    if registration["authenticated_inputs"]["critical_system_sha256"] != CRITICAL_SYSTEM_SHA256:
         raise AssertionError("critical-system source changed after registration")
     source_gate = json.loads(SOURCE_GATE.read_text(encoding="utf-8"))
-    if source_gate["semantic_sha256"] != registration["authenticated_inputs"]["source_gate_semantic_sha256"]:
+    if sha256(SOURCE_GATE) != SOURCE_GATE_RAW_SHA256:
+        raise AssertionError("source-mapping gate raw digest changed")
+    if source_gate["semantic_sha256"] != SOURCE_GATE_SEMANTIC_SHA256:
+        raise AssertionError("source-mapping gate semantic digest changed")
+    if registration["authenticated_inputs"]["source_gate_semantic_sha256"] != SOURCE_GATE_SEMANTIC_SHA256:
         raise AssertionError("source gate changed after registration")
 
     source = json.loads(SYSTEM.read_text(encoding="ascii"))
@@ -184,6 +230,16 @@ def main():
             }
         )
 
+    if len(ROW2599_DIRECT_PARENT_SIGNS) != len(brackets):
+        raise AssertionError("row-2599 parent-sign reference changed")
+    row2599_mismatches = [
+        record["label"]
+        for record, row2599_sign in zip(brackets, ROW2599_DIRECT_PARENT_SIGNS, strict=True)
+        if record["sign"] != row2599_sign
+    ]
+    if len(row2599_mismatches) != 29:
+        raise AssertionError("local box unexpectedly entered row-2599 parent cell")
+
     columns = tuple(registration["fixed_projection"]["fiber_columns_zero_based"])
     projection_minor = boundary.jacobian_minor(residuals, columns)
     projection_interval = direct_interval(projection_minor, center, radius)
@@ -194,10 +250,18 @@ def main():
     certificate = {
         "schema": SCHEMA,
         "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
-        "registration_sha256": sha256(REGISTRATION),
+        "registration_sha256": REGISTRATION_SHA256,
         "authenticated_sources": {
-            "critical_system_sha256": sha256(SYSTEM),
-            "source_gate_semantic_sha256": source_gate["semantic_sha256"],
+            "critical_system_sha256": CRITICAL_SYSTEM_SHA256,
+            "source_mapping_gate": {
+                "path": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+                "raw_sha256": SOURCE_GATE_RAW_SHA256,
+                "semantic_sha256": SOURCE_GATE_SEMANTIC_SHA256,
+                "verification_command": SOURCE_GATE_VERIFY_COMMAND,
+                "accepted_dependency_scope": (
+                    "named presentation to canonical unresolved-row mapping only"
+                ),
+            },
             "named_factor_presentation": source["named_presentation"],
             "canonical_unresolved_row": source_gate["canonical_row"],
         },
@@ -219,6 +283,17 @@ def main():
             "sign_definite_brackets": sum(record["sign"] != 0 for record in brackets),
             "records": brackets,
             "consequence": "the entire closed box lies in one uniform normalized parent cell",
+            "row2599_comparison": {
+                "reference_parent_index": 2599,
+                "reference_catalog_sha256": ROW2599_PARENT_CATALOG_SHA256,
+                "reference_normalized_parent_sign_sha256": ROW2599_NORMALIZED_PARENT_SIGN_SHA256,
+                "reference_direct_parent_sign_sha256": ROW2599_DIRECT_PARENT_SIGN_SHA256,
+                "reference_verification_command": ROW2599_PARENT_GATE_VERIFY_COMMAND,
+                "sign_mismatch_count": len(row2599_mismatches),
+                "sign_mismatch_labels": row2599_mismatches,
+                "same_uniform_parent_cell": False,
+                "consequence": "the certified box is not in the row-2599 parent chamber",
+            },
         },
         "projection": {
             **registration["fixed_projection"],
@@ -231,6 +306,20 @@ def main():
             ],
             "jacobian_minor_sign": projection_sign,
             "critical_points_in_box": 0,
+            "geometric_consequence": (
+                "the triple-zero set is smooth of dimension six near its box "
+                "intersection and projection to the six base variables is a local "
+                "diffeomorphism there"
+            ),
+        },
+        "topological_argument": {
+            "boundary_avoiding_component_is_smooth": True,
+            "boundary_avoiding_component_is_open_in_the_smooth_zero_set": True,
+            "projected_component_image_is_nonempty": True,
+            "projected_component_image_is_open_in_R6": True,
+            "boundary_avoiding_component_is_compact": True,
+            "projected_component_image_is_compact": True,
+            "contradiction": "no nonempty subset of R6 is both open and compact",
         },
         "boundary_accounting": {
             "coordinate_faces": 18,
@@ -242,6 +331,7 @@ def main():
             ],
             "claimed_parent_infinity_faces": 0,
             "claimed_parent_wall_faces": 0,
+            "face_classification": "ARTIFICIAL_SCOPE_BOUNDARY_ONLY",
         },
         "proof_consequence": registration["proof_consequence_if_accepted"],
         "non_consequences": registration["non_consequences"],
@@ -251,6 +341,7 @@ def main():
             "score_before": "2/9",
             "score_after": "2/9",
         },
+        "theorem_effect": THEOREM_EFFECT,
         "hostile_mutations": [
             "source_digest",
             "named_presentation",
@@ -264,7 +355,9 @@ def main():
             "projection_minor_digest",
             "projection_minor_interval",
             "boundary_face_count",
+            "parent_infinity_claim",
             "scope_orbit_transport",
+            "coupled_registration_global_rewrite",
             "theorem_score",
         ],
     }

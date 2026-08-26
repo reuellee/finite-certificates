@@ -11,12 +11,19 @@
       16134,
       19284
     ],
-    "source_gate_semantic_sha256": "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace"
+    "source_mapping_gate": {
+      "accepted_dependency_scope": "named presentation to canonical unresolved-row mapping only",
+      "path": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+      "raw_sha256": "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692",
+      "semantic_sha256": "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace",
+      "verification_command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py"
+    }
   },
   "boundary_accounting": {
     "claimed_parent_infinity_faces": 0,
     "claimed_parent_wall_faces": 0,
     "coordinate_faces": 18,
+    "face_classification": "ARTIFICIAL_SCOPE_BOUNDARY_ONLY",
     "faces_accounted": [
       {
         "side": "lower",
@@ -153,7 +160,9 @@
     "projection_minor_digest",
     "projection_minor_interval",
     "boundary_face_count",
+    "parent_infinity_claim",
     "scope_orbit_transport",
+    "coupled_registration_global_rewrite",
     "theorem_score"
   ],
   "non_consequences": [
@@ -869,6 +878,47 @@
         "terms": 24
       }
     ],
+    "row2599_comparison": {
+      "consequence": "the certified box is not in the row-2599 parent chamber",
+      "reference_catalog_sha256": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+      "reference_direct_parent_sign_sha256": "da921eb7d3a24d2fb642d966c1c1a3eb0159e98e2e16583ed05089915e561e4d",
+      "reference_normalized_parent_sign_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+      "reference_parent_index": 2599,
+      "reference_verification_command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_parent_face_gate.py",
+      "same_uniform_parent_cell": false,
+      "sign_mismatch_count": 29,
+      "sign_mismatch_labels": [
+        "1236",
+        "1237",
+        "1246",
+        "1247",
+        "1256",
+        "1257",
+        "1258",
+        "1267",
+        "1278",
+        "1346",
+        "1347",
+        "1348",
+        "1357",
+        "1358",
+        "1368",
+        "1378",
+        "1457",
+        "1467",
+        "1468",
+        "1478",
+        "1567",
+        "1568",
+        "1578",
+        "1678",
+        "2358",
+        "2458",
+        "2568",
+        "2578",
+        "5678"
+      ]
+    },
     "sign_definite_brackets": 70
   },
   "projection": {
@@ -899,6 +949,7 @@
       "e",
       "h"
     ],
+    "geometric_consequence": "the triple-zero set is smooth of dimension six near its box intersection and projection to the six base variables is a local diffeomorphism there",
     "jacobian_minor_at_center": "-1000407/686",
     "jacobian_minor_interval": [
       "-554912474289739698651/193091834023510016",
@@ -927,12 +978,22 @@
     "orbit_transport_claimed": false,
     "s8_sign_transport_claimed": false
   },
-  "semantic_sha256": "6feff1611ba767c3ca9411b1178a49b0052a85eb80d7c713eb642c5195db684d",
+  "semantic_sha256": "c14a850a03b4ab0028b41f5c2700e67470a45701e481470085123e0cdde6d43c",
   "status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
   "theorem_accounting": {
     "final_unresolved_triple_orbits_after": 1162302,
     "final_unresolved_triple_orbits_before": 1162302,
     "score_after": "2/9",
     "score_before": "2/9"
+  },
+  "theorem_effect": "A nonvacuous smooth local triple-zero compiler fixture is proved in one uniform parent chamber distinct from row 2599, but only artificial box-boundary reach is shown; no complete orbit, genuine parent boundary, or invariant obligation is covered, so the honest 9DVL score remains 2/9.",
+  "topological_argument": {
+    "boundary_avoiding_component_is_compact": true,
+    "boundary_avoiding_component_is_open_in_the_smooth_zero_set": true,
+    "boundary_avoiding_component_is_smooth": true,
+    "contradiction": "no nonempty subset of R6 is both open and compact",
+    "projected_component_image_is_compact": true,
+    "projected_component_image_is_nonempty": true,
+    "projected_component_image_is_open_in_R6": true
   }
 }

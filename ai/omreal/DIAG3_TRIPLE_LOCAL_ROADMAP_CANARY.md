@@ -40,6 +40,17 @@ explicit that the center and coarse interval behavior were already known from
 reconnaissance; this was not a blinded experiment.  No adaptive radius
 reduction or pivot replacement was permitted in the formal run.
 
+The verifier hard-pins the complete preregistration bytes, rather than merely
+comparing the certificate with a mutable live registration.  Its SHA-256 is
+
+```text
+94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3.
+```
+
+It also checks the exact registered schema, status, finite acceptance
+contract, authenticated inputs, declared scope, proof consequence, and all
+non-consequences.
+
 The registered box has center
 
 \[
@@ -72,7 +83,15 @@ matrix
 and all `70` four-by-four brackets.  For each bracket it evaluates an exact
 direct-monomial interval enclosure on the entire closed box.  All `70/70`
 enclosures exclude zero.  Hence the box lies inside one normalized uniform
-parent cell; no box face is silently a parent wall.
+parent cell; no box face is silently a parent wall.  This cell is **not** the
+row-2599 parent chamber used by the pair branch: in the same direct-determinant
+convention, its bracket-sign vector differs from row 2599 on exactly `29` of
+the `70` brackets.  Thus “one uniform parent cell” must not be read as
+“the row-2599 parent cell.”
+The row-2599 reference is an accepted contextual dependency pinned to catalog
+SHA-256 `c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b`;
+its normalized parent-sign replay is
+`python ai/omreal/verify_diag3_pair_global_parent_face_gate.py`.
 
 The named-to-canonical factor map is authenticated by the existing
 full-space feasibility gate with semantic digest
@@ -81,7 +100,23 @@ full-space feasibility gate with semantic digest
 874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace
 ```
 
-and the three source equations are pinned by SHA-256
+and raw SHA-256
+
+```text
+8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692.
+```
+
+That mapping gate is an accepted dependency for the named-presentation to
+canonical-row identification only.  Its independent invocation is
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 \
+  python ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py
+```
+
+The gate's separate full-space feasibility decision remains fail-closed; this
+local canary does not turn that earlier decision into a global acceptance.
+The three source equations are separately pinned by SHA-256
 
 ```text
 c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8.
@@ -126,14 +161,19 @@ and direct exact interval arithmetic on the whole box gives
 ```
 
 Both endpoints are negative.  Therefore the projection has no critical point
-on `V intersect Q`.
+on `V intersect Q`.  The same nonzero `3 x 3` minor gives rank three for the
+residual Jacobian, so the triple-zero set is a smooth six-manifold near its
+intersection with the box.
 
 The point of pinning these three columns is stronger than merely proving that
 the residual Jacobian has rank three.  By the inverse-function theorem, the
 projection to `(a,b,c,f,g,i)` restricts to a local diffeomorphism on the
 six-dimensional triple-zero set throughout the box.  If a connected
 component `C` of `V intersect Q` missed the box boundary, it would be a
-compact subset of the box interior.  Its projection would be:
+compact subset of the box interior.  Because a smooth manifold is locally
+connected, this connected component is open in the smooth triple-zero set.
+The local-diffeomorphism charts therefore make its projected image open in
+`R^6`.  Its projection would be:
 
 * nonempty;
 * open in `R^6`, because the projection is a local diffeomorphism; and
@@ -144,9 +184,10 @@ proves the displayed component-coverage theorem.
 
 ## Boundary and trust boundaries
 
-All `18` coordinate faces of the closed box are explicitly included.  There
-are no internal seams.  The certificate claims zero parent-wall faces and
-zero parent-infinity faces.  Reaching this artificial box boundary is not the
+All `18` coordinate faces of the closed box are explicitly included.  They
+are classified only as artificial scope boundary.  There are no internal
+seams, and the certificate claims zero parent-wall faces and zero
+parent-infinity faces.  Reaching this artificial box boundary is not the
 same as escaping the parent cell; adjacent compatible boxes would have to be
 glued, and any eventual terminal face would have to be identified with a
 genuine parent divisor or chart infinity.
@@ -154,9 +195,12 @@ genuine parent divisor or chart infinity.
 The producer uses the repository polynomial utilities.  The verifier does
 not import the producer: it separately implements sparse rational arithmetic,
 determinants, derivatives, normalized-bracket reconstruction, direct interval
-evaluation, and semantic hashing.  It rejects `14/14` hostile changes to
+evaluation, and semantic hashing.  It rejects hostile changes to
 source identity, row identity, box, bracket accounting, projection, boundary
-scope, orbit scope, and theorem score.
+scope, orbit scope, and theorem score.  It additionally rejects a direct false
+parent-infinity claim and a coupled registration-plus-certificate rewrite that
+tries to promote the local box to global coverage, for `16/16` total hostile
+mutations.
 
 An interior-sphere negative canary is also retained.  Its projection pivot
 derivative has interval `[-2,2]`, so the verifier refuses the sign

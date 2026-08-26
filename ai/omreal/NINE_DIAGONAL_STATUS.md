@@ -635,11 +635,16 @@ they do not reduce the residue or change the theorem score.
 The same hard canary now has the first full-space local projection-roadmap
 certificate: on one radius-`1/128` rational nine-box, all 70 parent brackets
 and the fixed `(d,e,h)` residual Jacobian minor retain exact nonzero sign, and
-an exact triple-zero point lies in the box interior.  Projection to the other
-six coordinates is therefore a local diffeomorphism, so every restricted
-triple-zero component meets one of the 18 box faces.  No face is identified
-with parent infinity and no complete orbit is covered, so the unresolved
-count remains unchanged.
+an exact triple-zero point lies in the box interior.  The box is contained in
+one uniform parent chamber, but that chamber is not row 2599: their direct
+bracket-sign vectors have 29 mismatches.  The common zero set is smooth of
+dimension six there, and projection to the other six coordinates is a local
+diffeomorphism.  A boundary-avoiding component and its projected image would
+therefore be nonempty and open, while compactness would make the projected
+image compact, which is impossible in `R^6`.  Thus every restricted component
+meets one of the 18 artificial box faces.  No face is identified with parent
+infinity and no complete orbit is covered, so the unresolved count remains
+unchanged.
 See
 `DIAG3_TRIPLE_FACTOR_REDUCTION.md`,
 `DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md`,
@@ -1635,9 +1640,10 @@ component coverage; the honest score remains `2/9`.  See
 - `DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.md`, its preregistration, producer,
   independent verifier, and exact JSON certificate: one nonvacuous rational
   nine-box on the canonical hard presentation, with all 70 parent brackets
-  and one fixed projection minor sign-certified; every restricted component
-  reaches the artificial box boundary, but no parent-infinity or orbit
-  transport is claimed.
+  and one fixed projection minor sign-certified.  The box lies in one uniform
+  chamber but differs from row 2599 on 29 bracket signs; every restricted
+  component reaches the artificial box boundary, but no parent-infinity or
+  orbit transport is claimed.
 - `DIAG3_CONCURRENCE_NORMAL_FORM.md` and its verifier: the four-bilinear
   generic concurrence chart, exact degree-20 internal ramification RUR, and
   the all-26,740-factor proof that the ramification point has no fourth
