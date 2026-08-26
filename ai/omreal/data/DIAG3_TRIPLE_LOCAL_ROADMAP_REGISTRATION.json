@@ -1,0 +1,60 @@
+{
+  "schema": "diag3-triple-local-roadmap-registration-v1",
+  "registered_at": "2026-08-26",
+  "status": "REGISTERED_BEFORE_FORMAL_CERTIFICATE_RUN",
+  "discovery_disclosure": "The rational center and coarse interval behavior were selected during reconnaissance before this registration. This contract preregisters the formal exact certificate, replay, mutation, scope, and stopping decisions; it is not a claim of a blinded experiment.",
+  "declared_scope": {
+    "kind": "one closed rational box in one normalized uniform-parent cell",
+    "named_factor_presentation": [5563, 16134, 19284],
+    "canonical_unresolved_row": [5563, 4373, 23221],
+    "orbit_transport_claimed": false,
+    "s8_sign_transport_claimed": false,
+    "global_parent_cell_coverage_claimed": false
+  },
+  "authenticated_inputs": {
+    "critical_system": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
+    "critical_system_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "source_gate": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+    "source_gate_semantic_sha256": "874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace"
+  },
+  "fixed_box": {
+    "variables": ["a", "b", "c", "d", "e", "f", "g", "h", "i"],
+    "center": ["-19/28", "-23/7", "-27/14", "-5", "-4", "-3", "-1", "2", "4"],
+    "radius": "1/128",
+    "boundary_faces": 18
+  },
+  "fixed_projection": {
+    "fiber_columns_zero_based": [3, 4, 7],
+    "fiber_variables": ["d", "e", "h"],
+    "base_columns_zero_based": [0, 1, 2, 5, 6, 8],
+    "base_variables": ["a", "b", "c", "f", "g", "i"]
+  },
+  "finite_acceptance_contract": {
+    "success_status": "PROVED_LOCAL_BOUNDARY_COVERAGE",
+    "success_conditions": [
+      "the three authenticated residual equations vanish exactly at the rational center",
+      "all 70 normalized parent brackets have exact sign-definite direct-monomial interval enclosures on the full closed box",
+      "the fixed 3-by-3 residual Jacobian minor has an exact sign-definite direct-monomial interval enclosure on the full closed box",
+      "the independent verifier reconstructs the source equations, 70 parent brackets, Jacobian minor, intervals, semantic digest, and all 18 boundary faces without importing the producer",
+      "every declared hostile mutation is rejected"
+    ],
+    "null_status": "BOUNDED_NO_GO",
+    "null_conditions": [
+      "the center is not an exact triple zero",
+      "some parent bracket interval contains zero",
+      "the fixed projection minor interval contains zero",
+      "independent replay or a hostile mutation test fails"
+    ],
+    "fail_closed_policy": "No adaptive radius reduction, pivot substitution, numerical tolerance, or orbit enlargement is allowed in the formal run.",
+    "resource_ceiling": "300 wall-clock seconds and 1 GiB resident memory for each producer or verifier run"
+  },
+  "proof_consequence_if_accepted": "Every connected component of the named triple-zero set restricted to the declared closed box meets one of its 18 boundary faces; the component through the center is nonvacuous.",
+  "non_consequences": [
+    "no component is proved to reach a genuine parent wall or parent infinity",
+    "no full parent cell is covered",
+    "no second representative and no S8 orbit is covered",
+    "the 1162302-row unresolved count is unchanged",
+    "the independent pair H_c^1 obligation is unchanged",
+    "the 9DVL score remains 2/9"
+  ]
+}
