@@ -1,0 +1,37 @@
+name: Build pinned SymPy tool cache
+
+on:
+  push:
+    branches:
+      - ops/tool-cache-sympy-20260826
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  wheel-cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download pinned wheels
+        run: |
+          mkdir -p tool-cache
+          python -m pip download --only-binary=:all: --dest tool-cache sympy==1.14.0
+          sha256sum tool-cache/* | tee tool-cache/SHA256SUMS
+          {
+            echo 'SymPy project tool cache'
+            echo 'sympy==1.14.0'
+            python --version
+            python -m pip --version
+          } > tool-cache/MANIFEST.txt
+      - name: Upload wheel cache
+        uses: actions/upload-artifact@v4
+        with:
+          name: sympy-1.14.0-python312-wheel-cache
+          path: tool-cache/
+          if-no-files-found: error
+          retention-days: 90
