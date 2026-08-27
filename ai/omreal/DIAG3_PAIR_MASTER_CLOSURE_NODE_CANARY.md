@@ -133,6 +133,30 @@ an unsigned branch change and nonzero `d^2`.
 The generated certificate is
 `data/DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.json`.
 
+## Lean kernel replay
+
+The finite semantic layer also has a Lean 4 replay in
+[`../../formal/lean/NineDVLFormal/NodeCanary.lean`](../../formal/lean/NineDVLFormal/NodeCanary.lean).
+It reconstructs the closed bad subcomplexes and balanced pair complexes from
+the 17 simplicial cells, checks integral `d1*d2=0`, and proves all 216 ordered
+profile triples have zero middle residue over `F_2`.  Separate theorems reject
+four fail-closed mutations: false global coverage, invented parent infinity,
+incomplete signature accounting and corrupt integral incidence.
+
+The proofs use kernel reduction (`decide`), not `native_decide`; their printed
+axiom audit contains only Lean's `propext`.  A deterministic generated module
+carries the JSON payload into Lean, while an independent Python bridge verifier
+checks the exact certificate byte digest and semantic fields and rejects six
+bridge mutations.  The formal replay deliberately does not duplicate the
+semialgebraic branch reconstruction performed above, so its scope is still
+local and the 9DVL ledger remains **2/9**.
+
+```console
+python ai/omreal/build_diag3_pair_master_closure_node_lean.py --check
+python ai/omreal/verify_diag3_pair_master_closure_node_lean.py
+cd formal/lean && lake build
+```
+
 ## Next bounded target
 
 The next compiler stage is a **multi-box two-dimensional full-support

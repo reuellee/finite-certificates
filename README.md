@@ -83,6 +83,8 @@ The procedures developed along this route are also maintained as a research outp
 
 The compiler now has three proof-producing local atlases.  The generated [`17-cell exact master-closure object`](ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md) covers one two-dimensional full-support node disk in row 2599.  The [`3 x 3 exact multi-box atlas`](ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_MULTIBOX_CANARY.md) then glues four no-wall, four one-wall and one transverse two-wall box into an 81-cell object.  The [`64-box first-event atlas`](ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_FIRST_EVENT.md) crosses a genuinely new affine residual branch: 42 no-wall, 20 one-wall and two transverse two-wall boxes glue by 171 exact boundary words into a 399-cell regular-CW object.  Its hostile verifier replays all 84,840 labelled restrictions, all 70 parent brackets, all 97,224 extension signatures and all 512 profile triples, with zero middle residue and 13/13 corruptions rejected.  The artificial boundary and box seams remain distinct from true parent infinity.
 
+The 17-cell node object now also has a [`Lean 4 kernel replay`](formal/lean/README.md).  It proves integral incidence, closed bad subcomplexes and zero middle residue for all 216 profile triples, rejects fail-closed scope and data mutations, and consumes a deterministically generated, independently audited JSON data bridge.  This is a local formalization checkpoint, not a global diagonal-three proof; the ledger remains **2/9**.
+
 The new [`exact chart-0-to-chart-89 source transition`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_TRANSITION.md) changes the parent germ along the objectively smallest parent-safe chart-zero edge.  Exact Sturm replay screens all 17,824 factors, orders 1,237 simple root crossings, and reconstructs the chart-89 factor state over a 2,477-cell regular CW path.  Its [`complete label continuation`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_LABELS.md) transports the 26,112-tope set across all 1,238 chambers using 1,179 antipodal simplicial mutations and 58 exact compound updates.  It reconstructs the independently stored raw chart-89 label state and yields 2,458 exact signature profiles.  Global parent-cell coverage remains open, so the honest theorem score is still 2/9.
 
 The coverage-oriented source graph now also has an [`exact three-block bridge`](ai/omreal/DIAG3_PAIR_PARENT_SOURCE_BLOCK_BRIDGE.md) from chart zero to chart 152, which was isolated in the 105-edge straight-segment forest.  Replacing moving columns 6, 7 and 8 one at a time keeps all 70 parent brackets strict.  Exact Sturm replay screens all 17,824 residual factors on each segment, orders 5,612 simple crossings, reconstructs the chart-152 factor state and produces an 11,231-cell regular-CW path.  The bridge glues to the labelled chart-0-to-chart-89 path at their exact common chart-zero vertex and raw 26,112-label set.  It embeds one new germ but is not parameter-space coverage; the score remains 2/9.
@@ -150,9 +152,11 @@ PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support_base_projection.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support_final_section_lift.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_global_four_support_open_cell_v_lift.py
+PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_pair_master_closure_node_lean.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_exact_semialgebraic_toolkit.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_run_all_ci_shards.py
 PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_completion_open_object.py
+cd formal/lean && lake build
 ```
 
 ## Results index

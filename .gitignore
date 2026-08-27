@@ -15,3 +15,4 @@ ai/maxout/paper/*.out
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+formal/lean/.lake/
