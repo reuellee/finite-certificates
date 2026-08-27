@@ -1,0 +1,6 @@
+name = "nine_dvl_formal"
+version = "0.1.0"
+defaultTargets = ["NineDVLFormal"]
+
+[[lean_lib]]
+name = "NineDVLFormal"

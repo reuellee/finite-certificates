@@ -28,6 +28,27 @@ jobs:
       - name: Prove exact shard union and disjointness
         run: python ai/omreal/verify_run_all_ci_shards.py
 
+  formal-lean-node-canary:
+    name: Lean kernel replay of 9DVL node canary
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit the generated JSON-to-Lean data bridge
+        run: |
+          python ai/omreal/build_diag3_pair_master_closure_node_lean.py --check
+          python ai/omreal/verify_diag3_pair_master_closure_node_lean.py
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal/lean
+          build: true
+          test: false
+          lint: false
+          use-mathlib-cache: false
+
   suite-shards:
     name: verifier suite shard ${{ matrix.shard }}/8
     needs: suite-shard-contract
@@ -59,7 +80,7 @@ jobs:
 
   suite:
     name: verifier suite (complete)
-    needs: [suite-shard-contract, suite-shards]
+    needs: [suite-shard-contract, suite-shards, formal-lean-node-canary]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
