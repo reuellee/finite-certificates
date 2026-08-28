@@ -73,7 +73,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install exact replay dependency
-        run: python -m pip install --upgrade pip numpy
+        run: python -m pip install --upgrade pip numpy scipy sympy
       - name: Replay the exact bounded missed-component census
         run: >-
           PYTHONDONTWRITEBYTECODE=1 python
