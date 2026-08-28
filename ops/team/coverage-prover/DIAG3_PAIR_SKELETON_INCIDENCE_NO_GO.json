@@ -1,0 +1,150 @@
+{
+  "actual_source_factor": {
+    "center_value": "16882352218659066701475442909197660/50889333335877803302402310808043927",
+    "degree": 1,
+    "factor_id": 137,
+    "orbit_type": [
+      0,
+      2,
+      19,
+      53
+    ],
+    "positive_safe_box": {
+      "minimizing_vertex_signs": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "minimum_signed_vertex_value": "34524168010477890801319304767228763753/104221354671877741163319932534873962496",
+      "vertex_count": 512
+    },
+    "retained_crossing_edges": [
+      22,
+      60,
+      61,
+      83,
+      86,
+      98
+    ],
+    "term_count": 2
+  },
+  "base_revision": "ec362dba8a912bc4749c004641aee2da0a88dc05",
+  "canaries": {
+    "hostile": [
+      "changed pinned input digest",
+      "claim that H is an accepted primitive residual factor",
+      "claim of actual-factor component coverage",
+      "claim of global parent-cell coverage",
+      "pair-branch closure",
+      "promotion to 3/9"
+    ],
+    "negative": "radius 1 is rejected because the exact closest retained-edge distance squared is less than 1",
+    "null": "center chart 0 is rejected because it is a retained-edge endpoint and has distance zero",
+    "positive": "center chart 9, box half-width 1/4096, sphere radius 1/8192 passes"
+  },
+  "countermodel": {
+    "definition": "H(x)=F_137(x)*q(x)",
+    "logical_consequence": "Parent-safe factor incidence, or even complete exact restriction roadmaps on the finite skeleton, does not imply ambient component coverage.",
+    "off_skeleton": "Z(H) contains the compact connected sphere Z(q), which is disjoint from Z(F_137), the retained skeleton, and the parent boundary.",
+    "on_skeleton": "q>0, hence H and F_137 have exactly the same signs, zeros, root order, and root multiplicities on all 40 retained edges."
+  },
+  "format": "diag3-pair-skeleton-incidence-information-no-go-v1",
+  "inputs": {
+    "combined_two_edge_skeleton": "dcb707220df3e61b1a94eeedcf8e46b6602f30d405f4a92fc542c0f52f672806",
+    "component_collar": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "decision_ledger": "7922d769aa30a84c5d208dec92d2e78d5c7744cc6184ea1d42aaeadf947761b3",
+    "factor_polynomial_source": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "parent_catalog": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "parent_polynomial_semantic_sha256": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "point_bank": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "segment_cover": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307"
+  },
+  "required_missing_hypothesis": {
+    "alternatives": [
+      "A source-specific theorem proving each actual residual wall component meets the skeleton or genuine parent boundary.",
+      "A boundary-aware polar/critical-point roadmap meeting every component, with exact continuation to the skeleton or a tagged parent wall.",
+      "A stronger source-specific connectedness/graph theorem for every actual primitive residual wall in the strict parent cell."
+    ],
+    "recommended_next_experiment": "Run a global Bernstein pivot/monotonicity screen on the 10844 crossed factors, then build relative polar-anchor certificates only for the residue; do not compile the remaining 38 skeleton edges first."
+  },
+  "scope": {
+    "actual_factor_component_coverage_decided": false,
+    "actual_primitive_residual_factor_counterexample": false,
+    "global_parent_cell_coverage": false,
+    "honest_9dvl_score": "2/9",
+    "pair_branch_closed": false,
+    "proved_nonconsequence": "No upgrade from skeleton-only data without an off-skeleton theorem tied to the pinned primitive polynomial family."
+  },
+  "semantic_sha256": "6c285b83e1a40c9076992f1c43cab0560a61c63ffbaa383b0d72ffd6443b55a1",
+  "skeleton_separation": {
+    "all_edge_distances_strictly_greater_than_radius": true,
+    "closest_edge": {
+      "charts": [
+        7,
+        33
+      ],
+      "closest_parameter": "6286789932680467314812810757463257047182072021548821640864217417457545409251544274323084251250806401673962926690038336854014928559454897315657641375/11957313082238439066007967509871792334441132748625391122841832048551122891714317384415421126524310606783529841929860147466705510410427098597600161647",
+      "distance_squared": "1001352716462150522331863198401404321029225257275216821282034014398808378526939511406653550464884809588159135490226218933253014149836789388516425077857720880387585662854601496892750337445574207619506039/5577795754861576273393286657197508302099629540160635230998909653306208790032928101029099733722808731549671902961456898873183915341686684693401593789223549581475420982076115392842758632017378756795088800",
+      "edge_index": 102
+    },
+    "distance_rows_sha256": "bd3bfd8669ccb27d14bc0a8dd21eb9bb583fd97d1f39967a965ed968e014fa48",
+    "radius_squared": "1/67108864",
+    "retained_edges": 40
+  },
+  "sphere_factor": {
+    "compact": true,
+    "connected": true,
+    "contained_in_strict_parent_box": true,
+    "definition": "q(x)=sum_{j=0}^8 (x_j-center_j)^2-(1/8192)^2",
+    "disjoint_from_actual_source_factor_zero_set": true,
+    "meets_parent_boundary": false,
+    "meets_retained_skeleton": false,
+    "radius": "1/8192",
+    "zero_set": "S^8"
+  },
+  "status": "EXACT_INFORMATION_NO_GO_FOR_SKELETON_ONLY_COMPONENT_INFERENCE",
+  "strict_parent_box": {
+    "center": [
+      "14894951404649337/15846295740726755",
+      "57114913870250741/67713103351349909",
+      "41830336720588715/93226340771529809",
+      "15442035404035232/18844083022516909",
+      "4276755889487534555/5233995284403800603",
+      "191500693162673675/554314059931709531",
+      "12855407857837805/15534969573611597",
+      "3945412680735540955/4314880028626591099",
+      "4719127160822945/9722846615379509"
+    ],
+    "center_chart": 9,
+    "certificate": "Each target-signed parent bracket is multiaffine, so its values on the box lie in the convex hull of its 512 exact vertex values.",
+    "dimension": 9,
+    "global_minimum": {
+      "parent_bracket": "1268",
+      "target_sign": -1,
+      "value": "182660869277039566038164117523419393/823829454718998280561737774965903546368",
+      "vertex_signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    "half_width": "1/4096",
+    "minima_sha256": "98e91d3f5792145a8827bafc872e0b7382c64871fb26bbe40df55f3d27fc4073",
+    "parent_bracket_count": 70,
+    "parent_index": 2599,
+    "vertices_checked_per_bracket": 512
+  },
+  "target_ledger_id": "diag3_pair_hc1"
+}

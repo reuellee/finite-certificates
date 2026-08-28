@@ -1,0 +1,60 @@
+track_id: cycle-2026-08-28-librarian-row2599-coverage
+base_revision: ec362dba8a912bc4749c004641aee2da0a88dc05
+outcome: inconclusive
+summary: >-
+  Compiling the remaining 38 factor-hitting edges is not the best next pair
+  action; select a profile-universal order-two Hardt--Mayer--Vietoris
+  compiler and first test a parent-safe triangle attached to edges 27 and 39.
+artifacts:
+  - path: ops/team/coverage-theory/ARCHITECTURE_AUDIT.md
+    digest: d5c0a7d5e37af5590d178af1134fff925ed8140eb429e87e4985c47f8db6b1ab
+replay:
+  command: >-
+    sha256sum ops/team/coverage-theory/ARCHITECTURE_AUDIT.md &&
+    git diff --check
+  result: >-
+    exit 0; artifact digest matched
+    d5c0a7d5e37af5590d178af1134fff925ed8140eb429e87e4985c47f8db6b1ab
+coverage:
+  included: >-
+    Exact topology of the selected 40-edge row-2599 factor-hitting graph;
+    repository no-go and obligation audit; four architecture comparison;
+    primary-source audit; exact rational exploratory preflight for the
+    chart-0/chart-89/chart-113 triangle.
+  excluded: >-
+    Independent replay of the triangle preflight, complete 17,824-factor
+    triangle census, wall-component coverage, signature labels, global
+    parent-cell coverage, pair injectivity, triple noncompactness, and every
+    ledger promotion.
+canaries:
+  positive: >-
+    Selected edges 27 and 39 share chart 0 and define the two accepted axes
+    of the proposed barycentric triangle.
+  negative: >-
+    The affine square's fourth corner violates nine named signed parent
+    brackets, so the experiment must use the barycentric triangle.
+  null: >-
+    If every triangle-nonempty factor already occurs on edges 27 or 39,
+    retire this triangle without compiling labels.
+  hostile: >-
+    Treating the triangle boundary as parent infinity or the triangle as
+    global parent coverage is explicitly rejected.
+source_accounting:
+  used: >-
+    Basu--Pollack--Roy arXiv:math/0603248; Basu--Roy arXiv:1305.3211;
+    Hardt DOI 10.2307/2374240; Kishimoto--Yushima arXiv:2202.03659;
+    Roudneff--Sturmfels DOI 10.1007/BF00151346;
+    Sturmfels--Ziegler DOI 10.1007/BF02573961; Postnikov
+    arXiv:math/0609764; pinned repository evidence at ec362dba.
+  unused_or_missing: >-
+    No primary source supplies the project-specific profile-universal
+    relative order-two cover lemma; it is the exact new lemma to prove.
+open_defects:
+  - The triangle preflight has discovery-side exact arithmetic but no independent verifier.
+  - The order-two cover lemma is unproved and its generator complexity is unknown.
+  - The independent 1,162,302-row triple obligation remains open.
+next_action: >-
+  Run the 45-minute fixed triangle contract: independently certify all 70
+  parent brackets, classify all 17,824 factor restrictions, and emit the
+  exact IDs having an interior zero absent from both boundary edge roadmaps.
+ledger_change_recommended: none

@@ -20,6 +20,10 @@ EDGE39_LABELS_PATH = DATA / "DIAG3_PAIR_PARENT_SOURCE_LABELS_EDGE39_0_113.json"
 TWO_EDGE_SKELETON_PATH = (
     DATA / "DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.json"
 )
+TRIANGLE_PILOT_PATH = (
+    HERE.parent.parent
+    / "ops/team/triangle-certificate/ROW2599_ORDER2_TRIANGLE_PILOT.json"
+)
 POINTER = "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json"
 
 
@@ -70,6 +74,7 @@ def main() -> None:
     edge39_transition = load(EDGE39_TRANSITION_PATH)
     edge39_labels = load(EDGE39_LABELS_PATH)
     two_edge_skeleton = load(TWO_EDGE_SKELETON_PATH)
+    triangle_pilot = load(TRIANGLE_PILOT_PATH)
 
     assert set(ledger) == {
         "format",
@@ -91,12 +96,12 @@ def main() -> None:
     }
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-27"
+    assert ledger["as_of"] == "2026-08-28"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
-        "audited_commit": "e8600495e70e6f5548cb0c73e0cfd2f33faacc0b",
-        "merged_pull_request": 37,
+        "audited_commit": "ec362dba8a912bc4749c004641aee2da0a88dc05",
+        "merged_pull_request": 38,
     }
     assert ledger["theorem"] == {
         "id": "9DVL",
@@ -308,6 +313,7 @@ def main() -> None:
         "thirty_seventh_triple_local_projection_roadmap_canary",
         "thirty_eighth_pair_fullsupport_component_collar",
         "thirty_ninth_pair_fullsupport_edge39_labeled_skeleton_and_collar_attachment",
+        "fortieth_pair_order2_triangle_coverage_discriminator",
         "theorem_effect",
         "next_stage",
     }
@@ -1880,17 +1886,98 @@ def main() -> None:
         "ARTIFICIAL_SCOPE_BOUNDARY_ONLY"
     )
     assert len(triple_local_roadmap["hostile_mutations"]) == 18
+    triangle = progress["fortieth_pair_order2_triangle_coverage_discriminator"]
+    assert triangle == {
+        "status": "PROVED_BOUNDED_ORDER2_COVERAGE_DISCRIMINATOR",
+        "scope": (
+            "the exact closed barycentric triangle conv(chart 0, chart 89, chart 113) "
+            "in the strict row-2599 full-support parent cell; two boundary sides are "
+            "compiled edges 27 and 39, the chart-89-to-chart-113 side is uncompiled, "
+            "and no global component or parent-cell coverage is claimed"
+        ),
+        "support": [15, 15, 15],
+        "parent_index": 2599,
+        "parameter_domain": "s>=0,t>=0,s+t<=1",
+        "parameterization": "x(s,t)=chart0+s(chart89-chart0)+t(chart113-chart0)",
+        "parent_brackets_replayed": 70,
+        "parent_brackets_strict": 70,
+        "parent_controls_sha256": (
+            "2deaefbb51263516d044ea1cdc1a6156c82288e41b5332410f01decabca66524"
+        ),
+        "candidate_factors": 17_824,
+        "certified_interior_zero_factors": 5_665,
+        "certified_closed_triangle_empty_factors": 12_096,
+        "unresolved_factors": 63,
+        "unresolved_reason": "MIXED_SIMPLEX_BERNSTEIN_AT_DEPTH_LIMIT",
+        "compiled_edge_indices": [27, 39],
+        "edge27_distinct_event_factors": 1_217,
+        "edge39_distinct_event_factors": 5_209,
+        "compiled_edge_union_distinct_event_factors": 5_616,
+        "interior_zero_absent_from_both_compiled_edges": 77,
+        "third_boundary_edge": "chart89_to_chart113_NOT_COMPILED",
+        "triangle_boundary_is_parent_infinity": False,
+        "producer_semantic_sha256": (
+            "dd67477a2e4068138cbf1a3821e4a992e80322f454bc29ef059a215d99ff49ba"
+        ),
+        "independent_verification": "COMPLETE_STANDALONE_RECONSTRUCTION",
+        "independent_hostile_corruptions_rejected": 10,
+        "component_coverage": "NOT_CLAIMED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "theorem_effect": (
+            "The two-edge source tree is exactly proved locally incomplete as a "
+            "wall-event detector: 77 factor zero sets meet the triangle interior but "
+            "neither compiled incident edge. This bounded discriminator supplies a "
+            "useful two-cell canary, not a component theorem or invariant closure, so "
+            "the honest 9DVL score remains 2/9."
+        ),
+        "evidence": [
+            "ops/team/triangle-certificate/ROW2599_ORDER2_TRIANGLE_PILOT.json",
+            "ops/team/triangle-certificate/build_order2_triangle_pilot.py",
+            "ops/team/triangle-referee/verify_order2_triangle_pilot.py",
+            "ops/team/triangle-referee/RESULT_HANDOFF.md",
+            "ops/team/coverage-prover/DIAG3_PAIR_SKELETON_INCIDENCE_NO_GO.json",
+            "ops/team/coverage-falsifier/PROOF_NOTE.md",
+            "ops/team/coverage-theory/ARCHITECTURE_AUDIT.md",
+        ],
+    }
+    triangle_factors = triangle_pilot["factor_classification"]
+    assert triangle_pilot["semantic_sha256"] == triangle["producer_semantic_sha256"]
+    assert triangle_pilot["scope"]["parent_index"] == triangle["parent_index"]
+    assert len(triangle_pilot["exact_parent_residence"]["brackets"]) == triangle[
+        "parent_brackets_replayed"
+    ]
+    assert triangle_pilot["exact_parent_residence"]["all_controls_strictly_positive"]
+    assert triangle_pilot["exact_parent_residence"]["aggregate_controls_sha256"] == (
+        triangle["parent_controls_sha256"]
+    )
+    assert (
+        triangle_factors["interior_zero_count"],
+        triangle_factors["empty_closed_triangle_count"],
+        triangle_factors["unresolved_count"],
+        triangle_factors["candidate_factor_count"],
+    ) == (
+        triangle["certified_interior_zero_factors"],
+        triangle["certified_closed_triangle_empty_factors"],
+        triangle["unresolved_factors"],
+        triangle["candidate_factors"],
+    )
+    assert len(triangle_pilot["interior_zero_absent_from_edges_27_39"]["factor_ids"]) == (
+        triangle["interior_zero_absent_from_both_compiled_edges"]
+    )
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
     assert progress["next_stage"] == (
-        "compile exact ordered residual roadmaps and compound-event extension-label "
-        "continuation on the 38 pending edges, then continue component/closure attachments "
-        "on the exact 40-edge full-support source cover while preserving that finite "
-        "skeleton coverage is not parent-cell/component coverage; alternatively replace "
-        "it with a direct coverage-certified parent-cell roadmap; retain section-960 and "
-        "section-550 only as compiler stress tests and retain the independent triple "
-        "boundary-complete projection-critical roadmap route"
+        "retire bulk compilation of the 38 remaining forest edges as the primary workload; "
+        "first resolve the 63 depth-limit triangle factors and compile/classify the "
+        "chart-89-to-chart-113 side, then construct exact component, specialization, "
+        "closure, relative-infinity, and signature-profile incidence for the 77 new "
+        "interior-only factors as the first profile-universal order-two Hardt-Mayer-"
+        "Vietoris canary; in parallel classify the global 5803-factor feasibility residue "
+        "or run a globally scoped factor-19069 component pilot, while retaining the "
+        "independent triple boundary-complete projection-critical roadmap route"
     )
 
     digest = git_blob_sha1(LEDGER_PATH)

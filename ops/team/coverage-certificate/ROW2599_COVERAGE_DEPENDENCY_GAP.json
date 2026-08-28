@@ -1,0 +1,139 @@
+{
+  "base_revision": "ec362dba8a912bc4749c004641aee2da0a88dc05",
+  "boundary_tag_contract": {
+    "allowed_in_global_complete": [
+      "INTERNAL_CONTINUATION",
+      "CHART_SEAM",
+      "GENUINE_RELATIVE_PARENT_FACE",
+      "GENUINE_RELATIVE_PARENT_INFINITY"
+    ],
+    "forbidden_in_global_complete": [
+      "ARTIFICIAL_SCOPE_FRONTIER",
+      "UNCLASSIFIED_FRONTIER"
+    ],
+    "rules": {
+      "ARTIFICIAL_SCOPE_FRONTIER": "is a dependency gap, never a relative escape",
+      "CHART_SEAM": "must pin an invertible transition and matched algebraic germ",
+      "GENUINE_RELATIVE_PARENT_FACE": "must pin vanishing parent brackets and all remaining target signs",
+      "GENUINE_RELATIVE_PARENT_INFINITY": "must pin a compactification face, chart cocycle, and relative-face ID",
+      "INTERNAL_CONTINUATION": "must have a unique reverse incidence and matching factor germ",
+      "UNCLASSIFIED_FRONTIER": "is a dependency gap"
+    }
+  },
+  "canary_contract": {
+    "hostile": "after recomputing the semantic seal, reject artificial-as-relative, missing input pin, invented component count, false 40/40 compilation, altered factor accounting, or 3/9 promotion",
+    "negative": "reject a GLOBAL_COMPLETE claim while any required block is missing",
+    "null": "accept this dependency-gap record without theorem promotion",
+    "positive": "accept the pinned factor-19069 local pilot only with local scope"
+  },
+  "exact_accounting": {
+    "candidate_factor_count": 17824,
+    "compiled_source_edge_indices": [
+      27,
+      39
+    ],
+    "crossed_factor_classes_covered_by_selected_edges": 10844,
+    "empty_factor_ids_sha256": "f9022c922d56c69ea541d6098cea89004bdfcff73b01a411a159a78b5c369484",
+    "known_strict_interior_empty_factor_count": 1177,
+    "known_strict_interior_nonempty_factor_count": 10844,
+    "maximum_current_active_wall_count": 16647,
+    "pending_source_edge_count": 38,
+    "selected_source_edge_count": 40,
+    "unresolved_factor_ids_sha256": "0c85f0e7370963df311a5a7d04e175e4a801b79c54fe0600a69bb777bf30a76a",
+    "unresolved_feasibility_factor_count": 5803
+  },
+  "first_decisive_gap": {
+    "consequence": "Compiling the remaining 38 edges cannot close global coverage by itself.",
+    "id": "unclassified_factor_feasibility",
+    "missing_count": 5803,
+    "statement": "The retained source bank has no crossing for these factors, and current exact artifacts prove neither strict-parent emptiness nor nonemptiness. A nonempty one would already be a wall missed by the 40-edge skeleton."
+  },
+  "format": "diag3-row2599-component-coverage-dependency-gap-v1",
+  "inputs": {
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.json": "dcb707220df3e61b1a94eeedcf8e46b6602f30d405f4a92fc542c0f52f672806",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json": "fb73899be7ff4aed5739b7f6a999d623db2a0504f212d5fe5aba35e1df1b1465",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "7922d769aa30a84c5d208dec92d2e78d5c7744cc6184ea1d42aaeadf947761b3",
+    "ops/team/edge39-prover/EDGE39_EXACT_ROADMAP.json": "cd4cc32efc2d71a609a01b2747e5d6230b7115a7ee23423b6a3175a71a1cf6c1"
+  },
+  "local_pilot": {
+    "components_outside_declared_scope": "UNTESTED",
+    "declared_scope": "two-dimensional rational collar on source edge 39",
+    "declared_scope_component_count": 1,
+    "factor_id": 19069,
+    "frontier": [
+      {
+        "cell_id": "w_minus",
+        "tag": "ARTIFICIAL_SCOPE_FRONTIER"
+      },
+      {
+        "cell_id": "w_plus",
+        "tag": "ARTIFICIAL_SCOPE_FRONTIER"
+      }
+    ],
+    "genuine_relative_escapes": [],
+    "global_acceptance": false,
+    "source_skeleton_hits": [
+      "w_zero"
+    ],
+    "status": "EXACT_LOCAL_SCHEMA_PILOT_ONLY"
+  },
+  "required_global_blocks": [
+    {
+      "id": "factor_disposition",
+      "missing": "5803 factors have no exact disposition.",
+      "obligation": "Every one of the 17824 pinned factors is exactly EMPTY_STRICT_PARENT or has a complete nonempty component quotient."
+    },
+    {
+      "id": "component_quotient",
+      "missing": "No global component count or component incidence exists for any factor.",
+      "obligation": "For every nonempty factor, an exact projection-critical roadmap or equivalent collar atlas enumerates all connected components and all continuation incidences."
+    },
+    {
+      "id": "skeleton_hit_map",
+      "missing": "The cover records factor-class witnesses, not component-to-hit surjectivity.",
+      "obligation": "Every enumerated wall component has at least one exact intersection cell on one of the 40 retained source edges."
+    },
+    {
+      "id": "frontier_balance",
+      "missing": "The only exact collar terminates at two artificial scope-frontier cells; no global relative escape inventory exists.",
+      "obligation": "Every roadmap/collar frontier germ is paired by internal continuation or a chart seam, or is exactly tagged as a genuine relative parent face/infinity escape."
+    },
+    {
+      "id": "ambient_exclusion",
+      "missing": "No coverage-certified parent-domain complement or equivalent no-missed-component proof.",
+      "obligation": "The complement of the certified wall collars/roadmap is covered by exact factor-nonzero regions, excluding disconnected unseeded components."
+    }
+  ],
+  "row2599_resource_estimate": {
+    "candidate_degree_census": {
+      "1": 10,
+      "2": 599,
+      "3": 4198,
+      "4": 8258,
+      "5": 4286,
+      "6": 473
+    },
+    "generic_dense_projection_critical_bezout_sum": 2732978444,
+    "interpretation": "Pessimistic dense bound before boundary strata; it rules out an unstructured global projection-critical solve under the 45-minute/12-GiB track ceiling, not a sparse or family-batched roadmap.",
+    "recommended_architecture": "streamed factor-family shards: exact feasibility first, then seeded adaptive Bernstein collars plus exact complement exclusion and a compact component quotient"
+  },
+  "scope": {
+    "ambient_parameter_dimension": 9,
+    "global_parent_cell_coverage": "NOT_CERTIFIED",
+    "honest_9dvl_score": "2/9_UNCHANGED",
+    "parent_index": 2599,
+    "relative_escape_coverage": "NOT_CERTIFIED",
+    "support": [
+      15,
+      15,
+      15
+    ],
+    "wall_component_coverage": "NOT_CERTIFIED"
+  },
+  "semantic_sha256": "1119d08857d46f9aec1c9fba9da9e7764e95dc1129a0fbdc7f75920da3131777",
+  "status": "INCOMPLETE_DEPENDENCY_GAP",
+  "theorem_effect": "Exact architectural null result: current inputs do not certify that the 40-edge skeleton meets every strict-parent residual-wall component or records every genuine relative escape. The pair obligation and honest 9DVL score remain unchanged."
+}

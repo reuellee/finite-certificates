@@ -1,0 +1,61 @@
+track_id: cycle-2026-08-28-falsifier-coverage
+base_revision: ec362dba8a912bc4749c004641aee2da0a88dc05
+outcome: disproved
+summary: >-
+  Exact factor 1118 has two interior roots but equal endpoint signs on retained
+  edge 39, and the accepted edge-39 roadmap contains 118 such factors, so
+  endpoint-sign cover data do not determine root or component coverage.
+artifacts:
+  - path: ops/team/coverage-falsifier/EXACT_HIDDEN_ROOT_CENSUS_EDGES_0_39.json
+    digest: 454207f808ae41eb25c8b9e7c29dfa58a53942fff6acf229c7cef6f4de95ed9f
+  - path: ops/team/coverage-falsifier/prototype_exact_hidden_root_census.py
+    digest: 62e8720400f31548daa9e5d23b9bf22a291653c4e50bcd02431eb77f9c831bb2
+  - path: ops/team/coverage-falsifier/PROOF_NOTE.md
+    digest: 48ade3f5a04b857a3316d294738aeb30f0db578c1f0528cc2e31b13e9a19b190
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/coverage-falsifier/prototype_exact_hidden_root_census.py
+    --workers 2 --edge-indices 0,39
+    --output ops/team/coverage-falsifier/EXACT_HIDDEN_ROOT_CENSUS_EDGES_0_39.json
+  result: >-
+    exit 0; 13,960 exact factor-segment pairs; zero hidden roots among the
+    6,980 endpoint-uncrossed candidates on each of edges 0 and 39; semantic
+    SHA-256 071133c821c6b94fe6160ec19dba75b68ce342e3daeaf00b4b72132cc62b6950
+coverage:
+  included: >-
+    Direct Sturm witness for factor 1118; authenticated complete edge-39
+    5,091/118 root-parity census; all 6,980 endpoint-uncrossed candidates on
+    exact certified segment indices 0 and 39.
+  excluded: >-
+    The other 103 segments, points off all source segments, global wall
+    connectedness, global parent-cell coverage, pair injectivity, and the
+    triple obligation. No factor from the 5,803 feasibility-unknown residue is
+    reclassified.
+canaries:
+  positive: detected exactly two roots with equal endpoint signs
+  negative: factor-1118 endpoints are nonzero and have equal signs
+  null: zero-free affine restriction has zero roots
+  hostile: endpoint roots and an identically zero restriction are rejected
+source_accounting:
+  used: >-
+    base ec362dba; cover 19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307;
+    combined skeleton dcb707220df3e61b1a94eeedcf8e46b6602f30d405f4a92fc542c0f52f672806;
+    collar 5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd;
+    edge-39 roadmap cb6eebc0df9bfeae8055c81471f09d594f8116e002caf11f62f9e865b0936dd7.
+  unused_or_missing: >-
+    Source-square and source-cube no-go artifacts were read for route context
+    but are not dependencies of the certificate; no exact all-105 hidden-root
+    census completed in this bounded handoff.
+open_defects:
+  - The edge-39 118-factor census authenticates an accepted upstream roadmap; only factor 1118 is directly rederived in this prototype.
+  - The result disproves an inference mechanism, not the possibility that a separately proved global coverage theorem could use the compiled skeleton.
+next_action: >-
+  Before compiling 38 more edges, run a certified parent-safe transverse-patch
+  component test on a preregistered multi-root factor family and require an
+  explicit gluing map from every patch outer-boundary component to certified
+  source cells.
+ledger_change_recommended: >-
+  None to the 9DVL score. Add a decision-log no-go: endpoint-sign cover
+  optimality is not a root/component-coverage certificate; the pair route
+  requires an independent factor-specific global coverage bridge.

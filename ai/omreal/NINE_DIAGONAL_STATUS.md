@@ -1512,11 +1512,18 @@ specialization, or genuine parent-infinity incidence.  This is an input-
 contract no-go, not a no-go for boundary-aware roadmaps.  A subsequent exact
 target-selection audit retires the section-960 collision and section-550
 endpoint-tangency stars as proof-bearing pair targets because they lie on
-proper supports.  The canonical pair route instead continues complete labels
-and component/closure attachments on the exact 40-edge full-support source
-cover, or replaces that finite skeleton with a direct coverage-certified
-parent-cell roadmap.  Neither diagonal-three invariant obligation is closed;
-the honest 9DVL score remains `2/9`.
+proper supports.  The canonical pair route no longer treats completion of the
+remaining 38 forest edges as its primary workload.  An exact graph audit finds
+that the 40-edge cover is a forest on 48 chart vertices with eight connected
+components and cycle rank zero, omitting 130 of the 178 stored charts.  A
+separate information-theoretic construction proves that even complete
+skeleton incidence cannot imply ambient wall-component coverage without a
+source-specific theorem, and exact edge-39 replay exhibits 118 factors with
+two interior roots but equal endpoint signs.  The proof-directed replacement
+is a profile-universal order-two Hardt--Mayer--Vietoris compiler retaining
+components and specialization maps for cover pieces and their pairwise and
+triple intersections.  Neither diagonal-three invariant obligation is
+closed; the honest 9DVL score remains `2/9`.
 
 A subsequent target-selection audit applies the exact relative-boundary
 theorem to that proposed scaling route.  Both stars lie wholly on proper
@@ -1559,6 +1566,23 @@ compound event.  Even completing them would cover only the finite source
 skeleton, not every parent-cell component or the two-cells required for global
 first homology.  See `DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.md`; the honest
 score remains `2/9`.
+
+The first genuine two-dimensional discriminator for that architecture is now
+exact on the closed barycentric triangle spanned by row-2599 charts 0, 89,
+and 113.  Its coordinate axes are compiled edges 27 and 39.  All 70 signed
+parent brackets have strictly positive exact simplex-Bernstein controls.
+Among all 17,824 pinned residual candidates, exact depth-three replay proves
+5,665 have an interior zero, proves 12,096 are empty on the closed triangle,
+and retains 63 as unresolved.  Exactly 77 of the certified interior-zero
+factors are absent from both compiled edge event sets, proving that the
+two-edge tree is locally incomplete as a wall-event detector.  An independent
+implementation reconstructs all counts and witnesses from the raw inputs and
+rejects 10 hostile mutations.  The chart-89-to-chart-113 side is not yet
+compiled, and no wall-component coverage, global parent-cell coverage,
+relative-infinity incidence, pair closure, or diagonal promotion is claimed.
+The next bounded gate resolves the 63-factor residue, classifies the third
+side, and builds component/closure/signature incidence for the 77 new factors;
+the honest score remains `2/9`.
 
 ## Exact artifacts
 
