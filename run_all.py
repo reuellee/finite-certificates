@@ -52,6 +52,7 @@ SLOW = {
     "verify_diag3_pair_fullsupport_parent_product_signs.py",
     "verify_diag3_pair_fullsupport_component_collar.py",
     "verify_diag3_pair_fullsupport_labeled_skeleton.py",
+    "verify_diag3_pair_parent_source_EDGE39_0_113.py",
     "verify_diag3_pair_fullsupport_segment_cover.py",
     "verify_diag3_pair_residual_wall_adjacency.py",
     "verify_diag3_pair_atlas_tangential_fill.py",
@@ -69,6 +70,7 @@ CI_DELEGATED = {
     "verify_diag2_escape_set_atlas178.py",
     "verify_diag3_ordered_root_atlas178.py",
     "verify_diag3_pair_parent_source_block_labels.py",
+    "verify_diag3_pair_parent_source_EDGE39_0_113.py",
 }
 EXTERNAL_INPUT = {
     "verify_diag3_triple_common_scaling_no_go.py": (

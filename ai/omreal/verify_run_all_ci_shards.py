@@ -90,7 +90,7 @@ def audit(payload, expected, count):
 
 def main():
     discovered, selected, delegated, external = direct_selected()
-    if len(delegated) != 3 or len(external) != 1:
+    if len(delegated) != 4 or len(external) != 1:
         raise AssertionError("nonsharded verifier census changed")
     if len(discovered - selected) != len(delegated | external):
         raise AssertionError("delegated verifier census changed")

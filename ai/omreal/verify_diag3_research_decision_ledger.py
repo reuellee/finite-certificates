@@ -15,6 +15,11 @@ COMPLETION_PATH = DATA / "DIAG3_COMPLETION_OPEN_OBJECT.json"
 CLOSURE_PATH = DATA / "DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json"
 TRIPLE_LOCAL_ROADMAP_PATH = DATA / "DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json"
 COMPONENT_COLLAR_PATH = DATA / "DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json"
+EDGE39_TRANSITION_PATH = DATA / "DIAG3_PAIR_PARENT_SOURCE_TRANSITION_EDGE39_0_113.json"
+EDGE39_LABELS_PATH = DATA / "DIAG3_PAIR_PARENT_SOURCE_LABELS_EDGE39_0_113.json"
+TWO_EDGE_SKELETON_PATH = (
+    DATA / "DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.json"
+)
 POINTER = "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json"
 
 
@@ -62,6 +67,9 @@ def main() -> None:
     closure = load(CLOSURE_PATH)
     triple_local_roadmap = load(TRIPLE_LOCAL_ROADMAP_PATH)
     component_collar_certificate = load(COMPONENT_COLLAR_PATH)
+    edge39_transition = load(EDGE39_TRANSITION_PATH)
+    edge39_labels = load(EDGE39_LABELS_PATH)
+    two_edge_skeleton = load(TWO_EDGE_SKELETON_PATH)
 
     assert set(ledger) == {
         "format",
@@ -83,12 +91,12 @@ def main() -> None:
     }
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-26"
+    assert ledger["as_of"] == "2026-08-27"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
-        "audited_commit": "e4ca567f829bd0e887e98efb05a3ed9437ba69d5",
-        "merged_pull_request": 19,
+        "audited_commit": "e8600495e70e6f5548cb0c73e0cfd2f33faacc0b",
+        "merged_pull_request": 37,
     }
     assert ledger["theorem"] == {
         "id": "9DVL",
@@ -299,6 +307,7 @@ def main() -> None:
         "thirty_sixth_pair_fullsupport_labeled_skeleton",
         "thirty_seventh_triple_local_projection_roadmap_canary",
         "thirty_eighth_pair_fullsupport_component_collar",
+        "thirty_ninth_pair_fullsupport_edge39_labeled_skeleton_and_collar_attachment",
         "theorem_effect",
         "next_stage",
     }
@@ -1587,6 +1596,175 @@ def main() -> None:
         component_collar["segment_cover_semantic_sha256"]
     )
     assert len(component_collar_certificate["hostile_mutation_contract"]) == 20
+    edge39_attachment = progress[
+        "thirty_ninth_pair_fullsupport_edge39_labeled_skeleton_and_collar_attachment"
+    ]
+    assert edge39_attachment == {
+        "status": "PROVED_LOCAL_LABELED_SKELETON_ATTACHMENT",
+        "scope": (
+            "complete exact residual roadmap and 97224-signature label continuation "
+            "on retained edge 39, independently replayed and glued with edge 27 into "
+            "a two-edge labelled source tree, with factor 19069 attached to the "
+            "accepted local collar; no component or parent-cell coverage claim"
+        ),
+        "support": [15, 15, 15],
+        "parent_index": 2599,
+        "minimum_source_cover_edges": 40,
+        "fully_compiled_edges": 2,
+        "pending_edges": 38,
+        "compiled_edge_indices": [27, 39],
+        "compiled_chart_pairs": [[0, 89], [0, 113]],
+        "edge39_candidate_factors": 17_824,
+        "edge39_rooted_factors": 5_209,
+        "edge39_ordered_events": 5_327,
+        "edge39_simple_mutations": 5_034,
+        "edge39_compound_exact_reenumerations": 293,
+        "edge39_generic_chambers": 5_328,
+        "labels_per_generic_chamber": 26_112,
+        "extension_signature_universe": 97_224,
+        "edge39_distinct_profiles": 10_571,
+        "joint_distinct_bad_membership_profiles": 11_719,
+        "zero_cells": 6_567,
+        "one_cells": 6_566,
+        "strict_closure_pairs": 13_132,
+        "rank_d1": 6_566,
+        "h0_rank": 1,
+        "h1_rank": 0,
+        "parent_infinity_cells": 0,
+        "collar_factor_id": 19_069,
+        "collar_event_index": 5_236,
+        "collar_oriented_intersection_sign": 1,
+        "edge39_profile_semantic_sha256": (
+            "1bfcd0d75d02103976e0f6b2253dfc97726d92ec769bef5d06763750fb7e7144"
+        ),
+        "edge39_label_semantic_sha256": (
+            "8989fa8418547ffe8ac38bcbeacce15cdc75809c8617f4e5776a8edbea94c9fa"
+        ),
+        "edge39_event_label_semantic_sha256": (
+            "1b6c32f8498105eb47559f7c31f09f04654b3d15c2b4935f119e770e39002ed8"
+        ),
+        "joint_feasible_semantic_sha256": (
+            "9fbf7b09ec75b7b27585d83e14fdc7703c21a43c7a37f5cda835df80748f769f"
+        ),
+        "joint_bad_membership_semantic_sha256": (
+            "e2393519c039b00e7f96bfa5de11a0565bcd900ca04567d12c286b75d5866e76"
+        ),
+        "semantic_sha256": (
+            "c6cfc9fdbe7002add59342d300b701e771fc331db698886636bdeea5392a5ae3"
+        ),
+        "independent_verification": "COMPLETE_STANDALONE_RECONSTRUCTION",
+        "independent_hostile_corruptions_rejected": 18,
+        "component_coverage": "NOT_CLAIMED",
+        "global_parent_cell_coverage": "NOT_CLAIMED",
+        "pair_branch_injectivity": "OPEN",
+        "triple_branch_compact_support_vanishing": "OPEN",
+        "theorem_effect": (
+            "Exactly two of forty retained source paths are now compiled into one "
+            "connected labelled tree, and the edge-39 factor-19069 event is oriented "
+            "into one accepted local collar; no global component theorem or invariant "
+            "obligation is closed, so the honest 9DVL score remains 2/9."
+        ),
+        "evidence": [
+            "ai/omreal/DIAG3_PAIR_PARENT_SOURCE_EDGE39_0_113.md",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_TRANSITION_EDGE39_0_113.json",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_EDGE39_0_113.json",
+            "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_EDGE39_0_113_PROFILES.bin.gz",
+            "ai/omreal/verify_diag3_pair_parent_source_EDGE39_0_113.py",
+            "ai/omreal/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.md",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.json",
+            "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39_PROFILES.bin.gz",
+            "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton_EDGE27_EDGE39.py",
+        ],
+    }
+    transition_roadmap = edge39_transition["residual_roadmap"]
+    label_continuation = edge39_labels["continuation"]
+    label_profiles = edge39_labels["signature_profiles"]
+    combined_scope = two_edge_skeleton["scope"]
+    combined_complex = two_edge_skeleton["compiled_regular_subcomplex"]
+    combined_boundary = combined_complex["integral_boundary"]
+    combined_profiles = two_edge_skeleton["joint_signature_profiles"]
+    combined_collar = two_edge_skeleton["collar_attachment"]
+    assert transition_roadmap["candidate_factor_count"] == edge39_attachment[
+        "edge39_candidate_factors"
+    ]
+    assert transition_roadmap["rooted_factor_count"] == edge39_attachment[
+        "edge39_rooted_factors"
+    ]
+    assert transition_roadmap["ordered_event_group_count"] == edge39_attachment[
+        "edge39_ordered_events"
+    ]
+    assert label_continuation["simple_mutation_events"] == edge39_attachment[
+        "edge39_simple_mutations"
+    ]
+    assert label_continuation["compound_or_tangential_reenumeration_events"] == (
+        edge39_attachment["edge39_compound_exact_reenumerations"]
+    )
+    assert edge39_labels["scope"]["generic_chambers"] == edge39_attachment[
+        "edge39_generic_chambers"
+    ]
+    assert label_continuation["labels_per_generic_chamber"] == edge39_attachment[
+        "labels_per_generic_chamber"
+    ]
+    assert label_continuation["extension_signature_universe"] == edge39_attachment[
+        "extension_signature_universe"
+    ]
+    assert label_profiles["distinct_profiles"] == edge39_attachment[
+        "edge39_distinct_profiles"
+    ]
+    assert label_profiles["semantic_sha256"] == edge39_attachment[
+        "edge39_profile_semantic_sha256"
+    ]
+    assert edge39_labels["semantic_sha256"] == edge39_attachment[
+        "edge39_label_semantic_sha256"
+    ]
+    assert label_continuation["event_label_semantic_sha256"] == edge39_attachment[
+        "edge39_event_label_semantic_sha256"
+    ]
+    assert combined_scope["fully_compiled_cover_edges"] == edge39_attachment[
+        "compiled_edge_indices"
+    ]
+    assert len(combined_scope["pending_cover_edges"]) == edge39_attachment[
+        "pending_edges"
+    ]
+    assert combined_complex["cell_count_by_dimension"] == {
+        "0": edge39_attachment["zero_cells"],
+        "1": edge39_attachment["one_cells"],
+    }
+    assert len(combined_complex["strict_closure_pairs"]) == edge39_attachment[
+        "strict_closure_pairs"
+    ]
+    assert combined_complex["parent_infinity_subcomplex"] == []
+    assert (
+        combined_boundary["rank_d1"],
+        combined_boundary["h0_rank"],
+        combined_boundary["h1_rank"],
+    ) == (
+        edge39_attachment["rank_d1"],
+        edge39_attachment["h0_rank"],
+        edge39_attachment["h1_rank"],
+    )
+    assert combined_profiles["signature_count"] == edge39_attachment[
+        "extension_signature_universe"
+    ]
+    assert combined_profiles["joint_profile_count"] == edge39_attachment[
+        "joint_distinct_bad_membership_profiles"
+    ]
+    assert combined_profiles["joint_feasible_semantic_sha256"] == edge39_attachment[
+        "joint_feasible_semantic_sha256"
+    ]
+    assert combined_profiles["bad_membership_semantic_sha256"] == edge39_attachment[
+        "joint_bad_membership_semantic_sha256"
+    ]
+    assert two_edge_skeleton["semantic_sha256"] == edge39_attachment["semantic_sha256"]
+    assert (
+        combined_collar["factor_id"],
+        combined_collar["edge_event_index"],
+        combined_collar["oriented_intersection_sign"],
+    ) == (
+        edge39_attachment["collar_factor_id"],
+        edge39_attachment["collar_event_index"],
+        edge39_attachment["collar_oriented_intersection_sign"],
+    )
     triple_local = progress[
         "thirty_seventh_triple_local_projection_roadmap_canary"
     ]
@@ -1707,7 +1885,7 @@ def main() -> None:
     )
     assert progress["next_stage"] == (
         "compile exact ordered residual roadmaps and compound-event extension-label "
-        "continuation on the 39 pending edges, then continue component/closure attachments "
+        "continuation on the 38 pending edges, then continue component/closure attachments "
         "on the exact 40-edge full-support source cover while preserving that finite "
         "skeleton coverage is not parent-cell/component coverage; alternatively replace "
         "it with a direct coverage-certified parent-cell roadmap; retain section-960 and "
