@@ -1,0 +1,62 @@
+track_id: cycle-20260828-prover-triple-frontier
+base_revision: ec362dba8a912bc4749c004641aee2da0a88dc05
+outcome: finite-exact
+summary: >-
+  The fixed projection-critical certificate scales deterministically from one
+  box to a 20-macrobox corridor (35 exact certificate boxes), and the first
+  rejected macrobox has an exact genuine parent-wall intersection [3468]=g-a.
+artifacts:
+  - path: ai/omreal/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.md
+    digest: 541a7c843eae7fd359596698fa2fa58b74c7170ddee6b6005de6feca4b24c42b
+  - path: ai/omreal/diag3_triple_frontier_build_multibox.py
+    digest: f395fbf1336a01a09524d7f172b75b64530057848af8805ac275bd2b3f4f7fcb
+  - path: ai/omreal/diag3_triple_frontier_verify_multibox.py
+    digest: 48219a759a3dba795919fd1fbadd447dc389add665488d6a8a4dafdfbb5be984
+  - path: ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json
+    digest: a41c3d84354bbbcb9d5b39b0899db7ad2479931f95f7363f945b9a9da0f9712a
+replay:
+  command: PYTHONDONTWRITEBYTECODE=1 python ai/omreal/diag3_triple_frontier_verify_multibox.py
+  result: >-
+    exit 0; 20/20 macroboxes, 35/35 projection boxes, 1400/1400 parent
+    intervals, exact [3468] frontier, 10/10 hostile mutations rejected.
+coverage:
+  included: >-
+    Named presentation (5563,16134,19284), mapped to canonical unresolved row
+    (5563,4373,23221), restricted to the exact 20-macrobox rectangular corridor
+    obtained from the registered box by indices k=0..19 in the negative-a
+    direction. Every restricted connected component meets one of 18 artificial
+    outer facets.
+  excluded: >-
+    No complete factor triple, complete S8 orbit, full parent cell, or genuine
+    parent-infinity attachment. The exact [3468] wall point is in rejected
+    macrobox 20. The unresolved residue remains 1162302 rows with source-order
+    digest a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4.
+canaries:
+  positive: Accepted base box and lexicographically first adjacent box replay and certify.
+  negative: Compact interior sphere refuses a sign-definite projection-pivot interval.
+  null: Extension stops exactly at macrobox 20, where [3468]=g-a has vertex range [-11/448,3/448].
+  hostile: 10/10 re-sealed mutations rejected.
+source_accounting:
+  used: >-
+    Pinned repository decision ledger, accepted one-box registration and
+    certificate, authenticated critical system, and source-mapping gate at the
+    exact base revision; all raw digests are embedded in the certificate.
+  unused_or_missing: >-
+    No external literature was needed beyond the elementary local-diffeomorphism
+    compact-open implication already accepted by the base canary. A canonical
+    materialized presentation stream for all 1162302 final-residue rows is not
+    available, which deterministically made the smallest-family branch ineligible.
+open_defects:
+  - >-
+    The accepted corridor still terminates on artificial scope boundary and
+    closes zero complete unresolved rows; it is a scale-up canary, not a
+    diag3_triple_hc0 proof.
+  - >-
+    Publication-grade integration still requires an independent coordinator or
+    verifier track to audit the new producer/verifier trust boundary.
+next_action: >-
+  Replace macrobox 20 by an exact cell clipped at [3468]=0, certify the same
+  projection minor on the clipped cell, and attach its terminal face to the
+  [3468] parent-wall stratum; this is the smallest direct bridge from artificial
+  corridor boundary to a genuine parent boundary.
+ledger_change_recommended: none

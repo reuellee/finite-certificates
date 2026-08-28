@@ -1,0 +1,1753 @@
+{
+  "authenticated_sources": {
+    "base_certificate": "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json",
+    "base_certificate_sha256": "0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27",
+    "base_registration": "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_REGISTRATION.json",
+    "base_registration_sha256": "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3",
+    "canonical_unresolved_row": [
+      5563,
+      4373,
+      23221
+    ],
+    "critical_system": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
+    "critical_system_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+    "decision_ledger_sha256": "7922d769aa30a84c5d208dec92d2e78d5c7744cc6184ea1d42aaeadf947761b3",
+    "named_factor_presentation": [
+      5563,
+      16134,
+      19284
+    ],
+    "source_mapping_gate": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",
+    "source_mapping_gate_sha256": "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692",
+    "unresolved_residue_count": 1162302,
+    "unresolved_residue_source_order_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4"
+  },
+  "base_revision": "ec362dba8a912bc4749c004641aee2da0a88dc05",
+  "branch_selection": {
+    "chosen_axis_zero_based": 0,
+    "chosen_direction": -1,
+    "chosen_variable": "a",
+    "direction_order": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        -1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        -1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        -1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        -1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        -1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        7,
+        -1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        -1
+      ],
+      [
+        8,
+        1
+      ]
+    ],
+    "materialized_1162302_row_presentation_stream": false,
+    "rule": "choose smallest-family closure only if a canonical materialized final-residue presentation stream exists; otherwise choose the multibox projection canary",
+    "selected": "MULTIBOX_PROJECTION_CANARY"
+  },
+  "canaries": {
+    "hostile_mutations_declared": [
+      "accepted_macrobox_count",
+      "corridor_axis",
+      "subdivision_axis",
+      "projection_interval",
+      "parent_record_digest",
+      "frontier_factor",
+      "frontier_zero_witness",
+      "global_parent_coverage_claim",
+      "unresolved_count_reduction",
+      "theorem_score"
+    ],
+    "negative_compact_sphere_projection_sign_refused": true,
+    "null_first_parent_wall_frontier_stops_extension": true,
+    "positive_base_box_replayed": true,
+    "positive_first_adjacent_box_certified": true
+  },
+  "corridor": {
+    "accepted_certificate_box_count": 35,
+    "accepted_macrobox_count": 20,
+    "all_parent_brackets_same_sign": true,
+    "closest_parent_interval_record": [
+      19,
+      "3468",
+      "-9/224",
+      "-1/112",
+      -1
+    ],
+    "common_parent_sign_vector_sha256": "fa130e5c103b556c6257d0cceed9eb119f443d9d128b3a74444a1bc50e614124",
+    "geometric_outer_facets": 18,
+    "intra_macro_subdivision_seams": 15,
+    "macro_adjacency_seams": 19,
+    "macroboxes": [
+      {
+        "center": [
+          "-19/28",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 1,
+        "index": 0,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-311/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 1,
+        "index": 1,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-159/224",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 1,
+        "index": 2,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-325/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 1,
+        "index": 3,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-83/112",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 1,
+        "index": 4,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-339/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 5,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-173/224",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 6,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-353/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 7,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-45/56",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 8,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-367/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 9,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-187/224",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 10,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-381/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 11,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-97/112",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 12,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-395/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 13,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-201/224",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 14,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-409/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 15,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-13/14",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 16,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-423/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 17,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-215/224",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 18,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-437/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "certificate_box_count": 2,
+        "index": 19,
+        "radius": "1/128",
+        "subdivision_axis_zero_based": 6
+      }
+    ],
+    "parent_brackets_per_macrobox": 70,
+    "parent_interval_record_count": 1400,
+    "parent_interval_record_sha256": "99d41026fe2529f5cbeceeb00ddfd2b8725fb1d6bfa40efaaa2efe93143de2a5",
+    "projection_interval_envelope": [
+      "-2235956227786787259793/772367336094040064",
+      "-412204685243606937/220676381741154304"
+    ],
+    "projection_interval_record_sha256": "fb03065512c9bcd8e0b3ed380598f18cc43efadba518d0ed59c5bb7f4c82b4ac",
+    "projection_records": [
+      {
+        "center": [
+          "-19/28",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 0,
+        "projection_minor_interval": [
+          "-554912474289739698651/193091834023510016",
+          "-1196518334587743667/27584547717644288"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-311/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 1,
+        "projection_minor_interval": [
+          "-8895498382875019305973/3089469344376160256",
+          "-14955890579704987037/441352763482308608"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-159/224",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 2,
+        "projection_minor_interval": [
+          "-4456001100686649829309/1544734672188080128",
+          "-5347670108721201061/220676381741154304"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-325/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 3,
+        "projection_minor_interval": [
+          "-8928111044130676236351/3089469344376160256",
+          "-6362642266616143927/441352763482308608"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-83/112",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 4,
+        "projection_minor_interval": [
+          "-2235956227786787259793/772367336094040064",
+          "-489449181806553113/110338190870577152"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": null
+      },
+      {
+        "center": [
+          "-1363/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 5,
+        "projection_minor_interval": [
+          "-69269326893100676122223/24715754755009282048",
+          "-318665523159053760871/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1349/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 5,
+        "projection_minor_interval": [
+          "-69212730398222700071113/24715754755009282048",
+          "-336160545742579366801/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1391/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 6,
+        "projection_minor_interval": [
+          "-69380150028411205574971/24715754755009282048",
+          "-283242592460620509331/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1377/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 6,
+        "projection_minor_interval": [
+          "-69325133436496844623509/24715754755009282048",
+          "-301026205398400808381/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1419/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 7,
+        "projection_minor_interval": [
+          "-69487813357794504828423/24715754755009282048",
+          "-247242481053677871551/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1405/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 7,
+        "projection_minor_interval": [
+          "-69434376668843758976609/24715754755009282048",
+          "-265314684345712863721/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1447/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 8,
+        "projection_minor_interval": [
+          "-69592316881250573882579/24715754755009282048",
+          "-210665188938225847531/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1433/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 8,
+        "projection_minor_interval": [
+          "-69540460095263443130413/24715754755009282048",
+          "-229025982584515532821/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1475/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 9,
+        "projection_minor_interval": [
+          "-69693660598779412737439/24715754755009282048",
+          "-173510716114264437271/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1461/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 9,
+        "projection_minor_interval": [
+          "-69643383715755897084921/24715754755009282048",
+          "-192160100114808815681/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1503/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 10,
+        "projection_minor_interval": [
+          "-69791844510381021393003/24715754755009282048",
+          "-135779062581793640771/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1489/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 10,
+        "projection_minor_interval": [
+          "-69743147530321120840133/24715754755009282048",
+          "-154717036936592712301/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1531/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 11,
+        "projection_minor_interval": [
+          "-69886868616055399849271/24715754755009282048",
+          "-97470228340813458031/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1517/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 11,
+        "projection_minor_interval": [
+          "-69839751538959114396049/24715754755009282048",
+          "-116696793049867222681/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1559/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 12,
+        "projection_minor_interval": [
+          "-69978732915802548106243/24715754755009282048",
+          "-58584213391323889051/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1545/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 12,
+        "projection_minor_interval": [
+          "-69933195741669877752669/24715754755009282048",
+          "-78099368454632346821/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1587/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 13,
+        "projection_minor_interval": [
+          "-70067437409622466163919/24715754755009282048",
+          "-19121017733324933831/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-1573/1792",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 13,
+        "projection_minor_interval": [
+          "-70023480138453410909993/24715754755009282048",
+          "-38924763150888084721/3530822107858468864"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 0
+      },
+      {
+        "center": [
+          "-201/224",
+          "-23/7",
+          "-3463/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 14,
+        "projection_minor_interval": [
+          "-68780550828914369420187/24715754755009282048",
+          "-2564148767555844027/55169095435288576"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-201/224",
+          "-23/7",
+          "-3449/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 14,
+        "projection_minor_interval": [
+          "-4296694116143239927495/1544734672188080128",
+          "-4175590759325058733/72057594037927936"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-409/448",
+          "-23/7",
+          "-3463/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 15,
+        "projection_minor_interval": [
+          "-68853318102242407111527/24715754755009282048",
+          "-1962217064449986651/55169095435288576"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-409/448",
+          "-23/7",
+          "-3449/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 15,
+        "projection_minor_interval": [
+          "-8601997624488599797587/3089469344376160256",
+          "-3381251504821306265/72057594037927936"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-13/14",
+          "-23/7",
+          "-3463/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 16,
+        "projection_minor_interval": [
+          "-68922901668044364729651/24715754755009282048",
+          "-10811121845657683815/441352763482308608"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-13/14",
+          "-23/7",
+          "-3449/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 16,
+        "projection_minor_interval": [
+          "-8610204992246354547073/3089469344376160256",
+          "-18026428773802717603/504403158265495552"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-423/448",
+          "-23/7",
+          "-3463/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 17,
+        "projection_minor_interval": [
+          "-68989301526320242274559/24715754755009282048",
+          "-5853346130620124037/441352763482308608"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-423/448",
+          "-23/7",
+          "-3449/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 17,
+        "projection_minor_interval": [
+          "-1077251291944968012931/386183668047020032",
+          "-12302140035436132375/504403158265495552"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-215/224",
+          "-23/7",
+          "-3463/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 18,
+        "projection_minor_interval": [
+          "-69052517677070039746251/24715754755009282048",
+          "-412204685243606937/220676381741154304"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-215/224",
+          "-23/7",
+          "-3449/1792",
+          "-5",
+          "-4",
+          "-3",
+          "-1",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 18,
+        "projection_minor_interval": [
+          "-1078176706803596058339/386183668047020032",
+          "-6495894318649388171/504403158265495552"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 2
+      },
+      {
+        "center": [
+          "-437/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-257/256",
+          "2",
+          "4"
+        ],
+        "child_side": 0,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 19,
+        "projection_minor_interval": [
+          "-4237784465786065761155/1544734672188080128",
+          "-12595323019306132123/220676381741154304"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 6
+      },
+      {
+        "center": [
+          "-437/448",
+          "-23/7",
+          "-27/14",
+          "-5",
+          "-4",
+          "-3",
+          "-255/256",
+          "2",
+          "4"
+        ],
+        "child_side": 1,
+        "coordinate_radii": [
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/128",
+          "1/256",
+          "1/128",
+          "1/128"
+        ],
+        "macro_index": 19,
+        "projection_minor_interval": [
+          "-8421326782079910478537/3089469344376160256",
+          "-171404011966466615159/3089469344376160256"
+        ],
+        "projection_minor_sign": -1,
+        "subdivision_axis_zero_based": 6
+      }
+    ],
+    "union_coordinate_bounds": [
+      [
+        "-881/896",
+        "-601/896"
+      ],
+      [
+        "-2951/896",
+        "-2937/896"
+      ],
+      [
+        "-1735/896",
+        "-1721/896"
+      ],
+      [
+        "-641/128",
+        "-639/128"
+      ],
+      [
+        "-513/128",
+        "-511/128"
+      ],
+      [
+        "-385/128",
+        "-383/128"
+      ],
+      [
+        "-129/128",
+        "-127/128"
+      ],
+      [
+        "255/128",
+        "257/128"
+      ],
+      [
+        "511/128",
+        "513/128"
+      ]
+    ]
+  },
+  "fixed_projection": {
+    "fiber_columns_zero_based": [
+      3,
+      4,
+      7
+    ],
+    "fiber_variables": [
+      "d",
+      "e",
+      "h"
+    ],
+    "projection_minor_sha256": "c18832763e63aac645e61fdd23c40b0cd7ee9c371d7f8457ee9dfe5a3a5cbcea",
+    "projection_minor_sign": -1,
+    "projection_minor_terms": 147
+  },
+  "frontier": {
+    "center": [
+      "-111/112",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "-1",
+      "2",
+      "4"
+    ],
+    "failed_parent_brackets": [
+      {
+        "direct_interval": [
+          "-11/448",
+          "3/448"
+        ],
+        "direct_interval_sign": 0,
+        "exact_parent_wall_point": [
+          "-223/224",
+          "-105/32",
+          "-431/224",
+          "-1119/224",
+          "-895/224",
+          "-671/224",
+          "-223/224",
+          "449/224",
+          "897/224"
+        ],
+        "label": "3468",
+        "opposite_vertex_signs": true,
+        "polynomial_sha256": "907d5800cec1c643e3a4f0025d0b20527c5872925f4bc97cc75823072741fb44",
+        "terms": 2,
+        "vertex_maximum": "3/448",
+        "vertex_maximum_bits": "011111111",
+        "vertex_maximum_point": [
+          "-895/896",
+          "-2937/896",
+          "-1721/896",
+          "-639/128",
+          "-511/128",
+          "-383/128",
+          "-127/128",
+          "257/128",
+          "513/128"
+        ],
+        "vertex_minimum": "-11/448",
+        "vertex_minimum_bits": "100000000",
+        "vertex_minimum_point": [
+          "-881/896",
+          "-2951/896",
+          "-1735/896",
+          "-641/128",
+          "-513/128",
+          "-385/128",
+          "-129/128",
+          "255/128",
+          "511/128"
+        ],
+        "zero_segment_parameter": "11/14"
+      }
+    ],
+    "kind": "FIRST_EXACT_PARENT_WALL_INTERSECTION",
+    "macro_index": 20,
+    "projection_test_after_parent_failure": "NOT_RUN_BY_STOP_RULE",
+    "radius": "1/128",
+    "same_sign_parent_brackets": 69
+  },
+  "schema": "diag3-triple-frontier-multibox-canary-v1",
+  "scope_and_nonconsequences": {
+    "artificial_outer_facets": 18,
+    "complete_named_factor_orbits_closed": 0,
+    "genuine_parent_infinity_reached": false,
+    "global_parent_cell_coverage_claimed": false,
+    "s8_transport_claimed": false,
+    "score_after": "2/9",
+    "score_before": "2/9",
+    "unresolved_triple_orbits_after": 1162302,
+    "unresolved_triple_orbits_before": 1162302
+  },
+  "semantic_sha256": "5a71b5a6144aa0ab858a5cda2fbca6ee485332954f92976f17f8ce599fd46447",
+  "status": "PROVED_MULTIBOX_LOCAL_BOUNDARY_COVERAGE_WITH_PARENT_WALL_FRONTIER",
+  "topological_consequence": "Every connected component of the named triple-zero set restricted to the accepted 20-macrobox rectangular corridor meets one of the 18 geometric outer facets; the component through the registered exact zero is nonvacuous.",
+  "track_id": "cycle-20260828-prover-triple-frontier"
+}

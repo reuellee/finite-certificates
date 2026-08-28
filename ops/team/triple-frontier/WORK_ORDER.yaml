@@ -1,0 +1,44 @@
+track_id: cycle-20260828-prover-triple-frontier
+role: prover
+base_revision: ec362dba8a912bc4749c004641aee2da0a88dc05
+target:
+  claim: >-
+    Make one bounded proof-producing advance on diag3_triple_hc0 over the exact
+    1162302-row unresolved residue, choosing deterministically between a
+    source-accounted smallest-family closure and a multibox projection-critical
+    roadmap canary.
+  quantifiers: >-
+    Exact unresolved residue of 1162302 canonical S8 triple orbits with
+    source-order digest a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4;
+    bounded canary scope may be strictly smaller but must state it exactly.
+  ledger_id: diag3_triple_hc0
+assumptions:
+  - The base one-box projection-roadmap certificate and its source mapping replay.
+  - The canonical decision-ledger accounting at the exact base revision.
+inputs:
+  - path_or_source: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    digest: 7922d769aa30a84c5d208dec92d2e78d5c7744cc6184ea1d42aaeadf947761b3
+  - path_or_source: ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json
+    digest: 0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27
+  - path_or_source: ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json
+    digest: c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8
+deliverables:
+  positive: Exact noncompact-component theorem for a declared unresolved subfamily with source accounting.
+  negative: Exact counterexample to the tested route or hypothesis.
+  null: Exact searched scope, surviving cases, first obstruction, and next discriminator.
+  timeout: Reproducible partial manifest with exact completed counts and digests.
+verification:
+  replay: PYTHONDONTWRITEBYTECODE=1 python ai/omreal/diag3_triple_frontier_verify_multibox.py
+  canaries:
+    - positive
+    - negative
+    - null
+    - hostile
+limits:
+  resource_ceiling: 50 wall-clock minutes, 12 GiB memory, no paid compute
+  stop_rule: First complete bounded family, exact route obstruction, or timeout.
+  prohibited_scope: >-
+    No common-scaling, quadratic-cover, Gale, contraction, or Cremona routes;
+    no README, ledger, existing artifact, or CI edits; no publication, merge,
+    or 3/9 promotion.
+handoff_to: coordinator
