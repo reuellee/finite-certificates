@@ -1,12 +1,12 @@
 {
   "format": "diag3-research-decision-ledger-v1",
   "status": "ACTIVE",
-  "as_of": "2026-08-26",
+  "as_of": "2026-08-27",
   "repository": {
     "full_name": "reuellee/finite-certificates",
     "default_branch": "main",
-    "audited_commit": "e4ca567f829bd0e887e98efb05a3ed9437ba69d5",
-    "merged_pull_request": 19
+    "audited_commit": "e8600495e70e6f5548cb0c73e0cfd2f33faacc0b",
+    "merged_pull_request": 37
   },
   "theorem": {
     "id": "9DVL",
@@ -1553,8 +1553,63 @@
         "ai/omreal/verify_diag3_pair_fullsupport_component_collar.py"
       ]
     },
+    "thirty_ninth_pair_fullsupport_edge39_labeled_skeleton_and_collar_attachment": {
+      "status": "PROVED_LOCAL_LABELED_SKELETON_ATTACHMENT",
+      "scope": "complete exact residual roadmap and 97224-signature label continuation on retained edge 39, independently replayed and glued with edge 27 into a two-edge labelled source tree, with factor 19069 attached to the accepted local collar; no component or parent-cell coverage claim",
+      "support": [15, 15, 15],
+      "parent_index": 2599,
+      "minimum_source_cover_edges": 40,
+      "fully_compiled_edges": 2,
+      "pending_edges": 38,
+      "compiled_edge_indices": [27, 39],
+      "compiled_chart_pairs": [[0, 89], [0, 113]],
+      "edge39_candidate_factors": 17824,
+      "edge39_rooted_factors": 5209,
+      "edge39_ordered_events": 5327,
+      "edge39_simple_mutations": 5034,
+      "edge39_compound_exact_reenumerations": 293,
+      "edge39_generic_chambers": 5328,
+      "labels_per_generic_chamber": 26112,
+      "extension_signature_universe": 97224,
+      "edge39_distinct_profiles": 10571,
+      "joint_distinct_bad_membership_profiles": 11719,
+      "zero_cells": 6567,
+      "one_cells": 6566,
+      "strict_closure_pairs": 13132,
+      "rank_d1": 6566,
+      "h0_rank": 1,
+      "h1_rank": 0,
+      "parent_infinity_cells": 0,
+      "collar_factor_id": 19069,
+      "collar_event_index": 5236,
+      "collar_oriented_intersection_sign": 1,
+      "edge39_profile_semantic_sha256": "1bfcd0d75d02103976e0f6b2253dfc97726d92ec769bef5d06763750fb7e7144",
+      "edge39_label_semantic_sha256": "8989fa8418547ffe8ac38bcbeacce15cdc75809c8617f4e5776a8edbea94c9fa",
+      "edge39_event_label_semantic_sha256": "1b6c32f8498105eb47559f7c31f09f04654b3d15c2b4935f119e770e39002ed8",
+      "joint_feasible_semantic_sha256": "9fbf7b09ec75b7b27585d83e14fdc7703c21a43c7a37f5cda835df80748f769f",
+      "joint_bad_membership_semantic_sha256": "e2393519c039b00e7f96bfa5de11a0565bcd900ca04567d12c286b75d5866e76",
+      "semantic_sha256": "c6cfc9fdbe7002add59342d300b701e771fc331db698886636bdeea5392a5ae3",
+      "independent_verification": "COMPLETE_STANDALONE_RECONSTRUCTION",
+      "independent_hostile_corruptions_rejected": 18,
+      "component_coverage": "NOT_CLAIMED",
+      "global_parent_cell_coverage": "NOT_CLAIMED",
+      "pair_branch_injectivity": "OPEN",
+      "triple_branch_compact_support_vanishing": "OPEN",
+      "theorem_effect": "Exactly two of forty retained source paths are now compiled into one connected labelled tree, and the edge-39 factor-19069 event is oriented into one accepted local collar; no global component theorem or invariant obligation is closed, so the honest 9DVL score remains 2/9.",
+      "evidence": [
+        "ai/omreal/DIAG3_PAIR_PARENT_SOURCE_EDGE39_0_113.md",
+        "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_TRANSITION_EDGE39_0_113.json",
+        "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_EDGE39_0_113.json",
+        "ai/omreal/data/DIAG3_PAIR_PARENT_SOURCE_LABELS_EDGE39_0_113_PROFILES.bin.gz",
+        "ai/omreal/verify_diag3_pair_parent_source_EDGE39_0_113.py",
+        "ai/omreal/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.md",
+        "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.json",
+        "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39_PROFILES.bin.gz",
+        "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton_EDGE27_EDGE39.py"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "compile exact ordered residual roadmaps and compound-event extension-label continuation on the 39 pending edges, then continue component/closure attachments on the exact 40-edge full-support source cover while preserving that finite skeleton coverage is not parent-cell/component coverage; alternatively replace it with a direct coverage-certified parent-cell roadmap; retain section-960 and section-550 only as compiler stress tests and retain the independent triple boundary-complete projection-critical roadmap route"
+    "next_stage": "compile exact ordered residual roadmaps and compound-event extension-label continuation on the 38 pending edges, then continue component/closure attachments on the exact 40-edge full-support source cover while preserving that finite skeleton coverage is not parent-cell/component coverage; alternatively replace it with a direct coverage-certified parent-cell roadmap; retain section-960 and section-550 only as compiler stress tests and retain the independent triple boundary-complete projection-critical roadmap route"
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {
