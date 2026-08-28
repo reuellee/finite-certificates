@@ -1,0 +1,104 @@
+track_id: cycle-20260828-prover-coverage-critical
+role: constructive-prover
+base_revision: ec362dba8a912bc4749c004641aee2da0a88dc05
+outcome: proved
+summary: >-
+  Proved that a true-parent-boundary barrier yields a semialgebraic critical
+  locus meeting every connected component of one primitive full-support
+  row-2599 residual wall, so exact component-sampling gives a finite
+  representative gate for the 40-edge missed-component obligation; also
+  disproved the stronger claim that the unperturbed nearest-point KKT locus
+  must itself be zero-dimensional.
+artifacts:
+  - path: ai/omreal/DIAG3_PAIR_SKELETON_MISSED_COMPONENT_CRITICAL_GATE.md
+    sha256: 9e4ba87acf73c1ca556e830fd687c9ca0ebad52366b82484c302ae4b282684e0
+replay:
+  command: >-
+    git diff --check && sha256sum
+    ai/omreal/DIAG3_PAIR_GLOBAL_MASTER_QUOTIENT.md
+    ai/omreal/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md
+    ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json
+    ai/omreal/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.md
+    ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md
+    ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json
+    ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json
+    ai/omreal/DIAG3_PAIR_SKELETON_MISSED_COMPONENT_CRITICAL_GATE.md
+  result: >-
+    exit 0; all seven repository input digests and the attached source-map
+    digest match the work order; the amended proof-note digest is
+    9e4ba87acf73c1ca556e830fd687c9ca0ebad52366b82484c302ae4b282684e0
+coverage:
+  included: >-
+    One nonzero primitive full-support residual polynomial on the pinned
+    (Delta^3)^3 compactification; every semialgebraically connected component
+    in the open strict row-2599 parent cell; closure at every true parent or
+    coordinate-divisor boundary; smooth and singular wall points; all forty
+    retained parent-safe source segments; open-edge and endpoint distance
+    strata; optional refinement by other residual intersections.
+  excluded: >-
+    No critical samples were computed for the 17,824 candidate factors; no
+    representative-to-skeleton paths, complete wall labels, global regular
+    master poset, middle-rank replay, other parent orbit, or 9DVL ledger
+    promotion is claimed.
+canaries:
+  positive: >-
+    Compactification barrier B is positive on the strict parent cell and zero
+    on its true boundary, so its maximum on the closure of any wall component
+    lies in the component and satisfies the displayed rank-minor system.
+  negative: >-
+    The smooth primitive cylinder x^2+y^2-1=0 avoiding an internal z-axis
+    segment has a two-dimensional nearest-point KKT locus, rejecting raw
+    zero-dimensionality.
+  null: >-
+    If the strict-parent wall is empty, the critical locus and its finite
+    sample set are empty and the coverage equivalence is vacuous.
+  hostile: >-
+    At a singular wall point the rank of J(G6,G7,G8,f) drops, forcing every
+    displayed 5-by-5 minor to vanish; skeleton endpoints remain t=0 or t=1
+    parameter strata and are never tagged as parent infinity.
+source_accounting:
+  used:
+    - path: ai/omreal/DIAG3_PAIR_GLOBAL_MASTER_QUOTIENT.md
+      sha256: af64cf292ce04234f4dabf48d0ae278c7a9ea1bee7ae83b525a0631d287f3eb7
+    - path: ai/omreal/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.md
+      sha256: 55a68acd5e74c011f92a0184ba240475f6076adf54d6ffb0df4ac42a601f2e6a
+    - path: ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json
+      sha256: 19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307
+    - path: ai/omreal/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.md
+      sha256: 513c858d10261bc2f2d9b1662838f02283b031cdc9f05f3926c8bc5a190f941a
+    - path: ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md
+      sha256: 5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15
+    - path: ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json
+      sha256: fb73899be7ff4aed5739b7f6a999d623db2a0504f212d5fe5aba35e1df1b1465
+    - path: ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json
+      sha256: 956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364
+    - path: project_sources/01-9DVL_RESEARCH_SOURCES-1-.md
+      sha256: 659a2818f409f01100bcb9886248c23767e65791fe1827ba29ab3a8a4ae093e1
+      role: >-
+        Confirmed the existing quantitative Basu--Pollack--Roy component-count
+        reference; it is not the source for the qualitative sampling facts.
+    - source: >-
+        Basu, Pollack, and Roy, Algorithms in Real Algebraic Geometry,
+        revised second edition (2016), Theorems 5.21--5.23, Algorithm 13.11,
+        and Section 5.5.
+      url: https://mariefrancoiseroy.pages.math.cnrs.fr/MFRoymathpublications.html
+      role: >-
+        Finite semialgebraic connected-component decomposition, equivalence
+        with semialgebraic path connectedness, exact component sampling, and
+        the optional finite smooth stratification.
+  unused_or_missing: none
+open_defects:
+  - >-
+    The theorem makes the missed-component obligation finite only after exact
+    connected-component sampling of the critical locus; it does not provide
+    that potentially expensive sampler or its row-2599 certificates.
+  - >-
+    Membership in the connected strict row-2599 parent component must be
+    retained by an exact roadmap/path tag if the seventy-sign realization set
+    is disconnected.
+next_action: >-
+  Preregister factor 19069 and build an exact active-parent-margin sampler on
+  the whole compactified parent cell; require recovery of a representative
+  attaching to the certified edge-39 collar and fail closed on every
+  additional critical component.
+ledger_change_recommended: none

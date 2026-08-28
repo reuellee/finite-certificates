@@ -1560,6 +1560,44 @@ skeleton, not every parent-cell component or the two-cells required for global
 first homology.  See `DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON.md`; the honest
 score remains `2/9`.
 
+The second compiled cover edge is edge 39, chart 0 to chart 113.  Its 5,327
+ordered event groups and 5,328 chambers are independently replayed with all
+97,224 extension signatures; after gluing to edge 27 the exact labelled tree
+has 6,567 zero-cells, 6,566 one-cells, `H_0=1`, `H_1=0`, and 11,719 joint bad-
+membership profiles.  The factor-19,069 event has oriented intersection sign
+`+1` into the accepted collar.  The complete 40-edge source cover itself has
+48 vertices, 40 edges, eight connected components, and cycle rank zero, so
+compiling the remaining 38 edges cannot by itself supply cycles, two-cells, or
+strict three-chains.  Additional edge compilation is therefore demand-driven,
+not the primary coverage route; the honest score remains `2/9`.  See
+`DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.md`.
+
+A new exact critical-locus gate replaces that incomplete coverage strategy.
+On the compactified parent cell, multiply the 70 strict parent brackets to
+form a true-boundary barrier.  Every connected component of a residual wall
+has a positive interior barrier maximum, hence meets the exact locus cut out
+by the wall equation and the rank-drop minors for the wall, the three simplex
+constraints, and the barrier.  Sampling one exact algebraic point per
+connected component of that semialgebraic critical locus gives a finite set
+meeting every wall component; global skeleton coverage is then reduced to
+exact path attachment of those representatives.  Singular wall points are
+included automatically.  The tempting nearest-skeleton zero-dimensional KKT
+shortcut is false (a cylinder gives a counterexample), and neither a sampler
+nor a global attachment certificate is claimed yet.  See
+`DIAG3_PAIR_SKELETON_MISSED_COMPONENT_CRITICAL_GATE.md`; the honest score
+remains `2/9`.
+
+The triple canary has also advanced from one artificial box to an exact
+20-macrobox corridor, certified by 35 rational subboxes and 1,400 strict
+parent-bracket interval proofs.  A fixed 147-term projection minor is strictly
+negative on every accepted subbox, and every restricted component reaches an
+artificial corridor facet.  The first rejected macrobox meets the genuine
+parent wall `[3468]=g-a=0`, with exact interval `[-11/448,3/448]` and a rational
+zero witness.  This identifies the next terminal-cell frontier but does not
+attach a triple-zero component to it; the unresolved triple residue remains
+1,162,302 and the honest score remains `2/9`.  See
+`DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.md`.
+
 ## Exact artifacts
 
 - `ATLAS_HELLY.md`: full theorem/proof ledger.

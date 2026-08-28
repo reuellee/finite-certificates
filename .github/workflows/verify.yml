@@ -49,6 +49,36 @@ jobs:
           lint: false
           use-mathlib-cache: false
 
+  nine-dvl-triple-frontier:
+    name: 9DVL triple multibox frontier replay
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replay the exact 20-macrobox frontier canary
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ai/omreal/diag3_triple_frontier_verify_multibox.py
+
+  nine-dvl-coverage-falsifier:
+    name: 9DVL bounded coverage-falsifier replay
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact replay dependency
+        run: python -m pip install --upgrade pip numpy scipy sympy
+      - name: Replay the exact bounded missed-component census
+        run: >-
+          PYTHONDONTWRITEBYTECODE=1 python
+          ops/team/coverage-falsifier/diagnose_diag3_pair_missed_component_census.py
+
   suite-shards:
     name: verifier suite shard ${{ matrix.shard }}/8
     needs: suite-shard-contract
@@ -80,7 +110,7 @@ jobs:
 
   suite:
     name: verifier suite (complete)
-    needs: [suite-shard-contract, suite-shards, formal-lean-node-canary]
+    needs: [suite-shard-contract, suite-shards, formal-lean-node-canary, nine-dvl-triple-frontier, nine-dvl-coverage-falsifier]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

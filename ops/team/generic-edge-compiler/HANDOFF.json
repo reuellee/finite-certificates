@@ -1,0 +1,49 @@
+{
+  "artifacts": [
+    {
+      "digest": "0027f87bc974dc1a825c87856e8613421c979f159fb6a47d4e52e484cc4d373d",
+      "path": "ai/omreal/diag3_pair_parent_source_generic_core.py"
+    },
+    {
+      "digest": "3a0af92c3c50fb4226a33c4a1ec086e39e5633e9b1b96c29023f7f8b3fffbf81",
+      "path": "ai/omreal/diag3_pair_parent_source_generic_census.py"
+    },
+    {
+      "digest": "b9c7c67908bae7e98766ca3212f9d6f4e85e9f90d65447940302e8fb73d7b63c",
+      "path": "ops/team/generic-edge-compiler/DIAG3_PAIR_PARENT_SOURCE_GENERIC_PHASE_A.json"
+    },
+    {
+      "digest": "a9beed5e1bbb70110c97a6b981a06076846356e1487dc4d647d663da576a725b",
+      "path": "ops/team/generic-edge-compiler/verify_generic_phase_a.py"
+    }
+  ],
+  "base_revision": "ec362dba8a912bc4749c004641aee2da0a88dc05",
+  "canaries": {
+    "hostile": "implemented in independent checker; not observed because bounded run was interrupted before summary",
+    "negative": "endpoint, tangency, coincidence, reversed orientation, dropped event, multiplicity mutation, parent-sign flip",
+    "null": "all 38 pending edges passed the generator-side phase-B eligibility gate",
+    "positive": "generator replayed all 40 compact censuses and full edge-17 event artifact"
+  },
+  "coverage": {
+    "excluded": "97,224-signature continuation; nonpilot independent full root replay; component, parent-cell, or global skeleton coverage; ledger promotion",
+    "included": "generator-side exact phase-A census on all 40 pinned selected edges and full 1,856-event generator-side roadmap on pending edge 17"
+  },
+  "ledger_change_recommended": "none",
+  "next_action": "Run the bounded independent checker to completion, then parameterize phase-B label continuation on chart-zero batch [17,4,21,52], beginning with edge 17 and without materializing other edge bitmaps.",
+  "open_defects": [
+    "The engineer and coordinator checker runs were each interrupted at 180 seconds and produced no PASS summary; acceptance is pending.",
+    "Compact nonpilot root/event censuses do not embed full event arrays and are not independently fully replayed by this bounded checker.",
+    "No phase-B extension-label continuation is implemented by this track."
+  ],
+  "outcome": "finite-exact",
+  "replay": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python ops/team/generic-edge-compiler/verify_generic_phase_a.py",
+    "result": "INTERRUPTED twice at the 180-second stop rule (engineer and coordinator replays); no PASS summary; checker syntax compilation passed"
+  },
+  "source_accounting": {
+    "unused_or_missing": "No external sources; label bitmaps deliberately not generated.",
+    "used": "Pinned base-revision point bank, factor states/census, candidate list, 40-edge cover, exact factor-polynomial source, parent catalog, and shared exact Sturm/Bernstein primitives."
+  },
+  "summary": "A parameterized exact phase-A compiler is compatible with all 40 selected edges; it emits a deterministic degeneracy census, selects [17,4,21,52], and includes a full pending edge-17 roadmap, but independent checker acceptance remains pending.",
+  "track_id": "cycle-20260828-certificate-generic-edges"
+}

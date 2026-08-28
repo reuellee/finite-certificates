@@ -1,0 +1,124 @@
+cycle: 2026-08-28-coverage-critical
+base_revision: ec362dba8a912bc4749c004641aee2da0a88dc05
+common_inputs:
+  - path: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    sha256: 7922d769aa30a84c5d208dec92d2e78d5c7744cc6184ea1d42aaeadf947761b3
+  - path: ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json
+    sha256: 19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307
+  - path: ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin
+    sha256: adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f
+  - path: ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json
+    sha256: fb73899be7ff4aed5739b7f6a999d623db2a0504f212d5fe5aba35e1df1b1465
+common_limits:
+  cost: no paid external compute
+  memory: 12 GiB
+  prohibited_scope: >-
+    no theorem-score promotion, canonical-ledger edit, merge, publication,
+    silent quantifier widening, or inference of global coverage from samples
+work_orders:
+  - track_id: cycle-20260828-prover-coverage-critical
+    role: prover
+    target:
+      claim: >-
+        A component of one primitive full-support row-2599 residual wall that
+        avoids the retained 40-edge skeleton has a finite exact critical or
+        boundary-stratified witness.
+      quantifiers: >-
+        Every wall component in the strict product-simplex parent cell,
+        including singular points and closures at genuine parent boundary.
+      ledger_id: diag3_pair_hc1
+    deliverables:
+      positive: rigorous lemma and explicit polynomial systems
+      negative: exact counterexample to the proposed reduction
+      null: searched variants, surviving boundary cases, next discriminator
+      timeout: proof frontier with unresolved lemma
+    verification:
+      replay: input-digest and proof-step audit
+      canaries: [compact, singular, boundary, artificial-scope]
+    limits:
+      time: 50 minutes
+      stop_rule: first false quantifier, unresolved singular gap, or complete theorem
+    handoff_to: coordinator and independent referee
+  - track_id: cycle-20260828-falsifier-missed-component
+    role: falsifier
+    target:
+      claim: >-
+        Find the smallest exact row-2599 factor component disjoint from all
+        retained edges, or prove its absence on a declared exact subfamily.
+      quantifiers: >-
+        Fixed low-complexity subfamily from the 10,844 known-interior and
+        5,803 feasibility-unresolved factors.
+      ledger_id: diag3_pair_hc1
+    deliverables:
+      positive: exact missed-component witness
+      negative: bounded exact no-miss census
+      null: searched domain, survivors, next discriminator
+      timeout: deterministic partial manifest
+    verification:
+      replay: exact certificate or bounded-search replay
+      canaries: [multiple-components, singular, boundary, numerical-only]
+    limits:
+      time: 50 minutes
+      stop_rule: first exact miss, complete bounded subfamily, or blocker
+    handoff_to: coordinator
+  - track_id: cycle-20260828-certificate-generic-edges
+    role: certificate-engineer
+    target:
+      claim: >-
+        Replace edge-specific roadmap logic with a fail-closed parameterized
+        compiler and measure the pending-edge degeneracy frontier.
+      quantifiers: all 40 selected edges for the census; at least one pending edge for a proof-producing pilot
+      ledger_id: diag3_pair_hc1
+    deliverables:
+      positive: deterministic compiler, manifest, and replay
+      negative: exact schema incompatibility
+      null: sharing map, measured costs, degeneracy frontier
+      timeout: reproducible partial manifest
+    verification:
+      replay: deterministic rebuild with separate checker surface
+      canaries: [endpoint-root, repeated-root, coincident-factors, multi-root, parent-residence]
+    limits:
+      time: 50 minutes
+      stop_rule: one pending-edge pilot plus census, first incompatibility, or timeout
+    handoff_to: coordinator and future independent verifier
+  - track_id: cycle-20260828-prover-triple-frontier
+    role: prover
+    target:
+      claim: >-
+        Produce one bounded exact advance on compact-component exclusion for
+        the 1,162,302 unresolved triple rows using a non-retired route.
+      quantifiers: deterministic unresolved subfamily or one scaling canary with complete source accounting
+      ledger_id: diag3_triple_hc0
+    deliverables:
+      positive: certified noncompact-component theorem for declared subfamily
+      negative: exact obstruction or counterexample
+      null: searched family, survivors, next discriminator
+      timeout: pinned projection/roadmap frontier
+    verification:
+      replay: deterministic exact verifier
+      canaries: [artificial-boundary, rank-drop, chart-transport, source-accounting]
+    limits:
+      time: 50 minutes
+      stop_rule: complete bounded family, exact obstruction, or timeout
+    handoff_to: coordinator and future independent verifier
+  - track_id: cycle-20260828-verifier-strategy
+    role: verifier
+    target:
+      claim: >-
+        Independently rank bulk edge compilation, critical coverage, and a
+        direct order-two master roadmap without discovery-side conclusions.
+      quantifiers: exact base, current obligations, all stated route endpoints
+      ledger_id: diag3_pair_hc1 and diag3_triple_hc0
+    deliverables:
+      positive: accepted route with exact gates and hostile canaries
+      negative: rejected route with fatal quantifier or cost obstruction
+      null: no dominant route and next discriminating experiment
+      timeout: authenticated partial obligation graph
+    verification:
+      replay: digest, graph, count, and scope reconstruction
+      canaries: [coverage, frontier, singular, artificial-infinity]
+    limits:
+      time: 40 minutes
+      memory: 8 GiB
+      stop_rule: complete independent ranking or fatal state conflict
+    handoff_to: coordinator
