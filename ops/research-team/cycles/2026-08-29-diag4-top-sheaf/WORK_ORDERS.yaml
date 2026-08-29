@@ -1,0 +1,131 @@
+cycle_id: 2026-08-29-diag4-top-sheaf
+base_revision: d047359e7892106021022b0401554f56eb4e4d8a
+base_tree: af221cc4a3c2d81ce2c58ecb71bdf2e029b4b929
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository reuellee/finite-certificates;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head. The user also authorizes durable recovery
+  checkpoints only in the Google Drive Projects/research-backups area. This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations; do
+  not substitute gh. Workers may commit and push only their assigned branches;
+  they may not merge or change the theorem ledger.
+
+strategy_gate:
+  opening_verdict: CONTINUE
+  selected_target: diag4_top_component_persistence
+  reason: >-
+    The exact fivefold reduction and omitted-label vanishing leave a structural
+    cover-all top-sheaf obstruction. Diagonal-three still has two unrelated
+    global blockers, diagonal-eight lacks theorem-ready quantifiers on its
+    training network, and diagonal-nine lacks a global roadmap.
+  closing_required: true
+  stagnation_rule: >-
+    If this cycle does not shrink the complete split--remerge obstruction class
+    or close a load-bearing edge, the next cycle must pivot away from this
+    route.
+
+work_orders:
+  - track_id: diag4-top-sheaf-prover
+    role: prover
+    branch: agent/diag4-top-sheaf-prover-20260829
+    target:
+      claim: >-
+        Derive the strongest globally quantified component-persistence or
+        top-sheaf-injectivity lemma forced by the signed third-compound and
+        oriented-matroid constraints on retained cover-all supports.
+      quantifiers: >-
+        Proper pairwise-incomparable four-signature 9DVL families, including
+        closed lower-weight faces, parent boundary, orientation local systems,
+        and all split, merge, birth, and death events used by the lemma.
+      ledger_id: diag4_top_component_persistence
+    inputs:
+      - path: ai/omreal/FOURTH_DIAGONAL_FIVEFOLD.md
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
+      - path: ai/omreal/THREE_SHEAR_SINGLE_PIECE_REDUCTION.md
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
+      - path: ai/omreal/verify_fourth_diagonal_reduction.py
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
+    deliverables:
+      positive: Proof note plus exact semantic-kernel verifier and hostile split--remerge canary.
+      negative: Exact failed premise or admissible obstruction handed to the falsifier/coordinator.
+      null: Precise surviving cases, failed lemmas, and next discriminating calculation.
+      timeout: Reproducible checkpoint, manifest, and partial classification.
+    verification:
+      replay: Document exact clean commands in RESULT.yaml.
+      canaries: [positive, negative, null, hostile_split_remerge]
+    limits:
+      resource_ceiling: One agent turn and at most 90 minutes wall-clock; ordinary local compute only; no paid services.
+      stop_rule: Stop at a universal lemma, exact refutation, strict orbit reduction, or complete timeout manifest.
+      prohibited_scope: No sampled-only theorem promotion, no ledger edits, no unrelated files, no merge.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
+
+  - track_id: diag4-top-sheaf-falsifier
+    role: falsifier
+    branch: agent/diag4-top-sheaf-falsifier-20260829
+    target:
+      claim: >-
+        Falsify the weakest necessary no-split--remerge premise, or classify the
+        smallest exact signed obstruction compatible with the retained
+        diagonal-four cover-all domain.
+      quantifiers: >-
+        Search must distinguish abstract constructible-sheaf countermodels from
+        realizable proper incomparable rank-four extension data; only the latter
+        refutes a 9DVL intermediate claim.
+      ledger_id: diag4_top_component_persistence
+    inputs:
+      - path: ai/omreal/FOURTH_DIAGONAL_FIVEFOLD.md
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
+      - path: ai/omreal/THREE_SHEAR_SINGLE_PIECE_REDUCTION.md
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
+      - path: ai/omreal/verify_fourth_diagonal_reduction.py
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
+    deliverables:
+      positive: Exact admissible counterexample with independent witness data.
+      negative: Exact exclusion of a stated obstruction class.
+      null: Exhaustive searched domain, survivors, and next discriminator.
+      timeout: Partial manifest and resumable exact search state.
+    verification:
+      replay: Document exact clean commands in RESULT.yaml.
+      canaries: [abstract_false_positive, realizable_positive, sign_mutation, boundary]
+    limits:
+      resource_ceiling: One agent turn and at most 90 minutes wall-clock; ordinary local compute only; no paid services.
+      stop_rule: Stop at an admissible counterexample, exact class exclusion, strict orbit reduction, or complete timeout manifest.
+      prohibited_scope: Do not repair a falsified premise, infer global topology from samples, edit the ledger, or merge.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
+
+  - track_id: diag4-strategy-referee
+    role: verifier
+    branch: agent/diag4-strategy-referee-20260829
+    target:
+      claim: >-
+        Audit target selection, quantifiers, and publication gates now; after
+        candidate handoffs freeze, independently replay and judge only claims
+        that the evidence actually supports.
+      quantifiers: >-
+        Full stated diagonal-four domain and every boundary/nonconsequence used
+        in a proposed intermediate lemma.
+      ledger_id: diag4_hc3
+    deliverables:
+      positive: ACCEPT gate table tied to exact candidate revisions.
+      negative: REJECT with actionable defects or a strategy PIVOT recommendation.
+      null: INCONCLUSIVE with missing evidence and required next discriminator.
+      timeout: Partial gate table with all unaudited gates marked fail-closed.
+    verification:
+      replay: Must not reuse discovery-side acceptance logic.
+      canaries: [positive, negative, null, hostile]
+    limits:
+      resource_ceiling: One initial strategy audit plus one candidate rereview, at most 45 minutes each.
+      stop_rule: Stop after a concrete GO/MODIFY/PIVOT opening verdict; resume only on frozen handoffs.
+      prohibited_scope: No discovery edits, no artifact repair, no ledger edits, no merge.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
