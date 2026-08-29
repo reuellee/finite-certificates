@@ -1,0 +1,87 @@
+track_id: diag4-top-sheaf-prover
+cycle_id: 2026-08-29-diag4-top-sheaf
+role: prover
+base_revision: d047359e7892106021022b0401554f56eb4e4d8a
+classification: positive_intermediate_strict_reduction
+fixed_proposition: D4-SP
+claim: >-
+  If the support union of an intersection of closed signed Gordan circuit
+  pieces has three moving labels dominated by one fixed apex and a fourth
+  moving label dominated by a distinct fixed apex, then H_c^q vanishes for
+  q <= 3.
+quantifiers: >-
+  Every realizable uniform rank-four parent OM on [8], every normalized
+  realization cell including structural and residual derived-wall
+  specializations, every signature family and sign choice, every finite
+  intersection of closed circuit pieces, and all zero-weight faces, whenever
+  the stated B31 domination predicate holds.
+exact_domain:
+  d4_sp_cover_all_labeled: 1715980
+  d4_sp_cover_all_orbits: 130
+  size_labeled:
+    3: 840
+    4: 72380
+    5: 1642760
+  size_orbits:
+    3: 1
+    4: 14
+    5: 115
+proved_subdomain:
+  labeled: 915740
+  orbits: 77
+  size_labeled:
+    3: 840
+    4: 53060
+    5: 861840
+  size_orbits:
+    3: 1
+    4: 10
+    5: 66
+survivors:
+  labeled: 800240
+  orbits: 53
+  size_orbits:
+    3: 0
+    4: 4
+    5: 49
+generic_subcensus_only:
+  domain_labeled: 1099560
+  domain_orbits: 66
+  proved_labeled: 339360
+  proved_orbits: 21
+  survivor_labeled: 760200
+  survivor_orbits: 45
+semantic_sha256: 16b11cba052b49af777354f256a783b419ec6e246d178de70c238807e50ecc11
+replay:
+  - python ops/team/diag4-top-sheaf-prover/verify_four_block_line_sieve.py
+canaries:
+  positive_actual_signed_b31: 123/124/235/147/368
+  negative_actual_signed_survivor: 123/134/267/258/468
+  null_out_of_domain: 123/124/125/126/127
+  hostile_split_remerge: doubled_interval_parallel_edge_kernel
+  hostile_separate_convexity: square_cycle_kernel
+ledger_delta: none
+nonconsequences:
+  - D4-SP remains open on 53 support-shape orbits.
+  - No surviving support is claimed to have nonzero compact-support cohomology.
+  - No Cech restriction differential or fivefold middle cohomology is computed.
+  - The 9DVL ledger remains 2/9.
+next_discriminator: >-
+  Compute the actual signed top-component-sheaf differential or find an exact
+  realizable split--remerge obstruction on the 53 B31-resistant orbit
+  representatives; further unsigned light-label counting is insufficient.
+timeout: false
+publication_authorization: >-
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository reuellee/finite-certificates;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head. The user also authorizes durable recovery
+  checkpoints only in the Google Drive Projects/research-backups area. This
+  authorization does not permit publishing secrets or private unrelated
+  files, modifying any other repository, using paid external compute or paid
+  APIs, changing repository visibility or settings, force-pushing, deleting
+  history or data, or taking other irreversible actions without separate
+  approval. Use the authenticated GitHub connector for GitHub publication
+  operations; do not substitute gh. Workers may commit and push only their
+  assigned branches; they may not merge or change the theorem ledger.
