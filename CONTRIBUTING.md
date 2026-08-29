@@ -85,6 +85,15 @@ artifacts they check, so your working tree may show diffs afterwards.
 
 A green run is necessary, not sufficient: results are read by a human too.
 
+## Structured research cycles
+
+The theorem-oriented research program uses the fail-closed control plane in
+[`ops/research-team/PROTOCOL.md`](ops/research-team/PROTOCOL.md).  Every new
+cycle must compare its target against credible alternatives before work starts,
+use bounded independent work orders, and end with an explicit
+`CONTINUE`/`PIVOT`/`RETIRE`/`STOP` strategy verdict.  The repository verifier
+rejects governed cycles that omit these strategy or publication gates.
+
 ## Style
 
 Match the surrounding code. No preference beyond that, and no house formatter.
