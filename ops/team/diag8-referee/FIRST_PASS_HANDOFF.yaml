@@ -1,0 +1,55 @@
+track_id: cycle-20260829-diag8-referee
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+outcome: inconclusive
+summary: >-
+  The diagonal-eight dual-master strategy is a valid conditional reduction;
+  pass-two gates now reject graph-only or sampled routing evidence and require
+  complete regular chamber/wall/node coverage, infinity accounting, exact
+  labels, admissible-family scope, and an exact H_1 or Morse certificate.
+artifacts:
+  - path: ops/team/diag8-referee/FIRST_PASS_REVIEW.md
+    digest: f09ecff505b48ebfbd7ca6a632c266e545998be69271b84b8d76384d7941d624
+  - path: ops/team/diag8-referee/GATE_TABLE.yaml
+    digest: 17c8f5a494b301bbaf3132deedc29899f9283408d1a521a617f4d3dc9f508f71
+  - path: ops/team/diag8-referee/PASS2_REQUIREMENTS.yaml
+    digest: 889b92b0e9957be63a4921cf827a575241c635049e3194a02a9cc51abbf25ae2
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ai/omreal/verify_generic_wall_gluing_combinatorics.py &&
+    PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_dual_master_node.py &&
+    PYTHONDONTWRITEBYTECODE=1 python
+    ai/omreal/verify_partial_mutation_fiber_disconnected.py &&
+    PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_residual_stratum_no_go.py
+  result: exit_0_for_all_four_canonical_regressions
+coverage:
+  included: >-
+    Canonical strategy, locked quantifiers, theorem dependencies, known local
+    positive and hostile regressions, and pass-two acceptance criteria.
+  excluded: >-
+    No discovery candidate or new cellulation was reviewed; no global or
+    parent-local diagonal-eight claim was accepted.
+canaries:
+  positive: pinned row-2599 convex-node verifier passed at local scope
+  negative: pinned annulus no-go verifier reported H_1=Z
+  null: acceptance rule defined; no candidate null artifact supplied yet
+  hostile: >-
+    canonical corrupted-wall canary passed; graph-only parent-860 routing is
+    explicitly rejected without complete two-cell and coverage data
+source_accounting:
+  used:
+    - ai/omreal/NINE_DIAGONAL_STATUS.md at canonical base
+    - ai/omreal/DUAL_MASTER_CELL_PROGRAM.md at canonical base
+    - ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md at canonical base
+  unused_or_missing: >-
+    No new external source claim was introduced; pass two requires candidate
+    manifests and replay commands that have not yet been handed off.
+open_defects:
+  - No pass-two candidate evidence has been supplied.
+  - Parent-860 canonical routing data is not a two-skeleton and cannot decide H_1.
+  - >-
+    The live a/g-rectangle diagnostic leaves residual factors 16573 and 22629
+    unresolved and does not certify polygon or parent-domain coverage.
+next_action: Coordinator supplies every applicable item in PASS2_REQUIREMENTS.yaml.
+ledger_change_recommended: none

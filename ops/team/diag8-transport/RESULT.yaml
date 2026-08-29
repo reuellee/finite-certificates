@@ -1,0 +1,104 @@
+track_id: cycle-20260829-diag8-transport
+role: formalizer
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+outcome: disproved
+summary: >-
+  Proved a sufficient labeled stratified-pair transport theorem, then exactly
+  disproved the inference that mutation connectivity or reducible deletion
+  supplies it. A one-bracket rational UOM(4,8) mutation changes the complete
+  abstract extension count from 73,712 to 74,342. A reducible lexicographic
+  deletion maps 25,856 full labels onto 5,294 deletion labels with 4,964
+  nontrivial fibers and maximum fiber 282. Finite exact fixtures separately
+  show that changing true infinity or codimension-two incidence changes H1.
+artifacts:
+  - path: ops/team/diag8-transport/WORK_ORDER.yaml
+    digest: ec635ef6a5ecc4097ea294d04437c46202777a8e6d46253a33af324629102d1d
+  - path: ops/team/diag8-transport/TRANSPORT_COUNTERMODELS.json
+    digest: 2bec363e39eb946abc051f2bf8ed86cc323f6e4114759cbe2347cead51410654
+  - path: ops/team/diag8-transport/PROOF_NOTE.md
+    digest: 6668e4804c816d39d222060c1f6d956bdcb5b85ea669f94f05248b0569227389
+  - path: ops/team/diag8-transport/verify_transport_obstruction.py
+    digest: fda9fc0cf60e5c2982bd2b4f3d85bb9f356733d2caafed03a2d140d678afc754
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/diag8-transport/verify_transport_obstruction.py
+  result: >-
+    exit 0; pinned canonical inputs 4/4; exact one-bracket mutation;
+    abstract extensions 73,712 -> 74,342; exact feasible topes
+    26,108 -> 26,106 with 4,830 deaths and 4,828 births; reducible lex
+    deletion 25,856 -> 5,294 with maximum fiber 282; infinity-relative
+    H1 1 -> 2; node-incidence H1 1 -> 0; all four required hostile canaries
+    reject.
+coverage:
+  included: >-
+    One explicit rational mutation between realizable uniform rank-four
+    parents on eight labeled elements, all 70 parent brackets, both complete
+    abstract uniform extension universes, all exact chart topes and integer
+    witnesses; one explicit reducible rank-four/eight-element lexicographic
+    parent, its complete exact tope projection to deletion, and finite exact
+    relative-infinity and node-incidence complexes.
+  excluded: >-
+    No catalog-wide quiet-edge census, no parent-860 master roadmap, no global
+    diagonal-eight chamber/wall/node certificate, no claim that every mutation
+    edge is nontransportable, no all-parent coverage, and no 9DVL diagonal is
+    proved or disproved.
+canaries:
+  mutation_birth: >-
+    An abstract label and an exactly realized chart tope present only on the
+    plus side are rejected as claimed common labels.
+  mutation_death: >-
+    An abstract label and an exactly realized chart tope present only on the
+    minus side are rejected as claimed common labels.
+  infinity_change: >-
+    The identity map on a four-cycle is rejected when source infinity is empty
+    and target infinity consists of two opposite vertices; relative H1 changes
+    from one to two over F2.
+  label_collision: >-
+    Two exact full-parent topes differing only at triple (0,1,7) map to the
+    same deletion label and are rejected by the injectivity gate.
+  node_incidence: >-
+    The same four-cycle has H1 one without its dual node two-cell and H1 zero
+    with the node cell, so chamber/wall data alone cannot transport H1.
+source_accounting:
+  used:
+    - path: ai/omreal/PARENT_CONTRACTIBILITY_AUDIT.md
+      sha256: d0fde0f211db71228a48af3c928a213181bab4bb29c25a57d2ed7417f49de226
+      role: >-
+        Pins the exact scope of reducible-deletion homotopy equivalence and
+        confirms that it does not state labeled feasibility naturality.
+    - path: ai/omreal/WALK_THEORY.md
+      sha256: 820cf256706d0e18a927cbb58758354ca433f15f249c8ebaeaf018fd37a1c7c2
+      role: >-
+        Pins realizable mutation connectivity at reachability scope only.
+    - path: ai/omreal/verify_mutation_graph_not_partial_cube.py
+      sha256: cf444dac9bd386a16e9d25171069f076edcde2ffafd416bad375e5f99b131bea
+      role: >-
+        Pins the exact warning that general mutation graphs do not provide a
+        partial-cube transport premise.
+    - path: ai/omreal/DIAG9_SIGN_GEODESY_AUDIT.md
+      sha256: 64896fa28a76f57344bd246f1546322e1361f6ac57f164ca6199c58938c30903
+      role: >-
+        Pins the missing connected-sign-cell and complete incidence axioms.
+  unused_or_missing: none
+open_defects:
+  - >-
+    The countermodels disprove unconditional transport from connectivity or
+    reducibility; they do not rule out special mutation edges carrying an
+    independently certified labeled product collar.
+  - >-
+    No complete parent-level diagonal-eight certificate yet exists to serve
+    as the source of even a special-edge transport replay.
+next_action: >-
+  Do not use the ordinary mutation graph or reducible-deletion count as a
+  catalog shortcut. First build the parent-860 diagonal-eight certificate.
+  If transport is revisited, admit an edge only after exact zero-birth/death,
+  signed wall/node-incidence, true-infinity, and family-rank replay checks;
+  count components in that certified quiet-edge graph rather than assuming
+  ordinary mutation connectivity transports certificates.
+ledger_change_recommended: >-
+  Record the universal mutation/deletion certificate-transport shortcut as
+  DISPROVED at label-faithful scope and the labeled stratified-pair theorem as
+  a proved sufficient criterion. Keep diagonal eight OPEN and the honest
+  9DVL score at 2/9.

@@ -1,0 +1,74 @@
+track_id: cycle-20260829-diag8-falsifier
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+outcome: inconclusive
+summary: >-
+  No admissible geometric diagonal-eight H1 witness was found: one exact
+  parent-860 graph loop is filled by a newly certified transverse node cell,
+  the second remains unresolved, and an eight-vertex abstract countermodel
+  disproves only the sufficiency of the current combinatorial local axioms.
+artifacts:
+  - path: ops/team/diag8-falsifier/COUNTERMODEL.json
+    digest: 53eaa93ac8270cf4f68accf944abecc641cc3af2a4dd2ab368911b6d5438b878
+  - path: ops/team/diag8-falsifier/verify_diag8_falsifier.py
+    digest: 048e3ea65af5854cc836bd6ad8eca2ffd2e6cd4ab4a68378aa3067923444a47d
+  - path: ops/team/diag8-falsifier/FINDINGS.md
+    digest: 37a57766fff2ff05f191032770309c11b0329c3f54ce6aeadc804f71389dd4bf
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/diag8-falsifier/verify_diag8_falsifier.py &&
+    PYTHONDONTWRITEBYTECODE=1 python
+    ai/omreal/verify_ninth_candidate_antichain.py &&
+    PYTHONDONTWRITEBYTECODE=1 python
+    ai/omreal/verify_ninth_candidate_generic.py antichain
+    ai/omreal/data/ninth_candidate_37_176_antichain.npz &&
+    PYTHONDONTWRITEBYTECODE=1 python
+    ai/omreal/verify_residual_stratum_no_go.py
+  result: >-
+    exit 0; exact polygon filling, 495 parent-860 local width tests, 18
+    row-2599 certified-antichain subfamilies, abstract countermodel, and four
+    required canaries pass.
+coverage:
+  included: >-
+    Exact parent-860 mask-3 a/g polygon; all 26,740 residual factors and 70
+    parent brackets on that polygon; all 12 repaired-network proper support
+    masks; the row-2599 transverse-node closure; all eight-subfamilies of two
+    certified row-2599 global nine-antichains; and the eight-vertex abstract
+    labelled-complex model.
+  excluded: >-
+    Full parent-860 chamber/wall/node coverage, boundary at infinity,
+    codimension-two closure of mask 6, any global parent-860 proper-antichain
+    certificate, other parents/nodes/families, and UOM realization of the
+    abstract countermodel.
+canaries:
+  positive: known_tree returns beta1=0
+  negative: filled_cycle returns beta1=0
+  null: missing_two_cell returns beta1=1
+  hostile: hostile_label_mutation is rejected
+source_accounting:
+  used:
+    - ai/omreal/DUAL_MASTER_CELL_PROGRAM.md@sha256:bac5bcaab0542069cff3e014c13e6a01f1d940c015796fc16591d88d0a00043e
+    - ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md@sha256:7d1f2adad37d414d662bdb3aabbb696d191676a8c407b4d8a2e5def6c4bb59f0
+    - ai/omreal/RESIDUAL_STRATUM_NONCOMPACTNESS.md@sha256:dd1322f85c601a2ee91600c91d3b103536ae614041f20f30e7c7f5c8522ad569
+    - ai/omreal/data/DIAG9_GRAPH_parent860_coordinate_star.npz@sha256:9274371ec45baee318cd160f931344f37dc5031acc13d63c16099534b8896f4b
+    - ai/omreal/data/DIAG9_GRAPH_parent860_star_repair.npz@sha256:f3ebf1f3a9b458663a12b042e68194aa24c4b55689cf85344e2d98f81aec3d11
+    - ai/omreal/data/DIAG9_GRAPH_row2599_node_roadmap.npz@sha256:ddec96b052b305d279b543be2af27e12f380f0dedc79ea434616c64b40cd8cea
+    - ai/omreal/data/ninth_candidate_12_37_antichain.npz@sha256:11ca66549982ec40ce8425d2caed45b418edb73c4eb415a45b39d57e481bd1e4
+    - ai/omreal/data/ninth_candidate_37_176_antichain.npz@sha256:fe7bb166b5a151262c665875d32de49d7e8a330cf11b26609458af6b2661a59f
+  unused_or_missing: >-
+    No complete parent-860 master complex, infinity subcomplex, or global
+    parent-860 proper-antichain certificate exists in the pinned tested input.
+open_defects:
+  - >-
+    The mask-6 cycle 4-11-12-14-13-23-4 has finite-network beta1=1 and 26,038
+    common stored labels, but lacks a certified spanning two-chain or
+    non-boundary cocycle.
+  - >-
+    Artifact-internal dominance width six does not decide global
+    incomparability because the parent-860 network has no coverage theorem.
+next_action: >-
+  Build an exact parent-safe spanning disk for the mask-6 cycle, attach every
+  residual wall/node subdivision, and compute the label-induced relative
+  boundary; this is the next sharp proof-versus-counterexample discriminator.
+ledger_change_recommended: none

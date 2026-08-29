@@ -1,0 +1,17 @@
+{
+  "format": "diag8-synthetic-geometry-evidence-v1",
+  "scope": "synthetic regular-CW fixtures only",
+  "discharges": [
+    "ambient_coverage",
+    "regular_cell_structure",
+    "complete_cellular_incidence",
+    "complete_signature_labels",
+    "genuine_true_infinity_identification",
+    "relative_model_matches_target_space"
+  ],
+  "nonconsequences": [
+    "No parent-860 geometry is represented.",
+    "No 9DVL parent-cell coverage is claimed.",
+    "No signature label is asserted to come from an oriented-matroid realization space."
+  ]
+}

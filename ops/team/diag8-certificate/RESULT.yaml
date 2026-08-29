@@ -1,0 +1,94 @@
+track_id: cycle-20260829-diag8-certificate
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+outcome: finite-exact
+summary: >-
+  Defined and independently replayed a fail-closed finite relative-CW
+  certificate which decides H1 over F2 for every proper dominance-reduced
+  eight-antichain represented by its complete labelled 0/1/2-cell input;
+  this is an abstract interface result and no geometric coverage is claimed.
+artifacts:
+  - path: ops/team/diag8-certificate/SCHEMA.md
+    digest: 2364b0c8cc65ed9d586e85443381af61cecf02c30ac358262aeac9f28275e72a
+  - path: ops/team/diag8-certificate/verify_diag8_relative_h1_certificate.py
+    digest: 37ee8be3fa8a334eeab6af19caaa31ca00065ccb07c2f77916184c86675592ac
+  - path: ops/team/diag8-certificate/DIAG8_RELATIVE_H1_FIXTURES.json
+    digest: bfdf864c74fe954e60e9fdd361fbbb0f21173c1c0ed7dfd401c54a4268cf047f
+  - path: ops/team/diag8-certificate/SYNTHETIC_GEOMETRY_EVIDENCE.json
+    digest: 851503ff6b554ead9933a3f8659b6fb8b0bf278d733fb0d2e46965dcf640b0a2
+  - path: ops/team/diag8-certificate/WORK_ORDER.yaml
+    digest: c7008255fc9598aeace7782e26b824c61171f92ad527fd9dd0d2a62ae91a3be4
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/diag8-certificate/verify_diag8_relative_h1_certificate.py
+  result: >-
+    exit 0; contractible_disk width=8, families=1, H1_F2={0:1};
+    unfilled_loop width=8, families=1, H1_F2={1:1}; relative_boundary
+    width=8, families=1, H1_F2={1:1}; 11/11 hostile mutations rejected
+    at their intended gates.
+coverage:
+  included: >-
+    Every finite regular relative two-complex satisfying the schema: complete
+    labelled cells in dimensions 0, 1, and 2; signed unit incidence with
+    integral d-squared zero; a true-infinity subcomplex; complete global
+    signature equivalence, properness, dominance and width accounting; and
+    pinned discharged external geometry obligations.  The checker quotients
+    equal supports, removes empty/universal supports, enumerates every proper
+    eight-antichain and computes its relative H1 over F2 exactly.
+  excluded: >-
+    No parent-860 or other parent geometry, semialgebraic coverage, label
+    correctness, wall/node completeness, two-cell filling, true-infinity
+    identification, target-space equivalence, rational nonvanishing result,
+    diagonal-eight proof, diagonal-nine proof, or ledger-score change.
+canaries:
+  positive: >-
+    Contractible labelled disk has one admissible eight-family and H1_F2=0.
+  negative: >-
+    The literally identical labelled one-skeleton without its two-cell has
+    one admissible eight-family and H1_F2=1, proving graph-only input unsound.
+  null: >-
+    The interface cannot accept the current parent-860 graph until a producer
+    supplies complete two-cell incidence, genuine infinity, global labels and
+    discharged geometric coverage/equivalence evidence.
+  hostile: >-
+    Eleven deterministic mutations reject at checked intended gates:
+    nonzero d-squared, missing two-cell accounting, erased/nonclosed infinity,
+    nonmonotone labels, moved external evidence, open coverage, duplicate
+    cells/incidence, false H1 verdict and corrupt global width.
+source_accounting:
+  used: >-
+    Canonical base tree 06cc3363a021b8adc59e66865f44bf8eafa66029;
+    ai/omreal/DUAL_MASTER_CELL_PROGRAM.md SHA-256
+    bac5bcaab0542069cff3e014c13e6a01f1d940c015796fc16591d88d0a00043e;
+    ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md SHA-256
+    dbc84c3c6c5db22a319d8932b538cd5807aee216212ca93cad08e80a68afa10f;
+    ai/omreal/verify_dual_master_node.py SHA-256
+    b0417eac6c8e867e257ad115dcd749af55af91435e67a80a1784219dbdd20b09.
+    The local work-order parent 77059d496466ccffe7c7309a360f99e6d5ea20c4
+    has the assigned base tree exactly.
+  unused_or_missing: >-
+    No discovery-side producer or acceptance logic was imported.  No pinned
+    parent-860 artifact currently supplies complete two-cells, global
+    dominance/admissibility witnesses, or genuine infinity for this schema.
+open_defects:
+  - >-
+    External status and artifact digests authenticate the geometry evidence
+    but do not prove its mathematical correctness; independent geometric
+    verification remains a publication gate.
+  - >-
+    Exhaustive antichain enumeration is exact but can be exponential.  A
+    future proof-carrying Morse or decision-tree certificate may be needed
+    for theorem-scale performance; it is not needed for interface soundness.
+  - >-
+    The schema deliberately reports nonzero mod-two H1 without inferring
+    nonzero rational H1.
+next_action: >-
+  Adapt one coverage-certified parent-860 two-dimensional filling object to
+  this schema, resolving every retained factor and cell attachment, and keep
+  all external obligations open until an independent geometry verifier
+  discharges them.
+ledger_change_recommended: >-
+  Record diag8_h1_certificate_interface as finite-exact infrastructure and
+  record graph-only labelled chamber/wall input as disproved for deciding H1.
+  Keep every geometric diagonal-eight claim OPEN and the honest score at 2/9.

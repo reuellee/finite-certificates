@@ -1,0 +1,80 @@
+{
+  "format": "diag8-parent860-graph-h1-no-go-v1",
+  "base_revision": "5393b03fda623dc6b4552130d13467fae71d31bc",
+  "base_tree": "06cc3363a021b8adc59e66865f44bf8eafa66029",
+  "source": {
+    "path": "ai/omreal/data/DIAG9_GRAPH_parent860_star_repair.npz",
+    "format": "diag9-parent860-star-repair-v1",
+    "sha256": "f3ebf1f3a9b458663a12b042e68194aa24c4b55689cf85344e2d98f81aec3d11",
+    "semantic_sha256": "3311c16bd553024891fc2cdcd68f2591135a43911146df221b4e1aa01672076e"
+  },
+  "coordinate_source": {
+    "path": "ai/omreal/data/DIAG9_GRAPH_parent860_coordinate_star.npz",
+    "format": "diag9-parent860-coordinate-star-v1",
+    "sha256": "9274371ec45baee318cd160f931344f37dc5031acc13d63c16099534b8896f4b"
+  },
+  "extracted_graph": {
+    "vertex_count": 24,
+    "edges": [[1, 2], [2, 3], [0, 3], [0, 4], [4, 5], [0, 6], [0, 7], [0, 8], [9, 10], [0, 10], [0, 11], [11, 12], [13, 14], [14, 15], [0, 15], [0, 16], [17, 18], [0, 18], [0, 19], [0, 20], [0, 21], [0, 22], [3, 6], [3, 7], [3, 18], [3, 20], [3, 21], [4, 11], [8, 10], [8, 16], [12, 14], [19, 22], [2, 8], [15, 17], [1, 17], [13, 23], [19, 23], [9, 19], [4, 23]]
+  },
+  "local_support_poset": {
+    "full_signature_universe_size": 26264,
+    "support_class_count": 13,
+    "proper_signature_count": 304,
+    "universal_support_mask": 16777215,
+    "universal_signature_count": 25960,
+    "patterns": [32, 67334, 192514, 3539150, 3661311, 8357839, 8419376, 13115904, 13238065, 16584701, 16709881, 16777183],
+    "multiplicities": [2, 72, 2, 2, 72, 2, 2, 72, 2, 2, 72, 2],
+    "representative_signatures": [14488354815770788, 13942636796864928, 32642325440703616, 14629026260659616, 14206879704843884, 32607416148044458, 32537047406029546, 13940617966222611, 14593841888308388, 32598344908487808, 13942636799027618, 14206810993754276],
+    "order": "bitset inclusion on the certified 24-vertex network",
+    "width": 6,
+    "width_witness_pattern_indices": [1, 2, 3, 6, 7, 9],
+    "six_chain_cover_pattern_indices": [[0, 6, 10], [1, 5], [2, 11], [3, 4], [7, 8], [9]],
+    "size_six_antichain_count": 9,
+    "size_six_nonempty_intersection_count": 0,
+    "size_eight_antichain_count": 0
+  },
+  "cycle_obstruction": {
+    "pairwise_incomparable_pattern_indices": [4, 8, 9, 10, 11],
+    "representative_signatures": [14206879704843884, 14593841888308388, 32598344908487808, 13942636799027618, 14206810993754276],
+    "common_support_mask": 2065,
+    "vertices": [0, 4, 11],
+    "edges": [[0, 4], [0, 11], [4, 11]],
+    "unfilled_c2_rank": 0,
+    "unfilled_h1_rank_over_q": 1,
+    "filled_triangle_boundary_on_ordered_edges": [1, -1, 1],
+    "filled_c2_rank": 1,
+    "filled_h1_rank_over_q": 0
+  },
+  "geometric_triangle_filling": {
+    "vertex_ids": [0, 4, 11],
+    "coordinate_variables": ["a", "d"],
+    "normalized_base_coordinates": ["40/7729", "20720/22139", "-9136/33929", "14980/50917", "184820/145847", "12164/31931", "-1910/7847", "9970/22477", "1962/4921"],
+    "vertex_offsets": [["0", "0"], ["79/978402", "0"], ["0", "13/526129"]],
+    "fixed_witnesses_by_signature": {
+      "14206879704843884": [-38986, 59819, 59818, -17209],
+      "14593841888308388": [169459737, 1, 169459738, -46749060],
+      "32598344908487808": [296189, -481208, 4023222, -79753],
+      "13942636799027618": [108309, -87879, -1, -113790],
+      "14206810993754276": [99518, 39574, 170458, -64823]
+    },
+    "minimum_signed_margin_by_signature": {
+      "14206879704843884": "8528763742765255/22278970456263157",
+      "14593841888308388": "18086261600/44994705847",
+      "32598344908487808": "1992526800/6427815121",
+      "13942636799027618": "596196/1883929",
+      "14206810993754276": "34318/290339"
+    },
+    "positive_parent_vertex_controls": 210,
+    "positive_signature_vertex_controls": 840,
+    "zero_mixed_affine_checks": 350,
+    "theorem": "The closed rational a/d triangle with vertices 0,4,11 stays in the strict parent-860 cell and is contained in the common feasibility locus of the five displayed pairwise-incomparable signatures. Its boundary is the certified network triangle, so it supplies an exact geometric null-homology of that cycle."
+  },
+  "decision": {
+    "outcome": "BOUNDED_PROVED_AND_NO_GO",
+    "proved": "The certified parent-860 network and its local support quotient have width exactly six, so they represent no proper pairwise-incomparable eight-family. A five-pattern antichain retains an exact triangle. Exact affine controls and fixed witnesses prove that its rational a/d-plane triangle lies in the common feasibility locus and fills the cycle. Separately, the unfilled and formally once-filled completions show why graph labels alone cannot supply that conclusion.",
+    "not_proved": "Neither completion is asserted to be the geometric parent-860 dual master complex. No global chamber coverage, codimension-two attaching map, or true-infinity incidence is certified.",
+    "first_missing_datum": "An exact fixed-witness-or-arrangement filling decision for the a/g polygon 1-2-3-18-17-1, followed by a certified chamber/wall/node relative 2-complex which installs the proven disks and records true-infinity incidence.",
+    "ledger_recommendation": "Keep diag8_h1 OPEN and the honest 9DVL score at 2/9. Do not count the vacuous local size-eight statement."
+  }
+}

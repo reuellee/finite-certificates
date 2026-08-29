@@ -1,0 +1,97 @@
+schema_version: 1
+track_id: cycle-20260829-diag8-referee
+candidate_commit: be7b5953856bb0f8dbb3dc63b5757edfb259268f
+candidate_tree: 18021503f846f85a0b9122e5c4732d0d85fdf080
+handoff_carrier: d13f84403d9226a8b2f1fa0347d46fe794e24424
+policy: fail_closed
+publication_disposition: reject
+ledger_change_recommended: none
+
+claims:
+  - claim_id: parent860_local_support_width
+    mathematical_replay: pass_at_corrected_bounded_scope
+    publication: reject_current_candidate
+    defect: >-
+      The exact width computation concerns 12 proper classes representing 304
+      signatures.  The full 26,264-signature quotient has 13 classes because
+      a universal class contains 25,960 signatures.  Result prose and the
+      handoff family quantifier conflate these counts.
+  - claim_id: parent860_ad_triangle_filling
+    mathematical_replay: pass_at_bounded_scope
+    publication: blocked_by_candidate_wide_G00_G16_failure
+    nonconsequence: no parent coverage, infinity, size-eight, or ledger result
+  - claim_id: parent860_ag_pentagon_filling
+    mathematical_replay: pass_at_bounded_scope
+    publication: blocked_by_candidate_wide_G00_G16_failure
+    nonconsequence: no parent coverage, global dominance, infinity, or ledger result
+  - claim_id: graph_only_h1_no_go
+    mathematical_replay: pass_as_abstract_interface_no_go
+    publication: blocked_by_candidate_wide_G00_G16_failure
+    nonconsequence: not a UOM counterexample
+  - claim_id: unconditional_transport_no_go
+    mathematical_replay: pass_for_the_two_pinned_fixtures
+    publication: blocked_by_candidate_wide_G00_G16_failure
+    nonconsequence: does not rule out certified quiet-edge transport
+
+gates:
+  - id: G00_claim_lock
+    status: fail
+    reason: >-
+      First-claim family quantifier says all 12 support-pattern classes, but
+      there are 13 total classes; only the 12 proper classes are tested.
+  - id: G01_revision_and_digest
+    status: pass
+    evidence: candidate identity exact; 20/20 manifest entries match bytes and SHA-256
+  - id: G02_clean_replay
+    status: pass
+    evidence: four track and four canonical commands exit zero from detached immutable candidate
+  - id: G03_independence
+    status: pass
+    evidence: >-
+      Track verifiers reconstruct exact invariants; referee separately used
+      SymPy for triangle controls and direct NPZ/polynomial audits.
+  - id: G04_parent_domain
+    status: pass_only_for_two_bounded_polygons
+    theorem_level: open
+  - id: G05_factor_and_chamber_coverage
+    status: pass_only_for_ag_polygon_factor_arrangement
+    theorem_level: open
+  - id: G06_regular_two_skeleton
+    status: pass_only_for_displayed_local_fillings_and_abstract_fixtures
+    theorem_level: open
+  - id: G07_infinity_and_relative_domain
+    status: not_claimed
+    theorem_level: open
+  - id: G08_complete_labels
+    status: pass_for_pinned_network_and_abstract_fixtures
+    theorem_level: open
+  - id: G09_germ_gluing
+    status: pass_for_ag_transverse_node_under_pinned_all_strata_theorem
+    theorem_level: open
+  - id: G10_chain_complex
+    status: pass_for_bounded_and_abstract_fixtures
+    theorem_level: open
+  - id: G11_h1_rank
+    status: pass_for_bounded_and_abstract_fixtures
+    theorem_level: open
+  - id: G12_morse_certificate
+    status: not_applicable
+  - id: G13_admissible_family_census
+    status: fail_for_publication_accounting
+    theorem_level: open
+    reason: 13 total local support classes versus 12 proper classes is misstated
+  - id: G14_transport
+    status: pass_as_no_go_only
+    theorem_level: open
+  - id: G15_canaries
+    status: pass
+    evidence: all track and canonical positive, negative, null, and hostile cases pass
+  - id: G16_repository_and_ledger
+    status: fail
+    reason: artifact accounting and publication prose disagree; current candidate must not publish
+
+required_fix:
+  - Correct full-versus-proper support-class accounting in all prose and handoff fields.
+  - State 13 total classes, 1 universal class with 25960 signatures, and 12 proper classes totaling 304.
+  - Regenerate affected manifests and immutable candidate identity.
+  - Preserve ledger status diag8_h1 open and 9DVL 2/9.

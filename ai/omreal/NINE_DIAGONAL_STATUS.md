@@ -34,7 +34,7 @@ Exactly two of the nine entries are currently proved.
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
-| 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
+| 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group; an exact relative-two-complex interface now proves that graph labels alone cannot decide `H_1`; on the parent-860 training network an `a/d` triangle and an `a/g` pentagon are filled exactly, the local support quotient has width six and no size-eight antichain, and the remaining mask-6 loop still lacks a coverage-certified two-chain, infinity, and global dominance data |
 | 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 now has an exact 23-chamber coordinate-star no-go and a 24-chamber all-family CEGIS repair network, but no full-dimensional parent roadmap |
 
 The dual column is valid for all nine entries after importing the published
@@ -1101,14 +1101,23 @@ escape or higher-wall coherence.  See
    interior lower-cell label is the intersection of its incident chamber
    labels and no isolated local puncture can occur in the interior.  Infinity
    cells are excluded, not intersection-labeled.  Global cycles, complete
-   codimension-two incidence, and infinity are the real
-   diagonal-eight targets.  See
-   `DUAL_MASTER_CELL_PROGRAM.md` and `verify_dual_master_node.py`.  The first
-   parent-860 heuristic-to-exact pilot additionally falsifies connected-tree
-   routing with one signature, repairs that obstruction and a subsequent pair
-   obstruction by 16 all-factor-certified chords, and obtains connected
-   finite intersections on its exact 24-chamber training network.  It is not
-   a coverage theorem; see `DIAG9_PARENT860_CEGIS_ROUTING.md`.
+   codimension-two incidence, and infinity are the real diagonal-eight
+   targets.  See `DUAL_MASTER_CELL_PROGRAM.md` and
+   `verify_dual_master_node.py`.  The first parent-860 heuristic-to-exact
+   pilot additionally falsifies connected-tree routing with one signature,
+   repairs that obstruction and a subsequent pair obstruction by 16
+   all-factor-certified chords, and obtains connected finite intersections
+   on its exact 24-chamber training network.  A strategy-reset audit then
+   proves exactly why that graph cannot decide `H_1`: its 12-pattern local
+   quotient has width six, and the same labelled one-skeleton can have
+   different first homology after changing one two-cell.  Two apparent graph
+   cycles are now filled geometrically: an affine `a/d` triangle for five
+   proper incomparable signatures, and the `a/g` pentagon cut by exactly two
+   transverse residual walls.  The surviving mask-6 loop
+   `4-11-12-14-13-23-4` is the next finite discriminator.  None of these
+   finite results proves parent coverage, global dominance, or correct
+   infinity incidence; see `DIAG9_PARENT860_CEGIS_ROUTING.md` and the
+   `ops/team/diag8-*` handoffs.
 2. **Sparse-form quotient plus CAD.**  Column scaling removes all but
    `beta<=4` invariant positive weight ratios from every generic pair orbit.
    The remaining equations ask that fixed sparse three-vectors vanish in a
@@ -1900,6 +1909,20 @@ attach a triple-zero component to it; the unresolved triple residue remains
   artifacts: a 23-chamber coordinate-star no-go to naive tree routing and a
   16-chord, 24-chamber network with connected support for every finite family
   on that network, without a claim of full parent-cell coverage.
+- `ops/team/diag8-dual-prover/`: a pure-standard-library exact replay of the
+  parent-860 local support quotient, its width-six certificate, the graph-only
+  `H_1` no-go, and a rational `a/d` triangle filling for five proper
+  incomparable signatures.
+- `ops/team/diag8-falsifier/`: an independent exact `a/g` polygon audit in
+  which 26,738/26,740 factors are sign-definite, the remaining two walls meet
+  transversely once, and the resulting dual two-cell kills the apparent
+  mask-3 graph cycle; the mask-6 loop remains unresolved.
+- `ops/team/diag8-certificate/`: a fail-closed relative `C_2 -> C_1 -> C_0`
+  certificate interface with complete labels, true-infinity deletion,
+  dominance witnesses, exact mod-two ranks, and hostile graph-only canaries.
+- `ops/team/diag8-transport/`: exact obstructions showing that ordinary
+  mutation connectivity and reducible deletion do not preserve the complete
+  label/incidence data required to transport a diagonal-eight certificate.
 - `RESIDUAL_STRATUM_NONCOMPACTNESS.md` and its exact verifiers: global graph
   charts for individual walls, fixed-minor pair/triple noncompactness, the
   common-factor all-die escape, and the sharp arity-eight abstract no-go.
