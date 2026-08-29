@@ -399,7 +399,66 @@ codimension-two closure, or boundary-at-infinity data.  Its sharp lesson is
 that a fixed tree is too rigid, while an exact counterexample-guided chord
 rule can repair all observed intersections with a small factor-local library.
 
-## 7. Revised attack order
+## 7. Parent-860 codimension-two strategy reset
+
+The repaired parent-860 network now supplies two exact filling regressions
+and a sharp interface no-go.  Its `26,264` represented signatures form `13`
+support classes on the `24` vertices: one universal class contains `25,960`
+signatures, while the other `304` signatures form `12` proper patterns.  The
+proper-pattern inclusion poset has width exactly `6`: a six-antichain proves
+the lower bound and a six-chain cover proves the upper bound.  Hence this
+local quotient contains no size-eight antichain.  Since missing chambers can
+split patterns that are equal or nested on the network, this is not a global
+width theorem.
+
+The five incomparable patterns with common support on the triangle
+`0-4-11-0` have graph `H_1` of rank one before a two-cell is supplied.  The
+vertices lie in the normalized `a/d` plane.  Exact affine controls check all
+`210` parent-bracket vertex signs, `840` fixed-witness signed feasibility
+inequalities, and `350` mixed coefficients.  Their rational triangle stays
+inside parent 860 and inside the fivefold feasibility intersection, so it
+geometrically fills that cycle.
+
+The apparent `a/g` pentagon `1-2-3-18-17-1` is also filled.  Exact
+triangle-Bernstein controls make `26,738/26,740` residual factors
+sign-definite on the polygon.  Only factors `16573` and `22629` meet it; all
+`70` parent brackets retain their signs, and the two walls have one exact
+transverse node inside.  The node's dual two-cell has the pentagon as
+boundary, and all `26,038` stored labels common to the boundary chambers
+label the cell by the all-strata theorem.  Thus the observed graph cycle dies
+after the required codimension-two incidence is restored.
+
+These are finite exact regressions, not a parent-local diagonal-eight result.
+The network does not cover the parent cell, carries no true-infinity
+subcomplex, and cannot certify the global equality/inclusion poset.  The
+remaining mask-6 cycle
+
+```text
+4-11-12-14-13-23-4
+```
+
+spans the `a,d,f,g` coordinates and is the next two-chain discriminator.
+
+The accompanying abstract relative-two-complex checker records the minimum
+acceptable proof interface: complete signed `0/1/2` incidence, complete cell
+labels, genuine-infinity deletion, global properness and dominance witnesses,
+and exact ranks.  Its filled and unfilled fixtures have the same labelled
+one-skeleton but different `H_1`, so graph-only evidence is rejected.  A
+mod-two vanishing certificate is sufficient for rational vanishing; a
+nonzero mod-two class alone is not a rational counterexample.
+
+Finally, exact transport can no longer be based on ordinary mutation or
+deletion connectivity.  A one-bracket mutation changes the complete abstract
+extension universe, and reducible deletion has large label fibers.  Only an
+explicit isomorphism of labelled signed regular-CW pairs, including every bad
+subcomplex, codimension-two incidence, and true infinity, is sufficient to
+transport a boundary-rank certificate.
+
+The exact replays and adversarial fixtures are in
+`ops/team/diag8-dual-prover`, `ops/team/diag8-falsifier`,
+`ops/team/diag8-certificate`, and `ops/team/diag8-transport`.
+
+## 8. Revised attack order
 
 1. Construct a complete regular chamber/wall/node refinement, retaining its
    artificial faces and the projective boundary-at-infinity subcomplex, for

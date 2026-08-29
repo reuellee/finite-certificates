@@ -1,0 +1,39 @@
+track_id: cycle-20260829-diag8-certificate
+role: certificate-engineer
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+target:
+  claim: >-
+    Define the smallest deterministic certificate schema and independent
+    exact verifier needed to decide H_1 over F_2 for every admissible
+    eight-signature antichain in a finite labelled relative 2-complex, with
+    true-infinity deletion, complete incidence, dominance, and width accounting.
+  quantifiers: >-
+    Every finite regular relative 2-complex satisfying the schema; geometric
+    coverage and label correctness remain explicit external obligations.
+  ledger_id: diag8_h1_certificate_interface
+assumptions:
+  - Finite chain-complex algebra over F_2 is sufficient for rational H_1 vanishing only in the proved direction recorded by the repository.
+  - Generator and verifier acceptance logic must be separated.
+inputs:
+  - path_or_source: ai/omreal/DUAL_MASTER_CELL_PROGRAM.md
+    digest: pinned_by_base_tree
+  - path_or_source: ai/omreal/DIAG3_PAIR_MASTER_CLOSURE_NODE_CANARY.md
+    digest: pinned_by_base_tree
+  - path_or_source: ai/omreal/verify_dual_master_node.py
+    digest: pinned_by_base_tree
+deliverables:
+  positive: Schema, synthetic fixtures, independent verifier, hostile mutations, and replay result.
+  negative: Exact demonstration that a proposed smaller schema is unsound.
+  null: Required fields that cannot yet be sourced from canonical artifacts.
+  timeout: Partial schema with unresolved trust boundaries marked fail-closed.
+verification:
+  replay: PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-certificate/verify_diag8_relative_h1_certificate.py
+  canaries: [contractible_disk, unfilled_loop, relative_boundary, hostile_incidence]
+limits:
+  resource_ceiling: 60 wall-clock minutes, 4 GiB RAM, no paid services.
+  stop_rule: Stop when the abstract certificate interface is independently replayable and all hostile fixtures discriminate correctly.
+  prohibited_scope: >-
+    No geometric parent-860 coverage claim, no reuse of producer acceptance
+    code, and no edits outside ops/team/diag8-certificate.
+handoff_to: coordinator

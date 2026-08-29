@@ -1,0 +1,160 @@
+schema_version: 1
+track_id: cycle-20260829-diag8-control-plane
+candidate_identity:
+  immutable_commit: be7b5953856bb0f8dbb3dc63b5757edfb259268f
+  immutable_tree: 18021503f846f85a0b9122e5c4732d0d85fdf080
+  branch_name_for_location_only: research/diag8-dual-cegar-cycle-20260829
+  parent_base_commit: 5393b03fda623dc6b4552130d13467fae71d31bc
+  parent_base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+  work_order_carrier: e07d7f9dec6bdf432b1ce82669f35201b6aa5e95
+  accepted_track_commits:
+    referee_first_pass: 8347caf344b1fd812d502ecef3baf0460420975f
+    prover: 50bd586bb1db440a1277fb2e28b7fe699a42abc7
+    certificate: 54d590c344533bc9b48dfa4abf311f5f07f53894
+    transport: 029ce83557d44c85e75b13755ecf870cfa78f85b
+    falsifier: 740c1702d60f117b77916cb197466c9f3f6a0e9c
+
+claims:
+  - claim_id: parent860_local_support_width
+    proposed_outcome_class: finite_exact
+    exact_mathematical_statement: >-
+      The 12 proper support patterns represented on the pinned 24-vertex,
+      39-edge parent-860 network have inclusion width exactly six, nine
+      size-six antichains with empty common network support, and no local
+      size-eight antichain.
+    parent_quantifier: one pinned embedded network in parent 860
+    family_quantifier: all 12 support-pattern classes on that network
+    coefficient_ring_or_field: exact bitset inclusion
+    explicit_nonconsequences: >-
+      Local equality or inclusion need not equal global equality or inclusion;
+      this is not a parent-local or global diagonal-eight theorem.
+  - claim_id: parent860_ad_triangle_filling
+    proposed_outcome_class: finite_exact
+    exact_mathematical_statement: >-
+      The rational a/d triangle on network vertices 0,4,11 stays in parent
+      860 and in the common feasibility locus of five displayed proper
+      incomparable signatures, and fills their retained graph cycle.
+    parent_quantifier: one exact rational triangle in parent 860
+    family_quantifier: the five certificate signatures
+    coefficient_ring_or_field: Q
+    explicit_nonconsequences: >-
+      No full parent coverage, relative infinity, or size-eight result.
+  - claim_id: parent860_ag_pentagon_filling
+    proposed_outcome_class: finite_exact
+    exact_mathematical_statement: >-
+      On the rational polygon 1-2-3-18-17-1, all parent brackets remain
+      strict, exactly residual factors 16573 and 22629 meet the polygon, the
+      walls meet transversely once, and the resulting node dual two-cell kills
+      the mask-3 graph cycle for every boundary-common stored label.
+    parent_quantifier: one exact rational polygon in parent 860
+    family_quantifier: the 26038 stored labels common to its boundary chambers
+    coefficient_ring_or_field: Q
+    explicit_nonconsequences: >-
+      The network and polygon do not cover parent 860; no global dominance or
+      true-infinity claim is made.
+  - claim_id: graph_only_h1_no_go
+    proposed_outcome_class: abstract_no_go
+    exact_mathematical_statement: >-
+      Identical complete labelled zero/one skeleta can have H1 ranks one or
+      zero after changing one two-cell, and relative infinity can also change
+      H1; complete graph labels therefore do not determine diagonal-eight H1.
+    parent_quantifier: abstract finite regular relative two-complex fixtures
+    family_quantifier: one exact proper incomparable eight-family per fixture
+    coefficient_ring_or_field: F2, with Q also replayed for the graph triangle
+    explicit_nonconsequences: >-
+      The fixtures are not UOM counterexamples; nonzero mod-two H1 alone is
+      not asserted to imply nonzero rational H1.
+  - claim_id: unconditional_transport_no_go
+    proposed_outcome_class: finite_exact_no_go
+    exact_mathematical_statement: >-
+      One exact realizable one-bracket mutation changes the complete abstract
+      extension universe, and one exact reducible deletion has nontrivial
+      label fibers; neither operation alone supplies a labelled stratified-pair
+      isomorphism capable of transporting the relative H1 certificate.
+    parent_quantifier: the pinned mutation and deletion fixtures only
+    family_quantifier: their complete enumerated label universes
+    coefficient_ring_or_field: exact signed combinatorics
+    explicit_nonconsequences: >-
+      No impossibility claim for a separately certified quiet-edge transport
+      graph or explicit labelled regular-CW pair isomorphism.
+
+proposed_ledger_change: none
+ledger_status_after_acceptance: diag8_h1_open_and_9DVL_2_of_9
+
+artifact_manifest:
+  - {path: ai/omreal/DUAL_MASTER_CELL_PROGRAM.md, bytes: 23517, sha256: 94e23c3694e87ef83aa607a7b43fb21d036473d478630a71edc5d04b97e3454d}
+  - {path: ai/omreal/NINE_DIAGONAL_STATUS.md, bytes: 130721, sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782}
+  - {path: ops/team/diag8-control-plane/CYCLE_REPORT.md, bytes: 3173, sha256: 730198dae78c8d20d284313d9fc793c2ab233d9a8f655a454b0e773c7bc7ca4a}
+  - {path: ops/team/diag8-dual-prover/DIAG8_PARENT860_GRAPH_H1_CERTIFICATE.json, bytes: 5066, sha256: ec2636cda1a92eb29784cc8de946b114cf178f39285d2fe62c7bd862f80da55c}
+  - {path: ops/team/diag8-dual-prover/PROOF_NOTE.md, bytes: 5168, sha256: 86cb572701a95f45408406be35d8d8e618c03a56324ac26de498d0c1a6f8200c}
+  - {path: ops/team/diag8-dual-prover/RESULT.yaml, bytes: 5485, sha256: 438daaf5b63defe60a4073ba35c4a39198303b18ce6d1f8f64228dd940608f16}
+  - {path: ops/team/diag8-dual-prover/verify_diag8_parent860_graph_h1.py, bytes: 20232, sha256: d6b118b3024b902489e1c389ebc10eb2112a229c33317f53e376c94202d502f6}
+  - {path: ops/team/diag8-falsifier/COUNTERMODEL.json, bytes: 931, sha256: 53eaa93ac8270cf4f68accf944abecc641cc3af2a4dd2ab368911b6d5438b878}
+  - {path: ops/team/diag8-falsifier/FINDINGS.md, bytes: 4497, sha256: 37a57766fff2ff05f191032770309c11b0329c3f54ce6aeadc804f71389dd4bf}
+  - {path: ops/team/diag8-falsifier/RESULT.yaml, bytes: 4163, sha256: 316248e032c2006c4518ce732910583f553c7cbd5d14f29525e0d585ca36d10c}
+  - {path: ops/team/diag8-falsifier/verify_diag8_falsifier.py, bytes: 27898, sha256: 048e3ea65af5854cc836bd6ad8eca2ffd2e6cd4ab4a68378aa3067923444a47d}
+  - {path: ops/team/diag8-certificate/DIAG8_RELATIVE_H1_FIXTURES.json, bytes: 21307, sha256: bfdf864c74fe954e60e9fdd361fbbb0f21173c1c0ed7dfd401c54a4268cf047f}
+  - {path: ops/team/diag8-certificate/RESULT.yaml, bytes: 5113, sha256: c61c3062788af4c5daf7f4356959be2e9e37ff9fa29871197bccf7995376edea}
+  - {path: ops/team/diag8-certificate/SCHEMA.md, bytes: 4882, sha256: 2364b0c8cc65ed9d586e85443381af61cecf02c30ac358262aeac9f28275e72a}
+  - {path: ops/team/diag8-certificate/SYNTHETIC_GEOMETRY_EVIDENCE.json, bytes: 546, sha256: 851503ff6b554ead9933a3f8659b6fb8b0bf278d733fb0d2e46965dcf640b0a2}
+  - {path: ops/team/diag8-certificate/verify_diag8_relative_h1_certificate.py, bytes: 25542, sha256: 37ee8be3fa8a334eeab6af19caaa31ca00065ccb07c2f77916184c86675592ac}
+  - {path: ops/team/diag8-transport/PROOF_NOTE.md, bytes: 10463, sha256: 6668e4804c816d39d222060c1f6d956bdcb5b85ea669f94f05248b0569227389}
+  - {path: ops/team/diag8-transport/RESULT.yaml, bytes: 5505, sha256: c9317be852343a42ec073c565587d5ac29fed1b6c149780f803b2450c7c9ceaa}
+  - {path: ops/team/diag8-transport/TRANSPORT_COUNTERMODELS.json, bytes: 3179, sha256: 2bec363e39eb946abc051f2bf8ed86cc323f6e4114759cbe2347cead51410654}
+  - {path: ops/team/diag8-transport/verify_transport_obstruction.py, bytes: 24735, sha256: fda9fc0cf60e5c2982bd2b4f3d85bb9f356733d2caafed03a2d140d678afc754}
+
+replay:
+  environment:
+    python: CPython 3.12.13
+    platform: Linux 6.18.35 x86_64
+    deterministic_seed_policy: no_randomness
+    bytecode_policy: PYTHONDONTWRITEBYTECODE=1
+  clean_checkout_commands:
+    - git checkout --detach be7b5953856bb0f8dbb3dc63b5757edfb259268f
+  independent_verifier_commands:
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-dual-prover/verify_diag8_parent860_graph_h1.py
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-falsifier/verify_diag8_falsifier.py
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-certificate/verify_diag8_relative_h1_certificate.py
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-transport/verify_transport_obstruction.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_generic_wall_gluing_combinatorics.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_dual_master_node.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_partial_mutation_fiber_disconnected.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_residual_stratum_no_go.py
+  measured_metrics:
+    prover: {elapsed_seconds: 0.399, maxrss_kib: 25080, exit: 0}
+    falsifier: {elapsed_seconds: 38.484, maxrss_kib: 209500, exit: 0}
+    certificate: {elapsed_seconds: 0.055, maxrss_kib: 18268, exit: 0}
+    transport: {elapsed_seconds: 32.199, maxrss_kib: 56444, exit: 0}
+    canonical_regressions: {elapsed_seconds_combined: 6.092, exits: [0, 0, 0, 0]}
+
+coverage:
+  included:
+    - pinned parent-860 24-vertex/39-edge embedded network
+    - exact rational a/d triangle and a/g pentagon
+    - exact row-2599 transverse-node regression
+    - abstract relative-two-complex and transport fixtures
+  excluded:
+    - full parent-860 chamber/wall/node coverage
+    - complete parent-860 true-infinity subcomplex
+    - global signature equality and inclusion poset
+    - all parents and all admissible size-eight families
+  surviving_defect: >-
+    The parent-860 mask-6 cycle 4-11-12-14-13-23-4 lacks a certified spanning
+    two-chain with every residual subdivision, label, and infinity incidence.
+
+canaries:
+  positive: exact a/d and a/g fillings accepted at their bounded scopes
+  negative: unfilled labelled loop and annulus retain nonzero H1
+  null: local quotient has no size-eight antichain and is reported vacuous
+  hostile: >-
+    tampered edges, labels, ranks, digests, incidence, infinity, mutation
+    labels, and ledger claims are rejected by the four track verifiers
+
+source_accounting:
+  external_source_claims_added: none
+  canonical_sources_used:
+    - ai/omreal/DUAL_MASTER_CELL_PROGRAM.md at base tree
+    - ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md at base tree
+    - ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md at base tree
+    - ai/omreal/NINE_DIAGONAL_STATUS.md at base tree
+  geometric_review_status: pending_independent_referee_pass_two

@@ -1,0 +1,92 @@
+schema_version: 1
+track_id: cycle-20260829-diag8-referee
+purpose: exact_information_required_for_second_pass
+
+handoff_required:
+  candidate_identity:
+    - immutable_commit
+    - immutable_tree
+    - branch_name_for_location_only
+    - parent_base_commit
+  claims:
+    - claim_id
+    - proposed_outcome_class
+    - exact_mathematical_statement
+    - parent_quantifier
+    - family_quantifier
+    - coefficient_ring_or_field
+    - explicit_nonconsequences
+    - proposed_ledger_change_or_none
+  artifact_manifest:
+    - relative_path
+    - byte_size
+    - sha256
+    - semantic_digest_if_defined
+    - generator_source_digest
+    - schema_version
+    - dependency_artifact_digests
+  replay:
+    - clean_checkout_commands
+    - generator_commands_if_regeneration_is_required
+    - independent_verifier_commands
+    - expected_exit_codes_and_exact_summary
+    - dependency_versions
+    - deterministic_seed_policy
+    - measured_runtime_and_peak_memory
+  geometry_and_coverage:
+    - parent_identifier_and_normalization
+    - parent_chirotope_and_cell_inequalities
+    - complete_residual_factor_manifest
+    - chamber_manifest_and_coverage_certificate
+    - wall_manifest_and_coverage_certificate
+    - codimension_two_cell_manifest_and_coverage_certificate
+    - artificial_refinement_face_manifest
+    - complete_cell_closure_and_incidence_manifest
+    - compactification_and_A_inf_manifest
+    - proof_or_certificate_that_no_relevant_cell_is_missing
+  labels_and_families:
+    - pinned_signature_universe_and_encoding
+    - exact_complete_chamber_label_bitsets
+    - incident_chamber_germs_for_each_interior_lower_cell
+    - inferred_wall_and_node_labels
+    - nonempty_proper_region_classes
+    - complete_region_equality_and_inclusion_poset
+    - exact_eight_antichain_coverage_or_universal_width_certificate
+  topology_certificate_one_of:
+    exact_boundary_rank:
+      - oriented_C0_C1_C2_incidence
+      - exact_d1_and_d2
+      - chain_identity_certificate
+      - exact_rank_certificate_per_claimed_family_or_universal_equivalent
+    proof_carrying_morse:
+      - matched_incidences
+      - Forman_directed_topological_order
+      - ambient_critical_cell_list
+      - broken_pair_width_certificates
+      - exact_dominance_poset
+  transport_if_used:
+    - source_and_target_parent_or_cell_ids
+    - exact_map_and_inverse_or_homology_equivalence_data
+    - sign_chart_orientation_and_boundary_conventions
+    - label_and_admissibility_preservation_certificate
+    - chain_map_or_matching_transport_certificate
+    - global_transport_coverage_graph
+  canaries:
+    - positive_fixture_and_expected_result
+    - negative_fixture_and_expected_result
+    - null_fixture_and_expected_result
+    - hostile_corruptions_and_expected_rejections
+
+delivery_constraints:
+  - Provide candidate artifacts read-only; the referee will not repair them.
+  - Do not require access to another agent's uncommitted worktree.
+  - Keep replay within 35 wall-clock minutes and 4 GiB RAM, or ask the coordinator to narrow the claim before pass two.
+  - State explicitly when an item is inapplicable and why; silence is treated as missing evidence.
+  - A parent-860 roadmap/network without complete two-cells, coverage, and infinity data is insufficient.
+
+minimum_for_useful_null_handoff:
+  - exact searched or constructed scope
+  - complete surviving defects
+  - all generated artifact digests
+  - deterministic partial replay command
+  - next discriminating datum

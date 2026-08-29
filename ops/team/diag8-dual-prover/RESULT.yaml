@@ -1,0 +1,101 @@
+track_id: cycle-20260829-diag8-dual-prover
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+local_base_revision: 77059d4
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+outcome: bounded_proved_and_no_go
+summary: >-
+  Proved an exact rational a/d-plane triangle filling for a five-pattern
+  pairwise-incomparable parent-860 family: 210/210 signed parent controls and
+  840/840 fixed-witness feasibility controls are strict, with 350/350 mixed
+  affine coefficients zero.  Also proved that the current 12-pattern local
+  quotient has width exactly six and hence represents no eight-antichain;
+  graph labels alone are insufficient because the unfilled and formally
+  filled versions of the same retained triangle have H1_Q ranks one and zero.
+artifacts:
+  - path: ops/team/diag8-dual-prover/DIAG8_PARENT860_GRAPH_H1_CERTIFICATE.json
+    digest: f2c381e99959f98df7ce538d00e6694a37d92b79e5ae89417b1ca3c426592f8b
+  - path: ops/team/diag8-dual-prover/PROOF_NOTE.md
+    digest: 533e6096ba4c4fee7647521b6e0e68737757656097c916dee76b626a1cc893a4
+  - path: ops/team/diag8-dual-prover/verify_diag8_parent860_graph_h1.py
+    digest: 70e1df94f29b69a5e0fa953a8c7387f7577ffcea4cfc0e821bb64f0a8b41bcd8
+  - path: ops/team/diag8-dual-prover/WORK_ORDER.yaml
+    digest: 1be6b22b1601ec78da745c9f691d1317a5e56bba8039b4a45af379ee925b1bde
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/diag8-dual-prover/verify_diag8_parent860_graph_h1.py
+  result: >-
+    exit 0 twice with byte-identical output; source NPZ byte digests and
+    required NPY members parsed with the Python standard library; exact local
+    width 6; 9 size-six antichains all with empty common support; zero
+    size-eight antichains; unfilled H1_Q=1, formally filled H1_Q=0; exact
+    rational geometric triangle filling passes 210 parent and 840 signed
+    feasibility controls.
+  output_digest: 240e2177ba592cbbfa882b891c3997608be011681259b14cd381c81deb3475ed
+coverage:
+  included: >-
+    The exact 24-vertex, 39-edge repaired network inside catalog parent 860;
+    the full 26,264-signature universe, comprising one 25,960-signature
+    universal support class and 304 signatures in 12 proper local support
+    patterns; the exact local inclusion poset; the five-pattern antichain
+    with indices (4,8,9,10,11); and the closed rational a/d triangle with
+    network boundary 0--4--11--0.  The filling theorem directly checks all
+    parent brackets and every derived-normal inequality needed by one fixed
+    witness for each of the five representative signatures.
+  excluded: >-
+    No full-dimensional parent-860 chamber coverage, full local dominance
+    poset, size-eight antichain, universal chamber/wall/node complex,
+    boundary-at-infinity incidence, other signature family, other parent, or
+    global diagonal-eight assertion.  The formal filled/unfilled pair is an
+    interface countermodel; only the displayed a/d triangle is asserted to be
+    geometric.
+canaries:
+  positive: >-
+    The five-pattern antichain retains the exact graph triangle on vertices
+    0,4,11 with unfilled H1_Q rank one, and the geometric fixed-witness disk
+    passes all strict affine controls.
+  negative: >-
+    Adding one oriented triangle boundary column (1,-1,1) gives d1*d2=0 and
+    changes the same labeled one-skeleton to H1_Q rank zero.
+  null: >-
+    Exhaustive local-poset enumeration returns zero size-eight antichains;
+    this is classified as vacuous local evidence, not a diagonal-eight proof.
+  hostile: >-
+    Mutated triangle edge, inflated width, inflated ledger, and corrupted
+    fixed witness, and inflated proper-signature count are rejected 5/5.
+source_accounting:
+  used: >-
+    Canonical repaired-network NPZ
+    f3ebf1f3a9b458663a12b042e68194aa24c4b55689cf85344e2d98f81aec3d11
+    with semantic digest 3311c16b..., canonical coordinate-star NPZ
+    9274371ec45baee318cd160f931344f37dc5031acc13d63c16099534b8896f4b,
+    and the dual-master/all-strata theorems pinned by base tree
+    06cc3363a021b8adc59e66865f44bf8eafa66029.  The selected filling is
+    independently replayed from exact rational coordinates and witnesses,
+    rather than inferred from sampled tope labels.
+  unused_or_missing: >-
+    No web source, external solver, numerical verdict, Drive, Library, or
+    unpublished track output is in the proof trust boundary.  Full residual
+    arrangement data away from the displayed triangle are not used.
+open_defects:
+  - >-
+    The represented local support quotient has width six, so it cannot test
+    the diagonal-eight quantifier.  Local equality or inclusion need not be
+    global equality or inclusion when undiscovered chambers are added.
+  - >-
+    The proven disk is not yet installed in a complete regular relative
+    chamber/wall/node complex, and true-infinity incidence is absent.
+  - >-
+    Other graph cycles may require non-affine arrangement fillings; one disk
+    does not provide a universal matching or rank certificate.
+next_action: >-
+  Run the same exact fixed-witness filling gate on the rational a/g polygon
+  1--2--3--18--17--1.  If any signature lacks a fixed witness, classify only
+  the surviving residual restrictions on that polygon.  Then emit a relative
+  two-cell incidence certificate installing both disks and marking true
+  infinity before enlarging the network.
+ledger_change_recommended: >-
+  Add the bounded parent-860 five-family triangle-filling theorem and the
+  proved graph-interface limitation as research lemmas.  Keep diag8_h1 OPEN
+  and the honest 9DVL score at 2/9; do not count the vacuous local
+  eight-antichain statement.

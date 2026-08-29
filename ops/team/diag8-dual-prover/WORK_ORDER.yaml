@@ -1,0 +1,47 @@
+track_id: cycle-20260829-diag8-dual-prover
+role: prover
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+target:
+  claim: >-
+    Identify and prove the strongest exact diagonal-eight result obtainable
+    from the existing parent-860 chamber/wall/node artifacts without assuming
+    global roadmap coverage. Prefer a theorem that converts a finite labelled
+    relative 2-complex or a label-safe Morse matching into simultaneous
+    H_1-vanishing for every admissible eight-signature antichain represented by
+    that complex.
+  quantifiers: >-
+    Every proper pairwise-incomparable eight-family over the exact certified
+    parent-860 subcomplex actually included in the artifact; no extrapolation
+    to the full parent cell, other parents, or true infinity unless certified.
+  ledger_id: diag8_h1
+assumptions:
+  - The dual master-cell theorem and all-strata gluing theorem on canonical main.
+  - Exact labels and incidences may be used only when independently replayable.
+inputs:
+  - path_or_source: ai/omreal/DUAL_MASTER_CELL_PROGRAM.md
+    digest: pinned_by_base_tree
+  - path_or_source: ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md
+    digest: pinned_by_base_tree
+  - path_or_source: ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md
+    digest: pinned_by_base_tree
+  - path_or_source: ai/omreal/DIAG9_GRAPH_ROW2599_NODE.md
+    digest: pinned_by_base_tree
+deliverables:
+  positive: Exact theorem/proof note plus machine-readable certificate or deterministic construction and replay command.
+  negative: Exact obstruction showing why the selected local complex cannot support the claimed matching/rank implication.
+  null: Exhausted candidate proof interfaces, surviving obligation, and one next discriminating artifact.
+  timeout: Reproducible partial manifest with exact inputs and unfinished cases.
+verification:
+  replay: A standard-library exact command supplied in RESULT.yaml.
+  canaries: [positive, negative, null, hostile]
+limits:
+  resource_ceiling: 60 wall-clock minutes, 8 GiB RAM, no paid services.
+  stop_rule: >-
+    Stop at one exact theorem/certificate, one exact counterexample to the
+    proposed interface, or a bounded null identifying the first missing
+    geometric datum. Do not begin a full 16,420-factor roadmap.
+  prohibited_scope: >-
+    No README, canonical ledger, CI, GitHub, Drive, Library, merge, or score
+    edits; do not modify another track's files.
+handoff_to: coordinator

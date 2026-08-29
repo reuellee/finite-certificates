@@ -1,0 +1,283 @@
+{
+  "format": "diag8-relative-h1-fixtures-v1",
+  "certificates": [
+    {
+      "format": "diag8-relative-h1-certificate-v1",
+      "id": "contractible_disk",
+      "scope": "ABSTRACT_FINITE_RELATIVE_2_COMPLEX",
+      "claim": {
+        "family_size": 8,
+        "coefficient_field": "F2",
+        "expected_all_admissible_h1_zero": true
+      },
+      "external_geometry": {
+        "artifact": "SYNTHETIC_GEOMETRY_EVIDENCE.json",
+        "sha256": "851503ff6b554ead9933a3f8659b6fb8b0bf278d733fb0d2e46965dcf640b0a2",
+        "obligations": {
+          "ambient_coverage": "DISCHARGED_EXTERNALLY",
+          "regular_cell_structure": "DISCHARGED_EXTERNALLY",
+          "complete_cellular_incidence": "DISCHARGED_EXTERNALLY",
+          "complete_signature_labels": "DISCHARGED_EXTERNALLY",
+          "genuine_true_infinity_identification": "DISCHARGED_EXTERNALLY",
+          "relative_model_matches_target_space": "DISCHARGED_EXTERNALLY"
+        }
+      },
+      "signatures": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+      "cells": [
+        {"id": "v0", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "v1", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "v2", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "p0", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3"], "true_infinity": false},
+        {"id": "p1", "dimension": 0, "boundary": [], "labels": ["s0", "s4", "s5", "s6"], "true_infinity": false},
+        {"id": "p2", "dimension": 0, "boundary": [], "labels": ["s1", "s4", "s7"], "true_infinity": false},
+        {"id": "p3", "dimension": 0, "boundary": [], "labels": ["s2", "s5", "s7"], "true_infinity": false},
+        {"id": "p4", "dimension": 0, "boundary": [], "labels": ["s3", "s6"], "true_infinity": false},
+        {"id": "e01", "dimension": 1, "boundary": [["v0", -1], ["v1", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "e12", "dimension": 1, "boundary": [["v1", -1], ["v2", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "e20", "dimension": 1, "boundary": [["v2", -1], ["v0", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "w0", "dimension": 1, "boundary": [["v0", -1], ["p0", 1]], "labels": ["s0", "s1", "s2", "s3"], "true_infinity": false},
+        {"id": "w1", "dimension": 1, "boundary": [["v0", -1], ["p1", 1]], "labels": ["s0", "s4", "s5", "s6"], "true_infinity": false},
+        {"id": "w2", "dimension": 1, "boundary": [["v0", -1], ["p2", 1]], "labels": ["s1", "s4", "s7"], "true_infinity": false},
+        {"id": "w3", "dimension": 1, "boundary": [["v0", -1], ["p3", 1]], "labels": ["s2", "s5", "s7"], "true_infinity": false},
+        {"id": "w4", "dimension": 1, "boundary": [["v0", -1], ["p4", 1]], "labels": ["s3", "s6"], "true_infinity": false},
+        {"id": "f012", "dimension": 2, "boundary": [["e01", 1], ["e12", 1], ["e20", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false}
+      ],
+      "global_signature_accounting": {
+        "domain": "ENTIRE_CERTIFIED_RELATIVE_COMPLEX",
+        "semantic_sha256": "53a36725389489010603fca69a734c1c46b95ad37758bba62ab8f93ced2cb005",
+        "equivalence_classes": [["s0"], ["s1"], ["s2"], ["s3"], ["s4"], ["s5"], ["s6"], ["s7"]],
+        "properness_witnesses": [
+          {"class": "s0", "present": "e01", "absent": "p2"},
+          {"class": "s1", "present": "e01", "absent": "p1"},
+          {"class": "s2", "present": "e01", "absent": "p1"},
+          {"class": "s3", "present": "e01", "absent": "p1"},
+          {"class": "s4", "present": "e01", "absent": "p0"},
+          {"class": "s5", "present": "e01", "absent": "p0"},
+          {"class": "s6", "present": "e01", "absent": "p0"},
+          {"class": "s7", "present": "e01", "absent": "p0"}
+        ],
+        "declared_width": 8,
+        "width_antichain": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+        "antichain_separations": [
+          {"left": "s0", "right": "s1", "left_not_right": "p1", "right_not_left": "p2"},
+          {"left": "s0", "right": "s2", "left_not_right": "p1", "right_not_left": "p3"},
+          {"left": "s0", "right": "s3", "left_not_right": "p1", "right_not_left": "p4"},
+          {"left": "s0", "right": "s4", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s0", "right": "s5", "left_not_right": "p0", "right_not_left": "p3"},
+          {"left": "s0", "right": "s6", "left_not_right": "p0", "right_not_left": "p4"},
+          {"left": "s0", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s1", "right": "s2", "left_not_right": "p2", "right_not_left": "p3"},
+          {"left": "s1", "right": "s3", "left_not_right": "p2", "right_not_left": "p4"},
+          {"left": "s1", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s7", "left_not_right": "p0", "right_not_left": "p3"},
+          {"left": "s2", "right": "s3", "left_not_right": "p3", "right_not_left": "p4"},
+          {"left": "s2", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s3", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s4", "right": "s5", "left_not_right": "p2", "right_not_left": "p3"},
+          {"left": "s4", "right": "s6", "left_not_right": "p2", "right_not_left": "p4"},
+          {"left": "s4", "right": "s7", "left_not_right": "p1", "right_not_left": "p3"},
+          {"left": "s5", "right": "s6", "left_not_right": "p3", "right_not_left": "p4"},
+          {"left": "s5", "right": "s7", "left_not_right": "p1", "right_not_left": "p2"},
+          {"left": "s6", "right": "s7", "left_not_right": "p1", "right_not_left": "p2"}
+        ],
+        "chain_cover": [["s0"], ["s1"], ["s2"], ["s3"], ["s4"], ["s5"], ["s6"], ["s7"]]
+      }
+    },
+    {
+      "format": "diag8-relative-h1-certificate-v1",
+      "id": "unfilled_loop",
+      "scope": "ABSTRACT_FINITE_RELATIVE_2_COMPLEX",
+      "claim": {
+        "family_size": 8,
+        "coefficient_field": "F2",
+        "expected_all_admissible_h1_zero": false
+      },
+      "external_geometry": {
+        "artifact": "SYNTHETIC_GEOMETRY_EVIDENCE.json",
+        "sha256": "851503ff6b554ead9933a3f8659b6fb8b0bf278d733fb0d2e46965dcf640b0a2",
+        "obligations": {
+          "ambient_coverage": "DISCHARGED_EXTERNALLY",
+          "regular_cell_structure": "DISCHARGED_EXTERNALLY",
+          "complete_cellular_incidence": "DISCHARGED_EXTERNALLY",
+          "complete_signature_labels": "DISCHARGED_EXTERNALLY",
+          "genuine_true_infinity_identification": "DISCHARGED_EXTERNALLY",
+          "relative_model_matches_target_space": "DISCHARGED_EXTERNALLY"
+        }
+      },
+      "signatures": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+      "cells": [
+        {"id": "v0", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "v1", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "v2", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "p0", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3"], "true_infinity": false},
+        {"id": "p1", "dimension": 0, "boundary": [], "labels": ["s0", "s4", "s5", "s6"], "true_infinity": false},
+        {"id": "p2", "dimension": 0, "boundary": [], "labels": ["s1", "s4", "s7"], "true_infinity": false},
+        {"id": "p3", "dimension": 0, "boundary": [], "labels": ["s2", "s5", "s7"], "true_infinity": false},
+        {"id": "p4", "dimension": 0, "boundary": [], "labels": ["s3", "s6"], "true_infinity": false},
+        {"id": "e01", "dimension": 1, "boundary": [["v0", -1], ["v1", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "e12", "dimension": 1, "boundary": [["v1", -1], ["v2", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "e20", "dimension": 1, "boundary": [["v2", -1], ["v0", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "w0", "dimension": 1, "boundary": [["v0", -1], ["p0", 1]], "labels": ["s0", "s1", "s2", "s3"], "true_infinity": false},
+        {"id": "w1", "dimension": 1, "boundary": [["v0", -1], ["p1", 1]], "labels": ["s0", "s4", "s5", "s6"], "true_infinity": false},
+        {"id": "w2", "dimension": 1, "boundary": [["v0", -1], ["p2", 1]], "labels": ["s1", "s4", "s7"], "true_infinity": false},
+        {"id": "w3", "dimension": 1, "boundary": [["v0", -1], ["p3", 1]], "labels": ["s2", "s5", "s7"], "true_infinity": false},
+        {"id": "w4", "dimension": 1, "boundary": [["v0", -1], ["p4", 1]], "labels": ["s3", "s6"], "true_infinity": false}
+      ],
+      "global_signature_accounting": {
+        "domain": "ENTIRE_CERTIFIED_RELATIVE_COMPLEX",
+        "semantic_sha256": "2790b79f16c160e8a487915245d13417ee0608ab8b3d409ff95997c928535113",
+        "equivalence_classes": [["s0"], ["s1"], ["s2"], ["s3"], ["s4"], ["s5"], ["s6"], ["s7"]],
+        "properness_witnesses": [
+          {"class": "s0", "present": "e01", "absent": "p2"},
+          {"class": "s1", "present": "e01", "absent": "p1"},
+          {"class": "s2", "present": "e01", "absent": "p1"},
+          {"class": "s3", "present": "e01", "absent": "p1"},
+          {"class": "s4", "present": "e01", "absent": "p0"},
+          {"class": "s5", "present": "e01", "absent": "p0"},
+          {"class": "s6", "present": "e01", "absent": "p0"},
+          {"class": "s7", "present": "e01", "absent": "p0"}
+        ],
+        "declared_width": 8,
+        "width_antichain": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+        "antichain_separations": [
+          {"left": "s0", "right": "s1", "left_not_right": "p1", "right_not_left": "p2"},
+          {"left": "s0", "right": "s2", "left_not_right": "p1", "right_not_left": "p3"},
+          {"left": "s0", "right": "s3", "left_not_right": "p1", "right_not_left": "p4"},
+          {"left": "s0", "right": "s4", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s0", "right": "s5", "left_not_right": "p0", "right_not_left": "p3"},
+          {"left": "s0", "right": "s6", "left_not_right": "p0", "right_not_left": "p4"},
+          {"left": "s0", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s1", "right": "s2", "left_not_right": "p2", "right_not_left": "p3"},
+          {"left": "s1", "right": "s3", "left_not_right": "p2", "right_not_left": "p4"},
+          {"left": "s1", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s7", "left_not_right": "p0", "right_not_left": "p3"},
+          {"left": "s2", "right": "s3", "left_not_right": "p3", "right_not_left": "p4"},
+          {"left": "s2", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s3", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s4", "right": "s5", "left_not_right": "p2", "right_not_left": "p3"},
+          {"left": "s4", "right": "s6", "left_not_right": "p2", "right_not_left": "p4"},
+          {"left": "s4", "right": "s7", "left_not_right": "p1", "right_not_left": "p3"},
+          {"left": "s5", "right": "s6", "left_not_right": "p3", "right_not_left": "p4"},
+          {"left": "s5", "right": "s7", "left_not_right": "p1", "right_not_left": "p2"},
+          {"left": "s6", "right": "s7", "left_not_right": "p1", "right_not_left": "p2"}
+        ],
+        "chain_cover": [["s0"], ["s1"], ["s2"], ["s3"], ["s4"], ["s5"], ["s6"], ["s7"]]
+      }
+    },
+    {
+      "format": "diag8-relative-h1-certificate-v1",
+      "id": "relative_boundary",
+      "scope": "ABSTRACT_FINITE_RELATIVE_2_COMPLEX",
+      "claim": {
+        "family_size": 8,
+        "coefficient_field": "F2",
+        "expected_all_admissible_h1_zero": false
+      },
+      "external_geometry": {
+        "artifact": "SYNTHETIC_GEOMETRY_EVIDENCE.json",
+        "sha256": "851503ff6b554ead9933a3f8659b6fb8b0bf278d733fb0d2e46965dcf640b0a2",
+        "obligations": {
+          "ambient_coverage": "DISCHARGED_EXTERNALLY",
+          "regular_cell_structure": "DISCHARGED_EXTERNALLY",
+          "complete_cellular_incidence": "DISCHARGED_EXTERNALLY",
+          "complete_signature_labels": "DISCHARGED_EXTERNALLY",
+          "genuine_true_infinity_identification": "DISCHARGED_EXTERNALLY",
+          "relative_model_matches_target_space": "DISCHARGED_EXTERNALLY"
+        }
+      },
+      "signatures": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+      "cells": [
+        {"id": "v0", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": true},
+        {"id": "v1", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": true},
+        {"id": "p0", "dimension": 0, "boundary": [], "labels": ["s0", "s1", "s2", "s3"], "true_infinity": false},
+        {"id": "p1", "dimension": 0, "boundary": [], "labels": ["s0", "s4", "s5", "s6"], "true_infinity": false},
+        {"id": "p2", "dimension": 0, "boundary": [], "labels": ["s1", "s4", "s7"], "true_infinity": false},
+        {"id": "p3", "dimension": 0, "boundary": [], "labels": ["s2", "s5", "s7"], "true_infinity": false},
+        {"id": "p4", "dimension": 0, "boundary": [], "labels": ["s3", "s6"], "true_infinity": false},
+        {"id": "e01", "dimension": 1, "boundary": [["v0", -1], ["v1", 1]], "labels": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"], "true_infinity": false},
+        {"id": "w0", "dimension": 1, "boundary": [["v0", -1], ["p0", 1]], "labels": ["s0", "s1", "s2", "s3"], "true_infinity": false},
+        {"id": "w1", "dimension": 1, "boundary": [["v0", -1], ["p1", 1]], "labels": ["s0", "s4", "s5", "s6"], "true_infinity": false},
+        {"id": "w2", "dimension": 1, "boundary": [["v0", -1], ["p2", 1]], "labels": ["s1", "s4", "s7"], "true_infinity": false},
+        {"id": "w3", "dimension": 1, "boundary": [["v0", -1], ["p3", 1]], "labels": ["s2", "s5", "s7"], "true_infinity": false},
+        {"id": "w4", "dimension": 1, "boundary": [["v0", -1], ["p4", 1]], "labels": ["s3", "s6"], "true_infinity": false}
+      ],
+      "global_signature_accounting": {
+        "domain": "ENTIRE_CERTIFIED_RELATIVE_COMPLEX",
+        "semantic_sha256": "2503dd36235172bed8587bcf8ef3aeceb51661b5e6edb029269f0579f9a0d76d",
+        "equivalence_classes": [["s0"], ["s1"], ["s2"], ["s3"], ["s4"], ["s5"], ["s6"], ["s7"]],
+        "properness_witnesses": [
+          {"class": "s0", "present": "e01", "absent": "p2"},
+          {"class": "s1", "present": "e01", "absent": "p1"},
+          {"class": "s2", "present": "e01", "absent": "p1"},
+          {"class": "s3", "present": "e01", "absent": "p1"},
+          {"class": "s4", "present": "e01", "absent": "p0"},
+          {"class": "s5", "present": "e01", "absent": "p0"},
+          {"class": "s6", "present": "e01", "absent": "p0"},
+          {"class": "s7", "present": "e01", "absent": "p0"}
+        ],
+        "declared_width": 8,
+        "width_antichain": ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+        "antichain_separations": [
+          {"left": "s0", "right": "s1", "left_not_right": "p1", "right_not_left": "p2"},
+          {"left": "s0", "right": "s2", "left_not_right": "p1", "right_not_left": "p3"},
+          {"left": "s0", "right": "s3", "left_not_right": "p1", "right_not_left": "p4"},
+          {"left": "s0", "right": "s4", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s0", "right": "s5", "left_not_right": "p0", "right_not_left": "p3"},
+          {"left": "s0", "right": "s6", "left_not_right": "p0", "right_not_left": "p4"},
+          {"left": "s0", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s1", "right": "s2", "left_not_right": "p2", "right_not_left": "p3"},
+          {"left": "s1", "right": "s3", "left_not_right": "p2", "right_not_left": "p4"},
+          {"left": "s1", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s1", "right": "s7", "left_not_right": "p0", "right_not_left": "p3"},
+          {"left": "s2", "right": "s3", "left_not_right": "p3", "right_not_left": "p4"},
+          {"left": "s2", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s2", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s3", "right": "s4", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s5", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s6", "left_not_right": "p0", "right_not_left": "p1"},
+          {"left": "s3", "right": "s7", "left_not_right": "p0", "right_not_left": "p2"},
+          {"left": "s4", "right": "s5", "left_not_right": "p2", "right_not_left": "p3"},
+          {"left": "s4", "right": "s6", "left_not_right": "p2", "right_not_left": "p4"},
+          {"left": "s4", "right": "s7", "left_not_right": "p1", "right_not_left": "p3"},
+          {"left": "s5", "right": "s6", "left_not_right": "p3", "right_not_left": "p4"},
+          {"left": "s5", "right": "s7", "left_not_right": "p1", "right_not_left": "p2"},
+          {"left": "s6", "right": "s7", "left_not_right": "p1", "right_not_left": "p2"}
+        ],
+        "chain_cover": [["s0"], ["s1"], ["s2"], ["s3"], ["s4"], ["s5"], ["s6"], ["s7"]]
+      }
+    }
+  ],
+  "hostile_mutations": [
+    {"id": "hostile_incidence", "base": "contractible_disk", "operation": "drop_disk_incidence", "expected_error": "integral d squared"},
+    {"id": "missing_two_cell_changes_h1", "base": "contractible_disk", "operation": "drop_disk_two_cell", "expected_error": "semantic digest"},
+    {"id": "erased_true_infinity", "base": "relative_boundary", "operation": "erase_relative_infinity", "expected_error": "semantic digest"},
+    {"id": "nonclosed_true_infinity", "base": "relative_boundary", "operation": "nonclosed_infinity", "expected_error": "not a subcomplex"},
+    {"id": "nonmonotone_label", "base": "contractible_disk", "operation": "drop_face_label", "expected_error": "selected cells are not a subcomplex"},
+    {"id": "bad_external_digest", "base": "contractible_disk", "operation": "bad_geometry_digest", "expected_error": "digest mismatch"},
+    {"id": "undischarged_coverage", "base": "contractible_disk", "operation": "undischarged_geometry", "expected_error": "undischarged obligation"},
+    {"id": "duplicate_cell", "base": "contractible_disk", "operation": "duplicate_cell_id", "expected_error": "duplicate id"},
+    {"id": "false_h1_verdict", "base": "contractible_disk", "operation": "flip_claim", "expected_error": "declared all-family H1 verdict is false"},
+    {"id": "duplicate_boundary_face", "base": "contractible_disk", "operation": "duplicate_boundary_face", "expected_error": "duplicate face"},
+    {"id": "corrupt_global_width", "base": "contractible_disk", "operation": "corrupt_global_width", "expected_error": "global signature accounting: width"}
+  ]
+}

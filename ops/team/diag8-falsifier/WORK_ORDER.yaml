@@ -1,0 +1,41 @@
+track_id: cycle-20260829-diag8-falsifier
+role: falsifier
+base_revision: 5393b03fda623dc6b4552130d13467fae71d31bc
+base_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+target:
+  claim: >-
+    Search adversarially for an exact admissible eight-family whose induced
+    subcomplex on any existing certified parent-860 or transverse-node
+    chamber/wall/node artifact has nonzero H_1, or for a minimal abstract
+    labelled-complex countermodel satisfying every currently claimed local
+    axiom.
+  quantifiers: >-
+    Exhaust all admissible eight-antichains on each finite certified label
+    universe actually tested; distinguish a geometric counterexample from an
+    abstract architecture countermodel.
+  ledger_id: diag8_h1
+assumptions:
+  - Only exact stored labels/incidences and proved gluing rules may be trusted.
+  - Missing coverage is inconclusive and must not be filled heuristically.
+inputs:
+  - path_or_source: ai/omreal/DUAL_MASTER_CELL_PROGRAM.md
+    digest: pinned_by_base_tree
+  - path_or_source: ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md
+    digest: pinned_by_base_tree
+  - path_or_source: ai/omreal/RESIDUAL_STRATUM_NONCOMPACTNESS.md
+    digest: pinned_by_base_tree
+deliverables:
+  positive: Exact H_1 witness with cycle and non-boundary certificate, honestly scoped.
+  negative: Exact proof that no tested admissible family has H_1 on the declared finite artifact.
+  null: Exact tested universe, survivors, abstraction gaps, and next discriminator.
+  timeout: Deterministic search checkpoint and manifest.
+verification:
+  replay: Independent exact command supplied in RESULT.yaml.
+  canaries: [known_tree, filled_cycle, missing_two_cell, hostile_label_mutation]
+limits:
+  resource_ceiling: 60 wall-clock minutes, 8 GiB RAM, no paid services.
+  stop_rule: Stop at the first exact geometric witness, complete finite exhaustion, or resource ceiling.
+  prohibited_scope: >-
+    No repair of the theorem target, no global extrapolation, no edits outside
+    ops/team/diag8-falsifier, and no ledger/publication changes.
+handoff_to: coordinator

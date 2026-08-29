@@ -1,0 +1,229 @@
+schema_version: 1
+track_id: cycle-20260829-diag8-referee
+target_ledger_id: diag8_h1
+canonical_base: 5393b03fda623dc6b4552130d13467fae71d31bc
+canonical_tree: 06cc3363a021b8adc59e66865f44bf8eafa66029
+policy: fail_closed
+
+gates:
+  - id: G00_claim_lock
+    class: scope
+    applies_to: every_candidate
+    required:
+      - Enumerate each proposed claim with outcome class and exact scope.
+      - Preserve the locked diagonal-eight quantifiers and coefficient field.
+      - Distinguish parent-local, transported-family, and global claims.
+    pass_condition: >-
+      Every claim has explicit parent and family quantifiers; no sample,
+      network, local disk, or reduced-core result is described as global.
+    reject_if:
+      - Quantifiers are widened from evidence.
+      - Only globally minimal regions are checked while all internal antichains are claimed.
+      - Graph connectedness is presented as an H_1 certificate.
+
+  - id: G01_revision_and_digest
+    class: artifact
+    applies_to: every_candidate
+    required:
+      - Immutable candidate commit and tree.
+      - SHA-256 and, where defined, semantic digest for every input and output.
+      - Generator and verifier source digests.
+    pass_condition: All bytes and semantic records match the supplied manifest.
+    reject_if:
+      - A revision moved or is unpinned.
+      - An artifact is missing or its digest differs.
+
+  - id: G02_clean_replay
+    class: replay
+    applies_to: every_computational_claim
+    required:
+      - Exact noninteractive commands from a clean checkout.
+      - Declared runtime, peak memory, dependency versions, and deterministic seed policy.
+    pass_condition: Every claimed output is regenerated or independently checked exactly with exit status 0.
+    reject_if:
+      - Replay depends on undeclared discovery-side state.
+      - A topology decision uses unproved floating-point tolerances.
+      - Replay exceeds the pass-two ceiling without a coordinator-approved narrowed claim.
+
+  - id: G03_independence
+    class: independence
+    applies_to: proof_or_finite_exact_candidate
+    required:
+      - Independent verifier entry point and separately stated invariants.
+      - No import of the generator's accept/reject routine.
+    pass_condition: The verifier reconstructs coverage, incidence, labels, and homology invariants from the manifest rather than trusting generator summaries.
+    reject_if:
+      - Generator and verifier share acceptance logic.
+      - The verifier merely compares a stored expected summary.
+
+  - id: G04_parent_domain
+    class: coverage
+    applies_to: parent_local_or_global_candidate
+    required:
+      - Exact parent identifier, normalization, chirotope, and parent-cell inequalities.
+      - Proof that the normalization covers the claimed realization space.
+      - Parent-catalog census or exact transport coverage for every globally claimed parent.
+    pass_condition: The geometric domain equals the claimed normalized parent realization space.
+    reject_if:
+      - Only one chart, slice, star, box, or embedded network is covered without an equivalence theorem.
+      - Parent-boundary or chart-transition cases are silently omitted.
+
+  - id: G05_factor_and_chamber_coverage
+    class: coverage
+    applies_to: cellulation_candidate
+    required:
+      - Pinned complete residual-factor inventory with duplicate geometric factors identified.
+      - Every connected full-dimensional chamber of the parent cell.
+      - Exact sign/topology certificates proving no chamber is missing.
+    pass_condition: The chamber list is a proved exhaustive decomposition, not a point bank.
+    reject_if:
+      - Coverage is inferred from random, coordinate-star, chord, or CEGAR samples.
+      - Family-inactive factors are omitted without the pinned active-sector theorem instantiated for that exact family.
+
+  - id: G06_regular_two_skeleton
+    class: coverage
+    applies_to: diagonal_eight_positive_or_counterexample
+    required:
+      - Complete regular chamber/wall/node refinement through primal codimension two.
+      - All artificial CAD/triangulation faces retained.
+      - Connected-cell decomposition and full closure/incidence lists.
+    pass_condition: Every retained cell is regular and every codimension-zero/one/two incidence is accounted for exactly.
+    reject_if:
+      - A raw zero/sign component is treated as a cell without regularity and germ-incidence proof.
+      - The artifact is graph-only or has no complete two-cell list.
+      - A 24-vertex/39-edge parent-860 routing network is used as the master complex.
+
+  - id: G07_infinity_and_relative_domain
+    class: transport
+    applies_to: cellulation_candidate
+    required:
+      - Explicit bounded embedding or equivalent compactification.
+      - Complete `A_inf` cell list and proof of boundary classification.
+      - Evidence that infinity cells are excluded before dual-block selection.
+    pass_condition: The resulting dual complex computes ordinary homology of the open feasibility intersection on the full parent cell.
+    reject_if:
+      - Infinity cells receive incident-chamber intersection labels.
+      - Noncompact escape is substituted for relative-boundary accounting.
+
+  - id: G08_complete_labels
+    class: artifact
+    applies_to: cellulation_candidate
+    required:
+      - Exact complete extension-tope label bitset for each chamber.
+      - Pinned signature universe and encoding.
+      - Independent tope feasibility checks on a reproducible set that includes all changed tope states.
+    pass_condition: Labels are exact and complete, with no discovery threshold in the trust boundary.
+    reject_if:
+      - Only selected family labels, witness samples, or endpoint labels are stored while a universal claim is made.
+      - Signature encodings are ambiguous or change across artifacts.
+
+  - id: G09_germ_gluing
+    class: transport
+    applies_to: inferred_lower_cell_labels
+    required:
+      - Actual incident local chamber germs for every interior wall/node cell.
+      - Lower-cell label equal to the intersection of all those chamber labels.
+      - Canonical all-strata theorem dependencies pinned or independently replayed.
+    pass_condition: Every interior lower-cell label is reconstructed from complete germ incidence.
+    reject_if:
+      - A coarse global zero set replaces the regular germ refinement.
+      - An unobserved incident chamber germ could change the intersection.
+
+  - id: G10_chain_complex
+    class: artifact
+    applies_to: boundary_rank_certificate
+    required:
+      - Oriented integer boundary matrices `d1:C1->C0` and `d2:C2->C1`.
+      - Cell identifiers cross-linked to geometry, labels, and incidences.
+      - Exact verification that `d1*d2=0`.
+    pass_condition: Independently reconstructed matrices agree and satisfy the chain identity.
+    reject_if:
+      - Incidence orientations are missing.
+      - A graph cycle rank is reported without `d2`.
+
+  - id: G11_h1_rank
+    class: exactness
+    applies_to: per_family_boundary_rank_certificate
+    required:
+      - Exact rational ranks of restricted `d1` and `d2`.
+      - The included-cell rule `S subseteq T(cell)` applied consistently.
+    pass_condition: "`dim(C1)-rank(d1)-rank(d2)=0` for every claimed family."
+    counterexample_condition: >-
+      The same exact expression is positive for one admissible family in a
+      dual complex already accepted by G04-G10.
+    reject_if:
+      - Rank is numerical or probabilistic without an exact certificate.
+      - A cycle witness is not proved outside `image(d2)`.
+
+  - id: G12_morse_certificate
+    class: exactness
+    applies_to: universal_morse_candidate
+    required:
+      - Complete matched incidences and cell orientations.
+      - Topological order for the Forman-directed Hasse graph with unmatched incidences upper-to-lower and matched incidences reversed.
+      - Exact dominance poset and width certificates for equations (10)-(11) of the canonical program at `s=8`.
+    pass_condition: No admissible restriction has an ambient or broken-pair critical one-cell.
+    reject_if:
+      - The whole Hasse orientation is reversed.
+      - Width is tested only on sampled or globally minimal antichains.
+    note: Failure of this sufficient certificate is inconclusive unless G11 proves nonzero H_1.
+
+  - id: G13_admissible_family_census
+    class: coverage
+    applies_to: universal_or_counterexample_claim
+    required:
+      - Exact nonemptiness and properness of every region class used.
+      - Complete inclusion/equality poset derived from global master labels.
+      - Every internal antichain of cardinality eight, or a width-safe universal certificate avoiding enumeration.
+    pass_condition: The tested family domain equals the locked DEHC diagonal-eight domain.
+    reject_if:
+      - Properness or incomparability is inferred from a sampled network.
+      - Equal region classes are counted twice.
+
+  - id: G14_transport
+    class: transport
+    applies_to: transported_parent_or_cell_claim
+    required:
+      - Exact source and target maps with sign, chart, orientation, boundary, label, and incidence conventions.
+      - Proof the map preserves admissibility and the relevant H_1 certificate.
+      - Verified coverage graph connecting every transported target to an accepted seed.
+    pass_condition: Replay commutes with cell boundaries and label restriction on every claimed transport edge.
+    reject_if:
+      - Mutation-graph connectivity alone is used.
+      - Transport is checked only at representative points.
+
+  - id: G15_canaries
+    class: adversarial
+    applies_to: every_candidate_verifier
+    required:
+      positive:
+        - Accept the pinned row-2599 convex-node local H_1-zero regression at its local scope.
+      negative:
+        - Detect nonzero H_1 on the pinned annulus no-go rather than accepting an abstract gluing argument.
+      null:
+        - Return H_1 zero for an empty or tree-like restricted complex while preserving its narrow scope.
+        - Reject a missing-cell or missing-digest manifest rather than guessing.
+      hostile:
+        - Reject a corrupted wall/node label.
+        - Reject a graph-only parent-860 routing artifact as diagonal-eight evidence.
+        - Reject an incidence corruption that violates `d1*d2=0`.
+        - Reject a moved revision or changed semantic digest.
+    pass_condition: Every applicable canary has the prescribed classification.
+
+  - id: G16_repository_and_ledger
+    class: publication
+    applies_to: integration_candidate
+    required:
+      - Protected checks at the exact reviewed head.
+      - Prose, manifests, theorem status, and durable checkpoint agree.
+      - Coordinator-only ledger action.
+    pass_condition: No actionable referee defect remains and all prior applicable gates pass.
+    reject_if:
+      - The candidate or referee advances the ledger directly.
+      - Any required gate is pending or waived silently.
+
+acceptance_rules:
+  positive_global_proof: All applicable gates G00-G16 pass for every locked quantifier.
+  positive_parent_local: G00-G13 and G15 pass with the parent-local scope stated explicitly.
+  exact_counterexample: G00-G11, G13, and G15 pass for one exact admissible family with nonzero H_1.
+  null_or_timeout: Missing gates are listed as open; no ledger change is recommended.

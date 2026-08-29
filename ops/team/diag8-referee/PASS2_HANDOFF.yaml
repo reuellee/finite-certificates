@@ -1,0 +1,63 @@
+track_id: cycle-20260829-diag8-referee
+role: verifier
+candidate_commit: be7b5953856bb0f8dbb3dc63b5757edfb259268f
+candidate_tree: 18021503f846f85a0b9122e5c4732d0d85fdf080
+handoff_carrier: d13f84403d9226a8b2f1fa0347d46fe794e24424
+outcome: rejected
+summary: >-
+  All five bounded claims replay mathematically at their corrected narrow
+  scopes, but the immutable candidate is rejected for publication because it
+  conflates 26,264 total signatures with the 12 proper support classes; the
+  true quotient has 13 classes, including one universal 25,960-signature
+  class, while the 12 proper classes total 304 signatures.
+artifacts:
+  - path: ops/team/diag8-referee/PASS2_REVIEW.md
+    digest: 2fbdfa371704f851c5360355cb23eb373fc3515889a8dc6f73a5eda979046fbf
+  - path: ops/team/diag8-referee/PASS2_GATE_RESULTS.yaml
+    digest: f8d4f7c5a5b851c134756f71829b9c8c9292e3cba206afaee9aebae36d942850
+replay:
+  commands:
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-dual-prover/verify_diag8_parent860_graph_h1.py
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-falsifier/verify_diag8_falsifier.py
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-certificate/verify_diag8_relative_h1_certificate.py
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-transport/verify_transport_obstruction.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_generic_wall_gluing_combinatorics.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_dual_master_node.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_partial_mutation_fiber_disconnected.py
+    - PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_residual_stratum_no_go.py
+  result: all_eight_exit_zero_from_detached_immutable_candidate
+manifest:
+  candidate_entries_checked: 20
+  candidate_entries_matching: 20
+  immutable_identity_matching: true
+independent_checks:
+  sympy_ad_triangle: 210_parent_and_840_signed_controls_pass
+  network_accounting: >-
+    26264 signatures, 13 total classes, 1 universal class of 25960,
+    12 proper classes totaling 304
+  ag_sector_order: all_four_incident_sectors_represented
+coverage:
+  included: the five bounded handoff claims only
+  excluded: >-
+    full parent-860 two-skeleton, true infinity, global dominance, all parents,
+    all admissible eight-families, and any 9DVL ledger advancement
+canaries:
+  positive: pass
+  negative: pass
+  null: pass
+  hostile: pass
+source_accounting:
+  used: immutable candidate, handoff carrier, canonical base tree, and pinned NPZ dependencies
+  unused_or_missing: no external source claim was added
+open_defects:
+  - >-
+    ops/team/diag8-dual-prover/RESULT.yaml falsely assigns all 26,264
+    signatures to the 12 proper support classes.
+  - >-
+    PROOF_NOTE.md, DUAL_MASTER_CELL_PROGRAM.md, and the handoff family
+    quantifier omit or conflate the universal support class.
+next_action: >-
+  Coordinator produces a corrected immutable candidate and handoff with
+  regenerated digests, then requests a short referee rereview.
+ledger_change_recommended: none
+publication_disposition: reject_current_candidate
