@@ -1,7 +1,7 @@
 {
   "format": "diag3-research-decision-ledger-v1",
   "status": "ACTIVE",
-  "as_of": "2026-08-27",
+  "as_of": "2026-08-28",
   "repository": {
     "full_name": "reuellee/finite-certificates",
     "default_branch": "main",
@@ -1608,8 +1608,69 @@
         "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton_EDGE27_EDGE39.py"
       ]
     },
+    "fortieth_triple_clipped_wall_route_refutation": {
+      "status": "REFUTED",
+      "scope": "authenticated presentation (5563,16134,19284), canonical unresolved row (5563,4373,23221), deterministic macrobox 20, its accepted-side clip g-a<=0, and the true parent-wall face [3468]=g-a=0",
+      "proposed_route": "continue the registered triple-zero component through macrobox 20 to the [3468] parent wall",
+      "decisive_countercertificate": "q16134 is strictly positive on the complete terminal face, so the face contains no triple zero",
+      "independent_face_taylor_interval": [
+        "17871665307/8589934592",
+        "9696617457747/2946347565056"
+      ],
+      "independent_face_bernstein_controls": 288,
+      "independent_face_bernstein_minimum": "879180358095/420906795008",
+      "full_macrobox_bernstein_controls": 576,
+      "full_macrobox_bernstein_minimum": "846151417395/420906795008",
+      "zero_free_macrobox_suffix": [6, 20],
+      "first_all_positive_macrobox": 6,
+      "macrobox_5_bernstein_minimum": "-5214568995/105226698752",
+      "macrobox_6_bernstein_minimum": "36942370245/420906795008",
+      "prior_wall_witness_residual_values": [
+        "-1/56",
+        "5934694995/2202927104",
+        "435073/702464"
+      ],
+      "independent_verification": "ACCEPTED_CLEAN_ARCHIVE_WITH_SEPARATE_TAYLOR_AND_BERNSTEIN_RECONSTRUCTION",
+      "component_coverage": "NOT_CLAIMED",
+      "complete_row_or_orbit_closed": 0,
+      "triple_branch_compact_support_vanishing": "OPEN",
+      "pair_branch_injectivity": "OPEN",
+      "theorem_effect": "The macrobox-20 [3468] terminal-attachment route is exactly false and the projection-only corridor is zero-free from macrobox 6 onward; no unresolved triple is removed and the honest score remains 2/9.",
+      "evidence": [
+        "ops/team/clipped-wall-falsifier/RESULT.yaml",
+        "ops/team/clipped-wall-falsifier/CLIPPED_WALL_FALSIFIER_CERTIFICATE.json",
+        "ai/omreal/clipped_wall_falsifier_verify.py",
+        "ai/omreal/verify_diag3_clipped_wall_falsifier.py",
+        "ops/team/clipped-wall-prover/RESULT.yaml",
+        "ops/team/clipped-wall-prover/DIAG3_CLIPPED_WALL_PROVER_CERTIFICATE.json",
+        "ops/team/clipped-wall-prover/PROOF_NOTE.md",
+        "ai/omreal/build_diag3_clipped_wall_prover_certificate.py"
+      ]
+    },
+    "forty_first_finite_global_exit_criterion": {
+      "status": "PROVED_METHODOLOGICAL_LEMMA",
+      "triple_certificate_contract": "component coverage, stable global component identities, sound same-component continuation edges, and sound genuine parent-infinity tags",
+      "sufficient_acceptance_condition": "every certificate vertex reaches a certified true-parent-infinity vertex",
+      "finite_graph_equivalence": "the acceptance condition holds if and only if every sink strongly connected component contains certified true infinity",
+      "rejection_interpretation": "INCONCLUSIVE_OPEN_WORLD_FALSE_NEGATIVES_ALLOWED",
+      "actual_noncompactness_necessity_claimed": false,
+      "omitted_edge_false_negative_canary": "one actual noncompact component is represented by two disconnected certificate fragments, only one infinity-tagged; the incomplete graph rejects",
+      "exact_wall_label_cycle_canary": "44->37->44 rejected because wall labels are not component-faithful and the sink SCC has no certified true-infinity exit",
+      "pair_graph_only_route": "REFUTED",
+      "pair_countermodel": "two relative CW complexes share the accepted exit graph and one-skeleton but have H1 over F2 equal to 1 and 0 depending on one two-cell incidence",
+      "triple_families_closed": 0,
+      "pair_branch_injectivity": "OPEN",
+      "triple_branch_compact_support_vanishing": "OPEN",
+      "theorem_effect": "The triple branch now has a finite fail-closed endpoint once component-faithful data exist, while the pair branch is proved to require two-cell/strict-three-chain incidence beyond any exit graph; current artifacts instantiate neither global contract, so the score remains 2/9.",
+      "evidence": [
+        "ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md",
+        "ai/omreal/verify_diag3_global_exit_criterion.py",
+        "ops/team/global-exit/GLOBAL_EXIT_FIXTURES.json",
+        "ops/team/global-exit/RESULT.yaml"
+      ]
+    },
     "theorem_effect": "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9.",
-    "next_stage": "compile exact ordered residual roadmaps and compound-event extension-label continuation on the 38 pending edges, then continue component/closure attachments on the exact 40-edge full-support source cover while preserving that finite skeleton coverage is not parent-cell/component coverage; alternatively replace it with a direct coverage-certified parent-cell roadmap; retain section-960 and section-550 only as compiler stress tests and retain the independent triple boundary-complete projection-critical roadmap route"
+    "next_stage": "For the triple branch, search only macroboxes 0..5 for the first occupied exit of the registered component, require globally stable component identities and genuine parent-infinity tags, and terminate each complete family with the accepted sink-SCC decision; do not extend the zero-free projection-only corridor. For the pair branch, prioritize one globally identified strict three-cell chain with two-cell incidence, true-infinity, and signature tags; another source edge or reachability graph alone cannot distinguish the accepted H1 countermodels."
   },
   "research_infrastructure": {
     "exact_semialgebraic_toolkit": {

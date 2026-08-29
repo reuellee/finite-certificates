@@ -1,0 +1,480 @@
+{
+  "authenticated_target": {
+    "accepted_parent_side": "g-a<=0",
+    "canonical_unresolved_row": [
+      5563,
+      4373,
+      23221
+    ],
+    "clipped_cell": "K=macrobox20 intersect {g-a<=0}",
+    "macrobox_index": 20,
+    "named_factor_presentation": [
+      5563,
+      16134,
+      19284
+    ],
+    "wall_label": "3468",
+    "wall_polynomial": "g-a"
+  },
+  "base_revision": "ae8a3afc24abfea94acf4b22ea35c2ca18f3c577",
+  "bounded_corridor_diagnostic": {
+    "certified_zero_free_suffix": [
+      6,
+      20
+    ],
+    "first_full_box_with_all_q16134_controls_positive": 6,
+    "interpretation": "Projection-minor and parent-sign acceptance did not certify occupancy or component transport; the corridor is q16134-positive from macrobox 6 onward.",
+    "searched_macrobox_index_interval_inclusive": [
+      0,
+      20
+    ],
+    "suffix_records": [
+      [
+        6,
+        "36942370245/420906795008",
+        "632453251239/420906795008",
+        "00d1bc23343f085ef8636dba57605c351190bdabefdb14624b69333563da7625"
+      ],
+      [
+        7,
+        "47371508235/210453397504",
+        "85927569495/52613349376",
+        "707cf66f98978150dfc8984e67a19fc74fc781bf07b51ac5b106016a2b13c975"
+      ],
+      [
+        8,
+        "152543662695/420906795008",
+        "742387860681/420906795008",
+        "10a48243be5192101338f990d0024b9db78fef8bd7a139ea98e1d0b3032495f6"
+      ],
+      [
+        9,
+        "26293038615/52613349376",
+        "398677582701/210453397504",
+        "339651e11a7d4d52057c97726151dda00df658b1af80c37599ddf8695b9fbd98"
+      ],
+      [
+        10,
+        "268144955145/420906795008",
+        "852322470123/420906795008",
+        "bf107392ecde327e10d54a6e31edd845664a990d312584c27a92f4723ca81916"
+      ],
+      [
+        11,
+        "162972800685/210453397504",
+        "226822443711/105226698752",
+        "c2f5d25e05ae7a6a760c51419ea19a78d81f280da09c8ea6b320ceb62da7dd74"
+      ],
+      [
+        12,
+        "383746247595/420906795008",
+        "962257079565/420906795008",
+        "1fa83a4273fa9e1ebcc425eaad5e79f20dff12e98e4ad25df92983370414526b"
+      ],
+      [
+        13,
+        "110386723455/105226698752",
+        "508612192143/210453397504",
+        "4ee64b843608843d7dd7348079f77ed36dc19af544090df4f3ae07a104ef6aaa"
+      ],
+      [
+        14,
+        "499347540045/420906795008",
+        "1072191689007/420906795008",
+        "1554c370bb9e5270d4ff9ff3f9b49bd4fa7e4eaf4cce08a3334d9ee3ae8dc8c1"
+      ],
+      [
+        15,
+        "278574093135/210453397504",
+        "17611859277/6576668672",
+        "854629c5556998c96c080c82a2848674b9c9596b74b21ef504172a7460da9de7"
+      ],
+      [
+        16,
+        "614948832495/420906795008",
+        "1182126298449/420906795008",
+        "4a4eaf5be2b06a483a2e8b1401830d62b288fa5f3f0e2c92a64f5c0ad7530201"
+      ],
+      [
+        17,
+        "10511710605/6576668672",
+        "618546801585/210453397504",
+        "a942e3a8dd4f5c2bb538aa08d7f1fec42f89aed2fc82929d90607372a075c40d"
+      ],
+      [
+        18,
+        "730550124945/420906795008",
+        "1292060907891/420906795008",
+        "b117f469f0f56cb10b9687cfb40488a539d0ec47a6fc251e04e6a6cd517f8007"
+      ],
+      [
+        19,
+        "394175385585/210453397504",
+        "336757053153/105226698752",
+        "65cb76d088b7e255cb0f925e268b14062d55d43128c290f7d460ba2f340d4e94"
+      ],
+      [
+        20,
+        "846151417395/420906795008",
+        "1401995517333/420906795008",
+        "44dddb975b94570f843647fe5a525ce02ce4c638b699a507385d288fac4dc8b8"
+      ]
+    ]
+  },
+  "canaries": {
+    "accepted_macrobox19": {
+      "closest_parent_record": [
+        "3468",
+        "-9/224",
+        "-1/112",
+        -1
+      ],
+      "parent_signs_retained": 70,
+      "projection_g_bisection_intervals": [
+        [
+          0,
+          "-4237784465786065761155/1544734672188080128",
+          "-12595323019306132123/220676381741154304",
+          -1
+        ],
+        [
+          1,
+          "-8421326782079910478537/3089469344376160256",
+          "-171404011966466615159/3089469344376160256",
+          -1
+        ]
+      ]
+    },
+    "compact_sphere_negative_projection_interval": [
+      "-2",
+      "2"
+    ],
+    "false_wall_witness": {
+      "correctly_rejected_as_triple_zero": true,
+      "parent_wall_value": "0",
+      "point": [
+        "-223/224",
+        "-105/32",
+        "-431/224",
+        "-1119/224",
+        "-895/224",
+        "-671/224",
+        "-223/224",
+        "449/224",
+        "897/224"
+      ],
+      "residual_values": [
+        "-1/56",
+        "5934694995/2202927104",
+        "435073/702464"
+      ]
+    },
+    "rejected_full_macrobox20": {
+      "failed_parent_records": [
+        [
+          "3468",
+          "-11/448",
+          "3/448",
+          0
+        ]
+      ],
+      "same_sign_parent_brackets": 69
+    },
+    "wall_face_feasibility": true
+  },
+  "geometry": {
+    "K_is_convex_and_nonempty": true,
+    "macrobox19_shared_seam_with_K": "a=-881/896",
+    "macrobox20_bounds": [
+      [
+        "-895/896",
+        "-881/896"
+      ],
+      [
+        "-2951/896",
+        "-2937/896"
+      ],
+      [
+        "-1735/896",
+        "-1721/896"
+      ],
+      [
+        "-641/128",
+        "-639/128"
+      ],
+      [
+        "-513/128",
+        "-511/128"
+      ],
+      [
+        "-385/128",
+        "-383/128"
+      ],
+      [
+        "-129/128",
+        "-127/128"
+      ],
+      [
+        "255/128",
+        "257/128"
+      ],
+      [
+        "511/128",
+        "513/128"
+      ]
+    ],
+    "macrobox20_center": [
+      "-111/112",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "-1",
+      "2",
+      "4"
+    ],
+    "macrobox20_radius": "1/128",
+    "triple_zero_set_on_K": "EMPTY",
+    "wall_face_bounds": [
+      [
+        "-895/896",
+        "-127/128"
+      ],
+      [
+        "-2951/896",
+        "-2937/896"
+      ],
+      [
+        "-1735/896",
+        "-1721/896"
+      ],
+      [
+        "-641/128",
+        "-639/128"
+      ],
+      [
+        "-513/128",
+        "-511/128"
+      ],
+      [
+        "-385/128",
+        "-383/128"
+      ],
+      [
+        "255/128",
+        "257/128"
+      ],
+      [
+        "511/128",
+        "513/128"
+      ]
+    ],
+    "wall_face_feasible_point": [
+      "-223/224",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "-223/224",
+      "2",
+      "4"
+    ],
+    "wall_face_parameter_order": [
+      "t=a=g",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "h",
+      "i"
+    ]
+  },
+  "next_discriminator": "Return to macroboxes 0..5 and locate the first exact boundary face through which the registered-zero component exits; then continue with an occupancy-certified adaptive cell chain rather than projection-sign-only extension.",
+  "quantified_decisions": {
+    "fixed_projection": {
+      "child_intervals": [
+        [
+          0,
+          "-8482274242734958513913/3089469344376160256",
+          "-19985305822060417665/441352763482308608",
+          -1
+        ],
+        [
+          1,
+          "-8428167982872965301851/3089469344376160256",
+          "-135259339382748616229/3089469344376160256",
+          -1
+        ]
+      ],
+      "claim": "For every x in K, det d(q5563,q16134,q19284)/d(d,e,h)(x)<0.",
+      "cover": "two closed rectangular children obtained by bisecting g at -1",
+      "outcome": true,
+      "stronger_domain": "full macrobox20"
+    },
+    "other_parent_brackets": {
+      "claim": "For every x in K and every normalized parent bracket B other than [3468], sign(B(x)) equals its accepted base-box sign and B(x)!=0.",
+      "closest_strict_record": [
+        "2467",
+        "313/448",
+        "327/448",
+        1
+      ],
+      "interval_record_sha256": "fbc49f6f393aa31bf3a7806e77bd7b58d3835ae8e594909a503429a6b259368d",
+      "outcome": true,
+      "strict_bracket_count": 69,
+      "stronger_domain": "full macrobox20"
+    },
+    "triple_zero_wall_attachment": {
+      "claim": "There exists x in K with g-a=0 and q5563(x)=q16134(x)=q19284(x)=0, connected inside the declared roadmap cell to an accepted-corridor triple-zero component.",
+      "full_macrobox_q16134_bernstein": {
+        "control_count": 576,
+        "control_record_sha256": "0858627282f2b7d89b5da10cf1a887e24919fb35ed40f213b25f13c4a32a38bd",
+        "maximum_control": "1401995517333/420906795008",
+        "maximum_index": [
+          0,
+          1,
+          2,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "minimum_control": "846151417395/420906795008",
+        "minimum_index": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "multidegree": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          0
+        ],
+        "source_polynomial_terms": 40,
+        "strictly_positive_control_count": 576,
+        "unit_cube_power_terms": 99
+      },
+      "outcome": false,
+      "stronger_refutation": "V intersect K is empty because q16134>0 on full macrobox20",
+      "wall_face_q16134_bernstein": {
+        "control_count": 288,
+        "control_record_sha256": "40c6824dc7a6c8d0adbac1755212eadebd64a235d834dc7254710e9e819d5451",
+        "maximum_control": "9622409514771/2946347565056",
+        "maximum_index": [
+          0,
+          1,
+          2,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        "minimum_control": "879180358095/420906795008",
+        "minimum_index": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "multidegree": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          0
+        ],
+        "source_polynomial_terms": 36,
+        "strictly_positive_control_count": 288,
+        "unit_cube_power_terms": 89
+      },
+      "wall_face_q19284_bernstein": {
+        "control_count": 384,
+        "control_record_sha256": "43243ea1a7c636113f56b838282599478935c8e9e87bed362adad31c3d8953bf",
+        "maximum_control": "749719125/719323136",
+        "maximum_index": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "minimum_control": "2809875/14680064",
+        "minimum_index": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "multidegree": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "source_polynomial_terms": 16,
+        "strictly_positive_control_count": 384,
+        "unit_cube_power_terms": 57
+      }
+    }
+  },
+  "schema": "diag3-clipped-wall-prover-route-refutation-v1",
+  "scope_and_nonconsequences": {
+    "complete_named_factor_orbits_closed": 0,
+    "global_noncompactness_proved": false,
+    "macrobox21_or_other_triple_searched": false,
+    "mere_parent_wall_intersection_proved": true,
+    "s8_transport_claimed": false,
+    "score_after": "2/9",
+    "score_before": "2/9",
+    "triple_zero_wall_attachment_proved": false,
+    "unresolved_triple_orbits_after": 1162302,
+    "unresolved_triple_orbits_before": 1162302
+  },
+  "semantic_sha256": "3fc2708857a56c49732127b984c1e7e408dc0cb3556e975a3d850e050dd8aac3",
+  "source_digests": {
+    "critical_system": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "decision_ledger": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+    "frontier_builder": "f395fbf1336a01a09524d7f172b75b64530057848af8805ac275bd2b3f4f7fcb",
+    "frontier_certificate": "7e7ba6761ba544ab96dc36cd3f559317132b7264b94bc39059be813a8c3b5f70",
+    "frontier_verifier": "5801c26d872d8615b020751fbb0bb478a02306e25523bac7e0a0f2e7f1e126b8",
+    "local_roadmap_certificate": "0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27"
+  },
+  "status": "DISPROVED_TRIPLE_ZERO_ATTACHMENT_EMPTY_CLIPPED_CELL",
+  "track_id": "cycle-20260828-clipped-wall-prover"
+}

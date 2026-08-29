@@ -12,7 +12,7 @@
     "critical_system": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
     "critical_system_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
     "decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-    "decision_ledger_sha256": "7922d769aa30a84c5d208dec92d2e78d5c7744cc6184ea1d42aaeadf947761b3",
+    "decision_ledger_sha256": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
     "named_factor_presentation": [
       5563,
       16134,
@@ -1746,7 +1746,7 @@
     "unresolved_triple_orbits_after": 1162302,
     "unresolved_triple_orbits_before": 1162302
   },
-  "semantic_sha256": "5a71b5a6144aa0ab858a5cda2fbca6ee485332954f92976f17f8ce599fd46447",
+  "semantic_sha256": "214fd39ae84de810c7e44995c1aa97e66c92d21a08ae5253f5b9b87b518a6e28",
   "status": "PROVED_MULTIBOX_LOCAL_BOUNDARY_COVERAGE_WITH_PARENT_WALL_FRONTIER",
   "topological_consequence": "Every connected component of the named triple-zero set restricted to the accepted 20-macrobox rectangular corridor meets one of the 18 geometric outer facets; the component through the registered exact zero is nonvacuous.",
   "track_id": "cycle-20260828-prover-triple-frontier"

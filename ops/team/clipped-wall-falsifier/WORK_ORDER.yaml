@@ -1,0 +1,47 @@
+track_id: cycle-20260828-falsifier-clipped-wall
+role: falsifier
+base_revision: ae8a3afc24abfea94acf4b22ea35c2ca18f3c577
+target:
+  claim: >-
+    The clipped terminal cell K = macrobox20 intersect {g-a <= 0}
+    preserves the fixed (d,e,h)-projection regularity and contains a
+    triple-zero attachment to its genuine parent-wall face [3468]=g-a=0
+    belonging to the accepted corridor component.
+  quantifiers: >-
+    The named authenticated presentation (5563,16134,19284), exact closed
+    radius-1/128 macrobox 20, and its closed face g=a; no other triple,
+    macrobox, wall, or orbit is included.
+  ledger_id: diag3_triple_hc0
+assumptions:
+  - The four pinned repository inputs have the declared SHA-256 digests.
+  - The fixed projection uses fiber variables (d,e,h).
+inputs:
+  - path_or_source: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    digest: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+  - path_or_source: ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json
+    digest: 0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27
+  - path_or_source: ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json
+    digest: c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8
+  - path_or_source: ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json
+    digest: 7e7ba6761ba544ab96dc36cd3f559317132b7264b94bc39059be813a8c3b5f70
+deliverables:
+  positive: An exact counterexample or countercertificate against the attachment claim.
+  negative: Exact evidence that the declared attacks fail.
+  null: A bounded searched space, surviving hypotheses, and next discriminator.
+  timeout: A partial manifest with replayable exact artifacts.
+verification:
+  replay: PYTHONDONTWRITEBYTECODE=1 python ai/omreal/clipped_wall_falsifier_verify.py
+  canaries:
+    - macrobox 19 remains accepted with all 70 parent signs and negative fixed projection minor
+    - macrobox 20 is rejected exactly at [3468]=g-a
+    - the registered parent-wall point is rejected as a triple-zero witness
+    - a semantically re-sealed false-witness mutation is rejected
+limits:
+  resource_ceiling: 45 wall-clock minutes, 12 GiB resident memory, no paid services
+  stop_rule: >-
+    Stop at the first exact counterexample, exact no-counterexample result for
+    the declared tests, or bounded null; do not inspect macrobox 21 or another triple.
+  prohibited_scope: >-
+    No macrobox 21, other triples, target repair, README/ledger/CI edits,
+    producer/verifier edits, or inspection of another agent worktree.
+handoff_to: coordinator

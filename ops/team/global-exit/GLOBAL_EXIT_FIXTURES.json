@@ -1,0 +1,136 @@
+{
+  "format": "diag3-global-exit-fixtures-v1",
+  "base_revision": "ae8a3afc24abfea94acf4b22ea35c2ca18f3c577",
+  "criterion": "every vertex reaches a certified true-parent-infinity vertex; equivalently every sink SCC contains such a vertex",
+  "graphs": [
+    {
+      "id": "acyclic_boundary_sinks",
+      "expected_accept": true,
+      "coverage_complete": true,
+      "component_faithful": true,
+      "true_infinity_sound": true,
+      "nodes": [
+        {"id": "local0", "boundary_kind": "ordinary"},
+        {"id": "local1", "boundary_kind": "ordinary"},
+        {"id": "infinity", "boundary_kind": "true_parent_infinity"}
+      ],
+      "edges": [
+        {"source": "local0", "target": "local1", "same_component_continuation": true},
+        {"source": "local1", "target": "infinity", "same_component_continuation": true}
+      ]
+    },
+    {
+      "id": "cycle_no_true_boundary",
+      "expected_accept": false,
+      "coverage_complete": true,
+      "component_faithful": true,
+      "true_infinity_sound": true,
+      "nodes": [
+        {"id": "a", "boundary_kind": "ordinary"},
+        {"id": "b", "boundary_kind": "ordinary"}
+      ],
+      "edges": [
+        {"source": "a", "target": "b", "same_component_continuation": true},
+        {"source": "b", "target": "a", "same_component_continuation": true}
+      ]
+    },
+    {
+      "id": "cyclic_with_true_exit",
+      "expected_accept": true,
+      "coverage_complete": true,
+      "component_faithful": true,
+      "true_infinity_sound": true,
+      "nodes": [
+        {"id": "a", "boundary_kind": "ordinary"},
+        {"id": "b", "boundary_kind": "ordinary"},
+        {"id": "infinity", "boundary_kind": "true_parent_infinity"}
+      ],
+      "edges": [
+        {"source": "a", "target": "b", "same_component_continuation": true},
+        {"source": "b", "target": "a", "same_component_continuation": true},
+        {"source": "b", "target": "infinity", "same_component_continuation": true}
+      ]
+    },
+    {
+      "id": "artificial_scope_boundary",
+      "expected_accept": false,
+      "coverage_complete": true,
+      "component_faithful": true,
+      "true_infinity_sound": true,
+      "nodes": [
+        {"id": "local", "boundary_kind": "ordinary"},
+        {"id": "box_face", "boundary_kind": "artificial_scope_boundary"}
+      ],
+      "edges": [
+        {"source": "local", "target": "box_face", "same_component_continuation": true}
+      ]
+    },
+    {
+      "id": "exact_wall_label_cycle_44_37_44",
+      "expected_accept": false,
+      "coverage_complete": true,
+      "component_faithful": false,
+      "true_infinity_sound": true,
+      "abstraction_kind": "wall_labels_without_global_component_ids",
+      "nodes": [
+        {"id": "wall44", "boundary_kind": "ordinary"},
+        {"id": "wall37", "boundary_kind": "ordinary"}
+      ],
+      "edges": [
+        {"source": "wall44", "target": "wall37", "same_component_continuation": true},
+        {"source": "wall37", "target": "wall44", "same_component_continuation": true}
+      ]
+    },
+    {
+      "id": "omitted_edge_duplicate_component",
+      "expected_accept": false,
+      "expected_interpretation": "INCONCLUSIVE_FALSE_NEGATIVE",
+      "coverage_complete": true,
+      "component_faithful": true,
+      "true_infinity_sound": true,
+      "nodes": [
+        {"id": "local_fragment", "global_component_id": "C", "boundary_kind": "ordinary"},
+        {"id": "infinity_fragment", "global_component_id": "C", "boundary_kind": "true_parent_infinity"}
+      ],
+      "edges": [],
+      "actual_components": {
+        "C": {
+          "vertices": ["local_fragment", "infinity_fragment"],
+          "closure_meets_true_infinity": true
+        }
+      }
+    },
+    {
+      "id": "pair_countermodel_exit_graph",
+      "expected_accept": true,
+      "coverage_complete": true,
+      "component_faithful": true,
+      "true_infinity_sound": true,
+      "nodes": [
+        {"id": "i", "boundary_kind": "ordinary"},
+        {"id": "infinity", "boundary_kind": "true_parent_infinity"}
+      ],
+      "edges": [
+        {"source": "i", "target": "i", "same_component_continuation": true},
+        {"source": "i", "target": "infinity", "same_component_continuation": true}
+      ]
+    }
+  ],
+  "pair_countermodel": {
+    "description": "Both relative CW complexes have the same component graph i->infinity and the same one-skeleton: a path p to relative infinity plus a loop l at i. Only the two-cell filling differs.",
+    "component_graph_id": "pair_countermodel_exit_graph",
+    "relative_C0_basis": ["i"],
+    "relative_C1_basis": ["p", "l"],
+    "boundary_1": [[1, 0]],
+    "unfilled": {
+      "relative_C2_basis": [],
+      "boundary_2": [[], []],
+      "expected_h1_f2": 1
+    },
+    "filled": {
+      "relative_C2_basis": ["disk"],
+      "boundary_2": [[0], [1]],
+      "expected_h1_f2": 0
+    }
+  }
+}

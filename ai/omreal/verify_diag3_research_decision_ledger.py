@@ -91,7 +91,7 @@ def main() -> None:
     }
     assert ledger["format"] == "diag3-research-decision-ledger-v1"
     assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-27"
+    assert ledger["as_of"] == "2026-08-28"
     assert ledger["repository"] == {
         "full_name": "reuellee/finite-certificates",
         "default_branch": "main",
@@ -308,6 +308,8 @@ def main() -> None:
         "thirty_seventh_triple_local_projection_roadmap_canary",
         "thirty_eighth_pair_fullsupport_component_collar",
         "thirty_ninth_pair_fullsupport_edge39_labeled_skeleton_and_collar_attachment",
+        "fortieth_triple_clipped_wall_route_refutation",
+        "forty_first_finite_global_exit_criterion",
         "theorem_effect",
         "next_stage",
     }
@@ -1883,14 +1885,44 @@ def main() -> None:
     assert progress["theorem_effect"] == (
         "No invariant diagonal-three obligation is closed; honest 9DVL score remains 2/9."
     )
+    clipped = progress["fortieth_triple_clipped_wall_route_refutation"]
+    assert clipped["status"] == "REFUTED"
+    assert clipped["complete_row_or_orbit_closed"] == 0
+    assert clipped["independent_face_taylor_interval"] == [
+        "17871665307/8589934592",
+        "9696617457747/2946347565056",
+    ]
+    assert clipped["independent_face_bernstein_controls"] == 288
+    assert clipped["independent_face_bernstein_minimum"] == (
+        "879180358095/420906795008"
+    )
+    assert clipped["full_macrobox_bernstein_controls"] == 576
+    assert clipped["full_macrobox_bernstein_minimum"] == (
+        "846151417395/420906795008"
+    )
+    assert clipped["zero_free_macrobox_suffix"] == [6, 20]
+    assert clipped["first_all_positive_macrobox"] == 6
+    assert clipped["triple_branch_compact_support_vanishing"] == "OPEN"
+    assert clipped["pair_branch_injectivity"] == "OPEN"
+
+    global_exit = progress["forty_first_finite_global_exit_criterion"]
+    assert global_exit["status"] == "PROVED_METHODOLOGICAL_LEMMA"
+    assert global_exit["actual_noncompactness_necessity_claimed"] is False
+    assert global_exit["rejection_interpretation"] == (
+        "INCONCLUSIVE_OPEN_WORLD_FALSE_NEGATIVES_ALLOWED"
+    )
+    assert global_exit["pair_graph_only_route"] == "REFUTED"
+    assert global_exit["triple_families_closed"] == 0
+    assert global_exit["triple_branch_compact_support_vanishing"] == "OPEN"
+    assert global_exit["pair_branch_injectivity"] == "OPEN"
     assert progress["next_stage"] == (
-        "compile exact ordered residual roadmaps and compound-event extension-label "
-        "continuation on the 38 pending edges, then continue component/closure attachments "
-        "on the exact 40-edge full-support source cover while preserving that finite "
-        "skeleton coverage is not parent-cell/component coverage; alternatively replace "
-        "it with a direct coverage-certified parent-cell roadmap; retain section-960 and "
-        "section-550 only as compiler stress tests and retain the independent triple "
-        "boundary-complete projection-critical roadmap route"
+        "For the triple branch, search only macroboxes 0..5 for the first occupied exit "
+        "of the registered component, require globally stable component identities and "
+        "genuine parent-infinity tags, and terminate each complete family with the "
+        "accepted sink-SCC decision; do not extend the zero-free projection-only corridor. "
+        "For the pair branch, prioritize one globally identified strict three-cell chain "
+        "with two-cell incidence, true-infinity, and signature tags; another source edge "
+        "or reachability graph alone cannot distinguish the accepted H1 countermodels."
     )
 
     digest = git_blob_sha1(LEDGER_PATH)
@@ -1979,6 +2011,8 @@ def main() -> None:
         "PASS thirty-fourth component-cosheaf pilot: four fixtures exact; "
         "16935101-cell lift manifests fail the global compiler input contract"
     )
+    print("PASS fortieth clipped-wall route refuted: macroboxes 6..20 zero-free")
+    print("PASS forty-first finite global-exit criterion: one-way sink-SCC gate")
     print("LEDGER_GIT_BLOB", digest)
 
 
