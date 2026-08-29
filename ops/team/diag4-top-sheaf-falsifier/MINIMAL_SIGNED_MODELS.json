@@ -1,0 +1,61 @@
+{
+  "abstract_search": {
+    "base_topology": "oriented_line_with_two_exterior_rays",
+    "births_or_deaths": false,
+    "component_bound": 2,
+    "connected_outside_events": true,
+    "event_bound": 2,
+    "event_type": "generic_split_or_merge"
+  },
+  "base_revision": "d047359e7892106021022b0401554f56eb4e4d8a",
+  "classification": {
+    "attachment_matrices": 16,
+    "gauge_classes": 2,
+    "minimal_event_word": "1-2-1",
+    "nonzero_kernel_models": 8,
+    "zero_kernel_models": 8
+  },
+  "nonconsequence": "The abstract signed models are not rank-four extension realizations, and the realizable control contains no certified split--remerge event or nonzero compact-support class.",
+  "realizable_retained_control": {
+    "candidate_motion": {
+      "description": "At pattern zero preserve Q=123/134/267/258/468 by y5+=s*y2+t*y8, y1+=u*y3, and y7+=v*y2; the open parameter domain is cut out by the original signs of all 70 parent brackets.",
+      "nonconstant_parent_inequalities": 48,
+      "nonlinear_parent_inequalities": 16,
+      "signature_index": 0,
+      "signed_parent_polynomial_sha256": "144b1c69ede7f4d7a78caae7f00bf66f162bd54d08f1cd17e44f1ba8c70b86cb",
+      "support_indices": [
+        0,
+        2,
+        31,
+        42,
+        48
+      ]
+    },
+    "input": "ai/omreal/data/seeat_parent2599_shatter8.npz",
+    "input_sha256": "d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb",
+    "parent_index": 2599,
+    "selected_signature_indices": [
+      0,
+      4,
+      5,
+      6
+    ]
+  },
+  "schema": "diag4-top-sheaf-minimal-signed-models-v1",
+  "semantic_sha256": "cc4f58f57ac6d244b417ad3772842b83bd90dbf4d665693866a2b43aa168b4b6",
+  "signed_normal_forms": {
+    "trivial_holonomy": [
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "twisted_holonomy": [
+      -1,
+      1,
+      1,
+      1
+    ]
+  },
+  "theorem_effect": "Over the declared oriented base line with two exterior rays, exactly excludes every zero- or one-event obstruction and reduces the minimal two-event signed class to one orientation-holonomy bit; it does not settle diag4_top_component_persistence."
+}

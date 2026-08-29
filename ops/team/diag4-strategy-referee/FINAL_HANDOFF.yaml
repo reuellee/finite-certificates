@@ -1,0 +1,114 @@
+track_id: diag4-strategy-referee
+phase: frozen_candidate_review
+role: independent_verifier_referee
+canonical_mathematical_base: d047359e7892106021022b0401554f56eb4e4d8a
+corrected_control_plane_local_revision: ec9a8ddba6f90e5cc96427337d0ad20ef28b8641
+corrected_control_plane_published_revision: 084330a0ea3b53b5e6d001b31ae83932d223620b
+outcome: finite-exact
+review_disposition:
+  prover: ACCEPT_WITH_SCOPE_WORDING
+  falsifier: MODIFY_SCOPE_WORDING_THEN_ACCEPT_USEFUL_NULL
+  ledger: NO_CHANGE
+  post_cycle_strategy: CONTINUE
+summary: >-
+  The universal signed B31 four-shear theorem and complete support-shape sieve
+  are accepted: 915740 of 1715980 supports in 77 of 130 S8 orbits vanish
+  through H_c^3, leaving 800240 supports in 53 orbits. The falsifier's exact
+  signed holonomy and row-2599 candidate are accepted as a bounded null after
+  narrowing abstract completeness to diagrams over a base line with two
+  exterior rays. D4-SP, restriction exactness, diagonal four, and the 2/9
+  ledger remain open.
+artifacts:
+  - path: ops/team/diag4-strategy-referee/CANDIDATE_REVIEW.md
+    digest: d02862604e5bfbd4cdbb490044fdb43b8d03d58c0af2b0c48d80c6014e5217a0
+  - path: ops/team/diag4-strategy-referee/CANDIDATE_GATE_TABLE.yaml
+    digest: 2d0cddd0a7d6139568b019e85798f9eb29a80a2b4684b7945ccb9ac4d2122e84
+reviewed_candidates:
+  prover:
+    local_revision: e7baf36f6bb18a4552a9a337d8373e7aa7a87355
+    local_tree: f85f17fdd390fc3803f1625a83bd2fb68e6f2045
+    connector_published_revision: d776ff9163c9f27194bfbeca38114434222b64be
+  falsifier:
+    local_revision: 7dc8a2bfae9672068b6c977302d2ea5b213c412b
+    local_tree: b1a5b61d1a851440114d1a6b2a1576270f17fdeb
+    connector_published_revision: 4a3fc3d4bc21eecd1ecabed47d79b2b853069025
+replay:
+  commands:
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ops/team/diag4-top-sheaf-prover/verify_four_block_line_sieve.py
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ai/omreal/verify_fourth_single_piece_light_count.py
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_seeat_shatter8.py
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ops/research-team/verify_cycle_protocol.py
+  result: exit_0_for_all
+independent_checks:
+  B31_complete_enumeration_and_s8_orbits: PASS
+  signed_normal_invariance_and_projective_stabilizer: PASS
+  convex_selection_poincare_leray_argument: PASS
+  full_256_pattern_shatter: PASS
+  row2599_motion_boolean_interpolation: PASS
+  abstract_signed_matrix_exhaustion: PASS_WITH_BASE_LINE_SCOPE
+coverage:
+  included: >-
+    Exact candidate identities and digests; B31 signed theorem; complete
+    1715980-support classification; projective quotient; fiber topology;
+    structural/residual strata; closed weight faces; signed canaries; minimal
+    abstract holonomy; row-2599 actual witness and motion; nonconsequences;
+    publication roles; mandatory post-cycle strategy evaluation.
+  excluded: >-
+    No topology of the row-2599 four-parameter candidate or any full surviving
+    circuit piece was computed. No restriction map, total-complex exactness,
+    D4-SP completion, diagonal-four proof, repository-check result at a future
+    integrated head, merge, backup, or ledger promotion is accepted.
+required_integration_wording:
+  prover:
+    - >-
+      Spell out the fixed-basis residual diagonal stabilizer calculation and
+      state that vanishing of rows below four does not require trivializing
+      the top orientation local system.
+    - >-
+      Cite the full 256-pattern shatter replay for the signature-index-7
+      positive B31 canary.
+  falsifier:
+    - >-
+      Add base_topology=oriented_line_with_two_exterior_rays to the abstract
+      search schema and verifier lock.
+    - >-
+      Replace every broad complete connected-one-dimensional phrase with the
+      exact base-line, connected-exterior, no-birth/death, generic-event,
+      two-branch, two-event scope and refresh semantic/file digests.
+    - >-
+      Preserve the statement that the row-2599 subset has uncomputed topology
+      and cannot refute D4-SP without survival under inclusion into the full
+      closed piece.
+publication_gates:
+  artifact: PASS_FOR_PROVER_MODIFY_FOR_FALSIFIER_SCOPE
+  replay: PASS
+  independence: PASS
+  coverage: PASS_AT_ACCEPTED_SCOPES
+  transport_and_boundary: PASS_FOR_B31_NOT_COMPUTED_FOR_SURVIVORS
+  adversarial: PASS
+  repository_exact_head: PENDING_COORDINATOR
+  ledger: PASS_NO_CHANGE
+post_cycle:
+  theorem_ledger_delta: none
+  obligation_delta: >-
+    diag4_cover_all_single_piece_hc3 narrowed from 1715980 supports in 130
+    support-shape orbits to 800240 supports in 53 B31-resistant orbits.
+  verdict: CONTINUE
+  next_action: >-
+    Run one bounded signed/topological cycle on the complete 53-orbit survivor
+    class: prove a universal signed holonomy/top-sheaf exclusion or produce an
+    exact admissible D4-SP counterexample on the entire closed piece. Treat the
+    row-2599 four-parameter subset only as a falsifier discriminator. If the
+    complete survivor class is unchanged, pivot next cycle.
+ledger_change_recommended: none
+freeze_status: COMPLETE_PENDING_SCOPE_CORRECTION_AND_INTEGRATED_HEAD_REVIEW

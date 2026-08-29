@@ -143,3 +143,40 @@ checks.  Recovery checkpoints are limited to Google Drive
 The coordinator report must apply the post-cycle strategy evaluation in
 `ops/research-team/PROTOCOL.md`, state the exact ledger delta, and issue a new
 `CONTINUE`, `PIVOT`, `RETIRE`, or `STOP` verdict before any successor cycle.
+
+## Closing strategy evaluation
+
+The frozen prover, falsifier, and independent-referee handoffs satisfy their
+declared artifact and replay gates after the referee-locked wording delta.
+Repository checks, CI, merge, and recovery backup remain publication gates and
+cannot promote the theorem ledger.
+
+Exact claim-ledger delta: **none**; the score remains `2/9`.  D4-SP and
+diagonal four remain open.  The cycle nevertheless closes a universal signed
+subcase over a complete declared support-shape domain: the B31 four-shear
+theorem certifies `915,740` of `1,715,980` labeled cover-all supports and `77`
+of `130` unsigned `S_8` support-shape orbits.  The exact survivor class is
+`800,240` supports in `53` orbits.  This is a strict end-to-end reduction of
+the selected D4-SP obstruction class, not a ledger promotion.
+
+The falsifier found no D4-SP counterexample.  It exactly classified the
+declared two-event signed line-base class by one orientation-holonomy bit and
+pinned an actual row-2599 four-parameter discriminator with `48` nonconstant
+and `16` nonlinear parent inequalities.  Its topology and survival under
+inclusion into the full closed piece remain uncomputed, so it is retained only
+as a useful null handoff.
+
+| Candidate next route | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independent verification | Resource / information | Stagnation risk | Verdict |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| diagonal 4: all 53 B31-resistant support orbits | 5 | 3 | 3 | 4 | 4 | 3 | 4 | 1 | **`CONTINUE` once** |
+| diagonal 3 | 5 | 3 | 5 | 2 | 3 | 3 | 2 | 5 | `PIVOT` reserve |
+| diagonal 8 | 5 | 1 | 5 | 2 | 3 | 4 | 2 | 4 | `RETIRE` as primary target |
+| diagonal 9 | 5 | 2 | 5 | 2 | 4 | 3 | 2 | 3 | `PIVOT` reserve |
+
+Post-cycle verdict: **`CONTINUE` diagonal four for one bounded cycle**.  The
+next target must either prove a universal signed holonomy/top-sheaf exclusion
+over all `53` survivor orbits or produce an exact admissible D4-SP
+counterexample whose class survives inclusion into the full closed piece.
+The row-2599 subset topology is a falsifier discriminator, not a promotable
+claim by itself.  If the complete `53`-orbit survivor class is unchanged at
+the end of that cycle, the protocol requires a pivot.
