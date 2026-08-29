@@ -1,0 +1,86 @@
+track_id: cycle-20260828-global-exit
+base_revision: ae8a3afc24abfea94acf4b22ea35c2ca18f3c577
+outcome: proved
+summary: >-
+  Proved that a complete component-faithful finite graph excludes compact
+  triple-bad components whenever every vertex reaches certified true parent
+  infinity; this graph acceptance predicate is equivalent to every sink SCC
+  containing true infinity, but is not necessary for actual noncompactness.
+  Also disproved any graph-only pair-H1 conclusion with two exact same-graph
+  relative CW complexes having H1 dimensions one and zero over F2.
+artifacts:
+  - path: ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md
+    digest: 0a372197a49f4a767c06b23a6df830ef2784e7fe653b4b3eb1a506eec0518e27
+  - path: ai/omreal/verify_diag3_global_exit_criterion.py
+    digest: bd451d1a2930b460e8c94cc70ed4dae83b6c2dc278889fa65f45927ba99d8c07
+  - path: ops/team/global-exit/GLOBAL_EXIT_FIXTURES.json
+    digest: 4bc0331835c82f0eb3e98bc87d0c6a37683ef66298e430337c3c0661ddd4a029
+  - path: ops/team/global-exit/WORK_ORDER.yaml
+    digest: 0c18e4fa2b5c34181da1838d7aeb4d0cd29a81477dd326f14c7ee2b171223c42
+replay:
+  command: PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_global_exit_criterion.py
+  result: >-
+    exit 0; PASS seven graph fixtures; exact rational 44->37->44 derivatives
+    (3,-2,-6,12); omitted-edge graph rejects while its represented actual
+    component is noncompact; unfilled H1_F2=1 and filled H1_F2=0 with
+    d1*d2=0.
+coverage:
+  included: >-
+    Every finite directed graph for a declared semialgebraic triple-bad family
+    whose component coverage, stable local-component identities,
+    same-component continuation edges, and genuine parent-infinity tags are
+    independently certified and sound; the one-way sufficiency theorem and
+    its exact false-negative boundary; graph-only pair insufficiency through
+    exact finite relative complexes.
+  excluded: >-
+    No current unresolved triple row is asserted to satisfy the input
+    contract; no parent-cell, wall-component, or signature-family coverage is
+    added; no pair master closure, two-cell incidence universe, rank replay,
+    diagonal-three proof, or score change follows.
+canaries:
+  positive: Acyclic boundary-sink graph passes; cyclic graph with a genuine exit also passes.
+  negative: Finite directed cycle with no true-boundary node rejects with NO_CERTIFIED_TRUE_INFINITY_PATH; rejection is inconclusive about actual compactness.
+  null: >-
+    Canonical open objects replay as 1,162,302 unresolved triple rows and zero
+    global pair adjacencies, strict closure pairs, strict closure triples, or
+    parent-infinity cells.
+  hostile: >-
+    Artificial scope boundary rejects; exact component-free wall-label
+    abstraction 44->37->44 rejects both component-faithfulness and exit tests;
+    duplicate fragments of one known noncompact component reject when their
+    sound connecting edge is omitted; accepted exit graph cannot distinguish
+    pair H1=1 from H1=0.
+source_accounting:
+  used: >-
+    Repository base ae8a3afc; decision ledger SHA-256
+    5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14;
+    DIAG3_COMPLETION_OPEN_OBJECT, DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT,
+    DIAG3_COMPONENT_COSHEAF_PILOT, architecture audit, master quotient,
+    residual adjacency, and exact DIAG2 37/44 source verifier at pinned
+    digests recorded in WORK_ORDER.yaml and the checker.
+  unused_or_missing: >-
+    The completed local lift manifests were inspected only through their
+    canonical input-contract audit; they do not expose globally stable
+    components, strict closure, signature labels, or true-infinity incidence.
+open_defects:
+  - >-
+    Existing triple artifacts do not yet instantiate the criterion for even
+    one complete unresolved source family; they provide local artificial-box
+    boundary reach rather than genuine parent-infinity reach.
+  - >-
+    Existing pair artifacts lack the global strict three-cell chains and
+    two-cell incidence parity distinguished by the exact countermodel.
+next_action: >-
+  Emit one complete unresolved triple-source-family certificate with globally
+  stable local-component IDs, exact same-component continuation edges, and
+  genuine parent-infinity witnesses, then run the sink-SCC decision.  For the pair
+  branch, prioritize one globally identified strict three-cell chain with
+  signed/parity two-cell incidence and its true-infinity and signature labels;
+  another reachability edge is nondiscriminating.
+ledger_change_recommended: >-
+  Add a proved methodological lemma "component-faithful graph acceptance is
+  sufficient for noncompactness; its reachability predicate is equivalent to
+  every sink SCC containing true parent infinity" and a disproved route
+  "component graph alone determines pair H1".  Record that graph rejection is
+  inconclusive.  Keep diag3_triple_hc0 OPEN with 1,162,302 unresolved rows,
+  diag3_pair_hc1 OPEN, and the honest score at 2/9.

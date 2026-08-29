@@ -1,0 +1,69 @@
+track_id: cycle-20260828-clipped-wall-prover
+base_revision: ae8a3afc24abfea94acf4b22ea35c2ca18f3c577
+outcome: disproved
+summary: >-
+  The proposed clipped-wall attachment is exactly impossible: q16134 is
+  strictly positive on all of macrobox 20, so the triple-zero set is empty on
+  K and on its genuine [3468]=g-a wall face, despite successful fixed-minor
+  and other-parent-sign certificates.
+artifacts:
+  - path: ai/omreal/build_diag3_clipped_wall_prover_certificate.py
+    digest: d72699dbead195147874db11da579b1102b8850b30bbd504636811961c0ddd1a
+  - path: ops/team/clipped-wall-prover/DIAG3_CLIPPED_WALL_PROVER_CERTIFICATE.json
+    digest: e2e2dbc0de5b7c94d15d377dbc3713ca8207469f04271bd39988dfd434383f7a
+  - path: ops/team/clipped-wall-prover/PROOF_NOTE.md
+    digest: 1cbb19ff113ce00275da9ccb6a59adaaf68c4b60419b3c2b90b32998ba01fdd0
+  - path: ops/team/clipped-wall-prover/WORK_ORDER.yaml
+    digest: 9f8daed4166e74f77c8c17d2c75e207a86490f29d31c2fb85a8cc8ba9daa90fe
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ai/omreal/build_diag3_clipped_wall_prover_certificate.py
+  result: >-
+    exit 0 twice with byte-identical output; fixed projection negative on K
+    by 2/2 full-box g children; 69/69 other parent brackets strict;
+    q16134 Bernstein-positive 576/576 on macrobox 20 with exact minimum
+    846151417395/420906795008; macroboxes 6..20 zero-free.
+coverage:
+  included: >-
+    Authenticated presentation (5563,16134,19284), canonical unresolved row
+    (5563,4373,23221), exact macrobox 20, clipped cell
+    K=macrobox20 intersect {g-a<=0}, its full [3468] wall face, and the bounded
+    diagnostic scan of already-declared macrobox indices 0..20.
+  excluded: >-
+    Macrobox 21, every other presentation or orbit, S8 transport, full parent
+    cell coverage, and global noncompactness. No complete row is closed.
+canaries:
+  positive: >-
+    Accepted macrobox 19 retains all 70 parent signs and two strictly negative
+    projection-minor intervals after the registered g bisection.
+  negative: >-
+    Compact-sphere pivot interval remains [-2,2] and is refused as a
+    sign-definite projection certificate.
+  null: >-
+    Full macrobox 20 remains rejected as a parent-interior box exactly at
+    [3468], whose interval is [-11/448,3/448]; its other 69 brackets are strict.
+  hostile: >-
+    The previous exact parent-wall witness is rejected as a triple zero because
+    its residual values are (-1/56,5934694995/2202927104,435073/702464).
+source_accounting:
+  used: >-
+    Decision ledger 5841dfbb..., local roadmap 0ee63d40..., authenticated
+    critical system c9244a47..., resealed multibox frontier 7e7ba676..., frontier
+    builder f395fbf1..., and resealed frontier verifier 5801c26d..., all pinned and
+    checked by the replay.
+  unused_or_missing: >-
+    No external sources or numerical solvers are used by the committed proof
+    artifact. Independent verifier-side replay remains an integration gate.
+open_defects:
+  - >-
+    The exact exit face of the registered-zero component inside macroboxes
+    0..5 is not yet identified.
+next_action: >-
+  Search exact faces of macroboxes 0..5 for the first exit of the component
+  through the registered zero, then build an occupancy-certified adaptive
+  continuation cell; do not extend the zero-free projection-sign corridor.
+ledger_change_recommended: >-
+  Proposal only: record the clipped-[3468] terminal route as DISPROVED with
+  countercertificate e2e2dbc0de5b7c94d15d377dbc3713ca8207469f04271bd39988dfd434383f7a;
+  leave diag3_triple_hc0 OPEN at 1162302 unresolved and the score at 2/9.

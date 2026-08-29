@@ -1,0 +1,224 @@
+{
+  "authenticated_inputs": {
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+    "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json": "0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json": "7e7ba6761ba544ab96dc36cd3f559317132b7264b94bc39059be813a8c3b5f70"
+  },
+  "base_revision": "ae8a3afc24abfea94acf4b22ea35c2ca18f3c577",
+  "canaries": {
+    "macrobox19": {
+      "all_70_parent_signs_match_base": true,
+      "fixed_projection_minor_child_intervals": [
+        [
+          "-4237784465786065761155/1544734672188080128",
+          "-12595323019306132123/220676381741154304"
+        ],
+        [
+          "-8421326782079910478537/3089469344376160256",
+          "-171404011966466615159/3089469344376160256"
+        ]
+      ],
+      "fixed_projection_minor_sign": -1
+    },
+    "macrobox20": {
+      "bracket_3468": "g-a",
+      "rejected_parent_brackets": [
+        "3468"
+      ]
+    },
+    "registered_parent_wall_point": {
+      "g_minus_a": "0",
+      "point": [
+        "-223/224",
+        "-105/32",
+        "-431/224",
+        "-1119/224",
+        "-895/224",
+        "-671/224",
+        "-223/224",
+        "449/224",
+        "897/224"
+      ],
+      "residual_values": {
+        "16134": "5934694995/2202927104",
+        "19284": "435073/702464",
+        "5563": "-1/56"
+      },
+      "triple_zero": false
+    },
+    "resealed_false_witness": {
+      "claimed_triple_zero": true,
+      "point": [
+        "-223/224",
+        "-105/32",
+        "-431/224",
+        "-1119/224",
+        "-895/224",
+        "-671/224",
+        "-223/224",
+        "449/224",
+        "897/224"
+      ],
+      "semantic_sha256": "71e29319f8908e9f0f648f9a6aee147fcbfe8cc819989ad9c5a1e509c4df3f73"
+    },
+    "resealed_false_witness_expected_rejection": "valid semantic seal does not cure three nonzero residual evaluations"
+  },
+  "coverage": {
+    "excluded": "projection regularity on the clipped interior, other terminal faces, macrobox21, other triples, orbit transport, and global topology",
+    "included": "the entire closed terminal face macrobox20 intersect {g-a=0} for the authenticated triple"
+  },
+  "exact_wall_exclusion": {
+    "centered_taylor_center": [
+      "-223/224",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "2",
+      "4"
+    ],
+    "centered_taylor_radii": [
+      "3/896",
+      "1/128",
+      "1/128",
+      "1/128",
+      "1/128",
+      "1/128",
+      "1/128",
+      "1/128"
+    ],
+    "conclusion": "q16134 is strictly positive on the complete terminal face, so no triple zero attaches to [3468]=0 in K",
+    "exact_interval": [
+      "17871665307/8589934592",
+      "9696617457747/2946347565056"
+    ],
+    "factor": 16134,
+    "shifted_nonzero_terms": 89,
+    "sign": 1,
+    "substitution": "g=a"
+  },
+  "ledger_change_recommended": "record the macrobox20 [3468]-attachment route as DISPROVED; do not change counts or the 2/9 score",
+  "named_factor_presentation": [
+    5563,
+    16134,
+    19284
+  ],
+  "outcome": "DISPROVED_TERMINAL_FACE_ATTACHMENT",
+  "reconstructed_macroboxes": {
+    "clipped_cell": "macrobox20 intersect {g-a <= 0}",
+    "corridor_axis_zero_based": 0,
+    "corridor_direction": -1,
+    "macrobox19_center": [
+      "-437/448",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "-1",
+      "2",
+      "4"
+    ],
+    "macrobox20_bounds": [
+      [
+        "-895/896",
+        "-881/896"
+      ],
+      [
+        "-2951/896",
+        "-2937/896"
+      ],
+      [
+        "-1735/896",
+        "-1721/896"
+      ],
+      [
+        "-641/128",
+        "-639/128"
+      ],
+      [
+        "-513/128",
+        "-511/128"
+      ],
+      [
+        "-385/128",
+        "-383/128"
+      ],
+      [
+        "-129/128",
+        "-127/128"
+      ],
+      [
+        "255/128",
+        "257/128"
+      ],
+      [
+        "511/128",
+        "513/128"
+      ]
+    ],
+    "macrobox20_center": [
+      "-111/112",
+      "-23/7",
+      "-27/14",
+      "-5",
+      "-4",
+      "-3",
+      "-1",
+      "2",
+      "4"
+    ],
+    "radius": "1/128",
+    "terminal_face": "macrobox20 intersect {g-a = 0}",
+    "terminal_face_bounds": [
+      [
+        "-895/896",
+        "-127/128"
+      ],
+      [
+        "-2951/896",
+        "-2937/896"
+      ],
+      [
+        "-1735/896",
+        "-1721/896"
+      ],
+      [
+        "-641/128",
+        "-639/128"
+      ],
+      [
+        "-513/128",
+        "-511/128"
+      ],
+      [
+        "-385/128",
+        "-383/128"
+      ],
+      [
+        "255/128",
+        "257/128"
+      ],
+      [
+        "511/128",
+        "513/128"
+      ]
+    ],
+    "terminal_face_variable_order": [
+      "a=g",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "h",
+      "i"
+    ]
+  },
+  "schema": "diag3-clipped-wall-falsifier-certificate-v1",
+  "semantic_sha256": "3dca394c6e094419ccd9f6677837e90cfbf086d13894c63e90bee53c593d53d6",
+  "theorem_effect": "the proposed macrobox20 [3468]-attachment bridge is false; diag3_triple_hc0 remains OPEN and the honest score remains 2/9",
+  "track_id": "cycle-20260828-falsifier-clipped-wall"
+}

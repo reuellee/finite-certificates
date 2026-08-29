@@ -33,7 +33,7 @@ BASE_REVISION = "ec362dba8a912bc4749c004641aee2da0a88dc05"
 RESIDUE_COUNT = 1_162_302
 RESIDUE_DIGEST = "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4"
 EXPECTED_SOURCE_HASHES = {
-    "decision_ledger_sha256": "7922d769aa30a84c5d208dec92d2e78d5c7744cc6184ea1d42aaeadf947761b3",
+    "decision_ledger_sha256": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
     "critical_system_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
     "source_mapping_gate_sha256": "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692",
     "base_registration_sha256": "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3",

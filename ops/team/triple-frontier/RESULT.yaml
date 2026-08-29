@@ -11,9 +11,9 @@ artifacts:
   - path: ai/omreal/diag3_triple_frontier_build_multibox.py
     digest: f395fbf1336a01a09524d7f172b75b64530057848af8805ac275bd2b3f4f7fcb
   - path: ai/omreal/diag3_triple_frontier_verify_multibox.py
-    digest: 48219a759a3dba795919fd1fbadd447dc389add665488d6a8a4dafdfbb5be984
+    digest: 5801c26d872d8615b020751fbb0bb478a02306e25523bac7e0a0f2e7f1e126b8
   - path: ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json
-    digest: a41c3d84354bbbcb9d5b39b0899db7ad2479931f95f7363f945b9a9da0f9712a
+    digest: 7e7ba6761ba544ab96dc36cd3f559317132b7264b94bc39059be813a8c3b5f70
 replay:
   command: PYTHONDONTWRITEBYTECODE=1 python ai/omreal/diag3_triple_frontier_verify_multibox.py
   result: >-

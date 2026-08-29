@@ -1,0 +1,63 @@
+track_id: cycle-20260828-falsifier-clipped-wall
+base_revision: ae8a3afc24abfea94acf4b22ea35c2ca18f3c577
+outcome: disproved
+summary: >-
+  The proposed [3468] terminal attachment is impossible: on the complete face
+  macrobox20 intersect {g-a=0}, authenticated factor q16134 is strictly
+  positive with exact enclosure
+  [17871665307/8589934592,9696617457747/2946347565056].
+artifacts:
+  - path: ops/team/clipped-wall-falsifier/WORK_ORDER.yaml
+    digest: d969d15ea51b8809100eb8027ca8656171c3b63eb5e745af4f84c33416a02fd6
+  - path: ops/team/clipped-wall-falsifier/CLIPPED_WALL_FALSIFIER_CERTIFICATE.json
+    digest: f092558d370ec74f0c9ffd3178bcc2d1cdeb89f86a4c6f8c64c140b04faf0c28
+  - path: ai/omreal/clipped_wall_falsifier_verify.py
+    digest: f086c8ed59d741bc0b7030ebab683302e82b602c892496c354c27ae7147d81f7
+replay:
+  command: PYTHONDONTWRITEBYTECODE=1 python ai/omreal/clipped_wall_falsifier_verify.py
+  result: >-
+    exit 0; 4/4 pinned inputs, macrobox19 parent/projection canaries,
+    macrobox20 [3468] rejection, exact wall exclusion, known-witness rejection,
+    and hostile re-sealed mutation all pass.
+coverage:
+  included: >-
+    Every point of the closed face macrobox20 intersect {g-a=0} for the
+    authenticated presentation (5563,16134,19284), with all eight effective
+    coordinate intervals exact.
+  excluded: >-
+    Projection regularity in the clipped interior, other boundary faces,
+    macrobox21, other factor triples, orbit transport, and global topology.
+canaries:
+  positive: >-
+    Macrobox19 reconstructs with all 70 parent signs equal to the base signs;
+    the fixed projection minor is negative on both exact g-half boxes.
+  negative: >-
+    Macrobox20 reconstructs with exactly one failed parent bracket,
+    [3468]=g-a.
+  null: >-
+    Not applicable because the first-priority exact wall-feasibility attack
+    returned a decisive strict-sign countercertificate.
+  hostile: >-
+    The registered parent-wall point evaluates to
+    (-1/56,5934694995/2202927104,435073/702464), and a false triple-zero claim
+    with a recomputed semantic seal is rejected.
+source_accounting:
+  used: >-
+    Ledger 5841dfbb..., local canary 0ee63d40..., authenticated critical
+    system c9244a47..., and resealed frontier certificate 7e7ba676..., all at the
+    declared raw SHA-256 digests on base ae8a3afc....
+  unused_or_missing: >-
+    No external source or producer/verifier implementation was used; no source
+    was missing.
+open_defects:
+  - >-
+    None in the bounded falsification. This result deliberately does not decide
+    whether the fixed projection remains regular on the clipped interior,
+    because terminal-face infeasibility already disproves the conjunction.
+next_action: >-
+  Abandon the macrobox20 [3468] attachment bridge. Before extending another
+  corridor, require an exact residual-feasibility prefilter on its proposed
+  genuine terminal face.
+ledger_change_recommended: >-
+  Record the macrobox20 [3468]-attachment route as DISPROVED; keep
+  diag3_triple_hc0 OPEN at unresolved_count 1162302 and keep the honest score 2/9.

@@ -1,0 +1,58 @@
+track_id: cycle-20260828-global-exit
+role: formalizer
+base_revision: ae8a3afc24abfea94acf4b22ea35c2ca18f3c577
+target:
+  claim: >-
+    Formulate a precise sufficient finite graph criterion which, from exact
+    component-faithful continuation and genuine parent-infinity decorations,
+    proves that every represented triple-bad component is noncompact; prove
+    it or give a finite countermodel.  Determine separately whether the same
+    component graph can certify the pair master complex.
+  quantifiers: >-
+    Every finite directed graph covering a declared family of connected
+    triple-bad components, with vertices carrying stable local-component IDs,
+    every edge certified to remain in the same underlying component closure,
+    and every true-infinity tag certified in the parent compactification.
+    Pair claims are restricted to information determined by that graph and
+    its boundary tags.
+  ledger_id: diag3_triple_hc0 and diag3_pair_hc1
+assumptions:
+  - The compactification is Hausdorff and its true parent-infinity subset is closed.
+  - Component coverage, stable local-component identity, same-component continuation, and sound true-infinity tags are independently certified rather than inferred from local samples.
+  - Artificial scope boundaries are ordinary nodes and never true infinity.
+inputs:
+  - path_or_source: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    digest: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+  - path_or_source: ai/omreal/DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md
+    digest: 046dc84c138cbbed9add0946392d72ddb3b73b332ddb4c9029ea54348a85562e
+  - path_or_source: ai/omreal/DIAG3_COMPONENT_COSHEAF_PILOT.md
+    digest: 6cd971222160f885faa883b2f714764f00fbcaeb691621feb35b43beafe5ae5d
+  - path_or_source: ai/omreal/DIAG3_PAIR_RESIDUAL_WALL_ADJACENCY.md
+    digest: 179ce73f8cec1edcba1c425e784f277df8b0cbe0dd8857163257850b4aea1bef
+  - path_or_source: ai/omreal/DIAG3_PAIR_GLOBAL_MASTER_QUOTIENT.md
+    digest: af64cf292ce04234f4dabf48d0ae278c7a9ea1bee7ae83b525a0631d287f3eb7
+  - path_or_source: ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json
+    digest: 707a96f19f471af041d02bf22fc4267ddd4bf6b78cffde4783f660b645aed833
+  - path_or_source: ai/omreal/data/DIAG3_COMPLETION_OPEN_OBJECT.json
+    digest: ea8808e8979603757dec928b1e9aeb266aa3eabcfb2e70c1f13e7aa5c4af6ece
+  - path_or_source: ai/omreal/DIAG2_PIVOT_ALL_COMPACT_SECOND_WALL_VERIFY.py
+    digest: 7b79dc1a679143ffee31cd5ad892c6f9b33b561aab7fd1305723db92b24415c1
+deliverables:
+  positive: An abstract theorem, exact finite checker, and passing/rejecting canaries.
+  negative: A same-graph pair of relative CW complexes with different H1, proving graph-only pair coverage is insufficient.
+  null: Examined criteria, survivors, and one next discriminating datum.
+  timeout: Partial manifest with exact source digests and replayable canaries.
+verification:
+  replay: PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag3_global_exit_criterion.py
+  canaries:
+    - finite cycle without true boundary rejects
+    - acyclic graph whose sinks are true-boundary nodes accepts
+    - exact 44-to-37-to-44 wall-label abstraction rejects
+    - artificial scope boundary does not count as true infinity
+    - omitted edge between duplicate fragments of one noncompact component causes an inconclusive false negative
+    - same accepted exit graph supports both H1=1 and H1=0 relative complexes
+limits:
+  resource_ceiling: 35 wall-clock minutes, 8 GiB, no paid services, no new bulk atlas computation
+  stop_rule: Stop at one proved criterion with exact fixture replay and one exact countermodel, or a bounded null.
+  prohibited_scope: No README, canonical-ledger, CI, prior-artifact, bulk-atlas, merge, or score edits.
+handoff_to: coordinator

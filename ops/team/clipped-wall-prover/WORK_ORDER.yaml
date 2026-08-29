@@ -1,0 +1,54 @@
+track_id: cycle-20260828-clipped-wall-prover
+role: prover
+base_revision: ae8a3afc24abfea94acf4b22ea35c2ca18f3c577
+target:
+  claim: >-
+    Decide the terminal clipped cell K = macrobox 20 intersect {g-a<=0}
+    for authenticated presentation (5563,16134,19284), mapped to canonical
+    unresolved row (5563,4373,23221): certify the fixed (d,e,h) projection
+    minor, the other 69 parent signs, and an actual triple-zero attachment on
+    K intersect {g-a=0} connected within the declared roadmap cell to the
+    accepted corridor component.
+  quantifiers: >-
+    All points of the exact closed rational clipped cell K, including its
+    genuine parent-wall face; existential attachment requires a common zero
+    of all three authenticated residuals, not merely a zero of [3468]=g-a.
+  ledger_id: diag3_triple_hc0
+assumptions:
+  - The pinned local-roadmap and multibox frontier certificates replay.
+  - The accepted parent-interior side is [3468]=g-a<0, with its closure g-a<=0.
+inputs:
+  - path_or_source: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    digest: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+  - path_or_source: ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json
+    digest: 0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27
+  - path_or_source: ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json
+    digest: c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8
+  - path_or_source: ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json
+    digest: 7e7ba6761ba544ab96dc36cd3f559317132b7264b94bc39059be813a8c3b5f70
+  - path_or_source: ai/omreal/diag3_triple_frontier_build_multibox.py
+    digest: f395fbf1336a01a09524d7f172b75b64530057848af8805ac275bd2b3f4f7fcb
+  - path_or_source: ai/omreal/diag3_triple_frontier_verify_multibox.py
+    digest: 5801c26d872d8615b020751fbb0bb478a02306e25523bac7e0a0f2e7f1e126b8
+deliverables:
+  positive: Exact attachment witness and connected roadmap certificate.
+  negative: Exact emptiness, projection-failure, or disconnection countercertificate.
+  null: Exact searched domain, survivors, first obstruction, and next discriminator.
+  timeout: Partial manifest with exact completed counts and source digests.
+verification:
+  replay: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ai/omreal/build_diag3_clipped_wall_prover_certificate.py
+  canaries:
+    - accepted macrobox 19
+    - rejected full macrobox 20
+    - wall-face feasibility
+    - false wall witness
+    - compact-sphere negative topology canary
+limits:
+  resource_ceiling: 45 wall-clock minutes, 12 GiB memory, no paid services
+  stop_rule: Proved attachment, exact route refutation, or bounded null.
+  prohibited_scope: >-
+    No macrobox 21, no other triple, and no edits to README, canonical ledger,
+    CI, prior artifacts, or verifier files.
+handoff_to: coordinator
