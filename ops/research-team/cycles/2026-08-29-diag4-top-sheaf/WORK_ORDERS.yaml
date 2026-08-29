@@ -19,18 +19,38 @@ publication_authorization: &publication_authorization |
   they may not merge or change the theorem ledger.
 
 strategy_gate:
-  opening_verdict: CONTINUE
-  selected_target: diag4_top_component_persistence
+  opening_verdict: MODIFY_THEN_CONTINUE
+  opening_referee_revision: a112391eab4311a67a88e6aa9447f658226c65bc
+  selected_target: diag4_cover_all_single_piece_hc3
   reason: >-
-    The exact fivefold reduction and omitted-label vanishing leave a structural
-    cover-all top-sheaf obstruction. Diagonal-three still has two unrelated
-    global blockers, diagonal-eight lacks theorem-ready quantifiers on its
-    training network, and diagonal-nine lacks a global roadmap.
+    The exact fivefold reduction and omitted-label vanishing leave D4-SP as a
+    bounded structural top-sheaf obstruction. The complete domain is 1,715,980
+    cover-all supports, not only the 1,099,560 generic five-supports in 66
+    unsigned orbits. Diagonal-three still has two unrelated global blockers,
+    diagonal-eight lacks theorem-ready quantifiers on its training network,
+    and diagonal-nine lacks a global roadmap.
   closing_required: true
   stagnation_rule: >-
-    If this cycle does not shrink the complete split--remerge obstruction class
-    or close a load-bearing edge, the next cycle must pivot away from this
-    route.
+    If this cycle does not prove or refute D4-SP or shrink an explicitly
+    complete declared D4-SP subdomain, the next cycle must pivot away from
+    this route.
+
+canonical_inputs:
+  - path: ai/omreal/FOURTH_DIAGONAL_FIVEFOLD.md
+    sha256: efac03d2854221b0c8f7dabe2ff6aa3693166b3f8fbacf1bbfaa76aa4c30e2f5
+  - path: ai/omreal/THREE_SHEAR_SINGLE_PIECE_REDUCTION.md
+    sha256: 77dc85c047c3ee8371f1548d59b32f87ced47a5e47c65ff5d8b4b83eb1824de9
+  - path: ai/omreal/verify_fourth_diagonal_reduction.py
+    sha256: d02d3bfa8994e380cfaa156b76fcc273934c3333abeac3ee3be13401bb8e2b55
+  - path: ai/omreal/verify_fourth_single_piece_light_count.py
+    sha256: ca7b0128a1eb689cb5e3f6341666e90b72553ef04831a5311578a6038f010bae
+  - path: ai/omreal/NINE_DIAGONAL_STATUS.md
+    sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+
+concurrency_inventory: >-
+  PR #41 is the last published cycle and is merged at the base. Any unpublished
+  parent-860 mask-6 continuation is non-input and owns disjoint surfaces. A
+  moved main is a stop-and-reconcile condition before integration.
 
 work_orders:
   - track_id: diag4-top-sheaf-prover
@@ -38,14 +58,14 @@ work_orders:
     branch: agent/diag4-top-sheaf-prover-20260829
     target:
       claim: >-
-        Derive the strongest globally quantified component-persistence or
-        top-sheaf-injectivity lemma forced by the signed third-compound and
-        oriented-matroid constraints on retained cover-all supports.
+        Prove D4-SP: every admissible cover-all closed single circuit piece has
+        H_c^3 equal to zero, or return an exact bounded result with complete
+        excluded-domain accounting.
       quantifiers: >-
         Proper pairwise-incomparable four-signature 9DVL families, including
         closed lower-weight faces, parent boundary, orientation local systems,
         and all split, merge, birth, and death events used by the lemma.
-      ledger_id: diag4_top_component_persistence
+      ledger_id: diag4_cover_all_single_piece_hc3
     inputs:
       - path: ai/omreal/FOURTH_DIAGONAL_FIVEFOLD.md
         revision: d047359e7892106021022b0401554f56eb4e4d8a
@@ -53,9 +73,11 @@ work_orders:
         revision: d047359e7892106021022b0401554f56eb4e4d8a
       - path: ai/omreal/verify_fourth_diagonal_reduction.py
         revision: d047359e7892106021022b0401554f56eb4e4d8a
+      - path: ai/omreal/verify_fourth_single_piece_light_count.py
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
     deliverables:
-      positive: Proof note plus exact semantic-kernel verifier and hostile split--remerge canary.
-      negative: Exact failed premise or admissible obstruction handed to the falsifier/coordinator.
+      positive: Proof of D4-SP plus exact semantic-kernel verifier and hostile split--remerge canaries.
+      negative: Exact failure of a stated premise, with the exact D4-SP consequence or nonconsequence.
       null: Precise surviving cases, failed lemmas, and next discriminating calculation.
       timeout: Reproducible checkpoint, manifest, and partial classification.
     verification:
@@ -63,7 +85,7 @@ work_orders:
       canaries: [positive, negative, null, hostile_split_remerge]
     limits:
       resource_ceiling: One agent turn and at most 90 minutes wall-clock; ordinary local compute only; no paid services.
-      stop_rule: Stop at a universal lemma, exact refutation, strict orbit reduction, or complete timeout manifest.
+      stop_rule: Stop at a D4-SP proof, exact admissible refutation, strict reduction of a complete declared subdomain, or complete timeout manifest.
       prohibited_scope: No sampled-only theorem promotion, no ledger edits, no unrelated files, no merge.
     handoff_to: coordinator
     publication_authorization: *publication_authorization
@@ -73,14 +95,13 @@ work_orders:
     branch: agent/diag4-top-sheaf-falsifier-20260829
     target:
       claim: >-
-        Falsify the weakest necessary no-split--remerge premise, or classify the
-        smallest exact signed obstruction compatible with the retained
-        diagonal-four cover-all domain.
+        Refute D4-SP with an exact admissible tuple and checked nonzero H_c^3
+        class, or exactly exclude a complete declared obstruction subdomain.
       quantifiers: >-
         Search must distinguish abstract constructible-sheaf countermodels from
         realizable proper incomparable rank-four extension data; only the latter
         refutes a 9DVL intermediate claim.
-      ledger_id: diag4_top_component_persistence
+      ledger_id: diag4_cover_all_single_piece_hc3
     inputs:
       - path: ai/omreal/FOURTH_DIAGONAL_FIVEFOLD.md
         revision: d047359e7892106021022b0401554f56eb4e4d8a
@@ -88,8 +109,10 @@ work_orders:
         revision: d047359e7892106021022b0401554f56eb4e4d8a
       - path: ai/omreal/verify_fourth_diagonal_reduction.py
         revision: d047359e7892106021022b0401554f56eb4e4d8a
+      - path: ai/omreal/verify_fourth_single_piece_light_count.py
+        revision: d047359e7892106021022b0401554f56eb4e4d8a
     deliverables:
-      positive: Exact admissible counterexample with independent witness data.
+      positive: Exact admissible D4-SP counterexample with independent witness and nonzero compact-support class data.
       negative: Exact exclusion of a stated obstruction class.
       null: Exhaustive searched domain, survivors, and next discriminator.
       timeout: Partial manifest and resumable exact search state.
@@ -98,7 +121,7 @@ work_orders:
       canaries: [abstract_false_positive, realizable_positive, sign_mutation, boundary]
     limits:
       resource_ceiling: One agent turn and at most 90 minutes wall-clock; ordinary local compute only; no paid services.
-      stop_rule: Stop at an admissible counterexample, exact class exclusion, strict orbit reduction, or complete timeout manifest.
+      stop_rule: Stop at an admissible D4-SP counterexample, exact complete-class exclusion, or complete timeout manifest.
       prohibited_scope: Do not repair a falsified premise, infer global topology from samples, edit the ledger, or merge.
     handoff_to: coordinator
     publication_authorization: *publication_authorization
