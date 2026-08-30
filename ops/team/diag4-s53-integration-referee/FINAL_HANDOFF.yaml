@@ -1,0 +1,207 @@
+track_id: diag4-s53-integration-referee
+cycle_id: 2026-08-30-diag4-s53-top-sheaf
+phase: final_integration_head_rereview
+role: independent_verifier_referee
+outcome: finite-exact
+verdict: ACCEPT
+summary: >-
+  The exact integrated content of PR #43 faithfully preserves the accepted
+  prover, falsifier, and closing-referee handoffs; independently replays all
+  relevant artifacts; records zero survivor and ledger delta; mandates PIVOT;
+  introduces no claim inflation; and correctly strengthens verbatim
+  publication-authorization enforcement. Acceptance is bound to the exact PR
+  head and excludes the still-pending CI and merge gates.
+
+artifact:
+  path: ops/team/diag4-s53-integration-referee/FINAL_REVIEW.md
+  sha256: 8812a889184b8ef136e0de9f5c63774f40c81f7ffeaca10c211ae4fae51b254a
+
+reviewed_candidate:
+  local_branch: agent/diag4-s53-integration-referee-20260830
+  local_commit: 3d3c3b3109a2873b7a20856a637730c4c5995517
+  local_tree: 692d173462497cb645127ea1ced6cbe40aba4d5a
+  repository: reuellee/finite-certificates
+  pull_request: 43
+  pr_title: Close D4-S53 cycle with mandatory pivot
+  pr_state: open
+  pr_draft: false
+  pr_mergeable: true
+  pr_merged: false
+  base_branch: main
+  base_sha: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  head_branch: research/diag4-s53-cycle-20260830
+  published_head: 06de9659d5090846afe09c95f1f8549d1d7b2ba5
+  published_tree: 692d173462497cb645127ea1ced6cbe40aba4d5a
+  branch_ref_verified: true
+  local_remote_tree_identical: true
+  changed_files: 21
+  head_move_invalidates_review: true
+
+publication_sequence:
+  pre_report_local_commit: 7af26f38caa926555125d77e39b10e8801079366
+  pre_report_published_commit: 3716290fbf0c30520c3cdb9e95abab4dda498b2c
+  pre_report_shared_tree: 2a85625ee518ebbc67539a6658ee1ced1d199572
+  final_head_parent: 3716290fbf0c30520c3cdb9e95abab4dda498b2c
+  final_change: CYCLE_REPORT.md only
+  staging_claim: >-
+    The report correctly records PR, CI, and merge as pending at its creation;
+    this final referee handoff binds the now-open PR's exact content head.
+
+frozen_handoff_identity:
+  prover:
+    local_commit: f232021960689d0b2a6a9e033dfe16939143643d
+    published_commit: a0ae3bee592c92b74856786078152f21638009c8
+    published_tree: aee462000be034249c8c1034101064c69cbcebb8
+    integrated_subtree: e0c1bf5a3ef29e0e6d91d2f95eaaf2fe3d9c3758
+    identical_to_frozen_local_subtree: true
+    remote_receipt_verified: true
+  falsifier:
+    local_commit: e4903f5a4193fb73b9e0e75657df9d0741a8bf9e
+    published_commit: 3428d26ecede8fd708b790b63efc1335fd2fb397
+    published_tree: f51102eac9b15df26c7eb2c9186a1c44e795859d
+    integrated_subtree: e5e776442599ab28950de5d156bbbcb8b3ac2d3d
+    identical_to_frozen_local_subtree: true
+    remote_receipt_verified: true
+  referee:
+    local_commit: 516f0d964c42e9eea93b8cb02a66d860db64e51e
+    published_commit: f37bd7d58316453809921f2b968af07627713867
+    published_tree: f9094f48e0926599c4367360a47de0b3d4263e5a
+    integrated_subtree: 516b4a96654675772a0fda150525fb776c86c933
+    identical_to_frozen_local_subtree: true
+    remote_receipt_verified: true
+
+replay:
+  prover:
+    commands:
+      - >-
+        tmp_dir=$(mktemp -d /tmp/diag4-s53-integration-prover.XXXXXX);
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-prover/generate_structural_scan.py --output
+        "$tmp_dir/STRUCTURAL_SCAN.json"; cmp
+        ops/team/diag4-s53-prover/STRUCTURAL_SCAN.json
+        "$tmp_dir/STRUCTURAL_SCAN.json"
+      - >-
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-prover/verify_structural_scan.py
+      - sha256sum -c ops/team/diag4-s53-prover/MANIFEST.sha256
+    result: >-
+      Exit 0; byte-identical generation; independent complete domain
+      1715980/130 = 915740/77 + 800240/53; 4+49 survivors; common-apex-four
+      0/53; all canaries pass; complete structural null.
+  falsifier:
+    commands:
+      - >-
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-falsifier/generate_candidate_domain.py
+      - >-
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-falsifier/verify_candidate_domain.py
+      - sha256sum -c ops/team/diag4-s53-falsifier/MANIFEST.sha256
+    result: >-
+      Exit 0; byte-identical generation; exact row-2599 tuple and 70 signed
+      polynomials; bounded enclosure; local Hc ranks [0,0,0,0,1]; all
+      canaries pass; whole-domain topology and full-piece inclusion UNREACHED.
+  protocol:
+    command: PYTHONDONTWRITEBYTECODE=1 python ops/research-team/verify_cycle_protocol.py
+    result: PASS; 2 governed cycles and 6 authorized work orders.
+  static:
+    commands:
+      - Parse all integrated WORK_ORDERS.yaml, RESULT.yaml, and referee handoffs.
+      - Compare each work-order authorization block byte-for-byte with PROTOCOL.md.
+      - Mutate the connector clause and require exact-equality rejection.
+      - Compare work-order semantics before and after authorization hardening.
+      - git diff --check aa784af939b55d3503e4782a9d65a9b06cf81ce0..HEAD
+      - git diff --exit-code aa784af939b55d3503e4782a9d65a9b06cf81ce0..HEAD -- ai/omreal/NINE_DIAGONAL_STATUS.md
+    result: PASS
+
+authorization_audit:
+  governed_cycles: 2
+  work_orders: 6
+  exact_protocol_quote_matches: 6
+  hostile_mutation_rejected: true
+  worker_restrictions_separate: true
+  work_order_semantics_preserved_excluding_authorization_metadata: true
+  target_or_quantifier_change: false
+
+claim_delta:
+  complete_cover_labeled: 1715980
+  complete_cover_orbits: 130
+  b31_labeled: 915740
+  b31_orbits: 77
+  survivor_labeled_before: 800240
+  survivor_labeled_after: 800240
+  survivor_orbits_before: 53
+  survivor_orbits_after: 53
+  survivor_delta_labeled: 0
+  survivor_delta_orbits: 0
+  d4_s53: OPEN_UNCHANGED
+  d4_sp: OPEN_UNCHANGED
+  diagonal_four: OPEN_UNCHANGED
+  ledger_before: "2/9"
+  ledger_after: "2/9"
+  ledger_file_sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+  claim_inflation: false
+  closing_strategy: PIVOT
+  further_d4_s53_cycle_permitted: false
+
+recovery_checkpoint:
+  local_bundle: finite-certificates-diag4-s53-close-20260830.bundle
+  size_bytes: 58704004
+  sha256: 51329e0c7a288068d96144206695f65f090066a6aa9c0ab4eb3aa941012f80a8
+  complete_history: true
+  git_bundle_verify: PASS
+  drive_bundle_id_recorded: 1OgENEQtclvU3iA29oaNiETmKYa6iU4Nw
+  drive_manifest_id_recorded: 1aPsF3vLQ7smZcfSx5VsiHxaIkxT-WPGo
+
+gates:
+  exact_pr_head_and_tree: PASS
+  frozen_handoff_identity: PASS
+  artifact_and_manifest: PASS
+  deterministic_replay: PASS
+  independent_and_hostile_canaries: PASS
+  protocol_and_yaml: PASS
+  exact_publication_authorization: PASS
+  diff_and_ledger_immutability: PASS
+  claim_scope_and_nonconsequences: PASS
+  zero_survivor_and_ledger_delta: PASS
+  mandatory_pivot: PASS
+  recovery_bundle: PASS
+  required_ci_at_exact_pr_head: PENDING_COORDINATOR
+  exact_head_merge: PENDING_COORDINATOR
+
+ci_observation:
+  workflow: verify
+  run_id: 33306581017
+  status_at_review: in_progress
+  conclusion_at_review: null
+  included_in_acceptance: false
+
+actionable_defects: []
+open_mathematical_defects:
+  - Whole-domain wall-adapted topology for an actual survivor is absent.
+  - Signed top-component incidence and orientation holonomy are unresolved.
+  - Full-piece attachment and inclusion remain absent.
+
+next_action: >-
+  Coordinator must wait for all required checks to pass at exact PR head
+  06de9659d5090846afe09c95f1f8549d1d7b2ba5, recheck that the head and tree
+  are unchanged, and only then decide whether to merge. Any head movement or
+  failing check invalidates this ACCEPT and requires fail-closed rereview.
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Workers may prepare and push their assigned branches when the work order says
+  so, but they may not merge or update the theorem ledger.
