@@ -1,0 +1,181 @@
+track_id: diag3-orbit5563-falsifier
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+role: falsifier
+base_revision: bf6050ddc16e01dbff6da07d3d8c3ec31a9ab52f
+base_tree: 4213fdb2adf5722d1b8a6b70aba4507e959fba6d
+published_opening_go_revision: 9e578f6e9d094b3342ca474f0d188428dd44ae7a
+
+outcome: inconclusive
+classification: "null"
+summary: >-
+  The exact all-parent/type-frame-S8 quotient is complete with 100,086,840
+  classes and multiplicities summing to 104,993,280, but the complete
+  parent-boundary atlas and closure-stratum attachment transport is missing;
+  the track therefore stops null before topology.
+
+target:
+  canonical_row: [5563, 4373, 23221]
+  named_presentation: [5563, 16134, 19284]
+  unresolved_before: 1162302
+  unresolved_after: 1162302
+  theorem_ledger_before: "2/9"
+  theorem_ledger_after: "2/9"
+
+first_gate:
+  deadline: 30 minutes wall-clock
+  layer_1_quotient_manifest: COMPLETE
+  layer_2_open_cell_sign_and_chart_transport: PASS_ALL_POINTS
+  layer_2_complete_boundary_and_attachment_transport: MISSING
+  smallest_missing_obligation: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+  topology_computation_authorized: false
+  terminal_effect: NULL_AND_STOP
+
+quotient:
+  realizable_unlabelled_parent_types: 2604
+  frames_per_parent: 40320
+  raw_frame_parent_presentations: 104993280
+  quotient_classes: 100086840
+  quotient_multiplicity_sum: 104993280
+  selected_triple_stabilizer_order: 1
+  class_multiplicity_histogram:
+    1: 96042240
+    2: 3689280
+    3: 134400
+    4: 161280
+    6: 20160
+    8: 30240
+    12: 3360
+    16: 2520
+    24: 3360
+  semantic_sha256: 89bd3a5d7185cfe66b26afb7225ae5262da44e071604372445bcf0d342f1e15c
+  representative_matrices_are_full_realization_space_coverage: false
+  redundant_external_stabilizer_crosscheck: PASS_2604_OF_2604_NOT_GENERATOR_ORACLE
+
+transport:
+  open_cell_quantifier: >-
+    Every point of every complete uniform open normalized realization space
+    and every framed quotient class.
+  open_cell_result: >-
+    PASS exact chirotope, determinant-parity, Cramer-gauge, bracket-unit,
+    and rational chart-transition formulas.
+  required_strata:
+    - open_parent_points
+    - coordinate
+    - chart_divisor
+    - parent_wall
+    - singular_rank_drop
+    - occurrence_rank
+    - concurrence_rank
+    - extra_factor
+    - simultaneous_wall
+    - true_parent_infinity
+  smallest_missing_obligation: >-
+    A complete finite normalized compactification atlas for every parent
+    quotient class, with exact transition domains and exhaustive named
+    boundary strata, before component attachments are attempted.
+  blocked_downstream:
+    - component_and_rank_drop_attachments
+    - true_parent_infinity_tags
+    - complete_component_partition
+    - global_exit_graph
+  semantic_sha256: a790d8eabf5172bba9b51bbfef1a87c19d6cac78a2f8f0d9138f14c4ca78fe2e
+
+artifacts:
+  - path: ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py
+    sha256: 43e6ccb83c7eedc0a219e85fecfefda6c6f8a3994d9a108aec38997cfd5dac0c
+  - path: ops/team/diag3-orbit5563-falsifier/QUOTIENT_MANIFEST.json
+    sha256: 911d4ff842e2e962ab2c67d1725037580b6fe2d5fa113f4ccdd4c4786e027b14
+  - path: ops/team/diag3-orbit5563-falsifier/TRANSPORT_CONTRACT.json
+    sha256: 4455a630c3d212f09e844812013e97e2591b2bd813a076fdf243e5f55aee0d2a
+  - path: ops/team/diag3-orbit5563-falsifier/FINDINGS.md
+    sha256: d8ab4bbd11c67846830fa53850f0f7795873a9f3288090ea40510152a8bd86b0
+
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python3
+    ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py
+  result: PASS_EXPECTED_TERMINAL_NULL
+  observed_elapsed_seconds: 12.592
+  observed_peak_rss_kib: 202020
+  resource_ceiling_respected: true
+  deterministic_summary: >-
+    PASS parents=2604 frames=40320 classes=100086840;
+    PASS multiplicity sum=104993280/104993280; PASS identity triple
+    stabilizer; PASS exact open-cell transport; NULL boundary atlas and
+    attachments missing; STOP no topology.
+
+coverage:
+  included: >-
+    Every realizable UOM(4,8) reorientation type, every lexicographic S8
+    frame, every exact projective/reorientation parent automorphism, the
+    exact named-triple stabilizer, every quotient multiplicity, and the
+    open-cell sign/chart formula at every realization-space point.
+  excluded: >-
+    A complete parent compactification/stratum atlas, component and
+    rank-drop attachments, exhaustive closure, true-infinity tags, and any
+    topology or global-exit conclusion. Stored representative matrices are
+    never promoted beyond exact sign data.
+
+canaries:
+  positive: PASS_EXACT_OPEN_CELL_TRANSPORT
+  negative: PASS_REJECT_FALSE_INFINITY_AND_REPRESENTATIVE_PROMOTION
+  null: PASS_COMPLETE_MANIFEST_MISSING_BOUNDARY_ATLAS_CLASSIFIES_NULL
+  hostile:
+    missing_quotient_multiplicity: REJECTED
+    missing_identity_automorphism: REJECTED
+    artificial_boundary_as_true_infinity: REJECTED
+    omitted_singular_rank_drop_stratum: REJECTED
+    representative_matrix_as_full_cell: REJECTED
+
+source_accounting:
+  used:
+    - ai/omreal/certs_4_8.jsonl@sha256:c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b
+    - ai/omgamma/data/extcount_4_9.jsonl@sha256:f9e0f122ed5f1efaa5687807db8e5325975b07c82f2bf75218877afa5e77ff03
+    - ai/omreal/PARENT_CONTRACTIBILITY_AUDIT.md@sha256:d0fde0f211db71228a48af3c928a213181bab4bb29c25a57d2ed7417f49de226
+    - ai/omreal/DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md@sha256:03615d52efec5a7abf66d8e78aff19deab8b74736f707598daada8d45b9d85dc
+    - ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json@sha256:8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692
+    - ai/omreal/verify_diag3_triple_rank_drop_parent_atlas.py@sha256:33ba14e0027e07877c9f8e7f9e98035645439dd24c2826379a2e50eccd958d3e
+    - ai/omreal/verify_diag3_triple_factor_orbits.py@sha256:9dba4a670be5ff458fee4f59b972f294d58b74ffd0cd6dab9a604848b8417ebd
+  unused_or_missing: >-
+    No prover output or acceptance flag was used. The missing input is the
+    complete all-parent normalized compactification/stratum atlas and its
+    exact attachment transport.
+
+open_defects:
+  - id: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    effect: >-
+      Blocks component/rank-drop attachments, true-infinity tags, complete
+      component coverage, and any global-exit or compact-component verdict.
+
+strategy_evaluation:
+  progress: EXACT_DOMAIN_COMPRESSION_ONLY
+  theorem_or_row_advancement: NONE
+  mandatory_verdict: PIVOT
+  prohibited_next_route: >-
+    No further local box, collar, macrobox, or clipped-wall continuation for
+    this residue.
+
+next_action: >-
+  Coordinator freezes this null handoff, cross-checks it against the
+  independent prover handoff, and selects a newly bounded target under the
+  mandatory strategy pivot; do not resume local topology for this row.
+ledger_change_recommended: none
+count_change_recommended: 0
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Workers may prepare and push their assigned branches when the work order
+  says so, but they may not merge or update the theorem ledger.
