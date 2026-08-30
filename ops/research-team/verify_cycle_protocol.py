@@ -43,15 +43,17 @@ CYCLE_PHRASES = (
     "Resource / information",
     "Stagnation risk",
     "## Bounded target",
-    "D4-SP",
-    "1,715,980",
     "## Obligation graph",
+    "## Canonical input accounting",
+    "## Concurrency and non-overlap",
+    "## Roles",
     "## Resource ceiling",
     "## Publication authority",
     "## Closing requirements",
     "CONTINUE",
     "PIVOT",
     "RETIRE",
+    "STOP",
 )
 
 WORK_ORDER_PHRASES = (

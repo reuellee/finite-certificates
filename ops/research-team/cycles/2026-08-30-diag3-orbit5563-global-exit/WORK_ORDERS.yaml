@@ -1,0 +1,232 @@
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+base_revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+base_tree: 6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository reuellee/finite-certificates;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head. The user also authorizes durable recovery
+  checkpoints only in the Google Drive Projects/research-backups area. This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute gh. Workers may commit and push only their assigned branches;
+  they may not merge or change the theorem ledger.
+
+strategy_gate:
+  opening_verdict: PIVOT_TO_DIAG3_ORBIT_GLOBAL_EXIT_ONCE
+  selected_target: diag3_triple_orbit_5563_global_exit
+  opening_referee_required: true
+  reason: >-
+    The D4-S53 survivor class is unchanged after its mandatory final cycle.
+    D8 and D9 lack theorem-ready global quantifiers. The pinned D3 residue row
+    has a finite global-exit acceptance predicate and can yield either one
+    exact row removal or an exact compact-component obstruction.
+  closing_required: true
+  stagnation_rule: >-
+    If this cycle produces neither an exact all-parent/S8 row removal nor an
+    exact compact component, the next cycle must pivot. No further local box,
+    collar, macrobox, or clipped-wall continuation for this residue is allowed.
+
+canonical_inputs:
+  - path: ops/research-team/PROTOCOL.md
+    sha256: 7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c
+  - path: ai/omreal/NINE_DIAGONAL_STATUS.md
+    sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+  - path: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    sha256: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+  - path: ai/omreal/data/DIAG3_COMPLETION_OPEN_OBJECT.json
+    sha256: ea8808e8979603757dec928b1e9aeb266aa3eabcfb2e70c1f13e7aa5c4af6ece
+  - artifact: final_triple_residue_source_order_stream
+    semantic_sha256: a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4
+  - path: ai/omreal/verify_diag3_triple_factor_orbits.py
+    semantic_sha256: 9dc473537e87e509031d4843d960f5ea4bfefb8508262cd1ebb5d44e1a49913d
+  - path: ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md
+    sha256: 0a372197a49f4a767c06b23a6df830ef2784e7fe653b4b3eb1a506eec0518e27
+  - path: ai/omreal/verify_diag3_global_exit_criterion.py
+    sha256: bd451d1a2930b460e8c94cc70ed4dae83b6c2dc278889fa65f45927ba99d8c07
+  - path: ops/team/global-exit/GLOBAL_EXIT_FIXTURES.json
+    sha256: 4bc0331835c82f0eb3e98bc87d0c6a37683ef66298e430337c3c0661ddd4a029
+  - path: ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json
+    sha256: 8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692
+    semantic_sha256: 874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace
+  - path: ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json
+    sha256: c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8
+  - path: ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_REGISTRATION.json
+    sha256: 94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3
+  - path: ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json
+    sha256: 0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27
+  - path: ai/omreal/verify_diag3_triple_boundary_stratification.py
+    sha256: 3f4e86d1b802b8bc1d102dd49a0168459bbde5d457afd85da16ab518b499ca1a
+  - path: ai/omreal/DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md
+    sha256: 03615d52efec5a7abf66d8e78aff19deab8b74736f707598daada8d45b9d85dc
+  - path: ops/team/clipped-wall-prover/RESULT.yaml
+    sha256: 8f33a354f55e141aa53fe9253537c7caac385accf29c890865747de8982d1352
+  - path: ops/team/clipped-wall-falsifier/RESULT.yaml
+    sha256: 8ceb928968875e314b38f0457eda99e1e51a557e675cd7beaf20798f7ae5957f
+
+concurrency_inventory: >-
+  Canonical main is merged PR #42 at the base. Old D3 frontier, clipped-wall,
+  macrobox, and collar artifacts are immutable inputs only. Prover, falsifier,
+  and referee own disjoint named branches and ops/team surfaces. A moved main
+  is a stop-and-reconcile condition before integration.
+
+work_orders:
+  - track_id: diag3-orbit5563-prover
+    role: prover
+    branch: agent/diag3-orbit5563-prover-20260830
+    owned_surface: ops/team/diag3-orbit5563-prover
+    target:
+      claim: >-
+        Construct a complete component-faithful global-exit certificate for
+        the complete S8 orbit of canonical unresolved row
+        (5563,4373,23221), using authenticated presentation
+        (5563,16134,19284), or return the strongest exact fail-closed outcome.
+      quantifiers: >-
+        Every realizable UOM(4,8) parent realization cell in the exact
+        2,604-parent universe; every compatible labeled transport in the
+        pinned primitive-factor S8 orbit, deduplicated under the exact
+        diagonal action; every connected component of every complete
+        triple-zero set; and every singular/rank-drop, coordinate, chart,
+        extra-factor, simultaneous-wall, parent-wall, and true-infinity
+        stratum used for component closure.
+      ledger_id: diag3_triple_hc0
+    first_gate:
+      deadline: 30 minutes wall-clock
+      required: >-
+        Exact all-2,604-parent/S8 quotient manifest plus independently
+        replayable sign/chart transport proof, emitted before any new local
+        roadmap, collar, clipped-wall, or macrobox computation.
+      failure_effect: Stop discovery and return null with no row-count change.
+    deliverables:
+      positive: >-
+        Complete stable local-component IDs, sound same-component
+        continuation edges, exhaustive component coverage, and sound true
+        parent-infinity tags; every sink SCC meets true infinity; exact row
+        count changes 1,162,302 to 1,162,301.
+      negative: >-
+        Complete global component partition with an exact component whose
+        closure is disjoint from true parent infinity; state explicitly that
+        this refutes only the sufficient route for this row.
+      null: >-
+        Exact all-parent/S8 manifest and the smallest missing global
+        attachment or transport obligation; no count or ledger change.
+      timeout: >-
+        Reproducible frontier manifest with exact covered and uncovered
+        quantifiers; no count or ledger change.
+    verification:
+      replay: Document exact clean commands and semantic digests in RESULT.yaml.
+      canaries:
+        - artificial_scope_boundary_is_not_infinity
+        - omitted_component
+        - unsound_edge
+        - macrobox20_attachment_false
+        - positive_exit
+        - compact_component
+    limits:
+      resource_ceiling: One agent turn, 90 minutes wall-clock, 12 GiB resident memory, ordinary local compute only, no paid services.
+      stop_rule: Stop at exact row removal, exact compact component, first-gate failure, or complete timeout manifest.
+      prohibited_scope: No local-only promotion, no artificial-boundary relabeling, no old macrobox/collar continuation, no ledger edits, no unrelated files, no merge.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
+
+  - track_id: diag3-orbit5563-falsifier
+    role: falsifier
+    branch: agent/diag3-orbit5563-falsifier-20260830
+    owned_surface: ops/team/diag3-orbit5563-falsifier
+    target:
+      claim: >-
+        Independently reconstruct the complete all-parent/S8 domain, then seek
+        an exact compact component or falsify any claimed component coverage,
+        continuation edge, infinity tag, or sign/chart transport.
+      quantifiers: >-
+        The same exact 2,604-parent, complete compatible-presentation orbit,
+        complete connected-component, singular/rank-drop, coordinate, chart,
+        extra-factor, simultaneous-wall, parent-wall, and true-infinity domain
+        as the prover. A sampled or one-chart objection is not promotable.
+      ledger_id: diag3_triple_hc0
+    first_gate:
+      deadline: 30 minutes wall-clock
+      required: >-
+        Independent exact reconstruction of the all-2,604-parent/S8 quotient
+        manifest and sign/chart transport obligations, without importing a
+        prover acceptance flag.
+      failure_effect: Stop discovery and return null with no row-count change.
+    deliverables:
+      positive: >-
+        Exact compact factor-stratum component with a complete closure
+        certificate showing no true-infinity intersection.
+      negative: >-
+        Exact defect in a proposed global-exit certificate: omitted component,
+        unstable ID, unsound continuation, false infinity tag, invalid
+        transport, or incomplete stratum accounting.
+      null: >-
+        Exact searched domain, survivors, and next binary discriminator, with
+        all scope limitations explicit and no row-count change.
+      timeout: >-
+        Reproducible exact frontier manifest with every unaudited quantifier
+        marked fail-closed.
+    verification:
+      replay: Use independent reconstruction and document exact clean commands in RESULT.yaml.
+      canaries:
+        - false_infinity_tag
+        - duplicated_or_missing_orbit_transport
+        - omitted_singular_component
+        - positive_exit
+        - compact_component
+        - artificial_boundary
+    limits:
+      resource_ceiling: One agent turn, 90 minutes wall-clock, 12 GiB resident memory, ordinary local compute only, no paid services.
+      stop_rule: Stop at an exact compact component, decisive certificate defect, first-gate failure, or complete timeout manifest.
+      prohibited_scope: Do not repair prover artifacts, infer topology from samples, resume old local boxes, edit the ledger, touch unrelated files, or merge.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
+
+  - track_id: diag3-orbit5563-referee
+    role: verifier
+    branch: agent/diag3-orbit5563-referee-20260830
+    owned_surface: ops/team/diag3-orbit5563-referee
+    target:
+      claim: >-
+        Audit target selection, exact quantifiers, first-gate feasibility,
+        resource bounds, publication restrictions, and stagnation rule before
+        discovery. After frozen handoffs, independently replay only the claims
+        supported at their exact commit and tree identities.
+      quantifiers: >-
+        Complete 2,604-parent and compatible S8-presentation domain, every
+        complete triple-zero component and required closure stratum, and the
+        distinction between true parent infinity and artificial work-scope
+        boundaries.
+      ledger_id: diag3_triple_hc0
+    opening_review:
+      allowed_verdicts:
+        - GO
+        - MODIFY
+        - PIVOT
+      required_before_discovery: true
+      independence: Do not accept discovery conclusions or reuse discovery-side acceptance flags.
+    deliverables:
+      positive: Opening GO and final ACCEPT gate tables tied to exact reviewed revisions and trees.
+      negative: MODIFY, PIVOT, or final REJECT with actionable exact defects.
+      null: INCONCLUSIVE with missing evidence and the next required discriminator.
+      timeout: Partial gate table with every unaudited obligation marked fail-closed.
+    verification:
+      replay: Independently reconstruct domain counts and replay the semantic kernel.
+      canaries:
+        - incomplete_parent_domain
+        - incomplete_orbit_domain
+        - artificial_infinity
+        - unsound_component_edge
+        - positive_exit
+        - compact_component
+    limits:
+      resource_ceiling: One opening audit and one frozen-handoff rereview, at most 45 minutes each, ordinary local compute only.
+      stop_rule: Stop after GO, MODIFY, or PIVOT at opening; resume only on exact frozen handoffs.
+      prohibited_scope: No discovery implementation, no candidate repair, no ledger edits, no unrelated files, no merge.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
