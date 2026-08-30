@@ -1,0 +1,174 @@
+track_id: diag3-orbit5563-integration-referee
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+phase: final_head_integration_audit
+role: independent_verifier_referee
+verdict: ACCEPT_FOR_PUBLICATION_AT_EXACT_HEAD
+outcome: finite-exact
+summary: >-
+  The exact final candidate adds only the faithful terminal-null cycle report;
+  its counts, missing boundary obligation, nonconsequences, mandatory pivot,
+  and pending-publication fields replay without defect.
+
+reviewed_identity:
+  local_candidate_commit: fbac5a1828f6a7b980bb1acdc8f09d76c4fe0e77
+  published_candidate_commit: 4af514719fa0a2d08e6cc9c69d4d6538ddb19452
+  candidate_tree: e80fd679624a9119dadae7ffdaf46963fe527a6e
+  publication_branch: research/diag3-orbit5563-global-exit-20260830
+  local_parent_commit: 67213be260363948c675bb4a718c3e23cbdd5ad6
+  published_parent_commit: 409c29a898f0cb8ec7ee64ee3afecf21d222ee20
+  parent_tree: 5eee4008f2527d096d34677505d1fb37f7b8194d
+  reviewed_integration_commit: af098d1297dd5c82f194d1f4d03a9ac75afafba9
+  reviewed_integration_tree: dcd0e683a33468194f38353a72ebc84c213b0b35
+  canonical_main_initial: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  canonical_main_final: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  canonical_main_tree: 6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561
+  main_unchanged_during_audit: true
+  candidate_unchanged_during_audit: true
+  local_published_content_tree_equal: true
+
+candidate_delta:
+  commits_ahead_of_closing_referee: 1
+  commits_behind_closing_referee: 0
+  files_added: 1
+  additions: 131
+  deletions: 0
+  paths:
+    - ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md
+  cycle_report_sha256: a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f
+
+exact_result:
+  realizable_unlabelled_parent_types: 2604
+  frames_per_type: 40320
+  raw_frame_parent_presentations: 104993280
+  quotient_classes: 100086840
+  quotient_multiplicity_sum: 104993280
+  selected_triple_stabilizer_order: 1
+  selected_triple_orbit_size: 40320
+  parent_automorphism_order_histogram:
+    1: 2382
+    2: 183
+    3: 10
+    4: 16
+    6: 3
+    8: 6
+    12: 1
+    16: 1
+    24: 2
+  worker_parent_rows_agree: 2604/2604
+  smallest_missing_obligation: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+  topology_computation: NOT_AUTHORIZED_NOT_RUN
+  unresolved_before: 1162302
+  unresolved_after: 1162302
+  theorem_ledger_before: 2/9
+  theorem_ledger_after: 2/9
+  row_change: 0
+  ledger_change: NONE
+  strategy: PIVOT
+
+replay:
+  protocol:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/research-team/verify_cycle_protocol.py
+    result: PASS_3_CYCLES_9_AUTHORIZED_WORK_ORDERS
+  closing_referee:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-referee/verify_closing_referee.py
+    result: PASS_ACCEPT_TERMINAL_NULL_2604_40320_100086840_104993280
+    semantic_sha256: 0ae6a0662872e78d31d116c53c77ec2df0efcee6d6f01dc39e16ca32235a5050
+  prover:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py
+    result: PASS_EXPECTED_TERMINAL_NULL_13_OF_13_CANARIES
+  falsifier:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py
+    result: PASS_EXPECTED_TERMINAL_NULL_HOSTILE_CANARIES
+  canonical_scope_guards:
+    completion_object: PASS_77940147_OF_79102449_RESIDUE_1162302
+    decision_ledger: PASS_LEDGER_2_OF_9
+    parent_frame_atlas: PASS_17105952_OF_104993280_NO_GLOBAL_CLOSURE
+    boundary_stratification: PASS_AT_DECLARED_SCOPE_NO_GLOBAL_CLOSURE
+
+coverage:
+  included: >-
+    Exact final-head identity and one-file delta; all 2,604 realizable parent
+    types, all 40,320 frames, exact diagonal quotient multiplicities, the
+    identity hard-triple stabilizer, and all-interior-point sign/chart/factor
+    transport as independently replayed by the closing checker.
+  excluded: >-
+    Complete normalized compactifications, closure strata and attachments,
+    component partitions, rank-drop attachments, true-infinity tags, compact
+    components, global-exit topology, protected CI, and merge.
+
+nonconsequences:
+  theorem_claim: false
+  row_removal: false
+  compact_component: false
+  component_partition: false
+  closure_coverage: false
+  true_infinity_coverage: false
+  ci_complete: false
+  merged: false
+  next_target_selected_or_authorized: false
+
+gates:
+  exact_candidate_head: PASS
+  exact_candidate_tree: PASS
+  exact_parent: PASS
+  one_file_delta: PASS
+  main_unchanged: PASS
+  report_fidelity: PASS
+  exact_counts: PASS
+  hard_triple_stabilizer: PASS_IDENTITY
+  missing_boundary_atlas: CONFIRMED_FAIL_CLOSED
+  topology_claim: NONE
+  count_change: NONE
+  ledger_change: NONE
+  mandatory_pivot: PASS
+  owned_surface_only: PASS
+  exact_authorization_protocol: PASS
+  protected_ci: PENDING_PUBLICATION_STAGE
+  exact_head_merge: PENDING_PUBLICATION_STAGE
+
+artifacts:
+  - path: ops/team/diag3-orbit5563-integration-referee/FINAL_REVIEW.md
+    digest: f4648d8c9f7bac9427af8cc1b01a862a1de0d99cb87b964a77601e05dc79327d
+  - path: ops/team/diag3-orbit5563-integration-referee/FINAL_HANDOFF.yaml
+    digest: SELF_DIGEST_NOT_RECORDED
+
+open_defects:
+  - id: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    effect: >-
+      Blocks component and rank-drop attachments, complete component coverage,
+      true-parent-infinity tags, the global-exit graph, and a compact-component
+      conclusion.
+
+next_action: >-
+  Open the publication pull request only at exact head
+  4af514719fa0a2d08e6cc9c69d4d6538ddb19452, run protected CI there, and
+  merge only after required checks pass at that same reviewed head; separately
+  repeat the eight-factor strategy evaluation before authorizing any successor
+  research target.
+ledger_change_recommended: none
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Workers may prepare and push their assigned branches when the work order
+  says so, but they may not merge or update the theorem ledger.
