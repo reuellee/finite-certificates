@@ -1,0 +1,185 @@
+cycle_id: 2026-08-30-diag4-s53-top-sheaf
+base_revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+base_tree: 6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository reuellee/finite-certificates;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head. The user also authorizes durable recovery
+  checkpoints only in the Google Drive Projects/research-backups area. This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute gh. Workers may commit and push only their assigned branches;
+  they may not merge or change the theorem ledger.
+
+strategy_gate:
+  opening_verdict: CONTINUE_ONCE
+  predecessor_merge: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  selected_target: diag4_s53_top_sheaf_hc3
+  reason: >-
+    The accepted B31 theorem strictly reduced the complete D4-SP support-shape
+    universe from 130 to 53 orbits. This one successor cycle attaches the
+    remaining exact class to signed topology; unsigned counting alone cannot
+    satisfy the stop rule.
+  closing_required: true
+  stagnation_rule: >-
+    If D4-S53 is neither proved nor refuted and the complete 53-orbit class is
+    not strictly reduced by a universal signed theorem, the closing verdict is
+    a mandatory PIVOT and no further D4-S53 cycle may start.
+
+canonical_inputs:
+  - path: ai/omreal/NINE_DIAGONAL_STATUS.md
+    sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+  - path: ops/research-team/PROTOCOL.md
+    sha256: 7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c
+  - path: ops/team/diag4-top-sheaf-prover/PROOF.md
+    sha256: 9bef2f9e1c4fc2862080ebd83805f488001cb9d3eface0b0fb21bfc838006157
+  - path: ops/team/diag4-top-sheaf-prover/RESULT.yaml
+    sha256: 9dec592379ff05e8210236e2db4d7a56c7808c9154fee8e5a2491ff466e3e7df
+  - path: ops/team/diag4-top-sheaf-prover/verify_four_block_line_sieve.py
+    sha256: 84a717a3df6ca9eabbee3d3645ecb5ffbb78932b34cb54969b97fab9d4015e48
+  - path: ops/team/diag4-top-sheaf-falsifier/FINDINGS.md
+    sha256: 8b31c0455c7336b135370023ae71a0ed55a9551cd38512fcc387941bf7db26af
+  - path: ops/team/diag4-top-sheaf-falsifier/RESULT.yaml
+    sha256: 30867673476264823d2f49449c03015f5a0015c350e2cb45fb1828efe8f9631b
+  - path: ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+    sha256: 028566e3005ad3c822ddd7fb12821f849cf4683ad9277a359eb2a4e8036ec51b
+  - path: ai/omreal/data/seeat_parent2599_shatter8.npz
+    sha256: d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb
+
+concurrency_inventory: >-
+  PR #42 is merged at the canonical base. Predecessor worker branches are
+  frozen, supply no unpublished claim, and own disjoint historical surfaces.
+  A moved main, ledger, or survivor semantic digest is a reconciliation stop.
+
+work_orders:
+  - track_id: diag4-s53-prover
+    role: prover
+    branch: agent/diag4-s53-prover-20260830
+    target:
+      claim: >-
+        Prove D4-S53: every admissible closed single circuit piece whose
+        support-shape lies in the canonical 53 B31-resistant orbits has H_c^3
+        equal to zero; otherwise return a universal signed theorem that
+        strictly reduces a completely enumerated nonempty subset of those 53.
+      quantifiers: >-
+        Every realizable uniform rank-four parent on labeled [8], every proper
+        pairwise-incomparable four-signature family, every selected signature,
+        every signed support instance in the 53 orbits, all zero-weight faces,
+        structural/residual walls, chart/sign transport, and every split,
+        merge, birth, or death used by the proof.
+      ledger_id: diag4_s53_top_sheaf_hc3
+    assumptions:
+      - The accepted B31 four-shear theorem and exact 130=77+53 partition at the pinned base.
+      - Parent uniformity only inside the normalized realization cell; no global orientation trivialization may be assumed.
+    inputs:
+      - path: ops/team/diag4-top-sheaf-prover/PROOF.md
+        revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+      - path: ops/team/diag4-top-sheaf-prover/verify_four_block_line_sieve.py
+        revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+      - path: ops/team/diag4-top-sheaf-falsifier/FINDINGS.md
+        revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+    deliverables:
+      positive: Proof of D4-S53 or a strict universal signed reduction, with a small exact verifier, manifest, and full survivor list.
+      negative: Exact failed premise or signed obstruction, with the precise D4-S53 consequence or nonconsequence.
+      null: Complete tested structural predicates on all 53 representatives, unchanged survivors, failed lemmas, and next discriminator.
+      timeout: Reproducible partial classification, input/output digests, and resumable state.
+    verification:
+      replay: Document exact clean commands in RESULT.yaml; generators and acceptance checks must be separated.
+      canaries: [actual_signed_survivor, hostile_split_remerge, hostile_separate_convexity, orientation_local_system, null_out_of_domain]
+    limits:
+      resource_ceiling: One agent turn and at most 90 minutes wall-clock; ordinary local compute only; no paid services.
+      stop_rule: Stop at a D4-S53 proof, exact refutation, strict universal signed reduction of the complete 53-orbit class, or complete null/timeout manifest.
+      prohibited_scope: >-
+        No unsigned-only progress claim, sampled topology, silent quantifier
+        widening, global orientation trivialization, ledger edit, merge, raw
+        review dump, or edit outside ops/team/diag4-s53-prover.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
+
+  - track_id: diag4-s53-falsifier
+    role: falsifier
+    branch: agent/diag4-s53-falsifier-20260830
+    target:
+      claim: >-
+        Refute D4-S53 with an exact admissible tuple and a checked nonzero
+        compact-support class that survives inclusion into the full closed
+        circuit piece; otherwise exactly exclude the pinned row-2599 candidate
+        or another completely declared signed obstruction subdomain.
+      quantifiers: >-
+        Actual realizable rank-four extension data in proper incomparable
+        four-families only. A subset class, abstract split--remerge model, or
+        class without the full-piece inclusion map is not a counterexample.
+      ledger_id: diag4_s53_top_sheaf_hc3
+    assumptions:
+      - The row-2599 tuple with support 123/134/267/258/468 is an accepted actual signed survivor discriminator.
+      - Its four-parameter subset has 48 nonconstant and 16 nonlinear parent inequalities, but its topology and full-piece inclusion are unproved.
+    inputs:
+      - path: ops/team/diag4-top-sheaf-falsifier/FINDINGS.md
+        revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+      - path: ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+        revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+      - path: ai/omreal/data/seeat_parent2599_shatter8.npz
+        revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+    deliverables:
+      positive: Exact admissible D4-S53 counterexample with compactification/cochain witness and checked inclusion into the full closed piece.
+      negative: Exact exclusion of the pinned tuple or another completely stated signed obstruction class.
+      null: Exact semialgebraic domain attempted, topology/inclusion gates reached, survivors, failed hypotheses, and next discriminator.
+      timeout: Partial compactification/cell data, digests, and a reproducible resume command.
+    verification:
+      replay: Document exact clean commands in RESULT.yaml and keep topology generation separate from cochain verification.
+      canaries: [abstract_false_positive, realizable_positive, inclusion_failure, sign_mutation, boundary]
+    limits:
+      resource_ceiling: One agent turn and at most 90 minutes wall-clock; ordinary local compute only; no paid services.
+      stop_rule: Stop at an admissible full-piece counterexample, exact exclusion of a complete declared signed subdomain, or complete null/timeout manifest.
+      prohibited_scope: >-
+        Do not infer full-piece cohomology from a subset, repair a falsified
+        premise, treat abstract models as actual OMs, broaden into a support
+        sweep, edit the ledger, merge, or edit outside
+        ops/team/diag4-s53-falsifier.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
+
+  - track_id: diag4-s53-referee
+    role: verifier
+    branch: agent/diag4-s53-referee-20260830
+    target:
+      claim: >-
+        Audit the opening D4-S53 strategy, exact 53-orbit target lock, stop
+        rule, and publication gates; after candidate handoffs freeze,
+        independently replay and judge only supported claims.
+      quantifiers: >-
+        The complete canonical 53-orbit class, every actual signed/admissible
+        quantifier, closed face and boundary clause used by a candidate, and
+        the full-piece inclusion requirement for any counterexample.
+      ledger_id: diag4_s53_top_sheaf_hc3
+    assumptions:
+      - No discovery conclusion is supplied during the opening audit.
+      - A strict reduction must be complete and signed; unchanged 53-orbit coverage forces PIVOT.
+    inputs:
+      - path: ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE.md
+        revision: coordinator_control_plane
+      - path: ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/WORK_ORDERS.yaml
+        revision: coordinator_control_plane
+      - path: ops/team/diag4-strategy-referee/FINAL_DELTA_HANDOFF.yaml
+        revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+    deliverables:
+      positive: GO opening audit, then an ACCEPT gate table tied to exact frozen candidate revisions.
+      negative: MODIFY, REJECT, or PIVOT with actionable defects and exact affected quantifiers.
+      null: INCONCLUSIVE with every missing gate and the required next discriminator.
+      timeout: Partial gate table with all unaudited gates marked fail-closed.
+    verification:
+      replay: Must reconstruct target/domain invariants independently and must not reuse discovery-side acceptance logic.
+      canaries: [positive, negative, null, hostile_split_remerge, subset_inclusion_false_positive]
+    limits:
+      resource_ceiling: One opening audit plus one frozen-candidate rereview, at most 45 minutes each.
+      stop_rule: Stop after GO/MODIFY/PIVOT opening verdict; resume only on exact frozen handoffs.
+      prohibited_scope: No discovery edits, candidate repair, ledger edit, merge, or edit outside ops/team/diag4-s53-referee.
+    handoff_to: coordinator
+    publication_authorization: *publication_authorization
