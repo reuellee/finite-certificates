@@ -1,0 +1,41 @@
+track_id: diag4-strategy-referee
+phase: final_wording_only_delta_rereview
+role: independent_verifier_referee
+reviewed_integrated_revision: eaa0cd0daf0277a16a69128f8624c0937e234a63
+reviewed_integrated_tree: d536a97c2e7af43fc1dd2a5c01118f10e87b963f
+prior_rejected_revision: 977d0afdcffe0937005f6eddd0dd026dedb47a39
+verdict: ACCEPT
+summary: >-
+  All six previously rejected abstract completeness/minimality sentences now
+  explicitly state the oriented-base-line with two-exterior-rays scope. The
+  corrected JSON semantic digest and embedded file digests match, both
+  declared falsifier replays pass, and the four-file delta narrows wording
+  without broadening any theorem or ledger claim.
+artifacts:
+  - path: ops/team/diag4-strategy-referee/FINAL_DELTA_REREVIEW.md
+    digest: dc36cd3b95eb949e41e1a2c12b8ace8b87f15f16af5487acc16c3642b8bca434
+gates:
+  six_exact_scope_sentences: PASS
+  json_base_topology_lock: PASS
+  json_semantic_sha256: PASS
+  embedded_file_digests: PASS
+  falsifier_replay: PASS
+  complete_support_count_replay: PASS
+  no_claim_broadening: PASS
+  nonconsequences: PASS
+  ledger_honesty: PASS_NO_CHANGE
+  reviewed_exact_tree: PASS
+accepted_scope: >-
+  The finite-exact abstract classification is only over an oriented base line
+  with two exterior rays, connected exterior fibers, no births/deaths, at
+  most two generic split/merge events, and at most two simultaneous branches.
+  The actual row-2599 candidate remains a bounded signed discriminator with
+  uncomputed compact-support topology and unproved inclusion into the full
+  closed circuit piece.
+claim_delta: none
+ledger_change_recommended: none
+post_cycle_strategy: CONTINUE_UNCHANGED_FROM_PRIOR_REVIEW
+remaining_coordinator_gates:
+  - protected repository checks at the exact final head
+  - exact-head merge decision
+  - durable backup after accepted publication state

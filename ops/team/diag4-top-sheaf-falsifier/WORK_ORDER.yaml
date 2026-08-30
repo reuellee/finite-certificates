@@ -1,0 +1,57 @@
+track_id: diag4-top-sheaf-falsifier
+role: falsifier
+branch: agent/diag4-top-sheaf-falsifier-20260829
+control_plane_revision: a58b108063bf25065f8874723728ec51d31d3f51
+canonical_mathematical_base: d047359e7892106021022b0401554f56eb4e4d8a
+opening_ledger: 2/9
+target_lock:
+  short_name: D4-SP
+  ledger_id: diag4_cover_all_single_piece_hc3
+  claim: >-
+    For every realizable uniform rank-four oriented matroid M on labeled [8],
+    every proper pairwise-incomparable four-signature family S in its 9DVL
+    domain, every rho in S, and every circuit support Q with 1 <= |Q| <= 5
+    and union(Q)=[8], the closed circuit piece C_(rho,Q), including every
+    zero-weight face and every structural/residual-wall specialization inside
+    the normalized realization cell, has H_c^3(C_(rho,Q);Q)=0.
+  referee_revision: a112391eab4311a67a88e6aa9447f658226c65bc
+negative_standard: >-
+  A refutation requires an exact admissible tuple (M,S,rho,Q) and a checked
+  nonzero compact-support class. An abstract or mechanism-only split--remerge
+  model is only a no-go canary.
+deliverables:
+  positive: Exact admissible D4-SP counterexample with independent witness data and replay.
+  negative: Exact exclusion of a completely stated obstruction class.
+  null: Exhaustive searched domain, survivors, failed hypotheses, and next discriminator.
+  timeout: Partial manifest and resumable exact search state.
+verification:
+  replay: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+  canaries:
+    - abstract_false_positive
+    - realizable_positive
+    - sign_mutation
+    - boundary
+limits:
+  resource_ceiling: One agent turn and at most 90 minutes wall-clock; ordinary local compute only; no paid services.
+  stop_rule: Stop at an admissible counterexample, exact class exclusion, strict complete-domain reduction, or complete null/timeout manifest.
+  prohibited_scope: >-
+    Do not repair a falsified premise, infer global topology from samples,
+    identify the 66 generic five-support orbits with the complete 1,715,980
+    cover-all support domain, edit the ledger, merge, or modify files outside
+    the assigned surface.
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository reuellee/finite-certificates;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head. The user also authorizes durable recovery
+  checkpoints only in the Google Drive Projects/research-backups area. This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations; do
+  not substitute gh. Workers may commit and push only their assigned branches;
+  they may not merge or change the theorem ledger.

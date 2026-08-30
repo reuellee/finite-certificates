@@ -1,0 +1,58 @@
+track_id: diag4-strategy-referee
+phase: signed_delta_rereview
+role: independent_verifier_referee
+integrated_revision: 977d0afdcffe0937005f6eddd0dd026dedb47a39
+integrated_tree: 5a7003bf3f2a7e299d32918b676386825eae2c69
+prior_referee_revision: b08c6e4ee2ea21cf879e67edd7bbac3b2a44dd94
+verdict: REJECT
+summary: >-
+  The mathematical correction, exact base_topology schema/verifier lock,
+  semantic and file digests, replays, prover clarifications, canonical
+  full-256-pattern canary, nonconsequences, and no-broadening audit all pass.
+  Publication remains rejected because six abstract completeness/minimality
+  summary or output sentences still omit the explicit oriented-base-line with
+  two-exterior-rays qualifier required by the prior handoff.
+artifacts:
+  - path: ops/team/diag4-strategy-referee/DELTA_REREVIEW.md
+    digest: a9e1d625891d7199851b558c157d4279b82527c443568161f1c297b75a97f715
+gates:
+  integrated_identity_and_tree: PASS
+  falsifier_json_base_topology: PASS
+  falsifier_verifier_base_topology_lock: PASS
+  detailed_scope_and_nonconsequences: PASS
+  every_completeness_sentence_exactly_scoped: FAIL
+  semantic_digest: PASS
+  file_digests: PASS
+  falsifier_replay: PASS
+  prover_fixed_basis_stabilizer_wording: PASS
+  prover_no_top_orientation_trivialization_wording: PASS
+  prover_index7_full_256_canary_wording: PASS
+  prover_manifest: PASS
+  no_claim_broadening: PASS
+  ledger_honesty: PASS_NO_CHANGE
+  publication_exact_head: REJECT_PENDING_WORDING
+remaining_defects:
+  - >-
+    FINDINGS.md outcome says complete minimal abstract classification without
+    the explicit base-line/two-exterior-ray scope.
+  - >-
+    FINDINGS.md classification conclusion uses declared abstract class rather
+    than restating the exact base-line scope.
+  - >-
+    RESULT.yaml summary says complete minimal abstract two-event signed class
+    without the explicit base-line scope.
+  - >-
+    MINIMAL_SIGNED_MODELS.json theorem_effect uses declared abstract class
+    rather than restating the exact base-line scope.
+  - >-
+    The verifier's PASS abstract minimality and OUTCOME finite-exact abstract
+    classification output lines omit the explicit base-line scope.
+required_next_action: >-
+  Add the explicit oriented-base-line with two-exterior-rays qualifier to all
+  six summary/output completeness sentences; retain the other declared
+  bounds; refresh affected semantic/file digests; and return the exact new
+  head for one final narrow text/digest replay. No broad research rerun is
+  needed.
+claim_delta: none
+ledger_change_recommended: none
+post_cycle_strategy: CONTINUE_UNCHANGED_FROM_PRIOR_REVIEW

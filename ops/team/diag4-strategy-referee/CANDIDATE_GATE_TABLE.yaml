@@ -1,0 +1,185 @@
+track_id: diag4-strategy-referee
+phase: frozen_candidate_review
+canonical_mathematical_base: d047359e7892106021022b0401554f56eb4e4d8a
+corrected_control_plane:
+  local_revision: ec9a8ddba6f90e5cc96427337d0ad20ef28b8641
+  local_tree: c7b20b7b85f72f1e5ab0315121fb30073f566e09
+  connector_published_revision: 084330a0ea3b53b5e6d001b31ae83932d223620b
+  protocol_replay: PASS
+prover:
+  frozen_local_revision: e7baf36f6bb18a4552a9a337d8373e7aa7a87355
+  frozen_local_tree: f85f17fdd390fc3803f1625a83bd2fb68e6f2045
+  connector_published_revision: d776ff9163c9f27194bfbeca38114434222b64be
+  overall_verdict: ACCEPT_WITH_SCOPE_WORDING
+  claims:
+    - id: B31_four_shear_vanishing
+      statement: >-
+        For every intersection of closed signed Gordan pieces whose support
+        union satisfies B31, H_c^q vanishes for 0 <= q <= 3.
+      verdict: ACCEPT
+      gates:
+        signed_normal_invariance: PASS
+        projective_quotient: PASS_WITH_EXPLICIT_GAUGE_WORDING
+        fiber_dimension_and_stabilizer: PASS
+        structural_and_residual_strata: PASS
+        closed_weight_faces: PASS
+        convex_sections_and_selection: PASS
+        orientation_and_poincare_duality: PASS
+        compact_support_leray: PASS
+      required_wording:
+        - >-
+          Use the four nonmoving rays as a basis; uniformity makes every
+          moving-ray coordinate nonzero. The residual diagonal stabilizer
+          preserving an f-line equates the three non-f scales, and preserving
+          the distinct h-line equates the remaining scale, leaving only
+          scalars.
+        - >-
+          The proof needs no global trivialization of the top orientation
+          local system: every fiber has zero compact-support cohomology in
+          rows below four, so all total degrees at most three vanish.
+    - id: complete_B31_support_shape_sieve
+      statement: >-
+        Of all 1715980 cover-all supports in 130 S8 orbits, B31 certifies
+        915740 supports in 77 orbits and leaves 800240 in 53 orbits.
+      verdict: ACCEPT_FINITE_EXACT
+      independent_reconstruction: PASS
+      exact_counts:
+        all_by_size: {3: 840, 4: 72380, 5: 1642760}
+        certified_by_size: {3: 840, 4: 53060, 5: 861840}
+        all_orbits_by_size: {3: 1, 4: 14, 5: 115}
+        certified_orbits_by_size: {3: 1, 4: 10, 5: 66}
+        survivors_labeled: 800240
+        survivors_orbits: 53
+      semantic_sha256: 16b11cba052b49af777354f256a783b419ec6e246d178de70c238807e50ecc11
+    - id: signed_actual_canaries
+      statement: >-
+        The row-2599 shatter certificate contains both an actual signed B31
+        five-circuit and an actual signed B31-resistant five-circuit in
+        admissible proper incomparable families.
+      verdict: ACCEPT_WITH_SUPPLEMENTAL_CANONICAL_REPLAY
+      note: >-
+        The candidate's internal 16-pattern loop does not include signature
+        index 7 used by its positive B31 support. The canonical full
+        verify_seeat_shatter8.py replay independently verifies all 256
+        patterns on all eight signatures and closes this canary-scope gap.
+    - id: D4_SP
+      statement: Full admissible cover-all single-piece vanishing.
+      verdict: NOT_PROVED
+      ledger_effect: none
+    - id: fivefold_restriction_exactness
+      verdict: NOT_CLAIMED
+  artifact_gates:
+    identity_and_tree: PASS
+    manifest: PASS
+    deterministic_replay: PASS
+    hostile_canaries: PASS_AT_DECLARED_ABSTRACT_SCOPE
+    independent_acceptance_logic: PASS
+    coverage_and_nonconsequences: PASS
+    publication_authorization: PASS
+    repository_checks_at_integrated_head: PENDING_COORDINATOR
+  integrable_files:
+    - path: ops/team/diag4-top-sheaf-prover/MANIFEST.sha256
+      sha256: 125c9b65b441b14360bc4c2b2b0a668d91420f43c151341cbc3e7baef3bd3942
+    - path: ops/team/diag4-top-sheaf-prover/PROOF.md
+      sha256: 339f8026415c56c3acd7bea7340284f32a739da9f9c15955779e7fb1c817a448
+    - path: ops/team/diag4-top-sheaf-prover/RESULT.yaml
+      sha256: 9dec592379ff05e8210236e2db4d7a56c7808c9154fee8e5a2491ff466e3e7df
+    - path: ops/team/diag4-top-sheaf-prover/verify_four_block_line_sieve.py
+      sha256: 84a717a3df6ca9eabbee3d3645ecb5ffbb78932b34cb54969b97fab9d4015e48
+falsifier:
+  frozen_local_revision: 7dc8a2bfae9672068b6c977302d2ea5b213c412b
+  frozen_local_tree: b1a5b61d1a851440114d1a6b2a1576270f17fdeb
+  connector_published_revision: 4a3fc3d4bc21eecd1ecabed47d79b2b853069025
+  overall_verdict: MODIFY_SCOPE_WORDING
+  claims:
+    - id: abstract_zero_one_event_exclusion
+      statement: >-
+        Zero- and one-event component diagrams in the declared minimal class
+        are trees, and the only two-event cyclic word is 1->2->1.
+      verdict: MODIFY_THEN_ACCEPT
+      defect: >-
+        The phrase connected one-dimensional component diagram is too broad:
+        a zero-event circular base already cycles. The complete domain must
+        say a component diagram over a base line with two exterior rays,
+        connected exterior fibers, no births/deaths, generic split/merge
+        events, at most two branches, and at most two events.
+    - id: signed_attachment_holonomy_classification
+      statement: >-
+        The 16 two-branch signed attachment matrices split into eight
+        one-kernel and eight zero-kernel matrices, and into two gauge classes
+        distinguished by one orientation-holonomy bit.
+      verdict: ACCEPT_FINITE_EXACT
+      exact_counts:
+        matrices: 16
+        nonzero_kernel: 8
+        zero_kernel: 8
+        gauge_classes: 2
+    - id: row2599_actual_admissible_control
+      statement: >-
+        Signature indices 0,4,5,6 are proper and pairwise incomparable and
+        have positive minimal cover-all five-circuits at pattern zero.
+      verdict: ACCEPT_FINITE_EXACT
+      canonical_full_shatter_replay: PASS
+    - id: row2599_four_parameter_motion
+      statement: >-
+        The displayed motion fixes all five support normals and has a
+        parent-safe domain with 48 nonconstant and 16 nonlinear exact signed
+        bracket inequalities.
+      verdict: ACCEPT_FINITE_EXACT
+      independent_polynomial_reconstruction: PASS
+      exact_counts:
+        support_normals_fixed: 5
+        parent_brackets: 70
+        nonconstant: 48
+        nonlinear: 16
+        maximum_total_degree: 3
+      signed_polynomial_sha256: 144b1c69ede7f4d7a78caae7f00bf66f162bd54d08f1cd17e44f1ba8c70b86cb
+    - id: D4_SP_counterexample
+      verdict: NOT_FOUND
+      topology_status: uncomputed
+      inclusion_into_full_piece: uncomputed
+    - id: useful_null_handoff
+      verdict: ACCEPT_AFTER_SCOPE_WORDING
+  artifact_gates:
+    identity_and_tree: PASS
+    digests: PASS
+    deterministic_replay: PASS
+    actual_signed_witnesses: PASS
+    abstract_class_completeness: MODIFY_SCOPE_WORDING
+    coverage_and_nonconsequences: PASS
+    publication_authorization: PASS
+    repository_checks_at_integrated_head: PENDING_COORDINATOR
+  integrable_files_after_scope_wording_correction:
+    - path: ops/team/diag4-top-sheaf-falsifier/WORK_ORDER.yaml
+      sha256: 06d0278b5463b4946c41914ac0b19537b3e6bfc56375241402488ecb38b018fa
+    - path: ops/team/diag4-top-sheaf-falsifier/MINIMAL_SIGNED_MODELS.json
+      sha256: 80fa2a80557502e0f0015135045d2135f5cd4b8153f872f96bd989bb8fee368f
+    - path: ops/team/diag4-top-sheaf-falsifier/RESULT.yaml
+      sha256: 2f24edc2fed51f9ef8a6b03c8350548a1b124ded7d9a7a21cd01309a11399ad0
+    - path: ops/team/diag4-top-sheaf-falsifier/FINDINGS.md
+      sha256: dce84765aea0d59a677f3c52bfdf2f318fd98785ef3fac0436f5c76604fb76c1
+    - path: ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+      sha256: e9bcc7651938a2aa71e2f400d3e76639ee074a9cd8f6c1dac706e951d0c87a19
+post_cycle:
+  ledger_before: 2/9
+  ledger_after: 2/9
+  exact_delta:
+    diag4_cover_all_single_piece_hc3: >-
+      Narrowed from 1715980 supports in 130 support-shape orbits to 800240
+      supports in 53 B31-resistant orbits.
+    D4_SP: OPEN
+    diag4_hc3: OPEN
+  verdict: CONTINUE
+  reason: >-
+    This cycle strictly reduced a complete declared D4-SP support-shape
+    domain by a universal signed theorem, so the stagnation pivot is not
+    triggered. Continue for one bounded signed/topological cycle on the 53
+    survivor orbits; if that complete survivor class is unchanged, pivot is
+    mandatory.
+  next_target: >-
+    Prove a universal signed holonomy/top-sheaf exclusion on the 53
+    B31-resistant support orbits, or produce an exact admissible D4-SP
+    counterexample with inclusion into the full closed piece. A topology
+    calculation on the row-2599 four-parameter subset is a falsifier
+    discriminator only and cannot be promoted without the inclusion gate.
+ledger_change_recommended: none

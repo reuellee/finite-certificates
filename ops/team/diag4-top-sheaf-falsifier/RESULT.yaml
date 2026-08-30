@@ -1,0 +1,131 @@
+track_id: diag4-top-sheaf-falsifier
+role: falsifier
+base_revision: d047359e7892106021022b0401554f56eb4e4d8a
+control_plane_revision: a58b108063bf25065f8874723728ec51d31d3f51
+referee_target_lock_revision: a112391eab4311a67a88e6aa9447f658226c65bc
+target: D4-SP
+outcome: inconclusive
+handoff_class: null
+summary: >-
+  No admissible D4-SP counterexample was found. Over an oriented base line
+  with two exterior rays, the complete minimal abstract two-event signed class
+  reduces to one holonomy bit, while an exact actual row-2599 cover-all
+  candidate yields a pinned four-parameter parent domain with 48 nonconstant
+  and 16 nonlinear signed bracket inequalities. Its compact-support topology
+  and inclusion into the full closed circuit piece remain uncomputed.
+finite_exact_subresults:
+  abstract_minimal_class:
+    complete_domain: >-
+      Component diagrams over a base line with two exterior rays, connected
+      exterior fibers, no births/deaths, at most two generic split/merge
+      events, and at most two simultaneous branches.
+    exclusion: Zero- and one-event diagrams are trees and cannot carry the target compact loop.
+    sole_cyclic_event_word: 1-2-1
+    signed_attachment_matrices: 16
+    obstructing_matrices: 8
+    exact_matrices: 8
+    gauge_classes: 2
+    survivor: Trivial orientation holonomy; abstract only and not known rank-four realizable.
+  actual_candidate:
+    parent: row-2599
+    signature_indices: [0, 4, 5, 6]
+    rho_index: 0
+    support: 123/134/267/258/468
+    motion: y5+=s*y2+t*y8; y1+=u*y3; y7+=v*y2
+    support_normals_fixed_exactly: true
+    parent_bracket_inequalities: 70
+    nonconstant_parent_inequalities: 48
+    nonlinear_parent_inequalities: 16
+    signed_parent_polynomial_sha256: 144b1c69ede7f4d7a78caae7f00bf66f162bd54d08f1cd17e44f1ba8c70b86cb
+    topology_status: uncomputed
+artifacts:
+  - path: ops/team/diag4-top-sheaf-falsifier/WORK_ORDER.yaml
+    digest: 06d0278b5463b4946c41914ac0b19537b3e6bfc56375241402488ecb38b018fa
+  - path: ops/team/diag4-top-sheaf-falsifier/MINIMAL_SIGNED_MODELS.json
+    digest: 1d6fc8a0123aa40b0e2cc5d7457e898a62a3c1e24f347954dd7e4b4e206e56c1
+  - path: ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+    digest: 028566e3005ad3c822ddd7fb12821f849cf4683ad9277a359eb2a4e8036ec51b
+  - path: ops/team/diag4-top-sheaf-falsifier/FINDINGS.md
+    digest: 8b31c0455c7336b135370023ae71a0ed55a9551cd38512fcc387941bf7db26af
+replay:
+  commands:
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ai/omreal/verify_fourth_single_piece_light_count.py
+  result: >-
+    exit 0 for both; signed 16-model exhaustion, two gauge classes, exact
+    row-2599 admissibility, four cover-all circuits, exact support-normal
+    invariance, 70 signed parent polynomials, and complete 4,216,422-support
+    census replayed.
+searched_domain:
+  abstract_complete: >-
+    All sixteen signed attachments on the unique minimal 1->2->1 event word,
+    plus the complete zero/one-event connected generic boundary class over a
+    base line with two exterior rays under the stated
+    two-component/no-birth/death bounds.
+  actual_complete: >-
+    Parent row 2599; selected signature indices 0,4,5,6; all sixteen selected
+    good/bad patterns for admissibility; rho index 0; support
+    123/134/267/258/468; and the displayed four-parameter motion with all 70
+    exact signed parent bracket polynomials.
+  excluded: >-
+    No whole closed circuit-piece topology, weight-face attachment,
+    structural/residual-wall specialization, remaining parent direction,
+    other support, other signature family, or other parent was searched. The
+    complete 1,715,980 cover-all support universe was counted but not searched
+    topologically. The 66 generic five-support orbits are not treated as a
+    complete domain.
+survivors:
+  - The trivial-holonomy abstract split--remerge gauge class; not an actual-OM witness.
+  - >-
+    The exact row-2599 four-parameter candidate; actual signed data, but with
+    no checked nonzero H_c^3 class and no inclusion result for the full piece.
+failed_hypotheses:
+  - Branchwise escape cannot replace signed top-sheaf exactness.
+  - Unsigned component incidence cannot decide the minimal obstruction.
+  - Proper incomparable cover-all point data does not imply a compact-support class.
+canaries:
+  abstract_false_positive: >-
+    The trivial-holonomy 1->2->1 model has a one-dimensional exact kernel but
+    is explicitly rejected as a D4-SP counterexample because it has no
+    rank-four realization data.
+  realizable_positive: >-
+    Four exact row-2599 signatures realize all sixteen selected patterns and
+    have positive minimal cover-all five-circuits at pattern zero.
+  sign_mutation: Flipping one attachment sign changes holonomy and raises the boundary rank from one to two.
+  boundary: >-
+    Every zero- or one-event connected generic component graph over the
+    declared base line with two exterior rays is a tree.
+source_accounting:
+  used:
+    - ops/research-team/PROTOCOL.md@sha256:7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c
+    - ai/omreal/FOURTH_DIAGONAL_FIVEFOLD.md@sha256:efac03d2854221b0c8f7dabe2ff6aa3693166b3f8fbacf1bbfaa76aa4c30e2f5
+    - ai/omreal/THREE_SHEAR_SINGLE_PIECE_REDUCTION.md@sha256:77dc85c047c3ee8371f1548d59b32f87ced47a5e47c65ff5d8b4b83eb1824de9
+    - ai/omreal/NINE_DIAGONAL_STATUS.md@sha256:f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+    - ai/omreal/verify_fourth_diagonal_reduction.py@sha256:d02d3bfa8994e380cfaa156b76fcc273934c3333abeac3ee3be13401bb8e2b55
+    - ai/omreal/verify_fourth_single_piece_light_count.py@sha256:ca7b0128a1eb689cb5e3f6341666e90b72553ef04831a5311578a6038f010bae
+    - ai/omreal/data/seeat_parent2599_shatter8.npz@sha256:d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb
+    - ops/team/diag4-strategy-referee/OPENING_REVIEW.md@a112391e@sha256:7541b9f35a9738c5c214b78f444c37f459bd1f92e2f37738d1ba05f8365193e1
+  unused_or_missing: >-
+    No cellular compactification or cochain certificate exists for the exact
+    candidate domain or for its inclusion into the full closed piece. No
+    external source or paid service was used.
+open_defects:
+  - Compact-support topology of the exact four-parameter candidate is unknown.
+  - A class on the candidate subset would still need to survive in the entire closed C_(rho,Q).
+  - D4-SP also quantifies over every cover-all support, signed family, parent, weight face, and specialization.
+next_action: >-
+  Build a compatible semialgebraic compactification and relative cellular
+  cochains for the pinned row-2599 four-parameter domain, compute its signed
+  top-component differential, and, if a nonzero class appears, test its
+  persistence under inclusion into the full closed C_(rho,Q). This is the
+  first exact actual-OM discriminator; do not launch an unsigned 66-orbit
+  census as a substitute.
+ledger_change_recommended: none
+theorem_effect: >-
+  D4-SP remains OPEN, diagonal four remains OPEN, and the honest ledger remains
+  2/9. The abstract mechanism class is narrowed, but no theorem-level
+  obstruction class or complete cover-all support subdomain is removed.

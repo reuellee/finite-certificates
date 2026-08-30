@@ -1,0 +1,116 @@
+track_id: diag4-strategy-referee
+phase: opening_strategy_audit
+role: independent_verifier_referee
+control_plane_revision: a58b108063bf25065f8874723728ec51d31d3f51
+control_plane_tree: 6da74080d67b15f90daa989363a947d93206c8ff
+canonical_mathematical_base: d047359e7892106021022b0401554f56eb4e4d8a
+canonical_mathematical_tree: af221cc4a3c2d81ce2c58ecb71bdf2e029b4b929
+outcome: inconclusive
+opening_verdict: MODIFY
+summary: >-
+  Keep diagonal four as the primary strategy, but lock the complete
+  admissible cover-all single-piece H_c^3 claim, replace the 66-orbit generic
+  subcensus with honest complete-domain accounting, and repair the obligation
+  graph and eight-factor strategy gate before accepting discovery evidence.
+artifacts:
+  - path: ops/team/diag4-strategy-referee/OPENING_REVIEW.md
+    digest: 7541b9f35a9738c5c214b78f444c37f459bd1f92e2f37738d1ba05f8365193e1
+canonical_replay:
+  commands:
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ai/omreal/verify_fourth_diagonal_reduction.py
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ai/omreal/verify_fourth_single_piece_light_count.py
+  result: exit_0_for_both
+  exact_scope:
+    all_supports_size_1_through_5: 4216422
+    all_cover_all_supports: 1715980
+    cover_all_by_size_3_4_5: [840, 72380, 1642760]
+    generic_five_supports: 2021992
+    generic_cover_all_five_supports: 1099560
+    generic_cover_all_s8_orbits: 66
+strategy_comparison:
+  diagonal_3: PIVOT
+  diagonal_4: MODIFY_THEN_CONTINUE
+  diagonal_8: RETIRE_AS_PRIMARY
+  diagonal_9: PIVOT
+required_target_lock:
+  ledger_id: diag4_cover_all_single_piece_hc3
+  short_name: D4-SP
+  claim: >-
+    For every realizable uniform rank-four oriented matroid on labeled [8],
+    every proper pairwise-incomparable four-signature family S, every rho in
+    S, and every support Q of at most five parent triples whose union is [8],
+    the closed circuit piece C_(rho,Q), including zero-weight faces and all
+    structural/residual-wall specializations in the normalized realization
+    cell, has H_c^3(C_(rho,Q);Q)=0.
+  positive_consequence: >-
+    Removes only the unresolved cover-all part of the (p,q)=(0,3)
+    single-piece column; does not prove diagonal four.
+  negative_standard: >-
+    Requires an exact admissible tuple (M,S,rho,Q) and a checked nonzero
+    compact-support class; an abstract or mechanism-only split--remerge model
+    does not refute D4-SP.
+coverage:
+  included: >-
+    Opening target choice; all eight mandatory strategy factors; canonical
+    fourth-diagonal reduction and support censuses; abstract sharp
+    split--remerge canaries; target quantifiers; obligation graph; stop rule;
+    publication-role boundaries.
+  excluded: >-
+    No new prover or falsifier candidate was inspected; no constructive
+    discovery, artifact repair, total-complex replay, theorem inference,
+    ledger edit, publication, PR, merge, or backup action was performed.
+canaries:
+  positive: canonical fourth-diagonal and all-support census replays passed
+  negative: >-
+    separate-convexity S^1 model must be rejected by any claimed top-row
+    vanishing kernel
+  hostile: >-
+    doubled-interval split--remerge model with escaping branches and nonzero
+    H_c^3 must be rejected by any persistence kernel
+  null: no candidate evidence supplied in the opening phase
+source_accounting:
+  used:
+    - ai/omreal/FOURTH_DIAGONAL_FIVEFOLD.md
+    - ai/omreal/THREE_SHEAR_SINGLE_PIECE_REDUCTION.md
+    - ai/omreal/verify_fourth_diagonal_reduction.py
+    - ai/omreal/verify_fourth_single_piece_light_count.py
+    - ai/omreal/NINE_DIAGONAL_STATUS.md
+    - ops/research-team/PROTOCOL.md
+    - ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE.md
+    - ops/research-team/cycles/2026-08-29-diag4-top-sheaf/WORK_ORDERS.yaml
+  unused_or_missing: >-
+    No new external-source claim was required. The control plane still needs
+    to record its canonical ledger path/digest, input byte digests, and
+    unfinished/concurrent-cycle inventory.
+open_defects:
+  - The opening comparison does not score all eight protocol factors.
+  - >-
+    The current target is not a fixed proposition; strongest-implied and
+    weakest-necessary can denote different claims.
+  - >-
+    The 66 generic unsigned five-support orbits are not the complete
+    1715980-support cover-all single-piece domain.
+  - >-
+    The obligation graph omits independent pair, triple, fourfold, adjacent
+    degree, compactification, and restriction-map obligations and asserts an
+    unproved dependency direction.
+  - >-
+    A strict reduction of 66 generic orbits is not a reduction of the complete
+    split--remerge obstruction class unless every omitted stratum is covered
+    or declared a nonconsequence.
+  - Canonical input and ledger digests are not recorded in the cycle contract.
+publication_authorization_audit:
+  explicit_authorization_present_in_work_orders: true
+  explicit_authorization_present_in_agent_prompt: true
+  worker_role_boundaries_preserved: true
+  coordinator_only_integration_merge_ledger_backup: true
+next_action: >-
+  Coordinator amends or explicitly disposes of the MODIFY items, then sends
+  exact frozen prover/falsifier revisions, handoffs, digests, and replay
+  commands for the separate candidate review.
+ledger_change_recommended: none
+freeze_status: FROZEN_PENDING_FROZEN_CANDIDATES
