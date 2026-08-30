@@ -1,0 +1,196 @@
+track_id: diag3-orbit5563-postmain-referee
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+phase: post_main_reconciliation_audit
+role: independent_verifier_referee
+verdict: ACCEPT_POST_MAIN_RECONCILIATION
+outcome: finite-exact
+summary: >-
+  The merged-predecessor reconciliation is content-neutral relative to the
+  previously accepted D3 final candidate; its exact current head is cleanly
+  based on current main and preserves the terminal null without scope drift.
+
+reviewed_identity:
+  local_candidate_commit: fbac5a1828f6a7b980bb1acdc8f09d76c4fe0e77
+  local_candidate_tree: e80fd679624a9119dadae7ffdaf46963fe527a6e
+  previous_published_candidate: 4af514719fa0a2d08e6cc9c69d4d6538ddb19452
+  previous_exact_head_referee_receipt: 385d3f3ea9171de040ba2420f3ae29a82e69e3f6
+  reconciled_published_head: 827959f624a4e2d197f940c066b4baf4a9df5d5e
+  reconciled_published_tree: e80fd679624a9119dadae7ffdaf46963fe527a6e
+  reconciled_first_parent: 4af514719fa0a2d08e6cc9c69d4d6538ddb19452
+  reconciled_second_parent: 9332f507996a8594883619cb530565ced79b59eb
+  publication_branch: research/diag3-orbit5563-global-exit-20260830
+  canonical_main_initial: 9332f507996a8594883619cb530565ced79b59eb
+  canonical_main_final: 9332f507996a8594883619cb530565ced79b59eb
+  canonical_main_tree: 692d173462497cb645127ea1ced6cbe40aba4d5a
+  main_unchanged_during_audit: true
+  candidate_unchanged_during_audit: true
+  local_published_content_tree_equal: true
+
+reconciliation:
+  compare_previous_to_reconciled:
+    base: 4af514719fa0a2d08e6cc9c69d4d6538ddb19452
+    head: 827959f624a4e2d197f940c066b4baf4a9df5d5e
+    ahead_by: 2
+    behind_by: 0
+    changed_files: 0
+    interpretation: >-
+      Content-neutral; the ahead count includes newly reachable merged-D4
+      ancestry through the reconciliation commit's second parent.
+  compare_main_to_reconciled:
+    base: 9332f507996a8594883619cb530565ced79b59eb
+    head: 827959f624a4e2d197f940c066b4baf4a9df5d5e
+    merge_base: 9332f507996a8594883619cb530565ced79b59eb
+    ahead_by: 9
+    behind_by: 0
+    changed_files: 22
+    scope: D3_CYCLE_CONTROL_WORKER_REFEREE_REPORT_ONLY
+    d4_duplication: false
+    theorem_or_decision_ledger_edit: false
+    canonical_status_edit: false
+    unrelated_path: false
+
+previous_receipt:
+  verdict: ACCEPT_FOR_PUBLICATION_AT_EXACT_HEAD
+  accepted_head: 4af514719fa0a2d08e6cc9c69d4d6538ddb19452
+  accepted_tree: e80fd679624a9119dadae7ffdaf46963fe527a6e
+  files:
+    - path: ops/team/diag3-orbit5563-integration-referee/FINAL_REVIEW.md
+      git_blob: e0474b4de80beacc25221704fb920a9db0b84527
+    - path: ops/team/diag3-orbit5563-integration-referee/FINAL_HANDOFF.yaml
+      git_blob: 11677aa4d49adc83df2232a122b2be71aec20e4b
+  result: PASS_VERIFIED_BY_AUTHENTICATED_CONNECTOR
+
+exact_result:
+  realizable_unlabelled_parent_types: 2604
+  frames_per_type: 40320
+  quotient_classes: 100086840
+  quotient_multiplicity_sum: 104993280
+  raw_frame_parent_presentations: 104993280
+  selected_triple_stabilizer_order: 1
+  selected_triple_orbit_size: 40320
+  parent_automorphism_order_histogram:
+    1: 2382
+    2: 183
+    3: 10
+    4: 16
+    6: 3
+    8: 6
+    12: 1
+    16: 1
+    24: 2
+  smallest_missing_obligation: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+  topology_computation: NOT_AUTHORIZED_NOT_RUN
+  unresolved_before: 1162302
+  unresolved_after: 1162302
+  theorem_ledger_before: "2/9"
+  theorem_ledger_after: "2/9"
+  row_change: 0
+  ledger_change: NONE
+  strategy: PIVOT
+  next_target_selected_or_authorized: false
+
+replay:
+  protocol:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/research-team/verify_cycle_protocol.py
+    result: PASS_3_CYCLES_9_AUTHORIZED_WORK_ORDERS
+  closing_referee:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-referee/verify_closing_referee.py
+    result: PASS_ACCEPT_TERMINAL_NULL_2604_40320_100086840_104993280
+    hostile_canaries: PASS_7_OF_7_REJECTED
+    gf2_mask_stream_sha256: 43860334dd86422923a51a4018f3205cf4df1fb296a3d2b8b00b2e824910ae84
+    semantic_sha256: 0ae6a0662872e78d31d116c53c77ec2df0efcee6d6f01dc39e16ca32235a5050
+  diff_check:
+    command: git diff --check
+    result: PASS
+
+coverage:
+  included: >-
+    Exact ref, commit, parent, tree, and compare identities; content-neutral
+    reconciliation; the previous independent referee receipt; protocol replay;
+    independent closing reconstruction and hostile canaries; terminal-null
+    counts, scope, nonconsequences, and mandatory pivot.
+  excluded: >-
+    Protected CI, merge, complete normalized compactifications, closure strata
+    and attachments, component partitions, rank-drop transport, true-infinity
+    tags, compact components, global-exit topology, and successor target choice.
+
+nonconsequences:
+  theorem_claim: false
+  row_removal: false
+  compact_component: false
+  component_partition: false
+  closure_coverage: false
+  true_infinity_coverage: false
+  topology_computed: false
+  ledger_update: false
+  next_target_selected_or_authorized: false
+  protected_ci_complete: false
+  merged: false
+
+gates:
+  exact_main_head: PASS
+  exact_candidate_head: PASS
+  exact_candidate_tree: PASS
+  exact_two_parents: PASS
+  content_neutral_reconciliation: PASS_NO_CHANGED_FILES
+  main_compare: PASS_AHEAD_9_BEHIND_0_22_D3_PATHS
+  owned_scope_only: PASS
+  no_d4_duplication: PASS
+  no_ledger_or_status_edit: PASS
+  previous_referee_receipt: PASS
+  exact_counts: PASS
+  missing_boundary_atlas: CONFIRMED_FAIL_CLOSED
+  topology_claim: NONE
+  row_change: NONE
+  ledger_change: NONE
+  mandatory_pivot: PASS
+  successor_authorization: NONE
+  exact_authorization_protocol: PASS
+  protected_ci: PENDING_PUBLICATION_STAGE
+  exact_head_merge: PENDING_PUBLICATION_STAGE
+
+artifacts:
+  - path: ops/team/diag3-orbit5563-postmain-referee/FINAL_REVIEW.md
+    digest: 5b8c815f01680795f667f1330de43ad49c501fb9c68d99f4862ca14636b99f87
+  - path: ops/team/diag3-orbit5563-postmain-referee/FINAL_HANDOFF.yaml
+    digest: SELF_DIGEST_NOT_RECORDED
+
+open_defects:
+  - id: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    effect: >-
+      Blocks closure and rank-drop attachments, complete component coverage,
+      true-infinity tags, the global-exit graph, and either terminal topology
+      conclusion.
+  - id: PROTECTED_PUBLICATION_GATES
+    effect: >-
+      CI and merge remain pending and must bind to exact reviewed head
+      827959f624a4e2d197f940c066b4baf4a9df5d5e.
+
+next_action: >-
+  Create the D3 pull request only at exact head
+  827959f624a4e2d197f940c066b4baf4a9df5d5e, run protected CI there, and merge
+  only after required checks pass at that same head; independently perform a
+  new strategy evaluation before authorizing any successor research target.
+ledger_change_recommended: none
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Workers may prepare and push their assigned branches when the work order says
+  so, but they may not merge or update the theorem ledger.
