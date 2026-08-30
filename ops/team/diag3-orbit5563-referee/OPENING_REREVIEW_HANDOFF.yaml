@@ -1,0 +1,119 @@
+track_id: diag3-orbit5563-referee-rereview
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+phase: corrected_opening_rereview
+role: independent_verifier_referee
+verdict: GO
+discovery_may_begin: true
+
+reviewed_identity:
+  canonical_base_revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  canonical_base_tree: 6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561
+  corrected_local_revision: 5aae5f2680e436cf96499ae54be7ae3a8fae2957
+  corrected_published_revision: a3d0e04cdb2b8a61b62f44da1aceddcf40e96cc1
+  corrected_tree: d93a552a15f2165473a73b9f01db8568a54d5da0
+  corrected_branch: research/diag3-orbit5563-global-exit-20260830
+  published_parents:
+    - 4d59201e84fd588b91a2a858ac4468c18b863544
+    - 06de9659d5090846afe09c95f1f8549d1d7b2ba5
+  opening_ledger: "2/9"
+  unresolved_before: 1162302
+
+prior_cycle:
+  cycle_id: 2026-08-30-diag4-s53-top-sheaf
+  pull_request: 43
+  branch: research/diag4-s53-cycle-20260830
+  published_head: 06de9659d5090846afe09c95f1f8549d1d7b2ba5
+  published_tree: 692d173462497cb645127ea1ced6cbe40aba4d5a
+  pr_state_at_rereview: OPEN_UNMERGED
+  main_at_rereview: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  frozen_and_nonconcurrent: true
+  required_checks_and_merge_are_separate_publication_gate: true
+  closing_verdict: PASS_NULL_HANDOFFS
+  closing_strategy: PIVOT
+  ledger_after: "2/9"
+  survivor_labeled_after: 800240
+  survivor_orbits_after: 53
+  closing_review_sha256: 7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c
+  closing_handoff_sha256: ad7bc8a4da4a2be589d62304b100222506d6471bf028c773d0435b1e50102c84
+
+repair_gates:
+  frozen_prior_cycle_identities: PASS
+  prior_cycle_integration_state: PASS
+  prior_cycle_nonconcurrency: PASS
+  incomplete_manifest_is_timeout: PASS
+  complete_manifest_missing_transport_is_null: PASS
+  exact_verbatim_authorization: PASS
+  authorization_hostile_mutations: PASS_4_OF_4
+  worker_restrictions_separate: PASS
+  parent_type_vs_full_realization_space: PASS
+  raw_frame_parent_census: PASS
+  selected_triple_stabilizer: PASS_IDENTITY
+  exact_quotient_multiplicity_rule: PASS
+
+domain_gate:
+  deadline: 30 minutes wall-clock
+  realizable_unlabelled_parent_types: 2604
+  frames_per_type: 40320
+  raw_frame_parent_presentations: 104993280
+  selected_triple_stabilizer_order: 1
+  first_layer: >-
+    Exact type/frame/S8 quotient manifest with every multiplicity summing to
+    104993280.
+  second_layer: >-
+    Independently replayable sign/chart transport over every point and
+    required stratum of every complete normalized realization space.
+  incomplete_manifest: TIMEOUT_AND_STOP
+  complete_manifest_missing_transport_or_attachment: NULL_AND_STOP
+  both_layers_pass: DISCOVERY_MAY_CONTINUE_WITHIN_TRACK_CEILING
+  representative_matrix_promotion: PROHIBITED
+
+replay:
+  cycle_protocol: PASS_3_CYCLES_9_AUTHORIZED_WORK_ORDERS
+  factor_orbit_semantic_sha256: 9dc473537e87e509031d4843d960f5ea4bfefb8508262cd1ebb5d44e1a49913d
+  global_exit_kernel: PASS_ONE_WAY_SUFFICIENT
+  fullspace_gate: PASS_REPLAY_EXPECTED_FAIL_CLOSED
+  fullspace_semantic_sha256: 874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace
+  completion_object: PASS_77940147_OF_79102449_RESIDUE_1162302
+  decision_ledger: PASS_LEDGER_2_OF_9
+  parent_frame_atlas: PASS_2604_TIMES_40320_STABILIZER_IDENTITY
+  boundary_stratification: PASS_AT_DECLARED_SCOPE
+  pinned_raw_inputs: PASS_19_OF_19
+  d4_prover: PASS_COMPLETE_NULL_800240_OF_53_UNCHANGED
+  d4_falsifier: PASS_DECLARED_SCOPE_GLOBAL_NULL
+
+remote_content_receipts:
+  corrected_cycle_blob: f8588047caf2fa961e363f41c8f746f6d4ada7e3
+  corrected_work_orders_blob: ec0147dd82a4c56cea2ee3aa2d4c476b6b5e08ee
+  corrected_protocol_verifier_blob: 936850935eecb53b72f10659de15aaa1b11e6379
+  local_blobs_identical: true
+
+claim_scope:
+  target_row: [5563, 4373, 23221]
+  named_presentation: [5563, 16134, 19284]
+  positive_unresolved_after: 1162301
+  ledger_change_at_opening: NONE
+  discovery_result_accepted_at_opening: false
+  closing_rereview_required: true
+  mandatory_pivot_if_no_terminal_result: true
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Workers may prepare and push their assigned branches when the work order
+  says so, but they may not merge or update the theorem ledger.
+
+next_action: >-
+  Coordinator may launch the independent prover and falsifier under the exact
+  30-minute two-layer gate at the reviewed corrected commit and tree.

@@ -1,0 +1,277 @@
+track_id: diag3-orbit5563-referee
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+phase: frozen_handoff_closing_review
+role: independent_verifier_referee
+verdict: ACCEPT_TERMINAL_NULL_WITH_MANDATORY_PIVOT
+outcome: inconclusive
+terminal_classification: "null"
+
+reviewed_identity:
+  opening_local_commit: bf6050ddc16e01dbff6da07d3d8c3ec31a9ab52f
+  opening_published_commit: 9e578f6e9d094b3342ca474f0d188428dd44ae7a
+  opening_tree: 4213fdb2adf5722d1b8a6b70aba4507e959fba6d
+  integration_local_commit: d4e5a228e5ae5472a838672b54ca074ee0738c25
+  integration_published_commit: af098d1297dd5c82f194d1f4d03a9ac75afafba9
+  integration_tree: dcd0e683a33468194f38353a72ebc84c213b0b35
+  integration_branch: research/diag3-orbit5563-global-exit-20260830
+  published_parents:
+    - dd4394c3a6131bfeb9b3d1c1adede830b1941535
+    - e5bc85923ab0694482219399e626d0d2255bc926
+  canonical_main_at_review: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  local_remote_content_tree_equal: true
+  equality_basis: >-
+    Authenticated GitHub comparisons show the exact opening-to-worker and
+    worker-to-integration path sets; all twelve remote integration-head blobs
+    equal their local Git blobs, reconstructing the identical content tree.
+
+workers:
+  prover:
+    local_commit: 7b22899b556cd4c8135f324a82be069d238fdd20
+    local_tree: e5aa65680f388a7a3aaab522d264227c45a532b4
+    published_commit: dd4394c3a6131bfeb9b3d1c1adede830b1941535
+    published_tree: e5aa65680f388a7a3aaab522d264227c45a532b4
+    outcome: inconclusive
+    classification: "null"
+    opening_to_publication_seconds: 1536
+  falsifier:
+    local_commit: 8be3fdddd7b2266db13cdbfcbea409f728b72559
+    local_tree: 0ae7191d74f3a77d343673a5f51b9a2bf22d596f
+    published_commit: e5bc85923ab0694482219399e626d0d2255bc926
+    published_tree: 0ae7191d74f3a77d343673a5f51b9a2bf22d596f
+    outcome: inconclusive
+    classification: "null"
+    opening_to_publication_seconds: 1313
+
+target:
+  canonical_row: [5563, 4373, 23221]
+  named_presentation: [5563, 16134, 19284]
+  unresolved_before: 1162302
+  unresolved_after: 1162302
+  theorem_ledger_before: "2/9"
+  theorem_ledger_after: "2/9"
+  row_change: 0
+  ledger_change: NONE
+
+independent_quotient_reconstruction:
+  method: >-
+    Enumerate all S8 frames and test relabelled 70-bracket chirotopes modulo
+    the eight-dimensional GF(2) action of global sign and element
+    reorientations; do not import either worker verifier.
+  realizable_unlabelled_parent_types: 2604
+  frames_per_type: 40320
+  raw_frame_parent_presentations: 104993280
+  quotient_classes: 100086840
+  quotient_multiplicity_sum: 104993280
+  selected_triple_stabilizer_frame_ranks: [0]
+  selected_triple_stabilizer_order: 1
+  selected_triple_orbit_size: 40320
+  parent_automorphism_order_histogram:
+    1: 2382
+    2: 183
+    3: 10
+    4: 16
+    6: 3
+    8: 6
+    12: 1
+    16: 1
+    24: 2
+  quotient_class_multiplicity_histogram:
+    1: 96042240
+    2: 3689280
+    3: 134400
+    4: 161280
+    6: 20160
+    8: 30240
+    12: 3360
+    16: 2520
+    24: 3360
+  prover_parent_rows_agree: 2604/2604
+  falsifier_parent_rows_agree: 2604/2604
+  falsifier_group_elements_agree: 2604/2604
+  gf2_mask_stream_sha256: 43860334dd86422923a51a4018f3205cf4df1fb296a3d2b8b00b2e824910ae84
+  closing_semantic_sha256: 0ae6a0662872e78d31d116c53c77ec2df0efcee6d6f01dc39e16ca32235a5050
+
+transport:
+  open_cell_sign_chart_factor_transport: PASS_ALL_INTERIOR_POINTS
+  proof_scope: >-
+    Fixed uniform chirotope signs, nonzero Cramer-frame bracket units, exact
+    rational chart transitions, and equivariant primitive-factor relabelling
+    for every interior point and framed quotient class.
+  complete_boundary_and_attachment_transport: MISSING
+  smallest_missing_obligation: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+  precise_equivalent: all_parent_closure_stratum_transport_and_attachment_atlas
+  required_strata:
+    - open_parent_points
+    - coordinate
+    - chart_divisor
+    - parent_wall
+    - singular_rank_drop
+    - occurrence_rank
+    - concurrence_rank
+    - extra_factor
+    - simultaneous_wall
+    - true_parent_infinity
+  blocked_downstream:
+    - component_and_rank_drop_attachments
+    - complete_component_partition
+    - true_parent_infinity_tags
+    - global_exit_graph
+    - compact_component_certificate
+  representative_matrix_is_full_realization_space_coverage: false
+  topology_computation_authorized: false
+  topology_computation_observed: false
+
+gates:
+  signed_opening_identity: PASS
+  worker_heads_unchanged: PASS
+  integration_head_unchanged: PASS
+  main_unchanged: PASS
+  owned_surface_only: PASS_12_OF_12_FILES
+  remote_blob_equality: PASS_12_OF_12
+  independent_parent_frame_reconstruction: PASS
+  hard_triple_stabilizer: PASS_IDENTITY
+  burnside_quotient: PASS
+  multiplicity_sum: PASS_104993280
+  worker_manifest_agreement: PASS_2604_OF_2604
+  interior_transport_quantifier: PASS
+  complete_boundary_transport: MISSING_FAIL_CLOSED
+  topology_claim: NONE
+  count_change: NONE
+  ledger_change: NONE
+  mandatory_pivot: PASS
+
+replay:
+  closing_referee:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-referee/verify_closing_referee.py
+    result: PASS_ACCEPT_TERMINAL_NULL
+    elapsed_seconds: 9.590
+    peak_rss_kib: 202936
+  prover:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py
+    result: PASS_EXPECTED_TERMINAL_NULL_13_OF_13_CANARIES
+    measured_elapsed_seconds: 9.722
+    measured_peak_rss_kib: 200228
+  falsifier:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py
+    result: PASS_EXPECTED_TERMINAL_NULL
+    reported_elapsed_seconds: 14.358
+    reported_peak_rss_kib: 202024
+  canonical_suite:
+    cycle_protocol: PASS_3_CYCLES_9_AUTHORIZED_WORK_ORDERS
+    factor_orbits: PASS_6_9476_79102449
+    global_exit: PASS_ONE_WAY_SUFFICIENT_AND_HOSTILE_FIXTURES
+    fullspace_feasibility: PASS_REPLAY_EXPECTED_FAIL_CLOSED
+    completion_object: PASS_77940147_OF_79102449_RESIDUE_1162302
+    decision_ledger: PASS_LEDGER_2_OF_9
+    parent_frame_atlas: PASS_2604_TIMES_40320_STABILIZER_IDENTITY
+    boundary_stratification: PASS_AT_DECLARED_SCOPE_NO_GLOBAL_CLOSURE
+
+canaries:
+  worker_prover: PASS_13_OF_13
+  worker_falsifier: PASS_ALL_5_HOSTILE_MUTATIONS
+  independent_resealed_hostile_mutations:
+    missing_parent_row: REJECTED
+    missing_quotient_multiplicity: REJECTED
+    nontrivial_hard_stabilizer: REJECTED
+    artificial_boundary_as_infinity: REJECTED
+    omitted_singular_rank_drop_stratum: REJECTED
+    representative_matrix_promotion: REJECTED
+    false_boundary_atlas_completion: REJECTED
+
+semantic_digests:
+  prover_manifest: 8182a82272de1b6a36e0052ad2310aaf2a4d1bccf96c1dbf2210a1c185e4d172
+  prover_transport: 60f686ff659093c3d4f46e8bd01de99cff6bcef2201a7da789f42d780afdebd9
+  falsifier_manifest: 89bd3a5d7185cfe66b26afb7225ae5262da44e071604372445bcf0d342f1e15c
+  falsifier_transport: a790d8eabf5172bba9b51bbfef1a87c19d6cac78a2f8f0d9138f14c4ca78fe2e
+
+artifact_sha256:
+  ops/team/diag3-orbit5563-prover/CANARIES.json: 09c30f020819d02caa21b543e9e2c8e3f79428a68c3647c96fc403dd22a7d529
+  ops/team/diag3-orbit5563-prover/PROOF_NOTE.md: ed3853cd4f0d78cc85801c6978dd9c7e37fd545f2fcdb3a0faef294153bdbdf1
+  ops/team/diag3-orbit5563-prover/REPLAY_MANIFEST.json: 150684b4190130b26e556858d6cf4bb55619167e48b2bc766b97a228c2265236
+  ops/team/diag3-orbit5563-prover/RESULT.yaml: c5d6d9df1e73f96d00a5e4bd5d75c87c0f02bd17d081d5f7e335fb2d85aa8430
+  ops/team/diag3-orbit5563-prover/TRANSPORT_CONTRACT.json: 099ad1e0518854bed8477fac92731482569c95eb89be4e65090b3972a5a9728b
+  ops/team/diag3-orbit5563-prover/TYPE_FRAME_S8_QUOTIENT_MANIFEST.json: 95f7d5f362a4af3445ca4f6cffbf8b5b2d812aad45ffd5cc655af9ea1216685b
+  ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py: a564fce15b42b6e6feca75a6f96b6a0ae7eb8fafa4414fbf2e7b406d67a4e74f
+  ops/team/diag3-orbit5563-falsifier/FINDINGS.md: d8ab4bbd11c67846830fa53850f0f7795873a9f3288090ea40510152a8bd86b0
+  ops/team/diag3-orbit5563-falsifier/QUOTIENT_MANIFEST.json: 911d4ff842e2e962ab2c67d1725037580b6fe2d5fa113f4ccdd4c4786e027b14
+  ops/team/diag3-orbit5563-falsifier/RESULT.yaml: d3c38f13ebbcf2e69829bd3d5544e911e5facb5693986fc2c0977f80fd7ee2c9
+  ops/team/diag3-orbit5563-falsifier/TRANSPORT_CONTRACT.json: 4455a630c3d212f09e844812013e97e2591b2bd813a076fdf243e5f55aee0d2a
+  ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py: 43e6ccb83c7eedc0a219e85fecfefda6c6f8a3994d9a108aec38997cfd5dac0c
+  ops/team/diag3-orbit5563-referee/verify_closing_referee.py: abe0c654488396e8f86203873fe2318af8202464d535e238b5ec9de52b4bcf83
+
+remote_git_blob_receipts:
+  ops/team/diag3-orbit5563-prover/CANARIES.json: 21e8808d2200118b1f4ac8dc90867da06c41bbed
+  ops/team/diag3-orbit5563-prover/PROOF_NOTE.md: 25e5a6297f05747e03a4de33e95aced39126ef9c
+  ops/team/diag3-orbit5563-prover/REPLAY_MANIFEST.json: a8708fc293b26de954ffaf135b65ffba5cfbed47
+  ops/team/diag3-orbit5563-prover/RESULT.yaml: 10f5f1c6d95d28dd2aaf0153fbe3a041083bf130
+  ops/team/diag3-orbit5563-prover/TRANSPORT_CONTRACT.json: 7d9bd51fd320bd080cdea530b0edf73cf96beee8
+  ops/team/diag3-orbit5563-prover/TYPE_FRAME_S8_QUOTIENT_MANIFEST.json: eac19b5e5141b069a2f38e44a9068bae52da3d5a
+  ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py: aabbf5b3918ee4986ac5f959a0473169f13f6b2d
+  ops/team/diag3-orbit5563-falsifier/FINDINGS.md: 5b56f01739a360d4c77f35e6259682a7576a6a9d
+  ops/team/diag3-orbit5563-falsifier/QUOTIENT_MANIFEST.json: 07216fa9ef9c4f45730aa17a5e463642137a08dc
+  ops/team/diag3-orbit5563-falsifier/RESULT.yaml: bdedf55071ae5192e5340186303fe0d7d79e71e2
+  ops/team/diag3-orbit5563-falsifier/TRANSPORT_CONTRACT.json: 6831222a0fd211ebc27f55d1832cc65206409dd4
+  ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py: ac2a57c410210cd0645397517be6e8e5158334d7
+
+coverage:
+  included: >-
+    Every realizable parent type, every S8 frame, every projected parent
+    automorphism, every hard-triple orbit label modulo the diagonal action,
+    every quotient multiplicity, and every interior point for sign, Cramer
+    chart, and factor-formula transport.
+  excluded: >-
+    Complete normalized compactifications, boundary/closure strata and their
+    attachments, component partitions, rank-drop attachments, sound true-
+    infinity tags, compact components, and global-exit topology.
+
+open_defects:
+  - id: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    effect: >-
+      Blocks all component/rank-drop attachments, true-parent-infinity tags,
+      complete component coverage, and either terminal topology conclusion.
+
+nonconsequences:
+  theorem_claim: false
+  row_removal: false
+  compact_component: false
+  component_partition: false
+  true_infinity_coverage: false
+  topology_computation: false
+
+strategy:
+  progress: EXACT_DOMAIN_COMPRESSION_ONLY
+  theorem_or_row_advancement: NONE
+  verdict: PIVOT
+  retired_route: >-
+    No further local roadmap, box, collar, macrobox, clipped-wall, or related
+    continuation for canonical row (5563,4373,23221).
+  next_action: >-
+    Coordinator records the exact null with no ledger change, repeats the
+    eight-factor strategy evaluation, and selects a newly bounded target.
+
+ledger_change_recommended: none
+count_change_recommended: 0
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Workers may prepare and push their assigned branches when the work order
+  says so, but they may not merge or update the theorem ledger.
