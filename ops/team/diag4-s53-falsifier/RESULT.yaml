@@ -1,0 +1,103 @@
+track_id: diag4-s53-falsifier
+cycle_id: 2026-08-30-diag4-s53-top-sheaf
+role: falsifier
+base_revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+opening_revision: eb88516411d54403f7b274624bd2c44918678cab
+outcome: inconclusive
+handoff_class: complete_null
+summary: >-
+  The exact row-2599 four-parameter domain is bounded and contains a certified
+  maximal reciprocal local cube U=(-1/84,1/84)^4 with H_c^3(U)=0, but the
+  whole-domain wall-adapted topology and the inclusion into the entire closed
+  circuit piece remain uncomputed; no counterexample or claim-level reduction
+  was obtained.
+classification: finite_exact_local_exclusion_with_global_null
+exact_tuple:
+  parent: row-2599
+  signature_indices: [0, 4, 5, 6]
+  rho_index: 0
+  support: 123/134/267/258/468
+  motion: y5+=s*y2+t*y8; y1+=u*y3; y7+=v*y2
+attempted_domain:
+  definition: "D={(s,t,u,v) in R^4: all 70 recorded signed parent brackets are positive}"
+  nonconstant_inequalities: 48
+  nonlinear_inequalities: 16
+  all_multi_affine: true
+  signed_parent_polynomial_sha256: 144b1c69ede7f4d7a78caae7f00bf66f162bd54d08f1cd17e44f1ba8c70b86cb
+compactification_gate:
+  status: exact_bounded_outer_enclosure_only
+  result: Eight affine bracket consequences place D in a bounded rational box.
+  missing: Wall-adapted compactification/cell decomposition relative to the genuine p_I=0 parent boundary.
+topology_gate:
+  complete_signed_subdomain: U=(-1/84,1/84)^4
+  exact_corner_minimum: 878/21 at bracket 5678 and corner (1,-1,-1,1)/84
+  nearest_boundary_canary: radius 1/83 fails with -9050/83 at the same bracket/corner
+  relative_cochain_ranks_hc_0_to_4: [0, 0, 0, 0, 1]
+  conclusion: H_c^3(U;Q)=0
+  whole_domain: UNREACHED
+inclusion_gate:
+  full_closed_piece: UNREACHED
+  reason: No normal/attachment data connects the four-plane subset to every weight face, specialization, and remaining parent direction.
+cubical_route_stop: >-
+  Any finite union of closed vertex-positive cubes is compactly contained in
+  the open D and therefore cannot cover D. Further inner-box subdivision
+  cannot meet the global completeness gate; a wall-adapted exact decomposition
+  is required. The annulus-to-disk canary independently rejects subset-to-full
+  cohomology inference.
+survivors:
+  - All sixteen nonlinear parent-wall mechanisms outside the local cube.
+  - The whole bounded component of D containing the origin beyond U.
+  - Every zero-weight face, structural/residual-wall specialization, remaining parent direction, and full-piece attachment.
+failed_hypotheses:
+  - Abstract trivial holonomy supplies an actual rank-four counterexample.
+  - Pointwise admissibility supplies a compact-support class.
+  - Finitely many strictly interior vertex-positive boxes cover the open sign chamber.
+  - A subset class survives inclusion without an explicitly checked map.
+canaries:
+  abstract_false_positive: PASS; rank-one abstract boundary is not promoted to an OM witness.
+  actual_realizable_positive: PASS; exact row-2599 family, support, motion, and local cube replay.
+  inclusion_failure: PASS; annulus H1 generator is killed by the disk filling cell.
+  sign_mutation: PASS; one attachment flip raises rank one to rank two.
+  boundary: PASS; radius 1/84 is safe and 1/83 crosses bracket 5678; cube boundary is not promoted to global parent boundary.
+artifacts:
+  - path: ops/team/diag4-s53-falsifier/CANDIDATE_DOMAIN.json
+    digest: ea80f99f614865d73e794ec84a8e79efcb2ee8ad4236c932688d257ee41823e7
+  - path: ops/team/diag4-s53-falsifier/generate_candidate_domain.py
+    digest: 574f351843ada10646390558f925092a7ae92b9542325d2512cbd0572f2e8699
+  - path: ops/team/diag4-s53-falsifier/verify_candidate_domain.py
+    digest: 85f13a826b65040323066fdf4f9f285cd16908ba29104a1a7a86db946be7494b
+replay:
+  commands:
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag4-s53-falsifier/generate_candidate_domain.py
+    - PYTHONDONTWRITEBYTECODE=1 python ops/team/diag4-s53-falsifier/verify_candidate_domain.py
+  separation: The verifier does not import the generator.
+  result: exit 0; exact domain, bounded enclosure, local H_c^3=0, and all five hostile canaries pass.
+coverage:
+  included: >-
+    Complete row-2599 pattern-zero four-parameter polynomial domain
+    reconstruction; all 70 inequalities; exact outer boundedness; and exact
+    local cube U with relative cochains.
+  excluded: >-
+    No whole-domain cell decomposition or H_c^3, no class on D, no full closed
+    circuit-piece inclusion, no other support/parent/family, and no universal
+    reduction of any of the 53 survivor orbits.
+source_accounting:
+  used:
+    - ai/omreal/data/seeat_parent2599_shatter8.npz@sha256:d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb
+    - ops/team/diag4-top-sheaf-falsifier/FINDINGS.md@sha256:8b31c0455c7336b135370023ae71a0ed55a9551cd38512fcc387941bf7db26af
+    - ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py@sha256:028566e3005ad3c822ddd7fb12821f849cf4683ad9277a359eb2a4e8036ec51b
+    - ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE.md@opening
+    - ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/WORK_ORDERS.yaml@opening
+    - ops/team/diag4-s53-referee/OPENING_REVIEW.md@opening
+    - ops/team/diag4-s53-referee/OPENING_HANDOFF.yaml@opening
+  unused_or_missing: No new prover conclusion inspected; no external source or paid service used.
+open_defects:
+  - Exact wall-adapted topology of the whole D component is absent.
+  - The full-piece inclusion map is absent.
+next_action: >-
+  Obey the cycle's mandatory pivot. If this candidate is later revisited, the
+  first discriminator is a wall-adapted exact stratification of the bounded
+  origin component, followed by independent relative cochains and explicit
+  full-piece attachment/inclusion data.
+ledger_change_recommended: none; retain 2/9 and apply the cycle's mandatory PIVOT because all 53 orbits remain
+theorem_effect: D4-S53 OPEN; D4-SP OPEN; diagonal four OPEN; survivor class unchanged at 53 orbits / 800240 supports.
