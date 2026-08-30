@@ -157,3 +157,24 @@ handoff, and issue `CONTINUE`, `PIVOT`, `RETIRE`, or `STOP`.  If D4-S53 is not
 proved or refuted and the complete survivor class is not strictly reduced,
 the verdict is a mandatory `PIVOT`; no third consecutive D4-S53 cycle may be
 started.
+
+## Closing strategy evaluation
+
+The independently replayed prover and falsifier handoffs are complete nulls at
+their declared scopes. The complete B31-resistant class is unchanged at
+`800,240` labeled supports in `53` unsigned support-shape orbits, split as four
+size-four and forty-nine size-five orbits. D4-S53 and D4-SP remain open. The
+theorem ledger remains `2/9`.
+
+| Candidate next route | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independent verification | Resource / information | Stagnation risk | Verdict |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| diagonal 3: one complete residue-orbit global-exit certificate | 2 | 3 | 5 | 5 | 4 | 4 | 4 | 3 | **`PIVOT` candidate, subject to a new opening audit** |
+| diagonal 4: complete alternating total complex | 5 | 1 | 5 | 5 | 5 | 2 | 1 | 4 | `RETIRE` until the global restriction object exists |
+| diagonal 8: training-network transport | 2 | 1 | 5 | 2 | 3 | 4 | 2 | 4 | `RETIRE` as the next target |
+| diagonal 9: parent-860 active-sector roadmap | 2 | 1 | 5 | 1 | 4 | 3 | 1 | 5 | `RETIRE` until a proper nine-family is registered |
+
+Post-cycle verdict: mandatory **`PIVOT` away from D4-S53**. No further
+D4-S53, inner-cube, or unsigned survivor-census cycle may `CONTINUE`. The D3
+global-exit candidate is not authorized by this close alone; it requires its
+own canonical grounding, bounded work orders, and independent opening referee.
+An incomplete global-quantifier gate is `STOP`/fail-closed, not progress.

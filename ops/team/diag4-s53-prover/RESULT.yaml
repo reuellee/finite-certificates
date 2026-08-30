@@ -1,0 +1,119 @@
+track_id: diag4-s53-prover
+cycle_id: 2026-08-30-diag4-s53-top-sheaf
+role: prover
+opening_revision: eb88516411d54403f7b274624bd2c44918678cab
+canonical_base_revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+outcome: inconclusive
+handoff_class: complete_null
+summary: >-
+  The common-apex-four signed convex-fiber lemma occurs on 0/53 canonical
+  B31-resistant orbits. Exact independent replay leaves all 800,240 labeled
+  supports in all 53 orbits unchanged; weaker fixed-apex and plane-plus-pencil
+  patterns are blocked by separate-convexity, split--remerge, and orientation
+  holonomy canaries.
+coverage:
+  included: >-
+    Every canonical representative of the complete 53 B31-resistant S8
+    support-shape orbits (800,240 labeled; four size-four and forty-nine
+    size-five), with exact orbit sizes, degree/occurrence data, dominance
+    arrows, four-shear profiles, and plane-plus-two-pencil counts.
+  excluded: >-
+    No topology of a whole closed circuit piece was computed. Unsigned shapes
+    were not assumed realizable; no sampled parent or subset was promoted to
+    a universal conclusion.
+canonical_domain:
+  semantic_sha256: 16b11cba052b49af777354f256a783b419ec6e246d178de70c238807e50ecc11
+  cover_labeled: 1715980
+  cover_orbits: 130
+  b31_labeled: 915740
+  b31_orbits: 77
+  survivor_labeled: 800240
+  survivor_orbits: 53
+  survivor_size_four_orbits: 4
+  survivor_size_five_orbits: 49
+tested_predicates:
+  common_apex_four:
+    exact_orbits: 0
+    status: failed_empty_premise_on_target
+    signed_lemma: >-
+      Four movers dominated by one fixed apex give a jointly affine convex
+      four-shear fiber, hence compact-support vanishing through degree three.
+  fixed_apex_four:
+    exact_orbits: 32
+    no_assignment_orbits: 21
+    profiles: [2+2, 2+1+1, 1+1+1+1]
+    status: insufficient_no_vanishing_claim
+  degree_one_plane_two_pencils:
+    exact_orbits: 53
+    status: insufficient_separate_convexity_only
+survivors: STRUCTURAL_SCAN.json#survivors
+failed_lemmas:
+  - The common-apex-four sufficient condition has no D4-S53 instance.
+  - Arbitrary four fixed-apex shears do not imply joint convexity or top-sheaf exactness.
+  - A degree-one plane plus two pencils does not exclude an H1 loop or split--remerge section.
+canaries:
+  actual_signed_survivor: PASS_row2599_123/134/267/258/468
+  hostile_split_remerge: PASS_rank_one_boundary_with_antidiagonal
+  hostile_separate_convexity: PASS_square_rank_three_with_H1_one
+  orientation_local_system: PASS_circle_differential_1_minus_h
+  null_out_of_domain: PASS_123/124/125/126/127_rejected
+replay:
+  commands:
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ops/team/diag4-s53-prover/generate_structural_scan.py --output
+      /tmp/diag4-s53-STRUCTURAL_SCAN.replay.json
+    - >-
+      cmp ops/team/diag4-s53-prover/STRUCTURAL_SCAN.json
+      /tmp/diag4-s53-STRUCTURAL_SCAN.replay.json
+    - >-
+      PYTHONDONTWRITEBYTECODE=1 python
+      ops/team/diag4-s53-prover/verify_structural_scan.py
+    - sha256sum -c ops/team/diag4-s53-prover/MANIFEST.sha256
+  result: >-
+    Generator replay is byte-identical; independent verifier exits 0 and
+    reports complete-null with survivors unchanged at 800,240 / 53.
+source_accounting:
+  used:
+    - ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE.md@eb885164
+    - ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/WORK_ORDERS.yaml@eb885164
+    - ops/team/diag4-s53-referee/OPENING_REVIEW.md@eb885164
+    - ops/team/diag4-s53-referee/OPENING_HANDOFF.yaml@eb885164
+    - ops/team/diag4-top-sheaf-prover/PROOF.md@aa784af9
+    - ops/team/diag4-top-sheaf-prover/RESULT.yaml@aa784af9
+    - ops/team/diag4-top-sheaf-prover/verify_four_block_line_sieve.py@aa784af9
+    - ops/team/diag4-top-sheaf-falsifier/FINDINGS.md@aa784af9
+    - ops/team/diag4-top-sheaf-falsifier/RESULT.yaml@aa784af9
+    - ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py@aa784af9
+    - ai/omreal/data/seeat_parent2599_shatter8.npz@aa784af9
+  unused_or_missing: >-
+    No exact signed top-component differential or compatible full-piece
+    compactification exists for the 53-orbit class.
+open_defects:
+  - D4-S53 whole-piece H_c^3 remains uncomputed on every survivor orbit.
+  - Signed orientation holonomy and split--remerge incidence remain unresolved.
+  - Any row-2599 subset class would still require inclusion into the full closed piece.
+next_action: >-
+  Compute an exact signed orientation-holonomy/top-component differential on
+  a compatible compactification of an actual full closed survivor piece,
+  beginning with row 2599, and check the full-piece inclusion map.
+nonconsequences:
+  - D4-S53 and D4-SP remain open.
+  - The complete 53-orbit survivor class is unchanged.
+  - Multi-piece, adjacent-degree, compactification, restriction-map, and diagonal-four obligations remain open.
+ledger_change_recommended: none
+closing_strategy_recommendation: PIVOT
+publication_authorization: >-
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository reuellee/finite-certificates;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head. The user also authorizes durable recovery
+  checkpoints only in the Google Drive Projects/research-backups area. This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute gh. Workers may commit and push only their assigned branches;
+  they may not merge or change the theorem ledger.

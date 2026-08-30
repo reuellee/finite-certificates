@@ -19,15 +19,14 @@ CYCLES_ROOT = TEAM_ROOT / "cycles"
 FIRST_GOVERNED_CYCLE = "2026-08-29-"
 
 AUTHORIZATION_PHRASES = (
-    "public GitHub repository reuellee/finite-certificates",
+    "public GitHub repository `reuellee/finite-certificates`",
     "run or rerun CI",
     "merge only after required checks pass",
-    "Projects/research-backups",
+    "`Projects/research-backups`",
     "does not permit publishing secrets",
     "paid external compute or paid APIs",
     "force-pushing",
-    "do not substitute gh",
-    "they may not merge or change the theorem ledger",
+    "do not substitute `gh`",
 )
 
 CYCLE_PHRASES = (
@@ -43,15 +42,17 @@ CYCLE_PHRASES = (
     "Resource / information",
     "Stagnation risk",
     "## Bounded target",
-    "D4-SP",
-    "1,715,980",
     "## Obligation graph",
+    "## Canonical input accounting",
+    "## Concurrency and non-overlap",
+    "## Roles",
     "## Resource ceiling",
     "## Publication authority",
     "## Closing requirements",
     "CONTINUE",
     "PIVOT",
     "RETIRE",
+    "STOP",
 )
 
 WORK_ORDER_PHRASES = (
@@ -66,6 +67,7 @@ WORK_ORDER_PHRASES = (
     "resource_ceiling:",
     "stop_rule:",
     "prohibited_scope:",
+    "worker_restrictions:",
 )
 
 
@@ -73,6 +75,39 @@ def require_phrases(text: str, phrases: tuple[str, ...], label: str) -> None:
     missing = [phrase for phrase in phrases if phrase not in text]
     if missing:
         raise AssertionError(f"{label}: missing required phrases {missing}")
+
+
+def protocol_authorization(text: str) -> str:
+    marker = "The standing publication authorization to copy verbatim"
+    marker_index = text.find(marker)
+    if marker_index < 0:
+        raise AssertionError("PROTOCOL.md: missing standing authorization marker")
+    lines = text[marker_index:].splitlines()
+    quoted: list[str] = []
+    for line in lines:
+        if line.startswith("> "):
+            quoted.append(line[2:])
+        elif quoted:
+            break
+    if not quoted:
+        raise AssertionError("PROTOCOL.md: missing standing authorization quote")
+    return "\n".join(quoted)
+
+
+def work_order_authorization(text: str, label: str) -> str:
+    marker = "publication_authorization: &publication_authorization |\n"
+    if marker not in text:
+        raise AssertionError(f"{label}: missing publication authorization anchor")
+    block = text.split(marker, 1)[1]
+    quoted: list[str] = []
+    for line in block.splitlines():
+        if line.startswith("  "):
+            quoted.append(line[2:])
+        else:
+            break
+    if not quoted:
+        raise AssertionError(f"{label}: empty publication authorization anchor")
+    return "\n".join(quoted)
 
 
 def audit_cycle(cycle_dir: Path) -> tuple[int, int]:
@@ -88,6 +123,14 @@ def audit_cycle(cycle_dir: Path) -> tuple[int, int]:
     require_phrases(cycle_text, CYCLE_PHRASES, cycle_dir.name)
     require_phrases(work_orders_text, WORK_ORDER_PHRASES, cycle_dir.name)
     require_phrases(work_orders_text, AUTHORIZATION_PHRASES, cycle_dir.name)
+    expected_authorization = protocol_authorization(
+        (TEAM_ROOT / "PROTOCOL.md").read_text(encoding="utf-8")
+    )
+    actual_authorization = work_order_authorization(work_orders_text, cycle_dir.name)
+    if actual_authorization != expected_authorization:
+        raise AssertionError(
+            f"{cycle_dir.name}: standing publication authorization is not verbatim"
+        )
 
     base_match = re.search(r"^base_revision:\s*([0-9a-f]{40})$", work_orders_text, re.M)
     if base_match is None:

@@ -5,18 +5,21 @@ opening_ledger: 2/9
 
 publication_authorization: &publication_authorization |
   The user explicitly authorizes this 9DVL cycle to publish research code and
-  artifacts to the public GitHub repository reuellee/finite-certificates;
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
   create and update named research branches and pull requests; push commits;
   run or rerun CI; and merge only after required checks pass at the exact
-  independently reviewed head. The user also authorizes durable recovery
-  checkpoints only in the Google Drive Projects/research-backups area. This
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
   authorization does not permit publishing secrets or private unrelated files,
   modifying any other repository, using paid external compute or paid APIs,
   changing repository visibility or settings, force-pushing, deleting history
   or data, or taking other irreversible actions without separate approval.
   Use the authenticated GitHub connector for GitHub publication operations;
-  do not substitute gh. Workers may commit and push only their assigned branches;
-  they may not merge or change the theorem ledger.
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Workers may prepare and push their assigned branches when the work order says
+  so, but they may not merge or update the theorem ledger.
 
 strategy_gate:
   opening_verdict: MODIFY_THEN_CONTINUE
