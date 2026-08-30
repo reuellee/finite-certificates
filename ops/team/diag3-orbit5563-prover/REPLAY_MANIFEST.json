@@ -1,0 +1,66 @@
+{
+  "artifact_sha256": {
+    "CANARIES.json": "09c30f020819d02caa21b543e9e2c8e3f79428a68c3647c96fc403dd22a7d529",
+    "PROOF_NOTE.md": "ed3853cd4f0d78cc85801c6978dd9c7e37fd545f2fcdb3a0faef294153bdbdf1",
+    "TRANSPORT_CONTRACT.json": "099ad1e0518854bed8477fac92731482569c95eb89be4e65090b3972a5a9728b",
+    "TYPE_FRAME_S8_QUOTIENT_MANIFEST.json": "95f7d5f362a4af3445ca4f6cffbf8b5b2d812aad45ffd5cc655af9ea1216685b",
+    "verify_diag3_orbit5563_prover.py": "a564fce15b42b6e6feca75a6f96b6a0ae7eb8fafa4414fbf2e7b406d67a4e74f"
+  },
+  "covered_quantifiers": "all 2604 realizable types, all 40320 frames per type, the entire hard-triple S8 torsor modulo the diagonal action, and all interior points for parent-sign, Cramer-chart, and factor-formula relabeling transport",
+  "cycle_id": "2026-08-30-diag3-orbit5563-global-exit",
+  "expected_exit": 0,
+  "expected_summary": {
+    "canaries_passed": 13,
+    "ledger_change": "none",
+    "manifest_semantic_sha256": "8182a82272de1b6a36e0052ad2310aaf2a4d1bccf96c1dbf2210a1c185e4d172",
+    "next_strategy": "PIVOT",
+    "number_of_quotient_classes": 100086840,
+    "parent_type_automorphism_order_histogram": {
+      "1": 2382,
+      "12": 1,
+      "16": 1,
+      "2": 183,
+      "24": 2,
+      "3": 10,
+      "4": 16,
+      "6": 3,
+      "8": 6
+    },
+    "quotient_class_raw_multiplicity_histogram": {
+      "1": 96042240,
+      "12": 3360,
+      "16": 2520,
+      "2": 3689280,
+      "24": 3360,
+      "3": 134400,
+      "4": 161280,
+      "6": 20160,
+      "8": 30240
+    },
+    "raw_frames_per_type": 40320,
+    "realizable_unlabelled_types": 2604,
+    "row_count_after": 1162302,
+    "selected_orbit_size": 40320,
+    "selected_stabilizer_order": 1,
+    "sum_of_raw_multiplicities": 104993280,
+    "topology_computation": "NOT_RUN",
+    "transport_semantic_sha256": "60f686ff659093c3d4f46e8bd01de99cff6bcef2201a7da789f42d780afdebd9"
+  },
+  "pinned_source_sha256": {
+    "ai/omgamma/canon.py": "17ca82b8bf34b0d0c9e5b5c52111ee44d16461c636682cd17762d9eb2e99aa7e",
+    "ai/omgamma/core.py": "6f0d256025c0b465231ca413c62752b63d06af85be7bba628f4e72e6e0a98dcc",
+    "ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md": "0a372197a49f4a767c06b23a6df830ef2784e7fe653b4b3eb1a506eec0518e27",
+    "ai/omreal/DIAG3_TRIPLE_FACTOR_REDUCTION.md": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+    "ai/omreal/PARENT_CONTRACTIBILITY_AUDIT.md": "d0fde0f211db71228a48af3c928a213181bab4bb29c25a57d2ed7417f49de226",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json": "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692",
+    "ops/team/clipped-wall-falsifier/RESULT.yaml": "8ceb928968875e314b38f0457eda99e1e51a557e675cd7beaf20798f7ae5957f",
+    "ops/team/clipped-wall-prover/RESULT.yaml": "8f33a354f55e141aa53fe9253537c7caac385accf29c890865747de8982d1352"
+  },
+  "replay_command": "PYTHONDONTWRITEBYTECODE=1 python3 ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py",
+  "schema": "diag3-orbit5563-prover-replay-manifest-v1",
+  "semantic_sha256": "acf41091985ce4aa60d58933e484775fcfd51a33b3e1fc210185b9fa8bf85f5e",
+  "terminal_classification": "null",
+  "track_id": "diag3-orbit5563-prover",
+  "uncovered_quantifiers": "all required closure strata and their residual-triple transition/attachment maps over every type and frame"
+}

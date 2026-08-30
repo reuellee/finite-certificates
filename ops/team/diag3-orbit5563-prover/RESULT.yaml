@@ -1,0 +1,131 @@
+track_id: diag3-orbit5563-prover
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+role: prover
+base_revision: bf6050ddc16e01dbff6da07d3d8c3ec31a9ab52f
+base_tree: 4213fdb2adf5722d1b8a6b70aba4507e959fba6d
+published_base_revision: 9e578f6e9d094b3342ca474f0d188428dd44ae7a
+outcome: inconclusive
+terminal_classification: "null"
+summary: >-
+  The exact type/frame/diagonal-S8 quotient is complete with 2,604 types,
+  40,320 raw frames per type, 100,086,840 parent-automorphism quotient
+  classes, and raw multiplicity sum 104,993,280. The selected triple's
+  stabilizer is trivial, while projected parent automorphism orders range from
+  1 to 24 and supply the non-singleton raw multiplicities. Interior sign,
+  Cramer-chart, and factor-formula relabeling transport hold at every point,
+  but the complete all-parent closure-stratum transport and true-infinity
+  attachment atlas is missing, so the first gate stops at null before topology.
+
+first_gate:
+  deadline: 30 minutes wall-clock
+  deadline_met: true
+  layer_1_quotient_manifest: PASS_COMPLETE_EXACT
+  layer_2_fullspace_transport: FAIL_CLOSED_MISSING_CLOSURE_STRATA
+  topology_started: false
+  stop_rule_applied: COMPLETE_MANIFEST_MISSING_TRANSPORT_IS_NULL
+
+artifacts:
+  - path: ops/team/diag3-orbit5563-prover/TYPE_FRAME_S8_QUOTIENT_MANIFEST.json
+    digest: 95f7d5f362a4af3445ca4f6cffbf8b5b2d812aad45ffd5cc655af9ea1216685b
+    semantic_digest: 8182a82272de1b6a36e0052ad2310aaf2a4d1bccf96c1dbf2210a1c185e4d172
+  - path: ops/team/diag3-orbit5563-prover/TRANSPORT_CONTRACT.json
+    digest: 099ad1e0518854bed8477fac92731482569c95eb89be4e65090b3972a5a9728b
+    semantic_digest: 60f686ff659093c3d4f46e8bd01de99cff6bcef2201a7da789f42d780afdebd9
+  - path: ops/team/diag3-orbit5563-prover/CANARIES.json
+    digest: 09c30f020819d02caa21b543e9e2c8e3f79428a68c3647c96fc403dd22a7d529
+  - path: ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py
+    digest: a564fce15b42b6e6feca75a6f96b6a0ae7eb8fafa4414fbf2e7b406d67a4e74f
+  - path: ops/team/diag3-orbit5563-prover/PROOF_NOTE.md
+    digest: ed3853cd4f0d78cc85801c6978dd9c7e37fd545f2fcdb3a0faef294153bdbdf1
+  - path: ops/team/diag3-orbit5563-prover/REPLAY_MANIFEST.json
+    digest: 150684b4190130b26e556858d6cf4bb55619167e48b2bc766b97a228c2265236
+
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python3
+    ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py
+  result: >-
+    exit 0; exact 100,086,840 quotient classes whose raw multiplicities sum
+    to 2,604*40,320=104,993,280; projected parent-automorphism histogram
+    1:2382, 2:183, 3:10, 4:16, 6:3, 8:6, 12:1, 16:1, 24:2; selected-triple
+    stabilizer identity and orbit size 40,320; exhaustive unique diagonal
+    gauge slice; interior sign/chart/factor transport for all points and
+    frames; terminal closure-transport null; 13/13 positive, null, negative,
+    and hostile canaries; no topology, count, or ledger promotion.
+
+coverage:
+  included: >-
+    Every one of the 2,604 realizable unlabelled UOM(4,8) types; every one of
+    the 40,320 lexicographic parent frames per type; the complete S8 orbit of
+    authenticated presentation (5563,16134,19284) modulo the exact free
+    diagonal action; all 100,086,840 quotient classes and all 104,993,280 raw
+    frame representatives counted with exact parent-automorphism
+    multiplicity; and, for every interior point of every complete open
+    normalized realization space, fixed parent-bracket signs, exact Cramer-
+    frame charts, and equivariant residual-factor relabeling formulas.
+  excluded: >-
+    The union over every type and frame of every required closure stratum and
+    residual-triple transition/attachment in Xbar_(T,f) minus X_(T,f),
+    including parent-wall, chart-divisor, coordinate, rank-drop, extra-factor,
+    simultaneous-wall, and true-infinity points. No stored representative
+    matrix or local box is promoted to cover any member of this union.
+  quotient_classes_covered: 100086840
+  quotient_classes_uncovered: 0
+  raw_frame_presentations_covered: 104993280
+  raw_frame_presentations_uncovered: 0
+  closure_strata_globally_covered: 0
+  closure_strata_exact_census_available: false
+
+canaries:
+  positive: >-
+    The exact reconstructed manifest and hard-triple torsor accept; the
+    complete manifest with honest terminal-null transport accepts.
+  negative: >-
+    The two pinned clipped-wall results continue to reject the macrobox-20
+    [3468]=0 attachment; compact-component claims are blocked before topology.
+  null: >-
+    Complete 104,993,280 manifest plus the empty closure-attachment artifact
+    list deterministically classifies as null, not timeout.
+  hostile: >-
+    A resealed missing-raw-multiplicity mutation, forced singleton parent
+    automorphism, resealed nontrivial hard-triple-stabilizer claim,
+    representative-matrix promotion, closure PASS without attachments,
+    artificial-boundary infinity tag, omitted component, unsound edge,
+    positive-exit claim, and compact-component claim all reject.
+
+source_accounting:
+  used: >-
+    Signed opening GO at local bf6050dd... / published 9e578f6e... with tree
+    4213fdb2...; catalog c55e805d...; factor reduction 805ed958...; parent
+    contractibility audit d0fde0f2...; global-exit criterion 0a372197...;
+    fullspace feasibility gate 8ad62abd...; clipped-wall prover 8f33a354...;
+    clipped-wall falsifier 8ceb9289...; and exact chirotope canonicalizer/core
+    17ca82b8... / 6f0d2560.... All are pinned and replayed.
+  unused_or_missing: >-
+    Missing by construction: one complete all-parent closure-stratum
+    transport and attachment atlas. No external source, numerical solver,
+    paid compute, old local-roadmap producer, collar, clipped-wall producer,
+    or macrobox continuation was used.
+
+open_defects:
+  - >-
+    Supply all_parent_closure_stratum_transport_and_attachment_atlas: for every
+    type and frame, a complete exact stratified Hausdorff compactification,
+    closure-chart cover, S8-equivariant transition maps, and sound attachment
+    classification for every required boundary and true-infinity stratum.
+
+nonconsequences:
+  row_removal: false
+  compact_component: false
+  component_partition: false
+  true_infinity_coverage: false
+  unresolved_before: 1162302
+  unresolved_after: 1162302
+  theorem_ledger_before: "2/9"
+  theorem_ledger_after: "2/9"
+
+next_action: >-
+  Mandatory PIVOT to a newly bounded target. Do not run another local box,
+  collar, clipped-wall, macrobox, or related continuation cycle for this
+  residue.
+ledger_change_recommended: none

@@ -1,0 +1,70 @@
+{
+  "fixtures": [
+    {
+      "class": "positive",
+      "expected": "ACCEPT_COMPLETE_QUOTIENT",
+      "id": "complete_manifest"
+    },
+    {
+      "class": "null",
+      "expected": "ACCEPT_TERMINAL_NULL",
+      "id": "complete_manifest_missing_transport"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "raw multiplicity sum changed",
+      "id": "drop_one_raw_multiplicity_resealed"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "parent automorphism reconciliation changed",
+      "id": "force_parent_automorphism_identity_resealed"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "hard presentation stabilizer claim changed",
+      "id": "claim_nontrivial_hard_stabilizer_resealed"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "representative-matrix promotion prohibited",
+      "id": "promote_representative_matrix_resealed"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "closure transport cannot pass without attachment artifacts",
+      "id": "close_transport_without_attachment_resealed"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "artificial scope boundary is not true parent infinity",
+      "id": "artificial_scope_boundary_as_infinity"
+    },
+    {
+      "class": "negative",
+      "expected": "ACCEPT_PINNED_FALSE_ATTACHMENT",
+      "id": "macrobox20_attachment_false"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "topology prohibited at terminal first-gate null",
+      "id": "omitted_component"
+    },
+    {
+      "class": "hostile",
+      "expected_error": "topology prohibited at terminal first-gate null",
+      "id": "unsound_edge"
+    },
+    {
+      "class": "positive",
+      "expected_error": "topology prohibited at terminal first-gate null",
+      "id": "positive_exit"
+    },
+    {
+      "class": "negative",
+      "expected_error": "topology prohibited at terminal first-gate null",
+      "id": "compact_component"
+    }
+  ],
+  "schema": "diag3-orbit5563-first-gate-canaries-v1"
+}
