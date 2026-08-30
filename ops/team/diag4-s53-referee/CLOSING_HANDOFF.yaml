@@ -1,0 +1,165 @@
+track_id: diag4-s53-referee
+cycle_id: 2026-08-30-diag4-s53-top-sheaf
+phase: frozen_candidate_closing_audit
+role: independent_verifier_referee
+base_revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+opening_revision: eb88516411d54403f7b274624bd2c44918678cab
+outcome: inconclusive
+verdict: PASS_NULL_HANDOFFS
+closing_strategy: PIVOT
+summary: >-
+  Independent replay accepts both discovery outputs as complete null
+  handoffs, not as D4-S53 progress. The complete 800240-support / 53-orbit
+  survivor class is unchanged, D4-S53 is neither proved nor refuted, the
+  ledger remains 2/9, and the frozen stagnation rule therefore mandates
+  PIVOT with no further D4-S53 cycle.
+
+artifact:
+  path: ops/team/diag4-s53-referee/CLOSING_REVIEW.md
+  sha256: 7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c
+
+frozen_handoffs:
+  prover:
+    branch: agent/diag4-s53-prover-20260830
+    local_commit: f232021960689d0b2a6a9e033dfe16939143643d
+    local_tree: aee462000be034249c8c1034101064c69cbcebb8
+    published_commit: a0ae3bee592c92b74856786078152f21638009c8
+    published_tree: aee462000be034249c8c1034101064c69cbcebb8
+    remote_ref_verified: true
+    result_sha256: da15acc442236000ae1b444a2ba6340bc1daca80d0d1c0608de2faf66c9b1815
+    manifest_sha256: aabada3a9567dde5981651683ff4abeb42a968ead86bed1ea7b0bd72f1c5de63
+    classification: inconclusive_complete_null
+  falsifier:
+    branch: agent/diag4-s53-falsifier-20260830
+    local_commit: e4903f5a4193fb73b9e0e75657df9d0741a8bf9e
+    local_tree: f51102eac9b15df26c7eb2c9186a1c44e795859d
+    published_commit: 3428d26ecede8fd708b790b63efc1335fd2fb397
+    published_tree: f51102eac9b15df26c7eb2c9186a1c44e795859d
+    remote_ref_verified: true
+    result_sha256: 3e1c082325a6909b4ad6cccd055eb52cc503600f2f5fa0e41148ab37a8c81168
+    manifest_sha256: 0ce0940098747fb155d3464e77e8ef115ea393813cf1550aed947a4159472e58
+    classification: finite_exact_local_exclusion_with_global_null
+
+domain_reconstruction:
+  semantic_sha256: 16b11cba052b49af777354f256a783b419ec6e246d178de70c238807e50ecc11
+  complete_cover_labeled: 1715980
+  complete_cover_orbits: 130
+  b31_labeled: 915740
+  b31_orbits: 77
+  survivor_labeled: 800240
+  survivor_orbits: 53
+  survivor_size_four_orbits: 4
+  survivor_size_five_orbits: 49
+  claim_level_survivor_delta_labeled: 0
+  claim_level_survivor_delta_orbits: 0
+  result: PASS_UNCHANGED
+
+replay:
+  prover:
+    commands:
+      - >-
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-prover/generate_structural_scan.py --output
+        /tmp/diag4-s53-STRUCTURAL_SCAN.referee.json
+      - >-
+        cmp ops/team/diag4-s53-prover/STRUCTURAL_SCAN.json
+        /tmp/diag4-s53-STRUCTURAL_SCAN.referee.json
+      - >-
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-prover/verify_structural_scan.py
+      - sha256sum -c ops/team/diag4-s53-prover/MANIFEST.sha256
+    result: >-
+      Exit 0; generator byte-identical; independent complete domain
+      1715980/130 = 915740/77 + 800240/53; 4+49 survivors;
+      common-apex-four 0/53; all declared canaries pass; complete-null.
+    verifier_independence: >-
+      No current generator is imported. The checker independently enumerates
+      the full domain and imports only the accepted predecessor checker for
+      the exact signed row-2599 canary.
+  falsifier:
+    commands:
+      - >-
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-falsifier/generate_candidate_domain.py
+      - >-
+        PYTHONDONTWRITEBYTECODE=1 python
+        ops/team/diag4-s53-falsifier/verify_candidate_domain.py
+      - sha256sum -c ops/team/diag4-s53-falsifier/MANIFEST.sha256
+    result: >-
+      Exit 0; generated JSON byte-identical; exact row-2599 tuple and all 70
+      parent polynomials reconstructed; bounded outer enclosure passes;
+      Hc ranks of U=(-1/84,1/84)^4 are [0,0,0,0,1]; all declared canaries
+      pass; whole-domain topology and full-piece inclusion remain UNREACHED.
+    verifier_independence: >-
+      No generator is imported; polynomials, boundedness witnesses, relative
+      cochains, and canaries are independently reconstructed.
+
+canaries:
+  actual_signed_survivor: PASS
+  actual_realizable_family_all_16_patterns: PASS
+  hostile_split_remerge: PASS
+  hostile_separate_convexity: PASS
+  orientation_local_system: PASS
+  abstract_false_positive: PASS
+  sign_mutation: PASS
+  boundary: PASS
+  null_out_of_domain: PASS
+  subset_inclusion_false_positive: PASS
+
+gates:
+  canonical_inputs_and_opening_lock: PASS
+  artifact_and_manifest: PASS
+  deterministic_replay: PASS
+  independent_verification: PASS
+  complete_53_orbit_accounting: PASS
+  exact_nonconsequences: PASS
+  universal_signed_reduction: NOT_ESTABLISHED
+  exact_full_piece_counterexample: NOT_ESTABLISHED
+  claim_level_progress: NONE
+  ledger_change: NONE
+  mandatory_pivot: PASS_REQUIRED
+  protected_repository_checks_at_integrated_head: PENDING_COORDINATOR
+  authenticated_remote_main_at_integration: PENDING_COORDINATOR
+  integration_and_durable_backup: PENDING_COORDINATOR
+
+claim_delta:
+  diag4_s53_top_sheaf_hc3: OPEN_UNCHANGED
+  diag4_cover_all_single_piece_hc3: OPEN_UNCHANGED
+  diag4_hc3: OPEN_UNCHANGED
+  survivor_orbits_before: 53
+  survivor_orbits_after: 53
+  survivor_labeled_before: 800240
+  survivor_labeled_after: 800240
+  ledger_before: "2/9"
+  ledger_after: "2/9"
+  ledger_change_recommended: none
+
+nonconsequences:
+  - No whole closed circuit piece has had H_c^3 computed by this cycle.
+  - No universal signed survivor orbit is removed.
+  - No admissible full-piece counterexample is produced.
+  - D4-S53, D4-SP, diagonal four, all multi-piece terms, adjacent degrees,
+    compactification, sign transport, restriction maps, and fivefold
+    exactness remain open.
+
+actionable_defects: []
+open_mathematical_defects:
+  - Whole-domain wall-adapted topology for an actual survivor is absent.
+  - Signed top-component incidence and orientation holonomy are unresolved.
+  - The attachment and inclusion map into the entire closed piece is absent.
+
+next_action: >-
+  Coordinator must record the mandatory PIVOT, preserve the unchanged 2/9
+  ledger, and start no further D4-S53 cycle. Any later row-2599 revisit must
+  begin with a wall-adapted exact stratification, independent relative
+  cochains, and an explicit full-piece signed attachment/inclusion map.
+
+publication_authorization: >-
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to public GitHub `reuellee/finite-certificates`; create/update
+  named branches and PRs; push commits; run/rerun CI; merge only after required
+  checks pass at exact independently reviewed head. Durable recovery only
+  Drive Projects/research-backups. No secrets/private unrelated files, other
+  repos, paid compute/APIs, settings/visibility, force-push, delete
+  history/data, irreversible actions. Use GitHub connector, not gh. Workers
+  only assigned branches; no merge/ledger.

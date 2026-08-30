@@ -34,10 +34,14 @@ subject to the independent opening referee.
 
 The preceding D4-S53 cycle closed with no theorem-ledger delta and the exact
 survivor class unchanged at `800,240` supports in `53` unsigned orbits. Its
-protocol therefore forbids another D4-S53 cycle. A complete alternating
-diagonal-four Cech total complex would be globally relevant, but no bounded
-cycle currently has the signed compactification, face poset, orientation
-local systems, or restriction matrices needed to state that object.
+independent closing verdict is `PASS_NULL_HANDOFFS` with mandatory `PIVOT`.
+The integrated publication head is `06de9659d5090846afe09c95f1f8549d1d7b2ba5`,
+tree `692d173462497cb645127ea1ced6cbe40aba4d5a`, on PR #43; the complete worker
+and referee identities are frozen below. Its protocol therefore forbids
+another D4-S53 cycle. A complete alternating diagonal-four Cech total complex
+would be globally relevant, but no bounded cycle currently has the signed
+compactification, face poset, orientation local systems, or restriction
+matrices needed to state that object.
 
 Diagonal nine is not theorem-ready: parent 860 has useful factor inventories,
 but no registered proper nine-signature family and no global component
@@ -56,20 +60,31 @@ Let `r=(5563,4373,23221)` be the canonical unresolved row, let
 Construct or refute a complete component-faithful global-exit certificate for
 `O`, quantified over:
 
-1. every realizable `UOM(4,8)` parent realization cell represented by the exact
-   `2,604`-parent catalog;
-2. every compatible labeled transport in `O`, deduplicated under the exact
-   diagonal action;
+1. every point and required closure stratum of the complete normalized parent
+   realization space for each of the exact `2,604` realizable unlabelled
+   `UOM(4,8)` types;
+2. every compatible labeled transport in `O`, starting from the raw census
+   `2,604 * 40,320 = 104,993,280` frame-parent presentations and deduplicated
+   under the exact diagonal action (the selected triple has trivial
+   stabilizer);
 3. every connected component of the complete triple-zero set in each cell;
    and
 4. every singular/rank-drop, coordinate, chart, extra-factor,
    simultaneous-wall, parent-wall, and true-infinity stratum needed for
    component closure.
 
-The mandatory first gate is an exact all-parent/`S_8` quotient manifest plus a
-proved sign/chart transport contract. It must appear before any new local
-roadmap or collar computation. Failure to produce that gate within 30 minutes
-stops discovery and yields a null handoff.
+The `2,604` stored matrices are one exact sign representative per oriented-
+matroid type; they are not finite coverage of the full realization spaces.
+Representative-matrix evaluation can certify the raw sign census but cannot
+certify components, rank-drop strata, closure, or infinity.
+
+The mandatory first gate has two layers: (1) an exact all-type/frame/`S_8`
+quotient manifest whose multiplicities sum to `104,993,280`, and (2) a proved
+sign/chart transport contract that ranges over every point and required
+stratum of each complete normalized realization space. Both must appear before
+any new local roadmap or collar computation. At 30 minutes, an incomplete
+quotient manifest is a **timeout** with a reproducible partial frontier. A
+complete manifest with a missing transport/attachment proof is a **null**.
 
 The cycle stops at the first publication-grade outcome:
 
@@ -81,10 +96,12 @@ The cycle stops at the first publication-grade outcome:
    closure is certified disjoint from true parent infinity; this refutes the
    chosen sufficient route for `r` but does not by itself refute diagonal
    three;
-3. **null:** the exact domain/quotient manifest and a minimal missing global
-   attachment or transport obligation, with no count change; or
-4. **timeout:** a resumable exact frontier manifest at the resource ceiling,
-   with every uncovered quantifier marked fail-closed and no count change.
+3. **null:** the exact complete quotient manifest, including the
+   `104,993,280` multiplicity identity, and a minimal missing global attachment
+   or full-realization-space transport obligation, with no count change; or
+4. **timeout:** an incomplete quotient manifest at the 30-minute gate or a
+   later resumable exact frontier at the resource ceiling, with every uncovered
+   quantifier marked fail-closed and no count change.
 
 Artificial box, collar, chart, or work-scope boundaries are never true parent
 infinity. The exact rejection of the old macrobox-20 `[3468]=0` attachment and
@@ -97,7 +114,8 @@ to be refined.
   `77,940,147`, unresolved `1,162,302`.
 - `diag3_triple_orbit_5563_global_exit`: open; selected bounded edge.
 - factor-action/Burnside registration: exact and pinned, but it does not by
-  itself materialize the all-parent compatible-presentation quotient.
+  itself materialize the all-type/frame compatible-presentation quotient or
+  cover a complete realization space.
 - full-space feasibility and height-critical gates: fail closed; any saturation
   must retain parent-wall, chart-divisor, rank, coordinate, extra-factor, and
   infinity attachments.
@@ -127,14 +145,29 @@ to be refined.
 | `ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json` | SHA-256 `0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27` |
 | `ai/omreal/DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md` | SHA-256 `03615d52efec5a7abf66d8e78aff19deab8b74736f707598daada8d45b9d85dc` |
 | `ai/omreal/verify_diag3_triple_boundary_stratification.py` | SHA-256 `3f4e86d1b802b8bc1d102dd49a0168459bbde5d457afd85da16ab518b499ca1a` |
+| `ai/omreal/verify_diag3_triple_rank_drop_parent_atlas.py` | SHA-256 `33ba14e0027e07877c9f8e7f9e98035645439dd24c2826379a2e50eccd958d3e` |
+| D4-S53 `CYCLE_REPORT.md` | SHA-256 `e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2` |
+| D4-S53 closing review | SHA-256 `7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c` |
+| D4-S53 closing handoff | SHA-256 `ad7bc8a4da4a2be589d62304b100222506d6471bf028c773d0435b1e50102c84` |
 
 ## Concurrency and non-overlap
 
-Canonical `main` is merged PR #42 at the pinned base. The three cycle workers
-receive disjoint branches and own only their named `ops/team/diag3-orbit5563-*`
-surfaces plus expressly declared implementation files. The coordinator alone
-may reconcile branches, integrate a frozen head, or change the theorem ledger.
-If `main` moves, integration stops until exact replay at the new base.
+The D4-S53 predecessor is frozen and nonconcurrent. Its prover, falsifier, and
+closing-referee published commits are respectively
+`a0ae3bee592c92b74856786078152f21638009c8`,
+`3428d26ecede8fd708b790b63efc1335fd2fb397`, and
+`f37bd7d58316453809921f2b968af07627713867`, with trees
+`aee462000be034249c8c1034101064c69cbcebb8`,
+`f51102eac9b15df26c7eb2c9186a1c44e795859d`, and
+`f9094f48e0926599c4367360a47de0b3d4263e5a`. Its integrated publication is PR
+#43 head `06de9659d5090846afe09c95f1f8549d1d7b2ba5`, tree
+`692d173462497cb645127ea1ced6cbe40aba4d5a`; no D4 worker remains active.
+
+The three D3 cycle workers receive disjoint branches and own only their named
+`ops/team/diag3-orbit5563-*` surfaces plus expressly declared implementation
+files. The coordinator alone may reconcile branches, integrate a frozen head,
+or change the theorem ledger. If `main` moves, integration stops until exact
+replay at the new base.
 
 The old local triple-frontier, clipped-wall, macrobox, and collar artifacts are
 inputs and hostile canaries only. No track may relabel one of their artificial

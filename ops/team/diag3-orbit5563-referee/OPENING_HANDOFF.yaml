@@ -1,0 +1,184 @@
+track_id: diag3-orbit5563-referee
+cycle_id: 2026-08-30-diag3-orbit5563-global-exit
+phase: opening_strategy_and_quantifier_audit
+role: independent_verifier_referee
+verdict: MODIFY
+
+frozen_identity:
+  canonical_base_revision: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+  canonical_base_tree: 6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561
+  local_opening_revision: 20ca3c9631fcd50eafc5eb11106f01dd36aee20b
+  local_opening_tree: a8ecae19ec9e851f28fffe51d1bd0d4abc0d759f
+  published_coordinator_revision: 4d59201e84fd588b91a2a858ac4468c18b863544
+  published_coordinator_branch: research/diag3-orbit5563-global-exit-20260830
+  opening_ledger: "2/9"
+
+summary: >-
+  The D3 residue-orbit global-exit target is suitable for one bounded,
+  fail-closed attempt, but discovery must wait for four control-plane repairs:
+  pin the unmerged D4-S53 closing evidence on which the pivot depends; make
+  null versus timeout consistent at the 30-minute first gate; copy the
+  standing publication authorization verbatim and enforce it; and distinguish
+  the 2,604 oriented-matroid types and representative matrices from complete
+  realization-space coverage.
+
+replay:
+  cycle_protocol:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ops/research-team/verify_cycle_protocol.py
+    result: PASS_PHRASE_LEVEL_ONLY
+  factor_orbits:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ai/omreal/verify_diag3_triple_factor_orbits.py
+    result: PASS
+    factor_orbits: 6
+    pair_orbits: 9476
+    triple_orbits: 79102449
+    semantic_sha256: 9dc473537e87e509031d4843d960f5ea4bfefb8508262cd1ebb5d44e1a49913d
+  global_exit:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ai/omreal/verify_diag3_global_exit_criterion.py
+    result: PASS_ONE_WAY_SUFFICIENT
+    rejection_interpretation: INCONCLUSIVE
+  fullspace_feasibility:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ai/omreal/verify_diag3_triple_fullspace_feasibility_gate.py
+    replay_result: PASS
+    gate_result: FAIL_CLOSED
+    semantic_sha256: 874c4895ae17843c6827c1c3a8d528eac0b45fc35dedc9159e4f447786ed2ace
+  completion_object:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ai/omreal/verify_diag3_completion_open_object.py
+    result: PASS
+    universe: 79102449
+    proved_noncompact: 77940147
+    unresolved: 1162302
+  decision_ledger:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ai/omreal/verify_diag3_research_decision_ledger.py
+    result: PASS
+  parent_frame_atlas:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ai/omreal/verify_diag3_triple_rank_drop_parent_atlas.py
+    result: PASS
+    realizable_unlabelled_types: 2604
+    frames: 40320
+    raw_frame_parent_presentations: 104993280
+    hard_triple_stabilizer: identity
+    sign_certified_subatlas: 17105952
+    sign_certified_subatlas_is_global_component_coverage: false
+  boundary_stratification:
+    command: PYTHONDONTWRITEBYTECODE=1 python3 ai/omreal/verify_diag3_triple_boundary_stratification.py
+    result: PASS_AT_DECLARED_SCOPE
+    global_closure_claimed: false
+  raw_digest_audit:
+    result: PASS_ALL_PATH_VALUED_CANONICAL_INPUTS
+
+strategy:
+  selected_target: diag3_triple_orbit_5563_global_exit
+  target_after_modification: APPROPRIATE_ONCE
+  d4_s53: RETIRE_AS_NEXT_TARGET_AFTER_PINNED_ZERO_DELTA_CLOSE
+  diagonal_8: RETIRE_AS_NEXT_TARGET_NO_GLOBAL_TWO_CHAIN_OR_INFINITY
+  diagonal_9: RETIRE_AS_NEXT_TARGET_NO_FULL_PARENT_ROADMAP_OR_REGISTERED_FAMILY
+  mandatory_close: >-
+    If there is neither an exact row removal nor an exact compact component,
+    pivot and prohibit another local box/collar/macrobox/clipped-wall cycle for
+    this residue.
+
+observed_prior_cycle_checkpoint:
+  cycle_id: 2026-08-30-diag4-s53-top-sheaf
+  integrated_into_canonical_main: false
+  coordinator:
+    branch: research/diag4-s53-cycle-20260830
+    local_commit: eb88516411d54403f7b274624bd2c44918678cab
+    local_tree: c7a7422783b71d13bbd3446d9c555fdb3dbaf680
+    published_commit: 1a3486a256e5a2e3ad7f2aed1953d3d1107f7cbf
+  prover:
+    branch: agent/diag4-s53-prover-20260830
+    local_commit: f232021960689d0b2a6a9e033dfe16939143643d
+    local_tree: aee462000be034249c8c1034101064c69cbcebb8
+    published_commit: a0ae3bee592c92b74856786078152f21638009c8
+    published_tree: aee462000be034249c8c1034101064c69cbcebb8
+  falsifier:
+    branch: agent/diag4-s53-falsifier-20260830
+    local_commit: e4903f5a4193fb73b9e0e75657df9d0741a8bf9e
+    local_tree: f51102eac9b15df26c7eb2c9186a1c44e795859d
+    published_commit: 3428d26ecede8fd708b790b63efc1335fd2fb397
+    published_tree: f51102eac9b15df26c7eb2c9186a1c44e795859d
+  closing_referee:
+    branch: agent/diag4-s53-referee-20260830
+    local_commit: 516f0d964c42e9eea93b8cb02a66d860db64e51e
+    local_tree: f9094f48e0926599c4367360a47de0b3d4263e5a
+    published_commit: f37bd7d58316453809921f2b968af07627713867
+    published_tree: f9094f48e0926599c4367360a47de0b3d4263e5a
+    closing_review_sha256: 7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c
+    closing_handoff_sha256: ad7bc8a4da4a2be589d62304b100222506d6471bf028c773d0435b1e50102c84
+    closing_strategy: PIVOT
+
+domain_contract:
+  canonical_row: [5563, 4373, 23221]
+  named_presentation: [5563, 16134, 19284]
+  unresolved_before: 1162302
+  positive_unresolved_after: 1162301
+  parent_type_count: 2604
+  raw_frame_parent_count: 104993280
+  selected_triple_stabilizer_order: 1
+  representative_matrix_is_full_cell_coverage: false
+  required_full_domain: >-
+    Every point and required closure stratum in every complete normalized
+    realization space for all 2,604 realizable types, with every compatible
+    labelled S8 transport deduplicated under the exact diagonal action.
+
+blocking_modifications:
+  - id: PIN_D4_S53_CLOSE
+    action: >-
+      Add exact D4-S53 control-plane, prover, falsifier, and closing-referee
+      local/published commit and tree identities, closing artifact digests,
+      and integration/concurrency state to the D3 canonical accounting.
+    known_closing_review_sha256: 7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c
+    known_closing_handoff_sha256: ad7bc8a4da4a2be589d62304b100222506d6471bf028c773d0435b1e50102c84
+  - id: SEPARATE_GATE_NULL_TIMEOUT
+    action: >-
+      Classify a complete quotient manifest with missing transport or
+      attachment proof as null; classify an incomplete manifest at 30 minutes
+      as timeout with an exact partial frontier. Apply consistently to the
+      cycle and both discovery work orders.
+  - id: VERBATIM_PUBLICATION_AUTHORIZATION
+    action: >-
+      Replace the YAML anchor with the exact standing authorization, move the
+      worker restriction to a separate field, and strengthen the verifier
+      beyond phrase presence.
+  - id: LOCK_PARENT_SPACE_GUARD
+    action: >-
+      Require 2,604-type versus complete-realization-space wording, the
+      104,993,280 raw sanity census, exact quotient multiplicities, and an
+      explicit ban on promoting representative-point evaluation to component
+      coverage.
+
+gates:
+  canonical_base_and_tree: PASS
+  canonical_d3_ledger_and_residue: PASS
+  target_row_and_named_transport: PASS
+  target_selection: PASS_AFTER_D4_CLOSE_IS_PINNED
+  global_exit_acceptance_kernel: PASS
+  fullspace_fail_closed_guard: PASS
+  component_stratum_infinity_quantifiers: PASS_WITH_PARENT_SPACE_GUARD
+  first_gate_outcome_contract: BLOCK
+  prior_cycle_concurrency_accounting: BLOCK
+  verbatim_publication_authorization: BLOCK
+  resource_ceiling: PASS
+  stagnation_rule: PASS
+  discovery_may_start: false
+  ledger_change: NONE
+
+next_action: >-
+  Coordinator applies the four bounded control-plane corrections, publishes
+  an exact corrected commit/tree, and requests opening rereview before
+  launching prover or falsifier discovery.
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.

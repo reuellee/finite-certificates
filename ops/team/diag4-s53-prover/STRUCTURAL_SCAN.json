@@ -1,0 +1,3457 @@
+{
+  "canonical_base": "aa784af939b55d3503e4782a9d65a9b06cf81ce0",
+  "canonical_survivor_semantic_sha256": "16b11cba052b49af777354f256a783b419ec6e246d178de70c238807e50ecc11",
+  "scan_semantic_sha256": "adaeb16200a496086f5aafbf8748c64908d04d270d4132fd8049fd924460226f",
+  "schema": "diag4-s53-structural-null-v1",
+  "summary": {
+    "b31_labeled": 915740,
+    "b31_orbits": 77,
+    "canonical_cover_labeled": 1715980,
+    "canonical_cover_orbits": 130,
+    "common_apex_four_orbits": 0,
+    "fixed_apex_four_orbits": 32,
+    "plane_two_pencils_orbits": 53,
+    "survivor_labeled": 800240,
+    "survivor_orbits": 53,
+    "survivor_size_five_orbits": 49,
+    "survivor_size_four_orbits": 4
+  },
+  "survivors": [
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        28,
+        28,
+        5,
+        10,
+        16,
+        2,
+        1
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 3,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 8,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 6,
+          "2+2": 2
+        }
+      },
+      "size": 5,
+      "support": "148/157/234/235/236"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        28,
+        28,
+        5,
+        9,
+        16,
+        2,
+        2
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 1,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 2,
+        "fixed_apex_four_profiles": {
+          "2+2": 2
+        }
+      },
+      "size": 5,
+      "support": "145/178/234/235/236"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        10,
+        20,
+        20,
+        8,
+        2,
+        1
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 18,
+        "degree_one_plane_two_pencils_choices": 22,
+        "fixed_apex_four_assignments": 16,
+        "fixed_apex_four_profiles": {
+          "1+1+1+1": 4,
+          "2+1+1": 12
+        }
+      },
+      "size": 5,
+      "support": "128/137/145/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        10,
+        20,
+        16,
+        12,
+        2,
+        1
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 3,
+        "degree_one_plane_two_pencils_choices": 22,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "128/137/146/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        11,
+        20,
+        16,
+        12,
+        1,
+        2
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 3,
+        "degree_one_plane_two_pencils_choices": 23,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "137/138/146/236/245"
+    },
+    {
+      "degree_sequence": "11112222",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        5,
+        10,
+        8,
+        4,
+        2,
+        1
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 12,
+        "degree_one_plane_two_pencils_choices": 40,
+        "fixed_apex_four_assignments": 16,
+        "fixed_apex_four_profiles": {
+          "1+1+1+1": 2,
+          "2+1+1": 12,
+          "2+2": 2
+        }
+      },
+      "size": 4,
+      "support": "138/147/236/245"
+    },
+    {
+      "degree_sequence": "11112333",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        11,
+        20,
+        16,
+        8,
+        4,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 12,
+        "degree_one_plane_two_pencils_choices": 18,
+        "fixed_apex_four_assignments": 16,
+        "fixed_apex_four_profiles": {
+          "1+1+1+1": 2,
+          "2+1+1": 12,
+          "2+2": 2
+        }
+      },
+      "size": 5,
+      "support": "123/138/147/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        10,
+        20,
+        17,
+        8,
+        4,
+        2
+      ],
+      "orbit_size": 40320,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 9,
+        "degree_one_plane_two_pencils_choices": 18,
+        "fixed_apex_four_assignments": 8,
+        "fixed_apex_four_profiles": {
+          "1+1+1+1": 1,
+          "2+1+1": 6,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "125/138/147/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        11,
+        20,
+        17,
+        8,
+        4,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 3,
+        "degree_one_plane_two_pencils_choices": 22,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "135/138/147/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        11,
+        20,
+        16,
+        9,
+        4,
+        2
+      ],
+      "orbit_size": 40320,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 9,
+        "degree_one_plane_two_pencils_choices": 19,
+        "fixed_apex_four_assignments": 8,
+        "fixed_apex_four_profiles": {
+          "1+1+1+1": 1,
+          "2+1+1": 6,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "136/138/147/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        20,
+        12,
+        2,
+        1
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 0,
+        "degree_one_plane_two_pencils_choices": 20,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "138/147/156/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        20,
+        8,
+        6,
+        1
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 2,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "138/147/157/236/245"
+    },
+    {
+      "degree_sequence": "11112222",
+      "dominance": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        4,
+        9,
+        10,
+        4,
+        2,
+        1
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 8,
+        "degree_one_plane_two_pencils_choices": 40,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 3,
+          "2+2": 1
+        }
+      },
+      "size": 4,
+      "support": "148/157/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        9,
+        18,
+        20,
+        8,
+        4,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 7,
+        "degree_one_plane_two_pencils_choices": 18,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 3,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "123/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11112333",
+      "dominance": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        8,
+        19,
+        20,
+        8,
+        4,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 8,
+        "degree_one_plane_two_pencils_choices": 15,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 3,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "124/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        8,
+        18,
+        20,
+        8,
+        5,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 5,
+        "degree_one_plane_two_pencils_choices": 18,
+        "fixed_apex_four_assignments": 2,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 1,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "127/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        19,
+        20,
+        8,
+        4,
+        2
+      ],
+      "orbit_size": 40320,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 3,
+        "degree_one_plane_two_pencils_choices": 19,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "134/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        20,
+        9,
+        4,
+        2
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 6,
+        "degree_one_plane_two_pencils_choices": 20,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "136/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        20,
+        8,
+        5,
+        2
+      ],
+      "orbit_size": 40320,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 2,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "137/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11112333",
+      "dominance": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        8,
+        19,
+        21,
+        8,
+        4,
+        2
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 8,
+        "degree_one_plane_two_pencils_choices": 14,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 3,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "145/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        8,
+        19,
+        20,
+        8,
+        5,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 5,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 2,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 1,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "147/148/157/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        11,
+        17,
+        18,
+        8,
+        4,
+        4
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 1,
+        "degree_one_plane_two_pencils_choices": 18,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "134/135/178/236/245"
+    },
+    {
+      "degree_sequence": "11112222",
+      "dominance": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        5,
+        8,
+        8,
+        5,
+        2,
+        2
+      ],
+      "orbit_size": 2520,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 24,
+        "degree_one_plane_two_pencils_choices": 40,
+        "fixed_apex_four_assignments": 17,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 16,
+          "2+2": 1
+        }
+      },
+      "size": 4,
+      "support": "136/178/236/245"
+    },
+    {
+      "degree_sequence": "11112333",
+      "dominance": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        11,
+        16,
+        16,
+        10,
+        4,
+        4
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 12,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 9,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 8,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "123/136/178/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        25,
+        10,
+        17,
+        16,
+        10,
+        4,
+        4
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 18,
+        "degree_one_plane_two_pencils_choices": 18,
+        "fixed_apex_four_assignments": 15,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 14,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "124/136/178/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        11,
+        17,
+        16,
+        10,
+        4,
+        4
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 5,
+        "degree_one_plane_two_pencils_choices": 15,
+        "fixed_apex_four_assignments": 2,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 2
+        }
+      },
+      "size": 5,
+      "support": "134/136/178/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        11,
+        17,
+        16,
+        8,
+        6,
+        4
+      ],
+      "orbit_size": 40320,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 7,
+        "degree_one_plane_two_pencils_choices": 15,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 3,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "134/137/178/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        11,
+        16,
+        16,
+        9,
+        6,
+        4
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 9,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 8,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 7,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "136/137/178/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        18,
+        9,
+        4,
+        4
+      ],
+      "orbit_size": 2520,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 12,
+        "degree_one_plane_two_pencils_choices": 20,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 4
+        }
+      },
+      "size": 5,
+      "support": "136/145/178/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        18,
+        8,
+        5,
+        4
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 9,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 4
+        }
+      },
+      "size": 5,
+      "support": "137/145/178/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        17,
+        10,
+        4,
+        4
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 0,
+        "degree_one_plane_two_pencils_choices": 20,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "135/146/178/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        16,
+        10,
+        5,
+        4
+      ],
+      "orbit_size": 40320,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 1,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "137/146/178/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        9,
+        18,
+        16,
+        8,
+        6,
+        5
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 6,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 3,
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "138/147/178/236/245"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        7,
+        24,
+        8,
+        17,
+        18,
+        8,
+        6,
+        5
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 2,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 1,
+        "fixed_apex_four_profiles": {
+          "2+2": 1
+        }
+      },
+      "size": 5,
+      "support": "148/157/178/236/245"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        25,
+        26,
+        4,
+        2,
+        1
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 3,
+        "degree_one_plane_two_pencils_choices": 15,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "148/157/236/245/345"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        13,
+        20,
+        24,
+        24,
+        6,
+        2,
+        1
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 6,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "128/167/236/245/345"
+    },
+    {
+      "degree_sequence": "11112222",
+      "dominance": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        1,
+        6,
+        10,
+        12,
+        12,
+        2,
+        1,
+        1
+      ],
+      "orbit_size": 1680,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 19,
+        "degree_one_plane_two_pencils_choices": 40,
+        "fixed_apex_four_assignments": 12,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 12
+        }
+      },
+      "size": 4,
+      "support": "178/236/245/345"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        13,
+        21,
+        24,
+        24,
+        4,
+        2,
+        2
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 12,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 4
+        }
+      },
+      "size": 5,
+      "support": "123/178/236/245/345"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        13,
+        20,
+        25,
+        24,
+        4,
+        2,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 5,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 2,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 2
+        }
+      },
+      "size": 5,
+      "support": "124/178/236/245/345"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        13,
+        20,
+        24,
+        24,
+        5,
+        2,
+        2
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 6,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 2,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 2
+        }
+      },
+      "size": 5,
+      "support": "126/178/236/245/345"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        13,
+        20,
+        24,
+        24,
+        4,
+        3,
+        2
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 13,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 8,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 8
+        }
+      },
+      "size": 5,
+      "support": "127/178/236/245/345"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        25,
+        25,
+        4,
+        2,
+        2
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 1,
+        "degree_one_plane_two_pencils_choices": 9,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 4
+        }
+      },
+      "size": 5,
+      "support": "145/178/236/245/345"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        25,
+        24,
+        5,
+        2,
+        2
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 0,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "146/178/236/245/345"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          1,
+          7
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        25,
+        24,
+        4,
+        3,
+        2
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 7,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 4,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 4
+        }
+      },
+      "size": 5,
+      "support": "147/178/236/245/345"
+    },
+    {
+      "degree_sequence": "12222222",
+      "dominance": [
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        24,
+        24,
+        5,
+        3,
+        2
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 1,
+        "degree_one_plane_two_pencils_choices": 10,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "167/178/236/245/345"
+    },
+    {
+      "degree_sequence": "11112333",
+      "dominance": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        1,
+        14,
+        22,
+        26,
+        24,
+        4,
+        1,
+        1
+      ],
+      "orbit_size": 3360,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 9,
+        "degree_one_plane_two_pencils_choices": 9,
+        "fixed_apex_four_assignments": 6,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 6
+        }
+      },
+      "size": 5,
+      "support": "178/234/236/245/345"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        1,
+        14,
+        22,
+        24,
+        18,
+        12,
+        1,
+        1
+      ],
+      "orbit_size": 3360,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 3,
+        "degree_one_plane_two_pencils_choices": 9,
+        "fixed_apex_four_assignments": 3,
+        "fixed_apex_four_profiles": {
+          "2+1+1": 3
+        }
+      },
+      "size": 5,
+      "support": "178/235/236/246/345"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        25,
+        18,
+        10,
+        4,
+        1
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 0,
+        "degree_one_plane_two_pencils_choices": 16,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "148/156/237/246/345"
+    },
+    {
+      "degree_sequence": "11222223",
+      "dominance": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        21,
+        24,
+        18,
+        8,
+        5,
+        2
+      ],
+      "orbit_size": 20160,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 2,
+        "degree_one_plane_two_pencils_choices": 12,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "137/158/237/246/345"
+    },
+    {
+      "degree_sequence": "12222222",
+      "dominance": [
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "occurrence_class_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        24,
+        17,
+        10,
+        6,
+        1
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 0,
+        "degree_one_plane_two_pencils_choices": 10,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "158/167/237/246/345"
+    },
+    {
+      "degree_sequence": "12222222",
+      "dominance": [
+        [
+          1,
+          8
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        24,
+        17,
+        10,
+        4,
+        3
+      ],
+      "orbit_size": 10080,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 1,
+        "degree_one_plane_two_pencils_choices": 10,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "158/168/237/246/345"
+    },
+    {
+      "degree_sequence": "11122233",
+      "dominance": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "occurrence_class_sizes": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        1,
+        14,
+        18,
+        20,
+        24,
+        14,
+        1,
+        1
+      ],
+      "orbit_size": 560,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 0,
+        "degree_one_plane_two_pencils_choices": 9,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "178/236/246/256/345"
+    },
+    {
+      "degree_sequence": "12222222",
+      "dominance": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "occurrence_class_sizes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "occurrence_masks": [
+        3,
+        12,
+        20,
+        20,
+        17,
+        10,
+        10,
+        1
+      ],
+      "orbit_size": 5040,
+      "predicates": {
+        "b31": false,
+        "common_apex_four": false,
+        "common_apex_four_witnesses": [],
+        "degree_one_plane_two_elementary_pencils_choices": 6,
+        "degree_one_plane_two_pencils_choices": 10,
+        "fixed_apex_four_assignments": 0,
+        "fixed_apex_four_profiles": {}
+      },
+      "size": 5,
+      "support": "158/167/234/267/345"
+    }
+  ],
+  "tested_predicates": {
+    "common_apex_four": "four distinct moving labels dominated by one fixed apex; signed four-parameter jointly affine convex shear block",
+    "degree_one_plane_two_elementary_pencils": "the preceding two pencils can both be parent-column domination shears",
+    "degree_one_plane_two_pencils": "degree-one label gives a two-parameter support-plane motion and two external degree-at-most-two labels give pencils; four parameters but only separate convexity",
+    "fixed_apex_four": "four distinct movers each dominated by a nonmoving fixed apex; signed-normal invariant, but profiles below 3+1 have no vanishing theorem"
+  }
+}
