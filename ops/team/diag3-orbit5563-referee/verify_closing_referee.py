@@ -10,6 +10,7 @@ enforces the fail-closed transport and repository-scope guards.
 
 from __future__ import annotations
 
+import argparse
 from collections import Counter
 from copy import deepcopy
 import hashlib
@@ -97,6 +98,23 @@ EXPECTED_SHA256 = {
     "ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py": "43e6ccb83c7eedc0a219e85fecfefda6c6f8a3994d9a108aec38997cfd5dac0c",
 }
 
+CONTROL_SHA256 = {
+    "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE.md": "97b5878586a57f54a6820b3f8bb1dea794e47bf1333695235523c9ac160c74a4",
+    "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md": "a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f",
+    "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/WORK_ORDERS.yaml": "cd6182913d08f6ce3ede91e0967e30ac44b75d7cce262571cfe586f357f81a5a",
+    "ops/team/diag3-orbit5563-referee/OPENING_HANDOFF.yaml": "c1401692f3c1e624e11193305364afd1371f820cef4a22e88113c1559a5a678a",
+    "ops/team/diag3-orbit5563-referee/OPENING_REVIEW.md": "a9ffbd81ea8a2bfb8f2b93f76b6bc345589c282df4d2a5b9834ccce1cfa5e990",
+    "ops/team/diag3-orbit5563-referee/OPENING_REREVIEW.md": "616f95abce7c6f1d1e35518d18712d3f5316f7deebfa9d75f76c1851d002ee76",
+    "ops/team/diag3-orbit5563-referee/OPENING_REREVIEW_HANDOFF.yaml": "d6034c5b1160ef759cea25724a602a6e1f7e4c2e02fd1bee09b64de0dfbd1497",
+    "ops/team/diag3-orbit5563-referee/CLOSING_HANDOFF.yaml": "9386bd77bce6c886046107511abf1efe8f87306c63ba9607ae9aef2ad805b12f",
+    "ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md": "e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35",
+}
+
+CYCLE_DIR = ROOT / "ops" / "research-team" / "cycles" / "2026-08-30-diag3-orbit5563-global-exit"
+EXPECTED_D3_PATHS = frozenset(
+    (*EXPECTED_SHA256, *CONTROL_SHA256, "ops/team/diag3-orbit5563-referee/verify_closing_referee.py")
+)
+
 BASES = tuple(
     sorted(combinations(range(8), 4), key=lambda basis: tuple(reversed(basis)))
 )
@@ -143,18 +161,68 @@ def git(*args: str) -> str:
     ).stdout.strip()
 
 
-def verify_repository_surface() -> None:
-    require(git("rev-parse", f"{OPENING_LOCAL}^{{tree}}") == OPENING_TREE, "opening tree moved")
-    require(git("rev-parse", f"{CANDIDATE_LOCAL}^{{tree}}") == CANDIDATE_TREE, "candidate tree moved")
-    changed = set(
-        filter(
-            None,
-            git("diff", "--name-only", OPENING_LOCAL, CANDIDATE_LOCAL).splitlines(),
-        )
+def git_optional(*args: str) -> str | None:
+    result = subprocess.run(
+        ["git", *args],
+        cwd=ROOT,
+        check=False,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
     )
-    require(changed == set(EXPECTED_SHA256), "candidate changed unauthorized files")
-    for relative, expected in EXPECTED_SHA256.items():
-        require(sha256(ROOT / relative) == expected, f"worker artifact changed: {relative}")
+    return result.stdout.strip() if result.returncode == 0 else None
+
+
+def d3_surface_paths() -> set[str]:
+    roots = (CYCLE_DIR, PROVER_DIR, FALSIFIER_DIR, HERE)
+    return {
+        str(path.relative_to(ROOT))
+        for root in roots
+        for path in root.rglob("*")
+        if path.is_file() and "__pycache__" not in path.parts
+    }
+
+
+def verify_repository_surface() -> str:
+    actual_paths = d3_surface_paths()
+    require(actual_paths == EXPECTED_D3_PATHS, "D3 governed surface changed")
+    for relative, expected in {**EXPECTED_SHA256, **CONTROL_SHA256}.items():
+        require(sha256(ROOT / relative) == expected, f"governed artifact changed: {relative}")
+
+    # A full checkout must authenticate the two published historical trees and
+    # their exact twelve-file worker delta. Local-only commit IDs are recorded
+    # in the handoff, but are deliberately not required from a remote clone.
+    opening_tree = git_optional("rev-parse", f"{OPENING_PUBLISHED}^{{tree}}")
+    candidate_tree = git_optional("rev-parse", f"{CANDIDATE_PUBLISHED}^{{tree}}")
+    if opening_tree is not None or candidate_tree is not None:
+        require(opening_tree is not None and candidate_tree is not None, "partial published history")
+        require(opening_tree == OPENING_TREE, "published opening tree moved")
+        require(candidate_tree == CANDIDATE_TREE, "published candidate tree moved")
+        changed = set(
+            filter(
+                None,
+                git("diff", "--name-only", OPENING_PUBLISHED, CANDIDATE_PUBLISHED).splitlines(),
+            )
+        )
+        require(changed == set(EXPECTED_SHA256), "published candidate changed unauthorized files")
+        return "FULL_PUBLISHED_HISTORY"
+
+    # GitHub Actions checks out the synthetic pull-request merge at depth one.
+    # Historical commits are then intentionally absent. Fail closed unless the
+    # repository advertises that exact shallow state, every governed D3 path is
+    # present with its pinned digest, and this verifier itself is tracked and
+    # unmodified. This is not a generic escape hatch for a damaged full clone.
+    require(git("rev-parse", "--is-shallow-repository") == "true", "published history missing from full checkout")
+    verifier_relative = str(Path(__file__).resolve().relative_to(ROOT))
+    require(
+        git("ls-files", "--error-unmatch", verifier_relative) == verifier_relative,
+        "closing verifier is not tracked",
+    )
+    require(
+        not git("status", "--porcelain", "--untracked-files=all", "--", *sorted(EXPECTED_D3_PATHS)),
+        "governed D3 surface is dirty in shallow checkout",
+    )
+    return "SHALLOW_PINNED_SURFACE"
 
 
 def load_parent_signs():
@@ -423,7 +491,17 @@ def expect_reject(label: str, operation) -> None:
 
 
 def main() -> None:
-    verify_repository_surface()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--surface-only",
+        action="store_true",
+        help="verify the full-history or fail-closed shallow repository surface, then stop",
+    )
+    args = parser.parse_args()
+    surface_mode = verify_repository_surface()
+    print("PASS repository surface", surface_mode)
+    if args.surface_only:
+        return
     realizable, negative_by_basis = load_parent_signs()
     ranks, gf2_mask_digest = reconstruct_parent_automorphisms(negative_by_basis)
     all_frames = tuple(permutations(range(8)))
