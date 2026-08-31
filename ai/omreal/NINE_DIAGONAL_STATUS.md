@@ -1,5 +1,44 @@
 # Nine-Diagonal Vanishing: proof status and exact remaining targets
 
+## Current canonical precedence through merged PR #44
+
+This section is the current control plane as of 2026-08-31.  It supersedes
+every target-selection or continuation instruction retained in the historical
+record below, while preserving those exact artifacts as evidence.
+Its machine-readable authority is
+`ai/omreal/data/CANONICAL_RESEARCH_STATE.json`; the existing
+`DIAG3_RESEARCH_DECISION_LEDGER.json` remains the immutable historical
+diagonal-three ledger so its pinned proof replays remain reproducible.
+
+- The theorem ledger is unchanged at **2/9**: exactly diagonals 1 and 2 are
+  proved.
+- The complete diagonal-four accounting is
+  `1,715,980 / 130 = 915,740 / 77 + 800,240 / 53`.  PR #43 removed zero
+  survivors, so all `800,240` supports in all `53` B31-resistant orbits remain
+  and any further D4-S53 continuation is **retired**.
+- Distinct from that D4-S53 retirement, the complete alternating D4
+  total-complex route is **`RETIRED_UNTIL_GLOBAL_INPUTS`**.  It may be
+  reconsidered only after a theorem-ready global compactification, signed face
+  poset, and restriction matrices all exist.  A successor input gate missing
+  any one of those three inputs must **`STOP` fail-closed**; it cannot reactivate
+  or select the route.
+- The diagonal-three unresolved residue is unchanged at `1,162,302`.
+- PR #44 completed the type/frame/diagonal-`S_8` quotient layer at
+  `100,086,840` quotient classes with raw multiplicity sum `104,993,280`.
+  It did not remove a row or begin topology.
+- The first missing global object is
+  `Q3_COMPLETE_PARENT_BOUNDARY_ATLAS`, equivalently the complete all-parent
+  closure-stratum transport and attachment atlas.  Without it, component,
+  rank-drop, closure, and true-infinity attachments remain unavailable.
+- Further orbit-5563 local roadmap, box, collar, macrobox, or clipped-wall
+  continuation is **retired**.  Local artifacts below retain their exact
+  proved scopes but are not a global coverage route.
+
+The current status is **`PIVOT_REQUIRED`**.  There is **no selected
+mathematical target**; selection is pending a fresh independent opening audit.
+No count, theorem claim, compact-component claim, or diagonal score changes in
+this reconciliation.
+
 ## Result ledger
 
 Let `X` be the normalized realization space of a realizable `UOM(4,8)`, let

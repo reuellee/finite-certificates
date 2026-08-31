@@ -12,9 +12,12 @@ This document is the standing operating framework for theorem-oriented work in
 3. allowing superseded targets to survive in old notes or machine-readable
    checkpoints and silently regain authority.
 
-The machine-readable companion is
-`data/DIAG3_RESEARCH_DECISION_LEDGER.json`. Its verifier is
-`verify_diag3_research_decision_ledger.py`.
+The cross-diagonal machine-readable companion is
+`data/CANONICAL_RESEARCH_STATE.json`. Its verifier is
+`verify_canonical_research_state.py`.  The older
+`data/DIAG3_RESEARCH_DECISION_LEDGER.json` and
+`verify_diag3_research_decision_ledger.py` are immutable historical proof
+inputs; they remain replayable but no longer select current work.
 
 The reusable implementation and methodological lessons extracted from the
 source-square and source-cube work are documented in
@@ -29,9 +32,9 @@ replace independent certificate replay.
 > activity, attractive numerics, or a large reduction by itself.
 >
 > Begin every research cycle from the current default branch and the canonical
-> machine-readable decision ledger. Reconstruct the theorem dependency graph
+> machine-readable research state. Reconstruct the theorem dependency graph
 > and distinguish invariant proof obligations from merely sufficient
-> reductions. Treat a target as active only if it is selected in the ledger;
+> reductions. Treat a target as active only if it is selected in that state;
 > older notes are historical evidence, not authority.
 >
 > For every candidate target, score proof criticality, branch-elimination
@@ -62,11 +65,11 @@ replace independent certificate replay.
 > trust boundary. Report a cancelled, skipped, dependency-blocked, or partial
 > run exactly as such.
 >
-> At the end of each cycle, update the canonical ledger first, then prose status
+> At the end of each cycle, update the canonical research state first, then prose status
 > files, GitHub, and the permanent Drive checkpoint. Record what is proved,
 > falsified, bounded-no-go, evidence-only, superseded, and open. Never advance a
 > theorem score until every invariant obligation and publication gate in the
-> ledger is closed.
+> canonical state is closed.
 
 ## Truth hierarchy
 
@@ -85,9 +88,9 @@ of a higher level.
 
 ## Canonical state rule
 
-The decision ledger is the only current target selector. Older notes and open
-objects remain valuable audit trails, but any current-status consumer must
-follow their `current_decision_ledger` pointer.
+The canonical research-state file is the only current target selector. Older
+notes, diagonal-specific ledgers, and open objects remain valuable audit
+trails, but their historical continuation fields are not current authority.
 
 Every material update must satisfy:
 
@@ -155,7 +158,7 @@ a decision consequence is not a research result.
 
 ## Proof and falsification loop
 
-1. Ground current state from the default branch and ledger.
+1. Ground current state from the default branch and canonical research state.
 2. State the invariant obstruction in mathematical language.
 3. Generate at least two structurally different routes and one counterexample
    route.
@@ -165,7 +168,7 @@ a decision consequence is not a research result.
 7. Implement an independent verifier and corrupt-certificate canary.
 8. Run targeted tests before the complete suite.
 9. Conduct an adversarial scope review.
-10. Update the ledger, prose, repository, and Drive checkpoint.
+10. Update the canonical state, prose, repository, and Drive checkpoint.
 
 ## Runtime-isolation policy
 

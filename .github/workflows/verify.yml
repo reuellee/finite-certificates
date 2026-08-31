@@ -93,6 +93,10 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Canonical reconciliation verifiers authenticate the exact PR42--PR44
+          # history. A depth-1 merge checkout cannot resolve those pinned trees.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

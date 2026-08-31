@@ -1,0 +1,185 @@
+track_id: canonical-reconciliation-prover
+cycle_id: 2026-08-31-canonical-reconciliation
+role: prover
+outcome: positive
+classification: canonical_reconciliation_repaired
+
+canonical_source:
+  merged_pull_request: 44
+  commit: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+  tree: 444f8a7e50ec58e4d97a71744090d7ed60330f19
+opening_reconciliation:
+  commit: e548a28832232a34ed9e408224f6e16a9ebc9e4b
+  tree: 99d7c10657088d6cebc7c80568f7224d1079af7c
+
+summary: >-
+  Canonical status and the diagonal-three decision ledger are reconciled
+  through merged PR #44. The live status is PIVOT_REQUIRED, the theorem score
+  remains 2/9, and no mathematical target is selected pending a fresh
+  independent opening audit. All exact prior local artifacts remain preserved
+  as historical evidence and no longer supply current continuation authority.
+  The distinct alternating D4 total-complex route is retired until all
+  theorem-ready global inputs exist, with an incomplete successor gate forced
+  to stop fail-closed.
+
+canonical_state:
+  theorem_score: "2/9"
+  proved_diagonals: [1, 2]
+  d4:
+    identity: "1715980/130=915740/77+800240/53"
+    survivor_delta_after_pr43: 0
+    d4_s53_continuation: RETIRED
+    alternating_total_complex:
+      status: RETIRED_UNTIL_GLOBAL_INPUTS
+      distinct_from: D4_S53_CONTINUATION
+      required_global_inputs:
+        - THEOREM_READY_GLOBAL_COMPACTIFICATION
+        - SIGNED_FACE_POSET
+        - RESTRICTION_MATRICES
+      incomplete_successor_input_gate: STOP_FAIL_CLOSED
+  d3:
+    unresolved_residue: 1162302
+    quotient_classes: 100086840
+    raw_frame_presentations: 104993280
+    quotient_multiplicity_sum: 104993280
+    row_delta_after_pr44: 0
+  first_missing_global_object: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+  first_missing_global_object_status: MISSING
+  orbit5563_local_roadmap_box_collar_macrobox_clipped_wall_continuation: RETIRED
+  control_status: PIVOT_REQUIRED
+  selected_mathematical_target: null
+  target_selection: PENDING_FRESH_INDEPENDENT_OPENING_AUDIT
+
+artifacts:
+  - path: ai/omreal/NINE_DIAGONAL_STATUS.md
+    sha256: a5865422b3337aba0ccd71eb02c1d521c201f4c338b9a2054afa0d21923e35b0
+  - path: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    sha256: 73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e
+  - path: ai/omreal/verify_diag3_research_decision_ledger.py
+    sha256: 3353ed3f7f185034f97a3e440e7957ebcf4046032a8fbf20bbc5d7e445060491
+  - path: ops/team/canonical-reconciliation-prover/SOURCE_MANIFEST.json
+    sha256: 4fa6e08a452856c3fc961928bc5921655bb32d236b57e440e9317ee4bcce7351
+  - path: ops/team/canonical-reconciliation-prover/FINDINGS.md
+    sha256: aab74d8e24b0f6ffeaed677c88ef9631907174da195d93201bb2bfdcea70ed72
+
+source_binding:
+  manifest: ops/team/canonical-reconciliation-prover/SOURCE_MANIFEST.json
+  historical_status_sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+  historical_ledger_sha256: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+  historical_ledger_git_blob: fe877050ae3942254bef54f23d6f3790480d698c
+  accepted_source_digest_count: 7
+  result: PASS_ALL_PINNED_BYTES
+
+replay:
+  canonical_ledger:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ai/omreal/verify_diag3_research_decision_ledger.py
+    result: >-
+      PASS ledger v2 through PR #44; exact 2/9, D4, D3 residue, quotient,
+      missing-Q3, both distinct D4 route dispositions, and null-target checks;
+      9/9 hostile canaries rejected.
+    ledger_git_blob: 85ea49f5f838ff5f780b7bf79ac0aa7d9ec1305f
+  cycle_protocol:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/research-team/verify_cycle_protocol.py
+    result: PASS_4_CYCLES_13_AUTHORIZED_WORK_ORDERS
+  pr42_prover:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag4-top-sheaf-prover/verify_four_block_line_sieve.py
+    result: PASS_1715980_130_EQUALS_915740_77_PLUS_800240_53
+  pr42_falsifier:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag4-top-sheaf-falsifier/verify_diag4_top_sheaf_falsifier.py
+    result: PASS_DECLARED_SCOPE_GLOBAL_REALIZABILITY_INCONCLUSIVE
+  pr43_prover:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag4-s53-prover/verify_structural_scan.py
+    result: PASS_COMPLETE_NULL_800240_OF_53_UNCHANGED
+  pr43_falsifier:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag4-s53-falsifier/verify_candidate_domain.py
+    result: PASS_WHOLE_DOMAIN_TOPOLOGY_AND_FULL_PIECE_INCLUSION_UNREACHED
+  pr44_prover:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-prover/verify_diag3_orbit5563_prover.py
+    result: PASS_TERMINAL_NULL_13_OF_13_CANARIES
+  pr44_falsifier:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py
+    result: PASS_TERMINAL_NULL_MISSING_COMPLETE_PARENT_BOUNDARY_ATLAS
+  pr44_referee:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/diag3-orbit5563-referee/verify_closing_referee.py
+    result: PASS_ACCEPT_TERMINAL_NULL_WITH_MANDATORY_PIVOT
+
+hostile_canaries:
+  2-of-9: REJECTED
+  800240-of-53: REJECTED
+  1162302-residue: REJECTED
+  q3-missing: REJECTED
+  no-selected-target: REJECTED
+  route-retirement: REJECTED
+  d4-total-complex-reactivation: REJECTED
+  d4-total-complex-omission: REJECTED
+  source-binding: REJECTED
+
+coverage:
+  included: >-
+    Every affected current-control-plane field in the canonical status,
+    decision ledger, and deterministic verifier, plus exact source-byte
+    binding to the accepted PR #42--#44 reports and closing reviews.
+  historical_preservation: >-
+    The complete prior v1 progress body remains byte-content-equivalent inside
+    explicitly historical fields; the two historical open objects retain their
+    exact v1 ledger pointer.
+  excluded: >-
+    Mathematical discovery, boundary-atlas construction, topology, target
+    selection, construction of the D4 global compactification, signed face
+    poset, or restriction matrices, count changes, score changes, publication,
+    merging, and ledger promotion.
+
+nonconsequences:
+  - No D4-S53 survivor is removed.
+  - The alternating D4 total-complex route is not reactivated or selected.
+  - No theorem-ready D4 global compactification, signed face poset, or restriction matrices are claimed to exist.
+  - No D3 unresolved row is removed.
+  - No compact component, global closure, or true-infinity claim is made.
+  - Neither diagonal-three invariant obligation is closed.
+  - No new theorem is proved or refuted.
+  - The 9DVL score remains 2/9.
+
+useful_null: >-
+  No current mathematical target is available from the accepted artifacts.
+  Q3_COMPLETE_PARENT_BOUNDARY_ATLAS remains missing, and target selection must
+  await a fresh independent opening audit rather than continue a retired local
+  route. The alternating D4 total-complex route separately remains unavailable
+  until its global compactification, signed face poset, and restriction
+  matrices all exist.
+
+ledger_delta: NONE
+count_delta: NONE
+publication: NOT_PERFORMED
+merge: NOT_PERFORMED
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.

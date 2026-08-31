@@ -7,7 +7,10 @@ atlases, canonical-edge, mutation-square, separator, and saturation replays.
 --ci-delegated additionally skips verifiers that the required GitHub workflow
 runs in their own jobs.  Verifiers that deliberately require a regenerable
 external artifact are always reported and skipped; invoke those directly with
-the pinned argument documented in their proof note.
+the pinned argument documented in their proof note.  Archival verifiers whose
+unpublished exact-head inputs are no longer retrievable are also reported and
+skipped by exact repository path; a named portable successor must replace
+their live gate.
 ``--shard INDEX/COUNT`` deterministically partitions the selected verifier
 universe.  The unsharded command remains exhaustive.  ``--list-shards COUNT``
 emits the exact partition without running verifiers so CI can independently
@@ -78,6 +81,24 @@ EXTERNAL_INPUT = {
         "direct replay documented in DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md"
     ),
 }
+ARCHIVAL_INPUT = {
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": (
+        "archival PR45 audit requires an unpublished transient commit chain "
+        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+    ),
+    "ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py": (
+        "archival PR45 audit requires an unpublished transient commit chain "
+        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+    ),
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py": (
+        "archival PR45 audit requires an unpublished transient commit chain "
+        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+    ),
+    "ops/team/canonical-reconciliation-referee/verify_final_closing_referee.py": (
+        "archival PR45 audit requires an unpublished transient commit chain "
+        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+    ),
+}
 ROOT = Path(__file__).resolve().parent
 TIMEOUT_SECONDS = 1_200
 
@@ -116,7 +137,10 @@ def selected(paths, *, fast: bool, ci_delegated: bool):
     skipped = []
     for path in paths:
         reason = None
-        if path.name in EXTERNAL_INPUT:
+        relative = path.relative_to(ROOT).as_posix()
+        if relative in ARCHIVAL_INPUT:
+            reason = ARCHIVAL_INPUT[relative]
+        elif path.name in EXTERNAL_INPUT:
             reason = EXTERNAL_INPUT[path.name]
         elif fast and path.name in SLOW:
             reason = "--fast"

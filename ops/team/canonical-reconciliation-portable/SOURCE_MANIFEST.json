@@ -1,0 +1,60 @@
+{
+  "format": "canonical-reconciliation-portable-source-manifest-v1",
+  "canonical_base": {
+    "commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+    "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19",
+    "merged_pull_request": 44
+  },
+  "published_history": [
+    {
+      "pull_request": 42,
+      "merge_commit": "aa784af939b55d3503e4782a9d65a9b06cf81ce0",
+      "tree": "6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561"
+    },
+    {
+      "pull_request": 43,
+      "merge_commit": "9332f507996a8594883619cb530565ced79b59eb",
+      "tree": "692d173462497cb645127ea1ced6cbe40aba4d5a"
+    },
+    {
+      "pull_request": 44,
+      "merge_commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+    }
+  ],
+  "immutable_legacy": {
+    "path": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+    "sha256": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+    "git_blob": "fe877050ae3942254bef54f23d6f3790480d698c",
+    "verifier_path": "ai/omreal/verify_diag3_research_decision_ledger.py",
+    "verifier_sha256": "32d778a2c4e1a4844b77649e7a82c4829da0cb4c4f293f0938e898d167c67ede"
+  },
+  "migrated_current_state": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE.json",
+    "verifier_path": "ai/omreal/verify_canonical_research_state.py",
+    "reverse_schema_only_sha256": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e"
+  },
+  "unpublished_transient_chain": {
+    "availability": "UNRETRIEVABLE_NOT_A_PUBLICATION_GATE",
+    "commits": [
+      "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+      "6e8fa4a74dbc9e0e130719f9c55df86d58a75707",
+      "3f764ce3e6fce92f984d0cf8249321452e7934c2",
+      "ca6a154899fea133920dfa435a597632bf03728d",
+      "77ea32c05eefd312a15ae0096e2990621da03a84"
+    ],
+    "replacement_gate": "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py"
+  },
+  "archival_verifiers": {
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": "d482fa2337e0df542c9b550cd1b894aa7845d76200196071f8b51ad9d82cb840",
+    "ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py": "96089be7c1b84c22f9b907fcaf34a93f8ab7c20c6c744c37225709bf49021621",
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py": "9d14f0a0afa988f76d1ff86e92f2064958b6cee87f750da51fcd82da6db4c83c",
+    "ops/team/canonical-reconciliation-referee/verify_final_closing_referee.py": "f47b0eb0192ca526896c3e6879b8b003152ffb34d85b81502834b2204a984bb3"
+  },
+  "scope": {
+    "theorem_delta": "NONE",
+    "score": "2/9",
+    "selected_target": null,
+    "mathematical_discovery": false
+  }
+}
