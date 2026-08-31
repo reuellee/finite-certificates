@@ -7,8 +7,8 @@
     "ai/omreal/data/CANONICAL_RESEARCH_STATE.json": "89d1475a43bef01be74e9c8eed62d9caadd8265f262c3aa3dcf0e704f341432c"
   },
   "cycle_contract_sha256": {
-    "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/CYCLE.md": "61036fa976223774972c30e77455337afd0965dcefcaa2a986a23e9abe726233",
-    "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/WORK_ORDERS.yaml": "ef9ad2de9d95cabcf044e000ce9e20293d0d3642ee05fe82341d46f78b2f24e1"
+    "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/CYCLE.md": "5aecdb8950e623d32f367dac1f16ea85e547343dc7a413d677886b0c851776e1",
+    "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/WORK_ORDERS.yaml": "f42f1e4ce1233937197f956ece2542c5861779d5fbed6416affec910ae36b9fb"
   },
   "accepted_track_sha256": {
     "ops/team/diag8-mask6-nonvacuity/RESULT.yaml": "6eac6a8c52a588f251acca63bdd72abc52344ff2aa18b675aee863fb5da36b5c",
