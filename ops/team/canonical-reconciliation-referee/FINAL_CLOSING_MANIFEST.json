@@ -1,0 +1,235 @@
+{
+  "format": "canonical-reconciliation-final-closing-manifest-v1",
+  "cycle_id": "2026-08-31-canonical-reconciliation",
+  "base": {
+    "commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+    "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+  },
+  "opening": {
+    "commit": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+    "tree": "99d7c10657088d6cebc7c80568f7224d1079af7c"
+  },
+  "rejected_candidate": {
+    "commit": "6e8fa4a74dbc9e0e130719f9c55df86d58a75707",
+    "tree": "10fd994ccc89b722cd92118759cee65fc8a1906c"
+  },
+  "rejection_evidence_commit": {
+    "commit": "3f764ce3e6fce92f984d0cf8249321452e7934c2",
+    "tree": "de18908882290dd304f2558daf439a18d170d077"
+  },
+  "repair_commit": {
+    "commit": "ca6a154899fea133920dfa435a597632bf03728d",
+    "tree": "00bc0e4affed33ed29e7dee5ba17f0c3d4b5e3fd"
+  },
+  "candidate": {
+    "commit": "77ea32c05eefd312a15ae0096e2990621da03a84",
+    "tree": "669c6782874b2d8de97f0d78a5ee86cb5c0c3fcc",
+    "parent": "ca6a154899fea133920dfa435a597632bf03728d"
+  },
+  "accepted_merges": [
+    {
+      "pull_request": 42,
+      "commit": "aa784af939b55d3503e4782a9d65a9b06cf81ce0",
+      "tree": "6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561"
+    },
+    {
+      "pull_request": 43,
+      "commit": "9332f507996a8594883619cb530565ced79b59eb",
+      "tree": "692d173462497cb645127ea1ced6cbe40aba4d5a"
+    },
+    {
+      "pull_request": 44,
+      "commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+    }
+  ],
+  "authoritative_sources": [
+    {
+      "path": "ops/research-team/PROTOCOL.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ai/omreal/NINE_DIAGONAL_STATUS.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782",
+      "candidate_must_match": false
+    },
+    {
+      "path": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+      "candidate_must_match": false
+    },
+    {
+      "path": "ai/omreal/verify_diag3_research_decision_ledger.py",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "32d778a2c4e1a4844b77649e7a82c4829da0cb4c4f293f0938e898d167c67ede",
+      "candidate_must_match": false
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/team/diag4-strategy-referee/FINAL_DELTA_REREVIEW.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "dc36cd3b95eb949e41e1a2c12b8ace8b87f15f16af5487acc16c3642b8bca434",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/team/diag4-s53-referee/CLOSING_REVIEW.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md",
+      "revision": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+      "sha256": "8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml",
+      "revision": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+      "sha256": "cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499",
+      "candidate_must_match": true
+    }
+  ],
+  "candidate_outputs": {
+    "ai/omreal/NINE_DIAGONAL_STATUS.md": "a5865422b3337aba0ccd71eb02c1d521c201f4c338b9a2054afa0d21923e35b0",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e",
+    "ai/omreal/verify_diag3_research_decision_ledger.py": "3353ed3f7f185034f97a3e440e7957ebcf4046032a8fbf20bbc5d7e445060491"
+  },
+  "candidate_evidence": {
+    "ops/team/canonical-reconciliation-prover/FINDINGS.md": "aab74d8e24b0f6ffeaed677c88ef9631907174da195d93201bb2bfdcea70ed72",
+    "ops/team/canonical-reconciliation-prover/RESULT.yaml": "7aaebec2271fd0a5fbc722649f3e2b799c9a71511650d84cc0997101bc49e210",
+    "ops/team/canonical-reconciliation-prover/SOURCE_MANIFEST.json": "4fa6e08a452856c3fc961928bc5921655bb32d236b57e440e9317ee4bcce7351",
+    "ops/team/canonical-reconciliation-falsifier/FINDINGS.md": "5eebca3aaa4b95a25f088d49665e5a8bef805414391e7681886d5d0412f08882",
+    "ops/team/canonical-reconciliation-falsifier/RESULT.yaml": "9ba43c9c2271a010b4d88c68a81a26d43ab21910b1ca5a5ffd4a7952577ca67a",
+    "ops/team/canonical-reconciliation-falsifier/SOURCE_MANIFEST.json": "3a2bc113711dd27ab3145512655f2afc6a68216866790f09370fe285de801abf",
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": "d482fa2337e0df542c9b550cd1b894aa7845d76200196071f8b51ad9d82cb840",
+    "ops/team/canonical-reconciliation-falsifier/CANDIDATE_REVIEW.md": "9cb60fc5f89857c97be2b36a48746ab005aa866c4befd1e6148654c1c30a7e2e",
+    "ops/team/canonical-reconciliation-falsifier/CANDIDATE_HANDOFF.yaml": "1adb7d13c83ae683b73b4cb36d636502d267d37771ac68427ec8f71509ed3e7a",
+    "ops/team/canonical-reconciliation-referee/OPENING_REVIEW.md": "19ef289973db98c9805ad6e41132c8a3588c88d513a4ce64651836c348ed9bea",
+    "ops/team/canonical-reconciliation-referee/OPENING_HANDOFF.yaml": "c65ee6d800ab55c80c3d3507f3522fe7e5a90be90d82c4ec4b143ba2d949ce42",
+    "ops/team/canonical-reconciliation-referee/CLOSING_REVIEW.md": "2a7e79b451fc5cd01ec62d739019967998d4825cd4c34ef6962750ffeb3edf04",
+    "ops/team/canonical-reconciliation-referee/CLOSING_HANDOFF.yaml": "fc920833045b91768ecc524449e379ca549092279eae93843f3db6ced8ee7d80",
+    "ops/team/canonical-reconciliation-referee/CLOSING_MANIFEST.json": "3c62bc8c943cf8582c40609634a5ad185dc51d8c0a6e723095b2d58abe1ebd9f",
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py": "9d14f0a0afa988f76d1ff86e92f2064958b6cee87f750da51fcd82da6db4c83c"
+  },
+  "expected_full_changed_paths": [
+    "ai/omreal/NINE_DIAGONAL_STATUS.md",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+    "ai/omreal/verify_diag3_research_decision_ledger.py",
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md",
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml",
+    "ops/team/canonical-reconciliation-falsifier/CANDIDATE_HANDOFF.yaml",
+    "ops/team/canonical-reconciliation-falsifier/CANDIDATE_REVIEW.md",
+    "ops/team/canonical-reconciliation-falsifier/FINDINGS.md",
+    "ops/team/canonical-reconciliation-falsifier/RESULT.yaml",
+    "ops/team/canonical-reconciliation-falsifier/SOURCE_MANIFEST.json",
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py",
+    "ops/team/canonical-reconciliation-prover/FINDINGS.md",
+    "ops/team/canonical-reconciliation-prover/RESULT.yaml",
+    "ops/team/canonical-reconciliation-prover/SOURCE_MANIFEST.json",
+    "ops/team/canonical-reconciliation-referee/CLOSING_HANDOFF.yaml",
+    "ops/team/canonical-reconciliation-referee/CLOSING_MANIFEST.json",
+    "ops/team/canonical-reconciliation-referee/CLOSING_REVIEW.md",
+    "ops/team/canonical-reconciliation-referee/OPENING_HANDOFF.yaml",
+    "ops/team/canonical-reconciliation-referee/OPENING_REVIEW.md",
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py"
+  ],
+  "expected_repair_changed_paths": [
+    "ai/omreal/NINE_DIAGONAL_STATUS.md",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+    "ai/omreal/verify_diag3_research_decision_ledger.py",
+    "ops/team/canonical-reconciliation-falsifier/CANDIDATE_HANDOFF.yaml",
+    "ops/team/canonical-reconciliation-falsifier/CANDIDATE_REVIEW.md",
+    "ops/team/canonical-reconciliation-prover/FINDINGS.md",
+    "ops/team/canonical-reconciliation-prover/RESULT.yaml",
+    "ops/team/canonical-reconciliation-prover/SOURCE_MANIFEST.json",
+    "ops/team/canonical-reconciliation-referee/CLOSING_HANDOFF.yaml",
+    "ops/team/canonical-reconciliation-referee/CLOSING_MANIFEST.json",
+    "ops/team/canonical-reconciliation-referee/CLOSING_REVIEW.md",
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py"
+  ],
+  "authoritative_facts": {
+    "theorem": {
+      "score": "2/9",
+      "proved_diagonals": [1, 2],
+      "delta": "NONE"
+    },
+    "d4": {
+      "complete_supports": 1715980,
+      "complete_orbits": 130,
+      "b31_supports": 915740,
+      "b31_orbits": 77,
+      "survivor_supports": 800240,
+      "survivor_orbits": 53,
+      "survivor_delta_supports": 0,
+      "survivor_delta_orbits": 0
+    },
+    "d3": {
+      "parent_types": 2604,
+      "frames_per_parent": 40320,
+      "raw_presentations": 104993280,
+      "quotient_classes": 100086840,
+      "triple_universe": 79102449,
+      "proved_noncompact": 77940147,
+      "unresolved_residue": 1162302,
+      "first_missing_object": "Q3_COMPLETE_PARENT_BOUNDARY_ATLAS"
+    }
+  },
+  "d4_total_complex_policy": {
+    "status": "RETIRED_UNTIL_GLOBAL_INPUTS",
+    "distinct_from": "D4_S53_CONTINUATION",
+    "required_global_inputs": [
+      "THEOREM_READY_GLOBAL_COMPACTIFICATION",
+      "SIGNED_FACE_POSET",
+      "RESTRICTION_MATRICES"
+    ],
+    "incomplete_successor_input_gate": "STOP_FAIL_CLOSED",
+    "reactivation_requires_all_inputs": true
+  },
+  "hostile_canaries": [
+    "delete_total_d4_route",
+    "reactivate_total_d4_route",
+    "conflate_total_d4_with_s53",
+    "remove_required_global_input",
+    "continue_incomplete_successor_gate",
+    "status_delete_total_d4_route",
+    "status_reactivate_total_d4_route",
+    "false_3_of_9",
+    "changed_d4_survivor_count",
+    "changed_d3_residue",
+    "promoted_q3_atlas",
+    "active_selected_target",
+    "restore_d4_s53_continuation",
+    "restore_orbit5563_macrobox_continuation",
+    "unauthorized_path"
+  ],
+  "expected_verdict": "ACCEPT_EXACT_HEAD_CANONICAL_RECONCILIATION_ONLY",
+  "post_acceptance_gate": "FRESH_INDEPENDENT_OPENING_AUDIT_REQUIRED"
+}

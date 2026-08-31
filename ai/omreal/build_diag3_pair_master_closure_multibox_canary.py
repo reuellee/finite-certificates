@@ -14,6 +14,8 @@ from fractions import Fraction
 from hashlib import sha256
 import json
 from pathlib import Path
+
+import diag3_research_ledger_compatibility as ledger_compat
 import sys
 
 import numpy as np
@@ -442,8 +444,8 @@ def build_record():
     parent_gate = json.loads(PARENT_GATE.read_text(encoding="utf-8"))
     if parent_gate["normalized_parent_sign_sha256"] != EXPECTED_PARENT_SIGN_SHA256:
         raise AssertionError("signed parent-cell digest changed")
-    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
-    full = ledger["row2599_fullsupport_ledger"]
+    ledger = ledger_compat.load_current_ledger(LEDGER)
+    full = ledger_compat.historical_row2599(ledger)
 
     cells = build_cells()
     closure, chains = closure_data(cells)

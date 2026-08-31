@@ -1,0 +1,200 @@
+track_id: canonical-reconciliation-referee
+cycle_id: 2026-08-31-canonical-reconciliation
+phase: opening_strategy_and_canonical_state_audit
+role: independent_verifier_referee
+verdict: GO_RECONCILIATION_ONLY
+mathematical_discovery_verdict: STOP_MATHEMATICAL_DISCOVERY
+
+summary: >-
+  Independent grounding reproduces the post-PR-44 canonical-state conflict.
+  The bounded reconciliation control plane has exact identities, matching
+  source digests, explicit field-level quantifiers, role separation, terminal
+  outcomes, resource ceilings, and a zero-theorem-delta guard. Only canonical
+  reconciliation may start; no mathematical target or future candidate was
+  inspected or authorized.
+
+frozen_identity:
+  canonical_base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+  canonical_base_tree: 444f8a7e50ec58e4d97a71744090d7ed60330f19
+  opening_revision: e548a28832232a34ed9e408224f6e16a9ebc9e4b
+  opening_tree: 99d7c10657088d6cebc7c80568f7224d1079af7c
+  opening_branch: agent/canonical-reconciliation-referee-20260831
+  opening_parent: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+  relation: direct_child
+  opening_ledger: "2/9"
+  opening_changed_paths:
+    - ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md
+    - ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml
+
+artifact:
+  path: ops/team/canonical-reconciliation-referee/OPENING_REVIEW.md
+  sha256: 19ef289973db98c9805ad6e41132c8a3588c88d513a4ce64651836c348ed9bea
+
+source_accounting:
+  cycle:
+    path: ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md
+    sha256: 8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8
+  work_orders:
+    path: ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml
+    sha256: cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499
+  protocol:
+    path: ops/research-team/PROTOCOL.md
+    sha256: 7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c
+  canonical_status:
+    path: ai/omreal/NINE_DIAGONAL_STATUS.md
+    sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+  canonical_decision_ledger:
+    path: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    sha256: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+  pr42_cycle_report:
+    path: ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md
+    sha256: 26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923
+  pr43_cycle_report:
+    path: ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md
+    sha256: e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2
+  pr43_closing_review:
+    path: ops/team/diag4-s53-referee/CLOSING_REVIEW.md
+    sha256: 7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c
+  pr44_cycle_report:
+    path: ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md
+    sha256: a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f
+  pr44_closing_review:
+    path: ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md
+    sha256: e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35
+  omitted_sources: none
+
+independent_conflict_reconstruction:
+  canonical_files_last_changed_revision: d047359e7892106021022b0401554f56eb4e4d8a
+  stale_fields:
+    as_of: "2026-08-28"
+    repository_audited_commit: e8600495e70e6f5548cb0c73e0cfd2f33faacc0b
+    repository_merged_pull_request: 37
+    status: ACTIVE
+    selected_target: fullsupport_master_closure_compiler
+    triple_next_stage: >-
+      Search macroboxes 0..5 for the first occupied exit of the registered
+      component, despite the later PR #44 retirement of further local
+      macrobox continuation for orbit 5563.
+  stale_verifier_behavior: >-
+    The current decision-ledger verifier exits zero and prints the old
+    selected target. This establishes internal consistency only, not currency
+    against merged PRs #42--#44.
+  conflict_result: PASS_REPRODUCED_MATERIAL_CONTROL_PLANE_CONFLICT
+
+required_reconciliation:
+  quantifiers:
+    - >-
+      Every current-control-plane field affected by merged PRs #42, #43, and
+      #44 in NINE_DIAGONAL_STATUS.md and
+      DIAG3_RESEARCH_DECISION_LEDGER.json.
+    - >-
+      Every associated deterministic-verifier assertion, source digest,
+      exact count, route disposition, and theorem nonconsequence.
+  fixed_theorem_state:
+    score: "2/9"
+    proved_diagonals: [1, 2]
+    theorem_promotion_allowed: false
+  d4_state:
+    complete_labeled_supports: 1715980
+    complete_support_orbits: 130
+    b31_certified_labeled_supports: 915740
+    b31_certified_orbits: 77
+    surviving_labeled_supports: 800240
+    surviving_orbits: 53
+    pr43_survivor_delta: 0
+    d4_s53_status: OPEN
+    d4_s53_continuation: RETIRED_PROHIBITED
+  d3_state:
+    raw_frame_parent_presentations: 104993280
+    quotient_classes: 100086840
+    triple_universe: 79102449
+    proved_noncompact: 77940147
+    unresolved_triple_residue: 1162302
+    triple_hc0: OPEN
+    pair_hc1: OPEN
+    smallest_missing_global_object: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    local_orbit5563_continuation: RETIRED_PROHIBITED
+  strategy_state_after_reconciliation:
+    status: PIVOT_REQUIRED
+    selected_mathematical_target: null
+    fresh_opening_audit_required: true
+
+outcome_contract:
+  positive: >-
+    One source-bound, deterministic, independently accepted canonical state
+    records every required field and exact zero theorem delta.
+  negative: >-
+    An exact replay mismatch against an accepted PR #42--#44 source artifact,
+    naming the disputed artifact, field, expected value, and observed value.
+  null: >-
+    Complete replay of every source and affected field with unresolved
+    canonical precedence, plus a field-level conflict manifest and the exact
+    authority decision required next.
+  timeout: >-
+    A reproducible checked/unchecked field manifest with source identities,
+    partial results, and an exact resume command.
+
+opening_replay:
+  yaml_parse:
+    result: PASS_4_ROLE_SEPARATED_WORK_ORDERS
+  cycle_protocol:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 python3
+      ops/research-team/verify_cycle_protocol.py
+    result: PASS_4_CYCLES_13_AUTHORIZED_WORK_ORDERS
+  authorization_comparison:
+    method: >-
+      Extract the canonical blockquote from PROTOCOL.md, remove only the
+      Markdown quote prefixes, parse WORK_ORDERS.yaml, and compare the anchor
+      and each of four expanded values exactly after final-newline removal.
+    result: PASS_VERBATIM_ANCHOR_AND_4_WORK_ORDERS
+  opening_diff_check:
+    result: PASS
+
+gates:
+  canonical_base_and_tree: PASS
+  opening_commit_tree_and_direct_parent: PASS
+  opening_changed_path_scope: PASS_EXACTLY_TWO_CONTROL_PLANE_FILES
+  source_digests: PASS
+  canonical_conflict: PASS_REPRODUCED
+  reconciliation_quantifiers: PASS
+  terminal_outcomes_and_useful_null: PASS
+  role_and_owned_surface_independence: PASS
+  resource_ceiling_and_stop_rule: PASS
+  standing_authorization_verbatim: PASS
+  unchanged_2_of_9_nonconsequence: PASS_REQUIRED
+  d4_s53_continuation: STOP_PROHIBITED
+  local_orbit5563_continuation: STOP_PROHIBITED
+  mathematical_discovery: STOP_NOT_AUTHORIZED
+  future_mathematical_candidate: NOT_INSPECTED_OUT_OF_SCOPE
+  frozen_reconciliation_candidate: PENDING_NOT_YET_SUPPLIED
+  protected_checks_at_candidate_head: PENDING_COORDINATOR
+  exact_head_publication_and_merge: PENDING_COORDINATOR
+
+resource_ceiling:
+  per_role_turns: 1
+  wall_clock_minutes: 30
+  rss_gib: 2
+  paid_external_compute_or_api: prohibited
+
+open_defects: []
+ledger_change_recommended: none
+next_action: >-
+  Start only the canonical reconciler and falsifier tracks. Stop this referee
+  track until the coordinator supplies exact frozen candidate and worker
+  identities. Then reconstruct the changed state independently and accept or
+  reject only the claims supported at that exact head.
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.

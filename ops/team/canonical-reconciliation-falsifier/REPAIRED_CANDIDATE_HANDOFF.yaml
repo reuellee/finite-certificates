@@ -1,0 +1,325 @@
+track_id: canonical-reconciliation-falsifier
+cycle_id: 2026-08-31-canonical-reconciliation
+role: falsifier
+date_utc: "2026-08-31"
+base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+base_tree: 444f8a7e50ec58e4d97a71744090d7ed60330f19
+reviewed_revision: 77ea32c05eefd312a15ae0096e2990621da03a84
+reviewed_tree: 669c6782874b2d8de97f0d78a5ee86cb5c0c3fcc
+
+outcome: finite-exact
+verdict: ACCEPT_REPAIRED_CANONICAL_RECONCILIATION
+candidate_accepted_by_falsifier: true
+publication_gate: PENDING_FRESH_INDEPENDENT_CLOSING_REVIEW
+merge_gate: CLOSED_PENDING_REVIEW_AND_REQUIRED_CHECKS
+summary: >-
+  The repaired exact head records and machine-checks both the D4-S53
+  retirement and the distinct complete alternating D4 total-complex
+  RETIRED_UNTIL_GLOBAL_INPUTS disposition. Twelve frozen sources, all exact
+  counts and nonconsequences, 18 approved paths, the rejected-head chain, 9/9
+  native canaries, and 20/20 independent hostile mutations pass. No actionable
+  semantic omission remains.
+
+exact_identity:
+  accepted_merges:
+    - pull_request: 42
+      commit: aa784af939b55d3503e4782a9d65a9b06cf81ce0
+      tree: 6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561
+    - pull_request: 43
+      commit: 9332f507996a8594883619cb530565ced79b59eb
+      tree: 692d173462497cb645127ea1ced6cbe40aba4d5a
+    - pull_request: 44
+      commit: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      tree: 444f8a7e50ec58e4d97a71744090d7ed60330f19
+  canonical_base:
+    commit: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    tree: 444f8a7e50ec58e4d97a71744090d7ed60330f19
+  opening:
+    commit: e548a28832232a34ed9e408224f6e16a9ebc9e4b
+    tree: 99d7c10657088d6cebc7c80568f7224d1079af7c
+  rejected_candidate:
+    commit: 6e8fa4a74dbc9e0e130719f9c55df86d58a75707
+    tree: 10fd994ccc89b722cd92118759cee65fc8a1906c
+    verdict: REJECT_ACTIONABLE_ROUTE_OMISSION
+  rejection_review:
+    commit: 3f764ce3e6fce92f984d0cf8249321452e7934c2
+    tree: de18908882290dd304f2558daf439a18d170d077
+  repair:
+    commit: ca6a154899fea133920dfa435a597632bf03728d
+    tree: 00bc0e4affed33ed29e7dee5ba17f0c3d4b5e3fd
+  reviewed_candidate:
+    commit: 77ea32c05eefd312a15ae0096e2990621da03a84
+    tree: 669c6782874b2d8de97f0d78a5ee86cb5c0c3fcc
+  parent_chain: >-
+    6e8fa4a74dbc9e0e130719f9c55df86d58a75707 ->
+    3f764ce3e6fce92f984d0cf8249321452e7934c2 ->
+    ca6a154899fea133920dfa435a597632bf03728d ->
+    77ea32c05eefd312a15ae0096e2990621da03a84
+  identity_and_ancestry_result: PASS
+
+repaired_route_dispositions:
+  d4_s53:
+    status: RETIRED
+    ledger_identifier: D4_S53_CONTINUATION
+    status_surface: PASS
+    ledger_surface: PASS
+    canonical_verifier_surface: PASS
+  d4_alternating_total_complex:
+    status: RETIRED_UNTIL_GLOBAL_INPUTS
+    ledger_identifier: D4_ALTERNATING_TOTAL_COMPLEX
+    distinct_from: D4_S53_CONTINUATION
+    required_global_inputs:
+      - THEOREM_READY_GLOBAL_COMPACTIFICATION
+      - SIGNED_FACE_POSET
+      - RESTRICTION_MATRICES
+    incomplete_successor_input_gate: STOP_FAIL_CLOSED
+    reactivation_requires_all_inputs: true
+    status_surface: PASS
+    ledger_surface: PASS
+    canonical_verifier_surface: PASS
+  orbit_5563_local_continuations:
+    roadmap: RETIRED
+    box: RETIRED
+    collar: RETIRED
+    macrobox: RETIRED
+    clipped_wall: RETIRED
+
+canonical_state:
+  theorem_score: "2/9"
+  proved_diagonals: [1, 2]
+  theorem_delta: NONE
+  d4:
+    complete_supports: 1715980
+    complete_orbits: 130
+    b31_supports: 915740
+    b31_orbits: 77
+    survivor_supports: 800240
+    survivor_orbits: 53
+    survivor_delta_supports: 0
+    survivor_delta_orbits: 0
+    identity: "1715980/130=915740/77+800240/53"
+  d3:
+    raw_presentations: 104993280
+    quotient_classes: 100086840
+    quotient_multiplicity_sum: 104993280
+    triple_universe: 79102449
+    proved_noncompact: 77940147
+    unresolved_residue: 1162302
+    residue_identity: "79102449-77940147=1162302"
+    row_delta: 0
+    first_missing_object: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    first_missing_object_status: MISSING
+    triple_obligation_status: OPEN
+    pair_obligation_status: OPEN
+  control_status: PIVOT_REQUIRED
+  selected_mathematical_target: null
+  target_selection: PENDING_FRESH_INDEPENDENT_OPENING_AUDIT
+
+candidate_outputs:
+  - path: ai/omreal/NINE_DIAGONAL_STATUS.md
+    sha256: a5865422b3337aba0ccd71eb02c1d521c201f4c338b9a2054afa0d21923e35b0
+  - path: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+    sha256: 73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e
+  - path: ai/omreal/verify_diag3_research_decision_ledger.py
+    sha256: 3353ed3f7f185034f97a3e440e7957ebcf4046032a8fbf20bbc5d7e445060491
+
+artifacts:
+  - path: ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py
+    sha256: 96089be7c1b84c22f9b907fcaf34a93f8ab7c20c6c744c37225709bf49021621
+  - path: ops/team/canonical-reconciliation-falsifier/REPAIRED_CANDIDATE_REVIEW.md
+    sha256: 571de0cd127af8749a2d253cdbab09c647545e3c12ce2bbf5d11bbce4389c620
+
+replay:
+  independent_semantic_verifier:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py
+    exit_code: 0
+    result: ACCEPT_REPAIRED_CANONICAL_RECONCILIATION
+    source_count: 12
+    changed_path_count: 18
+    native_candidate_canaries: PASS_9_OF_9
+    independent_hostile_rejections: PASS_20_OF_20
+    semantic_sha256: 037021e2fb8fe3692d961e8482a476c4ba2bb4d9b77427cd82e10faa26d3cf32
+    observed_elapsed_seconds: 0.354
+    observed_peak_rss_kib: 53008
+    resource_ceiling_respected: true
+  canonical_ledger_verifier:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ai/omreal/verify_diag3_research_decision_ledger.py
+    exit_code: 0
+    result: >-
+      PASS current counts and dispositions; D4 alternating total complex
+      RETIRED_UNTIL_GLOBAL_INPUTS; incomplete gate STOP_FAIL_CLOSED; 9/9
+      hostile canonical-state canaries rejected.
+  cycle_protocol:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/research-team/verify_cycle_protocol.py
+    exit_code: 0
+    result: PASS_4_CYCLES_13_AUTHORIZED_WORK_ORDERS
+  original_source_replay:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py
+      --sources-only
+    exit_code: 0
+    result: PASS_12_SOURCES
+    fact_sha256: a6a2913d7409ec9907ee9c249037d2fd508efa52a42b72603eb4e6e069f49789
+  original_self_test:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py
+      --self-test
+    exit_code: 0
+    result: PASS_POSITIVE_CONTROL_REJECT_9_OF_9_HOSTILES
+  original_candidate_mode:
+    command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py
+      --candidate
+    exit_code: 1
+    exact_output: |
+      REJECT candidate status missing accepted fact: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    classification: EXPECTED_NONAUTHORITATIVE_PRESENTATION_REJECTION
+
+independent_hostile_canaries:
+  count: 20
+  route_matrix:
+    status_d4_s53_deletion: REJECTED
+    status_d4_s53_reactivation: REJECTED
+    status_total_d4_deletion: REJECTED
+    status_total_d4_reactivation: REJECTED
+    ledger_d4_s53_deletion: REJECTED
+    ledger_d4_s53_reactivation: REJECTED
+    ledger_total_d4_deletion: REJECTED
+    ledger_total_d4_reactivation: REJECTED
+    verifier_d4_s53_deletion: REJECTED
+    verifier_d4_s53_reactivation: REJECTED
+    verifier_total_d4_deletion: REJECTED
+    verifier_total_d4_reactivation: REJECTED
+  other:
+    false_3_of_9: REJECTED
+    changed_d4_count: REJECTED
+    changed_d3_count: REJECTED
+    changed_d3_residue: REJECTED
+    promoted_q3: REJECTED
+    active_old_target: REJECTED
+    changed_source_digest: REJECTED
+    unapproved_path: REJECTED
+
+original_verifier_arbitration:
+  verifier_sha256: d482fa2337e0df542c9b550cd1b894aa7845d76200196071f8b51ad9d82cb840
+  modified_or_relaxed: false
+  literal_base_sha_in_status_prose:
+    classification: NONAUTHORITATIVE_PRESENTATION_ASSUMPTION
+    reason: >-
+      The correct base commit, tree, and PR number are machine-checked in the
+      ledger; governing sources do not require duplicating the SHA in prose.
+  exact_falsifier_v1_object_equality:
+    classification: NONAUTHORITATIVE_SCHEMA_ASSUMPTION
+    reason: >-
+      Governing sources prescribe semantic fields and quantifiers rather than
+      the independent falsifier's key names, nesting, or no-extra-field rule.
+  adjudication: >-
+    Preserve the exact rejection and verifier bytes, but decide the alternate
+    schema using the independent normalized-semantic replay above.
+
+rejected_head_history:
+  result: PASS_PRESERVED_AND_ANCESTRAL
+  artifacts:
+    ops/team/canonical-reconciliation-falsifier/CANDIDATE_REVIEW.md: 9cb60fc5f89857c97be2b36a48746ab005aa866c4befd1e6148654c1c30a7e2e
+    ops/team/canonical-reconciliation-falsifier/CANDIDATE_HANDOFF.yaml: 1adb7d13c83ae683b73b4cb36d636502d267d37771ac68427ec8f71509ed3e7a
+    ops/team/canonical-reconciliation-referee/CLOSING_REVIEW.md: 2a7e79b451fc5cd01ec62d739019967998d4825cd4c34ef6962750ffeb3edf04
+    ops/team/canonical-reconciliation-referee/CLOSING_HANDOFF.yaml: fc920833045b91768ecc524449e379ca549092279eae93843f3db6ced8ee7d80
+    ops/team/canonical-reconciliation-referee/CLOSING_MANIFEST.json: 3c62bc8c943cf8582c40609634a5ad185dc51d8c0a6e723095b2d58abe1ebd9f
+    ops/team/canonical-reconciliation-referee/verify_closing_referee.py: 9d14f0a0afa988f76d1ff86e92f2064958b6cee87f750da51fcd82da6db4c83c
+
+source_accounting:
+  status: PASS
+  source_count: 12
+  used:
+    - path: ops/research-team/PROTOCOL.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: 7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c
+    - path: ai/omreal/NINE_DIAGONAL_STATUS.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+    - path: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+    - path: ai/omreal/verify_diag3_research_decision_ledger.py
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: 32d778a2c4e1a4844b77649e7a82c4829da0cb4c4f293f0938e898d167c67ede
+    - path: ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: 26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923
+    - path: ops/team/diag4-strategy-referee/FINAL_DELTA_REREVIEW.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: dc36cd3b95eb949e41e1a2c12b8ace8b87f15f16af5487acc16c3642b8bca434
+    - path: ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2
+    - path: ops/team/diag4-s53-referee/CLOSING_REVIEW.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: 7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c
+    - path: ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f
+    - path: ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md
+      revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+      sha256: e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35
+    - path: ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md
+      revision: e548a28832232a34ed9e408224f6e16a9ebc9e4b
+      sha256: 8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8
+    - path: ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml
+      revision: e548a28832232a34ed9e408224f6e16a9ebc9e4b
+      sha256: cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499
+  unused_or_missing: >-
+    No external source, paid service, mutable branch result, new mathematics,
+    topology computation, or boundary-atlas construction was used.
+
+coverage:
+  included:
+    - exact candidate identity, tree, parent chain, and base ancestry
+    - all 12 frozen sources and three candidate canonical outputs
+    - preserved rejected-head evidence and original-verifier behavior
+    - all 18 opening-to-candidate paths
+    - every bounded endpoint count, status, route, target, and nonconsequence
+    - separate D4-S53 and total-D4 semantics on all three canonical surfaces
+    - native and independent hostile canaries
+  excluded:
+    - mathematical discovery, target selection, or theorem promotion
+    - Q3 atlas construction, topology, publication, merge, CI, or backup upload
+    - acceptance of any commit or tree other than the reviewed exact head
+
+open_defects: []
+ledger_change_recommended: none
+count_change_recommended: 0
+theorem_effect: NONE; retain 2/9 with diagonals 1 and 2 only.
+next_action: >-
+  Freeze 77ea32c05eefd312a15ae0096e2990621da03a84 and tree
+  669c6782874b2d8de97f0d78a5ee86cb5c0c3fcc for a fresh independent closing
+  review. Publish or merge only if that exact-head review and all required
+  checks pass; any changed byte requires a new review.
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Only ops/team/canonical-reconciliation-falsifier was changed. Prior rejection
+  artifacts and the original verifier were preserved byte-for-byte. No
+  canonical file, theorem ledger, publication state, repository ref, recovery
+  store, or mathematical claim was modified.

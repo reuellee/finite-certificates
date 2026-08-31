@@ -93,6 +93,29 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Four reconciliation verifiers intentionally replay exact ancestor
+          # commits, trees, path diffs, and frozen source bytes.  A depth-one
+          # checkout cannot satisfy that fail-closed evidence contract.
+          fetch-depth: 0
+      - name: Import and prove pinned reconciliation evidence
+        run: |
+          test "$(git rev-parse --is-shallow-repository)" = false
+          bundle=ops/research-team/cycles/2026-08-31-canonical-reconciliation/provenance/canonical-reconciliation-evidence.bundle
+          test "$(sha256sum "$bundle" | cut -d' ' -f1)" = d8cbb1e975bdbf62c3d91e30622e2174c71ce22c2484b164b19f106a369a2d27
+          git bundle verify "$bundle"
+          git fetch "$bundle" refs/remotes/recovery/reconciliation:refs/reconciliation-evidence/2026-08-31
+          test "$(git rev-parse refs/reconciliation-evidence/2026-08-31)" = 7411f3f1e40c09c32c027122cb2a2bf5935710a0
+          git cat-file -e e666990f5b0cf07fef4a639bbb6596ddc9c4515a^{commit}
+          git cat-file -e e548a28832232a34ed9e408224f6e16a9ebc9e4b^{commit}
+          git cat-file -e aa784af939b55d3503e4782a9d65a9b06cf81ce0^{commit}
+          git cat-file -e 9332f507996a8594883619cb530565ced79b59eb^{commit}
+          git cat-file -e 12f155c707366ab830252e7226e0030ddd1bd7e2^{commit}
+          git cat-file -e 6e8fa4a74dbc9e0e130719f9c55df86d58a75707^{commit}
+          git cat-file -e 3f764ce3e6fce92f984d0cf8249321452e7934c2^{commit}
+          git cat-file -e ca6a154899fea133920dfa435a597632bf03728d^{commit}
+          git cat-file -e 77ea32c05eefd312a15ae0096e2990621da03a84^{commit}
+          git cat-file -e 7411f3f1e40c09c32c027122cb2a2bf5935710a0^{commit}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

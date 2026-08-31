@@ -23,6 +23,7 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 
 import verify_diag3_triple_local_roadmap_canary as base  # noqa: E402
+import diag3_research_ledger_compatibility as ledger_compat  # noqa: E402
 
 
 CERTIFICATE = ROOT / "ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json"
@@ -32,8 +33,8 @@ SCHEMA = "diag3-triple-frontier-multibox-canary-v1"
 BASE_REVISION = "ec362dba8a912bc4749c004641aee2da0a88dc05"
 RESIDUE_COUNT = 1_162_302
 RESIDUE_DIGEST = "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4"
-EXPECTED_SOURCE_HASHES = {
-    "decision_ledger_sha256": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+HISTORICAL_SOURCE_HASHES = {
+    "decision_ledger_sha256": ledger_compat.HISTORICAL_LEDGER_SHA256,
     "critical_system_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
     "source_mapping_gate_sha256": "8ad62abdd3bd7d9bc14e5bfec3e407f3c07fd740a5475d1243e8dbb9e08d8692",
     "base_registration_sha256": "94224ab5f5f64d8a7e14e3d5d382c5cdc96292d9a455520c3c76e003b77eddb3",
@@ -125,16 +126,26 @@ def verify_source_accounting(candidate):
     for key, value in expected_paths.items():
         if authenticated[key] != value:
             raise AssertionError(f"source path changed: {key}")
+    # The committed v1 certificate retains its exact historical ledger
+    # binding.  Authenticate the current v2 ledger independently and then
+    # replay the unchanged obligation semantics below.
+    ledger_compat.require_historical_ledger_binding(
+        authenticated["decision_ledger_sha256"], "triple-frontier certificate"
+    )
+    ledger = ledger_compat.load_current_ledger(LEDGER)
     actual_hashes = {
-        "decision_ledger_sha256": sha256(LEDGER),
         "critical_system_sha256": sha256(base.SYSTEM),
         "source_mapping_gate_sha256": sha256(base.SOURCE_GATE),
         "base_registration_sha256": sha256(base.REGISTRATION),
         "base_certificate_sha256": sha256(BASE_CERTIFICATE),
     }
-    if actual_hashes != EXPECTED_SOURCE_HASHES:
+    if actual_hashes != {
+        key: value
+        for key, value in HISTORICAL_SOURCE_HASHES.items()
+        if key != "decision_ledger_sha256"
+    }:
         raise AssertionError(f"pinned source hash changed: {actual_hashes}")
-    for key, value in EXPECTED_SOURCE_HASHES.items():
+    for key, value in HISTORICAL_SOURCE_HASHES.items():
         if authenticated[key] != value:
             raise AssertionError(f"certificate source digest changed: {key}")
     if authenticated["named_factor_presentation"] != [5563, 16134, 19284]:
@@ -146,7 +157,6 @@ def verify_source_accounting(candidate):
     if authenticated["unresolved_residue_source_order_sha256"] != RESIDUE_DIGEST:
         raise AssertionError("residue digest changed")
 
-    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
     obligation = next(
         item for item in ledger["invariant_obligations"]
         if item["id"] == "diag3_triple_hc0"
@@ -529,6 +539,7 @@ def main():
     certificate = json.loads(CERTIFICATE.read_text(encoding="utf-8"))
     verify_candidate(certificate)
     rejected = verify_hostile_mutations(certificate)
+    ledger_rejected = ledger_compat.verify_hostile_mutations()
     compact_sphere_negative_canary()
     print("PASS independent deterministic 20-macrobox / 35-certificate-box replay")
     print("PASS parent signs: 1400/1400 strict on accepted corridor")
@@ -537,6 +548,10 @@ def main():
     print("PASS boundary accounting: 18 outer facets / 19 macro seams / 15 split seams")
     print("PASS compact-sphere negative canary refused")
     print(f"PASS hostile mutations rejected {rejected}/{rejected}")
+    print(
+        "PASS current ledger v2 authenticated with historical obligation semantics; "
+        f"hostile mutations rejected {ledger_rejected}/{ledger_rejected}"
+    )
     print("THEOREM every restricted component meets the 20-macrobox corridor boundary")
     print("SCOPE no complete orbit; unresolved=1162302; score=2/9")
 

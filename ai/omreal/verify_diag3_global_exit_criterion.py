@@ -22,13 +22,16 @@ from collections import deque
 from fractions import Fraction
 from pathlib import Path
 
+import diag3_research_ledger_compatibility as ledger_compat
+
 
 REPO = Path(__file__).resolve().parents[2]
 FIXTURES = REPO / "ops/team/global-exit/GLOBAL_EXIT_FIXTURES.json"
+HISTORICAL_LEDGER_SHA256 = (
+    "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14"
+)
 
 PINNED_SHA256 = {
-    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json":
-        "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
     "ai/omreal/data/DIAG3_COMPLETION_OPEN_OBJECT.json":
         "ea8808e8979603757dec928b1e9aeb266aa3eabcfb2e70c1f13e7aa5c4af6ece",
     "ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json":
@@ -238,6 +241,14 @@ def replay_pair_countermodel(countermodel: dict) -> dict:
 
 
 def replay_canonical_state() -> dict:
+    # Keep the historical proof record bound to ledger v1, while separately
+    # authenticating the current v2 ledger and unchanged obligations.
+    ledger_compat.require_historical_ledger_binding(
+        HISTORICAL_LEDGER_SHA256, "global-exit proof record"
+    )
+    ledger_compat.load_current_ledger(
+        REPO / "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json"
+    )
     for relative, expected in PINNED_SHA256.items():
         actual = sha256(REPO / relative)
         if actual != expected:
@@ -284,6 +295,7 @@ def replay_canonical_state() -> dict:
 def main() -> None:
     fixtures = json.loads(FIXTURES.read_text(encoding="utf-8"))
     canonical = replay_canonical_state()
+    ledger_rejected = ledger_compat.verify_hostile_mutations()
     graph_results = {}
     for graph in fixtures["graphs"]:
         result = check_exit_graph(graph)
@@ -343,6 +355,10 @@ def main() -> None:
     print("THEOREM graph acceptance is sufficient for noncompactness and equivalent to the sink-SCC predicate")
     print("INCONCLUSIVE graph rejection may be a false negative when sound edges are omitted")
     print("NO-GO component graph, even when exit-complete, does not determine pair H1")
+    print(
+        "PASS current ledger v2 authenticated with historical obligation semantics; "
+        f"hostile mutations rejected {ledger_rejected}/{ledger_rejected}"
+    )
 
 
 if __name__ == "__main__":

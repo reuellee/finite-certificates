@@ -1,0 +1,229 @@
+track_id: canonical-reconciliation-falsifier
+cycle_id: 2026-08-31-canonical-reconciliation
+role: falsifier
+base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+reviewed_revision: 6e8fa4a74dbc9e0e130719f9c55df86d58a75707
+reviewed_tree: 10fd994ccc89b722cd92118759cee65fc8a1906c
+reconciled_candidate_revision: 12f155c707366ab830252e7226e0030ddd1bd7e2
+
+outcome: finite-exact
+verdict: REJECT_ACTIONABLE_ROUTE_OMISSION
+summary: >-
+  All eight enumerated reconciliation endpoints, exact counts, theorem
+  nonconsequences, source identities, and path restrictions pass under the
+  candidate's alternate schema. The original verifier rejects first on an
+  unmandated status-prose commit token, but independent semantic adjudication
+  finds one substantive defect: the accepted PR43 retirement of the complete
+  alternating D4 total-complex route until global inputs exist is absent from
+  both current canonical surfaces and their verifier.
+
+exact_head:
+  commit: 6e8fa4a74dbc9e0e130719f9c55df86d58a75707
+  tree: 10fd994ccc89b722cd92118759cee65fc8a1906c
+  identity_check: PASS
+  worktree_before_review: CLEAN
+
+original_falsifier_replay:
+  verifier_sha256: d482fa2337e0df542c9b550cd1b894aa7845d76200196071f8b51ad9d82cb840
+  manifest_sha256: 3a2bc113711dd27ab3145512655f2afc6a68216866790f09370fe285de801abf
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+    ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py
+    --candidate
+  exit_code: 1
+  exact_output: |
+    REJECT candidate status missing accepted fact: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+  first_failure_classification: NON_AUTHORITATIVE_STATUS_PROSE_ASSUMPTION
+  reason: >-
+    The work order does not require the canonical base commit to be duplicated
+    in status prose, and the candidate machine-checks the exact commit, tree,
+    and PR44 identity in the ledger repository object.
+
+bounded_endpoint_replay:
+  implementation: independent direct JSON/prose comparison; imports neither verifier
+  results:
+    theorem_2_of_9_diagonals_1_2: PASS
+    d4_1715980_130_equals_915740_77_plus_800240_53: PASS
+    pr43_zero_survivor_delta: PASS
+    no_further_d4_s53_cycle: PASS
+    d3_100086840_quotient_104993280_raw: PASS
+    d3_residue_1162302: PASS
+    q3_complete_parent_boundary_atlas_missing: PASS
+    orbit5563_five_local_continuations_retired: PASS
+    pivot_required_no_selected_target: PASS
+    theorem_delta_none: PASS
+    approved_changed_paths_12_of_12: PASS
+  theorem_score_before: "2/9"
+  theorem_score_after: "2/9"
+  theorem_delta: NONE
+  count_delta: NONE
+
+actionable_mismatches:
+  - id: D4_TOTAL_COMPLEX_RETIRED_UNTIL_GLOBAL_INPUTS
+    kind: accepted_route_disposition_omitted
+    required_by:
+      - >-
+        ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md
+        final strategy disposition at lines 67-76
+      - >-
+        ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md
+        mandatory opening strategy table
+      - >-
+        falsifier work-order quantifier over every PR42-PR44 route disposition
+    expected_semantics: >-
+      The complete alternating D4/total-complex route is retired until its
+      global input object exists, and an incomplete successor input gate stops
+      fail-closed.
+    observed: >-
+      Current status and ledger encode D4_S53_CONTINUATION plus the five
+      orbit-5563 local retirements only. No distinct total-D4 disposition is
+      present.
+    verifier_gap: >-
+      RETIRED_CONTINUATIONS omits the total-D4 route, so the candidate's
+      route-retirement hostile canary cannot detect its absence.
+    effect: REJECT_EXACT_HEAD
+
+non_authoritative_mismatches:
+  - id: status_missing_literal_canonical_commit
+    classification: prose_placement_only
+  - id: status_no_selected_target_phrase_split_by_newline
+    classification: formatting_only_semantics_present
+  - id: status_uses_retired_continuation_instead_of_no_further_cycle_phrase
+    classification: equivalent_prose
+  - id: alternate_top_level_canonical_schema
+    classification: independent_schema_assumption_not_work_order_authority
+  - id: repository_identity_outside_canonical_reconciliation_object
+    classification: equivalent_authoritative_field_placement
+  - id: theorem_delta_derived_instead_of_explicit_field
+    classification: equivalent_exact_semantics
+  - id: renamed_d4_and_d3_accounting_fields
+    classification: equivalent_exact_values
+  - id: dedicated_d4_open_status_fields_absent
+    classification: equivalent_open_theorem_and_survivor_semantics
+  - id: parent_types_2604_and_frames_40320_not_repeated_in_current_object
+    classification: stronger_unmandated_repetition_assumption
+  - id: q3_status_missing_instead_of_missing_fail_closed
+    classification: equivalent_blocking_semantics
+  - id: historical_next_stage_preserved_below_historical_key
+    classification: >-
+      non-governing because historical_continuation_text_is_current is false
+      and both live target pointers are null
+  - id: historical_candidate_selected_flag_preserved
+    classification: non-governing_historical_evidence
+  - id: extra_precedence_source_and_history_fields
+    classification: benign_stronger_source_binding
+
+candidate_verifier_replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+    ai/omreal/verify_diag3_research_decision_ledger.py
+  exit_code: 0
+  result: >-
+    PASS candidate's own current-state assertions and 7/7 hostile canaries;
+    insufficient because no total-D4 retirement assertion or canary exists.
+
+supporting_replays:
+  - command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/research-team/verify_cycle_protocol.py
+    result: PASS_4_CYCLES_13_AUTHORIZED_WORK_ORDERS
+  - command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py
+      --sources-only
+    result: PASS_12_SOURCES_FACT_SHA256_a6a2913d7409ec9907ee9c249037d2fd508efa52a42b72603eb4e6e069f49789
+  - command: >-
+      PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3
+      ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py
+      --self-test
+    result: PASS_POSITIVE_CONTROL_REJECT_9_OF_9_HOSTILES
+
+artifacts:
+  - path: ops/team/canonical-reconciliation-falsifier/CANDIDATE_REVIEW.md
+    sha256: 9cb60fc5f89857c97be2b36a48746ab005aa866c4befd1e6148654c1c30a7e2e
+  - path: ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py
+    sha256: d482fa2337e0df542c9b550cd1b894aa7845d76200196071f8b51ad9d82cb840
+  - path: ops/team/canonical-reconciliation-falsifier/SOURCE_MANIFEST.json
+    sha256: 3a2bc113711dd27ab3145512655f2afc6a68216866790f09370fe285de801abf
+
+source_accounting:
+  used:
+    - path: ai/omreal/NINE_DIAGONAL_STATUS.md
+      sha256: 8e4070084805b812e03ccfea56ec23f2043f8e235857b75e5160ad69e426989e
+    - path: ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json
+      sha256: aaa4a59af8872154833fed38c7d97deccd4e4046514dedd91fb51692a01119f5
+    - path: ai/omreal/verify_diag3_research_decision_ledger.py
+      sha256: e894645cf67d7edbf53bbb52ccf78bf0e96c807df885566da4c03e2ae560a04c
+    - path: ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md
+      sha256: e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2
+    - path: ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md
+      sha256: 8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8
+    - path: ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml
+      sha256: cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499
+  unused_or_missing: >-
+    No external source, paid service, new mathematical artifact, or mutable
+    prover branch was used. The review is bound only to the frozen exact head.
+
+coverage:
+  included: >-
+    Exact head/tree, every changed path, all eight bounded canonical endpoint
+    facts, source-bound arithmetic, theorem nonconsequences, live versus
+    historical target precedence, all original schema/prose mismatches, and
+    every PR43 route disposition implicated by the falsifier contract.
+  excluded: >-
+    New mathematics, Q3 construction, topology, publication, merging, repair
+    of canonical files, and acceptance of any successor head.
+
+canaries:
+  original_candidate_mode: REJECTED_ON_NONAUTHORITATIVE_PROSE_TOKEN
+  semantic_eight_endpoint_control: PASS
+  stale_target_current_authority: REJECTED_BY_LIVE_NULL_TARGET_AND_HISTORY_POLICY
+  false_3_of_9: REJECTED
+  changed_d3_d4_counts: REJECTED
+  q3_false_completion: REJECTED
+  unauthorized_path: REJECTED
+  missing_total_d4_retirement: NOT_IMPLEMENTED_ACTIONABLE_GAP
+
+open_defects:
+  - >-
+    The current canonical state and verifier omit the distinct retirement of
+    the complete alternating D4 total-complex route until global inputs exist.
+
+suggested_discriminator:
+  candidate_change: >-
+    Add an explicit current D4_TOTAL_COMPLEX_RETIRED_UNTIL_GLOBAL_INPUTS
+    disposition to both canonical surfaces and assert it independently of
+    D4-S53 retirement.
+  hostile_test: >-
+    Delete or change only the total-D4 disposition while retaining
+    D4_S53_CONTINUATION retirement; the revised verifier must reject.
+  handoff: >-
+    Freeze a new exact commit/tree and rerun the independent closing referee.
+    Do not use the original verifier's unmandated schema/prose assumptions as
+    the repair specification.
+
+ledger_change_recommended: >-
+  Coordinator-only proposal: record the distinct current total-D4 route
+  retirement and seal it with an independent hostile mutation. No count,
+  theorem score, obligation, or selected-target change.
+count_change_recommended: 0
+theorem_effect: NONE; retain 2/9 with diagonals 1 and 2 only.
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  Only ops/team/canonical-reconciliation-falsifier was changed. The original
+  verifier was not edited or relaxed; no canonical repair, publication, merge,
+  ledger update, theorem promotion, or mathematical discovery was performed.

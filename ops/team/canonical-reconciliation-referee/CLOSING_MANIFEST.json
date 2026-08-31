@@ -1,0 +1,191 @@
+{
+  "format": "canonical-reconciliation-closing-referee-manifest-v1",
+  "cycle_id": "2026-08-31-canonical-reconciliation",
+  "base": {
+    "commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+    "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+  },
+  "opening": {
+    "commit": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+    "tree": "99d7c10657088d6cebc7c80568f7224d1079af7c"
+  },
+  "candidate": {
+    "commit": "6e8fa4a74dbc9e0e130719f9c55df86d58a75707",
+    "tree": "10fd994ccc89b722cd92118759cee65fc8a1906c",
+    "parent": "12f155c707366ab830252e7226e0030ddd1bd7e2"
+  },
+  "accepted_merges": [
+    {
+      "pull_request": 42,
+      "commit": "aa784af939b55d3503e4782a9d65a9b06cf81ce0",
+      "tree": "6aa36a92c5e5d2e420ec660a1ad2c2be2b06a561"
+    },
+    {
+      "pull_request": 43,
+      "commit": "9332f507996a8594883619cb530565ced79b59eb",
+      "tree": "692d173462497cb645127ea1ced6cbe40aba4d5a"
+    },
+    {
+      "pull_request": 44,
+      "commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+    }
+  ],
+  "authoritative_sources": [
+    {
+      "path": "ops/research-team/PROTOCOL.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ai/omreal/NINE_DIAGONAL_STATUS.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782",
+      "candidate_must_match": false
+    },
+    {
+      "path": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+      "candidate_must_match": false
+    },
+    {
+      "path": "ai/omreal/verify_diag3_research_decision_ledger.py",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "32d778a2c4e1a4844b77649e7a82c4829da0cb4c4f293f0938e898d167c67ede",
+      "candidate_must_match": false
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/team/diag4-strategy-referee/FINAL_DELTA_REREVIEW.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "dc36cd3b95eb949e41e1a2c12b8ace8b87f15f16af5487acc16c3642b8bca434",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/team/diag4-s53-referee/CLOSING_REVIEW.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md",
+      "revision": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "sha256": "e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md",
+      "revision": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+      "sha256": "8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8",
+      "candidate_must_match": true
+    },
+    {
+      "path": "ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml",
+      "revision": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+      "sha256": "cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499",
+      "candidate_must_match": true
+    }
+  ],
+  "candidate_outputs": {
+    "ai/omreal/NINE_DIAGONAL_STATUS.md": "8e4070084805b812e03ccfea56ec23f2043f8e235857b75e5160ad69e426989e",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "aaa4a59af8872154833fed38c7d97deccd4e4046514dedd91fb51692a01119f5",
+    "ai/omreal/verify_diag3_research_decision_ledger.py": "e894645cf67d7edbf53bbb52ccf78bf0e96c807df885566da4c03e2ae560a04c"
+  },
+  "candidate_evidence": {
+    "ops/team/canonical-reconciliation-prover/FINDINGS.md": "28d4a0955c923464fd7f563fb89544192ddfdad5ac9f860ef80824b4abce7aa8",
+    "ops/team/canonical-reconciliation-prover/RESULT.yaml": "0524c252ff3715e60c7f1f1707f5f9cd5f4cb401755c867fd17129bd183ac5f0",
+    "ops/team/canonical-reconciliation-prover/SOURCE_MANIFEST.json": "5c75e973c6a7c8f68e73b035bb2ef2b6b20f928db4d171fc25634832a1ef3506",
+    "ops/team/canonical-reconciliation-falsifier/FINDINGS.md": "5eebca3aaa4b95a25f088d49665e5a8bef805414391e7681886d5d0412f08882",
+    "ops/team/canonical-reconciliation-falsifier/RESULT.yaml": "9ba43c9c2271a010b4d88c68a81a26d43ab21910b1ca5a5ffd4a7952577ca67a",
+    "ops/team/canonical-reconciliation-falsifier/SOURCE_MANIFEST.json": "3a2bc113711dd27ab3145512655f2afc6a68216866790f09370fe285de801abf",
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": "d482fa2337e0df542c9b550cd1b894aa7845d76200196071f8b51ad9d82cb840",
+    "ops/team/canonical-reconciliation-referee/OPENING_REVIEW.md": "19ef289973db98c9805ad6e41132c8a3588c88d513a4ce64651836c348ed9bea",
+    "ops/team/canonical-reconciliation-referee/OPENING_HANDOFF.yaml": "c65ee6d800ab55c80c3d3507f3522fe7e5a90be90d82c4ec4b143ba2d949ce42"
+  },
+  "expected_changed_paths": [
+    "ai/omreal/NINE_DIAGONAL_STATUS.md",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+    "ai/omreal/verify_diag3_research_decision_ledger.py",
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md",
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml",
+    "ops/team/canonical-reconciliation-falsifier/FINDINGS.md",
+    "ops/team/canonical-reconciliation-falsifier/RESULT.yaml",
+    "ops/team/canonical-reconciliation-falsifier/SOURCE_MANIFEST.json",
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py",
+    "ops/team/canonical-reconciliation-prover/FINDINGS.md",
+    "ops/team/canonical-reconciliation-prover/RESULT.yaml",
+    "ops/team/canonical-reconciliation-prover/SOURCE_MANIFEST.json",
+    "ops/team/canonical-reconciliation-referee/OPENING_HANDOFF.yaml",
+    "ops/team/canonical-reconciliation-referee/OPENING_REVIEW.md"
+  ],
+  "authoritative_facts": {
+    "theorem": {
+      "score": "2/9",
+      "proved_diagonals": [1, 2],
+      "delta": "NONE"
+    },
+    "d4": {
+      "complete_supports": 1715980,
+      "complete_orbits": 130,
+      "b31_supports": 915740,
+      "b31_orbits": 77,
+      "survivor_supports": 800240,
+      "survivor_orbits": 53,
+      "survivor_delta_supports": 0,
+      "survivor_delta_orbits": 0
+    },
+    "d3": {
+      "parent_types": 2604,
+      "frames_per_parent": 40320,
+      "raw_presentations": 104993280,
+      "quotient_classes": 100086840,
+      "triple_universe": 79102449,
+      "proved_noncompact": 77940147,
+      "unresolved_residue": 1162302,
+      "first_missing_object": "Q3_COMPLETE_PARENT_BOUNDARY_ATLAS"
+    }
+  },
+  "required_route_dispositions": {
+    "d4_s53": "RETIRED",
+    "d4_alternating_total_complex": "RETIRE_UNTIL_GLOBAL_INPUT_OBJECT_EXISTS",
+    "orbit_5563_local_roadmap_box_collar_macrobox_clipped_wall": "RETIRED"
+  },
+  "hostile_canaries": [
+    "stale_base_identity",
+    "false_3_of_9",
+    "active_old_target",
+    "changed_d4_survivor_count",
+    "changed_d3_residue",
+    "promoted_q3_atlas",
+    "restored_d4_s53_continuation",
+    "restored_orbit5563_macrobox_continuation",
+    "changed_source_digest",
+    "unauthorized_path"
+  ],
+  "expected_verdict": "REJECT_ACTIONABLE_ROUTE_OMISSION",
+  "minimal_defect": {
+    "source": "ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md",
+    "source_lines": "67-76",
+    "required": "The complete alternating D4 total-complex route is RETIRE until its global input object exists.",
+    "candidate_observed": "Only D4_S53_CONTINUATION and the five orbit-5563 local continuations are retired in the current canonical object; the distinct D4 alternating total-complex disposition is absent."
+  }
+}

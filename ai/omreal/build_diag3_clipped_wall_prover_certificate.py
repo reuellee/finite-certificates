@@ -23,6 +23,7 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 
 import verify_diag3_triple_local_roadmap_canary as exact  # noqa: E402
+import diag3_research_ledger_compatibility as ledger_compat  # noqa: E402
 
 
 OUTPUT = ROOT / "ops/team/clipped-wall-prover/DIAG3_CLIPPED_WALL_PROVER_CERTIFICATE.json"
@@ -34,13 +35,23 @@ FRONTIER_VERIFIER = HERE / "diag3_triple_frontier_verify_multibox.py"
 
 BASE_REVISION = "ae8a3afc24abfea94acf4b22ea35c2ca18f3c577"
 SCHEMA = "diag3-clipped-wall-prover-route-refutation-v1"
-EXPECTED_DIGESTS = {
-    "decision_ledger": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+HISTORICAL_DIGESTS = {
+    "decision_ledger": ledger_compat.HISTORICAL_LEDGER_SHA256,
     "local_roadmap_certificate": "0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27",
     "critical_system": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
     "frontier_certificate": "7e7ba6761ba544ab96dc36cd3f559317132b7264b94bc39059be813a8c3b5f70",
     "frontier_builder": "f395fbf1336a01a09524d7f172b75b64530057848af8805ac275bd2b3f4f7fcb",
     "frontier_verifier": "5801c26d872d8615b020751fbb0bb478a02306e25523bac7e0a0f2e7f1e126b8",
+}
+CURRENT_SUCCESSOR_DIGESTS = {
+    "decision_ledger": ledger_compat.CURRENT_LEDGER_SHA256,
+    "local_roadmap_certificate": "0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27",
+    "critical_system": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "frontier_certificate": "7e7ba6761ba544ab96dc36cd3f559317132b7264b94bc39059be813a8c3b5f70",
+    # Filled with the exact compatibility successors; historical certificate
+    # provenance above remains unchanged.
+    "frontier_builder": "0ab04e80eccb0bbadfa9676e1dec9066d7b13f02f31358084d37e8ff737b24fd",
+    "frontier_verifier": "08707f73d6f5dc1bb5167bd3fd4237467c31be7967b733024ee85a83f52824b7",
 }
 
 
@@ -201,8 +212,9 @@ def main():
         "frontier_builder": FRONTIER_BUILDER,
         "frontier_verifier": FRONTIER_VERIFIER,
     }
+    ledger_compat.load_current_ledger(LEDGER)
     actual_digests = {name: sha256(path) for name, path in paths.items()}
-    if actual_digests != EXPECTED_DIGESTS:
+    if actual_digests != CURRENT_SUCCESSOR_DIGESTS:
         raise AssertionError(f"pinned input digest changed: {actual_digests}")
 
     local = json.loads(LOCAL_CERTIFICATE.read_text(encoding="utf-8"))
@@ -416,7 +428,9 @@ def main():
             "accepted_parent_side": "g-a<=0",
             "clipped_cell": "K=macrobox20 intersect {g-a<=0}",
         },
-        "source_digests": actual_digests,
+        # Reproduce the historical v1 artifact exactly.  The current v2
+        # ledger and versioned successor tools were authenticated separately.
+        "source_digests": HISTORICAL_DIGESTS,
         "quantified_decisions": {
             "fixed_projection": {
                 "claim": (

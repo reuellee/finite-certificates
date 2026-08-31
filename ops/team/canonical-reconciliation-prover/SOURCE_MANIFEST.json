@@ -1,0 +1,76 @@
+{
+  "format": "canonical-reconciliation-source-manifest-v2",
+  "track_id": "canonical-reconciliation-prover",
+  "cycle_id": "2026-08-31-canonical-reconciliation",
+  "opening_reconciliation": {
+    "commit": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+    "tree": "99d7c10657088d6cebc7c80568f7224d1079af7c"
+  },
+  "canonical_source": {
+    "merged_pull_request": 44,
+    "commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+    "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+  },
+  "historical_canonical_sha256": {
+    "ai/omreal/NINE_DIAGONAL_STATUS.md": "f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14"
+  },
+  "accepted_source_sha256": {
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md": "8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8",
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml": "cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499",
+    "ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md": "26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923",
+    "ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md": "e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2",
+    "ops/team/diag4-s53-referee/CLOSING_REVIEW.md": "7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c",
+    "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md": "a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f",
+    "ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md": "e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35"
+  },
+  "reconciled_output_sha256": {
+    "ai/omreal/NINE_DIAGONAL_STATUS.md": "a5865422b3337aba0ccd71eb02c1d521c201f4c338b9a2054afa0d21923e35b0",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e",
+    "ai/omreal/verify_diag3_research_decision_ledger.py": "3353ed3f7f185034f97a3e440e7957ebcf4046032a8fbf20bbc5d7e445060491"
+  },
+  "canonical_state": {
+    "status": "PIVOT_REQUIRED",
+    "theorem_score": "2/9",
+    "proved_diagonals": [1, 2],
+    "d4_identity": "1715980/130=915740/77+800240/53",
+    "d4_s53_survivor_delta": 0,
+    "d4_alternating_total_complex": {
+      "status": "RETIRED_UNTIL_GLOBAL_INPUTS",
+      "distinct_from": "D4_S53_CONTINUATION",
+      "required_global_inputs": [
+        "THEOREM_READY_GLOBAL_COMPACTIFICATION",
+        "SIGNED_FACE_POSET",
+        "RESTRICTION_MATRICES"
+      ],
+      "incomplete_successor_input_gate": "STOP_FAIL_CLOSED"
+    },
+    "d3_unresolved_residue": 1162302,
+    "d3_quotient_classes": 100086840,
+    "d3_raw_frame_presentations": 104993280,
+    "first_missing_global_object": "Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+    "selected_mathematical_target": null,
+    "fresh_independent_opening_audit_required": true
+  },
+  "retired_continuations": [
+    "D4_S53_CONTINUATION",
+    "ORBIT_5563_LOCAL_ROADMAP_CONTINUATION",
+    "ORBIT_5563_LOCAL_BOX_CONTINUATION",
+    "ORBIT_5563_LOCAL_COLLAR_CONTINUATION",
+    "ORBIT_5563_MACROBOX_CONTINUATION",
+    "ORBIT_5563_CLIPPED_WALL_CONTINUATION"
+  ],
+  "hostile_canaries": [
+    "2-of-9",
+    "800240-of-53",
+    "1162302-residue",
+    "q3-missing",
+    "no-selected-target",
+    "route-retirement",
+    "d4-total-complex-reactivation",
+    "d4-total-complex-omission",
+    "source-binding"
+  ],
+  "ledger_delta": "NONE",
+  "mathematical_discovery": "NONE"
+}
