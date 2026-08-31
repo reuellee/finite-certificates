@@ -1,0 +1,117 @@
+cycle_id: 2026-08-31-canonical-reconciliation
+base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+base_tree: 444f8a7e50ec58e4d97a71744090d7ed60330f19
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+strategy_gate:
+  opening_verdict: CONTINUE_CANONICAL_RECONCILIATION_ONLY
+  closing_required: true
+  stagnation_rule: >-
+    Mathematical discovery remains stopped until one canonical state reflects
+    all accepted PR #42--#44 facts and an independent exact-head review passes.
+
+work_orders:
+  - track_id: canonical-reconciliation-coordinator
+    role: coordinator
+    base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    publication_authorization: *publication_authorization
+    target:
+      claim: Integrate only independently accepted canonical-state evidence.
+      quantifiers: Every changed path, count, status, retirement, and theorem nonconsequence.
+      ledger_id: canonical_state_consistency
+    deliverables:
+      positive: Integrated candidate, cycle report, exact publication identities, and recovery manifest.
+      negative: Frozen mismatch report naming the disputed artifact and field.
+      null: Field-level unresolved-precedence manifest.
+      timeout: Reproducible partial integration manifest.
+    verification:
+      replay: Run the canonical ledger verifier, cycle protocol verifier, and all PR #42--#44 source verifiers named by the candidate.
+      canaries: [unchanged-2-of-9, stale-target-rejected, false-promotion-rejected, prohibited-route-rejected]
+    resource_ceiling: One coordinator turn, 30 minutes, 2 GiB RSS, no paid services.
+    stop_rule: Stop on mismatch, unresolved authority, accepted frozen candidate, or ceiling.
+    prohibited_scope: No mathematical discovery, score change, D4-S53 continuation, or orbit-5563 local continuation.
+    worker_restrictions: Coordinator integrates and publishes but does not independently approve its own evidence.
+
+  - track_id: canonical-reconciliation-prover
+    role: prover
+    base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    publication_authorization: *publication_authorization
+    target:
+      claim: Reconcile canonical status and D3 decision state through merged PR #44.
+      quantifiers: Every affected field in NINE_DIAGONAL_STATUS.md, DIAG3_RESEARCH_DECISION_LEDGER.json, and its deterministic verifier.
+      ledger_id: canonical_state_consistency
+    inputs:
+      - path_or_source: ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md
+        digest: 26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923
+      - path_or_source: ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md
+        digest: e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2
+      - path_or_source: ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md
+        digest: a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f
+    deliverables:
+      positive: Updated canonical files, source-bound manifest, deterministic replay, and explicit zero ledger delta.
+      negative: Exact contradiction with an accepted source artifact.
+      null: Complete field comparison with unresolved precedence.
+      timeout: Checked/unchecked field manifest and resume command.
+    verification:
+      replay: PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python3 ai/omreal/verify_diag3_research_decision_ledger.py
+      canaries: [2-of-9, 800240-of-53, 1162302-residue, q3-missing, no-selected-target]
+    resource_ceiling: One agent turn, 30 minutes, 2 GiB RSS, no paid services.
+    stop_rule: Stop at first source mismatch, complete deterministic candidate, or ceiling.
+    prohibited_scope: No new mathematical claim, no count change, no local roadmap, and no unrelated file edits.
+    worker_restrictions: Own only the two canonical files, their verifier, and ops/team/canonical-reconciliation-prover.
+
+  - track_id: canonical-reconciliation-falsifier
+    role: falsifier
+    base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    publication_authorization: *publication_authorization
+    target:
+      claim: Falsify any stale, inflated, or incomplete canonical reconciliation.
+      quantifiers: Every PR #42--#44 accepted count, route disposition, current-target field, and theorem nonconsequence.
+      ledger_id: canonical_state_consistency
+    deliverables:
+      positive: Exact counterexample or source mismatch that rejects the candidate.
+      negative: Independent acceptance manifest with all hostile mutations rejected.
+      null: Complete searched field set and remaining ambiguity.
+      timeout: Partial hostile-test manifest and replay command.
+    verification:
+      replay: Independent standard-library script under ops/team/canonical-reconciliation-falsifier.
+      canaries: [stale-pr37-head, active-old-target, macrobox-continuation, d4-s53-continuation, false-3-of-9]
+    resource_ceiling: One agent turn, 30 minutes, 2 GiB RSS, no paid services.
+    stop_rule: Stop on first actionable defect, complete hostile replay, or ceiling.
+    prohibited_scope: Do not repair the candidate, reuse its acceptance logic, or edit canonical files.
+    worker_restrictions: Own only ops/team/canonical-reconciliation-falsifier.
+
+  - track_id: canonical-reconciliation-referee
+    role: verifier
+    base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    publication_authorization: *publication_authorization
+    target:
+      claim: Independently accept or reject the frozen reconciled candidate at exact commit and tree identities.
+      quantifiers: All changed paths, all source digests, all exact counts, all route dispositions, and zero theorem delta.
+      ledger_id: canonical_state_consistency
+    deliverables:
+      positive: Exact-head ACCEPT handoff with independent replay and no actionable defects.
+      negative: REJECT handoff with a minimal exact defect.
+      null: Fail-closed ambiguity report identifying the next discriminator.
+      timeout: Partial replay manifest with checked and unchecked gates.
+    verification:
+      replay: Independent clean reconstruction under ops/team/canonical-reconciliation-referee.
+      canaries: [source-digest, stale-target, route-retirement, count-arithmetic, false-score, unauthorized-path]
+    resource_ceiling: One agent turn, 30 minutes, 2 GiB RSS, no paid services.
+    stop_rule: Stop at first defect, complete exact-head verdict, or ceiling.
+    prohibited_scope: Do not modify the candidate or share discovery-side acceptance logic.
+    worker_restrictions: Own only ops/team/canonical-reconciliation-referee and never merge or update the theorem ledger.

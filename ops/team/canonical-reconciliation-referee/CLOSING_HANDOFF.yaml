@@ -1,0 +1,199 @@
+track_id: canonical-reconciliation-referee
+cycle_id: 2026-08-31-canonical-reconciliation
+role: independent_closing_referee
+date_utc: "2026-08-31"
+
+verdict: REJECT_ACTIONABLE_ROUTE_OMISSION
+candidate_accepted: false
+publication_gate: CLOSED
+merge_gate: CLOSED
+
+frozen_identity:
+  base:
+    commit: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    tree: 444f8a7e50ec58e4d97a71744090d7ed60330f19
+  opening:
+    commit: e548a28832232a34ed9e408224f6e16a9ebc9e4b
+    tree: 99d7c10657088d6cebc7c80568f7224d1079af7c
+  candidate:
+    commit: 6e8fa4a74dbc9e0e130719f9c55df86d58a75707
+    tree: 10fd994ccc89b722cd92118759cee65fc8a1906c
+    parent: 12f155c707366ab830252e7226e0030ddd1bd7e2
+  identity_result: PASS
+
+minimal_actionable_defect:
+  id: D4_ALTERNATING_TOTAL_COMPLEX_RETIREMENT_OMITTED
+  authority:
+    path: ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md
+    sha256: e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2
+    lines: "67-76"
+    accepted_disposition: >-
+      The complete alternating D4 total-complex route is RETIRE until its
+      global input object exists; an incomplete successor input gate must STOP
+      fail-closed.
+    missing_inputs:
+      - theorem-ready global compactification
+      - signed face poset
+      - restriction matrices
+  cycle_binding:
+    opening_strategy_row: D4 signed fivefold total complex / RETIRE until global inputs exist
+    prover_quantifier: Every affected field through merged PRs 42-44.
+    falsifier_quantifier: Every accepted PR42-PR44 route disposition.
+    referee_quantifier: All route dispositions.
+  candidate_observation:
+    status_surface: Only the D4-S53 continuation is retired.
+    ledger_surface: >-
+      retired_continuations contains D4_S53_CONTINUATION and five orbit-5563
+      local continuations, but no distinct D4 alternating total-complex route.
+    verifier_surface: No assertion or hostile canary seals the missing disposition.
+  why_actionable: >-
+    D4-S53 stagnation and the complete alternating D4 total-complex input gate
+    are distinct accepted route dispositions. Omitting the latter leaves the
+    current control plane incomplete under the cycle's universal quantifiers.
+  next_discriminator: >-
+    A repaired exact head must state the distinct total-D4 retirement and its
+    global-input condition on both current canonical surfaces and reject a
+    mutation that removes or reactivates it.
+
+falsifier_candidate_mode_arbitration:
+  literal_base_sha_in_status_prose:
+    classification: EXTRA_CONTRACTUAL_PRESENTATION_ASSUMPTION
+    observed_result: >-
+      REJECT candidate status missing accepted fact
+      e666990f5b0cf07fef4a639bbb6596ddc9c4515a
+    reason: >-
+      Exact identity is required, but no governing source requires the base
+      SHA to appear literally in NINE_DIAGONAL_STATUS.md. The candidate's
+      repository object contains the correct commit, tree, and PR number.
+  exact_falsifier_v1_object_equality:
+    classification: EXTRA_CONTRACTUAL_SCHEMA_ASSUMPTION
+    reason: >-
+      CYCLE.md and WORK_ORDERS.yaml prescribe semantic fields and quantifiers,
+      not the falsifier's independently chosen v1 key names, nesting, or
+      no-extra-field equality. The falsifier explicitly requests referee
+      adjudication for a semantically equivalent alternate schema.
+  disposition: >-
+    Do not reject for either presentation assumption. Normalize candidate v2
+    semantics against authoritative sources; that independent comparison
+    exposes the actionable total-D4 route omission.
+
+source_accounting:
+  status: PASS
+  source_count: 12
+  sha256:
+    ops/research-team/PROTOCOL.md: 7b3fe051677d31748d483de006d9cfc97d26518f5103016371ed7ccee469654c
+    ai/omreal/NINE_DIAGONAL_STATUS.md@base: f4360254e5c7e624b9c9194bb7cb0b3844d5fe3201ec9bc688c2f18d37276782
+    ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json@base: 5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14
+    ai/omreal/verify_diag3_research_decision_ledger.py@base: 32d778a2c4e1a4844b77649e7a82c4829da0cb4c4f293f0938e898d167c67ede
+    ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md: 26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923
+    ops/team/diag4-strategy-referee/FINAL_DELTA_REREVIEW.md: dc36cd3b95eb949e41e1a2c12b8ace8b87f15f16af5487acc16c3642b8bca434
+    ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md: e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2
+    ops/team/diag4-s53-referee/CLOSING_REVIEW.md: 7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c
+    ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md: a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f
+    ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md: e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35
+    ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md: 8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8
+    ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml: cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499
+
+candidate_artifacts:
+  canonical_outputs:
+    ai/omreal/NINE_DIAGONAL_STATUS.md: 8e4070084805b812e03ccfea56ec23f2043f8e235857b75e5160ad69e426989e
+    ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json: aaa4a59af8872154833fed38c7d97deccd4e4046514dedd91fb51692a01119f5
+    ai/omreal/verify_diag3_research_decision_ledger.py: e894645cf67d7edbf53bbb52ccf78bf0e96c807df885566da4c03e2ae560a04c
+  changed_path_count: 14
+  changed_path_scope: PASS_EXACT_ALLOWED_SURFACE
+
+replay:
+  canonical_ledger_verifier: PASS_7_OF_7_NATIVE_CANARIES
+  cycle_protocol: PASS_4_CYCLES_13_AUTHORIZED_WORK_ORDERS
+  pr42_prover: PASS_EXACT_1715980_130_EQUALS_915740_77_PLUS_800240_53
+  pr42_falsifier: PASS_DECLARED_SCOPE_GLOBAL_REALIZABILITY_INCONCLUSIVE
+  pr43_accepted_source_and_review: PASS_ZERO_DELTA_AND_DISTINCT_ROUTE_RETIREMENTS
+  pr43_falsifier: PASS_WHOLE_DOMAIN_TOPOLOGY_UNREACHED
+  pr43_prover: STOPPED_AT_FIRST_ACTIONABLE_DEFECT
+  pr44_prover: PASS_TERMINAL_NULL_13_OF_13_CANARIES
+  pr44_falsifier: PASS_TERMINAL_NULL_MISSING_COMPLETE_PARENT_BOUNDARY_ATLAS
+  pr44_referee: PASS_ACCEPT_TERMINAL_NULL_WITH_MANDATORY_PIVOT
+  reconciliation_falsifier_sources: PASS_12_SOURCES
+  reconciliation_falsifier_self_test: PASS_POSITIVE_AND_REJECT_9_OF_9
+  reconciliation_falsifier_candidate: REJECT_NONAUTHORITATIVE_STATUS_LOCATION
+  independent_referee_verifier: PASS_EXPECTED_REJECTION_10_OF_10_HOSTILES
+  independent_result_semantic_sha256: 15f98967a7c3ddd75f5c988549e07ab559c8444849c92c29754052620181faa1
+
+mathematical_state:
+  theorem_score_before: "2/9"
+  theorem_score_after: "2/9"
+  proved_diagonals: [1, 2]
+  theorem_delta: NONE
+  d4:
+    identity: "1715980/130=915740/77+800240/53"
+    survivor_delta_supports: 0
+    survivor_delta_orbits: 0
+    d4_s53_status: OPEN
+    d4_sp_status: OPEN
+    diagonal_four_status: OPEN
+  d3:
+    raw_presentations: 104993280
+    quotient_classes: 100086840
+    unresolved_residue: 1162302
+    first_missing_object: Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    first_missing_object_status: MISSING
+    row_delta: 0
+  selected_mathematical_target: null
+  target_selection: PENDING_FRESH_INDEPENDENT_OPENING_AUDIT
+
+coverage:
+  checked:
+    - exact base, opening, candidate, parent, and accepted-merge identities
+    - all 12 frozen source digests
+    - all candidate output and worker-evidence digests
+    - exact 14-path changed surface
+    - PR42-PR44 arithmetic and accepted route dispositions
+    - theorem nonconsequence and both open D3 obligations
+    - D4-S53 and orbit-5563 local retirements
+    - schema-neutral total-D4 route search on both current canonical surfaces
+    - ten independent hostile mutations
+  incomplete_after_stop:
+    - PR43 prover rerun was terminated after the decisive route omission
+  excluded:
+    - candidate repair
+    - mathematical discovery or target selection
+    - topology or boundary-atlas construction
+    - publication, CI, recovery upload, or merge
+
+nonconsequences:
+  - No theorem or diagonal is proved or refuted.
+  - No D4 survivor or D3 row is removed.
+  - No compact component, global closure, or true-infinity claim is made.
+  - The 9DVL score remains 2/9.
+  - This rejection does not pre-approve a repaired candidate.
+
+referee_artifacts:
+  ops/team/canonical-reconciliation-referee/CLOSING_MANIFEST.json: 3c62bc8c943cf8582c40609634a5ad185dc51d8c0a6e723095b2d58abe1ebd9f
+  ops/team/canonical-reconciliation-referee/verify_closing_referee.py: 9d14f0a0afa988f76d1ff86e92f2064958b6cee87f750da51fcd82da6db4c83c
+
+stop_rule_triggered: FIRST_ACTIONABLE_ROUTE_DISPOSITION_DEFECT
+required_next_action: >-
+  Create a new candidate head that records the distinct complete alternating
+  D4 total-complex retirement and global-input condition on both current
+  canonical surfaces, binds it to the accepted PR43 source, and adds a hostile
+  removal/reactivation canary. Submit that exact repaired head to a fresh
+  independent closing review. Do not publish or merge candidate 6e8fa4a.
+
+publication_authorization: |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+worker_restrictions: >-
+  This review modifies only ops/team/canonical-reconciliation-referee. It does
+  not repair canonical files, publish, merge, update the theorem ledger, or
+  begin mathematical discovery.
