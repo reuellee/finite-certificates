@@ -1,0 +1,117 @@
+cycle_id: 2026-08-31-diag9-s1237-active-sector
+base_revision: ae2ffe5ff5c9fd087d13191e4e766d8fdb9fb8c8
+base_tree: 46c37dffd007ec08b576a1b3f0e9fc603ad09cbf
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+strategy_gate:
+  opening_verdict: PIVOT_TO_D9_PARENT2599_S12_37_ACTIVE_SECTOR
+  closing_required: true
+  stagnation_rule: >-
+    Stop rather than continue if complete projection closure, active-sector
+    coverage, genuine infinity, or exact component labels remain unavailable.
+
+work_orders:
+  - track_id: diag9-s1237-coordinator
+    role: coordinator
+    base_revision: ae2ffe5ff5c9fd087d13191e4e766d8fdb9fb8c8
+    publication_authorization: *publication_authorization
+    target:
+      claim: Integrate only independently accepted evidence for the exact parent-2599 S12,37 active sector.
+      quantifiers: Every pinned input, every one of 3539 signed active literals, every covered component, every boundary stratum, and every claimed consequence.
+      ledger_id: diag9_s1237_component_coverage
+    deliverables:
+      positive: Frozen integrated component certificate and exact one-instance connectivity claim.
+      negative: Frozen exact D9 counterexample candidate with two feasible separated components.
+      null: Complete obstruction manifest with no topology claim.
+      timeout: Deterministic projection and cell frontier with exact resume commands.
+    verification:
+      replay: Run the cycle opening verifier, active-sector verifier, all role verifiers, and the repository cycle-protocol verifier.
+      canaries: [unchanged-2-of-9, exact-3539-literals, no-sample-promotion, no-artificial-infinity, no-parent860-inflation]
+    resource_ceiling: One coordinator turn, 30 minutes, 12 GiB RSS, no paid services.
+    stop_rule: Stop on input drift, moved reviewed head, coverage gap, unresolved boundary, role overlap, or ceiling.
+    prohibited_scope: No D9 theorem promotion from a positive instance, no D3/D4 continuation, no parent-860 roadmap, and no unrelated edits.
+    worker_restrictions: Coordinator alone integrates and publishes; it may not approve its own evidence.
+
+  - track_id: diag9-s1237-prover
+    role: prover
+    base_revision: ae2ffe5ff5c9fd087d13191e4e766d8fdb9fb8c8
+    publication_authorization: *publication_authorization
+    target:
+      claim: Construct a complete compactified component certificate for H_S at parent 2599 and S12,37.
+      quantifiers: All 70 parent inequalities, all 3539 signed active literals, full projection closure, all components and adjacencies, all genuine boundary and infinity strata, and exact labels for every component.
+      ledger_id: diag9_s1237_component_coverage
+    inputs:
+      - path_or_source: ai/omreal/DIAG9_ACTIVE_SECTOR_THEOREM.md
+        digest: 132a51b92a9813947e7ab7a43b52aafa6b2c789126e31cfc8a7f0773ee30b790
+      - path_or_source: ai/omreal/data/ninth_candidate_12_37_antichain.npz
+        digest: 11ca66549982ec40ce8425d2caed45b418edb73c4eb415a45b39d57e481bd1e4
+      - path_or_source: ai/omreal/data/ninth_candidate_12_37_path.npz
+        digest: 8db38e00d9bf8701558c27cd4ede3e024db8953ea3ef9873bf0b4fc65ad6bcda
+    deliverables:
+      positive: Coverage-certified connected H_S with one exact feasible incidence.
+      negative: Two coverage-certified H_S components with exact feasible incidences.
+      null: Complete projection or compactification obstruction manifest.
+      timeout: Deterministic processed/open frontier and exact replay command.
+    verification:
+      replay: Standard-library or declared exact-algebra verifier under ops/team/diag9-s1237-prover.
+      canaries: [omitted-active-factor, unresolved-resultant, duplicate-cell, missing-unbounded-end, artificial-box-infinity, sample-only-label]
+    resource_ceiling: One prover turn, 30 minutes, 12 GiB RSS, no paid services.
+    stop_rule: Stop at the first untracked projection factor, uncovered or multiply covered point, unresolved true-infinity face, exact terminal endpoint, or ceiling.
+    prohibited_scope: No inactive-wall theorem beyond the pinned reduction, no parent-860 work, no universal D9 claim, and no theorem-ledger edit.
+    worker_restrictions: Own only ops/team/diag9-s1237-prover; do not reuse falsifier or referee acceptance logic.
+
+  - track_id: diag9-s1237-falsifier
+    role: falsifier
+    base_revision: ae2ffe5ff5c9fd087d13191e4e766d8fdb9fb8c8
+    publication_authorization: *publication_authorization
+    target:
+      claim: Falsify the candidate component certificate or certify a genuine separated feasible pair.
+      quantifiers: Every source pin, family member, active literal, projection descendant, cell, adjacency, boundary face, infinity tag, and component label used by the candidate.
+      ledger_id: diag9_s1237_component_coverage
+    deliverables:
+      positive: Minimal exact defect or two independently certified feasible separated components.
+      negative: Independent hostile-test manifest with no actionable defect.
+      null: Complete attacked surface and unresolved discriminator.
+      timeout: Partial hostile-test manifest and deterministic replay command.
+    verification:
+      replay: Independent implementation under ops/team/diag9-s1237-falsifier.
+      canaries: [drop-one-of-3539, flip-one-literal, omit-projection-descendant, merge-components, box-as-infinity, path-as-coverage, false-3-of-9]
+    resource_ceiling: One falsifier turn, 30 minutes, 12 GiB RSS, no paid services.
+    stop_rule: Stop on the first actionable defect, complete independent hostile replay, or ceiling.
+    prohibited_scope: Do not repair the prover artifact, weaken global component coverage, or infer separation from samples.
+    worker_restrictions: Own only ops/team/diag9-s1237-falsifier and do not share discovery code with the prover.
+
+  - track_id: diag9-s1237-referee
+    role: verifier
+    base_revision: ae2ffe5ff5c9fd087d13191e4e766d8fdb9fb8c8
+    publication_authorization: *publication_authorization
+    target:
+      claim: Accept or reject the frozen integrated S12,37 active-sector result at exact commit and tree identities.
+      quantifiers: Full changed path set, exact source digests, all coverage and boundary obligations, all component labels, and the exact theorem or non-theorem consequence.
+      ledger_id: diag9_s1237_component_coverage
+    deliverables:
+      positive: Exact-head ACCEPT with independent reconstruction and scope-safe consequence.
+      negative: Exact-head REJECT with one minimal reproducible defect.
+      null: Fail-closed ambiguity naming the next discriminator.
+      timeout: Checked and unchecked gate manifest with resume procedure.
+    verification:
+      replay: Clean-state independent verifier under ops/team/diag9-s1237-referee.
+      canaries: [source-digest, target-family, active-literal-count, projection-closure, coverage, adjacency, boundary-infinity, component-label, false-promotion, unauthorized-path]
+    resource_ceiling: One referee turn, 30 minutes, 12 GiB RSS, no paid services.
+    stop_rule: Stop at first defect, complete exact-head verdict, or ceiling.
+    prohibited_scope: Do not modify the candidate, reuse prover acceptance logic, merge, or update a theorem ledger.
+    worker_restrictions: Own only ops/team/diag9-s1237-referee and review only a frozen integrated head.
