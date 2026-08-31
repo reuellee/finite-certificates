@@ -2,12 +2,60 @@
 
 Date: 2026-08-31 UTC
 
+## Base and target
+
+- canonical base revision:
+  `6c7f52b43632072100b67e5f0a9b6221df14d620`
+- canonical base tree:
+  `60866cb78e8aea3259cf376a4420e5370ab8c010`
+- opening and closing theorem ledger: `2/9`
+- bounded target: `D8_M6_CEGAR1`
+- parent and loop: parent `860`, `4-11-12-14-13-23-4`
+- fixed chain grammar: the arithmetic-mean barycentric fan with six oriented
+  triangles
+
 ## Outcome
 
 The bounded cycle reaches its positive endpoint. It proves neither diagonal
 eight nor 9DVL, whose honest ledger remains `2/9`. It does prove that the
 named parent-860 mask-6 loop is nonvacuous for the diagonal-eight quantifier
 and nevertheless bounds an explicit singular disk.
+
+## Handoffs and publication gates
+
+| Role / track | Frozen evidence | Classification |
+| --- | --- | --- |
+| coordinator and cross-domain opening scout | `CYCLE.md` and `WORK_ORDERS.yaml` | `CONTINUE_ONE_BOUNDED_DISCRIMINATOR`; CEGAR is method-only |
+| independent opening falsifier | target contract | nonvacuity first; reject sampled, local-only, or graph-only promotion |
+| independent opening referee | D8/D3/D9 eight-factor comparison | `CONTINUE` D8 only; `STOP` D9 and `PIVOT` away from D3 for this cycle |
+| nonvacuity prover | `ops/team/diag8-mask6-nonvacuity/RESULT.yaml`, SHA-256 `6eac6a8c52a588f251acca63bdd72abc52344ff2aa18b675aee863fb5da36b5c` | `PROVED`; seven charts and all 56 ordered pairs |
+| exact fan prover | `ops/team/diag8-mask6-fan/RESULT.yaml`, SHA-256 `18dfae842f9b7e73d958a00dbd376c9fe86a0c4d5f3cdaba7658fea9f692e610` | `PROVED_BOUNDED_FILLING` |
+| independent closing referee | frozen integrated exact head after this report | `PENDING_EXACT_HEAD_REVIEW` |
+| coordinator publication | PR #47 | `PENDING_REVIEWED_FINAL_HEAD` |
+
+The integrated pre-report candidate is
+`c3190b618cb23d4ca5bd2f6d28c0c1f34e0d1988`, tree
+`3884f30c3c866ace2472d4366c78a12635586df9`. The report revision deliberately
+does not claim its own acceptance: the independent referee must review the new
+exact head after this report is published.
+
+| Gate | Result |
+| --- | --- |
+| canonical base revision and tree | `PASS` |
+| mandatory opening strategy evaluation | `PASS` |
+| exact nonvacuity certificate | `PASS_8_SIGNATURES_7_CHARTS_56_ORDERED_PAIRS` |
+| fixed-fan parent census | `PASS_70_OF_70` |
+| fixed-fan primitive-factor census | `PASS_26740_OF_26740` |
+| active-wall arc/node/sector reconstruction | `PASS_2_ARCS_1_NODE_4_SECTORS` |
+| singular boundary and radial cancellation | `PASS` |
+| cycle protocol | `PASS_5_CYCLES_19_AUTHORIZED_WORK_ORDERS` |
+| cycle source manifest | `PASS_6_OF_6_HOSTILE_CANARIES` |
+| canonical state v2 | `PASS_13_OF_13_HOSTILE_CANARIES` |
+| theorem ledger delta | `NONE; 2/9 -> 2/9` |
+| independent closing referee at final head | `PENDING_PUBLICATION_STAGE` |
+| protected CI at reviewed final head | `PENDING_PUBLICATION_STAGE` |
+| exact-head merge | `PENDING_PUBLICATION_STAGE` |
+| durable recovery checkpoint | `PENDING_PUBLICATION_STAGE` |
 
 ## Exact nonvacuity result
 
@@ -65,7 +113,7 @@ only. See de Silva--Morozov--Vejdemo-Johansson,
 [*Dualities in Persistent (Co)Homology*](https://arxiv.org/abs/1107.5665),
 for the broader matrix-duality perspective.
 
-## Nonconsequences and disposition
+## Ledger and route disposition
 
 - no parent-860 coverage;
 - no statement for every eight-family;
@@ -77,6 +125,20 @@ The mask-6 discriminator is **`RETIRED_AFTER_POSITIVE_FILLING`**. Repeating or
 widening this local loop is prohibited. Current control returns to
 `PIVOT_REQUIRED` with no selected target pending a fresh opening audit.
 
+Obligation-graph delta:
+
+- `diag8_mask6_nonvacuity`: closed for the one certified eight-family;
+- `diag8_mask6_fixed_fan`: closed positively for the one fixed fan;
+- `diag8_h1`: unchanged and open because parent coverage, universal-family,
+  infinity, and transport inputs remain absent;
+- `diag3_triple_hc0`, `diag3_pair_hc1`, `diag4_sp`, and `diag9_h0`: unchanged
+  and open;
+- theorem ledger: exactly `2/9`; promotion `NONE`.
+
+The cycle reduces one local graph ambiguity and retires one discriminator. It
+does not reduce the unresolved global quantifier burden enough to authorize a
+second local mask-6 cycle.
+
 ## Replays
 
 ```console
@@ -87,3 +149,27 @@ PYTHONDONTWRITEBYTECODE=1 python \
 PYTHONDONTWRITEBYTECODE=1 python \
   ai/omreal/verify_canonical_research_state_v2.py
 ```
+
+## Publication and recovery manifest
+
+- publication branch: `research/diag8-mask6-cegar-20260831`
+- pull request: `https://github.com/reuellee/finite-certificates/pull/47`
+- integrated pre-report candidate:
+  `c3190b618cb23d4ca5bd2f6d28c0c1f34e0d1988`, tree
+  `3884f30c3c866ace2472d4366c78a12635586df9`
+- final independently reviewed head and tree: `PENDING_PUBLICATION_STAGE`
+- protected CI run and result: `PENDING_PUBLICATION_STAGE`
+- merge revision: `PENDING_PUBLICATION_STAGE`
+- Google Drive `Projects/research-backups` bundle and recovery manifest:
+  `PENDING_PUBLICATION_STAGE`
+- ledger promotion: `NONE`
+
+## Next action
+
+Post-cycle verdict: **`PIVOT_TO_FRESH_INDEPENDENT_OPENING_AUDIT`**.
+
+After exact-head review, protected CI, merge, and recovery checkpointing, the
+next cycle must independently compare the surviving D3, D8, and D9 global
+obligations again. No mathematical target is selected here. The retired
+mask-6 discriminator may not be repeated or widened without a new theorem-
+ready global coverage input.
