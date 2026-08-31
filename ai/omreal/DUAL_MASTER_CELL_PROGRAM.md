@@ -430,14 +430,17 @@ after the required codimension-two incidence is restored.
 
 These are finite exact regressions, not a parent-local diagonal-eight result.
 The network does not cover the parent cell, carries no true-infinity
-subcomplex, and cannot certify the global equality/inclusion poset.  The
-remaining mask-6 cycle
+subcomplex, and cannot certify the global equality/inclusion poset.  A later
+bounded CEGAR cycle proves that the mask-6 cycle
 
 ```text
 4-11-12-14-13-23-4
 ```
 
-spans the `a,d,f,g` coordinates and is the next two-chain discriminator.
+spans the `a,d,f,g` coordinates and bounds a six-triangle rational singular
+disk for one globally proper pairwise-incomparable eight-family.  That result
+retires the named discriminator but supplies neither parent coverage nor a
+universal diagonal-eight certificate; no successor target is selected here.
 
 The accompanying abstract relative-two-complex checker records the minimum
 acceptable proof interface: complete signed `0/1/2` incidence, complete cell

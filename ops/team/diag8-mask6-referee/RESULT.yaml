@@ -1,0 +1,152 @@
+track_id: diag8-mask6-referee
+cycle_id: 2026-08-31-diag8-mask6-cegar
+role: independent_closing_referee
+date_utc: "2026-08-31"
+
+verdict: ACCEPT_EXACT_HEAD_BOUNDED_FILLING_ONLY
+candidate_accepted: true
+theorem_promotion: NONE
+merge_authorized_by_review: false
+
+frozen_identity:
+  canonical_base:
+    commit: 6c7f52b43632072100b67e5f0a9b6221df14d620
+    tree: 60866cb78e8aea3259cf376a4420e5370ab8c010
+  reviewed_pre_review_head:
+    commit: 7cd06ac13f2e38df6cd59b06859f61c84ed3bae2
+    tree: e2986f88bac8f1cc1e08ddd89a9310ac8e48c56a
+    parent: c3190b618cb23d4ca5bd2f6d28c0c1f34e0d1988
+  publication_branch: research/diag8-mask6-cegar-20260831
+  pull_request: 47
+  ancestry: PASS
+  changed_path_count: 25
+  changed_path_scope: PASS_GOVERNED_CYCLE_AND_AUTHORITY_SURFACES_ONLY
+
+outcome:
+  classification: finite_exact_bounded_proved
+  target: D8_M6_CEGAR1
+  parent: 860
+  loop: [4, 11, 12, 14, 13, 23]
+  family_size: 8
+  exact_consequence: >-
+    For one certified globally nonempty, proper, pairwise-incomparable
+    eight-family, the named mask-6 loop is the boundary of the fixed
+    six-triangle rational singular disk in the corresponding F_S.
+  route_disposition: RETIRED_AFTER_POSITIVE_FILLING
+
+replay:
+  diff_hygiene: PASS_BASE_TO_HEAD_WORKTREE_AND_INDEX
+  cycle_protocol: PASS_5_CYCLES_19_AUTHORIZED_WORK_ORDERS
+  work_orders: PASS_6_EXACT_BASE_BOUND_ORDERS
+  nonvacuity: PASS_8_SIGNATURES_7_CHARTS_56_ALTERNATIVES_56_OF_56_PAIRS
+  nonvacuity_hostiles: PASS_7_OF_7
+  fan_parent_brackets: PASS_70_OF_70
+  fan_residual_factors: PASS_26740_OF_26740
+  fan_factor_semantic_sha256: 71e01e0847e15f8bb21b50c6c3e2f69675bdd9ad9143d7b694aa8d6552cbcc06
+  fan_active_factors: [16573, 19721]
+  fan_active_arrangement: PASS_2_GLOBAL_ARCS_1_NODE_4_SECTORS
+  fan_boundary: PASS_6_RADIAL_CANCELLATIONS
+  fan_hostiles: PASS_8_OF_8
+  cycle_manifest: PASS_EXACT_PATH_CENSUSES_6_OF_6_HOSTILES
+  canonical_state_v1: PASS_9_OF_9_HOSTILES
+  canonical_state_v2: PASS_13_OF_13_HOSTILES
+  shard_contract: PASS_235_SELECTED_4_DELEGATED_1_EXTERNAL_5_ARCHIVAL
+  prior_diag8_controls: PASS_GRAPH_RELATIVE_POLYGON_AND_TRANSPORT
+  remote_pr_identity: PASS_EXACT_HEAD_MERGEABLE
+
+arrangement:
+  factor_16573_arc:
+    [outer_1, radial_1, radial_0, radial_5, outer_4]
+  factor_19721_arc:
+    [outer_3, radial_4, radial_5, outer_5]
+  alternating_outer_endpoints: true
+  triangle_4_interior_nodes: 1
+  triangle_5_resultant_root: EXCLUDED_BY_NEGATIVE_V
+  sector_count: 4
+  every_sector_meets_loop: true
+
+source_accounting:
+  status: PASS
+  sha256:
+    ai/omreal/data/CANONICAL_RESEARCH_STATE.json: 89d1475a43bef01be74e9c8eed62d9caadd8265f262c3aa3dcf0e704f341432c
+    ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json: 508d5433d33eeb5be915e1749838d73541a8bd0055c74fac00bdb74ee28e930f
+    ai/omreal/data/DIAG9_GRAPH_parent860_coordinate_star.npz: 9274371ec45baee318cd160f931344f37dc5031acc13d63c16099534b8896f4b
+    ai/omreal/data/DIAG9_GRAPH_parent860_star_repair.npz: f3ebf1f3a9b458663a12b042e68194aa24c4b55689cf85344e2d98f81aec3d11
+    ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md: 8af233ced03055881572353d26d6f3a7d931649a9456fe7018cbc31202f4556e
+    ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz: ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5
+    ops/team/diag8-mask6-nonvacuity/RESULT.yaml: 6eac6a8c52a588f251acca63bdd72abc52344ff2aa18b675aee863fb5da36b5c
+    ops/team/diag8-mask6-nonvacuity/SOURCE_MANIFEST.json: d67cca39c6056c0e32a22960d1e4917f1d6e95486710dc4b164c40780e8b5eb7
+    ops/team/diag8-mask6-fan/DIAG8_MASK6_BARYCENTRIC_FAN_CERTIFICATE.json: b5ead7b0ed6ac6a5cb50ab715110e302772f49e43b2419cd54c98228937627cb
+    ops/team/diag8-mask6-fan/RESULT.yaml: 18dfae842f9b7e73d958a00dbd376c9fe86a0c4d5f3cdaba7658fea9f692e610
+    ops/team/diag8-mask6-fan/SOURCE_MANIFEST.json: 3a03d06b96ee876bfc0e893c7f3020ef6de247d225b3b3593c61bf0c939c562e
+    ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/CYCLE.md: 5aecdb8950e623d32f367dac1f16ea85e547343dc7a413d677886b0c851776e1
+    ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/WORK_ORDERS.yaml: f42f1e4ce1233937197f956ece2542c5861779d5fbed6416affec910ae36b9fb
+    ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/CYCLE_REPORT.md: 85fde03ecbe5be0ecaa21e3b6da4e24c4bfa9eb24bd61a185e880f6735e27c4a
+    ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/SOURCE_MANIFEST.json: 8fd3ee2a33bd1bf50c2f7a866865cfa2cf88c0159aeb3f339605373229317cea
+  literature_boundary:
+    cegar: METHOD_ONLY_NO_IMPORTED_THEOREM
+    persistent_duality: FUTURE_ARCHITECTURE_NOT_USED
+
+archive_gate:
+  status: PASS
+  live_selected_verifiers: 235
+  delegated_verifiers: 4
+  external_input_verifiers: 1
+  archival_verifiers: 5
+  portable_pr45_classification: >-
+    Correctly archival because it freezes predecessor authority surfaces and
+    now rejects the current V2 README pointer; V1 and V2 state verifiers pass
+    as the live gates.
+  transient_history_classification: >-
+    Four exact-head PR45 review scripts require an unpublished transient
+    commit chain that is no longer retrievable.
+
+review_artifact:
+  path: ops/team/diag8-mask6-referee/CLOSING_REVIEW.md
+  sha256: a753eb4716c831daac780fa4945378be19cc2767cea42fab0da0ac83123f2ff5
+
+coverage:
+  included: >-
+    One eight-family, one complete six-edge loop, and the one fixed rational
+    barycentric fan, with complete parent, primitive-factor, wall, node,
+    sector, all-strata-label, and boundary audits.
+  excluded:
+    - parent-860 coverage
+    - every other proper incomparable eight-family
+    - true infinity and compactification
+    - global transport
+    - universal H1 computation
+    - diagonal-eight or 9DVL promotion
+
+ledger:
+  theorem_score_before: "2/9"
+  theorem_score_after: "2/9"
+  proved_diagonals: [1, 2]
+  diag8_h1: OPEN
+  selected_target: null
+  target_selection: PENDING_FRESH_INDEPENDENT_OPENING_AUDIT
+
+publication_gate:
+  reviewed_remote_head: PASS
+  pre_review_ci_run: 33403957651
+  pre_review_ci_status_at_review: IN_PROGRESS_NOT_FINAL_PUBLICATION_HEAD
+  exact_post_review_head_ci: REQUIRED_BEFORE_MERGE
+  durable_recovery_checkpoint: REQUIRED_AFTER_PUBLICATION
+  merge: PROHIBITED_UNTIL_ALL_PROTECTED_CHECKS_PASS_AT_EXACT_POST_REVIEW_HEAD
+
+open_global_obligations:
+  - parent coverage
+  - universal-family quantification
+  - true-infinity and compactification incidence
+  - global transport
+
+required_next_action: >-
+  Commit and publish the referee artifacts, require protected CI to pass at
+  that exact resulting head, merge only then, create the authorized durable
+  recovery checkpoint, and run a fresh independent opening audit. Do not
+  repeat or widen D8_M6_CEGAR1.
+
+worker_restrictions: >-
+  This review changes only ops/team/diag8-mask6-referee. It does not repair
+  producer files, change the theorem ledger, merge, upload recovery material,
+  or select the next mathematical target.

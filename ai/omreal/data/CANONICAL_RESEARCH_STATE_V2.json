@@ -1,0 +1,99 @@
+{
+  "format": "9dvl-canonical-research-state-v2",
+  "status": "PIVOT_REQUIRED",
+  "as_of": "2026-08-31",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "default_branch": "main",
+    "reconciled_commit": "6c7f52b43632072100b67e5f0a9b6221df14d620",
+    "reconciled_tree": "60866cb78e8aea3259cf376a4420e5370ab8c010",
+    "reconciliation_pull_request": 45
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE.json",
+    "sha256": "89d1475a43bef01be74e9c8eed62d9caadd8265f262c3aa3dcf0e704f341432c",
+    "policy": "IMMUTABLE_RECONCILIATION_STATE"
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "active_diagonal": null,
+    "promotion": "NONE"
+  },
+  "inherited_open_obligations": {
+    "diag3_triple_hc0": {
+      "status": "OPEN",
+      "residue": 1162302,
+      "first_missing_global_object": "Q3_COMPLETE_PARENT_BOUNDARY_ATLAS"
+    },
+    "diag3_pair_hc1": "OPEN",
+    "diag4_sp": {
+      "status": "OPEN",
+      "survivor_labeled": 800240,
+      "survivor_orbits": 53
+    },
+    "diag8_h1": "OPEN",
+    "diag9_h0": "OPEN"
+  },
+  "inherited_route_dispositions": {
+    "D4_S53_CONTINUATION": "RETIRED",
+    "D4_ALTERNATING_TOTAL_COMPLEX": "RETIRED_UNTIL_ALL_THREE_GLOBAL_INPUTS",
+    "ORBIT_5563_LOCAL_ROADMAP_CONTINUATION": "RETIRED",
+    "ORBIT_5563_LOCAL_BOX_CONTINUATION": "RETIRED",
+    "ORBIT_5563_LOCAL_COLLAR_CONTINUATION": "RETIRED",
+    "ORBIT_5563_MACROBOX_CONTINUATION": "RETIRED",
+    "ORBIT_5563_CLIPPED_WALL_CONTINUATION": "RETIRED"
+  },
+  "completed_cycle": {
+    "id": "2026-08-31-diag8-mask6-cegar",
+    "selected_target": "D8_M6_CEGAR1",
+    "cross_domain_transfer": {
+      "source_field": "counterexample_guided_abstraction_refinement",
+      "mapping": "treat_the_graph_loop_as_a_possibly_spurious_abstract_counterexample_and_refine_one_fixed_rational_disk_by_exact_residual_factors",
+      "exact_acceptance_kernel": "rational_singular_chain_boundary_plus_all_strata_label_gluing"
+    },
+    "opening_verdict": "CONTINUE_ONE_BOUNDED_DISCRIMINATOR",
+    "nonvacuity_gate": {
+      "status": "PROVED",
+      "parent": 860,
+      "loop": [4, 11, 12, 14, 13, 23],
+      "family_size": 8,
+      "exact_charts": 7,
+      "feasibility_or_gordan_witnesses": 56,
+      "directed_noncontainment_witnesses": 56,
+      "certificate": "ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz",
+      "certificate_sha256": "ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5"
+    },
+    "fixed_chain_gate": {
+      "status": "PROVED_BOUNDED_FILLING",
+      "chain": "six_triangle_rational_barycentric_singular_disk",
+      "parent_brackets_certified": 70,
+      "primitive_residual_factors_certified": 26740,
+      "sign_definite_factors": 26738,
+      "active_factors": [16573, 19721],
+      "active_wall_nodes": 1,
+      "sectors": 4,
+      "every_sector_meets_loop": true,
+      "radial_edges_cancel": true,
+      "certificate": "ops/team/diag8-mask6-fan/DIAG8_MASK6_BARYCENTRIC_FAN_CERTIFICATE.json",
+      "certificate_sha256": "b5ead7b0ed6ac6a5cb50ab715110e302772f49e43b2419cd54c98228937627cb"
+    },
+    "exact_consequence": "THE_MASK6_LOOP_BOUNDS_IN_F_S_FOR_ONE_CERTIFIED_PROPER_PAIRWISE_INCOMPARABLE_EIGHT_FAMILY",
+    "nonconsequences": [
+      "NO_PARENT_860_COVERAGE",
+      "NO_ALL_FAMILIES_STATEMENT",
+      "NO_DIAGONAL_8_PROOF",
+      "NO_9DVL_SCORE_CHANGE"
+    ],
+    "route_disposition": "MASK6_DISCRIMINATOR_RETIRED_AFTER_POSITIVE_FILLING"
+  },
+  "selected_target": null,
+  "target_selection": "PENDING_FRESH_INDEPENDENT_OPENING_AUDIT",
+  "process_gates": {
+    "theorem_score_promotion_requires_all_invariant_obligations_closed": true,
+    "local_filling_cannot_promote_diagonal_8": true,
+    "retired_mask6_discriminator_cannot_repeat": true,
+    "independent_exact_head_review_required": true
+  }
+}

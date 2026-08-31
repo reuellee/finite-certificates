@@ -82,6 +82,10 @@ EXTERNAL_INPUT = {
     ),
 }
 ARCHIVAL_INPUT = {
+    "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py": (
+        "archival PR45 portable verifier freezes predecessor authority surfaces; "
+        "superseded by canonical research state v2"
+    ),
     "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": (
         "archival PR45 audit requires an unpublished transient commit chain "
         "that is no longer retrievable; superseded by the portable reconciliation verifier"

@@ -1,12 +1,13 @@
 # Nine-Diagonal Vanishing: proof status and exact remaining targets
 
-## Current canonical precedence through merged PR #44
+## Current canonical precedence after merged PR #45 and the D8 mask-6 cycle
 
 This section is the current control plane as of 2026-08-31.  It supersedes
 every target-selection or continuation instruction retained in the historical
 record below, while preserving those exact artifacts as evidence.
 Its machine-readable authority is
-`ai/omreal/data/CANONICAL_RESEARCH_STATE.json`; the existing
+`ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json`.  Its immutable reconciled
+predecessor is `CANONICAL_RESEARCH_STATE.json`, and the existing
 `DIAG3_RESEARCH_DECISION_LEDGER.json` remains the immutable historical
 diagonal-three ledger so its pinned proof replays remain reproducible.
 
@@ -33,11 +34,21 @@ diagonal-three ledger so its pinned proof replays remain reproducible.
 - Further orbit-5563 local roadmap, box, collar, macrobox, or clipped-wall
   continuation is **retired**.  Local artifacts below retain their exact
   proved scopes but are not a global coverage route.
+- One fresh independent opening audit selected the bounded parent-860 D8
+  mask-6 discriminator.  Seven exact charts carry `56` strict-feasibility or
+  Gordan alternatives for one loop-common eight-family and cover all `56`
+  directed noncontainments, proving global properness and pairwise
+  incomparability.  The six-edge loop bounds an exact rational six-triangle
+  singular disk: all `70` parent brackets stay strict, `26,738/26,740`
+  residual factors are sign-definite, and the two remaining monotone walls
+  cross once into four loop-represented sectors.  This retires the named
+  discriminator after a positive bounded filling; it gives no parent coverage
+  or diagonal-eight proof.
 
 The current status is **`PIVOT_REQUIRED`**.  There is **no selected
 mathematical target**; selection is pending a fresh independent opening audit.
-No count, theorem claim, compact-component claim, or diagonal score changes in
-this reconciliation.
+The completed mask-6 filling changes no theorem score or invariant open
+obligation; it only retires that named bounded discriminator.
 
 ## Result ledger
 
@@ -73,7 +84,7 @@ Exactly two of the nine entries are currently proved.
 | 5 | `H_4(F_S)` | `H_c^4(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
-| 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group; an exact relative-two-complex interface now proves that graph labels alone cannot decide `H_1`; on the parent-860 training network an `a/d` triangle and an `a/g` pentagon are filled exactly, the local support quotient has width six and no size-eight antichain, and the remaining mask-6 loop still lacks a coverage-certified two-chain, infinity, and global dominance data |
+| 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group; an exact relative-two-complex interface proves that graph labels alone cannot decide `H_1`; on parent 860 the `a/d` triangle and `a/g` pentagon are filled, and the mask-6 loop now also bounds an exact six-triangle singular disk for one globally proper pairwise-incomparable eight-family; no parent coverage or all-family certificate exists |
 | 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 now has an exact 23-chamber coordinate-star no-go and a 24-chamber all-family CEGIS repair network, but no full-dimensional parent roadmap |
 
 The dual column is valid for all nine entries after importing the published
@@ -1151,9 +1162,10 @@ escape or higher-wall coherence.  See
    quotient has width six, and the same labelled one-skeleton can have
    different first homology after changing one two-cell.  Two apparent graph
    cycles are now filled geometrically: an affine `a/d` triangle for five
-   proper incomparable signatures, and the `a/g` pentagon cut by exactly two
-   transverse residual walls.  The surviving mask-6 loop
-   `4-11-12-14-13-23-4` is the next finite discriminator.  None of these
+   proper incomparable signatures, the `a/g` pentagon cut by exactly two
+   transverse residual walls, and the mask-6 loop
+   `4-11-12-14-13-23-4` by a six-triangle fan for one globally proper
+   incomparable eight-family.  None of these
    finite results proves parent coverage, global dominance, or correct
    infinity incidence; see `DIAG9_PARENT860_CEGIS_ROUTING.md` and the
    `ops/team/diag8-*` handoffs.
@@ -1955,13 +1967,18 @@ attach a triple-zero component to it; the unresolved triple residue remains
 - `ops/team/diag8-falsifier/`: an independent exact `a/g` polygon audit in
   which 26,738/26,740 factors are sign-definite, the remaining two walls meet
   transversely once, and the resulting dual two-cell kills the apparent
-  mask-3 graph cycle; the mask-6 loop remains unresolved.
+  mask-3 graph cycle; that artifact left the mask-6 loop unresolved, and the
+  later mask-6 fan certificate below supplies its bounded filling.
 - `ops/team/diag8-certificate/`: a fail-closed relative `C_2 -> C_1 -> C_0`
   certificate interface with complete labels, true-infinity deletion,
   dominance witnesses, exact mod-two ranks, and hostile graph-only canaries.
 - `ops/team/diag8-transport/`: exact obstructions showing that ordinary
   mutation connectivity and reducible deletion do not preserve the complete
   label/incidence data required to transport a diagonal-eight certificate.
+- `ops/team/diag8-mask6-nonvacuity/` and `ops/team/diag8-mask6-fan/`: a
+  seven-chart exact properness/incomparability certificate for one
+  loop-common eight-family and its all-`26,740`-factor rational singular-disk
+  filling.
 - `RESIDUAL_STRATUM_NONCOMPACTNESS.md` and its exact verifiers: global graph
   charts for individual walls, fixed-minor pair/triple noncompactness, the
   common-factor all-die escape, and the sharp arity-eight abstract no-go.

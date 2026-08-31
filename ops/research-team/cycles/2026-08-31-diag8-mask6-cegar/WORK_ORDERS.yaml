@@ -1,0 +1,152 @@
+cycle_id: 2026-08-31-diag8-mask6-cegar
+base_revision: 6c7f52b43632072100b67e5f0a9b6221df14d620
+base_tree: 60866cb78e8aea3259cf376a4420e5370ab8c010
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user explicitly authorizes this 9DVL cycle to publish research code and
+  artifacts to the public GitHub repository `reuellee/finite-certificates`;
+  create and update named research branches and pull requests; push commits;
+  run or rerun CI; and merge only after required checks pass at the exact
+  independently reviewed head.  The user also authorizes durable recovery
+  checkpoints only in the Google Drive `Projects/research-backups` area.  This
+  authorization does not permit publishing secrets or private unrelated files,
+  modifying any other repository, using paid external compute or paid APIs,
+  changing repository visibility or settings, force-pushing, deleting history
+  or data, or taking other irreversible actions without separate approval.
+  Use the authenticated GitHub connector for GitHub publication operations;
+  do not substitute `gh`.
+
+strategy_gate:
+  opening_verdict: CONTINUE_ONE_BOUNDED_DISCRIMINATOR
+  closing_required: true
+  stagnation_rule: >-
+    Stop after one nonvacuity gate and one fixed-fan discriminator. A positive
+    local filling retires this route; it cannot justify another mask-6 cycle.
+
+work_orders:
+  - track_id: diag8-mask6-opening-scout
+    role: coordinator and cross-domain strategy scout
+    base_revision: 6c7f52b43632072100b67e5f0a9b6221df14d620
+    publication_authorization: *publication_authorization
+    target:
+      claim: Rank the live D8, D3, and D9 routes and map one outside-field method without importing its theorem.
+      quantifiers: All eight protocol strategy dimensions, explicit fatal analogy breaks, and one bounded target or no-go verdict.
+      ledger_id: target_selection
+    deliverables:
+      positive: Ranked strategy table and exact CEGAR-to-certificate mapping.
+      negative: Fatal mismatch proving the proposed transfer cannot control this target.
+      null: NO_GO_NOW comparison with the missing information named.
+      timeout: Partial score table with unchecked dimensions identified.
+    verification:
+      replay: Recheck all scores against the canonical state and source-pinned literature.
+      canaries: [analogy-is-not-proof, no-hidden-score-promotion, no-retired-route]
+    resource_ceiling: One agent turn, 20 minutes, ordinary local compute, no paid services.
+    stop_rule: Stop at one ranked opening verdict or the ceiling.
+    prohibited_scope: No certificate production, theorem change, or repository publication.
+    worker_restrictions: Read-only research role; the coordinator alone integrates its result.
+
+  - track_id: diag8-mask6-opening-falsifier
+    role: independent opening falsifier
+    base_revision: 6c7f52b43632072100b67e5f0a9b6221df14d620
+    publication_authorization: *publication_authorization
+    target:
+      claim: Falsify the D8 mask-6 target on scope, nonvacuity, and quantifier readiness before compute begins.
+      quantifiers: Every candidate signature, the properness/incomparability prerequisite, and all stated nonconsequences.
+      ledger_id: target_selection
+    deliverables:
+      positive: Exact opening defect requiring STOP or PIVOT.
+      negative: Bounded discriminator accepted with a hostile-test contract.
+      null: Unresolved prerequisite and the smallest deciding experiment.
+      timeout: Checked and unchecked opening gates.
+    verification:
+      replay: Independently inspect the canonical state and parent-860 loop evidence.
+      canaries: [empty-family, duplicate-signature, local-only-incomparability, graph-only-homology]
+    resource_ceiling: One agent turn, 20 minutes, ordinary local compute, no paid services.
+    stop_rule: Stop at the first fatal defect, a complete bounded contract, or the ceiling.
+    prohibited_scope: Do not repair, produce certificates, or edit integrated surfaces.
+    worker_restrictions: Read-only falsifier; no shared acceptance logic with producers.
+
+  - track_id: diag8-mask6-opening-referee
+    role: independent target-selection referee
+    base_revision: 6c7f52b43632072100b67e5f0a9b6221df14d620
+    publication_authorization: *publication_authorization
+    target:
+      claim: Accept at most one bounded target after independently scoring D8, D3, and D9.
+      quantifiers: Every strategy dimension and every prerequisite in the proposed target contract.
+      ledger_id: target_selection
+    deliverables:
+      positive: CONTINUE_ONE_BOUNDED_DISCRIMINATOR verdict with fixed scope.
+      negative: STOP or RETIRE verdict with exact reason.
+      null: PIVOT verdict naming the next missing input.
+      timeout: Partial independent score table.
+    verification:
+      replay: Compare scout and falsifier claims to canonical source artifacts.
+      canaries: [stale-target, missing-nonvacuity, unbounded-parent-search, theorem-overclaim]
+    resource_ceiling: One agent turn, 20 minutes, ordinary local compute, no paid services.
+    stop_rule: Stop after one fail-closed opening verdict or the ceiling.
+    prohibited_scope: Do not create mathematical witnesses or edit producer artifacts.
+    worker_restrictions: Own only the opening-review verdict; no publication or merge authority.
+
+  - track_id: diag8-mask6-nonvacuity
+    role: constructive prover and exact certificate producer
+    base_revision: 6c7f52b43632072100b67e5f0a9b6221df14d620
+    publication_authorization: *publication_authorization
+    target:
+      claim: Exhibit one loop-common eight-family that is globally nonempty, proper, and pairwise incomparable.
+      quantifiers: Eight signatures, all 56 ordered pairs, and exact strict-feasibility or Gordan alternatives.
+      ledger_id: diag8_mask6_nonvacuity
+    deliverables:
+      positive: Exact certificate, independent verifier, source manifest, and all hostile canaries passing.
+      negative: Exact infeasibility or containment witness defeating the proposed family.
+      null: Complete searched chart set with an unresolved ordered pair.
+      timeout: Deterministic partial certificate and exact resume command.
+    verification:
+      replay: PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-mask6-nonvacuity/verify_diag8_mask6_nonvacuity.py
+      canaries: [gordan-weight, signature-bit, loop-vertex, chart-denominator, missing-field]
+    resource_ceiling: One agent turn, 30 minutes, ordinary local compute, no paid services.
+    stop_rule: Stop at a complete eight-family, first exact defect, or the ceiling.
+    prohibited_scope: No fan geometry, parent coverage, diagonal-eight claim, or unrelated edits.
+    worker_restrictions: Own only ops/team/diag8-mask6-nonvacuity; discovery dependencies stay outside verifier trust.
+
+  - track_id: diag8-mask6-fan
+    role: exact geometry prover and certificate producer
+    base_revision: 6c7f52b43632072100b67e5f0a9b6221df14d620
+    publication_authorization: *publication_authorization
+    target:
+      claim: Decide whether the fixed six-triangle rational fan is a labelled singular disk for the certified family.
+      quantifiers: All 70 parent brackets, all 26740 primitive residual factors, every active wall and node, all sectors, and the complete boundary.
+      ledger_id: diag8_mask6_fixed_fan
+    deliverables:
+      positive: Exact all-factor fan certificate with radial cancellation and loop boundary.
+      negative: Exact parent crossing, unresolved active stratum, or boundary mismatch.
+      null: Complete certified subset and first unresolved factor or incidence.
+      timeout: Deterministic factor frontier and exact resume command.
+    verification:
+      replay: PYTHONDONTWRITEBYTECODE=1 python ops/team/diag8-mask6-fan/verify_diag8_mask6_barycentric_fan.py
+      canaries: [parent-bracket, factor-sign, active-arc, node-resultant, sector-label, radial-cancellation, arc-reconstruction]
+    resource_ceiling: One agent turn, 45 minutes, at most eight local factor-scan workers, no paid services.
+    stop_rule: Stop after the one fixed fan, first exact defect, or the ceiling.
+    prohibited_scope: No alternative fan search, parent coverage, all-family claim, or theorem promotion.
+    worker_restrictions: Own only ops/team/diag8-mask6-fan; regenerate every factor from pinned source data.
+
+  - track_id: diag8-mask6-closing-referee
+    role: independent verifier and closing referee
+    base_revision: 6c7f52b43632072100b67e5f0a9b6221df14d620
+    publication_authorization: *publication_authorization
+    target:
+      claim: Accept or reject the frozen integrated exact head and its bounded consequence.
+      quantifiers: Every changed path, source digest, certificate census, hostile mutation, scope exclusion, and repository gate.
+      ledger_id: closing_publication_gate
+    deliverables:
+      positive: Exact-head ACCEPT bound to commit and tree with no actionable defect.
+      negative: REJECT with a minimal reproducible defect.
+      null: Fail-closed ambiguity report naming the next discriminator.
+      timeout: Partial replay manifest with checked and unchecked gates.
+    verification:
+      replay: Clean producer-independent replay of cycle protocol, certificates, canonical state, source manifest, and repository checks.
+      canaries: [missing-process-gate, missing-digest-entry, source-drift, false-promotion, incomplete-boundary, unauthorized-path]
+    resource_ceiling: One agent turn, 45 minutes, ordinary local compute, no paid services.
+    stop_rule: Stop at the first defect, complete exact-head verdict, or the ceiling.
+    prohibited_scope: Do not repair the candidate, merge, change the theorem ledger, or reuse producer acceptance logic.
+    worker_restrictions: Own only ops/team/diag8-mask6-referee and review a frozen exact head.

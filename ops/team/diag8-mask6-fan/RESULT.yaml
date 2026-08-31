@@ -1,0 +1,40 @@
+track_id: diag8-mask6-fan
+cycle_id: 2026-08-31-diag8-mask6-cegar
+canonical_commit: 6c7f52b43632072100b67e5f0a9b6221df14d620
+canonical_tree: 60866cb78e8aea3259cf376a4420e5370ab8c010
+outcome: bounded_proved_and_route_retired
+summary: >-
+  The six-edge parent-860 mask-6 loop bounds an exact six-triangle rational
+  singular disk for one certified proper pairwise-incomparable eight-family.
+  All 70 parent brackets and 26,740 primitive residual factors are decided;
+  only two walls are active, they cross once into four loop-represented
+  sectors, and all six radial boundary pairs cancel.
+artifacts:
+  - path: ops/team/diag8-mask6-fan/DIAG8_MASK6_BARYCENTRIC_FAN_CERTIFICATE.json
+    digest: b5ead7b0ed6ac6a5cb50ab715110e302772f49e43b2419cd54c98228937627cb
+  - path: ops/team/diag8-mask6-fan/PROOF_NOTE.md
+    digest: 2efb9933e1c2bb17d2da52e383e2c6f35a0a1d6f1aa297a54c2e15f11be3eb72
+  - path: ops/team/diag8-mask6-fan/verify_diag8_mask6_barycentric_fan.py
+    digest: d77175a3f13df273e8750e61617f3306c1dc280c8ad6ed4170b4938b0f565d7d
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/diag8-mask6-fan/verify_diag8_mask6_barycentric_fan.py
+  result: >-
+    exit 0; 70/70 parent brackets; 26,738 sign-definite plus two active
+    factors; two reconstructed boundary-to-boundary arcs, one node, four
+    sectors; six radial cancellations; 8/8 hostile canaries rejected.
+coverage:
+  included: >-
+    The arithmetic-mean barycentric fan, complete parent/factor pullback, all
+    active wall/node strata, and the family pinned by nonvacuity.
+  excluded: >-
+    Other chains, loops, families, parents, global coverage, true infinity,
+    transport, and any universal diagonal-eight assertion.
+canaries:
+  positive: The complete fan is parent-safe and all four sectors meet the loop.
+  negative: The triangle-five resultant root has negative simplex coordinate.
+  null: A local filling changes no theorem score and gives no parent coverage.
+  hostile: Factor, parent, incidence, node, arc, boundary, family, and promotion mutations are rejected 8/8.
+next_action: Retire D8_M6_CEGAR1 and require a fresh opening audit.
+ledger_change_recommended: Keep diag8_h1 OPEN and the honest score at 2/9.

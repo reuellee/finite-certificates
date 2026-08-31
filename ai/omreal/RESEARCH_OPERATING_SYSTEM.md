@@ -12,8 +12,10 @@ This document is the standing operating framework for theorem-oriented work in
 3. allowing superseded targets to survive in old notes or machine-readable
    checkpoints and silently regain authority.
 
-The cross-diagonal machine-readable companion is
-`data/CANONICAL_RESEARCH_STATE.json`. Its verifier is
+The current cross-diagonal machine-readable companion is
+`data/CANONICAL_RESEARCH_STATE_V2.json`. Its verifier is
+`verify_canonical_research_state_v2.py`.  Its immutable reconciled predecessor
+is `data/CANONICAL_RESEARCH_STATE.json`, verified by
 `verify_canonical_research_state.py`.  The older
 `data/DIAG3_RESEARCH_DECISION_LEDGER.json` and
 `verify_diag3_research_decision_ledger.py` are immutable historical proof

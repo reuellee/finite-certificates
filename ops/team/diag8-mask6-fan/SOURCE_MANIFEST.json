@@ -1,0 +1,20 @@
+{
+  "format": "diag8-mask6-fan-source-manifest-v2",
+  "track_id": "diag8-mask6-fan",
+  "cycle_id": "2026-08-31-diag8-mask6-cegar",
+  "canonical_commit": "6c7f52b43632072100b67e5f0a9b6221df14d620",
+  "used_sha256": {
+    "ai/omreal/data/DIAG9_GRAPH_parent860_coordinate_star.npz": "9274371ec45baee318cd160f931344f37dc5031acc13d63c16099534b8896f4b",
+    "ai/omreal/data/DIAG9_GRAPH_parent860_star_repair.npz": "f3ebf1f3a9b458663a12b042e68194aa24c4b55689cf85344e2d98f81aec3d11",
+    "ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md": "8af233ced03055881572353d26d6f3a7d931649a9456fe7018cbc31202f4556e",
+    "ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz": "ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5",
+    "ops/team/diag8-mask6-fan/DIAG8_MASK6_BARYCENTRIC_FAN_CERTIFICATE.json": "b5ead7b0ed6ac6a5cb50ab715110e302772f49e43b2419cd54c98228937627cb"
+  },
+  "method_source": {
+    "idea": "counterexample-guided abstraction refinement",
+    "primary_url": "https://link.springer.com/chapter/10.1007/10722167_15",
+    "role": "research control flow only; no imported theorem in the acceptance kernel"
+  },
+  "trust_boundary": "exact rational fan, complete Bernstein scan, exact Sturm/resultant isolation, pinned all-strata labeling, and singular-chain boundary",
+  "excluded": ["floating_point_discovery_verdicts", "graph_only_homology", "parent_coverage_or_theorem_promotion"]
+}

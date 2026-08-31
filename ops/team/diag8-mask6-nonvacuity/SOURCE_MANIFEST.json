@@ -1,0 +1,12 @@
+{
+  "format": "diag8-mask6-nonvacuity-source-manifest-v2",
+  "track_id": "diag8-mask6-nonvacuity",
+  "cycle_id": "2026-08-31-diag8-mask6-cegar",
+  "canonical_commit": "6c7f52b43632072100b67e5f0a9b6221df14d620",
+  "used_sha256": {
+    "ai/omreal/data/DIAG9_GRAPH_parent860_star_repair.npz": "f3ebf1f3a9b458663a12b042e68194aa24c4b55689cf85344e2d98f81aec3d11",
+    "ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz": "ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5"
+  },
+  "trust_boundary": "exact parent signs, signed derived rows, strict integer rays, and positive support-at-most-five Gordan relations",
+  "excluded": ["floating_point_discovery_verdicts", "sampled_graph_global_coverage", "homology_or_theorem_promotion"]
+}
