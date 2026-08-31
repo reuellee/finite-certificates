@@ -23,6 +23,28 @@ NONCONSEQUENCES = {
     "no diagonal-eight proof",
     "no change from the 2/9 theorem ledger",
 }
+DIGEST_PATHS = {
+    "opening_authority_sha256": {
+        "ai/omreal/data/CANONICAL_RESEARCH_STATE.json",
+    },
+    "cycle_contract_sha256": {
+        "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/CYCLE.md",
+        "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/WORK_ORDERS.yaml",
+    },
+    "accepted_track_sha256": {
+        "ops/team/diag8-mask6-nonvacuity/RESULT.yaml",
+        "ops/team/diag8-mask6-nonvacuity/SOURCE_MANIFEST.json",
+        "ops/team/diag8-mask6-fan/RESULT.yaml",
+        "ops/team/diag8-mask6-fan/SOURCE_MANIFEST.json",
+    },
+    "mathematical_certificate_sha256": {
+        "ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz",
+        "ops/team/diag8-mask6-fan/DIAG8_MASK6_BARYCENTRIC_FAN_CERTIFICATE.json",
+    },
+    "successor_state_sha256": {
+        "ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json",
+    },
+}
 
 
 class Reject(AssertionError):
@@ -70,12 +92,10 @@ def validate(manifest, check_files=True):
     require(literature[0]["url"] == "https://link.springer.com/chapter/10.1007/10722167_15", "CEGAR source")
     require("no imported mathematical theorem" in literature[0]["use"], "CEGAR role")
     require(literature[1]["use"].endswith("not used in this cycle's proof"), "duality role")
+    for key, required_paths in DIGEST_PATHS.items():
+        require(set(manifest[key]) == required_paths, f"digest path census: {key}")
     if check_files:
-        for key in (
-            "opening_authority_sha256", "cycle_contract_sha256",
-            "accepted_track_sha256", "mathematical_certificate_sha256",
-            "successor_state_sha256",
-        ):
+        for key in DIGEST_PATHS:
             audit_digest_map(manifest[key])
 
 
@@ -96,6 +116,9 @@ def hostile_canaries(manifest):
     candidate = copy.deepcopy(manifest)
     del candidate["opening_authority_sha256"]
     mutations.append(("field", candidate))
+    candidate = copy.deepcopy(manifest)
+    del candidate["accepted_track_sha256"]["ops/team/diag8-mask6-fan/RESULT.yaml"]
+    mutations.append(("missing-digest-entry", candidate))
     rejected = []
     for name, candidate in mutations:
         try:

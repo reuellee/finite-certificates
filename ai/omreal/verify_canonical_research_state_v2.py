@@ -34,6 +34,12 @@ RETIRED = {
     "ORBIT_5563_MACROBOX_CONTINUATION": "RETIRED",
     "ORBIT_5563_CLIPPED_WALL_CONTINUATION": "RETIRED",
 }
+REQUIRED_PROCESS_GATES = {
+    "theorem_score_promotion_requires_all_invariant_obligations_closed",
+    "local_filling_cannot_promote_diagonal_8",
+    "retired_mask6_discriminator_cannot_repeat",
+    "independent_exact_head_review_required",
+}
 
 
 class Reject(AssertionError):
@@ -129,6 +135,7 @@ def validate(state, check_files=True):
     require(state["selected_target"] is None, "selected target")
     require(state["target_selection"] == "PENDING_FRESH_INDEPENDENT_OPENING_AUDIT", "next selection")
     gates = state["process_gates"]
+    require(set(gates) == REQUIRED_PROCESS_GATES, "process gate census")
     require(all(gates.values()), "process gates")
     if check_files:
         require(sha256(NONVACUITY) == NONVACUITY_SHA256, "nonvacuity bytes")
@@ -156,6 +163,7 @@ def hostile_canaries(state):
     cases.append(("node", mutated(lambda x: x["completed_cycle"]["fixed_chain_gate"].__setitem__("active_wall_nodes", 0))))
     cases.append(("promotion", mutated(lambda x: x["completed_cycle"]["nonconsequences"].remove("NO_DIAGONAL_8_PROOF"))))
     cases.append(("repeat", mutated(lambda x: x["process_gates"].__setitem__("retired_mask6_discriminator_cannot_repeat", False))))
+    cases.append(("missing-process-gate", mutated(lambda x: x["process_gates"].pop("independent_exact_head_review_required"))))
     cases.append(("predecessor", mutated(lambda x: x["predecessor"].__setitem__("sha256", "0" * 64))))
     rejected = []
     for name, candidate in cases:
