@@ -1,0 +1,45 @@
+{
+  "format": "diag8-mask6-cegar-cycle-source-manifest-v2",
+  "cycle_id": "2026-08-31-diag8-mask6-cegar",
+  "canonical_commit": "6c7f52b43632072100b67e5f0a9b6221df14d620",
+  "canonical_tree": "60866cb78e8aea3259cf376a4420e5370ab8c010",
+  "opening_authority_sha256": {
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE.json": "89d1475a43bef01be74e9c8eed62d9caadd8265f262c3aa3dcf0e704f341432c"
+  },
+  "cycle_contract_sha256": {
+    "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/CYCLE.md": "61036fa976223774972c30e77455337afd0965dcefcaa2a986a23e9abe726233",
+    "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/WORK_ORDERS.yaml": "ef9ad2de9d95cabcf044e000ce9e20293d0d3642ee05fe82341d46f78b2f24e1"
+  },
+  "accepted_track_sha256": {
+    "ops/team/diag8-mask6-nonvacuity/RESULT.yaml": "6eac6a8c52a588f251acca63bdd72abc52344ff2aa18b675aee863fb5da36b5c",
+    "ops/team/diag8-mask6-nonvacuity/SOURCE_MANIFEST.json": "d67cca39c6056c0e32a22960d1e4917f1d6e95486710dc4b164c40780e8b5eb7",
+    "ops/team/diag8-mask6-fan/RESULT.yaml": "18dfae842f9b7e73d958a00dbd376c9fe86a0c4d5f3cdaba7658fea9f692e610",
+    "ops/team/diag8-mask6-fan/SOURCE_MANIFEST.json": "3a03d06b96ee876bfc0e893c7f3020ef6de247d225b3b3593c61bf0c939c562e"
+  },
+  "mathematical_certificate_sha256": {
+    "ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz": "ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5",
+    "ops/team/diag8-mask6-fan/DIAG8_MASK6_BARYCENTRIC_FAN_CERTIFICATE.json": "b5ead7b0ed6ac6a5cb50ab715110e302772f49e43b2419cd54c98228937627cb"
+  },
+  "successor_state_sha256": {
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json": "508d5433d33eeb5be915e1749838d73541a8bd0055c74fac00bdb74ee28e930f"
+  },
+  "literature": [
+    {
+      "title": "Counterexample-Guided Abstraction Refinement",
+      "url": "https://link.springer.com/chapter/10.1007/10722167_15",
+      "use": "bounded research control flow; no imported mathematical theorem"
+    },
+    {
+      "title": "Dualities in Persistent (Co)Homology",
+      "url": "https://arxiv.org/abs/1107.5665",
+      "use": "future primal-boundary versus dual-cocycle certificate architecture; not used in this cycle's proof"
+    }
+  ],
+  "exact_consequence": "one globally proper pairwise-incomparable parent-860 eight-family has an exact singular disk bounded by the named mask-6 loop",
+  "nonconsequences": [
+    "no parent-860 coverage",
+    "no universal eight-family statement",
+    "no diagonal-eight proof",
+    "no change from the 2/9 theorem ledger"
+  ]
+}

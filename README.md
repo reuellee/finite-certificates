@@ -24,7 +24,10 @@ Mutation graphs of uniform oriented matroids are connected at every rank for `n 
 
 ### 3. Nine-Diagonal Vanishing Lemma: 2 of 9 diagonals proved
 
-The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally. Diagonal 3 is the active frontier.
+The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally.
+There is **no active diagonal or selected mathematical target**: the canonical
+state is `PIVOT_REQUIRED`. Diagonal 3 remains the largest documented open
+program, not a currently selected route.
 
 For diagonal 3, the exact research pipeline has now:
 
@@ -56,7 +59,10 @@ For diagonal 3, the exact research pipeline has now:
 - completed the final **4,582 coefficient-plus-endpoint algebraic-`u` fibers** by exact bounded degree-drop, endpoint-attachment, and fiber-wide-zero analysis, adding **108,170** cells; all **132,134** open-`t` algebraic-`u` sections are now lifted to **4,047,846** cells with zero residue;
 - preserved the main missing obligation honestly: a coverage-certified global nonrelative master closure complex and the final relative middle-rank replay.
 
-The selected route is the coverage-certified nonrelative master-closure compiler. The 5,803-factor residue remains an input gap, but standalone wall classification and further chart-0/chart-152 staircase refinement are subordinated because neither can by itself prove diagonal three.
+The historically selected diagonal-three route was the coverage-certified
+nonrelative master-closure compiler. The 5,803-factor residue remains an input
+gap, but that route is not current authority and cannot resume without a fresh
+opening audit.
 
 - [`ai/omreal/NINE_DIAGONAL_STATUS.md`](ai/omreal/NINE_DIAGONAL_STATUS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)
@@ -78,11 +84,12 @@ The principal oriented-matroid program is the realizability/topology project in 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
 Current cross-diagonal target selection is governed by the machine-checked
-[`CANONICAL_RESEARCH_STATE.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE.json)
+[`CANONICAL_RESEARCH_STATE_V2.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json)
 and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
-The state through merged PR #44 is `PIVOT_REQUIRED`: the earlier
-diagonal-three ledger is retained byte-for-byte as historical proof input, but
-its old selected route is no longer current authority.
+The state after merged PR #45 and the bounded D8 mask-6 cycle is
+`PIVOT_REQUIRED`: the predecessor reconciliation state and earlier
+diagonal-three ledger are retained byte-for-byte as historical proof inputs,
+but their old selected routes are no longer current authority.
 
 The procedures developed along this route are also maintained as a research output. The [`exact semialgebraic certificate method`](ai/omreal/EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md) and its standard-library toolkit provide reusable rational affine pullback, tensor Bernstein subdivision, fail-closed system exclusion, analytic negative canaries, semantic certificates, and producer/verifier separation.
 

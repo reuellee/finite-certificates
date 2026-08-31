@@ -1,0 +1,41 @@
+cycle_id: 2026-08-31-diag8-mask6-cegar
+canonical_commit: 6c7f52b43632072100b67e5f0a9b6221df14d620
+canonical_tree: 60866cb78e8aea3259cf376a4420e5370ab8c010
+opening_ledger: 2/9
+selected_target: D8_M6_CEGAR1
+scope:
+  parent: 860
+  loop: [4, 11, 12, 14, 13, 23]
+  fixed_chain_grammar: arithmetic-mean barycentric fan with six oriented triangles
+  theorem_promotion: prohibited
+tracks:
+  - id: opening-strategy-scout
+    role: cross-domain analogy scout
+    output: ranked D8/D3/D9 comparison with exact mappings and fatal analogy breaks
+    writes: none
+  - id: opening-falsifier
+    role: red-team scope and nonvacuity audit
+    output: hard prerequisite and hostile-test contract
+    writes: none
+  - id: opening-referee
+    role: independent target-selection referee
+    output: GO/NO-GO score table
+    writes: none
+  - id: diag8-mask6-nonvacuity
+    role: prover/producer
+    owned_surface: ops/team/diag8-mask6-nonvacuity
+    positive: eight loop-common regions with exact nonempty/proper and 56 directed noncontainment witnesses
+    null: bounded chart set does not separate an eight-family
+  - id: diag8-mask6-fan
+    role: exact geometry prover
+    owned_surface: ops/team/diag8-mask6-fan
+    positive: parent-safe all-factor singular disk with exact boundary equal to the loop
+    negative: exact parent crossing or unresolved active arrangement on the fixed fan
+  - id: diag8-mask6-closing-referee
+    role: independent verifier/referee
+    owned_surface: ops/team/diag8-mask6-referee
+    positive: exact-head ACCEPT bound to source and artifact digests
+    negative: fail-closed gate table with no publication
+stop_rule: >-
+  Stop after the nonvacuity endpoint and one fixed fan. Do not widen the family,
+  parent, or chain grammar. A local filling retires only the named discriminator.

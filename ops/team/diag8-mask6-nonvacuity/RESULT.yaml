@@ -1,0 +1,41 @@
+track_id: diag8-mask6-nonvacuity
+cycle_id: 2026-08-31-diag8-mask6-cegar
+canonical_commit: 6c7f52b43632072100b67e5f0a9b6221df14d620
+canonical_tree: 60866cb78e8aea3259cf376a4420e5370ab8c010
+outcome: bounded_proved
+summary: >-
+  Eight extension signatures common on the complete parent-860 mask-6 loop
+  are globally nonempty, proper, and pairwise incomparable. Seven exact charts
+  carry 56 strict-feasibility or positive Gordan witnesses, and their words
+  cover all 56 directed noncontainments.
+artifacts:
+  - path: ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz
+    digest: ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5
+  - path: ops/team/diag8-mask6-nonvacuity/PROOF_NOTE.md
+    digest: b1097caf2d603e73d2efd3676e28a1ef9b162425c53d5d32ee6b0cf4f892ec14
+  - path: ops/team/diag8-mask6-nonvacuity/build_diag8_mask6_nonvacuity.py
+    digest: aeea37057c6809b4cf30a76faa4ded2c54083cd32357a76d4d636ca854b40239
+  - path: ops/team/diag8-mask6-nonvacuity/verify_diag8_mask6_nonvacuity.py
+    digest: 787335226c5202dc65e46760a27f1343b92257f8b13cd7f03ac65073396d8f15
+replay:
+  command: >-
+    PYTHONDONTWRITEBYTECODE=1 python
+    ops/team/diag8-mask6-nonvacuity/verify_diag8_mask6_nonvacuity.py
+  result: >-
+    exit 0; eight loop-common signatures; 56 exact alternatives; 56/56
+    directed noncontainment witnesses; 7/7 hostile canaries rejected.
+coverage:
+  included: >-
+    One eight-signature family, the complete six-edge loop in the parent-860
+    repair source, and seven exact parent-860 charts. Every chart/signature bit
+    has an exact primal or Gordan witness.
+  excluded: >-
+    Parent coverage, every other family, loop homology, infinity, transport,
+    and diagonal-eight promotion.
+canaries:
+  positive: Eight loop-common signatures have exact nonempty and proper witnesses.
+  negative: Every ordered pair has a first-feasible, second-infeasible chart.
+  null: The width-six local quotient is not used for global containment.
+  hostile: Pattern, ray, Gordan, signature, loop, chart, and field mutations are rejected 7/7.
+next_action: Replay the fixed barycentric fan against every primitive residual factor.
+ledger_change_recommended: Keep diag8_h1 OPEN and the theorem score at 2/9.

@@ -1,0 +1,60 @@
+{
+  "format": "diag8-mask6-barycentric-fan-v2",
+  "parent_index": 860,
+  "loop_vertices": [4, 11, 12, 14, 13, 23],
+  "center_rule": "arithmetic_mean_of_six_loop_vertices",
+  "triangle_rule": "oriented_fan_center_vi_vi_plus_1",
+  "nonvacuity_certificate_sha256": "ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5",
+  "family": [
+    34895220708312748,
+    34850557309758184,
+    34850557307726570,
+    34850557039028936,
+    34850539394645193,
+    34850144722168960,
+    34754553013114532,
+    34206807699455377
+  ],
+  "parent_brackets": {
+    "count": 70,
+    "triangle_sign_census": {"negative": 37, "positive": 33},
+    "unresolved": 0
+  },
+  "residual_factors": {
+    "count": 26740,
+    "uniform_negative": 13712,
+    "uniform_positive": 13026,
+    "active": {
+      "16573": [0, 0, 1, 1, 0, 0],
+      "19721": [1, 1, 1, 0, 0, 0]
+    },
+    "semantic_sha256": "71e01e0847e15f8bb21b50c6c3e2f69675bdd9ad9143d7b694aa8d6552cbcc06"
+  },
+  "active_derivative_signs": {
+    "16573": [[-1, -1], [-1, 1], [1, 1], [1, 1], [1, -1], [-1, -1]],
+    "19721": [[1, 1], [1, 1], [1, -1], [-1, -1], [-1, -1], [-1, 1]]
+  },
+  "boundary_profiles": {
+    "outer": [[], [16573], [], [19721], [16573], [19721]],
+    "radial": [[16573], [16573], [], [], [19721], [16573, 19721]]
+  },
+  "loop_vertex_active_signs": [
+    [-1, 1], [-1, 1], [1, 1], [1, 1], [1, -1], [-1, -1]
+  ],
+  "arrangement": {
+    "factor_16573_arc": ["outer_1", "radial_1", "radial_0", "radial_5", "outer_4"],
+    "factor_19721_arc": ["outer_3", "radial_4", "radial_5", "outer_5"],
+    "interior_nodes": [{"triangle": 4, "factors": [16573, 19721], "count": 1}],
+    "triangle_5_resultant_root": "outside_standard_triangle_v_negative",
+    "sector_count": 4,
+    "every_sector_meets_loop": true
+  },
+  "chain": {
+    "triangle_count": 6,
+    "radial_edges_cancel": true,
+    "boundary": [[4, 11], [11, 12], [12, 14], [14, 13], [13, 23], [23, 4]]
+  },
+  "result": "MASK6_LOOP_BOUNDS_EXACT_SINGULAR_DISK_FOR_CERTIFIED_EIGHT_FAMILY",
+  "theorem_delta": "none",
+  "scope": "one globally proper pairwise-incomparable eight-family on parent 860; no parent coverage or diagonal-eight promotion"
+}
