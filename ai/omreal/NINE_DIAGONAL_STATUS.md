@@ -5,6 +5,10 @@
 This section is the current control plane as of 2026-08-31.  It supersedes
 every target-selection or continuation instruction retained in the historical
 record below, while preserving those exact artifacts as evidence.
+Its machine-readable authority is
+`ai/omreal/data/CANONICAL_RESEARCH_STATE.json`; the existing
+`DIAG3_RESEARCH_DECISION_LEDGER.json` remains the immutable historical
+diagonal-three ledger so its pinned proof replays remain reproducible.
 
 - The theorem ledger is unchanged at **2/9**: exactly diagonals 1 and 2 are
   proved.

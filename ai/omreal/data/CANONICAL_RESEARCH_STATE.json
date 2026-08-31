@@ -1,12 +1,85 @@
 {
-  "format": "diag3-research-decision-ledger-v1",
-  "status": "ACTIVE",
-  "as_of": "2026-08-28",
+  "format": "9dvl-canonical-research-state-v1",
+  "status": "PIVOT_REQUIRED",
+  "as_of": "2026-08-31",
   "repository": {
     "full_name": "reuellee/finite-certificates",
     "default_branch": "main",
-    "audited_commit": "e8600495e70e6f5548cb0c73e0cfd2f33faacc0b",
-    "merged_pull_request": 37
+    "audited_commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+    "audited_tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19",
+    "merged_pull_request": 44
+  },
+  "canonical_reconciliation": {
+    "precedence": "CURRENT_THROUGH_MERGED_PR_44",
+    "opening_reconciliation_commit": "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
+    "opening_reconciliation_tree": "99d7c10657088d6cebc7c80568f7224d1079af7c",
+    "theorem_score": "2/9",
+    "proved_diagonals": [
+      1,
+      2
+    ],
+    "d4_accounting": {
+      "domain_labeled": 1715980,
+      "domain_orbits": 130,
+      "proved_labeled": 915740,
+      "proved_orbits": 77,
+      "survivor_labeled": 800240,
+      "survivor_orbits": 53,
+      "identity": "1715980/130=915740/77+800240/53",
+      "survivor_delta_after_pr43": {
+        "labeled": 0,
+        "orbits": 0
+      }
+    },
+    "d3_accounting": {
+      "unresolved_residue": 1162302,
+      "quotient_classes": 100086840,
+      "raw_frame_presentations": 104993280,
+      "quotient_multiplicity_sum": 104993280,
+      "row_delta_after_pr44": 0
+    },
+    "first_missing_global_object": {
+      "id": "Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+      "status": "MISSING",
+      "equivalent": "all_parent_closure_stratum_transport_and_attachment_atlas"
+    },
+    "retired_continuations": [
+      "D4_S53_CONTINUATION",
+      "ORBIT_5563_LOCAL_ROADMAP_CONTINUATION",
+      "ORBIT_5563_LOCAL_BOX_CONTINUATION",
+      "ORBIT_5563_LOCAL_COLLAR_CONTINUATION",
+      "ORBIT_5563_MACROBOX_CONTINUATION",
+      "ORBIT_5563_CLIPPED_WALL_CONTINUATION"
+    ],
+    "conditional_route_dispositions": {
+      "D4_ALTERNATING_TOTAL_COMPLEX": {
+        "status": "RETIRED_UNTIL_GLOBAL_INPUTS",
+        "distinct_from": "D4_S53_CONTINUATION",
+        "required_global_inputs": [
+          "THEOREM_READY_GLOBAL_COMPACTIFICATION",
+          "SIGNED_FACE_POSET",
+          "RESTRICTION_MATRICES"
+        ],
+        "incomplete_successor_input_gate": "STOP_FAIL_CLOSED",
+        "reactivation_requires_all_inputs": true
+      }
+    },
+    "selected_mathematical_target": null,
+    "target_selection": "PENDING_FRESH_INDEPENDENT_OPENING_AUDIT",
+    "historical_pointer_policy": {
+      "ledger_v1_git_blob": "fe877050ae3942254bef54f23d6f3790480d698c",
+      "preserve_exact_historical_artifacts": true,
+      "historical_continuation_text_is_current": false
+    },
+    "source_sha256": {
+      "ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md": "8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8",
+      "ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml": "cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499",
+      "ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md": "26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923",
+      "ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md": "e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2",
+      "ops/team/diag4-s53-referee/CLOSING_REVIEW.md": "7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c",
+      "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md": "a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f",
+      "ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md": "e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35"
+    }
   },
   "theorem": {
     "id": "9DVL",
@@ -52,7 +125,7 @@
       ]
     }
   ],
-  "row2599_fullsupport_ledger": {
+  "historical_row2599_fullsupport_ledger": {
     "compactification": "(Delta^3)^3",
     "support_count": 3375,
     "proper_relative_support_count": 3374,
@@ -86,7 +159,7 @@
       "ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md"
     ]
   },
-  "retired_or_subordinated_targets": [
+  "historical_retired_or_subordinated_targets": [
     {
       "id": "proper_support_dimension4_subdivision",
       "status": "RETIRED",
@@ -151,8 +224,8 @@
       "regression": "ai/omreal/verify_diag3_pair_source_family_incidence_no_go.py"
     }
   ],
-  "target_score_formula": "4*proof_criticality + 3*branch_elimination + 2*readiness + 2*decisiveness - 2*cost - 2*failure_risk",
-  "candidate_targets": [
+  "historical_target_score_formula": "4*proof_criticality + 3*branch_elimination + 2*readiness + 2*decisiveness - 2*cost - 2*failure_risk",
+  "historical_candidate_targets": [
     {
       "id": "fullsupport_master_closure_compiler",
       "proof_criticality": 5,
@@ -193,8 +266,8 @@
       "exact_question": "How many of the 5803 feasibility-unknown factors admit one-layer positive-coordinate multiplier identities?"
     }
   ],
-  "selected_target": "fullsupport_master_closure_compiler",
-  "selected_target_progress": {
+  "selected_target": null,
+  "historical_selected_target_progress": {
     "schema_interface": "COMPLETE",
     "first_proof_producing_canary": {
       "status": "PROVED",
@@ -1692,7 +1765,7 @@
       ]
     }
   },
-  "selected_target_contract": {
+  "historical_selected_target_contract": {
     "result_statuses": [
       "PROVED",
       "REFUTED",
@@ -1723,7 +1796,8 @@
     "negative_canary_required": true,
     "exact_scope_labels_required": true,
     "default_branch_and_drive_checkpoint_required_at_cycle_end": true,
-    "theorem_score_promotion_requires_all_invariant_obligations_closed": true
+    "theorem_score_promotion_requires_all_invariant_obligations_closed": true,
+    "target_selection_requires_fresh_independent_opening_audit": true
   },
   "historical_open_objects": [
     {

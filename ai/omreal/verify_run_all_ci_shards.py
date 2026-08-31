@@ -36,6 +36,7 @@ def direct_selected():
     tree = ast.parse(RUN_ALL.read_text(encoding="utf-8"))
     delegated = literal_set(tree, "CI_DELEGATED")
     external = set(literal_dict(tree, "EXTERNAL_INPUT"))
+    archival = set(literal_dict(tree, "ARCHIVAL_INPUT"))
     discovered = {
         path.relative_to(ROOT).as_posix()
         for path in ROOT.rglob("verify_*.py")
@@ -44,9 +45,9 @@ def direct_selected():
     selected = {
         path
         for path in discovered
-        if Path(path).name not in delegated | external
+        if Path(path).name not in delegated | external and path not in archival
     }
-    return discovered, selected, delegated, external
+    return discovered, selected, delegated, external, archival
 
 
 def manifest(count):
@@ -89,10 +90,10 @@ def audit(payload, expected, count):
 
 
 def main():
-    discovered, selected, delegated, external = direct_selected()
-    if len(delegated) != 4 or len(external) != 1:
+    discovered, selected, delegated, external, archival = direct_selected()
+    if len(delegated) != 4 or len(external) != 1 or len(archival) != 4:
         raise AssertionError("nonsharded verifier census changed")
-    if len(discovered - selected) != len(delegated | external):
+    if len(discovered - selected) != len(delegated | external) + len(archival):
         raise AssertionError("delegated verifier census changed")
     digests = {}
     for count in COUNTS:
@@ -103,6 +104,7 @@ def main():
     print("PASS exact union/disjointness", len(selected), "selected verifiers")
     print("PASS delegated verifier census", len(delegated))
     print("PASS explicit external-input verifier census", len(external))
+    print("PASS archival verifier census", len(archival))
 
 
 if __name__ == "__main__":
