@@ -1,0 +1,33 @@
+{
+  "constructor_frontier_semantic_sha256": "d062fe00f8c7cd256c7aff13b559ead79de2539ac84579497348576acf2423e6",
+  "constructor_manifest_semantic_sha256": "35e687d6ee4a6ddcf983ced155ac52afd84f2ced1d1460fc9a7ab72bfa8a37b4",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "format": "d9-factor19069-singular-df-multihomogeneous-certificate-source-manifest-v1",
+  "independent_source_reconstruction_semantic_sha256": "f7f4693aa7d8a2ac4e44effac40b78d4832fdba1ef02d45d3d4c9d706f6fbc3e",
+  "pins": {
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CYCLE.md": "9c8a51c141c8ab4742d580e50508f8cc544c6d6f211fe4b785b675f9c74f8055",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OBLIGATION_GRAPH.json": "6a01553079cb350f6a681bc5d19c8a584d3153eb106f49ff943ed4f1e99e709b",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OPENING_AUDIT.json": "d6fc28140be34ef7c77527ae3ef001ded849f269ffa0d92c541a4899262b4c3d",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/WORK_ORDERS.yaml": "921046f85cfe3bb83b9ac79a449e11a04d75074c1aa617e5118cb94e854243d5",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ops/team/d9-factor19069-critical-equidim-constructor/CRITICAL_EQUIDIM_FRONTIER.json": "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec897d3a33",
+    "ops/team/d9-factor19069-critical-equidim-constructor/SOURCE_MANIFEST.json": "06efc5d65274d7179728b9b89a1788ea4d33812bfb24ecd5235bdd0d294bd75b",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/verify_singular_df_certificate.py": "3d4d81530f545b92704a0db41b2f51b457875da9f24f55b214d1a46b90cd77d7",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/RESULT.json": "178d2006eca68295da2bbeae06cb1a511c8249028727aec7429ecbc639b6dbd8",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SINGULAR_DF_MULTIHOMOGENEOUS_FRONTIER.json": "d9f4aba3fa8c76e3a8abff5484ff509b0458fe9993edeb921e5a6d03c4dfac41",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SOURCE_MANIFEST.json": "6b38e9499c8474a52e083aa3ab4ccc12858abd7b476b6db2d04116ba86ba08b4"
+  },
+  "semantic_sha256": "23e8f10802d94bd838cbbdf795f527d9c377f3ebdc34890ead834f5240755a5f",
+  "source_policy": {
+    "constructor_code_imported": false,
+    "external_compute_used": false,
+    "falsifier_code_imported": false,
+    "network_or_connector_used": false,
+    "numerical_or_modular_inference_used": false,
+    "predecessor_certificate_code_imported": false,
+    "seventy_inverse_discovery_used": false
+  },
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-certificate"
+}
