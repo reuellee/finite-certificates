@@ -1,0 +1,96 @@
+{
+  "format": "d9-universal-cut-falsifier-source-manifest-v1",
+  "track_id": "d9-universal-cut-falsifier",
+  "opening_base": {
+    "commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+    "tree": "84eaf80b30e1f366b8f959bd6435a217762636b3"
+  },
+  "canonical_math_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "sources": [
+    {
+      "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md",
+      "sha256": "f97d88889e8a839485459e239dcb3a8ad9ea0e10ab061dcc97fbf30ab8a063b4",
+      "use": "opening gate, quantifiers, stop rule, and prohibited promotions"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml",
+      "sha256": "83a52dda924d536de0f61b7f82700391183e7e30665762c328fedd90e38fa472",
+      "use": "falsifier work order and owned surface"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/OPENING_AUDIT.json",
+      "sha256": "007fd5f83a9256c31f1851303fed00df7a7b5a83107333d5fc96b4e6477d7639",
+      "use": "source pins and endpoint contract"
+    },
+    {
+      "path": "ai/omreal/ATLAS_HELLY.md",
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "use": "canonical abstract disconnected polynomial model and local-wall no-go"
+    },
+    {
+      "path": "ai/omreal/DIAG9_ACTIVE_SECTOR_THEOREM.md",
+      "sha256": "132a51b92a9813947e7ab7a43b52aafa6b2c789126e31cfc8a7f0773ee30b790",
+      "use": "active-sector theorem, occurrence orientation, and exact limit"
+    },
+    {
+      "path": "ai/omreal/DIAG9_SIGN_GEODESY_AUDIT.md",
+      "sha256": "64896fa28a76f57344bd246f1546322e1361f6ac57f164ca6199c58938c30903",
+      "use": "global sign-geodesy discriminator and sampled-point no-go"
+    },
+    {
+      "path": "ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md",
+      "sha256": "8af233ced03055881572353d26d6f3a7d931649a9456fe7018cbc31202f4556e",
+      "use": "component-faithful chamber coverage and germ-label requirements"
+    },
+    {
+      "path": "ai/omreal/DIAG9_GRAPH_TREE_CERTIFICATE.md",
+      "sha256": "63966868407713f1977b16b2ae8c435eb186d0569ce6239cc91d623a566ceb2e",
+      "use": "properness/incomparability boundary and sampled-graph prohibition"
+    },
+    {
+      "path": "ai/omreal/DIAG9_PARENT860_CEGIS_ROUTING.md",
+      "sha256": "7d1f2adad37d414d662bdb3aabbb696d191676a8c407b4d8a2e5def6c4bb59f0",
+      "use": "24-chamber sampled-network repair and explicit lack of coverage"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/CYCLE_REPORT.md",
+      "sha256": "f61ae3bdb58c5192ccf3dee40eccbc587ace860a7e526aeebc6613d6485dc5e2",
+      "use": "accepted S12,37 normal-link scope and global nonconsequences"
+    },
+    {
+      "path": "ops/team/diag9-s1237-normal-link-prover/DIAG9_S1237_NORMAL_LINK_NO_GO.json",
+      "sha256": "8aa726c69b556f7c2d85f7f852cb88329da39dcd173294a7db7245f13e0d2d54",
+      "use": "opposite-parent-form hostile canary"
+    },
+    {
+      "path": "ops/team/diag9-s1237-normal-link-falsifier/RESULT.json",
+      "sha256": "15ce5c17a174ed6a82173d24a8f72d04da5962bcea9e87cf3648adb21351d46b",
+      "use": "factor-8552 recursive-facet hostile canary"
+    },
+    {
+      "path": "ops/team/diag9-s1237-normal-link-referee/RESULT.json",
+      "sha256": "16be207c4abaddf52bd6b670c293159cb317e712c431597838b00e2815bb8902",
+      "use": "independently accepted local no-go and prohibited global promotion"
+    },
+    {
+      "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V3.json",
+      "sha256": "e37fad74fae83cf087b2010039e85122866c3b093e34227f28d12759be94a6cf",
+      "use": "canonical ledger and S12,37 route dispositions"
+    }
+  ],
+  "unused_or_missing": [
+    {
+      "object": "ca730426cdd5847ae262ddc29c6f4ae98369eba3",
+      "reason": "historical referee object is unavailable and is not required; successor-safe committed referee artifacts are used"
+    },
+    {
+      "object": "a complete compactified D9 active-sector roadmap",
+      "reason": "no such source exists at the opening base; this is the first unresolved discriminator"
+    },
+    {
+      "object": "producer-track artifacts from the current cycle",
+      "reason": "excluded to preserve falsifier independence"
+    }
+  ],
+  "semantic_sha256": "390de374619532a0249fba888723bf396dcc02656dae20bff0caa744d320d2ec"
+}
