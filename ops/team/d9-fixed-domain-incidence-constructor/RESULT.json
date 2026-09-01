@@ -1,0 +1,46 @@
+{
+  "format": "d9-fixed-domain-incidence-constructor-result-v1",
+  "track_id": "d9-fixed-domain-incidence-constructor",
+  "base_revision": "32e2b37bf54c53982cb58a3b8d026734f9ab1113",
+  "base_tree": "689d1a5fb981fd2d52f7adb88721d9c7d3a01228",
+  "outcome": "pass",
+  "classification": "EXACT_NEGATIVE_PROJECTION_ENDPOINT",
+  "summary": "All 40,320 label permutations were checked. The complete 3,539-factor active set has identity stabilizer, so symmetry leaves all 6,260,491 unordered pair systems distinct, above the 96,461 pair budget. Independently, the pinned projection is algebraically nongeneric on 73 of the 83 active factors of degree at most two: each has a positive-dimensional polar locus.",
+  "fixed_domain_action": {
+    "permutations_checked": 40320,
+    "stabilizer_order": 1,
+    "stabilizer": [[0, 1, 2, 3, 4, 5, 6, 7]],
+    "rejected_permutations": 40319,
+    "orbit_size": 40320,
+    "semantic_sha256": "3cad5f514fd9b558b1b60fd940f055e4e6cd9a8e2fbda4b13aaa8dc4b1958ada"
+  },
+  "pair_frontier": {
+    "fixed_domain_pair_orbits": 6260491,
+    "pair_system_budget": 96461,
+    "global_ambient_pair_orbits": 9476,
+    "global_quotient_preserves_fixed_active_set": false,
+    "complete_nonemptiness_filter": "ABSENT"
+  },
+  "projection": {
+    "vector": [1, 2, 4, 8, 16, 32, 64, 128, 256],
+    "screened_factors": 83,
+    "generic_empty": 10,
+    "nongeneric_positive_dimensional": 73,
+    "unscreened_higher_degree_factors": 3456,
+    "complete_specialization_certificate": false
+  },
+  "critical_systems_solved": 0,
+  "critical_enumeration": "DENIED",
+  "endpoint": "LOW_DEGREE_PROJECTION_SPECIALIZATION_IS_NONGENERIC",
+  "nonconsequences": [
+    "NO_COMPLETE_FIXED_DOMAIN_MULTIWALL_INCIDENCE_FILTER",
+    "NO_PROJECTION_CERTIFICATE_FOR_DEGREES_THREE_THROUGH_SIX",
+    "NO_FIXED_DOMAIN_ROADMAP",
+    "NO_FIXED_DOMAIN_CONNECTIVITY_OR_DISCONNECTION",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "next_action": "PIVOT. Do not run another symmetry-only or unfiltered pair census. Hold a strategy tournament between an exact fixed-domain counterexample CEGAR route and a projection-free or adaptive component decomposition with a complete parent-residence invariant.",
+  "ledger_change_recommended": "none",
+  "theorem_ledger": "2/9"
+}

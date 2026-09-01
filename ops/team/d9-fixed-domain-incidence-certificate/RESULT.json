@@ -1,0 +1,24 @@
+{
+  "format": "d9-fixed-domain-incidence-certificate-result-v1",
+  "track_id": "d9-fixed-domain-incidence-certificate",
+  "base_revision": "32e2b37bf54c53982cb58a3b8d026734f9ab1113",
+  "outcome": "pass",
+  "classification": "INDEPENDENT_EXACT_REPLAY_ACCEPTS_NEGATIVE_ENDPOINT",
+  "independence": {
+    "factor_action": "Rebuilt directly from colex 3-subsets and the global factor NPZ; producer action helpers were not imported.",
+    "projection": "Rebuilt as an affine quadratic-form restriction over Fraction; producer polynomial-substitution helpers were not imported.",
+    "factor_action_descent": "Checked on all active occurrences for seven adjacent-transposition generators.",
+    "hostile_mutations_rejected": 8,
+    "hostile_mutations_total": 8
+  },
+  "accepted_facts": {
+    "active_set_stabilizer_order": 1,
+    "fixed_domain_pair_orbits": 6260491,
+    "pair_budget": 96461,
+    "low_degree_generic_empty": 10,
+    "low_degree_nongeneric_positive_dimensional": 73,
+    "critical_enumeration_authorized": false,
+    "theorem_ledger": "2/9"
+  },
+  "endpoint": "ACCEPT_EXACT_NEGATIVE_PROJECTION_ENDPOINT"
+}
