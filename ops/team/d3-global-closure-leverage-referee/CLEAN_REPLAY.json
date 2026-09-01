@@ -1,0 +1,91 @@
+{
+  "format": "d3-global-closure-leverage-clean-no-hardlink-replay-v1",
+  "source_worktree": "E:\\Projects\\9DVL Research\\lane-worktrees\\d3-closure-leverage-referee",
+  "replay_path": "E:\\Projects\\9DVL Research\\lane-replays\\d3-closure-leverage-referee-2426a20",
+  "clone": {
+    "command": "git clone --no-hardlinks --no-checkout 'E:\\Projects\\9DVL Research\\lane-worktrees\\d3-closure-leverage-referee' 'E:\\Projects\\9DVL Research\\lane-replays\\d3-closure-leverage-referee-2426a20'",
+    "exit_code": 0,
+    "no_hardlinks_flag": true,
+    "output": "Cloning into replay path... done."
+  },
+  "checkout": {
+    "command": "git -C 'E:\\Projects\\9DVL Research\\lane-replays\\d3-closure-leverage-referee-2426a20' checkout --detach 2426a20de8ad31d4b91e1a5ef337e99535b41f8b",
+    "exit_code": 0,
+    "output": "HEAD is now at 2426a20 research: freeze D3 leverage report candidate"
+  },
+  "detached_head": "2426a20de8ad31d4b91e1a5ef337e99535b41f8b",
+  "detached_tree": "98d2ab0262df1fe50ad6c6052ea77e8bb58989a2",
+  "working_tree_status": "CLEAN_DETACHED_HEAD",
+  "python": {
+    "executable": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "version": "Python 3.12.13"
+  },
+  "required_verifiers": [
+    {
+      "id": "opening",
+      "command": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe ops/research-team/cycles/2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1/verify_opening_audit.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS D3 leverage opening: 2/9, 7 obligations, UNKNOWN global residual, 9/9 hostiles rejected"
+    },
+    {
+      "id": "closing-candidate",
+      "command": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe ops/research-team/cycles/2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1/verify_closing_candidate.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS D3 closing candidate: 2/9 -> 2/9; 7 obligations; UNKNOWN global residual; 0 eligible successors; STALLED / STOP; 15/15 hostiles rejected"
+    },
+    {
+      "id": "repository-protocol",
+      "command": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe ops/research-team/verify_cycle_protocol.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS research-cycle strategy/convergence/storage/publication protocol: 17 cycles, 70 authorized work orders"
+    },
+    {
+      "id": "audit",
+      "command": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe ops/team/d3-global-closure-leverage-audit/verify_strategy_audit.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS D3 theorem-leverage audit: 64 charts, 527533 base cells, 16935101 local lifts, 7 open obligations, 4 routes, 0 eligible targets, 24/24 mutations rejected; verdict STALLED / NONE / STOP"
+    },
+    {
+      "id": "falsifier",
+      "command": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe ops/team/d3-global-closure-leverage-falsifier/verify_d3_global_closure_leverage_falsifier.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS pinned sources; 527533 base / 16935101 lifted / 8390619 algebraic-t; UNKNOWN denominator; 7 obligations; graph-only scope; 0 targets; 34/34 hostiles"
+    },
+    {
+      "id": "certificate",
+      "command": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe ops/team/d3-global-closure-leverage-certificate/verify_certificate.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS independent reconstruction; 527533 base / 16935101 lifted; global interface all zero; 42/42 hostiles; STALLED_INFORMATIONAL / STOP_PIVOT / NONE / 0/9"
+    }
+  ],
+  "hardlink_check": {
+    "method": "Python 3.12 os.stat NTFS st_dev/st_ino file-identity comparison plus st_nlink",
+    "source_git_objects": "E:\\Projects\\9DVL Research\\finite-certificates\\.git\\objects\\pack",
+    "clone_git_objects": "E:\\Projects\\9DVL Research\\lane-replays\\d3-closure-leverage-referee-2426a20\\.git\\objects\\pack",
+    "matching_files_checked": 7,
+    "same_identity_count": 0,
+    "files": [
+      {"name": "multi-pack-index", "source_dev": 16475985426355930968, "source_ino": 562949953776257, "clone_dev": 16475985426355930968, "clone_ino": 844424930527536, "same_identity": false, "source_nlink": 1, "clone_nlink": 1},
+      {"name": "pack-1454f33d6e5de56747e7d3c1e401d01fa5401d0d.idx", "source_dev": 16475985426355930968, "source_ino": 562949953776255, "clone_dev": 16475985426355930968, "clone_ino": 844424930527537, "same_identity": false, "source_nlink": 1, "clone_nlink": 1},
+      {"name": "pack-1454f33d6e5de56747e7d3c1e401d01fa5401d0d.pack", "source_dev": 16475985426355930968, "source_ino": 562949953776254, "clone_dev": 16475985426355930968, "clone_ino": 844424930527538, "same_identity": false, "source_nlink": 1, "clone_nlink": 1},
+      {"name": "pack-1454f33d6e5de56747e7d3c1e401d01fa5401d0d.rev", "source_dev": 16475985426355930968, "source_ino": 562949953776256, "clone_dev": 16475985426355930968, "clone_ino": 844424930527539, "same_identity": false, "source_nlink": 1, "clone_nlink": 1},
+      {"name": "pack-9a7534c8497458b4603b67eb102a3415890e2bf2.idx", "source_dev": 16475985426355930968, "source_ino": 3377699720580177, "clone_dev": 16475985426355930968, "clone_ino": 844424930527540, "same_identity": false, "source_nlink": 1, "clone_nlink": 1},
+      {"name": "pack-9a7534c8497458b4603b67eb102a3415890e2bf2.pack", "source_dev": 16475985426355930968, "source_ino": 3659174697290834, "clone_dev": 16475985426355930968, "clone_ino": 844424930527541, "same_identity": false, "source_nlink": 1, "clone_nlink": 1},
+      {"name": "pack-9a7534c8497458b4603b67eb102a3415890e2bf2.rev", "source_dev": 16475985426355930968, "source_ino": 3940649674001494, "clone_dev": 16475985426355930968, "clone_ino": 844424930527542, "same_identity": false, "source_nlink": 1, "clone_nlink": 1}
+    ]
+  },
+  "optional_legacy_replay": {
+    "command": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe ai/omreal/verify_diag3_component_cosheaf_pilot.py",
+    "complete": false,
+    "termination": "TERMINATED_BY_COORDINATOR_BOUND",
+    "exit_code_after_interrupt": 1,
+    "acceptance_dependency": false,
+    "known_external_scope_fact": "Prior Windows 3.12.13 replay fails closed at expected_canary(first_event) with CertificateError; pinned BOUNDED_NO_GO was independently reconstructed directly."
+  }
+}
