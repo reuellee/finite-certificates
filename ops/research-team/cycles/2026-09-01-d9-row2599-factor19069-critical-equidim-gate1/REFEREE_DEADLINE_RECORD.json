@@ -1,0 +1,39 @@
+{
+  "format": "d9-factor19069-critical-equidim-referee-deadline-record-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-critical-equidim-gate1",
+  "frozen_candidate_revision": "e2d6475db1555ab5151ce7896d3af7fc66b0911a",
+  "frozen_candidate_tree": "ffd72a8c9eb8159f162895cacf13f1b9785046ad",
+  "closing_evidence_revision_before_deadline_record": "cb3ff3aa46ca6b4f383d03626170190c7f6aea42",
+  "closing_evidence_tree_before_deadline_record": "b9406f4f23e01aa3d349e9aaef6af44c78015ba6",
+  "attempts": [
+    {
+      "lane": "referee",
+      "status": "INTERRUPTED_AFTER_BOUNDED_DEADLINE",
+      "artifacts_created": false
+    },
+    {
+      "lane": "referee2",
+      "status": "INTERRUPTED_AFTER_BOUNDED_DEADLINE",
+      "artifacts_created": false
+    },
+    {
+      "lane": "referee3",
+      "status": "INTERRUPTED_AFTER_BOUNDED_DEADLINE",
+      "artifacts_created": false
+    },
+    {
+      "lane": "falsifier-followup-as-replacement-referee",
+      "status": "INTERRUPTED_ON_LATEST_USER_INSTRUCTION",
+      "artifacts_created": false
+    }
+  ],
+  "referee_verdict": null,
+  "referee_evidence_used": false,
+  "closeout_authority": "LATEST_EXPLICIT_USER_INSTRUCTION_TO_CLOSE_CYCLE_6_FAIL_CLOSED_WITHOUT_FURTHER_WAIT",
+  "accepted_closeout_evidence": [
+    "PRODUCER_INDEPENDENT_CERTIFICATE_45_OF_45_HOSTILE_MUTATIONS",
+    "NO_HARDLINK_CLEAN_REPLAY_AT_FROZEN_CANDIDATE",
+    "EXACT_NULL_ENDPOINT_AND_ZERO_LEDGER_DELTA"
+  ],
+  "classification": "FAIL_CLOSED_CLOSEOUT_WITH_REFEREE_DEADLINE_FAILURE_PRESERVED"
+}

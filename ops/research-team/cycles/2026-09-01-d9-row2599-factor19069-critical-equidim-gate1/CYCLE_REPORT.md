@@ -40,7 +40,7 @@ resource accounting.
 | constructor | `d9-factor19069-critical-equidim-constructor` | exact fail-closed null | first unresolved singular branch |
 | falsifier | `d9-factor19069-critical-equidim-falsifier` | independent scope rejection | 33/33 hostile mutations rejected |
 | independent verifier | `d9-factor19069-critical-equidim-certificate` | producer-independent `ACCEPT` | null only; 45/45 rejected |
-| closing referee | `d9-factor19069-critical-equidim-referee` | frozen-head review | required before checkpoint |
+| closing referee | `d9-factor19069-critical-equidim-referee` | deadline exceeded; four attempts interrupted | no referee artifact or verdict used |
 
 ## Exact findings
 
@@ -102,6 +102,8 @@ barrier-critical sample.  Component samples remain zero.
 | falsifier hostile mutations | `PASS`: 33/33 rejected |
 | producer-independent certificate | `PASS`: 45/45 rejected; null only |
 | clean no-hardlink replay | `PASS`; exact branch at frozen candidate |
+| frozen-head closing referee | `NOT_COMPLETED`: bounded deadline exceeded; preserved as non-evidence |
+| explicit user closeout authority | `PASS`: close fail-closed using certificate and clean replay without further wait |
 | diagonal-nine theorem or counterexample | `OPEN / NOT_FOUND` |
 | ledger promotion | `DENIED`; remains `2/9` |
 
@@ -153,6 +155,13 @@ ten-branch cover replace an undifferentiated 79-variable saturation problem.
 It did not compute the requested equidimensional decomposition.  Repeating a
 full 79-variable Gröbner calculation with a larger blind budget would preserve
 the identical first blocker and is retired.  Closing verdict: **`PIVOT`**.
+
+The originally required frozen-head referee did not complete.  Four bounded
+attempts created no artifacts and were interrupted; their failed attempts are
+preserved in `REFEREE_DEADLINE_RECORD.json` and supply no evidence.  The user
+then explicitly directed immediate fail-closed closure using only the already
+completed producer-independent 45/45 certificate and no-hardlink clean replay.
+Accordingly this report records no referee verdict and makes no promotion.
 
 The one precise admissible successor is
 `D9_ROW2599_FACTOR19069_SINGULAR_DF_MULTIHOMOGENEOUS_DECOMPOSITION_GATE1`.

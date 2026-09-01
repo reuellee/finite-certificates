@@ -25,6 +25,19 @@
     "worktree_clean": true,
     "verdict": "PASS"
   },
+  "closing_referee": {
+    "status": "NOT_COMPLETED_DEADLINE_EXCEEDED",
+    "attempt_count": 4,
+    "artifacts_created": false,
+    "verdict": null,
+    "evidence_used": false,
+    "deadline_record": "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/REFEREE_DEADLINE_RECORD.json",
+    "closeout_basis": [
+      "LATEST_EXPLICIT_USER_CLOSEOUT_INSTRUCTION",
+      "PRODUCER_INDEPENDENT_CERTIFICATE_45_OF_45",
+      "CLEAN_NO_HARDLINK_REPLAY"
+    ]
+  },
   "resolved_branch_count": 0,
   "pending_branch_count": 10,
   "exact_component_dimensions": null,
@@ -34,7 +47,7 @@
   "ledger_delta": "none",
   "theorem_ledger": "2/9",
   "diagonal_nine": "OPEN",
-  "closing_strategy_verdict": "PIVOT",
+  "closing_strategy_verdict": "PIVOT_FAIL_CLOSED_USER_DIRECTED_CLOSEOUT",
   "retired_route": "BLIND_FULL_79_VARIABLE_SINGULAR_BRANCH_GROEBNER_BUDGET_ESCALATION",
   "precise_successor": "D9_ROW2599_FACTOR19069_SINGULAR_DF_MULTIHOMOGENEOUS_DECOMPOSITION_GATE1",
   "storage": {
