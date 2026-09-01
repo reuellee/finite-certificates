@@ -150,7 +150,7 @@ def multiply_f2(left: list[list[int]], right: list[list[int]]) -> list[list[int]
 def source_reconstruction() -> dict[str, Any]:
     require(git("rev-parse", f"{BASE}^{{tree}}") == BASE_TREE, "base tree drift")
     require(git("rev-parse", OPENING) == OPENING, "opening revision unavailable")
-    require(git("branch", "--show-current") == BRANCH, "wrong lane branch")
+    require(git("rev-parse", f"{OPENING}^") == BASE, "opening is not based on exact base")
     ancestor = subprocess.run(
         ["git", "merge-base", "--is-ancestor", OPENING, "HEAD"], cwd=ROOT
     )
