@@ -1,0 +1,85 @@
+cycle_id: 2026-09-01-d9-component-roadmap
+base_revision: a6cae1e774420a96ca0ba8b76ee990c3e0b11bdc
+base_tree: d99658f9ecde22fa3386d769a2fe72ea407a8ec1
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_D9_COMPONENT_COMPLETE_ROADMAP_GATE1
+  closing_required: true
+  stagnation_rule: >-
+    Stop before critical-system enumeration unless aliasing, novel-factor,
+    boundary-residence, singularity, exactness, and independent-replay gates pass.
+
+work_orders:
+  - track_id: d9-component-roadmap-constructor
+    role: constructive semialgebraic roadmap prover
+    base_revision: a6cae1e774420a96ca0ba8b76ee990c3e0b11bdc
+    publication_authorization: *publication_authorization
+    target: Define a deterministic exact roadmap for the fixed row-2599 S12,37 active-sector domain.
+    quantifiers: Every component, critical stratum, certified arc, active factor occurrence, and strict-parent boundary mode in the fixed domain.
+    positive: Exact component-complete roadmap and connected/disconnected verdict for the fixed domain only.
+    negative: Exact fixed-domain disconnection or a fatal counterexample to the construction hypotheses.
+    null: First unresolved singular stratum, path witness, or attachment mode.
+    timeout: Hash-pinned processed and pending critical-system frontier.
+    resource_ceiling: 4 wall-hours, 24 aggregate CPU-hours shared by opening tracks, 16 GiB, 100000 systems, 500 MB.
+    stop_rule: Stop at the first failed canary, non-exact witness, unresolved load-bearing stratum, or ceiling.
+    prohibited_scope: No 13-type closure assumption, fixed-domain theorem promotion, ledger edit, or GitHub write.
+    worker_restrictions: Own only ops/team/d9-component-roadmap-constructor.
+
+  - track_id: d9-component-roadmap-falsifier
+    role: independent falsifier
+    base_revision: a6cae1e774420a96ca0ba8b76ee990c3e0b11bdc
+    publication_authorization: *publication_authorization
+    target: Break the roadmap using global-memory aliasing, type-36 projection growth, boundary-only factor 8552, and singular critical loci.
+    quantifiers: Every required opening canary and every producer hypothesis used to claim component completeness.
+    positive: Minimal exact fatal counterexample and route disposition.
+    negative: Complete hostile matrix without a fatal defect.
+    null: Smallest unresolved attack and its exact deciding experiment.
+    timeout: Checked and unchecked hostile matrix.
+    resource_ceiling: Shared opening ceiling.
+    stop_rule: Stop at the first fatal defect, complete audit, or ceiling.
+    prohibited_scope: Do not repair producer artifacts or infer source realizability from abstract models.
+    worker_restrictions: Own only ops/team/d9-component-roadmap-falsifier.
+
+  - track_id: d9-component-roadmap-certificate
+    role: certificate engineer and independent verifier
+    base_revision: a6cae1e774420a96ca0ba8b76ee990c3e0b11bdc
+    publication_authorization: *publication_authorization
+    target: Define an endpoint-neutral exact schema for algebraic points, strata, boundary residence, and certified path adjacency.
+    quantifiers: Every certificate field, source pin, adjacency witness, component label, and hostile mutation.
+    positive: Versioned schema, independent replay, and rejection of all four lossy-canary representations.
+    negative: Minimal uncheckable load-bearing field or provenance defect.
+    null: First missing witness class with no claim promotion.
+    timeout: Versioned partial schema with unchecked fields explicit.
+    resource_ceiling: Shared opening ceiling.
+    stop_rule: Stop at complete replay, first uncheckable claim, or ceiling.
+    prohibited_scope: No discovery-side acceptance logic, theorem edit, or GitHub write.
+    worker_restrictions: Own only ops/team/d9-component-roadmap-certificate.
+
+  - track_id: d9-component-roadmap-referee
+    role: independent closing referee
+    base_revision: FROZEN_INTEGRATED_HEAD_TO_BE_SUPPLIED
+    publication_authorization: *publication_authorization
+    target: Accept or reject the opening gate at a frozen integrated commit and tree.
+    quantifiers: Every source pin, canary, exactness rule, independence boundary, endpoint, and nonconsequence.
+    positive: Exact-head ACCEPT with all opening gates replayed.
+    negative: REJECT with a minimal reproducible defect.
+    null: Fail-closed ambiguity and smallest next discriminator.
+    timeout: Partial replay manifest.
+    resource_ceiling: 45 minutes, 12 GiB.
+    stop_rule: Stop at first defect, complete verdict, or ceiling.
+    prohibited_scope: Do not repair candidate artifacts, alter the ledger, or write GitHub.
+    worker_restrictions: Own only ops/team/d9-component-roadmap-referee.
+
