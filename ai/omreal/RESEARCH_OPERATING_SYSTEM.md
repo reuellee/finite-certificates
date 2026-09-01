@@ -13,9 +13,11 @@ This document is the standing operating framework for theorem-oriented work in
    checkpoints and silently regain authority.
 
 The current cross-diagonal machine-readable companion is
-`data/CANONICAL_RESEARCH_STATE_V2.json`. Its verifier is
-`verify_canonical_research_state_v2.py`.  Its immutable reconciled predecessor
-is `data/CANONICAL_RESEARCH_STATE.json`, verified by
+`data/CANONICAL_RESEARCH_STATE_V3.json`. Its verifier is
+`verify_canonical_research_state_v3.py`.  Its immutable post-mask-6 predecessor
+is `data/CANONICAL_RESEARCH_STATE_V2.json`, verified by
+`verify_canonical_research_state_v2.py`; the earlier reconciled state remains
+`data/CANONICAL_RESEARCH_STATE.json`, verified by
 `verify_canonical_research_state.py`.  The older
 `data/DIAG3_RESEARCH_DECISION_LEDGER.json` and
 `verify_diag3_research_decision_ledger.py` are immutable historical proof
@@ -33,8 +35,9 @@ replace independent certificate replay.
 > correct theorem, counterexample, or decisive impossibility certificate—not
 > activity, attractive numerics, or a large reduction by itself.
 >
-> Begin every research cycle from the current default branch and the canonical
-> machine-readable research state. Reconstruct the theorem dependency graph
+> Begin every research cycle from the canonical durable Library working branch
+> and the current machine-readable research state. GitHub remains read-only
+> until a new explicit user instruction authorizes publication. Reconstruct the theorem dependency graph
 > and distinguish invariant proof obligations from merely sufficient
 > reductions. Treat a target as active only if it is selected in that state;
 > older notes are historical evidence, not authority.
@@ -68,7 +71,8 @@ replace independent certificate replay.
 > run exactly as such.
 >
 > At the end of each cycle, update the canonical research state first, then prose status
-> files, GitHub, and the permanent Drive checkpoint. Record what is proved,
+> files, the durable Library checkpoint, and the Drive recovery mirror. Touch
+> GitHub only after a new explicit user instruction. Record what is proved,
 > falsified, bounded-no-go, evidence-only, superseded, and open. Never advance a
 > theorem score until every invariant obligation and publication gate in the
 > canonical state is closed.

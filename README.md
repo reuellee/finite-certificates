@@ -29,6 +29,12 @@ There is **no active diagonal or selected mathematical target**: the canonical
 state is `PIVOT_REQUIRED`. Diagonal 3 remains the largest documented open
 program, not a currently selected route.
 
+The latest bounded D9 S12,37 normal-link route closed negatively: exact
+opposite parent initial forms make the ordinary radial link singular on both
+selected supports, and an independent exact factor wall appears on a recursive
+parent facet. This retires that tangential four-support route only; weighted
+recursive links, strict open-parent separation, and diagonal 9 remain open.
+
 For diagonal 3, the exact research pipeline has now:
 
 - reduced the original triple-factor census from **79,102,449** cases to **1,162,302** unresolved triple-factor orbits;
@@ -84,12 +90,12 @@ The principal oriented-matroid program is the realizability/topology project in 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
 Current cross-diagonal target selection is governed by the machine-checked
-[`CANONICAL_RESEARCH_STATE_V2.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json)
+[`CANONICAL_RESEARCH_STATE_V3.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V3.json)
 and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
-The state after merged PR #45 and the bounded D8 mask-6 cycle is
-`PIVOT_REQUIRED`: the predecessor reconciliation state and earlier
-diagonal-three ledger are retained byte-for-byte as historical proof inputs,
-but their old selected routes are no longer current authority.
+The state after the D9 S12,37 normal-link route closed negatively is
+`PIVOT_REQUIRED`: the post-mask-6 predecessor, reconciliation state, and
+earlier diagonal-three ledger are retained byte-for-byte as historical proof
+inputs, but their old selected routes are no longer current authority.
 
 The procedures developed along this route are also maintained as a research output. The [`exact semialgebraic certificate method`](ai/omreal/EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md) and its standard-library toolkit provide reusable rational affine pullback, tensor Bernstein subdivision, fail-closed system exclusion, analytic negative canaries, semantic certificates, and producer/verifier separation.
 

@@ -1,0 +1,22 @@
+{
+  "format": "diag9-s1237-normal-link-referee-hostile-tests-v1",
+  "expected": "ALL_REJECTED_BY_INDEPENDENT_CLOSING_VALIDATION",
+  "mutations": [
+    ["source-tree", "replace the frozen tree"],
+    ["literal-omission", "drop one active factor class"],
+    ["occurrence-omission", "drop one all-occurrence metadata row"],
+    ["parent-omission", "drop one of the seventy parent inequalities"],
+    ["orientation-sign-digest", "mutate the oriented literal inventory binding"],
+    ["factor-wall-digest", "mutate the factor-8552 obstruction binding"],
+    ["digest-only-geometry", "substitute an unmaterialized geometry assertion"],
+    ["sampled-wall", "downgrade exact same-stratum lifts to a sample"],
+    ["false-no-arc", "claim all inward arcs are absent"],
+    ["false-radius", "claim weighted recursive links are closed"],
+    ["false-strict-crossing", "claim a strict open-parent crossing"],
+    ["false-collar", "promote the result to a collar or mincut"],
+    ["false-d9", "promote the result to diagonal nine"],
+    ["false-3-of-9", "promote the theorem ledger"],
+    ["unauthorized-path", "add a path outside the frozen/referee surfaces"],
+    ["authority-epoch", "restore GitHub publication authority"]
+  ]
+}
