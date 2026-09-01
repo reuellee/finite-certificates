@@ -25,9 +25,20 @@ Mutation graphs of uniform oriented matroids are connected at every rank for `n 
 ### 3. Nine-Diagonal Vanishing Lemma: 2 of 9 diagonals proved
 
 The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally.
-There is **no active diagonal or selected mathematical target**: the canonical
-state is `PIVOT_REQUIRED`. Diagonal 3 remains the largest documented open
-program, not a currently selected route.
+The canonical state remains `PIVOT_REQUIRED`. There is no active diagonal
+construction and no theorem promotion. The only selected work is one bounded,
+theorem-first feasibility round centered on a globally attached mixed
+`(1,0,0)` chain in diagonal three. The round separates that chain problem from
+the complete joined-complex/pair-kernel theorem and the independent
+triple-component escape theorem; local carriers, atlas growth and residual
+sampling are explicitly unauthorized.
+
+The latest theorem-level tournament closed `STALLED / STOP` with winner and
+successor both `NONE`, after five cycles with the same blocker and eight
+zero-ledger cycles. Canonical state V8 supersedes the stale factor-19069
+successor retained in V7, preserves the exact `2/9` ledger, and permits only
+the one theorem-or-obstruction feasibility analysis described in the
+[`9DVL theorem prospectus`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md).
 
 The latest universal D9 cut opening gate failed closed before its main census.
 The 13-type local wall grammar is not projection-closed—type 36 already adds
@@ -72,7 +83,8 @@ nonrelative master-closure compiler. The 5,803-factor residue remains an input
 gap, but that route is not current authority and cannot resume without a fresh
 opening audit.
 
-- [`ai/omreal/NINE_DIAGONAL_STATUS_V4.md`](ai/omreal/NINE_DIAGONAL_STATUS_V4.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V5.md`](ai/omreal/NINE_DIAGONAL_STATUS_V5.md)
+- [`ai/omreal/9DVL_THEOREM_PROSPECTUS.md`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md)
@@ -92,12 +104,16 @@ The principal oriented-matroid program is the realizability/topology project in 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
 Current cross-diagonal target selection is governed by the machine-checked
-[`CANONICAL_RESEARCH_STATE_V4.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json)
+[`CANONICAL_RESEARCH_STATE_V8.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json)
 and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
-The state after the universal D9 cut opening gate failed closed is
-`PIVOT_REQUIRED`: the post-normal-link predecessor, reconciliation state, and
-earlier diagonal-three ledger are retained byte-for-byte as historical proof
-inputs, but their old selected routes are no longer current authority.
+The state after the theorem-level reset is `PIVOT_REQUIRED`: V7, the
+post-normal-link predecessor, the reconciliation states and the earlier
+diagonal-three ledger are retained byte-for-byte as historical proof inputs,
+but their old selected routes are no longer current authority. V8 authorizes
+one bounded three-target proof-program feasibility round and explicitly
+authorizes no mathematical construction or theorem credit. The earlier
+[`CANONICAL_RESEARCH_STATE_V4.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json)
+remains a replayable historical checkpoint.
 
 The procedures developed along this route are also maintained as a research output. The [`exact semialgebraic certificate method`](ai/omreal/EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md) and its standard-library toolkit provide reusable rational affine pullback, tensor Bernstein subdivision, fail-closed system exclusion, analytic negative canaries, semantic certificates, and producer/verifier separation.
 

@@ -1,0 +1,106 @@
+cycle_id: 2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1
+base_revision: 9116771ba80ed3d033516d0dd666b34348aad348
+base_tree: a64438426dc792af67d5ccc0dd2f4d1231dbaa14
+opening_ledger: 2/9
+selected_target: D3_NESTED_A_B_C_THEOREM_FEASIBILITY_ROUND1
+selected_construction_count: 0
+storage_authorization: &storage_authorization |
+  The saved local Codex project E:\Projects\9DVL Research is the canonical
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs.
+  A native-filesystem recovery mirror to
+  G:\My Drive\Projects\research-backups is mandatory at close, byte-length and
+  SHA-256 verified. Never invoke the Google Drive connector and never block on
+  connector approval. GitHub is read-only: do not push, publish branches, open
+  or update pull requests, trigger or rerun CI, or merge. This authorization
+  does not permit secrets, unrelated private files, paid/external compute,
+  force-push, history deletion, or irreversible external action.
+strategy_gate:
+  opening_verdict: PIVOT_BOUNDED_THEOREM_FEASIBILITY_ONLY
+  selected_count: 1
+  selected_construction_count: 0
+  compared_routes:
+    - D3_NESTED_A_B_C_THEOREM_FEASIBILITY_ROUND1
+    - D3_UNIFORM_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    - D3_PAIR_GLOBAL_COMPRESSION_DESCENT_EQUIVALENCE
+    - EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT
+  closing_required: true
+  stagnation_rule: >-
+    The predecessor closed after five same-blocker and eight zero-ledger cycles.
+    Local construction or evidence cannot continue this route. This one round
+    may test finite proof programs for nested targets A, B and C, but A-only,
+    null or timeout endpoints stop without a successor.
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    named_invariant: diag3_pair_hc1_AND_diag3_triple_hc0
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 5
+    zero_ledger_streak: 8
+  convergence_hypothesis: >-
+    An actual target-B theorem may close the pair obligation and an actual
+    target-C theorem may close the triple obligation; finite feasibility for
+    A/B/C is useful but informational, while an exact universal obstruction may
+    retire only the target it quantifies over.
+  minimum_acceptable_delta: >-
+    Independently prove actual target B or target C and close its inherited
+    load-bearing obligation under the same global quantifiers. A finite A/B/C
+    proof-program package is positive feasibility but not a proof-distance
+    decrease; a universal obstruction may instead justify precise retirement.
+  mid_cycle_checkpoint: >-
+    At the first complete topology, falsifier and naturality handoffs, or at an
+    earlier exact negative or decisive null; freeze and stop unless a positive
+    or universal negative remains reachable in one final revision round.
+  closing_classification_required: true
+  automatic_pivot_rule: >-
+    A-only or feasibility-only success is INFORMATIONAL and closes STOP unless
+    a separate future governed proof cycle is selected. Any local, conditional,
+    null or timeout result also closes STOP; no ceiling enlargement or third pass.
+handoff_contract: &handoff_contract |
+  Positive feasibility means finite independently falsifiable proof programs
+  for A (mixed chains relative to a declared lower-skeleton interface), B
+  (complete joined comparison and rational pair-kernel exactness) and C
+  (independent all-component true-parent-infinity escape). A alone is partial
+  informational credit. Negative means an exact universal obstruction and
+  retires only its quantified target, not failure of one ansatz. Null pins each
+  first open global edge; timeout freezes the frontier. No handoff changes the
+  2/9 ledger, proves B or C, or authorizes mathematical construction.
+work_orders:
+  - track_id: d3-mixed-carrier-topology
+    role: topology-joined-complex-proof-program-design
+    surface: ops/team/d3-mixed-carrier-topology
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: One theorem memo, one A-to-B dependency graph, at most six named lemmas, one lower-skeleton interface and one rational pair-comparison schema, with one initial and at most one referee-directed revision.
+    stop_rule: Stop if A cannot be stated relative to a noncircular lower-skeleton interface or B needs an unnamed coverage/comparison lemma, local atlas or third research pass.
+    prohibited_scope: No atlas, census, carrier implementation, A-only global-rank claim, triple-escape inference, network, connector, ledger edit or self-certification.
+    worker_restrictions: Own only the assigned evidence surface; do not edit canonical or cycle files, import referee logic, push, merge or select a successor.
+  - track_id: d3-mixed-carrier-falsifier
+    role: obstruction-falsifier
+    surface: ops/team/d3-mixed-carrier-falsifier
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: One A/B/C obstruction dossier, one pinned row-2599 diagnostic replay, at most three fully specified minimal obstruction models, one initial and at most one referee-directed revision.
+    stop_rule: Stop at a universal exact obstruction to one named target or after the first complete audit shows that only an ansatz-specific or local negative is available.
+    prohibited_scope: No sampled promotion, global enumeration, producer acceptance import, network, connector, ledger edit, claim that the singleton-root no-go decides A, or claim that pair rank cancels triple H_c^0.
+    worker_restrictions: Own only the assigned evidence surface; do not edit canonical or cycle files, push, merge, select a successor or certify topology acceptance.
+  - track_id: d3-mixed-carrier-naturality
+    role: semialgebraic-naturality-and-descent
+    surface: ops/team/d3-mixed-carrier-naturality
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: One A/B/C naturality memo, one complete quantifier/seam matrix, one descent/monodromy verdict and one triple-escape boundary verdict, with one initial and at most one referee-directed revision.
+    stop_rule: Stop with a pinned null edge if any chart, zero-weight, support, iterated-face, monodromy, joined-comparison or true-infinity passage lacks a named theorem with verified hypotheses.
+    prohibited_scope: No chartwise-to-global inference, pairwise-only specialization promoted as full coherence, witness-rank loss promoted as parent infinity, new atlas or census, network, connector, ledger edit or self-certification.
+    worker_restrictions: Own only the assigned evidence surface; do not edit canonical or cycle files, import topology acceptance logic, push, merge or select a successor.
+  - track_id: d3-mixed-carrier-referee
+    role: independent-closing-referee
+    surface: ops/team/d3-mixed-carrier-referee
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: One frozen-package review, one independent standard-library verifier with at least 24 hostile mutations, and one final handoff.
+    stop_rule: Reject or classify NULL on moved pins, a missing lane, false universality, local-to-global promotion, unproved rank, artificial infinity or producer acceptance reuse.
+    prohibited_scope: No discovery, mutable-head repair, construction, theorem promotion, network, connector or acceptance of a nonfrozen package.
+    worker_restrictions: Review only the frozen three-lane package; own only the assigned surface and do not edit canonical or cycle files, push, merge or authorize a successor.

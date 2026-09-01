@@ -13,13 +13,21 @@ This document is the standing operating framework for theorem-oriented work in
    checkpoints and silently regain authority.
 
 The current cross-diagonal machine-readable companion is
-`data/CANONICAL_RESEARCH_STATE_V4.json`. Its verifier is
-`verify_canonical_research_state_v4.py`.  Its immutable post-normal-link
-predecessor is `data/CANONICAL_RESEARCH_STATE_V3.json`, verified historically
-by `verify_canonical_research_state_v3.py`; the earlier post-mask-6 state is
+`data/CANONICAL_RESEARCH_STATE_V8.json`. Its verifier is
+`verify_canonical_research_state_v8.py`. V8 accepts the later theorem-reset
+`STALLED / STOP / NONE` close as authoritative over the historical successor
+stored in V7 and authorizes only one bounded proof-program feasibility round:
+the mixed-`(1,0,0)` chain subproblem, the complete joined-complex/pair-kernel
+program, and the independent triple-component escape program. It authorizes
+no mathematical construction or theorem credit. States V7 through V4 remain
+immutable historical checkpoints; in particular
+`data/CANONICAL_RESEARCH_STATE_V4.json` is the verified post-universal-cut
+state. Its immutable post-normal-link predecessor is
+`data/CANONICAL_RESEARCH_STATE_V3.json`, verified historically by
+`verify_canonical_research_state_v3.py`; the earlier post-mask-6 state is
 `data/CANONICAL_RESEARCH_STATE_V2.json`, and the reconciled state remains
 `data/CANONICAL_RESEARCH_STATE.json`, verified by
-`verify_canonical_research_state.py`.  The older
+`verify_canonical_research_state.py`. The older
 `data/DIAG3_RESEARCH_DECISION_LEDGER.json` and
 `verify_diag3_research_decision_ledger.py` are immutable historical proof
 inputs; they remain replayable but no longer select current work.
