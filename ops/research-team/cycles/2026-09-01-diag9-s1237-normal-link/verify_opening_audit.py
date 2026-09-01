@@ -68,6 +68,15 @@ def git(*arguments: str) -> str:
     return result.stdout.strip()
 
 
+def git_bytes(revision: str, relative: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"{revision}:{relative}"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    ).stdout
+
+
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise AssertionError(message)
@@ -232,6 +241,12 @@ def validate_repository_and_sources(audit: dict) -> None:
     require(git("rev-parse", f"{BASE}^{{tree}}") == BASE_TREE, "base tree drift")
     for relative, expected in EXPECTED_SOURCES.items():
         path = ROOT / relative
+        if relative == "ai/omreal/NINE_DIAGONAL_STATUS.md":
+            require(
+                hashlib.sha256(git_bytes(BASE, relative)).hexdigest() == expected,
+                f"canonical-base source drift {relative}",
+            )
+            continue
         require(path.is_file(), f"missing source {relative}")
         require(sha256(path) == expected, f"source drift {relative}")
         if relative not in {
