@@ -31,7 +31,7 @@ retains parent-component membership rather than only ambient signs, and both
 attachment and nonattachment are terminal for the one-wall coverage gate.
 Exactly one route is selected.
 
-## Quantified target and endpoints
+## Bounded target
 
 Let `P` be the connected strict row-2599 parent component containing the
 pinned source sample, `f_19069` the pinned primitive residual polynomial, and
@@ -78,7 +78,23 @@ alone does not advance the `2/9` theorem ledger.
 - all-factor, multiwall, all-parent, diagonal-nine, and ledger-promotion
   quantifiers: outside this gate and open.
 
-## Roles and separation
+## Canonical input accounting
+
+`OPENING_AUDIT.json` pins the exact base commit and tree, canonical V5 state,
+predecessor referee, factor/collar/skeleton sources, compactification inputs,
+resource ceiling, successor branch, storage authority, and prohibited routes.
+`verify_opening_audit.py` rejects source, ledger, quantifier, resource, or
+authority drift before construction is trusted.
+
+## Concurrency and non-overlap
+
+The phases use disjoint `ops/team` surfaces and execute sequentially from the
+immutable opening state.  Constructor discovery, falsifier attacks,
+certificate acceptance, and frozen-head review remain separate.  The
+independent verifier must not import the producer.  Only the coordinator may
+integrate or update the canonical ledger.
+
+## Roles
 
 - coordinator: cycle charter, integration, ledger, frozen checkpoint;
 - constructor: source-derived active-margin frontier and endpoint candidate;
@@ -86,10 +102,6 @@ alone does not advance the `2/9` theorem ledger.
 - certificate verifier: producer-independent semantic replay and hostile
   mutations;
 - closing referee: frozen-head replay, exact ledger delta, and successor.
-
-The phases use disjoint `ops/team` surfaces.  The independent verifier must
-not import the producer.  Only the coordinator may integrate or update the
-canonical ledger.
 
 ## Resource ceiling and stop rule
 
@@ -107,7 +119,7 @@ Do not revive sampled-separator CEGAR without a complete generator, retry
 coordinate projections or symmetry-only compression, use the ambient orbit
 quotient as fixed-domain coverage, or enumerate the unfiltered pair frontier.
 
-## Storage and publication authority
+## Publication authority
 
 The user designates the saved local Codex project `E:\Projects\9DVL Research`
 as the durable working folder for this research program.  At the next safe

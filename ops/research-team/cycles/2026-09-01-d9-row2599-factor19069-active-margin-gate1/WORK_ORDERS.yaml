@@ -4,15 +4,33 @@ base_tree: b942da304007bb4d9437ec7575c420fc6073814b
 opening_ledger: 2/9
 selected_target: D9_ROW2599_FACTOR19069_PROJECTION_FREE_ACTIVE_MARGIN_COMPONENT_GATE1
 publication_authorization: &publication_authorization |
-  The user designates E:\Projects\9DVL Research as the durable local Codex
-  project for verified working checkpoints. Preserve unrelated contents and
-  record exact path, commit, and tree. Google Drive is optional. GitHub is
-  read-only; do not push, publish, open or update pull requests, trigger CI,
-  or merge without a new explicit instruction.
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+storage_update: |
+  The user's later cycle-specific instruction designates
+  E:\Projects\9DVL Research as the durable local Codex project for verified
+  working checkpoints and G:\My Drive\Projects\research-backups as the
+  optional native-filesystem recovery mirror. Preserve unrelated contents,
+  record exact path/commit/tree, verify lengths and SHA-256, do not use the
+  Drive connector, and do not block on an inaccessible G: mount. GitHub
+  remains read-only.
 strategy_gate:
   opening_verdict: PIVOT_SELECT_PROJECTION_FREE_FACTOR19069_ACTIVE_MARGIN
   retired_route: SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR
   closing_required: true
+  stagnation_rule: >-
+    If complete active-margin tie incidence or connected-parent boundary
+    residence remains absent at the declared ceiling, do not repeat
+    unfiltered nonsmooth active-set enumeration; pivot to a structurally
+    compressed barrier sampler or stop.
 work_orders:
   - track_id: d9-factor19069-active-margin-constructor
     role: constructive-prover
