@@ -1,0 +1,53 @@
+{
+  "format": "9dvl-d9-universal-cut-certificate-source-manifest-v1",
+  "track_id": "d9-universal-cut-certificate",
+  "target_id": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+  "opening": {
+    "commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+    "tree": "84eaf80b30e1f366b8f959bd6435a217762636b3"
+  },
+  "canonical_base": {
+    "commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+    "tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a"
+  },
+  "used_sha256": {
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md": "f97d88889e8a839485459e239dcb3a8ad9ea0e10ab061dcc97fbf30ab8a063b4",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml": "83a52dda924d536de0f61b7f82700391183e7e30665762c328fedd90e38fa472",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/OPENING_AUDIT.json": "007fd5f83a9256c31f1851303fed00df7a7b5a83107333d5fc96b4e6477d7639",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/verify_opening_audit.py": "cdbe1db6c8b5391af4da264ede1aaef6b5feefca8aa0a5351f55cda213daeee9",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V3.json": "e37fad74fae83cf087b2010039e85122866c3b093e34227f28d12759be94a6cf",
+    "ai/omreal/verify_canonical_research_state_v3.py": "b08c89fc79f24d3546831b9e3b96a239b101350175ac8f108823cec471b3b5bb",
+    "ops/team/diag9-s1237-normal-link-certificate/RESULT.json": "8b932ec411fe9bc96d8bb895fccdcf7a63985df6ce4d35b38e2f53eef3afc010",
+    "ops/team/diag9-s1237-normal-link-prover/DIAG9_S1237_NORMAL_LINK_NO_GO.json": "8aa726c69b556f7c2d85f7f852cb88329da39dcd173294a7db7245f13e0d2d54",
+    "ops/team/diag9-s1237-normal-link-falsifier/RESULT.json": "15ce5c17a174ed6a82173d24a8f72d04da5962bcea9e87cf3648adb21351d46b",
+    "ops/team/diag9-s1237-normal-link-referee/verify_closing_referee.py": "5619d72de02663ca4205951e2cd8bf9a865c016f3c8390af4a9261afc164e8c5",
+    "ops/team/diag9-s1237-normal-link-referee/SOURCE_MANIFEST.json": "0d11558d8535304846862386211f8681aedf3d2db08a665ab28692ae34d44a7e",
+    "ops/team/diag9-s1237-normal-link-referee/CLOSING_MANIFEST.json": "9462528276530db48de7ae53808c7290327698878380193bd3f55e208196376d",
+    "ops/team/diag9-s1237-normal-link-referee/RESULT.json": "16be207c4abaddf52bd6b670c293159cb317e712c431597838b00e2815bb8902",
+    "ops/team/diag9-s1237-normal-link-referee/REFEREE_ADAPTER.json": "fd6530fa5ca35e86febfff6730a35ae26bae0762d4dbceac23f62e6d617f5da9",
+    "ops/team/diag9-s1237-normal-link-referee/HOSTILE_TESTS.json": "58320b798893fa34f1987c84fa6570a694b04c1ef7d42781d90d98feee6838e5",
+    "ops/team/d9-universal-cut-certificate/SCHEMA.md": "c11c0586211271eee1213bbbe6120ae5ec9ebf2f994779b7176f84ecf8312a25",
+    "ops/team/d9-universal-cut-certificate/SELF_TEST_FIXTURE.json": "5fb855c91a192dba6918e8b8575aee31d82490d66cb79855946599b15ff72c64",
+    "ops/team/d9-universal-cut-certificate/verify_universal_cut_certificate.py": "8dd6b38867e9b9afe751a6cb8b196bacb3b836a4c32a696fb6dc890ac7c76ae3",
+    "ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py": "eb8f274ffd8fd5ae5784a7dba202baef1c89bf07b86c9ac94026d0ec9ef20021",
+    "ops/team/d9-universal-cut-certificate/PORTABLE_PREDECESSOR_ADAPTER.json": "19341f0444efd79236be64f24c484206dc0d6d690d893ab6240f6f81afd708b9",
+    "ops/team/d9-universal-cut-certificate/run_hostile_mutations.py": "b9e4e5f63b7aa2cc1e2d9a4eedfe9b3cf8231f768b5d096eb16aefab6e96a685",
+    "ops/team/d9-universal-cut-certificate/HOSTILE_MUTATIONS.json": "3bd577a9842a57a737fbee4eac754c093c06635fe0d4571a82c3feca310070be"
+  },
+  "portable_predecessor": {
+    "historical_referee_commit": "ca730426cdd5847ae262ddc29c6f4ae98369eba3",
+    "availability_at_opening": "ABSENT",
+    "dereference_policy": "NEVER_REQUIRED",
+    "source_derived_adapter": "PORTABLE_PREDECESSOR_ADAPTER.json"
+  },
+  "trust_boundary": "Certificate acceptance is implemented only by this track's exact field/arithmetic kernel and a future versioned independent coverage adapter. Predecessor portability uses the byte-pinned independent referee kernel's source-reconstruction entrypoints, never its mutable wrapper, a producer verdict, or the absent historical referee object.",
+  "scope_exclusions": [
+    "discovery-side acceptance logic",
+    "sampled or fixed-family promotion",
+    "recursive-facet wall promoted to a strict-open-parent separator",
+    "unproved boundary or infinity attachment",
+    "unregistered live mathematical endpoint",
+    "theorem-ledger mutation"
+  ],
+  "semantic_sha256": "6694be9bbdab95efc2cfcc98808e41ce27b8a1df2788dc1f57d3f96d52c82282"
+}
