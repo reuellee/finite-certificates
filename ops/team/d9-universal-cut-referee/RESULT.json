@@ -1,0 +1,78 @@
+{
+  "format": "d9-universal-cut-closing-referee-result-v1",
+  "track_id": "d9-universal-cut-referee",
+  "target_id": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+  "reviewed_commit": "39035a9c35b27a9893db393dbb8a9ec1b621754d",
+  "reviewed_tree": "e05535180e3522521f5f151f956a9f407f5a2956",
+  "verdict": "ACCEPT",
+  "opening_gate": "FAILED_CLOSED",
+  "classification": "EXACT_NULL_GLOBAL_COVERAGE_AND_ATTACHMENT_NO_GO",
+  "endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
+  "summary": "The frozen head correctly fails the universal-cut opening gate: the 13-type local grammar is not projection-closed or globally component-faithful, factor 8552 remains on recursive facet 1237 without a strict coface, and no proved D9 property rejects the exact local-memory countermodel mechanism. The canary and portable-replay gates pass, but the main census remains denied.",
+  "opening_requirement_verdicts": [
+    "FAIL",
+    "FAIL",
+    "FAIL",
+    "PASS",
+    "PASS"
+  ],
+  "independent_replay": {
+    "source_pin_declarations": 87,
+    "unique_source_paths": 51,
+    "local_wall_types": 13,
+    "opposite_partner_pairs": 671,
+    "persistent_support_candidates": 2420,
+    "abstract_counterpair_chambers": 16,
+    "first_layer_new_irreducibles": 142,
+    "parent_brackets": 70,
+    "global_residual_factors": 26740,
+    "boundary_charts": 64,
+    "certificate_hostile_mutations": 32,
+    "referee_hostile_mutations": 20,
+    "ordered_noninclusions": 72,
+    "portable_predecessor_census": "3539/6167/5026/70/16"
+  },
+  "source_discrepancy": {
+    "printed_total": 131,
+    "displayed_row_sum": 123,
+    "disposition": "NON_LOAD_BEARING_ARITHMETIC_TYPO",
+    "load_bearing_totals_unchanged": [
+      671,
+      2420
+    ]
+  },
+  "main_census": {
+    "authorized": false,
+    "started": false
+  },
+  "scope": {
+    "accepted": "FAIL_CLOSED_NULL_ENDPOINT",
+    "universal_cut_coverage": "NOT_PROVED",
+    "actual_D9_counterexample": "NOT_FOUND",
+    "strict_open_parent_separator": "NOT_PROVED",
+    "weighted_recursive_links": "OPEN",
+    "diagonal_9": "OPEN",
+    "selected_successor": null,
+    "next_state": "PIVOT_REQUIRED"
+  },
+  "nonconsequences": [
+    "NO_SOURCE_REALIZED_D9_COUNTEREXAMPLE",
+    "NO_UNIVERSAL_D9_CUT_COVERAGE_THEOREM",
+    "NO_EXHAUSTIVE_OBSTRUCTION_UNSAT_RESULT",
+    "NO_STRICT_OPEN_PARENT_SEPARATOR",
+    "NO_WEIGHTED_RECURSIVE_LINK_CLASSIFICATION",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "ledger": {
+    "before": "2/9",
+    "after": "2/9",
+    "delta": 0,
+    "change_recommended": "none"
+  },
+  "replay": "PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python ops/team/d9-universal-cut-referee/verify_closing_referee.py",
+  "full_source_replay": "PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python ops/team/d9-universal-cut-referee/verify_closing_referee.py --full-source-replay",
+  "authority": "Library canonical; Drive recovery mirror; GitHub read-only; local scratch ephemeral",
+  "closing_manifest_semantic_sha256": "48d90a91ad68958798ea4de5a0838b8bcef673d4fd1f32960df1f4bb7f28e3dc",
+  "semantic_sha256": "125899bfe61b72f521b1c48abadd9d726a0053e6187f175a221a5d8845750ca3"
+}
