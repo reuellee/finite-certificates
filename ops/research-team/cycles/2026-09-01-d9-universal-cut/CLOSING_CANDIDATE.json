@@ -1,0 +1,93 @@
+{
+  "format": "9dvl-d9-universal-cut-closing-candidate-v1",
+  "cycle_id": "2026-09-01-d9-universal-cut",
+  "evidence_integration": {
+    "commit": "9cb3652b00c0a07901b6fa32dd3f7d03987cfb66",
+    "tree": "37f605949a2fbfdf8be8983b6ea24121eea4a177"
+  },
+  "opening_base": {
+    "commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+    "tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a"
+  },
+  "opening_control_plane": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "opening_gate": "FAILED_CLOSED",
+  "mathematical_endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
+  "classification": "EXACT_NULL_GLOBAL_COVERAGE_AND_ATTACHMENT_NO_GO",
+  "theorem": {
+    "id": "9DVL",
+    "opening_score": "2/9",
+    "closing_score": "2/9",
+    "promotion": "NONE"
+  },
+  "main_census": {
+    "authorized": false,
+    "started": false
+  },
+  "failure_reasons": [
+    "NO_COMPLETE_COMPACTIFIED_COMPONENT_FAITHFUL_INCIDENCE_OBJECT",
+    "THIRTEEN_LOCAL_TYPES_NOT_PROJECTION_CLOSED",
+    "MEMORYLESS_LOCAL_GRAMMAR_CANNOT_DETERMINE_GLOBAL_CUTS",
+    "NO_STRICT_COFACE_ATTACHMENT_FOR_RECURSIVE_FACET_WALL",
+    "NO_PROVED_D9_GLOBAL_PROPERTY_REJECTS_COUNTERMODEL_MECHANISM",
+    "NO_CERTIFIED_10000_TYPE_OR_250000_INSTANCE_BOUND"
+  ],
+  "exact_counts": {
+    "local_wall_types": 13,
+    "opposite_partner_pairs": 671,
+    "persistent_support_candidates": 2420,
+    "abstract_counterpair_chambers": 16,
+    "first_layer_new_irreducibles": 142,
+    "parent_brackets_checked": 70,
+    "global_residual_factors_checked": 26740,
+    "boundary_charts_checked": 64,
+    "certificate_hostile_mutations_rejected": 32,
+    "falsifier_ordered_noninclusions": 72
+  },
+  "first_exact_projection_gap": {
+    "source_type": 36,
+    "source_polynomial": "a*f-c*d+c-f",
+    "facet": "a=[1346]=0",
+    "new_polynomial": "c*d-c+f"
+  },
+  "boundary_canary": {
+    "factor_id": 8552,
+    "factor": "d*i-e",
+    "recursive_parent_facet": "1237",
+    "strict_open_parent_crossing": false
+  },
+  "route_disposition": "RETIRED_UNTIL_GLOBAL_ATTACHMENT_AND_PROJECTION_CLOSURE_INPUTS",
+  "selected_successor": null,
+  "next_state": "PIVOT_REQUIRED",
+  "nonconsequences": [
+    "NO_SOURCE_REALIZED_D9_COUNTEREXAMPLE",
+    "NO_UNIVERSAL_D9_CUT_COVERAGE_THEOREM",
+    "NO_EXHAUSTIVE_OBSTRUCTION_UNSAT_RESULT",
+    "NO_STRICT_OPEN_PARENT_SEPARATOR",
+    "NO_WEIGHTED_RECURSIVE_LINK_CLASSIFICATION",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "artifacts": {
+    "ops/team/d9-universal-cut-prover/RESULT.json": "199ffdbb74f75b704c2597831ee6006d382fb341e0e644635a8baa8cfd180560",
+    "ops/team/d9-universal-cut-prover/SOURCE_MANIFEST.json": "8e52329d8a4ef6912832a98a8c225bac4d62def71c58a291c35ed0840fd282e2",
+    "ops/team/d9-universal-cut-prover/verify_cut_reduction_gap.py": "d0cc963ef55943a987f01481c8b9c865b58d3c555cb7b2df74cf4aa93a61301e",
+    "ops/team/d9-universal-cut-circuits/RESULT.json": "15634f0bfebbd1408036de91041a1225a423307681c2c4ac2d5d2ce1c6eeb6d4",
+    "ops/team/d9-universal-cut-circuits/SOURCE_MANIFEST.json": "5bcee9f5f88b635471298d631ace05c9f899a64c767149f5789da29028a1dc56",
+    "ops/team/d9-universal-cut-circuits/verify_cut_grammar_frontier.py": "afb74effbfeeb9a35502b18b94342d01675fe7d4ae2193ec3073247a4ea04377",
+    "ops/team/d9-universal-cut-boundary/RESULT.json": "5fd6a9197448e51b19e068d7a147bb9504188a2d8b1a1ca97126be9753f3ba90",
+    "ops/team/d9-universal-cut-boundary/SOURCE_MANIFEST.json": "7f84d1dfc0c514b3dfce0e66bbfa657e0c7b25dbf9c65f92485e0c734bb63a30",
+    "ops/team/d9-universal-cut-boundary/verify_boundary_transport_gate.py": "0a4f6ddb7ee5caa50c4d464b3c3ba572eca8c116ada1fa4695d4c6d6cd2bd5dc",
+    "ops/team/d9-universal-cut-falsifier/RESULT.json": "1de1c249102292dce93bbf587d8c9ac048a8a38028fcbe120cd88f5328ba5232",
+    "ops/team/d9-universal-cut-falsifier/SOURCE_MANIFEST.json": "c4c12c095c8d0c9ebc042bc8fabb6157d20c256a252cfe0d8701e3c21d71a04c",
+    "ops/team/d9-universal-cut-falsifier/verify_d9_universal_cut_falsifier.py": "68fb7024c3e1742ce376ecad44b4d3250184984a4df53972cdbd7d9616e4cf84",
+    "ops/team/d9-universal-cut-certificate/RESULT.json": "bce26c8f094ece5295d97eef7a4b5315dea7dd4ba0bdab64995d8cce6fdf4c0c",
+    "ops/team/d9-universal-cut-certificate/SOURCE_MANIFEST.json": "541389fa5e13b4e60c0e97560f124741009f7f095d7a2b448e6b72d061a77e04",
+    "ops/team/d9-universal-cut-certificate/verify_universal_cut_certificate.py": "8dd6b38867e9b9afe751a6cb8b196bacb3b836a4c32a696fb6dc890ac7c76ae3",
+    "ops/team/d9-universal-cut-certificate/run_hostile_mutations.py": "b9e4e5f63b7aa2cc1e2d9a4eedfe9b3cf8231f768b5d096eb16aefab6e96a685",
+    "ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py": "eb8f274ffd8fd5ae5784a7dba202baef1c89bf07b86c9ac94026d0ec9ef20021"
+  },
+  "referee": {
+    "status": "PENDING_FROZEN_HEAD_REVIEW",
+    "owned_surface": "ops/team/d9-universal-cut-referee"
+  }
+}
