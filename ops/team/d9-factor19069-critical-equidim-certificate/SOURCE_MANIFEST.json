@@ -1,0 +1,31 @@
+{
+  "format": "d9-factor19069-critical-equidim-certificate-source-manifest-v1",
+  "track_id": "d9-factor19069-critical-equidim-certificate",
+  "reviewed_revision": "951498b19c17886ffbf3b32d938dd741903d99a7",
+  "reviewed_tree": "f90cb55cdc51dd3ca0b077ba62e384e5df96e094",
+  "constructor_pins": {
+    "ops/team/d9-factor19069-critical-equidim-constructor/CRITICAL_EQUIDIM_FRONTIER.json": "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec897d3a33",
+    "ops/team/d9-factor19069-critical-equidim-constructor/RESULT.json": "35619e34566ed01cfc749217e2b7f40842263e14108663d27b24687a6d7c7c6d",
+    "ops/team/d9-factor19069-critical-equidim-constructor/SOURCE_MANIFEST.json": "06efc5d65274d7179728b9b89a1788ea4d33812bfb24ecd5235bdd0d294bd75b",
+    "ops/team/d9-factor19069-critical-equidim-constructor/verify_critical_equidim_frontier.py": "3897be806048574e62b69f872050e176b9800db732ec626439c6a6f5ecaa5ab5"
+  },
+  "canonical_source_pins": {
+    "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py": "64e94f55d2495c365128523ae1d8d2a7a9b9fc38e260d9a113834b836083be97",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf"
+  },
+  "source_policy": {
+    "constructor_code_imported": false,
+    "falsifier_code_imported": false,
+    "predecessor_certificate_code_imported": false,
+    "network_or_connector_used": false,
+    "external_compute_used": false
+  },
+  "semantic_sha256": "e50cbb5037cb35668c06e9c4b5762638d535b674ccd79eef5e6f9b4cb68de997"
+}
