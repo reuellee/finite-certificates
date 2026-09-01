@@ -21,6 +21,13 @@
   "canonical_boundary_representation_semantic_sha256": "60cbac62bfc0684c7ee5ab8cef7773d33779683628a1fe55d75427a3ff01bd35",
   "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
   "format": "d9-factor19069-homogenizer-boundary-certificate-source-manifest-v1",
+  "historical_source_snapshot": {
+    "access": "git-show-frozen-bytes",
+    "current_worktree_historical_bytes_required_to_match": false,
+    "pin_count": 24,
+    "revision": "25757510dd88e8b7bbe5668c89f93b2a46b264de",
+    "tree": "47395637cc10c2bd736530719b6e2f3cf57b1629"
+  },
   "pins": {
     "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
     "ai/omreal/data/CANONICAL_RESEARCH_STATE_V6.json": "24d033a7f7d9886d8a538776a1453f1fd00af617da5c03f0f6a6e3921fe8b9bf",
@@ -44,7 +51,7 @@
     "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/RESULT.json": "12ac0d8da67d58720b5ff6f06d30760de8fc78382ff5a856e4976351af94cb57",
     "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-referee/RESULT.json": "e4088338d86d05442fe72289211500be187e6b99acd02c37a4fead51a07edc0f"
   },
-  "semantic_sha256": "c402d0af7a84dc7aba26e66e814c54626510f04c19fbb5de11017fdb348521fd",
+  "semantic_sha256": "4ff1c4103fb2cc13bd241c58b61025b923aaf165879dd0ec4bff3c4932267cdc",
   "source_policy": {
     "constructor_acceptance_imported": false,
     "constructor_code_imported": false,

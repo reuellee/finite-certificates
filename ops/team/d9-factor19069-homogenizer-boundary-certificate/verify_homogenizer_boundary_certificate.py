@@ -20,6 +20,7 @@ import argparse
 import ast
 from copy import deepcopy
 from hashlib import sha256
+from io import BytesIO
 from itertools import combinations, product
 import json
 from pathlib import Path
@@ -58,13 +59,6 @@ TYPE_ORDER = (
     ("w",),
 )
 
-CYCLE = ROOT / "ops" / "research-team" / "cycles" / CYCLE_ID
-OPENING = CYCLE / "OPENING_AUDIT.json"
-PREDECESSOR = ROOT / "ops" / "team" / "d9-factor19069-explicit-trihom-jacobian-chart-constructor" / "PROJECTIVE_CHART_FRONTIER.json"
-CONSTRUCTOR = ROOT / "ops" / "team" / "d9-factor19069-homogenizer-boundary-constructor"
-CONSTRUCTOR_FRONTIER = CONSTRUCTOR / "HOMOGENIZER_BOUNDARY_TYPE_FRONTIER.json"
-CONSTRUCTOR_MANIFEST = CONSTRUCTOR / "SOURCE_MANIFEST.json"
-CONSTRUCTOR_RESULT = CONSTRUCTOR / "RESULT.json"
 SOURCE_RECONSTRUCTION = HERE / "SOURCE_RECONSTRUCTION.json"
 BOUNDARY_CERTIFICATE = HERE / "BOUNDARY_CERTIFICATE.json"
 CANDIDATE_COMPARISON = HERE / "CANDIDATE_COMPARISON.json"
@@ -143,6 +137,41 @@ def write_json(path: Path, value) -> None:
 
 def file_digest(path: Path) -> str:
     return sha256(path.read_bytes()).hexdigest()
+
+
+def frozen_source_bytes(relative: str, expected_sha256: str) -> bytes:
+    """Read a reviewed historical input from the frozen candidate commit."""
+    try:
+        value = git("show", f"{CANDIDATE_REVISION}:{relative}", binary=True)
+    except subprocess.CalledProcessError as error:
+        raise Reject(f"frozen source exists {relative}") from error
+    require(sha256(value).hexdigest() == expected_sha256, f"frozen source digest {relative}")
+    return value
+
+
+def frozen_pinned_bytes(relative: str) -> bytes:
+    require(relative in PINNED_INPUTS, f"declared frozen source pin {relative}")
+    return frozen_source_bytes(relative, PINNED_INPUTS[relative])
+
+
+def frozen_candidate_bytes(relative: str) -> bytes:
+    require(relative in CANDIDATE_PINS, f"declared frozen candidate pin {relative}")
+    return frozen_source_bytes(relative, CANDIDATE_PINS[relative])
+
+
+def json_from_bytes(value: bytes, marker: str):
+    try:
+        return json.loads(value.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise Reject(f"frozen JSON parse {marker}") from error
+
+
+def frozen_pinned_json(relative: str):
+    return json_from_bytes(frozen_pinned_bytes(relative), relative)
+
+
+def frozen_candidate_json(relative: str):
+    return json_from_bytes(frozen_candidate_bytes(relative), relative)
 
 
 def normalize(records: list[dict], arity: int = 12) -> list[dict]:
@@ -309,9 +338,9 @@ def multidegrees(records: list[dict]) -> set[tuple[int, int, int]]:
     }
 
 
-def read_npy_member(npz_path: Path, member: str) -> tuple[dict, bytes]:
+def read_npy_member(npz_bytes: bytes, member: str) -> tuple[dict, bytes]:
     """Read the metadata and raw body of a simple .npy member using stdlib."""
-    with zipfile.ZipFile(npz_path) as archive:
+    with zipfile.ZipFile(BytesIO(npz_bytes)) as archive:
         raw = archive.read(member + ".npy")
     require(raw[:6] == b"\x93NUMPY", f"npy magic {member}")
     major, _minor = raw[6], raw[7]
@@ -326,8 +355,8 @@ def read_npy_member(npz_path: Path, member: str) -> tuple[dict, bytes]:
     return header, raw[start + header_length:]
 
 
-def unpack_unsigned_npy(npz_path: Path, member: str) -> tuple[tuple[int, ...], tuple[int, ...]]:
-    header, body = read_npy_member(npz_path, member)
+def unpack_unsigned_npy(npz_bytes: bytes, member: str) -> tuple[tuple[int, ...], tuple[int, ...]]:
+    header, body = read_npy_member(npz_bytes, member)
     require(header["fortran_order"] is False, f"npy C order {member}")
     descriptor = header["descr"]
     formats = {"<u2": ("<H", 2), "<u4": ("<I", 4), "|u1": ("B", 1)}
@@ -345,12 +374,13 @@ def unpack_unsigned_npy(npz_path: Path, member: str) -> tuple[tuple[int, ...], t
 
 
 def validate_pinned_sources() -> dict:
+    require(git("rev-parse", f"{CANDIDATE_REVISION}^{{commit}}") == CANDIDATE_REVISION, "historical source commit")
+    require(git("rev-parse", f"{CANDIDATE_REVISION}^{{tree}}") == CANDIDATE_TREE, "historical source tree")
     for relative, expected in PINNED_INPUTS.items():
-        path = ROOT / relative
-        require(path.is_file(), f"pinned source exists {relative}")
-        require(file_digest(path) == expected, f"pinned source digest {relative}")
+        frozen_source_bytes(relative, expected)
 
-    opening = read_json(OPENING)
+    opening_relative = f"ops/research-team/cycles/{CYCLE_ID}/OPENING_AUDIT.json"
+    opening = frozen_pinned_json(opening_relative)
     require(opening["cycle_id"] == CYCLE_ID, "opening cycle")
     require(opening["base_revision"] == BASE_REVISION and opening["base_tree"] == BASE_TREE, "opening base")
     require(opening["selected_target"] == TARGET and opening["selected_count"] == 1, "opening target")
@@ -358,22 +388,22 @@ def validate_pinned_sources() -> dict:
     require(opening["target"]["processing_order"] == ["u_v_w", "u_v", "u_w", "v_w", "u", "v", "w"], "opening type order")
     require(opening["target"]["parent_sign_factors"] == 70, "opening parent census")
 
-    canonical = read_json(ROOT / "ai/omreal/data/CANONICAL_RESEARCH_STATE_V6.json")
+    canonical = frozen_pinned_json("ai/omreal/data/CANONICAL_RESEARCH_STATE_V6.json")
     require(canonical["format"] == "9dvl-canonical-research-state-v6", "canonical state format")
     require(canonical["theorem"]["score"] == "2/9", "canonical state ledger")
     require(canonical["theorem"]["diagonal_nine"] == "OPEN", "canonical diagonal nine")
 
-    compactification = read_json(ROOT / "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json")
+    compactification = frozen_pinned_json("ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json")
     require(compactification["parent_index"] == 2599, "compactification parent")
     require(compactification["chart_atlas"]["chart_count"] == 64, "compactification charts")
     require(compactification["chart_atlas"]["ordered_transition_count"] == 4096, "compactification transitions including identities")
     require(len(compactification["boundary_divisors"]) == 12, "compactification boundary divisors")
 
-    parent_gate = read_json(ROOT / "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json")
+    parent_gate = frozen_pinned_json("ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json")
     require(parent_gate["parent_index"] == 2599, "parent gate parent")
     require(parent_gate["nonexcluded_support_face_count"] == 11, "parent gate nonexcluded faces")
 
-    candidates = (ROOT / "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin").read_bytes()
+    candidates = frozen_pinned_bytes("ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin")
     require(len(candidates) >= 20, "candidate factor header")
     magic, parent, factor_count, candidate_count = struct.unpack_from("<8sIII", candidates)
     require((magic, parent, factor_count, candidate_count) == (b"D3PFC001", 2599, 26740, 17824), "candidate factor header fields")
@@ -381,27 +411,27 @@ def validate_pinned_sources() -> dict:
     require(len(ids) == candidate_count and ids == tuple(sorted(set(ids))), "candidate factor canonical IDs")
     require(19069 in ids, "factor 19069 candidate membership")
 
-    npz = ROOT / "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz"
+    npz = frozen_pinned_bytes("ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz")
     shape, parent_values = unpack_unsigned_npy(npz, "parent_index")
     require(shape == () and parent_values == (2599,), "factor-state parent")
     varied_shape, varied = unpack_unsigned_npy(npz, "varied_factor")
     require(varied_shape == (10844,) and 19069 in varied, "factor-state varied factor membership")
 
-    lines = (ROOT / "ai/omreal/certs_4_8.jsonl").read_text(encoding="utf-8").splitlines()
+    lines = frozen_pinned_bytes("ai/omreal/certs_4_8.jsonl").decode("utf-8").splitlines()
     require(len(lines) == 2628, "canonical parent record count")
     parent_record = json.loads(lines[2599])
     require(parent_record["n"] == 8 and parent_record["r"] == 4, "row2599 parent rank")
     require(parent_record["verdict"] == "REALIZABLE", "row2599 realizability")
     require(len(parent_record["matrix"]) == 4 and all(len(row) == 8 for row in parent_record["matrix"]), "row2599 matrix shape")
 
-    predecessor_manifest = read_json(ROOT / "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/SOURCE_MANIFEST.json")
+    predecessor_manifest = frozen_pinned_json("ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/SOURCE_MANIFEST.json")
     require(predecessor_manifest["semantic_sha256"] == semantic_digest(predecessor_manifest), "predecessor manifest seal")
     require(predecessor_manifest["source_policy"]["predecessor_builder_code_imported"] is False, "predecessor source policy")
     require(predecessor_manifest["source_policy"]["numerical_or_modular_probe_used"] is False, "predecessor exact policy")
 
-    prior_certificate = read_json(ROOT / "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/RESULT.json")
-    prior_falsifier = read_json(ROOT / "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/RESULT.json")
-    prior_referee = read_json(ROOT / "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-referee/RESULT.json")
+    prior_certificate = frozen_pinned_json("ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/RESULT.json")
+    prior_falsifier = frozen_pinned_json("ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/RESULT.json")
+    prior_referee = frozen_pinned_json("ops/team/d9-factor19069-explicit-trihom-jacobian-chart-referee/RESULT.json")
     require(prior_certificate["outcome"] == "pass" and prior_certificate["ledger_delta"] == "0/9", "prior certificate")
     require(prior_falsifier["outcome"] == "pass" and prior_falsifier["theorem_ledger"] == "2/9", "prior falsifier")
     require(prior_referee["verdict"] == "ACCEPT_FAIL_CLOSED_TIMEOUT_FRONTIER", "prior referee")
@@ -418,7 +448,7 @@ def validate_pinned_sources() -> dict:
 
 
 def reconstruct_source() -> tuple[dict, list[dict]]:
-    predecessor = read_json(PREDECESSOR)
+    predecessor = frozen_pinned_json("ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/PROJECTIVE_CHART_FRONTIER.json")
     require(predecessor["semantic_sha256"] == semantic_digest(predecessor), "predecessor frontier seal")
     require(predecessor["outcome"] == "pass", "predecessor outcome")
     require(predecessor["theorem_ledger"] == "2/9", "predecessor ledger")
@@ -791,12 +821,7 @@ def validate_candidate_pins() -> dict:
     require(git("rev-parse", f"{CANDIDATE_REVISION}^{{commit}}") == CANDIDATE_REVISION, "candidate commit")
     require(git("rev-parse", f"{CANDIDATE_REVISION}^{{tree}}") == CANDIDATE_TREE, "candidate tree")
     for relative, expected in CANDIDATE_PINS.items():
-        path = ROOT / relative
-        require(path.is_file(), f"candidate input exists {relative}")
-        require(file_digest(path) == expected, f"candidate input digest {relative}")
-        frozen = git("show", f"{CANDIDATE_REVISION}:{relative}", binary=True)
-        require(sha256(frozen).hexdigest() == expected, f"frozen candidate digest {relative}")
-        require(path.read_bytes() == frozen, f"candidate worktree drift {relative}")
+        frozen_source_bytes(relative, expected)
     return {
         "candidate_revision": CANDIDATE_REVISION,
         "candidate_tree": CANDIDATE_TREE,
@@ -831,9 +856,9 @@ def independent_type_derivatives(record: dict) -> tuple[dict[str, list[dict]], d
 def compare_constructor_candidate(reconstruction: dict) -> dict:
     frozen = validate_candidate_pins()
     representation = reconstruction["canonical_boundary_representation"]
-    frontier = read_json(CONSTRUCTOR_FRONTIER)
-    manifest = read_json(CONSTRUCTOR_MANIFEST)
-    result = read_json(CONSTRUCTOR_RESULT)
+    frontier = frozen_candidate_json("ops/team/d9-factor19069-homogenizer-boundary-constructor/HOMOGENIZER_BOUNDARY_TYPE_FRONTIER.json")
+    manifest = frozen_candidate_json("ops/team/d9-factor19069-homogenizer-boundary-constructor/SOURCE_MANIFEST.json")
+    result = frozen_candidate_json("ops/team/d9-factor19069-homogenizer-boundary-constructor/RESULT.json")
 
     require(frontier["semantic_sha256"] == "70d980c28c536dd10a679ac086939fadcf78722dd68839658062948c1e0dd5ec", "candidate frontier semantic identity")
     require(frontier["format"] == "d9-factor19069-homogenizer-boundary-type-constructor-frontier-v1", "candidate frontier format")
@@ -1433,6 +1458,10 @@ def findings_text(reconstruction: dict, comparison: dict, certificate: dict, hos
         "overlap records, and 279 type/chart incidences (`27+36+36+36+48+48+48`).  No "
         "branch duplicates were quotiented: a later quotient must provide an explicit "
         "invertible overlap witness.\n\n"
+        "Every reviewed predecessor and constructor input is loaded with `git show` "
+        f"from frozen candidate `{CANDIDATE_REVISION}` and checked against its pinned "
+        "SHA-256.  Later protocol-only working-tree changes therefore cannot alter or "
+        "invalidate the reviewed source snapshot.\n\n"
         f"All {hostile_count} hostile mutations were rejected.  The independently "
         "reconstructed residual is `B-UV-01-unclassified-ambient-components`, SHA-256 "
         f"`{comparison['accepted_candidate_scope']['residual_branch_semantic_sha256']}`. "
@@ -1456,6 +1485,13 @@ def emit_artifacts(reconstruction: dict, comparison: dict, certificate: dict, re
         "candidate_pins": dict(sorted(CANDIDATE_PINS.items())),
         "candidate_revision": CANDIDATE_REVISION,
         "candidate_tree": CANDIDATE_TREE,
+        "historical_source_snapshot": {
+            "access": "git-show-frozen-bytes",
+            "revision": CANDIDATE_REVISION,
+            "tree": CANDIDATE_TREE,
+            "pin_count": len(PINNED_INPUTS) + len(CANDIDATE_PINS),
+            "current_worktree_historical_bytes_required_to_match": False,
+        },
         "candidate_comparison_policy": comparison["comparison_policy"],
         "source_reconstruction_semantic_sha256": reconstruction["semantic_sha256"],
         "candidate_comparison_semantic_sha256": comparison["semantic_sha256"],
@@ -1518,6 +1554,13 @@ def main() -> None:
         require(manifest["pins"] == dict(sorted(PINNED_INPUTS.items())), "manifest pins")
         require(manifest["candidate_pins"] == dict(sorted(CANDIDATE_PINS.items())), "manifest candidate pins")
         require(manifest["candidate_revision"] == CANDIDATE_REVISION and manifest["candidate_tree"] == CANDIDATE_TREE, "manifest candidate revision")
+        require(manifest["historical_source_snapshot"] == {
+            "access": "git-show-frozen-bytes",
+            "revision": CANDIDATE_REVISION,
+            "tree": CANDIDATE_TREE,
+            "pin_count": len(PINNED_INPUTS) + len(CANDIDATE_PINS),
+            "current_worktree_historical_bytes_required_to_match": False,
+        }, "manifest historical source snapshot")
         require(manifest["candidate_comparison_policy"] == comparison["comparison_policy"], "manifest candidate comparison policy")
         require(manifest["source_reconstruction_semantic_sha256"] == reconstruction["semantic_sha256"], "manifest reconstruction binding")
         require(manifest["candidate_comparison_semantic_sha256"] == comparison["semantic_sha256"], "manifest comparison binding")

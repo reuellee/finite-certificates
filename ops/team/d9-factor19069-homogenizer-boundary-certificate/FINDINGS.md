@@ -16,4 +16,6 @@ For `u=v=0`, direct substitution into the independently reconstructed source and
 
 The inherited atlas replay certifies 64 charts, 4,032 directed principal-open overlap records, and 279 type/chart incidences (`27+36+36+36+48+48+48`).  No branch duplicates were quotiented: a later quotient must provide an explicit invertible overlap witness.
 
+Every reviewed predecessor and constructor input is loaded with `git show` from frozen candidate `25757510dd88e8b7bbe5668c89f93b2a46b264de` and checked against its pinned SHA-256.  Later protocol-only working-tree changes therefore cannot alter or invalidate the reviewed source snapshot.
+
 All 60 hostile mutations were rejected.  The independently reconstructed residual is `B-UV-01-unclassified-ambient-components`, SHA-256 `2747fcc6923b44996bfe79c0d06d2f88169f9fedea465cdecaa3c104bcf6b8b5`. No complete seven-type component census, nondeepest factor certification, overlap quotient, accepted affine pullback, 70-parent affine census, strict-real residence, or connected-parent tag is certified.  The ledger remains `2/9`.
