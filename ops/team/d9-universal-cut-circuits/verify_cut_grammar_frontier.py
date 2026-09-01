@@ -235,6 +235,14 @@ def verify_frontier(payload: dict[str, Any]) -> None:
 def verify_sources(manifest: dict[str, Any]) -> None:
     require(manifest["format"] == "d9-universal-cut-circuit-source-manifest-v1", "source manifest format")
     require(manifest["opening_commit"] == "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e", "source opening commit")
+    repair = manifest["protocol_repair"]
+    require(repair["source_commit"] == "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f", "protocol repair source")
+    require(repair["applied_commit"] == "60e76467188f32288fee0cb896d2e9592e9b0741", "protocol repair application")
+    require(repair["applied_tree"] == "a5ee5c295c3e898bbbe702f75fd12cf0d11abbf5", "protocol repair tree")
+    require(repair["paths"] == [
+        "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md",
+        "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml",
+    ], "protocol repair paths")
     for record in manifest["inputs"]:
         path = ROOT / record["path"]
         require(path.is_file(), f"missing source {record['path']}")
@@ -245,6 +253,11 @@ def verify_result(result: dict[str, Any], payload: dict[str, Any]) -> None:
     require(result["format"] == "d9-universal-cut-circuit-result-v1", "result format")
     require(result["track_id"] == "d9-universal-cut-circuits", "result track")
     require(result["base_revision"] == payload["base_revision"], "result base")
+    require(result["protocol_repair"] == {
+        "source_commit": "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f",
+        "applied_commit": "60e76467188f32288fee0cb896d2e9592e9b0741",
+        "applied_tree": "a5ee5c295c3e898bbbe702f75fd12cf0d11abbf5",
+    }, "result protocol repair")
     require(result["outcome"] == "inconclusive", "result outcome")
     require(result["subclaim_status"]["local_type_only_separator_completeness"] == "disproved", "result local verdict")
     require(result["subclaim_status"]["actual_uom_4_8_universal_cut_grammar"] == "inconclusive", "result global scope")

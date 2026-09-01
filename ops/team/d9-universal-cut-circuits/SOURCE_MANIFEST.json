@@ -3,18 +3,27 @@
   "track_id": "d9-universal-cut-circuits",
   "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
   "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "protocol_repair": {
+    "source_commit": "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f",
+    "applied_commit": "60e76467188f32288fee0cb896d2e9592e9b0741",
+    "applied_tree": "a5ee5c295c3e898bbbe702f75fd12cf0d11abbf5",
+    "paths": [
+      "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md",
+      "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml"
+    ]
+  },
   "canonical_mathematical_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
   "canonical_mathematical_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
   "inputs": [
     {
       "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md",
       "role": "cycle contract, universal quantifiers, opening stop rules",
-      "sha256": "f97d88889e8a839485459e239dcb3a8ad9ea0e10ab061dcc97fbf30ab8a063b4"
+      "sha256": "6a51420d70b8ce0a67d1a23b641a2bca211745211bbfdeb5cb3d71d7f8aeb1df"
     },
     {
       "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml",
       "role": "owned track work order",
-      "sha256": "83a52dda924d536de0f61b7f82700391183e7e30665762c328fedd90e38fa472"
+      "sha256": "f156ebc83849863da90373818d837e0f55c745e57bdbfb279d2e8a593b6d9e12"
     },
     {
       "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/OPENING_AUDIT.json",

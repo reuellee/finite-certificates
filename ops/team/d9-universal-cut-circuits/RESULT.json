@@ -5,6 +5,11 @@
   "base_revision": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
   "base_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
   "canonical_mathematical_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "protocol_repair": {
+    "source_commit": "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f",
+    "applied_commit": "60e76467188f32288fee0cb896d2e9592e9b0741",
+    "applied_tree": "a5ee5c295c3e898bbbe702f75fd12cf0d11abbf5"
+  },
   "outcome": "inconclusive",
   "summary": "The finite local circuit grammar is exact through conditional convex-carrier coherence, but local wall/circuit/multiwall/transport data cannot determine global cuts; an exact minimal abstract counterpair forces global chamber-gluing memory, while the first actual unclassified composition is the row-2599 rigid three-block monochromatic corner.",
   "subclaim_status": {
@@ -23,7 +28,7 @@
     },
     {
       "path": "ops/team/d9-universal-cut-circuits/SOURCE_MANIFEST.json",
-      "sha256": "57ec84e74fa5b63bf4b07a2f647c37cd2ba3c460ccf7e884941fdcc1573f072a"
+      "sha256": "5bcee9f5f88b635471298d631ace05c9f899a64c767149f5789da29028a1dc56"
     },
     {
       "path": "ops/team/d9-universal-cut-circuits/FINITE_GRAMMAR_FRONTIER.json",
@@ -40,7 +45,7 @@
     },
     {
       "path": "ops/team/d9-universal-cut-circuits/verify_cut_grammar_frontier.py",
-      "sha256": "3554cbd1dde4bd33588ec2db93faa83433440421369bc3546c344bebfe5147ff"
+      "sha256": "afb74effbfeeb9a35502b18b94342d01675fe7d4ae2193ec3073247a4ea04377"
     }
   ],
   "replay": {
@@ -78,7 +83,7 @@
     "hostile": "Five mutations are rejected: deleted edge, corrupted sign, forged component count, erased specialization transport, and forged semantic digest."
   },
   "source_accounting": {
-    "used": "Twenty-one direct load-bearing files are SHA-256 pinned in SOURCE_MANIFEST.json; the immutable opening Git tree pins transitive repository dependencies. Four predecessor exact verifiers were replayed successfully.",
+    "used": "Twenty-one direct load-bearing files are SHA-256 pinned in SOURCE_MANIFEST.json; the immutable opening Git tree pins transitive repository dependencies, and the two repaired cycle-contract sources are additionally bound to d07c2a7b041f3a075d5e9294a0f3c63dbd87822f. Four predecessor exact verifiers were replayed successfully.",
     "unused_or_missing": "The unavailable historical referee object was not used. Complete D9 parent master roadmaps are absent and are the missing global-memory input.",
     "discrepancy": "The predecessor elimination note's displayed auxiliary total 131 is a non-load-bearing arithmetic typo; its 13 rows sum to 123 and exactly reproduce the verified 671 pair and 2420 support totals."
   },
