@@ -62,9 +62,9 @@ labels, dimensions, or sampled points.
 
 All 70 parent factors are reconstructed in source order from the pinned
 row-2599 parent record, including exact signed sparse polynomials and node
-identities.  No parent exclusion is complete before exact affine contraction,
-and no branch may receive a strict-real or connected-parent tag until all 70
-parent factors and the relevant residence/component certificates are present.
+identities.  No accepted affine branch may receive an all-70 parent test,
+strict-real residence claim, or connected-parent tag before exact affine
+contraction and the relevant residence/component certificates are present.
 
 ## Hostile attacks
 
@@ -88,3 +88,47 @@ resource-ceiling drift, ledger promotion, Drive use, and GitHub writes.
 - No universal diagonal certificate or theorem-ledger promotion is supported.
 - No numerical, modular, sampled, network, Google Drive, or GitHub inference
   was used.
+
+## Frozen constructor-candidate delta
+
+Frozen revision `25757510dd88e8b7bbe5668c89f93b2a46b264de`, tree
+`47395637cc10c2bd736530719b6e2f3cf57b1629`, receives the independent verdict
+
+`ACCEPT_EXACT_BOUNDED_NULL_FRONTIER_WITH_DEEPEST_AND_UV_PARTIAL_CLOSURES_FAIL_CLOSED`.
+
+The delta verifier reads only the frozen constructor frontier and result JSON;
+it imports neither constructor code nor acceptance logic.  It independently
+reconstructs and compares all seven restricted sources, all `84` full-source
+restricted derivatives, every tangent derivative, the `279` chart incidences,
+and each queued factor identity that the candidate actually asserts.
+
+The constructor's five deepest set-theoretic seeds reconcile exactly with the
+earlier three pairwise factor seeds.  `Sing(L)` is contained in `V(L,C)`
+because `a=c=d=f=0` forces `L=C=0`; `Sing(C)` is contained in `V(L,C)` because
+`dC/dh=-L` and the determinant vanishes on its singular locus.  Thus the
+five-seed union equals the earlier three-pairwise-seed union.  The five-seed
+presentation is a valid product-singularity cover, not a radical, primary, or
+scheme-multiplicity certificate.
+
+For the processed `V(h,L)` seed, exact sparse arithmetic confirms the normal
+identity `dF/dw = quotient*L + e*Q`.  Hence its ambient locus splits
+set-theoretically into the two recorded children `V(h,L,e)` and `V(h,L,Q)`.
+The first has certified dimension `3` and no degree or multiplicity claim; the
+second has no component invariants claimed.  Both are projective-infinity only
+and already excluded by `H_08_1248` or `H_22_1367`.
+
+At `u=v=0`, substitution into the independently reconstructed source and all
+twelve full restricted derivatives proves the homogeneous family
+`u=v=b=c=e=f=0`.  The first two projective blocks are fixed and the third is
+`P3`, so its dimension is exactly `3` and degree is `1`.  It is excluded from
+the strict parent domain because `H_22_1367=c*d-a*f` vanishes identically.
+This family is not accepted as an affine pullback and is not claimed to exhaust
+the ambient singular ideal.
+
+The first pending residual remains
+`B-UV-01-unclassified-ambient-components`, candidate semantic SHA-256
+`2747fcc6923b44996bfe79c0d06d2f88169f9fedea465cdecaa3c104bcf6b8b5`.
+The delta suite rejects `44` hostile producer overclaims and branch/hash
+mutations.  No overlap representatives are quotiented, no affine branch is
+accepted, the preregistered null endpoint is honest, and the ledger remains
+`2/9`.
