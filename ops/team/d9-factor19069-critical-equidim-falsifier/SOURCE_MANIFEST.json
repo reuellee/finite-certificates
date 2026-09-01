@@ -1,0 +1,32 @@
+{
+  "format": "d9-factor19069-critical-equidim-falsifier-source-manifest-v1",
+  "base_revision": "f196f949b2a2981ea1b21019e4a2bf56302a683a",
+  "base_tree": "7a5eaa91d1448defed2e77363b5e97cf93b97489",
+  "source_count": 13,
+  "source_sha256": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/CYCLE.md": "5c7a07c5cc54a9b2dfe1e526e47613b9533d15cdf05b5c32c0a348f53226c7f9",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/OPENING_AUDIT.json": "9bebcf1e92b4740c470fc5d067ad302e65ba6bf94073eb002d91b0779861f7a3",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/WORK_ORDERS.yaml": "4fe371b731efca9c1a1cf21c73a07be0efbdd01044aa2eb5aa290bf3809335ea",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/verify_opening_audit.py": "edb012843eb3695a8d66f1c7bb16abd4bfad890ee8c06ba99277e1ee7adf309c",
+    "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca",
+    "ops/team/d9-factor19069-factored-barrier-referee/RESULT.json": "f96c10050338bc497798883ac0340e966834ba6feb320b76a6e77d3657c01461",
+    "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py": "64e94f55d2495c365128523ae1d8d2a7a9b9fc38e260d9a113834b836083be97",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364"
+  },
+  "predecessor_factor_circuit_semantic_sha256": "0e10d3d4692a53a6040ea8822be05376775e9c674c74d532f42236d3dfb1a7cf",
+  "source_reconstruction": {
+    "parent_index": 2599,
+    "factor_id": 19069,
+    "parent_factor_count": 70,
+    "parent_sparse_terms": 209,
+    "factor_sparse_terms": 108,
+    "parent_sign_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+  },
+  "drive_connector_used": false,
+  "github_write": false
+}
