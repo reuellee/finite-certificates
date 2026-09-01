@@ -1,0 +1,28 @@
+{
+  "format": "d9-factor19069-clean-replay-v1",
+  "candidate_revision": "d9c43724ba0b82f3aeee69b4afa205bad2aa27f9",
+  "candidate_tree": "72ec9cffdb00969ae534daf742b45d05f4d8350a",
+  "clone_mode": "git clone --no-hardlinks --no-local followed by detached exact checkout",
+  "replay_path": "C:\\Users\\reuel\\Documents\\Codex\\2026-09-01\\research-cycle-d9-factor19069-gate1\\work\\clean-replay-factor19069",
+  "commands": [
+    "ai/omreal/verify_canonical_research_state_v5.py",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-active-margin-gate1/verify_opening_audit.py",
+    "ai/omreal/verify_diag3_pair_fullsupport_component_collar.py",
+    "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton_EDGE27_EDGE39.py",
+    "ops/team/d9-factor19069-active-margin-constructor/build_active_margin_frontier.py",
+    "ops/team/d9-factor19069-active-margin-falsifier/verify_active_margin_falsifier.py",
+    "ops/team/d9-factor19069-active-margin-certificate/verify_active_margin_certificate.py"
+  ],
+  "results": {
+    "canonical_v5": "PASS",
+    "opening_audit": "PASS",
+    "component_collar": "PASS_20_HOSTILE_MUTATIONS",
+    "two_edge_skeleton": "PASS_9_HOSTILE_MUTATIONS",
+    "constructor_regeneration": "PASS_BYTE_IDENTICAL",
+    "falsifier": "PASS_12_HOSTILE_MUTATIONS",
+    "certificate": "PASS_17_HOSTILE_MUTATIONS",
+    "git_diff_exit_code": 0,
+    "worktree_clean": true
+  },
+  "classification": "CLEAN_REPLAY_ACCEPTS_EXACT_FAIL_CLOSED_NULL"
+}
