@@ -11,7 +11,7 @@
     {"path": "PORTABLE_PREDECESSOR_ADAPTER.json", "sha256": "19341f0444efd79236be64f24c484206dc0d6d690d893ab6240f6f81afd708b9"},
     {"path": "SCHEMA.md", "sha256": "c11c0586211271eee1213bbbe6120ae5ec9ebf2f994779b7176f84ecf8312a25"},
     {"path": "SELF_TEST_FIXTURE.json", "sha256": "5fb855c91a192dba6918e8b8575aee31d82490d66cb79855946599b15ff72c64"},
-    {"path": "SOURCE_MANIFEST.json", "sha256": "87616b1754b9d7f9f8a1d3643b6f5f1f2e366d1adf0f65ad24f91da835fea35e"},
+    {"path": "SOURCE_MANIFEST.json", "sha256": "541389fa5e13b4e60c0e97560f124741009f7f095d7a2b448e6b72d061a77e04"},
     {"path": "run_hostile_mutations.py", "sha256": "b9e4e5f63b7aa2cc1e2d9a4eedfe9b3cf8231f768b5d096eb16aefab6e96a685"},
     {"path": "verify_portable_predecessor.py", "sha256": "eb8f274ffd8fd5ae5784a7dba202baef1c89bf07b86c9ac94026d0ec9ef20021"},
     {"path": "verify_universal_cut_certificate.py", "sha256": "8dd6b38867e9b9afe751a6cb8b196bacb3b836a4c32a696fb6dc890ac7c76ae3"}
@@ -49,5 +49,5 @@
   ],
   "next_action": "At a frozen integrated head, register only a producer-independent adapter that replays a materialized universal coverage proof or returns the first exact coverage gap; otherwise stop fail-closed.",
   "ledger_change_recommended": "none",
-  "semantic_sha256": "4e726029a9e45098b2fe89d4b4b24a8dc6659611736990c9ce1d1df516aea156"
+  "semantic_sha256": "baba7499921240819a59827757fef459ae75dbebab34a6173b53e7b194adc052"
 }
