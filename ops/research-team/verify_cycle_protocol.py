@@ -5,14 +5,18 @@ Cycles dated 2026-08-29 or later must carry an opening strategy comparison,
 a bounded target, a closing strategy gate, and the authorization that applied
 when the cycle opened.  Historical GitHub-publication authority is preserved
 through 2026-08-31; cycles from 2026-09-01 onward are Library-first and keep
-GitHub read-only.  The audit deliberately uses only the standard library so it
-can run in the repository-wide verifier suite.
+GitHub read-only.  Cycles based on a revision containing the mandatory
+solution-convergence protocol must also carry an opening proof-distance
+contract and, when closed, a convergence verdict.  The audit deliberately
+uses only the standard library so it can run in the repository-wide verifier
+suite.
 """
 
 from __future__ import annotations
 
 from pathlib import Path
 import re
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -26,6 +30,9 @@ LEGACY_AUTHORIZATION_MARKER = (
 )
 CURRENT_AUTHORIZATION_MARKER = (
     "The current storage and publication authorization to copy verbatim into every"
+)
+SOLUTION_CONVERGENCE_PROTOCOL_MARKER = (
+    "## 3. Mandatory solution-convergence gate"
 )
 
 LEGACY_AUTHORIZATION_PHRASES = (
@@ -51,6 +58,17 @@ CURRENT_AUTHORIZATION_PHRASES = (
     "force-pushing",
 )
 
+NATIVE_STORAGE_AUTHORIZATION_PHRASES = (
+    "saved local Codex project",
+    "native-filesystem recovery mirror",
+    r"G:\My Drive\Projects\research-backups",
+    "Never invoke the Google Drive connector",
+    "never block on connector approval",
+    "GitHub is read-only",
+    "paid/external compute",
+    "force-push",
+)
+
 CYCLE_PHRASES = (
     "Canonical base revision:",
     "Opening theorem ledger:",
@@ -69,7 +87,6 @@ CYCLE_PHRASES = (
     "## Concurrency and non-overlap",
     "## Roles",
     "## Resource ceiling",
-    "## Publication authority",
     "## Closing requirements",
     "CONTINUE",
     "PIVOT",
@@ -80,7 +97,6 @@ CYCLE_PHRASES = (
 WORK_ORDER_PHRASES = (
     "base_revision:",
     "opening_ledger:",
-    "publication_authorization:",
     "strategy_gate:",
     "opening_verdict:",
     "closing_required: true",
@@ -92,11 +108,58 @@ WORK_ORDER_PHRASES = (
     "worker_restrictions:",
 )
 
+CONVERGENCE_CYCLE_PHRASES = (
+    "## Mandatory solution-convergence evaluation",
+    "Proof-distance vector",
+    "Score deficit",
+    "Open load-bearing obligations",
+    "Certified exhaustive residual",
+    "Global coverage",
+    "Same-blocker streak",
+    "Zero-ledger streak",
+    "Convergence hypothesis",
+    "Minimum acceptable decrease",
+    "Mid-cycle convergence check",
+    "Automatic strategy-reset rule",
+)
+
+CONVERGENCE_WORK_ORDER_PHRASES = (
+    "solution_convergence_gate:",
+    "proof_distance:",
+    "opening_score:",
+    "score_deficit:",
+    "open_load_bearing_obligations:",
+    "certified_exhaustive_residual:",
+    "global_coverage:",
+    "same_blocker_streak:",
+    "zero_ledger_streak:",
+    "convergence_hypothesis:",
+    "minimum_acceptable_delta:",
+    "mid_cycle_checkpoint:",
+    "closing_classification_required: true",
+    "automatic_pivot_rule:",
+)
+
+CONVERGENCE_REPORT_PHRASES = (
+    "## Mandatory solution-convergence verdict",
+    "Opening proof-distance vector",
+    "Closing proof-distance vector",
+    "Mid-cycle convergence check",
+    "Trajectory classification",
+    "Automatic strategy-reset result",
+    "Same-route continuation justified",
+)
+
 
 def require_phrases(text: str, phrases: tuple[str, ...], label: str) -> None:
     missing = [phrase for phrase in phrases if phrase not in text]
     if missing:
         raise AssertionError(f"{label}: missing required phrases {missing}")
+
+
+def require_any_phrase(text: str, phrases: tuple[str, ...], label: str) -> None:
+    if not any(phrase in text for phrase in phrases):
+        raise AssertionError(f"{label}: missing every accepted phrase {phrases}")
 
 
 def require_phrases_collapsed(
@@ -126,8 +189,8 @@ def protocol_authorization(text: str, marker: str) -> str:
     return "\n".join(quoted)
 
 
-def work_order_authorization(text: str, label: str) -> str:
-    marker = "publication_authorization: &publication_authorization |\n"
+def work_order_authorization(text: str, label: str, anchor: str) -> str:
+    marker = f"{anchor}: &{anchor} |\n"
     if marker not in text:
         raise AssertionError(f"{label}: missing publication authorization anchor")
     block = text.split(marker, 1)[1]
@@ -142,6 +205,32 @@ def work_order_authorization(text: str, label: str) -> str:
     return "\n".join(quoted)
 
 
+def protocol_at_revision(revision: str, label: str) -> str:
+    commit = subprocess.run(
+        ["git", "cat-file", "-e", f"{revision}^{{commit}}"],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    if commit.returncode != 0:
+        raise AssertionError(f"{label}: unknown base revision {revision}")
+    result = subprocess.run(
+        ["git", "show", f"{revision}:ops/research-team/PROTOCOL.md"],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    if result.returncode != 0:
+        # The earliest governed cycles predate the repository protocol file.
+        # They remain covered by the historical phrase checks above.
+        return ""
+    return result.stdout
+
+
 def audit_cycle(cycle_dir: Path, protocol_text: str) -> tuple[int, int]:
     cycle_path = cycle_dir / "CYCLE.md"
     work_orders_path = cycle_dir / "WORK_ORDERS.yaml"
@@ -153,43 +242,86 @@ def audit_cycle(cycle_dir: Path, protocol_text: str) -> tuple[int, int]:
     cycle_text = cycle_path.read_text(encoding="utf-8")
     work_orders_text = work_orders_path.read_text(encoding="utf-8")
     require_phrases(cycle_text, CYCLE_PHRASES, cycle_dir.name)
+    require_any_phrase(
+        cycle_text,
+        ("## Publication authority", "## Storage and publication authority"),
+        cycle_dir.name,
+    )
     require_phrases(work_orders_text, WORK_ORDER_PHRASES, cycle_dir.name)
     current_epoch = cycle_dir.name >= CURRENT_AUTHORIZATION_START
-    authorization_phrases = (
-        CURRENT_AUTHORIZATION_PHRASES
-        if current_epoch
-        else LEGACY_AUTHORIZATION_PHRASES
-    )
-    authorization_marker = (
-        CURRENT_AUTHORIZATION_MARKER
-        if current_epoch
-        else LEGACY_AUTHORIZATION_MARKER
-    )
-    if current_epoch:
+    if "storage_authorization: &storage_authorization |" in work_orders_text:
+        authorization_anchor = "storage_authorization"
         require_phrases_collapsed(
-            work_orders_text, authorization_phrases, cycle_dir.name
+            work_orders_text,
+            NATIVE_STORAGE_AUTHORIZATION_PHRASES,
+            cycle_dir.name,
+        )
+        work_order_authorization(
+            work_orders_text, cycle_dir.name, authorization_anchor
         )
     else:
-        require_phrases(work_orders_text, authorization_phrases, cycle_dir.name)
-    expected_authorization = protocol_authorization(
-        protocol_text, authorization_marker
-    )
-    actual_authorization = work_order_authorization(work_orders_text, cycle_dir.name)
-    if actual_authorization != expected_authorization:
-        raise AssertionError(
-            f"{cycle_dir.name}: epoch authorization is not verbatim"
+        authorization_anchor = "publication_authorization"
+        authorization_phrases = (
+            CURRENT_AUTHORIZATION_PHRASES
+            if current_epoch
+            else LEGACY_AUTHORIZATION_PHRASES
         )
+        authorization_marker = (
+            CURRENT_AUTHORIZATION_MARKER
+            if current_epoch
+            else LEGACY_AUTHORIZATION_MARKER
+        )
+        if current_epoch:
+            require_phrases_collapsed(
+                work_orders_text, authorization_phrases, cycle_dir.name
+            )
+        else:
+            require_phrases(work_orders_text, authorization_phrases, cycle_dir.name)
+        expected_authorization = protocol_authorization(
+            protocol_text, authorization_marker
+        )
+        actual_authorization = work_order_authorization(
+            work_orders_text, cycle_dir.name, authorization_anchor
+        )
+        if actual_authorization != expected_authorization:
+            raise AssertionError(
+                f"{cycle_dir.name}: epoch authorization is not verbatim"
+            )
 
     base_match = re.search(r"^base_revision:\s*([0-9a-f]{40})$", work_orders_text, re.M)
     if base_match is None:
         raise AssertionError(f"{cycle_dir.name}: base_revision must be a full SHA-1")
-    if base_match.group(1) not in cycle_text:
+    base_revision = base_match.group(1)
+    if base_revision not in cycle_text:
         raise AssertionError(f"{cycle_dir.name}: CYCLE.md and work-order base disagree")
+
+    base_protocol = protocol_at_revision(base_revision, cycle_dir.name)
+    convergence_governed = (
+        SOLUTION_CONVERGENCE_PROTOCOL_MARKER in base_protocol
+    )
+    if convergence_governed:
+        require_phrases(
+            cycle_text,
+            CONVERGENCE_CYCLE_PHRASES,
+            f"{cycle_dir.name} convergence opening",
+        )
+        require_phrases(
+            work_orders_text,
+            CONVERGENCE_WORK_ORDER_PHRASES,
+            f"{cycle_dir.name} convergence work orders",
+        )
+        cycle_report_path = cycle_dir / "CYCLE_REPORT.md"
+        if cycle_report_path.is_file():
+            require_phrases(
+                cycle_report_path.read_text(encoding="utf-8"),
+                CONVERGENCE_REPORT_PHRASES,
+                f"{cycle_dir.name} convergence report",
+            )
 
     tracks = len(re.findall(r"^\s+- track_id:\s*\S+", work_orders_text, re.M))
     auth_uses = len(
         re.findall(
-            r"^\s+publication_authorization:\s*\*publication_authorization\s*$",
+            rf"^\s+{authorization_anchor}:\s*\*{authorization_anchor}\s*$",
             work_orders_text,
             re.M,
         )
@@ -212,9 +344,26 @@ def hostile_canaries() -> None:
             continue
         raise AssertionError(f"hostile cycle canary accepted removal of {phrase!r}")
 
+    for heading in (
+        "## Publication authority",
+        "## Storage and publication authority",
+    ):
+        require_any_phrase(heading, (heading,), "hostile authority heading")
+    try:
+        require_any_phrase(
+            "## Unrelated heading",
+            ("## Publication authority", "## Storage and publication authority"),
+            "hostile authority heading",
+        )
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("hostile authority-heading canary accepted no authority")
+
     for phrases in (
         LEGACY_AUTHORIZATION_PHRASES,
         CURRENT_AUTHORIZATION_PHRASES,
+        NATIVE_STORAGE_AUTHORIZATION_PHRASES,
     ):
         good_authorization = "\n".join(phrases)
         for phrase in phrases:
@@ -230,6 +379,21 @@ def hostile_canaries() -> None:
                 f"hostile authorization canary accepted removal of {phrase!r}"
             )
 
+    for phrases in (
+        CONVERGENCE_CYCLE_PHRASES,
+        CONVERGENCE_WORK_ORDER_PHRASES,
+        CONVERGENCE_REPORT_PHRASES,
+    ):
+        good = "\n".join(phrases)
+        for phrase in phrases:
+            try:
+                require_phrases(good.replace(phrase, "", 1), phrases, "hostile")
+            except AssertionError:
+                continue
+            raise AssertionError(
+                f"hostile convergence canary accepted removal of {phrase!r}"
+            )
+
 
 def main() -> None:
     protocol = TEAM_ROOT / "PROTOCOL.md"
@@ -240,9 +404,12 @@ def main() -> None:
         protocol_text,
         (
             "## 2. Mandatory pre-cycle strategy evaluation",
-            "## 4. Mandatory post-cycle strategy evaluation",
-            "## 5. Evidence, storage, and publication gates",
+            SOLUTION_CONVERGENCE_PROTOCOL_MARKER,
+            "## 5. Mandatory post-cycle strategy evaluation",
+            "## 6. Evidence, storage, and publication gates",
             "two consecutive cycles",
+            "three consecutive zero-ledger cycles",
+            "mid-cycle convergence check",
             LEGACY_AUTHORIZATION_MARKER,
             CURRENT_AUTHORIZATION_MARKER,
         ),
@@ -263,7 +430,7 @@ def main() -> None:
         track_count += tracks
     hostile_canaries()
     print(
-        "PASS research-cycle strategy/storage/publication protocol:",
+        "PASS research-cycle strategy/convergence/storage/publication protocol:",
         len(governed),
         "cycles,",
         track_count,
