@@ -1,0 +1,27 @@
+{
+  "format": "d9-fixed-domain-cegar-falsifier-result-v1",
+  "track_id": "d9-fixed-domain-cegar-falsifier",
+  "role": "independent falsifier",
+  "outcome": "exact negative against both proposed separator claims",
+  "classification": "TWO_EXACT_PATH_REPAIRS_AND_GLOBAL_SCOPE_NULL",
+  "attacks": {
+    "ROW2599_12_37_ENDPOINTS_DISCONNECTED": "REFUTED_BY_22711_SEGMENT_EXACT_PATH",
+    "ROW2599_37_176_ENDPOINTS_DISCONNECTED": "REFUTED_BY_22811_SEGMENT_EXACT_PATH",
+    "TWO_REPAIRS_PROVE_GLOBAL_CONNECTIVITY": "REJECTED_AS_QUANTIFIER_DRIFT",
+    "TWO_REPAIRS_EXHAUST_FIXED_DOMAIN_COUNTEREXAMPLES": "REJECTED_AS_COVERAGE_DRIFT"
+  },
+  "exact_path_repairs": 2,
+  "path_segments": 45522,
+  "source_realized_counterexamples": 0,
+  "complete_fixed_domain_candidate_generator": false,
+  "global_common_feasibility_connectivity": "UNPROVED",
+  "ledger_change_recommended": "none",
+  "theorem_ledger": "2/9",
+  "nonconsequences": [
+    "NO_EXHAUSTIVE_COUNTEREXAMPLE_ABSENCE",
+    "NO_GLOBAL_CONNECTIVITY_THEOREM",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "github_write": false
+}
