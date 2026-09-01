@@ -1,0 +1,72 @@
+cycle_id: 2026-09-01-d9-row2599-factor19069-critical-equidim-gate1
+base_revision: f196f949b2a2981ea1b21019e4a2bf56302a683a
+base_tree: 7a5eaa91d1448defed2e77363b5e97cf93b97489
+opening_ledger: 2/9
+selected_target: D9_ROW2599_FACTOR19069_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_GATE1
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+latest_operational_authority: >-
+  The saved local project E:\Projects\9DVL Research is the working home.
+  Native G:\My Drive\Projects\research-backups mirroring is optional and
+  length/SHA-256 verified; never use the Google Drive connector. GitHub stays
+  read-only. The latest explicit user instruction controls any conflict.
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_SATURATED_EQUIDIMENSIONAL_DECOMPOSITION
+  predecessor_verdict: PIVOT
+  selected_count: 1
+  retired_routes:
+    - BLIND_FACTORED_BARRIER_COMPONENT_SAMPLER_BUDGET_ESCALATION
+    - UNFILTERED_NONSMOOTH_ACTIVE_SET_ENUMERATION
+    - SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR
+  prohibited_routes:
+    - PROJECTION_RETRY
+    - SYMMETRY_ONLY_COMPRESSION
+    - AMBIENT_ORBIT_TRANSFER_AS_FIXED_DOMAIN_COVERAGE
+    - UNFILTERED_MULTIWALL_ENUMERATION
+  closing_required: true
+  stagnation_rule: >-
+    If exact saturation or decomposition crosses the ceiling, preserve the
+    first unresolved ideal branch and pivot to a structural simplification;
+    do not repeat with a larger blind algebra budget.
+work_orders:
+  - track_id: d9-factor19069-critical-equidim-constructor
+    role: constructive-prover
+    surface: ops/team/d9-factor19069-critical-equidim-constructor
+    publication_authorization: *publication_authorization
+    resource_ceiling: 75 wall-minutes, 5 CPU-hours, 16 GiB, 500000 exact algebra/component nodes
+    stop_rule: Stop at source drift, factor loss, barrier expansion, unsupported saturation/decomposition, missing strata/tags, or ceiling.
+    prohibited_scope: No sampler-only, active-subset, CEGAR, projection, symmetry, orbit, multiwall, or ledger promotion route.
+    worker_restrictions: Own only the assigned surface; do not push, merge, edit cycle files, or alter the ledger.
+  - track_id: d9-factor19069-critical-equidim-falsifier
+    role: falsifier
+    surface: ops/team/d9-factor19069-critical-equidim-falsifier
+    publication_authorization: *publication_authorization
+    resource_ceiling: 35 wall-minutes, 2 CPU-hours, 8 GiB, at least 18 hostile mutations
+    stop_rule: Stop at the first exact source, saturation, dimension, degree, multiplicity, real-residence, boundary, tag, or scope rejection.
+    prohibited_scope: No producer acceptance import and no numerical or sampled inference.
+    worker_restrictions: Own only the assigned surface; do not push, merge, edit cycle files, or alter the ledger.
+  - track_id: d9-factor19069-critical-equidim-certificate
+    role: independent-verifier
+    surface: ops/team/d9-factor19069-critical-equidim-certificate
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 3 CPU-hours, 8 GiB, at least 18 hostile mutations
+    stop_rule: Fail closed on any pin, circuit, saturation, branch, dimension, degree, multiplicity, real-residence, strata, scope, or ledger mismatch.
+    prohibited_scope: Do not import constructor code or certify an incomplete decomposition as zero-dimensional.
+    worker_restrictions: Own only the assigned surface; do not push, merge, edit cycle files, or alter the ledger.
+  - track_id: d9-factor19069-critical-equidim-referee
+    role: closing-referee
+    surface: ops/team/d9-factor19069-critical-equidim-referee
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, frozen-head replay
+    stop_rule: Reject moved head, incomplete endpoint accounting, false ledger delta, missing clean replay, or missing precise successor.
+    prohibited_scope: No mutable-head review, discovery repair, GitHub write, or promotion without a universal diagonal certificate.
+    worker_restrictions: Review only the frozen candidate and own only the assigned surface.

@@ -1,0 +1,81 @@
+{
+  "format": "d9-factor19069-critical-equidim-opening-audit-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-critical-equidim-gate1",
+  "base_revision": "f196f949b2a2981ea1b21019e4a2bf56302a683a",
+  "base_tree": "7a5eaa91d1448defed2e77363b5e97cf93b97489",
+  "base_branch": "research/local-d9-factor19069-factored-barrier-gate1-20260901",
+  "successor_branch": "research/local-d9-factor19069-factored-critical-equidim-gate1-20260901",
+  "opening_ledger": "2/9",
+  "predecessor_verdict": "PIVOT",
+  "selected_target": "D9_ROW2599_FACTOR19069_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_GATE1",
+  "selected_count": 1,
+  "concurrent_authoritative_cycles": [],
+  "target": {
+    "parent_index": 2599,
+    "factor_id": 19069,
+    "ambient_parameter_dimension": 9,
+    "parent_sign_factors": 70,
+    "wedge_equations": 36,
+    "barrier_total_degree": 90,
+    "barrier_representation": "UNEXPANDED_FACTORED_CIRCUIT",
+    "saturated_ideal": "<f_19069,coefficients(dB_wedge_df)>:(product_0^69 H_I)^infinity",
+    "requires_exact_saturation": true,
+    "requires_equidimensional_decomposition": true,
+    "requires_dimensions_degrees_multiplicities": true,
+    "requires_positive_dimensional_real_residence": true,
+    "requires_singular_and_boundary_strata": true,
+    "requires_connected_parent_component_tags": true,
+    "positive_endpoint": "PROVE_STRICT_CRITICAL_LOCUS_ZERO_DIMENSIONAL_WITH_COMPLETE_REAL_ROOT_COUNT_FRONTIER",
+    "negative_endpoint": "EXHIBIT_EXACT_POSITIVE_DIMENSIONAL_REAL_CRITICAL_COMPONENT",
+    "null_endpoint": "HASH_PIN_FIRST_UNRESOLVED_SATURATED_IDEAL_BRANCH",
+    "timeout_endpoint": "HASH_PIN_COMPLETED_AND_PENDING_EQUIDIMENSIONAL_DECOMPOSITION_FRONTIER"
+  },
+  "resource_ceiling": {
+    "wall_minutes": 120,
+    "aggregate_cpu_hours": 8,
+    "memory_gib_per_process": 16,
+    "max_exact_algebra_component_nodes": 500000,
+    "new_artifact_megabytes": 250,
+    "paid_external_compute": false
+  },
+  "prohibited_routes": [
+    "BLIND_FACTORED_BARRIER_COMPONENT_SAMPLER_BUDGET_ESCALATION",
+    "UNFILTERED_NONSMOOTH_ACTIVE_SET_ENUMERATION",
+    "SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR",
+    "PROJECTION_RETRY",
+    "SYMMETRY_ONLY_COMPRESSION",
+    "AMBIENT_ORBIT_TRANSFER_AS_FIXED_DOMAIN_COVERAGE",
+    "UNFILTERED_MULTIWALL_ENUMERATION"
+  ],
+  "durable_checkpoint": {
+    "project_root": "E:\\Projects\\9DVL Research",
+    "mounted_recovery_root": "G:\\My Drive\\Projects\\research-backups",
+    "drive_connector_used": false,
+    "drive_mirror_optional": true,
+    "verify_length_and_sha256": true,
+    "github_write": false
+  },
+  "inherited_replay_notes": {
+    "repository_protocol_checker": "PREEXISTING_FROZEN_PREDECESSOR_HEADING_FALSE_NEGATIVE",
+    "predecessor_referee_verifier": "REVIEWED_HEAD_SCOPED_ACCEPTED_RESULT_PINNED"
+  },
+  "pins": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V6.json": "24d033a7f7d9886d8a538776a1453f1fd00af617da5c03f0f6a6e3921fe8b9bf",
+    "ai/omreal/verify_canonical_research_state_v6.py": "0aef5bb2c999e74fcad71e2f8346e276dd66cd3c645d0b874a6d81109934e832",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/CYCLE_REPORT.md": "c2fa71aa6d893a132a1fb1bec1dda1385409b6d792922c4bf19c6ddc96b3c433",
+    "ops/team/d9-factor19069-factored-barrier-referee/RESULT.json": "f96c10050338bc497798883ac0340e966834ba6feb320b76a6e77d3657c01461",
+    "ops/team/d9-factor19069-factored-barrier-referee/verify_closing_referee.py": "a8286b7bb01ea8d5213132d9ac8a515824142629abe963fb178ca41339fc6d7f",
+    "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca",
+    "ops/team/d9-factor19069-factored-barrier-constructor/SOURCE_MANIFEST.json": "17bc476bfc78d629353f4fe73d24495de40de5a926aa5e8df4ed524131b3d303",
+    "ops/team/d9-factor19069-factored-barrier-certificate/RESULT.json": "c1a8a88cf117f34173925f436c131fc571a4efa4d946aeb3def2b2b984e04310",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf"
+  }
+}
