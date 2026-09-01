@@ -1,0 +1,204 @@
+{
+  "format": "theorem-reset-independent-verifier-result-v1",
+  "cycle_id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+  "role": "independent-verifier",
+  "lane_branch": "research/lane-theorem-reset-verifier-20260901",
+  "lane_opening_commit": "d4f83ffedc13f2fc07a2c8cd39a03cec8550da22",
+  "lane_opening_tree": "97ab517bfe5bf8b3b93e7d604690c4d6a1342c43",
+  "scientific_base_commit": "3689b5344dfed38468639d0e92b48f0b5fc4ebc8",
+  "scientific_base_tree": "ef14ccd9b844dae5e9b535310122251ca0e86bfb",
+  "pin_check": "PASS",
+  "opening_reconstruction": {
+    "ledger": "2/9",
+    "goal": "3/9",
+    "deficit": 1,
+    "named_invariants": [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    "open_load_bearing_obligations": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "same_blocker_streak": 4,
+    "zero_ledger_streak": 7
+  },
+  "triple_accounting": {
+    "source_orbits": 79102449,
+    "settled_orbits": 77940147,
+    "residual_orbits": 1162302,
+    "accounting_identity": "79102449-77940147=1162302",
+    "coverage": "77940147/79102449",
+    "source_order_residual_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+    "source_denominator_globally_attached": true,
+    "closes_diag3_alone": false
+  },
+  "joined_clause_rebaseline": {
+    "face_type_denominator": 10,
+    "face_types": [
+      "(0)",
+      "(1)",
+      "(0,0)",
+      "(2)",
+      "(1,0)",
+      "(0,0,0)",
+      "(3)",
+      "(2,0)",
+      "(1,1)",
+      "(1,0,0)"
+    ],
+    "taxonomy_scope": "the exact joined active-block/coordinate-face types through joined dimension three",
+    "taxonomy_exhaustive_in_scope": true,
+    "universally_credited": [
+      "(0)",
+      "(1)",
+      "(2)"
+    ],
+    "uncredited": [
+      "(0,0)",
+      "(1,0)",
+      "(0,0,0)",
+      "(3)",
+      "(2,0)",
+      "(1,1)",
+      "(1,0,0)"
+    ],
+    "universal_credit": "3/10",
+    "credit_basis": "The single-bad two-skeleton theorem is universal and handles only the single-active-block types in joined dimensions zero, one, and two.",
+    "critical_missing_clause": "(1,0,0)",
+    "critical_gate": "a genuinely mixed-block relative three-cell whose true-parent-relative boundary kills the primitive joined flow-triangle H2 class for all parents, signatures, supports, and zero-weight specializations",
+    "global_cell_coverage_proved": false,
+    "end_to_end_d3_denominator": false,
+    "new_universal_clause_proved": false
+  },
+  "route_gates": [
+    {
+      "route": "D3_JOINED_GORDAN_TEN_CLAUSE_THEOREM",
+      "classification": "NULL",
+      "theorem_attachment": false,
+      "finite_end_to_end_denominator": false,
+      "bounded_strict_decrease_chain": false,
+      "reason": "Only 3/10 single-block clause types are universally credited; the mixed-block (1,0,0) d3 filler, specialization, true-boundary attachment, and global cell coverage are missing."
+    },
+    {
+      "route": "D3_UNIFORM_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+      "classification": "NULL",
+      "theorem_attachment": false,
+      "finite_end_to_end_denominator": false,
+      "bounded_strict_decrease_chain": false,
+      "reason": "The triple source denominator is exact and globally attached, but all-residual component-to-true-parent-boundary escape remains unproved; the independent pair branch is still open."
+    },
+    {
+      "route": "D3_PAIR_GLOBAL_COMPRESSION_DESCENT_EQUIVALENCE",
+      "classification": "NULL",
+      "theorem_attachment": false,
+      "finite_end_to_end_denominator": false,
+      "bounded_strict_decrease_chain": false,
+      "reason": "Global gluing, label, strict-closure, true-infinity, integral-lift, and middle-rank coverage remain UNKNOWN."
+    },
+    {
+      "route": "EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT",
+      "classification": "NEGATIVE",
+      "theorem_attachment": true,
+      "finite_end_to_end_denominator": false,
+      "bounded_strict_decrease_chain": false,
+      "reason": "The exact row-2599 rank-four canary has empty triple elementary-root intersection and a primitive H2 class, retiring every singleton-block-only ordered-root filler. This narrow no-go does not retire genuinely mixed-block fillers or close a load-bearing D3 obligation."
+    },
+    {
+      "route": "D9_SIMULTANEOUS_INSERTION_2604_PARENT_THEOREM",
+      "classification": "NULL",
+      "theorem_attachment": false,
+      "finite_end_to_end_denominator": false,
+      "bounded_strict_decrease_chain": false,
+      "reason": "The exact no-go proves reducibility is not hereditary under one proper extension. The safe equivalence F_S(M) ~= G_e,S leaves the topology of the simultaneous-insertion locus open, so 2546+58 is not theorem coverage."
+    },
+    {
+      "route": "D9_ACTUAL_ARRANGEMENT_SIGN_GEODESY",
+      "classification": "NULL",
+      "theorem_attachment": false,
+      "finite_end_to_end_denominator": false,
+      "bounded_strict_decrease_chain": false,
+      "reason": "Exact local P26/K2/Q2 factor-isometry and 178-point support traces do not prove connected full sign cells, global chamber coverage, or certified adjacency."
+    }
+  ],
+  "replays": [
+    {
+      "command": "verify_opening_audit.py",
+      "status": "PASS",
+      "detail": "opening audit and 12/12 hostile mutations"
+    },
+    {
+      "command": "verify_diag3_joined_flow_triangle.py",
+      "status": "PASS",
+      "detail": "three exact GP-valid bad signatures; escape sizes 56/56/60; H0=H1=0 and H2=Z; missing d3 column (-1,1,1,1,1,1,1); explicitly local-only"
+    },
+    {
+      "command": "verify_diag3_single_bad_two_skeleton.py",
+      "status": "PASS",
+      "detail": "universal single-bad H_c^q vanishing for q=0,1,2; pair/triple terms remain open"
+    },
+    {
+      "command": "DIAG9_GRAPH_REDUCIBILITY_NO_GO.py",
+      "status": "PASS",
+      "detail": "exact positive-circuit countercertificate; naive reducible-parent induction blocked"
+    },
+    {
+      "command": "verify_diag9_sign_geodesy_audit.py",
+      "status": "MIDPOINT_STOP",
+      "detail": "completed local P26/K2/Q2 factor-isometry phase PASS; long remaining phases terminated at mandatory midpoint without enlarging resources"
+    },
+    {
+      "command": "canonical decision-ledger/triple accounting",
+      "status": "PASS_SOURCE_RECONSTRUCTION",
+      "detail": "independently checked pinned ledger/open-object fields, exact arithmetic identity, residual semantic digest, pair UNKNOWN state, and nonpromotion consequence"
+    }
+  ],
+  "handoffs": {
+    "positive": [],
+    "negative": [
+      "singleton-block-only joined fillers are exactly retired by the row-2599 primitive-H2 canary",
+      "reducibility-only D9 induction is exactly retired by the simultaneous-insertion no-go"
+    ],
+    "null": [
+      "no route passes theorem attachment plus finite end-to-end denominator plus bounded strict-decrease chain"
+    ],
+    "timeout": [
+      "the uncompleted nonlocal phases of the optional sign-geodesy replay were stopped at the mandatory midpoint; completed local metric output is preserved"
+    ]
+  },
+  "obligation_effect": {
+    "closed": [],
+    "narrowed_load_bearing": [],
+    "unchanged_open": [
+      "global_gluing",
+      "extension_labels",
+      "strict_closure",
+      "relative_infinity",
+      "middle_rank_replay",
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    "ledger_delta": "0/9",
+    "certified_residual_delta": 0
+  },
+  "vectors": {
+    "opening": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+    "midpoint": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+    "recommended_closing": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8]
+  },
+  "minimum_decrease_reachable_at_midpoint": false,
+  "overall_handoff": "NULL",
+  "trajectory": "STALLED",
+  "tournament_winner": "NONE",
+  "successor_eligible": false,
+  "recommended_strategy_verdict": "STOP",
+  "construction_started": false,
+  "ledger_edit_authorized": false,
+  "nonconsequences": [
+    "The exact 3/10 joined clause credit is not an end-to-end D3 coverage fraction.",
+    "Closing the 1162302 triple residual alone would not promote D3 while the pair branch remains open.",
+    "A local or artificial boundary exit is not true parent infinity.",
+    "The 2604 parent catalog is not a chamber roadmap and 2546 reducible parents are not automatic D9 cases.",
+    "The 178 D9 charts and local isometric graphs do not prove global sign-geodesy.",
+    "No canonical ledger claim changes."
+  ]
+}
