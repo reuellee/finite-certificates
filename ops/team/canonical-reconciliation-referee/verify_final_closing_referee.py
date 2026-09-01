@@ -31,6 +31,16 @@ PR43_REPORT = (
     "ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/"
     "CYCLE_REPORT.md"
 )
+ARCHIVAL_SUCCESSOR_SHA256 = {
+    # These two historical gates retain their exact frozen candidate versions
+    # in the evidence chain.  The current-tree successors only make their
+    # no-argument CI mode archival; explicit candidate rejection and the full
+    # closing replay are exercised below.
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py":
+        "f7a06f107058bf3738d18f5b321c6cbf8b70cc76a94e0eda04bf390c93716cb4",
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py":
+        "e65fedad2075907997dc9c00d263c3234b93127ad560a53dbb5a80d8219ad037",
+}
 
 
 class FinalReviewError(AssertionError):
@@ -178,10 +188,17 @@ def verify_source_and_artifact_digests(manifest: dict[str, Any]) -> None:
                 sha256_bytes(frozen) == expected,
                 f"candidate artifact digest mismatch: {path}",
             )
-            require(
-                (ROOT / path).read_bytes() == frozen,
-                f"working candidate artifact differs from frozen head: {path}",
-            )
+            working = (ROOT / path).read_bytes()
+            if path in ARCHIVAL_SUCCESSOR_SHA256:
+                require(
+                    sha256_bytes(working) == ARCHIVAL_SUCCESSOR_SHA256[path],
+                    f"working archival successor digest changed: {path}",
+                )
+            else:
+                require(
+                    working == frozen,
+                    f"working candidate artifact differs from frozen head: {path}",
+                )
 
 
 def changed_paths(left: str, right: str) -> list[str]:
@@ -691,6 +708,13 @@ def run_full_replay() -> dict[str, str]:
                 "--self-test",
             ],
             '"hostile_rejection_count": 9',
+        ),
+        "reconciliation_prior_rejection_referee": (
+            [
+                python,
+                "ops/team/canonical-reconciliation-referee/verify_closing_referee.py",
+            ],
+            '"verdict": "REJECT_ACTIONABLE_ROUTE_OMISSION"',
         ),
     }
     results: dict[str, str] = {}

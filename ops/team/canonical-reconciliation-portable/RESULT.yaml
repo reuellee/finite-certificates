@@ -2,9 +2,10 @@ track_id: cycle-20260831-portable-reconciliation
 base_revision: e666990f5b0cf07fef4a639bbb6596ddc9c4515a
 outcome: finite-exact
 summary: >-
-  Restored immutable diagonal-three proof inputs, migrated the accepted
-  cross-diagonal state without semantic drift, and replaced unretrievable
-  transient-history gates with a portable independent verifier.
+  Preserved immutable diagonal-three proof inputs by exact Git object and
+  pinned bundle, migrated the accepted cross-diagonal state without semantic
+  drift, and replaced fragile transient-history dependencies with archived,
+  explicitly replayed evidence plus a portable independent verifier.
 artifacts:
   - path: ai/omreal/data/CANONICAL_RESEARCH_STATE.json
     migration_reverse_schema_sha256: 73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e
@@ -25,7 +26,7 @@ canaries:
   hostile: 21 independent state, source, authority, byte, and path mutations reject
 source_accounting:
   used: published PR #42--#44 trees, seven state-bound sources, immutable v1 bytes
-  unavailable: five unpublished transient PR #45 review commits
+  archived: five unpublished transient PR #45 review commits in the pinned evidence bundle
 open_defects: []
 next_action: run the fresh cross-domain opening audit
 ledger_change_recommended: none

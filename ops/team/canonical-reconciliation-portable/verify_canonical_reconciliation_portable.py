@@ -32,6 +32,7 @@ MANIFEST_PATH = HERE / "SOURCE_MANIFEST.json"
 
 BASE = "e666990f5b0cf07fef4a639bbb6596ddc9c4515a"
 BASE_TREE = "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+RECONCILIATION_COMMIT = "6c7f52b43632072100b67e5f0a9b6221df14d620"
 PUBLISHED_HISTORY = (
     (
         "aa784af939b55d3503e4782a9d65a9b06cf81ce0",
@@ -48,6 +49,9 @@ LEGACY_BLOB = "fe877050ae3942254bef54f23d6f3790480d698c"
 LEGACY_VERIFIER_SHA256 = (
     "32d778a2c4e1a4844b77649e7a82c4829da0cb4c4f293f0938e898d167c67ede"
 )
+SUCCESSOR_LEDGER_VERIFIER_SHA256 = (
+    "29f2f93c2beb095ec5fdbb5ca3fa9a49be470d0e961035e44258869f690d98b8"
+)
 MIGRATED_V2_SHA256 = (
     "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e"
 )
@@ -63,6 +67,14 @@ ARCHIVAL_SHA256 = {
     "ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py": "96089be7c1b84c22f9b907fcaf34a93f8ab7c20c6c744c37225709bf49021621",
     "ops/team/canonical-reconciliation-referee/verify_closing_referee.py": "9d14f0a0afa988f76d1ff86e92f2064958b6cee87f750da51fcd82da6db4c83c",
     "ops/team/canonical-reconciliation-referee/verify_final_closing_referee.py": "f47b0eb0192ca526896c3e6879b8b003152ffb34d85b81502834b2204a984bb3",
+}
+ARCHIVAL_SUCCESSOR_SHA256 = {
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py":
+        "f7a06f107058bf3738d18f5b321c6cbf8b70cc76a94e0eda04bf390c93716cb4",
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py":
+        "e65fedad2075907997dc9c00d263c3234b93127ad560a53dbb5a80d8219ad037",
+    "ops/team/canonical-reconciliation-referee/verify_final_closing_referee.py":
+        "d7cf3924407867c80cbacad2b490adac888c0dcb0562c445189f2dfd11e974ce",
 }
 
 RETIRED = (
@@ -266,11 +278,13 @@ def validate_state(state: dict[str, Any]) -> None:
 
 def validate_authority_texts(status: str, readme: str, operating: str) -> None:
     for text, label in ((status, "status"), (readme, "README"), (operating, "operating")):
-        require("CANONICAL_RESEARCH_STATE.json" in text, f"{label} canonical pointer")
+        require("CANONICAL_RESEARCH_STATE_V2.json" in text, f"{label} successor pointer")
+    for text, label in ((status, "status"), (operating, "operating")):
+        require("CANONICAL_RESEARCH_STATE.json" in text, f"{label} predecessor pointer")
+    require("predecessor reconciliation state" in readme, "README predecessor pointer")
     require("immutable historical" in status, "status legacy classification")
     require("immutable historical proof" in operating, "operating legacy classification")
-    require("PIVOT_REQUIRED" in status and "no selected" in status.lower(), "status pivot")
-    require("old selected route is no longer current authority" in readme, "README authority")
+    require("old selected routes are no longer current authority" in readme, "README authority")
     stale = (
         "Current target selection is governed by the machine-checked "
         "[`DIAG3_RESEARCH_DECISION_LEDGER.json`]"
@@ -289,9 +303,28 @@ def validate_authority_surfaces() -> None:
 def validate_legacy() -> None:
     legacy = LEGACY_PATH.read_bytes()
     verifier = LEGACY_VERIFIER.read_bytes()
-    require(sha256_bytes(legacy) == LEGACY_SHA256, "legacy ledger SHA256")
-    require(git_blob(legacy) == LEGACY_BLOB, "legacy ledger blob")
-    require(sha256_bytes(verifier) == LEGACY_VERIFIER_SHA256, "legacy verifier SHA256")
+    ledger_digest = sha256_bytes(legacy)
+    if ledger_digest == LEGACY_SHA256:
+        require(git_blob(legacy) == LEGACY_BLOB, "legacy ledger blob")
+        require(
+            sha256_bytes(verifier) == LEGACY_VERIFIER_SHA256,
+            "legacy verifier SHA256",
+        )
+    else:
+        # The reviewed PR46 successor promotes the reconciled v2 payload into
+        # the decision-ledger path while retaining the literal v1 bytes by Git
+        # blob identity.  Authenticate both sides of that bridge; never accept
+        # an arbitrary replacement at the historical path.
+        require(ledger_digest == MIGRATED_V2_SHA256, "successor ledger SHA256")
+        require(
+            sha256_bytes(verifier) == SUCCESSOR_LEDGER_VERIFIER_SHA256,
+            "successor ledger verifier SHA256",
+        )
+        archived = run(
+            ["git", "cat-file", "blob", LEGACY_BLOB], no_lazy_fetch=True
+        ).stdout
+        require(sha256_bytes(archived) == LEGACY_SHA256, "archived v1 SHA256")
+        require(git_blob(archived) == LEGACY_BLOB, "archived v1 blob")
     migrated = STATE_PATH.read_bytes()
     old_schema = b'  "format": "diag3-research-decision-ledger-v2",'
     new_schema = b'  "format": "9dvl-canonical-research-state-v1",'
@@ -339,17 +372,24 @@ def validate_manifest() -> None:
     transient = manifest["unpublished_transient_chain"]
     require(tuple(transient["commits"]) == TRANSIENT_COMMITS, "transient census")
     require(
-        transient["availability"] == "UNRETRIEVABLE_NOT_A_PUBLICATION_GATE",
+        transient["availability"] == "ARCHIVED_IN_PINNED_EVIDENCE_BUNDLE",
         "transient disposition",
     )
     require(manifest["archival_verifiers"] == ARCHIVAL_SHA256, "archival census")
     for relative, digest in ARCHIVAL_SHA256.items():
-        require(sha256_bytes((ROOT / relative).read_bytes()) == digest, relative)
+        expected = ARCHIVAL_SUCCESSOR_SHA256.get(relative, digest)
+        require(sha256_bytes((ROOT / relative).read_bytes()) == expected, relative)
 
 
 def changed_paths(include_dirty: bool, mode: str) -> set[str]:
     if mode == "FULL_HISTORY":
-        paths = set(git("diff", "--name-only", f"{BASE}..HEAD").splitlines())
+        # This verifier governs the bounded reconciliation change set, not all
+        # valid successor research forever.  Later cycles carry their own
+        # manifests and verifiers and must not be rejected merely for adding
+        # new, independently governed paths.
+        paths = set(
+            git("diff", "--name-only", f"{BASE}..{RECONCILIATION_COMMIT}").splitlines()
+        )
     else:
         # A depth-one checkout intentionally lacks BASE, so it cannot make a
         # historical change-set claim.  Audit the complete current governed
@@ -432,7 +472,7 @@ def hostile_canaries(state: dict[str, Any]) -> list[str]:
     )
 
     stale_readme = README_PATH.read_text(encoding="utf-8").replace(
-        "CANONICAL_RESEARCH_STATE.json", "DIAG3_RESEARCH_DECISION_LEDGER.json"
+        "CANONICAL_RESEARCH_STATE_V2.json", "CANONICAL_RESEARCH_STATE.json"
     )
     expect_rejection(
         "authority_swap",
@@ -514,7 +554,7 @@ def main() -> int:
             "theorem_score": "2/9",
             "selected_target": None,
             "path_audit": (
-                "BASE_TO_HEAD_CHANGED_PATHS"
+                "BASE_TO_PR45_RECONCILIATION_PATHS"
                 if mode == "FULL_HISTORY"
                 else "CURRENT_GOVERNED_SURFACE"
             ),

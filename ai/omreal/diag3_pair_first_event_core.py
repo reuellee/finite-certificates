@@ -17,6 +17,8 @@ from functools import cached_property
 from itertools import combinations_with_replacement
 from math import comb, factorial, gcd, lcm
 from pathlib import Path
+
+import diag3_research_ledger_compatibility as ledger_compat
 import json
 import sys
 
@@ -839,9 +841,9 @@ def build_record():
     if replay["nonzero"]:
         raise AssertionError(f"first-event middle residue: {replay['nonzero'][:3]}")
 
-    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
+    ledger = ledger_compat.load_current_ledger(LEDGER)
     parent_gate = json.loads(PARENT_GATE.read_text(encoding="utf-8"))
-    full = ledger["row2599_fullsupport_ledger"]
+    full = ledger_compat.historical_row2599(ledger)
     cell_counts = Counter(cell["dimension"] for cell in serial)
     box_counts = Counter(box["classification"] for box in boxes)
     if cell_counts != Counter({0: 110, 1: 199, 2: 90}):

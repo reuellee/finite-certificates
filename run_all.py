@@ -7,10 +7,10 @@ atlases, canonical-edge, mutation-square, separator, and saturation replays.
 --ci-delegated additionally skips verifiers that the required GitHub workflow
 runs in their own jobs.  Verifiers that deliberately require a regenerable
 external artifact are always reported and skipped; invoke those directly with
-the pinned argument documented in their proof note.  Archival verifiers whose
-unpublished exact-head inputs are no longer retrievable are also reported and
-skipped by exact repository path; a named portable successor must replace
-their live gate.
+the pinned argument documented in their proof note.  Historical reconciliation
+verifiers are reported and skipped by exact repository path: CI replays their
+final closing gate from the pinned evidence bundle, while current successors
+have separate live gates.
 ``--shard INDEX/COUNT`` deterministically partitions the selected verifier
 universe.  The unsharded command remains exhaustive.  ``--list-shards COUNT``
 emits the exact partition without running verifiers so CI can independently
@@ -82,25 +82,21 @@ EXTERNAL_INPUT = {
     ),
 }
 ARCHIVAL_INPUT = {
-    "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py": (
-        "archival PR45 portable verifier freezes predecessor authority surfaces; "
-        "superseded by canonical research state v2"
-    ),
     "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is covered by the explicit pinned-bundle final-closing replay; "
+        "current successor state is governed separately"
     ),
     "ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is covered by the explicit pinned-bundle final-closing replay; "
+        "current successor state is governed separately"
     ),
     "ops/team/canonical-reconciliation-referee/verify_closing_referee.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is covered by the explicit pinned-bundle final-closing replay; "
+        "current successor state is governed separately"
     ),
     "ops/team/canonical-reconciliation-referee/verify_final_closing_referee.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is replayed explicitly from the pinned evidence bundle; "
+        "current successor state is governed separately"
     ),
 }
 ROOT = Path(__file__).resolve().parent

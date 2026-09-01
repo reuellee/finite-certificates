@@ -35,7 +35,7 @@
     "reverse_schema_only_sha256": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e"
   },
   "unpublished_transient_chain": {
-    "availability": "UNRETRIEVABLE_NOT_A_PUBLICATION_GATE",
+    "availability": "ARCHIVED_IN_PINNED_EVIDENCE_BUNDLE",
     "commits": [
       "e548a28832232a34ed9e408224f6e16a9ebc9e4b",
       "6e8fa4a74dbc9e0e130719f9c55df86d58a75707",

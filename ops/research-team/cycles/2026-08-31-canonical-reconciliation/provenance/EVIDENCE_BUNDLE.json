@@ -1,0 +1,27 @@
+{
+  "format": "canonical-reconciliation-evidence-bundle-v1",
+  "purpose": "Preserve the exact independently reviewed local commit chain for fail-closed CI replay after publication squashed the cycle into one public commit.",
+  "theorem_delta": "NONE",
+  "theorem_score": "2/9",
+  "bundle": {
+    "path": "ops/research-team/cycles/2026-08-31-canonical-reconciliation/provenance/canonical-reconciliation-evidence.bundle",
+    "size_bytes": 108801,
+    "sha256": "d8cbb1e975bdbf62c3d91e30622e2174c71ce22c2484b164b19f106a369a2d27",
+    "object_hash_algorithm": "sha1",
+    "head": {
+      "ref": "refs/remotes/recovery/reconciliation",
+      "commit": "7411f3f1e40c09c32c027122cb2a2bf5935710a0",
+      "tree": "6d154d56ea0e3741c1f108cb5231f17e7d2eaeda"
+    },
+    "prerequisite": {
+      "commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+      "tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19"
+    }
+  },
+  "ci_contract": {
+    "checkout_fetch_depth": 0,
+    "import_ref": "refs/reconciliation-evidence/2026-08-31",
+    "verify_original_commits_trees_diffs": true,
+    "shallow_or_surface_only_fallback": false
+  }
+}

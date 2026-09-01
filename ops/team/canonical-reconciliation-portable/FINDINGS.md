@@ -9,16 +9,22 @@ live CI dependency.
 
 ## Repair
 
-- The v1 diagonal-three ledger and verifier are restored byte-for-byte.
+- The original v1 diagonal-three ledger and verifier are preserved exactly by
+  their Git blob and the pinned evidence bundle.  Their current repository
+  paths hold the exact reviewed PR #46 v2 ledger and a historical-only,
+  successor-safe verifier.
 - The accepted v2 logical state is moved to
   `CANONICAL_RESEARCH_STATE.json` with only its authority/schema name changed.
   Reversing that one schema line reproduces SHA-256
   `73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e`.
 - README, proof status, and the research operating system now identify the
   cross-diagonal canonical state as the sole current target selector.
-- Four exact-head PR #45 scripts remain byte-for-byte archival evidence at
-  their documented paths.  Their transient commits are no longer retrievable,
-  so `run_all.py` reports them as archival instead of pretending they replay.
+- The four original exact-head PR #45 scripts and their transient commits are
+  preserved in the pinned evidence bundle imported and replayed by CI.  At the
+  current paths, one script remains byte-identical and three are successor-safe
+  archival variants; the portable verifier pins both the original and current
+  hashes, while `run_all.py` does not treat those historical scripts as current
+  authority.
 - A new standard-library verifier independently checks the immutable legacy
   bytes, the migrated state, published PR #42--#44 trees when available,
   pinned sources, authority pointers, governed paths, hostile mutations, and
