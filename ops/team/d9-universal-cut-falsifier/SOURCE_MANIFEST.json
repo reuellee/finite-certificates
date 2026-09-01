@@ -9,12 +9,12 @@
   "sources": [
     {
       "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md",
-      "sha256": "f97d88889e8a839485459e239dcb3a8ad9ea0e10ab061dcc97fbf30ab8a063b4",
+      "sha256": "6a51420d70b8ce0a67d1a23b641a2bca211745211bbfdeb5cb3d71d7f8aeb1df",
       "use": "opening gate, quantifiers, stop rule, and prohibited promotions"
     },
     {
       "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml",
-      "sha256": "83a52dda924d536de0f61b7f82700391183e7e30665762c328fedd90e38fa472",
+      "sha256": "f156ebc83849863da90373818d837e0f55c745e57bdbfb279d2e8a593b6d9e12",
       "use": "falsifier work order and owned surface"
     },
     {
@@ -92,5 +92,5 @@
       "reason": "excluded to preserve falsifier independence"
     }
   ],
-  "semantic_sha256": "390de374619532a0249fba888723bf396dcc02656dae20bff0caa744d320d2ec"
+  "semantic_sha256": "7b186afd26b0a278e60f434ef47165830b84e43675666f7684dceb8fe5213fc2"
 }
