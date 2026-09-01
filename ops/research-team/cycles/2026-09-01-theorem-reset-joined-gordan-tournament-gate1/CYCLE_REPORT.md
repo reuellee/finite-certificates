@@ -92,6 +92,7 @@ the pair branch remains independently load-bearing with literal
 | prover/strategy | `6942b9faf15fa6b63f277c05f901f147bfa469fb` / `54e822ad91ef6168bef611cad7ee5e070b032839` | `9c7c6ab` | `NULL`; 26/26 hostiles |
 | falsifier | `f2f2d6d4bf6cdf06c6a7c9fe15d0f69a476d5077` / `3a0f62163c4d040195c62f51d5a76e6c60bbd20d` | `5277886` | `NULL` overall; route `NEGATIVE` and `TIMEOUT`; 18/18 hostiles |
 | independent verifier | `b50cf74e6112429cda0e899093c749723d174470` / `f0c6b0ef3cbca02dc4f6ff66781cd86fa0594a1e` | `e8cf934` | `NULL / STALLED / NONE`; 20/20 hostiles |
+| closing referee | `d1d180396728a625937f88c497fb941e65a7e470` / `5f38b50568671b876aaaa1528a4aca7cb5e090eb` | `fa9787b` | `ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED`; 40/40 hostiles |
 
 Positive handoff: none.
 
@@ -158,6 +159,12 @@ Same-route continuation justified: **NO**.
 | prover/strategy verifier | `PASS`; 26/26 hostiles |
 | falsifier verifier | `PASS`; 18/18 hostiles |
 | independent verifier | `PASS`; 20/20 hostiles and 18/18 source pins |
+| closing candidate | `PASS`; 20/20 hostiles |
+| frozen-head referee | `PASS`; candidate `627344866096af0eea2863af295d718237ca8d23` / `b5b254bcb94662f8ed3ff621334638cc89526ada` |
+| clean no-hardlink replay | `PASS`; 10/10 gates; 14/14 files byte-identical, zero identity collisions, `nlink=1` |
+| closing referee verifier | `PASS`; 40/40 hostiles |
+| canonical state V7 | `PASS`; ledger `2/9`, diagonal 9 open |
+| repository protocol | `PASS`; 18 cycles, 74 work orders |
 | theorem attachment / denominator / bounded decrease | `FAIL_CLOSED / NO / NO` |
 | eligible construction targets | `0` |
 | ledger promotion | `DENIED`; `2/9 -> 2/9` |
@@ -187,4 +194,11 @@ pair descent/equivalence theorem. This cycle authorizes no continuation.
 - Per the latest instruction, no approval was requested, no connector was
   invoked, and mirroring is deferred to the coordinating user-context task
   after the final local artifacts exist.
-
+- Referee verdict: `ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED` at isolated commit
+  `d1d180396728a625937f88c497fb941e65a7e470`, integrated as `fa9787b`.
+- In-repository closing manifest: `CLOSING_MANIFEST.json`.
+- Planned bundle:
+  `E:\Projects\9DVL Research\outputs\9dvl-theorem-reset-joined-gordan-tournament-gate1-20260901.bundle`.
+- Planned external package manifest:
+  `E:\Projects\9DVL Research\outputs\9dvl-theorem-reset-joined-gordan-tournament-gate1-20260901-manifest.json`.
+  It records the exact final close commit/tree and package length/SHA-256.
