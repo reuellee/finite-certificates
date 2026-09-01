@@ -7,6 +7,12 @@
   "mathematics_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
   "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
   "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "protocol_integration_repair": {
+    "source_commit": "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f",
+    "source_tree": "4dfba8740a306d0e2468d23aba3ac3c4cfe68f66",
+    "cherry_pick_commit": "48592c6cf37b2d316ee34743e5fa525f899d3bda",
+    "cherry_pick_tree": "897b2253514e1d065ce59b1558d5b47c2ee3e272"
+  },
   "outcome": "inconclusive",
   "endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
   "summary": "A complete compactified master stratification would reduce two feasible active-sector components to a finite inclusion-minimal active-wall edge cut, but the source does not provide that global coverage object; the first boundary recursion already introduces a type-36 attachment polynomial outside the parent-bracket and 26740-residual-factor catalogs.",
@@ -32,11 +38,11 @@
     },
     {
       "path": "ops/team/d9-universal-cut-prover/SOURCE_MANIFEST.json",
-      "sha256": "c005af70cfd8637ee52e9f2fc0de433495d8f85986d341491019a84240804846"
+      "sha256": "8e52329d8a4ef6912832a98a8c225bac4d62def71c58a291c35ed0840fd282e2"
     },
     {
       "path": "ops/team/d9-universal-cut-prover/verify_cut_reduction_gap.py",
-      "sha256": "ae53b134f8da38d46eacff0b726c878bf5372b2b5f7299d3c523ef522d8dff85"
+      "sha256": "d0cc963ef55943a987f01481c8b9c865b58d3c555cb7b2df74cf4aa93a61301e"
     }
   ],
   "replay": {

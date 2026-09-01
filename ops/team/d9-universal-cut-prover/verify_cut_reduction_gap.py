@@ -35,6 +35,14 @@ MANIFEST_PATH = HERE / "SOURCE_MANIFEST.json"
 RESULT_PATH = HERE / "RESULT.json"
 NVARIABLES = 9
 ZERO_EXPONENT = (0,) * NVARIABLES
+EXPECTED_PROTOCOL_PINS = {
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md":
+        "6a51420d70b8ce0a67d1a23b641a2bca211745211bbfdeb5cb3d71d7f8aeb1df",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/OPENING_AUDIT.json":
+        "007fd5f83a9256c31f1851303fed00df7a7b5a83107333d5fc96b4e6477d7639",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml":
+        "f156ebc83849863da90373818d837e0f55c745e57bdbfb279d2e8a593b6d9e12",
+}
 
 
 class GateError(AssertionError):
@@ -61,6 +69,14 @@ def check_source_manifest(manifest) -> None:
         raise GateError("opening commit drift")
     if manifest.get("mathematics_base_revision") != "cbe84ccd7273252c81fd4da17ee360a284d2a2a6":
         raise GateError("mathematics base drift")
+    if manifest.get("protocol_repair_source_commit") != "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f":
+        raise GateError("protocol repair source commit drift")
+    if manifest.get("protocol_repair_source_tree") != "4dfba8740a306d0e2468d23aba3ac3c4cfe68f66":
+        raise GateError("protocol repair source tree drift")
+    if manifest.get("protocol_input_commit") != "48592c6cf37b2d316ee34743e5fa525f899d3bda":
+        raise GateError("protocol input commit drift")
+    if manifest.get("protocol_input_tree") != "897b2253514e1d065ce59b1558d5b47c2ee3e272":
+        raise GateError("protocol input tree drift")
     files = manifest.get("files")
     if not isinstance(files, dict) or not files:
         raise GateError("empty source manifest")
@@ -71,6 +87,8 @@ def check_source_manifest(manifest) -> None:
         actual = sha256(path)
         if actual != expected:
             raise GateError(f"source digest drift: {relative}")
+    if {relative: files.get(relative) for relative in EXPECTED_PROTOCOL_PINS} != EXPECTED_PROTOCOL_PINS:
+        raise GateError("protocol source pins are not bound to the repaired inputs")
     historical = manifest.get("unavailable_and_unused", {})
     if historical.get("historical_referee_object") != "ca730426cdd5847ae262ddc29c6f4ae98369eba3":
         raise GateError("historical-object guard drift")
@@ -335,6 +353,14 @@ def check_result(result) -> None:
         raise GateError("wrong null endpoint")
     if result.get("ledger_change_recommended") != "none":
         raise GateError("unauthorized ledger change recommended")
+    expected_repair = {
+        "source_commit": "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f",
+        "source_tree": "4dfba8740a306d0e2468d23aba3ac3c4cfe68f66",
+        "cherry_pick_commit": "48592c6cf37b2d316ee34743e5fa525f899d3bda",
+        "cherry_pick_tree": "897b2253514e1d065ce59b1558d5b47c2ee3e272",
+    }
+    if result.get("protocol_integration_repair") != expected_repair:
+        raise GateError("result is not bound to the repaired protocol input")
     artifacts = result.get("artifacts", [])
     expected_paths = {
         "ops/team/d9-universal-cut-prover/ABSTRACT_DISCONNECTED_COUNTERMODEL.json",
