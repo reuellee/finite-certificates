@@ -8,8 +8,10 @@
 - Opening tree: `4cb7c001243f3e1eb14d0a5867330c198c5dd381`
 - Frozen candidate: `a8ae8f9a73c1be1b53a928dd92dc9a5d02b54cf6`
 - Frozen candidate tree: `23e251a4af6cd4ae45315cc8bbcdd590d449555e`
-- Closing-evidence revision: `PENDING`
-- Closing-referee revision: `PENDING`
+- Closing-evidence revision: `5061ffab4f04356dc9b641985e8b9dffaf279057`
+- Frozen strategy-correction revision: `192bea3afdd7c06aa52e479acb681c2fa2d06e69`
+- Integrated closing-referee revision: `5566859aaa12bf107130761c6495934935322cdc`
+- Integrated closing-referee tree: `b20e5682e2c0c05598bf72473f04cedde230816e`
 - Opening ledger: `2/9`
 - Closing ledger: `2/9`
 - Selected target:
@@ -38,7 +40,7 @@ multihomogeneous, numerical, or modular route was used.
 | constructor | `d9-factor19069-homogenizer-boundary-constructor` | exact seven-type frontier | deepest type closed; one `uv` branch closed; residual null |
 | falsifier | `d9-factor19069-homogenizer-boundary-falsifier` | independent exact candidate attack | accepts bounded null only; 50/50 candidate mutations rejected |
 | independent verifier | `d9-factor19069-homogenizer-boundary-certificate` | producer-independent exact comparison | accepts bounded null only; 60/60 mutations rejected |
-| closing referee | `d9-factor19069-homogenizer-boundary-referee` | frozen-head review | `PENDING`; strategy correction supplied before verdict |
+| closing referee | `d9-factor19069-homogenizer-boundary-referee` | frozen-head review | accepts exact bounded null with corrected `RETIRE / DEFER` disposition and sole active D3 audit pivot; 40/40 mutations rejected |
 
 ## Seven exact restrictions and derivative semantics
 
@@ -144,7 +146,7 @@ parent-factor tests for any accepted affine pullback.
 | producer-independent certificate | `PASS`: 60/60 rejected; null only |
 | integrated falsifier candidate attack | `PASS`: 50/50 rejected; null only |
 | clean no-hardlink replay | `PASS`: distinct file identities, link counts one, clean worktree |
-| frozen-head closing referee | `PENDING` |
+| frozen-head closing referee | `PASS`: exact bounded null accepted after frozen strategy correction; 40/40 mutations rejected |
 | diagonal-nine theorem or counterexample | `OPEN / NOT FOUND` |
 | ledger promotion | `DENIED`; remains `2/9` |
 
@@ -237,8 +239,10 @@ results have link count one, distinct file identities, and identical bytes.
 
 GitHub remained read-only. No push, pull request, CI trigger, or merge was
 performed. The durable working checkpoint remains
-`E:\Projects\9DVL Research`. A final local Git bundle and SHA-256 recovery
-manifest will be written under `E:\Projects\9DVL Research\outputs` after the
-closing referee. Native mirroring to
+`E:\Projects\9DVL Research`. The final local Git bundle and its SHA-256
+recovery manifest are published under `E:\Projects\9DVL Research\outputs` as
+`9dvl-d9-factor19069-homogenizer-boundary-gate1-20260901.bundle` and
+`9dvl-d9-factor19069-homogenizer-boundary-gate1-20260901.manifest.json`.
+Native mirroring to
 `G:\My Drive\Projects\research-backups` is optional and nonblocking. The
 Google Drive connector was not used.
