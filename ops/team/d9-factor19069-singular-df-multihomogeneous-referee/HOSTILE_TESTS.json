@@ -1,0 +1,15 @@
+{
+  "format": "d9-factor19069-singular-df-multihomogeneous-referee-hostile-tests-v1",
+  "rejected": 24,
+  "total": 24,
+  "tests": [
+    "candidate_revision_drift", "candidate_tree_drift", "closing_evidence_revision_drift",
+    "classification_invention", "endpoint_substitution", "branch_hash_drift",
+    "affine_homogeneity_overclaim", "affine_multiaffinity_overclaim", "trihomogenization_scope_overclaim",
+    "dehomogenization_loss", "decomposition_started_overclaim", "component_count_invention",
+    "component_invariant_invention", "saturation_overclaim", "parent_factor_loss",
+    "strict_real_residence_overclaim", "connected_parent_tag_overclaim", "boundary_stratum_loss",
+    "positive_endpoint_overclaim", "negative_endpoint_overclaim", "timeout_endpoint_overclaim",
+    "ledger_promotion", "diagonal_nine_overclaim", "successor_ambiguity"
+  ]
+}
