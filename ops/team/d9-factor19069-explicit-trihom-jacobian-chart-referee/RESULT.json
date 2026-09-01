@@ -1,0 +1,102 @@
+{
+  "format": "d9-factor19069-explicit-trihom-jacobian-chart-referee-result-v1",
+  "track_id": "d9-factor19069-explicit-trihom-jacobian-chart-referee",
+  "reviewed_revision": "5428e6232a3303d0188b2fee022968ae830d3b03",
+  "reviewed_tree": "b32c190d662559ef2f2f80538595cf411fc26b54",
+  "closing_evidence_revision": "0388fb316603bfd85fe7e9c2983a6f38f39643aa",
+  "closing_evidence_tree": "f0a1ead500ad108c4e412c433eebbe5906dd998e",
+  "verdict": "ACCEPT_FAIL_CLOSED_TIMEOUT_FRONTIER",
+  "accepted_classification": "EXACT_64_CHART_RECONSTRUCTION_BOUNDED_CHARACTERISTIC_ZERO_TIMEOUT_FAIL_CLOSED",
+  "accepted_endpoint": "HASH_PIN_ALL_COMPLETED_CHART_BRANCHES_AND_FIRST_PENDING_BRANCH",
+  "first_pending_branch_id": "DEC-JCH-00-a-d-g",
+  "first_pending_branch_semantic_sha256": "abfc0e6ecf60da4924c0991e8f78ea6df06a3270353eeedba411096ee3727725",
+  "gates": {
+    "frozen_candidate_and_pins": true,
+    "governed_protocol_and_obligations": true,
+    "independent_exact_source_reconstruction": true,
+    "complete_64_chart_cover": true,
+    "Euler_and_affine_transfer": true,
+    "complete_overlap_and_boundary_accounting": true,
+    "bounded_characteristic_zero_timeout": true,
+    "zero_component_and_parent_test_claims": true,
+    "producer_independent_certificate": true,
+    "falsifier_hostile_mutations": true,
+    "clean_no_hardlink_replay": true,
+    "complete_endpoint_accounting": true,
+    "ledger_and_nonconsequences": true,
+    "sole_structurally_distinct_successor": true,
+    "deepest_boundary_factorization": true
+  },
+  "exact_chart_frontier": {
+    "trihomogeneous_source_terms": 108,
+    "trihomogeneous_multidegree": [2, 2, 2],
+    "dehomogenization_exact": true,
+    "standard_chart_count": 64,
+    "free_coordinates_per_chart": 9,
+    "chart_jacobian_generators_each": 10,
+    "directed_overlap_records": 4032,
+    "Euler_zero_residuals": 192,
+    "boundary_capable_charts": 63,
+    "boundary_stratum_chart_incidences": 279,
+    "global_nonempty_homogenizer_boundary_types": 7,
+    "affine_chart_id": "JCH-63-u-v-w",
+    "affine_original_ideal_equality": true,
+    "parent_factor_records_retained": 70
+  },
+  "decomposition_frontier": {
+    "coefficient_field": "QQ",
+    "monomial_order": "grevlex",
+    "attempted_chart": "JCH-00-a-d-g",
+    "wall_seconds": 20,
+    "status": "TIMEOUT_FIRST_CHART_GROEBNER_PREREQUISITE_PENDING",
+    "complete_projective_decomposition": false,
+    "accepted_projective_components": 0,
+    "accepted_affine_component_contractions": 0,
+    "componentwise_parent_factor_tests_completed": 0,
+    "embedded_or_boundary_strata_discarded": 0
+  },
+  "endpoint_accounting": {
+    "positive": false,
+    "negative": false,
+    "null": false,
+    "timeout": true
+  },
+  "closing_hostile_mutations": {
+    "rejected": 33,
+    "total": 33
+  },
+  "clean_replay": {
+    "no_local": true,
+    "no_hardlinks": true,
+    "worktree_clean": true,
+    "same_file_id": false
+  },
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "nonconsequences": [
+    "NO_COMPLETE_CHARACTERISTIC_ZERO_PROJECTIVE_CHART_DECOMPOSITION",
+    "NO_PRIMARY_OR_EQUIDIMENSIONAL_COMPONENT_CENSUS",
+    "NO_EMBEDDED_COMPONENT_COMPLETENESS_CLAIM",
+    "NO_OVERLAP_DEDUPLICATED_PROJECTIVE_COMPONENTS",
+    "NO_ACCEPTED_AFFINE_COMPONENT_CONTRACTIONS",
+    "NO_COMPONENTWISE_TESTS_AGAINST_THE_70_PARENT_FACTORS",
+    "NO_STRICT_REAL_RESIDENCE_OR_CONNECTED_PARENT_TAG",
+    "NO_STRICT_PARENT_SINGULAR_EMPTINESS_CERTIFICATE",
+    "NO_THEOREM_LEVEL_COUNTEREXAMPLE",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "BLIND_UNDIFFERENTIATED_GROEBNER_BUDGET_ESCALATION",
+  "precise_successor": "D9_ROW2599_FACTOR19069_HOMOGENIZER_BOUNDARY_TYPE_STRATIFICATION_GATE1",
+  "sole_successor_count": 1,
+  "successor_design": {
+    "structural_change": "STRATIFY_THE_SEVEN_NONEMPTY_HOMOGENIZER_BOUNDARY_TYPES_BEFORE_CHARTWISE_DECOMPOSITION",
+    "deepest_restriction_term_count": 11,
+    "deepest_restriction_exact_factorization": "-h*(a*f-c*d)*(a*e*i-a*f*h-b*d*i+b*f*g+c*d*h-c*e*g)"
+  },
+  "discovery_repair_used": false,
+  "drive_connector_used": false,
+  "github_write": false
+}
