@@ -211,7 +211,18 @@ def validate_source_manifest() -> dict:
     for relative, expected in sources.items():
         path = (ROOT / relative).resolve()
         require(path.is_relative_to(ROOT), f"source path escape: {relative}")
-        require(path.is_file() and sha256(path) == expected, f"source drift: {relative}")
+        # The referee reviewed FROZEN_HEAD.  Later control-plane compatibility
+        # edits must not rewrite that historical source ledger, so validate
+        # every listed source against its frozen Git blob rather than against
+        # the evolving successor checkout.
+        blob = subprocess.run(
+            ["git", "show", f"{FROZEN_HEAD}:{relative}"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+        )
+        require(blob.returncode == 0, f"missing frozen source: {relative}")
+        require(sha256_bytes(blob.stdout) == expected, f"frozen source drift: {relative}")
     require(
         manifest["semantic_sha256"]
         == object_digest(b"d9-s1237-normal-link-referee-sources-v1", manifest),

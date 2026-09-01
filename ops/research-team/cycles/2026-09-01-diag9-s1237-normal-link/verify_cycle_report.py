@@ -43,7 +43,7 @@ EXPECTED_SOURCE_PINS = {
     "ops/team/diag9-s1237-normal-link-prover/DIAG9_S1237_NORMAL_LINK_NO_GO.json": "8aa726c69b556f7c2d85f7f852cb88329da39dcd173294a7db7245f13e0d2d54",
     "ops/team/diag9-s1237-normal-link-referee/CLOSING_MANIFEST.json": "9462528276530db48de7ae53808c7290327698878380193bd3f55e208196376d",
     "ops/team/diag9-s1237-normal-link-referee/RESULT.json": "16be207c4abaddf52bd6b670c293159cb317e712c431597838b00e2815bb8902",
-    "ops/team/diag9-s1237-normal-link-referee/verify_closing_referee.py": "92beba4be826c331c8e5c3835912a68fa27ffebf294e403fd32c8c6504f02d7c",
+    "ops/team/diag9-s1237-normal-link-referee/verify_closing_referee.py": "5619d72de02663ca4205951e2cd8bf9a865c016f3c8390af4a9261afc164e8c5",
 }
 
 
