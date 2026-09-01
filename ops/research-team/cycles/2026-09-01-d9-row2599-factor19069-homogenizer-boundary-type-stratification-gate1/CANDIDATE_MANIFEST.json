@@ -82,7 +82,11 @@
   "ledger_delta": "none",
   "theorem_ledger": "2/9",
   "diagonal_nine": "OPEN",
-  "proposed_closing_strategy_verdict": "CONTINUE",
-  "proposed_precise_successor": "D9_ROW2599_FACTOR19069_UV_AMBIENT_SINGULAR_PARENT_EXCLUSION_GATE1",
+  "proposed_closing_strategy_verdict": "RETIRE_DEFER",
+  "active_route_disposition": "RETIRE_DEFER_FACTOR19069_BOUNDARY_DECOMPOSITION_AFTER_CYCLES_4_THROUGH_9_REMAINED_2_OF_9",
+  "deferred_exact_resumption_record": "D9_ROW2599_FACTOR19069_UV_AMBIENT_SINGULAR_PARENT_EXCLUSION_GATE1",
+  "deferred_resumption_first_pending_branch": "B-UV-01-unclassified-ambient-components",
+  "selected_next_active_cycle": "D3_COVERAGE_CERTIFIED_GLOBAL_MASTER_CLOSURE_GLUE_LABEL_STRICT_CLOSURE_THEOREM_LEVERAGE_AUDIT_GATE1",
+  "selected_next_active_cycle_kind": "FRESH_THEOREM_LEVERAGE_STRATEGY_AUDIT",
   "proposed_sole_successor_count": 1
 }

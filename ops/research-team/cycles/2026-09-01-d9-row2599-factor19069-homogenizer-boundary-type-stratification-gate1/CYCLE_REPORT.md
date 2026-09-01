@@ -38,7 +38,7 @@ multihomogeneous, numerical, or modular route was used.
 | constructor | `d9-factor19069-homogenizer-boundary-constructor` | exact seven-type frontier | deepest type closed; one `uv` branch closed; residual null |
 | falsifier | `d9-factor19069-homogenizer-boundary-falsifier` | independent exact candidate attack | accepts bounded null only; 50/50 candidate mutations rejected |
 | independent verifier | `d9-factor19069-homogenizer-boundary-certificate` | producer-independent exact comparison | accepts bounded null only; 60/60 mutations rejected |
-| closing referee | `d9-factor19069-homogenizer-boundary-referee` | frozen-head review | `PENDING` |
+| closing referee | `d9-factor19069-homogenizer-boundary-referee` | frozen-head review | `PENDING`; strategy correction supplied before verdict |
 
 ## Seven exact restrictions and derivative semantics
 
@@ -186,31 +186,45 @@ Nonconsequences:
 
 ## Mandatory post-cycle strategy evaluation
 
-The boundary-first pivot materially reduces the obstruction: the deepest
-type is now completely excluded and the `uv` type has one exact projective
-family removed. The current load-bearing blocker is no longer the
+The boundary-first pivot materially reduces the local obstruction: the
+deepest type is now completely excluded and the `uv` type has one exact
+projective family removed. The current local blocker is no longer the
 undifferentiated 64-chart prerequisite; it is the pinned residual ambient
-component census on the exact `uv` type.
+component census on the exact `uv` type. That local narrowing is not enough
+to justify another active factor-19069 decomposition cycle. Research cycles
+4 through 9 all left the theorem ledger at `2/9`, so convergence and theorem
+leverage now dominate the local continuation score.
 
 | Route | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independent verification | Resource / information | Stagnation risk | verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| normalize the exact `uv` stratum with `w=1`, cover the first two `P2` blocks by nine charts, split the residual ambient ideal by exact parent factors, and certify overlaps/pullbacks | high for the surviving singular obstruction | source, normal derivatives, one known family, parent records, and first residual are pinned | finite nine-chart residual rather than 64 undifferentiated charts | complete strict-parent exclusion or an exact strict survivor is terminal for this type | high: quotient the known linear family and use factor-guided exact splits | high: every chart, branch, and parent exclusion can be reconstructed | high under a bounded exact branch ledger | low: first cycle on this narrowed residual | `CONTINUE / SELECT` |
+| normalize the exact `uv` stratum with `w=1`, cover the first two `P2` blocks by nine charts, split the residual ambient ideal by exact parent factors, and certify overlaps/pullbacks | high only for the surviving local D9 singular obstruction | source, normal derivatives, one known family, parent records, and first residual are pinned | finite nine-chart residual rather than 64 undifferentiated charts, but five later boundary types and theorem-global transport still remain | terminal only for this boundary type | high local compression | high | useful exact resumption record | high at program level after six consecutive `2/9` cycles | `RETIRE / DEFER AS ACTIVE ROUTE` |
 | skip the first pending `uv` residual and process easier factored `uw`, `vw`, or `w` types | medium local progress only | later restrictions are pinned | leaves the load-bearing first residual untouched | nonterminal | moderate | high | superficially favorable but strategically weak | high | `RETIRE AS IMMEDIATE SUCCESSOR` |
 | retry the undifferentiated whole-atlas Groebner attack or any retired sampled/projection/symmetry/inverse-variable route | low or none | fails the selected structure or a pinned premise | unchanged | predecessor already null/timeout | none | expensive | poor | certain | `RETIRE` |
-| stop with the residual still sharply bounded | none | honest but incomplete | unchanged | nonterminal | none | trivial | poor under the explicit continuation objective | high | `STOP NOT SELECTED` |
+| fresh theorem-leverage audit centered on diagonal 3's coverage-certified global master closure, gluing, labels, and strict closure | direct route to an open diagonal rather than another local obstruction | canonical completion object, global master quotient, closure residues, and label obligations already exist | global but theorem-aligned; audit must quantify the remaining coverage and replay burden before construction | both a viable bounded closure gate and a demonstrated nonviability sharply redirect the program | potentially high: one global closure theorem can discharge many local residues | must require independent coverage/gluing/label replay | highest information per cycle after the `2/9` stagnation run | lower than continuing local D9 if the audit enforces explicit end-to-end leverage | `PIVOT / SELECT AUDIT` |
+| stop without selecting any active strategy audit | none | honest but incomplete | unchanged | nonterminal | none | trivial | poor under the explicit continuation objective | high | `STOP NOT SELECTED` |
 
-Closing strategy recommendation: **`CONTINUE`**. No mandatory two-cycle pivot
-is triggered: this is the first cycle whose blocker is the exact `uv`
-residual, and the predecessor's whole-chart blocker was materially narrowed.
+Closing strategy recommendation: **`RETIRE / DEFER`** the factor-19069
+boundary-decomposition continuation as the active route and **`PIVOT`** to a
+fresh theorem-leverage audit. The program-level stagnation signal is decisive:
+cycles 4 through 9 all retained the ledger at `2/9`, even though this cycle
+honestly narrowed its local blocker.
 
-The exactly one proposed successor is
-`D9_ROW2599_FACTOR19069_UV_AMBIENT_SINGULAR_PARENT_EXCLUSION_GATE1`.
-It is bounded to the exact `u=v=0, w!=0` stratum, normalized by `w=1`, with
-nine standard charts from the two remaining projective `P2` blocks. It must
-start from the known linear `P3` family, preserve the residual hash, use exact
-factor-guided branch splits, quotient chart duplicates only with explicit
-invertible overlap certificates, and fail closed before any unsupported
-affine or parent-interior conclusion.
+The nine-chart exact continuation
+`D9_ROW2599_FACTOR19069_UV_AMBIENT_SINGULAR_PARENT_EXCLUSION_GATE1` is
+preserved only as a deferred resumption record. Its frozen starting point is
+`B-UV-01-unclassified-ambient-components`, semantic SHA-256
+`2747fcc6923b44996bfe79c0d06d2f88169f9fedea465cdecaa3c104bcf6b8b5`.
+It is not the selected next active cycle.
+
+The exactly one selected next active cycle is
+`D3_COVERAGE_CERTIFIED_GLOBAL_MASTER_CLOSURE_GLUE_LABEL_STRICT_CLOSURE_THEOREM_LEVERAGE_AUDIT_GATE1`.
+It is an audit gate, not an automatic theorem claim or construction mandate.
+It must compare the diagonal-3 coverage-certified global master-closure,
+gluing, label, and strict-closure route against credible theorem-level
+alternatives; pin the current global residues and end-to-end quantifiers;
+state bounded positive, negative, null, and timeout handoffs; and select a
+construction target only if the audit demonstrates materially better ledger
+leverage than further local D9 decomposition.
 
 ## Replay, publication, and recovery
 
