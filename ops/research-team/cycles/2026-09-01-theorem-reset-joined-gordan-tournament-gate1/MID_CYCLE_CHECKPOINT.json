@@ -1,0 +1,87 @@
+{
+  "format": "theorem-reset-mid-cycle-checkpoint-v1",
+  "cycle_id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+  "base_revision": "3689b5344dfed38468639d0e92b48f0b5fc4ebc8",
+  "base_tree": "ef14ccd9b844dae5e9b535310122251ca0e86bfb",
+  "opening_revision": "d4f83ffedc13f2fc07a2c8cd39a03cec8550da22",
+  "opening_tree": "97ab517bfe5bf8b3b93e7d604690c4d6a1342c43",
+  "integrated_lane_head": "5277886b1171f15b8e486d5e62212515534e5944",
+  "integrated_lane_tree": "ed5e6359122bc167898f9d6b8f2c60904ff0125c",
+  "trigger": "FIRST_COMPLETE_PROVER_FALSIFIER_VERIFIER_HANDOFFS",
+  "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "checkpoint_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "triple_only_measure": {
+    "coverage": "77940147/79102449",
+    "residual_before": 1162302,
+    "residual_at_checkpoint": 1162302,
+    "residual_delta": 0,
+    "source_order_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+    "closure_alone_promotes_d3": false
+  },
+  "joined_measure": {
+    "formal_face_type_denominator": 10,
+    "independently_credited_universal_clauses": ["(0)", "(1)", "(2)"],
+    "opening_coverage": "3/10",
+    "checkpoint_coverage": "3/10",
+    "new_universal_clauses": [],
+    "globally_attached": false,
+    "end_to_end_d3_denominator": false,
+    "bounded_chain": false
+  },
+  "lane_verdicts": [
+    {
+      "track": "theorem-reset-prover-strategy",
+      "isolated_commit": "6942b9faf15fa6b63f277c05f901f147bfa469fb",
+      "isolated_tree": "54e822ad91ef6168bef611cad7ee5e070b032839",
+      "integrated_commit": "9c7c6ab",
+      "handoff": "NULL",
+      "hostile_mutations_rejected": 26,
+      "result_sha256": "bab28affb8a72d1ff86ed86a3bad9f0f9a41dd216826e4dca8889ca5e911eafb"
+    },
+    {
+      "track": "theorem-reset-falsifier",
+      "isolated_commit": "f2f2d6d4bf6cdf06c6a7c9fe15d0f69a476d5077",
+      "isolated_tree": "3a0f62163c4d040195c62f51d5a76e6c60bbd20d",
+      "integrated_commit": "5277886",
+      "handoff": "NULL",
+      "route_handoffs": ["NULL", "NULL", "NULL", "NEGATIVE", "NULL", "TIMEOUT"],
+      "hostile_mutations_rejected": 18,
+      "result_sha256": "c955c6886ed611ae915d56b21a57740f27acb5fb750b22f1900aa58e2996c663"
+    },
+    {
+      "track": "theorem-reset-independent-verifier",
+      "isolated_commit": "b50cf74e6112429cda0e899093c749723d174470",
+      "isolated_tree": "f0c6b0ef3cbca02dc4f6ff66781cd86fa0594a1e",
+      "integrated_commit": "e8cf934",
+      "handoff": "NULL",
+      "hostile_mutations_rejected": 20,
+      "result_sha256": "41eee0ecff951ab08d5c3419c8b596dfa0efea01c7709494d95c800a73edb80f"
+    }
+  ],
+  "minimum_acceptable_delta": "CLOSE_AT_LEAST_ONE_LOAD_BEARING_OBLIGATION_OR_STRICTLY_REDUCE_A_CERTIFIED_EXHAUSTIVE_GLOBALLY_ATTACHED_RESIDUAL_WITH_BOUNDED_NEXT_DECREASE",
+  "minimum_acceptable_delta_met": false,
+  "minimum_acceptable_delta_reachable_inside_remaining_ceiling": false,
+  "first_surviving_blockers": [
+    "no globally attached mixed-block (1,0,0) d3 family with specialization and true-parent-boundary attachment",
+    "no Q3_COMPLETE_PARENT_BOUNDARY_ATLAS for all 1162302 residual source orbits",
+    "no globally attached pair descent/equivalence and pair denominator remains UNKNOWN"
+  ],
+  "checkpoint_decision": {
+    "stop_discovery": true,
+    "optional_sign_geodesy_replays_terminated": true,
+    "partial_sign_geodesy_acceptance_dependency": false,
+    "construction_started": false,
+    "resource_ceiling_enlarged": false,
+    "same_route_continue_allowed": false,
+    "automatic_reset_fired": true,
+    "required_close": "STALLED__WINNER_NONE__SUCCESSOR_NONE__STOP"
+  },
+  "storage_override": {
+    "bundle_and_manifest_output_required": "E:\\Projects\\9DVL Research\\outputs",
+    "native_g_probe_result": "ACCESS_DENIED_IN_SANDBOX",
+    "probe_error": "Access to the path G:\\My Drive\\Projects\\research-backups is denied.",
+    "connector_used": false,
+    "approval_requested": false,
+    "mirror_deferred_to_coordinating_user_context": true
+  }
+}
