@@ -1,0 +1,47 @@
+{
+  "format": "d9-factor19069-critical-equidim-closing-manifest-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-critical-equidim-gate1",
+  "reviewed_revision": "e2d6475db1555ab5151ce7896d3af7fc66b0911a",
+  "reviewed_tree": "ffd72a8c9eb8159f162895cacf13f1b9785046ad",
+  "accepted_classification": "EXACT_FAIL_CLOSED_SATURATED_EQUIDIMENSIONAL_DECOMPOSITION_NULL",
+  "accepted_endpoint": "HASH_PIN_FIRST_UNRESOLVED_SATURATED_IDEAL_BRANCH",
+  "first_unresolved_branch_id": "EQ-B00-SINGULAR-DF-ZERO",
+  "first_unresolved_branch_semantic_sha256": "66f71350e7b0a2578997a388be43ae0547c8786c7206af056806eaaef3e516d9",
+  "pins": {
+    "ops/team/d9-factor19069-critical-equidim-constructor/CRITICAL_EQUIDIM_FRONTIER.json": "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec897d3a33",
+    "ops/team/d9-factor19069-critical-equidim-constructor/RESULT.json": "35619e34566ed01cfc749217e2b7f40842263e14108663d27b24687a6d7c7c6d",
+    "ops/team/d9-factor19069-critical-equidim-constructor/SOURCE_MANIFEST.json": "06efc5d65274d7179728b9b89a1788ea4d33812bfb24ecd5235bdd0d294bd75b",
+    "ops/team/d9-factor19069-critical-equidim-constructor/verify_critical_equidim_frontier.py": "3897be806048574e62b69f872050e176b9800db732ec626439c6a6f5ecaa5ab5",
+    "ops/team/d9-factor19069-critical-equidim-falsifier/RESULT.json": "40465839b3c5429ade99b7a62061cff2e75a2ed9d2f63ea2d526fbcc5d6faff2",
+    "ops/team/d9-factor19069-critical-equidim-falsifier/SOURCE_MANIFEST.json": "baef26e0d6a3a11e80bcc40e6dc18b50f38d64e87db7d89ccbdcd2fe822b261e",
+    "ops/team/d9-factor19069-critical-equidim-falsifier/verify_critical_equidim_falsifier.py": "65e1c4da08f365369e65e363f578786e799f1a79bd31e3bd259b4f5cebcc1b2d",
+    "ops/team/d9-factor19069-critical-equidim-certificate/RESULT.json": "48d45553f1910d08ed9d2af2fec29f9ef2b469665515670c3a523f02530f96c8",
+    "ops/team/d9-factor19069-critical-equidim-certificate/SOURCE_MANIFEST.json": "01b07931f28229313cc142841bc1ab5ffa16c052dc5daa1b0a2316bceeede265",
+    "ops/team/d9-factor19069-critical-equidim-certificate/verify_critical_equidim_certificate.py": "a971c647d0c1ad743d119f631d897a4149a7de969b023996d5b31a250866e60a"
+  },
+  "clean_replay": {
+    "candidate_revision": "e2d6475db1555ab5151ce7896d3af7fc66b0911a",
+    "candidate_tree": "ffd72a8c9eb8159f162895cacf13f1b9785046ad",
+    "worktree_clean": true,
+    "verdict": "PASS"
+  },
+  "resolved_branch_count": 0,
+  "pending_branch_count": 10,
+  "exact_component_dimensions": null,
+  "exact_component_degrees": null,
+  "exact_component_multiplicities": null,
+  "positive_dimensional_real_component": "NOT_EXCLUDED_AND_NOT_CERTIFIED",
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "BLIND_FULL_79_VARIABLE_SINGULAR_BRANCH_GROEBNER_BUDGET_ESCALATION",
+  "precise_successor": "D9_ROW2599_FACTOR19069_SINGULAR_DF_MULTIHOMOGENEOUS_DECOMPOSITION_GATE1",
+  "storage": {
+    "durable_project_root": "E:\\Projects\\9DVL Research",
+    "native_drive_mirror_optional": true,
+    "drive_connector_used": false,
+    "github_write": false,
+    "final_recovery_manifest": "PENDING_POST_REFEREE_LOCAL_CHECKPOINT"
+  }
+}
