@@ -10,7 +10,7 @@ Opening theorem ledger: `2/9`
 
 Selected target: `D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1`
 
-## Strategy decision
+## Mandatory opening strategy evaluation
 
 Five independent competitors and a rubric-first referee compared theorem-wide
 D9, fixed-family D9, global-order-two D8, universal-localization D3, and a D3
@@ -18,6 +18,16 @@ Nullstellensatz canary.  The referee selected a hybrid scored `82.4/100`:
 retain the theorem-wide D9 target and use the exact `S12,37` normal-link data
 only as adversarial replay.  A standalone weighted-link continuation scored
 `39.4/100` and is rejected because it has no global-quantifier bridge.
+
+| Candidate | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independent verification | Resource / information | Stagnation risk | Verdict |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| universal D9 cut hybrid | 5 | 4 | 5 | 5 | 5 | 5 | 4 | 2 | **PIVOT / SELECT** |
+| fixed-family D9 atlas | 2 | 5 | 5 | 4 | 3 | 5 | 2 | 4 | STOP; canary only |
+| D3 universal localization | 3 | 3 | 5 | 3 | 4 | 4 | 2 | 4 | PIVOT away |
+| D8 fixed-family order-two atlas | 2 | 3 | 5 | 3 | 3 | 4 | 2 | 5 | RETIRE as successor |
+
+`CONTINUE` is rejected for the preceding local D9 route.  Only an accepted
+universal coverage gate may authorize a main obstruction census.
 
 ## Bounded target
 
@@ -66,7 +76,32 @@ non-independent replay, missing portable provenance, or any resource ceiling.
 Only an accepted opening gate authorizes the 72-hour / 320-CPU-hour main
 obstruction census.
 
-## Roles and ownership
+## Obligation graph
+
+- active-sector/component reduction: proved at the base;
+- universal minimal-cut existence and finite schema coverage: selected and
+  open;
+- signed circuit/multiwall grammar: open;
+- strict-parent, chart, recursive-facet, and true-infinity transport: open;
+- endpoint-neutral exact certificate and portable replay: open;
+- exhaustive schema `UNSAT` or exact separator: downstream and unauthorized
+  until every opening obligation passes;
+- `diag9_h0`: open; theorem ledger fixed at `2/9`.
+
+## Canonical input accounting
+
+Every canonical path and SHA-256 used by the opening gate is recorded in
+`OPENING_AUDIT.json`.  Its verifier recomputes every digest from the working
+tree and fails on drift.
+
+## Concurrency and non-overlap
+
+All workers branch from the exact opening commit and own disjoint
+`ops/team/d9-universal-cut-*` surfaces.  The coordinator alone owns this cycle
+directory and integration.  The referee is activated only after the integrated
+head is frozen.
+
+## Roles
 
 - coordinator: this cycle control plane, integration, ledger and durable
   checkpoint;
@@ -82,3 +117,24 @@ No worker may edit this cycle directory, canonical state, theorem ledger, or
 another worker's surface.  GitHub is read-only.  The ChatGPT Library branch is
 canonical and Google Drive `Projects/research-backups` is the recovery mirror.
 
+## Resource ceiling
+
+Opening: 12 wall-hours, 64 aggregate CPU-hours, 16 GiB per process, at most
+10,000 obstruction types and 250,000 exact instances.  Main cycle, only after
+opening acceptance: 72 wall-hours and 320 aggregate CPU-hours.  Stop at the
+first failed coverage lemma, hostile countermodel, replay defect, or ceiling.
+
+## Publication authority
+
+The ChatGPT Library is the canonical durable branch.  Google Drive
+`Projects/research-backups` is a recovery mirror.  GitHub is read-only until a
+new explicit user instruction; no push, pull request, CI trigger, or merge is
+permitted.
+
+## Closing requirements
+
+The independent referee must bind its verdict to the frozen integrated commit
+and tree, replay every source pin and hostile canary without producer
+acceptance logic, verify portable predecessor evidence, and state the exact
+positive, negative, null, or timeout endpoint.  No ledger change is permitted
+without a theorem-level endpoint and every publication gate.
