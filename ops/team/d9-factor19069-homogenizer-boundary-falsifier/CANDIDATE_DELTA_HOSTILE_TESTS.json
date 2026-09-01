@@ -1,7 +1,7 @@
 {
   "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
   "format": "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-hostile-tests-v1",
-  "rejected": 44,
+  "rejected": 50,
   "rejection_markers": [
     "frontier format",
     "frontier semantic pin",
@@ -46,8 +46,14 @@
     "constructor result pending hash",
     "constructor result zero downstream",
     "constructor result endpoint ledger",
-    "constructor result nonconsequences"
+    "constructor result nonconsequences",
+    "delta manifest frozen source pin ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/CYCLE.md",
+    "delta manifest current source scope",
+    "delta manifest current source pin ops/team/d9-factor19069-homogenizer-boundary-falsifier/verify_candidate_delta.py",
+    "delta manifest frozen validation route",
+    "delta manifest current validation route",
+    "delta manifest portable branch mode"
   ],
-  "total": 44,
+  "total": 50,
   "track_id": "d9-factor19069-homogenizer-boundary-falsifier"
 }

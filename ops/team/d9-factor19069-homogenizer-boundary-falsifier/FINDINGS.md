@@ -128,7 +128,12 @@ the ambient singular ideal.
 The first pending residual remains
 `B-UV-01-unclassified-ambient-components`, candidate semantic SHA-256
 `2747fcc6923b44996bfe79c0d06d2f88169f9fedea465cdecaa3c104bcf6b8b5`.
-The delta suite rejects `44` hostile producer overclaims and branch/hash
-mutations.  No overlap representatives are quotiented, no affine branch is
+The delta suite rejects `50` hostile producer overclaims, branch/hash
+mutations, and provenance-routing mutations.  Every source that existed at
+the frozen candidate is pinned from `git show 25757510...`; only the delta
+verifier itself is pinned from current working-tree bytes.  Thus later
+protocol-only edits such as a `CYCLE.md` audit correction do not alter the
+reviewed candidate inputs or prevent integration-branch replay.  No overlap
+representatives are quotiented, no affine branch is
 accepted, the preregistered null endpoint is honest, and the ledger remains
 `2/9`.

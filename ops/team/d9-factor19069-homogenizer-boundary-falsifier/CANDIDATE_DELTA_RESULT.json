@@ -1,7 +1,7 @@
 {
   "accepted_affine_branch_count": 0,
-  "candidate_delta_hostile_tests_sha256": "2c2c5adc91f3d3e678d57a403b69b70ce70ca70d646c159b6462bdae9e4c24f7",
-  "candidate_delta_manifest_sha256": "9db73c7c771c21f422198458bf19e1a679b467335f2945f9f0f4592e912a56d5",
+  "candidate_delta_hostile_tests_sha256": "951802b75ffa2b753cc58e39a8c4cba0160abdfcab6ed2e61da2522f20c211f6",
+  "candidate_delta_manifest_sha256": "f984c63c3560ff9eb996f33f122193412872a114321ed79d0c05038c0c5fd5ce",
   "candidate_delta_sha256": "6fd1c20043240b71e79e0042b860d5fd941527457441af1329068ae02bdeff39",
   "candidate_revision": "25757510dd88e8b7bbe5668c89f93b2a46b264de",
   "candidate_tree": "47395637cc10c2bd736530719b6e2f3cf57b1629",
@@ -15,7 +15,7 @@
   "format": "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-result-v1",
   "github_write_used": false,
   "google_drive_connector_used": false,
-  "hostile_mutations_rejected": 44,
+  "hostile_mutations_rejected": 50,
   "ledger_delta": "none",
   "outcome": "pass",
   "overlap_representatives_quotiented": 0,

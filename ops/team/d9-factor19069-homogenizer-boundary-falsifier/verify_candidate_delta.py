@@ -44,6 +44,7 @@ DELTA = HERE / "CANDIDATE_DELTA.json"
 DELTA_MANIFEST = HERE / "CANDIDATE_DELTA_MANIFEST.json"
 DELTA_HOSTILE = HERE / "CANDIDATE_DELTA_HOSTILE_TESTS.json"
 DELTA_RESULT = HERE / "CANDIDATE_DELTA_RESULT.json"
+CURRENT_SCRIPT_RELATIVE = "ops/team/d9-factor19069-homogenizer-boundary-falsifier/verify_candidate_delta.py"
 
 LOCAL_INPUTS = (
     "ops/research-team/PROTOCOL.md",
@@ -518,12 +519,56 @@ def hostile_mutations(frontier: dict[str, Any], result: dict[str, Any], context:
     return rejected
 
 
+def hostile_manifest_mutations(manifest: dict[str, Any]) -> list[str]:
+    cycle_relative = f"ops/research-team/cycles/{CYCLE_ID}/CYCLE.md"
+    cases: list[tuple[str, Callable[[dict[str, Any]], None]]] = [
+        (
+            f"delta manifest frozen source pin {cycle_relative}",
+            lambda value: value["frozen_source_sha256"].__setitem__(cycle_relative, "0" * 64),
+        ),
+        (
+            "delta manifest current source scope",
+            lambda value: value["current_source_sha256"].__setitem__(
+                cycle_relative,
+                value["current_source_sha256"].pop(CURRENT_SCRIPT_RELATIVE),
+            ),
+        ),
+        (
+            f"delta manifest current source pin {CURRENT_SCRIPT_RELATIVE}",
+            lambda value: value["current_source_sha256"].__setitem__(CURRENT_SCRIPT_RELATIVE, "0" * 64),
+        ),
+        (
+            "delta manifest frozen validation route",
+            lambda value: value.__setitem__("historical_source_validation", "WORKING_TREE_BYTES"),
+        ),
+        (
+            "delta manifest current validation route",
+            lambda value: value.__setitem__("current_source_validation", "ALL_WORKING_TREE_BYTES"),
+        ),
+        (
+            "delta manifest portable branch mode",
+            lambda value: value.__setitem__("branch_name_required", True),
+        ),
+    ]
+    rejected = []
+    for marker, edit in cases:
+        mutated = deepcopy(manifest)
+        edit(mutated)
+        try:
+            validate_manifest(mutated)
+        except Reject as error:
+            require(marker in str(error), f"wrong hostile rejection {marker}: {error}")
+            rejected.append(marker)
+        else:
+            raise Reject(f"hostile mutation accepted {marker}")
+    return rejected
+
+
 def build_manifest() -> dict[str, Any]:
-    pins = {relative: digest_path(ROOT / relative) for relative in LOCAL_INPUTS}
-    script_relative = (HERE / "verify_candidate_delta.py").relative_to(ROOT).as_posix()
-    pins[script_relative] = digest_path(HERE / "verify_candidate_delta.py")
+    frozen_pins = {relative: digest_bytes(frozen_bytes(relative)) for relative in LOCAL_INPUTS}
+    current_pins = {CURRENT_SCRIPT_RELATIVE: digest_path(ROOT / CURRENT_SCRIPT_RELATIVE)}
     return {
-        "format": "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-manifest-v1",
+        "format": "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-manifest-v2",
         "cycle_id": CYCLE_ID,
         "track_id": TRACK_ID,
         "candidate_revision": CANDIDATE_REVISION,
@@ -533,8 +578,13 @@ def build_manifest() -> dict[str, Any]:
             CONSTRUCTOR_RESULT_PATH: EXPECTED_RESULT_SHA256,
             CONSTRUCTOR_MANIFEST_PATH: EXPECTED_MANIFEST_SHA256,
         },
-        "source_count": len(pins),
-        "source_sha256": pins,
+        "source_count": len(frozen_pins) + len(current_pins),
+        "frozen_source_count": len(frozen_pins),
+        "frozen_source_sha256": frozen_pins,
+        "current_source_count": len(current_pins),
+        "current_source_sha256": current_pins,
+        "historical_source_validation": "GIT_SHOW_FROZEN_CANDIDATE_BYTES",
+        "current_source_validation": "WORKING_TREE_BYTES_ONLY_FOR_DELTA_VERIFIER",
         "candidate_delta_sha256": digest_path(DELTA),
         "constructor_code_imported": False,
         "constructor_acceptance_logic_imported": False,
@@ -547,11 +597,21 @@ def build_manifest() -> dict[str, Any]:
 
 
 def validate_manifest(candidate: dict[str, Any]) -> None:
-    require(candidate["format"] == "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-manifest-v1", "delta manifest format")
+    require(candidate["format"] == "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-manifest-v2", "delta manifest format")
     require(candidate["candidate_revision"] == CANDIDATE_REVISION and candidate["candidate_tree"] == CANDIDATE_TREE, "delta manifest candidate")
-    require(candidate["source_count"] == len(candidate["source_sha256"]), "delta manifest source count")
-    for relative, expected in candidate["source_sha256"].items():
-        require(digest_path(ROOT / relative) == expected, f"delta manifest source pin {relative}")
+    frozen_pins = candidate["frozen_source_sha256"]
+    current_pins = candidate["current_source_sha256"]
+    require(candidate["frozen_source_count"] == len(frozen_pins) == len(LOCAL_INPUTS), "delta manifest frozen source count")
+    require(set(frozen_pins) == set(LOCAL_INPUTS), "delta manifest frozen source scope")
+    require(candidate["current_source_count"] == len(current_pins) == 1, "delta manifest current source count")
+    require(set(current_pins) == {CURRENT_SCRIPT_RELATIVE}, "delta manifest current source scope")
+    require(candidate["source_count"] == len(frozen_pins) + len(current_pins), "delta manifest source count")
+    require(candidate["historical_source_validation"] == "GIT_SHOW_FROZEN_CANDIDATE_BYTES", "delta manifest frozen validation route")
+    require(candidate["current_source_validation"] == "WORKING_TREE_BYTES_ONLY_FOR_DELTA_VERIFIER", "delta manifest current validation route")
+    for relative, expected in frozen_pins.items():
+        require(digest_bytes(frozen_bytes(relative)) == expected, f"delta manifest frozen source pin {relative}")
+    for relative, expected in current_pins.items():
+        require(digest_path(ROOT / relative) == expected, f"delta manifest current source pin {relative}")
     require(candidate["frozen_constructor_sha256"] == {FRONTIER_PATH: EXPECTED_FRONTIER_SHA256, CONSTRUCTOR_RESULT_PATH: EXPECTED_RESULT_SHA256, CONSTRUCTOR_MANIFEST_PATH: EXPECTED_MANIFEST_SHA256}, "delta manifest frozen pins")
     require(candidate["candidate_delta_sha256"] == digest_path(DELTA), "delta manifest artifact pin")
     for key in ("constructor_code_imported", "constructor_acceptance_logic_imported", "numerical_modular_or_sampled_inference_used", "network_or_connector_used", "google_drive_connector_used", "github_write_used"):
@@ -581,8 +641,9 @@ def main() -> None:
     expected = evaluate(frontier, constructor_result, context)
     if arguments.write:
         write_json(DELTA, expected)
-        write_json(DELTA_MANIFEST, build_manifest())
-        rejected = hostile_mutations(frontier, constructor_result, context)
+        manifest = build_manifest()
+        write_json(DELTA_MANIFEST, manifest)
+        rejected = hostile_mutations(frontier, constructor_result, context) + hostile_manifest_mutations(manifest)
         write_json(DELTA_HOSTILE, {
             "format": "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-hostile-tests-v1",
             "cycle_id": CYCLE_ID,
@@ -623,7 +684,7 @@ def main() -> None:
     result = json.loads(DELTA_RESULT.read_text(encoding="utf-8"))
     validate_delta(delta, expected)
     validate_manifest(manifest)
-    rejected = hostile_mutations(frontier, constructor_result, context)
+    rejected = hostile_mutations(frontier, constructor_result, context) + hostile_manifest_mutations(manifest)
     require(hostile["total"] == hostile["rejected"] == len(rejected) and hostile["rejection_markers"] == rejected, "delta hostile report")
     require(result["outcome"] == "pass" and result["verdict"] == VERDICT, "delta result verdict")
     require(result["candidate_delta_sha256"] == digest_path(DELTA) and result["candidate_delta_manifest_sha256"] == digest_path(DELTA_MANIFEST) and result["candidate_delta_hostile_tests_sha256"] == digest_path(DELTA_HOSTILE), "delta result artifact pins")
