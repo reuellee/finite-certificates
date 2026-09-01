@@ -1,0 +1,29 @@
+{
+  "format": "d9-fixed-domain-incidence-referee-result-v1",
+  "track_id": "d9-fixed-domain-incidence-referee",
+  "reviewed_revision": "527e1fa16f65fab40a6b67e4e657f4a657b43e57",
+  "reviewed_tree": "585c13a9ec3f9f11c265e13b9c70d3c716a16c81",
+  "verdict": "ACCEPT",
+  "accepted_endpoint": "LOW_DEGREE_PROJECTION_SPECIALIZATION_IS_NONGENERIC",
+  "accepted_classification": "EXACT_NEGATIVE_PROJECTION_ENDPOINT",
+  "gates": {
+    "frozen_source_pins": true,
+    "opening_contract": true,
+    "fixed_domain_action_replay": true,
+    "low_degree_projection_replay": true,
+    "hostile_mutations": true,
+    "critical_enumeration_denied": true,
+    "ledger_scope": true,
+    "anti_stagnation": true
+  },
+  "closing_hostile_mutations": {
+    "rejected": 6,
+    "total": 6
+  },
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "closing_strategy_verdict": "PIVOT",
+  "pivot_reason": "The complete fixed-domain incidence blocker survived a second constructive cycle, the fixed active set has no nontrivial relabeling compression, and the selected projection is already nongeneric on 73 low-degree source walls.",
+  "next_strategy_tournament": "Compare exact fixed-domain counterexample CEGAR against a projection-free adaptive component decomposition carrying a complete parent-residence invariant.",
+  "github_write": false
+}
