@@ -1,0 +1,39 @@
+{
+  "format": "d3-global-master-closure-obligation-graph-v1",
+  "base_revision": "98ed8d36f08f13305d226d3d3770e71542a0a408",
+  "nodes": [
+    {"id": "compactification_64_charts", "classification": "finite-exact", "count": 64},
+    {"id": "support_parent_face_gates", "classification": "finite-exact", "support_faces": 3375, "nonexcluded": 11},
+    {"id": "base_cad", "classification": "finite-exact", "count": 527533},
+    {"id": "local_v_lifts", "classification": "finite-exact", "count": 16935101},
+    {"id": "global_gluing", "classification": "inconclusive", "residual": "UNKNOWN"},
+    {"id": "extension_labels", "classification": "inconclusive", "residual": "UNKNOWN"},
+    {"id": "strict_closure", "classification": "inconclusive", "residual": "UNKNOWN"},
+    {"id": "relative_infinity", "classification": "inconclusive", "residual": "UNKNOWN"},
+    {"id": "middle_rank_replay", "classification": "inconclusive", "residual": "UNKNOWN"},
+    {"id": "diag3_pair_hc1", "classification": "inconclusive", "residual": "UNKNOWN"},
+    {"id": "diag3_triple_hc0", "classification": "inconclusive", "residual": 1162302},
+    {"id": "diagonal_3", "classification": "inconclusive"}
+  ],
+  "edges": [
+    ["compactification_64_charts", "support_parent_face_gates"],
+    ["support_parent_face_gates", "base_cad"],
+    ["base_cad", "local_v_lifts"],
+    ["local_v_lifts", "global_gluing"],
+    ["global_gluing", "extension_labels"],
+    ["global_gluing", "strict_closure"],
+    ["global_gluing", "relative_infinity"],
+    ["extension_labels", "middle_rank_replay"],
+    ["strict_closure", "middle_rank_replay"],
+    ["relative_infinity", "middle_rank_replay"],
+    ["middle_rank_replay", "diag3_pair_hc1"],
+    ["diag3_pair_hc1", "diagonal_3"],
+    ["diag3_triple_hc0", "diagonal_3"]
+  ],
+  "forbidden_bypasses": [
+    ["local_v_lifts", "middle_rank_replay"],
+    ["base_cad", "diag3_pair_hc1"],
+    ["diag3_pair_hc1", "diagonal_3_without_diag3_triple_hc0"]
+  ]
+}
+
