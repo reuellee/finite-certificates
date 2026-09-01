@@ -29,11 +29,13 @@ There is **no active diagonal or selected mathematical target**: the canonical
 state is `PIVOT_REQUIRED`. Diagonal 3 remains the largest documented open
 program, not a currently selected route.
 
-The latest bounded D9 S12,37 normal-link route closed negatively: exact
-opposite parent initial forms make the ordinary radial link singular on both
-selected supports, and an independent exact factor wall appears on a recursive
-parent facet. This retires that tangential four-support route only; weighted
-recursive links, strict open-parent separation, and diagonal 9 remain open.
+The latest universal D9 cut opening gate failed closed before its main census.
+The 13-type local wall grammar is not projection-closed—type 36 already adds
+`c*d-c+f`, one of 142 new first-layer irreducibles—and a 16-chamber exact
+counterpair proves that identical local circuit/multiwall data can have
+different global component counts. Factor 8552 remains a boundary-only canary,
+not a strict-parent separator. This retires the memoryless local cut grammar;
+diagonal 9 and the theorem ledger remain open.
 
 For diagonal 3, the exact research pipeline has now:
 
@@ -70,7 +72,7 @@ nonrelative master-closure compiler. The 5,803-factor residue remains an input
 gap, but that route is not current authority and cannot resume without a fresh
 opening audit.
 
-- [`ai/omreal/NINE_DIAGONAL_STATUS.md`](ai/omreal/NINE_DIAGONAL_STATUS.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V4.md`](ai/omreal/NINE_DIAGONAL_STATUS_V4.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md)
@@ -90,10 +92,10 @@ The principal oriented-matroid program is the realizability/topology project in 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
 Current cross-diagonal target selection is governed by the machine-checked
-[`CANONICAL_RESEARCH_STATE_V3.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V3.json)
+[`CANONICAL_RESEARCH_STATE_V4.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json)
 and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
-The state after the D9 S12,37 normal-link route closed negatively is
-`PIVOT_REQUIRED`: the post-mask-6 predecessor, reconciliation state, and
+The state after the universal D9 cut opening gate failed closed is
+`PIVOT_REQUIRED`: the post-normal-link predecessor, reconciliation state, and
 earlier diagonal-three ledger are retained byte-for-byte as historical proof
 inputs, but their old selected routes are no longer current authority.
 
