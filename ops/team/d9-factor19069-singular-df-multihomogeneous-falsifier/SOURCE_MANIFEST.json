@@ -1,0 +1,25 @@
+{
+  "format": "d9-factor19069-singular-df-multihomogeneous-falsifier-source-manifest-v1",
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-falsifier",
+  "source_count": 14,
+  "source_sha256": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CYCLE.md": "9c8a51c141c8ab4742d580e50508f8cc544c6d6f211fe4b785b675f9c74f8055",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OPENING_AUDIT.json": "d6fc28140be34ef7c77527ae3ef001ded849f269ffa0d92c541a4899262b4c3d",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OBLIGATION_GRAPH.json": "6a01553079cb350f6a681bc5d19c8a584d3153eb106f49ff943ed4f1e99e709b",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/WORK_ORDERS.yaml": "921046f85cfe3bb83b9ac79a449e11a04d75074c1aa617e5118cb94e854243d5",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/CYCLE_REPORT.md": "e33cd87103667bac0d4b9ea3d88822c50fd84f2476c46c4f4df3265e01c9f6f0",
+    "ops/team/d9-factor19069-critical-equidim-constructor/CRITICAL_EQUIDIM_FRONTIER.json": "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec897d3a33",
+    "ops/team/d9-factor19069-critical-equidim-constructor/SOURCE_MANIFEST.json": "06efc5d65274d7179728b9b89a1788ea4d33812bfb24ecd5235bdd0d294bd75b",
+    "ops/team/d9-factor19069-critical-equidim-certificate/RESULT.json": "48d45553f1910d08ed9d2af2fec29f9ef2b469665515670c3a523f02530f96c8",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py": "64e94f55d2495c365128523ae1d8d2a7a9b9fc38e260d9a113834b836083be97"
+  },
+  "producer_code_imported": false,
+  "network_or_connector_used": false,
+  "drive_connector_used": false,
+  "github_write": false
+}
