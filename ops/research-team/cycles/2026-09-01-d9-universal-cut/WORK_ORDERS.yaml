@@ -1,0 +1,97 @@
+cycle_id: 2026-09-01-d9-universal-cut
+base_revision: cbe84ccd7273252c81fd4da17ee360a284d2a2a6
+base_tree: da3cd6feca1052ea14ed5036413c72b8f7fadc2a
+opening_ledger: 2/9
+
+publication_authorization: &authority |
+  ChatGPT Library is the canonical durable branch and Google Drive
+  Projects/research-backups is the recovery mirror. GitHub is read-only until
+  a new explicit user instruction. No paid external compute, destructive
+  action, secret publication, repository-setting change, force-push, or merge.
+
+work_orders:
+  - track_id: d9-universal-cut-prover
+    role: constructive prover
+    base_revision: cbe84ccd7273252c81fd4da17ee360a284d2a2a6
+    publication_authorization: *authority
+    target: Prove a universal reduction from two feasible active-sector components to a finite source-reconstructible minimal-separator schema.
+    quantifiers: Every realizable parent, admissible nine-family, active literal, component cut, multiwall, recursive boundary stratum, chart, and genuine infinity mode.
+    positive: Deductive coverage theorem with exact hypotheses and finite schema grammar.
+    negative: Minimal exact countermodel to the proposed reduction.
+    null: First uncovered global-cut mode and the weakest missing lemma.
+    timeout: Hash-pinned proved lemmas, failed lemmas, and unresolved obligations.
+    limits: 12 wall-hours, 64 aggregate CPU-hours shared by opening tracks, 16 GiB, 10000 schema types.
+    stop_rule: Stop at a complete reduction, first fatal counterexample, or any opening ceiling.
+    prohibited_scope: No sampled coverage, fixed-family promotion, weighted-link continuation, ledger edit, or GitHub write.
+    owns: ops/team/d9-universal-cut-prover
+
+  - track_id: d9-universal-cut-circuits
+    role: structural combinatorics prover
+    base_revision: cbe84ccd7273252c81fd4da17ee360a284d2a2a6
+    publication_authorization: *authority
+    target: Decide whether 13 wall types plus support-minimal Gordan circuits and circuit elimination give a finite complete separator obstruction grammar.
+    positive: Exact grammar, transport rules, and completeness proof covering singular and simultaneous multiwalls.
+    negative: Exact configuration with identical local types but inequivalent global cut behavior.
+    null: Complete surviving grammar extensions and first unclassified circuit composition.
+    timeout: Deterministic type/instance frontier.
+    limits: Shared opening ceiling; at most 10000 types and 250000 exact instances.
+    stop_rule: Stop at completeness, first non-finite/global-memory obstruction, or a ceiling.
+    prohibited_scope: No inference from local coorientation alone and no theorem promotion.
+    owns: ops/team/d9-universal-cut-circuits
+
+  - track_id: d9-universal-cut-boundary
+    role: semialgebraic boundary and transport prover
+    base_revision: cbe84ccd7273252c81fd4da17ee360a284d2a2a6
+    publication_authorization: *authority
+    target: Prove or refute that schema witnesses preserve strict parent residence, charts, multiplicity, recursive facets, multiwall incidence, and genuine infinity.
+    positive: Exact boundary/transport lemma sufficient for the universal cut reduction.
+    negative: Minimal omitted end or transport mode.
+    null: Exact boundary registry plus first unresolved attachment.
+    timeout: Checked/unchecked boundary and transport frontier.
+    limits: Shared opening ceiling.
+    stop_rule: Stop at a complete lemma, first fatal omitted mode, or a ceiling.
+    prohibited_scope: A recursive-facet wall is not a strict-open-parent or global separator.
+    owns: ops/team/d9-universal-cut-boundary
+
+  - track_id: d9-universal-cut-falsifier
+    role: independent falsifier
+    base_revision: cbe84ccd7273252c81fd4da17ee360a284d2a2a6
+    publication_authorization: *authority
+    target: Break the universal cut reduction using abstract polynomial countermodels, multiwall memory, missing infinity, occurrence orientation, or feasible-component labeling.
+    positive: Minimal reproducible fatal counterexample and route disposition.
+    negative: Complete hostile matrix without a fatal defect.
+    null: Smallest unresolved attack and exact deciding experiment.
+    timeout: Checked/unchecked hostile matrix.
+    limits: Shared opening ceiling.
+    stop_rule: Stop at first fatal defect, complete audit, or a ceiling.
+    prohibited_scope: Do not repair producer arguments or edit their artifacts.
+    owns: ops/team/d9-universal-cut-falsifier
+
+  - track_id: d9-universal-cut-certificate
+    role: certificate engineer and portable-replay owner
+    base_revision: cbe84ccd7273252c81fd4da17ee360a284d2a2a6
+    publication_authorization: *authority
+    target: Define an endpoint-neutral exact schema and independent verifier, and remove reliance on the unavailable historical referee object.
+    positive: Versioned schema, source-derived verifier, hostile mutations, portable predecessor replay, and semantic digest contract.
+    negative: Minimal uncheckable load-bearing field or provenance defect.
+    null: Smallest missing witness class and successor-compatible replay plan.
+    timeout: Versioned partial schema with unchecked claims explicit.
+    limits: Shared opening ceiling.
+    stop_rule: Stop at a complete opening-gate contract, first uncheckable claim, or a ceiling.
+    prohibited_scope: No discovery claim, theorem edit, or use of producer acceptance logic.
+    owns: ops/team/d9-universal-cut-certificate
+
+  - track_id: d9-universal-cut-referee
+    role: independent closing referee
+    base_revision: FROZEN_INTEGRATED_HEAD_TO_BE_SUPPLIED
+    publication_authorization: *authority
+    target: Accept or reject every opening-gate requirement at a frozen integrated commit and tree.
+    positive: Exact-head ACCEPT with all coverage, countermodel, canary, portability, and scope gates passed.
+    negative: REJECT with a minimal reproducible defect.
+    null: Fail-closed ambiguity and smallest next discriminator.
+    timeout: Partial replay manifest.
+    limits: 45 minutes, 12 GiB.
+    stop_rule: Stop at first defect, complete verdict, or a ceiling.
+    prohibited_scope: Do not repair candidate artifacts, alter the ledger, or write GitHub.
+    owns: ops/team/d9-universal-cut-referee
+
