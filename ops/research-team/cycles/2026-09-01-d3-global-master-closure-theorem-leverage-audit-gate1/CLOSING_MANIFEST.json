@@ -1,0 +1,53 @@
+{
+  "format": "d3-global-master-closure-theorem-leverage-closing-manifest-v1",
+  "cycle_id": "2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1",
+  "canonical_base": {
+    "commit": "98ed8d36f08f13305d226d3d3770e71542a0a408",
+    "tree": "52a03a10b62e54a9ff5aa4e59dbbc2af9a69eeab"
+  },
+  "frozen_candidate": {
+    "commit": "2426a20de8ad31d4b91e1a5ef337e99535b41f8b",
+    "tree": "98d2ab0262df1fe50ad6c6052ea77e8bb58989a2"
+  },
+  "referee_lane": {
+    "commit": "fa1a451c53034f28fb28fc70053d17d01970e81d",
+    "tree": "d619c8ff6b3ea4c59dc1aacda6d76caa8c14a1b9",
+    "integrated_commit": "4a2cf6eb07308128f60da5b3633461fc8df293cd",
+    "verdict": "ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED",
+    "hostile_mutations_rejected": 30
+  },
+  "closing": {
+    "ledger": "2/9",
+    "ledger_delta": "0/9",
+    "trajectory": "STALLED",
+    "automatic_reset": "FIRED",
+    "strategy_action": "STOP",
+    "eligible_construction_targets": 0,
+    "selected_construction_target": "NONE",
+    "selected_successor": "NONE / STOP",
+    "construction_started": false
+  },
+  "clean_no_hardlink_replay": {
+    "status": "PASS",
+    "detached_head": "2426a20de8ad31d4b91e1a5ef337e99535b41f8b",
+    "detached_tree": "98d2ab0262df1fe50ad6c6052ea77e8bb58989a2",
+    "declared_gates_passed": 6,
+    "matching_object_store_files_checked": 7,
+    "hardlink_identity_collisions": 0,
+    "all_checked_nlink": 1
+  },
+  "evidence_sha256": {
+    "ops/team/d3-global-closure-leverage-referee/RESULT.json": "111955a8630505b07265b0abcf34fd511ae5d7f10c544029e1035cd9a64dc41f",
+    "ops/team/d3-global-closure-leverage-referee/REVIEW.md": "4df1fa798fb854d17823ce0aa074fa3e52ea0267c5f0fa709be8677cc7eaa628",
+    "ops/team/d3-global-closure-leverage-referee/CLEAN_REPLAY.json": "ce2e988a0db4d3f87d5a77765396e99afaa65a7ab49e8f7c1b344672d8f2bdfe",
+    "ops/team/d3-global-closure-leverage-referee/verify_closing_referee.py": "9e50aa3a7d79a5a45977946a636a0e22bbfc69ca828f27b7ab58436bb728b5a1"
+  },
+  "package": {
+    "output_root": "E:\\Projects\\9DVL Research\\outputs",
+    "bundle_name": "d3-global-master-closure-theorem-leverage-audit-gate1.bundle",
+    "manifest_name": "d3-global-master-closure-theorem-leverage-audit-gate1-manifest.json",
+    "native_drive_mirror": "OPTIONAL_NONBLOCKING_NOT_REQUIRED",
+    "google_drive_connector_used": false,
+    "github_write": false
+  }
+}

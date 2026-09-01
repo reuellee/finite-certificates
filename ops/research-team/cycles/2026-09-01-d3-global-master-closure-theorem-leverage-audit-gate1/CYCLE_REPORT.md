@@ -48,7 +48,7 @@ only its named `ops/team` surface.
 | strategy audit | `f40c2b1024294e1d93235dce3ba8797c0471d512` / `220c63b7447a346e09dbaf71e07593a6700d41ee` | `e60ff34` | `STALLED / NONE / STOP`; 24/24 hostiles |
 | falsifier | `d772fb68b5fc48829905de6cf86a4bbcab7af337`; replay delta `59d7871cbe2c17cdb9cd040ea7aae888e369b76c` / `aa4e1f9e16917e908fc645d65772076f37524525` | `8216aac`, `c050819` | selection rejected; 34/34 hostiles |
 | independent certificate | `3f04f56e80e430c247e5528d6c24aab4d8d08c9b` / `0932a0dfc2b5902e6a6d2b84fd62521b70646f50` | `f8fa487` | `STALLED_INFORMATIONAL / STOP_PIVOT / NONE`; 42/42 hostiles |
-| closing referee | frozen report candidate only | recorded after review | may not repair or perform discovery |
+| closing referee | `fa1a451c53034f28fb28fc70053d17d01970e81d` / `d619c8ff6b3ea4c59dc1aacda6d76caa8c14a1b9` | `4a2cf6e` | `ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED`; 30/30 hostiles |
 
 The three pre-referee lanes reject `100/100` hostile mutations.
 
@@ -151,7 +151,14 @@ Same-route continuation justified: **NO**. `CONTINUE` is prohibited.
 | theorem attachment / finite residual / decrease | `FAIL_CLOSED / UNKNOWN / NOT MET` |
 | eligible construction targets | `0` |
 | ledger promotion | `DENIED`; `2/9 -> 2/9` |
-| frozen-head referee and clean no-hardlink replay | `PENDING_CANDIDATE_REVIEW` |
+| frozen-head referee | `PASS` at `2426a20de8ad31d4b91e1a5ef337e99535b41f8b` / `98d2ab0262df1fe50ad6c6052ea77e8bb58989a2` |
+| clean no-hardlink replay | `PASS`; six declared gates, 7/7 matching object-store files distinct, zero identity collisions, `nlink=1` |
+
+The optional full legacy cosheaf-pilot replay was terminated by the explicit
+closeout bound and is not an acceptance dependency. The already completed
+Windows replay failed closed at the first-event exact-source comparison; the
+three independent lanes directly reconstructed the narrower pinned
+`BOUNDED_NO_GO` contract.
 
 The legacy raw-byte local-lift command exposes a platform-only gzip header
 defect: stored Linux OS byte `3` versus Windows runtime byte `10`. Normalizing
@@ -182,11 +189,12 @@ denominator, and bounded preregistered strict-decrease chain are pinned.
 - Local branch:
   `research/local-d3-global-master-closure-audit-gate1-20260901`
 - GitHub remains read-only; no push, PR, CI trigger, or merge.
-- Referee-input checkpoint: `476b752ab9d233b999494b1b87f3cf291afb4aea`
+- Frozen referee candidate: `2426a20de8ad31d4b91e1a5ef337e99535b41f8b`
+- Accepted referee lane: `fa1a451c53034f28fb28fc70053d17d01970e81d`
+- Integrated referee evidence: `4a2cf6eb07308128f60da5b3633461fc8df293cd`
 - Bundle directory: `E:\Projects\9DVL Research\outputs`
 - Backup manifest:
   `E:\Projects\9DVL Research\outputs\d3-global-master-closure-theorem-leverage-audit-gate1-manifest.json`
 - Native `G:\My Drive\Projects\research-backups` mirroring is optional and
   nonblocking.
 - Google Drive connector used: `false`.
-
