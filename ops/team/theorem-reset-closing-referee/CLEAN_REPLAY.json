@@ -1,0 +1,291 @@
+{
+  "format": "theorem-reset-clean-no-hardlink-replay-v1",
+  "source_worktree": "E:\\Projects\\9DVL Research\\lane-worktrees\\theorem-reset-referee",
+  "replay_path": "E:\\Projects\\9DVL Research\\lane-replays\\theorem-reset-referee-6273448",
+  "clone": {
+    "command": "git clone --no-hardlinks --no-checkout 'E:\\Projects\\9DVL Research\\lane-worktrees\\theorem-reset-referee' 'E:\\Projects\\9DVL Research\\lane-replays\\theorem-reset-referee-6273448'",
+    "exit_code": 0,
+    "no_hardlinks_flag": true,
+    "output": "Cloning into replay path... done."
+  },
+  "checkout": {
+    "command": "git -C 'E:\\Projects\\9DVL Research\\lane-replays\\theorem-reset-referee-6273448' checkout --detach 627344866096af0eea2863af295d718237ca8d23",
+    "exit_code": 0,
+    "output": "HEAD is now at 6273448 research: freeze theorem reset closing candidate"
+  },
+  "detached_head": "627344866096af0eea2863af295d718237ca8d23",
+  "detached_tree": "b5b254bcb94662f8ed3ff621334638cc89526ada",
+  "working_tree_status": "CLEAN_DETACHED_HEAD",
+  "python": {
+    "executable": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "version": "Python 3.12.13",
+    "bytecode_disabled": true
+  },
+  "required_verifiers": [
+    {
+      "id": "opening",
+      "command": "python -B ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/verify_opening_audit.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS theorem-reset opening audit; 12/12 hostiles; vector 2/9,1,7,UNKNOWN,UNKNOWN,4,7; triple residual 1162302; joined 3/10; construction targets 0"
+    },
+    {
+      "id": "prover-strategy",
+      "command": "python -B ops/team/theorem-reset-prover-strategy/verify_prover_strategy.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS pins/opening; joined 3/10 not end-to-end; mixed canary H2=Z; residual 1162302; winner NONE; midpoint STOP; 26/26 hostiles"
+    },
+    {
+      "id": "falsifier",
+      "command": "python -B ops/team/theorem-reset-falsifier/verify_falsifier.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS 21 pins; ranks 3/6 and H2=Z; D3 residual 1162302; D9 2546+58=2604; handoffs NULL/NULL/NULL/NEGATIVE/NULL/TIMEOUT; 18/18 hostiles"
+    },
+    {
+      "id": "independent-verifier",
+      "command": "python -B ops/team/theorem-reset-independent-verifier/verify_independent.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS independent reconstruction; 18/18 pins; 20/20 hostiles; joined 3/10; triple residual 1162302; pair UNKNOWN; STALLED/NONE/NONE"
+    },
+    {
+      "id": "closing-candidate",
+      "command": "python -B ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/verify_closing_candidate.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS closing candidate; 20/20 hostiles; vectors 4,7 to 5,8; handoffs NULL/NULL/NULL/NEGATIVE/NULL/TIMEOUT; STALLED/NONE/NONE; G mirror deferred AccessDenied"
+    },
+    {
+      "id": "repository-protocol",
+      "command": "python -B ops/research-team/verify_cycle_protocol.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS research-cycle strategy/convergence/storage/publication protocol: 18 cycles, 74 authorized work orders"
+    },
+    {
+      "id": "diag3-joined-flow-triangle",
+      "command": "python -B ai/omreal/verify_diag3_joined_flow_triangle.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS exact local carrier H0=H1=0, H2=Z; missing geometric d3 column (-1,1,1,1,1,1,1); no coverage or specialization theorem"
+    },
+    {
+      "id": "diag3-single-bad-two-skeleton",
+      "command": "python -B ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS universal single-block k=0/1/2; pair/triple terms and diagonal three remain open"
+    },
+    {
+      "id": "diag3-completion-open-object",
+      "command": "python -B ai/omreal/verify_diag3_completion_open_object.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS 77940147/79102449 triple rows settled, 1162302 unresolved; pair global closure missing; ledger 2/9"
+    },
+    {
+      "id": "diag9-reducibility-no-go",
+      "command": "python -B ai/omreal/DIAG9_GRAPH_REDUCIBILITY_NO_GO.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "output": "PASS reducibility is not hereditary under one proper extension; naive induction blocked; not a ninth-diagonal counterexample"
+    }
+  ],
+  "acceptance_file_identity_check": {
+    "method": "Python 3.12 os.stat NTFS st_dev/st_ino comparison, st_nlink, byte equality, and SHA-256",
+    "matching_files_checked": 14,
+    "same_identity_count": 0,
+    "files": [
+      {
+        "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/OPENING_AUDIT.json",
+        "sha256": "53b79726c99cb7dd0be52727e94f570eb73797e104811cfef4a566c1f670dd6a",
+        "bytes": 7213,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930540575,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930543908,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/MID_CYCLE_CHECKPOINT.json",
+        "sha256": "1a717dd9d1af36489cd641b4840ae2de1dacf2db4ba1c54aa09aaabf5583720d",
+        "bytes": 4091,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930540573,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930543906,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CLOSING_CANDIDATE.json",
+        "sha256": "5ff3c82930918daea52436fdcc7ab1c6da720bd913b8973dee714507df7de128",
+        "bytes": 8182,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930540570,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930543903,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/verify_opening_audit.py",
+        "sha256": "7ae51249a4b732ab2cba8eea9b9e98aeb299956b60c1bdcf6256ba87bb47e3ef",
+        "bytes": 5921,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930540578,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930543911,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/verify_closing_candidate.py",
+        "sha256": "296ad427c068f4ca5db4f12672164ce0004272de379cd70c12a86a451790c5d1",
+        "bytes": 10091,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930540577,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930543910,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/research-team/verify_cycle_protocol.py",
+        "sha256": "e3c2f64b97d53f4de00be675a789a42668835bb1dd8759779be8392760131753",
+        "bytes": 14615,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930540579,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930543912,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/team/theorem-reset-prover-strategy/RESULT.json",
+        "sha256": "bab28affb8a72d1ff86ed86a3bad9f0f9a41dd216826e4dca8889ca5e911eafb",
+        "bytes": 13026,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930541046,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930544379,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/team/theorem-reset-prover-strategy/verify_prover_strategy.py",
+        "sha256": "8bb26699974abc44b18ee8b994626670b486befda554dd0b83bdae3257e0939c",
+        "bytes": 18826,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930541048,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930544381,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/team/theorem-reset-falsifier/RESULT.json",
+        "sha256": "c955c6886ed611ae915d56b21a57740f27acb5fb750b22f1900aa58e2996c663",
+        "bytes": 10935,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930541036,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930544369,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/team/theorem-reset-falsifier/verify_falsifier.py",
+        "sha256": "5e83243cd4025a74eb7522345ed978aa4807974bdef2d41a20c3cb5c9d13b707",
+        "bytes": 17179,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930541038,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930544371,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/team/theorem-reset-independent-verifier/RESULT.json",
+        "sha256": "41eee0ecff951ab08d5c3419c8b596dfa0efea01c7709494d95c800a73edb80f",
+        "bytes": 8511,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930541041,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930544374,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ops/team/theorem-reset-independent-verifier/verify_independent.py",
+        "sha256": "20d40137ea8bc4bf5675396c281fea4757c77afe4376a59fa63e1598a820e315",
+        "bytes": 9993,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930541043,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930544376,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+        "sha256": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e",
+        "bytes": 90677,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930540042,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 9570149208573711,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      },
+      {
+        "path": "ai/omreal/data/DIAG3_COMPLETION_OPEN_OBJECT.json",
+        "sha256": "ea8808e8979603757dec928b1e9aeb266aa3eabcfb2e70c1f13e7aa5c4af6ece",
+        "bytes": 19027,
+        "source_dev": 16475985426355930968,
+        "source_ino": 844424930539702,
+        "source_nlink": 1,
+        "replay_dev": 16475985426355930968,
+        "replay_ino": 844424930543035,
+        "replay_nlink": 1,
+        "same_identity": false,
+        "same_bytes": true
+      }
+    ]
+  },
+  "optional_timeout": {
+    "id": "diag9-sign-geodesy-nonlocal-phases",
+    "status": "NOT_RERUN_BY_CLOSING_REFEREE",
+    "reason": "Mandatory midpoint already made the partial local metric replay a TIMEOUT nondependency and stopped discovery.",
+    "acceptance_dependency": false
+  }
+}
