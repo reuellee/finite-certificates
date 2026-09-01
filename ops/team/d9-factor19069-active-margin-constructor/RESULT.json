@@ -1,0 +1,53 @@
+{
+  "format": "d9-factor19069-active-margin-constructor-result-v1",
+  "track_id": "d9-factor19069-active-margin-constructor",
+  "opening_revision": "65744ea631c98dce21b58fd39626f9e129190003",
+  "opening_tree": "0f0cf83c316650a09ae2f08136f16cf9ed8880af",
+  "outcome": "pass",
+  "classification": "EXACT_FAIL_CLOSED_PARENT_RESIDENCE_NULL",
+  "endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+  "frontier_sha256": "0875dd345a307bf9c4e33287cc13df1e6944c902d8a84c419a35cf9ddccbd243",
+  "frontier_semantic_sha256": "e3c66257a1355b38b1485cc2f90ddc8e918fb744dede68434e9e42e30c9170af",
+  "exact_replay": {
+    "parent_sign_tags": 70,
+    "fixed_skeleton_edges": 40,
+    "parent_path_tag_checks": 2800,
+    "factor19069_rooted_skeleton_edges": [39],
+    "factor19069_edge39_open_roots": 1,
+    "factor19069_other_skeleton_open_roots": 0,
+    "local_collar_component_count": 1,
+    "global_component_inference_from_collar": false
+  },
+  "active_margin": {
+    "stationarity_support_bound": 9,
+    "candidate_active_sets_through_size_3": 57225,
+    "candidate_active_sets_through_size_4": 974120,
+    "candidate_active_sets_through_size_9": 75816847319,
+    "system_ceiling": 100000,
+    "first_support_size_exceeding_ceiling": 4,
+    "complete_source_derived_tie_incidence_filter": false,
+    "critical_systems_solved": 0,
+    "component_samples_constructed": 0
+  },
+  "true_boundary": {
+    "ambient_support_strata": 3375,
+    "parent_bernstein_excluded": 3364,
+    "proper_nonexcluded": 10,
+    "factor19069_identically_zero_proper_restrictions": 8,
+    "factor19069_mixed_proper_restrictions": 2,
+    "complete_parent_component_closure_path_tags": false,
+    "first_unclassified_support": [1, 1, 1]
+  },
+  "exact_consequence": "THE_FIXED_SKELETON_ATTACHMENT_IS_EXACTLY_REPLAYED_BUT_THE_COMPLETE_ACTIVE_MARGIN_AND_PARENT_RESIDENCE_FRONTIERS_FAIL_CLOSED",
+  "nonconsequences": [
+    "NO_COMPLETE_ACTIVE_MARGIN_TIE_STRATIFICATION",
+    "NO_COMPLETE_TRUE_BOUNDARY_PARENT_COMPONENT_RESIDENCE",
+    "NO_EXACT_GLOBAL_FACTOR19069_COMPONENT_SAMPLE",
+    "NO_GLOBAL_COMPONENT_TO_SKELETON_ATTACHMENT_CLASSIFICATION",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "next_action": "D9_ROW2599_FACTOR19069_FACTORED_BARRIER_COMPONENT_SAMPLER_GATE1",
+  "ledger_change_recommended": "none",
+  "theorem_ledger": "2/9"
+}

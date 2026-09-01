@@ -1,0 +1,718 @@
+{
+  "active_margin_frontier": {
+    "candidate_active_sets_by_support_size": {
+      "1": 70,
+      "2": 2415,
+      "3": 54740,
+      "4": 916895,
+      "5": 12103014,
+      "6": 131115985,
+      "7": 1198774720,
+      "8": 9440350920,
+      "9": 65033528560
+    },
+    "complete_source_derived_active_tie_incidence_filter": "ABSENT",
+    "component_samples_constructed": 0,
+    "critical_systems_solved": 0,
+    "cumulative_candidate_active_sets": {
+      "1": 70,
+      "2": 2485,
+      "3": 57225,
+      "4": 974120,
+      "5": 13077134,
+      "6": 144193119,
+      "7": 1342967839,
+      "8": 10783318759,
+      "9": 75816847319
+    },
+    "first_support_size_exceeding_ceiling": 4,
+    "largest_unfiltered_support_size_below_ceiling": 3,
+    "opening_exact_system_ceiling": 100000,
+    "stationarity_support_bound": 9,
+    "support_bound_reason": "Caratheodory on the eight-dimensional wall tangent quotient"
+  },
+  "classification": "EXACT_FAIL_CLOSED_PARENT_RESIDENCE_NULL",
+  "component_classification": {
+    "attached_global_components": null,
+    "complete_wall_component_count": null,
+    "status": "UNCLASSIFIED_FAIL_CLOSED",
+    "unattached_global_components": null
+  },
+  "endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+  "exact_consequences": [
+    "FACTOR19069_MEETS_THE_FIXED_SKELETON_ONLY_ON_EDGE39_WITH_ONE_EXACT_OPEN_ROOT",
+    "ALL_40_SKELETON_EDGES_RETAIN_ALL_70_STRICT_PARENT_PATH_TAGS",
+    "EIGHT_NONEXCLUDED_PROPER_SUPPORT_RESTRICTIONS_ARE_IDENTICALLY_ZERO_AND_TWO_ARE_BERNSTEIN_MIXED",
+    "UNFILTERED_ACTIVE_MARGIN_SUPPORTS_EXCEED_THE_100000_SYSTEM_CEILING_AT_SUPPORT_SIZE_FOUR"
+  ],
+  "exact_source_replay": {
+    "accepted_local_collar_attachment_edge": 39,
+    "accepted_local_collar_components": 1,
+    "all_40_edges_have_all_70_strict_parent_path_tags": true,
+    "factor19069_open_root_counts_by_skeleton_edge": {
+      "1": 0,
+      "101": 0,
+      "102": 0,
+      "103": 0,
+      "104": 0,
+      "12": 0,
+      "13": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "21": 0,
+      "22": 0,
+      "24": 0,
+      "27": 0,
+      "30": 0,
+      "36": 0,
+      "37": 0,
+      "39": 1,
+      "4": 0,
+      "45": 0,
+      "52": 0,
+      "60": 0,
+      "61": 0,
+      "62": 0,
+      "66": 0,
+      "67": 0,
+      "69": 0,
+      "7": 0,
+      "71": 0,
+      "73": 0,
+      "80": 0,
+      "83": 0,
+      "84": 0,
+      "86": 0,
+      "90": 0,
+      "92": 0,
+      "94": 0,
+      "96": 0,
+      "98": 0,
+      "99": 0
+    },
+    "factor19069_rooted_skeleton_edges": [
+      39
+    ],
+    "global_component_inference_from_collar": false,
+    "parent_path_tag_checks": 2800,
+    "parent_path_tag_semantic_sha256": "e0f2c7e9ec8841d2e5634a88763774fa08aab1c2636100097c33e00cc0ff5acd"
+  },
+  "format": "d9-factor19069-active-margin-frontier-v1",
+  "next_action": "D9_ROW2599_FACTOR19069_FACTORED_BARRIER_COMPONENT_SAMPLER_GATE1: replace nonsmooth active-set enumeration by the one factored product barrier critical locus, while retaining every parent factor and exact parent-component path tags.",
+  "nonconsequences": [
+    "NO_PROOF_THAT_ANY_AMBIGUOUS_WEAK_SIGN_SUPPORT_FACE_LIES_IN_THE_CLOSURE_OF_THE_PINNED_PARENT_COMPONENT",
+    "NO_COMPLETE_ACTIVE_MARGIN_TIE_STRATIFICATION",
+    "NO_EXACT_GLOBAL_FACTOR19069_COMPONENT_SAMPLE",
+    "NO_GLOBAL_COMPONENT_TO_SKELETON_ATTACHMENT_CLASSIFICATION",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "opening_revision": "65744ea631c98dce21b58fd39626f9e129190003",
+  "opening_tree": "0f0cf83c316650a09ae2f08136f16cf9ed8880af",
+  "semantic_sha256": "e3c66257a1355b38b1485cc2f90ddc8e918fb744dede68434e9e42e30c9170af",
+  "sources": {
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-active-margin-gate1/OPENING_AUDIT.json": "d925c2c0747e09ba8cfd6cedae8a0676c1ffd23c7f0243cc403dd341eb6c81c3"
+  },
+  "target": {
+    "ambient_parameter_dimension": 9,
+    "factor_id": 19069,
+    "factor_multidegree": [
+      2,
+      2,
+      2
+    ],
+    "factor_term_count": 108,
+    "factor_total_degree": 6,
+    "fixed_skeleton_edges": 40,
+    "parent_index": 2599,
+    "parent_inventory": [
+      {
+        "affine_degree": 0,
+        "label": "1234",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 0,
+        "label": "1235",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1236",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1237",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1238",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 0,
+        "label": "1245",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1246",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1247",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1248",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1256",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "1257",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "1258",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1267",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1268",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1278",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 0,
+        "label": "1345",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1346",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1347",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1348",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "1356",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "1357",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "1358",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1367",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1368",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1378",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "1456",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "1457",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "1458",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1467",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1468",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1478",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "1567",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "1568",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "1578",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 3,
+        "label": "1678",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 0,
+        "label": "2345",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 0,
+        "label": "2346",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 0,
+        "label": "2347",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 0,
+        "label": "2348",
+        "target_sign": 1,
+        "term_count": 1
+      },
+      {
+        "affine_degree": 1,
+        "label": "2356",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2357",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2358",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2367",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2368",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2378",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2456",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2457",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2458",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2467",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2468",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "2478",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "2567",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "2568",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "2578",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "2678",
+        "target_sign": 1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 1,
+        "label": "3456",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "3457",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "3458",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "3467",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "3468",
+        "target_sign": 1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 1,
+        "label": "3478",
+        "target_sign": -1,
+        "term_count": 2
+      },
+      {
+        "affine_degree": 2,
+        "label": "3567",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "3568",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "3578",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "3678",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "4567",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "4568",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "4578",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 2,
+        "label": "4678",
+        "target_sign": -1,
+        "term_count": 6
+      },
+      {
+        "affine_degree": 3,
+        "label": "5678",
+        "target_sign": 1,
+        "term_count": 24
+      }
+    ],
+    "parent_inventory_semantic_sha256": "b8147c3764e01028b029be9bb6b1c6d7c43023f297697e6462b701ee815c4df9",
+    "parent_sign_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "parent_sign_tags": 70
+  },
+  "theorem_ledger": "2/9",
+  "track_id": "d9-factor19069-active-margin-constructor",
+  "true_boundary_frontier": {
+    "ambient_product_support_strata": 3375,
+    "complete_parent_component_closure_path_tags": false,
+    "factor19069_proper_support_state_counts": {
+      "BERNSTEIN_MIXED_UNRESOLVED": 2,
+      "BERNSTEIN_NEGATIVE": 0,
+      "BERNSTEIN_POSITIVE": 0,
+      "IDENTICALLY_ZERO": 8
+    },
+    "first_unclassified_stratum": {
+      "factor19069_restriction": "IDENTICALLY_ZERO",
+      "missing": "EXACT_PATH_TAG_FROM_THE_PINNED_PARENT_COMPONENT_TO_THIS_WEAK_SIGN_BOUNDARY_WITNESS",
+      "obligation": "PARENT_COMPONENT_CLOSURE_RESIDENCE",
+      "support": [
+        1,
+        1,
+        1
+      ]
+    },
+    "nonexcluded_support_strata": 11,
+    "parent_bernstein_excluded_support_strata": 3364,
+    "proper_nonexcluded_support_strata": 10,
+    "records": [
+      {
+        "dimension": 0,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "CONTAINED",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          1,
+          1,
+          1
+        ],
+        "weak_sign_witness_zero_parent_brackets": 53
+      },
+      {
+        "dimension": 1,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          1,
+          1,
+          5
+        ],
+        "weak_sign_witness_zero_parent_brackets": 44
+      },
+      {
+        "dimension": 1,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          3,
+          1,
+          1
+        ],
+        "weak_sign_witness_zero_parent_brackets": 44
+      },
+      {
+        "dimension": 2,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          3,
+          1,
+          5
+        ],
+        "weak_sign_witness_zero_parent_brackets": 32
+      },
+      {
+        "dimension": 4,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          3,
+          1,
+          15
+        ],
+        "weak_sign_witness_zero_parent_brackets": 33
+      },
+      {
+        "dimension": 4,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          3,
+          3,
+          7
+        ],
+        "weak_sign_witness_zero_parent_brackets": 33
+      },
+      {
+        "dimension": 5,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          3,
+          3,
+          15
+        ],
+        "weak_sign_witness_zero_parent_brackets": 32
+      },
+      {
+        "dimension": 6,
+        "factor19069_restriction": "BERNSTEIN_MIXED_UNRESOLVED",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          7,
+          7,
+          7
+        ],
+        "weak_sign_witness_zero_parent_brackets": 41
+      },
+      {
+        "dimension": 6,
+        "factor19069_restriction": "IDENTICALLY_ZERO",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          15,
+          1,
+          15
+        ],
+        "weak_sign_witness_zero_parent_brackets": 41
+      },
+      {
+        "dimension": 8,
+        "factor19069_restriction": "BERNSTEIN_MIXED_UNRESOLVED",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          15,
+          7,
+          15
+        ],
+        "weak_sign_witness_zero_parent_brackets": 1
+      },
+      {
+        "dimension": 9,
+        "factor19069_restriction": "BERNSTEIN_MIXED_UNRESOLVED",
+        "parent_bernstein_classification": "AMBIGUOUS",
+        "path_tag_to_pinned_parent_component_closure": "ABSENT",
+        "support": [
+          15,
+          15,
+          15
+        ],
+        "weak_sign_witness_zero_parent_brackets": 44
+      }
+    ]
+  }
+}
