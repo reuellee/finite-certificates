@@ -1,0 +1,41 @@
+{
+  "canonical_base_revision": "9c9a78c4225a39803a0a5ac7e4e204d9b9f3773d",
+  "canonical_base_tree": "af4bdbfc8f89e950936d59e6b0737b12eb5bdfb5",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "cycle_opening_revision": "a2860f3f6436f573a913fc8ca6312b944212aadd",
+  "cycle_opening_tree": "56f179cea8b8664156ee2dfcd6a9052d95e3b78e",
+  "format": "d9-factor19069-singular-df-multihomogeneous-constructor-source-manifest-v1",
+  "pins": {
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V6.json": "24d033a7f7d9886d8a538776a1453f1fd00af617da5c03f0f6a6e3921fe8b9bf",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
+    "ai/omreal/verify_canonical_research_state_v6.py": "0aef5bb2c999e74fcad71e2f8346e276dd66cd3c645d0b874a6d81109934e832",
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/CYCLE_REPORT.md": "e33cd87103667bac0d4b9ea3d88822c50fd84f2476c46c4f4df3265e01c9f6f0",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/OPENING_AUDIT.json": "9bebcf1e92b4740c470fc5d067ad302e65ba6bf94073eb002d91b0779861f7a3",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CYCLE.md": "9c8a51c141c8ab4742d580e50508f8cc544c6d6f211fe4b785b675f9c74f8055",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OBLIGATION_GRAPH.json": "6a01553079cb350f6a681bc5d19c8a584d3153eb106f49ff943ed4f1e99e709b",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OPENING_AUDIT.json": "d6fc28140be34ef7c77527ae3ef001ded849f269ffa0d92c541a4899262b4c3d",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/WORK_ORDERS.yaml": "921046f85cfe3bb83b9ac79a449e11a04d75074c1aa617e5118cb94e854243d5",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ops/team/d9-factor19069-critical-equidim-certificate/RESULT.json": "48d45553f1910d08ed9d2af2fec29f9ef2b469665515670c3a523f02530f96c8",
+    "ops/team/d9-factor19069-critical-equidim-constructor/CRITICAL_EQUIDIM_FRONTIER.json": "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec897d3a33",
+    "ops/team/d9-factor19069-critical-equidim-constructor/RESULT.json": "35619e34566ed01cfc749217e2b7f40842263e14108663d27b24687a6d7c7c6d",
+    "ops/team/d9-factor19069-critical-equidim-constructor/SOURCE_MANIFEST.json": "06efc5d65274d7179728b9b89a1788ea4d33812bfb24ecd5235bdd0d294bd75b"
+  },
+  "semantic_sha256": "35e687d6ee4a6ddcf983ced155ac52afd84f2ced1d1460fc9a7ab72bfa8a37b4",
+  "source_policy": {
+    "external_compute_used": false,
+    "network_or_connector_used": false,
+    "numerical_or_modular_probe_used": false,
+    "predecessor_frontier_is_frozen_accepted_source": true,
+    "producer_code_imported": false,
+    "seventy_inverse_variable_discovery_used": false
+  },
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-constructor"
+}
