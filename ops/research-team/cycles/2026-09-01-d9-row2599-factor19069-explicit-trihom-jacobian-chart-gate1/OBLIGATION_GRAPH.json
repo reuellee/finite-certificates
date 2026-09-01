@@ -1,0 +1,39 @@
+{
+  "format": "d9-factor19069-explicit-trihom-jacobian-chart-obligation-graph-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1",
+  "opening_ledger": "2/9",
+  "nodes": [
+    {"id": "trihom-source", "status": "finite-exact", "claim": "the 108-term degree-(2,2,2) polynomial in 12 variables and its affine dehomogenization are source-pinned"},
+    {"id": "product-chart-cover", "status": "inconclusive", "claim": "all 64 standard charts of (P^3)^3 are explicit, ordered, and overlap-tagged"},
+    {"id": "chart-jacobian-transfer", "status": "inconclusive", "claim": "each chart ideal is F_chart plus its nine free-coordinate derivatives, and Euler recovers the three pivot derivatives"},
+    {"id": "affine-original-transfer", "status": "inconclusive", "claim": "the u=v=w=1 chart ideal equals the original affine singular ideal in Q[a,...,i]"},
+    {"id": "chart-decomposition", "status": "inconclusive", "claim": "every relevant chart has a complete characteristic-zero primary/equidimensional decomposition including embedded components"},
+    {"id": "overlap-deduplication", "status": "inconclusive", "claim": "projective components are identified across chart overlaps without dropping multiplicity or boundary data"},
+    {"id": "infinity-boundary-strata", "status": "inconclusive", "claim": "all charts with u=0, v=0, or w=0 are retained and classified as projective boundary data"},
+    {"id": "affine-contraction", "status": "inconclusive", "claim": "every accepted affine-chart component is pulled back to the original affine singular ideal before parent tests"},
+    {"id": "component-invariants", "status": "inconclusive", "claim": "every accepted component has exact equations, dimension, degree, and multiplicity where feasible"},
+    {"id": "parent-factor-incidence", "status": "inconclusive", "claim": "each contracted affine component is tested exactly against all 70 parent factors"},
+    {"id": "strict-real-residence", "status": "inconclusive", "claim": "survivors have exact strict real residence or exact exclusion"},
+    {"id": "connected-parent-tag", "status": "inconclusive", "claim": "each strict survivor is attached or excluded from the pinned connected row-2599 parent component"},
+    {"id": "regular-critical-frontier", "status": "inconclusive", "claim": "regular critical charts become eligible only after exact strict-parent singular emptiness"},
+    {"id": "diagonal-nine", "status": "inconclusive", "claim": "diagonal nine theorem or theorem-level counterexample"}
+  ],
+  "edges": [
+    ["trihom-source", "product-chart-cover"],
+    ["product-chart-cover", "chart-jacobian-transfer"],
+    ["chart-jacobian-transfer", "affine-original-transfer"],
+    ["chart-jacobian-transfer", "chart-decomposition"],
+    ["chart-decomposition", "overlap-deduplication"],
+    ["product-chart-cover", "infinity-boundary-strata"],
+    ["overlap-deduplication", "affine-contraction"],
+    ["affine-original-transfer", "affine-contraction"],
+    ["affine-contraction", "component-invariants"],
+    ["component-invariants", "parent-factor-incidence"],
+    ["parent-factor-incidence", "strict-real-residence"],
+    ["strict-real-residence", "connected-parent-tag"],
+    ["connected-parent-tag", "regular-critical-frontier"],
+    ["regular-critical-frontier", "diagonal-nine"]
+  ],
+  "promotion_gate": "INDEPENDENTLY_REPLAYED_UNIVERSAL_DIAGONAL_CERTIFICATE_ONLY"
+}
+
