@@ -1,0 +1,150 @@
+{
+  "base_revision": "90134ab3501eb77d56bbbf126817b41f5d2e6736",
+  "base_tree": "348bad06165af070fab51fa74cdc727b898c8a02",
+  "classification": "EXACT_FAIL_CLOSED_PREFLIGHT_NULL",
+  "critical_enumeration_authorized": false,
+  "critical_systems_solved": 0,
+  "endpoint": "STRATIFIED_SYSTEM_FRONTIER_EXCEEDS_GATE_WITHOUT_COMPLETE_INCIDENCE_FILTER",
+  "exact_consequence": "ONE_WALL_SYSTEMS_FIT_THE_CEILING_BUT_THE_UNFILTERED_PAIR_STRATUM_FRONTIER_DOES_NOT",
+  "fixed_domain": {
+    "active_factor_classes": 3539,
+    "active_occurrences": 6167,
+    "family": "S12,37",
+    "parent_brackets": 70,
+    "parent_index": 2599,
+    "parent_sign_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+  },
+  "format": "d9-component-roadmap-projection-stratification-preflight-v1",
+  "next_action": "Construct a source-derived complete active multiwall-incidence filter and an exact projection-discriminant exclusion certificate before solving any critical system.",
+  "nonconsequences": [
+    "NO_PROOF_THAT_ALL_PAIR_STRATA_ARE_NONEMPTY",
+    "NO_PROOF_THAT_THE_2420_LOCAL_CANDIDATES_ARE_GLOBALLY_COMPLETE",
+    "NO_GENERIC_PROJECTION_SPECIALIZATION_CERTIFICATE",
+    "NO_FIXED_DOMAIN_ROADMAP",
+    "NO_FIXED_DOMAIN_CONNECTIVITY_OR_DISCONNECTION",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "polynomial_inventory": {
+    "active_factor_degree_census": {
+      "1": 2,
+      "2": 81,
+      "3": 735,
+      "4": 1819,
+      "5": 830,
+      "6": 72
+    },
+    "active_factor_max_degree": 6,
+    "active_factor_max_terms": 108,
+    "active_factor_term_count_census": {
+      "10": 48,
+      "108": 66,
+      "12": 75,
+      "14": 492,
+      "15": 1,
+      "16": 468,
+      "18": 406,
+      "2": 28,
+      "20": 268,
+      "24": 30,
+      "26": 64,
+      "32": 109,
+      "33": 7,
+      "35": 88,
+      "36": 73,
+      "38": 128,
+      "39": 79,
+      "4": 61,
+      "40": 175,
+      "44": 82,
+      "46": 47,
+      "47": 6,
+      "58": 50,
+      "6": 417,
+      "69": 54,
+      "8": 192,
+      "92": 1,
+      "96": 3,
+      "98": 21
+    },
+    "expanded_boundary_barrier_required": false,
+    "factored_boundary_barrier_factors": 70,
+    "factored_boundary_barrier_total_degree": 90,
+    "parent_degree_census": {
+      "0": 8,
+      "1": 36,
+      "2": 24,
+      "3": 2
+    },
+    "parent_term_count_census": {
+      "1": 17,
+      "2": 36,
+      "24": 1,
+      "6": 16
+    },
+    "variables": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ]
+  },
+  "projection": {
+    "coordinates": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ],
+    "equations_per_one_wall_system": 9,
+    "genericity_discriminant_certificate": "ABSENT",
+    "linear_form": "1*a+2*b+4*c+8*d+16*e+32*f+64*g+128*h+256*i",
+    "one_wall_system": "q=0 and lambda_0*d_j(q)-lambda_j*d_0(q)=0 for j=1..8",
+    "primitive_integer_vector": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "specialization_authorized": false
+  },
+  "scope": "EXACT_PREFLIGHT_NO_CRITICAL_SYSTEMS_SOLVED",
+  "source_pins": {
+    "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json": "6b22f3f8da550fa14ea13700ff632eb3db53c40316a0e1844a7762784cfaf811",
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py": "64e94f55d2495c365128523ae1d8d2a7a9b9fc38e260d9a113834b836083be97",
+    "ops/research-team/cycles/2026-09-01-d9-component-roadmap/OPENING_AUDIT.json": "e988fe50b070f1fd61653454098cc78b71394af7a00a8ee7a68b8c23ab20c573",
+    "ops/team/d9-component-roadmap-certificate/RESULT.json": "2f7ccb6071ebe9c72259a1b0b68f217a14225395d02390a3c79fbbfd68265df1",
+    "ops/team/diag9-s1237-normal-link-prover/ACTIVE_LITERAL_INVENTORY.json": "9a2b51925ac838aa2d583be0c98cab2612ce33540ba274045cf5097bc4076c42",
+    "ops/team/diag9-s1237-normal-link-prover/build_normal_link_no_go.py": "3d19b1b69cacc09ca4a4cd145ffded14f181574c3f22478ae75db850afd55d31"
+  },
+  "stratification_frontier": {
+    "known_local_candidates_complete_for_global_multiwalls": false,
+    "known_memoryless_local_candidates": 2420,
+    "naive_frontier_exceeds_ceiling": true,
+    "naive_one_and_two_wall_systems": 6264030,
+    "naive_pair_strata": 6260491,
+    "one_wall_systems": 3539,
+    "opening_system_ceiling": 100000,
+    "positive_dimensional_singular_strata_must_be_registered": true,
+    "required_filter": "SOURCE_DERIVED_COMPLETE_ACTIVE_MULTIWALL_INCIDENCE"
+  },
+  "theorem_ledger": "2/9",
+  "track_id": "d9-component-roadmap-constructor"
+}
