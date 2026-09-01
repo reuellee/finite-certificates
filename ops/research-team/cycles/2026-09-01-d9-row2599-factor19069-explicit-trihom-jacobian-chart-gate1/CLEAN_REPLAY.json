@@ -1,0 +1,37 @@
+{
+  "format": "d9-factor19069-explicit-trihom-jacobian-chart-clean-replay-v1",
+  "candidate_revision": "5428e6232a3303d0188b2fee022968ae830d3b03",
+  "candidate_tree": "b32c190d662559ef2f2f80538595cf411fc26b54",
+  "clone_mode": "git clone --no-hardlinks --no-local with the exact candidate branch checked at the pinned revision",
+  "replay_path": "E:\\Projects\\9DVL Research\\replays\\d9-factor19069-explicit-trihom-chart-gate1-5428e62",
+  "python": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "commands": [
+    "ai/omreal/verify_canonical_research_state_v6.py",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/verify_opening_audit.py",
+    "target-only ops/research-team/verify_cycle_protocol.py audit_cycle plus hostile_canaries",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/build_projective_chart_frontier.py --check",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/verify_projective_chart_frontier.py",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/verify_projective_chart_certificate.py",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/verify_explicit_trihom_jacobian_chart_falsifier.py",
+    "git diff --check",
+    "git status --porcelain=v1",
+    "os.stat st_nlink and os.path.samefile no-hardlink check"
+  ],
+  "results": {
+    "canonical_v6": "PASS_10_HOSTILE_MUTATIONS_LEDGER_2_OF_9",
+    "opening_audit": "PASS_26_HOSTILE_MUTATIONS",
+    "target_cycle_protocol": "PASS_4_OF_4_AUTHORIZED_WORK_ORDERS_AND_HOSTILE_CANARIES",
+    "constructor_build_check": "PASS_HASH_PINNED_FRONTIER_UNCHANGED",
+    "constructor_verifier": "PASS_41_HOSTILE_MUTATIONS_EXACT_64_CHART_TIMEOUT_FRONTIER",
+    "producer_independent_certificate": "PASS_46_HOSTILE_MUTATIONS_ACCEPT_TIMEOUT_ONLY",
+    "falsifier": "PASS_53_HOSTILE_MUTATIONS_ACCEPT_TIMEOUT_ONLY",
+    "git_diff_check": "PASS",
+    "worktree_clean": true,
+    "source_result_hardlink_count": 1,
+    "replay_result_hardlink_count": 1,
+    "source_and_replay_same_file_id": false,
+    "source_and_replay_result_bytes_equal": true
+  },
+  "inherited_repository_protocol_note": "The repository-wide protocol main retains a frozen earlier-cycle heading false-negative; this target cycle and its hostile canaries replay independently and pass without editing frozen evidence.",
+  "classification": "CLEAN_REPLAY_ACCEPTS_EXACT_64_CHART_BOUNDED_TIMEOUT_FAIL_CLOSED_FRONTIER"
+}
