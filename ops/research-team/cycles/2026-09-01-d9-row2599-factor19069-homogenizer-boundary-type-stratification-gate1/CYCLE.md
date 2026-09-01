@@ -24,7 +24,7 @@ branches in source-derived order, deepest type first.
 
 ## Mandatory opening strategy evaluation
 
-| Route | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independence cost | Resource / information | Stagnation risk | verdict |
+| Route | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independent verification | Resource / information | Stagnation risk | verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | exact seven-type homogenizer-boundary stratification, factored branch propagation, overlap-certified deduplication, affine pullback, and 70-parent-factor exclusion | high: attacks the pinned singular obstruction and boundary ambiguity | exact source, atlas, parent tags, and all seven types are pinned | finite seven-type frontier with explicit branch ledger | complete classification or an exact strict-parent affine survivor is terminal for this gate | high: begins with source factorization before any ideal decomposition | moderate: sparse restrictions and identities admit independent reconstruction | high under a bounded exact node ledger, including null/timeout | low: structurally different from the timed-out whole-chart attack | `PIVOT / SELECT` |
 | retry the undifferentiated 64-chart Groebner basis | low | exact but uncompressed | unchanged | predecessor timed out before its first prerequisite | none | high | poor | certain | `RETIRE` |
@@ -35,6 +35,9 @@ Opening verdict: **PIVOT** to exactly one selected target. The deepest type
 identity
 
 `F|_{u=v=w=0} = -h*(a*f-c*d)*(a*e*i-a*f*h-b*d*i+b*f*g+c*d*h-c*e*g)`.
+
+The alternatives are explicitly `CONTINUE`, `PIVOT`, `RETIRE`, and `STOP`;
+only `PIVOT` is selected, and exactly one target follows.
 
 ## Bounded target
 
@@ -127,4 +130,3 @@ replay; hostile mutations; clean no-hardlink replay; a frozen candidate
 revision/tree; a closing-referee verdict; exact ledger delta and
 nonconsequences; and exactly one successor if the ledger remains below `3/9`
 and no theorem-level counterexample intervenes.
-
