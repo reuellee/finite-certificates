@@ -187,9 +187,13 @@ def assert_current_state(ledger: dict) -> None:
 
 def assert_status_surface() -> None:
     text = STATUS_PATH.read_text(encoding="utf-8")
-    heading = "## Current canonical precedence after merged PR #45 and the D8 mask-6 cycle"
-    assert text.count(heading) == 1
-    assert text.index(heading) < text.index("## Result ledger")
+    headings = (
+        "## Current canonical precedence after merged PR #45 and the D8 mask-6 cycle",
+        "## Current canonical precedence after the D9 S12,37 normal-link cycle",
+    )
+    present = [heading for heading in headings if text.count(heading) == 1]
+    assert len(present) == 1
+    assert text.index(present[0]) < text.index("## Result ledger")
     required = (
         "1,715,980 / 130 = 915,740 / 77 + 800,240 / 53",
         "1,162,302",

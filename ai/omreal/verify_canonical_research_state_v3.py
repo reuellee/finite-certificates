@@ -26,6 +26,7 @@ OPERATING_SYSTEM = HERE / "RESEARCH_OPERATING_SYSTEM.md"
 README = ROOT / "README.md"
 
 PREDECESSOR_SHA256 = "508d5433d33eeb5be915e1749838d73541a8bd0055c74fac00bdb74ee28e930f"
+PREDECESSOR_VERIFIER_SHA256 = "aae7a0aa6d3eca6ffedbe82f25e3ffd3e0e1f6652faf420ee477d6703aeb7da1"
 BASE = "c55d896cc5c0370e993b793992a2f05d894e0095"
 BASE_TREE = "17299e84397aae158a2111cbe01b52f5be24bfd5"
 OPENING = "c6bd7a6afeda0888fc950710b941cac6f6c9bf95"
@@ -220,6 +221,10 @@ def validate(state, check_files=True):
 
     if check_files:
         require(sha256(PREDECESSOR) == PREDECESSOR_SHA256, "predecessor bytes")
+        require(
+            sha256(PREDECESSOR_VERIFIER) == PREDECESSOR_VERIFIER_SHA256,
+            "predecessor verifier bytes",
+        )
         require(git("rev-parse", f"{BASE}^{{tree}}") == BASE_TREE, "base tree")
         require(git("rev-parse", f"{OPENING}^{{tree}}") == OPENING_TREE, "opening tree")
         require(git("rev-parse", f"{REVIEWED}^{{tree}}") == REVIEWED_TREE, "reviewed tree")
