@@ -1,0 +1,72 @@
+{
+  "format": "d3-global-master-closure-theorem-leverage-closing-candidate-v1",
+  "cycle_id": "2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1",
+  "base_revision": "98ed8d36f08f13305d226d3d3770e71542a0a408",
+  "base_tree": "52a03a10b62e54a9ff5aa4e59dbbc2af9a69eeab",
+  "integrated_evidence_revision": "c05081979f76c4bc2d461a9c705952594dc0227c",
+  "integrated_evidence_tree": "780c52d57f364a77f42aa6a1802bacca1b955ef7",
+  "opening_ledger": "2/9",
+  "closing_ledger": "2/9",
+  "ledger_delta": "0/9",
+  "theorem_promotion": "NONE",
+  "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 3, 6],
+  "closing_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "minimum_acceptable_delta": "7_TO_AT_MOST_6_OR_UNKNOWN_TO_EXACT_N_WITH_K_OVER_N_AND_BOUNDED_NEXT_DECREASE",
+  "minimum_acceptable_delta_met": false,
+  "trajectory_classification": "STALLED",
+  "automatic_strategy_reset": {
+    "fired": true,
+    "triggers": [
+      "SIX_PREDECESSOR_ZERO_LEDGER_CYCLES_PLUS_THIS_ZERO_DELTA",
+      "AT_LEAST_TWO_CONSECUTIVE_UNKNOWN_GLOBAL_DENOMINATORS",
+      "SAME_LOAD_BEARING_GLOBAL_ATTACHMENT_BLOCKER_SURVIVED"
+    ],
+    "same_route_continue_allowed": false,
+    "action": "STOP"
+  },
+  "obligation_delta": [
+    {"id": "global_gluing", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "extension_labels", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "strict_closure", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "relative_infinity", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "middle_rank_replay", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "diag3_pair_hc1", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "diag3_triple_hc0", "opening": 1162302, "closing": 1162302, "delta": 0}
+  ],
+  "route_dispositions": [
+    {"route": "DIRECT_GLOBAL_MASTER_CLOSURE", "credible": true, "construction_eligible": false, "disposition": "STOP_UNTIL_GLOBAL_DENOMINATOR_AND_BOUNDED_CHAIN_EXIST"},
+    {"route": "COMPONENT_COSHEAF_STRUCTURAL_COMPRESSION", "credible": true, "construction_eligible": false, "disposition": "PIVOT_CANDIDATE_ONLY_AFTER_NEW_GLOBAL_DESCENT_EQUIVALENCE_THEOREM"},
+    {"route": "EXACT_COUNTEREXAMPLE_OR_RETIREMENT", "credible": true, "construction_eligible": false, "disposition": "GRAPH_ONLY_PAIR_H1_SHORTCUT_RETIRED__SURVIVING_ROUTES_NOT_RETIRED"},
+    {"route": "D9_B_UV_01_LOW_LEVERAGE_BASELINE", "credible": true, "construction_eligible": false, "disposition": "DEFERRED_NOT_DEFAULT"}
+  ],
+  "successor_bar": {
+    "theorem_level_quantifier_attachment_proved": false,
+    "certified_finite_exhaustive_progress_measure_proved": false,
+    "preregistered_bounded_decrease_proved": false,
+    "eligible_route_count": 0,
+    "selected_construction_target": "NONE",
+    "selected_successor": "NONE / STOP"
+  },
+  "construction_started": false,
+  "nonconsequences": [
+    "NO_GLOBAL_MASTER_CELL_UNIVERSE",
+    "NO_GLOBAL_GLUE_OR_LABEL_OR_STRICT_CLOSURE_CERTIFICATE",
+    "NO_TRUE_INFINITY_SUBCOMPLEX",
+    "NO_GLOBAL_MIDDLE_RANK_REPLAY",
+    "NO_DIAG3_PAIR_HC1_PROOF",
+    "NO_DIAG3_TRIPLE_HC0_PROOF",
+    "NO_D3_PROOF_OR_COUNTEREXAMPLE",
+    "NO_D9_CONTINUATION",
+    "NO_CONSTRUCTION_TARGET",
+    "NO_LEDGER_CHANGE"
+  ],
+  "evidence_pins": {
+    "ops/team/d3-global-closure-leverage-audit/RESULT.json": "b06bd7f35c140865d36c294478d6ccdbf546bbfa6d7ffb79e8cbfd56852daa01",
+    "ops/team/d3-global-closure-leverage-audit/verify_strategy_audit.py": "09059191cadd74c37d950232994171a089b89be7baf85f03aed1ae45b2f55ad8",
+    "ops/team/d3-global-closure-leverage-falsifier/RESULT.json": "c0a3d456780e6a76dafba9431c3b6be742bd007d410a2517e1128baa38b8b97c",
+    "ops/team/d3-global-closure-leverage-falsifier/verify_d3_global_closure_leverage_falsifier.py": "89fe9d8d5ac71d06bc8a260407e458cf71d380be74b7959e27fa5965d4a2b81b",
+    "ops/team/d3-global-closure-leverage-certificate/RESULT.json": "96fc2d1b6968a62e1559bdec63e56cb1ce557b8b4b0a371b2c199b633a290e5f",
+    "ops/team/d3-global-closure-leverage-certificate/verify_certificate.py": "acc362564771c2227e6f412374e3b84870ba455a46684a2a0540d4d0854d7a7a"
+  }
+}
+

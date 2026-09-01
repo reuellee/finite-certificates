@@ -1,0 +1,62 @@
+{
+  "format": "d3-global-master-closure-mid-cycle-convergence-check-v1",
+  "cycle_id": "2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1",
+  "base_revision": "98ed8d36f08f13305d226d3d3770e71542a0a408",
+  "base_tree": "52a03a10b62e54a9ff5aa4e59dbbc2af9a69eeab",
+  "trigger": "AUDIT_FALSIFIER_AND_CERTIFICATE_ROUTE_BAR_DECISION_COMPLETE",
+  "integrated_lane_head": "c05081979f76c4bc2d461a9c705952594dc0227c",
+  "integrated_lane_tree": "780c52d57f364a77f42aa6a1802bacca1b955ef7",
+  "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 3, 6],
+  "checkpoint_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 3, 6],
+  "minimum_acceptable_delta": "7_TO_AT_MOST_6_OR_UNKNOWN_TO_EXACT_N_WITH_K_OVER_N_AND_BOUNDED_NEXT_DECREASE",
+  "minimum_acceptable_delta_reachable_inside_remaining_ceiling": false,
+  "reason": "All three lanes reconstruct the exact local census, but none proves a global cell/closure denominator, exact global coverage, a closed load-bearing obligation, or a bounded theorem-attached strict-decrease chain.",
+  "lane_verdicts": [
+    {
+      "track_id": "d3-global-closure-leverage-audit",
+      "lane_commit": "f40c2b1024294e1d93235dce3ba8797c0471d512",
+      "lane_tree": "220c63b7447a346e09dbaf71e07593a6700d41ee",
+      "classification": "STALLED",
+      "eligible_targets": 0,
+      "hostile_mutations_rejected": 24
+    },
+    {
+      "track_id": "d3-global-closure-leverage-falsifier",
+      "lane_commit": "d772fb68b5fc48829905de6cf86a4bbcab7af337",
+      "portable_verifier_delta": "59d7871cbe2c17cdb9cd040ea7aae888e369b76c",
+      "lane_tree_after_delta": "aa4e1f9e16917e908fc645d65772076f37524525",
+      "classification": "STALLED_INFORMATIONAL",
+      "eligible_targets": 0,
+      "hostile_mutations_rejected": 34
+    },
+    {
+      "track_id": "d3-global-closure-leverage-certificate",
+      "lane_commit": "3f04f56e80e430c247e5528d6c24aab4d8d08c9b",
+      "lane_tree": "0932a0dfc2b5902e6a6d2b84fd62521b70646f50",
+      "classification": "STALLED_INFORMATIONAL",
+      "eligible_targets": 0,
+      "hostile_mutations_rejected": 42
+    }
+  ],
+  "agreed_facts": {
+    "opening_and_checkpoint_ledger": "2/9",
+    "open_load_bearing_obligations": 7,
+    "base_cells": 527533,
+    "local_lifted_cells": 16935101,
+    "algebraic_t_lifted_cells": 8390619,
+    "unresolved_local_v_fibers": 0,
+    "global_denominator": "UNKNOWN",
+    "global_coverage": "UNKNOWN",
+    "eligible_construction_targets": 0,
+    "hostile_mutations_rejected_total": 100
+  },
+  "checkpoint_decision": {
+    "stop_discovery": true,
+    "construction_started": false,
+    "resource_ceiling_enlarged": false,
+    "same_route_continue_allowed": false,
+    "automatic_reset_fired": true,
+    "required_close": "STALLED__NONE_STOP"
+  }
+}
+
