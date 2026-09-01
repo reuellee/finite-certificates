@@ -1,0 +1,95 @@
+{
+  "format": "d9-universal-cut-boundary-result-v1",
+  "track_id": "d9-universal-cut-boundary",
+  "role": "semialgebraic boundary and transport prover",
+  "base_revision": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "base_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "cycle_math_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "outcome": "inconclusive",
+  "endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
+  "summary": "A recursive-facet wall cannot itself separate the strict parent; factor 8552 gives an exact residual/parent boundary multiwall whose three lifts remain on genuine divisor 1237, while the ordinary strict-parent link is singular and no weighted strict coface attachment is certified.",
+  "opening_gate_passed": false,
+  "main_census_authorized": false,
+  "artifacts": [
+    {
+      "path": "ops/team/d9-universal-cut-boundary/BOUNDARY_TRANSPORT_COUNTEREXAMPLE.json",
+      "sha256": "d08a63a96229c66d8c71f6083d6827ceaf84d8115c52b0afa444d2475fb9f0c3"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-boundary/FINDINGS.md",
+      "sha256": "f51023d93871b82b9eb3e81b7d5ac1448a08eab94e817d82d1c50a46db77ea38"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-boundary/SOURCE_MANIFEST.json",
+      "sha256": "e0001a05d2e71dfaa69e89730bb8bf982ec5769099223e9fab0c79672d2c10e5"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-boundary/verify_boundary_transport_gate.py",
+      "sha256": "0a4f6ddb7ee5caa50c4d464b3c3ba572eca8c116ada1fa4695d4c6d6cd2bd5dc"
+    }
+  ],
+  "replay": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python ops/team/d9-universal-cut-boundary/verify_boundary_transport_gate.py",
+    "result": "exit 0; exact boundary canary and both predecessor normal-link replays pass; 13/13 hostile mutations rejected"
+  },
+  "coverage": {
+    "included": [
+      "strict-parent separator gate as a set-theoretic lemma",
+      "row-2599 S12,37 factor 8552 active orientation and multiplicity",
+      "64-chart identification of f=0 with genuine divisor 1237",
+      "one exact residual/parent boundary multiwall with negative, wall, and positive rational lifts",
+      "ordinary common-radial singular-link obstruction on support (3,1,15)"
+    ],
+    "excluded": [
+      "strict open-parent coface transport at factor 8552",
+      "weighted stabilization beyond the recursive facet",
+      "all other parents, families, factors, charts, and multiwalls",
+      "global separator or connectivity"
+    ]
+  },
+  "boundary_registry": [
+    {
+      "obligation": "strict parent residence",
+      "status": "FAILED_FOR_CANDIDATE_TRANSPORT",
+      "evidence": "all three exact lifts have bracket 1237 equal to zero"
+    },
+    {
+      "obligation": "active orientation and occurrence multiplicity",
+      "status": "CHECKED_FOR_HOSTILE_INSTANCE",
+      "evidence": "factor 8552 has q=d*i-e<0, one occurrence, and no stripped parent unit"
+    },
+    {
+      "obligation": "charts and genuine infinity",
+      "status": "CHECKED_FOR_PARENT_2599",
+      "evidence": "64-chart product-simplex atlas identifies f=0 with genuine divisor 1237"
+    },
+    {
+      "obligation": "singular and residual/parent multiwall incidence",
+      "status": "CHECKED_FOR_HOSTILE_INSTANCE",
+      "evidence": "q has exact signs negative/zero/positive in facet 1237 and opposite parent initial forms make the ordinary strict link empty"
+    },
+    {
+      "obligation": "universal parent/family transport",
+      "status": "UNCHECKED",
+      "evidence": "no all-parent/family boundary registry or weighted coface theorem is present"
+    }
+  ],
+  "canaries": {
+    "positive": "chart-89 open ray is strict until its exact endpoint on genuine divisor 1237",
+    "negative": "factor 8552 same-facet two-sided wall is rejected as a strict-open-parent separator",
+    "null": "weighted coface attachment with bracket 1237>0 is absent and explicitly remains open",
+    "hostile": "13/13 mutations of orientation, multiplicity, chart/divisor, boundary residence, and global-separator scope are rejected"
+  },
+  "source_accounting": {
+    "used": "hash-pinned universal cut cycle, active-sector theorem, row-2599 compactification and attachment artifacts, and source-reconstructible normal-link prover/falsifier certificates",
+    "unused_or_missing": "the unavailable historical referee commit ca730426 is not required; no all-parent compactification/transport registry exists in the pinned inputs"
+  },
+  "open_defects": [
+    "weighted blow-up retaining higher orders of parent brackets 1237 and 1367",
+    "exact strict coface with bracket 1237>0 and transported factor-8552 labels",
+    "universal chart/multiwall/infinity registry across every realizable parent and family"
+  ],
+  "next_action": "Perform the weighted (3,1,15) blow-up and either construct a named strict coface with all 70 parent brackets positive and q<0 transported, or prove that no such coface exists.",
+  "ledger_change_recommended": "none",
+  "semantic_sha256": "13ea9db1511450aef50f709a22a3ee7950833a415acaedb4d48856b13078166f"
+}

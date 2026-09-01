@@ -1,0 +1,35 @@
+{
+  "format": "d9-universal-cut-boundary-source-manifest-v1",
+  "track_id": "d9-universal-cut-boundary",
+  "working_base": {
+    "commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+    "tree": "84eaf80b30e1f366b8f959bd6435a217762636b3"
+  },
+  "cycle_math_base": {
+    "commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+    "tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a"
+  },
+  "sources": {
+    "ai/omreal/DIAG3_PAIR_GLOBAL_COMPACTIFICATION_ATLAS.md": "b98867997ce08d403b460e89d5a0e24c516fae1478be88410a3e0e925666bef2",
+    "ai/omreal/DIAG9_ACTIVE_SECTOR_THEOREM.md": "132a51b92a9813947e7ab7a43b52aafa6b2c789126e31cfc8a7f0773ee30b790",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_PARENT_BOUNDARY_ATTACHMENT_89_1237.json": "9d895a3786a16add585b8310613d98c08cada0be60a2a4cc830ea30a80a2bcbb",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md": "f97d88889e8a839485459e239dcb3a8ad9ea0e10ab061dcc97fbf30ab8a063b4",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/OPENING_AUDIT.json": "007fd5f83a9256c31f1851303fed00df7a7b5a83107333d5fc96b4e6477d7639",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml": "83a52dda924d536de0f61b7f82700391183e7e30665762c328fedd90e38fa472",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/verify_opening_audit.py": "cdbe1db6c8b5391af4da264ede1aaef6b5feefca8aa0a5351f55cda213daeee9",
+    "ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/CYCLE_REPORT.md": "f61ae3bdb58c5192ccf3dee40eccbc587ace860a7e526aeebc6613d6485dc5e2",
+    "ops/team/diag9-s1237-normal-link-falsifier/RESULT.json": "15ce5c17a174ed6a82173d24a8f72d04da5962bcea9e87cf3648adb21351d46b",
+    "ops/team/diag9-s1237-normal-link-falsifier/SOURCE_MANIFEST.json": "a1f8e5dc3b376ec71da77cf5c37daacb224ce0a6270f0639f866e1105b136109",
+    "ops/team/diag9-s1237-normal-link-falsifier/verify_normal_link_falsifier.py": "c1e4ec22d7c08a2ced61909701e352bec206f7eda2fbeef0fe0a13bdc1ab234f",
+    "ops/team/diag9-s1237-normal-link-prover/DIAG9_S1237_NORMAL_LINK_NO_GO.json": "8aa726c69b556f7c2d85f7f852cb88329da39dcd173294a7db7245f13e0d2d54",
+    "ops/team/diag9-s1237-normal-link-prover/verify_normal_link_no_go.py": "618e663b3fdb67b70a4d01f074a564a6564c59e6bea177185dc174cb94feb24b"
+  },
+  "transitive_source_accounting": {
+    "normal_link_falsifier_manifest_semantic_sha256": "882ce789f936f4efd6e4572b7680669aeb6e51aa41f81f206d0b75bd418aa439",
+    "normal_link_falsifier_manifest_validates_deep_sources": true,
+    "unavailable_historical_referee_commit_required": false,
+    "unavailable_historical_referee_commit": "ca730426cdd5847ae262ddc29c6f4ae98369eba3"
+  },
+  "semantic_sha256": "2d9a457f7c9219b9f7b113414a121eaddeee419a88b7a91c859ce95fb3000ffd"
+}
