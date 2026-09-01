@@ -21,7 +21,7 @@
     },
     {
       "path": "ops/team/d9-universal-cut-boundary/SOURCE_MANIFEST.json",
-      "sha256": "e0001a05d2e71dfaa69e89730bb8bf982ec5769099223e9fab0c79672d2c10e5"
+      "sha256": "7f84d1dfc0c514b3dfce0e66bbfa657e0c7b25dbf9c65f92485e0c734bb63a30"
     },
     {
       "path": "ops/team/d9-universal-cut-boundary/verify_boundary_transport_gate.py",
@@ -91,5 +91,5 @@
   ],
   "next_action": "Perform the weighted (3,1,15) blow-up and either construct a named strict coface with all 70 parent brackets positive and q<0 transported, or prove that no such coface exists.",
   "ledger_change_recommended": "none",
-  "semantic_sha256": "13ea9db1511450aef50f709a22a3ee7950833a415acaedb4d48856b13078166f"
+  "semantic_sha256": "4be27fdec6a0508f68ce3f860da35e3306ee4fb9aee1a48daba6e11aea64a18d"
 }
