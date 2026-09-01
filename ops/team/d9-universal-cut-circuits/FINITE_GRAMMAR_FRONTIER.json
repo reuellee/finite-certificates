@@ -1,0 +1,731 @@
+{
+  "base_revision": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "canonical_mathematical_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "first_unclassified_actual_composition": {
+    "colex_parent_label_degree": [
+      4,
+      4,
+      6,
+      4,
+      5,
+      5,
+      3,
+      5
+    ],
+    "missing_rule": "ACYCLIC_MULTI_BLOCK_TRANSFER_TO_ANOTHER_BAD_BLOCK_OR_PROPER_BOUNDARY_CELL",
+    "name": "ROW2599_THREE_BLOCK_PENCIL_RIGID_CORNER",
+    "nonconsequence": "NOT_A_GLOBAL_SEPARATOR_AND_NOT_A_9DVL_COUNTEREXAMPLE",
+    "signatures_and_supports": [
+      {
+        "signature": 68231279848521727,
+        "support": [
+          0,
+          19,
+          34,
+          37,
+          40
+        ]
+      },
+      {
+        "signature": 62614156573450111,
+        "support": [
+          0,
+          18,
+          47,
+          48,
+          53
+        ]
+      },
+      {
+        "signature": 40418078342512640,
+        "support": [
+          4,
+          5,
+          18,
+          20,
+          40
+        ]
+      }
+    ],
+    "status": "UNCLASSIFIED_GLOBAL_TRANSFER"
+  },
+  "format": "d9-universal-cut-circuit-frontier-v1",
+  "global_memory_verdict": "FINITE_IN_PRINCIPLE_VIA_COMPLETE_MASTER_CHAMBER_GRAPH_BUT_NOT_CONSTRUCTED_OR_BOUNDED_BY_10000_TYPES",
+  "local_grammar_verdict": "DISPROVED_WITHOUT_GLOBAL_CHAMBER_GLUE",
+  "local_memory_counterpair": {
+    "cut_configuration": {
+      "edges": [
+        {
+          "ends": [
+            "N0",
+            "P7"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N1",
+            "P0"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N2",
+            "P1"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N3",
+            "P2"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N4",
+            "P3"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N5",
+            "P4"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N6",
+            "P5"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N7",
+            "P6"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N0",
+            "N1"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N0",
+            "N3"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N1",
+            "N2"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N2",
+            "N3"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N4",
+            "N5"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N4",
+            "N7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N5",
+            "N6"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N6",
+            "N7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P0",
+            "P1"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P0",
+            "P3"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P1",
+            "P2"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P2",
+            "P3"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P4",
+            "P5"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P4",
+            "P7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P5",
+            "P6"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P6",
+            "P7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        }
+      ],
+      "multiwall_incidences": [],
+      "name": "TWO_POSITIVE_CYCLES",
+      "vertices": [
+        {
+          "active_sign": "-",
+          "id": "N0"
+        },
+        {
+          "active_sign": "-",
+          "id": "N1"
+        },
+        {
+          "active_sign": "-",
+          "id": "N2"
+        },
+        {
+          "active_sign": "-",
+          "id": "N3"
+        },
+        {
+          "active_sign": "-",
+          "id": "N4"
+        },
+        {
+          "active_sign": "-",
+          "id": "N5"
+        },
+        {
+          "active_sign": "-",
+          "id": "N6"
+        },
+        {
+          "active_sign": "-",
+          "id": "N7"
+        },
+        {
+          "active_sign": "+",
+          "id": "P0"
+        },
+        {
+          "active_sign": "+",
+          "id": "P1"
+        },
+        {
+          "active_sign": "+",
+          "id": "P2"
+        },
+        {
+          "active_sign": "+",
+          "id": "P3"
+        },
+        {
+          "active_sign": "+",
+          "id": "P4"
+        },
+        {
+          "active_sign": "+",
+          "id": "P5"
+        },
+        {
+          "active_sign": "+",
+          "id": "P6"
+        },
+        {
+          "active_sign": "+",
+          "id": "P7"
+        }
+      ]
+    },
+    "expected_global_behavior": {
+      "ONE_POSITIVE_CYCLE": {
+        "full_components": 1,
+        "negative_sector_components": 1,
+        "positive_sector_components": 1
+      },
+      "TWO_POSITIVE_CYCLES": {
+        "full_components": 1,
+        "negative_sector_components": 2,
+        "positive_sector_components": 2
+      }
+    },
+    "minimality_scope": {
+      "class": "SIMPLE_BIPARTITE_CUBIC_SIGNED_GRAPHS_WITH_ONE_ACTIVE_AND_TWO_INACTIVE_EDGES_AT_EVERY_VERTEX",
+      "minimum_vertices": 16,
+      "reason": "Each same-sign induced graph is simple bipartite 2-regular. A disconnected example needs at least two cycles of length at least four, hence eight vertices of that sign and sixteen vertices total under the active perfect matching."
+    },
+    "noncut_configuration": {
+      "edges": [
+        {
+          "ends": [
+            "N0",
+            "P7"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N1",
+            "P0"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N2",
+            "P1"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N3",
+            "P2"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N4",
+            "P3"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N5",
+            "P4"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N6",
+            "P5"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N7",
+            "P6"
+          ],
+          "kind": "ACTIVE_RESIDUAL_37",
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "ends": [
+            "N0",
+            "N1"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N0",
+            "N7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N1",
+            "N2"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N2",
+            "N3"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N3",
+            "N4"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N4",
+            "N5"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N5",
+            "N6"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "N6",
+            "N7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P0",
+            "P1"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P0",
+            "P7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P1",
+            "P2"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P2",
+            "P3"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P3",
+            "P4"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P4",
+            "P5"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P5",
+            "P6"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        },
+        {
+          "ends": [
+            "P6",
+            "P7"
+          ],
+          "kind": "INACTIVE_SAFE",
+          "transport": "IDENTITY"
+        }
+      ],
+      "multiwall_incidences": [],
+      "name": "ONE_POSITIVE_CYCLE",
+      "vertices": [
+        {
+          "active_sign": "-",
+          "id": "N0"
+        },
+        {
+          "active_sign": "-",
+          "id": "N1"
+        },
+        {
+          "active_sign": "-",
+          "id": "N2"
+        },
+        {
+          "active_sign": "-",
+          "id": "N3"
+        },
+        {
+          "active_sign": "-",
+          "id": "N4"
+        },
+        {
+          "active_sign": "-",
+          "id": "N5"
+        },
+        {
+          "active_sign": "-",
+          "id": "N6"
+        },
+        {
+          "active_sign": "-",
+          "id": "N7"
+        },
+        {
+          "active_sign": "+",
+          "id": "P0"
+        },
+        {
+          "active_sign": "+",
+          "id": "P1"
+        },
+        {
+          "active_sign": "+",
+          "id": "P2"
+        },
+        {
+          "active_sign": "+",
+          "id": "P3"
+        },
+        {
+          "active_sign": "+",
+          "id": "P4"
+        },
+        {
+          "active_sign": "+",
+          "id": "P5"
+        },
+        {
+          "active_sign": "+",
+          "id": "P6"
+        },
+        {
+          "active_sign": "+",
+          "id": "P7"
+        }
+      ]
+    },
+    "observation_contract": "RADIUS_ONE_TYPED_STARS_PLUS_LOCAL_CIRCUIT_COSPANS_PLUS_SIGNED_MULTIWALL_RECORDS_PLUS_EDGE_TRANSPORT",
+    "scope": "ABSTRACT_SIGNED_CHAMBER_GRAPH_NOT_UOM_4_8_REALIZATION",
+    "shared_local_observation": {
+      "active_circuit_template": {
+        "class": "ORDINARY",
+        "dead_side": "EMPTY",
+        "live_support_size": 5,
+        "wall_support_size": 4,
+        "wall_type": 37
+      },
+      "edge_records": [
+        {
+          "endpoint_signs": "+-",
+          "kind": "ACTIVE_RESIDUAL_37",
+          "multiplicity": 8,
+          "transport": "ORDINARY_5_TO_4_SPECIALIZATION"
+        },
+        {
+          "endpoint_signs": "++",
+          "kind": "INACTIVE_SAFE",
+          "multiplicity": 8,
+          "transport": "IDENTITY"
+        },
+        {
+          "endpoint_signs": "--",
+          "kind": "INACTIVE_SAFE",
+          "multiplicity": 8,
+          "transport": "IDENTITY"
+        }
+      ],
+      "multiwall_incidences": [],
+      "vertex_records": [
+        {
+          "active_sign": "+",
+          "incident_kinds": {
+            "ACTIVE_RESIDUAL_37": 1,
+            "INACTIVE_SAFE": 2
+          },
+          "multiplicity": 8
+        },
+        {
+          "active_sign": "-",
+          "incident_kinds": {
+            "ACTIVE_RESIDUAL_37": 1,
+            "INACTIVE_SAFE": 2
+          },
+          "multiplicity": 8
+        }
+      ]
+    },
+    "shared_local_observation_sha256": "0fcbe8aa1c4cc5540a4f3d5544526298f6bb8209298481788122bab509a1913a"
+  },
+  "required_global_memory": [
+    "CONNECTED_MASTER_CHAMBER_IDENTITIES",
+    "GLOBAL_ENDPOINT_INCIDENCE_FOR_EVERY_GENERIC_WALL_COMPONENT",
+    "COMPLETE_SIGNATURE_LABELS_OR_ACTIVE_SECTOR_SIGN_WORDS",
+    "ACYCLIC_MULTI_BLOCK_TRANSFER_POTENTIAL",
+    "PROPER_BOUNDARY_AND_INFINITY_ATTACHMENTS"
+  ],
+  "residual_partition": {
+    "localization": [
+      36,
+      39,
+      46,
+      47
+    ],
+    "ordinary": [
+      37,
+      38,
+      41,
+      42,
+      44,
+      48,
+      49,
+      50,
+      51
+    ]
+  },
+  "scope": {
+    "actual_uom_4_8_universal_cut_grammar": "UNRESOLVED",
+    "diagonal_9": "UNCHANGED_2_OF_9",
+    "exact_instance_bound_250000": "NOT_PROVED",
+    "finite_full_global_graph_grammar": "THEORETICALLY_SUFFICIENT_PER_PARENT",
+    "local_type_only_completeness": "DISPROVED",
+    "obstruction_type_bound_10000": "NOT_PROVED"
+  },
+  "semantic_sha256": "3f3a21f7ff1ee63aecc12e5e7466000d0516da5812708cb818f7712adecb0128",
+  "surviving_productions": [
+    {
+      "coverage": "ALL_13_TYPES",
+      "localization_supports": "4_TO_3_TO_EMPTY",
+      "name": "ONE_SIDED_SPECIALIZATION_COSPAN",
+      "ordinary_supports": "5_TO_4_TO_EMPTY",
+      "status": "PROVED"
+    },
+    {
+      "certified_auxiliary_counts": {
+        "36": 12,
+        "37": 14,
+        "38": 2,
+        "39": 12,
+        "41": 14,
+        "42": 2,
+        "44": 12,
+        "46": 12,
+        "47": 12,
+        "48": 16,
+        "49": 8,
+        "50": 3,
+        "51": 4
+      },
+      "certified_pair_count": 671,
+      "coverage": "EVERY_CHOSEN_GENERIC_OPPOSITE_SIDE_PAIR",
+      "localization_union_support_bound": 5,
+      "name": "OPPOSITE_PARTNER_ELIMINATION_INTERVAL",
+      "ordinary_union_support_bound": 6,
+      "persistent_support_candidate_count": 2420,
+      "status": "PROVED_CONDITIONAL"
+    },
+    {
+      "coverage": "ONE_GENERIC_WALL",
+      "name": "SAME_SIDE_CHOICE_SIMPLEX",
+      "status": "PROVED"
+    },
+    {
+      "coverage": "COMMON_NONEMPTY_SUPPORT_CARRIERS",
+      "name": "ALL_CODIMENSION_CONVEX_CARRIER_COHERENCE",
+      "status": "PROVED_CONDITIONAL"
+    }
+  ]
+}

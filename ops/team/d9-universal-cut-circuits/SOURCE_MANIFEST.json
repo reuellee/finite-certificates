@@ -1,0 +1,151 @@
+{
+  "format": "d9-universal-cut-circuit-source-manifest-v1",
+  "track_id": "d9-universal-cut-circuits",
+  "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "canonical_mathematical_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "canonical_mathematical_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+  "inputs": [
+    {
+      "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md",
+      "role": "cycle contract, universal quantifiers, opening stop rules",
+      "sha256": "f97d88889e8a839485459e239dcb3a8ad9ea0e10ab061dcc97fbf30ab8a063b4"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml",
+      "role": "owned track work order",
+      "sha256": "83a52dda924d536de0f61b7f82700391183e7e30665762c328fedd90e38fa472"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-01-d9-universal-cut/OPENING_AUDIT.json",
+      "role": "source pins and prohibited claims",
+      "sha256": "007fd5f83a9256c31f1851303fed00df7a7b5a83107333d5fc96b4e6477d7639"
+    },
+    {
+      "path": "ai/omreal/ATLAS_HELLY.md",
+      "role": "13-type derived-wall theorem and exact disconnected polynomial hostile model",
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0"
+    },
+    {
+      "path": "ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md",
+      "role": "complete master-chamber graph theorem and global-cut criterion",
+      "sha256": "8af233ced03055881572353d26d6f3a7d931649a9456fe7018cbc31202f4556e"
+    },
+    {
+      "path": "ai/omreal/DIAG9_ACTIVE_SECTOR_THEOREM.md",
+      "role": "active-factor contraction and component-union theorem",
+      "sha256": "132a51b92a9813947e7ab7a43b52aafa6b2c789126e31cfc8a7f0773ee30b790"
+    },
+    {
+      "path": "ai/omreal/DIAG9_SIGN_GEODESY_AUDIT.md",
+      "role": "142-factor first projection-closure no-go and first missing global axiom",
+      "sha256": "64896fa28a76f57344bd246f1546322e1361f6ac57f164ca6199c58938c30903"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_RESIDUAL_MUTATION_MAP_NO_GO.md",
+      "role": "one-sided specialization theorem and zero-face no-go",
+      "sha256": "2d1250c9b1d8d25a5bb4b634c71f1329d8270c2b37b7153a63b1c43f319f92ae"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_RESIDUAL_MUTATION_MAP_NO_GO.py",
+      "role": "exact replay of 13-type specialization frontier",
+      "sha256": "770ba8bf5ee9e98c55e85181794c4252c5d37d028e6d23b727b787a841be7cc6"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_RESIDUAL_ELIMINATION_CELLS.md",
+      "role": "opposite-partner interval carriers and same-side simplexes",
+      "sha256": "c4f83fa579698c50b1c430d4113deb8921d922468ba6fde2e3fec40b80cfc824"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_RESIDUAL_ELIMINATION_CELLS.py",
+      "role": "exact replay of 671 partner pairs and 2420 carrier supports",
+      "sha256": "1b36c81076dcefcbfe930a85d4e52640966928bc1ec340af1d35d8869d7e3a24"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_CODIM2_DIAMOND_AUDIT.md",
+      "role": "conditional common-carrier diamond theorem",
+      "sha256": "f2e7dcf99b580a4cf1bc05f5f194e8653ad7f2875f2712ca42b7df067f7073f5"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_CODIM2_DIAMOND_AUDIT.py",
+      "role": "exact row-2599 node replay",
+      "sha256": "566bdc27e3f5280102bb94e9a070e4a111adcccdd6fda000f8b9ec84703d2c35"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_ALL_CODIM_COHERENCE.md",
+      "role": "all-codimension acyclic-carrier theorem",
+      "sha256": "1ef8ce2a6f96c922e103ea3270230e5619490020af9eadf743ac237aaef7eb2f"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_WALL_STARS.md",
+      "role": "actual all-13 monochromatic examples and first rigid three-block composition",
+      "sha256": "6490bccfaf5844fee6c6aa76f8538c2dc5af904c24835dfed0098ae9f96c8b4f"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_WALL_STARS.py",
+      "role": "exact replay of monochromatic examples and rigid triple",
+      "sha256": "31f48a70c1a81d3583c01dcd5a9f30ef5cd4f2eb766ebdacdda3f8d26bfc4bb7"
+    },
+    {
+      "path": "ai/omreal/verify_derived_walls.py",
+      "role": "52-orbit and 13-residual-type classification producer",
+      "sha256": "a7d8ae49f83cc54e21d5107f72be5e8e36ad6890b8cab56cd9dfefcef9acfd59"
+    },
+    {
+      "path": "ai/omreal/verify_derived_wall_sides.py",
+      "role": "all-occurrence side identity verifier",
+      "sha256": "2083aabf1ecd6cba64dc17638d561bf8858a01df3a3f65575433600d38bc78de"
+    },
+    {
+      "path": "ai/omreal/verify_diag9_active_sector.py",
+      "role": "active-sector source reconstruction verifier",
+      "sha256": "8317442e095918748397fe302157212333fd908efadfa9c0ab6b5d175599dfd0"
+    },
+    {
+      "path": "ai/omreal/prototype_koszul_circuits.py",
+      "role": "colex derived-normal indexing used by the rigid triple",
+      "sha256": "5384b0c26a7762ce9957cf508dba32f15f82d0d25e06d07f94ce89831218fd79"
+    },
+    {
+      "path": "ai/omreal/four_chart_gate.py",
+      "role": "definition of the exact colex triple order",
+      "sha256": "4697201fb5d17b9f6bd9091c59b6fc7bae7f8f7f23bfe4fdd5e07afd796dc0cf"
+    }
+  ],
+  "executed_predecessor_replays": [
+    {
+      "command": "python ai/omreal/BLOCK_GORDAN_RESIDUAL_MUTATION_MAP_NO_GO.py",
+      "result": "PASS; 13 types split 9+4; zero-face no-go"
+    },
+    {
+      "command": "python ai/omreal/BLOCK_GORDAN_RESIDUAL_ELIMINATION_CELLS.py",
+      "result": "PASS; 671 opposite pairs; 2420 persistent supports"
+    },
+    {
+      "command": "python ai/omreal/BLOCK_GORDAN_CODIM2_DIAMOND_AUDIT.py",
+      "result": "PASS; base diamond; common-support carrier remains conditional"
+    },
+    {
+      "command": "python ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_WALL_STARS.py",
+      "result": "PASS; all-13 monochromatic examples; row-2599 rigid triple"
+    }
+  ],
+  "transitive_dependency_policy": "The immutable opening Git tree pins all transitive repository dependencies of the executed predecessor verifiers. Direct load-bearing sources are additionally content-hashed above.",
+  "source_discrepancies": [
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_RESIDUAL_ELIMINATION_CELLS.md",
+      "disposition": "NON_LOAD_BEARING_ARITHMETIC_TYPO",
+      "detail": "The thirteen displayed per-type auxiliary counts sum to 123, not the printed total 131. The exact verifier output and the row-wise counts give 671 unordered pairs and 2420 persistent-support candidates, so those load-bearing totals are unchanged."
+    }
+  ],
+  "unused_or_missing": [
+    {
+      "source": "historical referee object ca730426cdd5847ae262ddc29c6f4ae98369eba3",
+      "reason": "Unavailable and not used. The new graph certificate is source-derived and dependency-free."
+    },
+    {
+      "source": "complete D9 parent master roadmaps",
+      "reason": "They do not exist in the pinned tree; this is the precise missing global-memory input."
+    }
+  ]
+}
