@@ -1,0 +1,25 @@
+{
+  "format": "d9-factor19069-factored-barrier-clean-replay-v1",
+  "candidate_revision": "9a7e2a32b5a659372cbc435ae5404bc02141d37e",
+  "candidate_tree": "aa571b94aa1d9f281b032e3b362e370711d26916",
+  "clone_mode": "git clone --no-hardlinks --no-local followed by detached exact checkout",
+  "replay_path": "E:\\Projects\\9DVL Research\\replays\\d9-factor19069-factored-barrier-gate1-9a7e2a3",
+  "python": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "commands": [
+    "ai/omreal/verify_canonical_research_state_v6.py",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/verify_opening_audit.py",
+    "ops/team/d9-factor19069-factored-barrier-constructor/verify_factored_barrier_frontier.py",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py",
+    "ops/team/d9-factor19069-factored-barrier-certificate/verify_factored_barrier_certificate.py"
+  ],
+  "results": {
+    "canonical_v6": "PASS_10_HOSTILE_MUTATIONS",
+    "opening_audit": "PASS_13_HOSTILE_MUTATIONS",
+    "constructor": "PASS_BYTE_EXACT_REBUILD_19_HOSTILE_MUTATIONS",
+    "falsifier": "PASS_25_HOSTILE_MUTATIONS",
+    "producer_independent_certificate": "PASS_22_HOSTILE_MUTATIONS",
+    "git_diff_check": "PASS",
+    "worktree_clean": true
+  },
+  "classification": "CLEAN_REPLAY_ACCEPTS_EXACT_FACTORED_BARRIER_NULL_ENVELOPE"
+}
