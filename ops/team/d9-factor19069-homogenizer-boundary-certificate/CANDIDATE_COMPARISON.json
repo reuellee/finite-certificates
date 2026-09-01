@@ -1,0 +1,131 @@
+{
+  "accepted_candidate_scope": {
+    "accepted_affine_branch_count": 0,
+    "ambient_derivatives_compared": 84,
+    "chart_incidences_compared": 279,
+    "complete_seven_type_component_classification": false,
+    "deepest_ambient_children_compared": 2,
+    "deepest_factor_records_compared": 3,
+    "deepest_set_theoretic_seed_cover_size": 5,
+    "nondeepest_factor_records_certified": 0,
+    "normal_derivatives_compared": 12,
+    "overlap_representatives_quotiented": 0,
+    "residual_branch_id": "B-UV-01-unclassified-ambient-components",
+    "residual_branch_semantic_sha256": "2747fcc6923b44996bfe79c0d06d2f88169f9fedea465cdecaa3c104bcf6b8b5",
+    "restricted_sources_compared": 7,
+    "tangent_derivative_identities_compared": 72,
+    "u_v_linear_P3_degree": 1,
+    "u_v_linear_P3_dimension": 3,
+    "u_v_linear_P3_excluded_by": "H_22_1367",
+    "u_v_linear_P3_family_all_derivatives_zero": true,
+    "universal_diagonal_certificate": false
+  },
+  "candidate_pin_count": 3,
+  "candidate_revision": "25757510dd88e8b7bbe5668c89f93b2a46b264de",
+  "candidate_tree": "47395637cc10c2bd736530719b6e2f3cf57b1629",
+  "classification": "ACCEPT_FROZEN_CONSTRUCTOR_EXACT_PARTIAL_FRONTIER_FAIL_CLOSED_NULL",
+  "comparison_policy": {
+    "candidate_semantic_tags_validated_by_frozen_file_hash_and_cross_binding": true,
+    "constructor_acceptance_logic_imported": false,
+    "constructor_code_imported": false,
+    "exact_sparse_field_comparison": true,
+    "frozen_constructor_data_only": true,
+    "numerical_modular_or_sampled_inference_used": false
+  },
+  "constructor_frontier_semantic_sha256": "70d980c28c536dd10a679ac086939fadcf78722dd68839658062948c1e0dd5ec",
+  "constructor_frontier_sha256": "18b0f7bf939646b884f05dc55832b509a54574cf3c2498461839f3c906418a6d",
+  "constructor_manifest_semantic_sha256": "3ca47972a9458a8cb044f2da8a01f11e823d14d0344f9d092054a2cd9732d790",
+  "constructor_manifest_sha256": "0e39b510708b6792c02dfdc537290b10d9897fad7b4a7b5a2f26987ae5ff9083",
+  "constructor_result_sha256": "d7ad15fd2bc49b25334f836a34de2cc25d75a903902545ac354bded3a919db8b",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
+  "endpoint": "FIRST_SOURCE_PINNED_UNRESOLVED_TYPE_OR_BRANCH_CLASSIFICATION",
+  "format": "d9-factor19069-homogenizer-boundary-certificate-candidate-comparison-v1",
+  "independent_reconstruction_semantic_sha256": "593cd726eb8ea6afc2cf77275dc96c9bb4fc05eec94610b74ed21f0ef83a94d7",
+  "ledger_delta": "0/9",
+  "nonconsequences": [
+    "NO_COMPLETE_SEVEN_TYPE_BRANCH_CLASSIFICATION",
+    "NO_COMPLETE_CHARACTERISTIC_ZERO_COMPONENT_CENSUS",
+    "NO_UNSUPPORTED_RADICALITY_DEGREE_OR_MULTIPLICITY_CLAIM",
+    "NO_OVERLAP_DEDUPLICATION",
+    "NO_ACCEPTED_AFFINE_SINGULAR_BRANCH",
+    "NO_70_PARENT_FACTOR_CENSUS_FOR_AN_AFFINE_BRANCH",
+    "NO_STRICT_REAL_RESIDENCE_OR_CONNECTED_PARENT_TAG",
+    "NO_THEOREM_LEVEL_COUNTEREXAMPLE",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "semantic_sha256": "7ff47aa2fa7d8bbb8ed81088805bd6ae6a6c2b0ab543a6790e53b36d4e9eb3db",
+  "track_id": "d9-factor19069-homogenizer-boundary-certificate",
+  "type_comparisons": [
+    {
+      "ambient_derivatives_compared": 12,
+      "chart_incidences_compared": 27,
+      "nondeepest_factor_records_certified": 0,
+      "normal_derivatives_compared": 3,
+      "restricted_source_semantic_sha256": "10865f8e3eae230f578d7eac8db4440bead1355f7ce90a87b9955d7a24ef9757",
+      "restricted_source_term_count": 11,
+      "tangent_derivatives_compared": 9,
+      "type_id": "u_v_w"
+    },
+    {
+      "ambient_derivatives_compared": 12,
+      "chart_incidences_compared": 36,
+      "nondeepest_factor_records_certified": 0,
+      "normal_derivatives_compared": 2,
+      "restricted_source_semantic_sha256": "d13c95b7a6fb0fbefd889d1fab6c9c62e9b6a035c846e7d75263bcd36d470c16",
+      "restricted_source_term_count": 37,
+      "tangent_derivatives_compared": 10,
+      "type_id": "u_v"
+    },
+    {
+      "ambient_derivatives_compared": 12,
+      "chart_incidences_compared": 36,
+      "nondeepest_factor_records_certified": 0,
+      "normal_derivatives_compared": 2,
+      "restricted_source_semantic_sha256": "f0344747991b139fc04cf41bd4fac38f0df16194209a4e3dfb81bfdebd9c0ddb",
+      "restricted_source_term_count": 23,
+      "tangent_derivatives_compared": 10,
+      "type_id": "u_w"
+    },
+    {
+      "ambient_derivatives_compared": 12,
+      "chart_incidences_compared": 36,
+      "nondeepest_factor_records_certified": 0,
+      "normal_derivatives_compared": 2,
+      "restricted_source_semantic_sha256": "b396cbae2293564697d4078dc4580acf9b697b0aeaf8a4a1dcd0cee561b5b6b1",
+      "restricted_source_term_count": 23,
+      "tangent_derivatives_compared": 10,
+      "type_id": "v_w"
+    },
+    {
+      "ambient_derivatives_compared": 12,
+      "chart_incidences_compared": 48,
+      "nondeepest_factor_records_certified": 0,
+      "normal_derivatives_compared": 1,
+      "restricted_source_semantic_sha256": "f331be95876e08797dfed17e2328fa7fcfa501a8edbaa137c3252fcdee3c7b41",
+      "restricted_source_term_count": 64,
+      "tangent_derivatives_compared": 11,
+      "type_id": "u"
+    },
+    {
+      "ambient_derivatives_compared": 12,
+      "chart_incidences_compared": 48,
+      "nondeepest_factor_records_certified": 0,
+      "normal_derivatives_compared": 1,
+      "restricted_source_semantic_sha256": "222449be0b1b3ea84e1d77d12fd45a97f14601cf5f4cc627ecb38f6afb1c8dbb",
+      "restricted_source_term_count": 69,
+      "tangent_derivatives_compared": 11,
+      "type_id": "v"
+    },
+    {
+      "ambient_derivatives_compared": 12,
+      "chart_incidences_compared": 48,
+      "nondeepest_factor_records_certified": 0,
+      "normal_derivatives_compared": 1,
+      "restricted_source_semantic_sha256": "1f157c202082a9451991c4b9f64094d2c38b8d9aa7c5bb896d22775dd0f6e9ce",
+      "restricted_source_term_count": 47,
+      "tangent_derivatives_compared": 11,
+      "type_id": "w"
+    }
+  ]
+}
