@@ -1,0 +1,238 @@
+{
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1",
+  "format": "d9-factor19069-explicit-trihom-jacobian-chart-certificate-hostile-tests-v1",
+  "semantic_sha256": "da707dabe4a73e730410b0a6e81252ca8ed5a4cab820c532f71d1dfaafdf2557",
+  "tests": [
+    {
+      "marker": "frontier identity",
+      "name": "cycle identity drift",
+      "rejected": true
+    },
+    {
+      "marker": "frontier identity",
+      "name": "constructor track drift",
+      "rejected": true
+    },
+    {
+      "marker": "frontier base",
+      "name": "base revision drift",
+      "rejected": true
+    },
+    {
+      "marker": "frontier opening tree",
+      "name": "opening tree drift",
+      "rejected": true
+    },
+    {
+      "marker": "trihomogeneous exact sparse source",
+      "name": "trihomogeneous coefficient mutation",
+      "rejected": true
+    },
+    {
+      "marker": "trihomogeneous blocks",
+      "name": "trihomogeneous multidegree mutation",
+      "rejected": true
+    },
+    {
+      "marker": "dehomogenization equality",
+      "name": "dehomogenization overclaim mutation",
+      "rejected": true
+    },
+    {
+      "marker": "trihomogenization scope",
+      "name": "trihomogenization decomposition overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "atlas chart count",
+      "name": "chart omission",
+      "rejected": true
+    },
+    {
+      "marker": "atlas chart order",
+      "name": "chart order mutation",
+      "rejected": true
+    },
+    {
+      "marker": "chart pivots 0",
+      "name": "chart pivot mutation",
+      "rejected": true
+    },
+    {
+      "marker": "chart polynomial 0",
+      "name": "chart polynomial coefficient mutation",
+      "rejected": true
+    },
+    {
+      "marker": "chart polynomial 1",
+      "name": "chart polynomial term omission",
+      "rejected": true
+    },
+    {
+      "marker": "chart derivative polynomial 2:b",
+      "name": "free derivative coefficient mutation",
+      "rejected": true
+    },
+    {
+      "marker": "chart derivative count 3",
+      "name": "free derivative omission",
+      "rejected": true
+    },
+    {
+      "marker": "chart Jacobian count 4",
+      "name": "Jacobian generator count mutation",
+      "rejected": true
+    },
+    {
+      "marker": "Euler direct equality 5:0",
+      "name": "Euler direct specialization mutation",
+      "rejected": true
+    },
+    {
+      "marker": "Euler direct equality 6:1",
+      "name": "Euler reconstruction mutation",
+      "rejected": true
+    },
+    {
+      "marker": "Euler zero residual 7:2",
+      "name": "Euler nonzero residual",
+      "rejected": true
+    },
+    {
+      "marker": "Euler count 8",
+      "name": "Euler recovery count mutation",
+      "rejected": true
+    },
+    {
+      "marker": "Euler transfer claim 9",
+      "name": "full Jacobian transfer removal",
+      "rejected": true
+    },
+    {
+      "marker": "affine transfer chart_ideal_equals_original_affine_singular_ideal",
+      "name": "affine ideal equality removal",
+      "rejected": true
+    },
+    {
+      "marker": "atlas affine chart",
+      "name": "affine chart tag mutation",
+      "rejected": true
+    },
+    {
+      "marker": "boundary divisors 0",
+      "name": "boundary divisor omission",
+      "rejected": true
+    },
+    {
+      "marker": "boundary strata 0",
+      "name": "boundary stratum omission",
+      "rejected": true
+    },
+    {
+      "marker": "atlas boundary incidence count",
+      "name": "boundary incidence count mutation",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition strata retention",
+      "name": "boundary discard overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "chart overlaps 0",
+      "name": "overlap omission",
+      "rejected": true
+    },
+    {
+      "marker": "atlas directed overlap count",
+      "name": "directed overlap count mutation",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition fail closed",
+      "name": "complete decomposition overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition accepted count",
+      "name": "accepted component overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition accepted count",
+      "name": "resolved chart overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition strata retention",
+      "name": "embedded component discard",
+      "rejected": true
+    },
+    {
+      "marker": "contraction fail closed accepted_affine_component_count",
+      "name": "affine contraction overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "contraction order",
+      "name": "contraction order violation",
+      "rejected": true
+    },
+    {
+      "marker": "parent factor count",
+      "name": "parent factor record omission",
+      "rejected": true
+    },
+    {
+      "marker": "parent incidence fail closed",
+      "name": "component-parent test overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "no inverse discovery",
+      "name": "inverse-variable discovery route",
+      "rejected": true
+    },
+    {
+      "marker": "parent sign pending 0",
+      "name": "strict sign completion overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "preserved source tags",
+      "name": "preserved stratum discard",
+      "rejected": true
+    },
+    {
+      "marker": "endpoint accounting",
+      "name": "positive endpoint overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "endpoint accounting",
+      "name": "timeout endpoint removal",
+      "rejected": true
+    },
+    {
+      "marker": "resource scope numerical_or_modular_probe_used",
+      "name": "numerical inference route",
+      "rejected": true
+    },
+    {
+      "marker": "resource scope network_or_connector_used",
+      "name": "connector scope drift",
+      "rejected": true
+    },
+    {
+      "marker": "ledger unchanged",
+      "name": "ledger promotion",
+      "rejected": true
+    },
+    {
+      "marker": "ledger unchanged",
+      "name": "ledger state drift",
+      "rejected": true
+    }
+  ],
+  "track_id": "d9-factor19069-explicit-trihom-jacobian-chart-certificate"
+}
