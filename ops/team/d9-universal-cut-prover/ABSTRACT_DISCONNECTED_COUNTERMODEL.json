@@ -1,0 +1,42 @@
+{
+  "format": "d9-universal-cut-abstract-countermodel-v1",
+  "ambient": "R^9 with coordinates (x,y,z1,z2,z3,z4,z5,z6,z7)",
+  "polynomials": [
+    "q1 = y",
+    "q2 = (x^2-1)(x^2-4)-y",
+    "q3 = z1",
+    "q4 = z2",
+    "q5 = z3",
+    "q6 = z4",
+    "q7 = z5",
+    "q8 = z6",
+    "q9 = z7"
+  ],
+  "regions": "F_i = {q_i > 0}",
+  "exact_properties": {
+    "smooth_cooriented_walls": true,
+    "constant_nonzero_pivot_derivatives": [
+      "partial_y q1 = 1",
+      "partial_y q2 = -1",
+      "partial_zj q_(2+j) = 1"
+    ],
+    "proper_regions": true,
+    "pairwise_incomparable_regions": true,
+    "q1_q2_multiwalls": [
+      {"x": -2, "y": 0, "transverse_derivative": -12},
+      {"x": -1, "y": 0, "transverse_derivative": 6},
+      {"x": 1, "y": 0, "transverse_derivative": -6},
+      {"x": 2, "y": 0, "transverse_derivative": 12}
+    ]
+  },
+  "common_intersection": "{0 < y < (x^2-1)(x^2-4), z1>0,...,z7>0}",
+  "x_intervals": ["(-infinity,-2)", "(-1,1)", "(2,infinity)"],
+  "component_count": 3,
+  "component_proof": "The quartic has the four simple ordered roots -2,-1,1,2 and positive sign exactly on the three displayed intervals. On each interval, (x,t,z) -> (x, t*g(x), z) is a homeomorphism from interval x (0,1) x positive-orthant to the corresponding component.",
+  "infinity_profile": {
+    "unbounded_x_components": 2,
+    "bounded_x_components": 1,
+    "policy": "closures at projective infinity do not create paths in the open affine locus"
+  },
+  "scope": "This is an implication countermodel, not a residual-determinant realization inside a UOM(4,8) parent. It proves that the currently proved local wall hypotheses cannot be the missing D9-specific global discriminator."
+}

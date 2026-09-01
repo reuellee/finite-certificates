@@ -1,0 +1,92 @@
+{
+  "format": "d9-universal-cut-prover-result-v1",
+  "track_id": "d9-universal-cut-prover",
+  "target_id": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+  "role": "constructive prover",
+  "mathematics_base_revision": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "mathematics_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+  "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "outcome": "inconclusive",
+  "endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
+  "summary": "A complete compactified master stratification would reduce two feasible active-sector components to a finite inclusion-minimal active-wall edge cut, but the source does not provide that global coverage object; the first boundary recursion already introduces a type-36 attachment polynomial outside the parent-bracket and 26740-residual-factor catalogs.",
+  "strongest_established_statement": {
+    "classification": "deductive conditional reduction plus finite-exact coverage gap",
+    "theorem": "For every quantified D9 input, if a complete source-reconstructible compactified regular stratification with exact signed incidence and boundary tags exists, then every pair of distinct feasible active-sector components has a finite human-checkable inclusion-minimal active-wall edge-cut witness.",
+    "fatal_missing_hypothesis": "complete global compactified stratification/roadmap coverage with projection closure, chart gluing, recursive-facet attachments, and genuine-infinity tags",
+    "first_exact_gap": "For q36=a*f-c*d+c-f at parent facet a=[1346]=0, the elimination factor c*d-c+f is neither a normalized parent bracket nor one of the 26740 global residual factors.",
+    "abstract_countermodel_gate": "The model is formally out of the D9 source-realizable domain, but no proved global consequence of D9 source realizability excludes its exact three-component cut mechanism."
+  },
+  "artifacts": [
+    {
+      "path": "ops/team/d9-universal-cut-prover/ABSTRACT_DISCONNECTED_COUNTERMODEL.json",
+      "sha256": "a7565ee9d1d6a5f322977b78b43ea7dbcd6acef6306a0adc8317ddc836c3bc85"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-prover/CUT_REDUCTION_SCHEMA.json",
+      "sha256": "8300a2960d9a1f5fb81f110c18f0bed7c450299988261b3436121da8204da1e0"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-prover/FINDINGS.md",
+      "sha256": "00c7ed23b4bed3d361c484813e20d04cab1d027bc46e19165ea06b8c18d7a2fb"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-prover/SOURCE_MANIFEST.json",
+      "sha256": "c005af70cfd8637ee52e9f2fc0de433495d8f85986d341491019a84240804846"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-prover/verify_cut_reduction_gap.py",
+      "sha256": "ae53b134f8da38d46eacff0b726c878bf5372b2b5f7299d3c523ef522d8dff85"
+    }
+  ],
+  "replay": {
+    "primary_command": "PYTHONDONTWRITEBYTECODE=1 python ops/team/d9-universal-cut-prover/verify_cut_reduction_gap.py",
+    "primary_result": "exit 0; source pins, conditional schema, 72 incomparability witnesses, four transverse multiwalls, three components, the type-36/26740-factor absence check, and 5/5 hostile mutations pass",
+    "source_crosscheck_command": "PYTHONDONTWRITEBYTECODE=1 python ai/omreal/verify_diag9_sign_geodesy_audit.py --workers 7",
+    "source_crosscheck_result": "exit 0; exact 178-chart audit and first resultant layer replay; 142 new irreducibles with degree census 2:23, 3:71, 4:43, 5:5; explicit scope says no chamber coverage, sign-geodesy, partial cube, or D9",
+    "hostile_canary_commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python ops/team/diag9-s1237-normal-link-prover/verify_normal_link_no_go.py",
+      "PYTHONDONTWRITEBYTECODE=1 python ops/team/diag9-s1237-normal-link-falsifier/verify_normal_link_falsifier.py"
+    ],
+    "hostile_canary_result": "both exit 0; the common-radial no-go and factor-8552 recursive-facet wall remain local/boundary canaries only"
+  },
+  "coverage": {
+    "included": "all parent/family/component quantifiers at the conditional graph-reduction level; primitive-factor occurrence orientation; minimal edge-cut extraction; explicit multiwall, chart, recursive-facet, and genuine-infinity policies; exact first uncovered boundary factor; exact abstract countermodel",
+    "excluded": "construction or enumeration of a complete all-parent or one-parent master stratification, a bound on its cells/instances, complete projection closure, a separator census, UNSAT of obstruction cases, an exact D9 counterexample, and diagonal nine",
+    "obstruction_schema_record_types": 9,
+    "obstruction_type_ceiling_exceeded": false,
+    "exact_instances_processed": 0,
+    "reason_no_instances_processed": "The opening gate requires universal schema coverage before an obstruction census; coverage failed at the first recursive-facet generator gap."
+  },
+  "boundary_and_transport": {
+    "multiwalls": "A generic open-parent path avoids codimension-at-least-two strata, but complete regular refinement and chamber-germ incidence remain required for coverage.",
+    "charts": "Exact overlap and raw-to-primitive occurrence orientations are schema fields; the complete atlas certificate is missing.",
+    "recursive_facets": "Tagged and deleted from interior adjacency; type-36 c*d-c+f is the first uncovered attachment, and the factor-8552/1237 predecessor replays as a hostile canary.",
+    "genuine_infinity": "Tagged and deleted from interior adjacency; common infinity closure never supplies an open-parent path; no complete tagged compactification is present.",
+    "duplicates": "Grouped by primitive factor with every fixed-unit occurrence orientation and multiplicity retained."
+  },
+  "canaries": {
+    "positive": "The finite-graph minimal-edge-cut construction validates under an explicitly complete stratification hypothesis.",
+    "negative": "The type-36 facet factor c*d-c+f is exactly rejected as an existing parent bracket or residual factor.",
+    "null": "The three-component smooth-wall model is formally rejected as an actual D9 instance but retained as an implication countermodel to local-wall-only reasoning.",
+    "hostile": "False gate promotion, false coverage promotion, infinity gluing, recursive-facet omission, and changed component count are rejected 5/5; both S12,37 predecessor canaries replay."
+  },
+  "source_accounting": {
+    "used": "All files and SHA-256 digests in SOURCE_MANIFEST.json; opening and mathematics revisions are separately pinned.",
+    "unused_or_missing": "Historical referee Git object ca730426cdd5847ae262ddc29c6f4ae98369eba3 is unavailable and unused; no network or external compute was used."
+  },
+  "open_defects": [
+    "No complete source-reconstructible compactified regular stratification or master roadmap exists for any full parent cell.",
+    "Projection closure is not enumerated beyond the pinned first resultant layer and has no termination/size certificate under the opening ceiling.",
+    "No proved D9-specific global connected-sign-cell, residual sign-geodesy, COM/support-convexity, or equivalent theorem rejects the abstract disconnected model.",
+    "Chart overlaps, recursive boundary attachments, and genuine infinity have policies but no complete all-parent incidence manifest."
+  ],
+  "next_action": "Recursively generate and certify the complete type-36 parent-facet/chart/infinity projection frontier beginning with c*d-c+f; stop if it cannot close below 10000 types, otherwise use the resulting regular-stratum grammar as the first candidate global-coverage generator.",
+  "ledger_change_recommended": "none",
+  "theorem_ledger": {
+    "before": "2/9",
+    "after_recommended": "2/9",
+    "delta": 0
+  },
+  "authority": "No cycle-directory, ledger, canonical-state, GitHub, external-compute, or out-of-scope file write was made."
+}
