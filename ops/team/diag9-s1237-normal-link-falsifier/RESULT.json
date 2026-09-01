@@ -1,0 +1,116 @@
+{
+  "attack_matrix": [
+    {"attack": "identically-zero-on-face", "evidence": "q=d*i-e restricts identically to zero when d=e=0.", "status": "FATAL_DEFECT_FOUND"},
+    {"attack": "lowest-normal-form", "evidence": "q1=d/4-e has exact negative, zero, and positive directions.", "status": "FATAL_DEFECT_FOUND"},
+    {"attack": "parent-residence", "evidence": "All 70 signed parent brackets are exact; each lift has only 1237 zero.", "status": "PASSED_FOR_OBSTRUCTION"},
+    {"attack": "recursive-facet/coface", "evidence": "All three directions share the f=0 parent-link facet.", "status": "FATAL_DEFECT_FOUND"},
+    {"attack": "orientation", "evidence": "Independent circuit replay gives family orientation q<0.", "status": "PASSED_FOR_OBSTRUCTION"},
+    {"attack": "duplicate-occurrence", "evidence": "Factor 8552 has one occurrence and no stripped parent unit.", "status": "NOT_APPLICABLE_TO_WITNESS"},
+    {"attack": "higher-order-stabilization", "evidence": "The wall lift imposes e=d*i exactly; side lifts retain opposite exact signs at t=1/100.", "status": "EXACT_WALL_LIFTED"},
+    {"attack": "boundary-gluing", "evidence": "The result does not glue through the excluded open-parent boundary.", "status": "GUARDED"},
+    {"attack": "fake-infinity", "evidence": "No artificial box or point at infinity is introduced.", "status": "GUARDED"},
+    {"attack": "sample-promotion", "evidence": "Every displayed coefficient and lift is exact rational arithmetic.", "status": "GUARDED"},
+    {"attack": "collar/mincut/global proof", "evidence": "The endpoint is local to one recursive normal-link facet.", "status": "PROHIBITED_AND_NOT_RUN"}
+  ],
+  "canonical_math_base": "c55d896cc5c0370e993b793992a2f05d894e0095",
+  "classification": "finite exact obstruction",
+  "endpoint": "NORMAL_LINK_REDUCTION_NO_GO",
+  "factor": {
+    "aligned_signature_indices": [2],
+    "candidate_active_factor_count": 3539,
+    "certified_empty_factor_count": 8916,
+    "factor_id": 8552,
+    "family_allowed_orientation": -1,
+    "family_allowed_side": "d*i-e<0",
+    "occurrence_fourset": [4, 9, 23, 37],
+    "occurrence_index": 24140,
+    "occurrence_multiplicity": 1,
+    "polynomial": "d*i-e",
+    "primitive_polynomial_rows": [
+      [0, 0, 0, 0, 1, 0, 0, 0, 0, -1],
+      [0, 0, 0, 1, 0, 0, 0, 0, 1, 1]
+    ],
+    "stripped_parent_unit_indices": []
+  },
+  "format": "diag9-s1237-normal-link-falsifier-result-v1",
+  "ledger": {"change_recommended": "none", "closing": "2/9", "delta": 0, "opening": "2/9"},
+  "next_action": "Retire the tangential four-support reduction as stated; any successor must include recursive oriented normal-link walls before a collar or mincut target.",
+  "obstruction": {
+    "common_recursive_link_stratum": {
+      "identically_zero_parent_brackets": ["1237"],
+      "interpretation": "f=0 recursive parent-link facet"
+    },
+    "face_identically_zero_parent_brackets": 25,
+    "face_point": ["3/4", "0", "0", "0", "0", "0", "1/4", "2/3", "1/4"],
+    "lowest_normal_form": "q1=d/4-e",
+    "normal_coordinates": ["b", "c", "d", "e", "f", "delta_i"],
+    "parent_brackets_replayed": 70,
+    "parent_target_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701",
+    "rays": [
+      {
+        "exact_factor_value": "-40141/30250000",
+        "exact_lift_point": ["3/4", "13/5500", "1/500", "19/5500", "3/1375", "0", "1/4", "2/3", "1361/5500"],
+        "first_order_parent_zero_profile": ["1237"],
+        "lift_parameter": "1/100",
+        "lift_parent_zero_profile": ["1237"],
+        "lowest_residual_form": "-29/220",
+        "normal_direction": ["13/55", "1/5", "19/55", "12/55", "0", "-14/55"],
+        "parent_evaluation_sha256": "a48d64df4bd08e120832881d579599c2abf99c6c80928fe2470f7d2e98f8c197",
+        "projective_sum_first_five": "1",
+        "side": "minus",
+        "strictly_positive_parent_brackets": 69
+      },
+      {
+        "exact_factor_value": "0",
+        "exact_lift_point": ["3/4", "51/24700", "8/6175", "164/30875", "1245744/953265625", "0", "1/4", "2/3", "7596/30875"],
+        "first_order_parent_zero_profile": ["1237"],
+        "lift_parameter": "1/100",
+        "lift_parent_zero_profile": ["1237"],
+        "lowest_residual_form": "0",
+        "normal_direction": ["51/247", "32/247", "656/1235", "164/1235", "0", "-491/1235"],
+        "parent_evaluation_sha256": "07ceaac73224bafa545cd872e4366abbeb6a9840bbd78f81f9c08b715dbf7375",
+        "projective_sum_first_five": "1",
+        "side": "wall",
+        "strictly_positive_parent_brackets": 69
+      },
+      {
+        "exact_factor_value": "8/30625",
+        "exact_lift_point": ["3/4", "1/500", "1/875", "1/175", "1/875", "0", "1/4", "2/3", "43/175"],
+        "first_order_parent_zero_profile": ["1237"],
+        "lift_parameter": "1/100",
+        "lift_parent_zero_profile": ["1237"],
+        "lowest_residual_form": "1/35",
+        "normal_direction": ["1/5", "4/35", "4/7", "4/35", "0", "-3/7"],
+        "parent_evaluation_sha256": "543ab77bfc37fb4e62a0b0afd36990e13f601d0baab2aa16acd83d9af48e1798",
+        "projective_sum_first_five": "1",
+        "side": "plus",
+        "strictly_positive_parent_brackets": 69
+      }
+    ],
+    "support": [3, 1, 15],
+    "tangential_coordinates": {"a": "3/4", "g": "1/4", "h": "2/3", "i": "g"}
+  },
+  "opening_commit": "c6bd7a6afeda0888fc950710b941cac6f6c9bf95",
+  "opening_tree": "9c2dbe39a3ea0f36e9e9c8f845e6f72e98526421",
+  "outcome": "disproved",
+  "scope": {
+    "all_3539_normal_links": "NOT_ENUMERATED; stop rule fired at the first exact fatal obstruction.",
+    "collar_or_mincut": "NOT_CONSTRUCTED",
+    "global_d9_separator": "NOT_CLAIMED",
+    "included": "One exact active oriented factor, one support, one recursive parent-link facet, and an exact same-stratum two-sided wall.",
+    "other_support": "NOT_DECIDED",
+    "strict_open_parent_crossing": "NOT_CLAIMED; bracket 1237 remains zero on every displayed lift."
+  },
+  "semantic_sha256": "95631d5d6192e9ff86ab04a3bb065e849a4b592be24a752c1cade41d669cf666",
+  "source_manifest_semantic_sha256": "882ce789f936f4efd6e4572b7680669aeb6e51aa41f81f206d0b75bd418aa439",
+  "source_manifest_sha256": "a1f8e5dc3b376ec71da77cf5c37daacb224ce0a6270f0639f866e1105b136109",
+  "strength": {
+    "level_a_nonzero_boundary_normal_form": true,
+    "level_b_two_sided_wall_in_one_certified_link_stratum": true,
+    "level_c_strict_open_parent_crossing": false,
+    "proved_level": "b"
+  },
+  "summary": "Active factor 8552 creates an exact two-sided inward normal wall inside the common recursive parent-link facet 1237 on support (3,1,15).",
+  "target_id": "D9_S1237_4SUPPORT_NORMAL_LINK_GATE1",
+  "track_id": "diag9-s1237-normal-link-falsifier"
+}

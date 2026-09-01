@@ -1,0 +1,18 @@
+{
+  "expected": "ALL_REJECTED_BY_EXACT_REBUILD",
+  "format": "diag9-s1237-normal-link-prover-canaries-v1",
+  "mutations": [
+    "drop-active-literal",
+    "flip-allowed-primitive-sign",
+    "drop-labeled-occurrence",
+    "flip-unit-sign",
+    "merge-duplicate-orientation",
+    "omit-parent-bracket",
+    "omit-normal-direction",
+    "delete-gordan-parent-pair",
+    "flip-gordan-parent-orientation",
+    "claim-ordinary-stabilization-radius",
+    "promote-tangential-filter-to-collar",
+    "promote-ledger-to-3/9"
+  ]
+}

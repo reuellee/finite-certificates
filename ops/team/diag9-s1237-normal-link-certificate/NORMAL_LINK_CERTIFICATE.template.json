@@ -1,0 +1,57 @@
+{
+  "format": "diag9-s1237-oriented-normal-link-certificate-v1",
+  "target_id": "D9_S1237_4SUPPORT_NORMAL_LINK_GATE1",
+  "endpoint": "UNRESOLVED_NORMAL_LINK_STRATUM",
+  "scope": {
+    "parent_index": 2599,
+    "family": "S12,37",
+    "supports": [[3, 1, 15], [3, 3, 7]],
+    "ledger_before": "2/9",
+    "ledger_after": "2/9",
+    "projective_normal_dimension": 5
+  },
+  "source_binding": {
+    "source_revision": "c55d896cc5c0370e993b793992a2f05d894e0095",
+    "source_tree": "17299e84397aae158a2111cbe01b52f5be24bfd5",
+    "opening_commit": "c6bd7a6afeda0888fc950710b941cac6f6c9bf95",
+    "opening_tree": "9c2dbe39a3ea0f36e9e9c8f845e6f72e98526421",
+    "source_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "active_sector_semantic_sha256": "6de7ff2716b65853c04b9a08f44eb98ad8966e1f3525887ffafde0a3b805c154",
+    "literal_census_semantic_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "literal_class_count": 3539,
+    "active_occurrence_count": 5026
+  },
+  "artifacts": {
+    "literal_census": null,
+    "normal_form_inventory": null,
+    "recursive_strata": null,
+    "link_sectors": null,
+    "stabilization": null,
+    "obstruction": null,
+    "frontier": null
+  },
+  "claims": {
+    "sample_only": true,
+    "complete_recursive_strata": false,
+    "complete_parent_safe_projective_link": false,
+    "exact_stabilization": false,
+    "ledger_consequence": "NO_LEDGER_CHANGE",
+    "prohibited_consequences": [
+      "TANGENTIAL_FILTER_IS_A_COLLAR",
+      "BOUNDARY_FACES_GLUE_OPEN_X_COMPONENTS",
+      "SAMPLED_LINK_COVERAGE_IS_COMPLETE",
+      "GLOBAL_SEPARATOR_OR_ACTIVE_SECTOR_CONNECTIVITY",
+      "DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+      "THEOREM_LEDGER_PROMOTION"
+    ]
+  },
+  "semantic_digests": {
+    "literal_census": "0000000000000000000000000000000000000000000000000000000000000000",
+    "normal_forms": "0000000000000000000000000000000000000000000000000000000000000000",
+    "strata": "0000000000000000000000000000000000000000000000000000000000000000",
+    "sectors": "0000000000000000000000000000000000000000000000000000000000000000",
+    "stabilization": "0000000000000000000000000000000000000000000000000000000000000000",
+    "endpoint": "0000000000000000000000000000000000000000000000000000000000000000",
+    "certificate": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}

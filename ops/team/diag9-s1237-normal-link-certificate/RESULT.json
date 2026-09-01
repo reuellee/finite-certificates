@@ -1,0 +1,48 @@
+{
+  "format": "diag9-s1237-normal-link-certificate-engineering-result-v1",
+  "track_id": "diag9-s1237-normal-link-certificate",
+  "target_id": "D9_S1237_4SUPPORT_NORMAL_LINK_GATE1",
+  "opening_commit": "c6bd7a6afeda0888fc950710b941cac6f6c9bf95",
+  "opening_tree": "9c2dbe39a3ea0f36e9e9c8f845e6f72e98526421",
+  "outcome": "VERSIONED_FAIL_CLOSED_ENVELOPE_PRODUCER_PAYLOAD_ABSENT",
+  "mathematical_endpoint": null,
+  "literal_census": {
+    "class_count": 3539,
+    "active_occurrence_count": 5026,
+    "semantic_sha256": "a1b9d3d9da1e01df83621dc8f1c7959f86ae2e0d9bd3bc457124c561cbac245a",
+    "reconstruction": "INDEPENDENT_FROM_PINNED_DETERMINANT_AND_CIRCUIT_SOURCES"
+  },
+  "schema": {
+    "version": "diag9-s1237-oriented-normal-link-certificate-v1",
+    "endpoints": [
+      "COMPLETE_ORIENTED_NORMAL_LINK_GATE",
+      "NORMAL_LINK_REDUCTION_NO_GO",
+      "UNRESOLVED_NORMAL_LINK_STRATUM",
+      "HASH_PINNED_NORMAL_LINK_FRONTIER"
+    ],
+    "template_status": "INCOMPLETE_SAMPLE_ONLY_AND_REJECTED",
+    "accepted_v1_endpoints": [
+      "UNRESOLVED_NORMAL_LINK_STRATUM",
+      "HASH_PINNED_NORMAL_LINK_FRONTIER"
+    ],
+    "mathematical_endpoint_gate": "REQUIRES_MATERIALIZED_PRODUCER_METHOD_AND_VERSIONED_INDEPENDENT_ADAPTER",
+    "hostile_mutations_rejected": 11
+  },
+  "replay": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python ops/team/diag9-s1237-normal-link-certificate/verify_normal_link_certificate.py",
+    "expected": "source pins pass; 3539/5026 exact census passes; incomplete template rejects; 11/11 hostile mutations reject"
+  },
+  "producer_evidence_required": [
+    "exact 3539-record literal census",
+    "both six-axis compactified support charts",
+    "complete recursive strata and cofaces",
+    "all literal and parent lowest normal forms with pullback identities",
+    "complete link sectors with exact feasibility or Gordan labels",
+    "exact sectorwise stabilization domination",
+    "one endpoint-specific exact obstruction, frontier, or complete gate record",
+    "versioned exact partition/obstruction adapter for a mathematical endpoint"
+  ],
+  "scope": "certificate engineering only; no normal-link mathematical result, collar, topology, D9 decision, or theorem promotion",
+  "ledger_before": "2/9",
+  "ledger_after": "2/9"
+}
