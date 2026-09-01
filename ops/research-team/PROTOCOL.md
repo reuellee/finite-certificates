@@ -82,15 +82,20 @@ A mandatory retirement is triggered by an exact counterexample to a required
 intermediate claim.  Negative and null results must be preserved in the
 decision log so later cycles do not repeat them.
 
-## 5. Evidence and publication gates
+## 5. Evidence, storage, and publication gates
 
 Claim advancement requires every applicable artifact, replay, independence,
 coverage, transport, adversarial, repository, and ledger gate.  Missing
 artifacts, moved revisions, ambiguous scope, incomplete global coverage, or
 pending checks fail closed.
 
-The standing publication authorization to copy verbatim into every research
-work order and agent prompt is:
+Authorization is cycle-specific and must reflect the user's latest explicit
+instruction. Historical work orders are immutable evidence of the authority
+that applied when those cycles opened; a later change of authority does not
+rewrite them.
+
+The historical publication authorization preserved verbatim for cycles dated
+through 2026-08-31 is:
 
 > The user explicitly authorizes this 9DVL cycle to publish research code and
 > artifacts to the public GitHub repository `reuellee/finite-certificates`;
@@ -105,9 +110,25 @@ work order and agent prompt is:
 > Use the authenticated GitHub connector for GitHub publication operations;
 > do not substitute `gh`.
 
-Workers may prepare and push their assigned branches when the work order says
-so, but they may not merge or update the theorem ledger.  The coordinator owns
-PR creation, integration, merge decisions, and the durable checkpoint.
+The current storage and publication authorization to copy verbatim into every
+work order dated 2026-09-01 or later is:
+
+> The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+> canonical durable working branch and to mirror recovery checkpoints only to
+> the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+> not push commits, publish branches, open or update pull requests, trigger or
+> rerun CI, or merge until a new explicit user instruction.  Local scratch is
+> ephemeral and is not an authority.  This authorization does not permit
+> publishing secrets or private unrelated files, modifying any repository or
+> service, using paid external compute or paid APIs, changing repository
+> visibility or settings, force-pushing, deleting history or data, or taking
+> other irreversible actions without separate approval.
+
+For current cycles, workers may commit only to isolated local worktrees and
+their assigned surfaces.  They may not push, open or update pull requests,
+trigger CI, merge, or update the theorem ledger.  The coordinator owns local
+integration and durable Library checkpoints; Google Drive is a recovery
+mirror.  GitHub remains read-only until a new explicit user instruction.
 
 ## 6. Cycle report
 

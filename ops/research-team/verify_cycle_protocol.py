@@ -2,9 +2,11 @@
 """Fail-closed audit for research cycles governed by PROTOCOL.md.
 
 Cycles dated 2026-08-29 or later must carry an opening strategy comparison,
-a bounded target, a closing strategy gate, and the standing publication
-authorization in every work order.  The audit deliberately uses only the
-standard library so it can run in the repository-wide verifier suite.
+a bounded target, a closing strategy gate, and the authorization that applied
+when the cycle opened.  Historical GitHub-publication authority is preserved
+through 2026-08-31; cycles from 2026-09-01 onward are Library-first and keep
+GitHub read-only.  The audit deliberately uses only the standard library so it
+can run in the repository-wide verifier suite.
 """
 
 from __future__ import annotations
@@ -17,8 +19,16 @@ ROOT = Path(__file__).resolve().parents[2]
 TEAM_ROOT = ROOT / "ops" / "research-team"
 CYCLES_ROOT = TEAM_ROOT / "cycles"
 FIRST_GOVERNED_CYCLE = "2026-08-29-"
+CURRENT_AUTHORIZATION_START = "2026-09-01-"
 
-AUTHORIZATION_PHRASES = (
+LEGACY_AUTHORIZATION_MARKER = (
+    "The historical publication authorization preserved verbatim for cycles dated"
+)
+CURRENT_AUTHORIZATION_MARKER = (
+    "The current storage and publication authorization to copy verbatim into every"
+)
+
+LEGACY_AUTHORIZATION_PHRASES = (
     "public GitHub repository `reuellee/finite-certificates`",
     "run or rerun CI",
     "merge only after required checks pass",
@@ -27,6 +37,18 @@ AUTHORIZATION_PHRASES = (
     "paid external compute or paid APIs",
     "force-pushing",
     "do not substitute `gh`",
+)
+
+CURRENT_AUTHORIZATION_PHRASES = (
+    "ChatGPT Library as the canonical durable working branch",
+    "Google Drive `Projects/research-backups`",
+    "GitHub is read-only",
+    "do not push commits",
+    "trigger or rerun CI",
+    "until a new explicit user instruction",
+    "Local scratch is ephemeral and is not an authority",
+    "paid external compute or paid APIs",
+    "force-pushing",
 )
 
 CYCLE_PHRASES = (
@@ -77,8 +99,18 @@ def require_phrases(text: str, phrases: tuple[str, ...], label: str) -> None:
         raise AssertionError(f"{label}: missing required phrases {missing}")
 
 
-def protocol_authorization(text: str) -> str:
-    marker = "The standing publication authorization to copy verbatim"
+def require_phrases_collapsed(
+    text: str, phrases: tuple[str, ...], label: str
+) -> None:
+    collapsed = " ".join(text.split())
+    missing = [
+        phrase for phrase in phrases if " ".join(phrase.split()) not in collapsed
+    ]
+    if missing:
+        raise AssertionError(f"{label}: missing required phrases {missing}")
+
+
+def protocol_authorization(text: str, marker: str) -> str:
     marker_index = text.find(marker)
     if marker_index < 0:
         raise AssertionError("PROTOCOL.md: missing standing authorization marker")
@@ -110,7 +142,7 @@ def work_order_authorization(text: str, label: str) -> str:
     return "\n".join(quoted)
 
 
-def audit_cycle(cycle_dir: Path) -> tuple[int, int]:
+def audit_cycle(cycle_dir: Path, protocol_text: str) -> tuple[int, int]:
     cycle_path = cycle_dir / "CYCLE.md"
     work_orders_path = cycle_dir / "WORK_ORDERS.yaml"
     if not cycle_path.is_file() or not work_orders_path.is_file():
@@ -122,14 +154,30 @@ def audit_cycle(cycle_dir: Path) -> tuple[int, int]:
     work_orders_text = work_orders_path.read_text(encoding="utf-8")
     require_phrases(cycle_text, CYCLE_PHRASES, cycle_dir.name)
     require_phrases(work_orders_text, WORK_ORDER_PHRASES, cycle_dir.name)
-    require_phrases(work_orders_text, AUTHORIZATION_PHRASES, cycle_dir.name)
+    current_epoch = cycle_dir.name >= CURRENT_AUTHORIZATION_START
+    authorization_phrases = (
+        CURRENT_AUTHORIZATION_PHRASES
+        if current_epoch
+        else LEGACY_AUTHORIZATION_PHRASES
+    )
+    authorization_marker = (
+        CURRENT_AUTHORIZATION_MARKER
+        if current_epoch
+        else LEGACY_AUTHORIZATION_MARKER
+    )
+    if current_epoch:
+        require_phrases_collapsed(
+            work_orders_text, authorization_phrases, cycle_dir.name
+        )
+    else:
+        require_phrases(work_orders_text, authorization_phrases, cycle_dir.name)
     expected_authorization = protocol_authorization(
-        (TEAM_ROOT / "PROTOCOL.md").read_text(encoding="utf-8")
+        protocol_text, authorization_marker
     )
     actual_authorization = work_order_authorization(work_orders_text, cycle_dir.name)
     if actual_authorization != expected_authorization:
         raise AssertionError(
-            f"{cycle_dir.name}: standing publication authorization is not verbatim"
+            f"{cycle_dir.name}: epoch authorization is not verbatim"
         )
 
     base_match = re.search(r"^base_revision:\s*([0-9a-f]{40})$", work_orders_text, re.M)
@@ -164,17 +212,23 @@ def hostile_canaries() -> None:
             continue
         raise AssertionError(f"hostile cycle canary accepted removal of {phrase!r}")
 
-    good_authorization = "\n".join(AUTHORIZATION_PHRASES)
-    for phrase in AUTHORIZATION_PHRASES:
-        try:
-            require_phrases(
-                good_authorization.replace(phrase, "", 1),
-                AUTHORIZATION_PHRASES,
-                "hostile",
+    for phrases in (
+        LEGACY_AUTHORIZATION_PHRASES,
+        CURRENT_AUTHORIZATION_PHRASES,
+    ):
+        good_authorization = "\n".join(phrases)
+        for phrase in phrases:
+            try:
+                require_phrases(
+                    good_authorization.replace(phrase, "", 1),
+                    phrases,
+                    "hostile",
+                )
+            except AssertionError:
+                continue
+            raise AssertionError(
+                f"hostile authorization canary accepted removal of {phrase!r}"
             )
-        except AssertionError:
-            continue
-        raise AssertionError(f"hostile authorization canary accepted removal of {phrase!r}")
 
 
 def main() -> None:
@@ -187,8 +241,10 @@ def main() -> None:
         (
             "## 2. Mandatory pre-cycle strategy evaluation",
             "## 4. Mandatory post-cycle strategy evaluation",
-            "## 5. Evidence and publication gates",
+            "## 5. Evidence, storage, and publication gates",
             "two consecutive cycles",
+            LEGACY_AUTHORIZATION_MARKER,
+            CURRENT_AUTHORIZATION_MARKER,
         ),
         "PROTOCOL.md",
     )
@@ -203,11 +259,11 @@ def main() -> None:
 
     track_count = 0
     for cycle_dir in governed:
-        tracks, _ = audit_cycle(cycle_dir)
+        tracks, _ = audit_cycle(cycle_dir, protocol_text)
         track_count += tracks
     hostile_canaries()
     print(
-        "PASS research-cycle strategy/publication protocol:",
+        "PASS research-cycle strategy/storage/publication protocol:",
         len(governed),
         "cycles,",
         track_count,
