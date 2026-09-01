@@ -1,0 +1,29 @@
+{
+  "format": "theorem-reset-obligation-graph-v1",
+  "cycle_id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+  "ledger": {"opening": "2/9", "goal": "3/9", "proved": [1, 2]},
+  "nodes": [
+    {"id": "global_gluing", "class": "inconclusive", "load_bearing": true},
+    {"id": "extension_labels", "class": "inconclusive", "load_bearing": true, "requires": ["global_gluing"]},
+    {"id": "strict_closure", "class": "inconclusive", "load_bearing": true, "requires": ["global_gluing", "extension_labels"]},
+    {"id": "relative_infinity", "class": "inconclusive", "load_bearing": true, "requires": ["strict_closure"]},
+    {"id": "middle_rank_replay", "class": "inconclusive", "load_bearing": true, "requires": ["strict_closure", "relative_infinity"]},
+    {"id": "diag3_pair_hc1", "class": "inconclusive", "load_bearing": true, "requires": ["middle_rank_replay"]},
+    {"id": "triple_source_denominator", "class": "finite-exact", "load_bearing": false, "coverage": "77940147/79102449", "residual": 1162302},
+    {"id": "diag3_triple_hc0", "class": "inconclusive", "load_bearing": true, "requires": ["triple_source_denominator"]},
+    {"id": "joined_ten_clause_denominator", "class": "inconclusive", "load_bearing": false, "provisional_coverage": "3/10", "warning": "not an end-to-end D3 denominator"},
+    {"id": "joined_mixed_block_1_0_0", "class": "inconclusive", "load_bearing": false, "requires": ["joined_ten_clause_denominator", "relative_infinity"], "boundary_target": "primitive_flow_triangle_H2"},
+    {"id": "d9_simultaneous_insertion_global", "class": "inconclusive", "load_bearing": false, "parent_denominator": 2604, "known_split": "2546+58"},
+    {"id": "d9_sign_geodesy_global", "class": "inconclusive", "load_bearing": false, "warning": "178 samples and local roadmaps are not global coverage"},
+    {"id": "diag3", "class": "inconclusive", "load_bearing": false, "requires": ["diag3_pair_hc1", "diag3_triple_hc0"]}
+  ],
+  "forbidden_edges": [
+    ["local_boundary_exit", "diag3_triple_hc0"],
+    ["graph_only_pair_model", "diag3_pair_hc1"],
+    ["joined_local_flow_disk", "joined_mixed_block_1_0_0"],
+    ["triple_only_closure", "diag3"],
+    ["d9_178_sample_halfspace_closure", "d9_sign_geodesy_global"],
+    ["parent_reducibility", "d9_simultaneous_insertion_global"]
+  ]
+}
+

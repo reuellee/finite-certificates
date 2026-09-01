@@ -1,0 +1,110 @@
+cycle_id: 2026-09-01-theorem-reset-joined-gordan-tournament-gate1
+base_revision: 3689b5344dfed38468639d0e92b48f0b5fc4ebc8
+base_tree: ef14ccd9b844dae5e9b535310122251ca0e86bfb
+opening_ledger: 2/9
+selected_target: THEOREM_LEVEL_STRATEGY_RESET_TOURNAMENT
+selected_construction_count: 0
+storage_authorization: &storage_authorization |
+  The saved local Codex project E:\Projects\9DVL Research is the canonical
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs.
+  A native-filesystem recovery mirror to
+  G:\My Drive\Projects\research-backups is mandatory at close, byte-length and
+  SHA-256 verified. Never invoke the Google Drive connector and never block on
+  connector approval. GitHub is read-only: do not push, publish branches, open
+  or update pull requests, trigger or rerun CI, or merge. This authorization
+  does not permit secrets, unrelated private files, paid/external compute,
+  force-push, history deletion, or irreversible external action.
+strategy_gate:
+  opening_verdict: PIVOT_FRESH_THEOREM_TOURNAMENT
+  selected_count: 1
+  selected_construction_count: 0
+  compared_routes:
+    - D3_JOINED_GORDAN_TEN_CLAUSE_THEOREM
+    - D3_UNIFORM_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS
+    - D3_PAIR_GLOBAL_COMPRESSION_DESCENT_EQUIVALENCE
+    - EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT
+    - D9_SIMULTANEOUS_INSERTION_2604_PARENT_THEOREM
+    - D9_ACTUAL_ARRANGEMENT_SIGN_GEODESY
+  closing_required: true
+  stagnation_rule: >-
+    If no route proves theorem attachment, finite exhaustive end-to-end
+    coverage, and a bounded strict-decrease chain, close with zero successor;
+    same-route local refinement is prohibited.
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    named_invariant: diag3_pair_hc1_AND_diag3_triple_hc0
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 4
+    zero_ledger_streak: 7
+  triple_only_measure:
+    coverage: 77940147/79102449
+    residual: 1162302
+    semantic_sha256: a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4
+    promotes_d3_if_closed: false
+  joined_clause_measure:
+    provisional_coverage: 3/10
+    independent_rebaseline_required: true
+    end_to_end_d3_denominator: false
+  convergence_hypothesis: >-
+    A globally attached joined-Gordan ten-clause theorem or uniform all-residual
+    parent-boundary theorem may reduce proof distance under a bounded chain.
+  minimum_acceptable_delta: >-
+    Close one of seven load-bearing obligations, or strictly reduce a certified
+    exhaustive globally attached residual with a bounded next decrease; joined
+    progress additionally requires an independently proved exhaustive ten-clause
+    denominator and at least one new universal clause.
+  mid_cycle_checkpoint: >-
+    At the first complete prover, falsifier, and verifier handoffs or earlier
+    negative/null result; stop without resource enlargement if unreachable.
+  closing_classification_required: true
+  automatic_pivot_rule: >-
+    Opening streaks 4 and 7 prohibit same-route refinement; nondecrease requires
+    PIVOT or STOP and zero successor construction.
+handoff_contract: &handoff_contract |
+  Positive: preserve a proved globally quantified theorem, exact denominator
+  and coverage, bounded strict-decrease chain, and replay. Negative: preserve
+  an exact counterexample or no-go and name only the retired lemma. Null:
+  preserve the first missing attachment or denominator and reject successors.
+  Timeout: preserve pins and partial decisions, stop, and do not enlarge bounds.
+work_orders:
+  - track_id: theorem-reset-prover-strategy
+    role: prover-strategy
+    surface: ops/team/theorem-reset-prover-strategy
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: 50 wall-minutes, 2 CPU-hours, 8 GiB, read-only theorem sources plus assigned evidence surface
+    stop_rule: Stop at the midpoint if no globally attached theorem-distance decrease remains reachable.
+    prohibited_scope: No construction, local refinement, ledger edit, network, connector, or use of artificial boundary.
+    worker_restrictions: Own only the assigned surface; do not edit cycle files, import falsifier/referee acceptance, push, merge, or select a successor.
+  - track_id: theorem-reset-falsifier
+    role: falsifier
+    surface: ops/team/theorem-reset-falsifier
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, 8 GiB, at least 12 hostile checks and one exact mixed-block canary attempt
+    stop_rule: Stop after exact retirement or after the first complete attachment/denominator rejection is pinned.
+    prohibited_scope: No construction, sampled promotion, ledger edit, network, connector, or producer acceptance import.
+    worker_restrictions: Own only the assigned surface; do not edit cycle files, push, merge, or select a successor.
+  - track_id: theorem-reset-independent-verifier
+    role: independent-verifier
+    surface: ops/team/theorem-reset-independent-verifier
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: 50 wall-minutes, 2 CPU-hours, 8 GiB, at least 12 hostile checks and independent source reconstruction
+    stop_rule: Fail closed on pin drift, false clause credit, false global attachment, denominator mismatch, or successor-bar mismatch.
+    prohibited_scope: Do not import prover or falsifier code; no construction, ledger edit, network, or connector.
+    worker_restrictions: Own only the assigned surface; do not edit cycle files, push, merge, or select a successor.
+  - track_id: theorem-reset-closing-referee
+    role: closing-referee
+    surface: ops/team/theorem-reset-closing-referee
+    storage_authorization: *storage_authorization
+    handoff_contract: *handoff_contract
+    resource_ceiling: 45 wall-minutes, 1 CPU-hour, 8 GiB, frozen-head clean replay and at least 12 hostile checks
+    stop_rule: Reject moved head, missing midpoint, false vector decrease, false ledger delta, non-independent evidence, or unjustified winner/successor.
+    prohibited_scope: No mutable-head repair, discovery, construction, ledger promotion, network, or connector.
+    worker_restrictions: Review only the frozen integrated candidate and own only the assigned surface.
+
