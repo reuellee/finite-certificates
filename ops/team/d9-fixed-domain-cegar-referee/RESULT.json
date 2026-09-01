@@ -1,0 +1,31 @@
+{
+  "format": "d9-fixed-domain-cegar-referee-result-v1",
+  "track_id": "d9-fixed-domain-cegar-referee",
+  "reviewed_revision": "55d284e05ab506dc2789045b13f10c3a13afb3ad",
+  "reviewed_tree": "5de3d0b4bda85a2a778e4e9c5d7aef040c41d155",
+  "verdict": "ACCEPT",
+  "accepted_endpoint": "COMMITTED_CEGAR_SEED_FRONTIER_EXACTLY_REPAIRED",
+  "accepted_classification": "EXACT_NULL_NO_D9_COUNTEREXAMPLE",
+  "gates": {
+    "frozen_source_pins": true,
+    "opening_tournament": true,
+    "theorem_domain_antichains": true,
+    "exact_path_repairs": true,
+    "producer_independent_replay": true,
+    "hostile_mutations": true,
+    "ledger_scope": true,
+    "anti_stagnation": true
+  },
+  "closing_hostile_mutations": {
+    "rejected": 8,
+    "total": 8
+  },
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_FIXED_DOMAIN_GENERATOR",
+  "pivot_reason": "Both committed exact CEGAR seeds are repaired by exact rational paths, while the complete fixed-domain candidate generator and compactified component coverage remain absent.",
+  "precise_successor": "D9_ROW2599_FACTOR19069_PROJECTION_FREE_ACTIVE_MARGIN_COMPONENT_GATE1: compute a complete parent-resident component sample for the factor-19069 wall over the entire strict row-2599 parent component, retain all 70 parent-sign path tags and true-boundary strata, and classify every component by attachment or nonattachment to the fixed 40-edge skeleton.",
+  "github_write": false
+}
