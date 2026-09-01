@@ -1,0 +1,57 @@
+cycle_id: 2026-09-01-d9-fixed-domain-cegar-gate1
+base_revision: a5990bff953432a49cfa186f78e25efdb7df280b
+base_tree: 96e75f55512f6abbc09749509a45b63adebfa456
+opening_ledger: 2/9
+selected_target: D9_FIXED_DOMAIN_COUNTEREXAMPLE_CEGAR_GATE1
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_EXACT_FIXED_DOMAIN_COUNTEREXAMPLE_CEGAR
+  closing_required: true
+  stagnation_rule: >-
+    If both committed seeds are exactly path-repaired and no complete candidate
+    generator is supplied, retire sampled-separator CEGAR and pivot to the
+    projection-free adaptive component decomposition with complete
+    parent-residence memory.
+work_orders:
+  - track_id: d9-fixed-domain-cegar-constructor
+    role: constructive-prover
+    surface: ops/team/d9-fixed-domain-cegar-constructor
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, 8 GiB, two exact seeds
+    stop_rule: Stop at source drift, failed exact replay, undeclared seed, or ceiling.
+    prohibited_scope: No global counterexample absence, connectivity theorem, projection, quotient, or ledger promotion.
+    worker_restrictions: Commit only assigned local surface; do not push, merge, or alter canonical ledger.
+  - track_id: d9-fixed-domain-cegar-falsifier
+    role: falsifier
+    surface: ops/team/d9-fixed-domain-cegar-falsifier
+    publication_authorization: *publication_authorization
+    resource_ceiling: 30 wall-minutes, 1 CPU-hour, 8 GiB, two path attacks
+    stop_rule: Stop at the first exact counterexample-claim rejection or unclassified seed.
+    prohibited_scope: No inference from sampled separation and no producer acceptance logic.
+    worker_restrictions: Commit only assigned local surface; do not push, merge, or alter canonical ledger.
+  - track_id: d9-fixed-domain-cegar-certificate
+    role: independent-verifier
+    surface: ops/team/d9-fixed-domain-cegar-certificate
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, 8 GiB, twelve hostile mutations
+    stop_rule: Fail closed on any pin, quantifier, path, scope, mutation, or ledger mismatch.
+    prohibited_scope: Do not import the new producer and do not certify unenumerated families.
+    worker_restrictions: Commit only assigned local surface; do not push, merge, or alter canonical ledger.
+  - track_id: d9-fixed-domain-cegar-referee
+    role: closing-referee
+    surface: ops/team/d9-fixed-domain-cegar-referee
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, 8 GiB, frozen-head replay
+    stop_rule: Reject moved head, incomplete seed disposition, false ledger delta, or missing successor.
+    prohibited_scope: No review of mutable evidence and no GitHub write.
+    worker_restrictions: Review the frozen candidate only; do not produce discovery evidence or promote the ledger.
