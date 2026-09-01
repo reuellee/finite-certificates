@@ -1,0 +1,42 @@
+{
+  "base_revision": "b71c139a3c64cde3442252f8f3d46f2d893978c5",
+  "base_tree": "7a9da9f02369831bd34bc22f39a0bbad57725522",
+  "drive_connector_used": false,
+  "format": "d9-factor19069-factored-barrier-falsifier-source-manifest-v1",
+  "github_write": false,
+  "opening_revision": "d12dbaf7cfb7312d9d603c8938dd8ad6ce62166e",
+  "opening_tree": "221e574fd705aff50f667ebc72345a36afc4f5d7",
+  "reviewed_artifact_sha256": {
+    "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca",
+    "ops/team/d9-factor19069-factored-barrier-constructor/RESULT.json": "5d9357346077562824c4564829260d49b6fa62ceea38b7ae3f7fe5543dee029a",
+    "ops/team/d9-factor19069-factored-barrier-constructor/SOURCE_MANIFEST.json": "17bc476bfc78d629353f4fe73d24495de40de5a926aa5e8df4ed524131b3d303"
+  },
+  "reviewed_revision": "2878addcc5d9c863ed5b2d518552b0298f08a64c",
+  "reviewed_tree": "3b6b3e563ca85782d76acfa0e3a48fc8aa031ec6",
+  "semantic_sha256": "c6bbbf78f12f5740cd8966f0d530007abe13e68826ae5fd62abdddd94ca1e2ce",
+  "source_count": 21,
+  "source_sha256": {
+    "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "ai/omreal/DIAG9_GRAPH_verify_row2599_slice.py": "8f550b570fa2a1352e5f7e5f251125df3af9ec87587b3da589fc25d46c15dedb",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
+    "ai/omreal/diag3_pair_parent_source_transition_core.py": "966a3e87b90affd984755bd4896db67aa7ae9b36f9fed97381b8f2d9f73a8dd1",
+    "ai/omreal/verify_diag3_pair_fullsupport_safe_segment_walls.py": "ea45d9541543207447fa3a8f3066dbc7716da68e46a90447283f0007322a3d1f",
+    "ai/omreal/verify_diag3_pair_global_face_bernstein_atlas.py": "b54a74ba9ef4d1065728541f54c2cdc744638e2fa3e84d67da29a2cbe3ca3fb0",
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py": "64e94f55d2495c365128523ae1d8d2a7a9b9fc38e260d9a113834b836083be97",
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-active-margin-gate1/CYCLE_REPORT.md": "0f57afe7ff32ec4c56766907caae73cab3fa788762e7086a000b689ae3d39203",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/CYCLE.md": "32f38adfb370a4c82b33640863ac41674707cec2254cd0a80d0aa2f46829585f",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/OPENING_AUDIT.json": "fa6338b7a42fa333e32c27916dbea0f1c9f50f0eeb4cbbe016cf04f59782cace",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/WORK_ORDERS.yaml": "7feb9e3ee717dd68f224886ce2e4fa1be78e869a9ee2ee708171988ac9eec6e0",
+    "ops/team/d9-factor19069-active-margin-certificate/RESULT.json": "b853e56aa9ffcb5e37126169652f49fc8ff735e53cbb1ac86d96d53fcdf8ebcc",
+    "ops/team/d9-factor19069-active-margin-constructor/ACTIVE_MARGIN_FRONTIER.json": "0875dd345a307bf9c4e33287cc13df1e6944c902d8a84c419a35cf9ddccbd243",
+    "ops/team/d9-factor19069-active-margin-referee/RESULT.json": "29993b134fdebfbc3ae88f1cf9e2603de15990bb048ca38be3ea9b8bd3158dca"
+  },
+  "track_id": "d9-factor19069-factored-barrier-falsifier"
+}
