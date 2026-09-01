@@ -1,0 +1,45 @@
+{
+  "accepted_scope": {
+    "affine_pullback_classifications_complete": false,
+    "all_70_parent_factor_classifications_complete": false,
+    "ambient_component_decomposition_complete": false,
+    "ambient_stratum_distinction": true,
+    "boundary_type_chart_incidences": 279,
+    "branch_overlap_deduplication_performed": false,
+    "connected_parent_tags_complete": false,
+    "deepest_11_term_factorization": true,
+    "deepest_parent_factor_sparse_matches": 3,
+    "deepest_set_theoretic_stratum_singular_cover": true,
+    "directed_overlap_records": 4032,
+    "explicit_overlap_atlas_replayed": true,
+    "remaining_six_type_parent_factor_matches": 0,
+    "restricted_normal_derivatives": 12,
+    "seven_restricted_sources": true,
+    "source_terms": 108,
+    "standard_charts": 64,
+    "strict_real_residence_complete": false,
+    "tangent_derivative_transfer_identities": 72,
+    "trihomogeneous_multidegree": [
+      2,
+      2,
+      2
+    ],
+    "universal_diagonal_certificate": false
+  },
+  "canonical_boundary_representation_semantic_sha256": "60cbac62bfc0684c7ee5ab8cef7773d33779683628a1fe55d75427a3ff01bd35",
+  "classification": "ACCEPT_EXACT_SEVEN_TYPE_RECONSTRUCTION_FAIL_CLOSED_NULL_FRONTIER",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
+  "endpoint_accounting": {
+    "first_unresolved_branch": "UVW-SING-H-MINOR:AMBIENT_NORMAL_FILTER_COMPONENT_DECOMPOSITION",
+    "negative": false,
+    "null": true,
+    "positive": false,
+    "timeout": false
+  },
+  "format": "d9-factor19069-homogenizer-boundary-certificate-v1",
+  "ledger_after": "2/9",
+  "ledger_before": "2/9",
+  "ledger_delta": "0/9",
+  "semantic_sha256": "7b2a7b14fa31980c6b075c7c5800c75a9612bd884403b531ee4d633021d997da",
+  "track_id": "d9-factor19069-homogenizer-boundary-certificate"
+}
