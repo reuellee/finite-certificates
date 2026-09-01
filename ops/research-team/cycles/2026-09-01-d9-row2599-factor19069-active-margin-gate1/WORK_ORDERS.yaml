@@ -1,0 +1,48 @@
+cycle_id: 2026-09-01-d9-row2599-factor19069-active-margin-gate1
+base_revision: b14e5bd0158752f96a9534b484ef2195626bd14c
+base_tree: b942da304007bb4d9437ec7575c420fc6073814b
+opening_ledger: 2/9
+selected_target: D9_ROW2599_FACTOR19069_PROJECTION_FREE_ACTIVE_MARGIN_COMPONENT_GATE1
+publication_authorization: &publication_authorization |
+  The user designates E:\Projects\9DVL Research as the durable local Codex
+  project for verified working checkpoints. Preserve unrelated contents and
+  record exact path, commit, and tree. Google Drive is optional. GitHub is
+  read-only; do not push, publish, open or update pull requests, trigger CI,
+  or merge without a new explicit instruction.
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_PROJECTION_FREE_FACTOR19069_ACTIVE_MARGIN
+  retired_route: SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR
+  closing_required: true
+work_orders:
+  - track_id: d9-factor19069-active-margin-constructor
+    role: constructive-prover
+    surface: ops/team/d9-factor19069-active-margin-constructor
+    publication_authorization: *publication_authorization
+    resource_ceiling: 60 wall-minutes, 3 CPU-hours, 16 GiB, 100000 exact systems
+    stop_rule: Stop at source drift, missing active/tie/boundary stratum, missing parent path tag, or ceiling.
+    prohibited_scope: No projections, quotient coverage, sampled separator, pair frontier, or ledger promotion.
+    worker_restrictions: Commit only assigned local surface; do not push, merge, or edit the ledger.
+  - track_id: d9-factor19069-active-margin-falsifier
+    role: falsifier
+    surface: ops/team/d9-factor19069-active-margin-falsifier
+    publication_authorization: *publication_authorization
+    resource_ceiling: 30 wall-minutes, 1 CPU-hour, 8 GiB
+    stop_rule: Stop at first exact scope, boundary, component-completeness, or attachment rejection.
+    prohibited_scope: No producer acceptance logic and no inference from numerical sampling.
+    worker_restrictions: Commit only assigned local surface; do not push, merge, or edit the ledger.
+  - track_id: d9-factor19069-active-margin-certificate
+    role: independent-verifier
+    surface: ops/team/d9-factor19069-active-margin-certificate
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, 8 GiB, at least 12 hostile mutations
+    stop_rule: Fail closed on any pin, stratum, path-tag, boundary, attachment, or ledger mismatch.
+    prohibited_scope: Do not import the constructor or certify an incomplete frontier.
+    worker_restrictions: Commit only assigned local surface; do not push, merge, or edit the ledger.
+  - track_id: d9-factor19069-active-margin-referee
+    role: closing-referee
+    surface: ops/team/d9-factor19069-active-margin-referee
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, frozen-head replay
+    stop_rule: Reject moved head, incomplete endpoint accounting, false ledger delta, or missing successor.
+    prohibited_scope: No review of mutable evidence and no discovery or GitHub write.
+    worker_restrictions: Review only the frozen candidate; do not promote the ledger.

@@ -1,0 +1,63 @@
+{
+  "format": "d9-factor19069-active-margin-opening-audit-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-active-margin-gate1",
+  "base_revision": "b14e5bd0158752f96a9534b484ef2195626bd14c",
+  "base_tree": "b942da304007bb4d9437ec7575c420fc6073814b",
+  "base_branch": "research/local-d9-pivot3-cegar-20260901",
+  "successor_branch": "research/local-d9-factor19069-gate1-20260901",
+  "opening_ledger": "2/9",
+  "predecessor_verdict": "PIVOT",
+  "selected_target": "D9_ROW2599_FACTOR19069_PROJECTION_FREE_ACTIVE_MARGIN_COMPONENT_GATE1",
+  "selected_count": 1,
+  "target": {
+    "parent_index": 2599,
+    "factor_id": 19069,
+    "parent_sign_tags": 70,
+    "skeleton_edges": 40,
+    "ambient_parameter_dimension": 9,
+    "requires_connected_parent_component_tag": true,
+    "requires_all_true_boundary_strata": true,
+    "positive_endpoint": "EXACT_FACTOR19069_WALL_COMPONENT_DISJOINT_FROM_FIXED_40_EDGE_SKELETON",
+    "negative_endpoint": "COMPLETE_EXACT_FACTOR19069_COMPONENT_TO_SKELETON_ATTACHMENT_CERTIFICATE",
+    "null_endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+    "timeout_endpoint": "HASH_PINNED_COMPLETED_AND_PENDING_ACTIVE_MARGIN_STRATUM_FRONTIER"
+  },
+  "resource_ceiling": {
+    "wall_minutes": 90,
+    "aggregate_cpu_hours": 4,
+    "memory_gib_per_process": 16,
+    "max_exact_systems": 100000,
+    "new_artifact_megabytes": 250,
+    "paid_external_compute": false
+  },
+  "prohibited_routes": [
+    "SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR",
+    "PROJECTION_OR_SYMMETRY_COMPRESSION_RETRY",
+    "AMBIENT_ORBIT_QUOTIENT_AS_FIXED_DOMAIN_COVERAGE",
+    "UNFILTERED_PAIR_FRONTIER"
+  ],
+  "durable_checkpoint": {
+    "project_root": "E:\\Projects\\9DVL Research",
+    "required_at_frozen_checkpoint": true,
+    "preserve_unrelated_contents": true,
+    "no_hardlinks": true,
+    "drive_optional": true,
+    "github_write": false
+  },
+  "pins": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V5.json": "e653070182bd57f1f983284cbc48aeca915bbba13b3647ea49fc7f20d6066364",
+    "ai/omreal/verify_canonical_research_state_v5.py": "8acaf5fd1a56433a4eabd06aae2e7f9fd5dd999aca45f9336265b6c17521012e",
+    "ai/omreal/DIAG3_PAIR_SKELETON_MISSED_COMPONENT_CRITICAL_GATE.md": "9e4ba87acf73c1ca556e830fd687c9ca0ebad52366b82484c302ae4b282684e0",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_COMPONENT_COLLAR.json": "5930cc19019470fdfdf55d67523f6c4211ccf5b540f5c2bb5df36c64db75d7bd",
+    "ai/omreal/verify_diag3_pair_fullsupport_component_collar.py": "8a80edc03d8e2b281a0c98c2fe6e62a47e11c0172a2148130dbd95cc46a6ca8e",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_SEGMENT_COVER.json": "19248dd148d1fd002931ed5f48197869dd42c68a513376e1a4d6941389bda307",
+    "ai/omreal/data/DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.json": "dcb707220df3e61b1a94eeedcf8e46b6602f30d405f4a92fc542c0f52f672806",
+    "ai/omreal/verify_diag3_pair_fullsupport_labeled_skeleton_EDGE27_EDGE39.py": "0cfd613ef1bab0ca36aa0cb9ce59700d607f8549b40ade7282edd875f3242943",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf"
+  }
+}
