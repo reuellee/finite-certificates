@@ -1,0 +1,64 @@
+cycle_id: 2026-09-01-d9-row2599-factor19069-factored-barrier-gate1
+base_revision: b71c139a3c64cde3442252f8f3d46f2d893978c5
+base_tree: 7a9da9f02369831bd34bc22f39a0bbad57725522
+opening_ledger: 2/9
+selected_target: D9_ROW2599_FACTOR19069_FACTORED_BARRIER_COMPONENT_SAMPLER_GATE1
+storage_authorization: &storage_authorization |
+  The saved local Codex project E:\Projects\9DVL Research is the durable
+  working home. A native-filesystem recovery mirror may be written only under
+  G:\My Drive\Projects\research-backups, must be verified by byte length and
+  SHA-256, and is optional if G: is unavailable. Never invoke the Google Drive
+  connector and never block on connector approval. GitHub is read-only: do
+  not push, publish branches, open or update pull requests, trigger or rerun
+  CI, or merge without a new explicit user instruction. Do not publish
+  secrets, modify unrelated files or services, use paid/external compute,
+  force-push, delete history, or take other irreversible actions.
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_SINGLE_FACTORED_BARRIER_COMPONENT_SAMPLER
+  retired_routes:
+    - UNFILTERED_NONSMOOTH_ACTIVE_SET_ENUMERATION
+    - SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR
+  prohibited_routes:
+    - PROJECTION_RETRY
+    - SYMMETRY_ONLY_COMPRESSION
+    - AMBIENT_ORBIT_TRANSFER_AS_FIXED_DOMAIN_COVERAGE
+    - UNFILTERED_MULTIWALL_ENUMERATION
+  closing_required: true
+  stagnation_rule: >-
+    If the barrier-critical frontier is incomplete at the declared ceiling,
+    do not repeat it with a larger blind solver budget; preserve the exact
+    first unsampled component/stratum and pivot to a structural lemma that
+    removes that obstruction class.
+work_orders:
+  - track_id: d9-factor19069-factored-barrier-constructor
+    role: constructive-prover
+    surface: ops/team/d9-factor19069-factored-barrier-constructor
+    storage_authorization: *storage_authorization
+    resource_ceiling: 75 wall-minutes, 5 CPU-hours, 16 GiB, 500000 exact solver/component nodes
+    stop_rule: Stop at source drift, factor loss, expanded-product dependence, missing critical piece, boundary path tag, attachment, or ceiling.
+    prohibited_scope: No active-subset frontier, sampled separator, projection, quotient transfer, multiwall census, or ledger promotion.
+    worker_restrictions: Commit only the assigned isolated local surface; do not push, merge, or edit the ledger.
+  - track_id: d9-factor19069-factored-barrier-falsifier
+    role: falsifier
+    surface: ops/team/d9-factor19069-factored-barrier-falsifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 30 wall-minutes, 2 CPU-hours, 8 GiB
+    stop_rule: Stop at the first exact incompleteness, false path tag, lost factor, boundary omission, or attachment rejection.
+    prohibited_scope: No producer acceptance logic and no numerical-sampling inference.
+    worker_restrictions: Commit only the assigned isolated local surface; do not push, merge, or edit the ledger.
+  - track_id: d9-factor19069-factored-barrier-certificate
+    role: independent-verifier
+    surface: ops/team/d9-factor19069-factored-barrier-certificate
+    storage_authorization: *storage_authorization
+    resource_ceiling: 45 wall-minutes, 3 CPU-hours, 8 GiB, at least 14 hostile mutations
+    stop_rule: Fail closed on any pin, factor-circuit, component, positive-dimensional, path, boundary, attachment, scope, or ledger mismatch.
+    prohibited_scope: Do not import the constructor or certify a finite generic-root sample as component-complete.
+    worker_restrictions: Commit only the assigned isolated local surface; do not push, merge, or edit the ledger.
+  - track_id: d9-factor19069-factored-barrier-referee
+    role: closing-referee
+    surface: ops/team/d9-factor19069-factored-barrier-referee
+    storage_authorization: *storage_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, frozen-head replay
+    stop_rule: Reject moved head, incomplete endpoint accounting, false ledger delta, missing clean replay, or missing precise successor.
+    prohibited_scope: No mutable-head review, new discovery, GitHub write, or ledger promotion without a universal diagonal certificate.
+    worker_restrictions: Review only the frozen candidate and commit only the assigned local surface.
