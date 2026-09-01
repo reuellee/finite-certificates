@@ -1,0 +1,50 @@
+{
+  "format": "d9-factor19069-factored-barrier-certificate-result-v1",
+  "track_id": "d9-factor19069-factored-barrier-certificate",
+  "reviewed_revision": "27f934f5030c2912fbe760656dd38a201ee2e31c",
+  "reviewed_tree": "b147b9658ed51b6c4c2730e628b38aec97178dd7",
+  "verdict": "ACCEPT",
+  "classification": "ACCEPT_EXACT_FACTORED_BARRIER_NULL_ENVELOPE",
+  "accepted_endpoint": "HASH_PINNED_FACTORED_BARRIER_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNSAMPLED_COMPONENT",
+  "producer_imported": false,
+  "falsifier_imported": false,
+  "source_replay": {
+    "pinned_sources": 20,
+    "parent_factors": 70,
+    "parent_sparse_terms": 209,
+    "barrier_total_degree": 90,
+    "barrier_derivative_summands": 630,
+    "wedge_equations": 36,
+    "proper_boundary_candidates": 10,
+    "certified_boundary_paths": 1,
+    "first_unclassified_boundary_support": [1, 1, 1],
+    "skeleton_parent_tags": 2800,
+    "rooted_skeleton_edges": [39]
+  },
+  "component_samples_certified": 0,
+  "attachment_completeness_certified": false,
+  "hostile_mutations": {
+    "rejected": 22,
+    "total": 22
+  },
+  "frozen_pins": {
+    "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca",
+    "ops/team/d9-factor19069-factored-barrier-constructor/RESULT.json": "5d9357346077562824c4564829260d49b6fa62ceea38b7ae3f7fe5543dee029a",
+    "ops/team/d9-factor19069-factored-barrier-constructor/SOURCE_MANIFEST.json": "17bc476bfc78d629353f4fe73d24495de40de5a926aa5e8df4ed524131b3d303",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/RESULT.json": "9af35e89fafd73e71d940750d1f49ae166cc3e634a3f8ea2e02d3371f0ddf022",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/SOURCE_MANIFEST.json": "5b8787839c2ac4d44850f05ab1e4fd3a47d80d47511a21020c13680872ca6172",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py": "8dc7adc67aef34651ac3ce3e97f4abaa3030fbc7732fd0e3922d95af64425965"
+  },
+  "exact_consequence": "THE_HASH_PINNED_FACTORED_BARRIER_NULL_ENVELOPE_IS_SOURCE_DERIVED_AND_SCOPE_CORRECT",
+  "nonconsequences": [
+    "NO_CONNECTED_COMPONENT_DECOMPOSITION_OF_THE_BARRIER_CRITICAL_LOCUS",
+    "NO_ZERO_OR_POSITIVE_DIMENSIONAL_CRITICAL_COMPONENT_SAMPLE",
+    "NO_COMPLETE_BOUNDARY_WALL_GERM_CLASSIFICATION",
+    "NO_GLOBAL_FACTOR19069_WALL_COMPONENT_COUNT",
+    "NO_COMPLETE_COMPONENT_TO_SKELETON_ATTACHMENT_CLASSIFICATION",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "ledger_change_recommended": "none",
+  "theorem_ledger": "2/9"
+}
