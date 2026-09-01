@@ -1,0 +1,28 @@
+{
+  "format": "d9-factor19069-active-margin-certificate-result-v1",
+  "track_id": "d9-factor19069-active-margin-certificate",
+  "reviewed_revision": "2f0c7026aace6cf6f10f79fd8b1e1dfdccb577ac",
+  "reviewed_tree": "f75c0ce659f0662d2a5865f399e5c3589729d182",
+  "verdict": "ACCEPT",
+  "accepted_classification": "EXACT_FAIL_CLOSED_PARENT_RESIDENCE_NULL",
+  "accepted_endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+  "producer_imported": false,
+  "gates": {
+    "frozen_source_pins": true,
+    "factor_and_parent_reconstruction": true,
+    "all_parent_path_tags": true,
+    "fixed_skeleton_root_replay": true,
+    "active_margin_frontier": true,
+    "true_boundary_frontier": true,
+    "scope_and_ledger": true
+  },
+  "hostile_mutations": {
+    "rejected": 17,
+    "total": 17
+  },
+  "component_samples": 0,
+  "global_component_classification": "ABSENT_FAIL_CLOSED",
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "next_action": "D9_ROW2599_FACTOR19069_FACTORED_BARRIER_COMPONENT_SAMPLER_GATE1"
+}
