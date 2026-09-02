@@ -33,14 +33,14 @@ lanes and the referee returned `NULL`, with no proof-distance decrease and no
 eligible successor. Local carriers, atlas growth and residual sampling remain
 unauthorized.
 
-Canonical state V9 records the accepted `STALLED / STOP / NONE` close after
-six cycles with the same blocker and nine zero-ledger cycles. Historical V8
-authorizes one bounded three-target proof-program feasibility round and
-explicitly authorizes no mathematical construction or theorem credit; that
-opening authority is now exhausted. The mathematical targets remain open, but
-reopening requires a new governed cycle with a concrete finite route for one
-first missing global edge. See the
-[`V6 status`](ai/omreal/NINE_DIAGONAL_STATUS_V6.md) and
+Canonical state V10 records the later global semialgebraic diagram-replacement
+gate as `NULL / STALLED / STOP / NONE`, with seven cycles on the same blocker
+and ten zero-ledger cycles. Q0 failed because no executable independently
+traceable replacement backend, exact all-parent denominator, or quantifier-free
+closed compactification tuple was available. Historical V9 records the prior
+mixed-carrier close and V8 records its consumed opening authority. The
+mathematical targets remain open. See the
+[`V7 status`](ai/omreal/NINE_DIAGONAL_STATUS_V7.md) and
 [`9DVL theorem prospectus`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md).
 
 The latest universal D9 cut opening gate failed closed before its main census.
@@ -86,7 +86,8 @@ nonrelative master-closure compiler. The 5,803-factor residue remains an input
 gap, but that route is not current authority and cannot resume without a fresh
 opening audit.
 
-- [`ai/omreal/NINE_DIAGONAL_STATUS_V6.md`](ai/omreal/NINE_DIAGONAL_STATUS_V6.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V7.md`](ai/omreal/NINE_DIAGONAL_STATUS_V7.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V6.md`](ai/omreal/NINE_DIAGONAL_STATUS_V6.md) (historical V9 status)
 - [`ai/omreal/NINE_DIAGONAL_STATUS_V5.md`](ai/omreal/NINE_DIAGONAL_STATUS_V5.md) (historical V8 opening status)
 - [`ai/omreal/9DVL_THEOREM_PROSPECTUS.md`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)
@@ -108,11 +109,15 @@ The principal oriented-matroid program is the realizability/topology project in 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
 Current cross-diagonal target selection is governed by the machine-checked
-[`CANONICAL_RESEARCH_STATE_V9.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json),
-its [`V9 verifier`](ai/omreal/verify_canonical_research_state_v9.py), and the
+[`CANONICAL_RESEARCH_STATE_V10.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json),
+its [`V10 verifier`](ai/omreal/verify_canonical_research_state_v10.py), and the
 [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
-V9 records `STOP / NONE`, marks the V8 round consumed, and selects no active
-target. V8, V7, the post-normal-link predecessor, the reconciliation states
+V10 records the SREP `STOP / NONE` close and its null Q0 inputs. V9 remains an
+immutable historical checkpoint verified by
+[`CANONICAL_RESEARCH_STATE_V9.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json)
+and
+[`verify_canonical_research_state_v9.py`](ai/omreal/verify_canonical_research_state_v9.py).
+V8, V7, the post-normal-link predecessor, the reconciliation states
 and the earlier diagonal-three ledger are retained byte-for-byte as historical
 proof inputs; their old selected routes and authorizations are not current
 authority. The immutable

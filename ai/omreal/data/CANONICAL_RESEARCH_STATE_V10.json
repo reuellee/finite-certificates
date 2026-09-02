@@ -1,0 +1,138 @@
+{
+  "format": "9dvl-canonical-research-state-v10",
+  "status": "STOPPED",
+  "as_of": "2026-09-02",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "branch": "research/local-9dvl-post-srep-stop-v10-20260902",
+    "evidence_close_branch": "research/local-d3-global-semialgebraic-replacement-gate1-20260902",
+    "canonical_evidence_close_commit": "740bff688f6136e94ba4430cbe6bc1e85e692e7f",
+    "canonical_evidence_close_tree": "97ce7c4393547950ff061a30e444aca825d8ff2f",
+    "integrated_referee_commit": "435f098d0ccd42f4dc2b7ddc5f3608ad2be7875b",
+    "integrated_referee_tree": "32c9668a352a7fdcab9d84436ea5286ffae3b551",
+    "github_mode": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION",
+    "github_write": false,
+    "drive_recovery_bundle_verified": true,
+    "network_contact_with_authors": false
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json",
+    "sha256": "6ec1fa9a23314a064fa8fd71b8a780ab1e6f2ec7543f696735f90c2047f792a5",
+    "policy": "IMMUTABLE_PRE_SREP_CLOSE_CANONICAL_STATE",
+    "v9_automatic_reopening_authorized": false,
+    "user_reopening_authority_received_after_close": true
+  },
+  "authoritative_cycle": {
+    "id": "2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1",
+    "accepted_opening_commit": "c50da6c99d465c65b3e54427418d9efe6a3f037e",
+    "frozen_evidence_commit": "e18efbdea3ef00616f4a6cb83967f6bb267b1a5d",
+    "independent_q0_commit": "597537a8f705ac895e7d3e30962eb515cc8f6015",
+    "closing_commit": "740bff688f6136e94ba4430cbe6bc1e85e692e7f",
+    "closing_tree": "97ce7c4393547950ff061a30e444aca825d8ff2f",
+    "referee_commit": "435f098d0ccd42f4dc2b7ddc5f3608ad2be7875b",
+    "referee_tree": "32c9668a352a7fdcab9d84436ea5286ffae3b551",
+    "q0_handoff": "NULL_NO_EXECUTABLE_REPLACEMENT_BACKEND",
+    "independent_verdict": "Q0_NULL_INDEPENDENTLY_CONFIRMED",
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "selected_successor": "NONE",
+    "same_route_continue": false,
+    "construction_started": false
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "diagonal_three": "OPEN",
+    "diagonal_nine": "OPEN",
+    "promotion": "NONE",
+    "theorem_level_counterexample": "NOT_FOUND"
+  },
+  "proof_distance": {
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 6, 9],
+    "closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+    "delta": 0,
+    "minimum_acceptable_decrease_met": false,
+    "same_blocker_streak_closing": 7,
+    "zero_ledger_streak_closing": 10
+  },
+  "open_obligations": {
+    "load_bearing_count": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_source_total": 79102449,
+    "triple_source_settled": 77940147,
+    "triple_source_residual": 1162302,
+    "triple_source_is_component_denominator": false,
+    "items": [
+      {"id": "global_gluing", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "extension_labels", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "strict_closure", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "relative_infinity", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "middle_rank_replay", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "diag3_pair_hc1", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "diag3_triple_hc0", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "residual_source_orbits": 1162302}
+    ]
+  },
+  "completed_replacement_gate": {
+    "id": "D3_GLOBAL_SEMIALGEBRAIC_DIAGRAM_REPLACEMENT_GATE1",
+    "authorization_status": "CONSUMED",
+    "q0_pass": false,
+    "q1_activated": false,
+    "theorem_credit": "NONE",
+    "cloud_used": false,
+    "first_missing_prerequisites": [
+      "EXECUTABLE_INDEPENDENTLY_TRACEABLE_REPLACEMENT_BACKEND",
+      "ALL_PARENT_PROPER_REGION_AND_PAIRWISE_INCOMPARABILITY_CLASSIFIER",
+      "EXACT_QUANTIFIER_FREE_P_CLOSED_PARENT_COMPACTIFICATION_AND_TRUE_INFINITY"
+    ],
+    "nonconsequences": [
+      "NO_GLOBAL_DIAGRAM_OR_PAIR_KERNEL",
+      "NO_COMPLETE_GLOBAL_DENOMINATOR",
+      "NO_DIAGONAL_OR_LEDGER_CHANGE",
+      "NO_ROUTE_DISPROOF"
+    ]
+  },
+  "selected_next_target": {
+    "id": "NONE",
+    "eligible_successor_count": 0,
+    "strategy_action": "STOP",
+    "construction_authorized": false,
+    "automatic_reopening_authorized": false,
+    "reason": "SREP_Q0_CLOSED_NULL_WITHOUT_BACKEND_DENOMINATOR_CLOSED_FORMULAS_OR_PROOF_DISTANCE_DECREASE",
+    "reopen_requires": [
+      "NEW_EXPLICIT_USER_AUTHORITY",
+      "NEW_GOVERNED_CYCLE",
+      "CONCRETE_FINITE_ROUTE_FOR_ONE_FIRST_MISSING_GLOBAL_EDGE",
+      "PREDECLARED_THEOREM_LEVEL_STRICT_DECREASE",
+      "FRESH_CANONICAL_OPENING_AUDIT_AND_INDEPENDENT_REPLAY"
+    ],
+    "prohibited_automatic_continuations": [
+      "REPEAT_GLOBAL_SREP_Q0_WITHOUT_A_NEW_THEOREM_CAPABLE_INPUT",
+      "PAIR_CAD_OR_LOCAL_MASTER_ATLAS_REVIVAL",
+      "TRIPLE_ATLAS_GROWTH_OR_RESIDUAL_SAMPLING_WITHOUT_COMPONENT_COMPLETE_ATTACHMENT",
+      "FACTOR19069_LOCAL_CONTINUATION",
+      "CLOUD_ACTIVATION_WITHOUT_A_HASH_PINNED_ELIGIBLE_JOB"
+    ]
+  },
+  "process_gates": {
+    "v10_is_current_target_selector": true,
+    "v9_is_immutable_historical_input": true,
+    "active_research_cycle_exists": false,
+    "active_target_exists": false,
+    "same_route_continue_allowed": false,
+    "mathematical_construction_authorized": false,
+    "theorem_credit_authorized": false,
+    "ledger_promotion_authorized": false,
+    "github_remains_read_only": true,
+    "author_contact_prohibited_by_latest_user_instruction": true
+  },
+  "source_pins": {
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json": "6ec1fa9a23314a064fa8fd71b8a780ab1e6f2ec7543f696735f90c2047f792a5",
+    "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/CLOSING_MANIFEST.json": "a14a082c3048e49ff21c87f162a190e611bd2d2087d218eb7913fdecac48a2c7",
+    "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/CYCLE_REPORT.md": "40c39a6ace1248575a7ed0b38b7a555393eff4fe743374d1d2373d55b2b9797d",
+    "ops/team/d3-global-srep-formula-compiler/RESULT.json": "39ac5d04d9e043d13360d7bec31beb2144f5fa73aa6e590e86b5efadd2f7c213",
+    "ops/team/d3-global-srep-independent-verifier/RESULT.json": "71d844c72b783896149ed42cdae695a559fccc15ef2d7575b37ae45047d80f54",
+    "ops/team/d3-global-srep-closing-referee/RESULT.json": "e28458a7300d806e8c8cb6b4ba1f170232664c355b482c2afe4aeffbf8c2dd85"
+  }
+}

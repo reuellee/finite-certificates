@@ -13,14 +13,21 @@ This document is the standing operating framework for theorem-oriented work in
    checkpoints and silently regain authority.
 
 The current cross-diagonal machine-readable companion is
-`data/CANONICAL_RESEARCH_STATE_V9.json`. Its verifier is
-`verify_canonical_research_state_v9.py`. V9 records the accepted mixed-carrier
-feasibility close as `STALLED / STOP / NONE`, marks the only V8 round consumed,
-and selects no active target or automatic successor. Reopening requires new
-explicit authority and a governed finite route for one first missing global
-edge.
+`data/CANONICAL_RESEARCH_STATE_V10.json`. Its verifier is
+`verify_canonical_research_state_v10.py`. V10 records the accepted global
+semialgebraic diagram-replacement close as `NULL / STALLED / STOP / NONE`,
+with the theorem ledger still `2/9` and no pair-diagram, denominator, closed
+formula tuple, or theorem credit.
+The user has since supplied explicit authority for a new governed cycle while
+prohibiting author contact; the new opening must still provide a concrete
+finite route, a strict-decrease contract, and independent replay.
 
-The immutable predecessor is `data/CANONICAL_RESEARCH_STATE_V8.json`, replayed
+The immutable predecessor is `data/CANONICAL_RESEARCH_STATE_V9.json`, replayed
+by `verify_canonical_research_state_v9.py`. V9 records the prior mixed-carrier
+feasibility close, marks the only V8 round consumed, selects no active target,
+and selected no automatic successor.
+
+The earlier immutable predecessor is `data/CANONICAL_RESEARCH_STATE_V8.json`, replayed
 by `verify_canonical_research_state_v8.py`. V8 historically authorized the
 mixed-`(1,0,0)` chain subproblem, the complete joined-complex/pair-kernel
 program, and the independent triple-component escape program, with no

@@ -4,11 +4,13 @@
 
 This is a research prospectus, not a theorem announcement. The exact ledger is
 still **2/9**: diagonals 1 and 2 are proved, while diagonals 3 through 9 remain
-open. The latest A/B/C feasibility cycle returned `NULL` on all three discovery
-lanes and in independent review, closed `STALLED / STOP / NONE`, selected no
-construction successor, and made no ledger change. Current authority is
-[`ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json`](data/CANONICAL_RESEARCH_STATE_V9.json).
+open. The later global semialgebraic diagram-replacement cycle also closed
+`NULL / STALLED / STOP / NONE`: its Q0 lacked an executable replacement
+backend, an exact all-parent denominator, and quantifier-free closed
+compactification formulas. Current authority is
+[`ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json`](data/CANONICAL_RESEARCH_STATE_V10.json).
 See also
+[`ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json`](data/CANONICAL_RESEARCH_STATE_V9.json),
 [`ai/omreal/ATLAS_HELLY.md`](ATLAS_HELLY.md),
 [`ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json`](data/CANONICAL_RESEARCH_STATE_V8.json),
 and the
@@ -16,12 +18,13 @@ and the
 
 ## Post-cycle disposition
 
-V8's one-round authorization is consumed. V9 selects no active research
-target and authorizes no automatic reopening. A new cycle requires explicit
-authority, a concrete finite route for one first missing global edge, a
-predeclared theorem-level strict decrease, and a fresh independent opening
-audit. The target definitions below remain open mathematical possibilities;
-they are not an active work order.
+V8's one-round authorization is consumed. Historical V9 selects no active
+research target and authorizes no automatic reopening. V10 records the later
+SREP null close. The user has now explicitly authorized one new governed cycle
+and prohibited contacting authors. The opening must still provide a concrete
+finite route for one first missing global edge, a predeclared theorem-level
+strict decrease, and a fresh independent audit. The target definitions below
+remain mathematical possibilities until that opening passes.
 
 The historically proposed next bet was a theorem about globally attached,
 genuinely mixed-block `(1,0,0)` carriers for diagonal three. The attraction is
