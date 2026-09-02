@@ -97,69 +97,73 @@ def build_record(progress=False, workers=None):
         if "fork" in multiprocessing.get_all_start_methods()
         else "spawn"
     )
-
-    normalized_zero = segment_parent(vertices, 0, Fraction(0))
-    raw_zero = matrices[bridge.SOURCE_CHART].tolist()
-    reorientation = source_labels.solve_reorientation_mask(
-        topes.parent_signs(normalized_zero),
-        topes.parent_signs(raw_zero),
-    )
-    if reorientation != source_labels.EXPECTED_REORIENTATION_MASK:
-        raise AssertionError(f"bridge reorientation mask changed: {reorientation}")
-    labels = {
-        signature ^ reorientation
-        for signature in topes.parent_topes(normalized_zero)
-    }
-    raw_labels = set(topes.parent_topes(raw_zero))
-    if labels != raw_labels or len(labels) != EXPECTED_TOPE_COUNT:
-        raise AssertionError("normalized chart-zero labels do not reorient to the raw source")
-
-    with np.load(transition.FACTOR_CENSUS, allow_pickle=False) as source:
-        occurrence_factor = np.asarray(source["occurrence_factor"], dtype=np.uint32)
-        occurrence_fourset = np.asarray(source["occurrence_fourset"], dtype=np.uint8)
-    event_factor_ids = {int(event["factor_id"]) for event in events}
-    factor_occurrences = {
-        factor_id: tuple(
-            tuple(map(int, row))
-            for row in occurrence_fourset[np.flatnonzero(occurrence_factor == factor_id)]
-        )
-        for factor_id in event_factor_ids
-    }
-
-    universe = source_labels.raw_extension_universe()
-    universe_index = {signature: index for index, signature in enumerate(universe)}
-    chamber_count = len(events) + len(grouped_events)
-    if chamber_count != roadmap["regular_cw_path"]["one_cells"]:
-        raise AssertionError("generic path chambers do not match regular-CW one-cells")
-    profile_bytes = (chamber_count + 7) // 8
-    profiles = np.zeros((len(universe), profile_bytes), dtype=np.uint8)
-    chamber_digests = []
-
-    def record_chamber(current):
-        chamber = len(chamber_digests)
-        if len(current) != EXPECTED_TOPE_COUNT:
-            raise AssertionError(f"chamber {chamber} has {len(current)} topes")
-        try:
-            indices = np.fromiter(
-                (universe_index[signature] for signature in current),
-                dtype=np.int64,
-                count=len(current),
-            )
-        except KeyError as error:
-            raise AssertionError(f"chamber {chamber} left the extension universe") from error
-        profiles[indices, chamber // 8] |= np.uint8(1 << (chamber & 7))
-        chamber_digests.append(source_labels.labels_digest(current))
-        return chamber
-
-    event_records = []
-    waypoint_records = []
-    simple_preliminary = Counter()
-    compound_delta = Counter()
-    global_event_index = 0
     pool = None
     try:
         pool = multiprocessing.get_context(method).Pool(process_count)
         compound_results = pool.imap(_compound_topes, compound_parents, chunksize=1)
+
+        normalized_zero = segment_parent(vertices, 0, Fraction(0))
+        raw_zero = matrices[bridge.SOURCE_CHART].tolist()
+        reorientation = source_labels.solve_reorientation_mask(
+            topes.parent_signs(normalized_zero),
+            topes.parent_signs(raw_zero),
+        )
+        if reorientation != source_labels.EXPECTED_REORIENTATION_MASK:
+            raise AssertionError(f"bridge reorientation mask changed: {reorientation}")
+        labels = {
+            signature ^ reorientation
+            for signature in topes.parent_topes(normalized_zero)
+        }
+        raw_labels = set(topes.parent_topes(raw_zero))
+        if labels != raw_labels or len(labels) != EXPECTED_TOPE_COUNT:
+            raise AssertionError(
+                "normalized chart-zero labels do not reorient to the raw source"
+            )
+
+        with np.load(transition.FACTOR_CENSUS, allow_pickle=False) as source:
+            occurrence_factor = np.asarray(source["occurrence_factor"], dtype=np.uint32)
+            occurrence_fourset = np.asarray(source["occurrence_fourset"], dtype=np.uint8)
+        event_factor_ids = {int(event["factor_id"]) for event in events}
+        factor_occurrences = {
+            factor_id: tuple(
+                tuple(map(int, row))
+                for row in occurrence_fourset[np.flatnonzero(occurrence_factor == factor_id)]
+            )
+            for factor_id in event_factor_ids
+        }
+
+        universe = source_labels.raw_extension_universe()
+        universe_index = {signature: index for index, signature in enumerate(universe)}
+        chamber_count = len(events) + len(grouped_events)
+        if chamber_count != roadmap["regular_cw_path"]["one_cells"]:
+            raise AssertionError("generic path chambers do not match regular-CW one-cells")
+        profile_bytes = (chamber_count + 7) // 8
+        profiles = np.zeros((len(universe), profile_bytes), dtype=np.uint8)
+        chamber_digests = []
+
+        def record_chamber(current):
+            chamber = len(chamber_digests)
+            if len(current) != EXPECTED_TOPE_COUNT:
+                raise AssertionError(f"chamber {chamber} has {len(current)} topes")
+            try:
+                indices = np.fromiter(
+                    (universe_index[signature] for signature in current),
+                    dtype=np.int64,
+                    count=len(current),
+                )
+            except KeyError as error:
+                raise AssertionError(
+                    f"chamber {chamber} left the extension universe"
+                ) from error
+            profiles[indices, chamber // 8] |= np.uint8(1 << (chamber & 7))
+            chamber_digests.append(source_labels.labels_digest(current))
+            return chamber
+
+        event_records = []
+        waypoint_records = []
+        simple_preliminary = Counter()
+        compound_delta = Counter()
+        global_event_index = 0
         for segment_index, segment_events in enumerate(grouped_events):
             pre_segment_chamber = record_chamber(labels)
             if segment_index:
