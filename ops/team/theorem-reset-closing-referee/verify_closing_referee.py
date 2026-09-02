@@ -13,6 +13,7 @@ import copy
 from functools import lru_cache
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 
@@ -49,6 +50,23 @@ OBLIGATIONS = [
     "global_gluing", "extension_labels", "strict_closure", "relative_infinity",
     "middle_rank_replay", "diag3_pair_hc1", "diag3_triple_hc0",
 ]
+ISOLATED_LANES = [
+    ("theorem-reset-prover-strategy",
+     "6942b9faf15fa6b63f277c05f901f147bfa469fb", OPENING,
+     "54e822ad91ef6168bef611cad7ee5e070b032839",
+     "ops/team/theorem-reset-prover-strategy", PROVER_INTEGRATED,
+     "d973ccf0b236990c259141078c613669c9f06026"),
+    ("theorem-reset-falsifier",
+     "f2f2d6d4bf6cdf06c6a7c9fe15d0f69a476d5077", OPENING,
+     "3a0f62163c4d040195c62f51d5a76e6c60bbd20d",
+     "ops/team/theorem-reset-falsifier", EVIDENCE,
+     "5883c7f553136f0f513d9d4346da133b46a74940"),
+    ("theorem-reset-independent-verifier",
+     "b50cf74e6112429cda0e899093c749723d174470", OPENING,
+     "f0c6b0ef3cbca02dc4f6ff66781cd86fa0594a1e",
+     "ops/team/theorem-reset-independent-verifier", VERIFIER_INTEGRATED,
+     "2374844259e92ad3565625896be1d599eb28700f"),
+]
 
 
 def expected_obligations() -> list[dict]:
@@ -76,6 +94,15 @@ def git(*args: str) -> str:
     ).stdout.strip()
 
 
+def git_object_exists(revision: str) -> bool:
+    env = os.environ.copy()
+    env["GIT_NO_LAZY_FETCH"] = "1"
+    return subprocess.run(
+        ["git", "cat-file", "-e", f"{revision}^{{commit}}"],
+        cwd=ROOT, check=False, capture_output=True, env=env,
+    ).returncode == 0
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as source:
@@ -84,7 +111,7 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def validate_git_chain() -> None:
+def validate_git_chain() -> str:
     objects = {
         BASE: BASE_TREE, OPENING: OPENING_TREE, EVIDENCE: EVIDENCE_TREE,
         CHECKPOINT: CHECKPOINT_TREE, FROZEN: FROZEN_TREE,
@@ -98,21 +125,29 @@ def validate_git_chain() -> None:
     require(git("merge-base", "--is-ancestor", BASE, FROZEN) == "", "base ancestry")
     require(git("merge-base", "--is-ancestor", FROZEN, "HEAD") == "", "referee ancestry")
 
-    isolated = [
-        ("6942b9faf15fa6b63f277c05f901f147bfa469fb", OPENING,
-         "54e822ad91ef6168bef611cad7ee5e070b032839", "ops/team/theorem-reset-prover-strategy", PROVER_INTEGRATED),
-        ("f2f2d6d4bf6cdf06c6a7c9fe15d0f69a476d5077", OPENING,
-         "3a0f62163c4d040195c62f51d5a76e6c60bbd20d", "ops/team/theorem-reset-falsifier", EVIDENCE),
-        ("b50cf74e6112429cda0e899093c749723d174470", OPENING,
-         "f0c6b0ef3cbca02dc4f6ff66781cd86fa0594a1e", "ops/team/theorem-reset-independent-verifier", VERIFIER_INTEGRATED),
-    ]
-    for commit, parent, tree, surface, integrated in isolated:
+    checkpoint = load(CYCLE / "MID_CYCLE_CHECKPOINT.json")
+    lane_verdicts = checkpoint["lane_verdicts"]
+    require(len(lane_verdicts) == len(ISOLATED_LANES), "isolated lane count")
+    availability = [git_object_exists(commit) for _, commit, *_ in ISOLATED_LANES]
+    require(all(availability) or not any(availability), "partial isolated history")
+
+    for row, lane in zip(lane_verdicts, ISOLATED_LANES):
+        track, commit, parent, tree, surface, integrated, surface_tree = lane
+        require(row["track"] == track, f"isolated track {track}")
+        require(row["isolated_commit"] == commit, f"isolated commit pin {track}")
+        require(row["isolated_tree"] == tree, f"isolated tree pin {track}")
+        require(row["integrated_commit"] == integrated[:7], f"integrated commit pin {track}")
+        require(git("rev-parse", f"{integrated}:{surface}") == surface_tree,
+                f"integrated lane tree {surface}")
+        if not all(availability):
+            continue
         require(git("rev-parse", f"{commit}^") == parent, f"isolated parent {commit}")
         require(git("rev-parse", f"{commit}^{{tree}}") == tree, f"isolated tree {commit}")
         changed = git("diff-tree", "--no-commit-id", "--name-only", "-r", commit).splitlines()
         require(changed and all(path.startswith(surface + "/") for path in changed), f"lane scope {commit}")
         require(git("rev-parse", f"{commit}:{surface}") == git("rev-parse", f"{integrated}:{surface}"),
                 f"integrated lane identity {surface}")
+    return "FULL_ISOLATED_HISTORY" if all(availability) else "PINNED_ISOLATED_SURFACES"
 
 
 @lru_cache(maxsize=1)
@@ -360,7 +395,7 @@ def hostile_canaries(result: dict) -> int:
 def main() -> None:
     result = load(RESULT_PATH)
     replay = load(REPLAY_PATH)
-    validate_git_chain()
+    history_mode = validate_git_chain()
     validate_cycle()
     validate_replay(replay)
     validate_result(result)
@@ -370,7 +405,8 @@ def main() -> None:
         "PASS theorem-reset closing referee: frozen 6273448 / b5b254b; "
         "2/9 -> 2/9; vectors 4,7 -> 5,8; 3/10 unchanged; residual 1162302; "
         "handoffs NULL/NULL/NULL/NEGATIVE/NULL/TIMEOUT; STALLED / NONE / NONE; "
-        f"10/10 detached replays; 14/14 copied identities independent; {rejected}/{rejected} hostiles"
+        f"10/10 detached replays; 14/14 copied identities independent; {rejected}/{rejected} hostiles; "
+        f"history {history_mode}"
     )
 
 

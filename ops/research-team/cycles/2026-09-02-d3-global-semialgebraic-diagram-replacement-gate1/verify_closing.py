@@ -16,6 +16,9 @@ ROOT = CYCLE.parents[3]
 MANIFEST = CYCLE / "CLOSING_MANIFEST.json"
 REPORT = CYCLE / "CYCLE_REPORT.md"
 BASE = "0b8141223193c1ea2a1b4fce8e862466749f8b6b"
+CLOSING = "740bff688f6136e94ba4430cbe6bc1e85e692e7f"
+CLOSING_TREE = "97ce7c4393547950ff061a30e444aca825d8ff2f"
+SELF = "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/verify_closing.py"
 OPENING_VECTOR = [
     "2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"],
     7, "UNKNOWN", "UNKNOWN", 6, 9,
@@ -123,7 +126,13 @@ def validate(document: dict[str, Any], *, external: bool) -> None:
 
     if external:
         for relative, pin in document["evidence_pins"].items():
-            data = (ROOT / relative).read_bytes()
+            if relative == SELF:
+                data = subprocess.run(
+                    ["git", "show", f"{CLOSING}:{relative}"], cwd=ROOT, check=True,
+                    stdout=subprocess.PIPE,
+                ).stdout
+            else:
+                data = (ROOT / relative).read_bytes()
             require(len(data) == pin["bytes"], f"byte pin: {relative}")
             require(sha256(data) == pin["sha256"], f"hash pin: {relative}")
 
@@ -149,13 +158,20 @@ def validate(document: dict[str, Any], *, external: bool) -> None:
             require(phrase in report, f"report phrase: {phrase}")
         require("PENDING_REFEREE" not in report, "pending referee token")
         require((CYCLE / "make_recovery_bundle.py").is_file(), "recovery generator")
-        require(git("diff", "--name-only", BASE, "--", "ai/omreal") == "", "protected ai/omreal surface changed")
-        canonical = (ROOT / "ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json").read_bytes()
+        require(git("rev-parse", f"{CLOSING}^{{tree}}") == CLOSING_TREE, "closing tree")
+        require(git("merge-base", "--is-ancestor", BASE, CLOSING) == "", "base/closing ancestry")
+        require(git("merge-base", "--is-ancestor", CLOSING, "HEAD") == "", "closing/current ancestry")
+        require(git("diff", "--name-only", BASE, CLOSING, "--", "ai/omreal") == "",
+                "protected ai/omreal surface changed during cycle")
         base_canonical = subprocess.run(
             ["git", "show", f"{BASE}:ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json"],
             cwd=ROOT, check=True, stdout=subprocess.PIPE,
         ).stdout
-        require(canonical == base_canonical, "canonical V9 drift")
+        closing_canonical = subprocess.run(
+            ["git", "show", f"{CLOSING}:ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json"],
+            cwd=ROOT, check=True, stdout=subprocess.PIPE,
+        ).stdout
+        require(closing_canonical == base_canonical, "canonical V9 drift during cycle")
 
 
 Mutation = Callable[[dict[str, Any]], None]
@@ -224,7 +240,7 @@ def main() -> None:
     print(f"PASS closing evidence pins: {len(document['evidence_pins'])}/{len(document['evidence_pins'])}")
     print("PASS Q0 null, Q1 denied, zero theorem and obligation delta")
     print("PASS cloud unused with zero cycle instances/disks; read-only scope breach disclosed")
-    print("PASS canonical V9 and all ai/omreal paths unchanged from base")
+    print("PASS canonical V9 and all ai/omreal paths unchanged during cycle")
     print("PASS report convergence labels and recovery plan")
     run_hostiles(document)
     print(f"PASS hostile mutations rejected: {len(HOSTILES)}/{len(HOSTILES)}")

@@ -17,6 +17,8 @@ FROZEN_CLOSE = "9116771ba80ed3d033516d0dd666b34348aad348"
 FROZEN_CLOSE_TREE = "a64438426dc792af67d5ccc0dd2f4d1231dbaa14"
 INTEGRATED_REFEREE = "fa9787b8295fae46a262d610698e7d21790c63bd"
 INTEGRATED_REFEREE_TREE = "5f38b50568671b876aaaa1528a4aca7cb5e090eb"
+AUTHORITY_REVISION = "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b"
+AUTHORITY_TREE = "a59d740c008ae04accf200a8373d16b4d9c70ae4"
 V7_SUCCESSOR = "D9_ROW2599_FACTOR19069_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_GATE1"
 PROGRAM_ID = "D3_NESTED_A_B_C_THEOREM_FEASIBILITY_ROUND1"
 TARGET_A = "A_UNIVERSAL_MIXED_CHAIN_CONSTRUCTION_SPECIALIZATION"
@@ -100,7 +102,7 @@ def canonical_digest(value: object) -> str:
     return sha256(encoded).hexdigest()
 
 
-def current_authority_surfaces() -> dict[str, str]:
+def frozen_authority_surfaces() -> dict[str, str]:
     paths = {
         "readme": "README.md",
         "operating_system": "ai/omreal/RESEARCH_OPERATING_SYSTEM.md",
@@ -108,7 +110,7 @@ def current_authority_surfaces() -> dict[str, str]:
         "prospectus": "ai/omreal/9DVL_THEOREM_PROSPECTUS.md",
     }
     return {
-        name: (ROOT / path).read_text(encoding="utf-8")
+        name: git("show", f"{AUTHORITY_REVISION}:{path}", binary=True).decode("utf-8")
         for name, path in paths.items()
     }
 
@@ -375,6 +377,9 @@ def validate(candidate: dict) -> None:
 def validate_frozen_sources(state: dict) -> None:
     require(git("rev-parse", f"{FROZEN_CLOSE}^{{tree}}") == FROZEN_CLOSE_TREE, "frozen close tree")
     require(git("rev-parse", f"{INTEGRATED_REFEREE}^{{tree}}") == INTEGRATED_REFEREE_TREE, "integrated referee tree")
+    require(git("rev-parse", f"{AUTHORITY_REVISION}^{{tree}}") == AUTHORITY_TREE, "V8 authority tree")
+    require(git("merge-base", "--is-ancestor", FROZEN_CLOSE, AUTHORITY_REVISION) == "", "V8 authority predecessor")
+    require(git("merge-base", "--is-ancestor", AUTHORITY_REVISION, "HEAD") == "", "V8 authority ancestry")
     for path, expected in PINS.items():
         require(sha256(frozen(path)).hexdigest() == expected, f"frozen source pin {path}")
 
@@ -569,7 +574,7 @@ def hostile_mutations(stored: dict) -> int:
 
 
 def hostile_authority_mutations() -> int:
-    stored = current_authority_surfaces()
+    stored = frozen_authority_surfaces()
     mutations: list[tuple[dict[str, str], str]] = []
 
     candidate = deepcopy(stored)
@@ -611,7 +616,7 @@ def main() -> None:
     state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     validate(state)
     validate_frozen_sources(state)
-    authority = current_authority_surfaces()
+    authority = frozen_authority_surfaces()
     validate_authority_content(authority)
     hostile_count = hostile_mutations(state) + hostile_authority_mutations()
     print("PASS canonical 9DVL research state V8")

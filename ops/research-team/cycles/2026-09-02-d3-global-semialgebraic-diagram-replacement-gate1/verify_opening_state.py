@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import copy
+from functools import lru_cache
 import hashlib
 import json
 import subprocess
@@ -15,6 +16,8 @@ CYCLE = Path(__file__).resolve().parent
 OPENING = CYCLE / "OPENING_STATE.json"
 BASE = "0b8141223193c1ea2a1b4fce8e862466749f8b6b"
 BASE_TREE = "faad8f9e78bd54435ee6212535198a08c0e3fe76"
+OPENING_REVISION = "c50da6c99d465c65b3e54427418d9efe6a3f037e"
+OPENING_TREE = "f5d91a7a6ea816b27b4f0a94fe7e26beccd8e72a"
 VECTOR = [
     "2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7,
     "UNKNOWN", "UNKNOWN", 6, 9,
@@ -30,20 +33,17 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as stream:
-        for block in iter(lambda: stream.read(1 << 20), b""):
-            digest.update(block)
-    return digest.hexdigest()
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
 
 
-def git_tree(revision: str) -> str:
-    return subprocess.check_output(
-        ["git", "rev-parse", f"{revision}^{{tree}}"],
-        cwd=ROOT,
-        text=True,
-    ).strip()
+def git(*args: str) -> str:
+    return subprocess.check_output(["git", *args], cwd=ROOT, text=True).strip()
+
+
+@lru_cache(maxsize=None)
+def git_blob(revision: str, relative: str) -> bytes:
+    return subprocess.check_output(["git", "show", f"{revision}:{relative}"], cwd=ROOT)
 
 
 def validate(opening: dict) -> None:
@@ -51,7 +51,10 @@ def validate(opening: dict) -> None:
     require(opening["cycle_id"] == "2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1", "cycle id")
     require(opening["base_revision"] == BASE, "base revision")
     require(opening["base_tree"] == BASE_TREE, "base tree")
-    require(git_tree(BASE) == BASE_TREE, "repository base tree")
+    require(git("rev-parse", f"{BASE}^{{tree}}") == BASE_TREE, "repository base tree")
+    require(git("rev-parse", f"{OPENING_REVISION}^{{tree}}") == OPENING_TREE, "opening tree")
+    require(git("merge-base", "--is-ancestor", BASE, OPENING_REVISION) == "", "base/opening ancestry")
+    require(git("merge-base", "--is-ancestor", OPENING_REVISION, "HEAD") == "", "opening/current ancestry")
     require(opening["branch"] == "research/local-d3-global-semialgebraic-replacement-gate1-20260902", "branch")
 
     canonical = opening["canonical_state"]
@@ -69,7 +72,7 @@ def validate(opening: dict) -> None:
     }
     require(canonical == expected_canonical, "canonical opening summary")
 
-    state = load(ROOT / canonical["path"])
+    state = json.loads(git_blob(OPENING_REVISION, canonical["path"]))
     require(state["status"] == "STOPPED", "V9 status")
     require(state["theorem"]["score"] == "2/9", "V9 ledger")
     require(state["theorem"]["proved_diagonals"] == [1, 2], "V9 proved diagonals")
@@ -196,12 +199,11 @@ def validate(opening: dict) -> None:
     require(len(opening["source_pins"]) == 21, "source pin count")
     seen = set()
     for pin in opening["source_pins"]:
-        path = ROOT / pin["path"]
         require(pin["path"] not in seen, f"duplicate pin {pin['path']}")
         seen.add(pin["path"])
-        require(path.is_file(), f"missing pin {pin['path']}")
-        require(path.stat().st_size == pin["bytes"], f"byte drift {pin['path']}")
-        require(sha256(path) == pin["sha256"], f"hash drift {pin['path']}")
+        data = git_blob(OPENING_REVISION, pin["path"])
+        require(len(data) == pin["bytes"], f"byte drift {pin['path']}")
+        require(sha256(data) == pin["sha256"], f"hash drift {pin['path']}")
 
 
 def hostile_canaries(opening: dict) -> int:
