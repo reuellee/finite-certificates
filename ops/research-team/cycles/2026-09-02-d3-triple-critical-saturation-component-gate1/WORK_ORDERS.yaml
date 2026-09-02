@@ -1,0 +1,89 @@
+cycle_id: 2026-09-02-d3-triple-critical-saturation-component-gate1
+base_commit: ba87af7b1ac58d22c0622c908e31dc8ec03d24fa
+base_tree: 54bcab4da2eaa441a4d4c3823a8d4593d89e6bda
+branch: research/local-d3-triple-critical-saturation-gate1-20260902
+opening_ledger: 2/9
+selected_target: D3_TRIPLE_ORBIT5563_COMPONENT_DECORATED_CRITICAL_SATURATION_GATE1
+
+authority: >-
+  The user explicitly authorized a new governed cycle after canonical V10 and
+  explicitly prohibited contacting authors. This cycle remains local and
+  read-only with respect to GitHub, networks, external services, and cloud.
+
+global_restrictions:
+  - no author contact
+  - no network research or external service
+  - no GitHub writes, pull requests, CI triggers, or merges
+  - no cloud worker or paid compute
+  - no repeat SREP backend search
+  - no pair-CAD, pair master-closure, or pair local-atlas continuation
+  - no triple box, collar, macrobox, source-family, or residual sampling growth
+  - no raw Groebner or RUR solve before independent Q0 acceptance
+  - no artificial boundary may be relabeled as true parent infinity
+  - no theorem or ledger promotion from modular, representative, or local evidence
+
+roles:
+  coordinator:
+    owns:
+      - ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1
+    duties:
+      - preserve canonical pins and the exact opening measure
+      - enforce Q0 before Q1
+      - integrate only independently accepted evidence
+      - record exact resource and theorem deltas
+
+  saturation_constructor:
+    future_surface: ops/team/d3-triple-critical-saturation-constructor
+    duties:
+      - build the exact ordered saturator ledger
+      - prove containment and attachment for every removed component
+      - retain unproved singular and rank strata
+      - produce a hash-pinned numeric job forecast
+    cannot:
+      - accept its own output
+      - run Q1 before Q0 acceptance
+      - change canonical state or theorem ledger
+
+  saturation_falsifier:
+    future_surface: ops/team/d3-triple-critical-saturation-falsifier
+    duties:
+      - search for discarded interior components and false attachments
+      - mutate parent-wall, chart-seam, rank-stratum, and infinity tags
+      - preserve the two known four-space canaries
+    cannot:
+      - redefine constructor success
+      - promote a route counterexample to a D3 counterexample
+
+  independent_verifier:
+    future_surface: ops/team/d3-triple-critical-saturation-independent-verifier
+    duties:
+      - parse constructor artifacts as untrusted data
+      - reconstruct exact identities without constructor acceptance code
+      - accept or reject Q0 and conditionally Q1
+
+  closing_referee:
+    future_surface: ops/team/d3-triple-critical-saturation-closing-referee
+    duties:
+      - bind review to exact frozen commit and tree
+      - replay the opening, Q0, conditional Q1, and theorem accounting
+      - enforce STOP after null or timeout
+
+gates:
+  q0:
+    status: OPEN
+    success: EXECUTABLE_COMPONENT_DECORATED_SATURATION_CONTRACT
+    failure_action: STOP_FAIL_CLOSED
+  q1:
+    status: DENIED_PENDING_Q0
+    success: COMPLETE_ORBIT5563_ROW_REMOVAL
+    negative: EXACT_COMPACT_COMPONENT_OR_COMPLETE_CRITICAL_ROUTE_OBSTRUCTION
+
+resources:
+  wall_clock_hours: 4
+  peak_ram_gib: 32
+  new_scratch_gib: 10
+  constructor_handoffs: 1
+  verifier_directed_repairs: 1
+  cloud_workers: 0
+  external_spend_usd: 0
+

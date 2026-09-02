@@ -1,0 +1,117 @@
+{
+  "format": "d3-triple-critical-saturation-opening-v1",
+  "cycle_id": "2026-09-02-d3-triple-critical-saturation-component-gate1",
+  "base": {
+    "commit": "ba87af7b1ac58d22c0622c908e31dc8ec03d24fa",
+    "tree": "54bcab4da2eaa441a4d4c3823a8d4593d89e6bda",
+    "canonical_state": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json",
+    "canonical_status": "STOPPED",
+    "ledger": "2/9"
+  },
+  "user_authority": {
+    "new_governed_cycle": true,
+    "contact_authors": false,
+    "github_write": false,
+    "network_research": false,
+    "cloud_use": false
+  },
+  "opening_measure": {
+    "proved_diagonals": [1, 2],
+    "load_bearing_obligations": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_source_total": 79102449,
+    "triple_source_settled": 77940147,
+    "triple_source_residual": 1162302,
+    "triple_source_is_component_denominator": false,
+    "proof_distance_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10]
+  },
+  "strategy_tournament": [
+    {"id": "TRIPLE_COMPONENT_DECORATED_CRITICAL_SATURATION", "scores": [5,4,4,5,3,5,5,3], "disposition": "SELECT"},
+    {"id": "REPEAT_GLOBAL_SREP_Q0", "scores": [5,1,1,2,1,3,1,0], "disposition": "REJECT_SAME_STOPPED_ROUTE"},
+    {"id": "PAIR_MASTER_CAD_OR_LOCAL_ATLAS", "scores": [5,1,1,2,1,3,1,0], "disposition": "REJECT_UNKNOWN_GLOBAL_DENOMINATOR"},
+    {"id": "TRIPLE_LOCAL_ATLAS_OR_SAMPLING", "scores": [3,1,2,2,2,4,2,0], "disposition": "REJECT_NO_COMPONENT_COMPLETE_ATTACHMENT"},
+    {"id": "D9_FACTOR19069_LOCAL_CONTINUATION", "scores": [1,1,3,2,3,4,2,0], "disposition": "REJECT_LOW_THEOREM_LEVERAGE"}
+  ],
+  "selected_target": {
+    "id": "D3_TRIPLE_ORBIT5563_COMPONENT_DECORATED_CRITICAL_SATURATION_GATE1",
+    "named_presentation": [5563,16134,19284],
+    "canonical_row": [5563,4373,23221],
+    "height_coordinate": "b",
+    "source_equations": 59,
+    "residual_equations": 3,
+    "formal_critical_minors": 56,
+    "nonzero_critical_minors": 52,
+    "known_parent_boundary_components": 2,
+    "selected_successor_count": 1
+  },
+  "q0": {
+    "id": "EXECUTABLE_COMPONENT_DECORATED_SATURATION_CONTRACT",
+    "status": "OPEN",
+    "q1_activated": false,
+    "required_outputs": [
+      "EXACT_SOURCE_IDEAL_AND_DIGESTS",
+      "FINITE_ORDERED_SATURATOR_LEDGER",
+      "CONTAINMENT_IDENTITY_AND_ATTACHMENT_CLASS_PER_REMOVED_COMPONENT",
+      "SINGULAR_LOCUS_RETENTION_OR_PROVED_ATTACHMENT",
+      "KNOWN_FOURSPACE_PARENT_WALL_CANARY",
+      "ARTIFICIAL_BOUNDARY_REJECTION_CANARY",
+      "EXACT_JOB_SIZE_COUNTS",
+      "NUMERIC_LOCAL_RESOURCE_FORECAST"
+    ],
+    "allowed_attachment_classes": [
+      "PARENT_WALL",
+      "CHART_OR_NORMALIZATION_DIVISOR",
+      "OCCURRENCE_OR_CONCURRENCE_RANK_STRATUM",
+      "EXTRA_RESIDUAL_FACTOR_FRONTIER",
+      "PROJECTIVE_INFINITY"
+    ]
+  },
+  "q1": {
+    "status": "DENIED_PENDING_Q0",
+    "positive_endpoint": "COMPLETE_ORBIT5563_ROW_REMOVAL",
+    "negative_endpoint": "EXACT_COMPACT_COMPONENT_OR_COMPLETE_CRITICAL_ROUTE_OBSTRUCTION",
+    "null_endpoint": "FIRST_MISSING_ATTACHMENT_OR_COMPLETENESS_OBLIGATION",
+    "timeout_endpoint": "REPRODUCIBLE_EXACT_FRONTIER"
+  },
+  "strict_decrease": {
+    "measure": "triple_source_residual",
+    "opening": 1162302,
+    "positive_ceiling": 1162301,
+    "ledger_promotion_from_one_row": false,
+    "pair_branch_closed": false
+  },
+  "resources": {
+    "wall_clock_hours": 4,
+    "peak_ram_gib": 32,
+    "new_scratch_gib": 10,
+    "constructor_handoffs": 1,
+    "verifier_directed_repairs": 1,
+    "cloud_workers": 0,
+    "external_spend_usd": 0
+  },
+  "prohibited": [
+    "AUTHOR_CONTACT",
+    "NETWORK_RESEARCH",
+    "GITHUB_WRITE",
+    "CLOUD_OR_PAID_COMPUTE",
+    "REPEAT_SREP_BACKEND_SEARCH",
+    "PAIR_CAD_OR_MASTER_ATLAS_REVIVAL",
+    "TRIPLE_BOX_COLLAR_MACROBOX_SOURCE_OR_SAMPLING_GROWTH",
+    "RAW_GROEBNER_OR_RUR_BEFORE_Q0",
+    "ARTIFICIAL_BOUNDARY_AS_TRUE_INFINITY",
+    "THEOREM_PROMOTION_FROM_MODULAR_OR_LOCAL_EVIDENCE"
+  ],
+  "source_pins": {
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json": "405e1f34789e999d2b8725881a4b99c1db81cec3ecfa70abcdfa9b3fbb7a46bf",
+    "ai/omreal/verify_canonical_research_state_v10.py": "662267d9d8692c6724ab0b55472b3ca262461cce864a7cbb8bd9296bef788917",
+    "ai/omreal/DIAG3_TRIPLE_FULLSPACE_CRITICAL_H1_GATE.md": "a4a58e284beddd2a073c3252bb6573a7ce220a7b9237013338e1698f40f588bd",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ai/omreal/verify_diag3_triple_fullspace_critical_h1.py": "c1aa3201f5c2f91a3185b31ff98d5c3eaf1b063477d466587e81d2e2179424ef",
+    "ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md": "0a372197a49f4a767c06b23a6df830ef2784e7fe653b4b3eb1a506eec0518e27",
+    "ai/omreal/verify_diag3_global_exit_criterion.py": "c092930367e1f8129fdc6799427ff0dd9ae1aae385ddd9d44aa0452ed3d9b249",
+    "ai/omreal/DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md": "d8ebb65e2c99103135fa227f27ca6b1396db38a70cd68787f98cf40adef99fc7",
+    "ai/omreal/DIAG3_TRIPLE_QUADRATIC_COVER_NO_GO.md": "8d1325ec4cfcd7de9ae2692c55a8d6e988e6278e0bce14c87da62c2601a77ba3",
+    "ops/team/d3-mixed-carrier-naturality/RESULT.json": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0"
+  }
+}
