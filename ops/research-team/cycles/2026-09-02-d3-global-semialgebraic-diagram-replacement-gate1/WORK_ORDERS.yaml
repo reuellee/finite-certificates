@@ -1,0 +1,146 @@
+cycle_id: 2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1
+base_revision: 0b8141223193c1ea2a1b4fce8e862466749f8b6b
+base_tree: faad8f9e78bd54435ee6212535198a08c0e3fe76
+opening_ledger: 2/9
+opening_action: PIVOT_BOUNDED_QUALIFICATION_AND_CONDITIONAL_CONSTRUCTION
+selected_target: D3_B0_GLOBAL_SEMIALGEBRAIC_DIAGRAM_SIMPLICIAL_REPLACEMENT_GATE1
+selected_construction_count_at_opening: 0
+
+storage_and_execution_authorization: &authority |
+  The saved local Codex project E:\Projects\9DVL Research is the canonical
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs
+  and are mirrored by native filesystem copy to
+  G:\My Drive\Projects\research-backups with byte length and SHA-256 checks.
+  GitHub is read-only: do not push, publish branches, open or update pull
+  requests, trigger or rerun CI, or merge. Network acquisition and connected
+  exact-computation services are permitted for this research, but secrets and
+  unrelated private files may not be sent. Human review and compute beyond
+  this laptop are unavailable, except that one useful ephemeral GCE worker is
+  authorized after an exact job-manifest preflight: project
+  project-ebd5a273-53ea-4c8b-81a, zone us-central1-a, cycle instance prefix
+  d3-srep-gate1-20260902-, machine n2-highcpu-16, 16 vCPU, 16 GiB RAM, 30 GiB
+  boot disk, maximum four elapsed hours and USD 5 total cycle spend. Delete
+  the cycle instance and attached disk after collection or failure. Stopping
+  is not cleanup. Do not inspect, stop, modify, or delete any pre-existing
+  instance, including claude-control. No other external mutation, paid API,
+  force-push, history deletion, or irreversible action is authorized.
+
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_GLOBAL_FORMULA_DIAGRAM_REPLACEMENT
+  compared_routes:
+    - GLOBAL_CLOSED_FORMULA_DIAGRAM_HOMOLOGICAL_2_SIMPLICIAL_REPLACEMENT
+    - FRONTIER_CONDITION_CAD_DIRECT_MASTER_CLOSURE
+    - UNIVERSAL_MIXED_CARRIER_THEOREM_A
+    - TRIPLE_COMPONENT_ATLAS_OR_RESIDUAL_SAMPLING
+    - EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT
+  construction_is_conditional_on_q0: true
+  q0_has_theorem_credit: false
+  same_route_continuation: false
+
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    named_invariant: diag3_pair_hc1_AND_diag3_triple_hc0
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 6
+    zero_ledger_streak: 9
+  minimum_acceptable_delta: >-
+    Independently verify a full-scope finite simplicial pair diagram and its
+    homological-2 comparison to the actual compactified bad-union diagram,
+    closing at least the global_gluing/B-root attachment edge and reducing
+    open load-bearing obligations from 7 to at most 6. Qualification, source
+    acquisition, a formula schema, forecasts, samples, and partial diagrams
+    carry zero decrease.
+  midpoint: >-
+    Immediately after Q0 or earlier on a failed canary, missing executable
+    trace, or forecast outside the fixed laptop/cloud ceiling. Open Q1 only
+    when every Q0 item is independently accepted and complete N/N construction
+    plus replay remains plausible inside the unused fixed ceiling.
+  closing_classification_required: true
+  nondecrease_action: STOP_OR_RETIRE_NOT_CONTINUE
+
+global_scope: &global_scope |
+  All 2,604 realizable unlabelled rank-four parent types, every required
+  labelled frame and realization component, and every ordered proper
+  pairwise-incomparable triple of proper extension signatures. One compact
+  closed semialgebraic formula diagram must encode Xbar_M, genuine I_M, all
+  bad loci, pair/triple/union terms, filtration inclusions, and the exclusive
+  pair relative subspaces. Parent-rank, witness-rank, zero-weight, chart and
+  true-infinity tags are distinct. No sampled, row-2599, factor19069, local
+  atlas, or per-block replacement is in scope.
+
+q0_contract: &q0_contract |
+  Starting from canonical integer-polynomial formulas, produce an exact
+  replay trace which distinguishes M3 unfilled/filled relative H1=1/0,
+  rejects the M2 nonclosed tangential first-exit/artificial boundary model,
+  reproduces the proved single-bad low-degree vanishing control, and compiles
+  the complete global tagged formula schema with exact (N,s,d,k) and a
+  resource/output forecast. A manually supplied complex, opaque solver
+  answer, paper-only implementation claim, or missing independent trace is
+  NULL_NO_EXECUTABLE_REPLACEMENT_BACKEND.
+
+cloud_gate:
+  status_at_opening: AVAILABLE_NOT_ACTIVATED
+  project: project-ebd5a273-53ea-4c8b-81a
+  zone: us-central1-a
+  instance_prefix: d3-srep-gate1-20260902-
+  machine_type: n2-highcpu-16
+  vcpus: 16
+  memory_gib: 16
+  boot_disk_gib: 30
+  max_elapsed_hours: 4
+  max_cycle_spend_usd: 5
+  preexisting_instances_in_scope: false
+  activation_requires:
+    - HASH_PINNED_INPUT_TREE
+    - EXACT_COMMAND_AND_EXECUTABLE
+    - INDEPENDENT_VERIFIER
+    - OUTPUT_CONTRACT
+    - TIMEOUT_AND_FINALLY_DELETE
+    - PRE_AND_POST_INVENTORY_CHECK
+  stop_is_cleanup: false
+
+work_orders:
+  - track_id: d3-global-srep-formula-compiler
+    role: formula-and-replacement-producer
+    surface: ops/team/d3-global-srep-formula-compiler
+    authority: *authority
+    global_scope: *global_scope
+    q0_contract: *q0_contract
+    resource_ceiling: Eight laptop-hours shared across Q0, 32 GiB RAM, 25 GiB scratch, one initial handoff and at most one verifier-directed repair.
+    stop_rule: Stop on an incomplete discrete scope, nonclosed formula encoding, missing exact trace, opaque backend, or forecast outside the remaining ceiling.
+    prohibited_scope: No self-acceptance, sampled promotion, direct master CAD, row2599 continuation, factor/residual sweep, canonical edit, push, or merge.
+
+  - track_id: d3-global-srep-falsifier
+    role: polynomial-topology-canary-and-hostile-falsifier
+    surface: ops/team/d3-global-srep-falsifier
+    authority: *authority
+    global_scope: *global_scope
+    q0_contract: *q0_contract
+    resource_ceiling: One M2 formula fixture, one M3 filled/unfilled formula pair, one single-bad control binding, and at least 16 hostile mutations.
+    stop_rule: Stop at the first sound falsification of the encoding/backend, or after one complete Q0 hostile pass.
+    prohibited_scope: No producer acceptance import, hand-authored output accepted as formula-derived, global theorem claim, canonical edit, push, or merge.
+
+  - track_id: d3-global-srep-independent-verifier
+    role: independent-exact-verifier
+    surface: ops/team/d3-global-srep-independent-verifier
+    authority: *authority
+    global_scope: *global_scope
+    q0_contract: *q0_contract
+    resource_ceiling: One independent parser/checker, one exact RCF replay lane, at least 16 hostile mutations, and one Q0 verdict; no human review is available.
+    stop_rule: Fail closed on producer-code import, formula/pin drift, missing scope denominator, weak closure, false infinity, broken inclusion, d2 failure, rank mismatch, or opaque algebraic data.
+    prohibited_scope: No repair of producer output, human-review claim, construction, canonical edit, push, merge, or cloud activation.
+
+  - track_id: d3-global-srep-coordinator
+    role: opening-integration-cloud-and-closing-coordinator
+    surface: ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1
+    authority: *authority
+    global_scope: *global_scope
+    q0_contract: *q0_contract
+    resource_ceiling: Integrate one Q0 package; activate at most the declared single cloud worker only after preflight; perform post-run absence and recovery checks.
+    stop_rule: Do not open Q1 without independent Q0 acceptance and an in-ceiling N/N forecast; stop on any cloud policy breach or unclean cleanup.
+    prohibited_scope: No producer self-certification, ceiling extension, existing-instance mutation, canonical state or ledger edit, push, CI, PR, or merge.
+

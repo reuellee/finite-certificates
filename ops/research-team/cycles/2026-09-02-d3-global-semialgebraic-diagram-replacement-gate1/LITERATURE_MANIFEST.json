@@ -1,0 +1,33 @@
+{
+  "format": "d3-global-srep-literature-manifest-v1",
+  "as_of": "2026-09-02",
+  "selected_algorithmic_sources": [
+    {
+      "id": "basu-karisani-efficient-simplicial-replacement",
+      "title": "Efficient simplicial replacement of semi-algebraic sets",
+      "authors": ["Saugata Basu", "Negin Karisani"],
+      "arxiv": "2009.13365v3",
+      "url": "https://arxiv.org/abs/2009.13365v3",
+      "last_revised": "2022-10-25",
+      "scope_used": "Algorithmic ell-equivalent finite simplicial replacement from a quantifier-free semialgebraic formula; complexity (s*d)^(k^O(ell)).",
+      "implementation_status": "NO_TURNKEY_IMPLEMENTATION_IDENTIFIED"
+    },
+    {
+      "id": "basu-karisani-homology-maps-diagrams",
+      "title": "Computing the homology functor on semi-algebraic maps and diagrams",
+      "authors": ["Saugata Basu", "Negin Karisani"],
+      "arxiv": "2207.10497v1",
+      "url": "https://arxiv.org/abs/2207.10497v1",
+      "submitted": "2022-07-21",
+      "scope_used": "Fixed-degree rational homology and induced maps for closed bounded semialgebraic maps and zigzag diagrams.",
+      "implementation_status": "NO_TURNKEY_IMPLEMENTATION_IDENTIFIED"
+    }
+  ],
+  "acquired_alternative_route_sources": {
+    "manifest": "ops/toolchains/exact-cas-laptop/SOURCE_MANIFEST.json",
+    "use_in_selected_cycle": "ALGEBRAIC_PRIMITIVES_AND_FALSIFIER_ONLY",
+    "frontier_cad_route_selected": false
+  },
+  "claim_boundary": "THEOREMS_DEFINE_A_FINITE_ROUTE_BUT_DO_NOT_BY_THEMSELVES_SUPPLY_AN_EXECUTABLE_TRACE_OR_9DVL_CERTIFICATE"
+}
+
