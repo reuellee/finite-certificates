@@ -1,0 +1,53 @@
+{
+  "absence_claim_boundary": "This is a documented search failure, not a proof that no private or unpublished implementation exists.",
+  "as_of": "2026-09-02",
+  "available_nonreplacement_tools": [
+    "Wolfram exact RCF/QE primitives",
+    "WSL Singular/SymPy exact algebra primitives",
+    "narrow exact affine-simplex compiler in this package"
+  ],
+  "searches": [
+    {
+      "hits": 0,
+      "queries": [
+        "github",
+        "software",
+        "implementation",
+        "source code",
+        "package"
+      ],
+      "surface": "pinned papers"
+    },
+    {
+      "query": "\"Efficient simplicial replacement of semi-algebraic sets\"",
+      "surface": "GitHub repository API",
+      "total_count": 0
+    },
+    {
+      "query": "\"Basu\" \"Karisani\" simplicial",
+      "surface": "GitHub repository API",
+      "total_count": 0
+    },
+    {
+      "query": "\"Efficient simplicial replacement\"",
+      "surface": "GitHub code API",
+      "total_count": 0
+    },
+    {
+      "query": "\"Basu-Karisani\"",
+      "surface": "GitHub code API",
+      "total_count": 0
+    },
+    {
+      "query": "simplicial-replacement",
+      "result": "NO_MATCHING_DISTRIBUTION",
+      "surface": "PyPI index"
+    },
+    {
+      "query": "semialgebraic-homology",
+      "result": "NO_MATCHING_DISTRIBUTION",
+      "surface": "PyPI index"
+    }
+  ],
+  "verdict": "NO_EXECUTABLE_BASU_KARISANI_REPLACEMENT_BACKEND_IDENTIFIED"
+}

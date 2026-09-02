@@ -1,0 +1,8 @@
+command: python -B ops/team/d3-global-srep-falsifier/falsify_canaries.py
+exit_code: 0
+
+PASS exact polynomial M3 distinguishes relative H1_Q 1/0 with the same K4 one-skeleton and exit graph
+PASS exact M2 nonclosure witness rejects the artificial jump frontier as true infinity
+PASS pinned single-bad control and independent 3/2/1 motion table
+PASS hostile mutations rejected 23/23 across 11 categories
+VERDICT CANARY_PACKAGE_SOUND_PRODUCER_NOT_YET_REVIEWED; theorem credit NONE

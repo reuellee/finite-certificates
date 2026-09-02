@@ -1,0 +1,92 @@
+{
+  "format": "d3-global-srep-falsifier-result-v1",
+  "status": "PASS",
+  "verdict": "CANARY_PACKAGE_SOUND_PRODUCER_NOT_YET_REVIEWED",
+  "opening_revision": "c50da6c99d465c65b3e54427418d9efe6a3f037e",
+  "q0_theorem_credit": "NONE",
+  "inputs": {
+    "FIXTURES.json": {
+      "bytes": 11489,
+      "sha256": "75340c2c144680546f8db38612984c64b2333de683c8a5336086ed152d8e9e3c"
+    },
+    "falsify_canaries.py": {
+      "bytes": 32056,
+      "sha256": "dea37d2a395b5efe5ce15e6010e54771136f72b12f09ad53cc2166639ee70c0b"
+    }
+  },
+  "baseline": {
+    "m3": {
+      "status": "PASS",
+      "compact_closed_formula": true,
+      "same_one_skeleton": true,
+      "same_accepted_exit_graph": true,
+      "relative_h1_q": {"unfilled": 1, "filled": 0},
+      "unfilled": {"dim_c0": 3, "dim_c1": 6, "dim_c2": 2, "rank_d1": 3, "rank_d2": 2, "h1_q": 1},
+      "filled": {"dim_c0": 3, "dim_c1": 6, "dim_c2": 3, "rank_d1": 3, "rank_d2": 3, "h1_q": 0}
+    },
+    "m2": {
+      "status": "PASS",
+      "pointwise_union_closed": false,
+      "exact_approach_family": ["(1/n,3/2)", "n>=1"],
+      "excluded_limit": "(0,3/2)",
+      "artificial_frontier_rejected_as_true_infinity": true,
+      "central_closure_relative_h1_q": 1
+    },
+    "single_bad_control": {
+      "status": "PASS",
+      "canonical_control_executed": true,
+      "verifier_sha256": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4",
+      "theorem_sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+      "independent_motion_dimensions": [3, 2, 1],
+      "binding_scope": "SINGLE_BAD_ONLY_NOT_PAIR_OR_TRIPLE"
+    }
+  },
+  "hostile_mutations": {
+    "rejected": 23,
+    "total": 23,
+    "categories": [
+      "control_binding",
+      "false_infinity",
+      "filled_unfilled_conflation",
+      "formula_complex_disconnect",
+      "hand_authored_complex",
+      "incidence_error",
+      "omitted_face",
+      "omitted_scope_tag",
+      "omitted_tag",
+      "rank_error",
+      "weak_closure"
+    ],
+    "results": [
+      {"id": "m2_weak_closure_u_lt_1", "category": "weak_closure", "rejected": true, "reason": "M2_ATOM_TABLE_DRIFT"},
+      {"id": "m2_weak_closure_u_lt_2", "category": "weak_closure", "rejected": true, "reason": "M2_ATOM_TABLE_DRIFT"},
+      {"id": "m2_false_infinity_vertical_frontier", "category": "false_infinity", "rejected": true, "reason": "M2_TRUE_PARENT_INFINITY_FORMULA_MISMATCH"},
+      {"id": "m2_limit_falsely_selected_by_ambient", "category": "weak_closure", "rejected": true, "reason": "M2_POINTWISE_UNION_FORMULA_MISMATCH"},
+      {"id": "m2_omit_central_terminal", "category": "omitted_tag", "rejected": true, "reason": "M2_POINTWISE_TERMINAL_FORMULA_MISMATCH"},
+      {"id": "m2_claim_artificial_frontier_is_infinity", "category": "false_infinity", "rejected": true, "reason": "M2_REPORTED_SEMANTICS_DRIFT"},
+      {"id": "m2_omit_artificial_frontier_formula_tag", "category": "omitted_tag", "rejected": true, "reason": "M2_FORMULA_TAG_OMITTED"},
+      {"id": "m3_unfilled_formula_complex_disconnect", "category": "formula_complex_disconnect", "rejected": true, "reason": "M3_MODEL_FORMULA_COMPLEX_DISCONNECT"},
+      {"id": "m3_filled_formula_complex_disconnect", "category": "formula_complex_disconnect", "rejected": true, "reason": "M3_MODEL_FORMULA_COMPLEX_DISCONNECT"},
+      {"id": "m3_omit_edge_23_formula", "category": "omitted_face", "rejected": true, "reason": "M3_ONE_SKELETON_FORMULA_MISMATCH"},
+      {"id": "m3_omit_true_infinity_tag", "category": "omitted_tag", "rejected": true, "reason": "M3_TRUE_INFINITY_TAG"},
+      {"id": "m3_false_infinity_vertex_0", "category": "false_infinity", "rejected": true, "reason": "M3_TRUE_INFINITY_TAG"},
+      {"id": "m3_filled_unfilled_conflation", "category": "filled_unfilled_conflation", "rejected": true, "reason": "M3_UNFILLED_MAXIMAL_SCHEMA"},
+      {"id": "m3_report_rank_d2_as_three", "category": "rank_error", "rejected": true, "reason": "M3_REPORTED_RANK_OR_HOMOLOGY"},
+      {"id": "m3_report_h1_as_zero", "category": "rank_error", "rejected": true, "reason": "M3_REPORTED_RANK_OR_HOMOLOGY"},
+      {"id": "m3_flip_face_incidence", "category": "incidence_error", "rejected": true, "reason": "M3_D_SQUARED_NONZERO"},
+      {"id": "m3_omit_required_trace_face", "category": "omitted_face", "rejected": true, "reason": "M3_COMMON_TRACE_FACE_OMITTED_OR_DRIFTED"},
+      {"id": "m3_duplicate_simplex_id", "category": "incidence_error", "rejected": true, "reason": "M3_DUPLICATE_SIMPLEX_ID"},
+      {"id": "m3_hand_authored_complex_substitution", "category": "hand_authored_complex", "rejected": true, "reason": "M3_NOT_FORMULA_DERIVED"},
+      {"id": "m3_polynomial_coefficient_drift", "category": "formula_complex_disconnect", "rejected": true, "reason": "M3_ATOM_TABLE_DRIFT"},
+      {"id": "single_bad_verifier_sha_drift", "category": "control_binding", "rejected": true, "reason": "SINGLE_BAD_VERIFIER_SHA256_DRIFT"},
+      {"id": "single_bad_rank_support_table_swap", "category": "rank_error", "rejected": true, "reason": "SINGLE_BAD_EXPECTED_TABLE_DRIFT"},
+      {"id": "single_bad_illicit_pair_extension", "category": "omitted_scope_tag", "rejected": true, "reason": "SINGLE_BAD_EXTENDS_TO_PAIR_OR_TRIPLE_DRIFT"}
+    ]
+  },
+  "scope_limits": [
+    "These fixtures do not implement Basu-Karisani replacement.",
+    "They do not certify a producer backend or the complete global schema.",
+    "The single-bad result is bound only to its proved one-block scope.",
+    "No theorem or ledger credit is claimed."
+  ]
+}
