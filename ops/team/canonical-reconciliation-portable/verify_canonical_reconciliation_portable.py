@@ -30,7 +30,8 @@ STATUS_PATH = ROOT / "ai/omreal/NINE_DIAGONAL_STATUS.md"
 README_PATH = ROOT / "README.md"
 OPERATING_SYSTEM_PATH = ROOT / "ai/omreal/RESEARCH_OPERATING_SYSTEM.md"
 MANIFEST_PATH = HERE / "SOURCE_MANIFEST.json"
-CURRENT_CANONICAL_STATE = "CANONICAL_RESEARCH_STATE_V9.json"
+CURRENT_CANONICAL_STATE = "CANONICAL_RESEARCH_STATE_V10.json"
+PREVIOUS_CANONICAL_STATE = "CANONICAL_RESEARCH_STATE_V9.json"
 
 BASE = "e666990f5b0cf07fef4a639bbb6596ddc9c4515a"
 BASE_TREE = "444f8a7e50ec58e4d97a71744090d7ed60330f19"
@@ -304,7 +305,7 @@ def validate_authority_texts(status: str, readme: str, operating: str) -> None:
         == readme_current.group(2)
         == operating_current.group(1)
         == CURRENT_CANONICAL_STATE,
-        "current V9 successor pointer agreement",
+        "current successor pointer agreement",
     )
     require(
         (
@@ -532,17 +533,20 @@ def hostile_canaries(state: dict[str, Any]) -> list[str]:
     )
     downgraded_readme, readme_replacements = re.subn(
         r"(Current cross-diagonal target selection is governed by the "
-        r"machine-checked \[`)(CANONICAL_RESEARCH_STATE_V9\.json)(`\]"
-        r"\(ai/omreal/data/)(CANONICAL_RESEARCH_STATE_V9\.json)(\))",
-        r"\1CANONICAL_RESEARCH_STATE_V8.json\3"
-        r"CANONICAL_RESEARCH_STATE_V8.json\5",
+        r"machine-checked \[`)"
+        rf"({re.escape(CURRENT_CANONICAL_STATE)})"
+        r"(`\]\(ai/omreal/data/)"
+        rf"({re.escape(CURRENT_CANONICAL_STATE)})"
+        r"(\))",
+        rf"\1{PREVIOUS_CANONICAL_STATE}\3"
+        rf"{PREVIOUS_CANONICAL_STATE}\5",
         live_readme,
         count=1,
     )
     downgraded_operating, operating_replacements = re.subn(
         r"(The current cross-diagonal machine-readable companion is `data/)"
-        r"CANONICAL_RESEARCH_STATE_V9\.json(`)",
-        r"\1CANONICAL_RESEARCH_STATE_V8.json\2",
+        rf"{re.escape(CURRENT_CANONICAL_STATE)}(`)",
+        rf"\1{PREVIOUS_CANONICAL_STATE}\2",
         live_operating,
         count=1,
     )
@@ -555,7 +559,7 @@ def hostile_canaries(state: dict[str, Any]) -> list[str]:
         lambda: validate_authority_texts(
             STATUS_PATH.read_text(encoding="utf-8"),
             downgraded_readme,
-            downgraded_operating + " Historical CANONICAL_RESEARCH_STATE_V9.json.",
+            downgraded_operating + f" Historical {CURRENT_CANONICAL_STATE}.",
         ),
         rejected,
     )
