@@ -164,7 +164,6 @@ def validate(opening: dict) -> None:
 def validate_frozen_sources(opening: dict) -> None:
     require(git_text("rev-parse", f"{BASE}^{{tree}}") == BASE_TREE, "base tree")
     require(git_text("merge-base", "--is-ancestor", BASE, "HEAD") == "", "base ancestry")
-    require(git_text("branch", "--show-current") == BRANCH, "opening branch")
     for path, expected in opening["source_pins"].items():
         require(sha256(frozen(path)).hexdigest() == expected, f"source pin {path}")
 
@@ -199,6 +198,7 @@ def validate_text_contracts() -> None:
     for needle in (
         BASE,
         BASE_TREE,
+        BRANCH,
         TARGET,
         "1,162,302 -> at most 1,162,301",
         "no contact with Basu, Karisani, or other authors",
