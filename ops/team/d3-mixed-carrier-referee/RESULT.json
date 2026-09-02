@@ -1,0 +1,453 @@
+{
+  "format": "d3-mixed-carrier-closing-referee-result-v2",
+  "cycle_id": "2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1",
+  "review_verdict": "ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED",
+  "referee_handoff": "NULL",
+  "cycle_handoff": "NULL",
+  "frozen_candidate": {
+    "revision": "2fc366e517c3bf30419b335053bec0895519b675",
+    "tree": "1520090d7f6a9ce6febeef4a0c50b31982ace560"
+  },
+  "intake": {
+    "branch": "research/lane-d3-mixed-carrier-referee-20260901",
+    "tracked_worktree_clean_before_review": true,
+    "reviewed_from_immutable_git_objects": true,
+    "producer_acceptance_code_imported": false,
+    "network_used": false,
+    "connector_used": false,
+    "external_solver_used": false
+  },
+  "revision_chain": {
+    "immutable_canonical_predecessor": {
+      "revision": "9116771ba80ed3d033516d0dd666b34348aad348",
+      "tree": "a64438426dc792af67d5ccc0dd2f4d1231dbaa14",
+      "parent": "fa9787b8295fae46a262d610698e7d21790c63bd"
+    },
+    "opening": {
+      "revision": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+      "tree": "a59d740c008ae04accf200a8373d16b4d9c70ae4",
+      "parent": "9116771ba80ed3d033516d0dd666b34348aad348"
+    },
+    "integrated_evidence": {
+      "revision": "2cf92fa094b80b89816feceaf6cce6c712f72115",
+      "tree": "ec92c870ff48949b1c6587556b6a930e025da733",
+      "parent": "91e6a0eac369c93de6b8d7abee7a758c26c6aec6"
+    },
+    "checkpoint": {
+      "revision": "f1f955f6ae69e6a847ea8795724c77896636c547",
+      "tree": "c4b68a4dfdafccb66f4c69695d733fa78e840570",
+      "parent": "2cf92fa094b80b89816feceaf6cce6c712f72115"
+    },
+    "v1_preflight_candidate": {
+      "revision": "7f135917f7ef859ec272ac3126725db272ff3ea1",
+      "tree": "ab724829b045fd9a5d3f89573757db40adec6f38",
+      "parent": "f1f955f6ae69e6a847ea8795724c77896636c547",
+      "disposition": "REJECTED_PREFLIGHT_PROTOCOL_REPORT_LABEL_MISMATCH"
+    },
+    "corrected_v2_candidate": {
+      "revision": "2fc366e517c3bf30419b335053bec0895519b675",
+      "tree": "1520090d7f6a9ce6febeef4a0c50b31982ace560",
+      "parent": "7f135917f7ef859ec272ac3126725db272ff3ea1"
+    }
+  },
+  "bounded_v2_repair": {
+    "changed_paths": [
+      "ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/CYCLE_REPORT.md"
+    ],
+    "insertions": 18,
+    "deletions": 0,
+    "content": "SIX_MANDATORY_CONVERGENCE_LABELS_ONLY",
+    "producer_files_changed": false,
+    "candidate_json_changed": false,
+    "checkpoint_json_changed": false,
+    "mathematical_claim_changed": false
+  },
+  "producer_objects": {
+    "d3-mixed-carrier-topology": {
+      "isolated_commit": "2697c7a87c085ed6066c9903cb224518737492db",
+      "isolated_tree": "418e214e7867d79d992ce50a9b8ea85c4c70fc03",
+      "isolated_parent": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+      "integrated_commit": "3c78fb8a181dca98b191db68395cfad9bc68f6c0",
+      "integrated_tree": "418e214e7867d79d992ce50a9b8ea85c4c70fc03",
+      "isolated_commit_reachable_from_candidate": false
+    },
+    "d3-mixed-carrier-falsifier": {
+      "isolated_commit": "2c12eb03e86cf5412a9d701adafd30bcc5facb10",
+      "isolated_tree": "74388045eaa5215413122143d8e45f8f2ea46f6b",
+      "isolated_parent": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+      "integrated_commit": "91e6a0eac369c93de6b8d7abee7a758c26c6aec6",
+      "integrated_tree": "71b84ef98b6a969637872cafff9d60f2e33a8355",
+      "isolated_commit_reachable_from_candidate": false
+    },
+    "d3-mixed-carrier-naturality": {
+      "isolated_commit": "a10a6e517af0ca66c5454926e7e7035358071c9c",
+      "isolated_tree": "2418ec86497a0271820d299016357936c96ab384",
+      "isolated_parent": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+      "integrated_commit": "2cf92fa094b80b89816feceaf6cce6c712f72115",
+      "integrated_tree": "ec92c870ff48949b1c6587556b6a930e025da733",
+      "isolated_commit_reachable_from_candidate": false
+    }
+  },
+  "source_pins": {
+    "canonical_v8_contract": {
+      "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json",
+      "bytes": 19049,
+      "sha256": "e356d00108e46be82937b18146ca47039d506ea378d489dc392d7a2ee3f865e4"
+    },
+    "v8_declared": {
+      "ai/omreal/data/CANONICAL_RESEARCH_STATE_V7.json": "4c5c75eaea78d005a664c61f43c2bb7559c890664e55fc2a947c4cc7e8811bcc",
+      "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CYCLE_REPORT.md": "ccb34a1b416bd65920a0b50f780e66292eece697847afe8042b4d7a2fd6a0df0",
+      "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CLOSING_MANIFEST.json": "2ef455643cc1a20812ea76a57ec650d6b251b522049851913aeedc7bcffccaea",
+      "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CLOSING_CANDIDATE.json": "5ff3c82930918daea52436fdcc7ab1c6da720bd913b8973dee714507df7de128",
+      "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/OBLIGATION_GRAPH.json": "61327b143f339cfa99620f4b3ddd3218ba86d705b87c0fdda7e81da782ad3de1",
+      "ops/team/theorem-reset-prover-strategy/RESULT.json": "bab28affb8a72d1ff86ed86a3bad9f0f9a41dd216826e4dca8889ca5e911eafb",
+      "ops/team/theorem-reset-prover-strategy/FINDINGS.md": "4ce7b6504cb07f75779660f0a7d04681a7e98bb5d0a72e3fb9b2884267ace9b1",
+      "ops/team/theorem-reset-closing-referee/RESULT.json": "4e20d66ee618df991fad56230484f21251515efd9673b84c1effb98662361a3a",
+      "ops/team/theorem-reset-closing-referee/REVIEW.md": "582d67504f9421e5f96f30585dc94fb0fd5a4df68be443331bb09153a6c150eb",
+      "ops/team/theorem-reset-closing-referee/CLEAN_REPLAY.json": "b1394e5e7b3e5b636eed689fa07036049215a79f144e9863414e992b66776f91"
+    },
+    "opening_declared": [
+      {
+        "path": "ops/research-team/PROTOCOL.md",
+        "bytes": 11222,
+        "sha256": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246"
+      },
+      {
+        "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CLOSING_MANIFEST.json",
+        "bytes": 4187,
+        "sha256": "2ef455643cc1a20812ea76a57ec650d6b251b522049851913aeedc7bcffccaea"
+      },
+      {
+        "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CYCLE_REPORT.md",
+        "bytes": 10862,
+        "sha256": "ccb34a1b416bd65920a0b50f780e66292eece697847afe8042b4d7a2fd6a0df0"
+      },
+      {
+        "path": "ops/team/theorem-reset-prover-strategy/FINDINGS.md",
+        "bytes": 10081,
+        "sha256": "4ce7b6504cb07f75779660f0a7d04681a7e98bb5d0a72e3fb9b2884267ace9b1"
+      },
+      {
+        "path": "ops/team/theorem-reset-falsifier/FINDINGS.md",
+        "bytes": 6659,
+        "sha256": "893ecc8d530e7af0970cc4bb232fb34e99cb8fc5e0e6b073c93d423c7313420f"
+      },
+      {
+        "path": "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md",
+        "bytes": 16265,
+        "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a"
+      },
+      {
+        "path": "ai/omreal/verify_diag3_joined_flow_triangle.py",
+        "bytes": 9283,
+        "sha256": "ac01851b53d4bed1c859f74bad2e71a5025825fe7accdac13263f5d6518a0944"
+      },
+      {
+        "path": "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+        "bytes": 13943,
+        "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f"
+      },
+      {
+        "path": "ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+        "bytes": 7350,
+        "sha256": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4"
+      },
+      {
+        "path": "ai/omreal/DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md",
+        "bytes": 12448,
+        "sha256": "046dc84c138cbbed9add0946392d72ddb3b73b332ddb4c9029ea54348a85562e"
+      },
+      {
+        "path": "ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md",
+        "bytes": 7170,
+        "sha256": "0a372197a49f4a767c06b23a6df830ef2784e7fe653b4b3eb1a506eec0518e27"
+      },
+      {
+        "path": "ai/omreal/NINE_DIAGONAL_STATUS.md",
+        "bytes": 135472,
+        "sha256": "07c146e835f6a62c29ab653d353d73469df1e6022018ffec76f6775b65ca7ae2"
+      },
+      {
+        "path": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+        "bytes": 90677,
+        "sha256": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e"
+      }
+    ]
+  },
+  "evidence_pins": {
+    "ops/team/d3-mixed-carrier-topology/RESULT.json": "7e54007c1bb97be457cbdc039c5520267cd39e39e08a930828b42708443a99e5",
+    "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76",
+    "ops/team/d3-mixed-carrier-falsifier/RESULT.json": "89f54c80234dd74f763b390a1da86de2359a99684e3920e57cec284e6fd08480",
+    "ops/team/d3-mixed-carrier-falsifier/OBSTRUCTION_DOSSIER.md": "de7e1d5c2758786852cbb1cf684f3af8cbf44ab4df124c7053b60534b1317936",
+    "ops/team/d3-mixed-carrier-naturality/RESULT.json": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0",
+    "ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86"
+  },
+  "discovery_handoffs": [
+    {
+      "track": "d3-mixed-carrier-topology",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL"
+    },
+    {
+      "track": "d3-mixed-carrier-falsifier",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL_SCOPED_ANSATZ_NEGATIVES_ONLY"
+    },
+    {
+      "track": "d3-mixed-carrier-naturality",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL"
+    }
+  ],
+  "program_status": {
+    "A": {
+      "status": "NULL",
+      "complete_finite_program": false,
+      "theorem_proved_or_refuted": false,
+      "first_missing": "UNIVERSAL_GENUINELY_MIXED_CHAIN_ASSIGNMENT_ON_ONE_SIMULTANEOUS_SOURCE_SUBDIVISION_WITH_ARBITRARY_FACE_CHAIN_COHERENCE"
+    },
+    "B": {
+      "status": "NULL",
+      "complete_finite_program": false,
+      "theorem_proved_or_refuted": false,
+      "rational_pair_kernel_proved": false,
+      "first_missing": "FINITE_EXHAUSTIVE_L_SOURCE_AND_FILTRATION_PRESERVING_COMPARISON_TO_THE_ACTUAL_COMPACTIFIED_BAD_UNION"
+    },
+    "C": {
+      "status": "NULL",
+      "complete_finite_program": false,
+      "theorem_proved_or_refuted": false,
+      "triple_escape_proved": false,
+      "first_missing": "COMPLETE_STABLE_COMPONENT_IDENTITIES_AND_SOUND_CONTINUATIONS_TO_CERTIFIED_TRUE_PARENT_INFINITY"
+    },
+    "positive_finite_program_found": false,
+    "universal_negative_found": false,
+    "actual_proved_and_replayed_B_plus_C_required_for_D3": true
+  },
+  "midpoint": {
+    "decision": "STOP_DISCOVERY_FREEZE_AND_SEND_TO_REFEREE",
+    "all_five_continuation_conditions_met": false,
+    "referee_directed_revision_allowed": false,
+    "construction_started": false,
+    "resource_ceiling_enlarged": false
+  },
+  "proof_distance": {
+    "opening_vector": [
+      "2/9",
+      1,
+      "diag3_pair_hc1_AND_diag3_triple_hc0",
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      5,
+      8
+    ],
+    "checkpoint_vector": [
+      "2/9",
+      1,
+      "diag3_pair_hc1_AND_diag3_triple_hc0",
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      5,
+      8
+    ],
+    "closing_vector": [
+      "2/9",
+      1,
+      "diag3_pair_hc1_AND_diag3_triple_hc0",
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      6,
+      9
+    ],
+    "delta": 0
+  },
+  "obligation_deltas": [
+    {
+      "id": "global_gluing",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "extension_labels",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "strict_closure",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "relative_infinity",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "middle_rank_replay",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "diag3_pair_hc1",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "diag3_triple_hc0",
+      "opening": "OPEN_1162302_SOURCE_ORBITS",
+      "closing": "OPEN_1162302_SOURCE_ORBITS",
+      "delta": "UNCHANGED"
+    }
+  ],
+  "ledger": {
+    "opening": "2/9",
+    "closing": "2/9",
+    "delta": "0/9",
+    "theorem_promotion": "NONE"
+  },
+  "scope_accounting": {
+    "joined_shapes": {
+      "shape_orbits_modulo_active_block_permutation": 10,
+      "formal_labeled_placements_in_one_three_block_family": 34,
+      "universally_credited_clauses": [
+        "(0)",
+        "(1)",
+        "(2)"
+      ],
+      "taxonomy_coverage": "3/10",
+      "end_to_end_denominator": false
+    },
+    "triple": {
+      "total_source_orbits": 79102449,
+      "settled_source_orbits": 77940147,
+      "residual_source_orbits_opening": 1162302,
+      "residual_source_orbits_closing": 1162302,
+      "residual_delta": 0,
+      "source_order_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+      "is_component_denominator": false
+    },
+    "pair": {
+      "global_residual": "UNKNOWN",
+      "global_coverage": "UNKNOWN",
+      "certified_global_adjacencies": 0,
+      "certified_strict_closure_pairs": 0,
+      "certified_strict_closure_triples": 0,
+      "certified_parent_infinity_cells": 0,
+      "rational_middle_exactness": "OPEN"
+    }
+  },
+  "row2599_canary": {
+    "parent_chart": "row2599_chart0",
+    "rank_d1": 3,
+    "rank_d2": 6,
+    "rank_C2": 7,
+    "relative_homology": {
+      "H0": "0",
+      "H1": "0",
+      "H2": "Z"
+    },
+    "primitive_relation": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "retired_scope": "SINGLETON_ONLY_FIXED_BLOCK_ROOT_CARRIERS",
+    "universal_target_A_negative": false,
+    "D3_counterexample": false
+  },
+  "conditional_endpoints": {
+    "C_exit_predicate": "EVERY_VERTEX_OF_A_COMPLETE_COMPONENT_FAITHFUL_GRAPH_REACHES_CERTIFIED_TRUE_PARENT_INFINITY_EQUIVALENTLY_EVERY_SINK_SCC_CONTAINS_IT",
+    "finite_equivalence_fixtures_checked": 4096,
+    "C_accepting_input_exists": false,
+    "actual_compared_pair_complex_exists": false
+  },
+  "protocol_replay": {
+    "command": "python -B ops/research-team/verify_cycle_protocol.py",
+    "status": "PASS",
+    "summary": "PASS research-cycle strategy/convergence/storage/publication protocol: 19 cycles, 78 authorized work orders",
+    "missing_required_phrases": []
+  },
+  "hostile_mutations": {
+    "rejected": 87,
+    "accepted": 0,
+    "minimum_required": 24,
+    "acceptance_logic": "ORIGINAL_PYTHON_STANDARD_LIBRARY_NO_PRODUCER_IMPORT"
+  },
+  "trajectory": {
+    "classification": "STALLED",
+    "strategy_action": "STOP",
+    "same_blocker_streak_closing": 6,
+    "zero_ledger_streak_closing": 9,
+    "selected_successor": "NONE",
+    "construction_started": false
+  },
+  "rejected_overclaims": [
+    "NULL_DOES_NOT_PROVE_IMPOSSIBILITY_OF_A_B_OR_C",
+    "NO_UNIVERSAL_NEGATIVE_FROM_SINGLETON_ROOT_FIXED_ORDER_OR_FIRST_EXIT_ANSATZ_FAILURES",
+    "NO_POSITIVE_FINITE_PROGRAM_FROM_A_CONDITIONAL_INTERFACE_OR_NAMED_DEPENDENCIES",
+    "NO_GLOBAL_RANK_OR_PAIR_KERNEL_FROM_ROW2599_OR_A_ALONE",
+    "NO_PAIR_H1_FROM_A_COMPONENT_EXIT_GRAPH",
+    "NO_ALL_COMPONENT_ESCAPE_FROM_ONE_PATH_PER_SOURCE_ORBIT",
+    "NO_COMPONENT_DENOMINATOR_FROM_1162302_SOURCE_ORBITS",
+    "NO_END_TO_END_DENOMINATOR_FROM_3_OF_10_TAXONOMY",
+    "NO_TRUE_PARENT_INFINITY_FROM_WITNESS_RANK_SUPPORT_ZERO_WEIGHT_OR_LOCAL_CUTOFF",
+    "NO_D3_OR_9DVL_PROMOTION_WITH_B_OR_C_OPEN"
+  ],
+  "next_strategy": {
+    "decision": "STOP",
+    "eligible_successor_count": 0,
+    "selected_successor": "NONE",
+    "construction_authorized": false,
+    "theorem_promotion_authorized": false,
+    "reopen_condition": "A_NEW_EXPLICITLY_GOVERNED_CYCLE_WITH_A_CONCRETE_FINITE_ROUTE_FOR_ONE_FIRST_MISSING_GLOBAL_EDGE"
+  },
+  "test_summary": [
+    {
+      "test": "independent_referee_verifier",
+      "status": "PASS",
+      "detail": "frozen objects, exact source/evidence pins, v2 repair, 87/87 hostile mutations"
+    },
+    {
+      "test": "canonical_v8",
+      "status": "PASS",
+      "detail": "98 hostile mutations"
+    },
+    {
+      "test": "opening_contract",
+      "status": "PASS",
+      "detail": "65/65 hostile mutations and 13/13 source pins"
+    },
+    {
+      "test": "research_cycle_protocol",
+      "status": "PASS",
+      "detail": "19 cycles and 78 authorized work orders"
+    },
+    {
+      "test": "exact_source_replays",
+      "status": "PASS",
+      "detail": "joined flow triangle; single-bad two-skeleton; fixed-order no-go; tangential first-exit no-go; conditional global-exit criterion"
+    }
+  ],
+  "nonconsequences": [
+    "NO_PROOF_OR_REFUTATION_OF_A_B_C_D3_OR_9DVL",
+    "NO_COMPLETE_FINITE_PROOF_PROGRAM",
+    "NO_PAIR_OR_TRIPLE_OBLIGATION_CLOSED",
+    "NO_LEDGER_CHANGE",
+    "NO_CONSTRUCTION",
+    "NO_SUCCESSOR_AUTHORIZATION",
+    "NO_THEOREM_PROMOTION"
+  ]
+}
