@@ -915,9 +915,9 @@ def build_record():
         },
         "inputs": {
             "source_commit": "c7bbbae13de85323be6b92b46332614eaa271b36",
-            "node_roadmap_path": str(NODE.relative_to(HERE.parents[1])),
+            "node_roadmap_path": NODE.relative_to(HERE.parents[1]).as_posix(),
             "node_roadmap_sha256": file_sha256(NODE),
-            "candidate_factor_path": str(CANDIDATES.relative_to(HERE.parents[1])),
+            "candidate_factor_path": CANDIDATES.relative_to(HERE.parents[1]).as_posix(),
             "candidate_factor_sha256": file_sha256(CANDIDATES),
             "candidate_factor_count": full["fullsupport_factor_count"],
             "exact_empty_factor_digest": full["digests"]["empty_factor_ids"],

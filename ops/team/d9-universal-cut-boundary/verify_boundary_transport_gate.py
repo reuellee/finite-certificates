@@ -11,6 +11,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import sys
 
 
 HERE = Path(__file__).resolve().parent
@@ -285,19 +286,19 @@ def run_upstream_replays() -> None:
     env = dict(os.environ)
     env["PYTHONDONTWRITEBYTECODE"] = "1"
     commands = (
-        ["python", "ops/research-team/cycles/2026-09-01-d9-universal-cut/verify_opening_audit.py"],
-        ["python", "ops/team/diag9-s1237-normal-link-prover/verify_normal_link_no_go.py"],
-        ["python", "ops/team/diag9-s1237-normal-link-falsifier/verify_normal_link_falsifier.py"],
+        [sys.executable, "ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py", "--manifest-only"],
+        [sys.executable, "ops/team/diag9-s1237-normal-link-prover/verify_normal_link_no_go.py"],
+        [sys.executable, "ops/team/diag9-s1237-normal-link-falsifier/verify_normal_link_falsifier.py"],
     )
     for command in commands:
         completed = subprocess.run(command, cwd=ROOT, env=env, text=True, capture_output=True)
         require(completed.returncode == 0, f"upstream replay failed: {' '.join(command)}\n{completed.stdout}\n{completed.stderr}")
-        print("PASS upstream", command[-1])
+        print("PASS upstream", command[1])
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skip-upstream", action="store_true", help="skip the three source replays; source hashes are still checked")
+    parser.add_argument("--skip-upstream", action="store_true", help="skip the three branch-neutral upstream replays; source hashes are still checked")
     args = parser.parse_args()
 
     validate_manifest()

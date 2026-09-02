@@ -125,7 +125,7 @@ def verify_holdout_chronology(registration: dict, prediction: dict) -> None:
         require(
             git_file_sha256(
                 REGISTRATION_COMMIT,
-                str(REGISTRATION.relative_to(REPO)),
+                REGISTRATION.relative_to(REPO).as_posix(),
                 git_dir=git_dir,
             )
             == file_sha256(REGISTRATION),
@@ -134,7 +134,7 @@ def verify_holdout_chronology(registration: dict, prediction: dict) -> None:
         require(
             git_file_sha256(
                 PREDICTION_COMMIT,
-                str(PREDICTION.relative_to(REPO)),
+                PREDICTION.relative_to(REPO).as_posix(),
                 git_dir=git_dir,
             )
             == file_sha256(PREDICTION),

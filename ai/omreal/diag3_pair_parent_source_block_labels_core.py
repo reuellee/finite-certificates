@@ -92,8 +92,11 @@ def build_record(progress=False, workers=None):
     if len(compound_parents) != 293:
         raise AssertionError("block-bridge compound event census changed")
     process_count = workers or max(1, min(6, multiprocessing.cpu_count()))
-    pool = multiprocessing.get_context("fork").Pool(process_count)
-    compound_results = pool.imap(_compound_topes, compound_parents, chunksize=1)
+    method = (
+        "fork"
+        if "fork" in multiprocessing.get_all_start_methods()
+        else "spawn"
+    )
 
     normalized_zero = segment_parent(vertices, 0, Fraction(0))
     raw_zero = matrices[bridge.SOURCE_CHART].tolist()
@@ -153,7 +156,10 @@ def build_record(progress=False, workers=None):
     simple_preliminary = Counter()
     compound_delta = Counter()
     global_event_index = 0
+    pool = None
     try:
+        pool = multiprocessing.get_context(method).Pool(process_count)
+        compound_results = pool.imap(_compound_topes, compound_parents, chunksize=1)
         for segment_index, segment_events in enumerate(grouped_events):
             pre_segment_chamber = record_chamber(labels)
             if segment_index:
@@ -221,8 +227,9 @@ def build_record(progress=False, workers=None):
                     "left_and_right_label_sets_equal": True,
                 })
     except BaseException:
-        pool.terminate()
-        pool.join()
+        if pool is not None:
+            pool.terminate()
+            pool.join()
         raise
     else:
         pool.close()
@@ -273,11 +280,11 @@ def build_record(progress=False, workers=None):
             "global_parent_cell_coverage": "NOT_CLAIMED",
         },
         "inputs": {
-            "bridge_certificate": str(BRIDGE.relative_to(HERE.parents[1])),
+            "bridge_certificate": BRIDGE.relative_to(HERE.parents[1]).as_posix(),
             "bridge_certificate_sha256": file_sha256(BRIDGE),
             "point_bank_sha256": transition.file_sha256(transition.POINT_BANK),
             "factor_census_sha256": transition.file_sha256(transition.FACTOR_CENSUS),
-            "chart_zero_label_certificate": str(source_labels.OUTPUT.relative_to(HERE.parents[1])),
+            "chart_zero_label_certificate": source_labels.OUTPUT.relative_to(HERE.parents[1]).as_posix(),
             "chart_zero_label_certificate_sha256": source_labels.file_sha256(source_labels.OUTPUT),
         },
         "normalization": {

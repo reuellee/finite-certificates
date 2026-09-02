@@ -303,9 +303,20 @@ python ai/omreal/verify_diag2_generic_birth_support_filter.py
 python ai/omreal/verify_diag2_generic_birth_pattern_reduction.py
 ```
 
-The first command exhausts the minimal-five eligibility filter, the
-localization and ordinary source-hard supports, and all ordinary four-
-partners.  The second command checks the exact signed formulas, the three
-`4+4` UNSAT digests, the `53 -> 23 -> 10` reduction, and disjointness of all
-ten final supports.  `run_all.py --fast` supplies the surrounding parent,
-wall-classification, moving-witness, duality, and status-ledger regressions.
+By default, the first command runs a dependency-free Python census over all
+`C(56,5)=3,819,816` five-supports and all `C(56,4)=367,290` four-supports,
+including the exact wall-stabilizer orbit quotient.  If a GNU-compatible
+`CXX`, `g++`, or `clang++` is available, it also compiles and runs the
+original C++17 program as an independent implementation cross-check.  Pass
+`--require-compiled-crosscheck` when that redundant compiled replay is a hard
+requirement.  An unusable automatically discovered compiler is treated like
+an unavailable optional toolchain; the strict flag and an explicit `CXX`
+remain fail-closed.  A compiled program that runs and rejects its evidence is
+always a hard failure.  The second command checks the exact signed formulas,
+the three `4+4` UNSAT digests, the `53 -> 23 -> 10` reduction, and
+disjointness of all ten final supports.  `run_all.py --fast` supplies the
+surrounding parent, wall-classification, moving-witness, duality, and
+status-ledger regressions.
+`CXX` follows native Windows command-line quoting on Windows and POSIX
+shell-word quoting elsewhere; attached options such as
+`-I"C:\Program Files\..."` are supported.

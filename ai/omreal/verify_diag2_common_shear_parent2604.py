@@ -22,8 +22,10 @@ point transversal, not a chamber atlas::
     python verify_diag2_common_shear_parent2604.py --full \
         --analysis-output data/DIAG2_COMMON_SHEAR_parent2604_summary.json
 
-With no flag, the committed summary is checked and three exact sentinel
-parents are replayed.  Neither mode claims residual-chamber coverage or
+With no flag, the committed summary is checked and, when a supported native
+toolchain can build and load the pinned kernel, three exact sentinel parents
+are replayed.  Otherwise the verifier reports its validated stored-summary
+fallback explicitly.  Neither mode claims residual-chamber coverage or
 promotes diagonal two.
 
 The one-time ``--upgrade-summary`` mode accepts only a complete canonical v1
@@ -40,7 +42,10 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shlex
+import shutil
 import subprocess
+import sys
 import tempfile
 
 import numpy as np
@@ -70,6 +75,9 @@ EXPECTED_PARENT16_RECORD_DIGEST = (
 # provenance upgrade (catalog chirotopes, exact matrices, and extension census).
 EXPECTED_AGGREGATE_DIGEST = (
     "58b5a8cb8f6e36466efabb6dc6a4ba1b9bf9f812f5899f5138d6abc96c2c8a18"
+)
+EXPECTED_KERNEL_SHA256 = (
+    "1a8b7a5292c2e424eff4bd6a164629f27db15b7903094e33ed407b136073754e"
 )
 EXPECTED_GLOBAL_MINIMUM_ESCAPE = 52
 EXPECTED_GLOBAL_MINIMUM_OVERLAP = 6
@@ -143,6 +151,10 @@ _REPLACEMENT_INDEX = None
 _SORTING_SIGN = None
 
 
+class NativeToolchainUnavailable(RuntimeError):
+    """The optional native kernel cannot be built or loaded on this host."""
+
+
 def transport_arrays():
     entries = []
     for source in range(1, 9):
@@ -159,23 +171,134 @@ def transport_arrays():
     )
 
 
-def compile_helper(output: Path):
+def verify_kernel_source():
+    digest = hashlib.sha256(SOURCE.read_bytes()).hexdigest()
+    if digest != EXPECTED_KERNEL_SHA256:
+        raise AssertionError(
+            "diagonal-two finite-kernel source digest changed: " + digest
+        )
+
+
+def parse_compiler_command(configured):
+    """Parse the platform command line supplied through ``CXX``."""
+    if not configured.strip():
+        raise RuntimeError("CXX is set but empty")
+    configured = configured.strip()
+    if os.name == "nt":
+        argc = ctypes.c_int()
+        command_line_to_argv = ctypes.windll.shell32.CommandLineToArgvW
+        command_line_to_argv.argtypes = (
+            ctypes.c_wchar_p,
+            ctypes.POINTER(ctypes.c_int),
+        )
+        command_line_to_argv.restype = ctypes.POINTER(ctypes.c_wchar_p)
+        argv = command_line_to_argv(configured, ctypes.byref(argc))
+        if not argv:
+            raise RuntimeError(f"invalid CXX command: {ctypes.WinError()}")
+        try:
+            return tuple(argv[index] for index in range(argc.value))
+        finally:
+            local_free = ctypes.windll.kernel32.LocalFree
+            local_free.argtypes = (ctypes.c_void_p,)
+            local_free.restype = ctypes.c_void_p
+            local_free(ctypes.cast(argv, ctypes.c_void_p))
+    try:
+        command = shlex.split(configured, posix=True)
+    except ValueError as error:
+        raise RuntimeError(f"invalid CXX command: {error}") from error
+    if not command:
+        raise RuntimeError("CXX is set but empty")
+    return tuple(command)
+
+
+def compiler_candidates():
+    if "CXX" in os.environ:
+        command = parse_compiler_command(os.environ["CXX"])
+        if shutil.which(command[0]) is None and not Path(command[0]).is_file():
+            raise RuntimeError(f"CXX compiler is not executable: {command[0]}")
+        return (command,), True
+    candidates = []
+    seen = set()
+    for candidate in ("g++", "clang++"):
+        resolved = shutil.which(candidate)
+        if resolved is not None and resolved not in seen:
+            candidates.append((resolved,))
+            seen.add(resolved)
+    return tuple(candidates), False
+
+
+def compile_helper(output: Path, compiler):
     command = [
-        "g++",
+        *compiler,
         "-std=c++17",
         "-O3",
-        "-fPIC",
-        "-shared",
-        str(SOURCE),
-        "-lcrypto",
-        "-o",
-        str(output),
     ]
-    completed = subprocess.run(command, capture_output=True, text=True, check=False)
+    if os.name != "nt":
+        command.append("-fPIC")
+    command.extend(
+        [
+            "-dynamiclib" if sys.platform == "darwin" else "-shared",
+            str(SOURCE),
+            "-lcrypto",
+            "-o",
+            str(output),
+        ]
+    )
+    try:
+        completed = subprocess.run(
+            command, capture_output=True, text=True, check=False
+        )
+    except OSError as error:
+        raise NativeToolchainUnavailable(
+            f"failed to invoke {compiler[0]}: {error}"
+        ) from error
     if completed.returncode:
-        raise RuntimeError(
+        raise NativeToolchainUnavailable(
             "failed to compile diagonal-two finite kernel:\n" + completed.stderr
         )
+
+
+def preflight_library(library: Path):
+    probe = (
+        "import ctypes,sys; "
+        "library=ctypes.CDLL(sys.argv[1]); "
+        "getattr(library,'diag2_common_shear_audit')"
+    )
+    try:
+        completed = subprocess.run(
+            [sys.executable, "-c", probe, str(library)],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except OSError as error:
+        raise NativeToolchainUnavailable(
+            f"compiled diagonal-two kernel preflight cannot be launched: {error}"
+        ) from error
+    if completed.returncode:
+        detail = completed.stderr.strip() or completed.stdout.strip()
+        raise NativeToolchainUnavailable(
+            "compiled diagonal-two kernel cannot be loaded or does not export "
+            f"diag2_common_shear_audit:\n{detail}"
+        )
+
+
+def native_failure_report(failures):
+    return "\n".join(
+        f"{compiler[0]}:\n{error}" for compiler, error in failures
+    )
+
+
+def print_stored_fallback(reason):
+    print(
+        "PASS portable stored-summary gate; compiled sentinel replay "
+        f"unavailable ({reason})"
+    )
+    print(
+        "SCOPE full v2 artifact, catalog, matrices, extension census, and "
+        "aggregate digest validated; use --require-compiled-replay for a "
+        "strict live-kernel gate"
+    )
 
 
 def initialize_worker(library_path: str):
@@ -800,6 +923,11 @@ def parse_args():
         action="store_true",
         help="resume selected parents from an existing --analysis-output checkpoint",
     )
+    parser.add_argument(
+        "--require-compiled-replay",
+        action="store_true",
+        help="fail instead of using the validated stored-summary fallback",
+    )
     return parser.parse_args()
 
 
@@ -809,13 +937,18 @@ def main():
     by_index = {record["catalog_index"]: record for record in records}
 
     if args.upgrade_summary:
-        if args.resume or args.analysis_output is not None:
+        if (
+            args.resume
+            or args.analysis_output is not None
+            or args.require_compiled_replay
+        ):
             raise ValueError(
-                "--upgrade-summary cannot be combined with --resume or "
-                "--analysis-output"
+                "--upgrade-summary cannot be combined with --resume, "
+                "--analysis-output, or --require-compiled-replay"
             )
         upgrade_legacy_summary(by_index)
         return
+    verify_kernel_source()
     if (
         not args.full
         and args.analysis_output is not None
@@ -829,7 +962,11 @@ def main():
     if not args.full and args.indices is None:
         stored = verify_summary(by_index)
         selected_indices = SENTINELS
-        print("PASS stored complete 2,604-parent summary", stored["aggregate_digest"])
+        print(
+            "PASS stored complete 2,604-parent summary",
+            stored["aggregate_digest"],
+            flush=True,
+        )
     elif args.full:
         selected_indices = tuple(sorted(by_index))
     else:
@@ -842,11 +979,31 @@ def main():
         raise ValueError("no parents selected")
     if args.workers < 1:
         raise ValueError("--workers must be positive")
+    if args.resume and (args.analysis_output is None or not args.analysis_output.exists()):
+        raise ValueError("--resume requires an existing --analysis-output")
+
+    try:
+        compilers, explicit_compiler = compiler_candidates()
+    except RuntimeError as error:
+        raise SystemExit(f"ERROR: {error}") from error
+    default_stored_mode = (
+        not args.full
+        and args.indices is None
+        and args.analysis_output is None
+        and not args.resume
+    )
+    native_required = args.require_compiled_replay or not default_stored_mode
+    if not compilers:
+        if native_required:
+            raise SystemExit(
+                "ERROR: compiled replay requires CXX, g++, or clang++ with "
+                "C++17 and OpenSSL libcrypto support"
+            )
+        print_stored_fallback("no supported C++17 compiler")
+        return
 
     results = []
     if args.resume:
-        if args.analysis_output is None or not args.analysis_output.exists():
-            raise ValueError("--resume requires an existing --analysis-output")
         checkpoint = json.loads(args.analysis_output.read_text(encoding="utf-8"))
         results = validate_payload(
             checkpoint,
@@ -862,8 +1019,43 @@ def main():
 
     if selected:
         with tempfile.TemporaryDirectory(prefix="diag2-common-shear-") as build:
-            library = Path(build) / "libdiag2_common_shear_fast.so"
-            compile_helper(library)
+            library = None
+            native_failures = []
+            for candidate_index, compiler in enumerate(compilers):
+                if os.name == "nt":
+                    library_name = f"diag2_common_shear_fast-{candidate_index}.dll"
+                elif sys.platform == "darwin":
+                    library_name = (
+                        f"libdiag2_common_shear_fast-{candidate_index}.dylib"
+                    )
+                else:
+                    library_name = f"libdiag2_common_shear_fast-{candidate_index}.so"
+                candidate_library = Path(build) / library_name
+                try:
+                    compile_helper(candidate_library, compiler)
+                    preflight_library(candidate_library)
+                except NativeToolchainUnavailable as error:
+                    native_failures.append((compiler, error))
+                    if explicit_compiler:
+                        raise SystemExit(
+                            "ERROR: explicit CXX cannot build/load the compiled "
+                            f"replay:\n{error}"
+                        ) from error
+                    continue
+                library = candidate_library
+                break
+            if library is None:
+                failures = native_failure_report(native_failures)
+                if native_required:
+                    raise SystemExit(
+                        "ERROR: no auto-discovered compiler can build/load the "
+                        f"compiled replay:\n{failures}"
+                    )
+                print_stored_fallback(
+                    "auto-discovered C++ toolchains could not build/load the "
+                    "pinned kernel"
+                )
+                return
             with ProcessPoolExecutor(
                 max_workers=args.workers,
                 initializer=initialize_worker,

@@ -45,10 +45,11 @@ For each selected parent the verifier:
    masks.
 
 The Boolean-heavy extension and mask steps are implemented by the C++17
-finite kernel `diag2_common_shear_fast.cpp`.  Parent 16 is also pinned
-bit-for-bit against the original independent pure-Python calculation: 66,636
-valid extensions, 40,524 bad signatures, minimum mask size 52, minimum
-overlap 8, and record digest
+finite kernel `diag2_common_shear_fast.cpp`.  Its source digest is pinned by
+the Python verifier.  Parent 16 is also pinned bit-for-bit against the
+original independent pure-Python calculation: 66,636 valid extensions,
+40,524 bad signatures, minimum mask size 52, minimum overlap 8, and record
+digest
 
 ```text
 942d7cac1ce3afff4ff0299c5b9acb382e60c4350616f9b42eb49385fd831737
@@ -98,13 +99,26 @@ extension count, all extrema and witnesses, and the complete sorted
 58b5a8cb8f6e36466efabb6dc6a4ba1b9bf9f812f5899f5138d6abc96c2c8a18
 ```
 
-The default command validates the full stored summary and exactly replays
-catalog parents 16, 860, and 2599:
+The default command always validates the full stored summary.  When a
+GNU-compatible `CXX`, `g++`, or `clang++` is available it also exactly
+replays catalog parents 16, 860, and 2599.  On a host without a supported
+compiler, or where an automatically discovered compiler cannot build and load
+the pinned kernel, it reports the stored-summary fallback explicitly.  An
+explicit `CXX` remains fail-closed.  The selected independent pure-Python
+escape-set verifier continues to replay parent 16 and four row-2599 charts.
+`CXX` follows native Windows command-line quoting on Windows and POSIX
+shell-word quoting elsewhere; attached options such as
+`-I"C:\Program Files\..."` are supported.
 
 ```console
 PYTHONDONTWRITEBYTECODE=1 python \
   ai/omreal/verify_diag2_common_shear_parent2604.py
 ```
+
+To require the live compiled sentinel replay rather than permit the validated
+stored-summary fallback, add `--require-compiled-replay`.  This strict mode,
+all scoped/full replay modes, and an explicit `CXX` surface native build or
+load failures instead of falling back.
 
 The complete replay is explicit because it is expensive and requires a
 C++17 compiler plus OpenSSL `libcrypto`:

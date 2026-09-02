@@ -41,6 +41,15 @@ def digest(value) -> str:
     ).hexdigest()
 
 
+def canonical_gzip_bytes(encoded):
+    compressed = bytearray(gzip.compress(encoded, compresslevel=9, mtime=0))
+    # zlib stamps byte 9 per host; these fixtures canonically pin the Unix value.
+    compressed[9] = 0x03
+    if compressed[:10] != b"\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\x03":
+        raise AssertionError("unexpected canonical gzip header")
+    return bytes(compressed)
+
+
 def canonical_terms(polynomial, variables):
     polynomial = sp.Poly(polynomial, *variables, domain=sp.QQ)
     if polynomial.is_zero:
@@ -348,7 +357,7 @@ def main():
             "strip_signature_ids": sector_ids[sector_start:sector_end],
         }
         encoded = (json.dumps(shard, sort_keys=True, separators=(",", ":")) + "\n").encode("ascii")
-        compressed = gzip.compress(encoded, compresslevel=9, mtime=0)
+        compressed = canonical_gzip_bytes(encoded)
         name = (
             "DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_CELL_V_LIFT_"
             f"SHARD_{shard_index:02d}_OF_{SHARD_COUNT}.json.gz"

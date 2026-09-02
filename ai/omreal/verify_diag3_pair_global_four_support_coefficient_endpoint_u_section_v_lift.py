@@ -69,7 +69,14 @@ def canonical_gzip_json(value):
     encoded = (
         json.dumps(value, sort_keys=True, separators=(",", ":")) + "\n"
     ).encode("ascii")
-    return gzip.compress(encoded, compresslevel=9, mtime=0)
+    compressed = bytearray(gzip.compress(encoded, compresslevel=9, mtime=0))
+    # zlib stamps byte 9 per host; these fixtures canonically pin the Unix value.
+    compressed[9] = 0x03
+    require(
+        compressed[:10] == b"\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\x03",
+        "unexpected canonical gzip header",
+    )
+    return bytes(compressed)
 
 
 def independent_endpoint_owner_map(projection, open_v):

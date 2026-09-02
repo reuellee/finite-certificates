@@ -58,6 +58,8 @@ SLOW = {
     "verify_diag3_pair_parent_source_EDGE39_0_113.py",
     "verify_diag3_pair_fullsupport_segment_cover.py",
     "verify_diag3_pair_residual_wall_adjacency.py",
+    "verify_diag3_pair_source_staircase8_coverage.py",
+    "verify_diag3_pair_source_staircase_coverage.py",
     "verify_diag3_pair_atlas_tangential_fill.py",
     "verify_diag3_pair_tangential_frontier.py",
     "verify_diag3_polynomial_multivector_height_screen.py",
