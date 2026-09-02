@@ -1,0 +1,166 @@
+{
+  "format": "d3-mixed-carrier-theorem-feasibility-midpoint-v1",
+  "cycle_id": "2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1",
+  "canonical_base_revision": "9116771ba80ed3d033516d0dd666b34348aad348",
+  "canonical_base_tree": "a64438426dc792af67d5ccc0dd2f4d1231dbaa14",
+  "opening_revision": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+  "opening_tree": "a59d740c008ae04accf200a8373d16b4d9c70ae4",
+  "integrated_lane_head": "2cf92fa094b80b89816feceaf6cce6c712f72115",
+  "integrated_lane_tree": "ec92c870ff48949b1c6587556b6a930e025da733",
+  "trigger": "FIRST_COMPLETE_HANDOFF_FROM_TOPOLOGY_FALSIFIER_AND_NATURALITY",
+  "opening_vector": [
+    "2/9",
+    1,
+    "diag3_pair_hc1_AND_diag3_triple_hc0",
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    5,
+    8
+  ],
+  "checkpoint_vector": [
+    "2/9",
+    1,
+    "diag3_pair_hc1_AND_diag3_triple_hc0",
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    5,
+    8
+  ],
+  "lane_verdicts": [
+    {
+      "track": "d3-mixed-carrier-topology",
+      "isolated_commit": "2697c7a87c085ed6066c9903cb224518737492db",
+      "isolated_tree": "418e214e7867d79d992ce50a9b8ea85c4c70fc03",
+      "integrated_commit": "3c78fb8a181dca98b191db68395cfad9bc68f6c0",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL",
+      "program_status": {
+        "A": "NULL_CONDITIONAL_PROGRAM_INCOMPLETE",
+        "B": "NULL_GLOBAL_PROGRAM_INCOMPLETE",
+        "C": "NULL_UNCHANGED_INDEPENDENT_OPEN"
+      },
+      "result_sha256": "7e54007c1bb97be457cbdc039c5520267cd39e39e08a930828b42708443a99e5",
+      "memo_sha256": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76",
+      "revision_reachable": false
+    },
+    {
+      "track": "d3-mixed-carrier-falsifier",
+      "isolated_commit": "2c12eb03e86cf5412a9d701adafd30bcc5facb10",
+      "isolated_tree": "74388045eaa5215413122143d8e45f8f2ea46f6b",
+      "integrated_commit": "91e6a0eac369c93de6b8d7abee7a758c26c6aec6",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL_SCOPED_ANSATZ_NEGATIVES_ONLY",
+      "program_status": {
+        "A": "A_NULL",
+        "B": "B_NULL",
+        "C": "C_NULL"
+      },
+      "result_sha256": "89f54c80234dd74f763b390a1da86de2359a99684e3920e57cec284e6fd08480",
+      "memo_sha256": "de7e1d5c2758786852cbb1cf684f3af8cbf44ab4df124c7053b60534b1317936",
+      "universal_negative_found": false,
+      "revision_reachable": false
+    },
+    {
+      "track": "d3-mixed-carrier-naturality",
+      "isolated_commit": "a10a6e517af0ca66c5454926e7e7035358071c9c",
+      "isolated_tree": "2418ec86497a0271820d299016357936c96ab384",
+      "integrated_commit": "2cf92fa094b80b89816feceaf6cce6c712f72115",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL",
+      "program_status": {
+        "A": "DECISIVE_NULL",
+        "B": "DECISIVE_NULL",
+        "C": "DECISIVE_NULL"
+      },
+      "result_sha256": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0",
+      "memo_sha256": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86",
+      "revision_reachable": false
+    }
+  ],
+  "combined_program_status": {
+    "A": "NULL_CONDITIONAL_MIXED_CHAIN_AND_GLOBAL_NATURALITY_PROGRAM_INCOMPLETE",
+    "B": "NULL_SOURCE_COMPLEX_COMPARISON_AND_RATIONAL_PAIR_PROGRAM_INCOMPLETE",
+    "C": "NULL_COMPONENT_COMPLETE_TRUE_PARENT_INFINITY_PROGRAM_INCOMPLETE",
+    "only_actual_proved_and_replayed_B_plus_C_can_close_D3": true,
+    "positive_finite_program_found": false,
+    "universal_negative_found": false
+  },
+  "first_surviving_edges": {
+    "A": [
+      "DECLARED_L_SOURCE_INTERFACE_TO_UNIVERSAL_GENUINELY_MIXED_CHAIN_THEOREM",
+      "COMMON_SIMULTANEOUS_SUBDIVISION_AND_ARBITRARY_FACE_CHAIN_COHERENCE"
+    ],
+    "B": [
+      "PINNED_SOURCES_TO_FINITE_EXHAUSTIVE_SOURCE_INDEX_AND_L_SOURCE",
+      "COMPLETE_TEN_SHAPE_RELATIVE_COMPLEX_TO_FILTRATION_PRESERVING_ACTUAL_BAD_UNION_COMPARISON",
+      "COMPARED_PAIR_COMPLEX_TO_RATIONAL_MIDDLE_EXACTNESS"
+    ],
+    "C": [
+      "RESIDUAL_SOURCE_ORBITS_TO_STABLE_COMPONENT_COMPLETE_IDENTITIES",
+      "COMPONENT_CONTINUATION_TO_CERTIFIED_TRUE_PARENT_INFINITY"
+    ]
+  },
+  "midpoint_conditions": [
+    {
+      "id": 1,
+      "condition": "A_B_AND_C_EACH_HAVE_COMPLETE_FINITE_DEPENDENCY_LISTS_WITH_NO_UNNAMED_GLOBAL_INPUT",
+      "met": false,
+      "reason": "A, B and C each retain a new global source, comparison, coherence or component-coverage input."
+    },
+    {
+      "id": 2,
+      "condition": "A_HAS_FULL_PROPER_ANTICHAIN_R1_TO_3_SIMULTANEOUS_SUBDIVISION_AND_ARBITRARY_CHAIN_PROGRAM",
+      "met": false,
+      "reason": "Only a conditional interface and local diagnostic are available."
+    },
+    {
+      "id": 3,
+      "condition": "B_HAS_FINITE_ALL_TEN_SHAPE_SOURCE_COMPARISON_AND_PAIR_KERNEL_PROGRAM",
+      "met": false,
+      "reason": "The source-derived complex, seven universal face clauses and actual bad-union comparison are absent."
+    },
+    {
+      "id": 4,
+      "condition": "C_HAS_FINITE_EVERY_COMPONENT_ROUTE_TO_CERTIFIED_TRUE_PARENT_INFINITY",
+      "met": false,
+      "reason": "The 1162302 residual count is by source orbit, not component, and no complete component-faithful graph exists."
+    },
+    {
+      "id": 5,
+      "condition": "DECISIVE_POSITIVE_OR_FULL_SCOPE_NEGATIVE_REMAINS_REACHABLE_IN_ONE_REVISION",
+      "met": false,
+      "reason": "All three lanes independently require new prohibited construction or a new global theorem; exact negatives are ansatz-scoped only."
+    }
+  ],
+  "minimum_acceptable_decrease_met": false,
+  "minimum_acceptable_decrease_reachable_inside_remaining_ceiling": false,
+  "evidence_file_count": 6,
+  "maximum_evidence_file_count": 12,
+  "checkpoint_decision": {
+    "stop_discovery": true,
+    "freeze_claim_dependency_graph": true,
+    "allow_referee_directed_revision": false,
+    "construction_started": false,
+    "resource_ceiling_enlarged": false,
+    "send_frozen_package_to_referee": true,
+    "required_close": "NULL__STALLED__STOP__SUCCESSOR_NONE"
+  },
+  "nonconsequences": [
+    "NO_PROOF_OR_REFUTATION_OF_A_B_OR_C",
+    "NO_SOURCE_DERIVED_JOINED_COMPLEX_OR_ACTUAL_BAD_UNION_COMPARISON",
+    "NO_ALL_COMPONENT_TRIPLE_ESCAPE",
+    "NO_PAIR_OR_TRIPLE_OBLIGATION_CLOSED",
+    "NO_D3_OR_9DVL_PROMOTION",
+    "NO_LEDGER_CHANGE",
+    "NO_CONSTRUCTION_OR_SUCCESSOR_AUTHORIZATION"
+  ],
+  "storage": {
+    "canonical_local_project": "E:\\Projects\\9DVL Research\\finite-certificates",
+    "github_write": false,
+    "connector_used": false,
+    "network_used": false,
+    "external_solver_used": false
+  }
+}
