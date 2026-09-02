@@ -1,0 +1,67 @@
+{
+  "format": "d3-global-srep-cloud-preflight-v1",
+  "cycle_id": "2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1",
+  "observed_on": "2026-09-02",
+  "project": "project-ebd5a273-53ea-4c8b-81a",
+  "zone": "us-central1-a",
+  "gcloud_version": "573.0.0",
+  "authorized_worker": {
+    "instance_prefix": "d3-srep-gate1-20260902-",
+    "machine_type": "n2-highcpu-16",
+    "vcpus": 16,
+    "memory_gib": 16,
+    "boot_disk_gib": 30,
+    "max_elapsed_hours": 4,
+    "max_cycle_spend_usd": 5,
+    "on_demand_compute_price_usd_per_hour": 0.573568,
+    "four_hour_compute_price_usd_before_disk_network_and_tax": 2.294272,
+    "required_creation_flags": [
+      "--max-run-duration=4h",
+      "--instance-termination-action=DELETE",
+      "--boot-disk-auto-delete"
+    ]
+  },
+  "official_sources": {
+    "price": "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "maximum_runtime_and_delete_action": "https://cloud.google.com/compute/docs/instances/limit-vm-runtime",
+    "stopped_instances_retain_billable_resources": "https://docs.cloud.google.com/compute/docs/instances/stop-start-instance"
+  },
+  "inventory_before_and_after_gate": {
+    "all_instances": [
+      {
+        "name": "claude-control",
+        "zone": "us-central1-a",
+        "status": "RUNNING",
+        "machine_type": "e2-micro",
+        "labels": {"role": "claude-control"},
+        "scope": "OUT_OF_SCOPE_UNTOUCHED"
+      }
+    ],
+    "cycle_prefix_instance_count": 0,
+    "cycle_prefix_disk_count": 0,
+    "cycle_instances_created": 0,
+    "cycle_instances_deleted": 0,
+    "existing_resources_modified": 0
+  },
+  "observed_us_central1_quota": {
+    "CPUS": {"limit": 200, "usage": 1},
+    "N2_CPUS": {"limit": 200, "usage": 0},
+    "PREEMPTIBLE_CPUS": {"limit": 0, "usage": 0},
+    "DISKS_TOTAL_GB": {"limit": 4096, "usage": 30},
+    "INSTANCES": {"limit": 24, "usage": 1}
+  },
+  "q0_gate": {
+    "frozen_evidence_commit": "e18efbdea3ef00616f4a6cb83967f6bb267b1a5d",
+    "independent_verifier_commit": "597537a8f705ac895e7d3e30962eb515cc8f6015",
+    "classification": "NULL_NO_EXECUTABLE_REPLACEMENT_BACKEND",
+    "independent_verdict": "Q0_NULL_INDEPENDENTLY_CONFIRMED",
+    "q0_pass": false,
+    "q1_eligible": false,
+    "hash_pinned_executable_job_manifest_exists": false,
+    "complete_N_s_d_forecast_exists": false
+  },
+  "activation": "DENIED_Q0_GATE_FAILED",
+  "cloud_used": false,
+  "actual_cycle_cloud_spend_usd": 0,
+  "conclusion": "The authorized cloud shape had adequate on-demand quota, but no mathematically eligible executable job existed. Launching capacity would not repair the missing backend, denominator, or P-closed compactification and was forbidden by the opening gate."
+}
