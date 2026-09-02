@@ -1,0 +1,7 @@
+PASS input SHA-256 pins: 5/5
+PASS producer Q0/Q1/cloud/theorem and N/s/d null assertions
+PASS producer M3 filled/unfilled rational ranks and d^2=0
+PASS falsifier M3 filled/unfilled rational ranks and d^2=0
+PASS M2 exact family (1/n,3/2) converges to excluded non-infinity limit
+PASS hostile mutations rejected: 22/22
+VERDICT Q0_NULL_INDEPENDENTLY_CONFIRMED; THEOREM_CREDIT=NONE
