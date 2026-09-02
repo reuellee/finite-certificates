@@ -1,0 +1,244 @@
+{
+  "format": "d3-mixed-carrier-naturality-result-v1",
+  "track_id": "d3-mixed-carrier-naturality",
+  "role": "semialgebraic-naturality-and-descent",
+  "branch": "research/lane-d3-mixed-carrier-naturality-20260901",
+  "base_commit": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+  "base_tree": "a59d740c008ae04accf200a8373d16b4d9c70ae4",
+  "handoff": "NULL",
+  "assessment": "DECISIVE_NULL",
+  "opening_ledger": "2/9",
+  "closing_ledger_required": "2/9",
+  "ledger_delta": "0/9",
+  "theorem_promotion": "NONE",
+  "program_status": {
+    "A": {
+      "status": "DECISIVE_NULL",
+      "scope": "A_B_NATURALITY",
+      "first_missing_edge": "AB-SIM-02",
+      "reason": "No coverage-certified common source subdivision or full face category exists on which to define simultaneous specialization and arbitrary-chain coherence.",
+      "reachable_in_one_referee_revision": false
+    },
+    "B": {
+      "status": "DECISIVE_NULL",
+      "scope": "B_SOURCE_COMPARISON_NATURALITY",
+      "first_missing_edges": ["B-INF-10", "B-CMP-11"],
+      "reason": "The source-derived closure category, true-infinity subcomplex, seven missing face types and filtration-preserving comparison are absent.",
+      "reachable_in_one_referee_revision": false
+    },
+    "C": {
+      "status": "DECISIVE_NULL",
+      "scope": "C_ALL_ACTUAL_COMPONENT_TRUE_INFINITY_ESCAPE",
+      "first_missing_edge": "C-COMP-01",
+      "reason": "The residual source-orbit count is not a component denominator, and no component-complete stable-identity graph exists.",
+      "reachable_in_one_referee_revision": false
+    }
+  },
+  "hardt_audit": {
+    "available_statement": "For a fixed semialgebraic map, a finite semialgebraic partition of the target exists over whose parts the map is semialgebraically trivial; properness is not required for this local triviality statement.",
+    "supplies": [
+      "FINITE_PARTITION_FOR_A_FIXED_DECLARED_SEMIALGEBRAIC_MAP",
+      "STRATUMWISE_SEMIALGEBRAIC_PRODUCT_TRIVIALIZATION",
+      "STRATUMWISE_CONSTANCY_OF_FIBER_HOMEOMORPHISM_TYPE_AND_COMPONENT_COUNT",
+      "POSSIBLE_COMMON_REFINEMENT_FOR_AN_ALREADY_FINITE_DECLARED_FAMILY"
+    ],
+    "does_not_supply": [
+      "FINITE_SOURCE_UNIVERSE_OR_COMMON_SUBDIVISION_BEFORE_ALL_MAPS_AND_SUBSETS_ARE_DEFINED",
+      "CANONICAL_SPECIALIZATION_MAPS_ACROSS_DISTINCT_STRATA",
+      "ARBITRARY_FACE_CHAIN_COHERENCE_OR_MONODROMY_DESCENT",
+      "LABEL_ORIENTATION_PERMUTATION_INCIDENCE_OR_D_SQUARED_ZERO_COMPATIBILITY",
+      "PROPERNESS_OR_COMPACT_SUPPORT_BOUNDARY_CONTROL",
+      "TRUE_PARENT_INFINITY_IDENTIFICATION",
+      "COMPONENT_COMPLETE_GLOBAL_CONTINUATION_GRAPH",
+      "EVERY_TRIPLE_COMPONENT_ESCAPE"
+    ],
+    "frozen_source_instantiation": "LOCAL_ONLY_NOT_GLOBAL_A_B_OR_C"
+  },
+  "required_distinctions": {
+    "parent_vs_witness_rank": "A parent-matrix rank drop may be true boundary only after actual compactification attachment; witness-kernel, support, occurrence and concurrence rank drops over a uniform parent are internal theorem strata.",
+    "cutoff_vs_infinity": "Chart divisors covered elsewhere, local boxes, cube faces, collars, zero weights and witness degenerations are not I=Xbar\\X.",
+    "per_block_vs_simultaneous": "Separate block/support Hardt partitions do not give one source-derived subdivision compatible with all labeled blocks, faces and specializations.",
+    "codim1_vs_arbitrary_chains": "Wall cospans and commuting squares do not prove equality and coherence of all composite chain maps or monodromy descent on the full face category."
+  },
+  "seam_matrix": [
+    {
+      "id": "AB-DOM-01",
+      "target": "A_B",
+      "required": "Every proper antichain; 1<=r<=3; ten shapes modulo active-block permutation; every labeled instance covered.",
+      "evidence": "The frozen contract states the quantifier and formal ten-shape taxonomy.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No finite source-derived indexed cell universe."
+    },
+    {
+      "id": "AB-SIM-02",
+      "target": "A_B",
+      "required": "One simultaneous subdivision for blocks, supports, weights, charts, walls, rank strata and parent boundary.",
+      "evidence": "Single-block coordinate-face strata and isolated local multi-block charts.",
+      "status": "FIRST_MISSING_A_B",
+      "gap": "No coverage-certified common subdivision."
+    },
+    {
+      "id": "A-SUP-03",
+      "target": "A",
+      "required": "Source-natural maps at support loss and witness-kernel rank change.",
+      "evidence": "The single-bad support/rank frontier and constant-rank kernel charts.",
+      "status": "LOCAL_ONLY",
+      "gap": "No three-block chain maps."
+    },
+    {
+      "id": "A-ZW-04",
+      "target": "A",
+      "required": "Zero-weight cospans through enlarged common faces.",
+      "evidence": "The local flow triangle retains zero mass and warns that direct continuation is false.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No universal cospan or common refinement."
+    },
+    {
+      "id": "AB-CHART-05",
+      "target": "A_B",
+      "required": "Chart-overlap maps preserving labels and source provenance.",
+      "evidence": "Chart-specific exact certificates.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No stable global cell identities or overlap maps."
+    },
+    {
+      "id": "AB-MONO-06",
+      "target": "A_B",
+      "required": "Loop descent for labels, orientations and active-block permutations.",
+      "evidence": "Frozen sources identify monodromy as an open risk.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No descent datum or loop audit."
+    },
+    {
+      "id": "AB-FLAG-07",
+      "target": "A_B",
+      "required": "Coherence on every arbitrary composable face chain.",
+      "evidence": "Codimension-one wall and face examples.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No full face category or equality of composite chain maps."
+    },
+    {
+      "id": "AB-RANK-08",
+      "target": "A_B",
+      "required": "Separate parent rank from witness/support/occurrence/concurrence rank.",
+      "evidence": "The distinction is explicit in V8, the prospectus and local theorems.",
+      "status": "SCOPE_RULE_ONLY",
+      "gap": "No common global stratification implements the distinct attachment maps."
+    },
+    {
+      "id": "B-FACE-09",
+      "target": "B",
+      "required": "Every labeled instance of all ten joined face types.",
+      "evidence": "Only (0), (1) and (2) are universally proved.",
+      "status": "MISSING_GLOBAL",
+      "gap": "Seven face types and their incidences remain open."
+    },
+    {
+      "id": "B-INF-10",
+      "target": "B",
+      "required": "Genuine infinity subcomplex with strict closure.",
+      "evidence": "The exit replay reports zero certified pair adjacencies, closure pairs/triples and infinity cells.",
+      "status": "MISSING_GLOBAL",
+      "gap": "K_I is not constructed."
+    },
+    {
+      "id": "B-CMP-11",
+      "target": "B",
+      "required": "Filtration-preserving comparison to the actual compactified bad union.",
+      "evidence": "Formal block-mass filtration and local matrices.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No source-derived comparison natural transformation."
+    },
+    {
+      "id": "C-COMP-01",
+      "target": "C",
+      "required": "Stable identity and complete coverage for every actual triple component.",
+      "evidence": "The 1,162,302 residue counts source orbits, not components.",
+      "status": "FIRST_MISSING_C",
+      "gap": "No component denominator or complete vertex set."
+    },
+    {
+      "id": "C-CONT-02",
+      "target": "C",
+      "required": "Sound same-component continuation across all chart, wall, rank and support seams.",
+      "evidence": "Local rays, local boxes and one canary escape.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No component-faithful edge set for unresolved sources."
+    },
+    {
+      "id": "C-INF-03",
+      "target": "C",
+      "required": "Certified closure point in actual I=Xbar\\X for every sink component.",
+      "evidence": "Scoped canaries have parent-wall ends; hostile fixtures reject artificial boundaries.",
+      "status": "MISSING_GLOBAL",
+      "gap": "No true-infinity witness for every residual component."
+    },
+    {
+      "id": "C-EXIT-04",
+      "target": "C",
+      "required": "Every component vertex reaches true infinity, equivalently every sink SCC contains it.",
+      "evidence": "The finite global-exit theorem proves this sufficient predicate.",
+      "status": "PROVED_CONDITIONAL",
+      "gap": "No accepting component-complete input graph exists."
+    },
+    {
+      "id": "C-FLAG-05",
+      "target": "C",
+      "required": "Escape compatibility along all boundary face chains.",
+      "evidence": "No complete boundary-stratified roadmap.",
+      "status": "MISSING_GLOBAL",
+      "gap": "Hardt strata do not supply cross-stratum coherence or proper exit."
+    }
+  ],
+  "first_missing_edges": {
+    "A_B": "AB-SIM-02",
+    "B_comparison": ["B-INF-10", "B-CMP-11"],
+    "C": "C-COMP-01"
+  },
+  "revision_reachability": {
+    "A_B_naturality_package": false,
+    "target_C_escape_package": false,
+    "reason": "Both repairs require new coverage/source construction or a new verified global theorem, not one bounded referee-directed revision."
+  },
+  "midpoint": {
+    "recommended_action": "STOP_DISCOVERY_FREEZE_AND_SEND_TO_REFEREE",
+    "allow_referee_directed_revision_for_this_lane": false,
+    "reason": "The positive finite program is unreachable after the first complete audit, and no exact universal negative was found."
+  },
+  "replays": [
+    {
+      "command": "python -B ai/omreal/verify_diag3_joined_flow_triangle.py",
+      "status": "PASS",
+      "scope": "LOCAL_ROW2599_TWO_SKELETON_ONLY"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+      "status": "PASS",
+      "scope": "UNIVERSAL_SINGLE_BAD_VANISHING_NOT_MULTI_BLOCK_NATURALITY"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_global_exit_criterion.py",
+      "status": "PASS",
+      "scope": "CONDITIONAL_EXIT_ACCEPTANCE_WITH_INPUT_GRAPH_MISSING"
+    },
+    {
+      "command": "python -B ai/omreal/verify_canonical_research_state_v8.py",
+      "status": "PASS",
+      "scope": "CANONICAL_STATE_AND_98_HOSTILES"
+    },
+    {
+      "command": "python -B ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/verify_opening_state.py",
+      "status": "PASS",
+      "scope": "OPENING_CONTRACT_AND_65_HOSTILES"
+    }
+  ],
+  "scope_limits": [
+    "NO_UNIVERSAL_OBSTRUCTION_TO_A_B_OR_C",
+    "NO_GLOBAL_SIMULTANEOUS_SUBDIVISION",
+    "NO_SOURCE_DERIVED_JOINED_COMPARISON",
+    "NO_ALL_COMPONENT_TRIPLE_ESCAPE",
+    "NO_THEOREM_OR_LEDGER_PROMOTION",
+    "NO_CONSTRUCTION_ATLAS_CENSUS_NETWORK_OR_EXTERNAL_SOLVER",
+    "NO_SUCCESSOR_SELECTION"
+  ]
+}
