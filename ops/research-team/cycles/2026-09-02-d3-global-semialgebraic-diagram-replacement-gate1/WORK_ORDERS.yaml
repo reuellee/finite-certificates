@@ -6,27 +6,37 @@ opening_action: PIVOT_BOUNDED_QUALIFICATION_AND_CONDITIONAL_CONSTRUCTION
 selected_target: D3_B0_GLOBAL_SEMIALGEBRAIC_DIAGRAM_SIMPLICIAL_REPLACEMENT_GATE1
 selected_construction_count_at_opening: 0
 
-storage_and_execution_authorization: &authority |
+storage_authorization: &storage_authorization |
   The saved local Codex project E:\Projects\9DVL Research is the canonical
-  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs
-  and are mirrored by native filesystem copy to
-  G:\My Drive\Projects\research-backups with byte length and SHA-256 checks.
-  GitHub is read-only: do not push, publish branches, open or update pull
-  requests, trigger or rerun CI, or merge. Network acquisition and connected
-  exact-computation services are permitted for this research, but secrets and
-  unrelated private files may not be sent. Human review and compute beyond
-  this laptop are unavailable, except that one useful ephemeral GCE worker is
-  authorized after an exact job-manifest preflight: project
-  project-ebd5a273-53ea-4c8b-81a, zone us-central1-a, cycle instance prefix
-  d3-srep-gate1-20260902-, machine n2-highcpu-16, 16 vCPU, 16 GiB RAM, 30 GiB
-  boot disk, maximum four elapsed hours and USD 5 total cycle spend. Delete
-  the cycle instance and attached disk after collection or failure. Stopping
-  is not cleanup. Do not inspect, stop, modify, or delete any pre-existing
-  instance, including claude-control. No other external mutation, paid API,
-  force-push, history deletion, or irreversible action is authorized.
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs.
+  A native-filesystem recovery mirror to
+  G:\My Drive\Projects\research-backups is mandatory at close, byte-length and
+  SHA-256 verified. Never invoke the Google Drive connector and never block on
+  connector approval. GitHub is read-only: do not push, publish branches, open
+  or update pull requests, trigger or rerun CI, or merge. This authorization
+  does not permit secrets, unrelated private files, unrestricted paid/external
+  compute, force-push, history deletion, or irreversible external action.
+
+execution_authorization: &execution_authorization |
+  Network acquisition and connected exact-computation services are permitted
+  for this research, but secrets and unrelated private files may not be sent.
+  Human review and compute beyond this laptop are unavailable, except that one
+  ephemeral GCE worker is conditionally authorized after exact job-manifest
+  preflight: project project-ebd5a273-53ea-4c8b-81a, zone us-central1-a,
+  prefix d3-srep-gate1-20260902-, n2-highcpu-16, 16 vCPU, 16 GiB RAM, 30 GiB
+  boot disk, at most four hours and USD 5 total. Both a client finally-delete
+  path and cloud-side TTL/self-delete watchdog are required. Delete the worker
+  and disk after collection or failure; stopping is not cleanup. Do not inspect,
+  stop, modify, or delete any pre-existing instance, including claude-control.
 
 strategy_gate:
   opening_verdict: PIVOT_SELECT_GLOBAL_FORMULA_DIAGRAM_REPLACEMENT
+  closing_required: true
+  stagnation_rule: >-
+    Six same-blocker and nine zero-ledger cycles prohibit nondecreasing
+    continuation. Qualification has zero theorem credit. A close without the
+    full exact pair-kernel decrease or a sound route-level negative must STOP;
+    it cannot continue or pivot back to direct master CAD.
   compared_routes:
     - GLOBAL_CLOSED_FORMULA_DIAGRAM_HOMOLOGICAL_2_SIMPLICIAL_REPLACEMENT
     - FRONTIER_CONDITION_CAD_DIRECT_MASTER_CLOSURE
@@ -47,20 +57,29 @@ solution_convergence_gate:
     global_coverage: UNKNOWN
     same_blocker_streak: 6
     zero_ledger_streak: 9
+  convergence_hypothesis: >-
+    A complete global formula diagram, certified homological-2 replacement,
+    induced maps and exact zero pair kernel can bypass rather than prove
+    literal O1-O5 and close diag3_pair_hc1, provided independent review proves
+    the replacement burden strictly smaller and theorem-capable.
   minimum_acceptable_delta: >-
-    Independently verify a full-scope finite simplicial pair diagram and its
-    homological-2 comparison to the actual compactified bad-union diagram,
-    closing at least the global_gluing/B-root attachment edge and reducing
-    open load-bearing obligations from 7 to at most 6. Qualification, source
+    Independently verify a full-scope finite simplicial pair diagram, its
+    homological-2 comparison to the actual compactified bad-union diagram, and
+    exact zero pair kernel, closing diag3_pair_hc1 through the named alternate
+    edge and reducing open load-bearing obligations from 7 to at most 6.
+    Do not mark global_gluing or literal O1-O5 proved. Qualification, source
     acquisition, a formula schema, forecasts, samples, and partial diagrams
     carry zero decrease.
-  midpoint: >-
+  mid_cycle_checkpoint: >-
     Immediately after Q0 or earlier on a failed canary, missing executable
     trace, or forecast outside the fixed laptop/cloud ceiling. Open Q1 only
     when every Q0 item is independently accepted and complete N/N construction
     plus replay remains plausible inside the unused fixed ceiling.
   closing_classification_required: true
-  nondecrease_action: STOP_OR_RETIRE_NOT_CONTINUE
+  automatic_pivot_rule: >-
+    Q0 failure, incomplete scope, a nondecreasing close, or failure to prove
+    the bypass strictly smaller forces STOP or precise RETIRE, never CONTINUE;
+    no fallback to the stopped direct-master, row2599, carrier, or sampling routes.
 
 global_scope: &global_scope |
   All 2,604 realizable unlabelled rank-four parent types, every required
@@ -107,40 +126,47 @@ work_orders:
   - track_id: d3-global-srep-formula-compiler
     role: formula-and-replacement-producer
     surface: ops/team/d3-global-srep-formula-compiler
-    authority: *authority
+    storage_authorization: *storage_authorization
+    execution_authorization: *execution_authorization
     global_scope: *global_scope
     q0_contract: *q0_contract
     resource_ceiling: Eight laptop-hours shared across Q0, 32 GiB RAM, 25 GiB scratch, one initial handoff and at most one verifier-directed repair.
     stop_rule: Stop on an incomplete discrete scope, nonclosed formula encoding, missing exact trace, opaque backend, or forecast outside the remaining ceiling.
     prohibited_scope: No self-acceptance, sampled promotion, direct master CAD, row2599 continuation, factor/residual sweep, canonical edit, push, or merge.
+    worker_restrictions: Own only the assigned producer surface; do not edit cycle, falsifier, verifier, canonical, ledger, cloud, or publication surfaces and do not commit, push, merge, or accept the producer output.
 
   - track_id: d3-global-srep-falsifier
     role: polynomial-topology-canary-and-hostile-falsifier
     surface: ops/team/d3-global-srep-falsifier
-    authority: *authority
+    storage_authorization: *storage_authorization
+    execution_authorization: *execution_authorization
     global_scope: *global_scope
     q0_contract: *q0_contract
     resource_ceiling: One M2 formula fixture, one M3 filled/unfilled formula pair, one single-bad control binding, and at least 16 hostile mutations.
     stop_rule: Stop at the first sound falsification of the encoding/backend, or after one complete Q0 hostile pass.
     prohibited_scope: No producer acceptance import, hand-authored output accepted as formula-derived, global theorem claim, canonical edit, push, or merge.
+    worker_restrictions: Own only the assigned falsifier surface; do not edit producer, verifier, cycle, canonical, ledger, cloud, or publication surfaces and do not commit, push, merge, or certify producer acceptance.
 
   - track_id: d3-global-srep-independent-verifier
     role: independent-exact-verifier
     surface: ops/team/d3-global-srep-independent-verifier
-    authority: *authority
+    storage_authorization: *storage_authorization
+    execution_authorization: *execution_authorization
     global_scope: *global_scope
     q0_contract: *q0_contract
     resource_ceiling: One independent parser/checker, one exact RCF replay lane, at least 16 hostile mutations, and one Q0 verdict; no human review is available.
     stop_rule: Fail closed on producer-code import, formula/pin drift, missing scope denominator, weak closure, false infinity, broken inclusion, d2 failure, rank mismatch, or opaque algebraic data.
     prohibited_scope: No repair of producer output, human-review claim, construction, canonical edit, push, merge, or cloud activation.
+    worker_restrictions: Own only the assigned verifier surface; review a frozen producer and falsifier package, import no producer acceptance code, and do not edit other surfaces, commit, push, merge, activate cloud, or select Q1.
 
   - track_id: d3-global-srep-coordinator
     role: opening-integration-cloud-and-closing-coordinator
     surface: ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1
-    authority: *authority
+    storage_authorization: *storage_authorization
+    execution_authorization: *execution_authorization
     global_scope: *global_scope
     q0_contract: *q0_contract
     resource_ceiling: Integrate one Q0 package; activate at most the declared single cloud worker only after preflight; perform post-run absence and recovery checks.
     stop_rule: Do not open Q1 without independent Q0 acceptance and an in-ceiling N/N forecast; stop on any cloud policy breach or unclean cleanup.
     prohibited_scope: No producer self-certification, ceiling extension, existing-instance mutation, canonical state or ledger edit, push, CI, PR, or merge.
-
+    worker_restrictions: Own only the cycle control surface and local integration; do not edit worker evidence, canonical state, ledger, or existing cloud resources, and do not push, merge, or claim human review.

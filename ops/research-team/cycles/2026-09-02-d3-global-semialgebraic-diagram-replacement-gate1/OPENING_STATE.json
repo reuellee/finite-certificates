@@ -46,7 +46,7 @@
       ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8],
       ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 6, 9]
     ],
-    "minimum_acceptable_decrease": "FULL_SCOPE_SIMPLICIAL_PAIR_DIAGRAM_AND_INDEPENDENT_HOMOLOGICAL_2_COMPARISON_CLOSE_GLOBAL_GLUE_B_ROOT_AND_REDUCE_7_TO_AT_MOST_6",
+    "minimum_acceptable_decrease": "FULL_SCOPE_SIMPLICIAL_PAIR_DIAGRAM_INDEPENDENT_HOMOLOGICAL_2_COMPARISON_AND_EXACT_ZERO_PAIR_KERNEL_CLOSE_DIAG3_PAIR_HC1_VIA_ALTERNATE_EDGE_AND_REDUCE_7_TO_AT_MOST_6",
     "qualification_has_theorem_credit": false,
     "partial_coverage_has_theorem_credit": false,
     "ledger_promotion_at_opening": false
@@ -61,6 +61,9 @@
     "bad_pair_triple_union_and_filtration_terms": true,
     "exclusive_pair_relative_subspaces": true,
     "parent_and_witness_rank_distinct": true,
+    "alternate_pair_edge": "diag3_pair_formula_diagram_comparison",
+    "literal_O1_through_O5_claimed": false,
+    "bypass_must_be_independently_proved_strictly_smaller": true,
     "samples_or_local_atlases_sufficient": false
   },
   "q0": {
@@ -105,7 +108,8 @@
     "known_existing_instance_out_of_scope": "claude-control",
     "must_delete_instance_and_disk": true,
     "stopping_is_cleanup": false,
-    "activation_requires_hashed_job_manifest": true
+    "activation_requires_hashed_job_manifest": true,
+    "activation_requires_cloud_side_ttl_watchdog": true
   },
   "tooling": {
     "wolfram_exact_rcf_lane": "AVAILABLE",
@@ -140,9 +144,17 @@
     {"path": "ai/omreal/DIAG3_PAIR_GLOBAL_MASTER_QUOTIENT.md", "bytes": 19973, "sha256": "af64cf292ce04234f4dabf48d0ae278c7a9ea1bee7ae83b525a0631d287f3eb7"},
     {"path": "ops/team/d3-mixed-carrier-falsifier/OBSTRUCTION_DOSSIER.md", "bytes": 15113, "sha256": "de7e1d5c2758786852cbb1cf684f3af8cbf44ab4df124c7053b60534b1317936"},
     {"path": "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md", "bytes": 11362, "sha256": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76"},
-    {"path": "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/CYCLE.md", "bytes": 12680, "sha256": "8f6e0591676eb37a7779f56d898bfb5a4742c2c06b9fcc28663a0def5e58c204"},
-    {"path": "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/WORK_ORDERS.yaml", "bytes": 7923, "sha256": "35a2f7cf56793e73afc970efeeb9e55b0885f91d07a345bcf82e6c71faecac22"},
-    {"path": "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/LITERATURE_MANIFEST.json", "bytes": 1543, "sha256": "54fb5e6a73d7b89ca78ed37ce26485075485ded009068527328c3ad88e03b898"},
+    {"path": "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/CYCLE.md", "bytes": 18235, "sha256": "4c692eff5b27ede005140c0bb53899750c22ce7bcb0d90b865026bb8038f39f4"},
+    {"path": "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/WORK_ORDERS.yaml", "bytes": 10321, "sha256": "8a598364acc94a4be149896997d5dc9d6b4587c722809b29e1abcb7bc8628dd1"},
+    {"path": "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/LITERATURE_MANIFEST.json", "bytes": 1919, "sha256": "a914760d7ac62eed449d00d1d0f468319f4b7dec186c6076bde694ec9e960827"},
+    {"path": "ai/omreal/9DVL_THEOREM_PROSPECTUS.md", "bytes": 23229, "sha256": "99b4755f2ea7341d60cbb96bbc0e70a3ec62ce796b7f6bd9ea31500e40d073a4"},
+    {"path": "ops/research-team/verify_cycle_protocol.py", "bytes": 14615, "sha256": "e3c2f64b97d53f4de00be675a789a42668835bb1dd8759779be8392760131753"},
+    {"path": "ops/research-team/cycles/2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1/CYCLE_REPORT.md", "bytes": 11134, "sha256": "736715466b398fc2294207f73cdbf71b6dbbeccdce78626a83b107572d5ccaf4"},
+    {"path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CYCLE_REPORT.md", "bytes": 10862, "sha256": "ccb34a1b416bd65920a0b50f780e66292eece697847afe8042b4d7a2fd6a0df0"},
+    {"path": "ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/CYCLE_REPORT.md", "bytes": 10997, "sha256": "1ecd782da68eb7a5e3a41052b916726aabed815e1dc50822d98d1f35078fc6e4"},
+    {"path": "ops/research-sources/basu-karisani/README.md", "bytes": 530, "sha256": "5b34e710856797fb32b4fcda5054fe7b62aa25421ec9dc96c0d06e524ac468bd"},
+    {"path": "ops/research-sources/basu-karisani/arxiv-2009.13365v3.pdf", "bytes": 1382913, "sha256": "c4cf62ddfa52185f6dac456ba8f4c115e5ced4ff7234d1b309b88c6c4387f8a1"},
+    {"path": "ops/research-sources/basu-karisani/arxiv-2207.10497v1.pdf", "bytes": 635893, "sha256": "560eb043ffb3bc5551d02404a3a288b756651319952870c4391f070377b46002"},
     {"path": "ops/toolchains/exact-cas-laptop/SOURCE_MANIFEST.json", "bytes": 2377, "sha256": "c66f814556f2765b8dfcd6466d5918cdb1c037d0d104a44e58d4da754ce52f1a"},
     {"path": "ops/toolchains/exact-cas-laptop/SMOKE_RESULT.json", "bytes": 602, "sha256": "9360d2d7b749f903dab41b2b990e90569dd519d5feef52408adf646247efccec"},
     {"path": "ops/toolchains/exact-cas-laptop/bootstrap_core.sh", "bytes": 2581, "sha256": "7e99712d9f15cff4bba9409c04c1473a471b1d4c5945b7c449a3b59362404c6f"},
@@ -150,4 +162,3 @@
     {"path": "ops/toolchains/exact-cas-laptop/conda-linux-64.lock", "bytes": 6980, "sha256": "a2f33ed5bbb26400f032e83c0981a91fd91478c8362e987f9acd6b58ea277d8b"}
   ]
 }
-

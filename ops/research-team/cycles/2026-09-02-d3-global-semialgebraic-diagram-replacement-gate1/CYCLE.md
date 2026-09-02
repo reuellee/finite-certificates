@@ -1,6 +1,6 @@
 # Cycle: D3 global semialgebraic diagram replacement gate 1
 
-Canonical predecessor revision: `0b8141223193c1ea2a1b4fce8e862466749f8b6b`
+Canonical base revision: `0b8141223193c1ea2a1b4fce8e862466749f8b6b`
 
 Canonical predecessor tree: `faad8f9e78bd54435ee6212535198a08c0e3fe76`
 
@@ -14,7 +14,7 @@ The cycle is open, but theorem construction is conditional on the
 qualification gate below.  Qualification artifacts carry zero theorem
 credit.
 
-## Authority and execution environment
+## Storage and publication authority
 
 The user's 2026-09-02 messages are the new explicit authority required by
 V9.  They authorize acquiring useful resources and starting this cycle.
@@ -42,12 +42,19 @@ user expressly authorizes a useful ephemeral cloud environment.  Therefore:
 - cloud use is `AVAILABLE_NOT_ACTIVATED` until a job manifest names the exact
   input tree, command, verifier, output hashes, timeout, and cleanup action.
 
+The saved local Codex project is the working authority, with a
+native-filesystem recovery mirror at
+`G:\My Drive\Projects\research-backups`.  Never invoke the Google Drive
+connector and never block on connector approval.  GitHub is read-only.  The
+standing prohibition on paid/external compute is superseded only by the
+single tightly bounded ephemeral worker above; force-push remains forbidden.
+
 The numeric cloud ceiling is conservative relative to the public
 `us-central1` on-demand price of `n2-highcpu-16`; it is an authorization cap,
 not a promise that a billing budget enforces shutdown.  The launcher and
 post-run inventory check are acceptance dependencies.
 
-## Mandatory opening strategy tournament
+## Mandatory opening strategy evaluation
 
 V9 closed with seven load-bearing obligations, pair residual and coverage
 both `UNKNOWN`, and streaks of six same-blocker and nine zero-ledger cycles.
@@ -57,7 +64,7 @@ sampling.  The new route changes the source object: it begins with one finite
 closed-formula diagram over the entire compact quantified domain and asks for
 a low-degree simplicial replacement of that diagram.
 
-| Route | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independent replay | Resource / information | Stagnation risk | Disposition |
+| Route | Ledger leverage | Quantifier readiness | Coverage burden | Terminality | Structural compression | Independent verification | Resource / information | Stagnation risk | Disposition |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | global closed-formula diagram plus homological-2 simplicial replacement | 5 | 3 | 2 | 5 | 5 | 4 | 4 | 2 | **selected** |
 | frontier-condition CAD / direct master closure | 5 | 2 | 1 | 4 | 3 | 3 | 2 | 5 | reject: continuation of the stopped direct-master route |
@@ -69,7 +76,7 @@ Scores are `1..5`, with `5` favorable except that stagnation risk is literal
 and `1` is favorable.  Selection does not assert that an implementation of
 the published replacement algorithm exists locally.
 
-## Mathematical target and global quantifiers
+## Bounded target
 
 For every one of the `2,604` realizable unlabelled rank-four parent types,
 every required labelled frame and every realization component, and every
@@ -99,6 +106,57 @@ diagram cannot express a required comparison.  The existing proper compact
 Gordan-fiber quotient may be used before the pair differential.  No receiver,
 root, row-2599, support-atlas, or master-CAD continuation is part of this
 cycle.
+
+The alternate edge attacked by this cycle is
+`diag3_pair_formula_diagram_comparison`.  It is a proposed bypass of literal
+O1--O5, not a proof of `global_gluing`, a source triangulation, or the
+face-natural `L_source` interface.  Acceptance requires the complete diagram,
+its exact rational pair-kernel computation, and an independent proof that the
+new edge is theorem-capable and strictly smaller than the bypassed obligation
+set under the opening measure.  Until then all seven canonical obligations
+remain open.
+
+## Obligation graph
+
+```text
+complete compact formula tuple and discrete scope denominator
+  -> exact low-degree replacement of every object in one diagram
+  -> verified induced maps / relative-pair boundary matrices
+  -> exact rational pair kernel = 0
+  -> diag3_pair_formula_diagram_comparison
+  -> diag3_pair_hc1
+
+independent actual triple-component escape
+  -> diag3_triple_hc0
+
+diag3_pair_hc1 + diag3_triple_hc0 -> D3
+```
+
+The first chain is an alternate proof route.  It does not relabel formula
+replacement as a simultaneous semialgebraic source subdivision and does not
+mark `global_gluing`, extension labels, strict closure, relative infinity, or
+middle-rank replay proved.  Those inherited nodes cease to be load-bearing on
+the pair branch only if an independent closing review accepts the complete
+bypass and its strictly smaller burden.
+
+## Canonical input accounting
+
+- canonical base and tree: `0b8141223193c1ea2a1b4fce8e862466749f8b6b`
+  / `faad8f9e78bd54435ee6212535198a08c0e3fe76`;
+- canonical V9 status: `STOPPED`, ledger `2/9`, seven open load-bearing
+  obligations, pair residual and coverage `UNKNOWN`;
+- parent domain: all `2,604` realizable unlabelled types, every required frame
+  and every realization component;
+- signature domain: every ordered proper pairwise-incomparable triple of
+  proper extensions, with an independently generated exact denominator still
+  required from Q0;
+- selected papers: arXiv `2009.13365v3` and `2207.10497v1`, whose local bytes
+  and digests are opening pins;
+- comparable vectors: the global-master audit, joined-Gordan tournament, and
+  mixed-carrier feasibility close reports are opening pins;
+- recovery checkpoint: complete-history bundle of the canonical base,
+  `134,422,661` bytes, SHA-256
+  `33bec64bf1a3cefef5b848cd581edc5808e0d3152fd8a150de00faf4b1714ee8`.
 
 ## Two-stage gate
 
@@ -136,8 +194,9 @@ the unused part of Q0 plus the one cloud worker authorized above; no larger
 cluster, human referee, third pass, or ceiling extension exists.
 
 The producer must emit one full-scope finite simplicial pair diagram through
-dimension three and a homological-2 comparison to the actual compactified
-bad-union diagram.  A separately implemented verifier must regenerate the
+dimension three, a homological-2 comparison to the actual compactified
+bad-union diagram, and the exact rational calculation proving the required
+pair kernel is zero.  A separately implemented verifier must regenerate the
 scope denominator, replay formula/subset facts using an independent exact
 real-closed-field backend, verify every face and subcomplex, recompute signed
 relative boundaries and `d^2 = 0`, and recompute exact ranks.  Partial parent,
@@ -161,14 +220,21 @@ duplicate simplex ID; flipped incidence; corrupt algebraic-root or
 infinitesimal data; M3 filled/unfilled conflation; and M2 nonclosed pointwise
 assembly.
 
-## Mandatory solution-convergence gate
+## Mandatory solution-convergence evaluation
 
-Opening proof-distance vector:
+Proof-distance vector at opening:
 
 ```text
 (2/9, 1, {diag3_pair_hc1, diag3_triple_hc0}, 7,
  UNKNOWN, UNKNOWN, 6, 9)
 ```
+
+- Score deficit: `1` diagonal to the next theorem-ledger score.
+- Open load-bearing obligations: `7`.
+- Certified exhaustive residual: `UNKNOWN` for the pair branch.
+- Global coverage: `UNKNOWN` for the pair branch.
+- Same-blocker streak: `6`.
+- Zero-ledger streak: `9`.
 
 The last three comparable closing vectors are:
 
@@ -178,17 +244,19 @@ joined-Gordan tournament:    (2/9, 1, {...}, 7, UNKNOWN, UNKNOWN, 5, 8)
 mixed-carrier feasibility:   (2/9, 1, {...}, 7, UNKNOWN, UNKNOWN, 6, 9)
 ```
 
-Convergence hypothesis: a formula-first diagram plus a certified
-homological-2 replacement can simultaneously attach the global source,
-strict closure, true infinity, and the source comparison without enumerating
-a direct master CAD.
+Convergence hypothesis: a formula-first diagram, certified homological-2
+replacement, and exact induced pair map can bypass the direct master CAD and
+prove `diag3_pair_hc1` without claiming the literal O1--O5 source
+triangulation.  The bypass counts only if an independent verifier proves its
+replacement burden strictly smaller and theorem-capable.
 
 Minimum acceptable decrease: an independently verified **full-scope** finite
-simplicial pair diagram and homological-2 comparison must close at least the
-`global_gluing`/B-root attachment edge and reduce the open load-bearing count
-from `7` to at most `6`.  The ledger remains `2/9` unless both independent D3
-invariants are actually proved.  Q0, a schema, a theorem citation, an output
-forecast, a sample, or a partial diagram earns zero decrease.
+simplicial pair diagram, homological-2 comparison, and exact zero pair kernel
+must close `diag3_pair_hc1` through the named alternate edge and reduce the
+open load-bearing count from `7` to at most `6`.  It does not mark
+`global_gluing` or literal O1--O5 proved.  The ledger remains `2/9` because
+the triple invariant is independent.  Q0, a schema, a theorem citation, an
+output forecast, a sample, or a partial diagram earns zero decrease.
 
 Mid-cycle checkpoint: immediately after Q0, or earlier upon a failed canary,
 missing trace, or forecast that cannot fit the remaining laptop/cloud ceiling.
@@ -196,12 +264,22 @@ Continue to Q1 iff every Q0 item passes independently and complete `N/N`
 construction and replay remain plausible under the fixed ceiling.  Otherwise
 freeze the handoff and stop; resources may not be enlarged.
 
+Mid-cycle convergence check must record the vector again, the exact Q0
+verdict, the executable/trace status, the `N/N` forecast, remaining local and
+cloud budget, and whether the minimum decrease remains reachable.
+
+Automatic strategy-reset rule: Q0 failure, incomplete global scope, a
+nondecreasing close, or failure to prove the bypass strictly smaller forces
+`STOP` or precisely scoped `RETIRE`; it can never authorize same-route
+`CONTINUE`.  Only the independently accepted strict decrease can support
+`CONTINUE`, and no result here may silently `PIVOT` back to direct CAD.
+
 Trajectory is `CONVERGING` only if the minimum decrease is independently
 accepted.  Reusable Q0 knowledge without that decrease is `INFORMATIONAL` or
 `STALLED` and cannot justify same-route continuation.  A sound counterexample
 retires only the precisely falsified encoding or theorem route.
 
-## Roles and boundaries
+## Roles
 
 1. **Formula/compiler producer:** owns the closed global schema and Q0
    executable trace; cannot accept its own output.
@@ -217,11 +295,35 @@ retires only the precisely falsified encoding or theorem route.
 No role may edit canonical theorem, ledger, or V9 state surfaces.  No role may
 push or merge.  Missing independence fails closed.
 
-## Handoffs and stop rules
+## Concurrency and non-overlap
 
-- `POSITIVE`: full `N/N` diagram and independently verified comparison meet
-  the strict decrease.  It closes only the named B-root edge unless further
-  invariants are separately proved.
+The formula/compiler producer, topology falsifier, and independent verifier
+own distinct `ops/team` surfaces and may work concurrently only after this
+opening passes independent review.  The producer cannot import falsifier or
+verifier acceptance logic.  The verifier cannot repair producer artifacts or
+import producer acceptance functions.  Only the coordinator integrates a
+frozen handoff, changes Q0/Q1 activation, launches or deletes the cycle cloud
+worker, and writes the closing record.  No worker commits to or edits another
+worker's surface.
+
+## Resource ceiling
+
+Q0 is bounded by eight laptop-hours, 32 GiB RAM, 25 GiB scratch, one producer
+handoff and one verifier-directed repair.  Q1 has no independent resource
+grant: it can use only the unused Q0 allowance plus one `n2-highcpu-16` worker
+for at most four hours and USD 5 total cycle spend.  Before activation, a
+hash-pinned cloud job must include both a client-side `finally` deletion path
+and a cloud-side TTL/self-delete watchdog; the latter is required so client or
+network failure cannot leave billable resources alive.  An exact pre/post
+inventory proves that only the cycle prefix was created and that no cycle
+instance or disk remains.  The ceiling cannot be extended.
+
+## Closing requirements
+
+- `POSITIVE`: full `N/N` diagram, independently verified comparison and exact
+  zero pair kernel meet the strict decrease.  They close
+  `diag3_pair_hc1` through the alternate edge, not literal `global_gluing` or
+  O1--O5, unless separately proved.
 - `NEGATIVE`: an exact full-scope counterexample falsifies one named necessary
   claim; freeze it and scope retirement narrowly.
 - `NULL`: no executable trace, incomplete schema, impossible resource
@@ -237,3 +339,9 @@ cycle prefix; discovery touching an existing cloud resource; failure to
 delete the cycle worker and disk; USD 5 or four-hour ceiling exhaustion; or a
 forecast that cannot complete and replay `N/N` inside the remaining ceiling.
 
+The closing report must give the exact opening and closing vectors, theorem
+and obligation delta, Q0/Q1 verdicts, mid-cycle convergence check, trajectory
+classification, automatic-reset result, same-route decision, resource and
+cloud-cleanup accounting, publication revision, recovery manifest, and one
+of `CONTINUE`, `PIVOT`, `RETIRE`, or `STOP`.  No incomplete cycle may omit a
+fail-closed closing record.

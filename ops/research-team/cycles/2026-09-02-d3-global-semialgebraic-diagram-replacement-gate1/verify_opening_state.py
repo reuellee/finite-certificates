@@ -115,7 +115,7 @@ def validate(opening: dict) -> None:
         ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8],
         VECTOR,
     ], "comparable vectors")
-    require(distance["minimum_acceptable_decrease"] == "FULL_SCOPE_SIMPLICIAL_PAIR_DIAGRAM_AND_INDEPENDENT_HOMOLOGICAL_2_COMPARISON_CLOSE_GLOBAL_GLUE_B_ROOT_AND_REDUCE_7_TO_AT_MOST_6", "minimum decrease")
+    require(distance["minimum_acceptable_decrease"] == "FULL_SCOPE_SIMPLICIAL_PAIR_DIAGRAM_INDEPENDENT_HOMOLOGICAL_2_COMPARISON_AND_EXACT_ZERO_PAIR_KERNEL_CLOSE_DIAG3_PAIR_HC1_VIA_ALTERNATE_EDGE_AND_REDUCE_7_TO_AT_MOST_6", "minimum decrease")
     require(distance["qualification_has_theorem_credit"] is False, "Q0 credit")
     require(distance["partial_coverage_has_theorem_credit"] is False, "partial credit")
     require(distance["ledger_promotion_at_opening"] is False, "opening promotion")
@@ -130,8 +130,11 @@ def validate(opening: dict) -> None:
         "bad_pair_triple_union_and_filtration_terms",
         "exclusive_pair_relative_subspaces",
         "parent_and_witness_rank_distinct",
+        "bypass_must_be_independently_proved_strictly_smaller",
     ):
         require(scope[key] is True, f"scope {key}")
+    require(scope["alternate_pair_edge"] == "diag3_pair_formula_diagram_comparison", "alternate edge")
+    require(scope["literal_O1_through_O5_claimed"] is False, "literal O1-O5 claim")
     require(scope["samples_or_local_atlases_sufficient"] is False, "sample scope")
 
     q0 = opening["q0"]
@@ -162,6 +165,7 @@ def validate(opening: dict) -> None:
     require(cloud["must_delete_instance_and_disk"] is True, "cloud deletion")
     require(cloud["stopping_is_cleanup"] is False, "cloud stop semantics")
     require(cloud["activation_requires_hashed_job_manifest"] is True, "cloud preflight")
+    require(cloud["activation_requires_cloud_side_ttl_watchdog"] is True, "cloud TTL watchdog")
 
     tooling = opening["tooling"]
     require(tooling == {
@@ -189,7 +193,7 @@ def validate(opening: dict) -> None:
     require(recovery["bundle_verify"] == "PASS_COMPLETE_HISTORY", "bundle verification")
     require(recovery["manifest_sha256"] == "b77f91b2b053d545b829df169308e5cb47c673039fd5af831f30fe6504ddac65", "recovery manifest")
 
-    require(len(opening["source_pins"]) == 13, "source pin count")
+    require(len(opening["source_pins"]) == 21, "source pin count")
     seen = set()
     for pin in opening["source_pins"]:
         path = ROOT / pin["path"]
@@ -214,6 +218,9 @@ def hostile_canaries(opening: dict) -> int:
         lambda x: x["proof_distance"]["opening_vector"].__setitem__(3, 6),
         lambda x: x["quantified_scope"].__setitem__("realizable_unlabelled_parent_types", 2603),
         lambda x: x["quantified_scope"].__setitem__("all_realization_components", False),
+        lambda x: x["quantified_scope"].__setitem__("literal_O1_through_O5_claimed", True),
+        lambda x: x["quantified_scope"].__setitem__("bypass_must_be_independently_proved_strictly_smaller", False),
+        lambda x: x["quantified_scope"].__setitem__("alternate_pair_edge", "global_gluing"),
         lambda x: x["quantified_scope"].__setitem__("samples_or_local_atlases_sufficient", True),
         lambda x: x["q0"].__setitem__("theorem_credit", "GLOBAL_GLUE"),
         lambda x: x["q0"].__setitem__("requires_formula_derived_output", False),
@@ -228,6 +235,7 @@ def hostile_canaries(opening: dict) -> int:
         lambda x: x["cloud"].__setitem__("existing_instances_in_scope", True),
         lambda x: x["cloud"].__setitem__("must_delete_instance_and_disk", False),
         lambda x: x["cloud"].__setitem__("stopping_is_cleanup", True),
+        lambda x: x["cloud"].__setitem__("activation_requires_cloud_side_ttl_watchdog", False),
         lambda x: x["tooling"].__setitem__("general_simplicial_replacement_backend", "QUALIFIED"),
         lambda x: x["authority"].__setitem__("human_review_available", True),
         lambda x: x["authority"].__setitem__("github_write", True),
@@ -259,4 +267,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

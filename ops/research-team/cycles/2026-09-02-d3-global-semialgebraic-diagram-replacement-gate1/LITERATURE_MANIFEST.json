@@ -8,6 +8,9 @@
       "authors": ["Saugata Basu", "Negin Karisani"],
       "arxiv": "2009.13365v3",
       "url": "https://arxiv.org/abs/2009.13365v3",
+      "local_path": "ops/research-sources/basu-karisani/arxiv-2009.13365v3.pdf",
+      "bytes": 1382913,
+      "sha256": "c4cf62ddfa52185f6dac456ba8f4c115e5ced4ff7234d1b309b88c6c4387f8a1",
       "last_revised": "2022-10-25",
       "scope_used": "Algorithmic ell-equivalent finite simplicial replacement from a quantifier-free semialgebraic formula; complexity (s*d)^(k^O(ell)).",
       "implementation_status": "NO_TURNKEY_IMPLEMENTATION_IDENTIFIED"
@@ -18,6 +21,9 @@
       "authors": ["Saugata Basu", "Negin Karisani"],
       "arxiv": "2207.10497v1",
       "url": "https://arxiv.org/abs/2207.10497v1",
+      "local_path": "ops/research-sources/basu-karisani/arxiv-2207.10497v1.pdf",
+      "bytes": 635893,
+      "sha256": "560eb043ffb3bc5551d02404a3a288b756651319952870c4391f070377b46002",
       "submitted": "2022-07-21",
       "scope_used": "Fixed-degree rational homology and induced maps for closed bounded semialgebraic maps and zigzag diagrams.",
       "implementation_status": "NO_TURNKEY_IMPLEMENTATION_IDENTIFIED"
@@ -30,4 +36,3 @@
   },
   "claim_boundary": "THEOREMS_DEFINE_A_FINITE_ROUTE_BUT_DO_NOT_BY_THEMSELVES_SUPPLY_AN_EXECUTABLE_TRACE_OR_9DVL_CERTIFICATE"
 }
-
