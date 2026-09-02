@@ -1,15 +1,16 @@
 # D3 mixed-carrier theorem-feasibility cycle report
 
-## Candidate status
+## Final status
 
-This report freezes a **closing candidate** for independent review. The three
-discovery lanes all returned exact handoff `NULL`; none returned `POSITIVE`,
-`NEGATIVE`, or `TIMEOUT`. The candidate therefore stops discovery at the
-mandatory midpoint. It proves or refutes none of Targets A, B, C, diagonal
-three, or 9DVL, and it leaves the theorem ledger at `2/9`.
+The corrected frozen candidate has been independently accepted fail-closed.
+The three discovery lanes and the referee all returned exact handoff `NULL`;
+none returned `POSITIVE`, `NEGATIVE`, or `TIMEOUT`. The cycle therefore stops
+at the mandatory midpoint. It proves or refutes none of Targets A, B, C,
+diagonal three, or 9DVL, and it leaves the theorem ledger at `2/9`.
 
-The final referee section and durable package identity are filled only after
-an independent referee has reviewed this immutable candidate commit/tree.
+Candidate v1 was rejected during preflight because its report omitted six
+literal protocol labels. Candidate v2 changed only that report by 18 inserted
+lines, passed the protocol replay, and was reviewed from immutable Git objects.
 
 ## Exact revisions
 
@@ -19,7 +20,9 @@ an independent referee has reviewed this immutable candidate commit/tree.
 | cycle opening | `dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b` | `a59d740c008ae04accf200a8373d16b4d9c70ae4` |
 | integrated discovery evidence | `2cf92fa094b80b89816feceaf6cce6c712f72115` | `ec92c870ff48949b1c6587556b6a930e025da733` |
 | frozen midpoint | `f1f955f6ae69e6a847ea8795724c77896636c547` | `c4b68a4dfdafccb66f4c69695d733fa78e840570` |
-| frozen closing candidate | filled after this report is committed | filled after this report is committed |
+| rejected v1 preflight candidate | `7f135917f7ef859ec272ac3126725db272ff3ea1` | `ab724829b045fd9a5d3f89573757db40adec6f38` |
+| corrected frozen v2 candidate | `2fc366e517c3bf30419b335053bec0895519b675` | `1520090d7f6a9ce6febeef4a0c50b31982ace560` |
+| independent referee | `4f72cf633eba01d50c0fa806da79bb7a2f19a2f8` | `e527e6d8483e6a38b2f274fe11913989d7164d2b` |
 
 The working branch is
 `research/local-d3-mixed-carrier-theorem-feasibility-gate1-20260901`.
@@ -57,7 +60,7 @@ alone carries no theorem credit.
 | topology / dependency design | `2697c7a87c085ed6066c9903cb224518737492db` | `NULL` | Six-obligation acyclic A-to-B graph; first roots are the missing global source/simultaneous subdivision and universal mixed-chain theorem, with a separately missing actual bad-union comparison. |
 | falsifier | `2c12eb03e86cf5412a9d701adafd30bcc5facb10` | `NULL` | No universal A/B/C counterexample. Three exact scoped models retire only fixed triangular order, pointwise first-exit assembly, and graph-only pair-H1 inference. |
 | semialgebraic naturality / escape | `a10a6e517af0ca66c5454926e7e7035358071c9c` | `NULL` | No common source subdivision/full face category, no B comparison, and no C component-complete true-infinity graph. |
-| independent referee | pending frozen-package review | pending | Must review without importing producer acceptance and reject at least 24 hostile mutations. |
+| independent referee | `4f72cf633eba01d50c0fa806da79bb7a2f19a2f8` | `NULL` | `ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED`; original standard-library verifier rejected 87/87 hostile mutations. |
 
 The six producer evidence files are pinned byte-for-byte in
 `CLOSING_CANDIDATE.json`.
@@ -118,7 +121,7 @@ resource enlargement was used.
 
 ## Gate table
 
-| gate | candidate result |
+| gate | final result |
 | --- | --- |
 | immutable predecessor and source pins | `PASS` |
 | V8 canonical contract | `PASS`, 98 hostile mutations rejected |
@@ -130,7 +133,9 @@ resource enlargement was used.
 | pointwise first-exit no-go | `PASS`, ansatz scope retained |
 | global-exit predicate | `PASS`, 9/9 hostiles and open-world rejection scope retained |
 | CI-shard census | `PASS`, 309 selected verifiers plus delegated/external/archival census |
-| independent frozen-package referee | `PENDING` |
+| v1 protocol preflight | `REJECTED`, six mandatory report labels absent |
+| bounded v2 repair | `PASS`, report only, exactly 18 insertions and no mathematical change |
+| independent frozen-package referee | `PASS`, candidate `2fc366e` / `1520090`, 87/87 hostiles |
 
 ## Mandatory solution-convergence verdict
 
@@ -159,7 +164,7 @@ Opening and midpoint vector:
  UNKNOWN, UNKNOWN, 5, 8)
 ```
 
-Candidate closing vector:
+Closing vector:
 
 ```text
 (2/9, 1, {diag3_pair_hc1, diag3_triple_hc0}, 7,
@@ -169,7 +174,7 @@ Candidate closing vector:
 All seven load-bearing obligations remain open: global gluing, extension
 labels, strict closure, genuine relative infinity, global middle-rank replay,
 `diag3_pair_hc1`, and `diag3_triple_hc0`. Proof-distance delta is zero. The
-same-blocker and zero-ledger streaks rise to `6` and `9` at candidate close.
+same-blocker and zero-ledger streaks rise to `6` and `9` at close.
 
 ## Trajectory, reset, and next decision
 
@@ -190,10 +195,21 @@ package.
 
 ## Referee and durable close
 
-Pending. The referee must pin the frozen candidate revision/tree, reconstruct
-the source and evidence hashes, independently validate the `NULL` scope and
-closing vector, reject at least 24 hostile mutations, and issue one final
-handoff. After acceptance, the coordinator will record the referee commit,
-final local publication revision, Git bundle identity, external manifest, and
-native recovery-mirror length/SHA-256 verification. No GitHub write or Google
-Drive connector is authorized.
+The referee accepted corrected candidate v2 with verdict
+`ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED` and exact referee/cycle handoffs
+`NULL / NULL`. It reconstructed every Git object, source and evidence pin;
+enumerated 10 shape orbits and 34 formal labeled placements; checked 4,096
+finite exit-graph fixtures; and rejected 87/87 hostile mutations. Its commit
+is `4f72cf633eba01d50c0fa806da79bb7a2f19a2f8`, integrated by fast-forward.
+
+The in-repository close is recorded in `CLOSING_MANIFEST.json`. After the
+final local close commit, the coordinator creates and verifies:
+
+- `E:\Projects\9DVL Research\outputs\9dvl-d3-mixed-carrier-theorem-feasibility-gate1-20260901.bundle`;
+- `E:\Projects\9DVL Research\outputs\9dvl-d3-mixed-carrier-theorem-feasibility-gate1-20260901-manifest.json`;
+- byte-identical native recovery copies under
+  `G:\My Drive\Projects\research-backups`.
+
+The external manifest records the exact final close commit/tree and bundle
+length/SHA-256. GitHub remains read-only; no push, PR, CI, merge, connector,
+or other remote mutation is performed.
