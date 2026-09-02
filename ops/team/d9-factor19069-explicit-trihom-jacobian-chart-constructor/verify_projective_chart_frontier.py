@@ -8,6 +8,7 @@ from hashlib import sha256
 from itertools import product
 import json
 from pathlib import Path
+import subprocess
 
 
 HERE = Path(__file__).resolve().parent
@@ -23,6 +24,12 @@ HOMOGENIZERS = ("u", "v", "w")
 AFFINE_VARIABLES = tuple("abcdefghi")
 AFFINE_TO_HOM = (0, 1, 2, 4, 5, 6, 8, 9, 10)
 BLOCK_AFFINE_INDICES = ((0, 1, 2), (3, 4, 5), (6, 7, 8))
+OPENING_REVISION = "cd2d856d3ccff51f7b5d6841702b25d191ed9985"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/RESULT.json",
+}
 
 
 def require(condition: bool, message: str) -> None:
@@ -36,6 +43,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def canonical_digest(value) -> str:
@@ -367,7 +383,7 @@ def validate_manifest(manifest: dict) -> None:
     require(policy["all_64_charts_constructed_without_symmetry_quotient"] is True, "manifest chart policy")
     require(policy["network_or_connector_used"] is False and policy["numerical_or_modular_probe_used"] is False, "manifest external route")
     for relative, expected in manifest["pins"].items():
-        require(digest_path(ROOT / relative) == expected, f"manifest pin: {relative}")
+        require(source_digest(relative) == expected, f"manifest pin: {relative}")
 
 
 def validate_result(result: dict, artifact: dict, manifest: dict) -> None:

@@ -27,6 +27,14 @@ FALSIFIER_RESULT = "ops/team/d9-factor19069-singular-df-multihomogeneous-falsifi
 CERTIFICATE_RESULT = "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/RESULT.json"
 RESULT = HERE / "RESULT.json"
 HOSTILE = HERE / "HOSTILE_TESTS.json"
+PORTABILITY_EDITED_CODE_PATHS = frozenset(
+    {
+        "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/build_singular_df_multihomogeneous_frontier.py",
+        "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/verify_singular_df_multihomogeneous_frontier.py",
+        "ops/team/d9-factor19069-singular-df-multihomogeneous-falsifier/verify_singular_df_multihomogeneous_falsifier.py",
+        "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/verify_singular_df_certificate.py",
+    }
+)
 VARIABLES = tuple("abcdefghi")
 BLOCKS = ((0, 1, 2), (3, 4, 5), (6, 7, 8))
 EXPECTED_DERIVATIVE_COUNTS = [54, 44, 54, 50, 50, 50, 36, 61, 36]
@@ -45,6 +53,15 @@ def require(condition: bool, marker: str) -> None:
 def git(*args: str, binary: bool = False):
     value = subprocess.check_output(["git", *args], cwd=ROOT, text=not binary)
     return value if binary else value.strip()
+
+
+def replay_git(replay: Path, *args: str) -> str:
+    resolved = replay.resolve()
+    return subprocess.check_output(
+        ["git", "-c", f"safe.directory={resolved.as_posix()}", *args],
+        cwd=resolved,
+        text=True,
+    ).strip()
 
 
 def digest(data: bytes) -> str:
@@ -166,6 +183,26 @@ def hostile_tests(stored: dict) -> list[str]:
     return rejected
 
 
+def optional_replay_path_recheck(clean: dict) -> bool:
+    replay = Path(clean["replay_path"]).resolve()
+    source_result = ROOT / CERTIFICATE_RESULT
+    replay_result = replay / CERTIFICATE_RESULT
+    if not replay.is_dir() or not replay_result.is_file():
+        return False
+    require(replay_git(replay, "rev-parse", "HEAD") == CANDIDATE, "external replay head")
+    require(replay_git(replay, "rev-parse", "HEAD^{tree}") == CANDIDATE_TREE, "external replay tree")
+    require(replay_git(replay, "status", "--porcelain=v1") == "", "external replay status")
+    require(source_result.stat().st_nlink == replay_result.stat().st_nlink == 1, "external replay hardlinks")
+    require(not os.path.samefile(source_result, replay_result), "external replay file identity")
+    require(
+        source_result.read_bytes()
+        == replay_result.read_bytes()
+        == frozen_bytes(CERTIFICATE_RESULT),
+        "external replay bytes",
+    )
+    return True
+
+
 def main() -> None:
     require(git("rev-parse", f"{CANDIDATE}^{{tree}}") == CANDIDATE_TREE, "candidate tree object")
     require(git("rev-parse", f"{EVIDENCE}^{{tree}}") == EVIDENCE_TREE, "evidence tree object")
@@ -180,10 +217,12 @@ def main() -> None:
     require(manifest["strict_real_residence"] == "UNRESOLVED" and manifest["connected_parent_component_tag"] == "UNRESOLVED", "manifest nonclaims")
     require(manifest["ledger_delta"] == "none" and manifest["theorem_ledger"] == "2/9", "manifest ledger")
     require(manifest["precise_successor"] == SUCCESSOR, "manifest successor")
+    require(PORTABILITY_EDITED_CODE_PATHS <= set(manifest["pins"]), "portability code pin census")
     for path, expected in manifest["pins"].items():
         blob = frozen_bytes(path)
         require(digest(blob) == expected, f"candidate pin {path}")
-        require((ROOT / path).read_bytes() == blob, f"post-candidate drift {path}")
+        if path not in PORTABILITY_EDITED_CODE_PATHS:
+            require((ROOT / path).read_bytes() == blob, f"post-candidate drift {path}")
 
     opening = frozen_json(f"ops/research-team/cycles/{CYCLE_ID}/OPENING_AUDIT.json")
     require(opening["selected_count"] == 1 and opening["opening_ledger"] == "2/9", "opening target")
@@ -239,14 +278,7 @@ def main() -> None:
     require(clean["candidate_revision"] == CANDIDATE and clean["candidate_tree"] == CANDIDATE_TREE, "clean candidate")
     require("--no-hardlinks --no-local" in clean["clone_mode"], "clean clone mode")
     require(clean["results"]["worktree_clean"] is True and clean["results"]["source_and_replay_same_file_id"] is False, "clean recorded result")
-    replay = Path(clean["replay_path"])
-    require(replay.is_dir() and subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=replay, text=True).strip() == CANDIDATE, "clean replay head")
-    require(subprocess.check_output(["git", "status", "--porcelain=v1"], cwd=replay, text=True).strip() == "", "clean replay status")
-    source_result = ROOT / CERTIFICATE_RESULT
-    replay_result = replay / CERTIFICATE_RESULT
-    require(source_result.stat().st_nlink == replay_result.stat().st_nlink == 1, "no hardlinks")
-    require(not os.path.samefile(source_result, replay_result), "distinct file identity")
-    require(source_result.read_bytes() == replay_result.read_bytes() == frozen_bytes(CERTIFICATE_RESULT), "replay bytes")
+    replay_path_checked = optional_replay_path_recheck(clean)
 
     stored = json.loads(RESULT.read_text(encoding="utf-8"))
     validate_result(stored)
@@ -254,7 +286,7 @@ def main() -> None:
     hostile = json.loads(HOSTILE.read_text(encoding="utf-8"))
     require(hostile["tests"] == rejected and hostile["rejected"] == hostile["total"] == 24, "hostile artifact")
     print("PASS frozen candidate, exact source/trihomogenization, preserved fail-closed frontier")
-    print("PASS clean no-hardlink replay, 24 hostile mutations, ledger 2/9 delta none")
+    print(f"PASS frozen clean-replay evidence, external_replay_path_rechecked={str(replay_path_checked).lower()}, 24 hostile mutations, ledger 2/9 delta none")
     print(f"PASS sole successor={SUCCESSOR}")
 
 

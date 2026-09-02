@@ -15,6 +15,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import sys
 from typing import Any, Callable
@@ -29,6 +30,7 @@ STATUS_PATH = ROOT / "ai/omreal/NINE_DIAGONAL_STATUS.md"
 README_PATH = ROOT / "README.md"
 OPERATING_SYSTEM_PATH = ROOT / "ai/omreal/RESEARCH_OPERATING_SYSTEM.md"
 MANIFEST_PATH = HERE / "SOURCE_MANIFEST.json"
+CURRENT_CANONICAL_STATE = "CANONICAL_RESEARCH_STATE_V9.json"
 
 BASE = "e666990f5b0cf07fef4a639bbb6596ddc9c4515a"
 BASE_TREE = "444f8a7e50ec58e4d97a71744090d7ed60330f19"
@@ -277,14 +279,49 @@ def validate_state(state: dict[str, Any]) -> None:
 
 
 def validate_authority_texts(status: str, readme: str, operating: str) -> None:
-    for text, label in ((status, "status"), (readme, "README"), (operating, "operating")):
+    status = " ".join(status.split())
+    readme = " ".join(readme.split())
+    operating = " ".join(operating.split())
+    for text, label in ((status, "status"), (operating, "operating")):
         require("CANONICAL_RESEARCH_STATE_V2.json" in text, f"{label} successor pointer")
     for text, label in ((status, "status"), (operating, "operating")):
         require("CANONICAL_RESEARCH_STATE.json" in text, f"{label} predecessor pointer")
-    require("predecessor reconciliation state" in readme, "README predecessor pointer")
+    readme_current = re.search(
+        r"Current cross-diagonal target selection is governed by the "
+        r"machine-checked \[`(CANONICAL_RESEARCH_STATE_V[0-9]+\.json)`\]"
+        r"\(ai/omreal/data/(CANONICAL_RESEARCH_STATE_V[0-9]+\.json)\)",
+        readme,
+    )
+    operating_current = re.search(
+        r"The current cross-diagonal machine-readable companion is "
+        r"`data/(CANONICAL_RESEARCH_STATE_V[0-9]+\.json)`",
+        operating,
+    )
+    require(readme_current is not None, "README current successor pointer")
+    require(operating_current is not None, "operating current successor pointer")
+    require(
+        readme_current.group(1)
+        == readme_current.group(2)
+        == operating_current.group(1)
+        == CURRENT_CANONICAL_STATE,
+        "current V9 successor pointer agreement",
+    )
+    require(
+        (
+            "predecessor reconciliation state" in readme
+            or (
+                "reconciliation states" in readme
+                and "historical proof inputs" in readme
+            )
+        ),
+        "README reconciliation history",
+    )
     require("immutable historical" in status, "status legacy classification")
     require("immutable historical proof" in operating, "operating legacy classification")
-    require("old selected routes are no longer current authority" in readme, "README authority")
+    require(
+        "old selected routes" in readme and "not current authority" in readme,
+        "README authority",
+    )
     stale = (
         "Current target selection is governed by the machine-checked "
         "[`DIAG3_RESEARCH_DECISION_LEDGER.json`]"
@@ -471,14 +508,65 @@ def hostile_canaries(state: dict[str, Any]) -> list[str]:
         rejected,
     )
 
-    stale_readme = README_PATH.read_text(encoding="utf-8").replace(
-        "CANONICAL_RESEARCH_STATE_V2.json", "CANONICAL_RESEARCH_STATE.json"
+    live_readme = " ".join(README_PATH.read_text(encoding="utf-8").split())
+    stale_pointer, replacements = re.subn(
+        r"(Current cross-diagonal target selection is governed by the "
+        r"machine-checked \[`)(CANONICAL_RESEARCH_STATE_V[0-9]+\.json)"
+        r"(`\]\([^)]*\))",
+        r"\1CANONICAL_RESEARCH_STATE.json\3",
+        live_readme,
+        count=1,
     )
+    require(replacements == 1, "authority pointer hostile setup")
     expect_rejection(
-        "authority_swap",
+        "authority_pointer_swap",
         lambda: validate_authority_texts(
             STATUS_PATH.read_text(encoding="utf-8"),
-            stale_readme,
+            stale_pointer,
+            OPERATING_SYSTEM_PATH.read_text(encoding="utf-8"),
+        ),
+        rejected,
+    )
+    live_operating = " ".join(
+        OPERATING_SYSTEM_PATH.read_text(encoding="utf-8").split()
+    )
+    downgraded_readme, readme_replacements = re.subn(
+        r"(Current cross-diagonal target selection is governed by the "
+        r"machine-checked \[`)(CANONICAL_RESEARCH_STATE_V9\.json)(`\]"
+        r"\(ai/omreal/data/)(CANONICAL_RESEARCH_STATE_V9\.json)(\))",
+        r"\1CANONICAL_RESEARCH_STATE_V8.json\3"
+        r"CANONICAL_RESEARCH_STATE_V8.json\5",
+        live_readme,
+        count=1,
+    )
+    downgraded_operating, operating_replacements = re.subn(
+        r"(The current cross-diagonal machine-readable companion is `data/)"
+        r"CANONICAL_RESEARCH_STATE_V9\.json(`)",
+        r"\1CANONICAL_RESEARCH_STATE_V8.json\2",
+        live_operating,
+        count=1,
+    )
+    require(
+        readme_replacements == operating_replacements == 1,
+        "dual authority downgrade hostile setup",
+    )
+    expect_rejection(
+        "dual_authority_downgrade",
+        lambda: validate_authority_texts(
+            STATUS_PATH.read_text(encoding="utf-8"),
+            downgraded_readme,
+            downgraded_operating + " Historical CANONICAL_RESEARCH_STATE_V9.json.",
+        ),
+        rejected,
+    )
+    stale_authority = live_readme.replace(
+        "not current authority", "is current authority"
+    )
+    expect_rejection(
+        "historical_authority_promotion",
+        lambda: validate_authority_texts(
+            STATUS_PATH.read_text(encoding="utf-8"),
+            stale_authority,
             OPERATING_SYSTEM_PATH.read_text(encoding="utf-8"),
         ),
         rejected,
@@ -500,7 +588,7 @@ def hostile_canaries(state: dict[str, Any]) -> list[str]:
         ),
         rejected,
     )
-    require(len(rejected) == len(cases) + 4, "hostile canary census")
+    require(len(rejected) == len(cases) + 6, "hostile canary census")
     return rejected
 
 
@@ -517,7 +605,7 @@ def replay_live_gates(mode: str) -> dict[str, str]:
         proc = run(argv)
         require(proc.stdout.strip(), f"empty replay: {name}")
     if mode == "FULL_HISTORY":
-        run(["git", "diff", "--check", f"{BASE}..HEAD"])
+        run(["git", "diff", "--check", f"{BASE}..{RECONCILIATION_COMMIT}"])
     return {name: "PASS" for name in commands}
 
 

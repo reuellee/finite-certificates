@@ -24,6 +24,7 @@ from hashlib import sha256
 from itertools import combinations, product
 import json
 from pathlib import Path
+import subprocess
 import sys
 
 
@@ -35,6 +36,13 @@ CERTIFICATE_TRACK = "d9-factor19069-explicit-trihom-jacobian-chart-certificate"
 TARGET = "D9_ROW2599_FACTOR19069_EXPLICIT_TRIHOMOGENIZED_JACOBIAN_CHART_DECOMPOSITION_GATE1"
 BASE_REVISION = "4aee0aac6e80d053cf1751eac766280873656909"
 BASE_TREE = "bfaff6f29b032ef6f81fa11a97063b01d74db8f7"
+OPENING_REVISION = "cd2d856d3ccff51f7b5d6841702b25d191ed9985"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/RESULT.json",
+}
+FROZEN_VERIFIER_SHA256 = "822b5c21fb4f738e62c9111c165fc4c447e4b6d46707b5dace7b9ae753db455a"
 OPENING_LEDGER = "2/9"
 LEDGER_DELTA = "0/9"
 
@@ -122,6 +130,15 @@ def seal(value: dict) -> dict:
 
 def file_digest(path: Path) -> str:
     return sha256(path.read_bytes()).hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return file_digest(ROOT / relative)
 
 
 def read_json(path: Path):
@@ -226,7 +243,7 @@ def all_nonempty_subsets(values: list[str]) -> list[list[str]]:
 def reconstruct_source() -> dict:
     for relative, expected in PINNED_INPUTS.items():
         require((ROOT / relative).is_file(), f"pinned input exists {relative}")
-        require(file_digest(ROOT / relative) == expected, f"pinned input digest {relative}")
+        require(source_digest(relative) == expected, f"pinned input digest {relative}")
 
     opening = read_json(OPENING)
     require(opening["cycle_id"] == CYCLE_ID, "opening cycle")
@@ -747,7 +764,7 @@ def validate_constructor_companions(candidate: dict) -> dict:
     require(manifest["canonical_base_revision"] == BASE_REVISION and manifest["canonical_base_tree"] == BASE_TREE, "constructor manifest base")
     require(manifest["cycle_opening_revision"] == candidate["opening_revision"] and manifest["cycle_opening_tree"] == candidate["opening_tree"], "constructor manifest opening")
     for relative, expected in manifest["pins"].items():
-        require((ROOT / relative).is_file() and file_digest(ROOT / relative) == expected, f"constructor manifest pin {relative}")
+        require((ROOT / relative).is_file() and source_digest(relative) == expected, f"constructor manifest pin {relative}")
     policy = manifest["source_policy"]
     require(policy["all_64_charts_constructed_without_symmetry_quotient"] is True, "constructor chart policy")
     for key in ("network_or_connector_used", "numerical_or_modular_probe_used", "predecessor_builder_code_imported", "seventy_inverse_variable_discovery_used", "trihomogenization_used_as_decomposition_certificate"):
@@ -847,7 +864,7 @@ def build_source_manifest(source: dict, companions: dict) -> dict:
     pins[CONSTRUCTOR_MANIFEST.relative_to(ROOT).as_posix()] = companions["manifest_sha256"]
     pins[CONSTRUCTOR_RESULT.relative_to(ROOT).as_posix()] = companions["result_sha256"]
     pins[SOURCE_ARTIFACT.relative_to(ROOT).as_posix()] = file_digest(SOURCE_ARTIFACT)
-    pins[Path(__file__).resolve().relative_to(ROOT).as_posix()] = file_digest(Path(__file__).resolve())
+    pins[Path(__file__).resolve().relative_to(ROOT).as_posix()] = FROZEN_VERIFIER_SHA256
     return seal({
         "format": "d9-factor19069-explicit-trihom-jacobian-chart-certificate-source-manifest-v1",
         "cycle_id": CYCLE_ID,

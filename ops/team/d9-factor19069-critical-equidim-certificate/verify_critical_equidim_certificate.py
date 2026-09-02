@@ -33,6 +33,11 @@ BASE = "f196f949b2a2981ea1b21019e4a2bf56302a683a"
 BASE_TREE = "7a5eaa91d1448defed2e77363b5e97cf93b97489"
 REVIEWED = "951498b19c17886ffbf3b32d938dd741903d99a7"
 REVIEWED_TREE = "f90cb55cdc51dd3ca0b077ba62e384e5df96e094"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    "ops/team/d9-factor19069-factored-barrier-referee/verify_closing_referee.py",
+}
 TARGET = "D9_ROW2599_FACTOR19069_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_GATE1"
 TARGET_FACTOR = 19069
 VARIABLES = tuple("abcdefghi")
@@ -123,6 +128,15 @@ def git(*arguments: str) -> str:
 
 def frozen(relative: str) -> bytes:
     return subprocess.check_output(["git", "show", f"{REVIEWED}:{relative}"], cwd=ROOT)
+
+
+def manifest_source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen_protocol = subprocess.check_output(
+            ["git", "show", f"{BASE}:{relative}"], cwd=ROOT
+        )
+        return digest(frozen_protocol)
+    return digest_path(ROOT / relative)
 
 
 def replay_sources() -> dict:
@@ -393,7 +407,7 @@ def validate_constructor_handoff(frontier: dict) -> None:
     require(manifest["opening_revision"] == BASE and manifest["opening_tree"] == BASE_TREE, "constructor manifest opening")
     require(manifest["source_policy"] == {"external_compute_used": False, "network_or_connector_used": False, "predecessor_frontier_is_frozen_accepted_source": True, "producer_code_imported": False}, "constructor manifest policy")
     for relative, expected in manifest["pins"].items():
-        require(digest_path(ROOT / relative) == expected, f"constructor manifest pin {relative}")
+        require(manifest_source_digest(relative) == expected, f"constructor manifest pin {relative}")
 
     result = json.loads(CONSTRUCTOR_RESULT.read_text(encoding="utf-8"))
     require(result["format"] == "d9-factor19069-critical-equidim-constructor-result-v1", "constructor result format")

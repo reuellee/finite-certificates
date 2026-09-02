@@ -95,7 +95,7 @@ EXPECTED_SHA256 = {
     "ops/team/diag3-orbit5563-falsifier/QUOTIENT_MANIFEST.json": "911d4ff842e2e962ab2c67d1725037580b6fe2d5fa113f4ccdd4c4786e027b14",
     "ops/team/diag3-orbit5563-falsifier/RESULT.yaml": "d3c38f13ebbcf2e69829bd3d5544e911e5facb5693986fc2c0977f80fd7ee2c9",
     "ops/team/diag3-orbit5563-falsifier/TRANSPORT_CONTRACT.json": "4455a630c3d212f09e844812013e97e2591b2bd813a076fdf243e5f55aee0d2a",
-    "ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py": "43e6ccb83c7eedc0a219e85fecfefda6c6f8a3994d9a108aec38997cfd5dac0c",
+    "ops/team/diag3-orbit5563-falsifier/verify_falsifier_gate.py": "84be5b538afd31ad71acd1385ad2d3170b6d1deb45f4643e81f63ac782ad12bc",
 }
 
 CONTROL_SHA256 = {
@@ -176,7 +176,7 @@ def git_optional(*args: str) -> str | None:
 def d3_surface_paths() -> set[str]:
     roots = (CYCLE_DIR, PROVER_DIR, FALSIFIER_DIR, HERE)
     return {
-        str(path.relative_to(ROOT))
+        path.relative_to(ROOT).as_posix()
         for root in roots
         for path in root.rglob("*")
         if path.is_file() and "__pycache__" not in path.parts

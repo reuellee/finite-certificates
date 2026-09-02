@@ -89,6 +89,12 @@ def git(*arguments: str, binary: bool = False):
     return answer if binary else answer.strip()
 
 
+def source_digest(relative: str) -> str:
+    if relative == "ops/research-team/PROTOCOL.md":
+        return digest_bytes(git("show", f"{REVIEWED_REVISION}:{relative}", binary=True))
+    return digest_path(ROOT / relative)
+
+
 def literal_assignment(path: Path, name: str):
     syntax = ast.parse(path.read_text(encoding="utf-8"))
     for node in syntax.body:
@@ -506,7 +512,7 @@ def validate_manifest(candidate: dict) -> None:
     require(candidate["base_revision"] == BASE_REVISION and candidate["base_tree"] == BASE_TREE, "manifest base pin")
     require(candidate["source_count"] == len(candidate["source_sha256"]), "manifest source count")
     for relative, expected in candidate["source_sha256"].items():
-        require(digest_path(ROOT / relative) == expected, f"source pin {relative}")
+        require(source_digest(relative) == expected, f"source pin {relative}")
     expected_artifacts = {
         "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json": EXPECTED_FRONTIER_SHA256,
         "ops/team/d9-factor19069-factored-barrier-constructor/SOURCE_MANIFEST.json": EXPECTED_CONSTRUCTOR_MANIFEST_SHA256,

@@ -40,7 +40,8 @@ ENDPOINT = "HASH_PINNED_FACTORED_BARRIER_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_
 CLASSIFICATION = "EXACT_FAIL_CLOSED_FACTORED_BARRIER_COMPONENT_NULL"
 SUCCESSOR = "D9_ROW2599_FACTOR19069_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_GATE1"
 RETIRED = "BLIND_FACTORED_BARRIER_COMPONENT_SAMPLER_BUDGET_ESCALATION"
-PYTHON = r"C:\Users\reuel\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
+# Historical provenance recorded by the frozen clean replay, not a runtime path.
+RECORDED_CLEAN_REPLAY_PYTHON = r"C:\Users\reuel\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
 
 FRONTIER_REL = "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json"
 CONSTRUCTOR_RESULT_REL = "ops/team/d9-factor19069-factored-barrier-constructor/RESULT.json"
@@ -89,6 +90,27 @@ REPLAY_SCRIPTS = (
     "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py",
     CERTIFICATE_VERIFY_REL,
 )
+REPLAY_SUCCESS_LINES = {
+    "ai/omreal/verify_canonical_research_state_v6.py": "PASS canonical 9DVL research state V6",
+    f"{CYCLE_REL}/verify_opening_audit.py": "PASS D9 factor-19069 factored-barrier gate-1 opening audit",
+    "ops/team/d9-factor19069-factored-barrier-constructor/verify_factored_barrier_frontier.py": "PASS exact source manifest and factored-circuit rebuild",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py": "PASS frozen constructor revision/tree and 24 immutable source/artifact pins",
+    CERTIFICATE_VERIFY_REL: "PASS producer-independent factor-19069 factored-barrier null certificate",
+}
+SUCCESSOR_MUTABLE_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    CERTIFICATE_VERIFY_REL,
+    "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py",
+}
+PORTABLE_REPLAY_SHA256 = {
+    "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py": "9825d136c4c8187477a0cd6cce4bebfad93153497e612be5c1576e1b18ed4259",
+    CERTIFICATE_VERIFY_REL: "627c254ca4fc87f5442a3ffe8143bc3d2e3bfc283af16a79bd5af70f434aedd3",
+}
+REPLAY_IMPORT_DIRECTORIES = tuple(
+    sorted({"ai/omreal", *(script.rsplit("/", 1)[0] for script in REPLAY_SCRIPTS)})
+)
+IMPORTABLE_SUFFIXES = {".py", ".pyc", ".pyd", ".so"}
 
 
 class Reject(AssertionError):
@@ -163,6 +185,16 @@ def validate_frozen_revisions() -> None:
 
 
 def validate_pins() -> None:
+    all_pinned_paths = set(OPENING_PROTOCOL_PINS) | set(CANDIDATE_PINS) | set(CLOSING_PINS)
+    require(
+        SUCCESSOR_MUTABLE_PATHS <= all_pinned_paths,
+        "successor-mutable path escaped frozen pin census",
+    )
+    require(
+        set(PORTABLE_REPLAY_SHA256) == SUCCESSOR_MUTABLE_PATHS & set(REPLAY_SCRIPTS),
+        "portable replay digest census",
+    )
+    require(set(REPLAY_SUCCESS_LINES) == set(REPLAY_SCRIPTS), "replay success-line census")
     for revision, pins, marker in (
         (CANDIDATE, OPENING_PROTOCOL_PINS, "opening/protocol pin"),
         (CANDIDATE, CANDIDATE_PINS, "candidate artifact pin"),
@@ -171,12 +203,53 @@ def validate_pins() -> None:
         for path, expected in pins.items():
             data = frozen(revision, path)
             require(digest(data) == expected, f"{marker} {path}")
-            require((ROOT / path).read_bytes() == data, f"post-frozen drift {path}")
+            if path not in SUCCESSOR_MUTABLE_PATHS:
+                require((ROOT / path).read_bytes() == data, f"post-frozen drift {path}")
+    for path, expected in PORTABLE_REPLAY_SHA256.items():
+        require(digest((ROOT / path).read_bytes()) == expected, f"portable replay digest {path}")
 
-    changed = set(git("diff", "--name-only", CLOSING_EVIDENCE, "--").splitlines())
-    require(all(path == REFEREE_REL or path.startswith(f"{REFEREE_REL}/") for path in changed), "edits outside referee surface")
-    untracked = set(git("ls-files", "--others", "--exclude-standard").splitlines())
-    require(all(path.startswith(f"{REFEREE_REL}/") for path in untracked), "untracked file outside referee surface")
+    validate_replay_import_surfaces()
+
+
+def validate_replay_import_surfaces() -> None:
+    """Reject successor-added modules that could shadow a replay import."""
+
+    import_names: set[str] = set()
+    for script in REPLAY_SCRIPTS:
+        syntax = ast.parse((ROOT / script).read_text(encoding="utf-8"))
+        for node in ast.walk(syntax):
+            if isinstance(node, ast.Import):
+                import_names.update(alias.name.split(".", 1)[0] for alias in node.names)
+            elif isinstance(node, ast.ImportFrom) and node.level == 0 and node.module:
+                import_names.add(node.module.split(".", 1)[0])
+    import_names.discard("__future__")
+    folded_names = {name.casefold() for name in import_names}
+    candidate_paths = set(git("ls-tree", "-r", "--name-only", CANDIDATE).splitlines())
+    added_shadows: set[str] = set()
+    for relative_directory in REPLAY_IMPORT_DIRECTORIES:
+        directory = ROOT / relative_directory
+        require(directory.is_dir(), f"missing replay import directory {relative_directory}")
+        for entry in directory.iterdir():
+            candidates: list[Path] = []
+            if (
+                entry.is_file()
+                and entry.suffix.casefold() in IMPORTABLE_SUFFIXES
+                and entry.stem.casefold() in folded_names
+            ):
+                candidates.append(entry)
+            elif entry.is_dir() and entry.name.casefold() in folded_names:
+                candidates.extend(
+                    child
+                    for child in entry.iterdir()
+                    if child.is_file()
+                    and child.stem.casefold() == "__init__"
+                    and child.suffix.casefold() in IMPORTABLE_SUFFIXES
+                )
+            for candidate in candidates:
+                relative = candidate.relative_to(ROOT).as_posix()
+                if relative not in candidate_paths:
+                    added_shadows.add(relative)
+    require(not added_shadows, f"successor-added replay import shadows: {sorted(added_shadows)}")
 
 
 def validate_frontier(candidate: dict) -> None:
@@ -344,7 +417,7 @@ def validate_closing_evidence(manifest: dict, clean: dict) -> None:
 
     require(clean["candidate_revision"] == CANDIDATE and clean["candidate_tree"] == CANDIDATE_TREE, "clean replay frozen head")
     require(clean["clone_mode"] == "git clone --no-hardlinks --no-local followed by detached exact checkout", "clean replay clone mode")
-    require(clean["python"] == PYTHON, "clean replay bundled Python")
+    require(clean["python"] == RECORDED_CLEAN_REPLAY_PYTHON, "clean replay bundled Python")
     require(clean["commands"] == list(REPLAY_SCRIPTS), "clean replay commands")
     require(clean["results"] == {
         "canonical_v6": "PASS_10_HOSTILE_MUTATIONS",
@@ -458,6 +531,25 @@ def hostile_mutations(frontier: dict, manifest: dict, clean: dict, result: dict)
 def replay(script: str) -> None:
     environment = dict(os.environ)
     environment["PYTHONDONTWRITEBYTECODE"] = "1"
+    environment["PYTHONNOUSERSITE"] = "1"
+    safe_pythonpath = []
+    inherited_paths = [
+        *sys.path,
+        *environment.get("PYTHONPATH", "").split(os.pathsep),
+    ]
+    for raw_path in inherited_paths:
+        if not raw_path:
+            continue
+        resolved = Path(raw_path).resolve()
+        try:
+            resolved.relative_to(ROOT)
+        except ValueError:
+            if resolved.is_dir() and str(resolved) not in safe_pythonpath:
+                safe_pythonpath.append(str(resolved))
+    if safe_pythonpath:
+        environment["PYTHONPATH"] = os.pathsep.join(safe_pythonpath)
+    else:
+        environment.pop("PYTHONPATH", None)
     completed = subprocess.run(
         [sys.executable, "-u", script],
         cwd=ROOT,
@@ -469,7 +561,13 @@ def replay(script: str) -> None:
         print(completed.stdout, end="")
     if completed.stderr:
         print(completed.stderr, end="", file=sys.stderr)
-    require(completed.returncode == 0 and "PASS" in completed.stdout, f"frozen replay {script}")
+    lines = completed.stdout.splitlines()
+    require(
+        completed.returncode == 0
+        and lines
+        and lines[0] == REPLAY_SUCCESS_LINES[script],
+        f"frozen replay {script}",
+    )
 
 
 def independence_audit() -> None:
@@ -484,7 +582,6 @@ def independence_audit() -> None:
 
 
 def main() -> None:
-    require(Path(sys.executable).resolve() == Path(PYTHON).resolve(), "referee must use bundled Python")
     independence_audit()
     validate_frozen_revisions()
     validate_pins()

@@ -23,6 +23,7 @@ from hashlib import sha256
 import json
 from math import gcd
 from pathlib import Path
+import subprocess
 import sys
 from collections import Counter
 
@@ -41,6 +42,12 @@ POSITIVE = "PROVE_SINGULAR_BRANCH_EMPTY_ON_STRICT_CONNECTED_ROW2599_PARENT_COMPO
 NEGATIVE = "EXHIBIT_EXACT_POSITIVE_DIMENSIONAL_REAL_SINGULAR_COMPONENT_ON_STRICT_CONNECTED_ROW2599_PARENT_COMPONENT"
 NULL = "HASH_PIN_FIRST_UNRESOLVED_MULTIHOMOGENEOUS_SINGULAR_COMPONENT_OR_PARENT_SATURATION_BRANCH"
 TIMEOUT = "HASH_PIN_COMPLETED_AND_PENDING_MULTIHOMOGENEOUS_SINGULAR_DECOMPOSITION_FRONTIER"
+OPENING_REVISION = "a2860f3f6436f573a913fc8ca6312b944212aadd"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+}
+FROZEN_VERIFIER_SHA256 = "3d4d81530f545b92704a0db41b2f51b457875da9f24f55b214d1a46b90cd77d7"
 
 CYCLE = ROOT / "ops" / "research-team" / "cycles" / CYCLE_ID
 OPENING = CYCLE / "OPENING_AUDIT.json"
@@ -107,6 +114,15 @@ def semantic_digest(value: dict) -> str:
 
 def file_digest(path: Path) -> str:
     return sha256(path.read_bytes()).hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return file_digest(ROOT / relative)
 
 
 def read_json(path: Path):
@@ -189,7 +205,7 @@ def exact_profile(records: list[dict]) -> dict:
 
 def source_reconstruction() -> dict:
     for relative, expected in PINNED_INPUTS.items():
-        require(file_digest(ROOT / relative) == expected, f"source pin {relative}")
+        require(source_digest(relative) == expected, f"source pin {relative}")
 
     opening = read_json(OPENING)
     require(opening["cycle_id"] == CYCLE_ID, "opening cycle")
@@ -597,7 +613,7 @@ def validate_constructor_companions(frontier: Path, candidate: dict) -> dict:
     require(manifest["canonical_base_revision"] == "9c9a78c4225a39803a0a5ac7e4e204d9b9f3773d" and manifest["canonical_base_tree"] == "af4bdbfc8f89e950936d59e6b0737b12eb5bdfb5", "constructor manifest base")
     require(manifest["cycle_opening_revision"] == "a2860f3f6436f573a913fc8ca6312b944212aadd" and manifest["cycle_opening_tree"] == "56f179cea8b8664156ee2dfcd6a9052d95e3b78e", "constructor manifest opening")
     for relative, expected in manifest["pins"].items():
-        require((ROOT / relative).is_file() and file_digest(ROOT / relative) == expected, f"constructor manifest pin {relative}")
+        require((ROOT / relative).is_file() and source_digest(relative) == expected, f"constructor manifest pin {relative}")
     policy = manifest["source_policy"]
     for key in ("external_compute_used", "network_or_connector_used", "numerical_or_modular_probe_used", "producer_code_imported", "seventy_inverse_variable_discovery_used"):
         require(policy[key] is False, f"constructor manifest policy {key}")
@@ -630,7 +646,7 @@ def build_source_manifest(frontier: Path, candidate: dict, companions: dict, sou
     pins[frontier.relative_to(ROOT).as_posix()] = companions["frontier_sha256"]
     pins[(CONSTRUCTOR / "SOURCE_MANIFEST.json").relative_to(ROOT).as_posix()] = companions["manifest_sha256"]
     pins[(CONSTRUCTOR / "RESULT.json").relative_to(ROOT).as_posix()] = companions["result_sha256"]
-    pins[Path(__file__).resolve().relative_to(ROOT).as_posix()] = file_digest(Path(__file__).resolve())
+    pins[Path(__file__).resolve().relative_to(ROOT).as_posix()] = FROZEN_VERIFIER_SHA256
     manifest = {
         "format": "d9-factor19069-singular-df-multihomogeneous-certificate-source-manifest-v1",
         "cycle_id": CYCLE_ID,

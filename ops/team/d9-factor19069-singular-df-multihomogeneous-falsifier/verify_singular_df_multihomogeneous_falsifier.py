@@ -14,6 +14,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import struct
+import subprocess
 import sys
 
 
@@ -43,6 +44,11 @@ EXPECTED_DERIVATIVE_DIGESTS = (
 )
 EXPECTED_DERIVATIVE_TERMS = (54, 44, 54, 50, 50, 50, 36, 61, 36)
 EXPECTED_PARENT_DIGEST = "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+OPENING_REVISION = "a2860f3f6436f573a913fc8ca6312b944212aadd"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+}
 
 sys.path.insert(0, str(OMREAL))
 import DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY as labeled  # noqa: E402
@@ -64,6 +70,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def sparse_digest(polynomial: dict[tuple[int, ...], int]) -> str:
@@ -140,7 +155,7 @@ def validate_manifest(candidate: dict) -> None:
     require(candidate["format"] == "d9-factor19069-singular-df-multihomogeneous-falsifier-source-manifest-v1", "manifest format")
     require(candidate["source_count"] == len(candidate["source_sha256"]), "manifest source count")
     for relative, expected in candidate["source_sha256"].items():
-        require(digest_path(ROOT / relative) == expected, f"source pin {relative}")
+        require(source_digest(relative) == expected, f"source pin {relative}")
     require(candidate["producer_code_imported"] is False, "producer independence")
     require(candidate["network_or_connector_used"] is False, "network scope")
     require(candidate["drive_connector_used"] is False, "drive scope")

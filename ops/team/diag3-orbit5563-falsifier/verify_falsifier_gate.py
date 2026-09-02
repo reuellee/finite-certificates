@@ -27,9 +27,13 @@ import hashlib
 from itertools import combinations, permutations
 import json
 from pathlib import Path
-import resource
 import sys
 import time
+
+try:
+    import resource
+except ImportError:  # Not available on Windows.
+    resource = None
 
 
 HERE = Path(__file__).resolve().parent
@@ -755,7 +759,7 @@ def main():
     print(
         "RESOURCE",
         f"elapsed_seconds={time.monotonic() - started:.3f}",
-        f"peak_rss_kib={resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}",
+        f"peak_rss_kib={resource.getrusage(resource.RUSAGE_SELF).ru_maxrss if resource is not None else 'unavailable'}",
     )
 
 

@@ -44,6 +44,11 @@ AFFINE_TO_HOM = (0, 1, 2, 4, 5, 6, 8, 9, 10)
 BLOCK_AFFINE_INDICES = ((0, 1, 2), (3, 4, 5), (6, 7, 8))
 MAX_EXACT_NODES = 500_000
 ATTEMPT_SECONDS = 20
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/RESULT.json",
+}
 
 
 def require(condition: bool, message: str) -> None:
@@ -57,6 +62,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def canonical_digest(value) -> str:
@@ -341,7 +355,7 @@ def build_manifest(audit: dict) -> dict:
         relative = f"ops/research-team/cycles/{CYCLE_ID}/{name}"
         pins[relative] = digest_path(ROOT / relative)
     for relative, expected in pins.items():
-        require(digest_path(ROOT / relative) == expected, f"source pin drift: {relative}")
+        require(source_digest(relative) == expected, f"source pin drift: {relative}")
     require(pins[str(PREDECESSOR.relative_to(ROOT)).replace('\\', '/')] == PREDECESSOR_SHA256, "predecessor pin mismatch")
     return add_semantic({
         "format": "d9-factor19069-explicit-trihom-jacobian-chart-constructor-source-manifest-v1",

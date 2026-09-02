@@ -16,6 +16,7 @@ from itertools import product
 import json
 from pathlib import Path
 import struct
+import subprocess
 import sys
 from typing import Any, Callable
 
@@ -52,6 +53,8 @@ EXPECTED_DERIVATIVE_DIGESTS = (
     "e68f99acd149c071ddf98ec55766cd5812fc163fcd0d1eb095c7e61085d8d0a9",
 )
 EXPECTED_DERIVATIVE_TERMS = (54, 44, 54, 50, 50, 50, 36, 61, 36)
+OPENING_REVISION = "cd2d856d3ccff51f7b5d6841702b25d191ed9985"
+PROTOCOL_PATH = "ops/research-team/PROTOCOL.md"
 
 sys.path.insert(0, str(OMREAL))
 import DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY as labeled  # noqa: E402
@@ -76,6 +79,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative == PROTOCOL_PATH:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def semantic_digest(value: Any) -> str:
@@ -327,7 +339,7 @@ def validate_manifest(candidate: dict[str, Any]) -> None:
     require(candidate["format"] == "d9-factor19069-explicit-trihom-jacobian-chart-falsifier-source-manifest-v1", "manifest format")
     require(candidate["source_count"] == len(candidate["source_sha256"]), "manifest source count")
     for relative, expected in candidate["source_sha256"].items():
-        require(digest_path(ROOT / relative) == expected, f"source pin {relative}")
+        require(source_digest(relative) == expected, f"source pin {relative}")
     require(candidate["producer_code_imported"] is False, "producer independence")
     require(candidate["constructor_acceptance_imported"] is False, "acceptance independence")
     require(candidate["network_or_connector_used"] is False, "network scope")

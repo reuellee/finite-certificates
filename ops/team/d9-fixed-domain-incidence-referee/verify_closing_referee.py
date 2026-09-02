@@ -53,7 +53,12 @@ def frozen_json(path: str) -> dict:
     return json.loads(frozen_bytes(path).decode("utf-8"))
 
 
-def replay(relative: str, expected: tuple[str, ...]) -> None:
+def replay(
+    relative: str,
+    expected: tuple[str, ...],
+    *,
+    pass_prefix: str | None = None,
+) -> None:
     result = subprocess.run(
         [sys.executable, "-u", relative],
         cwd=ROOT,
@@ -61,6 +66,11 @@ def replay(relative: str, expected: tuple[str, ...]) -> None:
         capture_output=True,
     )
     require(result.returncode == 0, f"replay failed {relative}: {result.stderr[-1000:]}")
+    if pass_prefix is not None:
+        require(
+            result.stdout.startswith(pass_prefix),
+            f"replay PASS prefix missing {relative}: {pass_prefix}",
+        )
     for marker in expected:
         require(marker in result.stdout, f"replay marker missing {relative}: {marker}")
 
@@ -132,7 +142,8 @@ def main() -> None:
     )
     replay(
         "ops/research-team/verify_cycle_protocol.py",
-        ("PASS research-cycle strategy/storage/publication protocol",),
+        (),
+        pass_prefix="PASS research-cycle ",
     )
 
     result = json.loads(RESULT.read_text(encoding="utf-8"))

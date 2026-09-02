@@ -8,6 +8,7 @@ from copy import deepcopy
 from hashlib import sha256
 import json
 from pathlib import Path
+import subprocess
 
 
 HERE = Path(__file__).resolve().parent
@@ -19,6 +20,11 @@ RESULT = HERE / "RESULT.json"
 VARIABLES = tuple("abcdefghi")
 BLOCKS = ((0, 1, 2), (3, 4, 5), (6, 7, 8))
 EXPECTED_PREDECESSOR_SHA256 = "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec897d3a33"
+OPENING_REVISION = "a2860f3f6436f573a913fc8ca6312b944212aadd"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+}
 
 
 def require(condition: bool, message: str) -> None:
@@ -32,6 +38,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def canonical_digest(value) -> str:
@@ -225,7 +240,7 @@ def validate_manifest(manifest: dict) -> None:
     require(policy["numerical_or_modular_probe_used"] is False, "probe use")
     require(policy["seventy_inverse_variable_discovery_used"] is False, "inverse route")
     for relative, expected in manifest["pins"].items():
-        require(digest_path(ROOT / relative) == expected, f"manifest pin: {relative}")
+        require(source_digest(relative) == expected, f"manifest pin: {relative}")
 
 
 def validate_result(result: dict, artifact: dict, manifest: dict) -> None:

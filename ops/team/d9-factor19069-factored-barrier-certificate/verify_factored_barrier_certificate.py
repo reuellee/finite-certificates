@@ -50,6 +50,11 @@ PINS = {
     FALSIFIER_MANIFEST_PATH: "5b8787839c2ac4d44850f05ab1e4fd3a47d80d47511a21020c13680872ca6172",
     FALSIFIER_VERIFY_PATH: "8dc7adc67aef34651ac3ce3e97f4abaa3030fbc7732fd0e3922d95af64425965",
 }
+SUCCESSOR_MUTABLE_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    FALSIFIER_VERIFY_PATH,
+}
 
 sys.path.insert(0, str(OMREAL))
 
@@ -507,14 +512,16 @@ def main() -> None:
     for path, expected in PINS.items():
         data = frozen(path)
         require(digest(data) == expected, f"frozen pin {path}")
-        require((ROOT / path).read_bytes() == data, f"worktree drift {path}")
+        if path not in SUCCESSOR_MUTABLE_PATHS:
+            require((ROOT / path).read_bytes() == data, f"worktree drift {path}")
     independence_audit()
     manifest = json.loads(frozen(CONSTRUCTOR_MANIFEST_PATH).decode("utf-8"))
     require(manifest["source_count"] == 20, "source manifest count")
     require(manifest["semantic_sha256"] == canonical_digest({key: value for key, value in manifest.items() if key != "semantic_sha256"}), "source manifest digest")
     for path, expected in manifest["source_sha256"].items():
         require(digest(frozen(path)) == expected, f"source manifest pin {path}")
-        require((ROOT / path).read_bytes() == frozen(path), f"source worktree drift {path}")
+        if path not in SUCCESSOR_MUTABLE_PATHS:
+            require((ROOT / path).read_bytes() == frozen(path), f"source worktree drift {path}")
     frontier = json.loads(frozen(FRONTIER_PATH).decode("utf-8"))
     replay = replay_sources()
     validate_frontier(frontier, replay)

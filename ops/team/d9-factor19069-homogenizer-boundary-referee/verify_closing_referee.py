@@ -94,6 +94,15 @@ def git(*args: str, binary: bool = False) -> bytes | str:
     return value if binary else value.strip()
 
 
+def replay_git(replay: Path, *args: str) -> str:
+    resolved = replay.resolve()
+    return subprocess.check_output(
+        ["git", "-c", f"safe.directory={resolved.as_posix()}", *args],
+        cwd=resolved,
+        text=True,
+    ).strip()
+
+
 def frozen_bytes(revision: str, path: str) -> bytes:
     return git("show", f"{revision}:{path}", binary=True)  # type: ignore[return-value]
 
@@ -592,14 +601,14 @@ def hostile_mutations(package: dict, context: dict) -> list[str]:
 
 
 def optional_replay_path_recheck(clean: dict) -> bool:
-    replay = Path(clean["replay_path"])
+    replay = Path(clean["replay_path"]).resolve()
     source_result = ROOT / CONSTRUCTOR_RESULT_PATH
     replay_result = replay / CONSTRUCTOR_RESULT_PATH
     if not replay.is_dir() or not replay_result.is_file():
         return False
-    require(git("-C", str(replay), "rev-parse", "HEAD") == CANDIDATE, "external replay head")
-    require(git("-C", str(replay), "rev-parse", "HEAD^{tree}") == CANDIDATE_TREE, "external replay tree")
-    require(git("-C", str(replay), "status", "--porcelain=v1") == "", "external replay dirty")
+    require(replay_git(replay, "rev-parse", "HEAD") == CANDIDATE, "external replay head")
+    require(replay_git(replay, "rev-parse", "HEAD^{tree}") == CANDIDATE_TREE, "external replay tree")
+    require(replay_git(replay, "status", "--porcelain=v1") == "", "external replay dirty")
     source_stat = os.stat(source_result)
     replay_stat = os.stat(replay_result)
     require(source_stat.st_nlink == replay_stat.st_nlink == 1, "external replay hardlink count")

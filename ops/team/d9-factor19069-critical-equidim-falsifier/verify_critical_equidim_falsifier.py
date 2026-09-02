@@ -15,6 +15,7 @@ from copy import deepcopy
 from hashlib import sha256
 from pathlib import Path
 import struct
+import subprocess
 import sys
 
 
@@ -35,6 +36,12 @@ PREDECESSOR = (
 
 TARGET_FACTOR = 19069
 TARGET_PARENT = 2599
+BASE_REVISION = "f196f949b2a2981ea1b21019e4a2bf56302a683a"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    "ops/team/d9-factor19069-factored-barrier-referee/verify_closing_referee.py",
+}
 VARIABLES = tuple("abcdefghi")
 EXPECTED_PARENT_DIGEST = "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
 EXPECTED_PREDECESSOR_SHA256 = "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca"
@@ -72,6 +79,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{BASE_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def canonical_digest(value) -> str:
@@ -174,7 +190,7 @@ def validate_manifest(candidate: dict) -> None:
     require(candidate["format"] == "d9-factor19069-critical-equidim-falsifier-source-manifest-v1", "manifest format")
     require(candidate["source_count"] == len(candidate["source_sha256"]), "manifest source count")
     for relative, expected in candidate["source_sha256"].items():
-        require(digest_path(ROOT / relative) == expected, f"source pin {relative}")
+        require(source_digest(relative) == expected, f"source pin {relative}")
     require(candidate["drive_connector_used"] is False, "drive authority")
     require(candidate["github_write"] is False, "github authority")
 

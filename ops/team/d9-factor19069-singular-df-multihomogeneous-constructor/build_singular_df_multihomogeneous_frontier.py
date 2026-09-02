@@ -18,6 +18,7 @@ from copy import deepcopy
 from hashlib import sha256
 import json
 from pathlib import Path
+import subprocess
 
 
 HERE = Path(__file__).resolve().parent
@@ -47,6 +48,10 @@ PREDECESSOR_SHA256 = "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec89
 PREDECESSOR_SEMANTIC_SHA256 = "28b4e989b42b526adf7b65e2c5f03d75396280d97f435faa03928a4f6f5228ae"
 FACTOR_CIRCUIT_SEMANTIC_SHA256 = "0e10d3d4692a53a6040ea8822be05376775e9c674c74d532f42236d3dfb1a7cf"
 MAX_EXACT_NODES = 500_000
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+}
 
 EXTRA_PINS = {
     f"ops/research-team/cycles/{CYCLE_ID}/CYCLE.md":
@@ -79,6 +84,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def canonical_digest(value) -> str:
@@ -135,7 +149,7 @@ def build_manifest(audit: dict) -> dict:
     pins = dict(audit["pins"])
     pins.update(EXTRA_PINS)
     for relative, expected in pins.items():
-        require(digest_path(ROOT / relative) == expected, f"source pin drift: {relative}")
+        require(source_digest(relative) == expected, f"source pin drift: {relative}")
     manifest = {
         "format": "d9-factor19069-singular-df-multihomogeneous-constructor-source-manifest-v1",
         "track_id": "d9-factor19069-singular-df-multihomogeneous-constructor",

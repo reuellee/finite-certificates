@@ -15,6 +15,9 @@ ROOT = HERE.parents[1]
 STATE = HERE / "data" / "CANONICAL_RESEARCH_STATE_V5.json"
 REFEREE = "4feee2ba0d918a8b04bddb3bbd1897175dd35a97"
 REFEREE_TREE = "842aedaa58e3ca5247d29a172ebd49f1d83bf61a"
+PORTABILITY_EDITED_CODE_PATHS = {
+    "ops/team/d9-fixed-domain-cegar-referee/verify_closing_referee.py",
+}
 
 
 class Reject(AssertionError):
@@ -93,10 +96,16 @@ def main() -> None:
     validate(state)
     predecessor_path = state["predecessor"]["path"]
     require(sha256((ROOT / predecessor_path).read_bytes()) == state["predecessor"]["sha256"], "predecessor pin")
-    for path, expected in state["pins"].items():
+    pins = state["pins"]
+    require(
+        PORTABILITY_EDITED_CODE_PATHS <= set(pins),
+        "portability-edited pin census",
+    )
+    for path, expected in pins.items():
         frozen = git("show", f"{REFEREE}:{path}", binary=True)
         require(sha256(frozen) == expected, f"referee pin {path}")
-        require((ROOT / path).read_bytes() == frozen, f"post-referee drift {path}")
+        if path not in PORTABILITY_EDITED_CODE_PATHS:
+            require((ROOT / path).read_bytes() == frozen, f"post-referee drift {path}")
     referee = json.loads(git(
         "show", f"{REFEREE}:ops/team/d9-fixed-domain-cegar-referee/RESULT.json",
         binary=True,

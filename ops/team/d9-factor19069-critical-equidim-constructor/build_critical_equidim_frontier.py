@@ -16,6 +16,7 @@ from hashlib import sha256
 import argparse
 import json
 from pathlib import Path
+import subprocess
 
 
 HERE = Path(__file__).resolve().parent
@@ -37,6 +38,11 @@ RESULT = HERE / "RESULT.json"
 VARIABLES = tuple("abcdefghi")
 OPENING_REVISION = "f196f949b2a2981ea1b21019e4a2bf56302a683a"
 OPENING_TREE = "7a5eaa91d1448defed2e77363b5e97cf93b97489"
+HISTORICAL_CONTROL_PATHS = {
+    "ops/research-team/PROTOCOL.md",
+    "ops/research-team/verify_cycle_protocol.py",
+    "ops/team/d9-factor19069-factored-barrier-referee/verify_closing_referee.py",
+}
 PREDECESSOR_SHA256 = "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca"
 PREDECESSOR_SEMANTIC_SHA256 = "7686b6fe5af6b7d50418c105d2fe5036bf2c660dde1cfe70c0e1ab7a4ce8c50c"
 FACTOR_CIRCUIT_SEMANTIC_SHA256 = "0e10d3d4692a53a6040ea8822be05376775e9c674c74d532f42236d3dfb1a7cf"
@@ -55,6 +61,15 @@ def digest_path(path: Path) -> str:
         for block in iter(lambda: source.read(1 << 20), b""):
             state.update(block)
     return state.hexdigest()
+
+
+def source_digest(relative: str) -> str:
+    if relative in HISTORICAL_CONTROL_PATHS:
+        frozen = subprocess.check_output(
+            ["git", "show", f"{OPENING_REVISION}:{relative}"], cwd=ROOT
+        )
+        return sha256(frozen).hexdigest()
+    return digest_path(ROOT / relative)
 
 
 def canonical_digest(value) -> str:
@@ -109,7 +124,7 @@ def build_source_manifest(audit: dict) -> dict:
         }
     )
     for relative, expected in pins.items():
-        require(digest_path(ROOT / relative) == expected, f"source pin drift: {relative}")
+        require(source_digest(relative) == expected, f"source pin drift: {relative}")
 
     manifest = {
         "format": "d9-factor19069-critical-equidim-constructor-source-manifest-v1",

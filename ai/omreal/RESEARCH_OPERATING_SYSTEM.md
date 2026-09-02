@@ -29,11 +29,15 @@ active. States V8 through V4 remain immutable historical checkpoints; in
 particular
 `data/CANONICAL_RESEARCH_STATE_V4.json` is the verified post-universal-cut
 state. Its immutable post-normal-link predecessor is
-`data/CANONICAL_RESEARCH_STATE_V3.json`, verified historically by
-`verify_canonical_research_state_v3.py`; the earlier post-mask-6 state is
-`data/CANONICAL_RESEARCH_STATE_V2.json`, and the reconciled state remains
-`data/CANONICAL_RESEARCH_STATE.json`, verified by
-`verify_canonical_research_state.py`. The older
+`data/CANONICAL_RESEARCH_STATE_V3.json`. Its checkout-bound historical verifier
+is replaced in the aggregate harness by the branch-neutral
+`ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py` gate.
+The earlier post-mask-6 state is `data/CANONICAL_RESEARCH_STATE_V2.json`; its
+checkout-bound historical replay is replaced by
+`ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py`
+and the selected mask-6 cycle-manifest verifier. The reconciled state remains
+`data/CANONICAL_RESEARCH_STATE.json`; its historical reconciliation tracks are
+likewise covered by the portable reconciliation gate. The older
 `data/DIAG3_RESEARCH_DECISION_LEDGER.json` and
 `verify_diag3_research_decision_ledger.py` are immutable historical proof
 inputs; they remain replayable but no longer select current work.
