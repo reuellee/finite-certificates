@@ -132,6 +132,24 @@ resource enlargement was used.
 | CI-shard census | `PASS`, 309 selected verifiers plus delegated/external/archival census |
 | independent frozen-package referee | `PENDING` |
 
+## Mandatory solution-convergence verdict
+
+Opening proof-distance vector:
+`(2/9, 1, {diag3_pair_hc1, diag3_triple_hc0}, 7, UNKNOWN, UNKNOWN, 5, 8)`.
+
+Closing proof-distance vector:
+`(2/9, 1, {diag3_pair_hc1, diag3_triple_hc0}, 7, UNKNOWN, UNKNOWN, 6, 9)`.
+
+Trajectory classification: **`STALLED`**. The dependency frontier is sharper,
+but no load-bearing obligation or certified residual decreased.
+
+Automatic strategy-reset result: **`STOP`**. The bounded feasibility pivot
+returned three `NULL` handoffs, no full-scope negative, and no eligible
+successor.
+
+Same-route continuation justified: **`NO`**. Reopening requires a new governed
+cycle with a concrete finite route for one first missing global edge.
+
 ## Proof-distance and obligation delta
 
 Opening and midpoint vector:
