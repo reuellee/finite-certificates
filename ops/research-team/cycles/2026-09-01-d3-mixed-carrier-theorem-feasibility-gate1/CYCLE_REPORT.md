@@ -132,7 +132,7 @@ resource enlargement was used.
 | fixed-order no-go | `PASS`, ansatz scope retained |
 | pointwise first-exit no-go | `PASS`, ansatz scope retained |
 | global-exit predicate | `PASS`, 9/9 hostiles and open-world rejection scope retained |
-| CI-shard census | `PASS`, 309 selected verifiers plus delegated/external/archival census |
+| CI-shard census | `PASS`, 310 selected verifiers plus delegated/external/archival census |
 | v1 protocol preflight | `REJECTED`, six mandatory report labels absent |
 | bounded v2 repair | `PASS`, report only, exactly 18 insertions and no mathematical change |
 | independent frozen-package referee | `PASS`, candidate `2fc366e` / `1520090`, 87/87 hostiles |

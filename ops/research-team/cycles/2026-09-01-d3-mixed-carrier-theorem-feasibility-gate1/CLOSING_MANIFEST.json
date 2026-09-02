@@ -119,7 +119,7 @@
     "fixed_order_no_go": "PASS_ANSATZ_SCOPE_RETAINED",
     "pointwise_first_exit_no_go": "PASS_ANSATZ_SCOPE_RETAINED",
     "global_exit_criterion": "PASS_9_OF_9_HOSTILES_CONDITIONAL_INPUT_ABSENT",
-    "ci_shard_census": "PASS_309_SELECTED_VERIFIERS",
+    "ci_shard_census": "PASS_310_SELECTED_VERIFIERS",
     "independent_referee": "PASS_87_OF_87_HOSTILES_4096_EXIT_FIXTURES_10_ORBITS_34_PLACEMENTS"
   },
   "referee_pins": {
