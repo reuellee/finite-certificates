@@ -1,0 +1,27 @@
+{
+  "format": "d9-factor19069-closing-manifest-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-active-margin-gate1",
+  "reviewed_revision": "d9c43724ba0b82f3aeee69b4afa205bad2aa27f9",
+  "reviewed_tree": "72ec9cffdb00969ae534daf742b45d05f4d8350a",
+  "accepted_classification": "EXACT_FAIL_CLOSED_PARENT_RESIDENCE_NULL",
+  "accepted_endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+  "pins": {
+    "ops/team/d9-factor19069-active-margin-constructor/ACTIVE_MARGIN_FRONTIER.json": "0875dd345a307bf9c4e33287cc13df1e6944c902d8a84c419a35cf9ddccbd243",
+    "ops/team/d9-factor19069-active-margin-constructor/RESULT.json": "b6b9a8329abde76d9a5755f33df41f59209c7fa6f7a91133edbd3c0607ccbe5f",
+    "ops/team/d9-factor19069-active-margin-falsifier/RESULT.json": "bf14ffa83fa95c05d64ad36ca5c8008f0b38dd00fd61a911ad38cd93da4deb0f",
+    "ops/team/d9-factor19069-active-margin-certificate/RESULT.json": "b853e56aa9ffcb5e37126169652f49fc8ff735e53cbb1ac86d96d53fcdf8ebcc",
+    "ops/team/d9-factor19069-active-margin-certificate/verify_active_margin_certificate.py": "ee798cc8eb18bbb4bbd5ec96e483fea1e5c23867f32363a5178773d996df4547"
+  },
+  "clean_replay": {
+    "candidate_revision": "d9c43724ba0b82f3aeee69b4afa205bad2aa27f9",
+    "candidate_tree": "72ec9cffdb00969ae534daf742b45d05f4d8350a",
+    "worktree_clean": true,
+    "verdict": "PASS"
+  },
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "precise_successor": "D9_ROW2599_FACTOR19069_FACTORED_BARRIER_COMPONENT_SAMPLER_GATE1",
+  "github_write": false
+}

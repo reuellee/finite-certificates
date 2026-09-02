@@ -1,0 +1,68 @@
+{
+  "format": "9dvl-d9-component-roadmap-opening-v1",
+  "cycle_id": "2026-09-01-d9-component-roadmap",
+  "canonical_base": {
+    "revision": "a6cae1e774420a96ca0ba8b76ee990c3e0b11bdc",
+    "tree": "d99658f9ecde22fa3386d769a2fe72ea407a8ec1",
+    "canonical_state_sha256": "6b22f3f8da550fa14ea13700ff632eb3db53c40316a0e1844a7762784cfaf811",
+    "ledger": "2/9",
+    "state": "PIVOT_REQUIRED"
+  },
+  "authority_epoch": {
+    "canonical_working_store": "CHATGPT_LIBRARY",
+    "recovery_mirror": "GOOGLE_DRIVE_PROJECTS_RESEARCH_BACKUPS",
+    "local_scratch": "EPHEMERAL_NOT_AUTHORITY",
+    "github": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION"
+  },
+  "opening_verdict": "PIVOT_SELECT",
+  "selected_target": "D9_COMPONENT_COMPLETE_ROADMAP_GATE1",
+  "target_contract": {
+    "domain": "ROW_2599_S12_37_ACTIVE_SECTOR_3539_FACTOR_CLASSES",
+    "claim": "An exact one-dimensional roadmap intersects every fixed-domain component and preserves component connectivity through certified paths.",
+    "positive_endpoint": "FIXED_DOMAIN_COMPONENT_COMPLETE_ROADMAP",
+    "negative_endpoint": "EXACT_FIXED_DOMAIN_DISCONNECTION_OR_FATAL_ROADMAP_COUNTEREXAMPLE",
+    "null_endpoint": "FIRST_UNRESOLVED_SINGULAR_STRATUM_OR_ATTACHMENT_MODE",
+    "timeout_endpoint": "HASH_PINNED_CRITICAL_SYSTEM_FRONTIER",
+    "theorem_promotion_authorized": false,
+    "prohibited_claims": [
+      "FIXED_DOMAIN_CONNECTIVITY_PROVES_DIAGONAL_9",
+      "MEMORYLESS_LOCAL_TYPES_DETERMINE_GLOBAL_COMPONENTS",
+      "THIRTEEN_FACTOR_TYPES_ARE_PROJECTION_CLOSED",
+      "RECURSIVE_BOUNDARY_WALL_IS_STRICT_PARENT_SEPARATOR",
+      "GENERIC_SMOOTHNESS_WITHOUT_SINGULAR_STRATA",
+      "SAMPLED_PATHS_PROVE_COMPONENT_COMPLETENESS"
+    ]
+  },
+  "opening_gate": {
+    "wall_hours": 4,
+    "cpu_hours": 24,
+    "memory_gib": 16,
+    "deterministic_perturbations": 1,
+    "max_exact_critical_systems": 100000,
+    "max_certificate_bytes": 500000000,
+    "required_canaries": [
+      "GLOBAL_MEMORY_ALIASING_COUNTERPAIR",
+      "TYPE36_NOVEL_PROJECTION_FACTOR",
+      "FACTOR8552_BOUNDARY_RESIDENCE",
+      "SINGULAR_SPLIT_MERGE_OR_POSITIVE_DIMENSIONAL_CRITICAL_LOCUS"
+    ],
+    "critical_enumeration_authorized_before_canaries": false
+  },
+  "source_pins": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json": "6b22f3f8da550fa14ea13700ff632eb3db53c40316a0e1844a7762784cfaf811",
+    "ai/omreal/RESEARCH_OPERATING_SYSTEM.md": "98aab2a83f33950647ac4864c10d89d1e2bf28ba87c7b8e09aba0a2b0cd5bb34",
+    "ai/omreal/NINE_DIAGONAL_STATUS.md": "07c146e835f6a62c29ab653d353d73469df1e6022018ffec76f6775b65ca7ae2",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE_REPORT.md": "63dfc93531334a2ff944716f0de9c6de1a95947072dd66632821d2e9cb49b73a",
+    "ops/team/d9-universal-cut-circuits/HOSTILE_CANARIES.json": "ecbfb5bdae9ab9336392ab66a0d464d5f09decb66adf759cb87914d5c4d60b2d",
+    "ops/team/d9-universal-cut-prover/ABSTRACT_DISCONNECTED_COUNTERMODEL.json": "a7565ee9d1d6a5f322977b78b43ea7dbcd6acef6306a0adc8317ddc836c3bc85",
+    "ops/team/d9-universal-cut-boundary/BOUNDARY_TRANSPORT_COUNTEREXAMPLE.json": "d08a63a96229c66d8c71f6083d6827ceaf84d8115c52b0afa444d2475fb9f0c3",
+    "ops/team/d9-universal-cut-prover/CUT_REDUCTION_SCHEMA.json": "8300a2960d9a1f5fb81f110c18f0bed7c450299988261b3436121da8204da1e0",
+    "ops/team/diag9-s1237-normal-link-prover/DIAG9_S1237_NORMAL_LINK_NO_GO.json": "8aa726c69b556f7c2d85f7f852cb88329da39dcd173294a7db7245f13e0d2d54",
+    "ops/team/diag9-s1237-normal-link-falsifier/RESULT.json": "15ce5c17a174ed6a82173d24a8f72d04da5962bcea9e87cf3648adb21351d46b",
+    "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf"
+  }
+}
+

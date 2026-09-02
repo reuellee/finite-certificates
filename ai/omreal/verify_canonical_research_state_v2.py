@@ -22,6 +22,7 @@ README = ROOT / "README.md"
 NONVACUITY = ROOT / "ops/team/diag8-mask6-nonvacuity/DIAG8_MASK6_NONVACUITY_CERTIFICATE.npz"
 FAN = ROOT / "ops/team/diag8-mask6-fan/DIAG8_MASK6_BARYCENTRIC_FAN_CERTIFICATE.json"
 PREDECESSOR_SHA256 = "89d1475a43bef01be74e9c8eed62d9caadd8265f262c3aa3dcf0e704f341432c"
+PREDECESSOR_VERIFIER_SHA256 = "a7c555f2b2728df2e5997ac0f3f20df99a9e389b2f7c4f2a50cb469dcc1ad986"
 NONVACUITY_SHA256 = "ac86ed2966cf4646dd2241caee4d938aefb9ec70b27a91df8795ad992993c7c5"
 FAN_SHA256 = "b5ead7b0ed6ac6a5cb50ab715110e302772f49e43b2419cd54c98228937627cb"
 LOOP = [4, 11, 12, 14, 13, 23]
@@ -85,6 +86,10 @@ def validate(state, check_files=True):
     require(predecessor["policy"] == "IMMUTABLE_RECONCILIATION_STATE", "predecessor policy")
     if check_files:
         require(sha256(PREDECESSOR) == PREDECESSOR_SHA256, "predecessor bytes")
+        require(
+            sha256(PREDECESSOR_VERIFIER) == PREDECESSOR_VERIFIER_SHA256,
+            "predecessor verifier bytes",
+        )
 
     require(
         state["theorem"]
@@ -141,7 +146,17 @@ def validate(state, check_files=True):
         require(sha256(NONVACUITY) == NONVACUITY_SHA256, "nonvacuity bytes")
         require(sha256(FAN) == FAN_SHA256, "fan bytes")
         status = STATUS.read_text(encoding="utf-8")
-        require("## Current canonical precedence after merged PR #45 and the D8 mask-6 cycle" in status, "current authority heading")
+        require(
+            (
+                "## Current canonical precedence after merged PR #45 and the D8 mask-6 cycle"
+                in status
+            )
+            or (
+                "CANONICAL_RESEARCH_STATE_V2.json" in status
+                and "immutable predecessor" in status
+            ),
+            "current authority or immutable-successor pointer",
+        )
         readme = README.read_text(encoding="utf-8")
         require("no active diagonal or selected mathematical target" in readme, "README target authority")
 

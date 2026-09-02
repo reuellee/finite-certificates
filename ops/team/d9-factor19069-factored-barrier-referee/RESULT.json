@@ -1,0 +1,96 @@
+{
+  "format": "d9-factor19069-factored-barrier-referee-result-v1",
+  "track_id": "d9-factor19069-factored-barrier-referee",
+  "reviewed_revision": "9a7e2a32b5a659372cbc435ae5404bc02141d37e",
+  "reviewed_tree": "aa571b94aa1d9f281b032e3b362e370711d26916",
+  "closing_evidence_revision": "9411e9c403fbf98b5e1e76c049a0d7fdb343b7ef",
+  "closing_evidence_tree": "7024e26a67df73d91872783f08acd863fde4daad",
+  "verdict": "ACCEPT",
+  "accepted_classification": "EXACT_FAIL_CLOSED_FACTORED_BARRIER_COMPONENT_NULL",
+  "accepted_endpoint": "HASH_PINNED_FACTORED_BARRIER_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNSAMPLED_COMPONENT",
+  "opening_and_protocol_pins": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/CYCLE.md": "32f38adfb370a4c82b33640863ac41674707cec2254cd0a80d0aa2f46829585f",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/WORK_ORDERS.yaml": "7feb9e3ee717dd68f224886ce2e4fa1be78e869a9ee2ee708171988ac9eec6e0",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/OPENING_AUDIT.json": "fa6338b7a42fa333e32c27916dbea0f1c9f50f0eeb4cbbe016cf04f59782cace",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/verify_opening_audit.py": "454ad11ef6364d9902e1c1f677187c206d3b79f50636a63418c667bc64c2d1d2"
+  },
+  "candidate_artifact_pins": {
+    "ops/team/d9-factor19069-factored-barrier-certificate/FINDINGS.md": "9258ac04d180783440600b53c07ba66c97288d2cf37268987b21f09536f4df5a",
+    "ops/team/d9-factor19069-factored-barrier-certificate/RESULT.json": "c1a8a88cf117f34173925f436c131fc571a4efa4d946aeb3def2b2b984e04310",
+    "ops/team/d9-factor19069-factored-barrier-certificate/verify_factored_barrier_certificate.py": "d5a485610ecf1eea95c04782c518089477ea9cdf2078f81fed977149caa34db5",
+    "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca",
+    "ops/team/d9-factor19069-factored-barrier-constructor/FINDINGS.md": "51d898f19b8d7132e52a4cd7161b2aea2f98b9b81b74a6a3663e5e40d2c0766c",
+    "ops/team/d9-factor19069-factored-barrier-constructor/RESULT.json": "5d9357346077562824c4564829260d49b6fa62ceea38b7ae3f7fe5543dee029a",
+    "ops/team/d9-factor19069-factored-barrier-constructor/SOURCE_MANIFEST.json": "17bc476bfc78d629353f4fe73d24495de40de5a926aa5e8df4ed524131b3d303",
+    "ops/team/d9-factor19069-factored-barrier-constructor/build_factored_barrier_frontier.py": "c1d4622ce35e07cc84d0cfa76a1d7760fca87fd234183101c790443b20938003",
+    "ops/team/d9-factor19069-factored-barrier-constructor/verify_factored_barrier_frontier.py": "86245950996cfbc4b49d2c802f6c1ffeed9b789a64646a43bca013af01f1bdf7",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/FINDINGS.md": "b70e6a315f8e936941595a602c7c042ac53926305595d5be410d8e3d59a40df3",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/HOSTILE_TESTS.json": "e50b911ee8ebcff133fe37c7685bbc055635c8144573f5ac3e0836a11ffcbbb7",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/RESULT.json": "9af35e89fafd73e71d940750d1f49ae166cc3e634a3f8ea2e02d3371f0ddf022",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/SOURCE_MANIFEST.json": "5b8787839c2ac4d44850f05ab1e4fd3a47d80d47511a21020c13680872ca6172",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py": "8dc7adc67aef34651ac3ce3e97f4abaa3030fbc7732fd0e3922d95af64425965"
+  },
+  "closing_evidence_pins": {
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/CLOSING_MANIFEST.json": "70d9ec0cb1935b769c812d6d2a663e414f65199a6f25c17805c4b252ca7cb11c",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/CLEAN_REPLAY.json": "f5514e8ed740a5c35ddf1895e9fa774514105208567da1097729f262aa9bba7c",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-factored-barrier-gate1/CYCLE_REPORT.md": "c2fa71aa6d893a132a1fb1bec1dda1385409b6d792922c4bf19c6ddc96b3c433"
+  },
+  "gates": {
+    "frozen_head_and_tree": true,
+    "candidate_artifact_bytes": true,
+    "closing_evidence_bytes": true,
+    "protocol_and_opening_replay": true,
+    "constructor_replay": true,
+    "falsifier_replay": true,
+    "producer_independent_certificate_replay": true,
+    "factored_circuit_scope": true,
+    "critical_component_null_scope": true,
+    "boundary_path_scope": true,
+    "collar_and_attachment_scope": true,
+    "clean_replay": true,
+    "ledger_scope": true,
+    "anti_stagnation": true,
+    "storage_and_github_scope": true
+  },
+  "closing_hostile_mutations": {
+    "rejected": 15,
+    "total": 15
+  },
+  "component_samples": 0,
+  "boundary_wall_residences_classified": 0,
+  "attachment_classification_complete": false,
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "BLIND_FACTORED_BARRIER_COMPONENT_SAMPLER_BUDGET_ESCALATION",
+  "pivot_reason": "The exact factored circuit is complete, but the first full-support barrier-critical stratum has no connected-component or equidimensional decomposition, zero component samples, and no global attachment classification; repeating the sampler with a larger blind budget would preserve that load-bearing obstruction.",
+  "precise_successor": "D9_ROW2599_FACTOR19069_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_GATE1",
+  "successor_assessment": {
+    "non_repetition": true,
+    "blind_budget_escalation": false,
+    "attacks_first_unsampled_stratum": "FB-C0-STRICT-INTERIOR-FULL-SUPPORT",
+    "structural_attack": "SATURATED_JACOBIAN_HILBERT_EQUIDIMENSIONAL_DECOMPOSITION",
+    "projection_free": true,
+    "positive_endpoint": "PROVE_STRICT_CRITICAL_LOCUS_ZERO_DIMENSIONAL_WITH_COMPLETE_REAL_ROOT_COUNT_FRONTIER",
+    "negative_endpoint": "EXHIBIT_EXACT_POSITIVE_DIMENSIONAL_REAL_CRITICAL_COMPONENT",
+    "null_endpoint": "HASH_PIN_FIRST_UNRESOLVED_SATURATED_IDEAL_BRANCH"
+  },
+  "exact_consequence": "THE_SOURCE_DERIVED_FACTORED_BARRIER_NULL_ENVELOPE_IS_FROZEN_AND_SCOPE_CORRECT",
+  "nonconsequences": [
+    "NO_CONNECTED_COMPONENT_DECOMPOSITION_OF_THE_BARRIER_CRITICAL_LOCUS",
+    "NO_ZERO_OR_POSITIVE_DIMENSIONAL_CRITICAL_COMPONENT_SAMPLE",
+    "NO_COMPLETE_BOUNDARY_WALL_GERM_CLASSIFICATION",
+    "NO_GLOBAL_FACTOR19069_WALL_COMPONENT_COUNT",
+    "NO_COMPLETE_COMPONENT_TO_SKELETON_ATTACHMENT_CLASSIFICATION",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "storage": {
+    "drive_connector_used": false,
+    "github_write": false,
+    "durable_project_root": "E:\\Projects\\9DVL Research"
+  }
+}

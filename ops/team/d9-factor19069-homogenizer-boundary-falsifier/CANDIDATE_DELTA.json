@@ -1,0 +1,80 @@
+{
+  "candidate_frontier_semantic_sha256": "70d980c28c536dd10a679ac086939fadcf78722dd68839658062948c1e0dd5ec",
+  "candidate_frontier_sha256": "18b0f7bf939646b884f05dc55832b509a54574cf3c2498461839f3c906418a6d",
+  "candidate_result_sha256": "d7ad15fd2bc49b25334f836a34de2cc25d75a903902545ac354bded3a919db8b",
+  "candidate_revision": "25757510dd88e8b7bbe5668c89f93b2a46b264de",
+  "candidate_tree": "47395637cc10c2bd736530719b6e2f3cf57b1629",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
+  "deepest_evaluation": {
+    "SingC_contained_in_pair_L_C": true,
+    "SingL_contained_in_pair_L_C": true,
+    "ambient_child_count": 2,
+    "ambient_child_split_identity_exact": true,
+    "candidate_seed_count": 5,
+    "five_seed_cover_exact": true,
+    "five_seed_union_equals_prior_three_pairwise_seed_union": true,
+    "prior_pairwise_seed_count": 3,
+    "scheme_radicality_or_primary_decomposition_claimed": false,
+    "strict_parent_excluded_seed_count": 5
+  },
+  "endpoint_evaluation": {
+    "accepted_affine_branch_count": 0,
+    "completed_boundary_types": 1,
+    "ledger_delta": "none",
+    "negative": "NOT_REACHED",
+    "null": "REACHED_FIRST_PINNED_UNRESOLVED_u_v_AMBIENT_BRANCH",
+    "overlap_representatives_quotiented": 0,
+    "positive": "NOT_REACHED",
+    "theorem_ledger": "2/9",
+    "timeout": "NOT_REACHED"
+  },
+  "format": "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-v1",
+  "github_write_used": false,
+  "google_drive_connector_used": false,
+  "numerical_modular_or_sampled_inference_used": false,
+  "producer_acceptance_logic_imported": false,
+  "producer_code_imported": false,
+  "source_and_derivative_evaluation": {
+    "all_84_restricted_full_derivatives_exact": true,
+    "all_seven_restricted_sources_exact": true,
+    "all_tangent_derivatives_exact": true,
+    "ambient_stratum_semantics_distinct": true,
+    "boundary_stratum_chart_incidence_count": 279,
+    "boundary_type_count": 7,
+    "boundary_type_order": [
+      "u_v_w",
+      "u_v",
+      "u_w",
+      "v_w",
+      "u",
+      "v",
+      "w"
+    ],
+    "queued_factor_identities_exact_where_asserted": true,
+    "restricted_source_term_counts": [
+      11,
+      37,
+      23,
+      23,
+      64,
+      69,
+      47
+    ]
+  },
+  "track_id": "d9-factor19069-homogenizer-boundary-falsifier",
+  "u_v_evaluation": {
+    "accepted_affine_pullback": false,
+    "all_twelve_ambient_derivatives_zero_exact": true,
+    "branch_id": "B-UV-00-linear-P3-family",
+    "candidate_pending_semantic_sha256": "2747fcc6923b44996bfe79c0d06d2f88169f9fedea465cdecaa3c104bcf6b8b5",
+    "degree": 1,
+    "dimension": 3,
+    "first_pending_branch_id": "B-UV-01-unclassified-ambient-components",
+    "independent_pending_payload_sha256": "b6dbaa2b4a5ce633e7658f8764d698c59b948e36f0d7647f206135d2861c2a88",
+    "isomorphic_to_P3": true,
+    "known_branch_exhausts_ambient_ideal": false,
+    "scheme_multiplicity_claimed": false,
+    "strict_parent_excluded_by": "H_22_1367"
+  },
+  "verdict": "ACCEPT_EXACT_BOUNDED_NULL_FRONTIER_WITH_DEEPEST_AND_UV_PARTIAL_CLOSURES_FAIL_CLOSED"
+}

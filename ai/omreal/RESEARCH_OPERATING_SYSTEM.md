@@ -13,10 +13,38 @@ This document is the standing operating framework for theorem-oriented work in
    checkpoints and silently regain authority.
 
 The current cross-diagonal machine-readable companion is
-`data/CANONICAL_RESEARCH_STATE_V2.json`. Its verifier is
-`verify_canonical_research_state_v2.py`.  Its immutable reconciled predecessor
-is `data/CANONICAL_RESEARCH_STATE.json`, verified by
-`verify_canonical_research_state.py`.  The older
+`data/CANONICAL_RESEARCH_STATE_V10.json`. Its verifier is
+`verify_canonical_research_state_v10.py`. V10 records the accepted global
+semialgebraic diagram-replacement close as `NULL / STALLED / STOP / NONE`,
+with the theorem ledger still `2/9` and no pair-diagram, denominator, closed
+formula tuple, or theorem credit.
+The user has since supplied explicit authority for a new governed cycle while
+prohibiting author contact; the new opening must still provide a concrete
+finite route, a strict-decrease contract, and independent replay.
+
+The immutable predecessor is `data/CANONICAL_RESEARCH_STATE_V9.json`, replayed
+by `verify_canonical_research_state_v9.py`. V9 records the prior mixed-carrier
+feasibility close, marks the only V8 round consumed, selects no active target,
+and selected no automatic successor.
+
+The earlier immutable predecessor is `data/CANONICAL_RESEARCH_STATE_V8.json`, replayed
+by `verify_canonical_research_state_v8.py`. V8 historically authorized the
+mixed-`(1,0,0)` chain subproblem, the complete joined-complex/pair-kernel
+program, and the independent triple-component escape program, with no
+mathematical construction or theorem credit. That authorization is no longer
+active. States V8 through V4 remain immutable historical checkpoints; in
+particular
+`data/CANONICAL_RESEARCH_STATE_V4.json` is the verified post-universal-cut
+state. Its immutable post-normal-link predecessor is
+`data/CANONICAL_RESEARCH_STATE_V3.json`. Its checkout-bound historical verifier
+is replaced in the aggregate harness by the branch-neutral
+`ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py` gate.
+The earlier post-mask-6 state is `data/CANONICAL_RESEARCH_STATE_V2.json`; its
+checkout-bound historical replay is replaced by
+`ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py`
+and the selected mask-6 cycle-manifest verifier. The reconciled state remains
+`data/CANONICAL_RESEARCH_STATE.json`; its historical reconciliation tracks are
+likewise covered by the portable reconciliation gate. The older
 `data/DIAG3_RESEARCH_DECISION_LEDGER.json` and
 `verify_diag3_research_decision_ledger.py` are immutable historical proof
 inputs; they remain replayable but no longer select current work.
@@ -33,8 +61,9 @@ replace independent certificate replay.
 > correct theorem, counterexample, or decisive impossibility certificate—not
 > activity, attractive numerics, or a large reduction by itself.
 >
-> Begin every research cycle from the current default branch and the canonical
-> machine-readable research state. Reconstruct the theorem dependency graph
+> Begin every research cycle from the canonical durable Library working branch
+> and the current machine-readable research state. GitHub remains read-only
+> until a new explicit user instruction authorizes publication. Reconstruct the theorem dependency graph
 > and distinguish invariant proof obligations from merely sufficient
 > reductions. Treat a target as active only if it is selected in that state;
 > older notes are historical evidence, not authority.
@@ -68,7 +97,8 @@ replace independent certificate replay.
 > run exactly as such.
 >
 > At the end of each cycle, update the canonical research state first, then prose status
-> files, GitHub, and the permanent Drive checkpoint. Record what is proved,
+> files, the durable Library checkpoint, and the Drive recovery mirror. Touch
+> GitHub only after a new explicit user instruction. Record what is proved,
 > falsified, bounded-no-go, evidence-only, superseded, and open. Never advance a
 > theorem score until every invariant obligation and publication gate in the
 > canonical state is closed.
@@ -98,7 +128,8 @@ Every material update must satisfy:
 
 - one theorem score;
 - one set of invariant open obligations;
-- one selected next target;
+- one selected next target, which may be the explicit fail-closed value
+  `NONE` together with a reopening predicate;
 - explicit supersession links for retired targets;
 - exact arithmetic identities for all displayed counts;
 - a verifier that rejects stale or contradictory accounting.

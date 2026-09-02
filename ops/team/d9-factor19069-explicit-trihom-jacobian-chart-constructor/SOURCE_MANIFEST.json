@@ -1,0 +1,40 @@
+{
+  "canonical_base_revision": "4aee0aac6e80d053cf1751eac766280873656909",
+  "canonical_base_tree": "bfaff6f29b032ef6f81fa11a97063b01d74db8f7",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1",
+  "cycle_opening_revision": "cd2d856d3ccff51f7b5d6841702b25d191ed9985",
+  "cycle_opening_tree": "6014474550142ec47f9280a123dc77bf403d1d0a",
+  "format": "d9-factor19069-explicit-trihom-jacobian-chart-constructor-source-manifest-v1",
+  "pins": {
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V6.json": "24d033a7f7d9886d8a538776a1453f1fd00af617da5c03f0f6a6e3921fe8b9bf",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
+    "ai/omreal/verify_canonical_research_state_v6.py": "0aef5bb2c999e74fcad71e2f8346e276dd66cd3c645d0b874a6d81109934e832",
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/CYCLE.md": "4f0f6841c483a0832e39b170eb1e5c041cabc214f5733f5a21b81ee849b58dba",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/OBLIGATION_GRAPH.json": "aedd5404ead4d36498da8a63e21d71f45a018ed2e6d2c14ea11300744545b9be",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/OPENING_AUDIT.json": "e513ef2f63f616cd06d3d5a27884a9919077ea1044132970de1d9691d09bbb55",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/WORK_ORDERS.yaml": "b501084a2c5f2e8f7be24c446a0d7d20729d4689076a5316fca4c81a1b42caad",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CYCLE_REPORT.md": "24e7765e7b39fee843494dcb6898fd844889f49d1f2b301cd8297fad3ef8af4e",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OPENING_AUDIT.json": "d6fc28140be34ef7c77527ae3ef001ded849f269ffa0d92c541a4899262b4c3d",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/RESULT.json": "06e64cf9eee6fdba5446179af3ca6ca93021a59c7a3e7563a865c5dfca28582f",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SINGULAR_DF_MULTIHOMOGENEOUS_FRONTIER.json": "d9f4aba3fa8c76e3a8abff5484ff509b0458fe9993edeb921e5a6d03c4dfac41",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SOURCE_MANIFEST.json": "6b38e9499c8474a52e083aa3ab4ccc12858abd7b476b6db2d04116ba86ba08b4",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-referee/RESULT.json": "c42ae5f15e21803a744df2cfd60db9a8edfb8081ec669f4a8025ab36fc452605"
+  },
+  "semantic_sha256": "b1c3c9822857e1905b8dc4d07f517f0fa92f24b7813bc638a042571d14e77f55",
+  "source_policy": {
+    "all_64_charts_constructed_without_symmetry_quotient": true,
+    "network_or_connector_used": false,
+    "numerical_or_modular_probe_used": false,
+    "predecessor_builder_code_imported": false,
+    "predecessor_json_is_only_polynomial_source": true,
+    "seventy_inverse_variable_discovery_used": false,
+    "trihomogenization_used_as_decomposition_certificate": false
+  },
+  "track_id": "d9-factor19069-explicit-trihom-jacobian-chart-constructor"
+}

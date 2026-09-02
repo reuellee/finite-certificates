@@ -1,0 +1,35 @@
+{
+  "format": "d9-factor19069-active-margin-referee-result-v1",
+  "track_id": "d9-factor19069-active-margin-referee",
+  "reviewed_revision": "d9c43724ba0b82f3aeee69b4afa205bad2aa27f9",
+  "reviewed_tree": "72ec9cffdb00969ae534daf742b45d05f4d8350a",
+  "verdict": "ACCEPT",
+  "accepted_endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+  "accepted_classification": "EXACT_FAIL_CLOSED_PARENT_RESIDENCE_NULL",
+  "gates": {
+    "frozen_source_pins": true,
+    "opening_and_predecessor": true,
+    "factor_parent_and_skeleton_replay": true,
+    "active_margin_ceiling": true,
+    "true_boundary_parent_residence_scope": true,
+    "producer_independent_certificate": true,
+    "hostile_mutations": true,
+    "clean_replay": true,
+    "ledger_scope": true,
+    "anti_stagnation": true
+  },
+  "closing_hostile_mutations": {
+    "rejected": 10,
+    "total": 10
+  },
+  "component_samples": 0,
+  "global_component_classification": "ABSENT_FAIL_CLOSED",
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "UNFILTERED_NONSMOOTH_ACTIVE_SET_ENUMERATION_FOR_FACTOR19069",
+  "pivot_reason": "The candidate active-set frontier crosses the exact-system ceiling at support size four, and the ten proper weak-sign support candidates lack connected-parent closure path tags.",
+  "precise_successor": "D9_ROW2599_FACTOR19069_FACTORED_BARRIER_COMPONENT_SAMPLER_GATE1: exactly sample every connected component of the single factored-barrier critical locus and classify each sample by a wall path to the fixed skeleton or exact nonattachment.",
+  "github_write": false
+}

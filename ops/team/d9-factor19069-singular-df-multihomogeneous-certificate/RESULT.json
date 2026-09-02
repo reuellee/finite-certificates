@@ -1,0 +1,74 @@
+{
+  "certificate_gates": {
+    "affine_multiaffine": false,
+    "affine_multihomogeneous": false,
+    "characteristic_zero_decomposition_certified": false,
+    "classification": "ACCEPTED_FAIL_CLOSED_SOURCE_PREMISE_FRONTIER",
+    "ledger_delta": "0/9",
+    "real_or_connected_tag_certified": false,
+    "source_factor_sha256": "b997e1dcc7216f595610633de99dd3459658cef28676fa748d79c2ba4ac0f3dc",
+    "strict_parent_emptiness_certified": false
+  },
+  "classification": "ACCEPTED_FAIL_CLOSED_SOURCE_PREMISE_FRONTIER",
+  "constructor_companion_sha256": {
+    "frontier_sha256": "d9f4aba3fa8c76e3a8abff5484ff509b0458fe9993edeb921e5a6d03c4dfac41",
+    "manifest_semantic_sha256": "35e687d6ee4a6ddcf983ced155ac52afd84f2ced1d1460fc9a7ab72bfa8a37b4",
+    "manifest_sha256": "6b38e9499c8474a52e083aa3ab4ccc12858abd7b476b6db2d04116ba86ba08b4",
+    "result_sha256": "178d2006eca68295da2bbeae06cb1a511c8249028727aec7429ecbc639b6dbd8"
+  },
+  "constructor_frontier": "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SINGULAR_DF_MULTIHOMOGENEOUS_FRONTIER.json",
+  "constructor_frontier_semantic_sha256": "d062fe00f8c7cd256c7aff13b559ead79de2539ac84579497348576acf2423e6",
+  "constructor_frontier_sha256": "d9f4aba3fa8c76e3a8abff5484ff509b0458fe9993edeb921e5a6d03c4dfac41",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "derivative_term_counts": {
+    "a": 54,
+    "b": 44,
+    "c": 54,
+    "d": 50,
+    "e": 50,
+    "f": 50,
+    "g": 36,
+    "h": 61,
+    "i": 36
+  },
+  "endpoint": "HASH_PIN_FIRST_UNRESOLVED_MULTIHOMOGENEOUS_SINGULAR_COMPONENT_OR_PARENT_SATURATION_BRANCH",
+  "exact_source_verdict": {
+    "affine_multiaffine": false,
+    "affine_three_block_homogeneous_of_multidegree_2_2_2": false,
+    "classification": "OPENING_PREMISE_FALSE_AS_AFFINE_STATEMENT",
+    "explicit_homogenization_reconstructed": true,
+    "first_unresolved_branch": "EXPLICIT_THREE_BLOCK_HOMOGENIZATION_OR_REVISED_NONHOMOGENEOUS_DECOMPOSITION_NOT_SUPPLIED",
+    "maximum_block_degree_bound": [
+      2,
+      2,
+      2
+    ]
+  },
+  "format": "d9-factor19069-singular-df-multihomogeneous-certificate-result-v1",
+  "hostile_tests": {
+    "rejected": 35,
+    "required": 18,
+    "run": 35
+  },
+  "ledger_after": "2/9",
+  "ledger_before": "2/9",
+  "ledger_change_recommended": false,
+  "ledger_delta": "0/9",
+  "negative_endpoint_reached": false,
+  "nonconsequences": [
+    "NO_COMPLETE_CHARACTERISTIC_ZERO_PRIMARY_OR_EQUIDIMENSIONAL_DECOMPOSITION",
+    "NO_COMPLETE_COMPONENT_EMBEDDED_BOUNDARY_CENSUS",
+    "NO_COMPLETE_COMPONENTWISE_SATURATION_AGAINST_ALL_70_PARENT_FACTORS",
+    "NO_STRICT_REAL_RESIDENCE_OR_CONNECTED_ROW2599_PARENT_TAG",
+    "NO_STRICT_PARENT_SINGULAR_BRANCH_EMPTINESS",
+    "NO_UNIVERSAL_DIAGONAL_CERTIFICATE",
+    "NO_THEOREM_LEDGER_PROMOTION"
+  ],
+  "outcome": "NULL",
+  "positive_endpoint_reached": false,
+  "semantic_sha256": "8312f72483a04e1c400dd51e225eb911084766729b978d87e90a5bdb6e766866",
+  "source_manifest_semantic_sha256": "23e8f10802d94bd838cbbdf795f527d9c377f3ebdc34890ead834f5240755a5f",
+  "source_reconstruction_sha256": "3e609f1e08f95647bd0b20f2bf4ec8590313944bf1d844b1defe604faa2f20bc",
+  "timeout_endpoint_reached": false,
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-certificate"
+}

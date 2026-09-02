@@ -1,0 +1,72 @@
+{
+  "format": "d9-factor19069-factored-barrier-constructor-result-v1",
+  "track_id": "d9-factor19069-factored-barrier-constructor",
+  "opening_revision": "d12dbaf7cfb7312d9d603c8938dd8ad6ce62166e",
+  "opening_tree": "221e574fd705aff50f667ebc72345a36afc4f5d7",
+  "outcome": "pass",
+  "classification": "EXACT_FAIL_CLOSED_FACTORED_BARRIER_COMPONENT_NULL",
+  "endpoint": "HASH_PINNED_FACTORED_BARRIER_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNSAMPLED_COMPONENT",
+  "frontier_sha256": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca",
+  "frontier_semantic_sha256": "7686b6fe5af6b7d50418c105d2fe5036bf2c660dde1cfe70c0e1ab7a4ce8c50c",
+  "source_manifest_sha256": "17bc476bfc78d629353f4fe73d24495de40de5a926aa5e8df4ed524131b3d303",
+  "factor_circuit_semantic_sha256": "0e10d3d4692a53a6040ea8822be05376775e9c674c74d532f42236d3dfb1a7cf",
+  "exact_circuit": {
+    "parent_factor_nodes": 70,
+    "parent_sparse_terms": 209,
+    "barrier_total_degree": 90,
+    "expanded_product_used": false,
+    "dB_coordinate_nodes": 9,
+    "dB_factored_summands": 630,
+    "df_coordinate_nodes": 9,
+    "dB_wedge_df_equations": 36
+  },
+  "critical_frontier": {
+    "systems_constructed": 1,
+    "connected_components_sampled": 0,
+    "zero_dimensional_components_sampled": 0,
+    "positive_dimensional_components_sampled": 0,
+    "first_unsampled_stratum": "FB-C0-STRICT-INTERIOR-FULL-SUPPORT",
+    "first_unsampled_stratum_sha256": "103ac3707fc12deeb74141ee916f42667f2210ad7fcf718b119eeaa58b62a6a0",
+    "component_solver_nodes_used": 0,
+    "component_solver_node_ceiling": 500000
+  },
+  "true_boundary": {
+    "ambient_product_support_strata": 3375,
+    "parent_bernstein_excluded": 3364,
+    "proper_nonexcluded_candidates": 10,
+    "factor19069_identically_zero_proper_restrictions": 8,
+    "factor19069_mixed_proper_restrictions": 2,
+    "certified_linear_witness_paths_to_pinned_parent_closure": 1,
+    "certified_path_support": [15, 7, 15],
+    "wall_component_residence_classified_strata": 0,
+    "first_unclassified_support": [1, 1, 1],
+    "first_unclassified_record_sha256": "d32036b252e71f9b3d921c972a87811a02eb6a2000a1ef85324464946d58eb4a"
+  },
+  "fixed_skeleton": {
+    "parent_path_tag_checks": 2800,
+    "factor19069_rooted_edges": [39],
+    "edge39_open_roots": 1,
+    "other_edge_open_roots": 0,
+    "exact_attached_wall_anchors": 1,
+    "barrier_critical_samples": 0,
+    "global_component_inference_from_anchor": false,
+    "attachment_classification_complete": false
+  },
+  "constructor_hostile_mutations": {
+    "rejected": 19,
+    "total": 19
+  },
+  "producer_independent_certificate_present": false,
+  "exact_consequence": "THE_COMPLETE_FACTORED_BARRIER_AND_dB_WEDGE_df_SOURCE_CIRCUIT_IS_HASH_PINNED_BUT_ITS_CONNECTED_CRITICAL_COMPONENTS_AND_GLOBAL_WALL_ATTACHMENTS_REMAIN_UNSAMPLED",
+  "nonconsequences": [
+    "NO_CONNECTED_COMPONENT_DECOMPOSITION_OF_THE_BARRIER_CRITICAL_LOCUS",
+    "NO_CRITICAL_COMPONENT_SAMPLE_OR_THOM_ENCODING",
+    "NO_COMPLETE_BOUNDARY_WALL_GERM_TO_INTERIOR_COMPONENT_CLASSIFICATION",
+    "NO_GLOBAL_FACTOR19069_WALL_COMPONENT_COUNT",
+    "NO_COMPLETE_COMPONENT_TO_SKELETON_ATTACHMENT_CLASSIFICATION",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "ledger_change_recommended": "none",
+  "theorem_ledger": "2/9"
+}

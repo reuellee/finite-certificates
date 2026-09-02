@@ -1,0 +1,42 @@
+track_id: diag9-s1237-normal-link-prover
+role: constructive prover and exact normal-link producer
+base_revision: c6bd7a6afeda0888fc950710b941cac6f6c9bf95
+base_tree: 9c2dbe39a3ea0f36e9e9c8f845e6f72e98526421
+outcome: finite-exact
+endpoint: NORMAL_LINK_REDUCTION_NO_GO
+summary: >-
+  Both support strata have an exact positive Gordan obstruction to a strict
+  ordinary common-radial parent link, forcing higher weighted blow-ups.
+artifacts:
+  - path: ops/team/diag9-s1237-normal-link-prover/ACTIVE_LITERAL_INVENTORY.json
+    semantic_sha256: e733196b9b9ba25cf9256c0d51ba0f5d2cd8d4da4a4c05eccd9d609c1ece20e7
+  - path: ops/team/diag9-s1237-normal-link-prover/NORMAL_FORM_INVENTORY.json
+    semantic_sha256: 3f891c6421e418758b11371d82522e5cdf789b6c944d1342773478df493445f6
+  - path: ops/team/diag9-s1237-normal-link-prover/DIAG9_S1237_NORMAL_LINK_NO_GO.json
+    semantic_sha256: f2169e2bc90f9c92d49f754d695b34b9dc3da770a3aecf6bfb6e84a6cb80b747
+replay:
+  command: PYTHONDONTWRITEBYTECODE=1 python ops/team/diag9-s1237-normal-link-prover/verify_normal_link_no_go.py
+  expected: >-
+    PASS with 3539 literals, 6167 occurrences, 7078 factor forms, 140 parent
+    forms, two source-derived Gordan obstructions, and 13/13 hostile rejects.
+coverage:
+  included: >-
+    Every S12,37 active literal and occurrence; both selected supports; every
+    factor and parent initial form; the two first strict-link singularities.
+  excluded: >-
+    Weighted blow-ups, recursive facet cellulation, stabilization radius,
+    collar/mincut/topology, global active-sector connectivity, and D9 theorem.
+canaries:
+  positive: both exact source-derived Gordan relations replay
+  negative: opposite first normal forms make strict ordinary links infeasible
+  null: weighted parent-safe arcs remain open on two hash-pinned forced facets
+  hostile: 13/13 support/label/sign/unit/omission/scope mutations rejected
+source_accounting:
+  used: SOURCE_MANIFEST.json at the exact opening commit and tree
+  unused_or_missing: none for the stated finite-exact endpoint
+open_defects:
+  - Higher weighted orders on n4=0 and n3=0 remain unresolved.
+next_action: >-
+  Independently verify the literal inventory and the two Gordan certificates;
+  only a successor cycle may decide whether to attempt the weighted blow-ups.
+ledger_change_recommended: none; honest 9DVL score remains 2/9

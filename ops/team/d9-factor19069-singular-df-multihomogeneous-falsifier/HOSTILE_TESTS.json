@@ -1,0 +1,27 @@
+{
+  "format": "d9-factor19069-singular-df-multihomogeneous-hostile-tests-v1",
+  "total": 59,
+  "rejected": 59,
+  "rejection_markers": [
+    "manifest source count",
+    "source pin ops/research-team/PROTOCOL.md",
+    "source pin ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OPENING_AUDIT.json",
+    "producer independence", "drive scope",
+    "track identity", "target identity", "factor term claim", "factor digest claim",
+    "total degree claim", "maximum total degree claim", "block partition", "block degree claim",
+    "block upper bound", "affine homogeneity rejection", "block homogeneity rejection",
+    "coordinate exponent claim", "multiaffinity rejection", "parent factor claim", "parent digest claim",
+    "singular ideal generators", "singular ideal generator count", "derivative variable order",
+    "derivative term claim", "derivative digest claim", "derivative reconstruction method",
+    "decomposition status", "component equation overclaim", "embedded component overclaim",
+    "dimension overclaim", "degree overclaim", "multiplicity overclaim", "parent incidence overclaim",
+    "parent incidence scope", "real residence overclaim", "connected parent overclaim",
+    "singular stratum loss", "boundary stratum loss", "inverse discovery prohibition",
+    "numerical promotion prohibition", "sampled route prohibition", "producer logic prohibition",
+    "homogenization overclaim", "wall resource ceiling", "cpu resource ceiling", "memory resource ceiling",
+    "hostile minimum", "resource crossing", "external compute scope",
+    "positive endpoint overclaim", "negative endpoint overclaim",
+    "null endpoint missing", "timeout endpoint mismatch", "first unresolved branch", "endpoint selection",
+    "endpoint classification", "ledger delta", "ledger scope", "ledger promotion"
+  ]
+}

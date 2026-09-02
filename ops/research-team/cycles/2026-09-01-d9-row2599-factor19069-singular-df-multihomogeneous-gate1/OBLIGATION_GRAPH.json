@@ -1,0 +1,30 @@
+{
+  "format": "d9-factor19069-singular-df-multihomogeneous-obligation-graph-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "opening_ledger": "2/9",
+  "nodes": [
+    {"id": "source-19069", "status": "finite-exact", "claim": "108-term primitive degree-six factor 19069 and nine sparse derivatives are source-pinned"},
+    {"id": "block-structure", "status": "inconclusive", "claim": "the exact three-block (2,2,2) multihomogeneous/multiaffine structure and its decomposition consequences are verified"},
+    {"id": "singular-decomposition", "status": "inconclusive", "claim": "J=<f,df> has a complete characteristic-zero primary/equidimensional decomposition including embedded components"},
+    {"id": "component-invariants", "status": "inconclusive", "claim": "every singular component has exact equations, dimension, degree, and multiplicity where feasible"},
+    {"id": "parent-factor-incidence", "status": "inconclusive", "claim": "every singular component is tested exactly against each of 70 parent factors"},
+    {"id": "strict-real-residence", "status": "inconclusive", "claim": "surviving components have exact real points with all 70 strict signs or are exactly excluded"},
+    {"id": "connected-parent-tag", "status": "inconclusive", "claim": "every strict survivor is attached or excluded from the pinned connected row-2599 parent component"},
+    {"id": "boundary-strata", "status": "inconclusive", "claim": "all killed components are retained as exact parent-factor/boundary strata with source tags"},
+    {"id": "regular-critical-frontier", "status": "inconclusive", "claim": "the nine regular critical charts are eligible as the next frontier only after exact singular strict-parent emptiness"},
+    {"id": "diagonal-nine", "status": "inconclusive", "claim": "diagonal nine theorem or theorem-level counterexample"}
+  ],
+  "edges": [
+    ["source-19069", "block-structure"],
+    ["block-structure", "singular-decomposition"],
+    ["singular-decomposition", "component-invariants"],
+    ["component-invariants", "parent-factor-incidence"],
+    ["parent-factor-incidence", "strict-real-residence"],
+    ["strict-real-residence", "connected-parent-tag"],
+    ["parent-factor-incidence", "boundary-strata"],
+    ["connected-parent-tag", "regular-critical-frontier"],
+    ["regular-critical-frontier", "diagonal-nine"]
+  ],
+  "promotion_gate": "INDEPENDENTLY_REPLAYED_UNIVERSAL_DIAGONAL_CERTIFICATE_ONLY"
+}
+

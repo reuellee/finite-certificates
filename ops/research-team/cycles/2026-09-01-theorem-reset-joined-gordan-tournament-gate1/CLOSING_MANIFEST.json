@@ -1,0 +1,94 @@
+{
+  "format": "theorem-reset-joined-gordan-closing-manifest-v1",
+  "cycle_id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+  "branch": "research/local-theorem-reset-joined-gordan-tournament-20260901",
+  "canonical_base": {
+    "commit": "3689b5344dfed38468639d0e92b48f0b5fc4ebc8",
+    "tree": "ef14ccd9b844dae5e9b535310122251ca0e86bfb"
+  },
+  "opening": {
+    "commit": "d4f83ffedc13f2fc07a2c8cd39a03cec8550da22",
+    "tree": "97ab517bfe5bf8b3b93e7d604690c4d6a1342c43"
+  },
+  "integrated_evidence": {
+    "commit": "5277886b1171f15b8e486d5e62212515534e5944",
+    "tree": "ed5e6359122bc167898f9d6b8f2c60904ff0125c"
+  },
+  "midpoint": {
+    "commit": "ebbe79cbc8a2b490ff1d9e77dde1cafb57d8a1e8",
+    "tree": "b0ee5a5890715704fa10b839979e5100fc7740bb",
+    "decision": "STOP_DISCOVERY_NO_RESOURCE_ENLARGEMENT"
+  },
+  "frozen_candidate": {
+    "commit": "627344866096af0eea2863af295d718237ca8d23",
+    "tree": "b5b254bcb94662f8ed3ff621334638cc89526ada"
+  },
+  "referee_lane": {
+    "commit": "d1d180396728a625937f88c497fb941e65a7e470",
+    "tree": "5f38b50568671b876aaaa1528a4aca7cb5e090eb",
+    "verdict": "ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED"
+  },
+  "integrated_referee": {
+    "commit": "fa9787b8295fae46a262d610698e7d21790c63bd",
+    "tree": "5f38b50568671b876aaaa1528a4aca7cb5e090eb"
+  },
+  "result": {
+    "opening_ledger": "2/9",
+    "closing_ledger": "2/9",
+    "ledger_delta": "0/9",
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "tournament_winner": "NONE",
+    "eligible_construction_targets": 0,
+    "selected_successor": "NONE",
+    "construction_started": false,
+    "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+    "checkpoint_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+    "closing_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8]
+  },
+  "measures": {
+    "joined_opening": "3/10",
+    "joined_closing": "3/10",
+    "joined_new_universal_clause": "NONE",
+    "triple_coverage": "77940147/79102449",
+    "triple_residual_opening": 1162302,
+    "triple_residual_closing": 1162302,
+    "triple_residual_delta": 0,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN"
+  },
+  "route_handoffs": ["NULL", "NULL", "NULL", "NEGATIVE", "NULL", "TIMEOUT"],
+  "verification": {
+    "opening_hostiles": "12/12",
+    "prover_strategy_hostiles": "26/26",
+    "falsifier_hostiles": "18/18",
+    "independent_verifier_hostiles": "20/20",
+    "closing_candidate_hostiles": "20/20",
+    "closing_referee_hostiles": "40/40",
+    "clean_replay": "10/10",
+    "clean_identity": "14/14_FILES_BYTE_IDENTICAL_ZERO_COLLISIONS_NLINK_1",
+    "repository_protocol": "PASS_18_CYCLES_74_WORK_ORDERS",
+    "canonical_state_v7": "PASS_LEDGER_2_OF_9_DIAGONAL9_OPEN",
+    "diag3_completion": "PASS_77940147_OF_79102449_RESIDUAL_1162302_PAIR_OPEN"
+  },
+  "referee_pins": {
+    "ops/team/theorem-reset-closing-referee/RESULT.json": "4e20d66ee618df991fad56230484f21251515efd9673b84c1effb98662361a3a",
+    "ops/team/theorem-reset-closing-referee/verify_closing_referee.py": "adc530c076f9730f828eab1d4826d617b9cba633e7525eacc6a68a28b66146c8",
+    "ops/team/theorem-reset-closing-referee/CLEAN_REPLAY.json": "b1394e5e7b3e5b636eed689fa07036049215a79f144e9863414e992b66776f91",
+    "ops/team/theorem-reset-closing-referee/REVIEW.md": "582d67504f9421e5f96f30585dc94fb0fd5a4df68be443331bb09153a6c150eb"
+  },
+  "package_plan": {
+    "bundle_path": "E:\\Projects\\9DVL Research\\outputs\\9dvl-theorem-reset-joined-gordan-tournament-gate1-20260901.bundle",
+    "external_manifest_path": "E:\\Projects\\9DVL Research\\outputs\\9dvl-theorem-reset-joined-gordan-tournament-gate1-20260901-manifest.json",
+    "generation": "AFTER_FINAL_LOCAL_CLOSE_COMMIT",
+    "exact_commit_tree_bytes_and_sha256": "RECORDED_IN_EXTERNAL_MANIFEST"
+  },
+  "storage": {
+    "native_g_mirror": "DEFERRED_ACCESS_DENIED_IN_SANDBOX_TO_COORDINATING_USER_CONTEXT",
+    "probe_error": "Access to the path G:\\My Drive\\Projects\\research-backups is denied.",
+    "google_drive_connector_used": false,
+    "approval_requested": false,
+    "github_write": false
+  }
+}
+

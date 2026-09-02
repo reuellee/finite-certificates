@@ -1,0 +1,163 @@
+{
+  "format": "theorem-reset-closing-referee-result-v1",
+  "track_id": "theorem-reset-closing-referee",
+  "branch": "research/lane-theorem-reset-referee-20260901",
+  "frozen_candidate": {
+    "commit": "627344866096af0eea2863af295d718237ca8d23",
+    "tree": "b5b254bcb94662f8ed3ff621334638cc89526ada"
+  },
+  "canonical_base": {
+    "commit": "3689b5344dfed38468639d0e92b48f0b5fc4ebc8",
+    "tree": "ef14ccd9b844dae5e9b535310122251ca0e86bfb"
+  },
+  "opening": {
+    "commit": "d4f83ffedc13f2fc07a2c8cd39a03cec8550da22",
+    "tree": "97ab517bfe5bf8b3b93e7d604690c4d6a1342c43"
+  },
+  "integrated_evidence": {
+    "commit": "5277886b1171f15b8e486d5e62212515534e5944",
+    "tree": "ed5e6359122bc167898f9d6b8f2c60904ff0125c"
+  },
+  "checkpoint": {
+    "commit": "ebbe79cbc8a2b490ff1d9e77dde1cafb57d8a1e8",
+    "tree": "b0ee5a5890715704fa10b839979e5100fc7740bb"
+  },
+  "verdict": "ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED",
+  "trajectory_classification": "STALLED",
+  "strategy_action": "STOP",
+  "ledger": {
+    "opening": "2/9",
+    "closing": "2/9",
+    "delta": "0/9"
+  },
+  "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "checkpoint_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "closing_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8],
+  "minimum_acceptable_delta": "CLOSE_AT_LEAST_ONE_LOAD_BEARING_OBLIGATION_OR_STRICTLY_REDUCE_A_CERTIFIED_EXHAUSTIVE_GLOBALLY_ATTACHED_RESIDUAL_WITH_BOUNDED_NEXT_DECREASE",
+  "minimum_acceptable_delta_met": false,
+  "joined_measure": {
+    "formal_clause_denominator": 10,
+    "opening_coverage": "3/10",
+    "closing_coverage": "3/10",
+    "credited_clauses": ["(0)", "(1)", "(2)"],
+    "new_clause": "NONE",
+    "globally_attached": false,
+    "end_to_end_d3_denominator": false,
+    "bounded_chain": false
+  },
+  "triple_measure": {
+    "coverage": "77940147/79102449",
+    "opening_residual": 1162302,
+    "closing_residual": 1162302,
+    "residual_delta": 0,
+    "source_order_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+    "triple_only_promotes_d3": false
+  },
+  "obligations": [
+    {"id": "global_gluing", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "extension_labels", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "strict_closure", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "relative_infinity", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "middle_rank_replay", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "diag3_pair_hc1", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "diag3_triple_hc0", "opening": 1162302, "closing": 1162302, "delta": 0}
+  ],
+  "routes": [
+    {
+      "id": "D3_JOINED_GORDAN_TEN_CLAUSE_THEOREM",
+      "scores": [5, 2, 2, 4, 5, 4, 5, 3],
+      "handoff": "NULL",
+      "successor_eligible": false,
+      "disposition": "STOP_NO_NEW_UNIVERSAL_CLAUSE"
+    },
+    {
+      "id": "D3_UNIFORM_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+      "scores": [5, 3, 2, 5, 4, 4, 4, 4],
+      "handoff": "NULL",
+      "successor_eligible": false,
+      "disposition": "STOP_RESIDUAL_UNCHANGED"
+    },
+    {
+      "id": "D3_PAIR_GLOBAL_COMPRESSION_DESCENT_EQUIVALENCE",
+      "scores": [5, 1, 1, 4, 5, 3, 4, 4],
+      "handoff": "NULL",
+      "successor_eligible": false,
+      "disposition": "STOP_GLOBAL_INPUT_CONTRACT_MISSING"
+    },
+    {
+      "id": "EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT",
+      "scores": [4, 3, 4, 5, 4, 5, 5, 1],
+      "handoff": "NEGATIVE",
+      "successor_eligible": false,
+      "disposition": "RETIRE_ONLY_NAMED_SHORTCUTS"
+    },
+    {
+      "id": "D9_SIMULTANEOUS_INSERTION_2604_PARENT_THEOREM",
+      "scores": [2, 2, 2, 4, 4, 4, 4, 4],
+      "handoff": "NULL",
+      "successor_eligible": false,
+      "disposition": "STOP_REDUCIBILITY_ONLY_INDUCTION_RETIRED"
+    },
+    {
+      "id": "D9_ACTUAL_ARRANGEMENT_SIGN_GEODESY",
+      "scores": [2, 2, 1, 5, 5, 3, 2, 4],
+      "handoff": "TIMEOUT",
+      "successor_eligible": false,
+      "disposition": "MIDPOINT_STOP_PARTIAL_LOCAL_METRIC_EXCLUDED"
+    }
+  ],
+  "handoff_sequence": ["NULL", "NULL", "NULL", "NEGATIVE", "NULL", "TIMEOUT"],
+  "tournament_winner": "NONE",
+  "selected_successor": "NONE",
+  "construction_started": false,
+  "successor_bar": {
+    "theorem_level_quantifier_attachment_proved": false,
+    "certified_finite_end_to_end_denominator_and_coverage_proved": false,
+    "bounded_strict_decrease_chain_proved": false,
+    "eligible_route_count": 0
+  },
+  "independent_reconstruction": {
+    "ledger": "2/9",
+    "proved_diagonals": [1, 2],
+    "pair_global_interface": [0, 0, 0, 0],
+    "triple_source_orbits": 79102449,
+    "triple_settled_orbits": 77940147,
+    "triple_residual_orbits": 1162302
+  },
+  "pin_counts": {
+    "opening": 16,
+    "evidence": 6,
+    "prover-strategy": 23,
+    "falsifier": 21,
+    "independent-verifier": 18
+  },
+  "clean_replay": {
+    "required_passed": 10,
+    "required_total": 10,
+    "acceptance_files_checked": 14,
+    "identity_collisions": 0
+  },
+  "storage": {
+    "native_g_mirror": "DEFERRED_ACCESS_DENIED_IN_SANDBOX_TO_COORDINATING_USER_CONTEXT",
+    "google_drive_connector_used": false,
+    "approval_requested": false,
+    "github_write": false
+  },
+  "nonconsequences": [
+    "NO_NEW_UNIVERSAL_JOINED_CLAUSE",
+    "NO_GENUINE_MIXED_BLOCK_CARRIER_OR_NONEXISTENCE_THEOREM",
+    "NO_GLOBAL_TEN_CLAUSE_END_TO_END_DENOMINATOR",
+    "NO_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+    "NO_TRIPLE_RESIDUAL_REDUCTION",
+    "NO_PAIR_GLOBAL_COMPRESSION_OR_DENOMINATOR",
+    "NO_D3_INVARIANT_PROOF_OR_COUNTEREXAMPLE",
+    "NO_D9_SIMULTANEOUS_INSERTION_OR_SIGN_GEODESY_THEOREM",
+    "NO_LEDGER_CHANGE",
+    "NO_CONSTRUCTION_SUCCESSOR"
+  ],
+  "hostile_mutations": {
+    "required": 40,
+    "rejected": 40,
+    "accepted": 0
+  }
+}

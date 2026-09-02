@@ -1,0 +1,101 @@
+{
+  "format": "d9-factor19069-singular-df-multihomogeneous-falsifier-result-v1",
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-falsifier",
+  "outcome": "pass",
+  "classification": "EXACT_AFFINE_BLOCK_STRUCTURE_PREMISE_REJECTED_FAIL_CLOSED",
+  "endpoint": "STOP_BEFORE_DECOMPOSITION_AT_FALSE_BLOCK_STRUCTURE_PREMISE",
+  "target": {
+    "parent_index": 2599,
+    "factor_id": 19069,
+    "ring": "Q[a,b,c,d,e,f,g,h,i]"
+  },
+  "independent_source_reconstruction": {
+    "factor_sparse_terms": 108,
+    "factor_sparse_sha256": "041227c22bc01ca80df8a66a46099b2f703c53a310fe737dac3981bda5ee20c4",
+    "total_degree_set": [4, 5, 6],
+    "maximum_total_degree": 6,
+    "block_partition": [["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]],
+    "block_degree_sets": [[1, 2], [1, 2], [0, 1, 2]],
+    "block_multidegree_upper_bound": [2, 2, 2],
+    "affine_total_homogeneous": false,
+    "affine_block_multihomogeneous": false,
+    "coordinate_maximum_exponents": [2, 1, 2, 2, 2, 2, 1, 2, 1],
+    "coordinate_multiaffine": false,
+    "explicit_counterterms": {
+      "total_degree_4_and_first_block_degree_1": {"exponents": [0, 0, 1, 0, 1, 0, 0, 1, 1], "coefficient": -1},
+      "third_block_degree_0": {"exponents": [0, 0, 2, 0, 2, 0, 0, 0, 0], "coefficient": -1},
+      "coordinate_a_squared": {"exponents": [2, 0, 0, 0, 0, 1, 0, 1, 1], "coefficient": 1}
+    },
+    "parent_factor_count": 70,
+    "parent_sign_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+  },
+  "singular_ideal_reconstruction": {
+    "generators": ["f_19069", "df_da", "df_db", "df_dc", "df_dd", "df_de", "df_df", "df_dg", "df_dh", "df_di"],
+    "generator_count": 10,
+    "derivative_variables": ["a", "b", "c", "d", "e", "f", "g", "h", "i"],
+    "derivative_term_counts": [54, 44, 54, 50, 50, 50, 36, 61, 36],
+    "derivative_sparse_sha256": [
+      "382f9a12ca2d88fa7c3c67c1c6b13c0b0bf91833978a482220b62eef2e175b3a",
+      "247a25f59acfeca0e2492b9f53b2cd1541edafec8a882c57935edd69076bf7ac",
+      "c6690d1c5fb151b0e71129ea26e92438e42e720326ed7b9a1b0e6c20a977d6d3",
+      "2135c43e43123c23e490f778b7bf661d8c737387e4ba1cede5bd78bbf5302b4f",
+      "bedfd41d243f619317d220f743a375850537a5b4057e193b6920296783d8116b",
+      "feb633531b931c539632d64665d074effe200db0f58ed7eafc5e05495e0e6bfd",
+      "0584e873bfa627a3d9d14c5358f2913d52b3b096ae00428d8039237727842723",
+      "edc40934e6e7a48ebd07ce4c42516de5b91ee68e27e71836c729dd9569ca7b58",
+      "e68f99acd149c071ddf98ec55766cd5812fc163fcd0d1eb095c7e61085d8d0a9"
+    ],
+    "derivatives_rebuilt_by_sparse_exponent_arithmetic": true
+  },
+  "downstream_fail_closed_audit": {
+    "characteristic_zero_decomposition": "NOT_REACHED_AFTER_EXACT_PRECONDITION_REJECTION",
+    "component_equations": null,
+    "embedded_components_accounted": false,
+    "dimensions": null,
+    "degrees": null,
+    "multiplicities": null,
+    "componentwise_parent_factor_tests_completed": 0,
+    "parent_factor_tests_required_per_component": 70,
+    "strict_real_residence": "UNRESOLVED",
+    "connected_parent_tag": "UNRESOLVED",
+    "singular_strata_discarded": 0,
+    "boundary_strata_discarded": 0
+  },
+  "scope_guards": {
+    "seventy_inverse_variable_discovery_used": false,
+    "numerical_or_modular_evidence_promoted": false,
+    "sampled_or_projection_inference_used": false,
+    "producer_acceptance_logic_imported": false,
+    "homogenization_claimed_without_explicit_construction": false
+  },
+  "resource_accounting": {
+    "wall_minutes_ceiling": 35,
+    "cpu_hours_ceiling": 2,
+    "memory_gib_ceiling": 8,
+    "hostile_mutations_minimum": 18,
+    "hostile_mutations_executed": 59,
+    "ceiling_crossed": false,
+    "external_compute_used": false
+  },
+  "endpoint_accounting": {
+    "positive": false,
+    "negative": false,
+    "null": true,
+    "timeout": false,
+    "first_unresolved_branch": "AFFINE_BLOCK_STRUCTURE_PRECONDITION"
+  },
+  "hostile_mutations_rejected": 59,
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "ledger_promotion_recommended": false,
+  "nonconsequences": [
+    "NO_CHARACTERISTIC_ZERO_PRIMARY_OR_EQUIDIMENSIONAL_DECOMPOSITION",
+    "NO_COMPLETE_COMPONENT_EQUATIONS_OR_EMBEDDED_COMPONENT_ACCOUNTING",
+    "NO_COMPONENT_DIMENSION_DEGREE_OR_MULTIPLICITY_CLAIM",
+    "NO_COMPONENTWISE_70_FACTOR_INCIDENCE_CLASSIFICATION",
+    "NO_STRICT_REAL_RESIDENCE_OR_CONNECTED_PARENT_TAG",
+    "NO_SINGULAR_BRANCH_EMPTINESS_OR_EXACT_COUNTEREXAMPLE",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ]
+}

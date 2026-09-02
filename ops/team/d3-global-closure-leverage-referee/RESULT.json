@@ -1,0 +1,107 @@
+{
+  "format": "d3-global-closure-leverage-closing-referee-v1",
+  "track_id": "d3-global-closure-leverage-referee",
+  "branch": "research/lane-d3-closure-leverage-referee-20260901",
+  "frozen_candidate": {
+    "commit": "2426a20de8ad31d4b91e1a5ef337e99535b41f8b",
+    "tree": "98d2ab0262df1fe50ad6c6052ea77e8bb58989a2"
+  },
+  "canonical_base": {
+    "commit": "98ed8d36f08f13305d226d3d3770e71542a0a408",
+    "tree": "52a03a10b62e54a9ff5aa4e59dbbc2af9a69eeab"
+  },
+  "verdict": "ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED",
+  "trajectory_classification": "STALLED",
+  "strategy_action": "STOP",
+  "ledger": {
+    "opening": "2/9",
+    "closing": "2/9",
+    "delta": "0/9"
+  },
+  "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 3, 6],
+  "comparable_closing_vectors": [
+    ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 1, 4],
+    ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 2, 5],
+    ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 3, 6]
+  ],
+  "checkpoint_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 3, 6],
+  "closing_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "minimum_acceptable_delta": "7_TO_AT_MOST_6_OR_UNKNOWN_TO_EXACT_N_WITH_K_OVER_N_AND_BOUNDED_NEXT_DECREASE",
+  "minimum_acceptable_delta_met": false,
+  "automatic_reset": {
+    "fired": true,
+    "same_route_continue_allowed": false,
+    "action": "STOP"
+  },
+  "obligations": [
+    {"id": "global_gluing", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "residual": "UNKNOWN", "coverage": "UNKNOWN"},
+    {"id": "extension_labels", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "residual": "UNKNOWN", "coverage": "UNKNOWN"},
+    {"id": "strict_closure", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "residual": "UNKNOWN", "coverage": "UNKNOWN"},
+    {"id": "relative_infinity", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "residual": "UNKNOWN", "coverage": "UNKNOWN"},
+    {"id": "middle_rank_replay", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "residual": "UNKNOWN", "coverage": "UNKNOWN"},
+    {"id": "diag3_pair_hc1", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "residual": "UNKNOWN", "coverage": "UNKNOWN"},
+    {"id": "diag3_triple_hc0", "opening": 1162302, "closing": 1162302, "residual": 1162302, "coverage": "77940147/79102449_PROVED_NONCOMPACT"}
+  ],
+  "routes": [
+    {
+      "id": "DIRECT_GLOBAL_MASTER_CLOSURE",
+      "construction_eligible": false,
+      "disposition": "STOP_UNTIL_GLOBAL_DENOMINATOR_AND_BOUNDED_CHAIN_EXIST"
+    },
+    {
+      "id": "COMPONENT_COSHEAF_STRUCTURAL_COMPRESSION",
+      "construction_eligible": false,
+      "disposition": "CREDIBLE_ONLY_AFTER_NEW_GLOBALLY_ATTACHED_DESCENT_OR_EQUIVALENCE_THEOREM"
+    },
+    {
+      "id": "EXACT_COUNTEREXAMPLE_OR_RETIREMENT",
+      "construction_eligible": false,
+      "disposition": "GRAPH_ONLY_PAIR_H1_SHORTCUT_RETIRED_NARROWLY__SURVIVING_ROUTES_NOT_RETIRED"
+    },
+    {
+      "id": "D9_B_UV_01_LOW_LEVERAGE_BASELINE",
+      "construction_eligible": false,
+      "disposition": "DEFERRED_LOW_LEVERAGE_BASELINE_NOT_DEFAULT"
+    }
+  ],
+  "successor_bar": {
+    "theorem_level_quantifier_attachment_proved": false,
+    "certified_finite_exhaustive_progress_measure_proved": false,
+    "preregistered_bounded_decrease_proved": false,
+    "eligible_construction_targets": 0,
+    "selected_construction_target": "NONE",
+    "selected_successor": "NONE / STOP"
+  },
+  "independent_reconstruction": {
+    "base_cells": 527533,
+    "lifted_cells": 16935101,
+    "algebraic_t_lifted_cells": 8390619,
+    "triple_unresolved": 1162302
+  },
+  "clean_replay": {
+    "path": "E:\\Projects\\9DVL Research\\lane-replays\\d3-closure-leverage-referee-2426a20",
+    "six_required_gates_passed": true,
+    "hardlink_identity_collisions": 0
+  },
+  "scope_facts": {
+    "legacy_component_cosheaf_full_pilot": "OPTIONAL_REPLAY_TERMINATED_BY_COORDINATOR_BOUND; KNOWN_FAIL_CLOSED_AT_EXPECTED_CANARY_FIRST_EVENT; NOT_AN_ACCEPTANCE_DEPENDENCY; PINNED_BOUNDED_NO_GO_RECONSTRUCTED_DIRECTLY",
+    "algebraic_t_raw_byte_replay": "KNOWN_WINDOWS_GZIP_OS_BYTE_10_VERSUS_STORED_3_PORTABILITY_DEFECT; BYTE_9_NORMALIZED_CONTENT_REPLAY_32_OF_32; NO_MATHEMATICAL_OR_GLOBAL_COVERAGE_PROMOTION"
+  },
+  "nonconsequences": [
+    "NO_GLOBAL_MASTER_CELL_UNIVERSE",
+    "NO_GLOBAL_GLUE_OR_EXTENSION_LABEL_OR_STRICT_CLOSURE_CERTIFICATE",
+    "NO_TRUE_RELATIVE_INFINITY_SUBCOMPLEX",
+    "NO_GLOBAL_MIDDLE_RANK_REPLAY",
+    "NO_DIAG3_PAIR_HC1_PROOF",
+    "NO_DIAG3_TRIPLE_HC0_PROOF",
+    "NO_DIAGONAL_3_PROOF_OR_COUNTEREXAMPLE",
+    "NO_D9_CONTINUATION",
+    "NO_CONSTRUCTION_TARGET",
+    "NO_LEDGER_CHANGE"
+  ],
+  "hostile_mutations": {
+    "required": 30,
+    "rejected": 30,
+    "accepted": 0
+  }
+}

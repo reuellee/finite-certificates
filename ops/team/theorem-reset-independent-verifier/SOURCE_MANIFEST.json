@@ -1,0 +1,35 @@
+{
+  "format": "theorem-reset-independent-verifier-source-manifest-v1",
+  "cycle_id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+  "scientific_base_commit": "3689b5344dfed38468639d0e92b48f0b5fc4ebc8",
+  "scientific_base_tree": "ef14ccd9b844dae5e9b535310122251ca0e86bfb",
+  "lane_opening_commit": "d4f83ffedc13f2fc07a2c8cd39a03cec8550da22",
+  "lane_opening_tree": "97ab517bfe5bf8b3b93e7d604690c4d6a1342c43",
+  "sources": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ops/research-team/verify_cycle_protocol.py": "e3c2f64b97d53f4de00be675a789a42668835bb1dd8759779be8392760131753",
+    "ops/research-team/cycles/2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1/CYCLE_REPORT.md": "736715466b398fc2294207f73cdbf71b6dbbeccdce78626a83b107572d5ccaf4",
+    "ops/research-team/cycles/2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1/CLOSING_CANDIDATE.json": "5350198508d15b60d6b67609cf4cba9ee11e3538e750c46b919a685f02fb3dd0",
+    "ai/omreal/NINE_DIAGONAL_STATUS.md": "07c146e835f6a62c29ab653d353d73469df1e6022018ffec76f6775b65ca7ae2",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e",
+    "ai/omreal/data/DIAG3_COMPLETION_OPEN_OBJECT.json": "ea8808e8979603757dec928b1e9aeb266aa3eabcfb2e70c1f13e7aa5c4af6ece",
+    "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ai/omreal/DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md": "046dc84c138cbbed9add0946392d72ddb3b73b332ddb4c9029ea54348a85562e",
+    "ai/omreal/verify_diag3_joined_flow_triangle.py": "ac01851b53d4bed1c859f74bad2e71a5025825fe7accdac13263f5d6518a0944",
+    "ai/omreal/verify_diag3_single_bad_two_skeleton.py": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4",
+    "ai/omreal/verify_canonical_research_state_v4.py": "1aa9e89436baa441aad13934c0943c1327c7420297c419f6bad7f993fdb9f96c",
+    "ai/omreal/NINTH_COORDINATE_PATH_THEOREM.md": "db785ee0f061cf45e938af77ecb8aba03a658830b3d98cc82e173af4c501a792",
+    "ai/omreal/DIAG9_GRAPH_REDUCIBILITY_AUDIT.md": "d9e72c4379b64ca2217a2b8f151b9ded0df0043e0939725c0320ea46ae828acc",
+    "ai/omreal/DIAG9_GRAPH_REDUCIBILITY_NO_GO.py": "75defaee45afeec2e82ee7a671bc92ac3281a17051ecc7c796498f4bedf727bf",
+    "ai/omreal/DIAG9_SIGN_GEODESY_AUDIT.md": "64896fa28a76f57344bd246f1546322e1361f6ac57f164ca6199c58938c30903",
+    "ai/omreal/verify_diag9_sign_geodesy_audit.py": "375f61c0928c55b5a9d3589ede9c23a512fbf26312596943b81b5bfe5ac1d3c5"
+  },
+  "independence": {
+    "producer_surfaces_read": false,
+    "falsifier_surfaces_read": false,
+    "acceptance_logic_imported": false,
+    "network_used": false,
+    "connector_used": false
+  }
+}

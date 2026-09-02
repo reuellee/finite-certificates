@@ -1,0 +1,52 @@
+{
+  "format": "d9-component-roadmap-constructor-result-v1",
+  "track_id": "d9-component-roadmap-constructor",
+  "base_revision": "90134ab3501eb77d56bbbf126817b41f5d2e6736",
+  "base_tree": "348bad06165af070fab51fa74cdc727b898c8a02",
+  "outcome": "pass",
+  "classification": "EXACT_FAIL_CLOSED_PREFLIGHT_NULL",
+  "summary": "The exact S12,37 active-sector reconstruction admits 3,539 one-wall critical systems under the 100,000-system gate, but its unfiltered two-wall frontier contains 6,260,491 systems. Critical solving therefore remains denied until a complete source-derived multiwall incidence filter and a projection-discriminant exclusion certificate exist.",
+  "frontier": {
+    "active_factor_classes": 3539,
+    "active_occurrences": 6167,
+    "one_wall_systems": 3539,
+    "naive_pair_strata": 6260491,
+    "naive_one_and_two_wall_systems": 6264030,
+    "opening_system_ceiling": 100000,
+    "known_memoryless_local_candidates": 2420,
+    "known_local_candidates_complete_for_global_multiwalls": false
+  },
+  "polynomial_inventory": {
+    "variables": 9,
+    "active_factor_max_degree": 6,
+    "active_factor_max_terms": 108,
+    "parent_brackets": 70,
+    "factored_boundary_barrier_total_degree": 90,
+    "expanded_boundary_barrier_required": false
+  },
+  "projection": {
+    "primitive_integer_vector": [1, 2, 4, 8, 16, 32, 64, 128, 256],
+    "genericity_discriminant_certificate": "ABSENT",
+    "specialization_authorized": false
+  },
+  "hostile_mutations": {
+    "rejected": 6,
+    "total": 6
+  },
+  "critical_systems_solved": 0,
+  "critical_enumeration": "DENIED",
+  "endpoint": "STRATIFIED_SYSTEM_FRONTIER_EXCEEDS_GATE_WITHOUT_COMPLETE_INCIDENCE_FILTER",
+  "exact_consequence": "ONE_WALL_SYSTEMS_FIT_THE_CEILING_BUT_THE_UNFILTERED_PAIR_STRATUM_FRONTIER_DOES_NOT",
+  "nonconsequences": [
+    "NO_PROOF_THAT_ALL_PAIR_STRATA_ARE_NONEMPTY",
+    "NO_PROOF_THAT_THE_2420_LOCAL_CANDIDATES_ARE_GLOBALLY_COMPLETE",
+    "NO_GENERIC_PROJECTION_SPECIALIZATION_CERTIFICATE",
+    "NO_FIXED_DOMAIN_ROADMAP",
+    "NO_FIXED_DOMAIN_CONNECTIVITY_OR_DISCONNECTION",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "next_action": "Construct a source-derived complete active multiwall-incidence filter and an exact projection-discriminant exclusion certificate before solving any critical system.",
+  "ledger_change_recommended": "none",
+  "theorem_ledger": "2/9"
+}

@@ -1,0 +1,91 @@
+{
+  "format": "d9-factor19069-critical-equidim-falsifier-result-v1",
+  "track_id": "d9-factor19069-critical-equidim-falsifier",
+  "outcome": "pass",
+  "classification": "FAIL_CLOSED_EXACT_EQUIDIMENSIONAL_DECOMPOSITION_UNRESOLVED",
+  "target": {
+    "parent_index": 2599,
+    "factor_id": 19069,
+    "ambient_parameter_dimension": 9,
+    "parent_sign_digest": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+  },
+  "audited_ideal_contract": {
+    "factor_circuit_semantic_sha256": "0e10d3d4692a53a6040ea8822be05376775e9c674c74d532f42236d3dfb1a7cf",
+    "wall_equation": "f_19069=0",
+    "critical_equations": [
+      "all_36_coefficients_of_dB_wedge_df=0"
+    ],
+    "parent_factor_node_ids": [
+      "H_00_1234", "H_01_1235", "H_02_1236", "H_03_1237", "H_04_1238", "H_05_1245", "H_06_1246", "H_07_1247", "H_08_1248", "H_09_1256",
+      "H_10_1257", "H_11_1258", "H_12_1267", "H_13_1268", "H_14_1278", "H_15_1345", "H_16_1346", "H_17_1347", "H_18_1348", "H_19_1356",
+      "H_20_1357", "H_21_1358", "H_22_1367", "H_23_1368", "H_24_1378", "H_25_1456", "H_26_1457", "H_27_1458", "H_28_1467", "H_29_1468",
+      "H_30_1478", "H_31_1567", "H_32_1568", "H_33_1578", "H_34_1678", "H_35_2345", "H_36_2346", "H_37_2347", "H_38_2348", "H_39_2356",
+      "H_40_2357", "H_41_2358", "H_42_2367", "H_43_2368", "H_44_2378", "H_45_2456", "H_46_2457", "H_47_2458", "H_48_2467", "H_49_2468",
+      "H_50_2478", "H_51_2567", "H_52_2568", "H_53_2578", "H_54_2678", "H_55_3456", "H_56_3457", "H_57_3458", "H_58_3467", "H_59_3468",
+      "H_60_3478", "H_61_3567", "H_62_3568", "H_63_3578", "H_64_3678", "H_65_4567", "H_66_4568", "H_67_4578", "H_68_4678", "H_69_5678"
+    ],
+    "barrier_representation": "UNEXPANDED_ORDERED_PRODUCT_OF_70_SOURCE_DERIVED_FACTORS",
+    "saturation": {
+      "invert_exactly": [
+        "H_00_1234", "H_01_1235", "H_02_1236", "H_03_1237", "H_04_1238", "H_05_1245", "H_06_1246", "H_07_1247", "H_08_1248", "H_09_1256",
+        "H_10_1257", "H_11_1258", "H_12_1267", "H_13_1268", "H_14_1278", "H_15_1345", "H_16_1346", "H_17_1347", "H_18_1348", "H_19_1356",
+        "H_20_1357", "H_21_1358", "H_22_1367", "H_23_1368", "H_24_1378", "H_25_1456", "H_26_1457", "H_27_1458", "H_28_1467", "H_29_1468",
+        "H_30_1478", "H_31_1567", "H_32_1568", "H_33_1578", "H_34_1678", "H_35_2345", "H_36_2346", "H_37_2347", "H_38_2348", "H_39_2356",
+        "H_40_2357", "H_41_2358", "H_42_2367", "H_43_2368", "H_44_2378", "H_45_2456", "H_46_2457", "H_47_2458", "H_48_2467", "H_49_2468",
+        "H_50_2478", "H_51_2567", "H_52_2568", "H_53_2578", "H_54_2678", "H_55_3456", "H_56_3457", "H_57_3458", "H_58_3467", "H_59_3468",
+        "H_60_3478", "H_61_3567", "H_62_3568", "H_63_3578", "H_64_3678", "H_65_4567", "H_66_4568", "H_67_4578", "H_68_4678", "H_69_5678"
+      ],
+      "must_not_invert": [
+        "f_19069",
+        "Jacobian_singular_locus",
+        "true_parent_boundary_strata"
+      ],
+      "connected_parent_selector": "EXACT_PATH_TO_PINNED_ROW2599_PARENT_SAMPLE_REQUIRED"
+    },
+    "singular_wall_pieces_retained": true,
+    "true_boundary_strata_retained": true,
+    "true_boundary_distinct_from": [
+      "SOLVER_BOUNDARY",
+      "BOX_BOUNDARY",
+      "COLLAR_BOUNDARY",
+      "SKELETON_EDGE_ENDPOINT"
+    ],
+    "source_derived_parent_component_tags": true
+  },
+  "decomposition_audit": {
+    "status": "UNRESOLVED_FAIL_CLOSED",
+    "exact_component_dimensions": null,
+    "exact_component_degrees": null,
+    "exact_component_multiplicities": null,
+    "positive_dimensional_piece_status": "NOT_EXCLUDED",
+    "zero_dimensionality_proved": false,
+    "exact_real_root_count_frontier": null,
+    "first_unresolved_obligation": {
+      "stratum_id": "FB-C0-STRICT-INTERIOR-FULL-SUPPORT",
+      "obligation": "COMPUTE_EXACT_SATURATED_IDEAL_DIMENSION_BEFORE_ANY_COMPONENT_SAMPLING",
+      "possible_dimensions": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "reason": "NO_PRODUCER_INDEPENDENT_GROEBNER_HILBERT_OR_PRIMARY_DECOMPOSITION_TRANSCRIPT_IS_PRESENT"
+    }
+  },
+  "inference_guards": {
+    "sampling_used_as_dimension_proof": false,
+    "projection_used_as_dimension_proof": false,
+    "local_skeleton_or_edge39_used_globally": false,
+    "collar_used_as_global_component_proof": false,
+    "boundary_or_singular_stratum_omitted": false
+  },
+  "hostile_mutations_rejected": 33,
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "ledger_promotion_recommended": false,
+  "nonconsequences": [
+    "NO_EXACT_EQUIDIMENSIONAL_DECOMPOSITION",
+    "NO_PROOF_OF_ZERO_DIMENSIONALITY",
+    "NO_EXCLUSION_OF_POSITIVE_DIMENSIONAL_CRITICAL_PIECES",
+    "NO_COMPONENT_DEGREES_OR_MULTIPLICITIES",
+    "NO_CRITICAL_COMPONENT_SAMPLES",
+    "NO_GLOBAL_FACTOR19069_COMPONENT_OR_ATTACHMENT_CLASSIFICATION",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ]
+}

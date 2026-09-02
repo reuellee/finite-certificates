@@ -1,0 +1,103 @@
+cycle_id: 2026-09-02-d3-triple-critical-saturation-component-gate1
+base_revision: ba87af7b1ac58d22c0622c908e31dc8ec03d24fa
+base_tree: 54bcab4da2eaa441a4d4c3823a8d4593d89e6bda
+branch: research/local-d3-triple-critical-saturation-gate1-20260902
+opening_ledger: 2/9
+selected_target: D3_TRIPLE_ORBIT5563_COMPONENT_DECORATED_CRITICAL_SATURATION_GATE1
+storage_authorization: &storage_authorization |
+  The saved local Codex project E:\Projects\9DVL Research is the canonical
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs.
+  A native-filesystem recovery mirror to
+  G:\My Drive\Projects\research-backups is optional, byte-length and SHA-256
+  verified, and nonblocking. Never invoke the Google Drive connector and never
+  block on connector approval. GitHub is read-only: do not push, publish
+  branches, open or update pull requests, trigger or rerun CI, or merge. This
+  opening authorization does not permit secrets, unrelated private files,
+  paid/external compute, force-push, history deletion, or irreversible external
+  action.
+
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_COMPONENT_DECORATED_SATURATION_Q0_ONLY
+  selected_count: 1
+  closing_required: true
+  compared_routes:
+    - TRIPLE_COMPONENT_DECORATED_CRITICAL_SATURATION
+    - REPEAT_GLOBAL_SREP_Q0
+    - PAIR_MASTER_CAD_OR_LOCAL_ATLAS
+    - TRIPLE_LOCAL_ATLAS_OR_SAMPLING
+    - D9_FACTOR19069_LOCAL_CONTINUATION
+  stagnation_rule: >-
+    If Q0 cannot close the executable saturation-contract obligation, or Q1
+    cannot reach the preregistered exact decrease or a complete route
+    obstruction, close fail-closed and STOP without a same-route successor.
+
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    named_invariant: diag3_pair_hc1_AND_diag3_triple_hc0
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 7
+    zero_ledger_streak: 10
+  convergence_hypothesis: >-
+    An independently accepted component-complete Q0 contract closes one
+    load-bearing obligation and activates Q1; conditional Q1 must remove the
+    complete canonical orbit-5563 row or prove an exact route obstruction.
+  minimum_acceptable_delta: >-
+    Close Q0 without weakening quantifiers, then prove triple source residual
+    1,162,302 -> at most 1,162,301 or a complete exact route obstruction.
+  mid_cycle_checkpoint: >-
+    Immediately after the Q0 candidate, decide whether independent replay can
+    still reach the minimum decrease inside the ceiling; otherwise deny Q1.
+  closing_classification_required: true
+  automatic_pivot_rule: >-
+    A null, timeout, or nondecreasing vector forbids same-route CONTINUE and
+    requires PIVOT or STOP under the opening blocker and zero-ledger streaks.
+
+global_restrictions:
+  - no contact with Basu, Karisani, or other authors
+  - no network research or external service
+  - no GitHub writes, pull requests, CI triggers, or merges under opening authority
+  - no cloud worker or paid compute
+  - no repeat SREP backend search
+  - no pair-CAD, pair master-closure, or pair local-atlas continuation
+  - no triple box, collar, macrobox, source-family, or residual sampling growth
+  - no raw Groebner or RUR solve before independent Q0 acceptance
+  - no artificial boundary may be relabeled as true parent infinity
+  - no theorem or ledger promotion from modular, representative, or local evidence
+
+work_orders:
+  - track_id: d3-triple-critical-saturation-constructor
+    role: saturation-constructor
+    surface: ops/team/d3-triple-critical-saturation-constructor
+    storage_authorization: *storage_authorization
+    resource_ceiling: 120 wall-minutes, 2 CPU-hours, 32 GiB, 10 GiB scratch, one Q0 handoff
+    stop_rule: Stop before Q1 and fail closed on an unattached component, unretained singular locus, inexact job count, or forecast outside the ceiling.
+    prohibited_scope: No raw Groebner or RUR solve before independent Q0 acceptance; no pair route, SREP repeat, sampling growth, network, connector, or cloud.
+    worker_restrictions: Own only the constructor surface; do not edit cycle files, accept the constructor output, activate Q1, change the ledger, push, or merge.
+  - track_id: d3-triple-critical-saturation-falsifier
+    role: saturation-falsifier
+    surface: ops/team/d3-triple-critical-saturation-falsifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 75 wall-minutes, 1 CPU-hour, 16 GiB, at least 20 hostile mutations
+    stop_rule: Stop at the first exact discarded-interior component, false attachment, singular-locus loss, artificial infinity tag, or invalid Q1 activation and preserve the witness.
+    prohibited_scope: No producer acceptance import, route redefinition, D3 counterexample promotion, ledger edit, network, connector, or cloud.
+    worker_restrictions: Own only the falsifier surface; do not edit cycle files, repair constructor artifacts, select a successor, push, or merge.
+  - track_id: d3-triple-critical-saturation-independent-verifier
+    role: independent-verifier
+    surface: ops/team/d3-triple-critical-saturation-independent-verifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 90 wall-minutes, 1 CPU-hour, 24 GiB, one verifier-directed repair
+    stop_rule: Fail closed on source drift, incomplete saturator ordering, unproved containment, invalid attachment class, missing canary, or resource mismatch.
+    prohibited_scope: Do not import constructor acceptance code; no discovery expansion, pair route, ledger edit, network, connector, or cloud.
+    worker_restrictions: Own only the independent-verifier surface; reconstruct untrusted inputs and do not edit cycle files, push, merge, or activate Q1 except by signed verdict.
+  - track_id: d3-triple-critical-saturation-closing-referee
+    role: closing-referee
+    surface: ops/team/d3-triple-critical-saturation-closing-referee
+    storage_authorization: *storage_authorization
+    resource_ceiling: 45 wall-minutes, 1 CPU-hour, frozen-head clean no-hardlink replay
+    stop_rule: Reject moved head, missing convergence checkpoint, false Q0/Q1 status, false residual decrease, incomplete orbit transfer, or unjustified successor.
+    prohibited_scope: No mutable-head repair, discovery, construction, ledger promotion, network, connector, cloud, or author contact.
+    worker_restrictions: Review only the frozen integrated candidate, own only the referee surface, and do not edit constructor, falsifier, verifier, or cycle evidence.

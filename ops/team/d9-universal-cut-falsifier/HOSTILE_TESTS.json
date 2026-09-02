@@ -1,0 +1,97 @@
+{
+  "format": "d9-universal-cut-falsifier-hostile-tests-v1",
+  "expected": "ALL_REJECTED_BY_PRODUCER_INDEPENDENT_EXACT_REPLAY",
+  "tests": [
+    {
+      "id": "connected-parabola-substitution",
+      "mutation": "replace q2=x^2-1-y by q2=1-x^2-y while retaining the two-component claim",
+      "gate": "exact component decomposition",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "boundary-witness",
+      "mutation": "replace the left feasible witness x=-2,y=1 by x=-1,y=1",
+      "gate": "strict simultaneous feasibility",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "component-label-merge",
+      "mutation": "assign the same component identity to the x<-1 and x>1 witnesses because their factor-sign words agree",
+      "gate": "component-faithful labeling",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "false-sign-geodesy",
+      "mutation": "claim the minimal model has an injective or isometric factor-sign map",
+      "gate": "same-sign distinct-chamber canary",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "local-inventory-promotion",
+      "mutation": "infer global cut behavior from smooth graph walls and transverse local multiwall types alone",
+      "gate": "nested-versus-disjoint global-memory pair",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "infinity-only-promotion",
+      "mutation": "infer global cut behavior after adding only the common leading form at infinity",
+      "gate": "nested-versus-disjoint pair has the same positive degree-four leading form",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "abstract-to-d9-promotion",
+      "mutation": "classify the abstract polynomial model as an actual UOM(4,8) D9 counterexample without a parent, signatures, occurrences, or determinant identities",
+      "gate": "source-reconstructible D9 instance",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "occurrence-unit-drop",
+      "mutation": "identify duplicate determinant occurrences without transporting the fixed-sign c_E*u_E orientation",
+      "gate": "occurrence-to-global-factor orientation",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "sampled-network-promotion",
+      "mutation": "promote connectivity of every support intersection on the 24-chamber parent-860 repair network to global active-sector connectivity",
+      "gate": "complete chamber coverage and adjacency",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "sampled-properness-promotion",
+      "mutation": "infer universal properness or inclusion relations from absence on a sampled network",
+      "gate": "global region labels or exact ordered noninclusion witnesses",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "s1237-strict-link-promotion",
+      "mutation": "treat the opposite parent initial forms as an ordinary strict-open-parent link",
+      "gate": "positive Gordan obstruction",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "factor8552-global-separator",
+      "mutation": "promote the exact q=d*i-e two-sided wall on facet 1237 to a strict-open-parent or global separator",
+      "gate": "recursive-facet scope",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "fake-parent-infinity",
+      "mutation": "label an artificial scope boundary or an unspecified projective end as genuine parent infinity",
+      "gate": "source-derived compactification incidence",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "false-actual-d9-disproof",
+      "mutation": "change the overall outcome from inconclusive to disproved while retaining no actual parent/family witness",
+      "gate": "target quantifiers",
+      "expected_result": "REJECT"
+    },
+    {
+      "id": "ledger-promotion",
+      "mutation": "change the theorem ledger from 2/9",
+      "gate": "publication scope",
+      "expected_result": "REJECT"
+    }
+  ],
+  "semantic_sha256": "e72e180eae1f8743487b26a0ece5cc4c2b34cf4c1a9e0d7d00953f5897672663"
+}

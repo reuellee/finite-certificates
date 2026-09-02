@@ -1,0 +1,36 @@
+{
+  "format": "d9-factor19069-singular-df-multihomogeneous-clean-replay-v1",
+  "candidate_revision": "be63abbb49b23134df615eefd646fe6f1c2863e7",
+  "candidate_tree": "bd9e78d8f640a2bf8c2d69afb70f3e571878b963",
+  "clone_mode": "git clone --no-hardlinks --no-local with exact candidate branch checked at the pinned revision",
+  "replay_path": "E:\\Projects\\9DVL Research\\replays\\d9-factor19069-singular-mh-gate1-be63abb",
+  "python": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "commands": [
+    "ai/omreal/verify_canonical_research_state_v6.py",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/verify_opening_audit.py",
+    "target-only ops/research-team/verify_cycle_protocol.py audit_cycle plus hostile_canaries",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/build_singular_df_multihomogeneous_frontier.py --check",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/verify_singular_df_multihomogeneous_frontier.py",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-falsifier/verify_singular_df_multihomogeneous_falsifier.py",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/verify_singular_df_certificate.py",
+    "git diff --check",
+    "git status --porcelain=v1",
+    "os.stat st_nlink and os.path.samefile no-hardlink check"
+  ],
+  "results": {
+    "canonical_v6": "PASS_10_HOSTILE_MUTATIONS_LEDGER_2_OF_9",
+    "opening_audit": "PASS_20_HOSTILE_MUTATIONS",
+    "target_cycle_protocol": "PASS_4_OF_4_AUTHORIZED_WORK_ORDERS_AND_HOSTILE_CANARIES",
+    "constructor": "PASS_34_HOSTILE_MUTATIONS_FIRST_UNRESOLVED_MH_B00",
+    "falsifier": "PASS_59_HOSTILE_MUTATIONS_SOURCE_PREMISE_REJECTED",
+    "producer_independent_certificate": "PASS_35_HOSTILE_MUTATIONS_ACCEPT_NULL_ONLY",
+    "git_diff_check": "PASS",
+    "worktree_clean": true,
+    "source_result_hardlink_count": 1,
+    "replay_result_hardlink_count": 1,
+    "source_and_replay_same_file_id": false
+  },
+  "inherited_repository_protocol_note": "The repository-wide protocol main retains the frozen predecessor heading false-negative recorded at opening; this target cycle and hostile canaries replay independently and pass without editing frozen evidence.",
+  "classification": "CLEAN_REPLAY_ACCEPTS_EXACT_SOURCE_STRUCTURE_FAIL_CLOSED_NULL_FRONTIER"
+}
+

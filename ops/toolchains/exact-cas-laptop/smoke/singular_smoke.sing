@@ -1,0 +1,6 @@
+ring r = 0,(x,y),dp;
+ideal I = x^2-y,x-y;
+ideal G = std(I);
+if (vdim(G) != 2) { exit(1); }
+print("SINGULAR_SMOKE_OK");
+exit;

@@ -1,0 +1,275 @@
+{
+  "format": "d3-mixed-carrier-theorem-feasibility-closing-candidate-v1",
+  "cycle_id": "2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1",
+  "canonical_base_revision": "9116771ba80ed3d033516d0dd666b34348aad348",
+  "canonical_base_tree": "a64438426dc792af67d5ccc0dd2f4d1231dbaa14",
+  "opening_revision": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+  "opening_tree": "a59d740c008ae04accf200a8373d16b4d9c70ae4",
+  "integrated_evidence_revision": "2cf92fa094b80b89816feceaf6cce6c712f72115",
+  "integrated_evidence_tree": "ec92c870ff48949b1c6587556b6a930e025da733",
+  "checkpoint_revision": "f1f955f6ae69e6a847ea8795724c77896636c547",
+  "checkpoint_tree": "c4b68a4dfdafccb66f4c69695d733fa78e840570",
+  "opening_ledger": "2/9",
+  "closing_ledger": "2/9",
+  "ledger_delta": "0/9",
+  "theorem_promotion": "NONE",
+  "opening_vector": [
+    "2/9",
+    1,
+    "diag3_pair_hc1_AND_diag3_triple_hc0",
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    5,
+    8
+  ],
+  "checkpoint_vector": [
+    "2/9",
+    1,
+    "diag3_pair_hc1_AND_diag3_triple_hc0",
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    5,
+    8
+  ],
+  "closing_vector": [
+    "2/9",
+    1,
+    "diag3_pair_hc1_AND_diag3_triple_hc0",
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    6,
+    9
+  ],
+  "proof_distance_delta": 0,
+  "minimum_acceptable_decrease_met": false,
+  "trajectory_classification": "STALLED",
+  "overall_handoff": "NULL",
+  "strategy_action": "STOP",
+  "selected_successor": "NONE",
+  "construction_started": false,
+  "discovery_handoffs": [
+    {
+      "track": "d3-mixed-carrier-topology",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL",
+      "first_edges": [
+        "PINNED_SOURCES_TO_FINITE_EXHAUSTIVE_SOURCE_INDEX_AND_SIMULTANEOUS_SUBDIVISION",
+        "DECLARED_L_SOURCE_TO_UNIVERSAL_GENUINELY_MIXED_CHAIN_THEOREM",
+        "COMPLETE_JOINED_COMPLEX_TO_ACTUAL_BAD_UNION_COMPARISON"
+      ]
+    },
+    {
+      "track": "d3-mixed-carrier-falsifier",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL_SCOPED_ANSATZ_NEGATIVES_ONLY",
+      "universal_negative_found": false,
+      "scoped_models": [
+        "FIXED_TRIANGULAR_LABEL_ORDER",
+        "POINTWISE_FIRST_EXIT_STRIP",
+        "SAME_EXIT_GRAPH_DIFFERENT_PAIR_H1"
+      ]
+    },
+    {
+      "track": "d3-mixed-carrier-naturality",
+      "handoff": "NULL",
+      "assessment": "DECISIVE_NULL",
+      "first_edges": [
+        "AB_SIMULTANEOUS_SOURCE_SUBDIVISION",
+        "B_TRUE_INFINITY_SUBCOMPLEX_AND_FILTRATION_PRESERVING_COMPARISON",
+        "C_COMPONENT_COMPLETE_STABLE_IDENTITY_GRAPH"
+      ]
+    }
+  ],
+  "program_status": {
+    "A": {
+      "status": "NULL",
+      "conditional_interface_non_circular": true,
+      "complete_finite_program": false,
+      "theorem_proved_or_refuted": false,
+      "first_missing": "UNIVERSAL_GENUINELY_MIXED_CHAIN_ASSIGNMENT_ON_ONE_SIMULTANEOUS_SOURCE_SUBDIVISION_WITH_ARBITRARY_FACE_CHAIN_COHERENCE"
+    },
+    "B": {
+      "status": "NULL",
+      "complete_finite_program": false,
+      "theorem_proved_or_refuted": false,
+      "first_missing": "FINITE_EXHAUSTIVE_L_SOURCE_AND_FILTRATION_PRESERVING_COMPARISON_TO_THE_ACTUAL_COMPACTIFIED_BAD_UNION",
+      "rational_pair_kernel_proved": false
+    },
+    "C": {
+      "status": "NULL",
+      "complete_finite_program": false,
+      "theorem_proved_or_refuted": false,
+      "first_missing": "COMPLETE_STABLE_COMPONENT_IDENTITIES_AND_SOUND_CONTINUATIONS_TO_CERTIFIED_TRUE_PARENT_INFINITY",
+      "triple_escape_proved": false
+    },
+    "actual_proved_and_replayed_B_plus_C_required_for_D3": true
+  },
+  "midpoint": {
+    "decision": "STOP_DISCOVERY_FREEZE_AND_SEND_TO_REFEREE",
+    "all_five_continuation_conditions_met": false,
+    "referee_directed_revision_allowed": false,
+    "resource_ceiling_enlarged": false,
+    "reason": "Every lane independently pins a global source, comparison, coherence or component-coverage edge that is unreachable in one bounded revision; no full-scope negative was found."
+  },
+  "obligation_delta": [
+    {
+      "id": "global_gluing",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "extension_labels",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "strict_closure",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "relative_infinity",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "middle_rank_replay",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "diag3_pair_hc1",
+      "opening": "OPEN",
+      "closing": "OPEN",
+      "delta": "UNCHANGED"
+    },
+    {
+      "id": "diag3_triple_hc0",
+      "opening": "OPEN_1162302_SOURCE_ORBITS",
+      "closing": "OPEN_1162302_SOURCE_ORBITS",
+      "delta": "UNCHANGED"
+    }
+  ],
+  "joined_face_accounting": {
+    "shape_orbits_modulo_active_block_permutation": 10,
+    "formal_labeled_placements_in_one_three_block_family": 34,
+    "universally_credited_shape_clauses": [
+      "(0)",
+      "(1)",
+      "(2)"
+    ],
+    "missing_universal_shape_clauses": [
+      "(0,0)",
+      "(1,0)",
+      "(0,0,0)",
+      "(3)",
+      "(2,0)",
+      "(1,1)",
+      "(1,0,0)"
+    ],
+    "taxonomy_coverage": "3/10",
+    "end_to_end_denominator": false
+  },
+  "triple_source_accounting": {
+    "total_source_orbits": 79102449,
+    "settled_source_orbits": 77940147,
+    "residual_source_orbits_opening": 1162302,
+    "residual_source_orbits_closing": 1162302,
+    "residual_delta": 0,
+    "source_order_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+    "is_component_denominator": false,
+    "closes_D3_alone": false
+  },
+  "pair_accounting": {
+    "global_residual": "UNKNOWN",
+    "global_coverage": "UNKNOWN",
+    "certified_global_adjacencies": 0,
+    "certified_strict_closure_pairs": 0,
+    "certified_strict_closure_triples": 0,
+    "certified_parent_infinity_cells": 0,
+    "rational_middle_exactness": "OPEN"
+  },
+  "exact_canary": {
+    "parent_chart": "row2599_chart0",
+    "rank_d1": 3,
+    "rank_d2": 6,
+    "rank_C2": 7,
+    "relative_homology": {
+      "H0": "0",
+      "H1": "0",
+      "H2": "Z"
+    },
+    "primitive_relation": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "retired_scope": "SINGLETON_ONLY_FIXED_BLOCK_ROOT_CARRIERS",
+    "universal_target_A_negative": false,
+    "D3_counterexample": false
+  },
+  "conditional_endpoints_preserved": {
+    "C_exit_predicate": "EVERY_VERTEX_OF_A_COMPLETE_COMPONENT_FAITHFUL_GRAPH_REACHES_CERTIFIED_TRUE_PARENT_INFINITY_EQUIVALENTLY_EVERY_SINK_SCC_CONTAINS_IT",
+    "C_accepting_input_exists": false,
+    "pair_mod2_to_Q_implication": "VALID_ONLY_FOR_AN_ACTUAL_SIGNED_INTEGRAL_COMPLEX_WITH_MN_ZERO_AND_MIDDLE_EXACT_MOD2_REDUCTION",
+    "actual_compared_pair_complex_exists": false
+  },
+  "evidence_pins": {
+    "ops/team/d3-mixed-carrier-topology/RESULT.json": "7e54007c1bb97be457cbdc039c5520267cd39e39e08a930828b42708443a99e5",
+    "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76",
+    "ops/team/d3-mixed-carrier-falsifier/RESULT.json": "89f54c80234dd74f763b390a1da86de2359a99684e3920e57cec284e6fd08480",
+    "ops/team/d3-mixed-carrier-falsifier/OBSTRUCTION_DOSSIER.md": "de7e1d5c2758786852cbb1cf684f3af8cbf44ab4df124c7053b60534b1317936",
+    "ops/team/d3-mixed-carrier-naturality/RESULT.json": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0",
+    "ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86"
+  },
+  "referee_gate": {
+    "required": true,
+    "frozen_package_review_only": true,
+    "producer_acceptance_import_allowed": false,
+    "minimum_hostile_mutations": 24,
+    "status": "PENDING_AT_CANDIDATE_FREEZE"
+  },
+  "automatic_reset": {
+    "same_blocker_streak_closing": 6,
+    "zero_ledger_streak_closing": 9,
+    "same_route_continue_allowed": false,
+    "action": "STOP",
+    "reason": "The bounded theorem-feasibility pivot did not produce a complete finite program, a full-scope negative, or any proof-distance decrease."
+  },
+  "next_strategy": {
+    "eligible_successor_count": 0,
+    "selected_successor": "NONE",
+    "reopen_condition": "A_NEW_EXPLICITLY_GOVERNED_CYCLE_WITH_A_CONCRETE_FINITE_ROUTE_FOR_ONE_FIRST_MISSING_GLOBAL_EDGE",
+    "construction_authorized": false
+  },
+  "nonconsequences": [
+    "NO_PROOF_OR_REFUTATION_OF_A_B_C_D3_OR_9DVL",
+    "NO_COMPLETE_FINITE_PROOF_PROGRAM",
+    "NO_GLOBAL_SIMULTANEOUS_SUBDIVISION_OR_SOURCE_COMPLEX",
+    "NO_FILTRATION_PRESERVING_ACTUAL_BAD_UNION_COMPARISON",
+    "NO_RATIONAL_PAIR_KERNEL_PROOF",
+    "NO_ALL_COMPONENT_TRUE_PARENT_INFINITY_ESCAPE",
+    "NO_LEDGER_CHANGE",
+    "NO_CONSTRUCTION_SUCCESSOR"
+  ],
+  "storage": {
+    "bundle_root": "E:\\Projects\\9DVL Research\\outputs",
+    "native_recovery_mirror": "G:\\My Drive\\Projects\\research-backups",
+    "bundle_and_manifest_generation": "AFTER_FINAL_LOCAL_CLOSE_COMMIT",
+    "mirror_length_and_sha256_verification_required": true,
+    "google_drive_connector_used": false,
+    "github_write": false
+  }
+}

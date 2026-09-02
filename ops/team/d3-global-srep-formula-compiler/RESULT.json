@@ -1,0 +1,76 @@
+{
+  "backend_inventory_verdict": "NO_EXECUTABLE_BASU_KARISANI_REPLACEMENT_BACKEND_IDENTIFIED",
+  "canaries": {
+    "COMPLETE_GLOBAL_TAGGED_SCHEMA": "NULL_FIRST_MISSING_DENOMINATOR_PINNED",
+    "M2_NONCLOSED_TANGENTIAL_FIRST_EXIT": "PASS_REJECTED_BEFORE_COMPLEX",
+    "M3_FILLED_RELATIVE_H1_0": "PASS_EXACT_FORMULA_DERIVED_AFFINE_SIMPLEX_SURROGATE_ONLY",
+    "M3_SAME_ONE_SKELETON": "PASS_EXACT_SURROGATE_ONLY",
+    "M3_UNFILLED_RELATIVE_H1_1": "PASS_EXACT_FORMULA_DERIVED_AFFINE_SIMPLEX_SURROGATE_ONLY",
+    "SINGLE_BAD_LOW_DEGREE_CONTROL": "PASS_BOUND_EXISTING_REPLAY"
+  },
+  "cloud_used": false,
+  "first_terminal_blocker": "No executable, independently traceable Basu--Karisani replacement backend is available; additionally, the exact required proper/incomparable triple denominator and P-closed compactification formula are missing.",
+  "format": "d3-global-srep-formula-compiler-result-v1",
+  "global_scope": {
+    "certified_finite_inputs": {
+      "maximum_valid_signatures_on_a_type": 97224,
+      "minimum_valid_signatures_on_a_type": 54520,
+      "ordered_distinct_signature_triples_before_properness_or_incomparability_over_raw_frames": 32569709623166016322560,
+      "ordered_distinct_signature_triples_before_properness_or_incomparability_over_types": 807780496606300008,
+      "raw_labelled_frames_per_parent_type": 40320,
+      "raw_parent_frame_presentations": 104993280,
+      "realizable_unlabelled_parent_types": 2604,
+      "sum_valid_abstract_extension_signatures_over_unlabelled_types": 174937600
+    },
+    "first_missing_required_denominator": {
+      "consequence": "The required ordered proper pairwise-incomparable triple denominator, and therefore global N, cannot be stated exactly.",
+      "id": "ALL_PARENT_PROPER_REGION_AND_PAIRWISE_INCOMPARABILITY_CLASSIFICATION",
+      "reason": "The extension-count table enumerates abstract valid sign extensions only. It does not decide whether F_sigma is a proper subset of the full normalized realization space, equality/inclusion among F_sigma, or which ordered triples are pairwise incomparable, for every parent and realization component.",
+      "status": "MISSING"
+    },
+    "second_missing_formula_input": {
+      "id": "QUANTIFIER_FREE_P_CLOSED_EXACT_PARENT_COMPACTIFICATION",
+      "reason": "A first-order closure predicate is uniform, but no exact quantifier-free P-closed formula for Xbar_M and genuine I_M has been generated and pinned for all parents. Replacing strict signs by weak signs is unsound.",
+      "status": "MISSING"
+    },
+    "source_pins": {
+      "ai/omgamma/data/extcount_4_9.jsonl": "f9e0f122ed5f1efaa5687807db8e5325975b07c82f2bf75218877afa5e77ff03",
+      "ops/team/diag3-orbit5563-prover/TYPE_FRAME_S8_QUOTIENT_MANIFEST.json": "95f7d5f362a4af3445ca4f6cffbf8b5b2d812aad45ffd5cc655af9ea1216685b"
+    }
+  },
+  "nonconsequences": [
+    "NO_GENERAL_SIMPLICIAL_REPLACEMENT_IMPLEMENTATION",
+    "NO_Q0_ACCEPTANCE",
+    "NO_Q1_ACTIVATION",
+    "NO_COMPLETE_GLOBAL_N_S_D_K",
+    "NO_GLOBAL_DIAGRAM",
+    "NO_PAIR_KERNEL_RESULT",
+    "NO_DIAGONAL_OR_LEDGER_CHANGE"
+  ],
+  "partial_basu_karisani_parameters": {
+    "N": null,
+    "d": null,
+    "ell": 2,
+    "fixed_cycle_ceiling_fit": "NOT_DEMONSTRATED",
+    "k": 178,
+    "k_derivation": "10 compact parent coordinates (nine homogenized coordinates plus z) + 3*56 normalized Gordan weights",
+    "only_honest_forecast": "(N*s*d)^(178^(O(2))) after the missing inputs exist; the hidden O(2) constant and null N,s,d prevent a numeric output, memory, or elapsed-time forecast.",
+    "raw_preclosure_occurrence_bound": {
+      "derivation": "70 parent brackets + 3*(56 nonnegative weights + 1 normalization + 4 Gordan equations) + sphere + z",
+      "polynomial_occurrences_for_three_witness_blocks_plus_parent_sphere_and_z": 255,
+      "raw_max_degree": 4
+    },
+    "s": null,
+    "why_N_s_d_are_null": "N depends on the missing proper incomparable triple denominator and a frozen diagram-node encoding; exact s and d depend on the missing quantifier-free P-closed compactification/QE output."
+  },
+  "producer_self_acceptance": false,
+  "q0_classification": "NULL_NO_EXECUTABLE_REPLACEMENT_BACKEND",
+  "q0_pass": false,
+  "q1_eligible": false,
+  "replay_commands": [
+    "python -B ops/team/d3-global-srep-formula-compiler/build_qualification.py",
+    "python -B ops/team/d3-global-srep-formula-compiler/test_formula_compiler.py"
+  ],
+  "theorem_credit": "NONE",
+  "track": "d3-global-srep-formula-compiler"
+}

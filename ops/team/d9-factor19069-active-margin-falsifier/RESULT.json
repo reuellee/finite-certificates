@@ -1,0 +1,29 @@
+{
+  "format": "d9-factor19069-active-margin-falsifier-result-v1",
+  "track_id": "d9-factor19069-active-margin-falsifier",
+  "reviewed_revision": "fe7eaa80f4949a5702d102afc55b53f9644e7e5b",
+  "reviewed_tree": "23a78cc3900bbbf0003f11de25f839b838809fda",
+  "outcome": "pass",
+  "classification": "EXACT_SCOPE_REJECTION_CONFIRMS_NULL",
+  "accepted_endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+  "attacks": {
+    "independent_parent_tag_replay": "PASS_70_TAGS_X_40_EDGES",
+    "independent_skeleton_root_replay": "PASS_ONLY_EDGE39_ONE_ROOT",
+    "local_collar_globalization": "REJECTED",
+    "complete_active_tie_filter": "ABSENT",
+    "complete_true_boundary_parent_residence": "ABSENT",
+    "complete_global_component_classification": "REJECTED"
+  },
+  "hostile_mutations": {
+    "rejected": 12,
+    "total": 12
+  },
+  "exact_consequence": "THE_CONSTRUCTOR_NULL_IS_SCOPE_CORRECT_AND_NEITHER_COMPLETE_COMPONENT_ENDPOINT_IS_CERTIFIED",
+  "nonconsequences": [
+    "NO_GLOBAL_FACTOR19069_COMPONENT_COUNT",
+    "NO_GLOBAL_ATTACHMENT_OR_NONATTACHMENT_CLASSIFICATION",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_LEDGER_CHANGE"
+  ],
+  "theorem_ledger": "2/9"
+}

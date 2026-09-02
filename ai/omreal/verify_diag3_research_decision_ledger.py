@@ -1,14 +1,22 @@
 #!/usr/bin/env python3
-"""Fail-closed audit of the canonical diagonal-three research decision ledger."""
+"""Fail-closed audit of the reconciled historical diagonal-three ledger.
+
+Cross-diagonal successor authority is checked by
+``verify_canonical_research_state_v2.py``.  This verifier deliberately does
+not bind evolving successor prose or target selection to the immutable PR44
+reconciliation payload.
+"""
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent.parent
 DATA = HERE / "data"
 LEDGER_PATH = DATA / "DIAG3_RESEARCH_DECISION_LEDGER.json"
 COMPLETION_PATH = DATA / "DIAG3_COMPLETION_OPEN_OBJECT.json"
@@ -21,6 +29,49 @@ TWO_EDGE_SKELETON_PATH = (
     DATA / "DIAG3_PAIR_FULLSUPPORT_LABELED_SKELETON_EDGE27_EDGE39.json"
 )
 POINTER = "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json"
+HISTORICAL_LEDGER_V1_GIT_BLOB = "fe877050ae3942254bef54f23d6f3790480d698c"
+EXPECTED_SOURCE_SHA256 = {
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/CYCLE.md": (
+        "8ea47d432e74fd67e727516a8bc23a3a0c62476bc6b08d6e36ef783eac87e1a8"
+    ),
+    "ops/research-team/cycles/2026-08-31-canonical-reconciliation/WORK_ORDERS.yaml": (
+        "cf5b3768af0bafef63853b023ad03e97d0be5e2221d38dd6e1f55afc4352d499"
+    ),
+    "ops/research-team/cycles/2026-08-29-diag4-top-sheaf/CYCLE_REPORT.md": (
+        "26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923"
+    ),
+    "ops/research-team/cycles/2026-08-30-diag4-s53-top-sheaf/CYCLE_REPORT.md": (
+        "e6f717a85dd078fcfcac87fbad0221801ad580cba408bccc7103c5a17c4027d2"
+    ),
+    "ops/team/diag4-s53-referee/CLOSING_REVIEW.md": (
+        "7eabc7700ea0a6e2dde0b05eab698b3bff98911c07aa11dc0a12250cacda7e4c"
+    ),
+    "ops/research-team/cycles/2026-08-30-diag3-orbit5563-global-exit/CYCLE_REPORT.md": (
+        "a2baf8cf0a8e0cfdfc845f38569557e95e2953995ad8964b912ef8738ffa7c5f"
+    ),
+    "ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md": (
+        "e1801e2782445374f606dfeef51f24694edaaaf494581ee1956738ae74d67a35"
+    ),
+}
+RETIRED_CONTINUATIONS = [
+    "D4_S53_CONTINUATION",
+    "ORBIT_5563_LOCAL_ROADMAP_CONTINUATION",
+    "ORBIT_5563_LOCAL_BOX_CONTINUATION",
+    "ORBIT_5563_LOCAL_COLLAR_CONTINUATION",
+    "ORBIT_5563_MACROBOX_CONTINUATION",
+    "ORBIT_5563_CLIPPED_WALL_CONTINUATION",
+]
+D4_TOTAL_COMPLEX_DISPOSITION = {
+    "status": "RETIRED_UNTIL_GLOBAL_INPUTS",
+    "distinct_from": "D4_S53_CONTINUATION",
+    "required_global_inputs": [
+        "THEOREM_READY_GLOBAL_COMPACTIFICATION",
+        "SIGNED_FACE_POSET",
+        "RESTRICTION_MATRICES",
+    ],
+    "incomplete_successor_input_gate": "STOP_FAIL_CLOSED",
+    "reactivation_requires_all_inputs": True,
+}
 
 
 def load(path: Path) -> dict:
@@ -32,6 +83,180 @@ def git_blob_sha1(path: Path) -> str:
     data = path.read_bytes()
     header = f"blob {len(data)}\0".encode("ascii")
     return hashlib.sha1(header + data).hexdigest()
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def assert_current_state(ledger: dict) -> None:
+    assert set(ledger) == {
+        "format",
+        "status",
+        "as_of",
+        "repository",
+        "canonical_reconciliation",
+        "theorem",
+        "invariant_obligations",
+        "historical_row2599_fullsupport_ledger",
+        "historical_retired_or_subordinated_targets",
+        "historical_target_score_formula",
+        "historical_candidate_targets",
+        "selected_target",
+        "historical_selected_target_progress",
+        "research_infrastructure",
+        "historical_selected_target_contract",
+        "process_gates",
+        "historical_open_objects",
+    }
+    assert ledger["format"] == "diag3-research-decision-ledger-v2"
+    assert ledger["status"] == "PIVOT_REQUIRED"
+    assert ledger["as_of"] == "2026-08-31"
+    assert ledger["repository"] == {
+        "full_name": "reuellee/finite-certificates",
+        "default_branch": "main",
+        "audited_commit": "e666990f5b0cf07fef4a639bbb6596ddc9c4515a",
+        "audited_tree": "444f8a7e50ec58e4d97a71744090d7ed60330f19",
+        "merged_pull_request": 44,
+    }
+    current = ledger["canonical_reconciliation"]
+    assert set(current) == {
+        "precedence",
+        "opening_reconciliation_commit",
+        "opening_reconciliation_tree",
+        "theorem_score",
+        "proved_diagonals",
+        "d4_accounting",
+        "d3_accounting",
+        "first_missing_global_object",
+        "retired_continuations",
+        "conditional_route_dispositions",
+        "selected_mathematical_target",
+        "target_selection",
+        "historical_pointer_policy",
+        "source_sha256",
+    }
+    assert current["precedence"] == "CURRENT_THROUGH_MERGED_PR_44"
+    assert current["opening_reconciliation_commit"] == (
+        "e548a28832232a34ed9e408224f6e16a9ebc9e4b"
+    )
+    assert current["opening_reconciliation_tree"] == (
+        "99d7c10657088d6cebc7c80568f7224d1079af7c"
+    )
+    assert current["theorem_score"] == ledger["theorem"]["score"] == "2/9"
+    assert current["proved_diagonals"] == ledger["theorem"]["proved_diagonals"] == [1, 2]
+
+    d4 = current["d4_accounting"]
+    assert d4 == {
+        "domain_labeled": 1_715_980,
+        "domain_orbits": 130,
+        "proved_labeled": 915_740,
+        "proved_orbits": 77,
+        "survivor_labeled": 800_240,
+        "survivor_orbits": 53,
+        "identity": "1715980/130=915740/77+800240/53",
+        "survivor_delta_after_pr43": {"labeled": 0, "orbits": 0},
+    }
+    assert d4["domain_labeled"] == d4["proved_labeled"] + d4["survivor_labeled"]
+    assert d4["domain_orbits"] == d4["proved_orbits"] + d4["survivor_orbits"]
+
+    d3 = current["d3_accounting"]
+    assert d3 == {
+        "unresolved_residue": 1_162_302,
+        "quotient_classes": 100_086_840,
+        "raw_frame_presentations": 104_993_280,
+        "quotient_multiplicity_sum": 104_993_280,
+        "row_delta_after_pr44": 0,
+    }
+    assert d3["raw_frame_presentations"] == d3["quotient_multiplicity_sum"]
+    assert current["first_missing_global_object"] == {
+        "id": "Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+        "status": "MISSING",
+        "equivalent": "all_parent_closure_stratum_transport_and_attachment_atlas",
+    }
+    assert current["retired_continuations"] == RETIRED_CONTINUATIONS
+    assert current["conditional_route_dispositions"] == {
+        "D4_ALTERNATING_TOTAL_COMPLEX": D4_TOTAL_COMPLEX_DISPOSITION
+    }
+    assert current["selected_mathematical_target"] is None
+    assert ledger["selected_target"] is None
+    assert current["target_selection"] == "PENDING_FRESH_INDEPENDENT_OPENING_AUDIT"
+    assert current["historical_pointer_policy"] == {
+        "ledger_v1_git_blob": HISTORICAL_LEDGER_V1_GIT_BLOB,
+        "preserve_exact_historical_artifacts": True,
+        "historical_continuation_text_is_current": False,
+    }
+    assert current["source_sha256"] == EXPECTED_SOURCE_SHA256
+
+
+def assert_source_binding(ledger: dict) -> None:
+    assert ledger["canonical_reconciliation"]["source_sha256"] == EXPECTED_SOURCE_SHA256
+    for relative, expected in EXPECTED_SOURCE_SHA256.items():
+        path = ROOT / relative
+        assert path.is_file(), f"missing canonical source: {relative}"
+        assert sha256(path) == expected, f"canonical source digest mismatch: {relative}"
+
+
+def run_hostile_canaries(ledger: dict) -> None:
+    mutations = {
+        "2-of-9": (("theorem", "score"), "3/9"),
+        "800240-of-53": (
+            ("canonical_reconciliation", "d4_accounting", "survivor_labeled"),
+            800_239,
+        ),
+        "1162302-residue": (
+            ("canonical_reconciliation", "d3_accounting", "unresolved_residue"),
+            1_162_301,
+        ),
+        "q3-missing": (
+            ("canonical_reconciliation", "first_missing_global_object", "status"),
+            "AVAILABLE",
+        ),
+        "no-selected-target": (("selected_target",), "fullsupport_master_closure_compiler"),
+        "route-retirement": (
+            ("canonical_reconciliation", "retired_continuations"),
+            RETIRED_CONTINUATIONS[:-1],
+        ),
+        "d4-total-complex-reactivation": (
+            (
+                "canonical_reconciliation",
+                "conditional_route_dispositions",
+                "D4_ALTERNATING_TOTAL_COMPLEX",
+                "status",
+            ),
+            "ACTIVE",
+        ),
+        "source-binding": (
+            (
+                "canonical_reconciliation",
+                "source_sha256",
+                "ops/team/diag3-orbit5563-referee/CLOSING_REVIEW.md",
+            ),
+            "0" * 64,
+        ),
+    }
+    for name, (path, value) in mutations.items():
+        hostile = copy.deepcopy(ledger)
+        cursor = hostile
+        for key in path[:-1]:
+            cursor = cursor[key]
+        cursor[path[-1]] = value
+        try:
+            assert_current_state(hostile)
+        except AssertionError:
+            continue
+        raise AssertionError(f"hostile canary accepted: {name}")
+
+    omitted = copy.deepcopy(ledger)
+    del omitted["canonical_reconciliation"]["conditional_route_dispositions"][
+        "D4_ALTERNATING_TOTAL_COMPLEX"
+    ]
+    try:
+        assert_current_state(omitted)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("hostile canary accepted: d4-total-complex-omission")
 
 
 def score(row: dict) -> int:
@@ -71,33 +296,9 @@ def main() -> None:
     edge39_labels = load(EDGE39_LABELS_PATH)
     two_edge_skeleton = load(TWO_EDGE_SKELETON_PATH)
 
-    assert set(ledger) == {
-        "format",
-        "status",
-        "as_of",
-        "repository",
-        "theorem",
-        "invariant_obligations",
-        "row2599_fullsupport_ledger",
-        "retired_or_subordinated_targets",
-        "target_score_formula",
-        "candidate_targets",
-        "selected_target",
-        "selected_target_progress",
-        "research_infrastructure",
-        "selected_target_contract",
-        "process_gates",
-        "historical_open_objects",
-    }
-    assert ledger["format"] == "diag3-research-decision-ledger-v1"
-    assert ledger["status"] == "ACTIVE"
-    assert ledger["as_of"] == "2026-08-28"
-    assert ledger["repository"] == {
-        "full_name": "reuellee/finite-certificates",
-        "default_branch": "main",
-        "audited_commit": "e8600495e70e6f5548cb0c73e0cfd2f33faacc0b",
-        "merged_pull_request": 37,
-    }
+    assert_current_state(ledger)
+    assert_source_binding(ledger)
+    run_hostile_canaries(ledger)
     assert ledger["theorem"] == {
         "id": "9DVL",
         "score": "2/9",
@@ -145,7 +346,7 @@ def main() -> None:
         observations["certified_parent_infinity_cells"],
     ) == (0, 0, 0, 0)
 
-    full = ledger["row2599_fullsupport_ledger"]
+    full = ledger["historical_row2599_fullsupport_ledger"]
     assert full["support_count"] == 3_375
     assert full["proper_relative_support_count"] == 3_374
     assert full["possible_nonrelative_supports"] == [[15, 15, 15]]
@@ -180,7 +381,10 @@ def main() -> None:
         "65b425e0a9507dd536b59e770f3c43f5eb025381b2ca2e75eb009e93d022b02a"
     )
 
-    retired = {row["id"]: row for row in ledger["retired_or_subordinated_targets"]}
+    retired = {
+        row["id"]: row
+        for row in ledger["historical_retired_or_subordinated_targets"]
+    }
     assert retired["proper_support_dimension4_subdivision"]["status"] == "RETIRED"
     assert retired["common_normalized_coordinate_scaling"] == {
         "id": "common_normalized_coordinate_scaling",
@@ -228,7 +432,7 @@ def main() -> None:
         "FOUR_SUPPORT_1665_SECTIONS_LIFTED_28_ALGEBRAIC_SECTIONS_MISSING"
     )
 
-    candidates = ledger["candidate_targets"]
+    candidates = ledger["historical_candidate_targets"]
     assert len({row["id"] for row in candidates}) == len(candidates)
     for row in candidates:
         assert all(0 <= row[key] <= 5 for key in (
@@ -242,11 +446,11 @@ def main() -> None:
         assert row["priority_score"] == score(row)
     selected = [row for row in candidates if row["selected"]]
     assert len(selected) == 1
-    assert selected[0]["id"] == ledger["selected_target"]
+    assert selected[0]["id"] == "fullsupport_master_closure_compiler"
     assert selected[0]["priority_score"] == max(
         row["priority_score"] for row in candidates
     )
-    assert ledger["selected_target"] == "fullsupport_master_closure_compiler"
+    assert ledger["selected_target"] is None
     infrastructure = ledger["research_infrastructure"]["exact_semialgebraic_toolkit"]
     assert infrastructure == {
         "status": "EXTRACTED_AND_CANARY_VERIFIED",
@@ -266,7 +470,7 @@ def main() -> None:
             "ai/omreal/verify_exact_semialgebraic_toolkit.py",
         ],
     }
-    progress = ledger["selected_target_progress"]
+    progress = ledger["historical_selected_target_progress"]
     assert set(progress) == {
         "schema_interface",
         "first_proof_producing_canary",
@@ -1928,7 +2132,9 @@ def main() -> None:
     digest = git_blob_sha1(LEDGER_PATH)
     for historical in (completion, closure):
         assert historical["current_decision_ledger"] == POINTER
-        assert historical["current_decision_ledger_git_blob"] == digest
+        assert historical["current_decision_ledger_git_blob"] == (
+            HISTORICAL_LEDGER_V1_GIT_BLOB
+        )
 
     assert ledger["process_gates"] == {
         "canonical_state_first": True,
@@ -1937,16 +2143,17 @@ def main() -> None:
         "exact_scope_labels_required": True,
         "default_branch_and_drive_checkpoint_required_at_cycle_end": True,
         "theorem_score_promotion_requires_all_invariant_obligations_closed": True,
+        "target_selection_requires_fresh_independent_opening_audit": True,
     }
     assert_evidence_exists(ledger)
-    print("PASS canonical diagonal-three research decision ledger")
+    print("PASS canonical diagonal-three research decision ledger v2 through PR #44")
     print("PASS invariant obligations remain open; honest ledger 2/9")
     print(
         "PASS row2599 full support:",
         "10844 interior + 1177 empty + 5803 unresolved = 17824",
     )
     print(
-        "SELECTED fullsupport_master_closure_compiler score",
+        "HISTORICAL_SELECTED fullsupport_master_closure_compiler score",
         selected[0]["priority_score"],
     )
     print("PASS first proof-producing master-closure canary: 17 cells / 216 ranks")
@@ -2013,6 +2220,16 @@ def main() -> None:
     )
     print("PASS fortieth clipped-wall route refuted: macroboxes 6..20 zero-free")
     print("PASS forty-first finite global-exit criterion: one-way sink-SCC gate")
+    print("PASS current D4 identity: 1715980/130 = 915740/77 + 800240/53")
+    print("PASS current D3 quotient: 100086840 classes / 104993280 raw")
+    print("PASS current D3 residue: 1162302")
+    print("PASS Q3_COMPLETE_PARENT_BOUNDARY_ATLAS missing; routes retired")
+    print(
+        "PASS D4 alternating total complex RETIRED_UNTIL_GLOBAL_INPUTS; "
+        "incomplete gate STOP_FAIL_CLOSED"
+    )
+    print("PASS PIVOT_REQUIRED; no selected mathematical target")
+    print("PASS 9/9 hostile canonical-state canaries rejected")
     print("LEDGER_GIT_BLOB", digest)
 
 

@@ -1,0 +1,16 @@
+{
+  "format": "d9-fixed-domain-cegar-constructor-result-v1",
+  "track_id": "d9-fixed-domain-cegar-constructor",
+  "outcome": "inconclusive",
+  "endpoint": "COMMITTED_CEGAR_SEED_FRONTIER_EXACTLY_REPAIRED",
+  "classification": "EXACT_NULL_NO_D9_COUNTEREXAMPLE",
+  "frontier_sha256": "d3d5b1e8f4fae15f651194a135954cd52b84e8ca209e4b64beafe8de35df5083",
+  "frontier_semantic_sha256": "5e3c2c92cbe7243d4150bb6c49c7545b58c64b22ede2812723c2e8d96a793f07",
+  "seed_families": 2,
+  "exact_path_repairs": 2,
+  "source_realized_counterexamples": 0,
+  "complete_fixed_domain_candidate_generator": false,
+  "ledger_change_recommended": "none",
+  "next_action": "Retire another sampled-separator CEGAR seed cycle and pivot to a projection-free adaptive component decomposition with a complete parent-residence invariant.",
+  "github_write": false
+}

@@ -1,0 +1,34 @@
+{
+  "format": "d9-fixed-domain-incidence-falsifier-result-v1",
+  "track_id": "d9-fixed-domain-incidence-falsifier",
+  "base_revision": "32e2b37bf54c53982cb58a3b8d026734f9ab1113",
+  "outcome": "pass",
+  "classification": "FATAL_TO_SELECTED_QUOTIENT_AND_PROJECTION",
+  "quotient_counterexample": {
+    "permutation": [0, 1, 2, 3, 4, 5, 7, 6],
+    "description": "Swap parent labels 7 and 8 in zero-based notation.",
+    "active_factor": 26,
+    "image_factor": 285,
+    "image_is_active": false,
+    "consequence": "The ambient S8 action does not preserve the fixed active set, so the 9,476 ambient pair quotient is not a fixed-domain quotient."
+  },
+  "projection_counterexample": {
+    "factor_id": 57,
+    "polynomial_terms": [
+      {"exponent": [0, 0, 0, 0, 0, 0, 0, 0, 1], "coefficient": -1},
+      {"exponent": [0, 0, 0, 0, 0, 0, 0, 1, 0], "coefficient": 1},
+      {"exponent": [0, 0, 0, 0, 1, 0, 0, 0, 1], "coefficient": 1},
+      {"exponent": [0, 0, 0, 0, 1, 0, 1, 0, 0], "coefficient": -1},
+      {"exponent": [0, 0, 1, 0, 0, 0, 0, 1, 0], "coefficient": -1},
+      {"exponent": [0, 0, 1, 0, 0, 0, 1, 0, 0], "coefficient": 1}
+    ],
+    "projection_vector": [1, 2, 4, 8, 16, 32, 64, 128, 256],
+    "polar_affine_rank": 4,
+    "polar_affine_solution_dimension": 5,
+    "wall_restriction_on_polar_space": "IDENTICALLY_ZERO",
+    "consequence": "The selected projection has a positive-dimensional polar locus on an active quadratic wall."
+  },
+  "hostile_mutations_rejected": 8,
+  "critical_enumeration": "DENIED",
+  "theorem_ledger": "2/9"
+}

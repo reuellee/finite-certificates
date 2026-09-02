@@ -1,0 +1,95 @@
+{
+  "format": "d9-component-roadmap-canary-contract-v1",
+  "track_id": "d9-component-roadmap-certificate",
+  "opening_revision": "ed57704f68e14349c3aae0eee5f807a2f5fe7feb",
+  "opening_tree": "0ecd1e35cc113b3a73a245191f930c908f989a8b",
+  "scope": "REPRESENTATION_CANARIES_ONLY_NO_CRITICAL_SYSTEM_ENUMERATION",
+  "roadmap_schema": {
+    "required_top_level_fields": [
+      "source_domain",
+      "factor_registry",
+      "algebraic_points",
+      "critical_strata",
+      "certified_arcs",
+      "boundary_residence",
+      "global_adjacency",
+      "component_partition",
+      "source_pins"
+    ],
+    "algebraic_point_fields": [
+      "id",
+      "rational_univariate_representation",
+      "isolating_intervals",
+      "factor_signs"
+    ],
+    "critical_stratum_fields": [
+      "id",
+      "dimension",
+      "defining_equations",
+      "jacobian_rank_profile",
+      "incident_branch_germs",
+      "boundary_residence"
+    ],
+    "certified_arc_fields": [
+      "id",
+      "endpoints",
+      "carrier_stratum",
+      "exact_path_witness",
+      "factor_sign_invariance"
+    ],
+    "component_rule": "CONNECTED_COMPONENTS_OF_CERTIFIED_GLOBAL_ADJACENCY_AFTER_DELETING_BOUNDARY_ONLY_ARCS"
+  },
+  "aliasing_canary": {
+    "source": "ops/team/d9-universal-cut-circuits/FINITE_GRAMMAR_FRONTIER.json",
+    "shared_local_observation_sha256": "0fcbe8aa1c4cc5540a4f3d5544526298f6bb8209298481788122bab509a1913a",
+    "cut_configuration_sha256": "574c8085031d60c240f8b60581e668cf3602d96a446a3d42fb3e51c9919cbb2d",
+    "noncut_configuration_sha256": "6bf896456f5c502df38559169c5e5c7087f8169a986f49eb9ee5d7642bf8f783",
+    "expected_positive_components": {
+      "TWO_POSITIVE_CYCLES": 2,
+      "ONE_POSITIVE_CYCLE": 1
+    },
+    "required_discriminator": "FULL_GLOBAL_ADJACENCY_DIGEST"
+  },
+  "projection_canary": {
+    "source": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json",
+    "residual_type": 36,
+    "projected_polynomial": "c*d-c+f",
+    "absent_parent_brackets": 70,
+    "absent_global_residual_factors": 26740,
+    "first_layer_new_irreducibles": 142,
+    "policy": "ON_DEMAND_FACTOR_REGISTRY_EXTENSION_REQUIRED"
+  },
+  "boundary_canary": {
+    "source": "ops/team/d9-universal-cut-boundary/BOUNDARY_TRANSPORT_COUNTEREXAMPLE.json",
+    "factor_id": 8552,
+    "polynomial": "d*i-e",
+    "recursive_parent_facet": "1237",
+    "boundary_charts": 64,
+    "strict_open_parent_crossing": false,
+    "global_separator": false,
+    "required_residence": "RECURSIVE_BOUNDARY_ONLY"
+  },
+  "singularity_canary": {
+    "variables": ["x", "y"],
+    "polynomial_monomials": [
+      {"coefficient": 1, "exponents": [2, 0]}
+    ],
+    "zero_locus_parameterization": {"x": "0", "y": "FREE"},
+    "expected_critical_locus_dimension": 1,
+    "positive_dimensional": true,
+    "required_treatment": "REGISTER_AS_POSITIVE_DIMENSIONAL_CRITICAL_STRATUM"
+  },
+  "claim_scope": {
+    "critical_enumeration_authorized": false,
+    "fixed_domain_connectivity_proved": false,
+    "diagonal_9_proved": false,
+    "theorem_ledger": "2/9"
+  },
+  "source_pins": {
+    "ops/research-team/cycles/2026-09-01-d9-component-roadmap/OPENING_AUDIT.json": "e988fe50b070f1fd61653454098cc78b71394af7a00a8ee7a68b8c23ab20c573",
+    "ops/team/d9-universal-cut-circuits/FINITE_GRAMMAR_FRONTIER.json": "9182fb0c69a332722e699d60a3945cbd36cabb2e5def40b55de441bad98444b5",
+    "ops/team/d9-universal-cut-boundary/BOUNDARY_TRANSPORT_COUNTEREXAMPLE.json": "d08a63a96229c66d8c71f6083d6827ceaf84d8115c52b0afa444d2475fb9f0c3",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json": "6b22f3f8da550fa14ea13700ff632eb3db53c40316a0e1844a7762784cfaf811"
+  }
+}
+

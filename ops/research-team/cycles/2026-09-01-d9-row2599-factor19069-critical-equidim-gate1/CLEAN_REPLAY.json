@@ -1,0 +1,30 @@
+{
+  "format": "d9-factor19069-critical-equidim-clean-replay-v1",
+  "candidate_revision": "e2d6475db1555ab5151ce7896d3af7fc66b0911a",
+  "candidate_tree": "ffd72a8c9eb8159f162895cacf13f1b9785046ad",
+  "clone_mode": "git clone --no-hardlinks --no-local with exact candidate branch checked at the pinned revision",
+  "replay_path": "E:\\Projects\\9DVL Research\\replays\\d9-factor19069-critical-equidim-gate1-e2d6475",
+  "python": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "commands": [
+    "ai/omreal/verify_canonical_research_state_v6.py",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/verify_opening_audit.py",
+    "target-only ops/research-team/verify_cycle_protocol.py audit_cycle plus hostile_canaries",
+    "ops/team/d9-factor19069-critical-equidim-constructor/verify_critical_equidim_frontier.py",
+    "ops/team/d9-factor19069-critical-equidim-falsifier/verify_critical_equidim_falsifier.py",
+    "ops/team/d9-factor19069-critical-equidim-certificate/verify_critical_equidim_certificate.py",
+    "git diff --check",
+    "git status --porcelain=v1"
+  ],
+  "results": {
+    "canonical_v6": "PASS_10_HOSTILE_MUTATIONS_LEDGER_2_OF_9",
+    "opening_audit": "PASS_18_HOSTILE_MUTATIONS",
+    "target_cycle_protocol": "PASS_4_OF_4_AUTHORIZED_WORK_ORDERS_AND_HOSTILE_CANARIES",
+    "constructor": "PASS_22_HOSTILE_MUTATIONS_FIRST_UNRESOLVED_EQ_B00",
+    "falsifier": "PASS_33_HOSTILE_MUTATIONS_FAIL_CLOSED",
+    "producer_independent_certificate": "PASS_45_HOSTILE_MUTATIONS_ACCEPT_NULL_ONLY",
+    "git_diff_check": "PASS",
+    "worktree_clean": true
+  },
+  "inherited_repository_protocol_note": "The repository-wide protocol main still has the frozen predecessor heading false-negative recorded at opening; the current target cycle and hostile canaries replay independently and pass without editing frozen evidence.",
+  "classification": "CLEAN_REPLAY_ACCEPTS_EXACT_SATURATED_EQUIDIMENSIONAL_NULL_FRONTIER"
+}

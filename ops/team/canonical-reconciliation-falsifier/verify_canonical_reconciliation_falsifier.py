@@ -529,7 +529,12 @@ def validate_candidate(manifest: dict[str, Any]) -> dict[str, Any]:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description=(
+            "Replay frozen reconciliation sources and hostile canaries by default; "
+            "use --candidate only while evaluating a live candidate surface."
+        )
+    )
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument("--sources-only", action="store_true")
     modes.add_argument("--self-test", action="store_true")
@@ -551,7 +556,13 @@ def main() -> int:
                 "status": "PASS",
             }
             result["semantic_sha256"] = sha256_bytes(canonical_bytes(result))
-        elif args.self_test:
+        elif args.self_test or not args.candidate:
+            # Repository-wide CI discovers every verify_*.py with no flags.
+            # Once a rejected candidate has been superseded, that default must
+            # authenticate the frozen rejection gate rather than apply its
+            # intentionally presentation-specific live-candidate contract to
+            # the current accepted surface.  Explicit --candidate semantics
+            # remain unchanged for the closing-referee replay below.
             result = run_self_test(manifest, facts)
         else:
             result = validate_candidate(manifest)

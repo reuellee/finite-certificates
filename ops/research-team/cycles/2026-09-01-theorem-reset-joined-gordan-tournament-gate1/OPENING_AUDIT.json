@@ -1,0 +1,97 @@
+{
+  "format": "theorem-reset-joined-gordan-opening-audit-v1",
+  "cycle_id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+  "base_revision": "3689b5344dfed38468639d0e92b48f0b5fc4ebc8",
+  "base_tree": "ef14ccd9b844dae5e9b535310122251ca0e86bfb",
+  "branch": "research/local-theorem-reset-joined-gordan-tournament-20260901",
+  "opening_ledger": "2/9",
+  "goal_ledger": "3/9",
+  "proved_diagonals": [1, 2],
+  "opening_verdict": "PIVOT",
+  "selected_construction_count": 0,
+  "concurrent_authoritative_cycles": [],
+  "proof_distance": {
+    "opening_score": "2/9",
+    "score_deficit": 1,
+    "named_invariants": ["diag3_pair_hc1", "diag3_triple_hc0"],
+    "open_load_bearing_obligations": 7,
+    "certified_exhaustive_residual": "UNKNOWN",
+    "global_coverage": "UNKNOWN",
+    "same_blocker_streak": 4,
+    "zero_ledger_streak": 7,
+    "convergence_hypothesis": "A globally attached joined-Gordan ten-clause theorem or a uniform all-residual parent-boundary theorem may yield a certified bounded decrease; no local carrier or sample can.",
+    "minimum_acceptable_delta": "CLOSE_AT_LEAST_ONE_LOAD_BEARING_OBLIGATION_OR_STRICTLY_REDUCE_A_CERTIFIED_EXHAUSTIVE_GLOBALLY_ATTACHED_RESIDUAL_WITH_BOUNDED_NEXT_DECREASE",
+    "mid_cycle_checkpoint": "FIRST_COMPLETE_PROVER_FALSIFIER_VERIFIER_HANDOFF_OR_EARLIER_NULL_NEGATIVE",
+    "automatic_pivot_rule": "NONDECREASE_REQUIRES_PIVOT_OR_STOP_AND_ZERO_SUCCESSOR"
+  },
+  "comparable_closing_vectors": [
+    {"cycle": "2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1", "score": "2/9", "deficit": 1, "open_obligations": 7, "residual": "UNKNOWN", "coverage": "UNKNOWN", "same_blocker_streak": 2, "zero_ledger_streak": 5},
+    {"cycle": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1", "score": "2/9", "deficit": 1, "open_obligations": 7, "residual": "UNKNOWN", "coverage": "UNKNOWN", "same_blocker_streak": 3, "zero_ledger_streak": 6},
+    {"cycle": "2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1", "score": "2/9", "deficit": 1, "open_obligations": 7, "residual": "UNKNOWN", "coverage": "UNKNOWN", "same_blocker_streak": 4, "zero_ledger_streak": 7}
+  ],
+  "triple_global_accounting": {
+    "source_orbits": 79102449,
+    "settled_orbits": 77940147,
+    "residual_orbits": 1162302,
+    "coverage": "77940147/79102449",
+    "source_order_residual_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+    "globally_attached_source_denominator": true,
+    "triple_only_closure_promotes_d3": false
+  },
+  "joined_gordan_clause_baseline": {
+    "denominator": 10,
+    "clauses": ["(0)", "(1)", "(0,0)", "(2)", "(1,0)", "(0,0,0)", "(3)", "(2,0)", "(1,1)", "(1,0,0)"],
+    "provisional_universally_proved": ["(0)", "(1)", "(2)"],
+    "provisional_coverage": "3/10",
+    "independent_rebaseline_required": true,
+    "end_to_end_d3_denominator": false,
+    "critical_missing_clause": "(1,0,0)",
+    "critical_quantifiers": ["all parents", "all signature triples", "all supports", "all zero-weight specializations", "all true-parent boundaries"],
+    "required_boundary": "primitive joined flow-triangle H2 class",
+    "forbidden_substitute": "singleton-root carrier or artificial local boundary"
+  },
+  "route_tournament": [
+    {"route": "D3_JOINED_GORDAN_TEN_CLAUSE_THEOREM", "scores": [5,3,3,5,5,4,5,2], "construction_ready": false},
+    {"route": "D3_UNIFORM_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS", "scores": [5,4,2,5,4,4,4,3], "construction_ready": false},
+    {"route": "D3_PAIR_GLOBAL_COMPRESSION_DESCENT_EQUIVALENCE", "scores": [5,2,2,4,5,3,4,3], "construction_ready": false},
+    {"route": "EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT", "scores": [4,3,4,5,4,5,5,1], "construction_ready": false},
+    {"route": "D9_SIMULTANEOUS_INSERTION_2604_PARENT_THEOREM", "scores": [2,2,3,4,4,4,3,4], "construction_ready": false, "catalog_split": "2546+58", "known_no_go": "reducibility alone does not make simultaneous insertion full"},
+    {"route": "D9_ACTUAL_ARRANGEMENT_SIGN_GEODESY", "scores": [2,2,1,5,5,3,2,4], "construction_ready": false, "known_no_go": "178-point support traces and local isometry do not prove global connected sign cells"}
+  ],
+  "end_to_end_obligations": [
+    {"id": "global_gluing", "status": "INCONCLUSIVE", "residual": "UNKNOWN"},
+    {"id": "extension_labels", "status": "INCONCLUSIVE", "residual": "UNKNOWN"},
+    {"id": "strict_closure", "status": "INCONCLUSIVE", "residual": "UNKNOWN"},
+    {"id": "relative_infinity", "status": "INCONCLUSIVE", "residual": "UNKNOWN"},
+    {"id": "middle_rank_replay", "status": "INCONCLUSIVE", "residual": "UNKNOWN"},
+    {"id": "diag3_pair_hc1", "status": "INCONCLUSIVE", "residual": "UNKNOWN"},
+    {"id": "diag3_triple_hc0", "status": "INCONCLUSIVE", "residual": 1162302}
+  ],
+  "pins": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ops/research-team/verify_cycle_protocol.py": "e3c2f64b97d53f4de00be675a789a42668835bb1dd8759779be8392760131753",
+    "ops/research-team/cycles/2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1/CYCLE_REPORT.md": "736715466b398fc2294207f73cdbf71b6dbbeccdce78626a83b107572d5ccaf4",
+    "ops/research-team/cycles/2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1/CLOSING_CANDIDATE.json": "5350198508d15b60d6b67609cf4cba9ee11e3538e750c46b919a685f02fb3dd0",
+    "ai/omreal/NINE_DIAGONAL_STATUS.md": "07c146e835f6a62c29ab653d353d73469df1e6022018ffec76f6775b65ca7ae2",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e",
+    "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ai/omreal/DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md": "046dc84c138cbbed9add0946392d72ddb3b73b332ddb4c9029ea54348a85562e",
+    "ai/omreal/verify_diag3_joined_flow_triangle.py": "ac01851b53d4bed1c859f74bad2e71a5025825fe7accdac13263f5d6518a0944",
+    "ai/omreal/verify_diag3_single_bad_two_skeleton.py": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4",
+    "ai/omreal/NINTH_COORDINATE_PATH_THEOREM.md": "db785ee0f061cf45e938af77ecb8aba03a658830b3d98cc82e173af4c501a792",
+    "ai/omreal/DIAG9_SIGN_GEODESY_AUDIT.md": "64896fa28a76f57344bd246f1546322e1361f6ac57f164ca6199c58938c30903",
+    "ai/omreal/verify_diag9_sign_geodesy_audit.py": "375f61c0928c55b5a9d3589ede9c23a512fbf26312596943b81b5bfe5ac1d3c5",
+    "ai/omreal/DIAG9_GRAPH_REDUCIBILITY_AUDIT.md": "d9e72c4379b64ca2217a2b8f151b9ded0df0043e0939725c0320ea46ae828acc",
+    "ai/omreal/DIAG9_GRAPH_REDUCIBILITY_NO_GO.py": "75defaee45afeec2e82ee7a671bc92ac3281a17051ecc7c796498f4bedf727bf"
+  },
+  "resource_ceiling": {"wall_minutes": 120, "aggregate_cpu_hours": 6, "memory_gib_per_process": 8, "new_evidence_mib": 80},
+  "storage": {
+    "project_root": "E:\\Projects\\9DVL Research",
+    "output_root": "E:\\Projects\\9DVL Research\\outputs",
+    "mounted_recovery_root": "G:\\My Drive\\Projects\\research-backups",
+    "drive_connector_used": false,
+    "github_write": false
+  }
+}
+

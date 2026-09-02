@@ -1,0 +1,32 @@
+{
+  "format": "d9-fixed-domain-cegar-certificate-result-v1",
+  "track_id": "d9-fixed-domain-cegar-certificate",
+  "verdict": "ACCEPT",
+  "accepted_endpoint": "COMMITTED_CEGAR_SEED_FRONTIER_EXACTLY_REPAIRED",
+  "accepted_classification": "EXACT_NULL_NO_D9_COUNTEREXAMPLE",
+  "independence": {
+    "new_producer_imported": false,
+    "accepted_exact_source_verifiers_replayed": true,
+    "frontier_semantics_reconstructed": true,
+    "hostile_mutations_rejected": 12,
+    "trust_boundary": "PRODUCER_INDEPENDENT_ENVELOPE_OVER_ACCEPTED_EXACT_DETERMINANT_VERIFIERS"
+  },
+  "pins": {
+    "ops/team/d9-fixed-domain-cegar-constructor/CEGAR_FRONTIER.json": "d3d5b1e8f4fae15f651194a135954cd52b84e8ca209e4b64beafe8de35df5083",
+    "ops/team/d9-fixed-domain-cegar-constructor/RESULT.json": "26951e9c69dc2e9b3ab79295c4f9c3218af4743208f4ee7fa8f4c09903f7f081",
+    "ops/team/d9-fixed-domain-cegar-constructor/build_cegar_frontier.py": "9bcd2d944d3a6473d96e063f4a764a8c942cb8b0b4daeb9397694a8301dca84e",
+    "ops/team/d9-fixed-domain-cegar-constructor/FINDINGS.md": "365d669d49f87db5a794c3cfd09b3b35df71acf9b4b6e03ddd3c2409325a4dc1",
+    "ops/team/d9-fixed-domain-cegar-falsifier/RESULT.json": "cfea0970abe1aaf24c8bf597382ce7c9475e0a28fdfe7c9334f86eba1f32c638",
+    "ops/team/d9-fixed-domain-cegar-falsifier/verify_counterexample_attack.py": "c161589be82b6249bdec4c4319923b9473805a68c04654dd69d7e8f9930ae2bf",
+    "ops/research-team/cycles/2026-09-01-d9-fixed-domain-cegar-gate1/CYCLE.md": "791c5b0421ebb25c33daf589dcc639ea2757bdcfc78f145b1d76c5130ad0012d",
+    "ops/research-team/cycles/2026-09-01-d9-fixed-domain-cegar-gate1/OPENING_AUDIT.json": "dbf9b8eefbd49272767616327452653a2a2590f1f2cc991b767c34dec06f70f0",
+    "ops/research-team/cycles/2026-09-01-d9-fixed-domain-cegar-gate1/WORK_ORDERS.yaml": "f59b2acd3872b381ec4348c3714d6e860ae26fc2ab1478f30cac292470077ba8"
+  },
+  "seed_families": 2,
+  "exact_path_repairs": 2,
+  "source_realized_counterexamples": 0,
+  "complete_fixed_domain_candidate_generator": false,
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "github_write": false
+}

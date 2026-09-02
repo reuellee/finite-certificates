@@ -1,0 +1,1066 @@
+{
+  "M2": {
+    "format": "canonical-integer-polynomial-formula-v1",
+    "pointwise_terminal": {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": -1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 2,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": -1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            }
+          ],
+          "op": "and"
+        },
+        {
+          "args": [
+            {
+              "args": [
+                {
+                  "op": "eq",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "eq",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "and"
+            },
+            {
+              "op": "eq",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": -2,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            }
+          ],
+          "op": "or"
+        }
+      ],
+      "op": "and"
+    },
+    "selected_plus_terminal": {
+      "args": [
+        {
+          "args": [
+            {
+              "args": [
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 2,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "and"
+            },
+            {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "op": "eq",
+                      "poly": {
+                        "terms": [
+                          {
+                            "coefficient": 1,
+                            "exponents": [
+                              1,
+                              0
+                            ]
+                          }
+                        ],
+                        "type": "integer_polynomial"
+                      }
+                    },
+                    {
+                      "op": "lt",
+                      "poly": {
+                        "terms": [
+                          {
+                            "coefficient": -1,
+                            "exponents": [
+                              0,
+                              0
+                            ]
+                          },
+                          {
+                            "coefficient": 1,
+                            "exponents": [
+                              0,
+                              1
+                            ]
+                          }
+                        ],
+                        "type": "integer_polynomial"
+                      }
+                    }
+                  ],
+                  "op": "and"
+                },
+                {
+                  "args": [
+                    {
+                      "args": [
+                        {
+                          "op": "lt",
+                          "poly": {
+                            "terms": [
+                              {
+                                "coefficient": 1,
+                                "exponents": [
+                                  1,
+                                  0
+                                ]
+                              }
+                            ],
+                            "type": "integer_polynomial"
+                          }
+                        },
+                        {
+                          "op": "gt",
+                          "poly": {
+                            "terms": [
+                              {
+                                "coefficient": 1,
+                                "exponents": [
+                                  1,
+                                  0
+                                ]
+                              }
+                            ],
+                            "type": "integer_polynomial"
+                          }
+                        }
+                      ],
+                      "op": "or"
+                    },
+                    {
+                      "op": "lt",
+                      "poly": {
+                        "terms": [
+                          {
+                            "coefficient": -2,
+                            "exponents": [
+                              0,
+                              0
+                            ]
+                          },
+                          {
+                            "coefficient": 1,
+                            "exponents": [
+                              0,
+                              1
+                            ]
+                          }
+                        ],
+                        "type": "integer_polynomial"
+                      }
+                    }
+                  ],
+                  "op": "and"
+                }
+              ],
+              "op": "or"
+            }
+          ],
+          "op": "and"
+        },
+        {
+          "args": [
+            {
+              "args": [
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 2,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "and"
+            },
+            {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "op": "eq",
+                      "poly": {
+                        "terms": [
+                          {
+                            "coefficient": 1,
+                            "exponents": [
+                              1,
+                              0
+                            ]
+                          }
+                        ],
+                        "type": "integer_polynomial"
+                      }
+                    },
+                    {
+                      "op": "eq",
+                      "poly": {
+                        "terms": [
+                          {
+                            "coefficient": -1,
+                            "exponents": [
+                              0,
+                              0
+                            ]
+                          },
+                          {
+                            "coefficient": 1,
+                            "exponents": [
+                              0,
+                              1
+                            ]
+                          }
+                        ],
+                        "type": "integer_polynomial"
+                      }
+                    }
+                  ],
+                  "op": "and"
+                },
+                {
+                  "op": "eq",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": -2,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "or"
+            }
+          ],
+          "op": "and"
+        }
+      ],
+      "op": "or"
+    },
+    "selected_strip": {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": -1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 2,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": -1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            }
+          ],
+          "op": "and"
+        },
+        {
+          "args": [
+            {
+              "args": [
+                {
+                  "op": "eq",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "lt",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "and"
+            },
+            {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "op": "lt",
+                      "poly": {
+                        "terms": [
+                          {
+                            "coefficient": 1,
+                            "exponents": [
+                              1,
+                              0
+                            ]
+                          }
+                        ],
+                        "type": "integer_polynomial"
+                      }
+                    },
+                    {
+                      "op": "gt",
+                      "poly": {
+                        "terms": [
+                          {
+                            "coefficient": 1,
+                            "exponents": [
+                              1,
+                              0
+                            ]
+                          }
+                        ],
+                        "type": "integer_polynomial"
+                      }
+                    }
+                  ],
+                  "op": "or"
+                },
+                {
+                  "op": "lt",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": -2,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "and"
+            }
+          ],
+          "op": "or"
+        }
+      ],
+      "op": "and"
+    },
+    "variables": [
+      "s",
+      "u"
+    ]
+  },
+  "M3": {
+    "format": "canonical-integer-polynomial-formula-v1",
+    "pairs": {
+      "M3_FILLED": {
+        "relative": {
+          "args": [
+            {
+              "op": "eq",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "eq",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            }
+          ],
+          "op": "and"
+        },
+        "space": {
+          "args": [
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "coefficient": -1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  },
+                  {
+                    "coefficient": -1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "ge",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            }
+          ],
+          "op": "and"
+        }
+      },
+      "M3_UNFILLED": {
+        "relative": {
+          "args": [
+            {
+              "op": "eq",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      1,
+                      0
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            },
+            {
+              "op": "eq",
+              "poly": {
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "exponents": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "type": "integer_polynomial"
+              }
+            }
+          ],
+          "op": "and"
+        },
+        "space": {
+          "args": [
+            {
+              "args": [
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "ge",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "and"
+            },
+            {
+              "args": [
+                {
+                  "op": "eq",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      },
+                      {
+                        "coefficient": -1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "eq",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          1,
+                          0
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                },
+                {
+                  "op": "eq",
+                  "poly": {
+                    "terms": [
+                      {
+                        "coefficient": 1,
+                        "exponents": [
+                          0,
+                          1
+                        ]
+                      }
+                    ],
+                    "type": "integer_polynomial"
+                  }
+                }
+              ],
+              "op": "or"
+            }
+          ],
+          "op": "and"
+        }
+      }
+    },
+    "simplex_barycentric_polynomials": [
+      {
+        "terms": [
+          {
+            "coefficient": 1,
+            "exponents": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": -1,
+            "exponents": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": -1,
+            "exponents": [
+              1,
+              0
+            ]
+          }
+        ],
+        "type": "integer_polynomial"
+      },
+      {
+        "terms": [
+          {
+            "coefficient": 1,
+            "exponents": [
+              1,
+              0
+            ]
+          }
+        ],
+        "type": "integer_polynomial"
+      },
+      {
+        "terms": [
+          {
+            "coefficient": 1,
+            "exponents": [
+              0,
+              1
+            ]
+          }
+        ],
+        "type": "integer_polynomial"
+      }
+    ],
+    "variables": [
+      "x",
+      "y"
+    ]
+  }
+}

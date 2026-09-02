@@ -1,0 +1,95 @@
+cycle_id: 2026-09-01-d3-global-master-closure-theorem-leverage-audit-gate1
+base_revision: 98ed8d36f08f13305d226d3d3770e71542a0a408
+base_tree: 52a03a10b62e54a9ff5aa4e59dbbc2af9a69eeab
+opening_ledger: 2/9
+selected_target: D3_COVERAGE_CERTIFIED_GLOBAL_MASTER_CLOSURE_GLUE_LABEL_STRICT_CLOSURE_THEOREM_LEVERAGE_AUDIT_GATE1
+selected_construction_count: 0
+storage_authorization: &storage_authorization |
+  The saved local Codex project E:\Projects\9DVL Research is the canonical
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs.
+  A native-filesystem recovery mirror to
+  G:\My Drive\Projects\research-backups is optional, byte-length and SHA-256
+  verified, and nonblocking. Never
+  invoke the Google Drive connector and never block on connector approval.
+  GitHub is read-only: do not push, publish branches, open or update pull
+  requests, trigger or rerun CI, or merge. This authorization does not permit
+  secrets, unrelated private files, paid/external compute, force-push, history
+  deletion, or irreversible external action.
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_AUDIT_ONLY
+  selected_count: 1
+  selected_construction_count: 0
+  compared_routes:
+    - DIRECT_GLOBAL_MASTER_CLOSURE_GLUE_LABEL_STRICT_CLOSURE_MIDDLE_RANK
+    - COMPONENT_COSHEAF_STRUCTURAL_COMPRESSION
+    - EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT
+    - DEFERRED_D9_B_UV_01_LOW_LEVERAGE_BASELINE
+  closing_required: true
+  stagnation_rule: >-
+    If no route proves theorem attachment plus a finite exhaustive measure and
+    preregistered decrease, select no construction successor and close
+    STALLED or INFORMATIONAL with STOP/PIVOT.
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    named_invariant: diag3_pair_hc1_AND_diag3_triple_hc0
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 3
+    zero_ledger_streak: 6
+  comparable_closing_vectors:
+    - cycle: 2026-09-01-d9-row2599-factor19069-active-margin-gate1
+      vector: [2/9, 1, 7, UNKNOWN, UNKNOWN, 1, 4]
+    - cycle: 2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1
+      vector: [2/9, 1, 7, UNKNOWN, UNKNOWN, 2, 5]
+    - cycle: 2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1
+      vector: [2/9, 1, 7, UNKNOWN, UNKNOWN, 3, 6]
+  convergence_hypothesis: >-
+    A successor is eligible only if the audit closes one of seven obligations
+    or replaces UNKNOWN by an exact finite residual and exact coverage whose
+    remaining count decreases under a bounded chain to diagonal three.
+  minimum_acceptable_delta: >-
+    Open obligations 7 to at most 6, or UNKNOWN to exact N with coverage k/N,
+    N-k less than N, and a preregistered bounded next decrease.
+  mid_cycle_checkpoint: >-
+    Immediately after audit, falsifier, and certificate lanes decide whether
+    the minimum decrease remains reachable; otherwise stop discovery.
+  closing_classification_required: true
+  automatic_pivot_rule: >-
+    Six zero-ledger cycles and repeated UNKNOWN global denominators force the
+    tournament; nondecrease forbids same-route CONTINUE and requires STOP/PIVOT.
+work_orders:
+  - track_id: d3-global-closure-leverage-audit
+    role: strategy-auditor
+    surface: ops/team/d3-global-closure-leverage-audit
+    storage_authorization: *storage_authorization
+    resource_ceiling: 35 wall-minutes, 1 CPU-hour, 8 GiB, read-only source reconstruction
+    stop_rule: Stop on source drift, missing route, unproved denominator, local-to-global promotion, or construction work.
+    prohibited_scope: No global-census construction, ledger edit, D9 continuation, network, or connector.
+    worker_restrictions: Own only the assigned surface and isolated branch; do not edit cycle files, import another lane acceptance, push, merge, or select a successor.
+  - track_id: d3-global-closure-leverage-falsifier
+    role: falsifier
+    surface: ops/team/d3-global-closure-leverage-falsifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 30 wall-minutes, 1 CPU-hour, 8 GiB, at least 20 hostile mutations
+    stop_rule: Stop at the first exact pin, count, quantifier, coverage, infinity, closure, rank, or route-bar rejection and preserve all tested mutations.
+    prohibited_scope: No construction, producer acceptance import, sampled promotion, ledger edit, network, or connector.
+    worker_restrictions: Own only the assigned surface and isolated branch; do not edit cycle files, push, merge, or select a successor.
+  - track_id: d3-global-closure-leverage-certificate
+    role: independent-verifier
+    surface: ops/team/d3-global-closure-leverage-certificate
+    storage_authorization: *storage_authorization
+    resource_ceiling: 35 wall-minutes, 1 CPU-hour, 8 GiB, at least 20 hostile mutations
+    stop_rule: Fail closed on any pin, census identity, obligation count, route status, finite-measure claim, or successor-bar mismatch.
+    prohibited_scope: Do not import audit or falsifier code; no construction, ledger edit, network, or connector.
+    worker_restrictions: Own only the assigned surface and isolated branch; do not edit cycle files, push, merge, or select a successor.
+  - track_id: d3-global-closure-leverage-referee
+    role: closing-referee
+    surface: ops/team/d3-global-closure-leverage-referee
+    storage_authorization: *storage_authorization
+    resource_ceiling: 35 wall-minutes, 1 CPU-hour, frozen-head clean no-hardlink replay
+    stop_rule: Reject moved head, missing checkpoint, false vector decrease, false ledger delta, inadequate hostile replay, or unjustified successor.
+    prohibited_scope: No mutable-head repair, discovery, construction, ledger promotion, network, or connector.
+    worker_restrictions: Review only the frozen integrated candidate in an isolated worktree and own only the assigned surface.

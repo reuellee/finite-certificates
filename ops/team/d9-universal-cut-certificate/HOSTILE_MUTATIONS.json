@@ -1,0 +1,40 @@
+{
+  "format": "9dvl-d9-universal-cut-hostile-mutations-v1",
+  "certificate_mutations": [
+    "opening-tree",
+    "parent-quantifier",
+    "wall-type-count",
+    "missing-grammar-kind",
+    "duplicate-atom",
+    "frontier-overlap",
+    "false-recursive-separator",
+    "adapter-status",
+    "sample-promotion",
+    "ledger-mutation",
+    "positive-gordan",
+    "positive-incomplete-coverage",
+    "negative-infeasible-witness",
+    "negative-separator-side",
+    "null-no-gap",
+    "null-gap-not-pending",
+    "timeout-frontier-drift",
+    "timeout-ceiling-not-reached",
+    "endpoint-class-mismatch",
+    "semantic-digest"
+  ],
+  "portable_mutations": [
+    "pretend-historical-object-exists",
+    "require-historical-dereference",
+    "canonical-state-digest",
+    "reviewed-head-substitution",
+    "mutable-wrapper",
+    "producer-acceptance-logic",
+    "source-census-drift",
+    "false-global-coverage",
+    "false-diagonal-nine",
+    "false-ledger-promotion",
+    "kernel-digest",
+    "portable-semantic-digest"
+  ],
+  "expected": "ALL_REJECTED_AT_THE_INDEPENDENT_VALIDATION_BOUNDARY"
+}

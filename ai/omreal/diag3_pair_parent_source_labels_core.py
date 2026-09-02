@@ -317,7 +317,7 @@ def build_record(progress=False, include_profile_data=False):
             "global_parent_cell_coverage": "NOT_CLAIMED",
         },
         "inputs": {
-            "transition_certificate": str(TRANSITION.relative_to(HERE.parents[1])),
+            "transition_certificate": TRANSITION.relative_to(HERE.parents[1]).as_posix(),
             "transition_certificate_sha256": file_sha256(TRANSITION),
             "point_bank_sha256": transition.file_sha256(transition.POINT_BANK),
             "factor_census_sha256": transition.file_sha256(transition.FACTOR_CENSUS),

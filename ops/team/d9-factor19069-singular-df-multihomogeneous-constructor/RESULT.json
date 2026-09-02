@@ -1,0 +1,69 @@
+{
+  "affine_block_homogeneous_of_degree_2_2_2": false,
+  "affine_multiaffine": false,
+  "block_degree_sets": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "characteristic_zero_decomposition_completed": false,
+  "classification": "EXACT_SOURCE_STRUCTURE_FALSIFICATION_FAIL_CLOSED_NULL",
+  "componentwise_parent_factor_tests_completed": 0,
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "endpoint": "HASH_PIN_FIRST_UNRESOLVED_MULTIHOMOGENEOUS_SINGULAR_BRANCH",
+  "factor19069_terms": 108,
+  "first_unresolved_branch_id": "MH-B00-AFFINE-SOURCE-STRUCTURE-CONTRACT",
+  "first_unresolved_branch_semantic_sha256": "73be706424b840acac8130f703649621a3092844bfefd3d25aa765e44f49712d",
+  "format": "d9-factor19069-singular-df-multihomogeneous-constructor-result-v1",
+  "frontier_semantic_sha256": "d062fe00f8c7cd256c7aff13b559ead79de2539ac84579497348576acf2423e6",
+  "frontier_sha256": "d9f4aba3fa8c76e3a8abff5484ff509b0458fe9993edeb921e5a6d03c4dfac41",
+  "inverse_variable_discovery_used": false,
+  "ledger_change_recommended": "none",
+  "nonconsequences": [
+    "NO_CHARACTERISTIC_ZERO_PRIMARY_OR_EQUIDIMENSIONAL_DECOMPOSITION_OF_THE_SINGULAR_IDEAL",
+    "NO_SINGULAR_COMPONENT_EQUATIONS_DIMENSIONS_DEGREES_OR_MULTIPLICITIES",
+    "NO_COMPONENTWISE_PARENT_FACTOR_SATURATION_OR_INCIDENCE_CLASSIFICATION",
+    "NO_STRICT_REAL_SINGULAR_COMPONENT_RESIDENCE_CLASSIFICATION",
+    "NO_CONNECTED_ROW2599_PARENT_COMPONENT_TAG_FOR_A_SINGULAR_COMPONENT",
+    "NO_SINGULAR_BRANCH_EMPTINESS_CERTIFICATE",
+    "NO_THEOREM_LEVEL_COUNTEREXAMPLE",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "opening_revision": "a2860f3f6436f573a913fc8ca6312b944212aadd",
+  "opening_tree": "56f179cea8b8664156ee2dfcd6a9052d95e3b78e",
+  "original_singular_ideal_semantic_sha256": "193f7c28db287eaebad524eb9b119d878e70e9d509c2158bc6dcf4f027e24ab2",
+  "outcome": "pass",
+  "parent_factor_tags_retained": 70,
+  "per_variable_max_exponents": {
+    "a": 2,
+    "b": 1,
+    "c": 2,
+    "d": 2,
+    "e": 2,
+    "f": 2,
+    "g": 1,
+    "h": 2,
+    "i": 1
+  },
+  "resolved_component_count": 0,
+  "singular_or_boundary_strata_discarded": 0,
+  "source_manifest_semantic_sha256": "35e687d6ee4a6ddcf983ced155ac52afd84f2ced1d1460fc9a7ab72bfa8a37b4",
+  "source_manifest_sha256": "6b38e9499c8474a52e083aa3ab4ccc12858abd7b476b6db2d04116ba86ba08b4",
+  "source_structure_semantic_sha256": "42ae1f4912bc3bfd3eccde4113f60c0756a3612fcb3ed1e0afc69dc666f2d5ec",
+  "terms_not_of_block_degree_2_2_2": 97,
+  "terms_with_at_least_one_squared_variable": 44,
+  "theorem_ledger": "2/9",
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-constructor",
+  "true_boundary_candidate_strata_retained": 10
+}

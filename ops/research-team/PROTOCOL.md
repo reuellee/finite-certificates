@@ -45,9 +45,79 @@ global quantifiers remain unattached.
 
 The selected target must have explicit quantifiers, a falsifiable success
 condition, a resource ceiling, a stop rule, and useful positive, negative,
-null, and timeout handoffs.
+null, and timeout handoffs.  It must also carry the solution-convergence
+contract in section 3; a target without a measurable theorem-level decrease
+is not ready to open.
 
-## 3. Independent execution
+## 3. Mandatory solution-convergence gate
+
+Every cycle must measure distance to the requested theorem outcome, not only
+distance to its local artifact.  The opening record must include a
+**proof-distance vector** with:
+
+1. the theorem-ledger score and the score deficit to the user's stated goal;
+2. the named theorem-level invariant or global quantifier being attacked;
+3. the number of open load-bearing obligations on the selected dependency
+   path;
+4. a certified exhaustive residual size, or the literal value `UNKNOWN` when
+   no finite denominator is proved;
+5. exact global coverage as a numerator/denominator, or `UNKNOWN`;
+6. the number of consecutive cycles with the same load-bearing blocker; and
+7. the number of consecutive cycles with zero theorem-ledger delta.
+
+The coordinator must show the corresponding closing vectors from the last
+three comparable cycles (or every available comparable cycle when fewer than
+three exist), state a **convergence hypothesis**, and preregister the minimum
+acceptable decrease for the new cycle.  A larger artifact, more samples, more
+runtime, a smaller local chart, or a local residual with an unknown global
+denominator does not by itself decrease proof distance.
+
+At the first of the half-budget point, a preregistered intermediate endpoint,
+or discovery of a null/negative result, the coordinator must record a
+mid-cycle convergence check.  If the promised decrease is no longer reachable
+inside the remaining ceiling, discovery stops and the cycle moves to a
+fail-closed handoff; resource bounds may not be enlarged merely to avoid a
+`STALLED` verdict.
+
+The closing record must classify the trajectory as exactly one of:
+
+- `CONVERGING`: the ledger advanced, a load-bearing theorem obligation closed,
+  or a certified finite exhaustive residual strictly decreased while its
+  global attachment and a bounded path to the theorem remained intact;
+- `INFORMATIONAL`: exact reusable knowledge was added, but the declared
+  proof-distance vector did not strictly decrease;
+- `STALLED`: the promised decrease failed or the same load-bearing blocker
+  survived; or
+- `DIVERGING`: the route introduced an unbounded or unproved replacement
+  burden, lost global attachment, or moved farther from the theorem.
+
+`INFORMATIONAL`, `STALLED`, and `DIVERGING` results cannot justify
+same-route `CONTINUE`.  An exact counterexample may justify `RETIRE`; otherwise
+they require `PIVOT` or `STOP`.  A same-route `CONTINUE` is permitted only when
+the closing vector strictly decreases under the preregistered measure and the
+remaining successor chain is still theorem-capable.
+
+The following automatic strategy-reset rules are mandatory:
+
+- two consecutive comparable cycles with no ledger delta and no strict
+  proof-distance decrease force `PIVOT`;
+- three consecutive zero-ledger cycles on one route force a fresh
+  theorem-level strategy tournament, even when local residuals shrink, unless
+  the opening record had a certified finite end-to-end measure and that same
+  measure strictly decreased in every cycle;
+- two consecutive cycles whose claimed residual or coverage denominator is
+  `UNKNOWN` cannot continue by further local refinement; and
+- replacing one blocker with new obligations counts as progress only when an
+  independent verifier proves the replacement strictly smaller under the
+  same preregistered measure.
+
+A forced strategy tournament must compare at least three credible
+theorem-level choices, including the direct next-ledger diagonal when
+applicable, a structural-compression route, and a counterexample or retirement
+route.  The selected successor must maximize expected theorem convergence,
+not continuity with the current implementation.
+
+## 4. Independent execution
 
 The default active roles are coordinator, constructive prover, falsifier, and
 independent verifier/referee.  Add certificate engineering or formalization
@@ -58,7 +128,7 @@ Workers use isolated branches or worktrees and may edit only their assigned
 surfaces.  Only the coordinator may integrate evidence or change the canonical
 ledger.  A worker must not merge its own work or promote its own claim.
 
-## 4. Mandatory post-cycle strategy evaluation
+## 5. Mandatory post-cycle strategy evaluation
 
 Before integration or a successor cycle, the coordinator must record:
 
@@ -66,12 +136,17 @@ Before integration or a successor cycle, the coordinator must record:
 - which obligation-graph edges were closed, narrowed, falsified, or unchanged;
 - whether the result reduced the end-to-end proof burden rather than merely
   adding local evidence;
+- the opening and closing proof-distance vectors, the preregistered minimum
+  decrease, the mid-cycle check, and the final trajectory classification;
+- the comparable-cycle history and whether an automatic strategy-reset rule
+  fired;
 - which starting assumptions or strategies were invalidated;
 - whether the same blocker survived and why another cycle would differ;
 - the next target comparison and `CONTINUE`, `PIVOT`, `RETIRE`, or `STOP`
   verdict.
 
-A mandatory pivot is triggered when either:
+A mandatory pivot is triggered when any section-3 strategy-reset rule fires,
+or when either:
 
 - two consecutive cycles leave the same load-bearing blocker and its complete
   obstruction class unchanged; or
@@ -82,15 +157,20 @@ A mandatory retirement is triggered by an exact counterexample to a required
 intermediate claim.  Negative and null results must be preserved in the
 decision log so later cycles do not repeat them.
 
-## 5. Evidence and publication gates
+## 6. Evidence, storage, and publication gates
 
 Claim advancement requires every applicable artifact, replay, independence,
 coverage, transport, adversarial, repository, and ledger gate.  Missing
 artifacts, moved revisions, ambiguous scope, incomplete global coverage, or
 pending checks fail closed.
 
-The standing publication authorization to copy verbatim into every research
-work order and agent prompt is:
+Authorization is cycle-specific and must reflect the user's latest explicit
+instruction. Historical work orders are immutable evidence of the authority
+that applied when those cycles opened; a later change of authority does not
+rewrite them.
+
+The historical publication authorization preserved verbatim for cycles dated
+through 2026-08-31 is:
 
 > The user explicitly authorizes this 9DVL cycle to publish research code and
 > artifacts to the public GitHub repository `reuellee/finite-certificates`;
@@ -105,14 +185,32 @@ work order and agent prompt is:
 > Use the authenticated GitHub connector for GitHub publication operations;
 > do not substitute `gh`.
 
-Workers may prepare and push their assigned branches when the work order says
-so, but they may not merge or update the theorem ledger.  The coordinator owns
-PR creation, integration, merge decisions, and the durable checkpoint.
+The current storage and publication authorization to copy verbatim into every
+work order dated 2026-09-01 or later is:
 
-## 6. Cycle report
+> The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+> canonical durable working branch and to mirror recovery checkpoints only to
+> the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+> not push commits, publish branches, open or update pull requests, trigger or
+> rerun CI, or merge until a new explicit user instruction.  Local scratch is
+> ephemeral and is not an authority.  This authorization does not permit
+> publishing secrets or private unrelated files, modifying any repository or
+> service, using paid external compute or paid APIs, changing repository
+> visibility or settings, force-pushing, deleting history or data, or taking
+> other irreversible actions without separate approval.
+
+For current cycles, workers may commit only to isolated local worktrees and
+their assigned surfaces.  They may not push, open or update pull requests,
+trigger CI, merge, or update the theorem ledger.  The coordinator owns local
+integration and durable Library checkpoints; Google Drive is a recovery
+mirror.  GitHub remains read-only until a new explicit user instruction.
+
+## 7. Cycle report
 
 Every cycle report must include the base revision, strategy evaluation, role
 assignments, handoff classifications, gate table, exact ledger delta, surviving
-blockers, post-cycle strategy verdict, publication revision, and backup
-manifest.  Activity is never reported as theorem progress unless a publication
-gate actually changes claim status.
+blockers, opening and closing proof-distance vectors, mid-cycle convergence
+check, trajectory classification, automatic-reset result, post-cycle strategy
+verdict, publication revision, and backup manifest.  Activity is never
+reported as theorem progress unless a publication gate actually changes claim
+status.

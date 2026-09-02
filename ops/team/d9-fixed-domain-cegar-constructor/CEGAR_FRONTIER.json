@@ -1,0 +1,99 @@
+{
+  "format": "d9-fixed-domain-cegar-frontier-v1",
+  "cycle_id": "2026-09-01-d9-fixed-domain-cegar-gate1",
+  "base_revision": "a5990bff953432a49cfa186f78e25efdb7df280b",
+  "base_tree": "96e75f55512f6abbc09749509a45b63adebfa456",
+  "opening_revision": "6fc3d4d8c4d235dbb262e56abfccb7c32dad1a39",
+  "opening_tree": "71ced64b12ace616e641befd5624f3b8653d217a",
+  "selected_target": "D9_FIXED_DOMAIN_COUNTEREXAMPLE_CEGAR_GATE1",
+  "scope": {
+    "classification": "TWO_COMMITTED_EXACT_ROW2599_STRESS_FAMILIES_ONLY",
+    "complete_committed_seed_frontier": true,
+    "complete_fixed_domain_candidate_generator": false,
+    "complete_parent_chamber_coverage": false,
+    "all_parent_coverage": false
+  },
+  "seeds": [
+    {
+      "id": "ROW2599_12_37",
+      "parent_index": 2599,
+      "endpoints": [
+        12,
+        37
+      ],
+      "signature_count": 9,
+      "signatures": [
+        32577326938880,
+        31532828708796544,
+        3510916511430656,
+        72042742044167295,
+        3476291556529680,
+        2137481474473987,
+        58098186400358399,
+        32444182421504,
+        68557050812244096
+      ],
+      "antichain_chart_count": 7,
+      "feasibility_or_gordan_entries": 63,
+      "ordered_incomparability_clauses": 72,
+      "path_segments": 22711,
+      "theorem_domain_input": "EXACT_NONEMPTY_PROPER_PAIRWISE_INCOMPARABLE",
+      "separator_disposition": "EXACT_PATH_REPAIR",
+      "endpoint_pair_same_component": true,
+      "source_realized_counterexample": false,
+      "antichain_replay_stdout_sha256": "cc99c49fe34570295ab7e5679b213718719d75e2eb3bd8971579475f9a41779b",
+      "path_replay_stdout_sha256": "3d7e470703805e6bd381706bcc72ba14bd9ba8ca628d466245370057496f5989"
+    },
+    {
+      "id": "ROW2599_37_176",
+      "parent_index": 2599,
+      "endpoints": [
+        37,
+        176
+      ],
+      "signature_count": 9,
+      "signatures": [
+        173181663141888,
+        68546650707290240,
+        102950366083904,
+        4390365959495680,
+        40419212217287680,
+        1228857713611584,
+        1228880270587904,
+        68557027348258944,
+        70793448873074816
+      ],
+      "antichain_chart_count": 7,
+      "feasibility_or_gordan_entries": 63,
+      "ordered_incomparability_clauses": 72,
+      "path_segments": 22811,
+      "theorem_domain_input": "EXACT_NONEMPTY_PROPER_PAIRWISE_INCOMPARABLE",
+      "separator_disposition": "EXACT_PATH_REPAIR",
+      "endpoint_pair_same_component": true,
+      "source_realized_counterexample": false,
+      "antichain_replay_stdout_sha256": "cc99c49fe34570295ab7e5679b213718719d75e2eb3bd8971579475f9a41779b",
+      "path_replay_stdout_sha256": "ae10ecb034d3f1ba5d91b384cbf6c81a21b1dfcdab5e7159d6c4761696034f0d"
+    }
+  ],
+  "aggregate": {
+    "seed_families": 2,
+    "feasibility_or_gordan_entries": 126,
+    "ordered_incomparability_clauses": 144,
+    "path_segments": 45522,
+    "exact_path_repairs": 2,
+    "source_realized_counterexamples": 0,
+    "unclassified_seeds": 0
+  },
+  "endpoint": "COMMITTED_CEGAR_SEED_FRONTIER_EXACTLY_REPAIRED",
+  "classification": "EXACT_NULL_NO_D9_COUNTEREXAMPLE",
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "nonconsequences": [
+    "NO_EXHAUSTIVE_FIXED_DOMAIN_CANDIDATE_GENERATOR",
+    "NO_COMPLETE_PARENT_CHAMBER_COVERAGE",
+    "NO_GLOBAL_COMMON_FEASIBILITY_CONNECTIVITY",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "semantic_sha256": "5e3c2c92cbe7243d4150bb6c49c7545b58c64b22ede2812723c2e8d96a793f07"
+}

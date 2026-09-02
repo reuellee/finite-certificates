@@ -25,9 +25,31 @@ Mutation graphs of uniform oriented matroids are connected at every rank for `n 
 ### 3. Nine-Diagonal Vanishing Lemma: 2 of 9 diagonals proved
 
 The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally.
-There is **no active diagonal or selected mathematical target**: the canonical
-state is `PIVOT_REQUIRED`. Diagonal 3 remains the largest documented open
-program, not a currently selected route.
+The canonical strategy state is now **`STOP / NONE`**. There is no active
+diagonal target or construction, and no theorem promotion. The one bounded
+theorem-first feasibility round for the mixed-chain, complete pair-comparison,
+and independent triple-escape programs has been consumed: all three discovery
+lanes and the referee returned `NULL`, with no proof-distance decrease and no
+eligible successor. Local carriers, atlas growth and residual sampling remain
+unauthorized.
+
+Canonical state V10 records the later global semialgebraic diagram-replacement
+gate as `NULL / STALLED / STOP / NONE`, with seven cycles on the same blocker
+and ten zero-ledger cycles. Q0 failed because no executable independently
+traceable replacement backend, exact all-parent denominator, or quantifier-free
+closed compactification tuple was available. Historical V9 records the prior
+mixed-carrier close and V8 records its consumed opening authority. The
+mathematical targets remain open. See the
+[`V7 status`](ai/omreal/NINE_DIAGONAL_STATUS_V7.md) and
+[`9DVL theorem prospectus`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md).
+
+The latest universal D9 cut opening gate failed closed before its main census.
+The 13-type local wall grammar is not projection-closed—type 36 already adds
+`c*d-c+f`, one of 142 new first-layer irreducibles—and a 16-chamber exact
+counterpair proves that identical local circuit/multiwall data can have
+different global component counts. Factor 8552 remains a boundary-only canary,
+not a strict-parent separator. This retires the memoryless local cut grammar;
+diagonal 9 and the theorem ledger remain open.
 
 For diagonal 3, the exact research pipeline has now:
 
@@ -64,7 +86,10 @@ nonrelative master-closure compiler. The 5,803-factor residue remains an input
 gap, but that route is not current authority and cannot resume without a fresh
 opening audit.
 
-- [`ai/omreal/NINE_DIAGONAL_STATUS.md`](ai/omreal/NINE_DIAGONAL_STATUS.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V7.md`](ai/omreal/NINE_DIAGONAL_STATUS_V7.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V6.md`](ai/omreal/NINE_DIAGONAL_STATUS_V6.md) (historical V9 status)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V5.md`](ai/omreal/NINE_DIAGONAL_STATUS_V5.md) (historical V8 opening status)
+- [`ai/omreal/9DVL_THEOREM_PROSPECTUS.md`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_PARENT_PRODUCT_SIGNS.md)
@@ -84,12 +109,22 @@ The principal oriented-matroid program is the realizability/topology project in 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
 Current cross-diagonal target selection is governed by the machine-checked
-[`CANONICAL_RESEARCH_STATE_V2.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json)
-and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
-The state after merged PR #45 and the bounded D8 mask-6 cycle is
-`PIVOT_REQUIRED`: the predecessor reconciliation state and earlier
-diagonal-three ledger are retained byte-for-byte as historical proof inputs,
-but their old selected routes are no longer current authority.
+[`CANONICAL_RESEARCH_STATE_V10.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json),
+its [`V10 verifier`](ai/omreal/verify_canonical_research_state_v10.py), and the
+[`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
+V10 records the SREP `STOP / NONE` close and its null Q0 inputs. V9 remains an
+immutable historical checkpoint verified by
+[`CANONICAL_RESEARCH_STATE_V9.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json)
+and
+[`verify_canonical_research_state_v9.py`](ai/omreal/verify_canonical_research_state_v9.py).
+V8, V7, the post-normal-link predecessor, the reconciliation states
+and the earlier diagonal-three ledger are retained byte-for-byte as historical
+proof inputs; their old selected routes and authorizations are not current
+authority. The immutable
+[`CANONICAL_RESEARCH_STATE_V8.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json)
+records the consumed opening authority. The earlier
+[`CANONICAL_RESEARCH_STATE_V4.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json)
+remains a replayable historical checkpoint.
 
 The procedures developed along this route are also maintained as a research output. The [`exact semialgebraic certificate method`](ai/omreal/EXACT_SEMIALGEBRAIC_CERTIFICATE_METHOD.md) and its standard-library toolkit provide reusable rational affine pullback, tensor Bernstein subdivision, fail-closed system exclusion, analytic negative canaries, semantic certificates, and producer/verifier separation.
 

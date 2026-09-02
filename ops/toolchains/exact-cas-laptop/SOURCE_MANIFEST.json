@@ -1,0 +1,61 @@
+{
+  "format": "9dvl-exact-cas-laptop-source-manifest-v1",
+  "as_of": "2026-09-02",
+  "platform": "WSL2 x86_64 Linux",
+  "installed_prefix": "/home/lee/.local/share/9dvl-exact-cas/v1",
+  "core": {
+    "singular": "4.4.1",
+    "normaliz": "3.11.0",
+    "4ti2": "1.6.15",
+    "python_flint": "0.8.0",
+    "msolve": {
+      "version": "0.10.1",
+      "source_url": "https://github.com/algebraic-solving/msolve/releases/download/v0.10.1/msolve-0.10.1.tar.gz",
+      "source_sha256": "4ea31066005dc38461fe6b85eb96828990340ce68bdc246fd37e1338d2155beb",
+      "upstream_tests": {"total": 64, "pass": 64, "fail": 0}
+    },
+    "micromamba": {
+      "version": "2.8.1",
+      "source_url": "https://github.com/mamba-org/micromamba-releases/releases/download/2.8.1-0/micromamba-linux-64",
+      "sha256": "9689782d863c05a1bf5d2d371ba527104e7a4eb4310c1637d8653b751aed9c82"
+    }
+  },
+  "acquired_cad_sources": [
+    {
+      "id": "baker-thesis-2025",
+      "landing_url": "https://researchportal.bath.ac.uk/en/studentTheses/cylindrical-algebraic-decompositions-with-monotone-cell/",
+      "cache_name": "baker-thesis-2025.pdf",
+      "sha256": "9add278f23c6e3f5276156bfe788148182bba8a5e0dcc7d7261ee25c38c58cdc"
+    },
+    {
+      "id": "baker-frontier-condition-arxiv-2212.12747v1",
+      "landing_url": "https://arxiv.org/abs/2212.12747",
+      "cache_name": "baker-frontier-condition-arxiv-2212.12747v1.pdf",
+      "sha256": "a140045d8cb2a7004fa8904b054616191b721a18ebede6610621c68c14b3fa64"
+    },
+    {
+      "id": "baker-qepcad-software-zenodo-15095148",
+      "landing_url": "https://doi.org/10.5281/zenodo.15095148",
+      "cache_name": "qepcad-monotone-20250327.zip",
+      "bytes": 14516897,
+      "md5": "2ae7078f7c3a6a7fbc8da3b4419d9813",
+      "sha256": "4d5ec7d3b9ec5a04ba8f7b958717846f5112536f1c35c00b301f2df6cc7d7879",
+      "embedded_frontier_development_ref": "refs/remotes/origin/working",
+      "embedded_frontier_development_commit": "c31179d"
+    }
+  ],
+  "qualification": {
+    "core_smoke": "PASS",
+    "core_smoke_components": [
+      "SINGULAR_SMOKE_OK",
+      "MSOLVE_SMOKE_OK",
+      "NORMALIZ_SMOKE_OK",
+      "FOURTI2_SMOKE_OK",
+      "PYTHON_FLINT_SMOKE_OK"
+    ],
+    "frontier_qepcad_development_build": "NOT_QUALIFIED_MISSING_BIN_CSH",
+    "general_low_degree_semialgebraic_simplicial_replacement_backend": "NOT_FOUND",
+    "theorem_credit": "NONE"
+  }
+}
+

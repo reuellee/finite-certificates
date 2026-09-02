@@ -1,13 +1,14 @@
 # Nine-Diagonal Vanishing: proof status and exact remaining targets
 
-## Current canonical precedence after merged PR #45 and the D8 mask-6 cycle
+## Current canonical precedence after the D9 S12,37 normal-link cycle
 
-This section is the current control plane as of 2026-08-31.  It supersedes
+This section is the current control plane as of 2026-09-01.  It supersedes
 every target-selection or continuation instruction retained in the historical
 record below, while preserving those exact artifacts as evidence.
 Its machine-readable authority is
-`ai/omreal/data/CANONICAL_RESEARCH_STATE_V2.json`.  Its immutable reconciled
-predecessor is `CANONICAL_RESEARCH_STATE.json`, and the existing
+`ai/omreal/data/CANONICAL_RESEARCH_STATE_V3.json`.  Its immutable predecessor
+is `CANONICAL_RESEARCH_STATE_V2.json`; the earlier reconciled
+`CANONICAL_RESEARCH_STATE.json` and existing
 `DIAG3_RESEARCH_DECISION_LEDGER.json` remains the immutable historical
 diagonal-three ledger so its pinned proof replays remain reproducible.
 
@@ -44,11 +45,25 @@ diagonal-three ledger so its pinned proof replays remain reproducible.
   cross once into four loop-represented sectors.  This retires the named
   discriminator after a positive bounded filling; it gives no parent coverage
   or diagonal-eight proof.
+- The next independent audit selected the bounded D9 `S12,37` four-support
+  normal-link gate.  The opening `8` factor IDs / `4` tangential zero sets on
+  support `(3,1,15)` and `0/0` on `(3,3,7)` are face-interior data only.  A
+  complete exact first-order inventory contains `3,539` oriented factor
+  classes, `6,167` labeled occurrences, `7,078` factor initial forms, and
+  `140` parent initial forms.  On each support, two oriented parent forms are
+  exact opposites, so the ordinary common-radial strict parent link is singular
+  and has no strict first-order direction.  Independently, active factor 8552
+  has a two-sided exact wall inside recursive parent facet `1237`.  Therefore
+  the tangential four-support and ordinary radial reductions are retired as
+  stated.  This is a local route no-go: weighted recursive links remain open,
+  and there is no strict open-parent separator or diagonal-nine result.
 
 The current status is **`PIVOT_REQUIRED`**.  There is **no selected
 mathematical target**; selection is pending a fresh independent opening audit.
-The completed mask-6 filling changes no theorem score or invariant open
-obligation; it only retires that named bounded discriminator.
+The completed D9 normal-link cycle changes no theorem score or invariant open
+obligation.  It retires only the selected tangential four-support and ordinary
+common-radial link routes; a weighted recursive blow-up cannot begin without a
+new opening strategy gate.
 
 ## Result ledger
 
@@ -85,7 +100,7 @@ Exactly two of the nine entries are currently proved.
 | 6 | `H_3(F_S)` | `H_c^5(B_S)` | open; block-Gordan convexity alone is formally insufficient |
 | 7 | `H_2(F_S)` | `H_c^6(B_S)` | open; rank-deficient witnesses can be removed without changing the target group |
 | 8 | `H_1(F_S)` | `H_c^7(B_S)` | open; rank-deficient witnesses can be removed without changing the target group; an exact relative-two-complex interface proves that graph labels alone cannot decide `H_1`; on parent 860 the `a/d` triangle and `a/g` pentagon are filled, and the mask-6 loop now also bounds an exact six-triangle singular disk for one globally proper pairwise-incomparable eight-family; no parent coverage or all-family certificate exists |
-| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 now has an exact 23-chamber coordinate-star no-go and a 24-chamber all-family CEGIS repair network, but no full-dimensional parent roadmap |
+| 9 | `H_tilde_0(F_S)` | `H_c^8(B_S)` | open; parent 860 has an exact 23-chamber coordinate-star no-go and a 24-chamber all-family CEGIS repair network, but no full-dimensional parent roadmap; for the proper incomparable row-2599 `S12,37` family, the ordinary common-radial link is singular on both selected support faces and factor 8552 has an exact two-sided wall in recursive facet 1237, retiring that local tangential four-support reduction without a strict open-parent separator or global connectivity result |
 
 The dual column is valid for all nine entries after importing the published
 contractibility statement for realizable oriented matroids on fewer than nine

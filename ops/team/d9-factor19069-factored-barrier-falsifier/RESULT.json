@@ -1,0 +1,50 @@
+{
+  "format": "d9-factor19069-factored-barrier-falsifier-result-v1",
+  "track_id": "d9-factor19069-factored-barrier-falsifier",
+  "reviewed_revision": "2878addcc5d9c863ed5b2d518552b0298f08a64c",
+  "reviewed_tree": "3b6b3e563ca85782d76acfa0e3a48fc8aa031ec6",
+  "outcome": "pass",
+  "classification": "EXACT_SCOPE_REJECTION_CONFIRMS_FACTORED_BARRIER_NULL",
+  "retained_endpoint": "HASH_PINNED_FACTORED_BARRIER_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNSAMPLED_COMPONENT",
+  "constructor_certified": false,
+  "cycle_certificate_issued": false,
+  "immutable_pins": {
+    "source_files": 21,
+    "reviewed_artifacts": 3,
+    "source_manifest_semantic_sha256": "c6bbbf78f12f5740cd8966f0d530007abe13e68826ae5fd62abdddd94ca1e2ce",
+    "frontier_sha256": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca"
+  },
+  "independent_attacks": {
+    "signed_parent_factor_reconstruction": "PASS_70_ORDERED_SOURCE_FACTORS_209_TERMS_DEGREE_90_PRODUCT",
+    "factored_derivative_reconstruction": "PASS_9_COORDINATES_630_PROVENANCE_PRESERVING_SUMMANDS",
+    "dB_wedge_df_membership": "PASS_ALL_36_ORDERED_COORDINATE_PAIRS_AND_EXACT_df_DERIVATIVES",
+    "expanded_product_dependence": "ABSENT_AND_HOSTILE_INSERTION_REJECTED",
+    "strict_interior_component_scope": "ZERO_COMPONENTS_SAMPLED_WITH_DIMENSIONS_0_THROUGH_8_AND_SINGULAR_PIECES_STILL_REQUIRED",
+    "compactification_support_reconstruction": "PASS_3375_TOTAL_3364_EXCLUDED_10_PROPER_NONEXCLUDED_PLUS_FULL_SUPPORT",
+    "support_15_7_15_parent_closure": "PASS_EXACT_LINEAR_PATH_ALL_70_FACTORS_STRICT_FOR_0_LE_T_LT_1",
+    "support_1_1_1_parent_closure": "LINEAR_PATH_REJECTED_FIRST_AT_FACTOR_2578_NO_ALTERNATIVE_PATH_NONEXISTENCE_INFERRED",
+    "boundary_wall_residence": "ZERO_OF_10_CLASSIFIED",
+    "fixed_skeleton_parent_paths": "PASS_2800_EXACT_TAG_CHECKS",
+    "factor19069_skeleton_roots": "PASS_ONLY_EDGE39_HAS_ONE_OPEN_ROOT",
+    "edge39_collar_globalization": "REJECTED_LOCAL_ANCHOR_IS_NOT_A_CRITICAL_SAMPLE_OR_GLOBAL_COMPONENT_CERTIFICATE",
+    "attachment_completeness": "REJECTED"
+  },
+  "hostile_mutations": {
+    "rejected": 25,
+    "total": 25
+  },
+  "exact_consequence": "THE_PREREGISTERED_NULL_SURVIVES_INDEPENDENT_FALSIFICATION_AS_A_SCOPE_CORRECT_HASH_PINNED_FRONTIER",
+  "nonconsequences": [
+    "NO_FALSIFIER_CERTIFICATION_OF_THE_CONSTRUCTOR",
+    "NO_CONNECTED_COMPONENT_DECOMPOSITION_OF_THE_BARRIER_CRITICAL_LOCUS",
+    "NO_ZERO_OR_POSITIVE_DIMENSIONAL_CRITICAL_COMPONENT_SAMPLE",
+    "NO_COMPLETE_BOUNDARY_WALL_GERM_TO_INTERIOR_COMPONENT_CLASSIFICATION",
+    "NO_GLOBAL_FACTOR19069_WALL_COMPONENT_COUNT",
+    "NO_COMPLETE_COMPONENT_TO_SKELETON_ATTACHMENT_CLASSIFICATION",
+    "NO_PROOF_THAT_SUPPORT_1_1_1_LACKS_AN_ALTERNATIVE_PARENT_CLOSURE_PATH",
+    "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "ledger_change_recommended": "none",
+  "theorem_ledger": "2/9"
+}

@@ -1,0 +1,570 @@
+{
+  "M2": {
+    "blind_strict_to_weak_closure_allowed": false,
+    "classification": "REJECT_NONCLOSED_SOURCE_EXPLICIT_CURVE_LIMIT_WITNESS",
+    "complex_emitted": false,
+    "excluded_limit": [
+      "0",
+      "3/2"
+    ],
+    "finite_exact_sequence_crosscheck": [
+      [
+        "1",
+        "3/2"
+      ],
+      [
+        "1/2",
+        "3/2"
+      ],
+      [
+        "1/3",
+        "3/2"
+      ],
+      [
+        "1/4",
+        "3/2"
+      ],
+      [
+        "1/5",
+        "3/2"
+      ],
+      [
+        "1/6",
+        "3/2"
+      ],
+      [
+        "1/7",
+        "3/2"
+      ],
+      [
+        "1/8",
+        "3/2"
+      ],
+      [
+        "1/9",
+        "3/2"
+      ],
+      [
+        "1/10",
+        "3/2"
+      ],
+      [
+        "1/11",
+        "3/2"
+      ],
+      [
+        "1/12",
+        "3/2"
+      ],
+      [
+        "1/13",
+        "3/2"
+      ],
+      [
+        "1/14",
+        "3/2"
+      ],
+      [
+        "1/15",
+        "3/2"
+      ],
+      [
+        "1/16",
+        "3/2"
+      ],
+      [
+        "1/17",
+        "3/2"
+      ],
+      [
+        "1/18",
+        "3/2"
+      ],
+      [
+        "1/19",
+        "3/2"
+      ],
+      [
+        "1/20",
+        "3/2"
+      ],
+      [
+        "1/21",
+        "3/2"
+      ],
+      [
+        "1/22",
+        "3/2"
+      ],
+      [
+        "1/23",
+        "3/2"
+      ],
+      [
+        "1/24",
+        "3/2"
+      ],
+      [
+        "1/25",
+        "3/2"
+      ],
+      [
+        "1/26",
+        "3/2"
+      ],
+      [
+        "1/27",
+        "3/2"
+      ],
+      [
+        "1/28",
+        "3/2"
+      ],
+      [
+        "1/29",
+        "3/2"
+      ],
+      [
+        "1/30",
+        "3/2"
+      ],
+      [
+        "1/31",
+        "3/2"
+      ],
+      [
+        "1/32",
+        "3/2"
+      ]
+    ],
+    "symbolic_branch_certificate": [
+      "s=t>0 selects the s!=0 branch",
+      "-1<=t<=1",
+      "0<=3/2<2",
+      "therefore every (t,3/2), 0<t<=1, is selected",
+      "the limit (0,3/2) is neither u<1 nor u=1 nor u=2"
+    ],
+    "witness_curve": {
+      "map": {
+        "s": "t",
+        "u": "3/2"
+      },
+      "parameter_domain": "0<t<=1"
+    }
+  },
+  "M3": {
+    "compiled": {
+      "M3_FILLED": {
+        "backend": "EXACT_AFFINE_SIMPLEX_FORMULA_COMPILER_V1",
+        "backend_scope": "BOOLEAN_COMBINATIONS_OF_STANDARD_SIMPLEX_BARYCENTRIC_ATOMS_ONLY",
+        "derivation": "FORMULA_TRUTH_ON_EACH_FACE_RELATIVE_INTERIOR_WITH_SIGN_INVARIANCE_BY_SUBLANGUAGE",
+        "face_trace": [
+          {
+            "face": [
+              "v0"
+            ],
+            "relative_interior_sample": [
+              "0",
+              "0"
+            ],
+            "relative_truth": true,
+            "space_atom_values": [
+              "1",
+              "0",
+              "0"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v1"
+            ],
+            "relative_interior_sample": [
+              "1",
+              "0"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "0",
+              "1",
+              "0"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "0",
+              "1"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "0",
+              "0",
+              "1"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v0",
+              "v1"
+            ],
+            "relative_interior_sample": [
+              "1/2",
+              "0"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "1/2",
+              "1/2",
+              "0"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v0",
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "0",
+              "1/2"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "1/2",
+              "0",
+              "1/2"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v1",
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "1/2",
+              "1/2"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "0",
+              "1/2",
+              "1/2"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v0",
+              "v1",
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "1/3",
+              "1/3"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "1/3",
+              "1/3",
+              "1/3"
+            ],
+            "space_truth": true
+          }
+        ],
+        "faces": [
+          [
+            "v0"
+          ],
+          [
+            "v1"
+          ],
+          [
+            "v2"
+          ],
+          [
+            "v0",
+            "v1"
+          ],
+          [
+            "v0",
+            "v2"
+          ],
+          [
+            "v1",
+            "v2"
+          ],
+          [
+            "v0",
+            "v1",
+            "v2"
+          ]
+        ],
+        "relative_faces": [
+          [
+            "v0"
+          ]
+        ]
+      },
+      "M3_UNFILLED": {
+        "backend": "EXACT_AFFINE_SIMPLEX_FORMULA_COMPILER_V1",
+        "backend_scope": "BOOLEAN_COMBINATIONS_OF_STANDARD_SIMPLEX_BARYCENTRIC_ATOMS_ONLY",
+        "derivation": "FORMULA_TRUTH_ON_EACH_FACE_RELATIVE_INTERIOR_WITH_SIGN_INVARIANCE_BY_SUBLANGUAGE",
+        "face_trace": [
+          {
+            "face": [
+              "v0"
+            ],
+            "relative_interior_sample": [
+              "0",
+              "0"
+            ],
+            "relative_truth": true,
+            "space_atom_values": [
+              "1",
+              "0",
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v1"
+            ],
+            "relative_interior_sample": [
+              "1",
+              "0"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "0",
+              "1",
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "0",
+              "1"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "0",
+              "0",
+              "1",
+              "0",
+              "0",
+              "1"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v0",
+              "v1"
+            ],
+            "relative_interior_sample": [
+              "1/2",
+              "0"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "1/2",
+              "1/2",
+              "0",
+              "1/2",
+              "1/2",
+              "0"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v0",
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "0",
+              "1/2"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "1/2",
+              "0",
+              "1/2",
+              "1/2",
+              "0",
+              "1/2"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v1",
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "1/2",
+              "1/2"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "0",
+              "1/2",
+              "1/2",
+              "0",
+              "1/2",
+              "1/2"
+            ],
+            "space_truth": true
+          },
+          {
+            "face": [
+              "v0",
+              "v1",
+              "v2"
+            ],
+            "relative_interior_sample": [
+              "1/3",
+              "1/3"
+            ],
+            "relative_truth": false,
+            "space_atom_values": [
+              "1/3",
+              "1/3",
+              "1/3",
+              "1/3",
+              "1/3",
+              "1/3"
+            ],
+            "space_truth": false
+          }
+        ],
+        "faces": [
+          [
+            "v0"
+          ],
+          [
+            "v1"
+          ],
+          [
+            "v2"
+          ],
+          [
+            "v0",
+            "v1"
+          ],
+          [
+            "v0",
+            "v2"
+          ],
+          [
+            "v1",
+            "v2"
+          ]
+        ],
+        "relative_faces": [
+          [
+            "v0"
+          ]
+        ]
+      }
+    },
+    "relative_homology_over_q": {
+      "M3_FILLED": {
+        "boundary_1": [
+          [
+            1,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "boundary_2": [
+          [
+            1
+          ],
+          [
+            -1
+          ],
+          [
+            1
+          ]
+        ],
+        "dim_c1": 3,
+        "h1_q": 0,
+        "rank_d1": 2,
+        "rank_d2": 1
+      },
+      "M3_UNFILLED": {
+        "boundary_1": [
+          [
+            1,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "boundary_2": [
+          [],
+          [],
+          []
+        ],
+        "dim_c1": 3,
+        "h1_q": 1,
+        "rank_d1": 2,
+        "rank_d2": 0
+      }
+    },
+    "same_one_skeleton": true
+  },
+  "backend_identity": {
+    "algebraic_numbers": "RATIONALS_ONLY_AS_REDUCED_NUMERATOR_DENOMINATOR_STRINGS",
+    "classification": "CANARY_ONLY_NONQUALIFYING_SURROGATE",
+    "name": "EXACT_AFFINE_SIMPLEX_FORMULA_COMPILER_V1",
+    "ordered_infinitesimals": "ABSENT_NOT_NEEDED_IN_AFFINE_SIMPLEX_SUBLANGUAGE",
+    "qualifies_as_general_simplicial_replacement": false
+  },
+  "format": "d3-global-srep-formula-producer-trace-v1",
+  "single_bad_control": {
+    "classification": "BOUND_REPLAY_OF_EXISTING_PROVED_CONTROL_NOT_A_NEW_DERIVATION",
+    "command": "python.exe -B ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+    "exit_code": 0,
+    "source_pins": {
+      "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+      "ai/omreal/verify_diag3_single_bad_two_skeleton.py": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4"
+    },
+    "stdout": [
+      "PASS augmented face bounds: k=0/1/2 use at most 5/6/7 coordinates",
+      "PASS forced motion dimensions: 3/2/1",
+      "PASS total-degree-two compact-support table",
+      "PASS residual wall vertices: 13 orbits/84,840 labels, supports 4(rank 3) or 3(rank 2), motion dimension 3",
+      "THEOREM H_c^q(B_rho; R)=0 for q=0,1,2",
+      "COROLLARY H_c^q(H_f; R)=0 for every residual factor and q=0,1,2",
+      "CAVEAT pair/triple terms and the third diagonal remain open"
+    ]
+  }
+}

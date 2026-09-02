@@ -545,10 +545,10 @@ def verify_expected_rejection(manifest: dict[str, Any]) -> dict[str, Any]:
     ledger_bytes = git_show(candidate, LEDGER_PATH)
     status = status_bytes.decode("utf-8")
     ledger = json.loads(ledger_bytes)
-
-    for path, expected in manifest["candidate_outputs"].items():
-        working = (ROOT / path).read_bytes()
-        require(sha256_bytes(working) == expected, f"working candidate surface changed: {path}")
+    # This is an archival exact-head replay.  ``verify_source_digests`` has
+    # already authenticated every candidate output from the pinned candidate
+    # commit.  Requiring the current working tree to equal the rejected head
+    # would turn a later accepted repair into a false CI failure.
 
     validate_core(ledger, status, manifest)
     base_ledger = json.loads(git_show(manifest["base"]["commit"], LEDGER_PATH))

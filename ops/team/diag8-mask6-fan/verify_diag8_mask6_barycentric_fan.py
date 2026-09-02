@@ -213,6 +213,12 @@ def factor_sign_task(index):
     )
 
 
+def initialize_factor_worker(factor_polynomials, triangles):
+    global FACTOR_POLYNOMIALS, TRIANGLES
+    FACTOR_POLYNOMIALS = factor_polynomials
+    TRIANGLES = triangles
+
+
 def load_geometry():
     require(sha256(star.ROADMAP) == STAR_SHA256, "coordinate-star bytes moved")
     require(sha256(repair.CERTIFICATE) == REPAIR_SHA256, "repair bytes moved")
@@ -250,7 +256,16 @@ def audit_all_factors(triangles, workers):
     if workers == 1:
         results = map(factor_sign_task, range(len(FACTOR_POLYNOMIALS)))
     else:
-        pool = multiprocessing.get_context("fork").Pool(workers)
+        method = (
+            "fork"
+            if "fork" in multiprocessing.get_all_start_methods()
+            else "spawn"
+        )
+        pool = multiprocessing.get_context(method).Pool(
+            workers,
+            initializer=initialize_factor_worker,
+            initargs=(FACTOR_POLYNOMIALS, TRIANGLES),
+        )
         results = pool.imap(factor_sign_task, range(len(FACTOR_POLYNOMIALS)), chunksize=20)
     census = Counter()
     active = {}

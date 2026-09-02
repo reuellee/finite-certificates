@@ -1,0 +1,469 @@
+{
+  "format": "d3-mixed-carrier-theorem-feasibility-opening-v1",
+  "cycle_id": "2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1",
+  "mode": "BOUNDED_THEOREM_FIRST_FEASIBILITY_NOT_CONSTRUCTION",
+  "opening_action": "PIVOT",
+  "canonical_base": {
+    "commit": "9116771ba80ed3d033516d0dd666b34348aad348",
+    "tree": "a64438426dc792af67d5ccc0dd2f4d1231dbaa14",
+    "subject": "research: close theorem-level strategy reset",
+    "immutable": true
+  },
+  "canonical_opening": {
+    "ledger": "2/9",
+    "proved_diagonals": [1, 2],
+    "promotion": "NONE",
+    "status": "PIVOT_REQUIRED",
+    "concurrent_authoritative_cycles": []
+  },
+  "strategy_evaluation": {
+    "score_order": [
+      "ledger_leverage",
+      "quantifier_readiness",
+      "coverage_burden_favorability",
+      "terminality",
+      "structural_compression",
+      "independent_verification",
+      "resource_to_information",
+      "stagnation_risk"
+    ],
+    "risk_column_is_literal": true,
+    "routes": [
+      {
+        "id": "D3_NESTED_A_B_C_THEOREM_FEASIBILITY",
+        "scores": [5, 2, 2, 4, 5, 4, 5, 3],
+        "disposition": "SELECTED_FEASIBILITY_ONLY"
+      },
+      {
+        "id": "D3_UNIFORM_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+        "scores": [5, 3, 2, 5, 4, 4, 4, 4],
+        "disposition": "NOT_SELECTED"
+      },
+      {
+        "id": "D3_PAIR_GLOBAL_COMPRESSION_DESCENT_EQUIVALENCE",
+        "scores": [5, 1, 1, 4, 5, 3, 4, 4],
+        "disposition": "NOT_SELECTED"
+      },
+      {
+        "id": "EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT",
+        "scores": [4, 3, 4, 5, 4, 5, 5, 1],
+        "disposition": "EMBEDDED_FALSIFIER_LANE"
+      }
+    ],
+    "selection_reason": "USER_SELECTED_THEOREM_FIRST_PLAN_AFTER_PREDECESSOR_STOP_WITH_A_AS_A_CONDITIONAL_FEASIBILITY_INPUT_TO_B_AND_C_AS_AN_INDEPENDENT_D3_BRANCH",
+    "construction_ready": false
+  },
+  "selected_target": {
+    "id": "D3_NESTED_A_B_C_THEOREM_FEASIBILITY",
+    "selected_count": 1,
+    "decision_kind": "COMPLETE_FINITE_PROOF_PROGRAM_OR_SCOPED_UNIVERSAL_NO_GO",
+    "domain": {
+      "parents": "ALL_REALIZABLE_UNIFORM_RANK4_PARENTS_ON_8_AND_NORMALIZED_REALIZATION_CELLS",
+      "signature_families": "ALL_PROPER_ANTICHAINS_OF_PAIRWISE_INCOMPARABLE_PROPER_EXTENSION_SIGNATURES",
+      "active_block_range": [1, 3],
+      "shape_quotient": "MODULO_ACTIVE_BLOCK_PERMUTATION_WITH_ALL_LABELED_INSTANCES_COVERED",
+      "supports": "ALL_ADMISSIBLE_WITNESS_SUPPORT_STRATA",
+      "subdivision": "ONE_SIMULTANEOUS_SUBDIVISION_FOR_ALL_BLOCKS_WEIGHTS_SUPPORTS_CHARTS_AND_BOUNDARIES",
+      "coherence": "ALL_ARBITRARY_COMPOSABLE_FACE_CHAINS_NOT_ONLY_CODIMENSION_ONE_SQUARES",
+      "rank_drop_policy": "PARENT_MATRIX_RANK_DROP_AND_WITNESS_MATRIX_OR_SUPPORT_RANK_DROP_ARE_DISTINCT_STRATA"
+    },
+    "target_a": {
+      "id": "A_UNIVERSAL_MIXED_100_CHAIN_SPECIALIZATION",
+      "kind": "CONDITIONAL_INTEGRAL_CHAIN_THEOREM_PROGRAM",
+      "declared_input_interface": "L_SOURCE_LABELED_LOWER_JOINED_GENERATORS_ORIENTATIONS_BOUNDARY_TAGS_AND_SPECIALIZATION_MAPS",
+      "interface_hypotheses_may_assume_complete_b": false,
+      "b_must_construct_and_verify_interface_from_sources": true,
+      "face_shape": "(1,0,0)_AND_PERMUTATIONS",
+      "required_program_obligations": [
+        "FINITE_GENUINELY_MIXED_INTEGRAL_CHAIN_FAMILY",
+        "PRIMITIVE_BOUNDARY_MINUS1_PLUS1_PLUS1_PLUS1_PLUS1_PLUS1_PLUS1",
+        "CERTIFIED_LOWER_JOINED_OR_GENUINE_TRUE_PARENT_BOUNDARY_TERMS",
+        "SUPPORT_ZERO_WEIGHT_CHART_MONODROMY_PARENT_BOUNDARY_AND_WITNESS_SPECIALIZATION",
+        "SIMULTANEOUS_SUBDIVISION",
+        "ARBITRARY_FACE_CHAIN_COHERENCE",
+        "ACTIVE_BLOCK_PERMUTATION_EQUIVARIANCE",
+        "PARENT_VERSUS_WITNESS_RANK_DROP_DISTINCTION"
+      ],
+      "forbidden_consequences": [
+        "NO_GLOBAL_RANK_CLAIM",
+        "NO_PAIR_KERNEL_EXACTNESS_CLAIM",
+        "NO_TRIPLE_ESCAPE_CLAIM",
+        "NO_D3_OR_LEDGER_CLAIM"
+      ]
+    },
+    "target_b": {
+      "id": "B_COMPLETE_SOURCE_DERIVED_JOINED_COMPARISON",
+      "kind": "PAIR_BRANCH_THEOREM_PROGRAM",
+      "constructs_and_verifies_l_source_before_invoking_a": true,
+      "coefficient_domains": ["Z_FOR_RELATIVE_COMPLEX", "Q_FOR_PAIR_KERNEL"],
+      "active_block_range": [1, 3],
+      "ten_shapes_modulo_permutation": ["(0)", "(1)", "(0,0)", "(2)", "(1,0)", "(0,0,0)", "(3)", "(2,0)", "(1,1)", "(1,0,0)"],
+      "all_labeled_instances_required": true,
+      "still_missing_shapes": ["(0,0)", "(1,0)", "(0,0,0)", "(3)", "(2,0)", "(1,1)", "(1,0,0)"],
+      "required_program_obligations": [
+        "COMPLETE_SOURCE_DERIVED_JOINED_RELATIVE_COMPLEX",
+        "STABLE_PARENT_SIGNATURE_BLOCK_SUPPORT_ORIENTATION_AND_INFINITY_PROVENANCE",
+        "ONE_SIMULTANEOUS_SUBDIVISION",
+        "ARBITRARY_FACE_CHAIN_COHERENCE_AND_D_SQUARED_ZERO",
+        "FILTRATION_PRESERVING_COMPARISON_TO_ACTUAL_COMPACTIFIED_JOINED_CECH_COMPLEX",
+        "RATIONAL_PAIR_KERNEL_EXACTNESS"
+      ],
+      "pair_kernel_statement": "ker[direct_sum_(i<j) H_c^1(B_i intersect B_j;Q) -> H_c^1(B_0 intersect B_1 intersect B_2;Q)] = 0",
+      "implied_by_a_alone": false,
+      "implies_target_c": false
+    },
+    "target_c": {
+      "id": "C_INDEPENDENT_TRIPLE_COMPONENT_TRUE_INFINITY_ESCAPE",
+      "kind": "TRIPLE_BRANCH_THEOREM_PROGRAM",
+      "independent_of_target_b": true,
+      "statement": "EVERY_CONNECTED_COMPONENT_OF_THE_ACTUAL_TRIPLE_BAD_INTERSECTION_ESCAPES_TO_CERTIFIED_TRUE_PARENT_INFINITY",
+      "cohomology_statement": "H_c^0(B_0 intersect B_1 intersect B_2;Q) = 0",
+      "actual_parent_compactification_required": true,
+      "forbidden_escape_substitutes": [
+        "WITNESS_SUPPORT_LOSS",
+        "WITNESS_KERNEL_RANK_DROP",
+        "ZERO_BLOCK_WEIGHT",
+        "ARTIFICIAL_BOX_BOUNDARY",
+        "TARGET_A_BOUNDARY_BOOKKEEPING",
+        "TARGET_B_RELATIVE_QUOTIENT",
+        "CONVEX_BLOCK_MASS_TRANSFER"
+      ]
+    },
+    "completion_logic": {
+      "a_is_conditional_prerequisite_inside_b": true,
+      "a_alone_classification": "INFORMATIONAL_STOP",
+      "b_closes_only": "diag3_pair_hc1",
+      "c_closes_only": "diag3_triple_hc0",
+      "d3_requires": ["B_PROVED_AND_REPLAYED", "C_PROVED_AND_REPLAYED"],
+      "positive_feasibility_is_proof": false,
+      "positive_feasibility_decreases_proof_distance": false
+    },
+    "diagnostic": {
+      "id": "ROW2599_CHART_ZERO_FLOW_TRIANGLE",
+      "scope": "DIAGNOSTIC_ONLY_NOT_DENOMINATOR_OR_REPRESENTATIVE_REDUCTION",
+      "permitted_use": "TEST_LOCAL_PRIMITIVE_CHAIN_AND_FALSIFY_SINGLETON_ONLY_ARCHITECTURES"
+    },
+    "forbidden_credit": [
+      "LOCAL_ONLY_CHAIN_OR_ROW2599_GENERALIZATION",
+      "FINITE_SAMPLE_OR_CHARTWISE_ONLY",
+      "SINGLETON_ROOT_OR_ONE_FIXED_BAD_BLOCK_FILLER",
+      "SEPARATE_PER_BLOCK_SUBDIVISIONS",
+      "CODIMENSION_ONE_ONLY_COHERENCE",
+      "UNTRACKED_ACTIVE_BLOCK_PERMUTATION",
+      "NON_ANTICHAIN_OR_IMPROPER_SIGNATURE_DOMAIN",
+      "PARENT_AND_WITNESS_RANK_DROP_CONFLATION",
+      "ARTIFICIAL_OR_CLIPPED_BOUNDARY",
+      "UNCOMPARED_PARTIAL_COMPLEX_USED_FOR_PAIR_EXACTNESS",
+      "TARGET_A_OR_B_USED_AS_TARGET_C_ESCAPE"
+    ],
+    "feasibility_only": true,
+    "construction_authorized": false,
+    "construction_started": false
+  },
+  "opening_facts": {
+    "joined_clause_taxonomy": {
+      "coverage": "3/10",
+      "universally_proved": ["(0)", "(1)", "(2)"],
+      "critical_missing_clause": "(1,0,0)",
+      "end_to_end_d3_denominator": false
+    },
+    "flow_triangle_canary": {
+      "scope": "EXACT_LOCAL_ROW2599_CHART_ZERO_ONLY",
+      "rank_d1": 3,
+      "rank_d2": 6,
+      "rank_c2": 7,
+      "relative_h0": "0",
+      "relative_h1": "0",
+      "relative_h2": "Z",
+      "primitive_generator": [-1, 1, 1, 1, 1, 1, 1],
+      "known_no_go": "NO_FILLER_SUBORDINATE_TO_ONE_FIXED_BAD_BLOCK_AT_A_TIME",
+      "mixed_carrier_decided": false,
+      "role": "DIAGNOSTIC_ONLY",
+      "is_global_denominator_or_representative_reduction": false
+    },
+    "triple_only_accounting": {
+      "settled": 77940147,
+      "total": 79102449,
+      "residual": 1162302,
+      "coverage": "77940147/79102449",
+      "source_order_residual_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+      "promotes_d3_alone": false
+    }
+  },
+  "proof_distance": {
+    "opening_vector": [
+      "2/9",
+      1,
+      "diag3_pair_hc1_AND_diag3_triple_hc0",
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      5,
+      8
+    ],
+    "load_bearing_obligations": [
+      "global_gluing",
+      "extension_labels",
+      "strict_closure",
+      "relative_infinity",
+      "middle_rank_replay",
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    "convergence_hypothesis": "A is conditional feasibility evidence inside B; a proved source-derived filtration-preserving B can close the rational pair kernel; an independently proved C can close triple H_c^0; only proved and replayed B plus C can close D3.",
+    "minimum_acceptable_decrease": "NO_FEASIBILITY_HANDOFF_DECREASES_PROOF_DISTANCE; FUTURE_PROVED_AND_REPLAYED_B_OR_C_MAY_CLOSE_ITS_NAMED_BRANCH_AND_ONLY_B_PLUS_C_CAN_CLOSE_D3",
+    "positive_feasibility_classification": "INFORMATIONAL",
+    "a_only_close_action": "STOP",
+    "negative_retires_only_named_level": true,
+    "null_or_timeout_decreases_distance": false,
+    "pair_branch_remains_independently_load_bearing": true,
+    "joined_3_of_10_is_end_to_end_measure": false
+  },
+  "handoffs": {
+    "allowed_labels": ["POSITIVE", "NEGATIVE", "NULL", "TIMEOUT"],
+    "exactly_one_label_per_lane": true,
+    "abc_program_status_vector_required": true,
+    "positive": {
+      "label": "POSITIVE",
+      "requires": [
+        "COMPLETE_FINITE_DEPENDENCY_CLOSED_PROOF_PROGRAM_FROM_A_INTO_B",
+        "SEPARATE_COMPLETE_FINITE_DEPENDENCY_CLOSED_PROOF_PROGRAM_FOR_C",
+        "EVERY_LEMMA_HAS_EXACT_DOMAIN_CONCLUSION_SOURCES_FALSIFIER_AND_FINITE_ACCEPTANCE_CHECK",
+        "B_PROGRAM_INCLUDES_L_SOURCE_CONSTRUCTION_ALL_TEN_SHAPES_COMPARISON_AND_PAIR_KERNEL",
+        "C_PROGRAM_INDEPENDENTLY_REACHES_ACTUAL_TRUE_PARENT_INFINITY",
+        "ALL_DEPENDENCIES_TERMINATE_WITHIN_DELIVERABLE_CEILING"
+      ],
+      "is_a_theorem_proof": false,
+      "proves_a_b_c_d3_or_9dvl": false,
+      "a_only_is_positive": false,
+      "a_only_classification_and_action": "INFORMATIONAL_STOP",
+      "authorizes": "NO_CONSTRUCTION_OR_PROMOTION"
+    },
+    "negative": {
+      "label": "NEGATIVE",
+      "requires": [
+        "EXACTLY_ONE_NAMED_LEVEL_A_B_OR_C_AND_NAMED_FORMULATION",
+        "EXACT_ADMISSIBLE_COUNTEREXAMPLE_OR_UNIVERSAL_NO_GO_AT_THAT_FULL_SCOPE",
+        "PINNED_PARENT_PROPER_ANTICHAIN_ACTIVE_SUBSET_PERMUTATION_SUPPORT_AND_SPECIALIZATION",
+        "RETIREMENT_SCOPED_ONLY_TO_NAMED_LEVEL_AND_FORMULATION"
+      ],
+      "one_ansatz_failure_is_sufficient": false,
+      "known_singleton_root_no_go_is_sufficient": false,
+      "negative_at_one_level_refutes_other_levels_or_d3": false
+    },
+    "null": {
+      "label": "NULL",
+      "requires": [
+        "A_B_C_STATUS_VECTOR",
+        "FIRST_UNPROVED_INTERFACE_SUBDIVISION_COHERENCE_COMPARISON_KERNEL_OR_ESCAPE_EDGE_PINNED",
+        "ALL_PARTIAL_LOCAL_OR_CONDITIONAL_RESULTS_FAIL_CLOSED"
+      ],
+      "local_only_chain_classification": "NULL"
+    },
+    "timeout": {
+      "label": "TIMEOUT",
+      "requires": [
+        "FREEZE_A_B_C_PROGRAM_STATUS_PROVED_LEMMAS_REJECTED_APPROACHES_OPEN_EDGES_AND_SOURCE_PINS",
+        "NO_CEILING_ENLARGEMENT_OR_CENSUS"
+      ],
+      "incomplete_work_may_be_relabelled_positive": false
+    }
+  },
+  "roles": [
+    {
+      "id": "TOPOLOGY_CONSTRUCTION",
+      "independent": true,
+      "deliverables": [
+        "ONE_A_TO_B_PROOF_PROGRAM_MEMO",
+        "ONE_FINITE_ACYCLIC_DEPENDENCY_GRAPH",
+        "AT_MOST_NINE_NAMED_PROOF_OBLIGATIONS",
+        "ONE_RELATIVE_BOUNDARY_AND_SOURCE_COMPARISON_SCHEMA_WITH_NO_RANK_ASSERTION"
+      ],
+      "maps_a_into_b_prerequisites_without_assuming_b": true,
+      "may_assert_global_rank_pair_kernel_or_triple_escape": false,
+      "may_certify_own_naturality_gate": false,
+      "construction_campaign_allowed": false
+    },
+    {
+      "id": "OBSTRUCTION_FALSIFIER",
+      "independent": true,
+      "deliverables": [
+        "ONE_OBSTRUCTION_DOSSIER",
+        "ONE_PINNED_CANARY_REPLAY",
+        "AT_MOST_THREE_FULLY_SPECIFIED_MINIMAL_OBSTRUCTION_MODELS"
+      ],
+      "must_distinguish_ansatz_failure_from_universal_no_go": true,
+      "must_scope_retirement_to_named_level": true,
+      "may_import_topology_acceptance_logic": false
+    },
+    {
+      "id": "SEMIALGEBRAIC_NATURALITY",
+      "independent": true,
+      "deliverables": [
+        "ONE_A_B_QUANTIFIER_SEAM_MATRIX",
+        "ONE_SEPARATE_C_ESCAPE_BOUNDARY_MATRIX",
+        "ONE_DESCENT_MONODROMY_ARBITRARY_CHAIN_COHERENCE_VERDICT"
+      ],
+      "chartwise_result_can_pass": false,
+      "a_true_boundary_bookkeeping_proves_c_escape": false,
+      "must_distinguish_parent_and_witness_rank_drop": true,
+      "must_name_theorem_for_each_passage": true
+    },
+    {
+      "id": "REFEREE",
+      "independent": true,
+      "deliverables": [
+        "ONE_FROZEN_PACKAGE_REVIEW",
+        "ONE_INDEPENDENT_STDLIB_CONTRACT_VERIFIER_WITH_AT_LEAST_24_HOSTILES",
+        "ONE_FINAL_FAIL_CLOSED_HANDOFF"
+      ],
+      "reviews_only_frozen_package": true,
+      "positive_means_complete_finite_proof_program_not_proof": true,
+      "separate_a_b_c_program_statuses_required": true,
+      "producer_acceptance_import_allowed": false,
+      "may_authorize_construction_or_promotion": false
+    }
+  ],
+  "deliverable_ceiling": {
+    "timebox_unit": "HANDOFF_ROUNDS",
+    "initial_handoff_rounds_per_discovery_lane": 1,
+    "maximum_referee_directed_revision_rounds_per_discovery_lane": 1,
+    "third_research_pass_allowed": false,
+    "maximum_new_evidence_files": 12,
+    "allowed_new_file_kinds": ["TEXT", "JSON", "PYTHON_STDLIB"],
+    "topology_max_named_proof_obligations": 9,
+    "falsifier_max_minimal_models": 3,
+    "pinned_canary_replays": 1,
+    "new_atlas_allowed": false,
+    "global_census_allowed": false,
+    "broad_sampling_allowed": false,
+    "unbounded_search_allowed": false,
+    "network_or_external_solver_allowed": false,
+    "paid_or_external_compute_allowed": false,
+    "ceiling_extendable": false
+  },
+  "midpoint": {
+    "trigger": "FIRST_COMPLETE_HANDOFF_FROM_TOPOLOGY_FALSIFIER_AND_NATURALITY_OR_EARLIER_EXACT_NEGATIVE_OR_DECISIVE_NULL",
+    "freeze_claim_dependency_graph": true,
+    "continue_iff": [
+      "A_B_AND_C_EACH_HAVE_FINITE_DEPENDENCY_LIST_WITH_NO_UNNAMED_CLASSIFICATION_OR_CENSUS",
+      "A_HAS_ACYCLIC_L_SOURCE_INTERFACE_PROPER_ANTICHAIN_R1_TO_3_PERMUTATION_SIMULTANEOUS_SUBDIVISION_AND_ARBITRARY_CHAIN_COHERENCE_WITH_NO_RANK_CLAIM",
+      "B_HAS_FINITE_OBLIGATIONS_FOR_L_SOURCE_ALL_LABELED_TEN_SHAPES_SOURCE_PROVENANCE_COMPARISON_AND_PAIR_KERNEL",
+      "C_HAS_SEPARATE_ROUTE_FROM_ACTUAL_TRIPLE_COMPONENTS_TO_CERTIFIED_TRUE_PARENT_INFINITY_NOT_A_OR_B_BOOKKEEPING",
+      "NO_CORRECTLY_SCOPED_UNIVERSAL_COUNTEREXAMPLE_AND_DECISIVE_PROGRAM_OR_NEGATIVE_REACHABLE_IN_ONE_REVISION"
+    ],
+    "failure_action": "STOP_DISCOVERY_FREEZE_AND_SEND_TO_REFEREE",
+    "a_only_action": "INFORMATIONAL_STOP",
+    "continuation_is_progress": false,
+    "positive_program_is_theorem_progress": false
+  },
+  "stop_rules": [
+    "BASE_TREE_LEDGER_OR_SOURCE_PIN_DRIFT",
+    "LOCAL_ROW2599_SAMPLED_OR_CHARTWISE_CHAIN_OFFERED_AS_COMPLETE_PROOF_PROGRAM",
+    "SINGLETON_ROOT_ONE_BLOCK_COLLAR_MACROBOX_CLIPPED_OR_ARTIFICIAL_BOUNDARY_SUBSTITUTE",
+    "PROPER_ANTICHAIN_R1_TO_3_PERMUTATION_OR_ALL_LABELED_INSTANCE_SCOPE_OMITTED",
+    "SEPARATE_PER_BLOCK_SUBDIVISION_OR_CODIMENSION_ONE_ONLY_COHERENCE",
+    "PARENT_MATRIX_AND_WITNESS_MATRIX_OR_SUPPORT_RANK_DROP_CONFLATED",
+    "TRUE_PARENT_INFINITY_REPLACED_BY_LOCAL_CUTOFF",
+    "A_ASSUMES_COMPLETE_B_OR_B_FAILS_TO_CONSTRUCT_AND_VERIFY_L_SOURCE",
+    "A_ASSERTS_GLOBAL_RANK_PAIR_KERNEL_TRIPLE_ESCAPE_OR_D3",
+    "PAIR_KERNEL_INFERRED_FROM_A_LOCAL_H2_ANONYMOUS_TAXONOMY_OR_UNCOMPARED_PARTIAL_COMPLEX",
+    "B_OMITS_MISSING_FACE_TYPE_SOURCE_PROVENANCE_OR_FILTRATION_PRESERVING_COMPARISON",
+    "C_INFERRED_FROM_A_BOUNDARY_B_QUOTIENT_WITNESS_DEGENERATION_SUPPORT_LOSS_OR_CONVEX_MASS_TRANSFER",
+    "JOINED_3_OF_10_USED_AS_END_TO_END_DENOMINATOR",
+    "TRIPLE_ONLY_ACCOUNTING_USED_WHILE_PAIR_BRANCH_IS_OMITTED",
+    "CONSTRUCTION_ATLAS_CENSUS_BROAD_SAMPLE_THIRD_PASS_OR_CEILING_ENLARGEMENT",
+    "LANE_SELF_CERTIFICATION_OR_REFEREE_IMPORTS_PRODUCER_ACCEPTANCE",
+    "POSITIVE_PROGRAM_RELABELED_AS_PROOF_OR_A_ONLY_CONTINUATION",
+    "CANONICAL_STATE_LEDGER_STATUS_EDIT_OR_THEOREM_PROMOTION",
+    "GITHUB_CONNECTOR_NETWORK_PAID_EXTERNAL_COMPUTE_OR_IRREVERSIBLE_MUTATION"
+  ],
+  "authority": {
+    "canonical_theorem_files_writable": false,
+    "theorem_ledger_writable": false,
+    "canonical_state_writable": false,
+    "closing_ledger_required": "2/9",
+    "ledger_delta_required": "0/9",
+    "theorem_promotion_allowed": false,
+    "positive_feasibility_is_theorem_proof": false,
+    "a_only_classification_and_action": "INFORMATIONAL_STOP",
+    "d3_closure_requires_proved_replayed_b_and_c": true,
+    "positive_handoff_proves_d3_or_9dvl": false,
+    "successor_construction_requires_new_governed_cycle": true,
+    "github_mode": "READ_ONLY",
+    "connector_use_allowed": false,
+    "network_use_allowed": false,
+    "external_mutation_allowed": false
+  },
+  "charter": {
+    "path": "ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/CYCLE.md",
+    "sha256": "f7fcb36b2a734ae89188ae347eb332b59a0169aaefbccf07702619760371ba81"
+  },
+  "source_pins": [
+    {
+      "path": "ops/research-team/PROTOCOL.md",
+      "bytes": 11222,
+      "sha256": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CLOSING_MANIFEST.json",
+      "bytes": 4187,
+      "sha256": "2ef455643cc1a20812ea76a57ec650d6b251b522049851913aeedc7bcffccaea"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CYCLE_REPORT.md",
+      "bytes": 10862,
+      "sha256": "ccb34a1b416bd65920a0b50f780e66292eece697847afe8042b4d7a2fd6a0df0"
+    },
+    {
+      "path": "ops/team/theorem-reset-prover-strategy/FINDINGS.md",
+      "bytes": 10081,
+      "sha256": "4ce7b6504cb07f75779660f0a7d04681a7e98bb5d0a72e3fb9b2884267ace9b1"
+    },
+    {
+      "path": "ops/team/theorem-reset-falsifier/FINDINGS.md",
+      "bytes": 6659,
+      "sha256": "893ecc8d530e7af0970cc4bb232fb34e99cb8fc5e0e6b073c93d423c7313420f"
+    },
+    {
+      "path": "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "bytes": 16265,
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a"
+    },
+    {
+      "path": "ai/omreal/verify_diag3_joined_flow_triangle.py",
+      "bytes": 9283,
+      "sha256": "ac01851b53d4bed1c859f74bad2e71a5025825fe7accdac13263f5d6518a0944"
+    },
+    {
+      "path": "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+      "bytes": 13943,
+      "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f"
+    },
+    {
+      "path": "ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+      "bytes": 7350,
+      "sha256": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4"
+    },
+    {
+      "path": "ai/omreal/DIAG3_ARCHITECTURE_ADVERSARIAL_AUDIT.md",
+      "bytes": 12448,
+      "sha256": "046dc84c138cbbed9add0946392d72ddb3b73b332ddb4c9029ea54348a85562e"
+    },
+    {
+      "path": "ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md",
+      "bytes": 7170,
+      "sha256": "0a372197a49f4a767c06b23a6df830ef2784e7fe653b4b3eb1a506eec0518e27"
+    },
+    {
+      "path": "ai/omreal/NINE_DIAGONAL_STATUS.md",
+      "bytes": 135472,
+      "sha256": "07c146e835f6a62c29ab653d353d73469df1e6022018ffec76f6775b65ca7ae2"
+    },
+    {
+      "path": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
+      "bytes": 90677,
+      "sha256": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e"
+    }
+  ]
+}

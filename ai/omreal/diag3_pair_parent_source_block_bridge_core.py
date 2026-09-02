@@ -142,9 +142,9 @@ def source_overlap(matrices, states):
     factor_payload = np.packbits(states[SOURCE_CHART], bitorder="little").tobytes()
     return {
         "shared_chart": SOURCE_CHART,
-        "existing_transition_certificate": str(transition.OUTPUT.relative_to(HERE.parents[1])),
+        "existing_transition_certificate": transition.OUTPUT.relative_to(HERE.parents[1]).as_posix(),
         "existing_transition_certificate_sha256": transition.file_sha256(transition.OUTPUT),
-        "existing_label_certificate": str(source_labels.OUTPUT.relative_to(HERE.parents[1])),
+        "existing_label_certificate": source_labels.OUTPUT.relative_to(HERE.parents[1]).as_posix(),
         "existing_label_certificate_sha256": source_labels.file_sha256(source_labels.OUTPUT),
         "raw_extension_labels": len(raw_labels),
         "raw_extension_labels_sha256": source_labels.labels_digest(raw_labels),
@@ -359,13 +359,13 @@ def build_record(progress=False):
             "global_parent_cell_coverage": "NOT_CLAIMED",
         },
         "inputs": {
-            "point_bank_path": str(transition.POINT_BANK.relative_to(HERE.parents[1])),
+            "point_bank_path": transition.POINT_BANK.relative_to(HERE.parents[1]).as_posix(),
             "point_bank_sha256": transition.file_sha256(transition.POINT_BANK),
-            "factor_states_path": str(transition.FACTOR_STATES.relative_to(HERE.parents[1])),
+            "factor_states_path": transition.FACTOR_STATES.relative_to(HERE.parents[1]).as_posix(),
             "factor_states_sha256": transition.file_sha256(transition.FACTOR_STATES),
-            "factor_census_path": str(transition.FACTOR_CENSUS.relative_to(HERE.parents[1])),
+            "factor_census_path": transition.FACTOR_CENSUS.relative_to(HERE.parents[1]).as_posix(),
             "factor_census_sha256": transition.file_sha256(transition.FACTOR_CENSUS),
-            "candidate_factor_path": str(transition.CANDIDATES.relative_to(HERE.parents[1])),
+            "candidate_factor_path": transition.CANDIDATES.relative_to(HERE.parents[1]).as_posix(),
             "candidate_factor_sha256": transition.file_sha256(transition.CANDIDATES),
         },
         "straight_transition_audit": {

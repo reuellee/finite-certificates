@@ -1,0 +1,317 @@
+{
+  "format": "9dvl-d9-universal-cut-self-test-v1",
+  "certificates": [
+    {
+      "format": "9dvl-d9-universal-cut-coverage-certificate-v1",
+      "schema_version": 1,
+      "target_id": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+      "mode": "SELF_TEST",
+      "source_binding": {
+        "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+        "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+        "canonical_base_commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+        "canonical_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+        "source_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "quantifiers": {
+        "parents": "EVERY_REALIZABLE_UOM(4,8)_PARENT",
+        "families": "EVERY_PROPER_PAIRWISE_INCOMPARABLE_NINE_FAMILY",
+        "active_literals": "EVERY_CONSISTENT_ACTIVE_LITERAL_ASSIGNMENT",
+        "cuts": "EVERY_PAIR_OF_DISTINCT_FEASIBLE_ACTIVE_SECTOR_COMPONENTS",
+        "ends": "ALL_CHARTS_MULTIPLICITIES_MULTIWALLS_RECURSIVE_STRATA_AND_GENUINE_INFINITY"
+      },
+      "grammar": {
+        "format": "d9-universal-cut-obstruction-grammar-v1",
+        "residual_wall_type_count": 13,
+        "atoms": [
+          {"id": "a-wall", "kind": "RESIDUAL_WALL_TYPE", "source_ref": "fixture:wall"},
+          {"id": "b-circuit", "kind": "SUPPORT_MINIMAL_GORDAN_CIRCUIT", "source_ref": "fixture:circuit"},
+          {"id": "c-multiwall", "kind": "SIGNED_MULTIWALL_INCIDENCE", "source_ref": "fixture:multiwall"},
+          {"id": "d-boundary", "kind": "RECURSIVE_BOUNDARY_STRATUM", "source_ref": "fixture:boundary"},
+          {"id": "e-infinity", "kind": "GENUINE_INFINITY_END", "source_ref": "fixture:infinity"}
+        ],
+        "covered_atom_ids": ["a-wall", "b-circuit", "c-multiwall", "d-boundary", "e-infinity"],
+        "pending_atom_ids": [],
+        "preserved_structure": ["SIGN", "DUPLICATE_OCCURRENCE", "CHART", "PROPERNESS", "MULTIWALL_INCIDENCE", "RECURSIVE_FACET", "GENUINE_INFINITY"],
+        "max_obstruction_types": 10000,
+        "max_exact_instances": 250000,
+        "boundary_contract": {
+          "residence": "EXACT_STRICT_PARENT_OR_NAMED_BOUNDARY_STRATUM_REQUIRED",
+          "attachment": "EXACT_COFACE_OR_EXPLICIT_UNRESOLVED_ATTACHMENT_REQUIRED",
+          "recursive_facet_default": "BOUNDARY_ONLY_NOT_A_GLOBAL_SEPARATOR",
+          "strict_coface": "REQUIRES_SEPARATE_EXACT_WITNESS"
+        }
+      },
+      "coverage": {
+        "status": "COMPLETE",
+        "adapter": {
+          "id": "SELF_TEST_EXACT_D9_CUT_ADAPTER",
+          "version": 1,
+          "status": "FIXTURE_ONLY",
+          "evidence_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "proof_object_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      "endpoint": "UNIVERSAL_D9_CUT_OBSTRUCTIONS_UNSAT",
+      "evidence": {
+        "kind": "ALL_COVERED_OBSTRUCTIONS_EXACT_UNSAT",
+        "instances": [
+          {
+            "id": "instance-000",
+            "type_id": "a-wall",
+            "linear_forms": [["1"], ["-1"]],
+            "positive_multipliers": ["1", "1"]
+          },
+          {
+            "id": "instance-001",
+            "type_id": "c-multiwall",
+            "linear_forms": [["2", "-1"], ["-2", "1"]],
+            "positive_multipliers": ["1", "1"]
+          }
+        ],
+        "coverage_theorem_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+        "obstruction_registry_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+      },
+      "scope": {
+        "classification": "positive",
+        "coverage": "PROVED",
+        "diagonal_9": "PROVED_PENDING_COORDINATOR_INTEGRATION",
+        "ledger_before": "2/9",
+        "ledger_after": "2/9",
+        "ledger_change_recommended": "PROMOTE_DIAGONAL_9_AFTER_INDEPENDENT_REPLAY",
+        "sample_only": false
+      },
+      "prohibited_consequences": ["LOCAL_COORIENTATION_IMPLIES_GLOBAL_CONNECTIVITY", "ALL_STRATA_GLUING_IMPLIES_GLOBAL_CONNECTIVITY", "RECURSIVE_FACET_WALL_IS_STRICT_OPEN_PARENT_SEPARATOR", "FIXED_FAMILY_CONNECTIVITY_PROVES_DIAGONAL_9", "SAMPLED_GRAPH_IS_GLOBAL_COVERAGE", "CERTIFICATE_ENGINEER_MUTATES_THE_THEOREM_LEDGER"],
+      "semantic_sha256": "cc6a98c2aa9b2cf44c317d39b3aba17db23bd671cad0aa04ddd025a713fcc228"
+    },
+    {
+      "format": "9dvl-d9-universal-cut-coverage-certificate-v1",
+      "schema_version": 1,
+      "target_id": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+      "mode": "SELF_TEST",
+      "source_binding": {
+        "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+        "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+        "canonical_base_commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+        "canonical_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+        "source_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "quantifiers": {
+        "parents": "EVERY_REALIZABLE_UOM(4,8)_PARENT",
+        "families": "EVERY_PROPER_PAIRWISE_INCOMPARABLE_NINE_FAMILY",
+        "active_literals": "EVERY_CONSISTENT_ACTIVE_LITERAL_ASSIGNMENT",
+        "cuts": "EVERY_PAIR_OF_DISTINCT_FEASIBLE_ACTIVE_SECTOR_COMPONENTS",
+        "ends": "ALL_CHARTS_MULTIPLICITIES_MULTIWALLS_RECURSIVE_STRATA_AND_GENUINE_INFINITY"
+      },
+      "grammar": {
+        "format": "d9-universal-cut-obstruction-grammar-v1",
+        "residual_wall_type_count": 13,
+        "atoms": [
+          {"id": "a-wall", "kind": "RESIDUAL_WALL_TYPE", "source_ref": "fixture:wall"},
+          {"id": "b-circuit", "kind": "SUPPORT_MINIMAL_GORDAN_CIRCUIT", "source_ref": "fixture:circuit"},
+          {"id": "c-multiwall", "kind": "SIGNED_MULTIWALL_INCIDENCE", "source_ref": "fixture:multiwall"},
+          {"id": "d-boundary", "kind": "RECURSIVE_BOUNDARY_STRATUM", "source_ref": "fixture:boundary"},
+          {"id": "e-infinity", "kind": "GENUINE_INFINITY_END", "source_ref": "fixture:infinity"}
+        ],
+        "covered_atom_ids": ["a-wall", "b-circuit", "c-multiwall", "d-boundary", "e-infinity"],
+        "pending_atom_ids": [],
+        "preserved_structure": ["SIGN", "DUPLICATE_OCCURRENCE", "CHART", "PROPERNESS", "MULTIWALL_INCIDENCE", "RECURSIVE_FACET", "GENUINE_INFINITY"],
+        "max_obstruction_types": 10000,
+        "max_exact_instances": 250000,
+        "boundary_contract": {
+          "residence": "EXACT_STRICT_PARENT_OR_NAMED_BOUNDARY_STRATUM_REQUIRED",
+          "attachment": "EXACT_COFACE_OR_EXPLICIT_UNRESOLVED_ATTACHMENT_REQUIRED",
+          "recursive_facet_default": "BOUNDARY_ONLY_NOT_A_GLOBAL_SEPARATOR",
+          "strict_coface": "REQUIRES_SEPARATE_EXACT_WITNESS"
+        }
+      },
+      "coverage": {
+        "status": "COMPLETE",
+        "adapter": {
+          "id": "SELF_TEST_EXACT_D9_CUT_ADAPTER",
+          "version": 1,
+          "status": "FIXTURE_ONLY",
+          "evidence_sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+        },
+        "proof_object_sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+      },
+      "endpoint": "EXACT_D9_TWO_COMPONENT_SEPARATOR",
+      "evidence": {
+        "kind": "EXACT_COVERAGE_CERTIFIED_TWO_COMPONENT_SEPARATOR",
+        "parent_id": "fixture-parent",
+        "family_id": "fixture-nine-family",
+        "active_constraints": [
+          {"id": "always-positive", "coefficients": ["1", "0"], "relation": ">0"}
+        ],
+        "feasible_witnesses": [
+          {"component_id": "left", "point": ["-1"]},
+          {"component_id": "right", "point": ["1"]}
+        ],
+        "separator": {
+          "coefficients": ["0", "1"],
+          "left_sign": -1,
+          "right_sign": 1,
+          "coverage_certificate_sha256": "7777777777777777777777777777777777777777777777777777777777777777"
+        }
+      },
+      "scope": {
+        "classification": "negative",
+        "coverage": "PROVED",
+        "diagonal_9": "DISPROVED_PENDING_COORDINATOR_INTEGRATION",
+        "ledger_before": "2/9",
+        "ledger_after": "2/9",
+        "ledger_change_recommended": "RECORD_EXACT_D9_COUNTEREXAMPLE",
+        "sample_only": false
+      },
+      "prohibited_consequences": ["LOCAL_COORIENTATION_IMPLIES_GLOBAL_CONNECTIVITY", "ALL_STRATA_GLUING_IMPLIES_GLOBAL_CONNECTIVITY", "RECURSIVE_FACET_WALL_IS_STRICT_OPEN_PARENT_SEPARATOR", "FIXED_FAMILY_CONNECTIVITY_PROVES_DIAGONAL_9", "SAMPLED_GRAPH_IS_GLOBAL_COVERAGE", "CERTIFICATE_ENGINEER_MUTATES_THE_THEOREM_LEDGER"],
+      "semantic_sha256": "cbd84a0d0275fdfa67fc0ea0cb489f3579c52994572da1b1d154314d5d302673"
+    },
+    {
+      "format": "9dvl-d9-universal-cut-coverage-certificate-v1",
+      "schema_version": 1,
+      "target_id": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+      "mode": "SELF_TEST",
+      "source_binding": {
+        "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+        "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+        "canonical_base_commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+        "canonical_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+        "source_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "quantifiers": {
+        "parents": "EVERY_REALIZABLE_UOM(4,8)_PARENT",
+        "families": "EVERY_PROPER_PAIRWISE_INCOMPARABLE_NINE_FAMILY",
+        "active_literals": "EVERY_CONSISTENT_ACTIVE_LITERAL_ASSIGNMENT",
+        "cuts": "EVERY_PAIR_OF_DISTINCT_FEASIBLE_ACTIVE_SECTOR_COMPONENTS",
+        "ends": "ALL_CHARTS_MULTIPLICITIES_MULTIWALLS_RECURSIVE_STRATA_AND_GENUINE_INFINITY"
+      },
+      "grammar": {
+        "format": "d9-universal-cut-obstruction-grammar-v1",
+        "residual_wall_type_count": 13,
+        "atoms": [
+          {"id": "a-wall", "kind": "RESIDUAL_WALL_TYPE", "source_ref": "fixture:wall"},
+          {"id": "b-circuit", "kind": "SUPPORT_MINIMAL_GORDAN_CIRCUIT", "source_ref": "fixture:circuit"},
+          {"id": "c-multiwall", "kind": "SIGNED_MULTIWALL_INCIDENCE", "source_ref": "fixture:multiwall"},
+          {"id": "d-boundary", "kind": "RECURSIVE_BOUNDARY_STRATUM", "source_ref": "fixture:boundary"},
+          {"id": "e-infinity", "kind": "GENUINE_INFINITY_END", "source_ref": "fixture:infinity"}
+        ],
+        "covered_atom_ids": ["a-wall", "b-circuit", "c-multiwall"],
+        "pending_atom_ids": ["d-boundary", "e-infinity"],
+        "preserved_structure": ["SIGN", "DUPLICATE_OCCURRENCE", "CHART", "PROPERNESS", "MULTIWALL_INCIDENCE", "RECURSIVE_FACET", "GENUINE_INFINITY"],
+        "max_obstruction_types": 10000,
+        "max_exact_instances": 250000,
+        "boundary_contract": {
+          "residence": "EXACT_STRICT_PARENT_OR_NAMED_BOUNDARY_STRATUM_REQUIRED",
+          "attachment": "EXACT_COFACE_OR_EXPLICIT_UNRESOLVED_ATTACHMENT_REQUIRED",
+          "recursive_facet_default": "BOUNDARY_ONLY_NOT_A_GLOBAL_SEPARATOR",
+          "strict_coface": "REQUIRES_SEPARATE_EXACT_WITNESS"
+        }
+      },
+      "coverage": {
+        "status": "GAP",
+        "adapter": {
+          "id": "SELF_TEST_EXACT_D9_CUT_ADAPTER",
+          "version": 1,
+          "status": "FIXTURE_ONLY",
+          "evidence_sha256": "8888888888888888888888888888888888888888888888888888888888888888"
+        },
+        "proof_object_sha256": "9999999999999999999999999999999999999999999999999999999999999999"
+      },
+      "endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
+      "evidence": {
+        "kind": "FIRST_EXACT_UNCOVERED_MODE",
+        "first_uncovered": {
+          "atom_id": "d-boundary",
+          "mode": "RECURSIVE_FACET",
+          "exact_witness_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "survivors": ["fixture-boundary-survivor-0", "fixture-infinity-survivor-0"],
+        "next_discriminator": "classify the first recursive-facet attachment exactly",
+        "resume_argv": ["python", "fixture_resume.py", "--atom", "d-boundary"]
+      },
+      "scope": {
+        "classification": "null",
+        "coverage": "GAP",
+        "diagonal_9": "OPEN",
+        "ledger_before": "2/9",
+        "ledger_after": "2/9",
+        "ledger_change_recommended": "NONE",
+        "sample_only": false
+      },
+      "prohibited_consequences": ["LOCAL_COORIENTATION_IMPLIES_GLOBAL_CONNECTIVITY", "ALL_STRATA_GLUING_IMPLIES_GLOBAL_CONNECTIVITY", "RECURSIVE_FACET_WALL_IS_STRICT_OPEN_PARENT_SEPARATOR", "FIXED_FAMILY_CONNECTIVITY_PROVES_DIAGONAL_9", "SAMPLED_GRAPH_IS_GLOBAL_COVERAGE", "CERTIFICATE_ENGINEER_MUTATES_THE_THEOREM_LEDGER"],
+      "semantic_sha256": "82bed8134b88a067536a6e16250eb298dde95d1278579b990ded91b742282d04"
+    },
+    {
+      "format": "9dvl-d9-universal-cut-coverage-certificate-v1",
+      "schema_version": 1,
+      "target_id": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+      "mode": "SELF_TEST",
+      "source_binding": {
+        "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+        "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+        "canonical_base_commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+        "canonical_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+        "source_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "quantifiers": {
+        "parents": "EVERY_REALIZABLE_UOM(4,8)_PARENT",
+        "families": "EVERY_PROPER_PAIRWISE_INCOMPARABLE_NINE_FAMILY",
+        "active_literals": "EVERY_CONSISTENT_ACTIVE_LITERAL_ASSIGNMENT",
+        "cuts": "EVERY_PAIR_OF_DISTINCT_FEASIBLE_ACTIVE_SECTOR_COMPONENTS",
+        "ends": "ALL_CHARTS_MULTIPLICITIES_MULTIWALLS_RECURSIVE_STRATA_AND_GENUINE_INFINITY"
+      },
+      "grammar": {
+        "format": "d9-universal-cut-obstruction-grammar-v1",
+        "residual_wall_type_count": 13,
+        "atoms": [
+          {"id": "a-wall", "kind": "RESIDUAL_WALL_TYPE", "source_ref": "fixture:wall"},
+          {"id": "b-circuit", "kind": "SUPPORT_MINIMAL_GORDAN_CIRCUIT", "source_ref": "fixture:circuit"},
+          {"id": "c-multiwall", "kind": "SIGNED_MULTIWALL_INCIDENCE", "source_ref": "fixture:multiwall"},
+          {"id": "d-boundary", "kind": "RECURSIVE_BOUNDARY_STRATUM", "source_ref": "fixture:boundary"},
+          {"id": "e-infinity", "kind": "GENUINE_INFINITY_END", "source_ref": "fixture:infinity"}
+        ],
+        "covered_atom_ids": ["a-wall", "b-circuit"],
+        "pending_atom_ids": ["c-multiwall", "d-boundary", "e-infinity"],
+        "preserved_structure": ["SIGN", "DUPLICATE_OCCURRENCE", "CHART", "PROPERNESS", "MULTIWALL_INCIDENCE", "RECURSIVE_FACET", "GENUINE_INFINITY"],
+        "max_obstruction_types": 10000,
+        "max_exact_instances": 250000,
+        "boundary_contract": {
+          "residence": "EXACT_STRICT_PARENT_OR_NAMED_BOUNDARY_STRATUM_REQUIRED",
+          "attachment": "EXACT_COFACE_OR_EXPLICIT_UNRESOLVED_ATTACHMENT_REQUIRED",
+          "recursive_facet_default": "BOUNDARY_ONLY_NOT_A_GLOBAL_SEPARATOR",
+          "strict_coface": "REQUIRES_SEPARATE_EXACT_WITNESS"
+        }
+      },
+      "coverage": {
+        "status": "PARTIAL",
+        "adapter": {
+          "id": "SELF_TEST_EXACT_D9_CUT_ADAPTER",
+          "version": 1,
+          "status": "FIXTURE_ONLY",
+          "evidence_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "proof_object_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "endpoint": "HASH_PINNED_D9_CUT_SCHEMA_FRONTIER",
+      "evidence": {
+        "kind": "DETERMINISTIC_HASH_PINNED_FRONTIER",
+        "processed": ["a-wall", "b-circuit"],
+        "pending": ["c-multiwall", "d-boundary", "e-infinity"],
+        "ceiling": {"kind": "EXACT_INSTANCES", "limit": 250000, "observed": 250000},
+        "checkpoint_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "resume_argv": ["python", "fixture_resume.py", "--after", "b-circuit"]
+      },
+      "scope": {
+        "classification": "timeout",
+        "coverage": "PARTIAL",
+        "diagonal_9": "OPEN",
+        "ledger_before": "2/9",
+        "ledger_after": "2/9",
+        "ledger_change_recommended": "NONE",
+        "sample_only": false
+      },
+      "prohibited_consequences": ["LOCAL_COORIENTATION_IMPLIES_GLOBAL_CONNECTIVITY", "ALL_STRATA_GLUING_IMPLIES_GLOBAL_CONNECTIVITY", "RECURSIVE_FACET_WALL_IS_STRICT_OPEN_PARENT_SEPARATOR", "FIXED_FAMILY_CONNECTIVITY_PROVES_DIAGONAL_9", "SAMPLED_GRAPH_IS_GLOBAL_COVERAGE", "CERTIFICATE_ENGINEER_MUTATES_THE_THEOREM_LEDGER"],
+      "semantic_sha256": "9d5468d41e0dbd7dbf837e1511fd091152eea6ba4fd263853f293e7bfb8180ef"
+    }
+  ]
+}

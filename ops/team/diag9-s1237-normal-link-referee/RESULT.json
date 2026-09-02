@@ -1,0 +1,52 @@
+{
+  "format": "diag9-s1237-normal-link-closing-referee-result-v1",
+  "track_id": "diag9-s1237-normal-link-referee",
+  "target_id": "D9_S1237_4SUPPORT_NORMAL_LINK_GATE1",
+  "reviewed_head": "5efbd07a25b818306f9fd22597fd81a0f2091309",
+  "reviewed_tree": "b8cb35941043ff40be06cba98461ddab0ba14c8f",
+  "reviewed_parent": "c6bd7a6afeda0888fc950710b941cac6f6c9bf95",
+  "verdict": "ACCEPT",
+  "classification": "finite-exact local normal-link route no-go",
+  "endpoint": "NORMAL_LINK_REDUCTION_NO_GO",
+  "summary": "The frozen head exactly establishes that the tangential four-support normal-link reduction is insufficient: the ordinary common-radial strict parent model is singular at both replayed support points, and an oriented residual wall occurs on recursive facet 1237. Weighted recursive analysis remains open.",
+  "independent_replay": {
+    "active_factor_classes": 3539,
+    "all_occurrences_of_active_classes": 6167,
+    "aligned_occurrence_union": 5026,
+    "certificate_literal_census_semantic_sha256": "a1b9d3d9da1e01df83621dc8f1c7959f86ae2e0d9bd3bc457124c561cbac245a",
+    "parent_inequalities": 70,
+    "producer_initial_forms": 4,
+    "gordan_relations": 2,
+    "factor_8552_orientation": "d*i-e<0",
+    "factor_8552_lowest_normal_form": "d/4-e",
+    "factor_8552_exact_same_stratum_lifts": 3,
+    "common_recursive_stratum": "1237"
+  },
+  "certificate_contract": {
+    "v1_mathematical_endpoint": null,
+    "unmaterialized_producer_payload": "PRESERVED_AS_AN_EXPLICIT_GAP",
+    "referee_adapter": "INDEPENDENTLY_CLOSES_ONLY_THE_TWO_MATERIALIZED_FROZEN_WITNESS_METHODS",
+    "digest_only_geometry": "REJECTED"
+  },
+  "scope": {
+    "accepted": "finite-exact local normal-link route no-go",
+    "ordinary_radial_model": "singular at the exact replayed support points",
+    "recursive_weighted_walls": "open",
+    "strict_open_parent_crossing": "not claimed",
+    "global_coverage_or_separator": "not claimed",
+    "collar_or_mincut": "not claimed",
+    "diagonal_9": "open",
+    "tangential_four_support_reduction": "retired as stated"
+  },
+  "ledger": {
+    "before": "2/9",
+    "after": "2/9",
+    "delta": 0,
+    "change_recommended": "none"
+  },
+  "authority": "Library canonical; Drive recovery mirror; GitHub read-only; local scratch ephemeral",
+  "hostile_mutations_rejected": 16,
+  "replay": "PYTHONDONTWRITEBYTECODE=1 python ops/team/diag9-s1237-normal-link-referee/verify_closing_referee.py",
+  "closing_manifest_semantic_sha256": "877ee39e97c9cc721fb2cc578618701953f8436fce128c3cba54fdf2026d4809",
+  "semantic_sha256": "98acb050a8fab188ebd3301a332d0797930c8772fab119494565b7cf69e9399e"
+}

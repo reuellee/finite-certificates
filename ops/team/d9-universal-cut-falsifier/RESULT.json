@@ -1,0 +1,172 @@
+{
+  "format": "d9-universal-cut-falsifier-result-v1",
+  "track_id": "d9-universal-cut-falsifier",
+  "role": "independent falsifier",
+  "base_revision": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "base_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "canonical_math_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "outcome": "inconclusive",
+  "endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
+  "classification": "FINITE_EXACT_LOGICAL_NO_GO_PLUS_NULL_ACTUAL_D9",
+  "summary": "A minimal exact two-wall model and a matched local/infinity-memory pair refute every memoryless local-type-to-global-cut inference, but neither is source-reconstructed from a realizable UOM(4,8) parent; no actual D9 counterexample or universal coverage proof is present.",
+  "minimal_exact_countermodel": {
+    "scope": "fatal counterexample to the abstract implication from smooth cooriented graph walls, transverse multiwalls, consistent literals, and proper pairwise-incomparable regions to connected strict sign sectors",
+    "ambient": "R^9 with coordinates (x,y,z1,z2,z3,z4,z5,z6,z7)",
+    "polynomials": [
+      "q1=y",
+      "q2=x^2-1-y",
+      "q3=z1",
+      "q4=z2",
+      "q5=z3",
+      "q6=z4",
+      "q7=z5",
+      "q8=z6",
+      "q9=z7"
+    ],
+    "regions": "Fi={qi>0}",
+    "feasible_witnesses": {
+      "left": ["-2", "1", "1", "1", "1", "1", "1", "1", "1"],
+      "right": ["2", "1", "1", "1", "1", "1", "1", "1", "1"]
+    },
+    "exact_component_decomposition": [
+      "x<-1, 0<y<x^2-1, and zj>0 for all j",
+      "x>1, 0<y<x^2-1, and zj>0 for all j"
+    ],
+    "component_count": 2,
+    "separator_proof": "Any path from the left witness to the right witness has x=0 somewhere; there q2=-1-y<0 because q1=y>0.",
+    "component_charts": "On either x interval, (x,s,z) with s=y/(x^2-1) identifies the component with an interval times (0,1) times (0,infinity)^7.",
+    "local_certificates": {
+      "global_graph_walls": ["q1=0 is y=0", "q2=0 is y=x^2-1", "q(2+j)=0 is zj=0"],
+      "nonzero_pivots": ["partial_y(q1)=1", "partial_y(q2)=-1", "partial_zj(q(2+j))=1"],
+      "full_multiwall_points": ["(-1,0,0,0,0,0,0,0,0)", "(1,0,0,0,0,0,0,0,0)"],
+      "full_multiwall_jacobian_determinants": ["2", "-2"],
+      "local_link": "all intersections are simple normal crossings; each full multiwall has the complete 2^9 orthant link",
+      "proper_pairwise_incomparable": true,
+      "ordered_noninclusion_witnesses_replayed": 72
+    },
+    "minimality": "Within arrangements of globally connected graph walls with nonzero common pivot, dimension one gives intersections of oriented rays and cannot disconnect; one graph-wall side in dimension two is connected. Two walls in dimension two are therefore the smallest such core. Seven coordinate halfspaces lift it to the nine-region/nine-dimensional hostile model.",
+    "not_an_actual_d9_counterexample": "No UOM(4,8) parent matrix/chirotope, nine extension signatures, residual determinant occurrence map, parent-unit orientation map, or complete parent-cell residence certificate is supplied."
+  },
+  "canonical_model_replay": {
+    "source": "ai/omreal/ATLAS_HELLY.md",
+    "q1": "y",
+    "q2": "(x^2-1)(x^2-4)-y",
+    "other_factors": "z1 through z7",
+    "strict_positive_sector_components": ["x<-2", "abs(x)<1", "x>2"],
+    "component_count": 3,
+    "relation_to_minimal_model": "The degree-two model removes two roots and one component while preserving the exact logical failure."
+  },
+  "global_memory_pair": {
+    "purpose": "show that local smooth/transverse type counts and a common leading form at infinity do not encode global nesting",
+    "core_coordinates": "(x,z,y)",
+    "common_q1": "y",
+    "nested_q2": "(x^2+z^2-1)(x^2+z^2-4)-y",
+    "disjoint_q2": "(((x-3)^2+z^2-1)((x+3)^2+z^2-1))-y",
+    "common_local_data": {
+      "q2_wall": "one connected smooth global graph over (x,z)",
+      "q1_q2_intersection": "two disjoint smooth circles, everywhere transverse",
+      "leading_form_at_infinity": "(x^2+z^2)^2",
+      "local_link_types": "identical simple transverse two-wall links"
+    },
+    "different_global_behavior": {
+      "nested_positive_sector_components": 2,
+      "nested_bases": ["x^2+z^2<1", "x^2+z^2>4"],
+      "disjoint_positive_sector_components": 1,
+      "disjoint_base": "the connected exterior of the two disjoint closed unit disks centered at (-3,0) and (3,0)"
+    },
+    "nine_region_lift": "Use q3=u1, q4=1-u1, and q5 through q9=u2 through u6 in R^9; the common auxiliary sector is (0,1) times (0,infinity)^5 and does not change component counts.",
+    "consequence": "A finite grammar must retain component identities and the global attachment/nesting relation of wall strata. Type names, local circuit links, orientation multisets, recursive flags, and coarse infinity leading forms are insufficient."
+  },
+  "countermodel_rejection_hypotheses": {
+    "exact_domain_gate": {
+      "name": "SOURCE_RECONSTRUCTIBLE_D9_INSTANCE",
+      "statement": "X must be one normalized realization cell of a realizable UOM(4,8) parent; every qj must be a primitive global residual determinant factor with all labeled occurrences and fixed-sign parent-unit transports; every Fi must be the actual feasibility locus of a named extension signature; parent residence, properness, and ordered noninclusions must be exact.",
+      "effect": "This is the least noncircular theorem-domain gate that rejects the abstract model: the required source reconstruction is absent.",
+      "nonconsequence": "Membership in the D9 source class does not itself prove component-faithful coverage or connectivity."
+    },
+    "exact_structural_discriminator": {
+      "name": "GLOBAL_COMPONENT_FAITHFUL_SIGN_GEODESY",
+      "statement": "The complete compactified chamber/stratum incidence is covered, each chamber occurrence has a stable global component identity, and the factor-sign map is injective and isometric (equivalently for the sufficient route, any two generic points admit a path crossing each geometric factor at most once).",
+      "effect": "The minimal and canonical models fail immediately because distinct sector components have the identical all-positive factor-sign word. The nested/disjoint pair shows why component-faithful global attachment, not only local types or a leading infinity form, is load-bearing.",
+      "status_for_actual_d9": "UNPROVED"
+    },
+    "weakest_direct_but_circular_separator": "Assuming every realizable complete factor-sign cell is connected also rejects the model, but this simply assumes the target connectivity and is not an acceptable reduction lemma."
+  },
+  "attack_matrix": [
+    {
+      "attack": "local-type-to-global-cut inference",
+      "status": "REFUTED_AT_ABSTRACT_AXIOM_LEVEL",
+      "evidence": "The minimal model has only smooth connected graph walls and simple normal crossings but its all-positive sector has two components; the nested/disjoint pair has matching local inventories and leading form but different component counts."
+    },
+    {
+      "attack": "multiwall memory",
+      "status": "FATAL_FOR_MEMORYLESS_SCHEMA",
+      "evidence": "The two full multiwall occurrences in the minimal model have standard orthant links, while both adjacent all-positive chamber germs carry one factor-sign word yet belong to different global components. Stable occurrence and attachment identities are required."
+    },
+    {
+      "attack": "genuine infinity",
+      "status": "UNRESOLVED_FOR_ACTUAL_D9",
+      "evidence": "The abstract model has no source-derived parent compactification. Moreover the nested/disjoint pair shares its degree-four leading form, so a coarse infinity sign is insufficient; complete attachment incidence is required."
+    },
+    {
+      "attack": "occurrence orientation",
+      "status": "CONDITIONALLY_GUARDED_BY_CANONICAL_THEOREM",
+      "evidence": "DIAG9_ACTIVE_SECTOR_THEOREM transports every occurrence through sign(c_E*u_E) and declares opposite transported active orientations empty. Any schema that stores only a factor ID or raw occurrence sign remains unsound."
+    },
+    {
+      "attack": "properness and pairwise incomparability",
+      "status": "DOES_NOT_REJECT_ABSTRACT_MODEL",
+      "evidence": "The minimal nine-region model has 72 exact ordered noninclusion witnesses. For actual D9, a sampled network cannot prove global inclusion or universal support; exact global labels or ordered witnesses are required."
+    },
+    {
+      "attack": "feasible-component labeling",
+      "status": "FATAL_FOR_FACTOR_SIGN_WORD_LABELS",
+      "evidence": "The exact left and right feasible witnesses have the identical sign word (+,+,+,+,+,+,+,+,+) but lie in different components."
+    },
+    {
+      "attack": "S12,37 opposite-parent-form canary",
+      "status": "REPLAYED_LOCAL_NO_GO_ONLY",
+      "evidence": "The two selected supports have exact opposite parent initial forms with positive Gordan weights; the ordinary common-radial strict link is empty and weighted recursive facets remain open."
+    },
+    {
+      "attack": "factor-8552 recursive-facet canary",
+      "status": "REPLAYED_LOCAL_NO_GO_ONLY",
+      "evidence": "q=d*i-e has negative, zero, and positive exact lifts while bracket 1237 stays zero; this is a recursive-facet wall, not a strict-open-parent or global separator."
+    },
+    {
+      "attack": "sampled-network repair",
+      "status": "NO_GLOBAL_COVERAGE",
+      "evidence": "The parent-860 16-chord repair connects all support intersections on its exact 24-chamber embedded network, but its source explicitly disclaims chamber coverage, component interception, and global D9 promotion."
+    },
+    {
+      "attack": "actual source-realizable D9 separator",
+      "status": "NOT_FOUND",
+      "evidence": "No exact realizable parent, proper incomparable nine-family, two feasible witnesses, and complete compactified separator certificate were found or supplied."
+    }
+  ],
+  "coverage": {
+    "included": "Exact abstract polynomial models; exact smoothness, pivot, transversality, properness/incomparability, component, sign-word, and global-memory checks; source-scope replay of the S12,37, factor-8552, and parent-860 network canaries.",
+    "excluded": "No exhaustive search of 2,604 parents or admissible nine-families; no complete D9 compactified roadmap; no producer artifact review; no claim that the abstract polynomials are residual determinants.",
+    "first_unresolved_discriminator": "Construct, for one actual source-reconstructible D9 family, the complete compactified active-sector chamber/stratum incidence with stable global component IDs and true-infinity attachments, then decide whether two chambers with the same complete active-factor sign word occur in distinct components. A same-word pair is fatal to sign-geodesy; its absence under complete coverage is the first evidence capable of rejecting the abstract mechanism noncircularly."
+  },
+  "canaries": {
+    "positive": "The minimal model replays two exact components and 72 ordered noninclusions.",
+    "negative": "Replacing q2 by 1-x^2-y yields one central component and invalidates the two-component certificate.",
+    "null": "The verifier rejects promotion to actual D9 because source reconstruction and complete compactified coverage are absent.",
+    "hostile": "All mutations in HOSTILE_TESTS.json are rejected independently."
+  },
+  "replay": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python ops/team/d9-universal-cut-falsifier/verify_d9_universal_cut_falsifier.py",
+    "expected": "exit 0; exact models, source pins, scope gates, and all 15 hostile mutations pass"
+  },
+  "source_manifest_semantic_sha256": "7b186afd26b0a278e60f434ef47165830b84e43675666f7684dceb8fe5213fc2",
+  "hostile_tests_semantic_sha256": "e72e180eae1f8743487b26a0ece5cc4c2b34cf4c1a9e0d7d00953f5897672663",
+  "open_defects": [
+    "No actual D9 instance has a complete compactified component-faithful incidence certificate.",
+    "No proved D9-specific replacement for global sign-geodesy or equivalent global attachment memory is available.",
+    "The current cycle's finite obstruction grammar is not materialized at this independent branch, so completeness cannot be tested beyond the public opening contract."
+  ],
+  "next_action": "Fail the opening gate closed until an actual D9 source-derived compactified incidence certificate distinguishes the abstract same-sign multi-component mechanism and retains recursive facets, occurrence transports, and genuine infinity.",
+  "ledger_change_recommended": "none; remain 2/9",
+  "semantic_sha256": "8dbc9a45e6148da2076d8e18519a0c00750ae02e5ca58985a0b4a929d720d808"
+}

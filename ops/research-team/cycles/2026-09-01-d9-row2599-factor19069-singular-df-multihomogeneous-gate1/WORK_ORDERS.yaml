@@ -1,0 +1,74 @@
+cycle_id: 2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1
+base_revision: 9c9a78c4225a39803a0a5ac7e4e204d9b9f3773d
+base_tree: af4bdbfc8f89e950936d59e6b0737b12eb5bdfb5
+opening_ledger: 2/9
+selected_target: D9_ROW2599_FACTOR19069_SINGULAR_DF_MULTIHOMOGENEOUS_DECOMPOSITION_GATE1
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+latest_operational_authority: >-
+  The saved local project E:\Projects\9DVL Research is the working home.
+  Native G:\My Drive\Projects\research-backups mirroring is optional and
+  length/SHA-256 verified; never use the Google Drive connector. GitHub stays
+  read-only. The latest explicit user instruction controls any conflict.
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_ORIGINAL_RING_MULTIHOMOGENEOUS_SINGULAR_DECOMPOSITION
+  predecessor_verdict: PIVOT
+  selected_count: 1
+  prohibited_routes:
+    - SEVENTY_INVERSE_VARIABLE_DISCOVERY_ROUTE
+    - BLIND_FACTORED_BARRIER_COMPONENT_SAMPLER_BUDGET_ESCALATION
+    - UNFILTERED_NONSMOOTH_ACTIVE_SET_ENUMERATION
+    - SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR
+    - PROJECTION_RETRY
+    - SYMMETRY_ONLY_COMPRESSION
+    - AMBIENT_ORBIT_TRANSFER_AS_FIXED_DOMAIN_COVERAGE
+    - UNFILTERED_MULTIWALL_ENUMERATION
+    - NUMERICAL_OR_MODULAR_PROBE_PROMOTION
+  closing_required: true
+  stagnation_rule: >-
+    If exact characteristic-zero decomposition or componentwise saturation
+    crosses the ceiling, preserve the first unresolved original-ring branch
+    and pivot to a source-specific structural simplification; do not retry the
+    79-variable localization or increase a blind algebra budget.
+work_orders:
+  - track_id: d9-factor19069-singular-df-multihomogeneous-constructor
+    role: constructive-prover
+    surface: ops/team/d9-factor19069-singular-df-multihomogeneous-constructor
+    publication_authorization: *publication_authorization
+    resource_ceiling: 75 wall-minutes, 5 CPU-hours, 16 GiB, 500000 exact algebra/component nodes
+    stop_rule: Stop at source drift, loss of a singular/embedded/boundary stratum, unsupported characteristic-zero lift, incomplete componentwise saturation, missing exact tag, or ceiling.
+    prohibited_scope: No 70-inverse discovery, sampler-only, active-subset, CEGAR, projection, symmetry, orbit, multiwall, numerical/modular promotion, or ledger promotion route.
+    worker_restrictions: Own only the assigned surface; do not push, merge, edit cycle files, or alter the ledger.
+  - track_id: d9-factor19069-singular-df-multihomogeneous-falsifier
+    role: falsifier
+    surface: ops/team/d9-factor19069-singular-df-multihomogeneous-falsifier
+    publication_authorization: *publication_authorization
+    resource_ceiling: 35 wall-minutes, 2 CPU-hours, 8 GiB, at least 18 hostile mutations
+    stop_rule: Stop at the first exact source, block-structure, ideal, component, embedded-prime, dimension, degree, multiplicity, saturation, strict-sign, boundary, connected-tag, or scope rejection.
+    prohibited_scope: No producer acceptance import and no numerical or sampled inference.
+    worker_restrictions: Own only the assigned surface; do not push, merge, edit cycle files, or alter the ledger.
+  - track_id: d9-factor19069-singular-df-multihomogeneous-certificate
+    role: independent-verifier
+    surface: ops/team/d9-factor19069-singular-df-multihomogeneous-certificate
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 3 CPU-hours, 8 GiB, at least 18 hostile mutations
+    stop_rule: Fail closed on any pin, derivative, multidegree, component, embedded-prime, saturation, real-residence, boundary, connected-tag, scope, or ledger mismatch.
+    prohibited_scope: Do not import constructor code or certify an incomplete decomposition as strict-parent emptiness.
+    worker_restrictions: Own only the assigned surface; do not push, merge, edit cycle files, or alter the ledger.
+  - track_id: d9-factor19069-singular-df-multihomogeneous-referee
+    role: closing-referee
+    surface: ops/team/d9-factor19069-singular-df-multihomogeneous-referee
+    publication_authorization: *publication_authorization
+    resource_ceiling: 45 wall-minutes, 2 CPU-hours, frozen-head replay
+    stop_rule: Reject moved head, incomplete endpoint accounting, false ledger delta, missing clean replay, or missing precise sole successor while below 3/9.
+    prohibited_scope: No mutable-head review, discovery repair, GitHub write, or promotion without a universal diagonal certificate.
+    worker_restrictions: Review only the frozen candidate and own only the assigned surface.

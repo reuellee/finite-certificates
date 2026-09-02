@@ -1,0 +1,32 @@
+{
+  "format": "d9-fixed-domain-incidence-gate2-opening-audit-v1",
+  "cycle_id": "2026-09-01-d9-fixed-domain-incidence-gate2",
+  "base_revision": "32e2b37bf54c53982cb58a3b8d026734f9ab1113",
+  "base_tree": "689d1a5fb981fd2d52f7adb88721d9c7d3a01228",
+  "opening_ledger": "2/9",
+  "selected_target": "D9_FIXED_DOMAIN_INCIDENCE_GATE2",
+  "opening_verdict": "CONTINUE",
+  "ceilings": {
+    "label_permutations": 40320,
+    "active_factors": 3539,
+    "low_degree_factors": 83,
+    "total_systems": 100000,
+    "remaining_pair_systems": 96461
+  },
+  "source_pins": {
+    "ops/team/d9-component-roadmap-constructor/RESULT.json": "8bf469eee608f7ea5c30461e5849693c3194816db68b342f315d1e339116ab08",
+    "ops/team/d9-component-roadmap-constructor/PROJECTION_STRATIFICATION_PREFLIGHT.json": "05a86551e12776cca960611c239b1a36387ec00f12cefe28b0233c22f9271732",
+    "ops/team/diag9-s1237-normal-link-prover/ACTIVE_LITERAL_INVENTORY.json": "9a2b51925ac838aa2d583be0c98cab2612ce33540ba274045cf5097bc4076c42",
+    "ops/team/diag9-s1237-normal-link-prover/build_normal_link_no_go.py": "3d19b1b69cacc09ca4a4cd145ffded14f181574c3f22478ae75db850afd55d31",
+    "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "ai/omreal/verify_diag2_pivot_all_pair_fibers.py": "ed705fffe6089add215839de96dd540ec5f6f082a78178b6a4f2c984c3e8374f",
+    "ai/omreal/data/DIAG2_PIVOT_pair_classification.npz": "a12680b52ace15096437e5cbcfcbdb6d888c9d61a2bccf8a2d336fa5be6b7025",
+    "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json": "6b22f3f8da550fa14ea13700ff632eb3db53c40316a0e1844a7762784cfaf811"
+  },
+  "authorization": {
+    "critical_enumeration": false,
+    "ledger_change": false,
+    "github_write": false
+  }
+}

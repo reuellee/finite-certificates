@@ -1,0 +1,93 @@
+{
+  "cloud_used": false,
+  "format": "d3-global-srep-formula-compiler-source-manifest-v1",
+  "frozen_opening_revision": "c50da6c99d465c65b3e54427418d9efe6a3f037e",
+  "inputs": {
+    "ai/omgamma/data/extcount_4_9.jsonl": {
+      "bytes": 93521,
+      "sha256": "f9e0f122ed5f1efaa5687807db8e5325975b07c82f2bf75218877afa5e77ff03"
+    },
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": {
+      "bytes": 13943,
+      "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f"
+    },
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_CLOSURE_OPEN_OBJECT.json": {
+      "bytes": 32440,
+      "sha256": "707a96f19f471af041d02bf22fc4267ddd4bf6b78cffde4783f660b645aed833"
+    },
+    "ai/omreal/verify_diag3_single_bad_two_skeleton.py": {
+      "bytes": 7350,
+      "sha256": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4"
+    },
+    "ai/omreal/verify_diag3_tangential_first_exit_no_go.py": {
+      "bytes": 3185,
+      "sha256": "71c4aba1858d21864a7dcd6f711b3e00450685420d45c447e65e72b700fc5115"
+    },
+    "ops/research-sources/basu-karisani/arxiv-2009.13365v3.pdf": {
+      "bytes": 1382913,
+      "sha256": "c4cf62ddfa52185f6dac456ba8f4c115e5ced4ff7234d1b309b88c6c4387f8a1"
+    },
+    "ops/research-sources/basu-karisani/arxiv-2207.10497v1.pdf": {
+      "bytes": 635893,
+      "sha256": "560eb043ffb3bc5551d02404a3a288b756651319952870c4391f070377b46002"
+    },
+    "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/CYCLE.md": {
+      "bytes": 18235,
+      "sha256": "4c692eff5b27ede005140c0bb53899750c22ce7bcb0d90b865026bb8038f39f4"
+    },
+    "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/LITERATURE_MANIFEST.json": {
+      "bytes": 1919,
+      "sha256": "a914760d7ac62eed449d00d1d0f468319f4b7dec186c6076bde694ec9e960827"
+    },
+    "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/OPENING_STATE.json": {
+      "bytes": 9903,
+      "sha256": "f97af6989befa86f06a0b64017dfb42c66328f5a6db4ae207f5bd8a0498008fe"
+    },
+    "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/WORK_ORDERS.yaml": {
+      "bytes": 10321,
+      "sha256": "8a598364acc94a4be149896997d5dc9d6b4587c722809b29e1abcb7bc8628dd1"
+    },
+    "ops/team/d3-mixed-carrier-falsifier/OBSTRUCTION_DOSSIER.md": {
+      "bytes": 15113,
+      "sha256": "de7e1d5c2758786852cbb1cf684f3af8cbf44ab4df124c7053b60534b1317936"
+    },
+    "ops/team/diag3-orbit5563-prover/TYPE_FRAME_S8_QUOTIENT_MANIFEST.json": {
+      "bytes": 149487,
+      "sha256": "95f7d5f362a4af3445ca4f6cffbf8b5b2d812aad45ffd5cc655af9ea1216685b"
+    }
+  },
+  "producer_outputs": {
+    "BACKEND_INVENTORY.json": {
+      "bytes": 1474,
+      "sha256": "f71ad3eb456790c884fa190ce50467d54dd3d908f91b4279b2bbe43684380f95"
+    },
+    "FORMULAS.json": {
+      "bytes": 29236,
+      "sha256": "0bddec6e60fbbdfbb5c1a3d16b8189d0447ec589033a4d5150cbb8cf8606b6ce"
+    },
+    "GLOBAL_SCHEMA.json": {
+      "bytes": 205753,
+      "sha256": "117c0640b873070610e4473f4a7a8e6b9e96f1ae3e0077468f95c20af4fc5fa8"
+    },
+    "REPORT.md": {
+      "bytes": 7308,
+      "sha256": "4b08b354f050dcce7a4fd0429a91c5d07d0a21da3b70f94702d842b06f9074f0"
+    },
+    "RESULT.json": {
+      "bytes": 4534,
+      "sha256": "39ac5d04d9e043d13360d7bec31beb2144f5fa73aa6e590e86b5efadd2f7c213"
+    },
+    "TRACE.json": {
+      "bytes": 12158,
+      "sha256": "b88e1baa9746b27762d6e3a572885d5e5135216e0299f5a3eb988ee3e85a69ba"
+    },
+    "build_qualification.py": {
+      "bytes": 29994,
+      "sha256": "6548ae405e0e6b1d59c18562e7d306b02b3ae8c20f6bb96f6a0839f139b406df"
+    },
+    "test_formula_compiler.py": {
+      "bytes": 3975,
+      "sha256": "0ba79a736fb9e5abf6df92f70e5dd94a47c3d6db2d96631f038ce6f3a8145e68"
+    }
+  }
+}

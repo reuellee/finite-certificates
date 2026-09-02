@@ -1,0 +1,80 @@
+{
+  "format": "d9-fixed-domain-cegar-opening-audit-v1",
+  "cycle_id": "2026-09-01-d9-fixed-domain-cegar-gate1",
+  "base_revision": "a5990bff953432a49cfa186f78e25efdb7df280b",
+  "base_tree": "96e75f55512f6abbc09749509a45b63adebfa456",
+  "opening_ledger": "2/9",
+  "predecessor_verdict": "PIVOT",
+  "tournament": {
+    "candidates": [
+      {
+        "id": "EXACT_FIXED_DOMAIN_COUNTEREXAMPLE_CEGAR",
+        "ledger_leverage": 5,
+        "quantifier_readiness": 4,
+        "coverage_burden": 4,
+        "terminality": 5,
+        "structural_compression": 4,
+        "independent_verification": 5,
+        "resource_information": 5,
+        "resource_cost": 2,
+        "stagnation_risk": 2,
+        "net_score": 30,
+        "verdict": "PIVOT_SELECT"
+      },
+      {
+        "id": "PROJECTION_FREE_ADAPTIVE_COMPONENT_DECOMPOSITION",
+        "ledger_leverage": 4,
+        "quantifier_readiness": 3,
+        "coverage_burden": 5,
+        "terminality": 4,
+        "structural_compression": 5,
+        "independent_verification": 4,
+        "resource_information": 3,
+        "resource_cost": 5,
+        "stagnation_risk": 3,
+        "net_score": 20,
+        "verdict": "RESERVE_PIVOT"
+      }
+    ],
+    "selected": "EXACT_FIXED_DOMAIN_COUNTEREXAMPLE_CEGAR",
+    "selected_count": 1,
+    "selection_reason": "Only CEGAR has a theorem-decisive positive endpoint within the bounded cycle, and each exact path repair is independently replayable refinement information."
+  },
+  "seed_frontier": {
+    "scope": "TWO_COMMITTED_EXACT_ROW2599_STRESS_FAMILIES_ONLY",
+    "seed_count": 2,
+    "endpoint_pairs": [[12, 37], [37, 176]],
+    "antichain_entries": 126,
+    "ordered_incomparability_clauses": 144,
+    "path_segments": 45522,
+    "complete_fixed_domain_generator": false
+  },
+  "resource_ceiling": {
+    "wall_minutes": 90,
+    "aggregate_cpu_hours": 4,
+    "memory_gib_per_process": 8,
+    "seed_families": 2,
+    "path_segments": 45522,
+    "new_artifact_megabytes": 20,
+    "paid_external_compute": false
+  },
+  "prohibited_routes": [
+    "ANOTHER_PROJECTION",
+    "SYMMETRY_ONLY_COMPRESSION",
+    "AMBIENT_ORBIT_QUOTIENT",
+    "UNFILTERED_PAIR_ENUMERATION"
+  ],
+  "pins": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-fixed-domain-incidence-gate2/CYCLE_REPORT.md": "774d636e34e6c8e9dbc2da37ede41a546f6ea29fe11630269978c49e8519ec2a",
+    "ops/team/d9-fixed-domain-incidence-referee/RESULT.json": "a91b42b902a46a1af0aa00dfa49d7cd257385b3f5aec39d38014b9ea2c46d136",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json": "6b22f3f8da550fa14ea13700ff632eb3db53c40316a0e1844a7762784cfaf811",
+    "ai/omreal/data/ninth_candidate_12_37_antichain.npz": "11ca66549982ec40ce8425d2caed45b418edb73c4eb415a45b39d57e481bd1e4",
+    "ai/omreal/data/ninth_candidate_12_37_path.npz": "8db38e00d9bf8701558c27cd4ede3e024db8953ea3ef9873bf0b4fc65ad6bcda",
+    "ai/omreal/data/ninth_candidate_37_176_antichain.npz": "fe7bb166b5a151262c665875d32de49d7e8a330cf11b26609458af6b2661a59f",
+    "ai/omreal/data/ninth_candidate_37_176_path.npz": "3c37c3c0d5de159bec9d48eeaaf57bccbe07c2f3aeb0ede9d4b1ddbae2bd3507",
+    "ai/omreal/verify_ninth_candidate_antichain.py": "19060052bde9d29de3c91becf188d5f4b99c034bbf5a81db4206885bea28b395",
+    "ai/omreal/verify_ninth_candidate_path.py": "283d9ead88881d2308d444eaffe172cb0414ef161215053271f5960116f544e6",
+    "ai/omreal/verify_ninth_candidate_generic.py": "525aad040d9b38a1cb018439e44a36a0259265e8f603af975f6b6a785ea217ac"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "format": "d3-mixed-carrier-theorem-feasibility-closing-manifest-v1",
+  "cycle_id": "2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1",
+  "branch": "research/local-d3-mixed-carrier-theorem-feasibility-gate1-20260901",
+  "canonical_base": {
+    "commit": "9116771ba80ed3d033516d0dd666b34348aad348",
+    "tree": "a64438426dc792af67d5ccc0dd2f4d1231dbaa14"
+  },
+  "opening": {
+    "commit": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+    "tree": "a59d740c008ae04accf200a8373d16b4d9c70ae4"
+  },
+  "integrated_evidence": {
+    "commit": "2cf92fa094b80b89816feceaf6cce6c712f72115",
+    "tree": "ec92c870ff48949b1c6587556b6a930e025da733"
+  },
+  "midpoint": {
+    "commit": "f1f955f6ae69e6a847ea8795724c77896636c547",
+    "tree": "c4b68a4dfdafccb66f4c69695d733fa78e840570",
+    "decision": "STOP_DISCOVERY_FREEZE_AND_SEND_TO_REFEREE"
+  },
+  "candidate_history": {
+    "v1_preflight": {
+      "commit": "7f135917f7ef859ec272ac3126725db272ff3ea1",
+      "tree": "ab724829b045fd9a5d3f89573757db40adec6f38",
+      "disposition": "REJECTED_PREFLIGHT_PROTOCOL_REPORT_LABEL_MISMATCH"
+    },
+    "v2_corrected_frozen": {
+      "commit": "2fc366e517c3bf30419b335053bec0895519b675",
+      "tree": "1520090d7f6a9ce6febeef4a0c50b31982ace560",
+      "repair": "CYCLE_REPORT_ONLY_18_INSERTIONS_SIX_MANDATORY_CONVERGENCE_LABELS_NO_MATHEMATICAL_CHANGE"
+    }
+  },
+  "referee": {
+    "commit": "4f72cf633eba01d50c0fa806da79bb7a2f19a2f8",
+    "tree": "e527e6d8483e6a38b2f274fe11913989d7164d2b",
+    "parent": "2fc366e517c3bf30419b335053bec0895519b675",
+    "integration": "FAST_FORWARD_EXACT_REFEREE_COMMIT",
+    "verdict": "ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED",
+    "referee_handoff": "NULL",
+    "cycle_handoff": "NULL"
+  },
+  "result": {
+    "opening_ledger": "2/9",
+    "closing_ledger": "2/9",
+    "ledger_delta": "0/9",
+    "theorem_promotion": "NONE",
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "selected_successor": "NONE",
+    "construction_started": false,
+    "opening_vector": [
+      "2/9",
+      1,
+      "diag3_pair_hc1_AND_diag3_triple_hc0",
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      5,
+      8
+    ],
+    "checkpoint_vector": [
+      "2/9",
+      1,
+      "diag3_pair_hc1_AND_diag3_triple_hc0",
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      5,
+      8
+    ],
+    "closing_vector": [
+      "2/9",
+      1,
+      "diag3_pair_hc1_AND_diag3_triple_hc0",
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      6,
+      9
+    ]
+  },
+  "handoffs": {
+    "topology": "NULL",
+    "falsifier": "NULL",
+    "naturality": "NULL",
+    "referee": "NULL",
+    "cycle": "NULL",
+    "positive_finite_program_found": false,
+    "universal_negative_found": false
+  },
+  "program_status": {
+    "A": "NULL_CONDITIONAL_MIXED_CHAIN_AND_GLOBAL_NATURALITY_PROGRAM_INCOMPLETE",
+    "B": "NULL_SOURCE_COMPLEX_COMPARISON_AND_RATIONAL_PAIR_PROGRAM_INCOMPLETE",
+    "C": "NULL_COMPONENT_COMPLETE_TRUE_PARENT_INFINITY_PROGRAM_INCOMPLETE",
+    "only_actual_proved_and_replayed_B_plus_C_can_close_D3": true
+  },
+  "measures": {
+    "joined_shape_orbits": 10,
+    "formal_labeled_placements_one_three_block_family": 34,
+    "joined_taxonomy_coverage": "3/10",
+    "joined_is_end_to_end_denominator": false,
+    "triple_source_total": 79102449,
+    "triple_source_settled": 77940147,
+    "triple_source_residual_opening": 1162302,
+    "triple_source_residual_closing": 1162302,
+    "triple_source_residual_delta": 0,
+    "triple_residual_is_component_denominator": false,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "load_bearing_obligations_unchanged": 7
+  },
+  "verification": {
+    "canonical_v8": "PASS_98_HOSTILES",
+    "opening_contract": "PASS_65_OF_65_HOSTILES_13_OF_13_SOURCE_PINS",
+    "research_cycle_protocol": "PASS_19_CYCLES_78_WORK_ORDERS",
+    "joined_flow_triangle": "PASS_LOCAL_SCOPE_RETAINED",
+    "single_bad_two_skeleton": "PASS_PAIR_TRIPLE_CAVEAT_RETAINED",
+    "fixed_order_no_go": "PASS_ANSATZ_SCOPE_RETAINED",
+    "pointwise_first_exit_no_go": "PASS_ANSATZ_SCOPE_RETAINED",
+    "global_exit_criterion": "PASS_9_OF_9_HOSTILES_CONDITIONAL_INPUT_ABSENT",
+    "ci_shard_census": "PASS_310_SELECTED_VERIFIERS",
+    "independent_referee": "PASS_87_OF_87_HOSTILES_4096_EXIT_FIXTURES_10_ORBITS_34_PLACEMENTS"
+  },
+  "referee_pins": {
+    "ops/team/d3-mixed-carrier-referee/RESULT.json": "b30b46c8a01eaf393c881c3de9a1550536d5f0daa4c6d3c649fcdedc249b5fe5",
+    "ops/team/d3-mixed-carrier-referee/REVIEW.md": "fa2d5894954c17c4c2edab93b991f7ee93f3c2680dcbdedea259daf711adb0ea",
+    "ops/team/d3-mixed-carrier-referee/verify_referee.py": "f4367e95184b9722a821aeea44281e9b365831b35e32a7dad2bdbcaf8e23b0a6"
+  },
+  "package_plan": {
+    "bundle_path": "E:\\Projects\\9DVL Research\\outputs\\9dvl-d3-mixed-carrier-theorem-feasibility-gate1-20260901.bundle",
+    "external_manifest_path": "E:\\Projects\\9DVL Research\\outputs\\9dvl-d3-mixed-carrier-theorem-feasibility-gate1-20260901-manifest.json",
+    "native_mirror_root": "G:\\My Drive\\Projects\\research-backups",
+    "generation": "AFTER_FINAL_LOCAL_CLOSE_COMMIT",
+    "exact_commit_tree_bytes_and_sha256": "RECORDED_IN_EXTERNAL_MANIFEST",
+    "mirror_length_and_sha256_verification_required": true
+  },
+  "publication": {
+    "github_mode": "READ_ONLY",
+    "github_write": false,
+    "google_drive_connector_used": false,
+    "network_used": false,
+    "external_solver_used": false
+  },
+  "nonconsequences": [
+    "NO_PROOF_OR_REFUTATION_OF_A_B_C_D3_OR_9DVL",
+    "NO_COMPLETE_FINITE_PROOF_PROGRAM",
+    "NO_PAIR_OR_TRIPLE_OBLIGATION_CLOSED",
+    "NO_LEDGER_CHANGE",
+    "NO_CONSTRUCTION",
+    "NO_SUCCESSOR_AUTHORIZATION",
+    "NO_THEOREM_PROMOTION"
+  ]
+}

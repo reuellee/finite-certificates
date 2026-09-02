@@ -1,0 +1,35 @@
+{
+  "format": "d9-factor19069-factored-barrier-closing-manifest-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-factored-barrier-gate1",
+  "reviewed_revision": "9a7e2a32b5a659372cbc435ae5404bc02141d37e",
+  "reviewed_tree": "aa571b94aa1d9f281b032e3b362e370711d26916",
+  "accepted_classification": "EXACT_FAIL_CLOSED_FACTORED_BARRIER_COMPONENT_NULL",
+  "accepted_endpoint": "HASH_PINNED_FACTORED_BARRIER_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNSAMPLED_COMPONENT",
+  "pins": {
+    "ops/team/d9-factor19069-factored-barrier-constructor/FACTORED_BARRIER_FRONTIER.json": "3f75eeb2f7433234206292012c527604517b516ee904e2ab1d1969e49ed1e8ca",
+    "ops/team/d9-factor19069-factored-barrier-constructor/RESULT.json": "5d9357346077562824c4564829260d49b6fa62ceea38b7ae3f7fe5543dee029a",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/RESULT.json": "9af35e89fafd73e71d940750d1f49ae166cc3e634a3f8ea2e02d3371f0ddf022",
+    "ops/team/d9-factor19069-factored-barrier-falsifier/verify_factored_barrier_falsifier.py": "8dc7adc67aef34651ac3ce3e97f4abaa3030fbc7732fd0e3922d95af64425965",
+    "ops/team/d9-factor19069-factored-barrier-certificate/RESULT.json": "c1a8a88cf117f34173925f436c131fc571a4efa4d946aeb3def2b2b984e04310",
+    "ops/team/d9-factor19069-factored-barrier-certificate/verify_factored_barrier_certificate.py": "d5a485610ecf1eea95c04782c518089477ea9cdf2078f81fed977149caa34db5"
+  },
+  "clean_replay": {
+    "candidate_revision": "9a7e2a32b5a659372cbc435ae5404bc02141d37e",
+    "candidate_tree": "aa571b94aa1d9f281b032e3b362e370711d26916",
+    "worktree_clean": true,
+    "verdict": "PASS"
+  },
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "BLIND_FACTORED_BARRIER_COMPONENT_SAMPLER_BUDGET_ESCALATION",
+  "precise_successor": "D9_ROW2599_FACTOR19069_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_GATE1",
+  "storage": {
+    "durable_project_root": "E:\\Projects\\9DVL Research",
+    "native_drive_mirror_optional": true,
+    "drive_connector_used": false,
+    "github_write": false,
+    "final_recovery_manifest": "PENDING_POST_REFEREE_LOCAL_CHECKPOINT"
+  }
+}

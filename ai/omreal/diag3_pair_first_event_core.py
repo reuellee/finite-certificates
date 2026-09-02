@@ -17,6 +17,8 @@ from functools import cached_property
 from itertools import combinations_with_replacement
 from math import comb, factorial, gcd, lcm
 from pathlib import Path
+
+import diag3_research_ledger_compatibility as ledger_compat
 import json
 import sys
 
@@ -839,9 +841,9 @@ def build_record():
     if replay["nonzero"]:
         raise AssertionError(f"first-event middle residue: {replay['nonzero'][:3]}")
 
-    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
+    ledger = ledger_compat.load_current_ledger(LEDGER)
     parent_gate = json.loads(PARENT_GATE.read_text(encoding="utf-8"))
-    full = ledger["row2599_fullsupport_ledger"]
+    full = ledger_compat.historical_row2599(ledger)
     cell_counts = Counter(cell["dimension"] for cell in serial)
     box_counts = Counter(box["classification"] for box in boxes)
     if cell_counts != Counter({0: 110, 1: 199, 2: 90}):
@@ -913,9 +915,9 @@ def build_record():
         },
         "inputs": {
             "source_commit": "c7bbbae13de85323be6b92b46332614eaa271b36",
-            "node_roadmap_path": str(NODE.relative_to(HERE.parents[1])),
+            "node_roadmap_path": NODE.relative_to(HERE.parents[1]).as_posix(),
             "node_roadmap_sha256": file_sha256(NODE),
-            "candidate_factor_path": str(CANDIDATES.relative_to(HERE.parents[1])),
+            "candidate_factor_path": CANDIDATES.relative_to(HERE.parents[1]).as_posix(),
             "candidate_factor_sha256": file_sha256(CANDIDATES),
             "candidate_factor_count": full["fullsupport_factor_count"],
             "exact_empty_factor_digest": full["digests"]["empty_factor_ids"],

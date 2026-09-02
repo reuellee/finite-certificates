@@ -1,0 +1,101 @@
+{
+  "format": "9dvl-canonical-research-state-v5",
+  "status": "PIVOT_REQUIRED",
+  "as_of": "2026-09-01",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "branch": "research/local-d9-pivot3-cegar-20260901",
+    "canonical_storage": "LOCAL_ISOLATED_CHECKOUT_WITH_GOOGLE_DRIVE_RECOVERY_MIRROR",
+    "github_mode": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION",
+    "cycle_base_commit": "a5990bff953432a49cfa186f78e25efdb7df280b",
+    "cycle_base_tree": "96e75f55512f6abbc09749509a45b63adebfa456",
+    "opening_commit": "6fc3d4d8c4d235dbb262e56abfccb7c32dad1a39",
+    "opening_tree": "71ced64b12ace616e641befd5624f3b8653d217a",
+    "reviewed_candidate_commit": "55d284e05ab506dc2789045b13f10c3a13afb3ad",
+    "reviewed_candidate_tree": "5de3d0b4bda85a2a778e4e9c5d7aef040c41d155",
+    "integrated_referee_commit": "4feee2ba0d918a8b04bddb3bbd1897175dd35a97",
+    "integrated_referee_tree": "842aedaa58e3ca5247d29a172ebd49f1d83bf61a"
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json",
+    "sha256": "6b22f3f8da550fa14ea13700ff632eb3db53c40316a0e1844a7762784cfaf811",
+    "policy": "IMMUTABLE_PRE_PIVOT3_CANONICAL_STATE"
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "diagonal_nine": "OPEN",
+    "promotion": "NONE"
+  },
+  "completed_cycle": {
+    "id": "2026-09-01-d9-fixed-domain-cegar-gate1",
+    "selected_target": "D9_FIXED_DOMAIN_COUNTEREXAMPLE_CEGAR_GATE1",
+    "opening_tournament": {
+      "selected": "EXACT_FIXED_DOMAIN_COUNTEREXAMPLE_CEGAR",
+      "selected_score": 30,
+      "challenger": "PROJECTION_FREE_ADAPTIVE_COMPONENT_DECOMPOSITION",
+      "challenger_score": 20,
+      "selected_count": 1
+    },
+    "frontier": {
+      "scope": "TWO_COMMITTED_EXACT_ROW2599_STRESS_FAMILIES_ONLY",
+      "seed_families": 2,
+      "feasibility_or_gordan_entries": 126,
+      "ordered_incomparability_clauses": 144,
+      "path_segments": 45522,
+      "exact_path_repairs": 2,
+      "source_realized_counterexamples": 0,
+      "complete_fixed_domain_candidate_generator": false
+    },
+    "certificate_gate": {
+      "verdict": "ACCEPT",
+      "classification": "EXACT_NULL_NO_D9_COUNTEREXAMPLE",
+      "hostile_mutations_rejected": 12,
+      "producer_imported": false
+    },
+    "referee_gate": {
+      "verdict": "ACCEPT",
+      "reviewed_revision": "55d284e05ab506dc2789045b13f10c3a13afb3ad",
+      "reviewed_tree": "5de3d0b4bda85a2a778e4e9c5d7aef040c41d155",
+      "closing_hostile_mutations_rejected": 8,
+      "closing_strategy_verdict": "PIVOT"
+    },
+    "exact_consequence": "BOTH_COMMITTED_EXACT_ROW2599_CEGAR_SEPARATOR_SEEDS_ARE_REPAIRED_BY_EXACT_RATIONAL_PATHS",
+    "nonconsequences": [
+      "NO_EXHAUSTIVE_FIXED_DOMAIN_COUNTEREXAMPLE_ABSENCE",
+      "NO_GLOBAL_COMMON_FEASIBILITY_CONNECTIVITY",
+      "NO_COMPLETE_PARENT_COMPONENT_COVERAGE",
+      "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+      "NO_9DVL_SCORE_CHANGE"
+    ],
+    "route_disposition": "SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_FIXED_DOMAIN_GENERATOR_RETIRED"
+  },
+  "selected_successor": {
+    "id": "D9_ROW2599_FACTOR19069_PROJECTION_FREE_ACTIVE_MARGIN_COMPONENT_GATE1",
+    "strategy": "PROJECTION_FREE_ADAPTIVE_COMPONENT_DECOMPOSITION",
+    "quantified_target": "Compute a complete parent-resident component sample for the factor-19069 wall over the entire strict row-2599 parent component, retain all 70 parent-sign path tags and every true-boundary stratum, and classify every component by attachment or nonattachment to the fixed 40-edge skeleton.",
+    "positive_endpoint": "AN_EXACT_FACTOR19069_WALL_COMPONENT_DISJOINT_FROM_THE_FIXED_40_EDGE_SKELETON",
+    "negative_endpoint": "A_COMPLETE_EXACT_COMPONENT_TO_SKELETON_ATTACHMENT_CERTIFICATE_FOR_FACTOR19069",
+    "null_endpoint": "A_HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+    "prohibited": [
+      "PROJECTION_RETRY",
+      "SYMMETRY_ONLY_COMPRESSION",
+      "AMBIENT_ORBIT_QUOTIENT",
+      "UNFILTERED_PAIR_ENUMERATION",
+      "ANOTHER_SAMPLED_SEPARATOR_CEGAR_SEED"
+    ]
+  },
+  "process_gates": {
+    "theorem_score_promotion_requires_all_invariant_obligations_closed": true,
+    "two_path_repairs_do_not_prove_global_connectivity": true,
+    "committed_seed_frontier_is_not_complete_fixed_domain_coverage": true,
+    "frozen_head_referee_passed": true,
+    "github_remains_read_only_until_new_explicit_user_instruction": true
+  },
+  "pins": {
+    "ops/research-team/cycles/2026-09-01-d9-fixed-domain-cegar-gate1/CYCLE_REPORT.md": "b3966aa581372bcdc7e2ae0e65d22e64ab36e35a14f41a22c99cbd895f722018",
+    "ops/team/d9-fixed-domain-cegar-referee/RESULT.json": "ee6655225327a572d34cdb1a8919df759486b4217e82488f1a936283a91f059b",
+    "ops/team/d9-fixed-domain-cegar-referee/verify_closing_referee.py": "dc8877afd6d34bfa5b81e1b2354bb8bde534a9fda797d67bb9121df4c434f250"
+  }
+}

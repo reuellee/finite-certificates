@@ -29,6 +29,15 @@ def digest(value):
     ).hexdigest()
 
 
+def canonical_gzip_bytes(encoded):
+    compressed = bytearray(gzip.compress(encoded, compresslevel=9, mtime=0))
+    # zlib stamps byte 9 per host; these fixtures canonically pin the Unix value.
+    compressed[9] = 0x03
+    if compressed[:10] != b"\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\x03":
+        raise AssertionError("unexpected canonical gzip header")
+    return bytes(compressed)
+
+
 def fraction_text(value):
     value = sp.Rational(value)
     if value.q == 1:
@@ -163,7 +172,7 @@ def main():
         "theorem_effect": "The former upper bound of 1693 factor-root incidences is exact: all 1693 interior t roots have pairwise disjoint rational point/interval certificates and a global order; base lifting and the global master complex remain open; honest 9DVL score remains 2/9.",
     }
     encoded = (json.dumps(record, sort_keys=True, separators=(",", ":")) + "\n").encode("ascii")
-    OUTPUT.write_bytes(gzip.compress(encoded, compresslevel=9, mtime=0))
+    OUTPUT.write_bytes(canonical_gzip_bytes(encoded))
     print("WROTE", OUTPUT)
     print("SECTIONS", len(sections), "=", rational_sections, "rational +", len(sections) - rational_sections, "irrational")
     print("MINIMUM_GAP", minimum_gap)

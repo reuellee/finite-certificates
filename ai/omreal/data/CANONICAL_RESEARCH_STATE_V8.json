@@ -1,0 +1,342 @@
+{
+  "format": "9dvl-canonical-research-state-v8",
+  "status": "PIVOT_REQUIRED",
+  "as_of": "2026-09-01",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "branch": "research/local-d3-mixed-carrier-theorem-feasibility-gate1-20260901",
+    "canonical_close_commit": "9116771ba80ed3d033516d0dd666b34348aad348",
+    "canonical_close_tree": "a64438426dc792af67d5ccc0dd2f4d1231dbaa14",
+    "integrated_referee_commit": "fa9787b8295fae46a262d610698e7d21790c63bd",
+    "integrated_referee_tree": "5f38b50568671b876aaaa1528a4aca7cb5e090eb",
+    "saved_project_root": "E:\\Projects\\9DVL Research",
+    "mounted_recovery_status": "UNAVAILABLE_ACCESS_DENIED_NONBLOCKING",
+    "drive_connector_used": false,
+    "github_mode": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION"
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V7.json",
+    "sha256": "4c5c75eaea78d005a664c61f43c2bb7559c890664e55fc2a947c4cc7e8811bcc",
+    "policy": "IMMUTABLE_PRE_THEOREM_RESET_CANONICAL_STATE",
+    "v7_selected_successor_disposition": "SUPERSEDED_BY_LATER_STOP_NONE_CLOSE"
+  },
+  "authoritative_theorem_reset_cycle": {
+    "id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+    "policy": "ACCEPT_STOP_NONE_CLOSE_AS_AUTHORITATIVE",
+    "v7_factor19069_successor_remains_selected": false
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "diagonal_three": "OPEN",
+    "diagonal_nine": "OPEN",
+    "promotion": "NONE",
+    "theorem_level_counterexample": "NOT_FOUND"
+  },
+  "theorem_reset_close": {
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "overall_handoff": "NULL",
+    "tournament_winner": "NONE",
+    "eligible_construction_targets": 0,
+    "selected_successor": "NONE",
+    "construction_started": false,
+    "ledger_delta": "0/9",
+    "same_blocker_cycle_streak": 5,
+    "zero_ledger_cycle_streak": 8,
+    "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+    "closing_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8],
+    "joined_gordan": {
+      "formal_face_type_denominator": 10,
+      "credited_universal_clauses": ["(0)", "(1)", "(2)"],
+      "universal_coverage": "3/10",
+      "new_universal_clause": "NONE",
+      "globally_attached": false,
+      "end_to_end_d3_denominator": false,
+      "bounded_decrease_chain": false,
+      "critical_open_clause": "(1,0,0)"
+    },
+    "triple_accounting": {
+      "source_orbits": 79102449,
+      "settled_orbits": 77940147,
+      "residual_orbits": 1162302,
+      "coverage": "77940147/79102449",
+      "residual_delta": 0,
+      "source_order_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+      "triple_only_closure_promotes_d3": false
+    },
+    "row2599_chart0_canary": {
+      "rank_d1": 3,
+      "rank_d2": 6,
+      "rank_C2": 7,
+      "relative_homology": {"H0": "0", "H1": "0", "H2": "Z"},
+      "primitive_h2_relation": [-1, 1, 1, 1, 1, 1, 1],
+      "singleton_nerve_cocycle_value": 1,
+      "singleton_root_filler_retired": true,
+      "genuine_mixed_block_carrier_nonexistence_proved": false,
+      "d3_or_9dvl_counterexample": false
+    }
+  },
+  "open_obligations": {
+    "load_bearing_count": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "items": [
+      {"id": "global_gluing", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": []},
+      {"id": "extension_labels", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["global_gluing"]},
+      {"id": "strict_closure", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["global_gluing", "extension_labels"]},
+      {"id": "relative_infinity", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["strict_closure"]},
+      {"id": "middle_rank_replay", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["strict_closure", "relative_infinity"]},
+      {"id": "diag3_pair_hc1", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["middle_rank_replay"]},
+      {"id": "diag3_triple_hc0", "status": "INCONCLUSIVE", "delta": 0, "residual": 1162302, "requires": ["triple_source_denominator"]}
+    ]
+  },
+  "bounded_feasibility_program": {
+    "id": "D3_NESTED_A_B_C_THEOREM_FEASIBILITY_ROUND1",
+    "selection_class": "ONE_ROUND_THREE_TARGET_THEOREM_FEASIBILITY_PROGRAM",
+    "purpose": "Test finite proof programs for the mixed-chain subproblem A, the complete source-derived joined-complex and pair comparison B, and the independent all-component triple escape C without constructing any of them.",
+    "scope_correction": {
+      "target_a_alone_yields_global_rank": false,
+      "target_a_alone_yields_triple_escape": false,
+      "target_a_alone_proves_d3": false,
+      "row2599_chart0_role": "DIAGNOSTIC_CANARY_ONLY_NOT_A_UNIVERSAL_GENERATOR_OR_DENOMINATOR",
+      "formal_joined_3_of_10_is_complete_complex": false,
+      "one_escape_witness_per_triple_source_is_all_component_escape": false
+    },
+    "authorization": {
+      "proof_program_feasibility_analysis": true,
+      "mathematical_construction": false,
+      "carrier_or_atlas_enumeration": false,
+      "theorem_credit": false,
+      "ledger_promotion": false,
+      "automatic_cycle_reopening": false
+    },
+    "round_bounds": {
+      "feasibility_rounds": 1,
+      "named_targets": 3,
+      "construction_rounds": 0,
+      "exact_diagnostic_canaries": 1,
+      "resource_enlargement_allowed": false,
+      "broad_residual_enumeration_allowed": false,
+      "new_global_census_allowed": false
+    },
+    "dependency_logic": {
+      "target_a_is_strict_subproblem_nested_inside_target_b": true,
+      "target_a_is_conditional_on_a_declared_interface_not_on_target_b": true,
+      "target_a_does_not_assert_that_its_interface_exists_or_is_complete": true,
+      "target_b_constructs_and_verifies_target_a_interface_before_invocation": true,
+      "target_a_does_not_define_or_exhaust_the_global_kernel": true,
+      "target_b_must_supply_the_complete_complex_before_any_global_rank_claim": true,
+      "target_c_is_independent_of_targets_a_and_b": true,
+      "future_actual_target_b_consequence": "diag3_pair_hc1",
+      "future_actual_target_c_consequence": "diag3_triple_hc0",
+      "future_d3_proof_condition": "ACTUAL_THEOREM_B_AND_ACTUAL_THEOREM_C",
+      "feasibility_of_b_and_c_counts_as_d3_proof": false
+    },
+    "targets": {
+      "A": {
+        "id": "A_UNIVERSAL_MIXED_CHAIN_CONSTRUCTION_SPECIALIZATION",
+        "status": "OPEN_FEASIBILITY",
+        "kind": "CONDITIONAL_SUBPROBLEM_INVOKED_BY_B_AFTER_INTERFACE_VERIFICATION",
+        "question": "For any candidate lower-skeleton/source contract satisfying the declared A0 interface, is there a finite source-natural construction and specialization proof program for genuinely mixed chains bounding every relevant primitive class exposed by that interface?",
+        "conditional_interface": {
+          "id": "A0_CANDIDATE_LOWER_SKELETON_SOURCE_INTERFACE",
+          "required_inputs": [
+            "FINITE_SOURCE_DERIVED_LABELED_C0_C1_C2_CELLS_ON_PARENT_ANTICHAIN_AND_SUPPORT_STRATA",
+            "ORIENTED_D1_D2_WITH_D1_COMPOSED_WITH_D2_ZERO_AND_A_FINITE_LIST_OF_RELEVANT_PRIMITIVE_INTEGRAL_KERNEL_CLASSES",
+            "SOURCE_NATURAL_FACE_LABELS_FOR_CHART_SUPPORT_ZERO_WEIGHT_TRUE_INFINITY_AND_PARENT_RANK_DROP_STRATA",
+            "DECLARED_SIMULTANEOUS_SUBDIVISION_AND_ITERATED_FACE_SPECIALIZATION_CATEGORY"
+          ],
+          "target_a_may_assume_interface_axioms_for_its_conditional_analysis": true,
+          "target_a_may_assert_interface_existence_exhaustiveness_or_bad_union_comparison": false,
+          "target_b_must_construct_and_verify_this_interface": true
+        },
+        "universal_axes": [
+          "EVERY_RELEVANT_PRIMITIVE_INTEGRAL_KERNEL_CLASS_NOT_ONLY_ROW2599",
+          "EVERY_SOURCE_DERIVED_ADMISSIBLE_ANTICHAIN_NOT_ONLY_MINIMAL_SIGNATURES_OR_ONE_ORDERED_TRIPLE",
+          "EVERY_PARENT_STRATUM_INCLUDING_PARENT_RANK_DROP_STRATA",
+          "EVERY_SUPPORT_AND_ZERO_WEIGHT_SPECIALIZATION",
+          "EVERY_CHART_OVERLAP_CONTINUATION_AND_MONODROMY_SEAM",
+          "EVERY_ITERATED_FACE_FLAG_AND_GENUINE_TRUE_PARENT_INFINITY_FACE"
+        ],
+        "required_precision": [
+          "FINITE_SEMIALGEBRAIC_GENUINELY_MIXED_CHAIN_FAMILY",
+          "ONE_COMMON_SIMULTANEOUS_SUBDIVISION_FOR_CHAINS_FACES_AND_ALL_SPECIALIZATIONS",
+          "ITERATED_FACE_COHERENCE_FOR_ALL_SPECIALIZATION_COMPOSITES_NOT_ONLY_PAIRWISE_SQUARES",
+          "SOURCE_NATURAL_LABELS_ORIENTATIONS_AND_INTEGRAL_BOUNDARIES",
+          "COMPATIBILITY_ACROSS_PARENT_RANK_DROP_AND_TRUE_INFINITY",
+          "ROW2599_SINGLETON_NERVE_NO_GO_USED_ONLY_AS_A_DIAGNOSTIC_TEST"
+        ],
+        "positive_feasibility_requires": [
+          "FINITE_PROOF_OBLIGATION_DENOMINATOR_FOR_ALL_UNIVERSAL_AXES",
+          "BOUNDED_LEMMA_CHAIN_WITH_INDEPENDENT_FALSIFICATION_ENDPOINTS"
+        ],
+        "nonconsequences": [
+          "NO_COMPLETE_JOINED_COMPLEX",
+          "NO_COVERAGE_OR_COMPARISON_TO_THE_ACTUAL_BAD_UNION",
+          "NO_GLOBAL_KERNEL_EXACTNESS_OR_RANK_IDENTITY",
+          "NO_TRIPLE_TRUE_PARENT_INFINITY_ESCAPE",
+          "NO_D3_OR_LEDGER_CREDIT"
+        ]
+      },
+      "B": {
+        "id": "B_COMPLETE_SOURCE_DERIVED_JOINED_COMPLEX_PAIR_EXACTNESS",
+        "status": "OPEN_FEASIBILITY",
+        "kind": "GLOBAL_PAIR_BRANCH_PREREQUISITE_CONTAINING_A",
+        "constructs_and_verifies_interface": "A0_CANDIDATE_LOWER_SKELETON_SOURCE_INTERFACE",
+        "invokes_conditionally_after_interface_verification": "A_UNIVERSAL_MIXED_CHAIN_CONSTRUCTION_SPECIALIZATION",
+        "dependency_order": [
+          "B_CONSTRUCTS_AND_VERIFIES_A0_INTERFACE",
+          "A_APPLIES_CONDITIONALLY_TO_VERIFIED_A0",
+          "B_COMPLETES_ALL_FACE_TYPES_BAD_UNION_COMPARISON_AND_RATIONAL_PAIR_EXACTNESS"
+        ],
+        "question": "Is there a finite proof program for a complete source-derived joined relative complex, an exhaustive comparison with the actual bad union, and rational pair-kernel exactness?",
+        "face_type_accounting": {
+          "joined_dimension_formula": "k=(r-1)+sum(k_i)",
+          "active_block_count_range": [1, 3],
+          "taxonomy_quotient": "SHAPES_MODULO_ACTIVE_BLOCK_PERMUTATION",
+          "labeled_instance_quantifier": "ALL_SOURCE_DERIVED_LABELED_INSTANCES_OF_EVERY_SHAPE",
+          "all_types": ["(0)", "(1)", "(0,0)", "(2)", "(1,0)", "(0,0,0)", "(3)", "(2,0)", "(1,1)", "(1,0,0)"],
+          "already_universally_credited": ["(0)", "(1)", "(2)"],
+          "missing_lower_types": ["(0,0)", "(1,0)", "(0,0,0)"],
+          "missing_dimension_three_types": ["(3)", "(2,0)", "(1,1)", "(1,0,0)"]
+        },
+        "required_precision": [
+          "FINITE_SOURCE_DERIVATION_AND_EXHAUSTIVE_DENOMINATOR_FOR_ALL_CELLS_AND_INCIDENCES",
+          "COVER_EVERY_SOURCE_DERIVED_ADMISSIBLE_ANTICHAIN",
+          "COMMON_SIMULTANEOUS_SUBDIVISION_ACROSS_ALL_FACE_TYPES_CHARTS_SUPPORTS_AND_SPECIALIZATIONS",
+          "ITERATED_FACE_COHERENCE_AND_D2_ZERO_FOR_EVERY_FACE_FLAG",
+          "PARENT_RANK_DROP_STRATA_INCLUDED_WITH_SOURCE_NATURAL_ATTACHMENTS",
+          "COVERAGE_OF_THE_ACTUAL_BAD_UNION_NOT_ONLY_FORMAL_JOINED_TUPLES",
+          "EXPLICIT_RELATIVE_CHAIN_COMPARISON_TO_THE_ACTUAL_BAD_UNION_WITH_THE_REQUIRED_HOMOLOGY_EQUIVALENCE",
+          "ALL_MISSING_LOWER_AND_DIMENSION_THREE_FACE_TYPES_PROVED_UNIVERSALLY",
+          "RATIONAL_PAIR_KERNEL_EXACTNESS_TRANSPORTED_THROUGH_THE_COMPARISON"
+        ],
+        "rational_pair_kernel_exactness_statement": "For the complete comparison complex C_pair^0 --N--> C_pair^1 --M--> C_pair^2 over Q, M composed with N is zero and im_Q(N)=ker_Q(M), equivalently rank_Q(N)+rank_Q(M)=dim_Q(C_pair^1); the comparison to the actual bad union transports this exactness to diag3_pair_hc1.",
+        "positive_feasibility_requires": [
+          "FINITE_EXHAUSTIVE_SOURCE_COMPLEX_AND_COMPARISON_PROOF_PROGRAM",
+          "BOUNDED_PROOF_CHAIN_FOR_RATIONAL_PAIR_KERNEL_EXACTNESS"
+        ],
+        "future_actual_theorem_consequence_only": "diag3_pair_hc1",
+        "nonconsequences": [
+          "NO_INDEPENDENT_TRIPLE_ESCAPE",
+          "NO_D3_WITHOUT_ACTUAL_TARGET_C",
+          "NO_THEOREM_OR_LEDGER_CREDIT_FROM_FEASIBILITY"
+        ]
+      },
+      "C": {
+        "id": "C_ALL_COMPONENT_TRIPLE_TRUE_PARENT_INFINITY_ESCAPE",
+        "status": "OPEN_FEASIBILITY",
+        "kind": "INDEPENDENT_GLOBAL_TRIPLE_BRANCH",
+        "depends_on": [],
+        "independent_of": ["A_UNIVERSAL_MIXED_CHAIN_CONSTRUCTION_SPECIALIZATION", "B_COMPLETE_SOURCE_DERIVED_JOINED_COMPLEX_PAIR_EXACTNESS"],
+        "question": "Is there a finite proof program showing that every connected component of every unresolved actual triple locus escapes to genuine true parent infinity?",
+        "source_accounting": {
+          "source_orbits": 79102449,
+          "settled_orbits": 77940147,
+          "residual_orbits": 1162302,
+          "coverage": "77940147/79102449"
+        },
+        "required_precision": [
+          "EVERY_CONNECTED_COMPONENT_NOT_ONE_WITNESS_PER_SOURCE_ORBIT",
+          "EVERY_RESIDUAL_SOURCE_ORBIT_WITH_A_SOURCE_DERIVED_FINITE_COMPONENT_DENOMINATOR",
+          "PATH_REMAINS_IN_THE_ACTUAL_TRIPLE_BAD_LOCUS_UNTIL_GENUINE_TRUE_PARENT_INFINITY",
+          "SIMULTANEOUS_WALL_SUPPORT_CHART_DIVISOR_CONCURRENCE_AND_PARENT_RANK_DROP_STRATA",
+          "ITERATED_BOUNDARY_FACE_COHERENCE_UNDER_ALL_SPECIALIZATIONS",
+          "NO_LOCAL_RADIAL_CLIPPED_OR_AMBIENT_BOUNDARY_SURROGATE"
+        ],
+        "positive_feasibility_requires": [
+          "FINITE_ALL_COMPONENT_COVERAGE_AND_ESCAPE_PROOF_PROGRAM",
+          "BOUNDED_STRICT_DECREASE_CHAIN_FOR_THE_RESIDUAL_FRONTIER"
+        ],
+        "future_actual_theorem_consequence_only": "diag3_triple_hc0",
+        "nonconsequences": [
+          "NO_PAIR_KERNEL_EXACTNESS",
+          "NO_D3_WITHOUT_ACTUAL_TARGET_B",
+          "NO_THEOREM_OR_LEDGER_CREDIT_FROM_FEASIBILITY"
+        ]
+      }
+    },
+    "prohibited_overclaims_and_continuations": [
+      "TARGET_A_MIXED_FAMILY_ALONE_PROMOTED_TO_GLOBAL_RANK_OR_KERNEL_EXACTNESS",
+      "TARGET_A_MIXED_FAMILY_ALONE_PROMOTED_TO_TRIPLE_ESCAPE",
+      "ROW2599_PRIMITIVE_CLASS_PROMOTED_AS_ALL_RELEVANT_PRIMITIVE_CLASSES",
+      "ONE_ORDERED_SIGNATURE_TRIPLE_OR_MINIMAL_SIGNATURE_SET_PROMOTED_AS_ALL_ADMISSIBLE_ANTICHAINS",
+      "SEPARATE_INCOMPATIBLE_SUBDIVISIONS_PROMOTED_AS_ONE_SIMULTANEOUS_SUBDIVISION",
+      "PAIRWISE_SPECIALIZATION_SQUARES_PROMOTED_AS_ITERATED_FACE_COHERENCE",
+      "GENERIC_PARENT_ARGUMENT_PROMOTED_ACROSS_UNANALYZED_PARENT_RANK_DROP_STRATA",
+      "FORMAL_TEN_TYPE_TAXONOMY_PROMOTED_AS_A_SOURCE_DERIVED_JOINED_COMPLEX",
+      "MIXED_1_0_0_FACE_ALONE_PROMOTED_WHILE_LOWER_OR_OTHER_DIMENSION_THREE_TYPES_ARE_MISSING",
+      "RANK_COUNT_PROMOTED_WITHOUT_D2_ZERO_RATIONAL_KERNEL_EXACTNESS_AND_BAD_UNION_COMPARISON",
+      "ONE_ESCAPE_PATH_PER_TRIPLE_SOURCE_PROMOTED_AS_ALL_COMPONENT_ESCAPE",
+      "LOCAL_RADIAL_CLIPPED_OR_AMBIENT_BOUNDARY_PROMOTED_AS_TRUE_PARENT_INFINITY",
+      "TRIPLE_ONLY_CLOSURE_PROMOTED_TO_D3_WHILE_TARGET_B_IS_OPEN",
+      "V7_FACTORED_CRITICAL_EQUIDIMENSIONAL_DECOMPOSITION_OR_BLIND_FACTOR19069_SAMPLING"
+    ],
+    "outcome_gates": {
+      "target_a_only_feasible": {
+        "verdict": "PARTIAL_FEASIBILITY_STOP_WITHOUT_SUCCESSOR",
+        "global_rank_credit": false,
+        "triple_escape_credit": false,
+        "construction_authorized": false,
+        "theorem_credit": false,
+        "ledger_effect": "0/9"
+      },
+      "full_program_feasible": {
+        "verdict": "QUALIFY_FOR_SEPARATE_GOVERNED_PROOF_CYCLE_SELECTION_ONLY",
+        "requires": [
+          "FINITE_INDEPENDENTLY_FALSIFIABLE_PROOF_PROGRAM_FOR_TARGET_A",
+          "FINITE_INDEPENDENTLY_FALSIFIABLE_PROOF_PROGRAM_FOR_TARGET_B",
+          "FINITE_INDEPENDENTLY_FALSIFIABLE_PROOF_PROGRAM_FOR_TARGET_C",
+          "EXACT_A_INSIDE_B_AND_B_PLUS_C_DEPENDENCY_AUDIT"
+        ],
+        "construction_authorized": false,
+        "theorem_credit": false,
+        "ledger_effect": "0/9"
+      },
+      "negative_feasibility": {
+        "verdict": "RETIRE_ONLY_THE_EXACT_UNIVERSALLY_QUANTIFIED_TARGET_THAT_FAILS",
+        "local_canary_or_one_ansatz_alone_suffices": false,
+        "construction_authorized": false,
+        "theorem_credit": false,
+        "ledger_effect": "0/9"
+      },
+      "null_or_timeout": {
+        "verdict": "STOP_AT_ONE_ROUND_BOUND_WITHOUT_SUCCESSOR",
+        "requires": ["PIN_FIRST_UNRESOLVED_GLOBAL_EDGE_FOR_EACH_OF_A_B_C_AND_ALL_COMPLETED_SUBCLAIMS"],
+        "construction_authorized": false,
+        "theorem_credit": false,
+        "ledger_effect": "0/9"
+      }
+    }
+  },
+  "process_gates": {
+    "later_stop_none_close_overrides_v7_selected_successor": true,
+    "v8_authorizes_one_a_b_c_feasibility_round_only": true,
+    "no_mathematical_construction_under_v8": true,
+    "no_theorem_or_ledger_credit_from_feasibility": true,
+    "target_a_alone_has_no_global_rank_or_triple_escape_consequence": true,
+    "row2599_canary_is_diagnostic_or_falsifying_only": true,
+    "complete_source_derived_complex_precedes_any_global_rank_claim": true,
+    "actual_target_b_and_actual_target_c_are_both_required_for_d3": true,
+    "feasibility_handoffs_do_not_prove_target_b_target_c_or_d3": true,
+    "positive_feasibility_requires_new_governed_proof_cycle_selection": true,
+    "ledger_promotion_requires_independently_replayed_universal_diagonal_certificate": true,
+    "failure_or_timeout_is_fail_closed_stop": true,
+    "github_remains_read_only": true,
+    "drive_connector_must_not_be_used": true
+  },
+  "source_pins": {
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V7.json": "4c5c75eaea78d005a664c61f43c2bb7559c890664e55fc2a947c4cc7e8811bcc",
+    "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CYCLE_REPORT.md": "ccb34a1b416bd65920a0b50f780e66292eece697847afe8042b4d7a2fd6a0df0",
+    "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CLOSING_MANIFEST.json": "2ef455643cc1a20812ea76a57ec650d6b251b522049851913aeedc7bcffccaea",
+    "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CLOSING_CANDIDATE.json": "5ff3c82930918daea52436fdcc7ab1c6da720bd913b8973dee714507df7de128",
+    "ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/OBLIGATION_GRAPH.json": "61327b143f339cfa99620f4b3ddd3218ba86d705b87c0fdda7e81da782ad3de1",
+    "ops/team/theorem-reset-prover-strategy/RESULT.json": "bab28affb8a72d1ff86ed86a3bad9f0f9a41dd216826e4dca8889ca5e911eafb",
+    "ops/team/theorem-reset-prover-strategy/FINDINGS.md": "4ce7b6504cb07f75779660f0a7d04681a7e98bb5d0a72e3fb9b2884267ace9b1",
+    "ops/team/theorem-reset-closing-referee/RESULT.json": "4e20d66ee618df991fad56230484f21251515efd9673b84c1effb98662361a3a",
+    "ops/team/theorem-reset-closing-referee/REVIEW.md": "582d67504f9421e5f96f30585dc94fb0fd5a4df68be443331bb09153a6c150eb",
+    "ops/team/theorem-reset-closing-referee/CLEAN_REPLAY.json": "b1394e5e7b3e5b636eed689fa07036049215a79f144e9863414e992b66776f91"
+  }
+}

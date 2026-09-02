@@ -1,0 +1,98 @@
+{
+  "format": "d9-universal-cut-circuit-result-v1",
+  "track_id": "d9-universal-cut-circuits",
+  "role": "structural combinatorics prover",
+  "base_revision": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "base_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "canonical_mathematical_base": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "protocol_repair": {
+    "source_commit": "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f",
+    "applied_commit": "60e76467188f32288fee0cb896d2e9592e9b0741",
+    "applied_tree": "a5ee5c295c3e898bbbe702f75fd12cf0d11abbf5"
+  },
+  "outcome": "inconclusive",
+  "summary": "The finite local circuit grammar is exact through conditional convex-carrier coherence, but local wall/circuit/multiwall/transport data cannot determine global cuts; an exact minimal abstract counterpair forces global chamber-gluing memory, while the first actual unclassified composition is the row-2599 rigid three-block monochromatic corner.",
+  "subclaim_status": {
+    "local_type_only_separator_completeness": "disproved",
+    "finite_generic_circuit_frontier": "proved_conditional",
+    "actual_uom_4_8_universal_cut_grammar": "inconclusive",
+    "full_master_chamber_graph_sufficiency": "proved_by_pinned_predecessor",
+    "grammar_type_bound_10000": "not_proved",
+    "exact_instance_bound_250000": "not_proved",
+    "diagonal_9": "unchanged_2_of_9"
+  },
+  "artifacts": [
+    {
+      "path": "ops/team/d9-universal-cut-circuits/FINDINGS.md",
+      "sha256": "484efa9b3d371d2574191817052d2c35ed312d94e58bd4f2274252ed18b58be2"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-circuits/SOURCE_MANIFEST.json",
+      "sha256": "5bcee9f5f88b635471298d631ace05c9f899a64c767149f5789da29028a1dc56"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-circuits/FINITE_GRAMMAR_FRONTIER.json",
+      "sha256": "9182fb0c69a332722e699d60a3945cbd36cabb2e5def40b55de441bad98444b5",
+      "semantic_sha256": "3f3a21f7ff1ee63aecc12e5e7466000d0516da5812708cb818f7712adecb0128"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-circuits/HOSTILE_CANARIES.json",
+      "sha256": "ecbfb5bdae9ab9336392ab66a0d464d5f09decb66adf759cb87914d5c4d60b2d"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-circuits/generate_cut_grammar_frontier.py",
+      "sha256": "74ebdee90221310d81e1807316b2abea51429a59ebf9efc202135ae9519da04e"
+    },
+    {
+      "path": "ops/team/d9-universal-cut-circuits/verify_cut_grammar_frontier.py",
+      "sha256": "afb74effbfeeb9a35502b18b94342d01675fe7d4ae2193ec3073247a4ea04377"
+    }
+  ],
+  "replay": {
+    "command": "python ops/team/d9-universal-cut-circuits/generate_cut_grammar_frontier.py && python ops/team/d9-universal-cut-circuits/verify_cut_grammar_frontier.py",
+    "result": "exit 0; source hashes, finite frontier, graph counterpair, rigid triple, semantic digest, and all hostile canaries pass"
+  },
+  "coverage": {
+    "included": [
+      "all 13 residual types in the exact 9 ordinary plus 4 localization partition",
+      "all 671 certified opposite auxiliary pairs and 2420 generic persistent-support candidates from the pinned local census",
+      "one-wall same-side choice coherence",
+      "all-codimension coherence conditional on common nonempty support carriers",
+      "a minimal exact 16-vertex counterpair within simple bipartite cubic signed chamber graphs having one active and two inactive edges at every vertex",
+      "the exact row-2599 rigid three-block composition"
+    ],
+    "excluded": [
+      "geometric realization of the abstract counterpair by residual determinants in a UOM(4,8) parent cell",
+      "complete master-chamber roadmaps for any of the 2604 parents",
+      "monochromatic multi-block transfer existence",
+      "global matching acyclicity",
+      "proper boundary and genuine infinity attachments",
+      "a 10000-type or 250000-instance universal bound",
+      "any theorem-ledger promotion"
+    ],
+    "nonconsequences": [
+      "The abstract counterpair is not a 9DVL counterexample.",
+      "The row-2599 rigid triple is not a global separator or compact component.",
+      "Finite local coherence does not imply global active-sector connectivity."
+    ]
+  },
+  "canaries": {
+    "positive": "Both unmutated graphs and every finite frontier invariant replay exactly.",
+    "negative": "The identical local invariant is paired with exact positive-sector component counts 2 versus 1, disproving local-only cut determination.",
+    "null": "The row-2599 rigid three-block corner is retained with status UNCLASSIFIED_GLOBAL_TRANSFER and explicit nonconsequences.",
+    "hostile": "Five mutations are rejected: deleted edge, corrupted sign, forged component count, erased specialization transport, and forged semantic digest."
+  },
+  "source_accounting": {
+    "used": "Twenty-one direct load-bearing files are SHA-256 pinned in SOURCE_MANIFEST.json; the immutable opening Git tree pins transitive repository dependencies, and the two repaired cycle-contract sources are additionally bound to d07c2a7b041f3a075d5e9294a0f3c63dbd87822f. Four predecessor exact verifiers were replayed successfully.",
+    "unused_or_missing": "The unavailable historical referee object was not used. Complete D9 parent master roadmaps are absent and are the missing global-memory input.",
+    "discrepancy": "The predecessor elimination note's displayed auxiliary total 131 is a non-load-bearing arithmetic typo; its 13 rows sum to 123 and exactly reproduce the verified 671 pair and 2420 support totals."
+  },
+  "open_defects": [
+    "No actual UOM(4,8) configuration is known that realizes the abstract local-memory counterpair.",
+    "No rule classifies the exact row-2599 rigid three-block monochromatic transfer.",
+    "No complete global chamber incidence, proper-end attachment, or acyclic transfer potential is certified.",
+    "No opening-ceiling bound on obstruction types or exact instances is proved."
+  ],
+  "next_action": "On the first coverage-certified parent master roadmap, enumerate actual monochromatic wall-star exits with full block labels and boundary ends; stop at the first two globally inequivalent gluings sharing the proposed bounded state, or certify every transfer with one global acyclic potential.",
+  "ledger_change_recommended": "none"
+}

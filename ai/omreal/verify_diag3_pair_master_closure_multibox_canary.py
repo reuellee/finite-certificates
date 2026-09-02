@@ -10,6 +10,8 @@ from hashlib import sha256
 from itertools import product
 import json
 from pathlib import Path
+
+import diag3_research_ledger_compatibility as ledger_compat
 import sys
 
 import numpy as np
@@ -427,7 +429,9 @@ def validate(record, sources):
     require(file_sha256(CANDIDATES) == inputs["candidate_factor_sha256"] == EXPECTED_CANDIDATE_SHA256, "candidate digest")
     require(inputs["target_signed_parent_digest"] == EXPECTED_PARENT_SIGN_SHA256, "parent digest")
     require(len(candidate_input.parse_artifact()) == inputs["candidate_factor_count"] == 17_824, "factor count")
-    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))["row2599_fullsupport_ledger"]
+    ledger = ledger_compat.historical_row2599(
+        ledger_compat.load_current_ledger(LEDGER)
+    )
     require(inputs["exact_empty_factor_digest"] == ledger["digests"]["empty_factor_ids"], "empty digest")
     require(inputs["unresolved_factor_digest"] == ledger["digests"]["unresolved_factor_ids"], "unresolved digest")
     parent_gate = json.loads(PARENT_GATE.read_text(encoding="utf-8"))

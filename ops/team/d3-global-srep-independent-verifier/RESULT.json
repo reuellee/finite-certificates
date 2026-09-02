@@ -1,0 +1,50 @@
+{
+  "format": "d3-global-srep-independent-q0-verification-v1",
+  "status": "PASS",
+  "verdict": "Q0_NULL_INDEPENDENTLY_CONFIRMED",
+  "frozen_evidence_commit": "e18efbdea3ef00616f4a6cb83967f6bb267b1a5d",
+  "inputs": {
+    "producer_result": {"bytes": 4534, "sha256": "39ac5d04d9e043d13360d7bec31beb2144f5fa73aa6e590e86b5efadd2f7c213"},
+    "producer_formulas": {"bytes": 29236, "sha256": "0bddec6e60fbbdfbb5c1a3d16b8189d0447ec589033a4d5150cbb8cf8606b6ce"},
+    "producer_trace": {"bytes": 12158, "sha256": "b88e1baa9746b27762d6e3a572885d5e5135216e0299f5a3eb988ee3e85a69ba"},
+    "falsifier_result": {"bytes": 5507, "sha256": "c7e359b8290ad599bd8847bb7f6e5d75b0991e58d14aee8a9576507122eb9fd3"},
+    "falsifier_fixtures": {"bytes": 11489, "sha256": "75340c2c144680546f8db38612984c64b2333de683c8a5336086ed152d8e9e3c"}
+  },
+  "producer_gate_assertions": {
+    "q0_pass": false,
+    "q1_eligible": false,
+    "cloud_used": false,
+    "theorem_credit": "NONE",
+    "N": null,
+    "s": null,
+    "d": null
+  },
+  "independent_recomputation": {
+    "producer_m3": {
+      "unfilled": {"dim_c0": 2, "dim_c1": 3, "dim_c2": 0, "rank_d1": 2, "rank_d2": 0, "h1_q": 1, "d_squared_zero": true},
+      "filled": {"dim_c0": 2, "dim_c1": 3, "dim_c2": 1, "rank_d1": 2, "rank_d2": 1, "h1_q": 0, "d_squared_zero": true}
+    },
+    "falsifier_m3": {
+      "unfilled": {"dim_c0": 3, "dim_c1": 6, "dim_c2": 2, "rank_d1": 3, "rank_d2": 2, "h1_q": 1, "d_squared_zero": true},
+      "filled": {"dim_c0": 3, "dim_c1": 6, "dim_c2": 3, "rank_d1": 3, "rank_d2": 3, "h1_q": 0, "d_squared_zero": true}
+    },
+    "m2": {
+      "family": "(1/n,3/2), n>=1",
+      "limit": "(0,3/2)",
+      "all_terms_in_pointwise_union": true,
+      "limit_excluded": true,
+      "limit_not_true_parent_infinity": true,
+      "exact_convergence_recipe_checked": true
+    }
+  },
+  "hostile_mutations": {
+    "rejected": 22,
+    "total": 22,
+    "all_rejected": true
+  },
+  "scope": [
+    "Independent machine verification, not human review.",
+    "Confirms a sound Q0 null/stop classification and its canaries only.",
+    "Does not implement Basu--Karisani replacement or earn theorem/ledger credit."
+  ]
+}

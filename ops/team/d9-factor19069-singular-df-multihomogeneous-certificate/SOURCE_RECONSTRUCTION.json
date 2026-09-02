@@ -1,0 +1,2317 @@
+{
+  "canonical_trihomogenization": {
+    "block_degree": [
+      2,
+      2,
+      2
+    ],
+    "dehomogenization_identity": "F(a,b,c,1,d,e,f,1,g,h,i,1)=f_19069",
+    "homogenizers": [
+      "u",
+      "v",
+      "w"
+    ],
+    "ring": "Q[a,b,c,u,d,e,f,v,g,h,i,w]",
+    "term_count": 108,
+    "terms": [
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          2,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -2,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 2,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 2,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -2,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          2,
+          1,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1,
+        "exponents_a_b_c_d_e_f_g_h_i": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        "homogenizer_exponents_u_v_w": [
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "derivatives": [
+    {
+      "coordinate": "a",
+      "sparse_sha256": "b1048204971754cfd4f001abf68ad2488d6037b3334777a8763bb022b3fabb00",
+      "term_count": 54
+    },
+    {
+      "coordinate": "b",
+      "sparse_sha256": "4c9db67ab330fe23417dcd64e57b7e792c64020f87176e1807464f365a5280ad",
+      "term_count": 44
+    },
+    {
+      "coordinate": "c",
+      "sparse_sha256": "b05fa546338d4481eaadd570669f9516419b59298cbc29c71757c36ba0175cf5",
+      "term_count": 54
+    },
+    {
+      "coordinate": "d",
+      "sparse_sha256": "c6fa25aa86cbd43ab9e47d67361393dd7c3d7486b8665150e69a3ccbf3ba9ee4",
+      "term_count": 50
+    },
+    {
+      "coordinate": "e",
+      "sparse_sha256": "43b217a3004285953c015bcd3b0f9bf73108d012bdb8e4124bbde07ed92f62d5",
+      "term_count": 50
+    },
+    {
+      "coordinate": "f",
+      "sparse_sha256": "4237f35ca439ad8edeb331a4a8f55c80cd18aba032dc749b3fd2bc2fd1c5042f",
+      "term_count": 50
+    },
+    {
+      "coordinate": "g",
+      "sparse_sha256": "569b2483ca9f359b0b3bedc8eed1519c06f9249ed20baa49f11284753e0ef20f",
+      "term_count": 36
+    },
+    {
+      "coordinate": "h",
+      "sparse_sha256": "f7eacc121b4fa89f518e33a04a5fef79c0c1e9e968de436c5a5fe87640b1676b",
+      "term_count": 61
+    },
+    {
+      "coordinate": "i",
+      "sparse_sha256": "7201162b7637d313aa6a9463cdbb2eec37f4cd8fda2d2bc0b83a108aede03f72",
+      "term_count": 36
+    }
+  ],
+  "exact_structural_verdict": {
+    "affine_multiaffine": false,
+    "affine_three_block_homogeneous_of_multidegree_2_2_2": false,
+    "classification": "OPENING_PREMISE_FALSE_AS_AFFINE_STATEMENT",
+    "explicit_homogenization_reconstructed": true,
+    "first_unresolved_branch": "EXPLICIT_THREE_BLOCK_HOMOGENIZATION_OR_REVISED_NONHOMOGENEOUS_DECOMPOSITION_NOT_SUPPLIED",
+    "maximum_block_degree_bound": [
+      2,
+      2,
+      2
+    ]
+  },
+  "factor": {
+    "ambient_ring": "Q[a,b,c,d,e,f,g,h,i]",
+    "block_degree_vector_distribution": [
+      {
+        "degree": [
+          1,
+          1,
+          2
+        ],
+        "term_count": 12
+      },
+      {
+        "degree": [
+          1,
+          2,
+          1
+        ],
+        "term_count": 20
+      },
+      {
+        "degree": [
+          1,
+          2,
+          2
+        ],
+        "term_count": 12
+      },
+      {
+        "degree": [
+          2,
+          1,
+          1
+        ],
+        "term_count": 15
+      },
+      {
+        "degree": [
+          2,
+          1,
+          2
+        ],
+        "term_count": 12
+      },
+      {
+        "degree": [
+          2,
+          2,
+          0
+        ],
+        "term_count": 11
+      },
+      {
+        "degree": [
+          2,
+          2,
+          1
+        ],
+        "term_count": 15
+      },
+      {
+        "degree": [
+          2,
+          2,
+          2
+        ],
+        "term_count": 11
+      }
+    ],
+    "block_total_degree_support": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "coefficient_content": 1,
+    "factor_id": 19069,
+    "per_variable_exponent_sets": {
+      "a": [
+        0,
+        1,
+        2
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "c": [
+        0,
+        1,
+        2
+      ],
+      "d": [
+        0,
+        1,
+        2
+      ],
+      "e": [
+        0,
+        1,
+        2
+      ],
+      "f": [
+        0,
+        1,
+        2
+      ],
+      "g": [
+        0,
+        1
+      ],
+      "h": [
+        0,
+        1,
+        2
+      ],
+      "i": [
+        0,
+        1
+      ]
+    },
+    "sparse_sha256": "b997e1dcc7216f595610633de99dd3459658cef28676fa748d79c2ba4ac0f3dc",
+    "term_count": 108,
+    "terms_not_of_block_degree_2_2_2": 97,
+    "terms_with_at_least_one_squared_variable": 44,
+    "total_degree_distribution": [
+      {
+        "degree": 4,
+        "term_count": 58
+      },
+      {
+        "degree": 5,
+        "term_count": 39
+      },
+      {
+        "degree": 6,
+        "term_count": 11
+      }
+    ],
+    "total_degree_support": [
+      4,
+      5,
+      6
+    ],
+    "variable_degree_maxima": [
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      1
+    ]
+  },
+  "format": "d9-factor19069-singular-df-source-reconstruction-v1",
+  "parent_factor_count": 70,
+  "pins": {
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CYCLE.md": "9c8a51c141c8ab4742d580e50508f8cc544c6d6f211fe4b785b675f9c74f8055",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OBLIGATION_GRAPH.json": "6a01553079cb350f6a681bc5d19c8a584d3153eb106f49ff943ed4f1e99e709b",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/OPENING_AUDIT.json": "d6fc28140be34ef7c77527ae3ef001ded849f269ffa0d92c541a4899262b4c3d",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/WORK_ORDERS.yaml": "921046f85cfe3bb83b9ac79a449e11a04d75074c1aa617e5118cb94e854243d5",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ops/team/d9-factor19069-critical-equidim-constructor/CRITICAL_EQUIDIM_FRONTIER.json": "4d7f4f21d0a5ab59ae42fa265d5a3cf851fa74dd1ff7069cd19209ec897d3a33",
+    "ops/team/d9-factor19069-critical-equidim-constructor/SOURCE_MANIFEST.json": "06efc5d65274d7179728b9b89a1788ea4d33812bfb24ecd5235bdd0d294bd75b"
+  },
+  "semantic_sha256": "f7f4693aa7d8a2ac4e44effac40b78d4832fdba1ef02d45d3d4c9d706f6fbc3e",
+  "source_policy": {
+    "constructor_code_imported": false,
+    "network_or_connector_used": false,
+    "numerical_or_modular_inference_used": false,
+    "predecessor_certificate_code_imported": false,
+    "seventy_inverse_discovery_used": false
+  },
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-certificate"
+}

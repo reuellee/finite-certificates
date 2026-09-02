@@ -1,0 +1,53 @@
+{
+  "format": "9dvl-d9-universal-cut-certificate-result-v1",
+  "track_id": "d9-universal-cut-certificate",
+  "base_revision": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "opening_revision": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "outcome": "finite-exact",
+  "summary": "A versioned endpoint-neutral universal-cut contract, exact four-endpoint preflight kernel, 32-case hostile harness, and successor-portable source replay are complete; no live universal coverage proof object is claimed.",
+  "mathematical_endpoint": null,
+  "artifacts": [
+    {"path": "HOSTILE_MUTATIONS.json", "sha256": "3bd577a9842a57a737fbee4eac754c093c06635fe0d4571a82c3feca310070be"},
+    {"path": "PORTABLE_PREDECESSOR_ADAPTER.json", "sha256": "19341f0444efd79236be64f24c484206dc0d6d690d893ab6240f6f81afd708b9"},
+    {"path": "SCHEMA.md", "sha256": "c11c0586211271eee1213bbbe6120ae5ec9ebf2f994779b7176f84ecf8312a25"},
+    {"path": "SELF_TEST_FIXTURE.json", "sha256": "5fb855c91a192dba6918e8b8575aee31d82490d66cb79855946599b15ff72c64"},
+    {"path": "SOURCE_MANIFEST.json", "sha256": "541389fa5e13b4e60c0e97560f124741009f7f095d7a2b448e6b72d061a77e04"},
+    {"path": "run_hostile_mutations.py", "sha256": "b9e4e5f63b7aa2cc1e2d9a4eedfe9b3cf8231f768b5d096eb16aefab6e96a685"},
+    {"path": "verify_portable_predecessor.py", "sha256": "eb8f274ffd8fd5ae5784a7dba202baef1c89bf07b86c9ac94026d0ec9ef20021"},
+    {"path": "verify_universal_cut_certificate.py", "sha256": "8dd6b38867e9b9afe751a6cb8b196bacb3b836a4c32a696fb6dc890ac7c76ae3"}
+  ],
+  "replay": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python ops/team/d9-universal-cut-certificate/verify_universal_cut_certificate.py && PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python ops/team/d9-universal-cut-certificate/run_hostile_mutations.py && PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py",
+    "result": "PASS contract/result; 4/4 exact endpoint fixtures; 4/4 fixture adapters rejected as live; 32/32 hostile mutations rejected; source-derived predecessor replay returns NORMAL_LINK_REDUCTION_NO_GO without ca730426"
+  },
+  "coverage": {
+    "included": "VERSIONED_ENDPOINT_NEUTRAL_SCHEMA_AND_EXACT_STRUCTURAL_ARITHMETIC_PREFLIGHT_FOR_ALL_FOUR_ENDPOINTS",
+    "excluded": "NO_LIVE_UNIVERSAL_COVERAGE_ADAPTER_OR_MATHEMATICAL_D9_ENDPOINT",
+    "boundary_rule": "RECURSIVE_FACET_IS_BOUNDARY_ONLY_UNLESS_A_SEPARATE_STRICT_COFACE_WITNESS_IS_REPLAYED"
+  },
+  "canaries": {
+    "positive": "PASS_SYNTHETIC_EXACT_GORDAN_PREFLIGHT",
+    "negative": "PASS_SYNTHETIC_EXACT_TWO_WITNESS_SEPARATOR_PREFLIGHT",
+    "null": "PASS_SYNTHETIC_COMPLETE_SURVIVOR_GAP_PREFLIGHT",
+    "timeout": "PASS_SYNTHETIC_HASH_PINNED_FRONTIER_PREFLIGHT",
+    "hostile": "PASS_32_OF_32_REJECTED"
+  },
+  "source_accounting": {
+    "used": "22 SHA-256-pinned opening, canonical V3, predecessor exact-result, independent-referee, schema, fixture, and verifier inputs",
+    "unused_or_missing": "Historical referee object ca730426cdd5847ae262ddc29c6f4ae98369eba3 is absent, is recorded only as an immutable identifier, and is never dereferenced. No producer-side acceptance logic is used."
+  },
+  "portability": {
+    "historical_referee": "ca730426cdd5847ae262ddc29c6f4ae98369eba3",
+    "availability": "ABSENT_AND_NOT_REQUIRED",
+    "replacement": "PINNED_SOURCE_DERIVED_REPLAY_OF_REVIEWED_HEAD_5EFBD07",
+    "predecessor_endpoint": "NORMAL_LINK_REDUCTION_NO_GO",
+    "scope": "LOCAL_ROUTE_NO_GO_ONLY"
+  },
+  "open_defects": [
+    "No live universal-cut coverage adapter or producer proof object is materialized.",
+    "The universal cut theorem and diagonal nine remain open."
+  ],
+  "next_action": "At a frozen integrated head, register only a producer-independent adapter that replays a materialized universal coverage proof or returns the first exact coverage gap; otherwise stop fail-closed.",
+  "ledger_change_recommended": "none",
+  "semantic_sha256": "baba7499921240819a59827757fef459ae75dbebab34a6173b53e7b194adc052"
+}

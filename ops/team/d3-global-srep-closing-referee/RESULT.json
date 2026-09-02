@@ -1,0 +1,41 @@
+{
+  "format": "d3-global-srep-independent-closing-referee-v1",
+  "status": "PASS",
+  "verdict": "ACCEPT_FROZEN_MIDPOINT_CLOSE_STALLED_STOP",
+  "candidate_commit": "d8e61faae0e2318d8eb83fd26dc4140b44a149e1",
+  "candidate_parent": "597537a8f705ac895e7d3e30962eb515cc8f6015",
+  "frozen_q0_evidence_commit": "e18efbdea3ef00616f4a6cb83967f6bb267b1a5d",
+  "pins": {
+    "midpoint": {"bytes": 2064, "sha256": "f59f5ee5ef1131ecc72a0c9b9ff5d22ba4143e67dc8e1573ea9fb3ac3040417f"},
+    "cloud": {"bytes": 2698, "sha256": "688fe0f24a1c82ce6a54bbbb536e8a774186e4642e250a153ae12d01b5342da1"},
+    "opening": {"bytes": 9903, "sha256": "f97af6989befa86f06a0b64017dfb42c66328f5a6db4ae207f5bd8a0498008fe"},
+    "cycle_policy": {"bytes": 18235, "sha256": "4c692eff5b27ede005140c0bb53899750c22ce7bcb0d90b865026bb8038f39f4"},
+    "producer": {"bytes": 4534, "sha256": "39ac5d04d9e043d13360d7bec31beb2144f5fa73aa6e590e86b5efadd2f7c213"},
+    "q0_referee": {"bytes": 2154, "sha256": "71d844c72b783896149ed42cdae695a559fccc15ef2d7575b37ae45047d80f54"},
+    "canonical_v9": {"bytes": 9093, "sha256": "6ec1fa9a23314a064fa8fd71b8a780ab1e6f2ec7543f696735f90c2047f792a5", "identical_to_base_revision": "0b8141223193c1ea2a1b4fce8e862466749f8b6b"}
+  },
+  "protected_surface_check": {
+    "canonical_v9_byte_identical": true,
+    "changed_ai_omreal_paths": 0
+  },
+  "independent_closing_reconstruction": {
+    "q0": "NULL_INDEPENDENTLY_CONFIRMED",
+    "q1": "DENIED",
+    "cloud": {"used": false, "spend_usd": 0, "prefix_instances": 0, "prefix_disks": 0, "existing_claude_control": "OUT_OF_SCOPE_UNTOUCHED"},
+    "canonical_v9": "BYTE_IDENTICAL_TO_BASE",
+    "theorem_delta": 0,
+    "obligation_delta": 0,
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 6, 9],
+    "closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "same_route_continue": false,
+    "theorem_credit": "NONE"
+  },
+  "hostile_mutations": {"rejected": 22, "total": 22, "all_rejected": true},
+  "scope": [
+    "Independent machine closing review; no human review was available or claimed.",
+    "Accepts only the STALLED/STOP close with zero theorem and obligation delta.",
+    "Does not edit canonical state, activate Q1, use cloud, or grant theorem credit."
+  ]
+}

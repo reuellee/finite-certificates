@@ -1,0 +1,62 @@
+{
+  "format": "d9-factor19069-singular-df-multihomogeneous-closing-manifest-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "reviewed_revision": "be63abbb49b23134df615eefd646fe6f1c2863e7",
+  "reviewed_tree": "bd9e78d8f640a2bf8c2d69afb70f3e571878b963",
+  "closing_evidence_revision": "47f8b5ff93332cf49afd231747512d04c9ee172a",
+  "closing_evidence_tree": "6ebf243d211e7ce6f1383318f015209891b2d213",
+  "integrated_referee_revision": "0db69d9ac7021b621205e7c62f7644f396d02258",
+  "integrated_referee_tree": "b7e459ffb09bbe331bd7d7d212fe9d62c8edefea",
+  "accepted_classification": "EXACT_SOURCE_STRUCTURE_FALSIFICATION_FAIL_CLOSED_NULL",
+  "accepted_endpoint": "HASH_PIN_FIRST_UNRESOLVED_MULTIHOMOGENEOUS_SINGULAR_COMPONENT_OR_PARENT_SATURATION_BRANCH",
+  "first_unresolved_branch_id": "MH-B00-AFFINE-SOURCE-STRUCTURE-CONTRACT",
+  "first_unresolved_branch_semantic_sha256": "73be706424b840acac8130f703649621a3092844bfefd3d25aa765e44f49712d",
+  "pins": {
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CYCLE_REPORT.md": "24e7765e7b39fee843494dcb6898fd844889f49d1f2b301cd8297fad3ef8af4e",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CANDIDATE_MANIFEST.json": "8bfabf124b098432c86b56cf80c7266acbb6138d0c79b7bd715f8b5a6fc66ca3",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/CLEAN_REPLAY.json": "e2158b68c7a654668609ff502eb94f95e1cb49db59fc1d2a7b07064695b3aebf",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SINGULAR_DF_MULTIHOMOGENEOUS_FRONTIER.json": "d9f4aba3fa8c76e3a8abff5484ff509b0458fe9993edeb921e5a6d03c4dfac41",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/RESULT.json": "178d2006eca68295da2bbeae06cb1a511c8249028727aec7429ecbc639b6dbd8",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/verify_singular_df_multihomogeneous_frontier.py": "5dee10750b3de7acb044a73d42ca837ca95e0b6852c11831a56f3398dfa3c518",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-falsifier/RESULT.json": "f08b66bf2434c5b668e6400a94b4fdab66ac20379ee4816247c684a6bdb8192e",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-falsifier/verify_singular_df_multihomogeneous_falsifier.py": "654b3481103cd336d5d58d78e6a8e8c1f2c24f2cb8f6de38211a3fcf22a30baf",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/RESULT.json": "06e64cf9eee6fdba5446179af3ca6ca93021a59c7a3e7563a865c5dfca28582f",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/verify_singular_df_certificate.py": "3d4d81530f545b92704a0db41b2f51b457875da9f24f55b214d1a46b90cd77d7",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-referee/RESULT.json": "c42ae5f15e21803a744df2cfd60db9a8edfb8081ec669f4a8025ab36fc452605",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-referee/HOSTILE_TESTS.json": "a963a0772a9f290a34015131d7eb285ba461cc9dacae4b6083c68fbe7b2c964a",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-referee/FINDINGS.md": "f9752a4b3ba40b492d82f2cebb9771298367b021881cf2ce9ef9a462a072d0f9",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-referee/verify_closing_referee.py": "be4b5e844653c5082e7c47e4ec0cd8f1b0e8626c6d2ad46a6f8cd2ef22e39796"
+  },
+  "clean_replay": {
+    "clone_mode": "--no-hardlinks --no-local",
+    "worktree_clean": true,
+    "source_and_replay_same_file_id": false,
+    "verdict": "PASS"
+  },
+  "closing_referee": {
+    "verdict": "ACCEPT_FAIL_CLOSED_NULL",
+    "closing_hostile_mutations_rejected": 24,
+    "frozen_head": true,
+    "discovery_repair_used": false
+  },
+  "resolved_component_count": 0,
+  "componentwise_parent_factor_tests_completed": 0,
+  "strict_real_residence": "UNRESOLVED",
+  "connected_parent_component_tag": "UNRESOLVED",
+  "singular_or_boundary_strata_discarded": 0,
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "AFFINE_MULTIHOMOGENEOUS_OR_MULTIAFFINE_DECOMPOSITION_AS_STATED",
+  "precise_successor": "D9_ROW2599_FACTOR19069_EXPLICIT_TRIHOMOGENIZED_JACOBIAN_CHART_DECOMPOSITION_GATE1",
+  "sole_successor_count": 1,
+  "storage": {
+    "durable_project_root": "E:\\Projects\\9DVL Research",
+    "local_bundle": "E:\\Projects\\9DVL Research\\outputs\\9dvl-d9-factor19069-singular-mh-gate1-20260901.bundle",
+    "local_recovery_manifest": "E:\\Projects\\9DVL Research\\outputs\\9dvl-d9-factor19069-singular-mh-gate1-20260901.manifest.json",
+    "native_drive_mirror_optional": true,
+    "drive_connector_used": false,
+    "github_write": false
+  }
+}

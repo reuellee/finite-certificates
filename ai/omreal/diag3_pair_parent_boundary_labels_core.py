@@ -94,36 +94,44 @@ def build_record(progress=False, workers=None):
     if len(compound_parents) != 63:
         raise AssertionError("boundary compound-event census changed")
     process_count = workers or max(1, min(6, multiprocessing.cpu_count()))
-    pool = multiprocessing.get_context("fork").Pool(process_count)
-    compound_results = pool.imap(_compound_topes, compound_parents, chunksize=1)
-
-    universe = source_labels.raw_extension_universe()
-    universe_index = {signature: index for index, signature in enumerate(universe)}
-    chamber_count = len(events) + 1
-    profile_bytes = (chamber_count + 7) // 8
-    profiles = np.zeros((len(universe), profile_bytes), dtype=np.uint8)
-    chamber_digests = []
-
-    def record_chamber(current):
-        chamber = len(chamber_digests)
-        if len(current) != source_labels.EXPECTED_TOPE_COUNT:
-            raise AssertionError(f"boundary chamber {chamber} has {len(current)} topes")
-        try:
-            indices = np.fromiter(
-                (universe_index[signature] for signature in current),
-                dtype=np.int64,
-                count=len(current),
-            )
-        except KeyError as error:
-            raise AssertionError(f"boundary chamber {chamber} left the extension universe") from error
-        profiles[indices, chamber // 8] |= np.uint8(1 << (chamber & 7))
-        chamber_digests.append(source_labels.labels_digest(current))
-
-    record_chamber(labels)
-    event_records = []
-    simple_preliminary = Counter()
-    compound_delta = Counter()
+    method = (
+        "fork"
+        if "fork" in multiprocessing.get_all_start_methods()
+        else "spawn"
+    )
+    pool = None
     try:
+        pool = multiprocessing.get_context(method).Pool(process_count)
+        compound_results = pool.imap(_compound_topes, compound_parents, chunksize=1)
+
+        universe = source_labels.raw_extension_universe()
+        universe_index = {signature: index for index, signature in enumerate(universe)}
+        chamber_count = len(events) + 1
+        profile_bytes = (chamber_count + 7) // 8
+        profiles = np.zeros((len(universe), profile_bytes), dtype=np.uint8)
+        chamber_digests = []
+
+        def record_chamber(current):
+            chamber = len(chamber_digests)
+            if len(current) != source_labels.EXPECTED_TOPE_COUNT:
+                raise AssertionError(f"boundary chamber {chamber} has {len(current)} topes")
+            try:
+                indices = np.fromiter(
+                    (universe_index[signature] for signature in current),
+                    dtype=np.int64,
+                    count=len(current),
+                )
+            except KeyError as error:
+                raise AssertionError(
+                    f"boundary chamber {chamber} left the extension universe"
+                ) from error
+            profiles[indices, chamber // 8] |= np.uint8(1 << (chamber & 7))
+            chamber_digests.append(source_labels.labels_digest(current))
+
+        record_chamber(labels)
+        event_records = []
+        simple_preliminary = Counter()
+        compound_delta = Counter()
         for event_index, event in enumerate(events):
             factor_id = int(event["factor_id"])
             occurrences = factor_occurrences[factor_id]
@@ -163,8 +171,9 @@ def build_record(progress=False, workers=None):
                     flush=True,
                 )
     except BaseException:
-        pool.terminate()
-        pool.join()
+        if pool is not None:
+            pool.terminate()
+            pool.join()
         raise
     else:
         pool.close()
@@ -216,11 +225,11 @@ def build_record(progress=False, workers=None):
             "global_parent_cell_coverage": "NOT_CLAIMED",
         },
         "inputs": {
-            "boundary_attachment_certificate": str(ATTACHMENT.relative_to(HERE.parents[1])),
+            "boundary_attachment_certificate": ATTACHMENT.relative_to(HERE.parents[1]).as_posix(),
             "boundary_attachment_certificate_sha256": source_labels.file_sha256(ATTACHMENT),
             "point_bank_sha256": transition.file_sha256(transition.POINT_BANK),
             "factor_census_sha256": transition.file_sha256(transition.FACTOR_CENSUS),
-            "source_label_certificate": str(source_labels.OUTPUT.relative_to(HERE.parents[1])),
+            "source_label_certificate": source_labels.OUTPUT.relative_to(HERE.parents[1]).as_posix(),
             "source_label_certificate_sha256": source_labels.file_sha256(source_labels.OUTPUT),
         },
         "normalization": {

@@ -1,0 +1,38 @@
+{
+  "canonical_base_revision": "0ffb0295d74e6c50a3c198b67c9821d2fe2e2760",
+  "canonical_base_tree": "d01cfbbe04f721496a91d13f85d3688262869ac0",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
+  "cycle_opening_revision": "aad8e1efa5a45e47c9f924dce5263a07996a10e9",
+  "cycle_opening_tree": "8b8fcd6652a0245df9b2a7f262f4c48bb5fdc883",
+  "format": "d9-factor19069-homogenizer-boundary-type-constructor-source-manifest-v1",
+  "pins": {
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_compactification_atlas.json": "956fbe7e5c7b1e04c8873ed9c0f3de9cb5420e3e06f1d5fae4c60f4e0571b364",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_parent_face_gate.json": "cc279d125605b45d25a3a01f462ad051038102f2bf12574f494a9d261bfc7401",
+    "ai/omreal/data/DIAG9_GRAPH_row2599_factor_states.npz": "f44b1fccfb4e61273aeceb8796a18098d82c48473e257556ce3d2a22f99b0bcf",
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/CYCLE.md": "17eabb966da4b6dc6468616fd4b90dea3dfe41672a881fe05e97f99e835e6809",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/OBLIGATION_GRAPH.json": "f85c957eef37a3e991119057f28685f5d5e2208271da053b9e0294e03b530e35",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/OPENING_AUDIT.json": "a430effec7a0defb5646be8d823c39e31aaf09227261e4d3fe816baba3903821",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/WORK_ORDERS.yaml": "1c894fbf181416e84c0ec0397c6a04f45400721871a9c40ad210dce8f2424230",
+    "ops/research-team/verify_cycle_protocol.py": "4d9e16daed0de08af415e95c746803b512ea8b92c452df6df2c9e09fdcd3b7d1",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/RESULT.json": "ab9e4aa1591e425b210b98442ae22803b99a8974311022088561c1ac708ec375",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/PROJECTIVE_CHART_FRONTIER.json": "815edf97a68a049f8fb6749adf948cc406ec7a258de480cf3ada3e301ca6de67",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/SOURCE_MANIFEST.json": "9d4c69493f1ebb0a7a3e1f1bf8832ab56bace65a9841c4700af713322bd4658c",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/RESULT.json": "12ac0d8da67d58720b5ff6f06d30760de8fc78382ff5a856e4976351af94cb57",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-referee/RESULT.json": "e4088338d86d05442fe72289211500be187e6b99acd02c37a4fead51a07edc0f"
+  },
+  "semantic_sha256": "3ca47972a9458a8cb044f2da8a01f11e823d14d0344f9d092054a2cd9732d790",
+  "source_policy": {
+    "all_seven_boundary_types_reconstructed": true,
+    "ambient_normal_derivatives_retained_separately": true,
+    "network_or_connector_used": false,
+    "numerical_or_modular_probe_used": false,
+    "predecessor_json_is_only_polynomial_source": true,
+    "restrict_then_differentiate_semantics": true,
+    "unsupported_overlap_quotient_used": false,
+    "whole_atlas_groebner_retry_used": false
+  },
+  "track_id": "d9-factor19069-homogenizer-boundary-constructor"
+}

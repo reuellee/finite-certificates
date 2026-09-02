@@ -36,6 +36,15 @@ def digest(value):
     ).hexdigest()
 
 
+def canonical_gzip_bytes(encoded):
+    compressed = bytearray(gzip.compress(encoded, compresslevel=9, mtime=0))
+    # zlib stamps byte 9 per host; these fixtures canonically pin the Unix value.
+    compressed[9] = 0x03
+    if compressed[:10] != b"\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\x03":
+        raise AssertionError("unexpected canonical gzip header")
+    return bytes(compressed)
+
+
 def fraction_text(value):
     value = sp.Rational(value)
     if value.q == 1:
@@ -232,7 +241,7 @@ def main():
         shard_encoded = (
             json.dumps(shard_record, sort_keys=True, separators=(",", ":")) + "\n"
         ).encode("ascii")
-        shard_compressed = gzip.compress(shard_encoded, compresslevel=9, mtime=0)
+        shard_compressed = canonical_gzip_bytes(shard_encoded)
         shard_name = (
             "DIAG3_PAIR_GLOBAL_FOUR_SUPPORT_OPEN_SECTOR_LIFT_"
             f"SHARD_{shard_index:02d}_OF_{SHARD_COUNT}.json.gz"

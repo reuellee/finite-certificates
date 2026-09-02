@@ -1,0 +1,138 @@
+{
+  "format": "theorem-reset-joined-gordan-closing-candidate-v1",
+  "cycle_id": "2026-09-01-theorem-reset-joined-gordan-tournament-gate1",
+  "base_revision": "3689b5344dfed38468639d0e92b48f0b5fc4ebc8",
+  "base_tree": "ef14ccd9b844dae5e9b535310122251ca0e86bfb",
+  "opening_revision": "d4f83ffedc13f2fc07a2c8cd39a03cec8550da22",
+  "opening_tree": "97ab517bfe5bf8b3b93e7d604690c4d6a1342c43",
+  "integrated_evidence_revision": "5277886b1171f15b8e486d5e62212515534e5944",
+  "integrated_evidence_tree": "ed5e6359122bc167898f9d6b8f2c60904ff0125c",
+  "checkpoint_revision": "ebbe79cbc8a2b490ff1d9e77dde1cafb57d8a1e8",
+  "checkpoint_tree": "b0ee5a5890715704fa10b839979e5100fc7740bb",
+  "opening_ledger": "2/9",
+  "closing_ledger": "2/9",
+  "ledger_delta": "0/9",
+  "theorem_promotion": "NONE",
+  "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "checkpoint_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 4, 7],
+  "closing_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8],
+  "minimum_acceptable_delta": "CLOSE_AT_LEAST_ONE_LOAD_BEARING_OBLIGATION_OR_STRICTLY_REDUCE_A_CERTIFIED_EXHAUSTIVE_GLOBALLY_ATTACHED_RESIDUAL_WITH_BOUNDED_NEXT_DECREASE",
+  "minimum_acceptable_delta_met": false,
+  "trajectory_classification": "STALLED",
+  "overall_handoff": "NULL",
+  "tournament_winner": "NONE",
+  "automatic_strategy_reset": {
+    "fired": true,
+    "triggers": [
+      "EIGHT_CONSECUTIVE_ZERO_LEDGER_CYCLES_AT_CLOSE",
+      "FIVE_CYCLE_SAME_BLOCKER_STREAK_AT_CLOSE",
+      "REPEATED_UNKNOWN_PAIR_RESIDUAL_AND_COVERAGE",
+      "PREREGISTERED_DECREASE_UNREACHABLE_AT_MIDPOINT"
+    ],
+    "same_route_continue_allowed": false,
+    "action": "STOP"
+  },
+  "triple_global_accounting": {
+    "coverage_opening": "77940147/79102449",
+    "coverage_closing": "77940147/79102449",
+    "residual_opening": 1162302,
+    "residual_closing": 1162302,
+    "residual_delta": 0,
+    "source_order_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+    "triple_only_closure_promotes_d3": false
+  },
+  "joined_gordan_accounting": {
+    "formal_face_type_denominator": 10,
+    "opening_universal_coverage": "3/10",
+    "closing_universal_coverage": "3/10",
+    "credited_universal_clauses": ["(0)", "(1)", "(2)"],
+    "new_universal_clause": "NONE",
+    "globally_attached": false,
+    "end_to_end_d3_denominator": false,
+    "bounded_chain": false,
+    "critical_open_clause": "(1,0,0)"
+  },
+  "exact_canary": {
+    "parent_chart": "row2599_chart0",
+    "rank_partial_1": 3,
+    "rank_partial_2": 6,
+    "rank_C2": 7,
+    "relative_homology": {"H0": "0", "H1": "0", "H2": "Z"},
+    "primitive_h2_relation": [-1, 1, 1, 1, 1, 1, 1],
+    "singleton_nerve_cocycle_value": 1,
+    "retired_lemma": "SINGLETON_BLOCK_ROOT_ONLY_FILLER_FOR_THE_ROW2599_PRIMITIVE_FLOW_DISK",
+    "genuine_mixed_block_carrier_nonexistence_proved": false,
+    "d3_counterexample": false
+  },
+  "route_dispositions": [
+    {"route": "D3_JOINED_GORDAN_TEN_CLAUSE_THEOREM", "scores": [5,2,2,4,5,4,5,3], "handoff": "NULL", "theorem_attachment": false, "finite_end_to_end_denominator": false, "bounded_decrease_chain": false, "successor_eligible": false, "disposition": "STOP_NO_NEW_UNIVERSAL_CLAUSE"},
+    {"route": "D3_UNIFORM_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS", "scores": [5,3,2,5,4,4,4,4], "handoff": "NULL", "theorem_attachment": false, "finite_source_denominator": true, "bounded_decrease_chain": false, "successor_eligible": false, "disposition": "STOP_RESIDUAL_UNCHANGED"},
+    {"route": "D3_PAIR_GLOBAL_COMPRESSION_DESCENT_EQUIVALENCE", "scores": [5,1,1,4,5,3,4,4], "handoff": "NULL", "theorem_attachment": false, "finite_end_to_end_denominator": false, "bounded_decrease_chain": false, "successor_eligible": false, "disposition": "STOP_GLOBAL_INPUT_CONTRACT_MISSING"},
+    {"route": "EXACT_COUNTEREXAMPLE_OR_ROUTE_RETIREMENT", "scores": [4,3,4,5,4,5,5,1], "handoff": "NEGATIVE", "theorem_attachment": true, "finite_end_to_end_denominator": false, "bounded_decrease_chain": false, "successor_eligible": false, "disposition": "RETIRE_SINGLETON_ONLY_FILLER_AND_OTHER_NAMED_SHORTCUTS_ONLY"},
+    {"route": "D9_SIMULTANEOUS_INSERTION_2604_PARENT_THEOREM", "scores": [2,2,2,4,4,4,4,4], "handoff": "NULL", "theorem_attachment": false, "finite_parent_catalog": true, "bounded_decrease_chain": false, "successor_eligible": false, "disposition": "STOP_REDUCIBILITY_ONLY_INDUCTION_RETIRED"},
+    {"route": "D9_ACTUAL_ARRANGEMENT_SIGN_GEODESY", "scores": [2,2,1,5,5,3,2,4], "handoff": "TIMEOUT", "theorem_attachment": false, "finite_end_to_end_denominator": false, "bounded_decrease_chain": false, "successor_eligible": false, "disposition": "MIDPOINT_STOP_PARTIAL_LOCAL_METRIC_EXCLUDED"}
+  ],
+  "obligation_delta": [
+    {"id": "global_gluing", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "extension_labels", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "strict_closure", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "relative_infinity", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "middle_rank_replay", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "diag3_pair_hc1", "opening": "INCONCLUSIVE", "closing": "INCONCLUSIVE", "delta": "UNCHANGED"},
+    {"id": "diag3_triple_hc0", "opening": 1162302, "closing": 1162302, "delta": 0}
+  ],
+  "handoffs": {
+    "positive": [],
+    "negative": [
+      "singleton-block/root-only filling of the exact row2599 primitive flow disk is retired",
+      "reducibility-only D9 simultaneous-insertion induction is retired",
+      "projection closure using only parent brackets and the 26740 residual factors is retired"
+    ],
+    "null": [
+      "joined-Gordan global mixed-block theorem",
+      "uniform Q3 parent-boundary atlas",
+      "D3 pair global compression/descent theorem",
+      "D9 witness-retaining simultaneous-insertion theorem"
+    ],
+    "timeout": [
+      "optional nonlocal D9 sign-geodesy replay stopped at mandatory midpoint after local P26/K2/Q2 metric PASS; partial result excluded from acceptance"
+    ]
+  },
+  "successor_bar": {
+    "theorem_level_quantifier_attachment_proved": false,
+    "certified_finite_end_to_end_denominator_and_coverage_proved": false,
+    "bounded_strict_decrease_chain_proved": false,
+    "eligible_route_count": 0,
+    "selected_construction_target": "NONE",
+    "selected_successor": "NONE",
+    "construction_started": false
+  },
+  "evidence_pins": {
+    "ops/team/theorem-reset-prover-strategy/RESULT.json": "bab28affb8a72d1ff86ed86a3bad9f0f9a41dd216826e4dca8889ca5e911eafb",
+    "ops/team/theorem-reset-prover-strategy/verify_prover_strategy.py": "8bb26699974abc44b18ee8b994626670b486befda554dd0b83bdae3257e0939c",
+    "ops/team/theorem-reset-falsifier/RESULT.json": "c955c6886ed611ae915d56b21a57740f27acb5fb750b22f1900aa58e2996c663",
+    "ops/team/theorem-reset-falsifier/verify_falsifier.py": "5e83243cd4025a74eb7522345ed978aa4807974bdef2d41a20c3cb5c9d13b707",
+    "ops/team/theorem-reset-independent-verifier/RESULT.json": "41eee0ecff951ab08d5c3419c8b596dfa0efea01c7709494d95c800a73edb80f",
+    "ops/team/theorem-reset-independent-verifier/verify_independent.py": "20d40137ea8bc4bf5675396c281fea4757c77afe4376a59fa63e1598a820e315"
+  },
+  "storage": {
+    "output_root": "E:\\Projects\\9DVL Research\\outputs",
+    "native_g_mirror": "DEFERRED_ACCESS_DENIED_IN_SANDBOX_TO_COORDINATING_USER_CONTEXT",
+    "google_drive_connector_used": false,
+    "approval_requested": false,
+    "github_write": false
+  },
+  "nonconsequences": [
+    "NO_NEW_UNIVERSAL_JOINED_CLAUSE",
+    "NO_GENUINE_MIXED_BLOCK_CARRIER_OR_NONEXISTENCE_THEOREM",
+    "NO_GLOBAL_TEN_CLAUSE_END_TO_END_DENOMINATOR",
+    "NO_Q3_COMPLETE_PARENT_BOUNDARY_ATLAS",
+    "NO_TRIPLE_RESIDUAL_REDUCTION",
+    "NO_PAIR_GLOBAL_COMPRESSION_OR_DENOMINATOR",
+    "NO_D3_INVARIANT_PROOF_OR_COUNTEREXAMPLE",
+    "NO_D9_SIMULTANEOUS_INSERTION_OR_SIGN_GEODESY_THEOREM",
+    "NO_LEDGER_CHANGE",
+    "NO_CONSTRUCTION_SUCCESSOR"
+  ]
+}
+

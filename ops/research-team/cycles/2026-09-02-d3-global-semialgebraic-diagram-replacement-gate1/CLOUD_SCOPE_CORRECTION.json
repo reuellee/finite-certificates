@@ -1,0 +1,32 @@
+{
+  "format": "d3-global-srep-cloud-scope-correction-v1",
+  "cycle_id": "2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1",
+  "recorded_on": "2026-09-02",
+  "frozen_record": "CLOUD_PREFLIGHT.json at d8e61faae0e2318d8eb83fd26dc4140b44a149e1",
+  "governing_rule": "WORK_ORDERS.yaml says not to inspect, stop, modify, or delete any pre-existing instance, including claude-control.",
+  "deviation": {
+    "classification": "READ_ONLY_EXISTING_INSTANCE_SCOPE_BREACH",
+    "command_class": "UNFILTERED_GCLOUD_COMPUTE_INSTANCES_LIST",
+    "read_only": true,
+    "existing_instance_metadata_rows_returned": 1,
+    "lifecycle_or_configuration_commands_issued": 0,
+    "existing_instances_modified": 0,
+    "cycle_resources_created": 0,
+    "cycle_cloud_spend_usd": 0
+  },
+  "defensible_observations": {
+    "cycle_prefix_instances_after": 0,
+    "cycle_prefix_disks_after": 0,
+    "existing_instance_was_not_targeted_by_any_mutating_command": true,
+    "existing_instance_final_state_asserted": false
+  },
+  "effect_on_close": {
+    "cloud_policy_clean_pass": false,
+    "q0_mathematical_verdict_changed": false,
+    "theorem_or_obligation_credit": "NONE",
+    "strategy_effect": "INDEPENDENTLY_REINFORCES_STOP",
+    "q1_activation": "DENIED"
+  },
+  "corrective_boundary": "No further non-prefix instance inspection is permitted in this cycle. Only exact cycle-prefix absence may be cited at close.",
+  "claim_boundary": "The frozen preflight's existing-instance metadata is retained as an audit trail, not promoted into a claim of compliant post-opening inspection or final state."
+}

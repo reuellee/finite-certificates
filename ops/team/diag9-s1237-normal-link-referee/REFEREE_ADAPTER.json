@@ -1,0 +1,40 @@
+{
+  "format": "diag9-s1237-normal-link-referee-adapter-v1",
+  "frozen_head": "5efbd07a25b818306f9fd22597fd81a0f2091309",
+  "frozen_tree": "b8cb35941043ff40be06cba98461ddab0ba14c8f",
+  "target_id": "D9_S1237_4SUPPORT_NORMAL_LINK_GATE1",
+  "accepted_endpoint": "NORMAL_LINK_REDUCTION_NO_GO",
+  "accepted_methods": [
+    {
+      "method": "EXACT_OPPOSITE_PARENT_INITIAL_FORMS_WITH_POSITIVE_GORDAN_WEIGHTS",
+      "materialized_evidence": "four source-derived primitive initial forms and two positive (1,1) Gordan relations",
+      "consequence": "the ordinary common-radial strict parent link is singular at the two replayed support points"
+    },
+    {
+      "method": "EXACT_SAME_RECURSIVE_STRATUM_TWO_SIDED_FACTOR_WALL",
+      "materialized_evidence": "factor 8552 orientation, lowest form d/4-e, and exact minus/wall/plus lifts in facet 1237",
+      "consequence": "the tangential four-support reduction omits an oriented recursive weighted wall"
+    }
+  ],
+  "source_census": {
+    "active_factor_classes": 3539,
+    "all_occurrences_of_active_classes": 6167,
+    "aligned_occurrence_union": 5026,
+    "certificate_literal_census_semantic_sha256": "a1b9d3d9da1e01df83621dc8f1c7959f86ae2e0d9bd3bc457124c561cbac245a"
+  },
+  "certificate_v1": {
+    "producer_payload_status": "ABSENT",
+    "mathematical_endpoint": null,
+    "treatment": "PRESERVED_FAIL_CLOSED; NOT_RETROACTIVELY_ACCEPTED",
+    "referee_boundary": "The adapter independently rederives only the two frozen witness methods and does not authorize digest-only geometry or another producer method."
+  },
+  "scope": {
+    "strict_open_parent_crossing": "NOT_CLAIMED",
+    "weighted_recursive_links": "OPEN",
+    "global_coverage_or_separator": "OPEN",
+    "collar_or_mincut": "OPEN",
+    "diagonal_9": "OPEN",
+    "ledger": "2/9"
+  },
+  "semantic_sha256": "38dfab850e0735ffe371f8e7f0c1b3a33ee7983333d49befc184a675f019123a"
+}

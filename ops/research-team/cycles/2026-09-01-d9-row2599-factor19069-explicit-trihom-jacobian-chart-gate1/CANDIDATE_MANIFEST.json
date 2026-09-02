@@ -1,0 +1,70 @@
+{
+  "format": "d9-factor19069-explicit-trihom-jacobian-chart-candidate-manifest-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1",
+  "candidate_revision": "5428e6232a3303d0188b2fee022968ae830d3b03",
+  "candidate_tree": "b32c190d662559ef2f2f80538595cf411fc26b54",
+  "accepted_classification": "EXACT_64_CHART_RECONSTRUCTION_BOUNDED_CHARACTERISTIC_ZERO_TIMEOUT_FAIL_CLOSED",
+  "accepted_endpoint": "HASH_PIN_ALL_COMPLETED_CHART_BRANCHES_AND_FIRST_PENDING_BRANCH",
+  "first_pending_branch_id": "DEC-JCH-00-a-d-g",
+  "first_pending_branch_semantic_sha256": "abfc0e6ecf60da4924c0991e8f78ea6df06a3270353eeedba411096ee3727725",
+  "pins": {
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/CYCLE.md": "4f0f6841c483a0832e39b170eb1e5c041cabc214f5733f5a21b81ee849b58dba",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/OPENING_AUDIT.json": "e513ef2f63f616cd06d3d5a27884a9919077ea1044132970de1d9691d09bbb55",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/OBLIGATION_GRAPH.json": "aedd5404ead4d36498da8a63e21d71f45a018ed2e6d2c14ea11300744545b9be",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/WORK_ORDERS.yaml": "b501084a2c5f2e8f7be24c446a0d7d20729d4689076a5316fca4c81a1b42caad",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/verify_opening_audit.py": "a5346694d5e6187b43f17d447840279d62746b424e330e5d51446b477855ffb7",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/PROJECTIVE_CHART_FRONTIER.json": "815edf97a68a049f8fb6749adf948cc406ec7a258de480cf3ada3e301ca6de67",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/RESULT.json": "429466e2bc3b7dd3617a5597e41df3adec48fb72c33c9deab22f2e73540f0300",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/SOURCE_MANIFEST.json": "9d4c69493f1ebb0a7a3e1f1bf8832ab56bace65a9841c4700af713322bd4658c",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/build_projective_chart_frontier.py": "fac063379545ec25af63f114db637634ecf9a285bc284a0b7b85a3e49487b5a4",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/verify_projective_chart_frontier.py": "3092cfa55721318c923f78aeae920006d9395a81fae83fabbe33722b4f6ded17",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/RESULT.json": "12ac0d8da67d58720b5ff6f06d30760de8fc78382ff5a856e4976351af94cb57",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/SOURCE_MANIFEST.json": "0eae6ef5d67a1868916df377168deede8ddcb0dd7a5ec5034b9a691651a53656",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/HOSTILE_TESTS.json": "633d1cc8a3807d3068df4499f16537be1ac4f9fc54d994e841790a20bc9c5d02",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-falsifier/verify_explicit_trihom_jacobian_chart_falsifier.py": "1e108febf840cd5262b862dfbd0a42e103267fe7866917dee03c8e18ac479d97",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/RESULT.json": "ab9e4aa1591e425b210b98442ae22803b99a8974311022088561c1ac708ec375",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/SOURCE_MANIFEST.json": "ab2573b767d2cd87a931dd1f63de397781f08f721f95ea67b1e6016fb187857d",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/HOSTILE_TESTS.json": "adfc633d0b7a9a4665c16df8d7f2911c2aefcb69ed7bcba2cdeb78e315d20826",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/SOURCE_RECONSTRUCTION.json": "4e16765b03ba82e400414287e8bbc80b7739f4f859b6facd2fa9b384dabde1cc",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/verify_projective_chart_certificate.py": "822b5c21fb4f738e62c9111c165fc4c447e4b6d46707b5dace7b9ae753db455a"
+  },
+  "exact_chart_frontier": {
+    "trihomogeneous_source_terms": 108,
+    "standard_chart_count": 64,
+    "directed_overlap_records": 4032,
+    "Euler_zero_residuals": 192,
+    "boundary_stratum_chart_incidences": 279,
+    "global_nonempty_homogenizer_boundary_types": 7,
+    "affine_original_ideal_equality": true,
+    "parent_factor_records_retained": 70
+  },
+  "decomposition_frontier": {
+    "coefficient_field": "QQ",
+    "monomial_order": "grevlex",
+    "first_chart": "JCH-00-a-d-g",
+    "wall_seconds": 20,
+    "status": "TIMEOUT_FIRST_CHART_GROEBNER_PREREQUISITE_PENDING",
+    "accepted_projective_components": 0,
+    "accepted_affine_component_contractions": 0,
+    "componentwise_parent_factor_tests_completed": 0,
+    "embedded_or_boundary_strata_discarded": 0
+  },
+  "endpoint_accounting": {
+    "positive": false,
+    "negative": false,
+    "null": false,
+    "timeout": true
+  },
+  "ledger_delta": "none",
+  "theorem_ledger": "2/9",
+  "diagonal_nine": "OPEN",
+  "closing_strategy_verdict": "PIVOT",
+  "retired_route": "BLIND_UNDIFFERENTIATED_GROEBNER_BUDGET_ESCALATION",
+  "precise_successor": "D9_ROW2599_FACTOR19069_HOMOGENIZER_BOUNDARY_TYPE_STRATIFICATION_GATE1",
+  "successor_design": {
+    "selected_count": 1,
+    "structural_change": "STRATIFY_THE_SEVEN_NONEMPTY_HOMOGENIZER_BOUNDARY_TYPES_BEFORE_CHARTWISE_DECOMPOSITION",
+    "deepest_restriction_term_count": 11,
+    "deepest_restriction_exact_factorization": "-h*(a*f-c*d)*(a*e*i-a*f*h-b*d*i+b*f*g+c*d*h-c*e*g)"
+  }
+}

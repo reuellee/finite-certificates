@@ -1,0 +1,169 @@
+{
+  "format": "d3-mixed-carrier-falsifier-result-v1",
+  "cycle_id": "2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1",
+  "track_id": "d3-mixed-carrier-falsifier",
+  "branch": "research/lane-d3-mixed-carrier-falsifier-20260901",
+  "lane_base_revision": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+  "lane_base_tree": "a59d740c008ae04accf200a8373d16b4d9c70ae4",
+  "charter_immutable_predecessor": "9116771ba80ed3d033516d0dd666b34348aad348",
+  "handoff": "NULL",
+  "assessment": "DECISIVE_NULL_SCOPED_ANSATZ_NEGATIVES_ONLY",
+  "abc_program_status": {
+    "A": "A_NULL",
+    "B": "B_NULL",
+    "C": "C_NULL"
+  },
+  "abc_findings": {
+    "A": {
+      "finding": "NULL",
+      "universal_counterexample_found": false,
+      "scoped_negatives": [
+        "singleton-root cells subordinate to one fixed bad block cannot fill the row-2599 primitive class",
+        "one globally fixed triangular label order is not a universal pair-root receiver",
+        "pointwise acyclic first-exit fibers do not by themselves assemble to a proper relative strip"
+      ],
+      "first_unproved_boundary": "No finite source-bound rule assigns at least one valid genuinely mixed chain family to every quantified input on one simultaneous subdivision with specialization coherent along every arbitrary face chain."
+    },
+    "B": {
+      "finding": "NULL",
+      "universal_counterexample_found": false,
+      "exact_denominator": {
+        "shape_orbits": 10,
+        "labeled_placements": 34,
+        "credited_universal_shape_clauses": 3,
+        "missing_universal_shape_clauses": 7,
+        "scope": "FORMAL_FACE_COUNT_WITHIN_ONE_LABELED_THREE_BLOCK_FAMILY_NOT_A_SOURCE_CELL_OR_END_TO_END_DENOMINATOR"
+      },
+      "scoped_negative": "A component-faithful true-infinity exit graph, even when accepted, does not determine pair H1.",
+      "first_unproved_boundary": "No complete source-derived L_source, filtration-preserving comparison, or rational pair-kernel complex with verified M*N=0 and rank_Q(N)+rank_Q(M)=dim_Q(C_pair^1) is present."
+    },
+    "C": {
+      "finding": "NULL",
+      "universal_counterexample_found": false,
+      "sufficient_endpoint": "Every vertex of a complete component-faithful graph reaches a certified true_parent_infinity vertex, equivalently every sink SCC contains one.",
+      "first_unproved_boundary": "No universal all-component escape theorem is present; separately, no unresolved source family has complete stable local-component identities, sound same-component continuations, and certified true-parent-infinity marks for every actual component.",
+      "scope_note": "Rejection of an incomplete open-world exit graph is inconclusive and no compact actual triple component was found."
+    }
+  },
+  "quantifier_audit": {
+    "proper_antichain": "LOCAL_DIAGNOSTIC_ONLY",
+    "active_sizes_r_1_through_3": "EXACT_SHAPE_DENOMINATOR_REPLAYED",
+    "all_labeled_shapes_modulo_permutation": "10_ORBITS_34_LABELED_PLACEMENTS",
+    "simultaneous_subdivision": "OPEN",
+    "arbitrary_face_chain_coherence": "OPEN",
+    "complete_source_provenance": "OPEN",
+    "filtration_preserving_comparison": "OPEN",
+    "parent_rank_vs_witness_rank": "DISTINCTION_REQUIRED_NOT_GLOBALLY_ATTACHED",
+    "rational_pair_rank": "OPEN",
+    "true_parent_infinity": "CRITERION_EXACT_INPUT_MISSING"
+  },
+  "triple_source_accounting": {
+    "source_orbits": 79102449,
+    "settled_orbits": 77940147,
+    "residual_orbits": 1162302,
+    "source_order_semantic_sha256": "a76a7c2cd6631c2d9724b450540bec7f3be6c106a41ae41f1736bbd2755a5ca4",
+    "semantic_scope": "SOURCE_ORDER_AND_ACCOUNTING_ONLY_NOT_COMPONENT_ID_OR_COMPONENT_COUNT"
+  },
+  "row2599_canary": {
+    "parent": "row2599_chart0",
+    "signatures": [
+      14988895318912,
+      3405195891438080,
+      40418075143643136
+    ],
+    "derived_tope_count": 26112,
+    "escape_sizes": [56, 56, 60],
+    "triple_elementary_root_intersection": "EMPTY",
+    "pair_roots": [
+      [2, 8, -1],
+      [1, 2, -1],
+      [1, 3, 1]
+    ],
+    "rank_d1": 3,
+    "rank_d2": 6,
+    "rank_C2": 7,
+    "relative_homology": {
+      "H0": "0",
+      "H1": "0",
+      "H2": "Z"
+    },
+    "primitive_relation": [-1, 1, 1, 1, 1, 1, 1],
+    "singleton_nerve_cocycle_value": 1,
+    "exact_scope": "NO_GO_FOR_SINGLETON_ONLY_FIXED_BLOCK_ROOT_CARRIERS",
+    "does_not_prove": [
+      "TARGET_A_IMPOSSIBLE",
+      "GENUINELY_MIXED_CHAIN_EXISTS",
+      "TARGET_B_COMPARISON_OR_PAIR_EXACTNESS",
+      "TARGET_C_ALL_COMPONENT_ESCAPE",
+      "D3"
+    ]
+  },
+  "minimal_obstruction_models": [
+    {
+      "id": "M1_FIXED_TRIANGULAR_LABEL_ORDER",
+      "machine_replay": "python -B ai/omreal/verify_diag3_pair_fixed_order_no_go.py",
+      "exact_result": "At canonical type-49 support (0,7,14,28), all 22 common roots for the two pinned GP-valid positive signings ascend for 1>2>...>8.",
+      "retired_scope": "ONE_GLOBALLY_FIXED_TRIANGULAR_ROOT_ORDER",
+      "universal_target_retired": "NONE"
+    },
+    {
+      "id": "M2_POINTWISE_FIRST_EXIT_STRIP",
+      "machine_replay": "python -B ai/omreal/verify_diag3_tangential_first_exit_no_go.py",
+      "exact_result": "The selected union is nonclosed at (0,3/2), while ambient closure has H_1([0,2],{1,2};Q)=Q.",
+      "retired_scope": "POINTWISE_ACYCLIC_EXIT_FIBERS_WITHOUT_COMPLETE_FRONTIER_DATA",
+      "universal_target_retired": "NONE"
+    },
+    {
+      "id": "M3_SAME_EXIT_GRAPH_DIFFERENT_PAIR_H1",
+      "machine_replay": "python -B ai/omreal/verify_diag3_global_exit_criterion.py",
+      "exact_result": "Two complexes with d1=[1 0] share an accepted true-infinity graph; unfilled H1(F2)=1 and filled d2=(0,1)^T gives H1(F2)=0.",
+      "retired_scope": "GRAPH_ONLY_INFERENCE_OF_PAIR_H1",
+      "universal_target_retired": "NONE"
+    }
+  ],
+  "universal_negative_found": false,
+  "scope_limits": [
+    "No broad sampling, global enumeration, census, or new/global atlas was performed; the mandatory local canary used its pre-existing NPZ source.",
+    "No external solver or network source was used.",
+    "The canary is local and the first-exit model is abstract rather than an actual 9DVL locus.",
+    "Exit-graph rejection is open-world inconclusive.",
+    "Only B and C together could prove D3; this handoff proves neither."
+  ],
+  "midpoint_recommendation": "STOP_DISCOVERY_FREEZE_AND_SEND_TO_REFEREE_UNLESS_OTHER_V8_LANE_OUTPUTS_ALREADY_SATISFY_EVERY_SECOND_ROUND_GATE",
+  "tests": [
+    {
+      "command": "python -B ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/verify_opening_state.py",
+      "exit_code": 0,
+      "result": "PASS_OPENING_STATE_AND_13_OF_13_SOURCE_PINS"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_joined_flow_triangle.py",
+      "exit_code": 0,
+      "result": "PASS_EXACT_ROW2599_CANARY"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+      "exit_code": 0,
+      "result": "PASS_SINGLE_BAD_TWO_SKELETON_WITH_STATED_PAIR_TRIPLE_CAVEAT"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_pair_fixed_order_no_go.py",
+      "exit_code": 0,
+      "result": "PASS_SCOPED_FIXED_ORDER_NO_GO"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_tangential_first_exit_no_go.py",
+      "exit_code": 0,
+      "result": "PASS_SCOPED_FIRST_EXIT_NO_GO"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_global_exit_criterion.py",
+      "exit_code": 0,
+      "result": "PASS_TRUE_INFINITY_CRITERION_AND_GRAPH_ONLY_PAIR_NO_GO"
+    }
+  ],
+  "theorem_effect": "NONE",
+  "ledger_before": "2/9",
+  "ledger_after": "2/9",
+  "ledger_delta": "0/9"
+}

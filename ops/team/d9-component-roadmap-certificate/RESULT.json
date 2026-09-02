@@ -1,0 +1,71 @@
+{
+  "format": "d9-component-roadmap-certificate-result-v1",
+  "track_id": "d9-component-roadmap-certificate",
+  "opening_revision": "ed57704f68e14349c3aae0eee5f807a2f5fe7feb",
+  "opening_tree": "0ecd1e35cc113b3a73a245191f930c908f989a8b",
+  "outcome": "pass",
+  "classification": "REPRESENTATION_CANARY_GATE_PASS",
+  "summary": "The endpoint-neutral roadmap contract preserves the global adjacency, novel projection-factor, recursive-boundary residence, and positive-dimensional singular-stratum information that the retired local grammar lost.",
+  "canary_results": {
+    "global_memory_aliasing": {
+      "status": "PASS",
+      "shared_local_observation_sha256": "0fcbe8aa1c4cc5540a4f3d5544526298f6bb8209298481788122bab509a1913a",
+      "positive_component_counts": [2, 1],
+      "discriminator": "FULL_GLOBAL_ADJACENCY_DIGEST"
+    },
+    "type36_projection": {
+      "status": "PASS",
+      "projected_polynomial": "c*d-c+f",
+      "first_layer_new_irreducibles": 142,
+      "policy": "ON_DEMAND_FACTOR_REGISTRY_EXTENSION_REQUIRED"
+    },
+    "factor8552_boundary_residence": {
+      "status": "PASS",
+      "factor_id": 8552,
+      "recursive_parent_facet": "1237",
+      "strict_open_parent_crossing": false,
+      "global_separator": false
+    },
+    "positive_dimensional_singularity": {
+      "status": "PASS",
+      "test_polynomial": "x^2",
+      "critical_locus": "x=0, y free",
+      "derived_dimension": 1,
+      "treatment": "REGISTER_AS_POSITIVE_DIMENSIONAL_CRITICAL_STRATUM"
+    }
+  },
+  "hostile_mutations": {
+    "rejected": 5,
+    "total": 5,
+    "classes": [
+      "ERASE_GLOBAL_ADJACENCY",
+      "ERASE_NOVEL_PROJECTION_FACTOR",
+      "PROMOTE_BOUNDARY_WALL_TO_INTERIOR",
+      "COLLAPSE_POSITIVE_DIMENSIONAL_SINGULAR_LOCUS",
+      "PROMOTE_FIXED_DOMAIN_TO_DIAGONAL_NINE"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "ops/team/d9-component-roadmap-certificate/ROADMAP_CANARY_CONTRACT.json",
+      "sha256": "026688a55e2b76e582ff72c8d67b00ab234a7b609fceb87175ddd23c78d2cb45"
+    },
+    {
+      "path": "ops/team/d9-component-roadmap-certificate/verify_roadmap_canary_contract.py",
+      "sha256": "3213b6d37e72b2c6ec5c6471fece1711e57e2d0df5eda04d0d6212d29ae4b599"
+    }
+  ],
+  "exact_consequence": "THE_ROADMAP_CERTIFICATE_LANGUAGE_CAN_REPRESENT_ALL_FOUR_OPENING_DISCRIMINATORS_WITHOUT_REUSING_THE_RETIRED_MEMORYLESS_LOCAL_GRAMMAR",
+  "nonconsequences": [
+    "NO_CRITICAL_SYSTEM_ENUMERATION_AUTHORIZATION",
+    "NO_PRODUCED_FIXED_DOMAIN_ROADMAP",
+    "NO_FIXED_DOMAIN_CONNECTIVITY_OR_DISCONNECTION",
+    "NO_COMPONENT_COMPLETENESS_THEOREM",
+    "NO_DIAGONAL_9_RESULT",
+    "NO_9DVL_SCORE_CHANGE"
+  ],
+  "critical_enumeration": "DENIED_PENDING_CONSTRUCTIVE_EXACT_PROJECTION_AND_STRATIFICATION_PREFLIGHT",
+  "next_action": "Implement the deterministic exact projection, boundary barrier, Jacobian-minor stratification, and a producer-independent schema adapter; rerun these canaries before solving any critical system.",
+  "ledger_change_recommended": "none"
+}
+

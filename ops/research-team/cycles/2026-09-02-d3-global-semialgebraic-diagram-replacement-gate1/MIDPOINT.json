@@ -1,0 +1,41 @@
+{
+  "format": "d3-global-srep-midpoint-v1",
+  "cycle_id": "2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1",
+  "frozen_q0_evidence_commit": "e18efbdea3ef00616f4a6cb83967f6bb267b1a5d",
+  "independent_verifier_commit": "597537a8f705ac895e7d3e30962eb515cc8f6015",
+  "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 6, 9],
+  "midpoint_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 6, 9],
+  "q0": {
+    "producer_classification": "NULL_NO_EXECUTABLE_REPLACEMENT_BACKEND",
+    "independent_verdict": "Q0_NULL_INDEPENDENTLY_CONFIRMED",
+    "canaries": "PASS_WITH_NONQUALIFYING_SURROGATES",
+    "complete_global_tagged_schema": false,
+    "executable_replacement_backend": false,
+    "independently_checkable_replacement_trace": false,
+    "complete_scope_denominator_N": null,
+    "exact_formula_parameters_s": null,
+    "exact_formula_parameters_d": null,
+    "template_ambient_dimension_k": 178,
+    "numeric_N_over_N_resource_forecast": null,
+    "theorem_credit": "NONE"
+  },
+  "first_missing_prerequisites": [
+    "EXECUTABLE_INDEPENDENTLY_TRACEABLE_BASU_KARISANI_REPLACEMENT_BACKEND",
+    "ALL_PARENT_PROPER_REGION_AND_PAIRWISE_INCOMPARABILITY_CLASSIFICATION",
+    "QUANTIFIER_FREE_P_CLOSED_EXACT_PARENT_COMPACTIFICATION"
+  ],
+  "resource_accounting": {
+    "q0_local_ceiling_hours": 8,
+    "q0_local_ram_ceiling_gib": 32,
+    "q0_local_scratch_ceiling_gib": 25,
+    "producer_handoffs_used": 1,
+    "verifier_directed_repairs_used": 0,
+    "cloud_worker_authorized_conditionally": true,
+    "cloud_worker_activated": false,
+    "cloud_activation": "DENIED_Q0_GATE_FAILED"
+  },
+  "minimum_decrease_still_reachable_under_fixed_ceiling": false,
+  "q1_activation": "DENIED",
+  "mandatory_midpoint_action": "FREEZE_Q0_AND_STOP",
+  "reason": "Q0 failed independently. Without a qualifying executable, an exact global denominator, a sound quantifier-free P-closed compactification, or numeric N/s/d, there is no hash-pinned job that cloud compute can execute and verify."
+}

@@ -29,6 +29,7 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 
 import verify_diag3_triple_local_roadmap_canary as accepted  # noqa: E402
+import diag3_research_ledger_compatibility as ledger_compat  # noqa: E402
 
 
 OUTPUT = ROOT / "ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json"
@@ -109,7 +110,10 @@ def main():
     accepted.verify_candidate(base_certificate)
     registration = json.loads(accepted.REGISTRATION.read_text(encoding="utf-8"))
     source = json.loads(accepted.SYSTEM.read_text(encoding="ascii"))
-    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
+    # This producer reproduces a historical v1 certificate byte-for-byte.
+    # Authenticate ledger v2 and its unchanged obligation semantics, but keep
+    # the immutable v1 source digest in the emitted certificate.
+    ledger = ledger_compat.load_current_ledger(LEDGER)
 
     triple_obligation = next(
         item for item in ledger["invariant_obligations"]
@@ -357,7 +361,7 @@ def main():
         },
         "authenticated_sources": {
             "decision_ledger": "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json",
-            "decision_ledger_sha256": sha256(LEDGER),
+            "decision_ledger_sha256": ledger_compat.HISTORICAL_LEDGER_SHA256,
             "critical_system": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
             "critical_system_sha256": sha256(accepted.SYSTEM),
             "source_mapping_gate": "ai/omreal/data/DIAG3_triple_fullspace_feasibility_gate.json",

@@ -1,0 +1,130 @@
+cycle_id: 2026-09-01-diag9-s1237-normal-link
+base_revision: c55d896cc5c0370e993b793992a2f05d894e0095
+base_tree: 17299e84397aae158a2111cbe01b52f5be24bfd5
+opening_ledger: 2/9
+
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_D9_S1237_4SUPPORT_NORMAL_LINK_GATE1
+  closing_required: true
+  stagnation_rule: >-
+    Stop after one complete normal-link gate. A pass authorizes only a fresh
+    audit for a later collar/cell target; a fail retires this reduction unless
+    it supplies a strictly smaller exact obstruction class.
+
+work_orders:
+  - track_id: diag9-s1237-opening-coordinator
+    role: coordinator and opening strategy auditor
+    base_revision: c55d896cc5c0370e993b793992a2f05d894e0095
+    publication_authorization: *publication_authorization
+    target:
+      claim: Lock one bounded target after reconciling the PR46 evidence base with the PR47 successor tree.
+      quantifiers: Every protocol strategy dimension, live D3/D8/D9 route, canonical input, and authority epoch.
+      ledger_id: target_selection
+    deliverables:
+      positive: Exact opening audit, selected target contract, source pins, and hostile verifier.
+      negative: STOP with the conflicting canonical state or authority named.
+      null: PIVOT_REQUIRED with the smallest missing opening discriminator.
+      timeout: Partial source ledger with checked and unchecked items.
+    verification:
+      replay: PYTHONDONTWRITEBYTECODE=1 python ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/verify_opening_audit.py
+      canaries: [stale-base, false-ledger-promotion, old-publication-authority, tangential-as-collar]
+    resource_ceiling: One coordinator turn, 30 minutes, ordinary local compute, no paid services.
+    stop_rule: Stop after one independently endorsed bounded target or a fail-closed opening defect.
+    prohibited_scope: No mathematical certificate production, GitHub write, theorem change, or stale-branch reuse.
+    worker_restrictions: Own only the cycle control plane and durable checkpoints.
+
+  - track_id: diag9-s1237-normal-link-prover
+    role: constructive prover and exact normal-link producer
+    base_revision: c55d896cc5c0370e993b793992a2f05d894e0095
+    publication_authorization: *publication_authorization
+    target:
+      claim: Decide the complete oriented inward normal-link gate on the two certified support faces.
+      quantifiers: All 3539 active literals, every occurrence and orientation, both supports, all parent-safe projective directions, recursive boundary strata, and exact stabilization.
+      ledger_id: diag9_s1237_oriented_normal_link
+    deliverables:
+      positive: Exact normal-form inventory, complete link-sector certificate, stabilization proof, source manifest, and replay command.
+      negative: Exact extra link wall, singularity, missing coface, or higher-order instability proving NORMAL_LINK_REDUCTION_NO_GO.
+      null: First exact unresolved stratum with a complete deterministic dependency frontier.
+      timeout: Hash-pinned processed and pending literal/stratum frontier with an exact resume command.
+    verification:
+      replay: Producer verifier plus the independent certificate-engineering replay at the frozen head.
+      canaries: [drop-literal, flip-unit-sign, merge-duplicate-orientation, omit-parent-bracket, omit-normal-direction, omit-coface, fake-radius]
+    resource_ceiling: 30 minutes, 12 GiB, 10000 link polynomials, 100000 link cells, ordinary local compute, no paid services.
+    stop_rule: Stop at a complete gate, first exact no-go obstruction, or any resource ceiling.
+    prohibited_scope: No collar complex, mincut, sampled coverage, global separator, theorem promotion, or GitHub write.
+    worker_restrictions: Own only ops/team/diag9-s1237-normal-link-prover; do not edit cycle or canonical-state files.
+
+  - track_id: diag9-s1237-normal-link-falsifier
+    role: independent mathematical and certificate falsifier
+    base_revision: c55d896cc5c0370e993b793992a2f05d894e0095
+    publication_authorization: *publication_authorization
+    target:
+      claim: Break the proposed normal-link reduction on orientation, completeness, parent residence, or stabilization.
+      quantifiers: Every active literal class, duplicate occurrence, support face, normal facet/base/apex/seam, coface, and claimed domination bound.
+      ledger_id: diag9_s1237_oriented_normal_link
+    deliverables:
+      positive: Minimal exact obstruction or hostile mutation accepted by producer logic.
+      negative: Fail-closed attack report covering every mandated canary without finding a defect.
+      null: Smallest unresolved attack and exact deciding computation.
+      timeout: Checked/unchecked attack matrix with deterministic frontier.
+    verification:
+      replay: Independent regeneration of orientations and adversarial mutations without producer acceptance logic.
+      canaries: [identically-zero-on-face, lowest-normal-form, facet-coefficient-vanishing, boundary-gluing, fake-infinity, sample-promotion]
+    resource_ceiling: 30 minutes, 12 GiB, ordinary local compute, no paid services.
+    stop_rule: Stop at the first reproducible fatal defect, complete hostile audit, or ceiling.
+    prohibited_scope: Do not repair producer artifacts, construct a collar/mincut, edit canonical state, or write GitHub.
+    worker_restrictions: Own only ops/team/diag9-s1237-normal-link-falsifier and preserve independent acceptance logic.
+
+  - track_id: diag9-s1237-normal-link-certificate
+    role: certificate engineer and independent replay designer
+    base_revision: c55d896cc5c0370e993b793992a2f05d894e0095
+    publication_authorization: *publication_authorization
+    target:
+      claim: Define and verify a fail-closed exact artifact contract for either normal-link endpoint.
+      quantifiers: Source manifest, 3539-literal census, occurrence orientations, recursive stratum closure, link sectors, feasibility labels, stabilization, and scope exclusions.
+      ledger_id: diag9_s1237_oriented_normal_link
+    deliverables:
+      positive: Producer-independent schema, verifier, hostile mutation harness, and deterministic semantic digest.
+      negative: Certificate format no-go identifying an uncheckable load-bearing claim.
+      null: Minimal missing field or witness class required before acceptance.
+      timeout: Versioned partial schema with explicit unchecked claims.
+    verification:
+      replay: Reconstruct certificate semantics from pinned repository sources, not producer summaries.
+      canaries: [missing-source, reordered-literal, orientation-flip, omitted-stratum, duplicate-sector, false-stabilization, false-nonconsequence]
+    resource_ceiling: 30 minutes, 12 GiB, ordinary local compute, no paid services.
+    stop_rule: Stop at one complete endpoint-neutral schema/verifier or first uncheckable requirement.
+    prohibited_scope: No mathematical discovery claim, producer repair, theorem update, or GitHub write.
+    worker_restrictions: Own only ops/team/diag9-s1237-normal-link-certificate; acceptance logic must remain independent.
+
+  - track_id: diag9-s1237-normal-link-closing-referee
+    role: independent verifier and closing referee
+    base_revision: c55d896cc5c0370e993b793992a2f05d894e0095
+    publication_authorization: *publication_authorization
+    target:
+      claim: Accept or reject the frozen integrated local head and its bounded consequence.
+      quantifiers: Every changed path, source digest, literal, stratum, hostile mutation, resource endpoint, scope exclusion, and durable checkpoint identity.
+      ledger_id: closing_acceptance_gate
+    deliverables:
+      positive: Exact-head ACCEPT bound to local commit and tree with the bounded endpoint stated.
+      negative: REJECT with a minimal reproducible defect.
+      null: Fail-closed ambiguity naming the smallest successor discriminator.
+      timeout: Partial replay manifest with checked and unchecked gates.
+    verification:
+      replay: Clean producer-independent replay of protocol, opening audit, certificates, hostile tests, source manifest, and repository checks.
+      canaries: [unfrozen-head, unauthorized-path, missing-digest, source-drift, false-3-of-9, tangential-as-collar, unresolved-infinity]
+    resource_ceiling: 45 minutes, 12 GiB, ordinary local compute, no paid services.
+    stop_rule: Stop at first defect, complete frozen-head verdict, or ceiling.
+    prohibited_scope: Do not repair the candidate, merge, update the theorem ledger, or write GitHub.
+    worker_restrictions: Activate only after integration is frozen; own only ops/team/diag9-s1237-normal-link-referee.

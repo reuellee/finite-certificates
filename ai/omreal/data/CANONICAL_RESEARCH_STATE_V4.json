@@ -1,0 +1,158 @@
+{
+  "format": "9dvl-canonical-research-state-v4",
+  "status": "PIVOT_REQUIRED",
+  "as_of": "2026-09-01",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "default_branch": "main",
+    "canonical_storage": "CHATGPT_LIBRARY",
+    "recovery_mirror": "GOOGLE_DRIVE_PROJECTS_RESEARCH_BACKUPS",
+    "github_mode": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION",
+    "cycle_base_commit": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+    "cycle_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+    "reviewed_candidate_commit": "39035a9c35b27a9893db393dbb8a9ec1b621754d",
+    "reviewed_candidate_tree": "e05535180e3522521f5f151f956a9f407f5a2956",
+    "integrated_referee_commit": "6bbfb4b728bb92d993ea0faf4e88dde572abd9ea",
+    "integrated_referee_tree": "b52ef7fbdf42b3cfd8e3c66f98ced5406c3b7db9"
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V3.json",
+    "sha256": "e37fad74fae83cf087b2010039e85122866c3b093e34227f28d12759be94a6cf",
+    "policy": "IMMUTABLE_POST_D9_NORMAL_LINK_STATE"
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "active_diagonal": null,
+    "promotion": "NONE"
+  },
+  "inherited_open_obligations": {
+    "diag3_triple_hc0": {
+      "status": "OPEN",
+      "residue": 1162302,
+      "first_missing_global_object": "Q3_COMPLETE_PARENT_BOUNDARY_ATLAS"
+    },
+    "diag3_pair_hc1": "OPEN",
+    "diag4_sp": {
+      "status": "OPEN",
+      "survivor_labeled": 800240,
+      "survivor_orbits": 53
+    },
+    "diag8_h1": "OPEN",
+    "diag9_h0": "OPEN"
+  },
+  "inherited_route_dispositions": {
+    "D4_S53_CONTINUATION": "RETIRED",
+    "D4_ALTERNATING_TOTAL_COMPLEX": "RETIRED_UNTIL_ALL_THREE_GLOBAL_INPUTS",
+    "ORBIT_5563_LOCAL_ROADMAP_CONTINUATION": "RETIRED",
+    "ORBIT_5563_LOCAL_BOX_CONTINUATION": "RETIRED",
+    "ORBIT_5563_LOCAL_COLLAR_CONTINUATION": "RETIRED",
+    "ORBIT_5563_MACROBOX_CONTINUATION": "RETIRED",
+    "ORBIT_5563_CLIPPED_WALL_CONTINUATION": "RETIRED",
+    "D8_MASK6_DISCRIMINATOR": "RETIRED_AFTER_POSITIVE_FILLING",
+    "D9_S1237_TANGENTIAL_FOUR_SUPPORT_REDUCTION": "RETIRED_AFTER_EXACT_NORMAL_LINK_NO_GO",
+    "D9_S1237_ORDINARY_COMMON_RADIAL_LINK": "RETIRED_AFTER_EXACT_SINGULAR_LINK",
+    "D9_UNIVERSAL_MEMORYLESS_13_TYPE_CUT_GRAMMAR": "RETIRED_UNTIL_GLOBAL_ATTACHMENT_AND_PROJECTION_CLOSURE_INPUTS"
+  },
+  "completed_cycle": {
+    "id": "2026-09-01-d9-universal-cut",
+    "selected_target": "D9_UNIVERSAL_FEASIBLE_COMPONENT_CUT_GATE1",
+    "opening_verdict": "PIVOT_SELECT",
+    "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+    "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+    "evidence_commit": "9cb3652b00c0a07901b6fa32dd3f7d03987cfb66",
+    "evidence_tree": "37f605949a2fbfdf8be8983b6ea24121eea4a177",
+    "reviewed_candidate_commit": "39035a9c35b27a9893db393dbb8a9ec1b621754d",
+    "reviewed_candidate_tree": "e05535180e3522521f5f151f956a9f407f5a2956",
+    "referee_commit": "6bbfb4b728bb92d993ea0faf4e88dde572abd9ea",
+    "referee_tree": "b52ef7fbdf42b3cfd8e3c66f98ced5406c3b7db9",
+    "opening_gate": {
+      "status": "FAILED_CLOSED",
+      "requirement_verdicts": ["FAIL", "FAIL", "FAIL", "PASS", "PASS"],
+      "mathematical_endpoint": "UNIVERSAL_CUT_SCHEMA_COVERAGE_GAP",
+      "classification": "EXACT_NULL_GLOBAL_COVERAGE_AND_ATTACHMENT_NO_GO",
+      "main_census_authorized": false,
+      "main_census_started": false
+    },
+    "structural_gate": {
+      "conditional_master_stratification_reduction": "PROVED",
+      "residual_local_types": 13,
+      "first_projection_gap_type": 36,
+      "first_projection_gap_polynomial": "c*d-c+f",
+      "first_layer_new_irreducibles": 142,
+      "new_irreducible_degree_census": {"2": 23, "3": 71, "4": 43, "5": 5},
+      "parent_brackets_checked": 70,
+      "global_residual_factors_checked": 26740,
+      "projection_closed": false
+    },
+    "circuit_gate": {
+      "one_sided_specialization_cospans": 13,
+      "opposite_partner_pairs": 671,
+      "persistent_support_candidates": 2420,
+      "abstract_counterpair_chambers": 16,
+      "local_observations_identical": true,
+      "positive_component_counts": [2, 1],
+      "counterpair_source_realized_uom_4_8": false,
+      "displayed_auxiliary_rows_sum": 123,
+      "printed_auxiliary_total": 131,
+      "source_discrepancy": "NON_LOAD_BEARING_ARITHMETIC_TYPO"
+    },
+    "boundary_gate": {
+      "factor_id": 8552,
+      "factor": "d*i-e",
+      "recursive_parent_facet": "1237",
+      "exact_lift_signs": ["-", "0", "+"],
+      "boundary_charts": 64,
+      "strict_open_parent_crossing": false,
+      "global_separator": false,
+      "weighted_strict_coface": "NOT_CERTIFIED"
+    },
+    "falsifier_gate": {
+      "classification": "FINITE_EXACT_LOGICAL_NO_GO_PLUS_NULL_ACTUAL_D9",
+      "ordered_noninclusions": 72,
+      "memoryless_local_to_global_inference": "REFUTED",
+      "source_realized_d9_counterexample": "NOT_FOUND",
+      "first_missing_discriminator": "GLOBAL_COMPONENT_FAITHFUL_SIGN_GEODESY_OR_EQUIVALENT_ATTACHMENT_OBJECT"
+    },
+    "certificate_gate": {
+      "status": "VERSIONED_ENDPOINT_NEUTRAL_FAIL_CLOSED_ENVELOPE",
+      "endpoint_fixtures": 4,
+      "hostile_mutations_rejected": 32,
+      "live_universal_coverage_adapter": false,
+      "portable_predecessor_census": "3539/6167/5026/70/16",
+      "historical_referee_object_required": false
+    },
+    "referee_gate": {
+      "verdict": "ACCEPT",
+      "accepted_scope": "FAIL_CLOSED_NULL_ENDPOINT",
+      "source_pin_declarations": 87,
+      "unique_source_paths": 51,
+      "hostile_mutations_rejected": 20,
+      "semantic_sha256": "125899bfe61b72f521b1c48abadd9d726a0053e6187f175a221a5d8845750ca3"
+    },
+    "exact_consequence": "THE_MEMORYLESS_13_TYPE_LOCAL_GRAMMAR_IS_NOT_A_COMPLETE_UNIVERSAL_D9_CUT_SCHEMA_AND_THE_OPENING_GATE_FAILS_CLOSED",
+    "nonconsequences": [
+      "NO_SOURCE_REALIZED_D9_COUNTEREXAMPLE",
+      "NO_UNIVERSAL_D9_CUT_COVERAGE_THEOREM",
+      "NO_EXHAUSTIVE_OBSTRUCTION_UNSAT_RESULT",
+      "NO_STRICT_OPEN_PARENT_SEPARATOR",
+      "NO_WEIGHTED_RECURSIVE_LINK_CLASSIFICATION",
+      "NO_DIAGONAL_9_RESULT",
+      "NO_9DVL_SCORE_CHANGE"
+    ],
+    "route_disposition": "RETIRED_UNTIL_GLOBAL_ATTACHMENT_AND_PROJECTION_CLOSURE_INPUTS"
+  },
+  "selected_target": null,
+  "target_selection": "PENDING_FRESH_INDEPENDENT_OPENING_AUDIT",
+  "process_gates": {
+    "theorem_score_promotion_requires_all_invariant_obligations_closed": true,
+    "opening_failure_prohibits_main_census": true,
+    "abstract_countermodel_is_not_a_source_d9_counterexample": true,
+    "recursive_facet_wall_is_not_a_strict_parent_separator": true,
+    "source_discrepancy_is_preserved_and_non_load_bearing": true,
+    "portable_predecessor_replay_replaces_historical_object_dependency": true,
+    "independent_exact_head_review_passed": true,
+    "github_remains_read_only_until_new_explicit_user_instruction": true
+  }
+}

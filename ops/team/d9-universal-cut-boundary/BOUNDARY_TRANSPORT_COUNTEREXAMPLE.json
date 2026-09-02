@@ -1,0 +1,99 @@
+{
+  "format": "d9-universal-cut-boundary-transport-counterexample-v1",
+  "track_id": "d9-universal-cut-boundary",
+  "classification": "finite-exact omitted strict-coface attachment",
+  "parent": {
+    "catalog_index": 2599,
+    "compactification": "product_of_three_closed_positive_projective_3_simplices",
+    "chart_count": 64,
+    "strict_parent_condition": "all 70 oriented parent brackets are positive"
+  },
+  "family": {
+    "name": "S12,37",
+    "proper_pairwise_incomparable": true,
+    "candidate_active_factor_count": 3539
+  },
+  "active_factor": {
+    "factor_id": 8552,
+    "polynomial": "d*i-e",
+    "family_allowed_orientation": -1,
+    "family_allowed_side": "d*i-e<0",
+    "occurrence_index": 24140,
+    "occurrence_fourset": [4, 9, 23, 37],
+    "occurrence_multiplicity": 1,
+    "stripped_parent_unit_indices": []
+  },
+  "boundary_incidence": {
+    "support": [3, 1, 15],
+    "recursive_parent_bracket": "1237",
+    "standard_coordinate": "f",
+    "compactification_divisor": {
+      "moving_column": 7,
+      "coordinate_row": 4,
+      "parent_bracket": "1237",
+      "determinant_sign": 1
+    },
+    "genuine_parent_boundary": true,
+    "artificial_work_boundary": false,
+    "residual_parent_multiwall": true,
+    "lowest_residual_normal_form": "d/4-e"
+  },
+  "exact_rays": [
+    {
+      "side": "minus",
+      "normal_direction": ["13/55", "1/5", "19/55", "12/55", "0", "-14/55"],
+      "lowest_residual_form": "-29/220",
+      "exact_lift_point": ["3/4", "13/5500", "1/500", "19/5500", "3/1375", "0", "1/4", "2/3", "1361/5500"],
+      "exact_factor_value": "-40141/30250000",
+      "lift_parent_zero_profile": ["1237"],
+      "strictly_positive_parent_brackets": 69
+    },
+    {
+      "side": "wall",
+      "normal_direction": ["51/247", "32/247", "656/1235", "164/1235", "0", "-491/1235"],
+      "lowest_residual_form": "0",
+      "exact_lift_point": ["3/4", "51/24700", "8/6175", "164/30875", "1245744/953265625", "0", "1/4", "2/3", "7596/30875"],
+      "exact_factor_value": "0",
+      "lift_parent_zero_profile": ["1237"],
+      "strictly_positive_parent_brackets": 69
+    },
+    {
+      "side": "plus",
+      "normal_direction": ["1/5", "4/35", "4/7", "4/35", "0", "-3/7"],
+      "lowest_residual_form": "1/35",
+      "exact_lift_point": ["3/4", "1/500", "1/875", "1/175", "1/875", "0", "1/4", "2/3", "43/175"],
+      "exact_factor_value": "8/30625",
+      "lift_parent_zero_profile": ["1237"],
+      "strictly_positive_parent_brackets": 69
+    }
+  ],
+  "singular_transport_obstruction": {
+    "ordinary_common_radial_strict_parent_link": "EMPTY",
+    "positive_parent_initial_form": "+n4",
+    "negative_parent_initial_form": "-n4",
+    "positive_gordan_weights": [1, 1],
+    "forced_recursive_facet": "n4=0",
+    "higher_weighted_orders_required": true,
+    "strict_open_parent_lift_certified": false
+  },
+  "strict_parent_separator_gate": {
+    "lemma": "If W is contained in the compactification boundary B=Xbar\\X, then W is disjoint from the strict parent X and X\\W=X; W alone cannot separate X or an active sector H contained in X.",
+    "witness_contained_in_boundary": true,
+    "witness_separates_strict_parent": false,
+    "recursive_facet_wall_promoted_to_global_separator": false,
+    "missing_load_bearing_attachment": "An exact incident coface with bracket 1237>0, transported active orientation/occurrence labels, and stabilized weighted order."
+  },
+  "scope": {
+    "refutes": "RECURSIVE_FACET_WALL_IMPLIES_STRICT_OPEN_PARENT_SEPARATOR",
+    "opening_gate_effect": "first fatal omitted transport mode",
+    "does_not_refute": "existence of a richer finite schema carrying exact strict-coface attachments",
+    "does_not_claim": [
+      "strict open-parent crossing",
+      "collar or mincut",
+      "global D9 separator",
+      "coverage of every parent or family",
+      "theorem-ledger change"
+    ]
+  },
+  "semantic_sha256": "68c84839a926bacbf1ac52b254097a08b1d5e42d9f6ddd4bcb516332810aa568"
+}

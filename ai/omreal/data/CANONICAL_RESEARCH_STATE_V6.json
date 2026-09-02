@@ -1,0 +1,122 @@
+{
+  "format": "9dvl-canonical-research-state-v6",
+  "status": "PIVOT_REQUIRED",
+  "as_of": "2026-09-01",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "branch": "research/local-d9-factor19069-gate1-20260901",
+    "canonical_storage": "SAVED_LOCAL_CODEX_PROJECT_WITH_OPTIONAL_MOUNTED_DRIVE_RECOVERY_MIRROR",
+    "saved_project_root": "E:\\Projects\\9DVL Research",
+    "mounted_recovery_root": "G:\\My Drive\\Projects\\research-backups",
+    "drive_connector_used": false,
+    "github_mode": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION",
+    "cycle_base_commit": "b14e5bd0158752f96a9534b484ef2195626bd14c",
+    "cycle_base_tree": "b942da304007bb4d9437ec7575c420fc6073814b",
+    "opening_commit": "65744ea631c98dce21b58fd39626f9e129190003",
+    "opening_tree": "0f0cf83c316650a09ae2f08136f16cf9ed8880af",
+    "reviewed_candidate_commit": "d9c43724ba0b82f3aeee69b4afa205bad2aa27f9",
+    "reviewed_candidate_tree": "72ec9cffdb00969ae534daf742b45d05f4d8350a",
+    "integrated_referee_commit": "fee73c8d79a930cad044397d4ee221c06632d831",
+    "integrated_referee_tree": "a9f4cda05620fc024cda7998fd45ee661a72fe51"
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V5.json",
+    "sha256": "e653070182bd57f1f983284cbc48aeca915bbba13b3647ea49fc7f20d6066364",
+    "policy": "IMMUTABLE_PRE_FACTOR19069_CANONICAL_STATE"
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "diagonal_nine": "OPEN",
+    "promotion": "NONE",
+    "theorem_level_counterexample": "NOT_FOUND"
+  },
+  "completed_cycle": {
+    "id": "2026-09-01-d9-row2599-factor19069-active-margin-gate1",
+    "selected_target": "D9_ROW2599_FACTOR19069_PROJECTION_FREE_ACTIVE_MARGIN_COMPONENT_GATE1",
+    "selected_count": 1,
+    "frontier": {
+      "parent_index": 2599,
+      "factor_id": 19069,
+      "parent_sign_tags": 70,
+      "fixed_skeleton_edges": 40,
+      "parent_path_tag_checks": 2800,
+      "rooted_skeleton_edges": [39],
+      "edge39_open_roots": 1,
+      "active_sets_through_size_3": 57225,
+      "active_sets_through_size_4": 974120,
+      "active_sets_through_size_9": 75816847319,
+      "exact_system_ceiling": 100000,
+      "first_support_size_exceeding_ceiling": 4,
+      "proper_nonexcluded_support_strata": 10,
+      "identically_zero_proper_restrictions": 8,
+      "mixed_proper_restrictions": 2,
+      "complete_active_tie_filter": false,
+      "complete_parent_component_closure_path_tags": false,
+      "component_samples": 0
+    },
+    "certificate_gate": {
+      "verdict": "ACCEPT",
+      "classification": "EXACT_FAIL_CLOSED_PARENT_RESIDENCE_NULL",
+      "hostile_mutations_rejected": 17,
+      "producer_imported": false
+    },
+    "referee_gate": {
+      "verdict": "ACCEPT",
+      "reviewed_revision": "d9c43724ba0b82f3aeee69b4afa205bad2aa27f9",
+      "reviewed_tree": "72ec9cffdb00969ae534daf742b45d05f4d8350a",
+      "closing_hostile_mutations_rejected": 10,
+      "clean_replay": true,
+      "closing_strategy_verdict": "PIVOT"
+    },
+    "accepted_endpoint": "HASH_PINNED_PARENT_RESIDENT_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNCLASSIFIED_STRATUM",
+    "exact_consequences": [
+      "FACTOR19069_MEETS_THE_FIXED_SKELETON_ONLY_ON_EDGE39_WITH_ONE_EXACT_OPEN_ROOT",
+      "ALL_40_SKELETON_EDGES_RETAIN_ALL_70_STRICT_PARENT_PATH_TAGS",
+      "UNFILTERED_ACTIVE_SUPPORTS_EXCEED_THE_SYSTEM_CEILING_AT_SIZE_FOUR",
+      "TEN_PROPER_WEAK_SIGN_SUPPORT_CANDIDATES_LACK_CONNECTED_PARENT_CLOSURE_PATH_TAGS"
+    ],
+    "nonconsequences": [
+      "NO_COMPLETE_ACTIVE_MARGIN_TIE_STRATIFICATION",
+      "NO_COMPLETE_TRUE_BOUNDARY_PARENT_COMPONENT_RESIDENCE",
+      "NO_EXACT_GLOBAL_FACTOR19069_COMPONENT_SAMPLE",
+      "NO_GLOBAL_COMPONENT_ATTACHMENT_CLASSIFICATION",
+      "NO_DIAGONAL_9_PROOF_OR_COUNTEREXAMPLE",
+      "NO_9DVL_SCORE_CHANGE"
+    ],
+    "route_disposition": "UNFILTERED_NONSMOOTH_ACTIVE_SET_ENUMERATION_FOR_FACTOR19069_RETIRED"
+  },
+  "selected_successor": {
+    "id": "D9_ROW2599_FACTOR19069_FACTORED_BARRIER_COMPONENT_SAMPLER_GATE1",
+    "strategy": "PROJECTION_FREE_FACTORED_BARRIER_COMPONENT_SAMPLING",
+    "quantified_target": "On the compactified connected strict row-2599 parent component, use B=product_I H_I in factored form and exactly sample every connected component of the factor-19069 barrier-critical locus, including positive-dimensional pieces; retain all 70 parent factors and exact paths to the pinned parent component; then classify every sampled wall component by an exact wall path to the fixed 40-edge skeleton or exact nonattachment.",
+    "positive_endpoint": "EXACT_FACTOR19069_COMPONENT_DISJOINT_FROM_THE_FIXED_SKELETON",
+    "negative_endpoint": "COMPLETE_FACTORED_BARRIER_COMPONENT_TO_SKELETON_ATTACHMENT_CERTIFICATE",
+    "null_endpoint": "HASH_PINNED_FACTORED_BARRIER_CRITICAL_COMPONENT_FRONTIER_WITH_FIRST_UNSAMPLED_COMPONENT",
+    "timeout_endpoint": "HASH_PINNED_COMPLETED_AND_PENDING_FACTORED_BARRIER_COMPONENT_FRONTIER",
+    "prohibited": [
+      "UNFILTERED_NONSMOOTH_ACTIVE_SET_ENUMERATION",
+      "PROJECTION_OR_SYMMETRY_COMPRESSION_RETRY",
+      "AMBIENT_ORBIT_QUOTIENT_AS_FIXED_DOMAIN_COVERAGE",
+      "UNFILTERED_RESIDUAL_PAIR_FRONTIER",
+      "SAMPLED_SEPARATOR_CEGAR_WITHOUT_COMPLETE_GENERATOR"
+    ]
+  },
+  "process_gates": {
+    "theorem_score_promotion_requires_complete_global_quantifiers": true,
+    "local_collar_attachment_is_not_global_component_coverage": true,
+    "weak_parent_signs_are_not_connected_parent_closure_residence": true,
+    "null_endpoint_does_not_prove_component_attachment_or_nonattachment": true,
+    "frozen_head_referee_and_clean_replay_passed": true,
+    "github_remains_read_only_until_new_explicit_user_instruction": true,
+    "drive_connector_must_not_be_used": true
+  },
+  "pins": {
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-active-margin-gate1/CYCLE_REPORT.md": "0f57afe7ff32ec4c56766907caae73cab3fa788762e7086a000b689ae3d39203",
+    "ops/team/d9-factor19069-active-margin-referee/RESULT.json": "29993b134fdebfbc3ae88f1cf9e2603de15990bb048ca38be3ea9b8bd3158dca",
+    "ops/team/d9-factor19069-active-margin-referee/verify_closing_referee.py": "15756c150b8f1b58e2353ebebbe5b7df6c05ee425084cfadbe85657c826c484d",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-active-margin-gate1/CLEAN_REPLAY.json": "0cf1d9506c2761df79204c9ed558da6fbb9ff78e0fe7ab6689781beff99cc75b",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-active-margin-gate1/CLOSING_MANIFEST.json": "78027f2ea7e32dfd7a72164db08fd76b0c87a24c88fb16c8788f5fa08e853b72"
+  }
+}

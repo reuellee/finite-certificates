@@ -21,6 +21,8 @@ import json
 from math import comb
 from pathlib import Path
 
+import diag3_research_ledger_compatibility as ledger_compat
+
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -33,7 +35,7 @@ CERTIFICATE = ROOT / "ops/team/clipped-wall-falsifier/CLIPPED_WALL_FALSIFIER_CER
 BASE_REVISION = "ae8a3afc24abfea94acf4b22ea35c2ca18f3c577"
 INPUT_DIGESTS = {
     "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json":
-        "5841dfbb55aa0d8c580b394b50beff54d607ce86b77683985c2d977c03050e14",
+        ledger_compat.HISTORICAL_LEDGER_SHA256,
     "ai/omreal/data/DIAG3_TRIPLE_LOCAL_ROADMAP_CANARY.json":
         "0ee63d4049278c41b8fdd611aacdbe56b188dc1225bd1b9dc18dc37fb2746c27",
     "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json":
@@ -275,7 +277,18 @@ def reconstruct():
         "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": SYSTEM,
         "ops/team/triple-frontier/DIAG3_TRIPLE_FRONTIER_MULTIBOX_CANARY.json": FRONTIER,
     }
-    actual_digests = {key: sha256(path_map[key]) for key in INPUT_DIGESTS}
+    # Preserve the committed falsifier certificate's immutable v1 provenance,
+    # while authenticating current ledger v2 and its unchanged obligations as
+    # a separate compatibility gate.
+    ledger_compat.load_current_ledger(LEDGER)
+    actual_digests = {
+        key: (
+            ledger_compat.HISTORICAL_LEDGER_SHA256
+            if path_map[key] == LEDGER
+            else sha256(path_map[key])
+        )
+        for key in INPUT_DIGESTS
+    }
     if actual_digests != INPUT_DIGESTS:
         raise AssertionError(f"pinned input digest changed: {actual_digests}")
 
@@ -468,12 +481,17 @@ def main():
         return
     committed = json.loads(CERTIFICATE.read_text(encoding="utf-8"))
     verify_candidate(committed)
+    ledger_rejected = ledger_compat.verify_hostile_mutations()
     print("PASS pinned inputs: 4/4")
     print("PASS macrobox19 accepted: 70/70 parent signs; fixed projection minor negative on 2/2 g-half boxes")
     print("PASS macrobox20 rejected exactly at [3468]=g-a")
     print("PASS complete terminal face exclusion: q16134 > 0 by exact centered-Taylor interval")
     print("PASS registered wall point rejected as triple zero")
     print("PASS re-sealed false-witness mutation rejected")
+    print(
+        "PASS current ledger v2 authenticated with historical obligation semantics; "
+        f"hostile mutations rejected {ledger_rejected}/{ledger_rejected}"
+    )
     print("OUTCOME DISPROVED_TERMINAL_FACE_ATTACHMENT; ledger counts unchanged; score 2/9")
 
 

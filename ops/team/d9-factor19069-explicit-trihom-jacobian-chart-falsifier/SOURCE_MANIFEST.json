@@ -1,0 +1,31 @@
+{
+  "format": "d9-factor19069-explicit-trihom-jacobian-chart-falsifier-source-manifest-v1",
+  "track_id": "d9-factor19069-explicit-trihom-jacobian-chart-falsifier",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1",
+  "canonical_base_revision": "4aee0aac6e80d053cf1751eac766280873656909",
+  "canonical_base_tree": "bfaff6f29b032ef6f81fa11a97063b01d74db8f7",
+  "cycle_opening_revision": "cd2d856d3ccff51f7b5d6841702b25d191ed9985",
+  "cycle_opening_tree": "6014474550142ec47f9280a123dc77bf403d1d0a",
+  "source_count": 11,
+  "source_sha256": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/CYCLE.md": "4f0f6841c483a0832e39b170eb1e5c041cabc214f5733f5a21b81ee849b58dba",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/OPENING_AUDIT.json": "e513ef2f63f616cd06d3d5a27884a9919077ea1044132970de1d9691d09bbb55",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/WORK_ORDERS.yaml": "b501084a2c5f2e8f7be24c446a0d7d20729d4689076a5316fca4c81a1b42caad",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SINGULAR_DF_MULTIHOMOGENEOUS_FRONTIER.json": "d9f4aba3fa8c76e3a8abff5484ff509b0458fe9993edeb921e5a6d03c4dfac41",
+    "ops/team/d9-factor19069-singular-df-multihomogeneous-constructor/SOURCE_MANIFEST.json": "6b38e9499c8474a52e083aa3ab4ccc12858abd7b476b6db2d04116ba86ba08b4",
+    "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-constructor/PROJECTIVE_CHART_FRONTIER.json": "815edf97a68a049f8fb6749adf948cc406ec7a258de480cf3ada3e301ca6de67",
+    "ai/omreal/certs_4_8.jsonl": "c55e805d60d8086bcb84a312f2103a9973fc2691d0fd97f3d9a1d9809d2b163b",
+    "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+    "ai/omreal/verify_diag3_pair_global_parent_face_gate.py": "64e94f55d2495c365128523ae1d8d2a7a9b9fc38e260d9a113834b836083be97",
+    "ai/omreal/data/DIAG3_PAIR_GLOBAL_row2599_candidate_factors.bin": "adb2e7257457f158e809450683c46fe7ecafdbdd4a7efdf9ac630e8a4f0fb03f"
+  },
+  "producer_code_imported": false,
+  "constructor_acceptance_imported": false,
+  "network_or_connector_used": false,
+  "drive_connector_used": false,
+  "github_write": false,
+  "numerical_or_modular_inference_used": false,
+  "evaluated_frontier_semantic_sha256": "aec3c7e29744d6d9a7df004c611c7edbdfbfedfad2bbea6f206df09d5fb14f33",
+  "source_policy": "PINNED_PREDECESSOR_MATHEMATICAL_SOURCE_RECONSTRUCTED_INDEPENDENTLY"
+}

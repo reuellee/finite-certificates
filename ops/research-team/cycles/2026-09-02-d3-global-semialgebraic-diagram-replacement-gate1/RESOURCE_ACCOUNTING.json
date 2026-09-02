@@ -1,0 +1,56 @@
+{
+  "format": "d3-global-srep-resource-accounting-v1",
+  "cycle_id": "2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1",
+  "ceilings": {
+    "q0_laptop_elapsed_hours": 8,
+    "ram_gib": 32,
+    "scratch_gib": 25,
+    "producer_handoffs": 1,
+    "verifier_directed_repairs": 1,
+    "conditional_cloud_worker_count": 1,
+    "conditional_cloud_elapsed_hours": 4,
+    "conditional_cloud_spend_usd": 5
+  },
+  "observable_git_timeline": {
+    "initial_opening_commit_time": "2026-09-02T06:17:29-07:00",
+    "accepted_opening_commit_time": "2026-09-02T06:32:46-07:00",
+    "frozen_q0_evidence_commit_time": "2026-09-02T06:54:08-07:00",
+    "independent_q0_commit_time": "2026-09-02T07:18:07-07:00",
+    "frozen_midpoint_commit_time": "2026-09-02T07:20:40-07:00",
+    "independent_closing_referee_commit_time": "2026-09-02T07:28:07-07:00",
+    "initial_opening_to_midpoint_seconds": 3791,
+    "accepted_opening_to_midpoint_seconds": 2874,
+    "interpretation": "Commit timestamps bound the governed Q0 integration span; they are not CPU-time or complete acquisition-time measurements."
+  },
+  "disk_observations_at_close": {
+    "wsl_exact_cas_install_bytes": 616899515,
+    "ignored_vendor_cache_bytes": 61581320,
+    "producer_evidence_bytes": 298309,
+    "falsifier_evidence_bytes": 54123,
+    "q0_verifier_evidence_bytes": 28976,
+    "closing_referee_evidence_bytes": 20531,
+    "observed_total_bytes": 678882774,
+    "observed_total_gib": 0.632258853,
+    "scratch_ceiling_exceeded": false
+  },
+  "memory": {
+    "peak_ram_instrumented": false,
+    "out_of_memory_event_observed": false,
+    "ram_ceiling_trigger_observed": false,
+    "claim_boundary": "No peak-RAM telemetry was collected; this record does not invent a measured peak."
+  },
+  "handoffs": {
+    "producer_handoffs_used": 1,
+    "verifier_directed_repairs_used": 0,
+    "independent_q0_replays": 1,
+    "independent_closing_replays": 1
+  },
+  "cloud": {
+    "workers_created": 0,
+    "worker_elapsed_hours": 0,
+    "actual_spend_usd": 0,
+    "activation": "DENIED_Q0_GATE_FAILED"
+  },
+  "ceiling_verdict": "NO_CEILING_TRIGGER_OBSERVED",
+  "claim_boundary": "Disk and commit-time observations are measured. Peak RAM and aggregate CPU time were not continuously instrumented."
+}

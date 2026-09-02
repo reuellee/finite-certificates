@@ -1,0 +1,155 @@
+{
+  "format": "d3-global-srep-polynomial-canaries-v1",
+  "opening_revision": "c50da6c99d465c65b3e54427418d9efe6a3f037e",
+  "cycle_id": "2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1",
+  "scope": "Q0_TOPOLOGY_FALSIFIER_ONLY",
+  "theorem_credit": "NONE",
+  "m3": {
+    "id": "M3_POLYNOMIAL_TETRAHEDRON_PAIR",
+    "description": "Two compact closed subcomplexes of the standard tetrahedron have the same K4 one-skeleton and exit graph.  The unfilled object has faces 012 and 013 plus edge 23; the filled object additionally has face 023 instead of listing its boundary edge separately.",
+    "variables": ["x", "y", "z"],
+    "source_mode": "POLYNOMIAL_FORMULA_DERIVED",
+    "atom_table": {
+      "lambda_0_ge": {"relation": "ge", "polynomial": [[1, 0, 0, 0], [-1, 1, 0, 0], [-1, 0, 1, 0], [-1, 0, 0, 1]]},
+      "lambda_0_eq": {"relation": "eq", "polynomial": [[1, 0, 0, 0], [-1, 1, 0, 0], [-1, 0, 1, 0], [-1, 0, 0, 1]]},
+      "lambda_1_ge": {"relation": "ge", "polynomial": [[1, 1, 0, 0]]},
+      "lambda_1_eq": {"relation": "eq", "polynomial": [[1, 1, 0, 0]]},
+      "lambda_2_ge": {"relation": "ge", "polynomial": [[1, 0, 1, 0]]},
+      "lambda_2_eq": {"relation": "eq", "polynomial": [[1, 0, 1, 0]]},
+      "lambda_3_ge": {"relation": "ge", "polynomial": [[1, 0, 0, 1]]},
+      "lambda_3_eq": {"relation": "eq", "polynomial": [[1, 0, 0, 1]]}
+    },
+    "face_formula_ast": {
+      "v_0": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_1_eq"}, {"atom": "lambda_2_eq"}, {"atom": "lambda_3_eq"}]},
+      "v_1": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_0_eq"}, {"atom": "lambda_2_eq"}, {"atom": "lambda_3_eq"}]},
+      "v_2": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_0_eq"}, {"atom": "lambda_1_eq"}, {"atom": "lambda_3_eq"}]},
+      "v_3": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_0_eq"}, {"atom": "lambda_1_eq"}, {"atom": "lambda_2_eq"}]},
+      "e_01": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_2_eq"}, {"atom": "lambda_3_eq"}]},
+      "e_02": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_1_eq"}, {"atom": "lambda_3_eq"}]},
+      "e_03": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_1_eq"}, {"atom": "lambda_2_eq"}]},
+      "e_12": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_0_eq"}, {"atom": "lambda_3_eq"}]},
+      "e_13": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_0_eq"}, {"atom": "lambda_2_eq"}]},
+      "e_23": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_0_eq"}, {"atom": "lambda_1_eq"}]},
+      "f_012": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_3_eq"}]},
+      "f_013": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_2_eq"}]},
+      "f_023": {"op": "and", "args": [{"atom": "lambda_0_ge"}, {"atom": "lambda_1_ge"}, {"atom": "lambda_2_ge"}, {"atom": "lambda_3_ge"}, {"atom": "lambda_1_eq"}]}
+    },
+    "common_one_skeleton_formula": {"op": "or", "args": [{"formula": "e_01"}, {"formula": "e_02"}, {"formula": "e_03"}, {"formula": "e_12"}, {"formula": "e_13"}, {"formula": "e_23"}]},
+    "true_infinity": {"kind": "true_parent_infinity", "vertex": 3, "formula": {"formula": "v_3"}},
+    "reported_exit_graph": {
+      "vertices": [0, 1, 2, 3],
+      "edges": [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]],
+      "true_infinity_vertices": [3],
+      "coverage_complete": true,
+      "all_vertices_reach_true_infinity": true
+    },
+    "common_trace": [
+      {"id": "v_0", "dimension": 0, "vertices": [0], "formula_id": "v_0", "boundary": []},
+      {"id": "v_1", "dimension": 0, "vertices": [1], "formula_id": "v_1", "boundary": []},
+      {"id": "v_2", "dimension": 0, "vertices": [2], "formula_id": "v_2", "boundary": []},
+      {"id": "v_3", "dimension": 0, "vertices": [3], "formula_id": "v_3", "boundary": []},
+      {"id": "e_01", "dimension": 1, "vertices": [0, 1], "formula_id": "e_01", "boundary": [[-1, "v_0"], [1, "v_1"]]},
+      {"id": "e_02", "dimension": 1, "vertices": [0, 2], "formula_id": "e_02", "boundary": [[-1, "v_0"], [1, "v_2"]]},
+      {"id": "e_03", "dimension": 1, "vertices": [0, 3], "formula_id": "e_03", "boundary": [[-1, "v_0"], [1, "v_3"]]},
+      {"id": "e_12", "dimension": 1, "vertices": [1, 2], "formula_id": "e_12", "boundary": [[-1, "v_1"], [1, "v_2"]]},
+      {"id": "e_13", "dimension": 1, "vertices": [1, 3], "formula_id": "e_13", "boundary": [[-1, "v_1"], [1, "v_3"]]},
+      {"id": "e_23", "dimension": 1, "vertices": [2, 3], "formula_id": "e_23", "boundary": [[-1, "v_2"], [1, "v_3"]]}
+    ],
+    "models": {
+      "unfilled": {
+        "formula": {"op": "or", "args": [{"formula": "f_012"}, {"formula": "f_013"}, {"formula": "e_23"}]},
+        "maximal_simplices": [[0, 1, 2], [0, 1, 3], [2, 3]],
+        "two_cell_trace": [
+          {"id": "f_012", "dimension": 2, "vertices": [0, 1, 2], "formula_id": "f_012", "boundary": [[1, "e_12"], [-1, "e_02"], [1, "e_01"]]},
+          {"id": "f_013", "dimension": 2, "vertices": [0, 1, 3], "formula_id": "f_013", "boundary": [[1, "e_13"], [-1, "e_03"], [1, "e_01"]]}
+        ],
+        "reported_relative_chain": {"dim_c0": 3, "dim_c1": 6, "dim_c2": 2, "rank_d1": 3, "rank_d2": 2, "h1_q": 1}
+      },
+      "filled": {
+        "formula": {"op": "or", "args": [{"formula": "f_012"}, {"formula": "f_013"}, {"formula": "f_023"}]},
+        "maximal_simplices": [[0, 1, 2], [0, 1, 3], [0, 2, 3]],
+        "two_cell_trace": [
+          {"id": "f_012", "dimension": 2, "vertices": [0, 1, 2], "formula_id": "f_012", "boundary": [[1, "e_12"], [-1, "e_02"], [1, "e_01"]]},
+          {"id": "f_013", "dimension": 2, "vertices": [0, 1, 3], "formula_id": "f_013", "boundary": [[1, "e_13"], [-1, "e_03"], [1, "e_01"]]},
+          {"id": "f_023", "dimension": 2, "vertices": [0, 2, 3], "formula_id": "f_023", "boundary": [[1, "e_23"], [-1, "e_03"], [1, "e_02"]]}
+        ],
+        "reported_relative_chain": {"dim_c0": 3, "dim_c1": 6, "dim_c2": 3, "rank_d1": 3, "rank_d2": 3, "h1_q": 0}
+      }
+    }
+  },
+  "m2": {
+    "id": "M2_TANGENTIAL_FIRST_EXIT_NONCLOSED",
+    "description": "Over -1<=s<=1 and 0<=u<=2, the selected fiber has u<1 at s=0 and u<2 at s!=0.  Pointwise terminal points do not add the missing central interval 1<u<2.",
+    "variables": ["s", "u"],
+    "source_mode": "POLYNOMIAL_FORMULA_DERIVED",
+    "atom_table": {
+      "s_plus_one_ge": {"relation": "ge", "polynomial": [[1, 0, 0], [1, 1, 0]]},
+      "one_minus_s_ge": {"relation": "ge", "polynomial": [[1, 0, 0], [-1, 1, 0]]},
+      "u_ge": {"relation": "ge", "polynomial": [[1, 0, 1]]},
+      "two_minus_u_ge": {"relation": "ge", "polynomial": [[2, 0, 0], [-1, 0, 1]]},
+      "s_eq_zero": {"relation": "eq", "polynomial": [[1, 1, 0]]},
+      "s_ne_zero": {"relation": "ne", "polynomial": [[1, 1, 0]]},
+      "one_minus_u_gt": {"relation": "gt", "polynomial": [[1, 0, 0], [-1, 0, 1]]},
+      "two_minus_u_gt": {"relation": "gt", "polynomial": [[2, 0, 0], [-1, 0, 1]]},
+      "u_minus_one_eq": {"relation": "eq", "polynomial": [[-1, 0, 0], [1, 0, 1]]},
+      "two_minus_u_eq": {"relation": "eq", "polynomial": [[2, 0, 0], [-1, 0, 1]]},
+      "u_minus_one_gt": {"relation": "gt", "polynomial": [[-1, 0, 0], [1, 0, 1]]}
+    },
+    "formula_ast": {
+      "ambient_rectangle": {"op": "and", "args": [{"atom": "s_plus_one_ge"}, {"atom": "one_minus_s_ge"}, {"atom": "u_ge"}, {"atom": "two_minus_u_ge"}]},
+      "selected_strip": {"op": "and", "args": [{"formula": "ambient_rectangle"}, {"op": "or", "args": [{"op": "and", "args": [{"atom": "s_eq_zero"}, {"atom": "one_minus_u_gt"}]}, {"op": "and", "args": [{"atom": "s_ne_zero"}, {"atom": "two_minus_u_gt"}]}]}]},
+      "pointwise_terminal": {"op": "and", "args": [{"formula": "ambient_rectangle"}, {"op": "or", "args": [{"op": "and", "args": [{"atom": "s_eq_zero"}, {"atom": "u_minus_one_eq"}]}, {"atom": "two_minus_u_eq"}]}]},
+      "pointwise_union": {"op": "or", "args": [{"formula": "selected_strip"}, {"formula": "pointwise_terminal"}]},
+      "true_parent_infinity": {"op": "and", "args": [{"formula": "ambient_rectangle"}, {"atom": "two_minus_u_eq"}]},
+      "artificial_jump_frontier": {"op": "and", "args": [{"formula": "ambient_rectangle"}, {"atom": "s_eq_zero"}, {"atom": "u_minus_one_gt"}, {"atom": "two_minus_u_gt"}]},
+      "central_closed_fiber": {"op": "and", "args": [{"formula": "ambient_rectangle"}, {"atom": "s_eq_zero"}]},
+      "central_relative_subset": {"op": "and", "args": [{"formula": "central_closed_fiber"}, {"op": "or", "args": [{"atom": "u_minus_one_eq"}, {"atom": "two_minus_u_eq"}]}]}
+    },
+    "nonclosure_witness": {
+      "family": ["1/n", "3/2"],
+      "n_domain": "POSITIVE_INTEGERS",
+      "limit": ["0", "3/2"]
+    },
+    "closure_relative_trace": {
+      "vertices": [
+        {"id": "u_0", "coordinate": "0", "relative": false},
+        {"id": "u_1", "coordinate": "1", "relative": true},
+        {"id": "u_2", "coordinate": "2", "relative": true}
+      ],
+      "edges": [
+        {"id": "e_01", "boundary": [[-1, "u_0"], [1, "u_1"]]},
+        {"id": "e_12", "boundary": [[-1, "u_1"], [1, "u_2"]]}
+      ],
+      "reported_h1_q": 1
+    },
+    "reported": {
+      "pointwise_union_closed": false,
+      "projection_proper": false,
+      "artificial_jump_frontier_is_true_infinity": false,
+      "ambient_closure_formula": "ambient_rectangle",
+      "central_closure_relative_h1_q": 1
+    }
+  },
+  "single_bad_control": {
+    "id": "PINNED_SINGLE_BAD_LOW_DEGREE_VANISHING",
+    "verifier_path": "ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+    "verifier_sha256": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4",
+    "theorem_path": "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+    "theorem_sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "target_degree": 2,
+    "max_augmented_equality_rank": 5,
+    "expected_table": [
+      {"face_dimension": 0, "maximum_support": 5, "forced_motion_dimension": 3, "required_motion_dimension": 3},
+      {"face_dimension": 1, "maximum_support": 6, "forced_motion_dimension": 2, "required_motion_dimension": 2},
+      {"face_dimension": 2, "maximum_support": 7, "forced_motion_dimension": 1, "required_motion_dimension": 1}
+    ],
+    "expected_stdout_markers": [
+      "PASS augmented face bounds: k=0/1/2 use at most 5/6/7 coordinates",
+      "PASS forced motion dimensions: 3/2/1",
+      "THEOREM H_c^q(B_rho; R)=0 for q=0,1,2",
+      "CAVEAT pair/triple terms and the third diagonal remain open"
+    ],
+    "binding_only": true,
+    "extends_to_pair_or_triple": false
+  }
+}

@@ -14,6 +14,7 @@ import sys
 HERE = Path(__file__).resolve().parent
 CERTIFICATE = HERE / "data" / "DIAG3_PAIR_PARENT_SOURCE_TRANSITION_0_89.json"
 sys.path.insert(0, str(HERE))
+import build_diag3_pair_parent_source_transition as builder  # noqa: E402
 import diag3_pair_parent_source_transition_core as core  # noqa: E402
 
 
@@ -100,7 +101,7 @@ def assert_rejected(record, expected, label):
 
 def main():
     record = json.loads(CERTIFICATE.read_text(encoding="utf-8"))
-    expected = core.build_record()
+    expected = builder.build_record()
     roadmap, frontier = validate(record, expected)
 
     hostile = []

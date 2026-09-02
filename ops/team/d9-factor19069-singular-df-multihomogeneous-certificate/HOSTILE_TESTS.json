@@ -1,0 +1,183 @@
+{
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1",
+  "format": "d9-factor19069-singular-df-certificate-hostile-tests-v1",
+  "semantic_sha256": "0bd5f7c320d91ae77619c6d76c0aa19cecb9c20d2b6caac2a60cc9e3ee0ae460",
+  "tests": [
+    {
+      "marker": "frontier cycle",
+      "name": "cycle drift",
+      "rejected": true
+    },
+    {
+      "marker": "frontier track",
+      "name": "track drift",
+      "rejected": true
+    },
+    {
+      "marker": "frontier base revision",
+      "name": "base revision drift",
+      "rejected": true
+    },
+    {
+      "marker": "frontier opening tree",
+      "name": "opening tree drift",
+      "rejected": true
+    },
+    {
+      "marker": "source affine block homogeneity",
+      "name": "affine block homogeneity overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "source affine multiaffinity",
+      "name": "affine multiaffinity overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "source block degree sets",
+      "name": "block support mutation",
+      "rejected": true
+    },
+    {
+      "marker": "source variable maxima",
+      "name": "variable degree mutation",
+      "rejected": true
+    },
+    {
+      "marker": "source total degree distribution",
+      "name": "total degree mutation",
+      "rejected": true
+    },
+    {
+      "marker": "trihomogenization terms",
+      "name": "homogenization mutation",
+      "rejected": true
+    },
+    {
+      "marker": "Jacobian wall generator",
+      "name": "factor coefficient mutation",
+      "rejected": true
+    },
+    {
+      "marker": "Jacobian derivative a",
+      "name": "derivative omission",
+      "rejected": true
+    },
+    {
+      "marker": "Jacobian ideal inverse variables",
+      "name": "inverse-variable discovery",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition first branch pin",
+      "name": "characteristic-zero started overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition first branch pin",
+      "name": "characteristic-zero completion overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition stratum retention",
+      "name": "embedded component omission",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition first branch pin",
+      "name": "component census overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition first branch pin",
+      "name": "component invariant overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition first branch pin",
+      "name": "70-factor saturation overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition first branch pin",
+      "name": "strict real residence overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition first branch pin",
+      "name": "connected parent tag overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "decomposition stratum retention",
+      "name": "boundary stratum omission",
+      "rejected": true
+    },
+    {
+      "marker": "parent incidence record count",
+      "name": "parent record omission",
+      "rejected": true
+    },
+    {
+      "marker": "parent record 1 polynomial",
+      "name": "parent polynomial mutation",
+      "rejected": true
+    },
+    {
+      "marker": "parent incidence inverse route",
+      "name": "parent incidence route overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "preserved null frontier",
+      "name": "preserved null omission",
+      "rejected": true
+    },
+    {
+      "marker": "preserved boundary frontier",
+      "name": "preserved boundary omission",
+      "rejected": true
+    },
+    {
+      "marker": "endpoint accounting",
+      "name": "positive endpoint overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "endpoint accounting",
+      "name": "negative endpoint overclaim",
+      "rejected": true
+    },
+    {
+      "marker": "frontier ledger",
+      "name": "ledger promotion",
+      "rejected": true
+    },
+    {
+      "marker": "frontier ledger",
+      "name": "ledger state drift",
+      "rejected": true
+    },
+    {
+      "marker": "resource scope numerical_or_modular_probe_used",
+      "name": "numerical inference promotion",
+      "rejected": true
+    },
+    {
+      "marker": "resource scope seventy_inverse_variable_discovery_used",
+      "name": "70-inverse discovery route",
+      "rejected": true
+    },
+    {
+      "marker": "resource scope network_or_connector_used",
+      "name": "connector scope drift",
+      "rejected": true
+    },
+    {
+      "marker": "frontier semantic digest",
+      "name": "semantic seal corruption",
+      "rejected": true
+    }
+  ],
+  "track_id": "d9-factor19069-singular-df-multihomogeneous-certificate"
+}

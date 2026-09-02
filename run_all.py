@@ -7,10 +7,10 @@ atlases, canonical-edge, mutation-square, separator, and saturation replays.
 --ci-delegated additionally skips verifiers that the required GitHub workflow
 runs in their own jobs.  Verifiers that deliberately require a regenerable
 external artifact are always reported and skipped; invoke those directly with
-the pinned argument documented in their proof note.  Archival verifiers whose
-unpublished exact-head inputs are no longer retrievable are also reported and
-skipped by exact repository path; a named portable successor must replace
-their live gate.
+the pinned argument documented in their proof note.  Historical or checkout-
+context-bound verifiers are reported and skipped by exact repository path.
+Every such exclusion has one or more selected branch-neutral replacement gates
+declared in ``ARCHIVAL_REPLACEMENTS``; current successors remain live.
 ``--shard INDEX/COUNT`` deterministically partitions the selected verifier
 universe.  The unsharded command remains exhaustive.  ``--list-shards COUNT``
 emits the exact partition without running verifiers so CI can independently
@@ -58,6 +58,8 @@ SLOW = {
     "verify_diag3_pair_parent_source_EDGE39_0_113.py",
     "verify_diag3_pair_fullsupport_segment_cover.py",
     "verify_diag3_pair_residual_wall_adjacency.py",
+    "verify_diag3_pair_source_staircase8_coverage.py",
+    "verify_diag3_pair_source_staircase_coverage.py",
     "verify_diag3_pair_atlas_tangential_fill.py",
     "verify_diag3_pair_tangential_frontier.py",
     "verify_diag3_polynomial_multivector_height_screen.py",
@@ -66,6 +68,7 @@ SLOW = {
     "verify_diag3_triple_primitive_final_direction.py",
     "verify_diag3_triple_primitive_final_support3.py",
     "verify_diag3_triple_gale_canary_no_go.py",
+    "verify_diag8_mask6_barycentric_fan.py",
     "verify_druzkowski.py",
     "verify_sae_circuit.py",
 }
@@ -82,25 +85,140 @@ EXTERNAL_INPUT = {
     ),
 }
 ARCHIVAL_INPUT = {
-    "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py": (
-        "archival PR45 portable verifier freezes predecessor authority surfaces; "
-        "superseded by canonical research state v2"
+    "ai/omreal/verify_canonical_research_state_v2.py": (
+        "historical post-mask-6 checkpoint is current-authority-context-bound; "
+        "selected portable reconciliation and mask-6 gates replace its replay"
+    ),
+    "ai/omreal/verify_canonical_research_state_v3.py": (
+        "historical post-normal-link checkpoint depends on checkout-local history; "
+        "the selected portable predecessor gate replaces its replay"
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-component-roadmap/verify_opening_audit.py": (
+        "historical opening audit pins a superseded governance worktree; "
+        "the selected branch-neutral roadmap certificate replaces it"
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/verify_opening_audit.py": (
+        "historical factor-19069 opening audit requires its exact lane branch; "
+        "the selected branch-neutral critical-equidimension certificate replaces it"
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/verify_opening_audit.py": (
+        "historical factor-19069 opening audit requires its exact lane branch; "
+        "selected branch-neutral certificate and referee gates replace it"
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/verify_opening_audit.py": (
+        "historical factor-19069 opening audit requires its exact lane branch; "
+        "selected branch-neutral certificate and referee gates replace it"
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/verify_opening_audit.py": (
+        "historical factor-19069 opening audit requires its exact lane branch; "
+        "selected branch-neutral certificate and referee gates replace it"
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/verify_closing_candidate.py": (
+        "historical cycle wrapper replays a superseded opening worktree; "
+        "selected universal-cut certificate and referee gates replace it"
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/verify_opening_audit.py": (
+        "historical opening audit pins a superseded governance worktree; "
+        "selected universal-cut certificate and referee gates replace it"
+    ),
+    "ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/verify_cycle_report.py": (
+        "historical cycle report pins superseded authority prose; "
+        "the selected portable predecessor gate replaces it"
+    ),
+    "ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/verify_opening_audit.py": (
+        "historical opening audit pins a superseded governance worktree; "
+        "the selected portable predecessor gate replaces it"
     ),
     "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is covered by the explicit pinned-bundle final-closing replay; "
+        "current successor state is governed separately"
     ),
     "ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is covered by the explicit pinned-bundle final-closing replay; "
+        "current successor state is governed separately"
     ),
     "ops/team/canonical-reconciliation-referee/verify_closing_referee.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is covered by the explicit pinned-bundle final-closing replay; "
+        "current successor state is governed separately"
     ),
     "ops/team/canonical-reconciliation-referee/verify_final_closing_referee.py": (
-        "archival PR45 audit requires an unpublished transient commit chain "
-        "that is no longer retrievable; superseded by the portable reconciliation verifier"
+        "archival PR45 audit is replayed explicitly from the pinned evidence bundle; "
+        "current successor state is governed separately"
+    ),
+    "ops/team/d3-mixed-carrier-referee/verify_referee.py": (
+        "historical referee requires its exact lane branch and mutable lane head; "
+        "the selected canonical V9 gate replaces it from frozen evidence"
+    ),
+    "ops/team/d9-factor19069-homogenizer-boundary-falsifier/verify_homogenizer_boundary_falsifier.py": (
+        "historical falsifier requires its exact lane branch; selected branch-neutral "
+        "homogenizer-boundary certificate and referee gates replace it"
+    ),
+    "ops/team/diag9-s1237-normal-link-referee/verify_closing_referee.py": (
+        "historical referee replays checkout-bound opening and worktree state; "
+        "the selected portable predecessor gate replaces it"
+    ),
+}
+ARCHIVAL_REPLACEMENTS = {
+    "ai/omreal/verify_canonical_research_state_v2.py": (
+        "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py",
+        "ops/research-team/cycles/2026-08-31-diag8-mask6-cegar/verify_diag8_mask6_cycle_manifest.py",
+    ),
+    "ai/omreal/verify_canonical_research_state_v3.py": (
+        "ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-component-roadmap/verify_opening_audit.py": (
+        "ops/team/d9-component-roadmap-certificate/verify_roadmap_canary_contract.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-critical-equidim-gate1/verify_opening_audit.py": (
+        "ops/team/d9-factor19069-critical-equidim-certificate/verify_critical_equidim_certificate.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-explicit-trihom-jacobian-chart-gate1/verify_opening_audit.py": (
+        "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-certificate/verify_projective_chart_certificate.py",
+        "ops/team/d9-factor19069-explicit-trihom-jacobian-chart-referee/verify_closing_referee.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/verify_opening_audit.py": (
+        "ops/team/d9-factor19069-homogenizer-boundary-certificate/verify_homogenizer_boundary_certificate.py",
+        "ops/team/d9-factor19069-homogenizer-boundary-referee/verify_closing_referee.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-singular-df-multihomogeneous-gate1/verify_opening_audit.py": (
+        "ops/team/d9-factor19069-singular-df-multihomogeneous-certificate/verify_singular_df_certificate.py",
+        "ops/team/d9-factor19069-singular-df-multihomogeneous-referee/verify_closing_referee.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/verify_closing_candidate.py": (
+        "ops/team/d9-universal-cut-certificate/verify_universal_cut_certificate.py",
+        "ops/team/d9-universal-cut-referee/verify_closing_referee.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/verify_opening_audit.py": (
+        "ops/team/d9-universal-cut-certificate/verify_universal_cut_certificate.py",
+        "ops/team/d9-universal-cut-referee/verify_closing_referee.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/verify_cycle_report.py": (
+        "ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py",
+    ),
+    "ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/verify_opening_audit.py": (
+        "ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py",
+    ),
+    "ops/team/canonical-reconciliation-falsifier/verify_canonical_reconciliation_falsifier.py": (
+        "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py",
+    ),
+    "ops/team/canonical-reconciliation-falsifier/verify_repaired_candidate_semantics.py": (
+        "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py",
+    ),
+    "ops/team/canonical-reconciliation-referee/verify_closing_referee.py": (
+        "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py",
+    ),
+    "ops/team/canonical-reconciliation-referee/verify_final_closing_referee.py": (
+        "ops/team/canonical-reconciliation-portable/verify_canonical_reconciliation_portable.py",
+    ),
+    "ops/team/d3-mixed-carrier-referee/verify_referee.py": (
+        "ai/omreal/verify_canonical_research_state_v9.py",
+    ),
+    "ops/team/d9-factor19069-homogenizer-boundary-falsifier/verify_homogenizer_boundary_falsifier.py": (
+        "ops/team/d9-factor19069-homogenizer-boundary-certificate/verify_homogenizer_boundary_certificate.py",
+        "ops/team/d9-factor19069-homogenizer-boundary-referee/verify_closing_referee.py",
+    ),
+    "ops/team/diag9-s1237-normal-link-referee/verify_closing_referee.py": (
+        "ops/team/d9-universal-cut-certificate/verify_portable_predecessor.py",
     ),
 }
 ROOT = Path(__file__).resolve().parent

@@ -1,0 +1,39 @@
+{
+  "branch_name_required": false,
+  "candidate_delta_sha256": "6fd1c20043240b71e79e0042b860d5fd941527457441af1329068ae02bdeff39",
+  "candidate_revision": "25757510dd88e8b7bbe5668c89f93b2a46b264de",
+  "candidate_tree": "47395637cc10c2bd736530719b6e2f3cf57b1629",
+  "constructor_acceptance_logic_imported": false,
+  "constructor_code_imported": false,
+  "current_source_count": 1,
+  "current_source_sha256": {
+    "ops/team/d9-factor19069-homogenizer-boundary-falsifier/verify_candidate_delta.py": "a68503005bb98c018887e82728bdaa302c05c8fcf6890e03c69f06683bbafe4f"
+  },
+  "current_source_validation": "WORKING_TREE_BYTES_ONLY_FOR_DELTA_VERIFIER",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
+  "format": "d9-factor19069-homogenizer-boundary-falsifier-candidate-delta-manifest-v2",
+  "frozen_constructor_sha256": {
+    "ops/team/d9-factor19069-homogenizer-boundary-constructor/HOMOGENIZER_BOUNDARY_TYPE_FRONTIER.json": "18b0f7bf939646b884f05dc55832b509a54574cf3c2498461839f3c906418a6d",
+    "ops/team/d9-factor19069-homogenizer-boundary-constructor/RESULT.json": "d7ad15fd2bc49b25334f836a34de2cc25d75a903902545ac354bded3a919db8b",
+    "ops/team/d9-factor19069-homogenizer-boundary-constructor/SOURCE_MANIFEST.json": "0e39b510708b6792c02dfdc537290b10d9897fad7b4a7b5a2f26987ae5ff9083"
+  },
+  "frozen_source_count": 9,
+  "frozen_source_sha256": {
+    "ops/research-team/PROTOCOL.md": "54f1a15b7774085005707727780b266ffbd4a8edc4687fe14e1e6bc76d229031",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/CYCLE.md": "17eabb966da4b6dc6468616fd4b90dea3dfe41672a881fe05e97f99e835e6809",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/OBLIGATION_GRAPH.json": "f85c957eef37a3e991119057f28685f5d5e2208271da053b9e0294e03b530e35",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/OPENING_AUDIT.json": "a430effec7a0defb5646be8d823c39e31aaf09227261e4d3fe816baba3903821",
+    "ops/research-team/cycles/2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1/WORK_ORDERS.yaml": "1c894fbf181416e84c0ec0397c6a04f45400721871a9c40ad210dce8f2424230",
+    "ops/team/d9-factor19069-homogenizer-boundary-falsifier/INDEPENDENT_RECONSTRUCTION.json": "cae32769c04bd0ed31c382d11e2e086038771a42af9efc318c84544011c0ebcd",
+    "ops/team/d9-factor19069-homogenizer-boundary-falsifier/RESULT.json": "29d9cc005fc144a806ca83aa008f9cf84785628e781da5cb3ad798f32330ac20",
+    "ops/team/d9-factor19069-homogenizer-boundary-falsifier/SOURCE_MANIFEST.json": "8893767bac6c80be678521ac0ec4495a8ce6e1af91c54288824dafc2b8eeaf0a",
+    "ops/team/d9-factor19069-homogenizer-boundary-falsifier/verify_homogenizer_boundary_falsifier.py": "482736bc60cdaf1ed28cbf25e608d44826bdcb0e3cd829c87c2c50dfeb7b2580"
+  },
+  "github_write_used": false,
+  "google_drive_connector_used": false,
+  "historical_source_validation": "GIT_SHOW_FROZEN_CANDIDATE_BYTES",
+  "network_or_connector_used": false,
+  "numerical_modular_or_sampled_inference_used": false,
+  "source_count": 10,
+  "track_id": "d9-factor19069-homogenizer-boundary-falsifier"
+}

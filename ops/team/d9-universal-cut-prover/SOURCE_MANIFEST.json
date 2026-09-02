@@ -1,0 +1,34 @@
+{
+  "format": "d9-universal-cut-prover-source-manifest-v1",
+  "track_id": "d9-universal-cut-prover",
+  "mathematics_base_revision": "cbe84ccd7273252c81fd4da17ee360a284d2a2a6",
+  "mathematics_base_tree": "da3cd6feca1052ea14ed5036413c72b8f7fadc2a",
+  "opening_commit": "6cbd1b4a7d3ed61bee268b6b54cbfadeece90f0e",
+  "opening_tree": "84eaf80b30e1f366b8f959bd6435a217762636b3",
+  "protocol_repair_source_commit": "d07c2a7b041f3a075d5e9294a0f3c63dbd87822f",
+  "protocol_repair_source_tree": "4dfba8740a306d0e2468d23aba3ac3c4cfe68f66",
+  "protocol_input_commit": "48592c6cf37b2d316ee34743e5fa525f899d3bda",
+  "protocol_input_tree": "897b2253514e1d065ce59b1558d5b47c2ee3e272",
+  "files": {
+    "ai/omreal/ATLAS_HELLY.md": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+    "ai/omreal/BLOCK_GORDAN_ALL_CODIM_COHERENCE.md": "1ef8ce2a6f96c922e103ea3270230e5619490020af9eadf743ac237aaef7eb2f",
+    "ai/omreal/BLOCK_GORDAN_RESIDUAL_ELIMINATION_CELLS.md": "c4f83fa579698c50b1c430d4113deb8921d922468ba6fde2e3fec40b80cfc824",
+    "ai/omreal/DIAG9_ACTIVE_SECTOR_THEOREM.md": "132a51b92a9813947e7ab7a43b52aafa6b2c789126e31cfc8a7f0773ee30b790",
+    "ai/omreal/DIAG9_SIGN_GEODESY_AUDIT.md": "64896fa28a76f57344bd246f1546322e1361f6ac57f164ca6199c58938c30903",
+    "ai/omreal/NINTH_DIAGONAL_SAFE_GRAPH.md": "8af233ced03055881572353d26d6f3a7d931649a9456fe7018cbc31202f4556e",
+    "ai/omreal/data/DIAG9_GRAPH_global_factor_census.npz": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+    "ai/omreal/verify_diag9_sign_geodesy_audit.py": "375f61c0928c55b5a9d3589ede9c23a512fbf26312596943b81b5bfe5ac1d3c5",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/CYCLE.md": "6a51420d70b8ce0a67d1a23b641a2bca211745211bbfdeb5cb3d71d7f8aeb1df",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/OPENING_AUDIT.json": "007fd5f83a9256c31f1851303fed00df7a7b5a83107333d5fc96b4e6477d7639",
+    "ops/research-team/cycles/2026-09-01-d9-universal-cut/WORK_ORDERS.yaml": "f156ebc83849863da90373818d837e0f55c745e57bdbfb279d2e8a593b6d9e12",
+    "ops/research-team/cycles/2026-09-01-diag9-s1237-normal-link/CYCLE_REPORT.md": "f61ae3bdb58c5192ccf3dee40eccbc587ace860a7e526aeebc6613d6485dc5e2",
+    "ops/team/diag9-s1237-normal-link-falsifier/RESULT.json": "15ce5c17a174ed6a82173d24a8f72d04da5962bcea9e87cf3648adb21351d46b",
+    "ops/team/diag9-s1237-normal-link-falsifier/verify_normal_link_falsifier.py": "c1e4ec22d7c08a2ced61909701e352bec206f7eda2fbeef0fe0a13bdc1ab234f",
+    "ops/team/diag9-s1237-normal-link-prover/DIAG9_S1237_NORMAL_LINK_NO_GO.json": "8aa726c69b556f7c2d85f7f852cb88329da39dcd173294a7db7245f13e0d2d54",
+    "ops/team/diag9-s1237-normal-link-prover/verify_normal_link_no_go.py": "618e663b3fdb67b70a4d01f074a564a6564c59e6bea177185dc174cb94feb24b"
+  },
+  "unavailable_and_unused": {
+    "historical_referee_object": "ca730426cdd5847ae262ddc29c6f4ae98369eba3",
+    "reason": "Portable replay uses only hash-pinned files present at the opening commit and does not read or fetch this Git object."
+  }
+}

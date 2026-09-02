@@ -1,0 +1,159 @@
+{
+  "base": {
+    "commit": "c6bd7a6afeda0888fc950710b941cac6f6c9bf95",
+    "tree": "9c2dbe39a3ea0f36e9e9c8f845e6f72e98526421"
+  },
+  "classification": "FINITE_EXACT_COMPUTATION",
+  "complete_frontier_before_stop": {
+    "active_literals": 3539,
+    "both_supports_materialized": true,
+    "labeled_occurrences": 6167,
+    "resource_ceiling_crossed": false,
+    "support_factor_initial_forms": 7078,
+    "support_parent_initial_forms": 140
+  },
+  "endpoint": "NORMAL_LINK_REDUCTION_NO_GO",
+  "format": "diag9-s1237-oriented-normal-link-no-go-v1",
+  "nonconsequence": "The ordinary common-radial normal link is singular before residual factor feasibility can be decided. This negative endpoint does not exclude weighted parent-safe arcs, construct a collar or mincut, or prove or disprove diagonal nine.",
+  "obstruction": {
+    "deterministic_recursive_frontier": [
+      {
+        "forced_facet": "n4=0",
+        "next_exact_task": "weighted blow-up retaining second and higher orders of labels 1237 and 1367",
+        "support": [
+          3,
+          1,
+          15
+        ]
+      },
+      {
+        "forced_facet": "n3=0",
+        "next_exact_task": "weighted blow-up retaining second and higher orders of labels 1237 and 1278",
+        "support": [
+          3,
+          3,
+          7
+        ]
+      }
+    ],
+    "higher_weighted_orders_required": true,
+    "kind": "POSITIVE_GORDAN_CERTIFICATE_FOR_STRICT_LINK_INFEASIBILITY",
+    "ordinary_projectivized_strict_parent_link": "EMPTY",
+    "singular_supports": [
+      {
+        "exact_consequence": "The two oriented parent inequalities require one linear normal coordinate to be simultaneously positive and negative.",
+        "forced_recursive_facet": "n4=0",
+        "negative_initial_form": [
+          {
+            "coefficient": -1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        ],
+        "negative_parent_label": "1367",
+        "positive_gordan_weights": [
+          1,
+          1
+        ],
+        "positive_initial_form": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        ],
+        "positive_parent_label": "1237",
+        "strict_first_order_parent_link_feasible": false,
+        "support": [
+          3,
+          1,
+          15
+        ],
+        "weighted_sum": []
+      },
+      {
+        "exact_consequence": "The two oriented parent inequalities require one linear normal coordinate to be simultaneously positive and negative.",
+        "forced_recursive_facet": "n3=0",
+        "negative_initial_form": [
+          {
+            "coefficient": -1,
+            "exponent": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "negative_parent_label": "1278",
+        "positive_gordan_weights": [
+          1,
+          1
+        ],
+        "positive_initial_form": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "positive_parent_label": "1237",
+        "strict_first_order_parent_link_feasible": false,
+        "support": [
+          3,
+          3,
+          7
+        ],
+        "weighted_sum": []
+      }
+    ],
+    "stabilization_status": "ORDINARY_FIRST_ORDER_LINK_INVALID_BEFORE_RADIUS_STAGE"
+  },
+  "scope": {
+    "diagonal_9_proof_or_counterexample": "NOT_CLAIMED",
+    "global_active_sector_connectivity": "NOT_CLAIMED",
+    "honest_9dvl_score": "2/9",
+    "result": "FIRST_ORDER_PARENT_NORMAL_LINK_SINGULAR_ON_BOTH_SUPPORTS",
+    "stops_at_first_exact_singular_link": true,
+    "supports": [
+      [
+        3,
+        1,
+        15
+      ],
+      [
+        3,
+        3,
+        7
+      ]
+    ],
+    "tangential_filter_is_not_a_collar": true,
+    "target": "D9_S1237_4SUPPORT_NORMAL_LINK_GATE1"
+  },
+  "semantic_sha256": "f2169e2bc90f9c92d49f754d695b34b9dc3da770a3aecf6bfb6e84a6cb80b747",
+  "source_digests": {
+    "literal_inventory": "e733196b9b9ba25cf9256c0d51ba0f5d2cd8d4da4a4c05eccd9d609c1ece20e7",
+    "normal_form_inventory": "3f891c6421e418758b11371d82522e5cdf789b6c944d1342773478df493445f6",
+    "normalized_parent_signs": "1d9b940e2bb954b5c69bcee8b2346f9554b2e15589ea4c5b3c3f8e1e943de701"
+  }
+}

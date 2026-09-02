@@ -1,0 +1,43 @@
+{
+  "format": "d9-factor19069-homogenizer-boundary-type-obligation-graph-v1",
+  "cycle_id": "2026-09-01-d9-row2599-factor19069-homogenizer-boundary-type-stratification-gate1",
+  "opening_ledger": "2/9",
+  "nodes": [
+    {"id": "trihom-source", "status": "finite-exact", "claim": "the 108-term degree-(2,2,2) source and affine dehomogenization are pinned"},
+    {"id": "product-chart-cover", "status": "finite-exact", "claim": "all 64 standard charts, 4032 directed overlaps, and 279 boundary incidences are pinned"},
+    {"id": "euler-affine-transfer", "status": "finite-exact", "claim": "192 Euler recoveries and affine original-ideal equality are pinned"},
+    {"id": "seven-boundary-types", "status": "finite-exact", "claim": "the seven nonempty types u, v, w, uv, uw, vw, uvw are exhaustive"},
+    {"id": "restricted-sources", "status": "inconclusive", "claim": "each type has an exact restricted polynomial reconstructed from the pinned source"},
+    {"id": "restricted-jacobians", "status": "inconclusive", "claim": "each type has correct ambient singular and stratum-singular equations with derivative/restriction order explicit"},
+    {"id": "factored-branches", "status": "inconclusive", "claim": "every exact source factor and Jacobian branch is propagated with no radicality inference"},
+    {"id": "branch-invariants", "status": "inconclusive", "claim": "branch equations, dimension, degree, and multiplicity are exact where certified"},
+    {"id": "type-closure-incidence", "status": "inconclusive", "claim": "specialization among boundary types is recorded exactly"},
+    {"id": "overlap-deduplication", "status": "inconclusive", "claim": "duplicates are quotiented only with explicit invertible chart-overlap certificates"},
+    {"id": "projective-only-classification", "status": "inconclusive", "claim": "each boundary branch is proved projective-infinity only or carried toward affine pullback"},
+    {"id": "affine-pullback", "status": "inconclusive", "claim": "every non-projective-only branch is contracted to the original affine singular ideal"},
+    {"id": "parent-factor-incidence", "status": "inconclusive", "claim": "each accepted affine branch is tested exactly against all 70 parent factors"},
+    {"id": "strict-real-residence", "status": "inconclusive", "claim": "survivors have exact strict real residence or exact exclusion"},
+    {"id": "connected-parent-tag", "status": "inconclusive", "claim": "each strict survivor is attached to or excluded from the connected row-2599 parent component"},
+    {"id": "diagonal-nine", "status": "inconclusive", "claim": "diagonal nine theorem or theorem-level counterexample"}
+  ],
+  "edges": [
+    ["trihom-source", "restricted-sources"],
+    ["product-chart-cover", "seven-boundary-types"],
+    ["seven-boundary-types", "restricted-sources"],
+    ["euler-affine-transfer", "restricted-jacobians"],
+    ["restricted-sources", "restricted-jacobians"],
+    ["restricted-jacobians", "factored-branches"],
+    ["factored-branches", "branch-invariants"],
+    ["branch-invariants", "type-closure-incidence"],
+    ["product-chart-cover", "overlap-deduplication"],
+    ["type-closure-incidence", "overlap-deduplication"],
+    ["overlap-deduplication", "projective-only-classification"],
+    ["projective-only-classification", "affine-pullback"],
+    ["affine-pullback", "parent-factor-incidence"],
+    ["parent-factor-incidence", "strict-real-residence"],
+    ["strict-real-residence", "connected-parent-tag"],
+    ["connected-parent-tag", "diagonal-nine"]
+  ],
+  "promotion_gate": "INDEPENDENTLY_REPLAYED_UNIVERSAL_DIAGONAL_CERTIFICATE_ONLY"
+}
+

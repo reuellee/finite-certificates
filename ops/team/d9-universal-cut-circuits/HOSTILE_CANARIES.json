@@ -1,0 +1,63 @@
+{
+  "canaries": [
+    {
+      "expected_error": "edge census",
+      "name": "delete_inactive_edge",
+      "operation": "DELETE",
+      "path": [
+        "local_memory_counterpair",
+        "cut_configuration",
+        "edges",
+        8
+      ]
+    },
+    {
+      "expected_error": "vertex signs",
+      "name": "active_edge_same_sign",
+      "operation": "SET",
+      "path": [
+        "local_memory_counterpair",
+        "cut_configuration",
+        "vertices",
+        0,
+        "active_sign"
+      ],
+      "value": "+"
+    },
+    {
+      "expected_error": "component count",
+      "name": "forge_component_count",
+      "operation": "SET",
+      "path": [
+        "local_memory_counterpair",
+        "expected_global_behavior",
+        "TWO_POSITIVE_CYCLES",
+        "positive_sector_components"
+      ],
+      "value": 1
+    },
+    {
+      "expected_error": "transport",
+      "name": "erase_specialization_transport",
+      "operation": "SET",
+      "path": [
+        "local_memory_counterpair",
+        "cut_configuration",
+        "edges",
+        0,
+        "transport"
+      ],
+      "value": "IDENTITY"
+    },
+    {
+      "expected_error": "semantic digest",
+      "name": "forge_semantic_digest",
+      "operation": "SET",
+      "path": [
+        "semantic_sha256"
+      ],
+      "value": "00"
+    }
+  ],
+  "format": "d9-universal-cut-circuit-hostile-canaries-v1"
+}
