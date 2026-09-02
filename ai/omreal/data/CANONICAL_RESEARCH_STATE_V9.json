@@ -1,0 +1,180 @@
+{
+  "format": "9dvl-canonical-research-state-v9",
+  "status": "STOPPED",
+  "as_of": "2026-09-01",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "branch": "research/local-9dvl-post-mixed-carrier-stop-v9-20260901",
+    "evidence_close_branch": "research/local-d3-mixed-carrier-theorem-feasibility-gate1-20260901",
+    "canonical_evidence_close_commit": "c06884abf64ab761e1430012653e4d851da3a0f3",
+    "canonical_evidence_close_tree": "6cb091f3cc7a7dd32d801dce662aa610b49af41f",
+    "integrated_referee_commit": "4f72cf633eba01d50c0fa806da79bb7a2f19a2f8",
+    "integrated_referee_tree": "e527e6d8483e6a38b2f274fe11913989d7164d2b",
+    "github_mode": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION",
+    "github_write": false,
+    "drive_connector_used": false,
+    "network_used": false
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json",
+    "sha256": "e356d00108e46be82937b18146ca47039d506ea378d489dc392d7a2ee3f865e4",
+    "policy": "IMMUTABLE_PRE_MIXED_CARRIER_CLOSE_CANONICAL_STATE",
+    "v8_one_round_authorization": "CONSUMED_BY_AUTHORITATIVE_CYCLE_CLOSE",
+    "v8_target_activation_disposition": "DEACTIVATED_AFTER_NULL_STOP_NONE_CLOSE_TARGETS_REMAIN_MATHEMATICALLY_OPEN"
+  },
+  "authoritative_cycle": {
+    "id": "2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1",
+    "opening_commit": "dd86907bebbfaaac9caee4e1d93dc77bc9f3ad8b",
+    "opening_tree": "a59d740c008ae04accf200a8373d16b4d9c70ae4",
+    "closing_commit": "c06884abf64ab761e1430012653e4d851da3a0f3",
+    "closing_tree": "6cb091f3cc7a7dd32d801dce662aa610b49af41f",
+    "referee_commit": "4f72cf633eba01d50c0fa806da79bb7a2f19a2f8",
+    "referee_tree": "e527e6d8483e6a38b2f274fe11913989d7164d2b",
+    "referee_verdict": "ACCEPT_FROZEN_CANDIDATE_FAIL_CLOSED",
+    "discovery_handoffs": {
+      "topology": "NULL",
+      "falsifier": "NULL",
+      "naturality": "NULL"
+    },
+    "referee_handoff": "NULL",
+    "cycle_handoff": "NULL",
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "selected_successor": "NONE",
+    "construction_started": false
+  },
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "diagonal_three": "OPEN",
+    "diagonal_nine": "OPEN",
+    "promotion": "NONE",
+    "theorem_level_counterexample": "NOT_FOUND"
+  },
+  "proof_distance": {
+    "opening_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8],
+    "checkpoint_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 5, 8],
+    "closing_vector": ["2/9", 1, "diag3_pair_hc1_AND_diag3_triple_hc0", 7, "UNKNOWN", "UNKNOWN", 6, 9],
+    "delta": 0,
+    "minimum_acceptable_decrease_met": false,
+    "same_blocker_streak_closing": 6,
+    "zero_ledger_streak_closing": 9
+  },
+  "open_obligations": {
+    "load_bearing_count": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_source_total": 79102449,
+    "triple_source_settled": 77940147,
+    "triple_source_residual": 1162302,
+    "triple_source_is_component_denominator": false,
+    "items": [
+      {"id": "global_gluing", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": []},
+      {"id": "extension_labels", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["global_gluing"]},
+      {"id": "strict_closure", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["global_gluing", "extension_labels"]},
+      {"id": "relative_infinity", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["strict_closure"]},
+      {"id": "middle_rank_replay", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["strict_closure", "relative_infinity"]},
+      {"id": "diag3_pair_hc1", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "requires": ["middle_rank_replay"]},
+      {"id": "diag3_triple_hc0", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "residual_source_orbits": 1162302, "requires": ["triple_source_denominator"]}
+    ]
+  },
+  "completed_feasibility_program": {
+    "id": "D3_NESTED_A_B_C_THEOREM_FEASIBILITY_ROUND1",
+    "authorization_status": "CONSUMED",
+    "rounds_authorized": 1,
+    "rounds_completed": 1,
+    "overall_handoff": "NULL",
+    "positive_finite_program_found": false,
+    "universal_negative_found": false,
+    "targets": {
+      "A": {
+        "status": "NULL",
+        "complete_finite_program": false,
+        "theorem_proved_or_refuted": false,
+        "first_missing": "UNIVERSAL_GENUINELY_MIXED_CHAIN_ASSIGNMENT_ON_ONE_SIMULTANEOUS_SOURCE_SUBDIVISION_WITH_ARBITRARY_FACE_CHAIN_COHERENCE"
+      },
+      "B": {
+        "status": "NULL",
+        "complete_finite_program": false,
+        "theorem_proved_or_refuted": false,
+        "rational_pair_kernel_proved": false,
+        "first_missing": "FINITE_EXHAUSTIVE_L_SOURCE_AND_FILTRATION_PRESERVING_COMPARISON_TO_THE_ACTUAL_COMPACTIFIED_BAD_UNION"
+      },
+      "C": {
+        "status": "NULL",
+        "complete_finite_program": false,
+        "theorem_proved_or_refuted": false,
+        "triple_escape_proved": false,
+        "first_missing": "COMPLETE_STABLE_COMPONENT_IDENTITIES_AND_SOUND_CONTINUATIONS_TO_CERTIFIED_TRUE_PARENT_INFINITY"
+      }
+    },
+    "dependency_logic": {
+      "target_a_is_conditional_subproblem_inside_target_b": true,
+      "target_a_alone_proves_no_global_pair_rank": true,
+      "target_c_is_independent_of_targets_a_and_b": true,
+      "only_actual_proved_and_replayed_b_plus_c_can_close_d3": true,
+      "feasibility_handoffs_have_theorem_credit": false
+    },
+    "nonconsequences": [
+      "NO_PROOF_OR_REFUTATION_OF_A_B_C_D3_OR_9DVL",
+      "NO_COMPLETE_FINITE_PROOF_PROGRAM",
+      "NO_PAIR_OR_TRIPLE_OBLIGATION_CLOSED",
+      "NO_LEDGER_CHANGE",
+      "NO_CONSTRUCTION",
+      "NO_SUCCESSOR_AUTHORIZATION",
+      "NO_THEOREM_PROMOTION"
+    ]
+  },
+  "selected_next_target": {
+    "id": "NONE",
+    "eligible_successor_count": 0,
+    "strategy_action": "STOP",
+    "construction_authorized": false,
+    "automatic_reopening_authorized": false,
+    "reason": "THE_ONLY_V8_FEASIBILITY_ROUND_CLOSED_NULL_STALLED_WITHOUT_PROOF_DISTANCE_DECREASE_OR_FULL_SCOPE_NEGATIVE",
+    "reopen_requires": [
+      "NEW_EXPLICIT_USER_AUTHORITY",
+      "NEW_GOVERNED_CYCLE",
+      "CONCRETE_FINITE_ROUTE_FOR_ONE_FIRST_MISSING_GLOBAL_EDGE",
+      "PREDECLARED_THEOREM_LEVEL_STRICT_DECREASE",
+      "FRESH_CANONICAL_OPENING_AUDIT_AND_INDEPENDENT_REPLAY"
+    ],
+    "prohibited_automatic_continuations": [
+      "REPEAT_D3_NESTED_A_B_C_THEOREM_FEASIBILITY_ROUND1",
+      "LOCAL_MIXED_CARRIER_OR_CHART_REFINEMENT",
+      "TRIPLE_ATLAS_GROWTH_WITHOUT_COMPONENT_COMPLETE_GLOBAL_ATTACHMENT",
+      "FACTOR19069_OR_RESIDUAL_SAMPLING",
+      "LEDGER_PROMOTION_FROM_FEASIBILITY_OR_LOCAL_EVIDENCE"
+    ]
+  },
+  "process_gates": {
+    "v9_is_current_target_selector": true,
+    "v8_is_immutable_historical_input": true,
+    "v8_one_round_authorization_is_consumed": true,
+    "active_research_cycle_exists": false,
+    "active_target_exists": false,
+    "same_route_continue_allowed": false,
+    "mathematical_construction_authorized": false,
+    "carrier_or_atlas_enumeration_authorized": false,
+    "theorem_credit_authorized": false,
+    "ledger_promotion_authorized": false,
+    "github_remains_read_only": true,
+    "drive_connector_must_not_be_used": true
+  },
+  "source_pins": {
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json": "e356d00108e46be82937b18146ca47039d506ea378d489dc392d7a2ee3f865e4",
+    "ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/CLOSING_MANIFEST.json": "e321eb89397c1549a39d2e3b757014bdd2d283fe098ee3ded23c57078a872f48",
+    "ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/CLOSING_CANDIDATE.json": "135328356b754f97ae631bee441ae8d3c0be5ddbd0ab427bfaac344244da94fc",
+    "ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/CYCLE_REPORT.md": "1ecd782da68eb7a5e3a41052b916726aabed815e1dc50822d98d1f35078fc6e4",
+    "ops/team/d3-mixed-carrier-topology/RESULT.json": "7e54007c1bb97be457cbdc039c5520267cd39e39e08a930828b42708443a99e5",
+    "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76",
+    "ops/team/d3-mixed-carrier-falsifier/RESULT.json": "89f54c80234dd74f763b390a1da86de2359a99684e3920e57cec284e6fd08480",
+    "ops/team/d3-mixed-carrier-falsifier/OBSTRUCTION_DOSSIER.md": "de7e1d5c2758786852cbb1cf684f3af8cbf44ab4df124c7053b60534b1317936",
+    "ops/team/d3-mixed-carrier-naturality/RESULT.json": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0",
+    "ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86",
+    "ops/team/d3-mixed-carrier-referee/RESULT.json": "b30b46c8a01eaf393c881c3de9a1550536d5f0daa4c6d3c649fcdedc249b5fe5",
+    "ops/team/d3-mixed-carrier-referee/REVIEW.md": "fa2d5894954c17c4c2edab93b991f7ee93f3c2680dcbdedea259daf711adb0ea",
+    "ops/team/d3-mixed-carrier-referee/verify_referee.py": "f4367e95184b9722a821aeea44281e9b365831b35e32a7dad2bdbcaf8e23b0a6"
+  }
+}

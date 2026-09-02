@@ -13,14 +13,20 @@ This document is the standing operating framework for theorem-oriented work in
    checkpoints and silently regain authority.
 
 The current cross-diagonal machine-readable companion is
-`data/CANONICAL_RESEARCH_STATE_V8.json`. Its verifier is
-`verify_canonical_research_state_v8.py`. V8 accepts the later theorem-reset
-`STALLED / STOP / NONE` close as authoritative over the historical successor
-stored in V7 and authorizes only one bounded proof-program feasibility round:
-the mixed-`(1,0,0)` chain subproblem, the complete joined-complex/pair-kernel
-program, and the independent triple-component escape program. It authorizes
-no mathematical construction or theorem credit. States V7 through V4 remain
-immutable historical checkpoints; in particular
+`data/CANONICAL_RESEARCH_STATE_V9.json`. Its verifier is
+`verify_canonical_research_state_v9.py`. V9 records the accepted mixed-carrier
+feasibility close as `STALLED / STOP / NONE`, marks the only V8 round consumed,
+and selects no active target or automatic successor. Reopening requires new
+explicit authority and a governed finite route for one first missing global
+edge.
+
+The immutable predecessor is `data/CANONICAL_RESEARCH_STATE_V8.json`, replayed
+by `verify_canonical_research_state_v8.py`. V8 historically authorized the
+mixed-`(1,0,0)` chain subproblem, the complete joined-complex/pair-kernel
+program, and the independent triple-component escape program, with no
+mathematical construction or theorem credit. That authorization is no longer
+active. States V8 through V4 remain immutable historical checkpoints; in
+particular
 `data/CANONICAL_RESEARCH_STATE_V4.json` is the verified post-universal-cut
 state. Its immutable post-normal-link predecessor is
 `data/CANONICAL_RESEARCH_STATE_V3.json`, verified historically by
@@ -111,7 +117,8 @@ Every material update must satisfy:
 
 - one theorem score;
 - one set of invariant open obligations;
-- one selected next target;
+- one selected next target, which may be the explicit fail-closed value
+  `NONE` together with a reopening predicate;
 - explicit supersession links for retired targets;
 - exact arithmetic identities for all displayed counts;
 - a verifier that rejects stale or contradictory accounting.

@@ -25,19 +25,22 @@ Mutation graphs of uniform oriented matroids are connected at every rank for `n 
 ### 3. Nine-Diagonal Vanishing Lemma: 2 of 9 diagonals proved
 
 The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally.
-The canonical state remains `PIVOT_REQUIRED`. There is no active diagonal
-construction and no theorem promotion. The only selected work is one bounded,
-theorem-first feasibility round centered on a globally attached mixed
-`(1,0,0)` chain in diagonal three. The round separates that chain problem from
-the complete joined-complex/pair-kernel theorem and the independent
-triple-component escape theorem; local carriers, atlas growth and residual
-sampling are explicitly unauthorized.
+The canonical strategy state is now **`STOP / NONE`**. There is no active
+diagonal target or construction, and no theorem promotion. The one bounded
+theorem-first feasibility round for the mixed-chain, complete pair-comparison,
+and independent triple-escape programs has been consumed: all three discovery
+lanes and the referee returned `NULL`, with no proof-distance decrease and no
+eligible successor. Local carriers, atlas growth and residual sampling remain
+unauthorized.
 
-The latest theorem-level tournament closed `STALLED / STOP` with winner and
-successor both `NONE`, after five cycles with the same blocker and eight
-zero-ledger cycles. Canonical state V8 supersedes the stale factor-19069
-successor retained in V7, preserves the exact `2/9` ledger, and permits only
-the one theorem-or-obstruction feasibility analysis described in the
+Canonical state V9 records the accepted `STALLED / STOP / NONE` close after
+six cycles with the same blocker and nine zero-ledger cycles. Historical V8
+authorizes one bounded three-target proof-program feasibility round and
+explicitly authorizes no mathematical construction or theorem credit; that
+opening authority is now exhausted. The mathematical targets remain open, but
+reopening requires a new governed cycle with a concrete finite route for one
+first missing global edge. See the
+[`V6 status`](ai/omreal/NINE_DIAGONAL_STATUS_V6.md) and
 [`9DVL theorem prospectus`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md).
 
 The latest universal D9 cut opening gate failed closed before its main census.
@@ -83,7 +86,8 @@ nonrelative master-closure compiler. The 5,803-factor residue remains an input
 gap, but that route is not current authority and cannot resume without a fresh
 opening audit.
 
-- [`ai/omreal/NINE_DIAGONAL_STATUS_V5.md`](ai/omreal/NINE_DIAGONAL_STATUS_V5.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V6.md`](ai/omreal/NINE_DIAGONAL_STATUS_V6.md)
+- [`ai/omreal/NINE_DIAGONAL_STATUS_V5.md`](ai/omreal/NINE_DIAGONAL_STATUS_V5.md) (historical V8 opening status)
 - [`ai/omreal/9DVL_THEOREM_PROSPECTUS.md`](ai/omreal/9DVL_THEOREM_PROSPECTUS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_SAFE_SEGMENTS.md)
 - [`ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md`](ai/omreal/DIAG3_PAIR_FULLSUPPORT_BLOCK_SYMMETRY.md)
@@ -104,14 +108,16 @@ The principal oriented-matroid program is the realizability/topology project in 
 The current diagonal-three frontier is deliberately fail-closed. Of 17,824 candidate full-support residual factors, 10,844 are proved to occur in the strict parent interior, 1,177 have exact fixed-sign emptiness certificates, and 5,803 remain unresolved. A constant sign on stored or exploratory points is treated only as reconnaissance, never as an emptiness certificate.
 
 Current cross-diagonal target selection is governed by the machine-checked
+[`CANONICAL_RESEARCH_STATE_V9.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json),
+its [`V9 verifier`](ai/omreal/verify_canonical_research_state_v9.py), and the
+[`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
+V9 records `STOP / NONE`, marks the V8 round consumed, and selects no active
+target. V8, V7, the post-normal-link predecessor, the reconciliation states
+and the earlier diagonal-three ledger are retained byte-for-byte as historical
+proof inputs; their old selected routes and authorizations are not current
+authority. The immutable
 [`CANONICAL_RESEARCH_STATE_V8.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json)
-and the [`exact-mathematics research operating system`](ai/omreal/RESEARCH_OPERATING_SYSTEM.md).
-The state after the theorem-level reset is `PIVOT_REQUIRED`: V7, the
-post-normal-link predecessor, the reconciliation states and the earlier
-diagonal-three ledger are retained byte-for-byte as historical proof inputs,
-but their old selected routes are no longer current authority. V8 authorizes
-one bounded three-target proof-program feasibility round and explicitly
-authorizes no mathematical construction or theorem credit. The earlier
+records the consumed opening authority. The earlier
 [`CANONICAL_RESEARCH_STATE_V4.json`](ai/omreal/data/CANONICAL_RESEARCH_STATE_V4.json)
 remains a replayable historical checkpoint.
 

@@ -4,17 +4,27 @@
 
 This is a research prospectus, not a theorem announcement. The exact ledger is
 still **2/9**: diagonals 1 and 2 are proved, while diagonals 3 through 9 remain
-open. The latest theorem-level audit selected no construction successor and
-made no ledger change. Its conclusion was to stop local enumeration until a
-globally quantified theorem, a theorem-relevant counterexample, or a certified
-strict decrease becomes available. See
+open. The latest A/B/C feasibility cycle returned `NULL` on all three discovery
+lanes and in independent review, closed `STALLED / STOP / NONE`, selected no
+construction successor, and made no ledger change. Current authority is
+[`ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json`](data/CANONICAL_RESEARCH_STATE_V9.json).
+See also
 [`ai/omreal/ATLAS_HELLY.md`](ATLAS_HELLY.md),
 [`ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json`](data/CANONICAL_RESEARCH_STATE_V8.json),
 and the
-[`latest theorem-reset report`](../../ops/research-team/cycles/2026-09-01-theorem-reset-joined-gordan-tournament-gate1/CYCLE_REPORT.md).
+[`accepted feasibility report`](../../ops/research-team/cycles/2026-09-01-d3-mixed-carrier-theorem-feasibility-gate1/CYCLE_REPORT.md).
 
-The proposed next bet is a theorem about globally attached, genuinely
-mixed-block `(1,0,0)` carriers for diagonal three. The attraction is
+## Post-cycle disposition
+
+V8's one-round authorization is consumed. V9 selects no active research
+target and authorizes no automatic reopening. A new cycle requires explicit
+authority, a concrete finite route for one first missing global edge, a
+predeclared theorem-level strict decrease, and a fresh independent opening
+audit. The target definitions below remain open mathematical possibilities;
+they are not an active work order.
+
+The historically proposed next bet was a theorem about globally attached,
+genuinely mixed-block `(1,0,0)` carriers for diagonal three. The attraction is
 structural: one successful theorem could replace extensive case-by-case
 topology by a finite, face-natural construction. The danger is equally clear:
 the repository currently proves only a local two-skeleton and contains an
@@ -416,12 +426,15 @@ refute a mixed carrier or 9DVL.
 
 ## Hard go/no-go criteria
 
-Canonical state V8 authorizes exactly **one bounded feasibility round** for
-the mixed route. It authorizes no carrier construction, theorem credit,
-ledger promotion, broad residual enumeration, or resource enlargement.
+Canonical state V8 authorized exactly **one bounded feasibility round** for
+the mixed route. It authorized no carrier construction, theorem credit,
+ledger promotion, broad residual enumeration, or resource enlargement. That
+round is now consumed; V9 records `STALLED / STOP / NONE` and no successor.
 
-Advancing beyond that round requires the positive-feasibility package named
-in V8, interpreted through Targets A--C:
+A new bounded cycle may reopen on one first missing global edge only under
+V9's explicit governance and strict-decrease gate. Any request to select a
+construction successor for the full A/B/C program must first supply the
+positive-feasibility package named in V8, interpreted through Targets A--C:
 
 - a quantifier-complete candidate statement distinguishing universal mixed
   chains, global pair comparison/exactness, and independent triple escape;
@@ -434,9 +447,9 @@ This package is a proof-program feasibility result, not an already proved
 theorem. It qualifies only for a separate canonical construction-selection
 decision and has ledger effect `0/9`.
 
-A negative feasibility result receives V8's whole-route retirement verdict
-only if it is an independently replayed obstruction quantified over every
-carrier satisfying the entire V8 feasibility contract: the full Target A
+A negative feasibility result would receive V8's whole-route retirement
+verdict only if it is an independently replayed obstruction quantified over
+every carrier satisfying the entire V8 feasibility contract: the full Target A
 scope and the carrier's claimed specialization, attachment, comparison, and
 rank role in Target B. A counterexample to one exchange lemma,
 parameterization, or local canary retires only that object. A null result must
@@ -446,10 +459,10 @@ and pending frontier. Either result stops without a successor.
 A local filler, sampled success rate, artificial-boundary escape, anonymous
 `3/10` clause count, unproved monodromy assumption, or rational rank on an
 uncompared partial complex is a **no-go**, regardless of the size of the
-computation. If the authorized round does not produce the full positive or
-universal-negative feasibility package, stop this route. Do not resume the
-full triple atlas or expand factor-by-factor sampling merely because compute
-is available. Preserve and circulate the proved single-block theorem, the
-singleton elementary-root no-go, the exact D3 obligation split, and the triple
-accounting as independent results; then either test one of the other two
-surviving global routes under the same gates or park 9DVL.
+computation. The authorized round did not produce the full positive or
+universal-negative feasibility package, so the route is stopped. Do not resume
+the full triple atlas or expand factor-by-factor sampling merely because
+compute is available. Preserve and circulate the proved single-block theorem,
+the singleton elementary-root no-go, the exact D3 obligation split, and the
+triple accounting as independent results; then either test one of the other
+two surviving global routes under the same gates or park 9DVL.
