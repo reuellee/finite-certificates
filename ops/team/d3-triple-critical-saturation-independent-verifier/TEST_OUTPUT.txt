@@ -1,0 +1,3 @@
+PASS frozen-input reconstruction: 7 pins, 62 walls, 5 canaries
+PASS 22/22 hostile gate mutations rejected
+Q0 NULL INDEPENDENTLY CONFIRMED; Q1 DENIED; STALLED / STOP

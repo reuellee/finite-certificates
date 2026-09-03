@@ -1,0 +1,179 @@
+{
+  "accepted": false,
+  "accounting": {
+    "strategy_action": "STOP",
+    "theorem_credit": "NONE",
+    "theorem_ledger_after": "2/9",
+    "theorem_ledger_before": "2/9",
+    "trajectory": "STALLED",
+    "triple_source_residual_after": 1162302,
+    "triple_source_residual_before": 1162302
+  },
+  "first_failed_obligation": "END_TO_END_EXECUTABLE_COMPONENT_DECORATED_CONTRACT_WITH_CEILING_BOUND_Q1_PATH",
+  "format": "d3-triple-critical-saturation-independent-q0-verification-v1",
+  "frozen_evidence_commit": "2df3285c19b0c65127bd0acd79df2cc57f0d7752",
+  "frozen_evidence_tree": "67bc7fa65db3d45f42edf724d7c7f69cef8edbfc",
+  "hostile_mutations": {
+    "all_rejected": true,
+    "rejected": 22,
+    "results": [
+      {
+        "id": "accept_q0",
+        "rejected": true
+      },
+      {
+        "id": "pass_q0",
+        "rejected": true
+      },
+      {
+        "id": "activate_q1",
+        "rejected": true
+      },
+      {
+        "id": "stage_loss",
+        "rejected": true
+      },
+      {
+        "id": "invent_attachment",
+        "rejected": true
+      },
+      {
+        "id": "invent_budget",
+        "rejected": true
+      },
+      {
+        "id": "invent_scratch_guard",
+        "rejected": true
+      },
+      {
+        "id": "omit_q1_tail",
+        "rejected": true
+      },
+      {
+        "id": "claim_reachable",
+        "rejected": true
+      },
+      {
+        "id": "continue_action",
+        "rejected": true
+      },
+      {
+        "id": "promote_opening_ledger",
+        "rejected": true
+      },
+      {
+        "id": "promote_closing_ledger",
+        "rejected": true
+      },
+      {
+        "id": "shrink_opening_residual",
+        "rejected": true
+      },
+      {
+        "id": "shrink_closing_residual",
+        "rejected": true
+      },
+      {
+        "id": "grant_credit",
+        "rejected": true
+      },
+      {
+        "id": "claim_converging",
+        "rejected": true
+      },
+      {
+        "id": "same_route_continue",
+        "rejected": true
+      },
+      {
+        "id": "unknown_trajectory",
+        "rejected": true
+      },
+      {
+        "id": "pivot_without_target",
+        "rejected": true
+      },
+      {
+        "id": "retire_without_counterexample",
+        "rejected": true
+      },
+      {
+        "id": "null_as_timeout",
+        "rejected": true
+      },
+      {
+        "id": "q1_as_null",
+        "rejected": true
+      }
+    ],
+    "total": 22
+  },
+  "independent_reconstruction": {
+    "ceiling_seconds": 14400,
+    "false_infinity_canaries": 3,
+    "forecast_saturation_seconds": 12600,
+    "formal_source_generators": 59,
+    "known_fourspace_canaries": 2,
+    "materialized_component_attachment_stages": 0,
+    "maximum_source_degree": 8,
+    "nonzero_source_generators": 55,
+    "ordered_parent_wall_stages": 62,
+    "scratch_ceiling_enforced_by_runner": false,
+    "source_sparse_terms": 14741,
+    "unallocated_seconds_after_saturation_forecast": 1800,
+    "unforecasted_q1_obligations": [
+      "exact final dimension or emptiness",
+      "complete real-root isolation",
+      "parent-chamber classification",
+      "sound true-parent-infinity continuation",
+      "complete S8 orbit transfer"
+    ]
+  },
+  "independent_verifier": true,
+  "inputs": {
+    "contract": {
+      "bytes": 143059,
+      "sha256": "0284ddb3a6ce0c7b2eedf3d7a0232cd45a2c098e3cb7413a6946241c85acbed3"
+    },
+    "falsifier_result": {
+      "bytes": 7327,
+      "sha256": "1108d1c39c520cf6db9faf033db140807401f76a6b13ac1dee2b75432d72b7ef"
+    },
+    "opening": {
+      "bytes": 5226,
+      "sha256": "7202e40746ca4a482d638ea32edda4d24c7ca5506961fd8863958aa410be8f13"
+    },
+    "producer_result": {
+      "bytes": 1333,
+      "sha256": "97c99680f3910912e0b7eaccc0081c5966134f6f2c655520ce3a27f77d7c9282"
+    },
+    "runner": {
+      "bytes": 13238,
+      "sha256": "11fd84c16a97f7143311498fe2218bfcc400ddda72c14e043cf22d9238543af7"
+    },
+    "system": {
+      "bytes": 364486,
+      "sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+    },
+    "wall_source": {
+      "bytes": 35449,
+      "sha256": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26"
+    }
+  },
+  "mid_cycle": {
+    "action": "FREEZE_Q0_NULL_AND_STOP",
+    "minimum_decrease_still_reachable_inside_fixed_ceiling": false,
+    "reason": "The only numeric forecast consumes 210 of 240 minutes on saturation, is uncalibrated, omits five Q1 endpoint obligations, and lacks scratch-ceiling enforcement."
+  },
+  "q0_status": "NULL",
+  "q1_status": "DENIED",
+  "scope": [
+    "Independent machine verification, not human review.",
+    "Imports no constructor or falsifier code and reads their artifacts from frozen Git.",
+    "No raw research saturation or RUR job was run because Q1 remains denied.",
+    "Does not disprove the mathematical route or change any theorem/component/row claim."
+  ],
+  "status": "PASS",
+  "track_id": "d3-triple-critical-saturation-independent-verifier",
+  "verdict": "Q0_NULL_INDEPENDENTLY_CONFIRMED"
+}
