@@ -1,0 +1,50 @@
+{
+  "format": "d3-mixed-100-carrier-constructor-source-manifest-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "track_id": "d3-mixed-100-carrier-constructor",
+  "lane_branch": "research/lane-d3-mixed-100-carrier-constructor-20260903",
+  "lane_opening_commit": "1c6519d89335dde215e93887de074ea4e6d6464a",
+  "lane_opening_tree": "ff8a33e13952e86b27f184e3d8c40e768fbeb110",
+  "canonical_base_commit": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+  "canonical_base_tree": "117850b25cd94f865cb85e681c465b8260dd9c6a",
+  "sources": [
+    {"path": "ops/research-team/PROTOCOL.md", "bytes": 11222, "sha256": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246"},
+    {"path": "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/CYCLE.md", "bytes": 11012, "sha256": "9f88215d6b9fdacd5318c056d27322b0339f2c04bbbe5ce378f45d6ac4d515cb"},
+    {"path": "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/OPENING_STATE.json", "bytes": 5569, "sha256": "442081ba35778ba103ff4caccf274329b8694e826a7349fdf5b30fb662514e00"},
+    {"path": "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/WORK_ORDERS.yaml", "bytes": 7900, "sha256": "3ba2bb478e6efe2f28d385204bb698b0308854731eb8d36a10093b91943c7901"},
+    {"path": "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/verify_opening_state.py", "bytes": 7462, "sha256": "064a8c6944b33238abd8555c79a8304269d85755716c7a8aa658ada217dfd760"},
+    {"path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json", "bytes": 6535, "sha256": "405e1f34789e999d2b8725881a4b99c1db81cec3ecfa70abcdfa9b3fbb7a46bf"},
+    {"path": "ai/omreal/verify_canonical_research_state_v10.py", "bytes": 13118, "sha256": "662267d9d8692c6724ab0b55472b3ca262461cce864a7cbb8bd9296bef788917"},
+    {"path": "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CLOSING_MANIFEST.json", "bytes": 8258, "sha256": "f64592cf7f5bd991a7085ebc0f6197ed0b5361f6605a053fc0ad814a1dbff428"},
+    {"path": "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CYCLE_REPORT.md", "bytes": 9584, "sha256": "89daf49e419b23bcdf91830c883a8ba381c226da2a366ef894c64cb3465073d6"},
+    {"path": "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md", "bytes": 11362, "sha256": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76"},
+    {"path": "ops/team/d3-mixed-carrier-topology/RESULT.json", "bytes": 18496, "sha256": "7e54007c1bb97be457cbdc039c5520267cd39e39e08a930828b42708443a99e5"},
+    {"path": "ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md", "bytes": 13465, "sha256": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86"},
+    {"path": "ops/team/d3-mixed-carrier-naturality/RESULT.json", "bytes": 10798, "sha256": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0"},
+    {"path": "ops/team/theorem-reset-falsifier/FINDINGS.md", "bytes": 6659, "sha256": "893ecc8d530e7af0970cc4bb232fb34e99cb8fc5e0e6b073c93d423c7313420f"},
+    {"path": "ops/team/theorem-reset-falsifier/RESULT.json", "bytes": 10935, "sha256": "c955c6886ed611ae915d56b21a57740f27acb5fb750b22f1900aa58e2996c663"},
+    {"path": "ai/omreal/9DVL_THEOREM_PROSPECTUS.md", "bytes": 23473, "sha256": "9d7fa818ef48ec1df8d7cadc8525d6d705377f2f1294d9eba692dc15a2533cb7"},
+    {"path": "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md", "bytes": 16265, "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a"},
+    {"path": "ai/omreal/verify_diag3_joined_flow_triangle.py", "bytes": 9283, "sha256": "ac01851b53d4bed1c859f74bad2e71a5025825fe7accdac13263f5d6518a0944"},
+    {"path": "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md", "bytes": 13943, "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f"},
+    {"path": "ai/omreal/verify_diag3_single_bad_two_skeleton.py", "bytes": 7350, "sha256": "0ae6a9d54abcddbeb68be882083c52e1e6a9735941cea42eebacdf91ef77bda4"},
+    {"path": "ai/omreal/verify_diag3_row2599_common_proper_escape.py", "bytes": 13638, "sha256": "6b426e94181a0d447f79d70e3eb6f64f2f34227d88b9ae1fa0a87f9539c4297c"},
+    {"path": "ai/omreal/verify_diag3_row2599_h1_radial_gap.py", "bytes": 7893, "sha256": "437358967ebf6a7ea362fe95314e58de3243b6959777be3cee534b982d6ab81e"}
+  ],
+  "executions": [
+    {"command": "python -B ai/omreal/verify_canonical_research_state_v10.py", "status": "PASS", "acceptance_use": true, "scope": "CANONICAL_STOP_STATE_LEDGER_AND_HOSTILES"},
+    {"command": "python -B ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/verify_opening_state.py", "status": "PASS", "acceptance_use": true, "scope": "CYCLE_OPENING_AND_24_HOSTILES"},
+    {"command": "python -B ai/omreal/verify_diag3_joined_flow_triangle.py", "status": "PASS", "acceptance_use": true, "scope": "LOCAL_EXACT_FLOW_DISK_H2_AND_SINGLETON_ROOT_NO_GO_ONLY"},
+    {"command": "python -B ai/omreal/verify_diag3_single_bad_two_skeleton.py", "status": "PASS", "acceptance_use": true, "scope": "UNIVERSAL_SINGLE_BAD_TERMS_ONLY"},
+    {"command": "python -B ai/omreal/verify_diag3_row2599_common_proper_escape.py", "status": "PASS", "acceptance_use": true, "scope": "LOCAL_COMMON_PROPER_TRIPLE_RAY_ONLY"},
+    {"command": "python -B ai/omreal/verify_diag3_row2599_h1_radial_gap.py", "status": "PASS", "acceptance_use": true, "scope": "LOCAL_RADIAL_P01_SHORTCUT_NO_GO_ONLY"}
+  ],
+  "restrictions": {
+    "network_used": false,
+    "external_compute_used": false,
+    "github_write": false,
+    "canonical_or_cycle_file_edited": false,
+    "falsifier_worktree_inspected": false,
+    "producer_self_acceptance": false
+  }
+}

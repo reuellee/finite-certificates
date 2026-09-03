@@ -1,0 +1,216 @@
+{
+  "format": "d3-mixed-100-carrier-constructor-result-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "track_id": "d3-mixed-100-carrier-constructor",
+  "role": "constructive-prover",
+  "owned_surface": "ops/team/d3-mixed-100-carrier-constructor",
+  "frozen_base": {
+    "branch": "research/lane-d3-mixed-100-carrier-constructor-20260903",
+    "lane_opening_commit": "1c6519d89335dde215e93887de074ea4e6d6464a",
+    "lane_opening_tree": "ff8a33e13952e86b27f184e3d8c40e768fbeb110",
+    "canonical_base_commit": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+    "canonical_base_tree": "117850b25cd94f865cb85e681c465b8260dd9c6a",
+    "clean_before_work": true
+  },
+  "handoff": "NULL",
+  "assessment": "NULL_STALLED_STOP",
+  "positive_token": null,
+  "negative_token": null,
+  "constructor_self_acceptance": false,
+  "first_missing_edge": {
+    "id": "O3_MIXED_GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY",
+    "from": "DECLARED_L_SOURCE_INTERFACE",
+    "to": "O3_universal_mixed_chain",
+    "required": "FOR_EVERY_OBJECT_AND_RELEVANT_PRIMITIVE_ALPHA_CONSTRUCT_A_FINITE_GENUINELY_MIXED_100_RELATIVE_CHAIN_Z_ALPHA_WITH_BOUNDARY_ALPHA",
+    "exact_gap": "THE_INTERFACE_DEFINES_ONLY_THE_FUNCTORIAL_LOWER_TWO_SKELETON;_NO_GEOMETRIC_MIXED_C3_FUNCTOR_BOUNDARY_SURJECTIVITY_RELATIVE_ACYCLICITY_OR_PROPER_MIXED_EXCHANGE_THEOREM_IS_PROVIDED_OR_DERIVED",
+    "proof_reachable_within_lane_ceiling": false
+  },
+  "target_status": {
+    "O3_universal_mixed_chain": "OPEN",
+    "O4_arbitrary_flag_coherence": "OPEN_BLOCKED_BEHIND_O3_AND_MIXED_FUNCTOR_DESCENT",
+    "O3_proved": false,
+    "O4_proved": false,
+    "full_quantifier_obstruction_proved": false,
+    "ansatz_failure_promoted_to_negative": false
+  },
+  "quantified_scope_preserved": {
+    "parents": "ALL_REALIZABLE_UNIFORM_RANK4_PARENTS_ON_8_LABELS",
+    "realization_components_and_charts": "ALL_NORMALIZED_COMPONENTS_AND_REQUIRED_CHARTS",
+    "signature_antichains": "ALL_SOURCE_DERIVED_PROPER_PAIRWISE_INCOMPARABLE_ANTICHAINS",
+    "witness_support_strata": "ALL_ADMISSIBLE",
+    "primitive_integral_kernel_classes": "ALL_RELEVANT_CLASSES_DECLARED_BY_EACH_INTERFACE",
+    "labeled_active_block_placements": "ALL_FOR_1_LE_R_LE_3",
+    "active_block_permutations": "ALL",
+    "specializations": [
+      "SUPPORT_LOSS",
+      "ZERO_WEIGHT",
+      "CHART_TRANSITION",
+      "MONODROMY",
+      "PARENT_BOUNDARY",
+      "PARENT_RANK",
+      "WITNESS_RANK",
+      "RESIDUAL_WALL",
+      "ACTIVE_BLOCK_PERMUTATION"
+    ],
+    "face_flags": "ALL_COMPOSABLE_FLAGS_NOT_ONLY_CODIMENSION_ONE",
+    "relative_infinity": "TRUE_PARENT_INFINITY_ONLY"
+  },
+  "interface_audit": {
+    "provided": [
+      "FINITE_LABELED_C0_C1_C2_GENERATORS",
+      "INTEGRAL_ORIENTATIONS_AND_D1_D2_WITH_D1_D2_ZERO",
+      "FINITE_DECLARED_RELEVANT_PRIMITIVE_KERNEL_CLASS_LIST",
+      "STABLE_PROVENANCE_AND_DISTINCT_FACE_TAGS",
+      "ONE_SIMULTANEOUS_LOWER_SOURCE_SUBDIVISION",
+      "LOWER_SPECIALIZATION_FUNCTOR_ON_ALL_COMPOSABLE_FACE_FLAGS",
+      "ACTIVE_BLOCK_PERMUTATION_EQUIVARIANCE"
+    ],
+    "not_provided_or_derived": [
+      "FINITE_GEOMETRIC_MIXED_C3_FUNCTOR",
+      "SOURCE_DERIVED_MIXED_100_CELL_GENERATORS",
+      "RELATIVE_BOUNDARY_SURJECTIVITY_ON_RELEVANT_PRIMITIVES",
+      "RELATIVE_ACYCLICITY_OF_ASSIGNED_MIXED_CARRIERS",
+      "PROPERNESS_OF_EVERY_MIXED_PARAMETER_END_TO_TRUE_PARENT_INFINITY",
+      "MIXED_CELL_SPECIALIZATION_MAPS_AND_LOOP_DESCENT",
+      "NATURAL_RIGHT_INVERSE_OF_MIXED_RELATIVE_BOUNDARY"
+    ],
+    "lower_cycle_condition_is_sufficient_for_mixed_boundary": false
+  },
+  "functorial_reformulation": {
+    "source": "L_LE_2:F_TO_CHAIN_COMPLEXES_LE_2_OVER_Z",
+    "required_new_functor": "M3_MIX:F_TO_FREE_ABELIAN_GROUPS_GENERATED_BY_GEOMETRIC_MIXED_100_CHAINS",
+    "required_natural_boundary": "b:M3_MIX_TO_Z2_REL",
+    "required_natural_section": "s:P_TO_M3_MIX_WITH_b_COMPOSE_s_EQUALS_INCLUSION",
+    "interface_contains_required_new_functor": false,
+    "interface_contains_required_natural_section": false
+  },
+  "algebraic_axiom_independence_witness": {
+    "role": "LOWER_CHAIN_AXIOM_INDEPENDENCE_ONLY_NOT_AN_ADMISSIBLE_L_SOURCE_COUNTEREXAMPLE",
+    "objects": 1,
+    "morphisms": ["IDENTITY"],
+    "ranks": {"C0": 0, "C1": 0, "C2": 1, "C3_supplied": 0},
+    "d2": [],
+    "primitive_alpha": [1],
+    "d1_d2_zero": true,
+    "alpha_is_primitive": true,
+    "H2": "Z",
+    "proves_algebraic_lower_axioms_imply_boundary": false,
+    "source_derived_geometric_admissibility_claimed": false,
+    "universal_negative_consequence": false
+  },
+  "candidate_routes": [
+    {
+      "id": "FORMAL_FUNCTORIAL_CONE",
+      "algebraic_boundary_and_flag_coherence": "AVAILABLE_BY_SETTING_D3_EQUAL_Z2",
+      "accepted_for_O3": false,
+      "first_failure": "FORMAL_CYCLE_GENERATORS_ARE_NOT_GEOMETRIC_MIXED_100_CELLS_AND_HAVE_NO_WITNESS_PROPERNESS_OR_INFINITY_PROVENANCE"
+    },
+    {
+      "id": "ACYCLIC_CARRIER_EXTENSION",
+      "accepted_for_O3": false,
+      "first_failure": "RELATIVE_ACYCLIC_MIXED_CARRIER_ASSIGNMENT_IS_MISSING_AND_IS_THE_LOAD_BEARING_HYPOTHESIS"
+    },
+    {
+      "id": "ROW2599_COMMON_RAY_CONE",
+      "accepted_for_O3": false,
+      "first_failure": "ONLY_4_OF_6_COMPARISON_INCIDENCES_EXIST_AND_THE_NONRADIAL_P01_COMPATIBILITY_HOMOTOPY_IS_OPEN"
+    },
+    {
+      "id": "OBJECTWISE_FILLERS_THEN_TRANSPORT",
+      "accepted_for_O3": false,
+      "first_failure": "NO_OBJECTWISE_UNIVERSAL_FILLER_AND_NO_MIXED_SPECIALIZATION_FUNCTOR_OR_LOOP_DESCENT"
+    }
+  ],
+  "row2599_diagnostic": {
+    "parent": 2599,
+    "chart": 0,
+    "relative_chain_ranks": {"partial_1": 3, "partial_2": 6, "C2": 7},
+    "relative_homology": {"H0": 0, "H1": 0, "H2": "Z"},
+    "primitive_class": [-1, 1, 1, 1, 1, 1, 1],
+    "singleton_nerve_cocycle_evaluation": 1,
+    "singleton_root_fixed_block_fillers_excluded": true,
+    "genuinely_mixed_carrier_excluded": false,
+    "common_proper_triple_ray_exists": true,
+    "common_proper_ray_parent_wall": "[2467]",
+    "comparison_incidences": {"certified": 4, "required": 6},
+    "certified_mixed_d3_cells": 0,
+    "absence_is_nonexistence_proof": false,
+    "local_instance_proves_universal_target": false
+  },
+  "naturality_frontier": {
+    "lower_face_category_exists_by_interface": true,
+    "mixed_degree_three_face_functor_constructed": false,
+    "natural_filler_section_constructed": false,
+    "codimension_one_checks_suffice": false,
+    "arbitrary_flag_equality_proved": false,
+    "monodromy_descent_proved": false,
+    "true_parent_infinity_properness_proved": false
+  },
+  "proof_distance": {
+    "canonical_opening": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "canonical_closing_recommendation": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "selected_route_opening": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_closing": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_delta": 0,
+    "minimum_acceptable_decrease_met": false,
+    "trajectory": "STALLED",
+    "same_route_continue": false,
+    "required_action": "STOP"
+  },
+  "accounting_guards": {
+    "formal_shape_count": 10,
+    "provisional_universal_shape_clauses": ["(0)", "(1)", "(2)"],
+    "provisional_shape_ratio": "3/10",
+    "formal_taxonomy_is_global_denominator": false,
+    "formal_taxonomy_is_end_to_end_coverage": false,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "canonical_ledger_before": "2/9",
+    "canonical_ledger_after": "2/9",
+    "canonical_ledger_delta": "0/9"
+  },
+  "scope_compliance": {
+    "edited_only_owned_surface": true,
+    "falsifier_worktree_inspected": false,
+    "atlas_or_census_run": false,
+    "saturation_srep_cad_or_residual_growth_run": false,
+    "fixed_block_filler_promoted": false,
+    "artificial_infinity_used": false,
+    "O1_O2_O5_O6_construction_performed": false,
+    "canonical_or_cycle_file_edited": false,
+    "theorem_ledger_edited": false,
+    "network_used": false,
+    "external_compute_used": false,
+    "github_write": false,
+    "push_or_merge": false
+  },
+  "replays": [
+    {"command": "python -B ai/omreal/verify_canonical_research_state_v10.py", "status": "PASS", "scope": "CANONICAL_STATE_ONLY"},
+    {"command": "python -B ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/verify_opening_state.py", "status": "PASS", "scope": "OPENING_CONTRACT_ONLY"},
+    {"command": "python -B ai/omreal/verify_diag3_joined_flow_triangle.py", "status": "PASS", "scope": "LOCAL_FLOW_DISK_AND_SINGLETON_ROOT_NO_GO_ONLY"},
+    {"command": "python -B ai/omreal/verify_diag3_single_bad_two_skeleton.py", "status": "PASS", "scope": "UNIVERSAL_SINGLE_BAD_TERMS_ONLY"},
+    {"command": "python -B ai/omreal/verify_diag3_row2599_common_proper_escape.py", "status": "PASS", "scope": "LOCAL_COMMON_PROPER_TRIPLE_RAY_ONLY"},
+    {"command": "python -B ai/omreal/verify_diag3_row2599_h1_radial_gap.py", "status": "PASS", "scope": "LOCAL_RADIAL_SHORTCUT_NO_GO_ONLY"}
+  ],
+  "nonconsequences": [
+    "NO_PROOF_OF_O3",
+    "NO_PROOF_OF_O4",
+    "NO_EXACT_ADMISSIBLE_OBSTRUCTION_TO_THEIR_FULL_CONJUNCTION",
+    "NO_COUNTEREXAMPLE_TO_A_GENUINELY_MIXED_CARRIER",
+    "NO_GLOBAL_L_SOURCE_EXISTENCE_OR_COVERAGE",
+    "NO_PAIR_OR_TRIPLE_BRANCH_CLOSURE",
+    "NO_D3_OR_9DVL_PROMOTION",
+    "NO_LEDGER_CHANGE"
+  ],
+  "verification": {
+    "command": "python -B ops/team/d3-mixed-100-carrier-constructor/verify_constructor.py",
+    "standard_library_only": true,
+    "hostile_mutations_required": 30
+  },
+  "deliverables": [
+    "ops/team/d3-mixed-100-carrier-constructor/THEOREM_ATTEMPT.md",
+    "ops/team/d3-mixed-100-carrier-constructor/RESULT.json",
+    "ops/team/d3-mixed-100-carrier-constructor/SOURCE_MANIFEST.json",
+    "ops/team/d3-mixed-100-carrier-constructor/verify_constructor.py"
+  ]
+}
