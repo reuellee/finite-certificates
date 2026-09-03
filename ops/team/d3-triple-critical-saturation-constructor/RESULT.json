@@ -1,0 +1,23 @@
+{
+  "accepted": false,
+  "contract": "ops/team/d3-triple-critical-saturation-constructor/SATURATION_CONTRACT.json",
+  "contract_semantic_sha256": "f6ee0a75c6e8138a35dff3b12993efeeb8d3cd9a3847160acefd1b6ce40fb84f",
+  "contract_sha256": "0284ddb3a6ce0c7b2eedf3d7a0232cd45a2c098e3cb7413a6946241c85acbed3",
+  "endpoint": "Q0_CANDIDATE_HANDOFF_PENDING_INDEPENDENT_REPLAY",
+  "format": "d3-triple-critical-saturation-constructor-result-v1",
+  "hostile_boundary_canaries": 3,
+  "known_fourspace_canaries": 2,
+  "ordered_parent_wall_saturators": 62,
+  "q0_status": "CANDIDATE",
+  "q1_status": "DENIED_PENDING_INDEPENDENT_Q0_ACCEPTANCE",
+  "semantic_sha256": "ca9a1ec849b4e476d3b4b0291d89e791cf0037c06f9c2333128a1cc9a056bbd6",
+  "source_manifest": "ops/team/d3-triple-critical-saturation-constructor/SOURCE_MANIFEST.json",
+  "source_manifest_semantic_sha256": "744b81f2b69789b99cebc00a217b0cc67fb6f36838bfa35c0c549268dd237f66",
+  "source_manifest_sha256": "1583376d6bca7ebf7aef63a0375e71622f6774e7facfaaf20018f03b4e5552d1",
+  "target": "D3_TRIPLE_ORBIT5563_COMPONENT_DECORATED_CRITICAL_SATURATION_GATE1",
+  "theorem_ledger_after": "2/9",
+  "theorem_ledger_before": "2/9",
+  "track_id": "d3-triple-critical-saturation-constructor",
+  "triple_source_residual_after": 1162302,
+  "triple_source_residual_before": 1162302
+}

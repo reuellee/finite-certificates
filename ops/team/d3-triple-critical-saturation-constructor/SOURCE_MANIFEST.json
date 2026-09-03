@@ -1,0 +1,32 @@
+{
+  "format": "d3-triple-critical-saturation-constructor-source-manifest-v1",
+  "opening_revision": "ba87af7b1ac58d22c0622c908e31dc8ec03d24fa",
+  "opening_tree": "54bcab4da2eaa441a4d4c3823a8d4593d89e6bda",
+  "pins": {
+    "ai/omreal/DIAG2_PIVOT_REPRESENTATIVE_TRIPLES_VERIFY.py": "f6423de40d4ae72e633db5b9c4b8755dcfa0672d3acde183196c2763751c7d5a",
+    "ai/omreal/DIAG3_GLOBAL_EXIT_CRITERION.md": "0a372197a49f4a767c06b23a6df830ef2784e7fe653b4b3eb1a506eec0518e27",
+    "ai/omreal/DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md": "d8ebb65e2c99103135fa227f27ca6b1396db38a70cd68787f98cf40adef99fc7",
+    "ai/omreal/DIAG3_TRIPLE_FULLSPACE_CRITICAL_H1_GATE.md": "a4a58e284beddd2a073c3252bb6573a7ce220a7b9237013338e1698f40f588bd",
+    "ai/omreal/DIAG3_TRIPLE_QUADRATIC_COVER_NO_GO.md": "8d1325ec4cfcd7de9ae2692c55a8d6e988e6278e0bce14c87da62c2601a77ba3",
+    "ai/omreal/DIAG9_GRAPH_global_factor_census.py": "c810e4e7b1fa8493d843f293cd92ff4568debb893b8296ec076b22b8963fe1e3",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json": "405e1f34789e999d2b8725881a4b99c1db81cec3ecfa70abcdfa9b3fbb7a46bf",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1_manifest.json": "ba47b626b731dfe41f35ca98953b4531c9dcd1c27af321559e811ffae0714854",
+    "ai/omreal/verify_canonical_research_state_v10.py": "662267d9d8692c6724ab0b55472b3ca262461cce864a7cbb8bd9296bef788917",
+    "ai/omreal/verify_diag3_global_exit_criterion.py": "c092930367e1f8129fdc6799427ff0dd9ae1aae385ddd9d44aa0452ed3d9b249",
+    "ai/omreal/verify_diag3_triple_fullspace_critical_h1.py": "c1aa3201f5c2f91a3185b31ff98d5c3eaf1b063477d466587e81d2e2179424ef",
+    "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/OPENING_STATE.json": "7202e40746ca4a482d638ea32edda4d24c7ca5506961fd8863958aa410be8f13",
+    "ops/team/d3-mixed-carrier-naturality/RESULT.json": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0",
+    "ops/team/d3-triple-critical-saturation-constructor/build_saturation_contract.py": "2b6b939dc4335dd752a24bb2703a86ff965bb46324fdb38032a9d1b47e4d09b6",
+    "ops/team/d3-triple-critical-saturation-constructor/run_q1_saturation.py": "11fd84c16a97f7143311498fe2218bfcc400ddda72c14e043cf22d9238543af7",
+    "ops/team/d3-triple-critical-saturation-constructor/verify_saturation_contract.py": "64297ee2a5c31ad4aceb1cc70dd60b8876d1c44de6df1eade09cf3fad5dc66e3"
+  },
+  "semantic_sha256": "744b81f2b69789b99cebc00a217b0cc67fb6f36838bfa35c0c549268dd237f66",
+  "source_policy": {
+    "constructor_self_acceptance": false,
+    "external_compute_used": false,
+    "network_or_connector_used": false,
+    "raw_groebner_or_rur_run": false
+  },
+  "track_id": "d3-triple-critical-saturation-constructor"
+}

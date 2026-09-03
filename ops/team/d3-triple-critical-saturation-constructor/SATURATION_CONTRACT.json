@@ -1,0 +1,5047 @@
+{
+  "conditional_q1_executor": {
+    "guard": "--execute requires an independent ACCEPT artifact bound to both the contract byte digest and semantic digest",
+    "method": "Singular 4.4.1 elim.lib sat_with_exp, one named parent wall per fresh 180-second/7-GiB-limited process, with saturation exponent, standard-basis state, timing, and peak-RSS frontier retained",
+    "path": "ops/team/d3-triple-critical-saturation-constructor/run_q1_saturation.py",
+    "q0_safe_modes": [
+      "--dry-run",
+      "--smoke-test"
+    ],
+    "scope_after_all_62_stages": "SATURATION_ONLY; Q1 still requires dimension, real-root, component attachment, chamber classification, true-infinity, and S8 checks",
+    "sha256": "11fd84c16a97f7143311498fe2218bfcc400ddda72c14e043cf22d9238543af7"
+  },
+  "constructor_replay": {
+    "hostile_mutation_count": 27,
+    "independent_verifier": false,
+    "path": "ops/team/d3-triple-critical-saturation-constructor/verify_saturation_contract.py",
+    "sha256": "64297ee2a5c31ad4aceb1cc70dd60b8876d1c44de6df1eade09cf3fad5dc66e3"
+  },
+  "format": "d3-triple-component-decorated-saturation-contract-v1",
+  "hostile_boundary_canaries": [
+    {
+      "accepted": false,
+      "canary_id": "HOSTILE-BOX-FACE-AS-INFINITY",
+      "candidate": "128*a-1=0",
+      "claimed_attachment_class": "PROJECTIVE_INFINITY",
+      "rejection": "ARTIFICIAL_BOX_FACE_NOT_A_SOURCE_PARENT_WALL_OR_A_HOMOGENIZING_DIVISOR",
+      "semantic_sha256": "e7e20db194c9a7dd87e8b4e262f6abe95afa651300222d41e38983e638e6732a"
+    },
+    {
+      "accepted": false,
+      "canary_id": "HOSTILE-CHART-SEAM-AS-INFINITY",
+      "candidate": "an auxiliary chart denominator z_chart=0",
+      "claimed_attachment_class": "PROJECTIVE_INFINITY",
+      "rejection": "CHART_SEAM_REQUIRES_CHART_OR_NORMALIZATION_DIVISOR_CLASS_AND_AN_EXACT_CROSS_CHART_COVERAGE_WITNESS",
+      "semantic_sha256": "b916e4cd44f35f49e0842f6491c0a532562ba1ab82beff778a7e7103e655bb04"
+    },
+    {
+      "accepted": false,
+      "canary_id": "HOSTILE-WITNESS-RANK-LOSS-AS-INFINITY",
+      "candidate": {
+        "semantic_sha256": "a503a01bde2dedcfff80392bf47350128560bf84b6a7a967bc958441273889c2",
+        "source_height_minor_columns": [
+          0,
+          2,
+          3
+        ]
+      },
+      "claimed_attachment_class": "PROJECTIVE_INFINITY",
+      "rejection": "SOURCE_CRITICAL_GENERATOR_CANNOT_BE_A_SATURATOR: I:M^infinity=<1> WHEN M_IN_I",
+      "semantic_sha256": "6b73baa0ec024a9906947f8909a7392bb1bac2b786acc28f9b4187d38a8daa91"
+    }
+  ],
+  "job_census": {
+    "base_ring": {
+      "coefficient_field": "Q",
+      "variable_count": 9,
+      "variables": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i"
+      ]
+    },
+    "ordered_sequential_compilation": {
+      "fixed_rabinowitsch_relation_count": 62,
+      "fixed_rabinowitsch_relation_term_count": 263,
+      "maximum_transient_variable_count": 10,
+      "post_stage_basis_generator_counts": "RUNTIME_EXACT_OUTPUT_REQUIRED",
+      "stage_count": 62,
+      "transient_auxiliary_variables_per_stage": 1
+    },
+    "parent_boundary": {
+      "nonconstant_wall_saturator_count": 62,
+      "nonzero_constant_brackets_not_saturated": 8,
+      "raw_bracket_coordinate_count": 70,
+      "wall_degree_census": {
+        "1": 36,
+        "2": 24,
+        "3": 2
+      },
+      "wall_degree_sum": 90,
+      "wall_sparse_term_count": 201
+    },
+    "prior_degree_10_modular_screen": {
+      "dense_uint64_projection_bytes": 25257623248,
+      "dense_uint64_projection_gib": 23.522995,
+      "monomial_columns": 92378,
+      "rank_over_F2_and_F3": 32637,
+      "rows": 34177,
+      "status": "DIAGNOSTIC_ONLY_NOT_A_CHARACTERISTIC_ZERO_FORECAST"
+    },
+    "simultaneous_preflight_representation_not_execution_order": {
+      "formal_equation_count": 121,
+      "maximum_total_degree": 8,
+      "nonzero_equation_count": 117,
+      "sparse_term_count": 15004,
+      "sum_of_nonzero_generator_degrees": 579,
+      "variable_count": 71
+    },
+    "source_ideal": {
+      "degree_census": {
+        "2": 1,
+        "4": 1,
+        "5": 1,
+        "8": 52,
+        "ZERO": 4
+      },
+      "formal_generator_count": 59,
+      "kind_census": {
+        "factor": 3,
+        "height_minor": 56
+      },
+      "maximum_coefficient_absolute_value": 7,
+      "maximum_coefficient_bit_length": 3,
+      "nonzero_generator_count": 55,
+      "sparse_term_count": 14741,
+      "zero_generator_count": 4
+    }
+  },
+  "known_fourspace_canaries": [
+    {
+      "all_source_equations_vanish_identically": true,
+      "attachment_class": "PARENT_WALL",
+      "canary_id": "KNOWN-COORDINATE-FOURSPACE-0",
+      "coordinate_ideal": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "f"
+      ],
+      "dimension": 4,
+      "discriminating_isolated_canary": {
+        "other_fourspace_has_this_coordinate_free": true,
+        "parent_wall": "1346",
+        "polynomial": "a",
+        "stage_index_in_full_order": 6
+      },
+      "exact_localization_contradiction": "1346=a belongs to the coordinate ideal, while 1-u*a reduces to 1 modulo that ideal; hence this named-wall localization has no point on the four-space.",
+      "first_wall_in_full_order": {
+        "parent_wall": "1236",
+        "stage_index": 0
+      },
+      "free_variables": [
+        "e",
+        "g",
+        "h",
+        "i"
+      ],
+      "membership_count": 23,
+      "named_parent_wall_memberships": [
+        "1236",
+        "1237",
+        "1246",
+        "1346",
+        "1347",
+        "1256",
+        "1267",
+        "1268",
+        "1356",
+        "1357",
+        "1367",
+        "1368",
+        "1378",
+        "1456",
+        "1467",
+        "1468",
+        "2367",
+        "3467",
+        "1567",
+        "1568",
+        "1678",
+        "3567",
+        "3678"
+      ],
+      "no_artificial_boundary_used": true,
+      "semantic_sha256": "ada8bb62d92803c25773a66a6ebf797c6933c4e2c935b4932a57c854eee4b179"
+    },
+    {
+      "all_source_equations_vanish_identically": true,
+      "attachment_class": "PARENT_WALL",
+      "canary_id": "KNOWN-COORDINATE-FOURSPACE-1",
+      "coordinate_ideal": [
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "dimension": 4,
+      "discriminating_isolated_canary": {
+        "other_fourspace_has_this_coordinate_free": true,
+        "parent_wall": "1247",
+        "polynomial": "e",
+        "stage_index_in_full_order": 4
+      },
+      "exact_localization_contradiction": "1247=e belongs to the coordinate ideal, while 1-u*e reduces to 1 modulo that ideal; hence this named-wall localization has no point on the four-space.",
+      "first_wall_in_full_order": {
+        "parent_wall": "1236",
+        "stage_index": 0
+      },
+      "free_variables": [
+        "a",
+        "g",
+        "h",
+        "i"
+      ],
+      "membership_count": 23,
+      "named_parent_wall_memberships": [
+        "1236",
+        "1237",
+        "1246",
+        "1247",
+        "1347",
+        "1256",
+        "1257",
+        "1267",
+        "1268",
+        "1278",
+        "1357",
+        "1367",
+        "1378",
+        "1457",
+        "1467",
+        "1478",
+        "2367",
+        "2467",
+        "1567",
+        "1578",
+        "1678",
+        "2567",
+        "2678"
+      ],
+      "no_artificial_boundary_used": true,
+      "semantic_sha256": "083f4e8bc4119da3e2e1c5eeb4341f41d500b52c7851e3a746acdf45488083b0"
+    }
+  ],
+  "numeric_local_resource_forecast": {
+    "confidence": "LOW",
+    "construction_replay_baselines": {
+      "d9_inverse_circuit_check_peak_mib": 35.4,
+      "d9_inverse_circuit_check_wall_seconds": 0.789,
+      "exact_d3_source_replay_peak_mib": 213.7,
+      "exact_d3_source_replay_wall_seconds": 4.802,
+      "scope": "CONSTRUCTION_AND_REPLAY_ONLY_NOT_SATURATION_SOLVE"
+    },
+    "cycle_ceiling_peak_ram_gib": 32,
+    "cycle_ceiling_scratch_gib": 10,
+    "cycle_ceiling_wall_seconds": 14400,
+    "empirical_exact_cas_calibration_available": false,
+    "exact_backend": {
+      "engine": "Singular 4.4.1",
+      "environment": "WSL lee-dev",
+      "library": "elim.lib",
+      "prefix": "/home/lee/.local/share/9dvl-exact-cas/v1",
+      "procedure": "sat_with_exp",
+      "use": "SEQUENTIAL_ONE_NAMED_PARENT_WALL_AT_A_TIME"
+    },
+    "forecast_consequence": "The arithmetic envelope is inside the ceiling, but lack of an empirical exact-CAS calibration is an independent-verifier acceptance risk.",
+    "forecast_kind": "PREREGISTERED_HARD_BUDGET_WITH_LOW_CONFIDENCE",
+    "hard_stop_rule": "Stop before a stage exceeds 180 seconds or observed RSS exceeds 7 GiB; preserve the exact last completed J_k and return TIMEOUT.",
+    "numeric_envelope_inside_ceiling": true,
+    "numeric_envelope_inside_observed_wsl_ram": true,
+    "observed_host_physical_ram_gib": 15.835438,
+    "observed_wsl_ram_gib": 7.676846,
+    "ordered_saturation_stages": 62,
+    "per_stage_wall_seconds": 180,
+    "preflight_and_certificate_seconds": 1440,
+    "projected_peak_ram_gib": 7,
+    "projected_scratch_gib": 9,
+    "projected_total_wall_minutes": 210,
+    "projected_total_wall_seconds": 12600,
+    "stage_wall_seconds": 11160
+  },
+  "opening_revision": "ba87af7b1ac58d22c0622c908e31dc8ec03d24fa",
+  "opening_tree": "54bcab4da2eaa441a4d4c3823a8d4593d89e6bda",
+  "q0_disposition": {
+    "constructor_status": "CANDIDATE_HANDOFF_ONLY",
+    "independently_accepted": false,
+    "nonconsequence": "This contract does not prove zero-dimensionality, emptiness, a real-root census, parent-chamber coverage, true-infinity continuation, or S8 transfer.",
+    "q0_closed": false,
+    "q1_status": "DENIED_PENDING_INDEPENDENT_Q0_ACCEPTANCE",
+    "theorem_ledger_after": "2/9",
+    "theorem_ledger_before": "2/9",
+    "triple_source_residual_after": 1162302,
+    "triple_source_residual_before": 1162302
+  },
+  "saturation_contract": {
+    "allowed_attachment_classes": [
+      "PARENT_WALL",
+      "CHART_OR_NORMALIZATION_DIVISOR",
+      "OCCURRENCE_OR_CONCURRENCE_RANK_STRATUM",
+      "EXTRA_RESIDUAL_FACTOR_FRONTIER",
+      "PROJECTIVE_INFINITY"
+    ],
+    "anonymous_product_saturation_used": false,
+    "classes_used_by_this_ledger": [
+      "PARENT_WALL"
+    ],
+    "execution_rule": "Execute all Rabinowitsch eliminations one at a time in the recorded order; retain each wall branch and every exact reduction witness.",
+    "final_ideal": "J_62",
+    "initial_ideal": "J_00",
+    "ordered": true,
+    "stage_count": 62,
+    "stage_order": [
+      "SAT-PARENT-00-1236",
+      "SAT-PARENT-01-1237",
+      "SAT-PARENT-02-1238",
+      "SAT-PARENT-03-1246",
+      "SAT-PARENT-04-1247",
+      "SAT-PARENT-05-1248",
+      "SAT-PARENT-06-1346",
+      "SAT-PARENT-07-1347",
+      "SAT-PARENT-08-1348",
+      "SAT-PARENT-09-1256",
+      "SAT-PARENT-10-1257",
+      "SAT-PARENT-11-1258",
+      "SAT-PARENT-12-1267",
+      "SAT-PARENT-13-1268",
+      "SAT-PARENT-14-1278",
+      "SAT-PARENT-15-1356",
+      "SAT-PARENT-16-1357",
+      "SAT-PARENT-17-1358",
+      "SAT-PARENT-18-1367",
+      "SAT-PARENT-19-1368",
+      "SAT-PARENT-20-1378",
+      "SAT-PARENT-21-1456",
+      "SAT-PARENT-22-1457",
+      "SAT-PARENT-23-1458",
+      "SAT-PARENT-24-1467",
+      "SAT-PARENT-25-1468",
+      "SAT-PARENT-26-1478",
+      "SAT-PARENT-27-2356",
+      "SAT-PARENT-28-2357",
+      "SAT-PARENT-29-2358",
+      "SAT-PARENT-30-2367",
+      "SAT-PARENT-31-2368",
+      "SAT-PARENT-32-2378",
+      "SAT-PARENT-33-2456",
+      "SAT-PARENT-34-2457",
+      "SAT-PARENT-35-2458",
+      "SAT-PARENT-36-2467",
+      "SAT-PARENT-37-2468",
+      "SAT-PARENT-38-2478",
+      "SAT-PARENT-39-3456",
+      "SAT-PARENT-40-3457",
+      "SAT-PARENT-41-3458",
+      "SAT-PARENT-42-3467",
+      "SAT-PARENT-43-3468",
+      "SAT-PARENT-44-3478",
+      "SAT-PARENT-45-1567",
+      "SAT-PARENT-46-1568",
+      "SAT-PARENT-47-1578",
+      "SAT-PARENT-48-1678",
+      "SAT-PARENT-49-2567",
+      "SAT-PARENT-50-2568",
+      "SAT-PARENT-51-2578",
+      "SAT-PARENT-52-2678",
+      "SAT-PARENT-53-3567",
+      "SAT-PARENT-54-3568",
+      "SAT-PARENT-55-3578",
+      "SAT-PARENT-56-3678",
+      "SAT-PARENT-57-4567",
+      "SAT-PARENT-58-4568",
+      "SAT-PARENT-59-4578",
+      "SAT-PARENT-60-4678",
+      "SAT-PARENT-61-5678"
+    ],
+    "stages": [
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_00_1236^n in Q implies V(Q) subset V(H_00_1236), the named parent wall 1236.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_00)=V(J_01) union V(A_00)",
+          "wall_branch_preserved_as": "A_00=J_00+<H_00_1236>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1236",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_01=(J_00+<1-u*H_00_1236>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_00",
+          "output_ideal": "J_01",
+          "relation": "1-u*H_00_1236=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_01=J_00:H_00_1236^infinity"
+        },
+        "saturator_id": "H_00_1236",
+        "semantic_sha256": "17d7a9403469bda41d7122ebf58ccdb5ab6863da41587cba7935eb1d845cb54f",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-00-1236",
+        "stage_index": 0,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_01_1237^n in Q implies V(Q) subset V(H_01_1237), the named parent wall 1237.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_01)=V(J_02) union V(A_01)",
+          "wall_branch_preserved_as": "A_01=J_01+<H_01_1237>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1237",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_02=(J_01+<1-u*H_01_1237>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_01",
+          "output_ideal": "J_02",
+          "relation": "1-u*H_01_1237=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_02=J_01:H_01_1237^infinity"
+        },
+        "saturator_id": "H_01_1237",
+        "semantic_sha256": "7bdf567af3fa3a286249fadde44a606ca71eeb267a21287c33994f6159c107b2",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-01-1237",
+        "stage_index": 1,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_02_1238^n in Q implies V(Q) subset V(H_02_1238), the named parent wall 1238.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_02)=V(J_03) union V(A_02)",
+          "wall_branch_preserved_as": "A_02=J_02+<H_02_1238>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1238",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_03=(J_02+<1-u*H_02_1238>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_02",
+          "output_ideal": "J_03",
+          "relation": "1-u*H_02_1238=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_03=J_02:H_02_1238^infinity"
+        },
+        "saturator_id": "H_02_1238",
+        "semantic_sha256": "06ed6fb6eb629ac5ff39736c846f8cfcc6241ed90f4d1e0796a6345d61e0d537",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-02-1238",
+        "stage_index": 2,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_03_1246^n in Q implies V(Q) subset V(H_03_1246), the named parent wall 1246.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_03)=V(J_04) union V(A_03)",
+          "wall_branch_preserved_as": "A_03=J_03+<H_03_1246>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1246",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_04=(J_03+<1-u*H_03_1246>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_03",
+          "output_ideal": "J_04",
+          "relation": "1-u*H_03_1246=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_04=J_03:H_03_1246^infinity"
+        },
+        "saturator_id": "H_03_1246",
+        "semantic_sha256": "07e95ec90975d092edee7df4c8b756b128c669b58233026e544e0d968ecc560a",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-03-1246",
+        "stage_index": 3,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_04_1247^n in Q implies V(Q) subset V(H_04_1247), the named parent wall 1247.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_04)=V(J_05) union V(A_04)",
+          "wall_branch_preserved_as": "A_04=J_04+<H_04_1247>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1247",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_05=(J_04+<1-u*H_04_1247>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_04",
+          "output_ideal": "J_05",
+          "relation": "1-u*H_04_1247=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_05=J_04:H_04_1247^infinity"
+        },
+        "saturator_id": "H_04_1247",
+        "semantic_sha256": "3b563ae70ac847900efee266d0630cb14a57597e0041a39572c991b46d6b1c4c",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-04-1247",
+        "stage_index": 4,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_05_1248^n in Q implies V(Q) subset V(H_05_1248), the named parent wall 1248.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_05)=V(J_06) union V(A_05)",
+          "wall_branch_preserved_as": "A_05=J_05+<H_05_1248>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1248",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_06=(J_05+<1-u*H_05_1248>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_05",
+          "output_ideal": "J_06",
+          "relation": "1-u*H_05_1248=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_06=J_05:H_05_1248^infinity"
+        },
+        "saturator_id": "H_05_1248",
+        "semantic_sha256": "fba2c9b938a4ba30d732ecd0ff9eaabf39bc0f2029208d4c707acc51cdd3ec26",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-05-1248",
+        "stage_index": 5,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_06_1346^n in Q implies V(Q) subset V(H_06_1346), the named parent wall 1346.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_06)=V(J_07) union V(A_06)",
+          "wall_branch_preserved_as": "A_06=J_06+<H_06_1346>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1346",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_07=(J_06+<1-u*H_06_1346>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_06",
+          "output_ideal": "J_07",
+          "relation": "1-u*H_06_1346=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_07=J_06:H_06_1346^infinity"
+        },
+        "saturator_id": "H_06_1346",
+        "semantic_sha256": "fcde105b3065bb7571585c37951abc0e4c50565966a8f478f9639a043110c1c8",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-06-1346",
+        "stage_index": 6,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_07_1347^n in Q implies V(Q) subset V(H_07_1347), the named parent wall 1347.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_07)=V(J_08) union V(A_07)",
+          "wall_branch_preserved_as": "A_07=J_07+<H_07_1347>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1347",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_08=(J_07+<1-u*H_07_1347>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_07",
+          "output_ideal": "J_08",
+          "relation": "1-u*H_07_1347=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_08=J_07:H_07_1347^infinity"
+        },
+        "saturator_id": "H_07_1347",
+        "semantic_sha256": "7a617ab35fb4c8bd55e07fb24ef255c53bb753bcf8509920a11483d3635c3804",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-07-1347",
+        "stage_index": 7,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_08_1348^n in Q implies V(Q) subset V(H_08_1348), the named parent wall 1348.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_08)=V(J_09) union V(A_08)",
+          "wall_branch_preserved_as": "A_08=J_08+<H_08_1348>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1348",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_09=(J_08+<1-u*H_08_1348>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_08",
+          "output_ideal": "J_09",
+          "relation": "1-u*H_08_1348=0",
+          "relation_degree": 2,
+          "relation_term_count": 2,
+          "saturation_identity": "J_09=J_08:H_08_1348^infinity"
+        },
+        "saturator_id": "H_08_1348",
+        "semantic_sha256": "97aa70eaf4215803bc4439e0f5e5620596cc1500058ac8422201b8c2a57e5cf5",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-08-1348",
+        "stage_index": 8,
+        "term_count": 1
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_09_1256^n in Q implies V(Q) subset V(H_09_1256), the named parent wall 1256.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_09)=V(J_10) union V(A_09)",
+          "wall_branch_preserved_as": "A_09=J_09+<H_09_1256>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1256",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_10=(J_09+<1-u*H_09_1256>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_09",
+          "output_ideal": "J_10",
+          "relation": "1-u*H_09_1256=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_10=J_09:H_09_1256^infinity"
+        },
+        "saturator_id": "H_09_1256",
+        "semantic_sha256": "7ae318a902e6a946dffd45a35eaf3c8cd0ab05969d5d406e2231009aeb5a89d9",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-09-1256",
+        "stage_index": 9,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_10_1257^n in Q implies V(Q) subset V(H_10_1257), the named parent wall 1257.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_10)=V(J_11) union V(A_10)",
+          "wall_branch_preserved_as": "A_10=J_10+<H_10_1257>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1257",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_11=(J_10+<1-u*H_10_1257>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_10",
+          "output_ideal": "J_11",
+          "relation": "1-u*H_10_1257=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_11=J_10:H_10_1257^infinity"
+        },
+        "saturator_id": "H_10_1257",
+        "semantic_sha256": "8b7f29dec1344380c0a4d21cdfca013627279f1f41e1320923dca8a055bd9b92",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-10-1257",
+        "stage_index": 10,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_11_1258^n in Q implies V(Q) subset V(H_11_1258), the named parent wall 1258.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_11)=V(J_12) union V(A_11)",
+          "wall_branch_preserved_as": "A_11=J_11+<H_11_1258>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1258",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_12=(J_11+<1-u*H_11_1258>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_11",
+          "output_ideal": "J_12",
+          "relation": "1-u*H_11_1258=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_12=J_11:H_11_1258^infinity"
+        },
+        "saturator_id": "H_11_1258",
+        "semantic_sha256": "8d2312ca36a3b5e870b82a96df6a3302b1766d9a6e6637cbe573f0981972d2db",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-11-1258",
+        "stage_index": 11,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_12_1267^n in Q implies V(Q) subset V(H_12_1267), the named parent wall 1267.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_12)=V(J_13) union V(A_12)",
+          "wall_branch_preserved_as": "A_12=J_12+<H_12_1267>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1267",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_13=(J_12+<1-u*H_12_1267>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_12",
+          "output_ideal": "J_13",
+          "relation": "1-u*H_12_1267=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_13=J_12:H_12_1267^infinity"
+        },
+        "saturator_id": "H_12_1267",
+        "semantic_sha256": "efa5afb85675e13c03daf805afbb80710b77fede0fba54a317bfcaaffa5244e2",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-12-1267",
+        "stage_index": 12,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_13_1268^n in Q implies V(Q) subset V(H_13_1268), the named parent wall 1268.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_13)=V(J_14) union V(A_13)",
+          "wall_branch_preserved_as": "A_13=J_13+<H_13_1268>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1268",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_14=(J_13+<1-u*H_13_1268>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_13",
+          "output_ideal": "J_14",
+          "relation": "1-u*H_13_1268=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_14=J_13:H_13_1268^infinity"
+        },
+        "saturator_id": "H_13_1268",
+        "semantic_sha256": "9a0a5b22648412af70794f7a51de0f46fe1f78520b4e412037ec713567cb09af",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-13-1268",
+        "stage_index": 13,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_14_1278^n in Q implies V(Q) subset V(H_14_1278), the named parent wall 1278.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_14)=V(J_15) union V(A_14)",
+          "wall_branch_preserved_as": "A_14=J_14+<H_14_1278>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1278",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_15=(J_14+<1-u*H_14_1278>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_14",
+          "output_ideal": "J_15",
+          "relation": "1-u*H_14_1278=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_15=J_14:H_14_1278^infinity"
+        },
+        "saturator_id": "H_14_1278",
+        "semantic_sha256": "e53bf4215b1cbd381c0fc69d5b47b85a840e4cd004634db372bb1bbfbdb668eb",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-14-1278",
+        "stage_index": 14,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_15_1356^n in Q implies V(Q) subset V(H_15_1356), the named parent wall 1356.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_15)=V(J_16) union V(A_15)",
+          "wall_branch_preserved_as": "A_15=J_15+<H_15_1356>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1356",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_16=(J_15+<1-u*H_15_1356>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_15",
+          "output_ideal": "J_16",
+          "relation": "1-u*H_15_1356=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_16=J_15:H_15_1356^infinity"
+        },
+        "saturator_id": "H_15_1356",
+        "semantic_sha256": "dc614f55003e7d8a21ac87353b629b649031cdb981e65fef08493f7acc17cec4",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-15-1356",
+        "stage_index": 15,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_16_1357^n in Q implies V(Q) subset V(H_16_1357), the named parent wall 1357.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_16)=V(J_17) union V(A_16)",
+          "wall_branch_preserved_as": "A_16=J_16+<H_16_1357>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1357",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_17=(J_16+<1-u*H_16_1357>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_16",
+          "output_ideal": "J_17",
+          "relation": "1-u*H_16_1357=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_17=J_16:H_16_1357^infinity"
+        },
+        "saturator_id": "H_16_1357",
+        "semantic_sha256": "3d8d7edea7fe944b6d48cd2a453721c0bea09a78f5a5f89f654921b492ced64a",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-16-1357",
+        "stage_index": 16,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_17_1358^n in Q implies V(Q) subset V(H_17_1358), the named parent wall 1358.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_17)=V(J_18) union V(A_17)",
+          "wall_branch_preserved_as": "A_17=J_17+<H_17_1358>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1358",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_18=(J_17+<1-u*H_17_1358>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_17",
+          "output_ideal": "J_18",
+          "relation": "1-u*H_17_1358=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_18=J_17:H_17_1358^infinity"
+        },
+        "saturator_id": "H_17_1358",
+        "semantic_sha256": "f2a628219d8354dc688ecca6d0690213323153c10872a58599102542b0303aa6",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-17-1358",
+        "stage_index": 17,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_18_1367^n in Q implies V(Q) subset V(H_18_1367), the named parent wall 1367.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_18)=V(J_19) union V(A_18)",
+          "wall_branch_preserved_as": "A_18=J_18+<H_18_1367>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1367",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_19=(J_18+<1-u*H_18_1367>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_18",
+          "output_ideal": "J_19",
+          "relation": "1-u*H_18_1367=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_19=J_18:H_18_1367^infinity"
+        },
+        "saturator_id": "H_18_1367",
+        "semantic_sha256": "4a364fb82261add6bcd35804911ac6f03c2b4025d42a0ea27a65eaabe9ce8897",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-18-1367",
+        "stage_index": 18,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_19_1368^n in Q implies V(Q) subset V(H_19_1368), the named parent wall 1368.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_19)=V(J_20) union V(A_19)",
+          "wall_branch_preserved_as": "A_19=J_19+<H_19_1368>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1368",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_20=(J_19+<1-u*H_19_1368>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_19",
+          "output_ideal": "J_20",
+          "relation": "1-u*H_19_1368=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_20=J_19:H_19_1368^infinity"
+        },
+        "saturator_id": "H_19_1368",
+        "semantic_sha256": "93a909e2eb4017abdd323d58a026358c51a48a8cef572ff0d0705754cdd66d84",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-19-1368",
+        "stage_index": 19,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_20_1378^n in Q implies V(Q) subset V(H_20_1378), the named parent wall 1378.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_20)=V(J_21) union V(A_20)",
+          "wall_branch_preserved_as": "A_20=J_20+<H_20_1378>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1378",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_21=(J_20+<1-u*H_20_1378>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_20",
+          "output_ideal": "J_21",
+          "relation": "1-u*H_20_1378=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_21=J_20:H_20_1378^infinity"
+        },
+        "saturator_id": "H_20_1378",
+        "semantic_sha256": "f996adda9c9031b82acc210dc959c778dda3dc0f0db824c41710d266f5e185f4",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-20-1378",
+        "stage_index": 20,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_21_1456^n in Q implies V(Q) subset V(H_21_1456), the named parent wall 1456.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_21)=V(J_22) union V(A_21)",
+          "wall_branch_preserved_as": "A_21=J_21+<H_21_1456>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1456",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_22=(J_21+<1-u*H_21_1456>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_21",
+          "output_ideal": "J_22",
+          "relation": "1-u*H_21_1456=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_22=J_21:H_21_1456^infinity"
+        },
+        "saturator_id": "H_21_1456",
+        "semantic_sha256": "55cdf646b0ed5224c8badf2e7999c738c3ba971cc30a4ed146d8512543a747e9",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-21-1456",
+        "stage_index": 21,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_22_1457^n in Q implies V(Q) subset V(H_22_1457), the named parent wall 1457.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_22)=V(J_23) union V(A_22)",
+          "wall_branch_preserved_as": "A_22=J_22+<H_22_1457>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1457",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_23=(J_22+<1-u*H_22_1457>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_22",
+          "output_ideal": "J_23",
+          "relation": "1-u*H_22_1457=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_23=J_22:H_22_1457^infinity"
+        },
+        "saturator_id": "H_22_1457",
+        "semantic_sha256": "18d0f30536b1b5d1969da2fbd1dc0ca711dbf0faea54dec1a0bb8bd40ea3ebdd",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-22-1457",
+        "stage_index": 22,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_23_1458^n in Q implies V(Q) subset V(H_23_1458), the named parent wall 1458.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_23)=V(J_24) union V(A_23)",
+          "wall_branch_preserved_as": "A_23=J_23+<H_23_1458>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1458",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_24=(J_23+<1-u*H_23_1458>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_23",
+          "output_ideal": "J_24",
+          "relation": "1-u*H_23_1458=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_24=J_23:H_23_1458^infinity"
+        },
+        "saturator_id": "H_23_1458",
+        "semantic_sha256": "08092834d5af6a55fbf37174387676790d51decd970849bc30ec5339ac9256e1",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-23-1458",
+        "stage_index": 23,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_24_1467^n in Q implies V(Q) subset V(H_24_1467), the named parent wall 1467.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_24)=V(J_25) union V(A_24)",
+          "wall_branch_preserved_as": "A_24=J_24+<H_24_1467>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1467",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_25=(J_24+<1-u*H_24_1467>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_24",
+          "output_ideal": "J_25",
+          "relation": "1-u*H_24_1467=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_25=J_24:H_24_1467^infinity"
+        },
+        "saturator_id": "H_24_1467",
+        "semantic_sha256": "e196ee71e53aaf52e3047002d9ae3e0d8e2ae5bb425e1f02a27a23026f3f4215",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-24-1467",
+        "stage_index": 24,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_25_1468^n in Q implies V(Q) subset V(H_25_1468), the named parent wall 1468.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_25)=V(J_26) union V(A_25)",
+          "wall_branch_preserved_as": "A_25=J_25+<H_25_1468>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1468",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_26=(J_25+<1-u*H_25_1468>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_25",
+          "output_ideal": "J_26",
+          "relation": "1-u*H_25_1468=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_26=J_25:H_25_1468^infinity"
+        },
+        "saturator_id": "H_25_1468",
+        "semantic_sha256": "39700d1c289f54ef99b7eb895a90e243e976ce0f73fe72547454fc388a107a42",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-25-1468",
+        "stage_index": 25,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_26_1478^n in Q implies V(Q) subset V(H_26_1478), the named parent wall 1478.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_26)=V(J_27) union V(A_26)",
+          "wall_branch_preserved_as": "A_26=J_26+<H_26_1478>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1478",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_27=(J_26+<1-u*H_26_1478>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_26",
+          "output_ideal": "J_27",
+          "relation": "1-u*H_26_1478=0",
+          "relation_degree": 3,
+          "relation_term_count": 3,
+          "saturation_identity": "J_27=J_26:H_26_1478^infinity"
+        },
+        "saturator_id": "H_26_1478",
+        "semantic_sha256": "a579745d6593be1884813971e6b0d81dc85f787aeb9d2c3eee0cc98818584317",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-26-1478",
+        "stage_index": 26,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_27_2356^n in Q implies V(Q) subset V(H_27_2356), the named parent wall 2356.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_27)=V(J_28) union V(A_27)",
+          "wall_branch_preserved_as": "A_27=J_27+<H_27_2356>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2356",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_28=(J_27+<1-u*H_27_2356>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_27",
+          "output_ideal": "J_28",
+          "relation": "1-u*H_27_2356=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_28=J_27:H_27_2356^infinity"
+        },
+        "saturator_id": "H_27_2356",
+        "semantic_sha256": "660996d781965b0eee67d2275c54cd2b70b0a5742c602c1523421e43e69c4b11",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-27-2356",
+        "stage_index": 27,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_28_2357^n in Q implies V(Q) subset V(H_28_2357), the named parent wall 2357.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_28)=V(J_29) union V(A_28)",
+          "wall_branch_preserved_as": "A_28=J_28+<H_28_2357>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2357",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_29=(J_28+<1-u*H_28_2357>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_28",
+          "output_ideal": "J_29",
+          "relation": "1-u*H_28_2357=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_29=J_28:H_28_2357^infinity"
+        },
+        "saturator_id": "H_28_2357",
+        "semantic_sha256": "ac58d68550e5d8891fb414ceacaee5492533068196108112c15ac585f0b5720e",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-28-2357",
+        "stage_index": 28,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_29_2358^n in Q implies V(Q) subset V(H_29_2358), the named parent wall 2358.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_29)=V(J_30) union V(A_29)",
+          "wall_branch_preserved_as": "A_29=J_29+<H_29_2358>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2358",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_30=(J_29+<1-u*H_29_2358>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_29",
+          "output_ideal": "J_30",
+          "relation": "1-u*H_29_2358=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_30=J_29:H_29_2358^infinity"
+        },
+        "saturator_id": "H_29_2358",
+        "semantic_sha256": "45537aa50b522a0dc353ebadcd301ed513b5707b01e5ef585617da916694d5ff",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-29-2358",
+        "stage_index": 29,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_30_2367^n in Q implies V(Q) subset V(H_30_2367), the named parent wall 2367.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_30)=V(J_31) union V(A_30)",
+          "wall_branch_preserved_as": "A_30=J_30+<H_30_2367>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2367",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_31=(J_30+<1-u*H_30_2367>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_30",
+          "output_ideal": "J_31",
+          "relation": "1-u*H_30_2367=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_31=J_30:H_30_2367^infinity"
+        },
+        "saturator_id": "H_30_2367",
+        "semantic_sha256": "af27bec9e7457ae72e1dde4883c923f5ab6b4b519a7bb8230c88804d70c01ad3",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-30-2367",
+        "stage_index": 30,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_31_2368^n in Q implies V(Q) subset V(H_31_2368), the named parent wall 2368.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_31)=V(J_32) union V(A_31)",
+          "wall_branch_preserved_as": "A_31=J_31+<H_31_2368>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2368",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_32=(J_31+<1-u*H_31_2368>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_31",
+          "output_ideal": "J_32",
+          "relation": "1-u*H_31_2368=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_32=J_31:H_31_2368^infinity"
+        },
+        "saturator_id": "H_31_2368",
+        "semantic_sha256": "755d63d76edc3a72af3ac42d1edebcab5ef221a70982fb9a9d6bdaaab3f0291c",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-31-2368",
+        "stage_index": 31,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_32_2378^n in Q implies V(Q) subset V(H_32_2378), the named parent wall 2378.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_32)=V(J_33) union V(A_32)",
+          "wall_branch_preserved_as": "A_32=J_32+<H_32_2378>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2378",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_33=(J_32+<1-u*H_32_2378>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_32",
+          "output_ideal": "J_33",
+          "relation": "1-u*H_32_2378=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_33=J_32:H_32_2378^infinity"
+        },
+        "saturator_id": "H_32_2378",
+        "semantic_sha256": "f442ea62912dfec7780604741c1e891c7002ab9489f2e7a807491b797b4b94af",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-32-2378",
+        "stage_index": 32,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_33_2456^n in Q implies V(Q) subset V(H_33_2456), the named parent wall 2456.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_33)=V(J_34) union V(A_33)",
+          "wall_branch_preserved_as": "A_33=J_33+<H_33_2456>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2456",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_34=(J_33+<1-u*H_33_2456>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_33",
+          "output_ideal": "J_34",
+          "relation": "1-u*H_33_2456=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_34=J_33:H_33_2456^infinity"
+        },
+        "saturator_id": "H_33_2456",
+        "semantic_sha256": "2b4be02eb0dcf3ca1b496530eed1d0c3cc5526de32afaf9cfd1258f4cd838024",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-33-2456",
+        "stage_index": 33,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_34_2457^n in Q implies V(Q) subset V(H_34_2457), the named parent wall 2457.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_34)=V(J_35) union V(A_34)",
+          "wall_branch_preserved_as": "A_34=J_34+<H_34_2457>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2457",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_35=(J_34+<1-u*H_34_2457>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_34",
+          "output_ideal": "J_35",
+          "relation": "1-u*H_34_2457=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_35=J_34:H_34_2457^infinity"
+        },
+        "saturator_id": "H_34_2457",
+        "semantic_sha256": "7fdd9315532fbf3a8bdca48f91f5fa87b6f11160362afb844d2899c56d506191",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-34-2457",
+        "stage_index": 34,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_35_2458^n in Q implies V(Q) subset V(H_35_2458), the named parent wall 2458.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_35)=V(J_36) union V(A_35)",
+          "wall_branch_preserved_as": "A_35=J_35+<H_35_2458>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2458",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_36=(J_35+<1-u*H_35_2458>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_35",
+          "output_ideal": "J_36",
+          "relation": "1-u*H_35_2458=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_36=J_35:H_35_2458^infinity"
+        },
+        "saturator_id": "H_35_2458",
+        "semantic_sha256": "4caf9d96f5143594712c50da473cdc4c4a19354dcb2bdfb496e993d501921052",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-35-2458",
+        "stage_index": 35,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_36_2467^n in Q implies V(Q) subset V(H_36_2467), the named parent wall 2467.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_36)=V(J_37) union V(A_36)",
+          "wall_branch_preserved_as": "A_36=J_36+<H_36_2467>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2467",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_37=(J_36+<1-u*H_36_2467>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_36",
+          "output_ideal": "J_37",
+          "relation": "1-u*H_36_2467=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_37=J_36:H_36_2467^infinity"
+        },
+        "saturator_id": "H_36_2467",
+        "semantic_sha256": "acfb3c2a4272c81a517c9cf15c7f2fa3969a1f62d083a53d1c242f21c8c58173",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-36-2467",
+        "stage_index": 36,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_37_2468^n in Q implies V(Q) subset V(H_37_2468), the named parent wall 2468.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_37)=V(J_38) union V(A_37)",
+          "wall_branch_preserved_as": "A_37=J_37+<H_37_2468>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2468",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_38=(J_37+<1-u*H_37_2468>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_37",
+          "output_ideal": "J_38",
+          "relation": "1-u*H_37_2468=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_38=J_37:H_37_2468^infinity"
+        },
+        "saturator_id": "H_37_2468",
+        "semantic_sha256": "63f680f4e02cbafa4ece32b88e7bf32c6dba64ca7ebeb051c3e7b789901b0b34",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-37-2468",
+        "stage_index": 37,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_38_2478^n in Q implies V(Q) subset V(H_38_2478), the named parent wall 2478.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_38)=V(J_39) union V(A_38)",
+          "wall_branch_preserved_as": "A_38=J_38+<H_38_2478>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2478",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_39=(J_38+<1-u*H_38_2478>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_38",
+          "output_ideal": "J_39",
+          "relation": "1-u*H_38_2478=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_39=J_38:H_38_2478^infinity"
+        },
+        "saturator_id": "H_38_2478",
+        "semantic_sha256": "5071b69b1928ecb35cd9d05b1fb68364cb624bae54045172b51444fe6babab21",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-38-2478",
+        "stage_index": 38,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_39_3456^n in Q implies V(Q) subset V(H_39_3456), the named parent wall 3456.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_39)=V(J_40) union V(A_39)",
+          "wall_branch_preserved_as": "A_39=J_39+<H_39_3456>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3456",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_40=(J_39+<1-u*H_39_3456>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_39",
+          "output_ideal": "J_40",
+          "relation": "1-u*H_39_3456=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_40=J_39:H_39_3456^infinity"
+        },
+        "saturator_id": "H_39_3456",
+        "semantic_sha256": "893a2396f4fbc0b8c00f430cd5c1149fac70cb3ff3b5e94be743c475cd18c2ee",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-39-3456",
+        "stage_index": 39,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_40_3457^n in Q implies V(Q) subset V(H_40_3457), the named parent wall 3457.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_40)=V(J_41) union V(A_40)",
+          "wall_branch_preserved_as": "A_40=J_40+<H_40_3457>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3457",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_41=(J_40+<1-u*H_40_3457>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_40",
+          "output_ideal": "J_41",
+          "relation": "1-u*H_40_3457=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_41=J_40:H_40_3457^infinity"
+        },
+        "saturator_id": "H_40_3457",
+        "semantic_sha256": "63a87a5fdaa45c9e44ff1e827616590fd25caf4385c6c936b868433f537e56a2",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-40-3457",
+        "stage_index": 40,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_41_3458^n in Q implies V(Q) subset V(H_41_3458), the named parent wall 3458.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_41)=V(J_42) union V(A_41)",
+          "wall_branch_preserved_as": "A_41=J_41+<H_41_3458>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3458",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_42=(J_41+<1-u*H_41_3458>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_41",
+          "output_ideal": "J_42",
+          "relation": "1-u*H_41_3458=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_42=J_41:H_41_3458^infinity"
+        },
+        "saturator_id": "H_41_3458",
+        "semantic_sha256": "8cd93a4d3fdf76830ae8b6bd029d5f9035534962f5d974fdaa6cc5bf293e19d3",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-41-3458",
+        "stage_index": 41,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_42_3467^n in Q implies V(Q) subset V(H_42_3467), the named parent wall 3467.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_42)=V(J_43) union V(A_42)",
+          "wall_branch_preserved_as": "A_42=J_42+<H_42_3467>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3467",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_43=(J_42+<1-u*H_42_3467>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_42",
+          "output_ideal": "J_43",
+          "relation": "1-u*H_42_3467=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_43=J_42:H_42_3467^infinity"
+        },
+        "saturator_id": "H_42_3467",
+        "semantic_sha256": "2aac8e74816778e552030ca0a0f3c26d77105c59d5de9d5fb60af92229bb3034",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-42-3467",
+        "stage_index": 42,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_43_3468^n in Q implies V(Q) subset V(H_43_3468), the named parent wall 3468.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_43)=V(J_44) union V(A_43)",
+          "wall_branch_preserved_as": "A_43=J_43+<H_43_3468>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3468",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_44=(J_43+<1-u*H_43_3468>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_43",
+          "output_ideal": "J_44",
+          "relation": "1-u*H_43_3468=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_44=J_43:H_43_3468^infinity"
+        },
+        "saturator_id": "H_43_3468",
+        "semantic_sha256": "11a9a5043d34fe22103b96058e00095fab8f1bb340d99cb1ad459d98e36f65b8",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-43-3468",
+        "stage_index": 43,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_44_3478^n in Q implies V(Q) subset V(H_44_3478), the named parent wall 3478.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_44)=V(J_45) union V(A_44)",
+          "wall_branch_preserved_as": "A_44=J_44+<H_44_3478>"
+        },
+        "degree": 1,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3478",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_45=(J_44+<1-u*H_44_3478>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_44",
+          "output_ideal": "J_45",
+          "relation": "1-u*H_44_3478=0",
+          "relation_degree": 2,
+          "relation_term_count": 3,
+          "saturation_identity": "J_45=J_44:H_44_3478^infinity"
+        },
+        "saturator_id": "H_44_3478",
+        "semantic_sha256": "1995fe505eaae4a6df23d3daab6fd1e3fa5bd4b47f06df586211d5633f3863ea",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-44-3478",
+        "stage_index": 44,
+        "term_count": 2
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_45_1567^n in Q implies V(Q) subset V(H_45_1567), the named parent wall 1567.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_45)=V(J_46) union V(A_45)",
+          "wall_branch_preserved_as": "A_45=J_45+<H_45_1567>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1567",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_46=(J_45+<1-u*H_45_1567>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_45",
+          "output_ideal": "J_46",
+          "relation": "1-u*H_45_1567=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_46=J_45:H_45_1567^infinity"
+        },
+        "saturator_id": "H_45_1567",
+        "semantic_sha256": "0da861bea5a0bccc99e2dbf934f9ec80260618021746df03db17a9a696eab0a7",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-45-1567",
+        "stage_index": 45,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_46_1568^n in Q implies V(Q) subset V(H_46_1568), the named parent wall 1568.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_46)=V(J_47) union V(A_46)",
+          "wall_branch_preserved_as": "A_46=J_46+<H_46_1568>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1568",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_47=(J_46+<1-u*H_46_1568>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_46",
+          "output_ideal": "J_47",
+          "relation": "1-u*H_46_1568=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_47=J_46:H_46_1568^infinity"
+        },
+        "saturator_id": "H_46_1568",
+        "semantic_sha256": "4f1f8cc34053d1472e5b296958ca6cfccc37624b3b2ccdc81c69756b435651fe",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-46-1568",
+        "stage_index": 46,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_47_1578^n in Q implies V(Q) subset V(H_47_1578), the named parent wall 1578.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_47)=V(J_48) union V(A_47)",
+          "wall_branch_preserved_as": "A_47=J_47+<H_47_1578>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1578",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_48=(J_47+<1-u*H_47_1578>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_47",
+          "output_ideal": "J_48",
+          "relation": "1-u*H_47_1578=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_48=J_47:H_47_1578^infinity"
+        },
+        "saturator_id": "H_47_1578",
+        "semantic_sha256": "f885e9d69c4f8b30256f9f36f83a55f2e1bb4a9a82b179a5fdd651c1ed65ee70",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-47-1578",
+        "stage_index": 47,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_48_1678^n in Q implies V(Q) subset V(H_48_1678), the named parent wall 1678.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_48)=V(J_49) union V(A_48)",
+          "wall_branch_preserved_as": "A_48=J_48+<H_48_1678>"
+        },
+        "degree": 3,
+        "normalization_sign": 1,
+        "parent_bracket_label": "1678",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_49=(J_48+<1-u*H_48_1678>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_48",
+          "output_ideal": "J_49",
+          "relation": "1-u*H_48_1678=0",
+          "relation_degree": 4,
+          "relation_term_count": 7,
+          "saturation_identity": "J_49=J_48:H_48_1678^infinity"
+        },
+        "saturator_id": "H_48_1678",
+        "semantic_sha256": "03c721a164f32c2f52d783d534738fde6501cf2238e74f60acf633550a8b8bf0",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-48-1678",
+        "stage_index": 48,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_49_2567^n in Q implies V(Q) subset V(H_49_2567), the named parent wall 2567.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_49)=V(J_50) union V(A_49)",
+          "wall_branch_preserved_as": "A_49=J_49+<H_49_2567>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2567",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_50=(J_49+<1-u*H_49_2567>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_49",
+          "output_ideal": "J_50",
+          "relation": "1-u*H_49_2567=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_50=J_49:H_49_2567^infinity"
+        },
+        "saturator_id": "H_49_2567",
+        "semantic_sha256": "3eeedd3b4643076eafa3dcf20b54e418a00710c4b068713e7f3f78cd520e4a76",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-49-2567",
+        "stage_index": 49,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_50_2568^n in Q implies V(Q) subset V(H_50_2568), the named parent wall 2568.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_50)=V(J_51) union V(A_50)",
+          "wall_branch_preserved_as": "A_50=J_50+<H_50_2568>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2568",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_51=(J_50+<1-u*H_50_2568>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_50",
+          "output_ideal": "J_51",
+          "relation": "1-u*H_50_2568=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_51=J_50:H_50_2568^infinity"
+        },
+        "saturator_id": "H_50_2568",
+        "semantic_sha256": "e0ab3da276a1474c6c1a4ce240ec69e694689e81349446ed61c08b6116c42f53",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-50-2568",
+        "stage_index": 50,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_51_2578^n in Q implies V(Q) subset V(H_51_2578), the named parent wall 2578.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_51)=V(J_52) union V(A_51)",
+          "wall_branch_preserved_as": "A_51=J_51+<H_51_2578>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2578",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_52=(J_51+<1-u*H_51_2578>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_51",
+          "output_ideal": "J_52",
+          "relation": "1-u*H_51_2578=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_52=J_51:H_51_2578^infinity"
+        },
+        "saturator_id": "H_51_2578",
+        "semantic_sha256": "c5a4f9f3121e8580d6665433a8a43841eaff30001dfc1ae1f58a61858102cb22",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-51-2578",
+        "stage_index": 51,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_52_2678^n in Q implies V(Q) subset V(H_52_2678), the named parent wall 2678.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_52)=V(J_53) union V(A_52)",
+          "wall_branch_preserved_as": "A_52=J_52+<H_52_2678>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "2678",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_53=(J_52+<1-u*H_52_2678>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_52",
+          "output_ideal": "J_53",
+          "relation": "1-u*H_52_2678=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_53=J_52:H_52_2678^infinity"
+        },
+        "saturator_id": "H_52_2678",
+        "semantic_sha256": "4600863d01b76a66a7a833435396e09423fb5c591c43d071f8b20e74d8834e35",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-52-2678",
+        "stage_index": 52,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_53_3567^n in Q implies V(Q) subset V(H_53_3567), the named parent wall 3567.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_53)=V(J_54) union V(A_53)",
+          "wall_branch_preserved_as": "A_53=J_53+<H_53_3567>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3567",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_54=(J_53+<1-u*H_53_3567>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_53",
+          "output_ideal": "J_54",
+          "relation": "1-u*H_53_3567=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_54=J_53:H_53_3567^infinity"
+        },
+        "saturator_id": "H_53_3567",
+        "semantic_sha256": "acd41fc899e1750dfb3524b41792def765dbe9fd9fed57fd3df14673a0878ada",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-53-3567",
+        "stage_index": 53,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_54_3568^n in Q implies V(Q) subset V(H_54_3568), the named parent wall 3568.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_54)=V(J_55) union V(A_54)",
+          "wall_branch_preserved_as": "A_54=J_54+<H_54_3568>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3568",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_55=(J_54+<1-u*H_54_3568>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_54",
+          "output_ideal": "J_55",
+          "relation": "1-u*H_54_3568=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_55=J_54:H_54_3568^infinity"
+        },
+        "saturator_id": "H_54_3568",
+        "semantic_sha256": "a0de0732e681acf2eccc1c2b3b3fe0fb6ab4aaf0570b475ca079808e25d4b14e",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-54-3568",
+        "stage_index": 54,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_55_3578^n in Q implies V(Q) subset V(H_55_3578), the named parent wall 3578.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_55)=V(J_56) union V(A_55)",
+          "wall_branch_preserved_as": "A_55=J_55+<H_55_3578>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3578",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_56=(J_55+<1-u*H_55_3578>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_55",
+          "output_ideal": "J_56",
+          "relation": "1-u*H_55_3578=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_56=J_55:H_55_3578^infinity"
+        },
+        "saturator_id": "H_55_3578",
+        "semantic_sha256": "57d46757c2f77fded907a65511a3c78d301dc568dd08d8de5434457c13ea616c",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-55-3578",
+        "stage_index": 55,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_56_3678^n in Q implies V(Q) subset V(H_56_3678), the named parent wall 3678.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_56)=V(J_57) union V(A_56)",
+          "wall_branch_preserved_as": "A_56=J_56+<H_56_3678>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "3678",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_57=(J_56+<1-u*H_56_3678>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_56",
+          "output_ideal": "J_57",
+          "relation": "1-u*H_56_3678=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_57=J_56:H_56_3678^infinity"
+        },
+        "saturator_id": "H_56_3678",
+        "semantic_sha256": "3e43dc7f20256d218904c4bd79963137237231b894c9f0a8d4c48b605ffdc0c1",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-56-3678",
+        "stage_index": 56,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_57_4567^n in Q implies V(Q) subset V(H_57_4567), the named parent wall 4567.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_57)=V(J_58) union V(A_57)",
+          "wall_branch_preserved_as": "A_57=J_57+<H_57_4567>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "4567",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_58=(J_57+<1-u*H_57_4567>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_57",
+          "output_ideal": "J_58",
+          "relation": "1-u*H_57_4567=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_58=J_57:H_57_4567^infinity"
+        },
+        "saturator_id": "H_57_4567",
+        "semantic_sha256": "f89140971b8cda8781c9ab1782de5fc8d0446c0f5de3cb1498f76cf1980fad7c",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-57-4567",
+        "stage_index": 57,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_58_4568^n in Q implies V(Q) subset V(H_58_4568), the named parent wall 4568.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_58)=V(J_59) union V(A_58)",
+          "wall_branch_preserved_as": "A_58=J_58+<H_58_4568>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "4568",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_59=(J_58+<1-u*H_58_4568>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_58",
+          "output_ideal": "J_59",
+          "relation": "1-u*H_58_4568=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_59=J_58:H_58_4568^infinity"
+        },
+        "saturator_id": "H_58_4568",
+        "semantic_sha256": "048cb4a33d5108a71b5eefdf755aa3ec6ef5a11276e7cd0a76cb9e670bc9f5c4",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-58-4568",
+        "stage_index": 58,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_59_4578^n in Q implies V(Q) subset V(H_59_4578), the named parent wall 4578.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_59)=V(J_60) union V(A_59)",
+          "wall_branch_preserved_as": "A_59=J_59+<H_59_4578>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "4578",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_60=(J_59+<1-u*H_59_4578>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_59",
+          "output_ideal": "J_60",
+          "relation": "1-u*H_59_4578=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_60=J_59:H_59_4578^infinity"
+        },
+        "saturator_id": "H_59_4578",
+        "semantic_sha256": "17c5af849765f0fb559d29c4cbf6d4ee5ed007db75fa8f3218504db63a3f928c",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-59-4578",
+        "stage_index": 59,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_60_4678^n in Q implies V(Q) subset V(H_60_4678), the named parent wall 4678.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_60)=V(J_61) union V(A_60)",
+          "wall_branch_preserved_as": "A_60=J_60+<H_60_4678>"
+        },
+        "degree": 2,
+        "normalization_sign": 1,
+        "parent_bracket_label": "4678",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_61=(J_60+<1-u*H_60_4678>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_60",
+          "output_ideal": "J_61",
+          "relation": "1-u*H_60_4678=0",
+          "relation_degree": 3,
+          "relation_term_count": 7,
+          "saturation_identity": "J_61=J_60:H_60_4678^infinity"
+        },
+        "saturator_id": "H_60_4678",
+        "semantic_sha256": "6dde4b55eff1a74ea03619d583e135c827992be908295a81e1ae9ba6deafa2d6",
+        "sparse_polynomial": [
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-60-4678",
+        "stage_index": 60,
+        "term_count": 6
+      },
+      {
+        "attachment_class": "PARENT_WALL",
+        "component_attachment_contract": {
+          "containment_consequence": "H_61_5678^n in Q implies V(Q) subset V(H_61_5678), the named parent wall 5678.",
+          "removed_primary_component_witness": "For every omitted primary component Q, emit n>=1 and an exact reduction certificate H^n in Q.",
+          "set_identity": "V(J_61)=V(J_62) union V(A_61)",
+          "wall_branch_preserved_as": "A_61=J_61+<H_61_5678>"
+        },
+        "degree": 3,
+        "normalization_sign": 1,
+        "parent_bracket_label": "5678",
+        "rabinowitsch_step": {
+          "auxiliary_variable": "u",
+          "elimination_identity": "J_62=(J_61+<1-u*H_61_5678>).intersection(Q[a,b,c,d,e,f,g,h,i])",
+          "input_ideal": "J_61",
+          "output_ideal": "J_62",
+          "relation": "1-u*H_61_5678=0",
+          "relation_degree": 4,
+          "relation_term_count": 25,
+          "saturation_identity": "J_62=J_61:H_61_5678^infinity"
+        },
+        "saturator_id": "H_61_5678",
+        "semantic_sha256": "ca548bae6a797744109605e4d7e6d8dfe43b8f6921829a67981ddbea55fd9ac7",
+        "sparse_polynomial": [
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          [
+            -1,
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            1,
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "stage_id": "SAT-PARENT-61-5678",
+        "stage_index": 61,
+        "term_count": 24
+      }
+    ],
+    "unsaturated_classes_retained": [
+      "CHART_OR_NORMALIZATION_DIVISOR",
+      "OCCURRENCE_OR_CONCURRENCE_RANK_STRATUM",
+      "EXTRA_RESIDUAL_FACTOR_FRONTIER",
+      "PROJECTIVE_INFINITY"
+    ]
+  },
+  "semantic_sha256": "f6ee0a75c6e8138a35dff3b12993efeeb8d3cd9a3847160acefd1b6ce40fb84f",
+  "singular_locus_retention": {
+    "all_59_formal_source_equations_retained_at_every_stage": true,
+    "exact_open_set_identity": "V(J_00) intersect D(PRODUCT(H_00,...,H_61)) equals V(J_62) intersect D(PRODUCT(H_00,...,H_61)); therefore every singular source point in the parent interior is retained.",
+    "height_minors_used_as_saturators": false,
+    "jacobian_rank_or_singularity_equations_used_as_saturators": false,
+    "qualification": "Singular loci on a saturated parent wall may leave the interior branch only through that named wall branch; no other singular locus is discarded.",
+    "residual_factors_used_as_saturators": false
+  },
+  "source_ideal": {
+    "artifact": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
+    "artifact_semantic_sha256": "5b49626f122dc81360e4aa7e283b92e3eecbe9ca6ecdb7480ad8c4f0c2c5ce17",
+    "artifact_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "census": {
+      "degree_census": {
+        "2": 1,
+        "4": 1,
+        "5": 1,
+        "8": 52,
+        "ZERO": 4
+      },
+      "formal_generator_count": 59,
+      "kind_census": {
+        "factor": 3,
+        "height_minor": 56
+      },
+      "maximum_coefficient_absolute_value": 7,
+      "maximum_coefficient_bit_length": 3,
+      "nonzero_generator_count": 55,
+      "sparse_term_count": 14741,
+      "zero_generator_count": 4
+    },
+    "ideal_id": "J_00",
+    "ordered_generator_contract": "the three residual factors followed by all 56 formal height-b minors; the four zero minors remain explicit formal records"
+  },
+  "source_manifest_semantic_sha256": "744b81f2b69789b99cebc00a217b0cc67fb6f36838bfa35c0c549268dd237f66",
+  "target": {
+    "canonical_row": [
+      5563,
+      4373,
+      23221
+    ],
+    "coefficient_field": "Q",
+    "height_coordinate": "b",
+    "id": "D3_TRIPLE_ORBIT5563_COMPONENT_DECORATED_CRITICAL_SATURATION_GATE1",
+    "named_presentation": [
+      5563,
+      16134,
+      19284
+    ]
+  },
+  "track_id": "d3-triple-critical-saturation-constructor"
+}
