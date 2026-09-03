@@ -1,0 +1,75 @@
+{
+  "format": "d3-triple-critical-saturation-closing-candidate-v1",
+  "cycle_id": "2026-09-02-d3-triple-critical-saturation-component-gate1",
+  "canonical_base": {
+    "commit": "ba87af7b1ac58d22c0622c908e31dc8ec03d24fa",
+    "tree": "54bcab4da2eaa441a4d4c3823a8d4593d89e6bda",
+    "canonical_state": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json",
+    "edited_by_cycle": false
+  },
+  "role_commits": {
+    "constructor": "97787bed0afae6a2f7cb7d2edf9df4f54bbe97f9",
+    "falsifier": "2df3285c19b0c65127bd0acd79df2cc57f0d7752",
+    "independent_verifier": "e65f844a4fdb82f5850b9b27eff0dc54274dd735"
+  },
+  "result": {
+    "classification": "NULL",
+    "first_failed_obligation": "END_TO_END_EXECUTABLE_COMPONENT_DECORATED_CONTRACT_WITH_CEILING_BOUND_Q1_PATH",
+    "q0": "NULL_INDEPENDENTLY_CONFIRMED",
+    "q1": "DENIED",
+    "raw_research_saturation_run": false,
+    "opening_ledger": "2/9",
+    "closing_ledger": "2/9",
+    "ledger_delta": "0/9",
+    "opening_triple_source_residual": 1162302,
+    "closing_triple_source_residual": 1162302,
+    "source_residual_delta": 0,
+    "opening_load_bearing_obligations": 7,
+    "closing_load_bearing_obligations": 7,
+    "obligation_delta": 0,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "trajectory": "STALLED",
+    "automatic_strategy_reset": "FIRED",
+    "strategy_action": "STOP",
+    "same_route_continue": false,
+    "selected_successor": "NONE",
+    "theorem_credit": "NONE"
+  },
+  "proof_distance": {
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+    "mid_cycle_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+    "closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "minimum_acceptable_decrease": "Q0 acceptance followed by residual 1162302 -> at most 1162301, or a complete exact route obstruction",
+    "minimum_decrease_achieved": false
+  },
+  "evidence_pins": {
+    "ops/team/d3-triple-critical-saturation-constructor/SATURATION_CONTRACT.json": {"bytes": 143059, "sha256": "0284ddb3a6ce0c7b2eedf3d7a0232cd45a2c098e3cb7413a6946241c85acbed3"},
+    "ops/team/d3-triple-critical-saturation-constructor/RESULT.json": {"bytes": 1333, "sha256": "97c99680f3910912e0b7eaccc0081c5966134f6f2c655520ce3a27f77d7c9282"},
+    "ops/team/d3-triple-critical-saturation-constructor/run_q1_saturation.py": {"bytes": 13238, "sha256": "11fd84c16a97f7143311498fe2218bfcc400ddda72c14e043cf22d9238543af7"},
+    "ops/team/d3-triple-critical-saturation-falsifier/RESULT.json": {"bytes": 7327, "sha256": "1108d1c39c520cf6db9faf033db140807401f76a6b13ac1dee2b75432d72b7ef"},
+    "ops/team/d3-triple-critical-saturation-independent-verifier/RESULT.json": {"bytes": 5164, "sha256": "842e51d292eeb7dab3e14ec15f4dd61f4245b9641644235e3a543133ce747594"},
+    "ops/team/d3-triple-critical-saturation-independent-verifier/REVIEW.md": {"bytes": 2227, "sha256": "4902761d07f8a27ea008736b6c8632389ac1f2c1efc38d7457fa1360dbe941fd"}
+  },
+  "post_cycle_strategy": {
+    "same_component_saturation_route": "STOP_Q0_NULL_AND_NO_END_TO_END_CEILING_BOUND_PATH",
+    "raw_saturation_anyway": "DENIED_BY_MID_CYCLE_GATE",
+    "repeat_srep_or_pair_cad": "DENIED_BY_OPENING_AND_PREDECESSOR_STOP",
+    "local_atlas_or_sampling_growth": "DENIED_NO_GLOBAL_ATTACHMENT",
+    "exact_route_retirement": "NOT_JUSTIFIED_NO_MATHEMATICAL_COUNTEREXAMPLE",
+    "distinct_bounded_pivot": "NONE_INDEPENDENTLY_JUSTIFIED",
+    "verdict": "STOP"
+  },
+  "nonconsequences": [
+    "NO_Q0_ACCEPTANCE_OR_Q1_ACTIVATION",
+    "NO_RAW_RESEARCH_SATURATION_RESULT",
+    "NO_COMPLETE_COMPONENT_ATTACHMENT_CENSUS",
+    "NO_COMPACT_COMPONENT_OR_ROUTE_COUNTEREXAMPLE",
+    "NO_ORBIT5563_ROW_REMOVAL_OR_S8_TRANSFER",
+    "NO_PAIR_BRANCH_OR_TRIPLE_BRANCH_CLOSURE",
+    "NO_DIAGONAL_OR_LEDGER_CHANGE",
+    "NO_HUMAN_REVIEW",
+    "NO_SUCCESSOR_AUTHORITY"
+  ]
+}
+

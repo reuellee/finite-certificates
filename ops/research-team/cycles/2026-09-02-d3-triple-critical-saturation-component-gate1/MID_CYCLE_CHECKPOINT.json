@@ -1,0 +1,47 @@
+{
+  "format": "d3-triple-critical-saturation-mid-cycle-v1",
+  "cycle_id": "2026-09-02-d3-triple-critical-saturation-component-gate1",
+  "constructor_commit": "97787bed0afae6a2f7cb7d2edf9df4f54bbe97f9",
+  "frozen_falsifier_commit": "2df3285c19b0c65127bd0acd79df2cc57f0d7752",
+  "independent_verifier_commit": "e65f844a4fdb82f5850b9b27eff0dc54274dd735",
+  "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+  "mid_cycle_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+  "q0": {
+    "constructor_classification": "CANDIDATE_HANDOFF_ONLY",
+    "falsifier_verdict": "Q0_NULL_MINIMUM_DECREASE_NOT_REACHABLE",
+    "independent_verdict": "Q0_NULL_INDEPENDENTLY_CONFIRMED",
+    "exact_source_and_digest": "PASS",
+    "ordered_saturator_ledger": "PASS_62_OF_62",
+    "materialized_component_attachments": "FAIL_0_OF_62_STAGES_HAVE_COMPONENT_LISTS_AND_EXACT_REDUCTION_CERTIFICATES",
+    "singular_locus_retention": "PASS_AT_CONTRACT_LEVEL",
+    "known_fourspace_canary": "PASS_2_OF_2",
+    "artificial_boundary_rejection_canary": "PASS_3_OF_3",
+    "exact_static_job_counts": "PASS",
+    "end_to_end_numeric_resource_forecast": "FAIL_SATURATION_ONLY_UNCALIBRATED_AND_NO_SCRATCH_GUARD",
+    "q0_status": "NULL",
+    "theorem_credit": "NONE"
+  },
+  "resource_forecast": {
+    "cycle_ceiling_seconds": 14400,
+    "saturation_forecast_seconds": 12600,
+    "unallocated_seconds_after_saturation_forecast": 1800,
+    "forecast_confidence": "LOW",
+    "research_ideal_saturation_calibration": false,
+    "scratch_ceiling_gib": 10,
+    "scratch_ceiling_enforced_by_runner": false,
+    "unforecasted_endpoint_obligations": [
+      "EXACT_FINAL_DIMENSION_OR_EMPTINESS",
+      "COMPLETE_REAL_ROOT_ISOLATION",
+      "PARENT_CHAMBER_CLASSIFICATION",
+      "TRUE_PARENT_INFINITY_CONTINUATION",
+      "COMPLETE_S8_TRANSFER"
+    ]
+  },
+  "first_failed_obligation": "END_TO_END_EXECUTABLE_COMPONENT_DECORATED_CONTRACT_WITH_CEILING_BOUND_Q1_PATH",
+  "minimum_decrease_still_reachable_under_fixed_ceiling": false,
+  "q1_activation": "DENIED",
+  "raw_research_saturation_run": false,
+  "mandatory_mid_cycle_action": "FREEZE_Q0_NULL_AND_STOP",
+  "reason": "The independently replayed package has a sound exact source/ledger/canary core, but its only numeric forecast consumes 210 of 240 minutes on saturation, has no research-ideal calibration or scratch guard, and leaves five theorem-bearing Q1 obligations unforecasted. Even its success endpoint says further Q1 work is required."
+}
+
