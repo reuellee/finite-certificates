@@ -1,0 +1,233 @@
+{
+  "constructor_commit": "97787bed0afae6a2f7cb7d2edf9df4f54bbe97f9",
+  "first_failed_obligation": "END_TO_END_EXECUTABLE_COMPONENT_DECORATED_CONTRACT_WITH_CEILING_BOUND_Q1_PATH",
+  "format": "d3-triple-critical-saturation-falsifier-result-v1",
+  "gate": {
+    "minimum_decrease_still_reachable_inside_ceiling": false,
+    "q0": "NULL",
+    "q1": "DENIED",
+    "recommended_action": "STOP",
+    "recommended_trajectory": "STALLED",
+    "theorem_credit": "NONE",
+    "theorem_ledger": "2/9",
+    "triple_source_residual": 1162302
+  },
+  "hostile_mutations": {
+    "all_rejected": true,
+    "rejected": 27,
+    "results": [
+      {
+        "id": "opening_revision",
+        "reason": "opening revision",
+        "rejected": true
+      },
+      {
+        "id": "target",
+        "reason": "target",
+        "rejected": true
+      },
+      {
+        "id": "source_digest",
+        "reason": "source byte digest",
+        "rejected": true
+      },
+      {
+        "id": "source_semantic",
+        "reason": "source semantic digest",
+        "rejected": true
+      },
+      {
+        "id": "unordered",
+        "reason": "ordered ledger",
+        "rejected": true
+      },
+      {
+        "id": "anonymous_product",
+        "reason": "anonymous product",
+        "rejected": true
+      },
+      {
+        "id": "stage_count",
+        "reason": "stage count",
+        "rejected": true
+      },
+      {
+        "id": "stage_loss",
+        "reason": "stage count",
+        "rejected": true
+      },
+      {
+        "id": "stage_order",
+        "reason": "stage order",
+        "rejected": true
+      },
+      {
+        "id": "wall_label",
+        "reason": "stage 0 label",
+        "rejected": true
+      },
+      {
+        "id": "wall_polynomial",
+        "reason": "stage 0 polynomial",
+        "rejected": true
+      },
+      {
+        "id": "wall_class",
+        "reason": "stage 0 class",
+        "rejected": true
+      },
+      {
+        "id": "set_identity",
+        "reason": "stage 0 set identity",
+        "rejected": true
+      },
+      {
+        "id": "minor_saturation",
+        "reason": "minor saturation",
+        "rejected": true
+      },
+      {
+        "id": "source_loss",
+        "reason": "source retention",
+        "rejected": true
+      },
+      {
+        "id": "fourspace_ideal",
+        "reason": "four-space 0 ideal",
+        "rejected": true
+      },
+      {
+        "id": "fourspace_wall",
+        "reason": "four-space 0 discriminating label",
+        "rejected": true
+      },
+      {
+        "id": "fourspace_census",
+        "reason": "four-space 1 census",
+        "rejected": true
+      },
+      {
+        "id": "box_as_infinity",
+        "reason": "hostile false-boundary acceptance",
+        "rejected": true
+      },
+      {
+        "id": "seam_as_infinity",
+        "reason": "hostile false-boundary acceptance",
+        "rejected": true
+      },
+      {
+        "id": "rank_loss_as_infinity",
+        "reason": "hostile false-boundary acceptance",
+        "rejected": true
+      },
+      {
+        "id": "base_variables",
+        "reason": "base variable count",
+        "rejected": true
+      },
+      {
+        "id": "wall_census",
+        "reason": "wall count",
+        "rejected": true
+      },
+      {
+        "id": "wall_ceiling",
+        "reason": "wall ceiling",
+        "rejected": true
+      },
+      {
+        "id": "scratch_ceiling",
+        "reason": "scratch ceiling",
+        "rejected": true
+      },
+      {
+        "id": "self_acceptance",
+        "reason": "constructor self-acceptance",
+        "rejected": true
+      },
+      {
+        "id": "premature_q1",
+        "reason": "premature Q1",
+        "rejected": true
+      }
+    ],
+    "total": 27
+  },
+  "inputs": {
+    "contract": {
+      "bytes": 143059,
+      "sha256": "0284ddb3a6ce0c7b2eedf3d7a0232cd45a2c098e3cb7413a6946241c85acbed3"
+    },
+    "opening": {
+      "bytes": 5226,
+      "sha256": "7202e40746ca4a482d638ea32edda4d24c7ca5506961fd8863958aa410be8f13"
+    },
+    "producer_result": {
+      "bytes": 1333,
+      "sha256": "97c99680f3910912e0b7eaccc0081c5966134f6f2c655520ce3a27f77d7c9282"
+    },
+    "runner": {
+      "bytes": 13238,
+      "sha256": "11fd84c16a97f7143311498fe2218bfcc400ddda72c14e043cf22d9238543af7"
+    },
+    "source_system": {
+      "bytes": 364486,
+      "sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8"
+    }
+  },
+  "q0_blockers": [
+    {
+      "evidence": "all 62 stages contain a future-output instruction, not a component list or exact reduction certificate",
+      "id": "MATERIALIZED_COMPONENT_ATTACHMENTS_ABSENT",
+      "observed": 0,
+      "required": "an exact containment identity/certificate for every removed component"
+    },
+    {
+      "evidence": "the 210-minute forecast covers saturation only; dimension, real roots, chamber residence, continuation, and S8 transfer remain unforecasted",
+      "id": "END_TO_END_Q1_FORECAST_ABSENT",
+      "observed": "SATURATION_ONLY; Q1 still requires dimension, real-root, component attachment, chamber classification, true-infinity, and S8 checks",
+      "required": "a numeric path to the preregistered row-removal or complete-route-obstruction endpoint"
+    },
+    {
+      "evidence": "runner retains every dumped state but contains no file-size or directory-size guard",
+      "id": "SCRATCH_CEILING_NOT_ENFORCED",
+      "observed": "no scratch-byte census or 10-GiB stop in guarded runner",
+      "required": "fail closed before crossing the 10-GiB cycle ceiling"
+    },
+    {
+      "evidence": "the numerical envelope is a hard allocation, not a measured or calibrated research-ideal forecast",
+      "id": "SATURATION_FORECAST_UNCALIBRATED",
+      "observed": {
+        "confidence": "LOW",
+        "empirical_exact_cas_calibration_available": false,
+        "scope": "CONSTRUCTION_AND_REPLAY_ONLY_NOT_SATURATION_SOLVE"
+      },
+      "required": "independent evidence that the minimum decrease remains reachable inside the fixed ceiling"
+    },
+    {
+      "evidence": "even a 62-stage success deliberately stops with all downstream Q1 quantifiers open",
+      "id": "RUNNER_ENDS_BEFORE_Q1_ENDPOINT",
+      "observed": true,
+      "required": "positive row removal, complete exact route obstruction, exact null, or reproducible timeout frontier"
+    }
+  ],
+  "scope": [
+    "Independent machine falsification, not human review.",
+    "No raw Groebner, saturation, primary decomposition, or RUR research job was run.",
+    "The exact source, ordered wall ledger, and canaries replay, but they do not make the preregistered theorem-level decrease reachable inside the fixed ceiling.",
+    "No theorem, row, component, or ledger credit is claimed."
+  ],
+  "status": "PASS",
+  "structural_replay": {
+    "artificial_boundary_rejection_canaries": 3,
+    "exact_source_generators": 59,
+    "known_fourspace_canaries": 2,
+    "nonzero_source_generators": 55,
+    "ordered_parent_wall_stages": 62,
+    "source_sparse_terms": 14741,
+    "status": "PASS"
+  },
+  "track_id": "d3-triple-critical-saturation-falsifier",
+  "verdict": "Q0_NULL_MINIMUM_DECREASE_NOT_REACHABLE"
+}
