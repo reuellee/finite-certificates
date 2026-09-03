@@ -1,0 +1,3 @@
+PASS frozen closing reconstruction: 11 pins and protected canonical V10
+PASS 22/22 hostile closing mutations rejected
+ACCEPT Q0 NULL / Q1 DENIED / STALLED / STOP / NONE

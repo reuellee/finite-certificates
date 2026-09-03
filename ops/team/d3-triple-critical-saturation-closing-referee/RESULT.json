@@ -1,0 +1,214 @@
+{
+  "candidate_commit": "0aaa07dc7ae91cdb3ee386c9b7362e650347bdba",
+  "candidate_parent": "e65f844a4fdb82f5850b9b27eff0dc54274dd735",
+  "candidate_tree": "29bc16c551e43ae0a33ab624a09a4e31f6b546c6",
+  "format": "d3-triple-critical-saturation-independent-closing-referee-v1",
+  "hostile_mutations": {
+    "all_rejected": true,
+    "rejected": 22,
+    "results": [
+      {
+        "id": "accept_q0",
+        "rejected": true
+      },
+      {
+        "id": "activate_q1",
+        "rejected": true
+      },
+      {
+        "id": "invent_raw_run",
+        "rejected": true
+      },
+      {
+        "id": "invent_theorem_delta",
+        "rejected": true
+      },
+      {
+        "id": "invent_residual_delta",
+        "rejected": true
+      },
+      {
+        "id": "invent_obligation_delta",
+        "rejected": true
+      },
+      {
+        "id": "opening_streak_drift",
+        "rejected": true
+      },
+      {
+        "id": "closing_streak_drift",
+        "rejected": true
+      },
+      {
+        "id": "converging",
+        "rejected": true
+      },
+      {
+        "id": "informational",
+        "rejected": true
+      },
+      {
+        "id": "disable_reset",
+        "rejected": true
+      },
+      {
+        "id": "continue",
+        "rejected": true
+      },
+      {
+        "id": "pivot",
+        "rejected": true
+      },
+      {
+        "id": "retire",
+        "rejected": true
+      },
+      {
+        "id": "same_route",
+        "rejected": true
+      },
+      {
+        "id": "successor",
+        "rejected": true
+      },
+      {
+        "id": "grant_credit",
+        "rejected": true
+      },
+      {
+        "id": "canonical_drift",
+        "rejected": true
+      },
+      {
+        "id": "path_escape",
+        "rejected": true
+      },
+      {
+        "id": "verdict_promotion",
+        "rejected": true
+      },
+      {
+        "id": "timeout_instead_of_null",
+        "rejected": true
+      },
+      {
+        "id": "q1_null_instead_of_denied",
+        "rejected": true
+      }
+    ],
+    "total": 22
+  },
+  "independent_closing_reconstruction": {
+    "automatic_strategy_reset": "FIRED",
+    "closing_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      8,
+      11
+    ],
+    "mid_cycle_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      7,
+      10
+    ],
+    "obligation_delta": 0,
+    "opening_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      7,
+      10
+    ],
+    "q0": "NULL_INDEPENDENTLY_CONFIRMED",
+    "q1": "DENIED",
+    "raw_research_saturation_run": false,
+    "same_route_continue": false,
+    "selected_successor": "NONE",
+    "source_residual_delta": 0,
+    "strategy_action": "STOP",
+    "theorem_credit": "NONE",
+    "theorem_delta": 0,
+    "trajectory": "STALLED"
+  },
+  "pins": {
+    "canonical_v10": {
+      "bytes": 6535,
+      "sha256": "405e1f34789e999d2b8725881a4b99c1db81cec3ecfa70abcdfa9b3fbb7a46bf"
+    },
+    "closing_candidate": {
+      "bytes": 3915,
+      "sha256": "99b8b16d2d1d7bf0d5524031c5e3f944ccad6619f8aa6d4a5e795b15d1ea3be6"
+    },
+    "constructor": {
+      "bytes": 1333,
+      "sha256": "97c99680f3910912e0b7eaccc0081c5966134f6f2c655520ce3a27f77d7c9282"
+    },
+    "cycle_policy": {
+      "bytes": 12772,
+      "sha256": "02f15ff2bbb03fbabcb383228abb14bbf9631940b071728a7d3022229fff0a98"
+    },
+    "cycle_report": {
+      "bytes": 8836,
+      "sha256": "69d63da06adfc5b9980ea53f5ea819745a221acb373cc3d626590fcb886126b4"
+    },
+    "falsifier": {
+      "bytes": 7327,
+      "sha256": "1108d1c39c520cf6db9faf033db140807401f76a6b13ac1dee2b75432d72b7ef"
+    },
+    "mid_cycle": {
+      "bytes": 2551,
+      "sha256": "415e72294436fdf021fadc0b1f398d17eaca1b53ae6e165b371a1ae96cdd2b7c"
+    },
+    "opening": {
+      "bytes": 5226,
+      "sha256": "7202e40746ca4a482d638ea32edda4d24c7ca5506961fd8863958aa410be8f13"
+    },
+    "q0_verifier": {
+      "bytes": 5164,
+      "sha256": "842e51d292eeb7dab3e14ec15f4dd61f4245b9641644235e3a543133ce747594"
+    },
+    "resources": {
+      "bytes": 2899,
+      "sha256": "a6d738db27a5e6ad0954f0d8c776e8e6844a784e921d0b26edf2d90c5ec2c24e"
+    },
+    "work_orders": {
+      "bytes": 6543,
+      "sha256": "3b19470bb01e62354f1fa6d01c2978d45a7dc1071944adf2a31f5c5c9d3805cc"
+    }
+  },
+  "protected_surface_check": {
+    "all_changed_paths_inside_owned_surfaces": true,
+    "canonical_v10_byte_identical_to_base": true,
+    "changed_paths_from_cycle_start": 19
+  },
+  "scope": [
+    "Independent machine closing review; no human review is claimed.",
+    "Accepts only the frozen NULL/STALLED/STOP close with no Q1 run or theorem delta.",
+    "Lean is reserved as a downstream checker after exact CAS certificates exist, not counted as present-cycle evidence.",
+    "Does not edit canonical state, activate Q1, or select a successor."
+  ],
+  "status": "PASS",
+  "track_id": "d3-triple-critical-saturation-closing-referee",
+  "verdict": "ACCEPT_FROZEN_Q0_NULL_CLOSE_STALLED_STOP"
+}
