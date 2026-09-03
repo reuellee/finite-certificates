@@ -123,6 +123,35 @@ certified reachable inside the remaining fixed ceiling.  The mandatory action
 was therefore `FREEZE_Q0_NULL_AND_STOP`.  Q1 remained denied; spending the
 budget on a raw saturation anyway would have violated the opening gate.
 
+## Mandatory solution-convergence verdict
+
+Opening proof-distance vector:
+
+```text
+(2/9, 1, {diag3_pair_hc1, diag3_triple_hc0}, 7,
+ UNKNOWN, UNKNOWN, 7, 10)
+```
+
+Closing proof-distance vector:
+
+```text
+(2/9, 1, {diag3_pair_hc1, diag3_triple_hc0}, 7,
+ UNKNOWN, UNKNOWN, 8, 11)
+```
+
+Mid-cycle convergence check: the constructor handoff did not make the
+preregistered decrease reachable inside the remaining resource ceiling, so
+Q1 was denied and the evidence was frozen.
+
+Trajectory classification: **`STALLED`**.
+
+Automatic strategy-reset result: **`FIRED -> STOP`**.
+
+Same-route continuation justified: **`NO`**.
+
+This protocol-vocabulary summary restates the facts below and changes no
+mathematical or governance conclusion of the frozen report.
+
 ## Obligation and theorem accounting
 
 No dependency edge closed.  Global pair gluing, complete pair labels, pair
