@@ -1,0 +1,115 @@
+{
+  "format": "d3-mixed-100-final-closing-manifest-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "base": {
+    "revision": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+    "tree": "117850b25cd94f865cb85e681c465b8260dd9c6a"
+  },
+  "opening": {
+    "revision": "1c6519d89335dde215e93887de074ea4e6d6464a",
+    "tree": "ff8a33e13952e86b27f184e3d8c40e768fbeb110"
+  },
+  "frozen_candidate": {
+    "revision": "a2d78f9c30c13dc199b60355829a862ae7eec54a",
+    "tree": "3328a17a00c38c76129dc9a7385fba9f9cbfaaff"
+  },
+  "closing_referee": {
+    "lane_revision": "ff8017c17fae5ba71ab58ae290ece0c479443321",
+    "lane_tree": "27d4ef884bb42ad8687e4a6e9eb44d38b30fe4a5",
+    "integrated_revision": "3f7c58a46aa4e8ebf6394b7ce7a8e4593f034f3a",
+    "integrated_tree": "27d4ef884bb42ad8687e4a6e9eb44d38b30fe4a5",
+    "verdict": "ACCEPT_EXACT_FROZEN_NULL_STALLED_STOP_NONE"
+  },
+  "result": {
+    "classification": "NULL",
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "selected_successor": "NONE",
+    "same_route_continue": false,
+    "positive_token": null,
+    "negative_token": null,
+    "O3": "OPEN",
+    "O4": "OPEN",
+    "opening_ledger": "2/9",
+    "closing_ledger": "2/9",
+    "ledger_delta": "0/9",
+    "opening_load_bearing_obligations": 7,
+    "closing_load_bearing_obligations": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_residual": 1162302,
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "midpoint_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 9, 12],
+    "selected_route_opening": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_closing": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "minimum_decrease_met": false
+  },
+  "exact_boundary": {
+    "first_missing_edge": "DECLARED_L_SOURCE_INTERFACE_TO_O3_MIXED_GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY",
+    "formal_kernel_cone_exact": true,
+    "formal_kernel_cone_geometric_mixed_proper": false,
+    "declared_interface_entails_geometric_carrier": false,
+    "empty_carrier_is_actual_admissible_9dvl_instance": false,
+    "full_negative_proved": false,
+    "bounded_repair": false
+  },
+  "verification": {
+    "opening_hostiles": 24,
+    "constructor_hostiles": 30,
+    "falsifier_hostiles": 40,
+    "midpoint_hostiles": 24,
+    "independent_hostiles": 45,
+    "closing_candidate_hostiles": 30,
+    "closing_referee_hostiles": 57,
+    "closing_referee_candidate_source_pins": 26,
+    "clean_no_hardlink_replay": true,
+    "human_review": false
+  },
+  "resources": {
+    "opening_to_referee_integration_seconds": 2654,
+    "governed_ceiling_seconds": 14400,
+    "four_role_surface_bytes_before_final_close": 214253,
+    "constructor_handoffs": 1,
+    "verifier_directed_repairs": 0,
+    "research_saturation_cad_srep_jobs": 0,
+    "cloud_workers": 0,
+    "external_spend_usd": 0,
+    "peak_ram_continuously_measured": false
+  },
+  "scope": {
+    "author_contact": false,
+    "network_research": false,
+    "github_write": false,
+    "external_compute": false,
+    "atlas_census_sampling_or_residual_growth": false,
+    "canonical_ledger_edit": false,
+    "google_drive_connector_used": false
+  },
+  "evidence_pins": {
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/CLOSING_CANDIDATE.json": {"bytes": 6236, "sha256": "8e1e6e6938d5d21c8a69316ea4df218fb9ffbc5740f78062d089d3c1e7579e1c"},
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/CYCLE_REPORT.md": {"bytes": 10646, "sha256": "33b16132e69d6b32965948b27dc31a855f2bc4917cc40e1f8173d1b1bb2364a5"},
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/verify_closing_candidate.py": {"bytes": 7801, "sha256": "0b6565f3cbaad6d269f80d024e4c12adb240101fb4aa558f5663ad3e289201ee"},
+    "ops/team/d3-mixed-100-closing-referee/RESULT.json": {"bytes": 10763, "sha256": "288f82a4b3ff081349db72d5cf9ef9602bd26bb459f5e58a8817dff62b955eae"},
+    "ops/team/d3-mixed-100-closing-referee/REVIEW.md": {"bytes": 6078, "sha256": "d746d927eb0637083342c3737fe04322fcbb56bf73a791baec11ea8dc4e36461"},
+    "ops/team/d3-mixed-100-closing-referee/SOURCE_MANIFEST.json": {"bytes": 8123, "sha256": "57148f2a65b849bdf03519fb013652a9ad6da1d495eb3c8696796000821bccf5"},
+    "ops/team/d3-mixed-100-closing-referee/verify_close.py": {"bytes": 36012, "sha256": "05aead460409b596e1aaef38e49de3ec90cb8969c8f75ea1964097bec21e0f4a"}
+  },
+  "publication": {
+    "branch": "research/local-d3-mixed-block-100-universal-carrier-gate1-20260903",
+    "github_mode": "READ_ONLY",
+    "local_bundle_after_final_commit": true,
+    "native_mirror_optional": true,
+    "connector_use": false
+  },
+  "nonconsequences": [
+    "NO_O3_OR_O4_THEOREM",
+    "NO_EXACT_ADMISSIBLE_UNIVERSAL_NEGATIVE",
+    "NO_MIXED_GEOMETRIC_CELL_EXISTENCE_OR_NONEXISTENCE_THEOREM",
+    "NO_GLOBAL_L_SOURCE_OR_PAIR_COMPLEX",
+    "NO_D3_PAIR_OR_TRIPLE_BRANCH_CLOSURE",
+    "NO_D3_OR_9DVL_PROOF_OR_COUNTEREXAMPLE",
+    "NO_LEDGER_CHANGE",
+    "NO_SUCCESSOR_AUTHORIZATION"
+  ]
+}
