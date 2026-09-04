@@ -1,0 +1,110 @@
+{
+  "format": "d3-bg-compact-relative-source-opening-v1",
+  "cycle_id": "2026-09-04-d3-block-gordan-compact-relative-source-gate1",
+  "authorization": {
+    "user_execution_authority_received": true,
+    "read_only_primary_source_research": true,
+    "author_contact": false,
+    "github_write": false,
+    "external_compute": false,
+    "canonical_ledger_edit": false
+  },
+  "repository": {
+    "base_revision": "5587d2da0e6e7a03a716f7e25ddbd98a82f4af28",
+    "base_tree": "3c6647af475ace9c1a4d77a2af169a0076344af1",
+    "branch": "research/local-9dvl-post-mixed-100-stop-v11-20260903",
+    "concurrent_successor_cycles": [],
+    "historical_worktrees_are_frozen_evidence": true
+  },
+  "canonical": {
+    "state": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json",
+    "status": "STOPPED",
+    "selected_next_target": "NONE",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "open_diagonals": [3, 4, 5, 6, 7, 8, 9],
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_total": 79102449,
+    "triple_settled": 77940147,
+    "triple_residual": 1162302,
+    "same_blocker_streak": 9,
+    "zero_ledger_streak": 12
+  },
+  "new_input": {
+    "id": "FULL_SOURCE_DERIVED_PROPER_FUNCTORIAL_BLOCK_GORDAN_TOTAL_SPACE",
+    "predecessor_gap": "FINITE_ADMISSIBLE_MIXED_CELL_FUNCTOR_WITH_REALIZATION_PROPERNESS_AND_TRUE_INFINITY",
+    "distinction": "USE_GAMMA_S_GEOMETRY_NOT_REDUCED_L_SOURCE_INTERFACE",
+    "source_derived": true,
+    "proper_over_bad_union": true,
+    "functorial_by_zero_padding": true,
+    "fixed_fiber_convexity_alone_claims_vanishing": false
+  },
+  "strategy": {
+    "verdict": "PIVOT_SELECT_D3_BLOCK_GORDAN_COMPACT_RELATIVE_SOURCE",
+    "selected_target": "D3_BLOCK_GORDAN_COMPACT_RELATIVE_SOURCE_THEOREM_OR_OBSTRUCTION_GATE1",
+    "selected_count": 1,
+    "same_route_continue": false,
+    "alternatives_compared": [
+      "D3_BLOCK_GORDAN_COMPACT_RELATIVE_SOURCE",
+      "D3_GLOBAL_MASS_TRANSFER_POTENTIAL",
+      "D3_REPEAT_MIXED_100_LOWER_INTERFACE",
+      "D3_REPEAT_GLOBAL_SREP",
+      "D3_TRIPLE_SATURATION_OR_PAIR_CAD"
+    ]
+  },
+  "proof_distance": {
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 9, 12],
+    "selected_route_open_residual": ["global_gluing", "extension_labels", "strict_closure", "relative_infinity"],
+    "selected_route_open_count": 4,
+    "positive_load_bearing_count": 3,
+    "positive_ledger": "2/9",
+    "minimum_acceptable_decrease": "PROVE_ALL_FIVE_SOURCE_CLAUSES_AND_CLOSE_FOUR_STRUCTURAL_OBLIGATIONS_OR_EXACTLY_DISPROVE_THE_CONSTRUCTION",
+    "midpoint_trigger": "FIRST_FROZEN_ARCHITECT_AND_FALSIFIER_HANDOFFS_OR_THREE_HOURS",
+    "local_or_formal_progress_counts": false
+  },
+  "quantifiers": {
+    "all_2604_realizable_uniform_rank4_parent_classes": true,
+    "all_normalized_realization_components": true,
+    "all_ordered_proper_pairwise_incomparable_signature_triples": true,
+    "all_seven_nonempty_signature_subsets": true,
+    "all_block_coordinate_and_zero_mass_faces": true,
+    "all_parent_residual_and_declared_rank_strata": true,
+    "all_subdiagram_inclusions_simultaneous": true,
+    "true_parent_infinity_only": true
+  },
+  "positive_endpoint": {
+    "token": "PROVED_GLOBAL_FINITE_RELATIVE_BLOCK_GORDAN_SOURCE",
+    "required_clauses": [
+      "component_complete_fixed_frame_normalization",
+      "exact_compact_parent_closure_and_true_infinity",
+      "compact_relative_block_gordan_pairs_and_zero_padding",
+      "simultaneous_labeled_finite_triangulation",
+      "filtered_compact_support_and_mayer_vietoris_comparison"
+    ],
+    "closes": ["global_gluing", "extension_labels", "strict_closure", "relative_infinity"],
+    "does_not_close": ["middle_rank_replay", "diag3_pair_hc1", "diag3_triple_hc0", "diag3"]
+  },
+  "resource_ceiling": {
+    "wall_seconds": 21600,
+    "lane_peak_ram_gib": 16,
+    "new_scratch_gib": 2,
+    "producer_handoffs": 2,
+    "verifier_directed_repairs": 1,
+    "cloud_workers": 0,
+    "external_spend_usd": 0,
+    "bulk_semialgebraic_execution": false
+  },
+  "source_pins": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+    "ai/omreal/BLOCK_GORDAN_AUDIT.md": "5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a",
+    "ai/omreal/BLOCK_GORDAN_ALL_CODIM_COHERENCE.md": "1ef8ce2a6f96c922e103ea3270230e5619490020af9eadf743ac237aaef7eb2f",
+    "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md": "f0326930b473ff9e1c07c6dc69e332de28cbb3d178b7d3b5b526c451d1234f98",
+    "ai/omreal/BLOCK_GORDAN_RESIDUAL_MUTATION_MAP_NO_GO.md": "2d1250c9b1d8d25a5bb4b634c71f1329d8270c2b37b7153a63b1c43f319f92ae",
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/CYCLE_REPORT.md": "33b16132e69d6b32965948b27dc31a855f2bc4917cc40e1f8173d1b1bb2364a5",
+    "ops/research-sources/basu-karisani/arxiv-2009.13365v3.pdf": "c4cf62ddfa52185f6dac456ba8f4c115e5ced4ff7234d1b309b88c6c4387f8a1",
+    "ops/research-sources/basu-karisani/arxiv-2207.10497v1.pdf": "560eb043ffb3bc5551d02404a3a288b756651319952870c4391f070377b46002"
+  }
+}

@@ -1,0 +1,152 @@
+cycle_id: 2026-09-04-d3-block-gordan-compact-relative-source-gate1
+base_revision: 5587d2da0e6e7a03a716f7e25ddbd98a82f4af28
+base_tree: 3c6647af475ace9c1a4d77a2af169a0076344af1
+branch: research/local-9dvl-post-mixed-100-stop-v11-20260903
+opening_ledger: 2/9
+selected_target: D3_BLOCK_GORDAN_COMPACT_RELATIVE_SOURCE_THEOREM_OR_OBSTRUCTION_GATE1
+storage_authorization: &storage_authorization |
+  The saved local Codex project E:\Projects\9DVL Research is the canonical
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs.
+  A native-filesystem recovery mirror to
+  G:\My Drive\Projects\research-backups is optional, byte-length and SHA-256
+  verified, and nonblocking. Never invoke the Google Drive connector and never
+  block on connector approval. GitHub is read-only: do not push, publish
+  branches, open or update pull requests, trigger or rerun CI, or merge. This
+  opening authorization does not permit secrets, unrelated private files,
+  paid/external compute, force-push, history deletion, or irreversible external
+  action.
+
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_D3_BLOCK_GORDAN_COMPACT_RELATIVE_SOURCE
+  closing_required: true
+  selected_count: 1
+  predecessor: V11_STOPPED_NONE_AFTER_TWO_POST_V10_NULL_CYCLES
+  same_route_continue: false
+  stagnation_rule: >-
+    Null, timeout, loss of label or boundary fidelity, or an unchanged selected
+    residual forbids same-route continuation and requires PIVOT or STOP; an
+    exact full-scope obstruction requires RETIRE.
+
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    named_invariant: diag3_pair_hc1_AND_diag3_triple_hc0
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 9
+    zero_ledger_streak: 12
+  selected_route_open_residual:
+    - global_gluing
+    - extension_labels
+    - strict_closure
+    - relative_infinity
+  convergence_hypothesis: >-
+    A complete compact relative block-Gordan source theorem closes the four
+    selected structural obligations and reduces the load-bearing count from
+    7 to 3 without changing the 2/9 theorem ledger.
+  minimum_acceptable_delta: >-
+    Independently prove all five source clauses at the full global quantifier,
+    closing all four selected obligations, or prove an exact admissible
+    obstruction to the compact-relative construction.
+  mid_cycle_checkpoint: >-
+    Freeze after the source architect and adversarial topologist first handoffs
+    or three elapsed hours; stop if neither full endpoint remains reachable.
+  closing_classification_required: true
+  automatic_pivot_rule: >-
+    Null, timeout, abstract existence without exact label/boundary fidelity, or
+    unchanged residual requires PIVOT or STOP; exact obstruction requires
+    RETIRE; a proof permits only a separately authorized successor.
+
+global_restrictions:
+  - no author contact, paid API, external solver, cloud worker, or external compute
+  - no GitHub write, push, pull request, CI trigger, or merge
+  - no canonical-state edit or theorem-ledger promotion
+  - no saturation, CAD, SREP execution, atlas/census growth, or residual sampling
+  - no inference from row-2599 or one coordinate chart to all 2,604 parent classes
+  - no inference from a finite source to middle-rank exactness or diagonal three
+
+work_orders:
+  - track_id: d3-bg-compact-source-architect
+    role: source-architect
+    surface: ops/team/d3-bg-compact-source-architect
+    storage_authorization: *storage_authorization
+    resource_ceiling: 180 wall-minutes, 16 GiB RAM, 1 GiB scratch, one frozen handoff
+    target: >-
+      Prove the five-clause compact relative block-Gordan source theorem for all
+      2,604 parent classes, all normalized components, and all seven nonempty
+      subdiagrams of every ordered signature triple.
+    positive: PROVED_GLOBAL_FINITE_RELATIVE_BLOCK_GORDAN_SOURCE
+    negative: Not available from construction failure; return NULL with the first exact missing edge.
+    stop_rule: >-
+      Stop on an unproved global frame quotient, naive weak-sign closure,
+      artificial infinity, non-simultaneous triangulation, or an unavailable
+      full-quantifier proof inside the ceiling.
+    prohibited_scope: >-
+      No rank calculation, global potential claim, diagonal promotion, bulk
+      triangulation, CAD, SREP run, saturation, network contact, external
+      compute, canonical edit, push, or merge.
+    worker_restrictions: >-
+      Own only the architect surface; do not edit cycle/canonical files, accept
+      your own proof, inspect the falsifier worktree, push, or merge.
+
+  - track_id: d3-bg-compact-source-falsifier
+    role: adversarial-topologist
+    surface: ops/team/d3-bg-compact-source-falsifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 180 wall-minutes, 16 GiB RAM, 1 GiB scratch, at least 30 hostile cases
+    target: >-
+      Independently attack component-complete frame normalization, exact
+      closure versus weak closure, relative compact-support semantics, all
+      subdiagram inclusions, simultaneous strata, and MV filtration fidelity.
+    positive: DISPROVED_COMPACT_RELATIVE_BLOCK_GORDAN_SOURCE_BY_EXACT_OBSTRUCTION
+    null: NO_FULL_SCOPE_OBSTRUCTION_FOUND_WITHIN_FROZEN_SCOPE
+    stop_rule: >-
+      Stop and preserve an exact admissible obstruction; otherwise distinguish
+      a mathematical failure from missing executable software or large size.
+    prohibited_scope: >-
+      No producer repair or acceptance, rank proof, global potential, bulk CAD
+      or triangulation, canonical edit, ledger promotion, author contact,
+      external compute, push, or merge.
+    worker_restrictions: >-
+      Own only the falsifier surface; do not edit cycle/canonical/producer
+      files, accept producer output, push, or merge.
+
+  - track_id: d3-bg-compact-source-independent-verifier
+    role: independent-verifier
+    surface: ops/team/d3-bg-compact-source-independent-verifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 90 wall-minutes, 16 GiB RAM, 1 GiB scratch, one directed repair
+    target: >-
+      Reconstruct every source-theorem clause from pinned definitions and
+      primary theorems, verify the relative comparison and literal subcomplex
+      inclusions, and reject hidden quantifier, closure, or infinity changes.
+    stop_rule: >-
+      Fail closed on source drift, producer acceptance code, missing parent or
+      signature quantifiers, artificial infinity, or loss of exact incidence.
+    prohibited_scope: >-
+      No discovery expansion, replacement theorem, producer repair, canonical
+      edit, ledger promotion, network contact, external compute, push, or merge.
+    worker_restrictions: >-
+      Own only the verifier surface; read frozen handoffs as untrusted data and
+      do not import producer acceptance code or edit producer/cycle files.
+
+  - track_id: d3-bg-compact-source-closing-referee
+    role: closing-referee
+    surface: ops/team/d3-bg-compact-source-closing-referee
+    storage_authorization: *storage_authorization
+    resource_ceiling: 60 wall-minutes, 16 GiB RAM, clean frozen-head replay
+    target: >-
+      Bind the accepted verdict to exact Git objects, enforce the five-clause
+      endpoint and proof-distance delta, and record all nonconsequences.
+    stop_rule: >-
+      Reject moved sources, producer self-acceptance, partial theorem promoted
+      to four closed obligations, any diagonal/ledger claim, or an automatic
+      successor.
+    prohibited_scope: >-
+      No mutable-head repair, discovery, proof construction, canonical edit,
+      ledger promotion, network contact, external compute, push, or merge.
+    worker_restrictions: >-
+      Review only the frozen integrated candidate; own only the referee surface
+      and do not repair evidence or edit cycle/canonical files.
