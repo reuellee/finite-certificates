@@ -7,12 +7,15 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import subprocess
+import tempfile
 
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 MANIFEST = HERE / "CLOSING_MANIFEST.json"
 REFEREE = "3f7c58a46aa4e8ebf6394b7ce7a8e4593f034f3a"
+FINAL_CLOSE = "a10a47d1e934e4296b9612ccbde6d0b1a74a88bb"
+FINAL_CLOSE_TREE = "eead48c4263f85cb71b0617213011fe5dcae89bf"
 ALLOWED_PREFIXES = (
     HERE.relative_to(ROOT).as_posix() + "/",
     "ops/team/d3-mixed-100-carrier-constructor/",
@@ -42,7 +45,52 @@ def run(relative: str) -> str:
     return completed.stdout.strip()
 
 
+def replay_frozen_close() -> None:
+    """Replay the immutable close when invoked from a legitimate successor."""
+    require(git("rev-parse", f"{FINAL_CLOSE}^{{tree}}") == FINAL_CLOSE_TREE, "final close tree")
+    require(git("merge-base", "--is-ancestor", FINAL_CLOSE, "HEAD") == "", "final close ancestry")
+    with tempfile.TemporaryDirectory(prefix="d3-mixed-100-close-") as temporary:
+        checkout = Path(temporary) / "checkout"
+        added = False
+        try:
+            subprocess.run(
+                ["git", "worktree", "add", "--detach", str(checkout), FINAL_CLOSE],
+                cwd=ROOT,
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            added = True
+            completed = subprocess.run(
+                ["python", "-B", str(HERE.relative_to(ROOT) / Path(__file__).name)],
+                cwd=checkout,
+                text=True,
+                capture_output=True,
+            )
+            require(
+                completed.returncode == 0,
+                f"frozen close replay failed\n{completed.stdout}\n{completed.stderr}",
+            )
+            require("PASS final D3 mixed-(1,0,0) close" in completed.stdout, "frozen close output")
+        finally:
+            if added:
+                subprocess.run(
+                    ["git", "worktree", "remove", "--force", str(checkout)],
+                    cwd=ROOT,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                )
+    print("PASS frozen final D3 mixed-(1,0,0) close from successor state")
+    print("NULL / STALLED / STOP / NONE; O3/O4 2/2 OPEN; LEDGER 2/9")
+
+
 def main() -> None:
+    if git("rev-parse", "HEAD") != FINAL_CLOSE or git("status", "--porcelain"):
+        replay_frozen_close()
+        return
     data = json.loads(MANIFEST.read_text(encoding="ascii"))
     require(data["format"] == "d3-mixed-100-final-closing-manifest-v1", "format")
     require(data["cycle_id"] == HERE.name, "cycle")

@@ -1,0 +1,172 @@
+{
+  "format": "9dvl-canonical-research-state-v11",
+  "status": "STOPPED",
+  "as_of": "2026-09-03",
+  "repository": {
+    "full_name": "reuellee/finite-certificates",
+    "branch": "research/local-9dvl-post-mixed-100-stop-v11-20260903",
+    "canonical_evidence_close_commit": "a10a47d1e934e4296b9612ccbde6d0b1a74a88bb",
+    "canonical_evidence_close_tree": "eead48c4263f85cb71b0617213011fe5dcae89bf",
+    "latest_integrated_referee_commit": "3f7c58a46aa4e8ebf6394b7ce7a8e4593f034f3a",
+    "latest_integrated_referee_tree": "27d4ef884bb42ad8687e4a6e9eb44d38b30fe4a5",
+    "github_mode": "READ_ONLY_UNTIL_NEW_EXPLICIT_USER_INSTRUCTION",
+    "github_write": false,
+    "drive_recovery_bundle_verified": true,
+    "network_research": false,
+    "author_contact": false,
+    "user_scope": "9DVL_ONLY"
+  },
+  "predecessor": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json",
+    "sha256": "405e1f34789e999d2b8725881a4b99c1db81cec3ecfa70abcdfa9b3fbb7a46bf",
+    "policy": "IMMUTABLE_POST_SREP_CANONICAL_STATE",
+    "v10_automatic_reopening_authorized": false,
+    "post_v10_closed_cycle_count": 2
+  },
+  "authoritative_history": [
+    {
+      "id": "2026-09-02-d3-triple-critical-saturation-component-gate1",
+      "closing_commit": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+      "closing_tree": "117850b25cd94f865cb85e681c465b8260dd9c6a",
+      "q0": "NULL_INDEPENDENTLY_CONFIRMED",
+      "q1": "DENIED",
+      "trajectory": "STALLED",
+      "strategy_action": "STOP",
+      "selected_successor": "NONE",
+      "same_route_continue": false,
+      "first_failed_obligation": "END_TO_END_EXECUTABLE_COMPONENT_DECORATED_CONTRACT_WITH_CEILING_BOUND_Q1_PATH",
+      "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+      "closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11]
+    },
+    {
+      "id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+      "closing_commit": "a10a47d1e934e4296b9612ccbde6d0b1a74a88bb",
+      "closing_tree": "eead48c4263f85cb71b0617213011fe5dcae89bf",
+      "integrated_referee_commit": "3f7c58a46aa4e8ebf6394b7ce7a8e4593f034f3a",
+      "integrated_referee_tree": "27d4ef884bb42ad8687e4a6e9eb44d38b30fe4a5",
+      "classification": "NULL",
+      "trajectory": "STALLED",
+      "strategy_action": "STOP",
+      "selected_successor": "NONE",
+      "same_route_continue": false,
+      "positive_token": null,
+      "negative_token": null,
+      "O3": "OPEN",
+      "O4": "OPEN",
+      "first_missing_edge": "DECLARED_L_SOURCE_INTERFACE_TO_O3_MIXED_GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY",
+      "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+      "closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 9, 12]
+    }
+  ],
+  "theorem": {
+    "id": "9DVL",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "open_diagonals": [3, 4, 5, 6, 7, 8, 9],
+    "promotion": "NONE",
+    "theorem_level_counterexample": "NOT_FOUND"
+  },
+  "proof_distance": {
+    "v10_closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 7, 10],
+    "triple_saturation_closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "mixed_100_closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 9, 12],
+    "current_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 9, 12],
+    "ledger_delta_since_v10": "0/9",
+    "load_bearing_obligation_delta_since_v10": 0,
+    "certified_residual_delta_since_v10": 0,
+    "minimum_acceptable_decrease_met": false,
+    "same_blocker_streak_closing": 9,
+    "zero_ledger_streak_closing": 12
+  },
+  "open_obligations": {
+    "load_bearing_count": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_source_total": 79102449,
+    "triple_source_settled": 77940147,
+    "triple_source_residual": 1162302,
+    "triple_source_is_component_denominator": false,
+    "items": [
+      {"id": "global_gluing", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "extension_labels", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "strict_closure", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "relative_infinity", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "middle_rank_replay", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "diag3_pair_hc1", "status": "INCONCLUSIVE", "delta": "UNCHANGED"},
+      {"id": "diag3_triple_hc0", "status": "INCONCLUSIVE", "delta": "UNCHANGED", "residual_source_orbits": 1162302}
+    ]
+  },
+  "completed_post_v10_gates": {
+    "triple_component_saturation": {
+      "authorization_status": "CONSUMED",
+      "q0_pass": false,
+      "q1_activated": false,
+      "raw_research_saturation_run": false,
+      "theorem_credit": "NONE",
+      "first_missing_inputs": [
+        "MATERIALIZED_EXACT_COMPONENT_ATTACHMENT_CERTIFICATES",
+        "ENFORCEABLE_SCRATCH_AND_RESOURCE_LIMITS",
+        "CALIBRATED_END_TO_END_Q1_FORECAST_AND_EXECUTOR"
+      ]
+    },
+    "mixed_100_universal_carrier": {
+      "authorization_status": "CONSUMED",
+      "universal_O3_O4_proof": false,
+      "exact_universal_obstruction": false,
+      "theorem_credit": "NONE",
+      "first_missing_inputs": [
+        "FINITE_ADMISSIBLE_MIXED_CELL_FUNCTOR_WITH_REALIZATION_PROPERNESS_AND_TRUE_INFINITY",
+        "EXACT_BOUNDARY_MAP_WITH_GLOBALLY_QUANTIFIED_TESTABLE_IMAGE",
+        "GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY_OR_MISSING_PRIMITIVE_CERTIFICATE"
+      ]
+    }
+  },
+  "selected_next_target": {
+    "id": "NONE",
+    "eligible_successor_count": 0,
+    "strategy_action": "STOP",
+    "construction_authorized": false,
+    "automatic_reopening_authorized": false,
+    "reason": "TWO_POST_V10_CYCLES_CLOSED_STALLED_WITH_ZERO_PROOF_DISTANCE_DECREASE_AND_NO_THEOREM_CAPABLE_SUCCESSOR",
+    "reopen_requires": [
+      "NEW_GOVERNED_CYCLE_WITH_EXPLICIT_USER_AUTHORITY",
+      "GENUINELY_NEW_THEOREM_CAPABLE_INPUT",
+      "CONCRETE_FINITE_ROUTE_FOR_ONE_FIRST_MISSING_GLOBAL_EDGE",
+      "PREDECLARED_THEOREM_LEVEL_STRICT_DECREASE",
+      "FRESH_CANONICAL_OPENING_AUDIT_AND_INDEPENDENT_REPLAY"
+    ],
+    "prohibited_automatic_continuations": [
+      "REPEAT_GLOBAL_SREP_WITHOUT_NEW_BACKEND_DENOMINATOR_AND_CLOSED_FORMULAS",
+      "RUN_TRIPLE_SATURATION_Q1_WITHOUT_COMPONENT_CERTIFICATES_AND_END_TO_END_RESOURCE CONTRACT",
+      "REPEAT_MIXED_100_INTERFACE_WITHOUT_NEW_GEOMETRIC_CARRIER_INPUT",
+      "PAIR_CAD_OR_LOCAL_MASTER_ATLAS_REVIVAL",
+      "TRIPLE_ATLAS_GROWTH_OR_RESIDUAL_SAMPLING_WITHOUT_COMPONENT_COMPLETE_ATTACHMENT",
+      "FACTOR19069_OR_D9_LOCAL_CONTINUATION",
+      "CLOUD_ACTIVATION_WITHOUT_A_HASH_PINNED_ELIGIBLE_JOB"
+    ]
+  },
+  "process_gates": {
+    "v11_is_current_target_selector": true,
+    "v10_is_immutable_historical_input": true,
+    "active_research_cycle_exists": false,
+    "active_target_exists": false,
+    "same_route_continue_allowed": false,
+    "mathematical_construction_authorized": false,
+    "theorem_credit_authorized": false,
+    "ledger_promotion_authorized": false,
+    "github_remains_read_only": true,
+    "network_research_authorized": false,
+    "author_contact_authorized": false,
+    "work_scope_is_9dvl_only": true
+  },
+  "source_pins": {
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json": "405e1f34789e999d2b8725881a4b99c1db81cec3ecfa70abcdfa9b3fbb7a46bf",
+    "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CLOSING_MANIFEST.json": "f64592cf7f5bd991a7085ebc0f6197ed0b5361f6605a053fc0ad814a1dbff428",
+    "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CYCLE_REPORT.md": "89daf49e419b23bcdf91830c883a8ba381c226da2a366ef894c64cb3465073d6",
+    "ops/team/d3-triple-critical-saturation-closing-referee/RESULT.json": "4255bd8e762d73f9a527f7a33f11b6d1574fa9d67caecfcd60657ad91eaef956",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/CLOSING_MANIFEST.json": "28c8eb22c10adadedafe518419484f34ef5f4fc537df6d59f693e6ffd1a32d10",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/CYCLE_REPORT.md": "33b16132e69d6b32965948b27dc31a855f2bc4917cc40e1f8173d1b1bb2364a5",
+    "ops/team/d3-mixed-100-independent-verifier/RESULT.json": "ed8622edae163351309b1d1ade580ee9bf964118bd793f8c52cedf01642d7868",
+    "ops/team/d3-mixed-100-closing-referee/RESULT.json": "288f82a4b3ff081349db72d5cf9ef9602bd26bb459f5e58a8817dff62b955eae"
+  }
+}

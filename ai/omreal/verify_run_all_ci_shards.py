@@ -14,7 +14,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 RUN_ALL = ROOT / "run_all.py"
 COUNTS = (1, 2, 4, 7, 8)
-EXPECTED_SELECTED = 303
+EXPECTED_SELECTED = 316
 EXPECTED_CI_DELEGATED_PATHS = {
     "ai/omreal/verify_diag2_escape_set_atlas178.py",
     "ai/omreal/verify_diag3_ordered_root_atlas178.py",
