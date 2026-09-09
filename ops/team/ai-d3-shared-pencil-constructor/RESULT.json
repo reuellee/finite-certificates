@@ -1,0 +1,89 @@
+{
+  "format": "ai-d3-shared-pencil-constructor-v1",
+  "cycle_id": "2026-09-05-ai-only-d3-structural-reset",
+  "stage": "B",
+  "role": "source-constructor",
+  "base_revision": "ee7c110a0862ec2da961a4b8c9987a0b90e03a0a",
+  "status": "EXACT_ROUTE_COUNTERCERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+  "conditional_theorem": {
+    "restricted_predicate_equivalent_to_common_label_union_degree_at_most_two": true,
+    "zero_weights_allowed": true,
+    "derived_rank_drops_allowed": true,
+    "finite_choices": 1680,
+    "proper_path_from_each_successful_point": true,
+    "frame": "Five nonmoving labels, positive-determinant ordered basis, fixed signed-simplex normalization for moving label",
+    "residence": "Bounded convex open interval after intersecting the two retained planes",
+    "endpoint": "A genuine parent bracket or frame-coordinate zero; no arbitrary affine-chart infinity",
+    "global_continuous_choice_required_for_hc0": false,
+    "universal_predicate_would_imply_triple_hc0_zero": true,
+    "pair_hc1_consequence": false
+  },
+  "universal_attempt": {
+    "route": "Common-parent Koszul kernel and circuit exchanges to force a shared restricted-infeasibility graph edge",
+    "missing_attempted_step": "A sign-compatible exchange giving a common edge in three graphs on the 21 e-star triples for some e",
+    "endpoint": "Complete exact obstruction to that conclusion on the registered admissible flow triple",
+    "universal_proof_claimed": false,
+    "more_general_rank_two_star_or_multilabel_escape_refuted": false
+  },
+  "countercertificate": {
+    "file": "OBSTRUCTION.json",
+    "source": "ai/omreal/data/seeat_parent2599_upper178.npz",
+    "array": "chart_matrix",
+    "chart": 0,
+    "signatures": [14988895318912, 3405195891438080, 40418075143643136],
+    "negative_row_pair_choices": 1680,
+    "integer_strict_inequalities": 62160,
+    "minimum_integer_margin": 6858251431715,
+    "full_bad_gordan_witnesses": 3,
+    "same_parent_realized_good_controls": [3, 14, 2],
+    "ordered_incomparability_bindings": 6,
+    "nonempty_proper_pairwise_incomparable_regions_certified": true,
+    "source_matrices_reconstructed_from_npz": true,
+    "gp_signature_validity_checked": true,
+    "scope": "Countercertificate to the universal shared-two-triple pencil predicate only; no D3 counterexample or compact triple-bad component"
+  },
+  "cohort": [
+    {"case": "shatter_pattern_0", "status": "EXACT_POSITIVE_SHARED_PENCIL", "label": 1, "retained_triples": ["134", "127"], "positive_pairs_exhaustively_counted": false},
+    {"case": "upper_chart_7", "status": "INELIGIBLE", "feasible_block": 2, "feasible_signature": 58432476850159616},
+    {"case": "upper_chart_0", "status": "EXACT_NEGATIVE_ALL_1680_CHOICES"}
+  ],
+  "verification": {
+    "command": "python -B ops/team/ai-d3-shared-pencil-constructor/verify_controls.py",
+    "exit_code": 0,
+    "output": "TEST_OUTPUT.json",
+    "dependencies": "Python standard library only",
+    "imports_producer_code": false,
+    "uses_floating_arithmetic": false,
+    "uses_numerical_search_completeness": false,
+    "gp_relations_checked": 11340,
+    "numerical_proposal_scripts": ["search_controls.py", "certify_obstruction.py"],
+    "acceptance_authority_exercised": false
+  },
+  "decision": {
+    "proposed_after_independent_acceptance": "RETIRE",
+    "route": "Universal pointwise shared-two-triple pencil criterion",
+    "conditional_escape_lemma_retained": true,
+    "d3_ledger": "2/9",
+    "d3_pair_hc1": "OPEN",
+    "d3_triple_hc0": "OPEN",
+    "d3_trajectory": "INFORMATIONAL",
+    "discovery_stopped_at_exact_endpoint": true,
+    "new_cohort_or_weakened_successor_opened": false
+  },
+  "governance": {
+    "own_surface_only": "ops/team/ai-d3-shared-pencil-constructor",
+    "old_source_lane_modified": false,
+    "active_falsifier_artifacts_read": false,
+    "preliminary_coordinator_result_received": true,
+    "countercertificate_reconstructed_independently_from_source": true,
+    "human_contact": false,
+    "paid_compute": false,
+    "external_compute_jobs": 0,
+    "broad_cad_runs": 0,
+    "pushes": 0,
+    "merges": 0,
+    "canonical_edits": 0
+  },
+  "resource_accounting": "RESOURCE_ACCOUNTING.json",
+  "source_pins": "SOURCE_MANIFEST.json"
+}

@@ -1,0 +1,179 @@
+{
+  "schema": "9dvl-d3-height-fiber-investigation-v1",
+  "closed_at_utc": "2026-09-05T17:09:38.9149259Z",
+  "base_revision": "8cab91141240236a203f812f490901b3a67573d2",
+  "base_tree": "1fd457ed04e1a9b8565705febde4fb9f99fae61a",
+  "authority": "User: figure out what will get us to 3/9 and get it done",
+  "milestone_achieved": false,
+  "ledger": "2/9",
+  "triple_source_residual": 1162302,
+  "pair_coverage": "UNKNOWN",
+  "classification": "INFORMATIONAL",
+  "proof_endpoint": "NULL",
+  "action": "STOP_BOUNDED_CALCULATION",
+  "independent_review": "NOT_PERFORMED",
+  "verified_identities": {
+    "source_minors": 56,
+    "unit_pivot": 56,
+    "multiplier": 8,
+    "rank_drop_countermodel": 1
+  },
+  "solver_runs": "3 full-size runs; no completed basis; one preliminary unsupported-characteristic call",
+  "canonical_sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+  "canonical_verifier": "PASS",
+  "existing_protocol_verifier": "PASS; 24 historical cycles and 97 work orders",
+  "github_publication": "NONE",
+  "files": [
+    {
+      "path": "ARITHMETIC_REPLAY.json",
+      "bytes": 826,
+      "sha256": "7190c387353bf084a39368916393fcbcb485cba3e13168b3661dc1a10f954562"
+    },
+    {
+      "path": "cas_input_manifest.json",
+      "bytes": 669,
+      "sha256": "f1a1d4823777ed8eb6404e0e796bfb2deb4791797ed0636f3b2d95e3b0073ed9"
+    },
+    {
+      "path": "discovery.json",
+      "bytes": 9258,
+      "sha256": "304606d4719040311a7d837f85fc968e4e99ba212ac4e489a929104f903b9ef2"
+    },
+    {
+      "path": "evidence/critical_lagrange_p1073741827.basis",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/critical_lagrange_p1073741827.ms",
+      "bytes": 1842,
+      "sha256": "563dd8284be65c534693eeb671d71eedbb266ac897ab4da2ca2d3280bd635ba9"
+    },
+    {
+      "path": "evidence/critical_lagrange_p1073741827.run.json",
+      "bytes": 622,
+      "sha256": "bc45f81fa9de19861c1304fce430f5527d875c4c87aacbfd5d09c29c6593c5be"
+    },
+    {
+      "path": "evidence/critical_lagrange_p1073741827.transcript.txt",
+      "bytes": 2932,
+      "sha256": "f061e20d86544d94c70621e451a8e5e8e65142bebb7abb7905a62fa90c10bacd"
+    },
+    {
+      "path": "evidence/critical_pivot_more_p1073741827.basis",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/critical_pivot_more_p1073741827.ms",
+      "bytes": 19159,
+      "sha256": "e29256431e9dbb899c3fb93af5a0c2da12a9418707ed12eda84743083159d552"
+    },
+    {
+      "path": "evidence/critical_pivot_more_p1073741827.run.json",
+      "bytes": 637,
+      "sha256": "d24560084dbd43f9ee1dce7f89baae7e938ad0312c0367f3d56b1b0830fbcf88"
+    },
+    {
+      "path": "evidence/critical_pivot_more_p1073741827.transcript.txt",
+      "bytes": 2713,
+      "sha256": "fbddaca0071b165e869cab77411711d0b5324f3bfb4e93cec7ddb571c71f392f"
+    },
+    {
+      "path": "evidence/critical_pivot_more_p65521.ms",
+      "bytes": 19154,
+      "sha256": "792a302af803aa5d92e96c399b298911ecc38ef978525dea7a26904faeadefa1"
+    },
+    {
+      "path": "evidence/critical_pivot_p1073741827.basis",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/critical_pivot_p1073741827.ms",
+      "bytes": 13955,
+      "sha256": "629bc4e4828d8e97c560ec84092b04b2dadeb57167622da17febd3a51738b9ac"
+    },
+    {
+      "path": "evidence/critical_pivot_p1073741827.run.json",
+      "bytes": 623,
+      "sha256": "45af6aab98dc9ad8e1ee181a22d25effa7294b615c72c6fa44065f18191d0d61"
+    },
+    {
+      "path": "evidence/critical_pivot_p1073741827.transcript.txt",
+      "bytes": 6279,
+      "sha256": "b635e4e90cd3c01219343b13daba2d205d94d32724beb009794b2ecfb7367fc8"
+    },
+    {
+      "path": "evidence/critical_pivot_p65521.basis",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/critical_pivot_p65521.ms",
+      "bytes": 13950,
+      "sha256": "27358e36867f64c51e1520b4742fa9a89b08ba54d1b9db0e45a8a6eff0b07c13"
+    },
+    {
+      "path": "evidence/critical_pivot_p65521.run.json",
+      "bytes": 606,
+      "sha256": "e5de131a207dbd5805b75b0202436d6dc22162a5bfe83a742d0a26f2d2d68ae7"
+    },
+    {
+      "path": "evidence/critical_pivot_p65521.transcript.txt",
+      "bytes": 368,
+      "sha256": "3aee5768165f095926588056ba174cd9c712332ae11733ffb9c43b83dac3ac07"
+    },
+    {
+      "path": "evidence/critical_pivot_Q.ms",
+      "bytes": 13967,
+      "sha256": "09b53d2250b19ff16daf0e44459cc43a92bba7f211f670f77516714ab993a65a"
+    },
+    {
+      "path": "explore.py",
+      "bytes": 1540,
+      "sha256": "b67d8162571490ca7e8e23233482e36a57121f6781900e9632c7f2adcdc99379"
+    },
+    {
+      "path": "export_cas.py",
+      "bytes": 2215,
+      "sha256": "d3df61f83d660fc14e9451ab0588c286f9f63c9124bc58136d2437e372e80cda"
+    },
+    {
+      "path": "OPENING.md",
+      "bytes": 4040,
+      "sha256": "8ef236287271552a40752a7dc1c573b6c177ad1545849af55c1828cf1667d24c"
+    },
+    {
+      "path": "RAW_SOLVER_EVIDENCE.zip",
+      "bytes": 24666,
+      "sha256": "9b29dbe4d07ae33a20696af6e5a0d3477577d61103dc5938ba17724206d273bf"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 10353,
+      "sha256": "51747c4b1f06ec2eda21c6c4b8d4eaeaf85151ed347f9fbf67626c284c52e217"
+    },
+    {
+      "path": "run_solver.py",
+      "bytes": 1557,
+      "sha256": "dc8b2fcd3fa40950ab1f861af000c4cfcce9fb4d311b120e5b13828d4696eb7c"
+    },
+    {
+      "path": "strip_units.py",
+      "bytes": 1525,
+      "sha256": "6cad47bda8504411b641076de38574ea3b42be19207327634a7919672683daec"
+    },
+    {
+      "path": "stripped_units.json",
+      "bytes": 16858,
+      "sha256": "51d87d25f42efc49ded2693bd89ff03e540a1eb8cc50b19686561f87b70cdaa7"
+    },
+    {
+      "path": "verify_height_chart.py",
+      "bytes": 5324,
+      "sha256": "1db8e4bd6ccc23663832555ab9b6117d938a4f2d80ce6c91ee994858f91d76db"
+    }
+  ],
+  "evidence_preservation": "Raw bytes in RAW_SOLVER_EVIDENCE.zip; readable copies normalized only for line endings and trailing whitespace"
+}

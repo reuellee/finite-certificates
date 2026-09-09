@@ -1,0 +1,216 @@
+{
+  "format": "ai-d3-source-audit-independent-referee-v1",
+  "reviewed_base": "9aefa1d783ffae751406c4e295e228153041772c",
+  "source_candidate_commits": [
+    "13b54136ba0e226c60f23235e706ffa31e85ab41",
+    "76d168e746e6dc3996496bdf1fd08eb83d165b53"
+  ],
+  "source_integration_commits": [
+    "286c3ea",
+    "d0431c0"
+  ],
+  "falsifier_integration_commit": "ce71070",
+  "branch": "research/ai-d3-source-audit-referee-20260905",
+  "frozen_at_utc": "2026-09-05T14:25:07.706646+00:00",
+  "decision": "ACCEPT_EXPLICIT_SOURCE_EXISTENCE_THEOREM",
+  "source_existence_route_decision": "STOP_AT_PROVED_ENDPOINT",
+  "generic_implication_route_decision": "RETIRE_GENERIC_SOURCE_PLUS_LOWER_VANISHING_IMPLIES_D3",
+  "stage_b_decision": "NOT_REVIEWED",
+  "accepted_statement": "For every realizable uniform labeled rank-four parent on eight elements, all realization components and every finite signature family have simultaneous finite compact-relative source pairs, literal zero-padding, finite declared semialgebraic compatibility, and natural integral compact-support Mayer-Vietoris under the positive-block support-cardinality filtration.",
+  "clause_decisions": {
+    "1_open_complement": "ACCEPT_AS_FINITE_POLYHEDRON_MINUS_SUBCOMPLEX",
+    "2_compact_support_over_Z": "ACCEPT_NATURAL_PROPER_FIBER_COMPARISON",
+    "3_zero_padding": "ACCEPT_LITERAL_SUBCOMPLEX_INCLUSIONS",
+    "4_finite_strata_and_true_boundary": "ACCEPT_FOR_FINITE_DECLARED_FAMILY_AND_BLOCK_SUPPORT_CARDINALITY",
+    "5_filtered_Mayer_Vietoris": "ACCEPT_INTEGRAL_EXACT_COUPLES_AND_NATURAL_RESTRICTION_MAPS"
+  },
+  "gauge": {
+    "fixed_chirotope_convention": "chi(1234)=+1; quotient by GL^+(4,R) and positive column scalings",
+    "equivalent_full_GL_convention": "Use {chi,-chi} with consistent extension-sign representatives",
+    "all_components": "PROVED_BY_GLOBAL_QUOTIENT_HOMEOMORPHISM",
+    "project_base_compatibility": "PROVED_FOR_NINE_DIMENSIONAL_POSITIVE_PROJECTIVE_QUOTIENT",
+    "independent_negative_column_scalings": "NOT_QUOTIENTED",
+    "label_permutations": "NOT_QUOTIENTED",
+    "normal_transport": "PROVED_WITH_DETERMINANT_SIGN",
+    "weight_zero_faces_and_block_support": "PRESERVED",
+    "numerical_block_masses_under_global_weight_normalization": "NOT_GENERALLY_PRESERVED",
+    "homeomorphism_of_arbitrary_chosen_boundary_compactifications": "NOT_ASSERTED"
+  },
+  "effectivity": {
+    "effective_existence": "ACCEPT_FOR_EFFECTIVELY_REPRESENTED_REAL_ALGEBRAIC_INPUTS",
+    "uniform_in_finite_input": "ACCEPT",
+    "enumerative_termination_proof": "ACCEPT",
+    "practical_complexity_bound": "NOT_PROVED_OR_REQUIRED",
+    "all_parent_triangulations_constructed": false,
+    "reported_2604_count_reverified": false
+  },
+  "original_draft_precision_corrections": [
+    "Residual positive diagonal frame map is required; column-five scalar alone is insufficient.",
+    "Fix the chirotope orientation and extension-sign convention.",
+    "Noncompact sources are complements of relative subcomplexes, not finite closed complexes.",
+    "Equation-defined compact envelopes may contain boundary-only fibers; density is not asserted.",
+    "Block filtration means support cardinality, not every real numerical mass sublevel.",
+    "Finite declared labels and simplex orientations do not imply old carrier bindings or manifold orientation.",
+    "Automatic seven-to-three canonical-obligation reduction is rejected."
+  ],
+  "source_handoff_remaining_mathematical_gap": null,
+  "falsifier_distinctions": {
+    "both_invariants_fail": {
+      "pair_kernel_Z_rank": 3,
+      "triple_Hc0_Z_rank": 1,
+      "union_Hc2_Z_rank": 4,
+      "pair_map_row": [],
+      "pair_map_nonzero_Smith_invariants": [],
+      "intersection_dimensions": {
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "01": 1,
+        "02": 1,
+        "12": 1,
+        "012": 0
+      }
+    },
+    "pair_only_failure": {
+      "pair_kernel_Z_rank": 2,
+      "triple_Hc0_Z_rank": 0,
+      "union_Hc2_Z_rank": 2,
+      "pair_map_row": [
+        1,
+        -1,
+        1
+      ],
+      "pair_map_nonzero_Smith_invariants": [
+        1
+      ],
+      "intersection_dimensions": {
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "01": 1,
+        "02": 1,
+        "12": 1,
+        "012": 1
+      }
+    },
+    "triple_only_failure": {
+      "pair_kernel_Z_rank": 0,
+      "triple_Hc0_Z_rank": 1,
+      "union_Hc2_Z_rank": 1,
+      "pair_map_row": [],
+      "pair_map_nonzero_Smith_invariants": [],
+      "intersection_dimensions": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "01": 2,
+        "02": 2,
+        "12": 2,
+        "012": 0
+      }
+    }
+  },
+  "falsifier_scope": {
+    "three_generic_separations": "ACCEPT_OVER_Z",
+    "individual_pair_injectivity_suffices_for_joint_injectivity": false,
+    "actual_parent_counterexample": false,
+    "lower_vanishing_theorems_reaudited": false,
+    "nonrealizability_reason": "Distinct actual uniform-parent normals cannot be proportional; the generic examples have repeated tail normals."
+  },
+  "theorem_accounting": {
+    "accepted_selected_route_existence_nodes": [
+      "frame_normalization_all_parents",
+      "exact_compact_parent_closure",
+      "compact_relative_block_gordan_pair",
+      "simultaneous_labeled_triangulation",
+      "filtration_preserving_compact_support_comparison"
+    ],
+    "canonical_obligations_closed": [],
+    "canonical_open_obligation_count_before": 7,
+    "canonical_open_obligation_count_after": 7,
+    "seven_to_three_inference": "REJECTED_WITHOUT_OLD_CARRIER_COVERAGE_COMPARISONS_OR_COMPLETE_BYPASS",
+    "ledger_before": "2/9",
+    "ledger_after": "2/9",
+    "ledger_delta": 0,
+    "pair_invariant": "OPEN",
+    "triple_invariant": "OPEN",
+    "global_coverage": "UNKNOWN",
+    "certified_exhaustive_residual": "UNKNOWN",
+    "classification": "INFORMATIONAL_FOR_D3_WITH_ACTUAL_PARENT_SOURCE_EXISTENCE_LEMMA_ACCEPTED"
+  },
+  "verification": {
+    "status": "PASS_INDEPENDENT_FINITE_CHECKS",
+    "script": "independent_check.py",
+    "method": "Cramer-bracket gauge; elementary-generator universal covariance; integer augmented-simplex contraction; intersection-poset and Smith-invariant checks.",
+    "producer_code_imported_or_executed": false,
+    "universal_GL_coordinate_identities": 88,
+    "labeled_normal_transports": 112,
+    "integer_Cech_stalk_patterns": 7,
+    "hostile_mutations_rejected": 3,
+    "elapsed_seconds": 4.837388,
+    "global_topology_formalized_by_machine": false
+  },
+  "source_hashes": {
+    "ops/team/ai-d3-reset-source/FINDINGS.md": {
+      "git_blob_sha256": "f32f2fa3904e825a8d83cfb53d658862e53953a933d44c80dc9ae3dee28a43c5",
+      "worktree_sha256": "f32f2fa3904e825a8d83cfb53d658862e53953a933d44c80dc9ae3dee28a43c5"
+    },
+    "ops/team/ai-d3-reset-source/RESULT.json": {
+      "git_blob_sha256": "0d0ba2ecbc281ed10c4c373cde574c2a7ad1598b064da12661a01fa701ed328c",
+      "worktree_sha256": "0d0ba2ecbc281ed10c4c373cde574c2a7ad1598b064da12661a01fa701ed328c"
+    },
+    "ops/team/ai-d3-reset-source/verify_identities.py": {
+      "git_blob_sha256": "4ee8a2e89bd0a693458519c7af407bb8e0c476401ebe4027bbcd08fd3382bb39",
+      "worktree_sha256": "4ee8a2e89bd0a693458519c7af407bb8e0c476401ebe4027bbcd08fd3382bb39"
+    },
+    "ops/team/ai-d3-reset-falsifier/FINDINGS.md": {
+      "git_blob_sha256": "aa451796f65dcb3b1f3a59cd75e7085f51ed98725204be90d7d5d87bdb676c29",
+      "worktree_sha256": "aa451796f65dcb3b1f3a59cd75e7085f51ed98725204be90d7d5d87bdb676c29"
+    },
+    "ops/team/ai-d3-reset-falsifier/COUNTERMODELS.json": {
+      "git_blob_sha256": "a49b40888b4e9e6d7e2299903acaa00b1467fb138fb5a864f27e8d3f9d810657",
+      "worktree_sha256": "a49b40888b4e9e6d7e2299903acaa00b1467fb138fb5a864f27e8d3f9d810657"
+    },
+    "ops/team/ai-d3-reset-falsifier/RESULT.json": {
+      "git_blob_sha256": "41438272d0ba1146f5d1034aface8aa8fda0adfca32b8c1b160c780989a93f9d",
+      "worktree_sha256": "41438272d0ba1146f5d1034aface8aa8fda0adfca32b8c1b160c780989a93f9d"
+    },
+    "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/THEOREM_CANDIDATE.md": {
+      "git_blob_sha256": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a",
+      "worktree_sha256": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a"
+    },
+    "ai/omreal/ATLAS_HELLY.md": {
+      "git_blob_sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "worktree_sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0"
+    },
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": {
+      "git_blob_sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+      "worktree_sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879"
+    },
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": {
+      "git_blob_sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+      "worktree_sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86"
+    }
+  },
+  "artifact_sha256": {
+    "REVIEW.md": "96cc50dfb825254aea9fe7677e8cfe692b6cd23124836990ce404ecd38ec3eb1",
+    "independent_check.py": "4c789a59d9ef86df7577e9418936f5e7ba4ffcc7d19f2e438f66b5d7d3bb1810",
+    "CHECK_OUTPUT.json": "122a2e7e3b479f7f8f40ac8785ef5ef04e7a256d9a5ca028222a3011b35b4e0e"
+  },
+  "resources_and_independence": {
+    "first_clock_read_utc": "2026-09-05T14:08:59+00:00",
+    "minutes_since_first_clock_read": 16.145,
+    "active_duration_and_peak_memory": "NOT_INSTRUMENTED",
+    "wall_ceiling_minutes": 60,
+    "new_file_bytes_before_result": 33248,
+    "human_consultation": false,
+    "paid_or_external_compute": false,
+    "external_access": "READ_ONLY_PRIMARY_LITERATURE",
+    "old_referee_surface_modified": false,
+    "producer_files_modified": false,
+    "canonical_edits": false,
+    "stage_b_inspected": false,
+    "push_or_merge": false
+  },
+  "containing_referee_commit": "Exact containing commit SHA supplied in final handoff; no self-referential file hash."
+}

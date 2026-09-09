@@ -1,0 +1,94 @@
+{
+  "format": "d3-mixed-100-mid-cycle-checkpoint-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "opening": {
+    "commit": "1c6519d89335dde215e93887de074ea4e6d6464a",
+    "tree": "ff8a33e13952e86b27f184e3d8c40e768fbeb110"
+  },
+  "frozen_handoffs": {
+    "constructor": {
+      "lane_commit": "35346bf6093c83d77b24227b660a36760a60b319",
+      "lane_tree": "2dabeee664c946325eb34ed4f833aa547a961344",
+      "integrated_commit": "a92c459340d0f76c3578a49f10cbb7968d07c156",
+      "handoff": "NULL",
+      "assessment": "NULL_STALLED_STOP"
+    },
+    "falsifier": {
+      "lane_commit": "88e20c2e0f4837eaa46787e5cdd564001de5d23c",
+      "lane_tree": "19a4af576823cb9e8650f31216b52768b628657c",
+      "integrated_commit": "833d61bd0702529c892c9b37ad8a2ee5c7b8b972",
+      "handoff": "NO_UNIVERSAL_OBSTRUCTION_FOUND_WITHIN_FROZEN_SCOPE",
+      "assessment": "NULL_STALLED_STOP"
+    }
+  },
+  "integrated_evidence": {
+    "commit": "833d61bd0702529c892c9b37ad8a2ee5c7b8b972",
+    "tree": "736228f57bcbb1bbad355a87266bfb833fb420ce"
+  },
+  "verdict": {
+    "constructor": "NULL",
+    "falsifier": "NULL",
+    "universal_proof": false,
+    "exact_admissible_universal_obstruction": false,
+    "positive_token": null,
+    "negative_token": null,
+    "repair_authorized": false,
+    "discovery_action": "FREEZE_NULL_AND_STOP",
+    "independent_verification_required": true
+  },
+  "first_missing_edge": {
+    "id": "O3_MIXED_GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY",
+    "from": "DECLARED_L_SOURCE_INTERFACE",
+    "to": "O3_universal_mixed_chain",
+    "missing_inputs": [
+      "FINITE_SOURCE_DERIVED_GEOMETRIC_MIXED_C3_FUNCTOR",
+      "RELATIVE_BOUNDARY_SURJECTIVITY_ON_RELEVANT_PRIMITIVES",
+      "PROPER_MIXED_EXCHANGE_CONSTRUCTION",
+      "NATURAL_RIGHT_INVERSE_COMPATIBLE_WITH_ALL_FACE_FLAGS",
+      "TRUE_PARENT_INFINITY_PROVENANCE"
+    ],
+    "bounded_repair": false
+  },
+  "exact_information": {
+    "formal_kernel_cone_exists": true,
+    "formal_kernel_cone_is_integral_and_functorial": true,
+    "formal_kernel_cone_is_geometric_mixed_proper": false,
+    "declared_interface_entails_geometric_carrier": false,
+    "empty_carrier_interpretation_is_actual_9dvl_instance": false,
+    "interface_non_entailment_is_d3_counterexample": false,
+    "row2599_comparison_incidences_certified": 4,
+    "row2599_comparison_incidences_required": 6
+  },
+  "proof_distance": {
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "midpoint_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "selected_route_opening": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_midpoint": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "minimum_acceptable_decrease_met": false,
+    "reachable_inside_remaining_ceiling": false,
+    "trajectory": "STALLED"
+  },
+  "accounting": {
+    "ledger_opening": "2/9",
+    "ledger_midpoint": "2/9",
+    "ledger_delta": "0/9",
+    "canonical_obligations_opening": 7,
+    "canonical_obligations_midpoint": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_residual": 1162302,
+    "formal_taxonomy_is_global_denominator": false,
+    "provisional_3_of_10_is_end_to_end_coverage": false
+  },
+  "source_pins": {
+    "ops/team/d3-mixed-100-carrier-constructor/RESULT.json": "7df547c8de5cc7259107829e3c34ca427992be978517991cab249d209d4c1785",
+    "ops/team/d3-mixed-100-carrier-constructor/SOURCE_MANIFEST.json": "b5a670667f34964bdfd668cab7442b9b146cad9d27a548d9e2b7c35e4f146b00",
+    "ops/team/d3-mixed-100-carrier-constructor/THEOREM_ATTEMPT.md": "b2195e1a52600975be9ab2a0b3fb3139ba19242aa08803c96fe58f7b085b27dc",
+    "ops/team/d3-mixed-100-carrier-constructor/verify_constructor.py": "5cb3cf0ebacf5a40027096e9a1a1c82550f706c31abbbd3c0c4d18bc8a4a2c1c",
+    "ops/team/d3-mixed-100-carrier-falsifier/RESULT.json": "7bc792fe6e4ee8b555de50b42b47cbc713fbc9f5918e7a082a35dac57ff2aa8c",
+    "ops/team/d3-mixed-100-carrier-falsifier/SOURCE_MANIFEST.json": "193194958d475dc8cb76153ef1af30f99f2f5e1998d1e5db819ef151b37ae642",
+    "ops/team/d3-mixed-100-carrier-falsifier/FINDINGS.md": "ec5b43253ba71b244bf496d37ceb182a335c8e08f6260bb079f6f538135b16a6",
+    "ops/team/d3-mixed-100-carrier-falsifier/interface_independence_fixture.json": "205f109543695a25dc99eea6650e60467c971d6f2f12319b3f06fa2c4ef37061",
+    "ops/team/d3-mixed-100-carrier-falsifier/verify_falsifier.py": "690f735f5efd7c4ffb7ddd666dc76a597ce299363f861a269456a9ec1709ba14"
+  }
+}

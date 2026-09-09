@@ -1,0 +1,64 @@
+cycle_id: 2026-09-09-saturation-injectivity
+base_revision: 3a7ce7b5d57543d54eace7707659418cea6d69c9
+base_tree: 7e2e958bcc7fef306bfc309c1502a279925b4ab6
+opening_ledger: 2/9
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+strategy_gate:
+  opening_verdict: PIVOT_CANDIDATE_DESIGN_ONLY
+  closing_required: true
+  stagnation_rule: No local refinement or same-route continuation without original-scope decrease.
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 12
+    zero_ledger_streak: 15
+  convergence_hypothesis: A saturation-certified original attachment reduction simplifies the combined D map.
+  minimum_acceptable_delta: One original quantified obligation closed or strictly smaller globally attached finite residual.
+  mid_cycle_checkpoint: First gate or obstruction; no later than 10 discovery minutes.
+  closing_classification_required: true
+  automatic_pivot_rule: Unchanged attachment forbids same-route CONTINUE.
+work_orders:
+  - track_id: d3-satinj-prover
+    role: constructive_prover
+    surface: ops/team/d3-satinj-prover/
+    worktree: /workspace/scratch/075a82401b1f/satinj-prover
+    publication_authorization: *publication_authorization
+    target: Derive one missing original attachment lemma and exact polynomial failure equations; prove its connection to D or return precise null. No solver before eligibility.
+    resource_ceiling: 20 discovery minutes, 4 GiB, no paid compute.
+    stop_rule: At 8-minute gate or first null; absolute midpoint 10 minutes if no eligible original-scope route.
+    prohibited_scope: No local atlas growth, signing enumeration, fixed-base sampling, global claim on unverified local objects, external writes or humans.
+    worker_restrictions: Edit only assigned surface; commit locally; independent verification never imports producer acceptance logic; no ledger changes.
+  - track_id: d3-satinj-falsifier
+    role: falsifier
+    surface: ops/team/d3-satinj-falsifier/
+    worktree: /workspace/scratch/075a82401b1f/satinj-falsifier
+    publication_authorization: *publication_authorization
+    target: Independently test original-source saturation and attachment hypotheses, preserving signs, rank drops and zero weights; identify exact counterexamples or nulls.
+    resource_ceiling: 20 discovery minutes, 4 GiB, no paid compute.
+    stop_rule: At 8-minute gate or first null; absolute midpoint 10 minutes if no eligible original-scope route.
+    prohibited_scope: No local atlas growth, signing enumeration, fixed-base sampling, global claim on unverified local objects, external writes or humans.
+    worker_restrictions: Edit only assigned surface; commit locally; independent verification never imports producer acceptance logic; no ledger changes.
+  - track_id: d3-satinj-referee
+    role: independent_referee
+    surface: ops/team/d3-satinj-referee/
+    worktree: /workspace/scratch/075a82401b1f/satinj-referee
+    publication_authorization: *publication_authorization
+    target: Independent opening/strategy audit, then candidate mathematics and original-space comparison audit without importing producer acceptance logic.
+    resource_ceiling: 20 discovery minutes, 4 GiB, no paid compute.
+    stop_rule: At 8-minute gate or first null; absolute midpoint 10 minutes if no eligible original-scope route.
+    prohibited_scope: No local atlas growth, signing enumeration, fixed-base sampling, global claim on unverified local objects, external writes or humans.
+    worker_restrictions: Edit only assigned surface; commit locally; independent verification never imports producer acceptance logic; no ledger changes.

@@ -1,0 +1,417 @@
+{
+  "accounting": {
+    "canonical_obligations_closing": 7,
+    "canonical_obligations_opening": 7,
+    "formal_3_of_10_promoted": false,
+    "ledger_closing": "2/9",
+    "ledger_delta": "0/9",
+    "ledger_opening": "2/9",
+    "pair_coverage": "UNKNOWN",
+    "pair_residual": "UNKNOWN",
+    "selected_route_delta": 0,
+    "triple_residual": 1162302
+  },
+  "candidate": {
+    "commit": "a2d78f9c30c13dc199b60355829a862ae7eec54a",
+    "parent": "78738358b76157a68d6b46b8367d902ff0b0a8af",
+    "tree": "3328a17a00c38c76129dc9a7385fba9f9cbfaaff"
+  },
+  "changed_surface": {
+    "canonical_v10_byte_identical_to_base": true,
+    "current_cycle_or_role_paths": 22,
+    "immutable_predecessor_report_matches_its_close_manifest": true,
+    "outside_additions": 29,
+    "outside_change_disposition": "ACCEPT_DISCLOSED_INSERTION_ONLY_COORDINATOR_RECONCILIATION",
+    "outside_current_prefixes": [
+      "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CYCLE_REPORT.md"
+    ],
+    "outside_deletions": 0,
+    "paths_from_base": 23
+  },
+  "clean_replay": {
+    "candidate_commit": "a2d78f9c30c13dc199b60355829a862ae7eec54a",
+    "candidate_tree": "3328a17a00c38c76129dc9a7385fba9f9cbfaaff",
+    "canonical_opening_constructor_falsifier_midpoint_independent_and_candidate_checks": "PASS_7_OF_7",
+    "method": "GIT_CLONE_NO_HARDLINKS_DETACHED_AT_CANDIDATE",
+    "working_tree_clean_after_replay": true
+  },
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "format": "d3-mixed-100-independent-closing-referee-result-v1",
+  "hostile_mutations": {
+    "all_rejected": true,
+    "rejected": 57,
+    "results": [
+      {
+        "id": "reject_status",
+        "rejected": true
+      },
+      {
+        "id": "promote_verdict",
+        "rejected": true
+      },
+      {
+        "id": "move_candidate",
+        "rejected": true
+      },
+      {
+        "id": "move_tree",
+        "rejected": true
+      },
+      {
+        "id": "move_parent",
+        "rejected": true
+      },
+      {
+        "id": "hide_changed_path",
+        "rejected": true
+      },
+      {
+        "id": "hide_exception",
+        "rejected": true
+      },
+      {
+        "id": "broaden_exception",
+        "rejected": true
+      },
+      {
+        "id": "historical_deletion",
+        "rejected": true
+      },
+      {
+        "id": "predecessor_drift",
+        "rejected": true
+      },
+      {
+        "id": "canonical_drift",
+        "rejected": true
+      },
+      {
+        "id": "constructor_not_independent",
+        "rejected": true
+      },
+      {
+        "id": "falsifier_saw_constructor",
+        "rejected": true
+      },
+      {
+        "id": "verifier_started_early",
+        "rejected": true
+      },
+      {
+        "id": "lane_path_escape",
+        "rejected": true
+      },
+      {
+        "id": "accept_agreement",
+        "rejected": true
+      },
+      {
+        "id": "constructor_positive",
+        "rejected": true
+      },
+      {
+        "id": "falsifier_negative",
+        "rejected": true
+      },
+      {
+        "id": "verifier_positive",
+        "rejected": true
+      },
+      {
+        "id": "grant_positive",
+        "rejected": true
+      },
+      {
+        "id": "grant_negative",
+        "rejected": true
+      },
+      {
+        "id": "close_O3",
+        "rejected": true
+      },
+      {
+        "id": "close_O4",
+        "rejected": true
+      },
+      {
+        "id": "geometrize_cone",
+        "rejected": true
+      },
+      {
+        "id": "invent_entailment",
+        "rejected": true
+      },
+      {
+        "id": "promote_empty_model",
+        "rejected": true
+      },
+      {
+        "id": "promote_non_entailment",
+        "rejected": true
+      },
+      {
+        "id": "opening_streak_drift",
+        "rejected": true
+      },
+      {
+        "id": "midpoint_progress",
+        "rejected": true
+      },
+      {
+        "id": "closing_streak_drift",
+        "rejected": true
+      },
+      {
+        "id": "close_route",
+        "rejected": true
+      },
+      {
+        "id": "claim_decrease",
+        "rejected": true
+      },
+      {
+        "id": "claim_minimum",
+        "rejected": true
+      },
+      {
+        "id": "converging",
+        "rejected": true
+      },
+      {
+        "id": "disable_reset",
+        "rejected": true
+      },
+      {
+        "id": "continue",
+        "rejected": true
+      },
+      {
+        "id": "pivot",
+        "rejected": true
+      },
+      {
+        "id": "retire",
+        "rejected": true
+      },
+      {
+        "id": "same_route",
+        "rejected": true
+      },
+      {
+        "id": "select_successor",
+        "rejected": true
+      },
+      {
+        "id": "grant_credit",
+        "rejected": true
+      },
+      {
+        "id": "promote_ledger",
+        "rejected": true
+      },
+      {
+        "id": "close_obligation",
+        "rejected": true
+      },
+      {
+        "id": "invent_route_delta",
+        "rejected": true
+      },
+      {
+        "id": "invent_pair_denominator",
+        "rejected": true
+      },
+      {
+        "id": "invent_pair_coverage",
+        "rejected": true
+      },
+      {
+        "id": "invent_triple_progress",
+        "rejected": true
+      },
+      {
+        "id": "promote_taxonomy",
+        "rejected": true
+      },
+      {
+        "id": "exceed_ceiling",
+        "rejected": true
+      },
+      {
+        "id": "extra_handoff",
+        "rejected": true
+      },
+      {
+        "id": "use_repair",
+        "rejected": true
+      },
+      {
+        "id": "invent_job",
+        "rejected": true
+      },
+      {
+        "id": "use_external_compute",
+        "rejected": true
+      },
+      {
+        "id": "write_github",
+        "rejected": true
+      },
+      {
+        "id": "shared_clone",
+        "rejected": true
+      },
+      {
+        "id": "dirty_replay",
+        "rejected": true
+      },
+      {
+        "id": "failed_replay",
+        "rejected": true
+      }
+    ],
+    "total": 57
+  },
+  "lane_independence": {
+    "constructor_and_falsifier_both_fork_from_opening": true,
+    "each_lane_changed_only_its_owned_surface": true,
+    "falsifier_lane_contains_no_constructor_surface": true,
+    "lane_changed_paths": {
+      "constructor": [
+        "ops/team/d3-mixed-100-carrier-constructor/RESULT.json",
+        "ops/team/d3-mixed-100-carrier-constructor/SOURCE_MANIFEST.json",
+        "ops/team/d3-mixed-100-carrier-constructor/THEOREM_ATTEMPT.md",
+        "ops/team/d3-mixed-100-carrier-constructor/verify_constructor.py"
+      ],
+      "falsifier": [
+        "ops/team/d3-mixed-100-carrier-falsifier/FINDINGS.md",
+        "ops/team/d3-mixed-100-carrier-falsifier/RESULT.json",
+        "ops/team/d3-mixed-100-carrier-falsifier/SOURCE_MANIFEST.json",
+        "ops/team/d3-mixed-100-carrier-falsifier/interface_independence_fixture.json",
+        "ops/team/d3-mixed-100-carrier-falsifier/verify_falsifier.py"
+      ],
+      "verifier": [
+        "ops/team/d3-mixed-100-independent-verifier/RESULT.json",
+        "ops/team/d3-mixed-100-independent-verifier/REVIEW.md",
+        "ops/team/d3-mixed-100-independent-verifier/SOURCE_MANIFEST.json",
+        "ops/team/d3-mixed-100-independent-verifier/verify_independent.py"
+      ]
+    },
+    "producer_agreement_used_as_acceptance": false,
+    "verifier_forks_after_both_handoffs_and_midpoint": true
+  },
+  "nonconsequences": [
+    "NO_O3_OR_O4_PROOF",
+    "NO_EXACT_ADMISSIBLE_FULL_NEGATIVE",
+    "NO_GENUINELY_MIXED_GEOMETRIC_CELL_CONSTRUCTED_OR_EXCLUDED",
+    "NO_GLOBAL_L_SOURCE_OR_PAIR_COMPLEX",
+    "NO_PAIR_OR_TRIPLE_BRANCH_CLOSURE",
+    "NO_D3_OR_9DVL_PROOF_OR_COUNTEREXAMPLE",
+    "NO_LEDGER_CHANGE",
+    "NO_HUMAN_REVIEW",
+    "NO_AUTOMATIC_SUCCESSOR"
+  ],
+  "object_chain": {
+    "base": {
+      "commit": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+      "tree": "117850b25cd94f865cb85e681c465b8260dd9c6a"
+    },
+    "constructor_integrated": "a92c459340d0f76c3578a49f10cbb7968d07c156",
+    "constructor_lane": "35346bf6093c83d77b24227b660a36760a60b319",
+    "falsifier_integrated": "833d61bd0702529c892c9b37ad8a2ee5c7b8b972",
+    "falsifier_lane": "88e20c2e0f4837eaa46787e5cdd564001de5d23c",
+    "midpoint": "69983136e6f222ede46433da12a674dda613244e",
+    "opening": {
+      "commit": "1c6519d89335dde215e93887de074ea4e6d6464a",
+      "tree": "ff8a33e13952e86b27f184e3d8c40e768fbeb110"
+    },
+    "verifier_integrated": "78738358b76157a68d6b46b8367d902ff0b0a8af",
+    "verifier_lane": "e92c489d703c1e1adc9365b66884f5cb03322287"
+  },
+  "proof_distance": {
+    "automatic_strategy_reset": "FIRED",
+    "closing_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      9,
+      12
+    ],
+    "midpoint_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      8,
+      11
+    ],
+    "minimum_acceptable_decrease_met": false,
+    "opening_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      8,
+      11
+    ],
+    "same_route_continue": false,
+    "selected_route_closing": [
+      "O3_universal_mixed_chain",
+      "O4_arbitrary_flag_coherence"
+    ],
+    "selected_route_opening": [
+      "O3_universal_mixed_chain",
+      "O4_arbitrary_flag_coherence"
+    ],
+    "selected_successor": "NONE",
+    "strategy_action": "STOP",
+    "strict_decrease": false,
+    "theorem_credit": "NONE",
+    "trajectory": "STALLED"
+  },
+  "resources": {
+    "ceiling_seconds": 14400,
+    "constructor_handoffs": 1,
+    "github_write_push_or_merge": false,
+    "network_or_external_compute": false,
+    "opening_to_integrated_verifier_seconds": 1598,
+    "peak_ram": "NOT_CONTINUOUSLY_MEASURED_NO_VALUE_INVENTED",
+    "research_saturation_or_cad_jobs": 0,
+    "role_surface_bytes_before_close": 153277,
+    "verifier_directed_repairs": 0
+  },
+  "status": "PASS",
+  "theorem_gate": {
+    "O3": "OPEN",
+    "O4": "OPEN",
+    "constructor": "NULL",
+    "empty_carrier_is_actual_admissible_9dvl_instance": false,
+    "falsifier": "NULL",
+    "first_missing_edge": "DECLARED_L_SOURCE_INTERFACE_TO_O3_MIXED_GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY",
+    "formal_kernel_cone": "EXACT_INTEGRAL_STRICTLY_FUNCTORIAL_ALGEBRAIC_CONTROL_ONLY",
+    "formal_kernel_cone_is_geometric_carrier": false,
+    "independent_verdict": "NULL_STALLED_STOP_INDEPENDENTLY_CONFIRMED",
+    "interface_entails_geometric_mixed_proper_realization": false,
+    "interface_non_entailment_is_full_negative": false,
+    "negative_token_eligible": false,
+    "positive_token_eligible": false
+  },
+  "track_id": "d3-mixed-100-closing-referee",
+  "verdict": "ACCEPT_EXACT_FROZEN_NULL_STALLED_STOP_NONE"
+}

@@ -1,0 +1,18 @@
+{
+  "base_revision": "ee7c110a0862ec2da961a4b8c9987a0b90e03a0a",
+  "hash_algorithm": "SHA-256",
+  "pins": {
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_B_SHARED_PENCIL.md": "e64b2632f58d6510236ca71cfb004bac65c59d0dfeb711154bef9a37261a8e81",
+    "ai/omreal/DIAG9_GRAPH_exact_topes.py": "aa1bb32b1fee5f9e11805352f2b072f6ee10c5dbb003c8dd4a0b530382d638df",
+    "ai/omreal/BLOCK_GORDAN_HARD_TRIPLE_PIVOT.py": "ee5dc9f38b64c33d4387d4db12b885f88e5118bb0305a0004ce07872b25f966e",
+    "ai/omreal/verify_diag3_joined_flow_triangle.py": "ac01851b53d4bed1c859f74bad2e71a5025825fe7accdac13263f5d6518a0944",
+    "ai/omreal/verify_diag2_moving_witness_shear.py": "bee7dc42cb330cff78b888f8ff337946ab9d7f1964cd494357d071f8df4b2329",
+    "ai/omreal/four_chart_gate.py": "4697201fb5d17b9f6bd9091c59b6fc7bae7f8f7f23bfe4fdd5e07afd796dc0cf",
+    "ai/omreal/verify_seeat_shatter8.py": "1a78fd9e6d7205e0b040c78f8f250913070bb1d177d9fc14d011f6e56a6fb904",
+    "ai/omreal/verify_seeat_upper_bound.py": "669e8a7e6c39d9f7ffaede5043bd31a9b7d52bc3af69cdad9c54b06cfe4bf2a7",
+    "ai/omgamma/data/cat_4_8.txt": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5",
+    "ai/omreal/data/seeat_parent2599_shatter8.npz": "d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a"
+  },
+  "validation_source_pin_check": "PASS"
+}

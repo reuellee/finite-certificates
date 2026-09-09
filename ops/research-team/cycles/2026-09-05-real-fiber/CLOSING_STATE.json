@@ -1,0 +1,135 @@
+{
+  "accepted_counter_basis": "Count this completed cycle once after inherited accepted 10/13; interim unaccepted cycle closures not inferred; historical V11 unchanged.",
+  "auxiliary_classification": "INFORMATIONAL",
+  "auxiliary_results": [
+    {
+      "claim": "Entire compact fixed-base oval lies within one uniform parent sign component",
+      "scope": "One source slice, no compact full-source or actual triple-bad component",
+      "verdict": "ACCEPT"
+    },
+    {
+      "claim": "Generic same-factor occurrence H1 vanishes for any finite number of signed blocks over any coefficient ring",
+      "scope": "Retained generic factor classification and pencil; no frontier map or original extension replacement",
+      "verdict": "ACCEPT"
+    },
+    {
+      "claim": "All 28 constant symmetric second-order operators on the original graph numerator are independent",
+      "scope": "Polynomial identities with constant coefficients on this numerator; no general escape theorem",
+      "verdict": "ACCEPT"
+    }
+  ],
+  "backup": {
+    "clean_restore_record_in_package": "CLEAN_RESTORE_REPLAY.json",
+    "complete_history": true,
+    "drive_recovery_folder_id": "1vuCkB2Yd2D2rDwwFcKgqT7ZaAOXKwpFX",
+    "final_revision_recorded_externally_to_avoid_self_reference": true,
+    "manifest_in_package": "RECOVERY_MANIFEST.json",
+    "package": "9DVL_REAL_FIBER_2026-09-05.zip",
+    "standalone_report": "9DVL_REAL_FIBER_2026-09-05.md"
+  },
+  "base": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "base_tree": "c49c2e6625f3ee76d77cc263897366dcf7e037c2",
+  "closed_utc": "2026-09-05T19:00:54.076688+00:00",
+  "closing_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    11,
+    14
+  ],
+  "frozen_producer_bytes_unchanged": true,
+  "github_write": false,
+  "global_component_coverage": "UNKNOWN",
+  "human_consultation": false,
+  "independent_final_acceptance": "ACCEPT_AUXILIARY_ONLY",
+  "independent_referee_integrated_commit": "dadd43d3d5a5fd689c789caac74c35864976e520",
+  "independent_referee_raw_commit": "ddac58bebd46fe8dd5effa440a3a23529e9676c8",
+  "ledger": "2/9",
+  "minimum_acceptable_decrease_met": false,
+  "next_required_input": [
+    "quantified moving-base escape or exact parent-unit critical identity",
+    "original oriented factor-end blocks and true-infinity attachment with exact middle-rank proof"
+  ],
+  "numerical_critical_search": "HEURISTIC_NULL_NO_EMPTINESS_CREDIT",
+  "open_diagonals": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "open_obligations": {
+    "diag3_pair_hc1": "INCONCLUSIVE",
+    "diag3_triple_hc0": "INCONCLUSIVE",
+    "extension_labels": "INCONCLUSIVE",
+    "global_gluing": "INCONCLUSIVE",
+    "middle_rank_replay": "INCONCLUSIVE",
+    "relative_infinity": "INCONCLUSIVE",
+    "strict_closure": "INCONCLUSIVE"
+  },
+  "opening_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    10,
+    13
+  ],
+  "original_full_source_target": "NULL",
+  "original_obligations_closed": 0,
+  "original_pair_target": "NULL",
+  "original_source_pins_unchanged": {
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ops/team/d3-bracket-chart/REPORT.md": "4c16c68de079e39ae1b913024cf63ff3c1dd7efd2cec9de77e013c6ad76d3f0c",
+    "ops/team/d3-height-fiber/REPORT.md": "51747c4b1f06ec2eda21c6c4b8d4eaeaf85151ed347f9fbf67626c284c52e217"
+  },
+  "paid_compute_or_api": false,
+  "pair_residual": "UNKNOWN",
+  "proved_diagonals": [
+    1,
+    2
+  ],
+  "raw_worker_branches": {
+    "refs/heads/agent/d3-global-prover-20260905": "2c0ec834efc6c8e3dd328522895ef4ad402d8796",
+    "refs/heads/agent/d3-independent-referee-20260905": "ddac58bebd46fe8dd5effa440a3a23529e9676c8",
+    "refs/heads/agent/d3-oval-falsifier-20260905": "1b66decbab553750e2af2ab9bfc5bd652ef0d5d4",
+    "refs/heads/agent/d3-pair-prover-20260905": "a58ad39dce2d3444372f053cea649dbb06fe5a0c"
+  },
+  "referee_hostile_controls_rejected": 12,
+  "referee_manifest_sha256": "3d5fbfd1f231fddd754958d767fd56897b7f02faf66b458095986c18393c5a93",
+  "requested_ledger": "3/9",
+  "retired_claims": [
+    "universal fixed-five-base escape",
+    "constant-metric harmonic polynomial shortcut"
+  ],
+  "reviewed_candidate": "65f1524bda77ebc5b74a0857e23c4323c18ad263",
+  "same_route_continuation": false,
+  "schema": "9dvl-real-fiber-reviewed-close-v1",
+  "selected_successor": "NONE",
+  "source_counts": {
+    "delta": 0,
+    "is_component_denominator": false,
+    "residual": 1162302,
+    "settled": 77940147,
+    "total": 79102449
+  },
+  "strategy_action": "STOP",
+  "theorem_trajectory": "STALLED"
+}

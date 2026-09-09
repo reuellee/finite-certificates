@@ -1,0 +1,67 @@
+{
+  "schema": "9dvl-backward-detector-independent-review-v1",
+  "verdict": "ACCEPT_AUXILIARY_ONLY",
+  "base_revision": "730fd6c7b6c2c3e8cbbf94ab4da3bc97ba53f095",
+  "reviewed_producer_commits": {
+    "prover": "6a99be1f7bac8215af18b5438b53cdc6ffe479fd",
+    "falsifier": "4f06cf8cf5ae2f7b68afe4e2e1f6324d75faf3be"
+  },
+  "opening_gate": "ELIGIBLE_BOUNDED_CANDIDATE_DESIGN_ONLY",
+  "global_construction_gate": "NO_GO",
+  "original_pair_target": "NULL",
+  "original_obligations_closed": 0,
+  "ledger": "2/9",
+  "theorem_trajectory": "STALLED",
+  "auxiliary_classification": "INFORMATIONAL",
+  "minimum_acceptable_decrease_met": false,
+  "opening_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    11,
+    14
+  ],
+  "recommended_closing_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    12,
+    15
+  ],
+  "same_route_continuation": false,
+  "strategy_action": "STOP",
+  "selected_successor": "NONE",
+  "source_counts": {
+    "total": 79102449,
+    "settled": 77940147,
+    "residual": 1162302,
+    "is_component_denominator": false
+  },
+  "independence": "No producer or repository verifier imports; independent integer/rational arithmetic and written exact-sequence proof.",
+  "defects_resolved": [
+    "Local normalization wording corrected at4f06cf8; independent acceptance of corrected proof."
+  ],
+  "nonconsequences": [
+    "No global detector nondegeneracy theorem",
+    "No original-space cohomology counterexample",
+    "No universal detector impossibility",
+    "No exclusion of homotopy-coherent or acyclic-carrier comparisons"
+  ],
+  "replay": "python -B ops/team/d3-detector-referee/verify_independently.py",
+  "replay_output": "INDEPENDENT_REPLAY.json",
+  "external_writes": false,
+  "ledger_modified": false,
+  "paid_compute": false
+}

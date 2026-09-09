@@ -1,0 +1,122 @@
+{
+  "schema": "9dvl-saturation-injectivity-reviewed-close-v1",
+  "closed_utc": "2026-09-09T03:46:37.362939+00:00",
+  "base_revision": "3a7ce7b5d57543d54eace7707659418cea6d69c9",
+  "base_tree": "7e2e958bcc7fef306bfc309c1502a279925b4ab6",
+  "ledger": "2/9",
+  "proved_diagonals": [
+    1,
+    2
+  ],
+  "original_obligations_closed": 0,
+  "original_pair_target": "NULL",
+  "open_obligations": {
+    "diag3_pair_hc1": "INCONCLUSIVE",
+    "diag3_triple_hc0": "INCONCLUSIVE",
+    "extension_labels": "INCONCLUSIVE",
+    "global_gluing": "INCONCLUSIVE",
+    "middle_rank_replay": "INCONCLUSIVE",
+    "relative_infinity": "INCONCLUSIVE",
+    "strict_closure": "INCONCLUSIVE"
+  },
+  "source_counts": {
+    "delta": 0,
+    "is_component_denominator": false,
+    "residual": 1162302,
+    "settled": 77940147,
+    "total": 79102449
+  },
+  "opening_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    12,
+    15
+  ],
+  "closing_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    13,
+    16
+  ],
+  "verdict": "ACCEPT_AUXILIARY_AND_SCOPED_NEGATIVE_ONLY",
+  "theorem_trajectory": "STALLED",
+  "auxiliary_classification": "INFORMATIONAL",
+  "minimum_acceptable_decrease_met": false,
+  "strategy_action": "STOP",
+  "retired_candidate": "Universal deletion of all selected-support zero-weight events by parent-unit saturation",
+  "same_route_continuation": false,
+  "selected_successor": "NONE",
+  "f4sat_gate": "NO_GO",
+  "f4sat_runs": 0,
+  "modular_screening_runs": 0,
+  "f4sat_cpu_seconds": 0,
+  "main_compute_budget_activated": false,
+  "reviewed_prover_revision": "3c3ccbcac95fe05543a870c86da1b2d29342f526",
+  "reviewed_falsifier_revision": "1f8be67c47679d4283edec4b67ba3ae70c1c4818",
+  "independent_referee_raw_commit": "113d8d202220e4795b09f164e642407354302e24",
+  "independent_referee_integrated_commit": "e3db2b93cb66f4f57afd9324f114d987ff7ee3ed",
+  "independent_review": "ops/team/d3-satinj-referee/FINAL_REVIEW.md",
+  "independent_replay": "python -B ops/team/d3-satinj-referee/verify_frozen_candidates.py --prover-revision 3c3ccbcac95fe05543a870c86da1b2d29342f526 --falsifier-revision 1f8be67c47679d4283edec4b67ba3ae70c1c4818",
+  "candidate_files_independently_pinned": 11,
+  "inherited_sources_independently_pinned": 16,
+  "coordinator_replay_passed": true,
+  "defects_resolved": [
+    "Reversed saturation/localization wording corrected before final proof acceptance",
+    "Producer default replay corrected to compare frozen semantic fields without overwriting timing data"
+  ],
+  "auxiliary_results": [
+    {
+      "claim": "Conditional local sign collar for original bad-set diagram on smooth single-factor branch",
+      "classification": "proved conditional lemma",
+      "global_attachment": false
+    },
+    {
+      "claim": "Rational original-domain zero-weight event makes its 16-generator parent-unit saturated ideal proper over Q",
+      "classification": "finite-exact with deductive ideal consequence",
+      "cohomology_counterexample": false
+    }
+  ],
+  "nonconsequences": [
+    "No global frontier block supplied",
+    "No change of bad-locus topology proved",
+    "No failure of a regular collar or saturation-assisted methods in general",
+    "No proof of pair injectivity or triple Hc0 vanishing",
+    "No complete minor-factor census or computational size bound"
+  ],
+  "next_required_input": "A proper original-space comparison with actual oriented factor-end incidences and true-infinity attachment, retaining admitted support-change strata, or a different globally quantified geometric nondegeneracy proof. No ready successor supplied.",
+  "pair_global_coverage": "UNKNOWN",
+  "pair_residual": "UNKNOWN",
+  "github_write": false,
+  "human_consultation": false,
+  "paid_compute_or_api": false,
+  "historical_sources_modified": false,
+  "raw_worker_branches": {
+    "refs/heads/research/d3-satinj-prover-20260909": "3c3ccbcac95fe05543a870c86da1b2d29342f526",
+    "refs/heads/research/d3-satinj-falsifier-20260909": "1f8be67c47679d4283edec4b67ba3ae70c1c4818",
+    "refs/heads/research/d3-satinj-referee-20260909": "113d8d202220e4795b09f164e642407354302e24"
+  },
+  "backup": {
+    "complete_history": true,
+    "manifest": "RECOVERY_MANIFEST.json in external recovery package",
+    "clean_restore": "CLEAN_RESTORE_REPLAY.json in package",
+    "final_revision_recorded_externally_to_avoid_self_reference": true,
+    "report": "9DVL_Saturation_Injectivity_2026-09-09.md",
+    "package": "9DVL_Saturation_Injectivity_2026-09-09.zip",
+    "delivery_volumes": 3,
+    "drive_folder_id": "1vuCkB2Yd2D2rDwwFcKgqT7ZaAOXKwpFX"
+  }
+}

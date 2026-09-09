@@ -1,0 +1,125 @@
+{
+  "reviewed_base": "9aefa1d783ffae751406c4e295e228153041772c",
+  "source_hashes": {
+    "ops/team/ai-d3-reset-source/FINDINGS.md": {
+      "git_blob_sha256": "f32f2fa3904e825a8d83cfb53d658862e53953a933d44c80dc9ae3dee28a43c5",
+      "worktree_sha256": "f32f2fa3904e825a8d83cfb53d658862e53953a933d44c80dc9ae3dee28a43c5"
+    },
+    "ops/team/ai-d3-reset-source/RESULT.json": {
+      "git_blob_sha256": "0d0ba2ecbc281ed10c4c373cde574c2a7ad1598b064da12661a01fa701ed328c",
+      "worktree_sha256": "0d0ba2ecbc281ed10c4c373cde574c2a7ad1598b064da12661a01fa701ed328c"
+    },
+    "ops/team/ai-d3-reset-source/verify_identities.py": {
+      "git_blob_sha256": "4ee8a2e89bd0a693458519c7af407bb8e0c476401ebe4027bbcd08fd3382bb39",
+      "worktree_sha256": "4ee8a2e89bd0a693458519c7af407bb8e0c476401ebe4027bbcd08fd3382bb39"
+    },
+    "ops/team/ai-d3-reset-falsifier/FINDINGS.md": {
+      "git_blob_sha256": "aa451796f65dcb3b1f3a59cd75e7085f51ed98725204be90d7d5d87bdb676c29",
+      "worktree_sha256": "aa451796f65dcb3b1f3a59cd75e7085f51ed98725204be90d7d5d87bdb676c29"
+    },
+    "ops/team/ai-d3-reset-falsifier/COUNTERMODELS.json": {
+      "git_blob_sha256": "a49b40888b4e9e6d7e2299903acaa00b1467fb138fb5a864f27e8d3f9d810657",
+      "worktree_sha256": "a49b40888b4e9e6d7e2299903acaa00b1467fb138fb5a864f27e8d3f9d810657"
+    },
+    "ops/team/ai-d3-reset-falsifier/RESULT.json": {
+      "git_blob_sha256": "41438272d0ba1146f5d1034aface8aa8fda0adfca32b8c1b160c780989a93f9d",
+      "worktree_sha256": "41438272d0ba1146f5d1034aface8aa8fda0adfca32b8c1b160c780989a93f9d"
+    },
+    "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/THEOREM_CANDIDATE.md": {
+      "git_blob_sha256": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a",
+      "worktree_sha256": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a"
+    },
+    "ai/omreal/ATLAS_HELLY.md": {
+      "git_blob_sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "worktree_sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0"
+    },
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": {
+      "git_blob_sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+      "worktree_sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879"
+    },
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": {
+      "git_blob_sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+      "worktree_sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86"
+    }
+  },
+  "producer_code_imported_or_executed": false,
+  "universal_algebra": {
+    "GL_generators": 22,
+    "coordinate_identities": 88,
+    "triple_scaling_identities": 4
+  },
+  "gauge": {
+    "uniform_parent_brackets": 70,
+    "transported_normals": 112,
+    "orientation_signs_checked": [
+      1,
+      -1
+    ],
+    "zero_faces_preserved": true,
+    "numerical_mass_change_canary": true
+  },
+  "integral_Cech_stalks": {
+    "nonempty_bad_index_patterns": 7,
+    "integer_chain_contraction": true
+  },
+  "generic_distinctions": {
+    "both_invariants_fail": {
+      "pair_kernel_Z_rank": 3,
+      "triple_Hc0_Z_rank": 1,
+      "union_Hc2_Z_rank": 4,
+      "pair_map_row": [],
+      "pair_map_nonzero_Smith_invariants": [],
+      "intersection_dimensions": {
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "01": 1,
+        "02": 1,
+        "12": 1,
+        "012": 0
+      }
+    },
+    "pair_only_failure": {
+      "pair_kernel_Z_rank": 2,
+      "triple_Hc0_Z_rank": 0,
+      "union_Hc2_Z_rank": 2,
+      "pair_map_row": [
+        1,
+        -1,
+        1
+      ],
+      "pair_map_nonzero_Smith_invariants": [
+        1
+      ],
+      "intersection_dimensions": {
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "01": 1,
+        "02": 1,
+        "12": 1,
+        "012": 1
+      }
+    },
+    "triple_only_failure": {
+      "pair_kernel_Z_rank": 0,
+      "triple_Hc0_Z_rank": 1,
+      "union_Hc2_Z_rank": 1,
+      "pair_map_row": [],
+      "pair_map_nonzero_Smith_invariants": [],
+      "intersection_dimensions": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "01": 2,
+        "02": 2,
+        "12": 2,
+        "012": 0
+      }
+    }
+  },
+  "hostile_mutations_rejected": 3,
+  "elapsed_seconds": 4.837388,
+  "status": "PASS_INDEPENDENT_FINITE_CHECKS",
+  "scope": "Global quotient, topology, effectivity, and obligation credit reviewed in prose; no global triangulation constructed."
+}

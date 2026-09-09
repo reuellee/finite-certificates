@@ -1,0 +1,142 @@
+{
+  "format": "ai-d3-rank-pencil-falsifier-v1",
+  "cycle_id": "2026-09-05-ai-only-d3-structural-reset",
+  "stage": "D",
+  "role": "rank-closure-falsifier",
+  "base_revision": "390d447eb1dceb3cf78b294a043e303a6430c267",
+  "branch": "research/ai-d3-rank-pencil-falsifier-20260905",
+  "status": "EXACT_NEGATIVE_CERTIFICATE_PENDING_INDEPENDENT_REFEREE",
+  "decision": "RETIRE",
+  "decision_scope": "Universal complete fixed-support-plane one-column escape criterion (incident normal rank at most two).",
+  "endpoint": {
+    "parent_index": 2599,
+    "source": "ai/omreal/data/seeat_parent2599_upper178.npz",
+    "array": "chart_matrix",
+    "chart_index": 0,
+    "signatures": [
+      14988895318912,
+      3405195891438080,
+      40418075143643136
+    ],
+    "all_rank_at_most_two_incident_support_unions_excluded": true,
+    "indexed_pairs": 1680,
+    "unique_labelled_closures": 896,
+    "closure_size_distribution": {
+      "2": 840,
+      "6": 840
+    },
+    "strict_inequalities": 65520,
+    "minimum_integer_margin": 162514748513691,
+    "separator_pool_size": 23,
+    "signature_usage": [
+      1202,
+      477,
+      1
+    ],
+    "new_predicate_points": 1,
+    "extra_tope_enumeration": false
+  },
+  "stability": {
+    "status": "EXACTLY_SUPPORTED",
+    "rank_two_pair_minors": 1680,
+    "rank_three_exclusion_minors": 28560,
+    "positive_rank_four_full_circuits": 3,
+    "conclusion": "Relative open neighborhood remains triple-bad and fails complete fixed-plane criterion.",
+    "numerical_neighborhood_radius_claimed": false
+  },
+  "admissibility": {
+    "reused_frozen_same_parent_anchor_charts": [
+      3,
+      14,
+      2
+    ],
+    "anchor_point_indices": [
+      24588,
+      14261,
+      2534
+    ],
+    "exact_primal_and_dual_replay": true,
+    "gp_relations_per_signature": 1260,
+    "ordered_incomparability_directions": 6,
+    "new_rank_predicate_at_anchors": false
+  },
+  "verification": {
+    "status": "PASS",
+    "script": "verify_rank_closures.py",
+    "output": "VERIFICATION.json",
+    "producer_or_old_acceptance_imported": false,
+    "arithmetic": "Exact Python integers; NumPy only decodes immutable NPZ.",
+    "discovery_closures": "Two-coordinate span interpolation",
+    "checker_closures": "All four three-by-three minors",
+    "negative_controls_passed": 4,
+    "negative_controls": "REJECTION_CONTROLS.json",
+    "independent_referee_acceptance": "PENDING"
+  },
+  "mathematics": {
+    "rank_closure_equivalence_proved": true,
+    "empty_and_singleton_supports_covered_by_padding": true,
+    "conditional_bounded_signed_simplex_proper_escape_proof_retained": true,
+    "universal_rank_closure_criterion_refuted": true,
+    "d3_counterexample_claimed": false,
+    "compact_triple_bad_component_claimed": false,
+    "all_one_column_motions_refuted": false,
+    "pair_invariant": "OPEN",
+    "triple_hc0": "OPEN",
+    "theorem_ledger_delta": 0,
+    "named_D3_obligations_closed": [],
+    "trajectory": "INFORMATIONAL"
+  },
+  "isolation": {
+    "owned_surface": "ops/team/ai-d3-rank-pencil-falsifier",
+    "old_lanes_modified": false,
+    "coordinator_new_lane_read": false,
+    "tracked_files_outside_owned_surface_modified": false,
+    "human_contact": false,
+    "paid_compute": false,
+    "external_compute_jobs": 0,
+    "broad_CAD": false,
+    "new_cohort": false,
+    "successor_weakening_opened": false,
+    "push": false,
+    "merge": false,
+    "canonical_or_ledger_edits": false,
+    "text_line_endings": "LF"
+  },
+  "resources": {
+    "registered_start_utc": "2026-09-05T15:04:00+00:00",
+    "discovery_complete_utc": "2026-09-05T15:06:49.057477+00:00",
+    "package_recorded_utc": "2026-09-05T15:19:04.060688+00:00",
+    "elapsed_role_wall_seconds_at_record": 904.060688,
+    "wall_ceiling_seconds": 1800,
+    "memory_ceiling_bytes": 17179869184,
+    "artifact_ceiling_bytes": 52428800,
+    "discovery_seconds": 0.1264422000022023,
+    "verification_seconds": 1.4177223000006052,
+    "verifier_memory": {
+      "instrumented": true,
+      "peak_working_set_bytes": 37289984,
+      "peak_pagefile_bytes": 429920256
+    },
+    "whole_role_peak_memory_instrumented": false,
+    "python_version": "3.12.14",
+    "numpy_version": "2.3.5",
+    "new_artifact_bytes": 426412
+  },
+  "reproduction": {
+    "python": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "arguments": [
+      "-B",
+      "ops/team/ai-d3-rank-pencil-falsifier/verify_rank_closures.py"
+    ]
+  },
+  "artifact_sha256": {
+    "certificate.json": "38a469d4f5c84f7d5e4fa2f09382d786d560d4847f96f76578e488bffdfadeea",
+    "REJECTION_CONTROLS.json": "28814ba95a6ddee7ccb913e85d404e06bca0ef4085c5f7aa42f95be2b69229b7",
+    "RESULT.md": "b8595e51f7e87bcbfb2d09696e2fdcb04d5f4c51a7306d15bcf405efee2db1a6",
+    "search_rank_closures.py": "251b7b1a68aa016732d47d928be0c25f84bd5a7f7b5dbcbd6635e5994d704833",
+    "SOURCE_PINS.json": "90afada584bcd01f7129ed03b93acca2d0a18c42cb8e015cb202548f211f048f",
+    "test_checker_rejections.py": "08cd6caf29dedf240d557e5da85a9a692df28cdb04ba9038725d1f8c0d2da197",
+    "VERIFICATION.json": "73c897a64ef95226d8cc1326358f0cd6a67e3d170ab1c9c11c1106dccd841475",
+    "verify_rank_closures.py": "9fbe238428ab745425b5c91e840e75ef1e7d86667cb2738024554b7883721bdd"
+  }
+}

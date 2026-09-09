@@ -1,0 +1,15 @@
+{
+  "opening_revision": "c27a36d6e3f47a2b4c7bb017774cbe5df30abdc2",
+  "canonical_mathematical_base": "21a97db6aa66912fd37556d81711c0588c454a7d",
+  "source_sha256": {
+    "ops/research-team/cycles/2026-09-09-exploration/CYCLE.md": "47dd4ae2d163d5402cc37416e1615ab33fc1b90ab11fa2ba3e2cd722f5b94f47",
+    "ops/research-team/cycles/2026-09-09-exploration/WORK_ORDERS.yaml": "0028cc1494921cba41bd218e732ce0c84819b5749dc50e1fc8646019ba8c0677",
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+    "ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "ops/team/d3-real-oval-falsifier/REPORT.md": "4ef44739091bb9bacd59837332b6147defa51b6d83531b6159fec71124abfeea",
+    "ops/team/d3-real-global-prover/REPORT.md": "0ae73ea5952846e34c151f7cf4475ea9752fc41e25548e4ad1b80f02edbb3dd4",
+    "ops/team/d3-triple-critical-saturation-falsifier/REPORT.md": "ed2f1efa6fb0da310cad57a4a87c9a1969e25a6bacc956ccc8c09f3cee3422f9"
+  }
+}

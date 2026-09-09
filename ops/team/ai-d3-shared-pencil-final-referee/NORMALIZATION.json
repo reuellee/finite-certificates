@@ -1,0 +1,50 @@
+{
+  "frozen_original_commit": "964c427f6b71b6223add7dc7fd3a695d4c7db270",
+  "coordinator_action": "LF normalization only, plus refreshing two owned-checker byte hashes; no mathematical, checker-code, input-pin, or verdict change",
+  "files": {
+    "CHECK_OUTPUT.json": {
+      "before_sha256": "f1ca699f070b4e2f6bd251884238c6d746d1653de1ade7eace55e0df9be53633",
+      "after_sha256": "fbf12639aaab2266c229b0a97134f377813715da262e4ed2ea1bdc0eaf36e14d"
+    },
+    "check_robustness.py": {
+      "before_sha256": "4b90244310e6aea37e68c3f3f71948241af6154ee8ce064cb1830d072ef8d95f",
+      "after_sha256": "4b90244310e6aea37e68c3f3f71948241af6154ee8ce064cb1830d072ef8d95f"
+    },
+    "check_robustness.py.stderr.txt": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "independent_check.py": {
+      "before_sha256": "82163982583d7468a267eeb78bad9fb998a53e82b0ca5ad657b4cf00daa2b2bf",
+      "after_sha256": "82163982583d7468a267eeb78bad9fb998a53e82b0ca5ad657b4cf00daa2b2bf"
+    },
+    "independent_check.py.stderr.txt": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "RESOURCE_ACCOUNTING.json": {
+      "before_sha256": "89dae215ffe33e712d09d194e1b953142eb0d8d715d9af57c5508f488b4a1bd1",
+      "after_sha256": "089567c6a45619208ef90c6611d3d4dfe9f9932c62a97292878ef3fafcbad012"
+    },
+    "RESULT.json": {
+      "before_sha256": "1bbca57c116defbccd61b3e182ec1dfce6cc9011b3197e9053597c281fa66923",
+      "after_sha256": "61b822d83460daf39b2c1dd9715a06c402eab468b7a9efdb31133cc591f45bce"
+    },
+    "REVIEW.md": {
+      "before_sha256": "8bf6d4d12a0e6067263688a75c93ac1ffe2d3543d809852e2e259898efafaef1",
+      "after_sha256": "8bf6d4d12a0e6067263688a75c93ac1ffe2d3543d809852e2e259898efafaef1"
+    },
+    "ROBUSTNESS_OUTPUT.json": {
+      "before_sha256": "3e6156f27297c0e2fe5450132c34e8bb3f1dced3ddbe7a8772ce597947caf383",
+      "after_sha256": "62b4735e5c712a3a7fb4a10c21df36706639e0b8b57af72a0b2d25db0a134666"
+    },
+    "RUN_RESOURCES.json": {
+      "before_sha256": "471122d0c60146e6091cd9ee5293f749bae5a94508fb190064d7c34822338028",
+      "after_sha256": "2b4a3d66ee6a652f243dc1c591e01399cabf9e1b1ee2950e52948191aba1cb96"
+    },
+    "SOURCE_PINS.json": {
+      "before_sha256": "2d4da7f3f901491829023f5e3e94e1740c25dd40764eb11afac584689c7b54b5",
+      "after_sha256": "6b775b0e75d030dd6077e9c711e8420540dcc40187d988dbac632b9fe3945b33"
+    }
+  }
+}

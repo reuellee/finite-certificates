@@ -1,0 +1,54 @@
+{
+  "event": {
+    "revision": "dff5dc46744ca6680770b20392139f61bec69ff6",
+    "files": {
+      "ops/team/d3-explore-event/CERTIFICATE.json": "d10682642cb6b7990bf7b7531c8c681f5166127d76f5aef4f32589f5eeece90b",
+      "ops/team/d3-explore-event/DISCOVERY.json": "1c5f80bf76b2a99f37c4892b99e371399e79c7933a78b61d3ef41994c821791e",
+      "ops/team/d3-explore-event/FINDINGS.md": "0f913c464bf3ca036f9d9bdc74167a0d751f21a53e4a855fd1418b256a32f406",
+      "ops/team/d3-explore-event/HANDOFF.json": "e223f98b7d4365b32cdf3f547913c1a694a2480c612f263e754a474c1230c541",
+      "ops/team/d3-explore-event/SOURCE_MANIFEST.json": "18ffd67798ea49a312b4608a086ca96af197c3d648abd442608ca40de8bb5634",
+      "ops/team/d3-explore-event/discover.py": "6fa376d788e8546e13434d2c8c46c3287113178b80dd0c139e2a89e843929d3c",
+      "ops/team/d3-explore-event/verify.py": "330210ef8eec42da34c1f4f8b54155f627f7035c1b4ec2918d14c347e0243f4e"
+    },
+    "independent_status": "PENDING_FINAL_REFEREE"
+  },
+  "topology": {
+    "revision": "b468869778beb404cd2c4f4b5b426115a4c9356b",
+    "files": {
+      "ops/team/d3-explore-topology/DISCOVERY.json": "6ad0e1b8cf7cfabcc42acf63f752ee67f095476204b4ccf40394b358d3f051a7",
+      "ops/team/d3-explore-topology/DISCOVERY_OUTPUT.txt": "734e0b9086e9812d8641cd77a52e59be6dbcc009bcb7773283e200653d98bf62",
+      "ops/team/d3-explore-topology/EXACT_DISCOVERY_OUTPUT.txt": "479bc47d157a3db9244bc67748aa74f75d33d6bccdd19cf34538903ffb30c801",
+      "ops/team/d3-explore-topology/EXACT_OUTPUT.txt": "abbd8a583dd8ea1ac7785101c2ff0068a772c2fe62157d28dbeb7d38888f5d33",
+      "ops/team/d3-explore-topology/EXACT_RESULT.json": "bc4459e9ceb2203c90a7785af38e908f0c660da306cb21f928bd7c942956bdd0",
+      "ops/team/d3-explore-topology/FINDINGS.md": "3f922a9d1aef0cc3bd9ae82ad8fc6ec5bd30b1ea96b5f498e4da1848f370df09",
+      "ops/team/d3-explore-topology/PREREGISTRATION.md": "56a39428e94fc1b8f52dd3c93be38b2a4978aaf6fd8f9438731e6cfbe56cc168",
+      "ops/team/d3-explore-topology/SOURCE_MANIFEST.json": "1899bcc9f6fe473242c85b03d5ddf7e8c74034618fd982c3a30a8fe8bef98e86",
+      "ops/team/d3-explore-topology/discover_slice.py": "2327cf2c76a04cb13b849ae560c80874d68699495a22c2c2939687f8c55b4ca3",
+      "ops/team/d3-explore-topology/exact_chord.py": "1c61346c63591de522b229178d608dfbac6e8a7254603ccc144e7fceb4a1c958",
+      "ops/team/d3-explore-topology/verify_family.py": "edcc65a29629690af79cd6d17c8930a082daf2bfe2a9998656cbfbdbe66ed9e7"
+    },
+    "independent_status": "PENDING_FINAL_REFEREE"
+  },
+  "coherent": {
+    "revision": "845791277cb0c41eb7b8d6dd7aea892cf135d79c",
+    "files": {
+      "ops/team/d3-explore-coherent/FINDINGS.md": "78531afb98c6c4f2ef1eed55699b99ade7debe8d953a80f3dacba3fd01ebd6ce",
+      "ops/team/d3-explore-coherent/RESULT.json": "3ed9a6411c5a1325d840995e7e57e1755e2846d16403b821be303b85826603c9",
+      "ops/team/d3-explore-coherent/SOURCE_MANIFEST.json": "fcb21013844dd21c04d51520016e04b6e052a35ffcb24b43b1c37962ebdd79cc",
+      "ops/team/d3-explore-coherent/verify_coherent.py": "000caba9bd1c77b6ea8b3144afd01a48ac473e3bead15137d6a37d3b883828d1"
+    },
+    "independent_status": "PENDING_FINAL_REFEREE"
+  },
+  "diagonals": {
+    "revision": "efbb652c543dbf05a6ebb947fde5cb4218b07e26",
+    "files": {
+      "ops/team/d3-explore-diagonals/FINDINGS.md": "9f8cb91a23078f3c374a2fd915a9f0387293503939c65ad14a0a419b5f5bcbe2",
+      "ops/team/d3-explore-diagonals/HANDOFF.json": "f06b6c1d9aa8c51b2ddaee49f881d06ee8add07862b1ca0e4370701ab3518fbe",
+      "ops/team/d3-explore-diagonals/HYBRID_OUTPUT.json": "ec93c0ffef02dca168bfed256769123fa9d1842b2e0c3d64489ae4e9bfa843c2",
+      "ops/team/d3-explore-diagonals/REPLAY.txt": "e85264cf5b42dbfcd0b985b1e480b14fa637966d58de3da0aede61127677cbd2",
+      "ops/team/d3-explore-diagonals/SOURCE_MANIFEST.json": "2d94a2ff3fe8bd15ad2bcb562603a9b8248fd2567d6d419ddc3ffa275b6badc2",
+      "ops/team/d3-explore-diagonals/test_coordinate_hybrids.py": "f62b589f34ce1810b91e610d52992629bafe6f78484db3a1dc57753b44e93e28"
+    },
+    "independent_status": "PENDING_FINAL_REFEREE"
+  }
+}

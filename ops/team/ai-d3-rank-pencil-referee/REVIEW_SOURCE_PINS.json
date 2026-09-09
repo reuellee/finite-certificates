@@ -1,0 +1,17 @@
+[
+  {
+    "git_source": "fdd143c8be96636b7b11af0ac7e2ea8d60b65eca:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_D_RANK_CLOSURE.md",
+    "sha256": "af943632fcd4d0a99b3fa7c46e123943d8df08600c5c7b94b96068749a9bf5ac",
+    "bytes": 4201
+  },
+  {
+    "git_source": "fdd143c8be96636b7b11af0ac7e2ea8d60b65eca:ops/team/ai-d3-rank-pencil-coordinator/FINDINGS.md",
+    "sha256": "aa38d4859ed8cbebc34a8d1edecca016a94c66c5762ad51ad9a62964d2991658",
+    "bytes": 5616
+  },
+  {
+    "git_source": "fdd143c8be96636b7b11af0ac7e2ea8d60b65eca:ops/team/ai-d3-shared-pencil-final-referee/NORMALIZATION.json",
+    "sha256": "b755063c70478d966f5b23a4d877ff1433ed6b090c911c042c0fca64c8007b84",
+    "bytes": 2633
+  }
+]

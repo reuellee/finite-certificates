@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "arithmetic": "Exact Python integers; NumPy only reads NPZ files",
+  "search_imported": false,
+  "tope_enumeration_used": false,
+  "parent_catalog_index_zero_based": 2599,
+  "parent_chirotope": "++++++++++++++++++++++++++++-++--+++++++++-+++----+--++--------++--+++",
+  "cases": [
+    {
+      "id": "shatter_pattern_0",
+      "status": "POSITIVE_INSTANCE",
+      "parent_brackets_checked": 70,
+      "gp_relations_per_signature": [
+        1260,
+        1260,
+        1260
+      ],
+      "full_dual_support_sizes": [
+        5,
+        5,
+        5
+      ],
+      "label": 1,
+      "incident_triples": [
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          7
+        ]
+      ],
+      "scope": "One directly verified success; search-reported exhaustive success count is not assumed."
+    },
+    {
+      "id": "upper_chart_7",
+      "status": "INELIGIBLE",
+      "parent_brackets_checked": 70,
+      "gp_relations_per_signature": [
+        1260,
+        1260,
+        1260
+      ],
+      "full_dual_support_sizes": [
+        5,
+        5,
+        null
+      ],
+      "feasible_signature_indices": [
+        2
+      ]
+    },
+    {
+      "id": "upper_chart_0_flow",
+      "status": "NEGATIVE_POINTWISE_INSTANCE",
+      "parent_brackets_checked": 70,
+      "gp_relations_per_signature": [
+        1260,
+        1260,
+        1260
+      ],
+      "full_dual_support_sizes": [
+        5,
+        5,
+        5
+      ],
+      "all_restrictions_excluded": 1680,
+      "strict_inequalities_checked": 62160,
+      "witness_pool_size": 23,
+      "signature_usage": [
+        1596,
+        83,
+        1
+      ],
+      "minimum_integer_margin": 162514748513691,
+      "scope": "Exhaustive pointwise negative proved by strict integer separators, independent of enumeration."
+    }
+  ],
+  "shatter_properness_incomparability": [
+    {
+      "feasible_signature_index": 0,
+      "bad_other_indices": [
+        1,
+        2
+      ],
+      "shatter_pattern": 1,
+      "parent_brackets_checked": 70
+    },
+    {
+      "feasible_signature_index": 1,
+      "bad_other_indices": [
+        0,
+        2
+      ],
+      "shatter_pattern": 16,
+      "parent_brackets_checked": 70
+    },
+    {
+      "feasible_signature_index": 2,
+      "bad_other_indices": [
+        0,
+        1
+      ],
+      "shatter_pattern": 8,
+      "parent_brackets_checked": 70
+    }
+  ],
+  "flow_properness_incomparability": [
+    {
+      "feasible_signature_index": 0,
+      "bad_other_indices": [
+        1,
+        2
+      ],
+      "upper_chart": 3,
+      "stored_point_index": 24588,
+      "parent_brackets_checked": 70
+    },
+    {
+      "feasible_signature_index": 1,
+      "bad_other_indices": [
+        0,
+        2
+      ],
+      "upper_chart": 14,
+      "stored_point_index": 14261,
+      "parent_brackets_checked": 70
+    },
+    {
+      "feasible_signature_index": 2,
+      "bad_other_indices": [
+        0,
+        1
+      ],
+      "upper_chart": 2,
+      "stored_point_index": 2534,
+      "parent_brackets_checked": 70
+    }
+  ],
+  "source_sha256": {
+    "ai\\omgamma\\data\\cat_4_8.txt": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5",
+    "ai\\omreal\\data\\seeat_parent2599_shatter8.npz": "d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb",
+    "ai\\omreal\\data\\seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a"
+  },
+  "elapsed_seconds": 0.560263200000918
+}

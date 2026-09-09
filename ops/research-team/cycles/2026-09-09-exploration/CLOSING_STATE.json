@@ -1,0 +1,114 @@
+{
+  "schema": "9dvl-exploration-reviewed-close-v1",
+  "closed_utc": "2026-09-09T04:27:09.017770+00:00",
+  "base_revision": "21a97db6aa66912fd37556d81711c0588c454a7d",
+  "base_tree": "4b7b850cd3e0e1ebb2aa0bf4e7c5c3f25a360bf7",
+  "opening_revision": "c27a36d6e3f47a2b4c7bb017774cbe5df30abdc2",
+  "branch": "research/d3-exploration-20260909",
+  "ledger": "2/9",
+  "proved_diagonals": [
+    1,
+    2
+  ],
+  "original_obligations_closed": 0,
+  "open_obligations": {
+    "diag3_pair_hc1": "INCONCLUSIVE",
+    "diag3_triple_hc0": "INCONCLUSIVE",
+    "extension_labels": "INCONCLUSIVE",
+    "global_gluing": "INCONCLUSIVE",
+    "middle_rank_replay": "INCONCLUSIVE",
+    "relative_infinity": "INCONCLUSIVE",
+    "strict_closure": "INCONCLUSIVE"
+  },
+  "source_counts": {
+    "delta": 0,
+    "is_component_denominator": false,
+    "residual": 1162302,
+    "settled": 77940147,
+    "total": 79102449
+  },
+  "opening_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    13,
+    16
+  ],
+  "closing_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    14,
+    17
+  ],
+  "theorem_trajectory": "STALLED",
+  "auxiliary_classification": "INFORMATIONAL",
+  "verdict": "ACCEPT_SCOPED_AUXILIARY_RESULTS_ONLY",
+  "minimum_acceptable_theorem_decrease_met": false,
+  "user_authorized_discovery_deliverables_completed": true,
+  "strategy_action": "PIVOT_COMPLETED_AND_STOP_FINISHED_TESTS",
+  "same_route_theorem_convergent_continuation": false,
+  "selected_lead": "A small parameterized escape corridor preserving the original labeled bad-set diagram across actual feasibility boundaries",
+  "successor_constructed": false,
+  "successor_running": false,
+  "reviewed_candidates": {
+    "event": "dff5dc46744ca6680770b20392139f61bec69ff6",
+    "topology": "b468869778beb404cd2c4f4b5b426115a4c9356b",
+    "coherent": "845791277cb0c41eb7b8d6dd7aea892cf135d79c",
+    "diagonals": "efbb652c543dbf05a6ebb947fde5cb4218b07e26"
+  },
+  "independent_referee_raw_commit": "cb4f11e3ef4819014e13928416e442e3801865a8",
+  "independent_referee_integrated_commit": "9462f72020a7b62fc8054645733588bee20b396c",
+  "independent_review": "ops/team/d3-explore-referee/FINAL_REVIEW.md",
+  "independent_replay": "python -B ops/team/d3-explore-referee/verify_candidates.py",
+  "candidate_files_independently_pinned": 28,
+  "auxiliary_results": {
+    "event": {
+      "classification": "finite-exact with deductive parent-matrix local-germ proof",
+      "accepted_scope": "Valid in the stated open parent-matrix neighborhood; no normalized-gauge transport asserted",
+      "global_attachment": false
+    },
+    "topology": {
+      "classification": "finite-exact with deductive normalized-parent noncompactness proof",
+      "accepted_scope": "Only the ambient triple-bad component containing the certified horizontal interval is proved noncompact",
+      "source_orbits_removed": 0
+    },
+    "coherent": {
+      "classification": "finite-exact instance and inherited mass-map proof",
+      "novel_general_mechanism": false
+    },
+    "diagonals": {
+      "classification": "finite-exact narrow obstruction",
+      "accepted_scope": "One fixed oriented first-five-ray frame; endpoint-coordinate/column hybrid graphs only"
+    }
+  },
+  "pair_global_coverage": "UNKNOWN",
+  "pair_residual": "UNKNOWN",
+  "global_component_coverage": "UNKNOWN",
+  "github_write": false,
+  "paid_compute_or_api": false,
+  "human_consultation": false,
+  "historical_sources_modified": false,
+  "backup": {
+    "complete_history": true,
+    "all_prior_recovery_refs_preserved": 10,
+    "final_revision_recorded_externally": true,
+    "manifest": "RECOVERY_MANIFEST.json in external recovery package",
+    "clean_restore": "CLEAN_RESTORE_REPLAY.json in external recovery package",
+    "report": "9DVL_Exploration_2026-09-09.md",
+    "package": "9DVL_Exploration_2026-09-09.zip",
+    "drive_folder_id": "1vuCkB2Yd2D2rDwwFcKgqT7ZaAOXKwpFX"
+  }
+}

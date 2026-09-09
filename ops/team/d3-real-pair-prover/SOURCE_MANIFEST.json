@@ -1,0 +1,13 @@
+{
+  "base_commit": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "base_tree": "c49c2e6625f3ee76d77cc263897366dcf7e037c2",
+  "sources": {
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_WALL_STARS.py": "31f48a70c1a81d3583c01dcd5a9f30ef5cd4f2eb766ebdacdda3f8d26bfc4bb7",
+    "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+    "ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ai/omreal/verify_diag2_canonical_robust_edges.py": "0f7d7111b2087abbb388d00bcae27e8566beeca32c9749902d3774d94cd57d77",
+    "ai/omreal/verify_diag3_pair_factor_occurrence_h1.py": "346b26e48fe3265a6ccf5270fd6576070017db6d46e6978855adbbfa8f643c75"
+  }
+}

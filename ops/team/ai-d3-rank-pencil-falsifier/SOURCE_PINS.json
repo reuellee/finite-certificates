@@ -1,0 +1,14 @@
+{
+  "base_revision": "390d447eb1dceb3cf78b294a043e303a6430c267",
+  "old_falsifier_revision": "da1834f",
+  "old_constructor_revision": "7d0efe",
+  "sha256": {
+    "ai/omgamma/data/cat_4_8.txt": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "ai/omreal/DIAG9_GRAPH_exact_topes.py": "aa1bb32b1fee5f9e11805352f2b072f6ee10c5dbb003c8dd4a0b530382d638df",
+    "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+    "ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+    "ops/team/ai-d3-shared-pencil-constructor/FINDINGS.md": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc",
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_D_RANK_CLOSURE.md": "af943632fcd4d0a99b3fa7c46e123943d8df08600c5c7b94b96068749a9bf5ac"
+  }
+}

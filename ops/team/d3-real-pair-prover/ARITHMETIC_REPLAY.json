@@ -1,0 +1,110 @@
+{
+  "actual_parent_anchor": {
+    "active_patterns": 58,
+    "all_eight_rank": 3,
+    "coordinates": [
+      "-1211/27",
+      "-26",
+      "-32",
+      "28",
+      "-15",
+      "6",
+      "-19",
+      "-2",
+      "-10"
+    ],
+    "direct_signings": 256,
+    "gap": 1,
+    "outer_rank": 2,
+    "parent_brackets_nonzero": 70
+  },
+  "all_gap_distinct_patterns": 487,
+  "hostile_controls_rejected": 5,
+  "matching_triangles_filled": 105,
+  "original_pair_target": "INCONCLUSIVE",
+  "scope": {
+    "arbitrary_signings": true,
+    "diagonals_proved": 2,
+    "generic_supported_factor_only": true,
+    "global_pair_map_proved": false,
+    "rank_two_pencil_required": true,
+    "source_orbits_removed": 0
+  },
+  "status": "PASS_AUXILIARY_EXACT_REPLAY",
+  "synthetic_not_original_canary": {
+    "gap": 0,
+    "intersection": 512,
+    "patterns": [
+      580,
+      1728,
+      1549
+    ],
+    "synthetic_pair": [
+      8,
+      27
+    ],
+    "words": [
+      8,
+      25,
+      26
+    ]
+  },
+  "tables": [
+    {
+      "arbitrary_finite_intersections": 180,
+      "double": 180,
+      "double_masks_sha256": "d8e48564f5f55dcbadf1f4b9b8001cae00dc5ffda285b3a241f62495dde72099",
+      "gap": 0,
+      "matching_triangles_filled": 15,
+      "single": 58
+    },
+    {
+      "arbitrary_finite_intersections": 180,
+      "double": 180,
+      "double_masks_sha256": "a6b150fc114c079e408e772c978a760449f4b9306f29b9d1758a183fcdaba2f5",
+      "gap": 1,
+      "matching_triangles_filled": 15,
+      "single": 58
+    },
+    {
+      "arbitrary_finite_intersections": 180,
+      "double": 180,
+      "double_masks_sha256": "ea3855cf8780f5c4b118aaba866c15cdd76326f20a12e4310121a2ee7726cc23",
+      "gap": 2,
+      "matching_triangles_filled": 15,
+      "single": 58
+    },
+    {
+      "arbitrary_finite_intersections": 180,
+      "double": 180,
+      "double_masks_sha256": "d34f7ddd5d4140aae2e003ac3ada03994abbc9a133b8916d4d31bf6843e2180e",
+      "gap": 3,
+      "matching_triangles_filled": 15,
+      "single": 58
+    },
+    {
+      "arbitrary_finite_intersections": 180,
+      "double": 180,
+      "double_masks_sha256": "41f11db664a543a2ff0677c9ace8476351fbdd0115c7410f5734b697ef26c734",
+      "gap": 4,
+      "matching_triangles_filled": 15,
+      "single": 58
+    },
+    {
+      "arbitrary_finite_intersections": 180,
+      "double": 180,
+      "double_masks_sha256": "4bfaf2a8957346dee0ddc44a8ca0fd1d985f94437c99fe61e8e6535bbd30be31",
+      "gap": 5,
+      "matching_triangles_filled": 15,
+      "single": 58
+    },
+    {
+      "arbitrary_finite_intersections": 180,
+      "double": 180,
+      "double_masks_sha256": "d8e48564f5f55dcbadf1f4b9b8001cae00dc5ffda285b3a241f62495dde72099",
+      "gap": 6,
+      "matching_triangles_filled": 15,
+      "single": 58
+    }
+  ]
+}

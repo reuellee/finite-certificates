@@ -1,0 +1,88 @@
+{
+  "format": "ai-d3-rank-pencil-independent-referee-v1",
+  "stage": "D",
+  "principal_commit": "fdd143c8be96636b7b11af0ac7e2ea8d60b65eca",
+  "secondary_commit": "52ad4e14c63831243f0a57b193e99ebbf32891e5",
+  "inherited_stage_c_original": "964c427f6b71b6223add7dc7fd3a695d4c7db270",
+  "decision": "ACCEPT_COMPLETE_FIXED_PLANE_COUNTERCERTIFICATES_AND_CONDITIONAL_ESCAPE",
+  "investment_decision": "RETIRE",
+  "cycle_action": "STOP_AT_NEGATIVE_ENDPOINT",
+  "retired_scope": "Universal fixed-support-plane one-column escape criterion: three nonnegative Gordan witnesses whose incident positive-support union has rank at most two for some common label.",
+  "acceptance": {
+    "literal_actual_parent_binding": true,
+    "parent_index": 2599,
+    "chart_index": 0,
+    "signatures": [
+      14988895318912,
+      3405195891438080,
+      40418075143643136
+    ],
+    "rank_closure_equivalence": true,
+    "zero_and_one_support_padding": true,
+    "zero_weights_and_rank_deficient_supports_allowed": true,
+    "indexed_closures": 1680,
+    "distinct_labeled_closures": 896,
+    "strict_inequalities_per_certificate": 65520,
+    "minimum_integer_margin": 162514748513691,
+    "independent_pair_rank_two_witnesses": 1680,
+    "independent_excluded_row_rank_three_witnesses": 28560,
+    "primary_and_secondary_full_badness_positive_rank_four_circuits": true,
+    "conditional_proper_escape": true,
+    "true_parent_boundary": true,
+    "open_nine_dimensional_obstruction": true,
+    "nearby_closures_only_shrink": true,
+    "quantitative_radius_claimed": false
+  },
+  "verification": {
+    "checker": "independent_check.py",
+    "arithmetic": "Exact Python integers; Laplace determinant evaluations; all four 3x3 coordinate minors; stdlib integer NPY decoding",
+    "producer_acceptance_code_imported_or_executed": false,
+    "frozen_stage_c_independent_checkers_replayed": true,
+    "frozen_stage_c_nontime_output_exact_match": true,
+    "normalization_files_verified_pure_crlf_to_lf": 11,
+    "hostile_mutations_rejected": 12,
+    "added_closure_row_canary_rejected": true,
+    "new_rank_predicate_points": 1
+  },
+  "research_credit": {
+    "trajectory": "INFORMATIONAL",
+    "ledger_before": "2/9",
+    "ledger_after": "2/9",
+    "theorem_delta": 0,
+    "canonical_obligations_open": [
+      "global_gluing",
+      "extension_labels",
+      "strict_closure",
+      "relative_infinity",
+      "middle_rank_replay",
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    "canonical_obligations_closed": [],
+    "all_one_column_motions_refuted": false,
+    "D3_counterexample": false,
+    "compact_component_proved": false,
+    "compactly_supported_class_constructed": false,
+    "global_pair_coverage": "UNKNOWN",
+    "certified_exhaustive_D3_residual": "UNKNOWN"
+  },
+  "governance": {
+    "owned_surface": "ops/team/ai-d3-rank-pencil-referee",
+    "prior_lanes_modified": false,
+    "ledger_or_canonical_edits": false,
+    "new_cohort": false,
+    "search_resumed": false,
+    "successor_route_opened": false,
+    "human_contact": false,
+    "paid_or_external_compute": false,
+    "push": false,
+    "merge": false
+  },
+  "replay_outputs": [
+    "CHECK_OUTPUT.json",
+    "STAGE_C_REPLAY_OUTPUT.json"
+  ],
+  "source_pins": "SOURCE_PINS.json",
+  "resource_accounting": "RESOURCE_ACCOUNTING.json",
+  "freeze": "The local commit containing this package is the frozen handoff; its full SHA is returned separately."
+}

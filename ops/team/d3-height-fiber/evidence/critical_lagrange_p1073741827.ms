@@ -1,0 +1,14 @@
+a,b,c,d,e,f,g,h,i,lam,mu,z
+1073741827
+b*f-b*i+d*i-f*g,
+a*b*f^2*h-a*b*f^2-a*b*f*h+a*b*f-a*c*e*f*h+a*c*e*f+a*c*e*h-a*c*e-b*c*d*f*h+b*c*d*f+b*c*d*h-b*c*d-b*c*e*g+b*c*e+b*c*f*h-b*c*f+b*c*g-b*c*h+b*e*f*g-b*e*f-b*f^2*h+b*f^2-b*f*g+b*f*h+c^2*d*e*h-c^2*d*e-c^2*d*h+c^2*d+c^2*e*g-c^2*e*h-c^2*g+c^2*h-c*d*e*h+c*d*e+c*d*f*h-c*d*f-c*e*f*g+c*e*f*h+c*f*g-c*f*h,
+a*d*h-a*d*i-a*e*g*h+a*e*i+a*f*g*h-a*f*h+b*d*g*i-b*d*g+b*e*g^2-b*e*g*i-b*f*g^2+b*f*g-c*d*g*h+c*d*g+c*e*g*h-c*e*g,
+b*f^2*h*mu-b*f^2*mu-b*f*h*mu+b*f*mu-c*e*f*h*mu+c*e*f*mu+c*e*h*mu-c*e*mu+d*h-d*i-e*g*h+e*i+f*g*h-f*h,
+-a*e*f*h*mu+a*e*f*mu+a*e*h*mu-a*e*mu-b*d*f*h*mu+b*d*f*mu+b*d*h*mu-b*d*mu-b*e*g*mu+b*e*mu+b*f*h*mu-b*f*mu+b*g*mu-b*h*mu+2*c*d*e*h*mu-2*c*d*e*mu-2*c*d*h*mu+2*c*d*mu+2*c*e*g*mu-2*c*e*h*mu-2*c*g*mu+2*c*h*mu-d*e*h*mu+d*e*mu+d*f*h*mu-d*f*mu-d*g*h+d*g-e*f*g*mu+e*f*h*mu+e*g*h-e*g+f*g*mu-f*h*mu,
+a*h-a*i-b*c*f*h*mu+b*c*f*mu+b*c*h*mu-b*c*mu+b*g*i-b*g+c^2*e*h*mu-c^2*e*mu-c^2*h*mu+c^2*mu-c*e*h*mu+c*e*mu+c*f*h*mu-c*f*mu-c*g*h+c*g+i*lam,
+-a*c*f*h*mu+a*c*f*mu+a*c*h*mu-a*c*mu-a*g*h+a*i-b*c*g*mu+b*c*mu+b*f*g*mu-b*f*mu+b*g^2-b*g*i+c^2*d*h*mu-c^2*d*mu+c^2*g*mu-c^2*h*mu-c*d*h*mu+c*d*mu-c*f*g*mu+c*f*h*mu+c*g*h-c*g,
+2*a*b*f*h*mu-2*a*b*f*mu-a*b*h*mu+a*b*mu-a*c*e*h*mu+a*c*e*mu+a*g*h-a*h-b*c*d*h*mu+b*c*d*mu+b*c*h*mu-b*c*mu+b*e*g*mu-b*e*mu-2*b*f*h*mu+2*b*f*mu-b*g^2-b*g*mu+b*g+b*h*mu+b*lam+c*d*h*mu-c*d*mu-c*e*g*mu+c*e*h*mu+c*g*mu-c*h*mu-g*lam,
+-a*e*h+a*f*h-b*c*e*mu+b*c*mu+b*d*i-b*d+b*e*f*mu+2*b*e*g-b*e*i-2*b*f*g-b*f*mu+b*f+c^2*e*mu-c^2*mu-c*d*h+c*d-c*e*f*mu+c*e*h-c*e+c*f*mu-f*lam,
+a*b*f^2*mu-a*b*f*mu-a*c*e*f*mu+a*c*e*mu+a*d-a*e*g+a*f*g-a*f-b*c*d*f*mu+b*c*d*mu+b*c*f*mu-b*c*mu-b*f^2*mu+b*f*mu+c^2*d*e*mu-c^2*d*mu-c^2*e*mu+c^2*mu-c*d*e*mu+c*d*f*mu-c*d*g+c*e*f*mu+c*e*g-c*f*mu,
+-a*d+a*e+b*d*g-b*e*g-b*lam+d*lam,
+-b*f^2*h*i*z+b*f^2*i*z+b*f*h*i*z-b*f*i*z+c*e*f*h*i*z-c*e*f*i*z-c*e*h*i*z+c*e*i*z+1

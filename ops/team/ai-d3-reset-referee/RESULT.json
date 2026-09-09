@@ -1,0 +1,133 @@
+{
+  "format": "ai-d3-reset-independent-referee-v1",
+  "reviewed_candidate_sha": "96d2cafda5c3588d0754780d18b92c694a843b54",
+  "review_branch": "research/ai-d3-reset-referee-20260905",
+  "frozen_at_utc": "2026-09-05T14:02:29.653277+00:00",
+  "mathematical_decision": "ACCEPT_GENERIC_NO_GO",
+  "artifact_decision": "ACCEPT_WITH_REFEREE_PROOF_SUPPLEMENT_AND_SCOPE_CORRECTIONS",
+  "route_decision": "RETIRE",
+  "retired_route_exact_scope": "Deduction of D3 solely from the generic common-matrix, proper-convex-source, finite-compact-relative-model and lower-vanishing package listed in the candidate.",
+  "cycle_wide_investment_decision": "OUTSIDE_THIS_REVIEW_SCOPE",
+  "claims": {
+    "common_unsigned_56_by_4_and_three_signatures": "ACCEPT_EXACT",
+    "all_rows_nonzero_and_full_rank_everywhere_on_R9": "ACCEPT_EXACT",
+    "feasible_regions_nonempty_proper_pairwise_incomparable": "ACCEPT_EXACT",
+    "singleton_and_pair_Hc_all_degrees_over_Z": "ZERO",
+    "triple_bad_intersection": "NONEMPTY_COMPACT_CONVEX_FULL_DIMENSIONAL",
+    "triple_Hc0_over_Z": "Z",
+    "bad_union_Hc2_over_Z": "Z",
+    "other_bad_union_Hc_degrees_over_Z": "ZERO",
+    "common_feasible_H6_over_Z": "Z",
+    "common_feasible_homeomorphism": "S^6 x (0,infinity)^3",
+    "single_signature_dual_fiber_at_fi_zero": "POINT",
+    "single_signature_dual_fiber_at_fi_negative": "AFFINE_49_SIMPLEX",
+    "compact_convex_source_fibers_proper_projection_zero_padding": "ACCEPT",
+    "simultaneous_finite_compact_relative_models": "ACCEPT_EXISTENCE_ONLY",
+    "filtered_integral_Mayer_Vietoris_comparison": "ACCEPT_BY_REFEREE_EXPLICIT_PROPER_BLOCK_MASS_RETRACTION",
+    "individual_witness_coordinate_faces_preserved_by_retraction": "NOT_ASSERTED",
+    "labeled_parent_origin": "EXCLUDED_BY_DETERMINANT_ONE_COMMON_LABEL_MINOR",
+    "arbitrary_row_to_triple_relabeling_exclusion": "NOT_REVIEWED_OR_GRANTED",
+    "parent_identity_suffices_for_D3": "UNPROVED",
+    "actual_parent_counterexample": false,
+    "pair_Hc1_injectivity_failure_demonstrated": false,
+    "generic_triple_escape_failure_demonstrated": true
+  },
+  "frozen_candidate_defects": [
+    {
+      "id": "R1",
+      "kind": "VERIFICATION_SCOPE",
+      "severity": "NONBLOCKING_WITH_INDEPENDENT_INTEGRAL_CERTIFICATE",
+      "location": "check_full_dimensional_countermodel.py: halfline_product/rank and integral PASS message",
+      "finding": "Ranks over Fraction alone do not certify integral acyclicity or exclude torsion.",
+      "independent_resolution": "Integer cubical chain contraction d h + h d = identity, checked on every relative cell including the Euclidean degree shift."
+    },
+    {
+      "id": "R2",
+      "kind": "UNPINNED_PROOF_REFERENCE",
+      "severity": "NONBLOCKING_WITH_REFEREE_SELF_CONTAINED_PROOF",
+      "location": "FULL_DIMENSIONAL_COUNTERMODEL.md: compact-relative source filtered comparison",
+      "finding": "The reference to a source audit is not pinned in the candidate; no ai-d3-reset-source directory is present.",
+      "independent_resolution": "REVIEW.md Section 5 gives the explicit proper block-mass deformation and the integral simplex attachment maps."
+    }
+  ],
+  "verification": {
+    "status": "PASS_FINITE_CERTIFICATES",
+    "command": "py -3 ops/team/ai-d3-reset-referee/independent_check.py",
+    "python_runtime": "CPython 3.13.1",
+    "third_party_dependencies": [],
+    "producer_code_imported_or_executed": false,
+    "method": "Exact degree-bounded rational interpolation plus integer cubical contraction; separate prose topology proof.",
+    "independent_parameter_grid_size": 64,
+    "compactification_unisolvent_nodes": 66,
+    "hostile_mutations_rejected": 4,
+    "checker_elapsed_seconds": 0.904661,
+    "machine_formalized_global_topology": false
+  },
+  "source_hashes": {
+    "ops/team/ai-d3-reset-coordinator/FULL_DIMENSIONAL_COUNTERMODEL.md": {
+      "git_blob_sha256": "29080bd9199295747216dc7f6b619822dfa05d009d2b56accd76b61c35a3d963",
+      "worktree_bytes_sha256": "29080bd9199295747216dc7f6b619822dfa05d009d2b56accd76b61c35a3d963",
+      "git_blob_id": "c629c727c6235a47a76d07f2b37efc1e4b6d208d"
+    },
+    "ops/team/ai-d3-reset-coordinator/check_full_dimensional_countermodel.py": {
+      "git_blob_sha256": "0cd93fcbf892ebf6969b9983c5055ecca03bb0d1ff15a413a8bcd0c2b7a6927c",
+      "worktree_bytes_sha256": "0cd93fcbf892ebf6969b9983c5055ecca03bb0d1ff15a413a8bcd0c2b7a6927c",
+      "git_blob_id": "429ddd63152e9eb8998d2597bd6458a0112c81e2"
+    },
+    "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/THEOREM_CANDIDATE.md": {
+      "git_blob_sha256": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a",
+      "worktree_bytes_sha256": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a",
+      "git_blob_id": "db9f56cc21b6e46697fb19422a9d1ca06e14ab38"
+    },
+    "ai/omreal/BLOCK_GORDAN_AUDIT.md": {
+      "git_blob_sha256": "5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a",
+      "worktree_bytes_sha256": "5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a",
+      "git_blob_id": "b5dd849e4483da3dbb267e93de96b30cb304d30c"
+    },
+    "ai/omreal/ATLAS_HELLY.md": {
+      "git_blob_sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "worktree_bytes_sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "git_blob_id": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64"
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE.md": {
+      "git_blob_sha256": "e3ce6f7110b13a46e0831fe8c2344ad865ada17d9fa70d03383fd654bd287dea",
+      "worktree_bytes_sha256": "e3ce6f7110b13a46e0831fe8c2344ad865ada17d9fa70d03383fd654bd287dea",
+      "git_blob_id": "54718ac565bf526ebf44cc0f2ac0c6a57f7edf0e"
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/WORK_ORDERS.yaml": {
+      "git_blob_sha256": "2ec4b8edc27946a84adef1f122261cb41db066e6481c3cdee2864e9725534a0a",
+      "worktree_bytes_sha256": "2ec4b8edc27946a84adef1f122261cb41db066e6481c3cdee2864e9725534a0a",
+      "git_blob_id": "952fd96a50d2e71df7a4115edc0432db0c352a5d"
+    }
+  },
+  "artifact_sha256": {
+    "REVIEW.md": "2ef3e230048405210e839577f5a602c722c2e89e0af02462bb156b467febe4f6",
+    "independent_check.py": "17b0994294ab3929bae49c938ae312f7c6ad9febb6377eced0f28033b9628ac0",
+    "CHECK_OUTPUT.json": "7ed65445e80fad2e789e5f7eb1bcc4c71b39d8ed87e1325aa059fc7f6c9695b6"
+  },
+  "theorem_accounting": {
+    "ledger_before": "2/9",
+    "ledger_after": "2/9",
+    "theorem_delta": 0,
+    "actual_parent_obligations_closed": [],
+    "seven_actual_parent_obligations": "UNCHANGED",
+    "certified_exhaustive_residual": "UNKNOWN",
+    "global_coverage": "UNKNOWN",
+    "classification": "INFORMATIONAL_GENERIC_HYPOTHESIS_SEPARATION"
+  },
+  "authority_and_resources": {
+    "human_consultation": false,
+    "human_contact": false,
+    "paid_or_external_compute": false,
+    "external_actions": "READ_ONLY_PRIMARY_LITERATURE_BROWSING",
+    "producer_files_modified": false,
+    "canonical_files_modified": false,
+    "push_or_merge": false,
+    "review_wall_minutes_upper_bound_since_candidate_commit": 19.694,
+    "wall_bound_explanation": "Referee began after the candidate commit timestamp; this is an upper bound, not a measured active duration.",
+    "peak_memory": "NOT_MEASURED",
+    "created_files_bytes_before_result": 34522,
+    "limits": "90 wall-minutes, 16 GiB RAM, 300 MiB new scratch"
+  },
+  "referee_commit": "Exact containing commit SHA is returned in the final handoff; this field is deliberately not self-referential."
+}

@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-09-09T03:30:40.913523+00:00",
+  "initial_executables": {
+    "msolve": false,
+    "Singular": false,
+    "M2": false,
+    "sage": false
+  },
+  "initial_python": {
+    "numpy": true,
+    "scipy": true,
+    "sympy": false,
+    "flint": false
+  },
+  "f4sat_started": false,
+  "reason": "Attachment design gate pending; no unrelated solver experiment.",
+  "temporary_symbolic_dependency": {
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "path": "/workspace/scratch/075a82401b1f/deps",
+    "purpose": "bounded equation derivation only; not F4SAT"
+  }
+}

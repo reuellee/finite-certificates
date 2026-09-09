@@ -1,0 +1,34 @@
+{
+  "base_commit": "3a7ce7b5d57543d54eace7707659418cea6d69c9",
+  "base_tree": "7e2e958bcc7fef306bfc309c1502a279925b4ab6",
+  "handoff": "NULL",
+  "classification": "STALLED",
+  "strategy_verdict": "STOP",
+  "independent_AI_acceptance": "PENDING",
+  "diagonal_ledger": [
+    2,
+    9
+  ],
+  "original_invariants_closed": [],
+  "pair_global_coverage": "UNKNOWN",
+  "pair_certified_residual": "UNKNOWN",
+  "Hc0_T_assumed": false,
+  "auxiliary_result": "Conditional local sign-collar lemma and explicit parametric failure equations, not a global attachment reduction.",
+  "candidate_lemmas_examined": [
+    "C1 generic collar to global original frontier",
+    "C2 saturation-certified mixed comparison prism",
+    "C3 critical exclusion to detector nondegeneracy"
+  ],
+  "first_unresolved_implication": "No proper globally attached original-space comparison carrying local sign collars to actual signed b_ij frontier blocks, including all original labels, zero weights, rank strata and true infinity.",
+  "saturation_eligible": false,
+  "main_F4SAT_started": false,
+  "modular_primes_screened": 0,
+  "new_arithmetic_certificate": null,
+  "no_same_route_successor": true,
+  "scope_of_saturated_units": "nonparent normal-minor factors are units only on the declared restricted collar branch; their zero loci remain unresolved",
+  "files": {
+    "SOURCE_MANIFEST.json": "7c7917680a979684d41d3109866c66a3fd833ba8e5cbec6f33ab69d7280b3b13",
+    "FINDINGS.md": "622c91a08c4a3620f1e6075653259b99503c5f25ae8a59a21d464ecadba65493",
+    "CANDIDATE_EQUATIONS.json": "7304d004f1f18944b11b3f04576ad48478f35b312fd5b2d44176f5a9c08b5849"
+  }
+}

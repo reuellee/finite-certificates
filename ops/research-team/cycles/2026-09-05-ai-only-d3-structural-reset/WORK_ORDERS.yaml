@@ -1,0 +1,56 @@
+cycle_id: 2026-09-05-ai-only-d3-structural-reset
+base_revision: 50a77bc5657c12cc079fb6c8043c4ad41270f506
+base_tree: c338e15a6735694987528be21d3c000d87704d99
+opening_ledger: 2/9
+storage_authorization: &storage_authorization |
+  The saved local Codex project is the working home. Use local checkpoints.
+  The optional native-filesystem recovery mirror is
+  G:\My Drive\Projects\research-backups. Never invoke the Google Drive connector
+  and never block on connector approval. GitHub is read-only for this work.
+  No paid/external compute, force-push, human contact, or unrelated changes.
+strategy_gate:
+  opening_verdict: PIVOT
+  closing_required: true
+  stagnation_rule: Stop if no new parent-specific testable hypothesis emerges.
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 9
+    zero_ledger_streak: 12
+  convergence_hypothesis: Isolate and test a parent-specific geometric identity.
+  minimum_acceptable_delta: Independently close a named obligation or certify a full-scope counterexample; exploratory separation results are informational.
+  mid_cycle_checkpoint: First frozen source/falsifier handoffs or three active hours.
+  closing_classification_required: true
+  automatic_pivot_rule: No same-route continuation after an unchanged blocker without a new testable input.
+work_orders:
+  - track_id: ai-d3-reset-source
+    role: source-architect
+    surface: ops/team/ai-d3-reset-source
+    storage_authorization: *storage_authorization
+    resource_ceiling: 90 wall-minutes, 16 GiB RAM, 300 MiB scratch
+    target: Reconstruct the five source clauses and distinguish actual consequences from existence alone.
+    stop_rule: Freeze a complete argument or the first exact missing edge.
+    prohibited_scope: No ledger changes, producer self-acceptance, bulk computation, external contact, push, or merge.
+    worker_restrictions: Own only the source surface in an isolated local worktree; do not inspect other active lanes.
+  - track_id: ai-d3-reset-falsifier
+    role: adversarial-topologist
+    surface: ops/team/ai-d3-reset-falsifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 90 wall-minutes, 16 GiB RAM, 300 MiB scratch
+    target: Attack the source theorem and whether its hypotheses constrain the two D3 invariants.
+    stop_rule: Freeze a precise obstruction or null scope; separate generic and actual-parent examples.
+    prohibited_scope: No repairs to source lane, self-acceptance, ledger changes, bulk computation, contact, push, or merge.
+    worker_restrictions: Own only the falsifier surface; do not inspect the source lane or coordinator discoveries.
+  - track_id: ai-d3-reset-referee
+    role: independent-referee
+    surface: ops/team/ai-d3-reset-referee
+    storage_authorization: *storage_authorization
+    resource_ceiling: 90 wall-minutes, 16 GiB RAM, 300 MiB scratch
+    target: Reconstruct frozen claims from primary definitions and independently verify exact certificates and scope.
+    stop_rule: Fail closed on wrong quantifiers, absent geometry, source drift, or unproved global attachment.
+    prohibited_scope: No producer repair, discovery expansion, ledger promotion, human contact, push, or merge.
+    worker_restrictions: Own only the referee surface; do not import producer acceptance logic.

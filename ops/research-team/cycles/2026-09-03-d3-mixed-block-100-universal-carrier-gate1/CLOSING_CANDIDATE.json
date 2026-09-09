@@ -1,0 +1,124 @@
+{
+  "format": "d3-mixed-100-closing-candidate-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "base": {
+    "revision": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+    "tree": "117850b25cd94f865cb85e681c465b8260dd9c6a"
+  },
+  "opening": {
+    "revision": "1c6519d89335dde215e93887de074ea4e6d6464a",
+    "tree": "ff8a33e13952e86b27f184e3d8c40e768fbeb110"
+  },
+  "integrated_evidence": {
+    "revision": "78738358b76157a68d6b46b8367d902ff0b0a8af",
+    "tree": "001ce5221544a0c6d0e313af670d3798a13483c1"
+  },
+  "roles": {
+    "constructor": {
+      "lane_revision": "35346bf6093c83d77b24227b660a36760a60b319",
+      "lane_tree": "2dabeee664c946325eb34ed4f833aa547a961344",
+      "integrated_revision": "a92c459340d0f76c3578a49f10cbb7968d07c156",
+      "handoff": "NULL_STALLED_STOP"
+    },
+    "falsifier": {
+      "lane_revision": "88e20c2e0f4837eaa46787e5cdd564001de5d23c",
+      "lane_tree": "19a4af576823cb9e8650f31216b52768b628657c",
+      "integrated_revision": "833d61bd0702529c892c9b37ad8a2ee5c7b8b972",
+      "handoff": "NO_UNIVERSAL_OBSTRUCTION_FOUND_WITHIN_FROZEN_SCOPE"
+    },
+    "independent_verifier": {
+      "lane_revision": "e92c489d703c1e1adc9365b66884f5cb03322287",
+      "lane_tree": "001ce5221544a0c6d0e313af670d3798a13483c1",
+      "integrated_revision": "78738358b76157a68d6b46b8367d902ff0b0a8af",
+      "handoff": "NULL_STALLED_STOP_INDEPENDENTLY_CONFIRMED"
+    }
+  },
+  "result": {
+    "constructor": "NULL",
+    "falsifier": "NULL",
+    "independent_verdict": "NULL_STALLED_STOP_INDEPENDENTLY_CONFIRMED",
+    "positive_token": null,
+    "negative_token": null,
+    "O3": "OPEN",
+    "O4": "OPEN",
+    "trajectory": "STALLED",
+    "strategy_action": "STOP",
+    "selected_successor": "NONE",
+    "same_route_continue": false
+  },
+  "exact_finding": {
+    "first_missing_edge": "DECLARED_L_SOURCE_INTERFACE_TO_O3_MIXED_GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY",
+    "formal_kernel_cone": "EXACT_INTEGRAL_STRICTLY_FUNCTORIAL_ALGEBRAIC_CONTROL",
+    "formal_kernel_cone_is_geometric_carrier": false,
+    "interface_entails_geometric_mixed_proper_realization": false,
+    "empty_carrier_expansion_is_actual_admissible_9dvl_instance": false,
+    "interface_non_entailment_is_full_negative": false,
+    "row2599_comparison_incidences": "4/6",
+    "bounded_repair_available": false
+  },
+  "proof_distance": {
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "midpoint_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 9, 12],
+    "selected_route_opening": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_closing": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_delta": 0,
+    "minimum_acceptable_decrease_met": false
+  },
+  "accounting": {
+    "ledger_opening": "2/9",
+    "ledger_closing": "2/9",
+    "ledger_delta": "0/9",
+    "canonical_open_obligations": 7,
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_residual": 1162302,
+    "formal_3_of_10_promoted": false,
+    "theorem_or_counterexample_claimed": false
+  },
+  "resources": {
+    "opening_to_independent_verifier_seconds": 1598,
+    "governed_ceiling_seconds": 14400,
+    "role_surface_bytes_before_close": 153277,
+    "constructor_handoffs": 1,
+    "verifier_directed_repairs": 0,
+    "research_saturation_or_cad_jobs": 0,
+    "cloud_workers": 0,
+    "external_spend_usd": 0,
+    "peak_ram_continuously_measured": false
+  },
+  "scope": {
+    "author_contact": false,
+    "network_research": false,
+    "github_write": false,
+    "external_compute": false,
+    "atlas_census_sampling_or_residual_growth": false,
+    "canonical_ledger_edit": false,
+    "human_review": false
+  },
+  "source_pins": {
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/CYCLE.md": "9f88215d6b9fdacd5318c056d27322b0339f2c04bbbe5ce378f45d6ac4d515cb",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/WORK_ORDERS.yaml": "3ba2bb478e6efe2f28d385204bb698b0308854731eb8d36a10093b91943c7901",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/OPENING_STATE.json": "442081ba35778ba103ff4caccf274329b8694e826a7349fdf5b30fb662514e00",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/verify_opening_state.py": "064a8c6944b33238abd8555c79a8304269d85755716c7a8aa658ada217dfd760",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/MID_CYCLE_CHECKPOINT.json": "fd0e4c908d0418bcb642d8c3cc821d135384c72aef50c02d0b8cfa70f1e84cec",
+    "ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/verify_mid_cycle.py": "136976e4b84c5d227014b03d2e5f4ecced04b26d76ccbe71b77f64d8e1bfa22d",
+    "ops/team/d3-mixed-100-carrier-constructor/RESULT.json": "7df547c8de5cc7259107829e3c34ca427992be978517991cab249d209d4c1785",
+    "ops/team/d3-mixed-100-carrier-constructor/verify_constructor.py": "5cb3cf0ebacf5a40027096e9a1a1c82550f706c31abbbd3c0c4d18bc8a4a2c1c",
+    "ops/team/d3-mixed-100-carrier-falsifier/RESULT.json": "7bc792fe6e4ee8b555de50b42b47cbc713fbc9f5918e7a082a35dac57ff2aa8c",
+    "ops/team/d3-mixed-100-carrier-falsifier/interface_independence_fixture.json": "205f109543695a25dc99eea6650e60467c971d6f2f12319b3f06fa2c4ef37061",
+    "ops/team/d3-mixed-100-carrier-falsifier/verify_falsifier.py": "690f735f5efd7c4ffb7ddd666dc76a597ce299363f861a269456a9ec1709ba14",
+    "ops/team/d3-mixed-100-independent-verifier/RESULT.json": "ed8622edae163351309b1d1ade580ee9bf964118bd793f8c52cedf01642d7868",
+    "ops/team/d3-mixed-100-independent-verifier/verify_independent.py": "1f6399d8ad7fe0c893a1919ebb26a43075ed894f7aeb4c739ff6b0f13d7e572a"
+  },
+  "nonconsequences": [
+    "NO_O3_OR_O4_PROOF",
+    "NO_EXACT_ADMISSIBLE_FULL_NEGATIVE",
+    "NO_GENUINELY_MIXED_GEOMETRIC_CELL_CONSTRUCTED_OR_EXCLUDED",
+    "NO_GLOBAL_L_SOURCE_OR_PAIR_COMPLEX",
+    "NO_PAIR_OR_TRIPLE_BRANCH_CLOSURE",
+    "NO_D3_OR_9DVL_PROOF_OR_COUNTEREXAMPLE",
+    "NO_LEDGER_CHANGE",
+    "NO_AUTOMATIC_SUCCESSOR"
+  ]
+}

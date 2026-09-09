@@ -1,0 +1,16 @@
+{
+  "base_revision": "730fd6c7b6c2c3e8cbbf94ab4da3bc97ba53f095",
+  "contract": "OPENING.md",
+  "source_manifest": "SOURCE_MANIFEST.json",
+  "discovery_minutes_per_worker": 20,
+  "opening_gate_minutes": 8,
+  "roles": [
+    {"role": "constructive_prover", "worktree": "/workspace/scratch/f3b1d9a51229/detector-prover", "owned_surface": "ops/team/d3-detector-prover/", "target": "Actual boundary/compact-support detector construction; produce formulas and prove geometric lemmas or a precise null."},
+    {"role": "falsifier", "worktree": "/workspace/scratch/f3b1d9a51229/detector-falsifier", "owned_surface": "ops/team/d3-detector-falsifier/", "target": "Test local/sheaf and support-natural detector mechanisms against actual Gordan geometry; distinguish local-rule no-go from D3 counterexample."},
+    {"role": "independent_referee", "worktree": "/workspace/scratch/f3b1d9a51229/detector-referee", "owned_surface": "ops/team/d3-detector-referee/", "target": "Independent opening/strategy audit, then candidate mathematics and original-space comparison audit without importing producer acceptance logic."}
+  ],
+  "ledger_edit_owner": "coordinator",
+  "github_write": false,
+  "paid_compute": false,
+  "author_contact": false
+}

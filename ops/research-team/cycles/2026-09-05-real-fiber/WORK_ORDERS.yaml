@@ -1,0 +1,70 @@
+cycle_id: 2026-09-05-real-fiber
+base_revision: cefc495b27247c4a76f88bce04978422161f7ce9
+base_tree: c49c2e6625f3ee76d77cc263897366dcf7e037c2
+opening_ledger: 2/9
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+strategy_gate:
+  opening_verdict: PIVOT
+  closing_required: true
+  stagnation_rule: No same-route continuation without a globally attached decrease.
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 10
+    zero_ledger_streak: 13
+  convergence_hypothesis: Real parent geometry can close escape despite failure of fixed-base rational ruling; pair image cancellation is independently controlled.
+  minimum_acceptable_delta: Close an original invariant or a complete globally attached source obligation; auxiliary obstructions are informational.
+  mid_cycle_checkpoint: First structural obstruction or 18 active minutes.
+  closing_classification_required: true
+  automatic_pivot_rule: Unchanged global attachment forbids same-route CONTINUE.
+work_orders:
+  - track_id: d3-real-global-prover
+    role: constructive-prover
+    surface: ops/team/d3-real-global-prover
+    publication_authorization: *publication_authorization
+    target: Prove all-component all-parent noncompactness for the original source; retain singularities and all parent denominators.
+    resource_ceiling: 35 active minutes; 180 seconds and 4 GiB per symbolic process; 500 MiB outputs
+    stop_rule: First decisive obstruction, complete proof, or time ceiling; freeze useful null if the global endpoint remains unattached.
+    prohibited_scope: No ledger changes, publication, unrelated changes, paid compute, human contact, or enlarged resource bounds.
+    worker_restrictions: Own only assigned new files in isolated worktree; no other-track acceptance logic; commit locally only.
+  - track_id: d3-real-pair-prover
+    role: constructive-prover
+    surface: ops/team/d3-real-pair-prover
+    publication_authorization: *publication_authorization
+    target: Prove original alternating direct-sum pair Hc1 injectivity with full original parent and signature quantifiers.
+    resource_ceiling: 35 active minutes; 180 seconds and 4 GiB per symbolic process; 500 MiB outputs
+    stop_rule: First decisive obstruction, complete proof, or time ceiling; freeze useful null if the global endpoint remains unattached.
+    prohibited_scope: No ledger changes, publication, unrelated changes, paid compute, human contact, or enlarged resource bounds.
+    worker_restrictions: Own only assigned new files in isolated worktree; no other-track acceptance logic; commit locally only.
+  - track_id: d3-real-oval-falsifier
+    role: falsifier
+    surface: ops/team/d3-real-oval-falsifier
+    publication_authorization: *publication_authorization
+    target: Prove or falsify parent-boundary intersection of every compact fixed-base real oval; whole-oval signs required.
+    resource_ceiling: 35 active minutes; 180 seconds and 4 GiB per symbolic process; 500 MiB outputs
+    stop_rule: First decisive obstruction, complete proof, or time ceiling; freeze useful null if the global endpoint remains unattached.
+    prohibited_scope: No ledger changes, publication, unrelated changes, paid compute, human contact, or enlarged resource bounds.
+    worker_restrictions: Own only assigned new files in isolated worktree; no other-track acceptance logic; commit locally only.
+  - track_id: d3-real-referee
+    role: independent-referee
+    surface: ops/team/d3-real-referee
+    publication_authorization: *publication_authorization
+    target: Independently reconstruct frozen arithmetic and audit all-source versus slice quantifiers; do not repair producers.
+    resource_ceiling: 20 minutes opening and 20 minutes closing
+    stop_rule: First decisive obstruction, complete proof, or time ceiling; freeze useful null if the global endpoint remains unattached.
+    prohibited_scope: No ledger changes, publication, unrelated changes, paid compute, human contact, or enlarged resource bounds.
+    worker_restrictions: Own only assigned new files in isolated worktree; no other-track acceptance logic; commit locally only.

@@ -1,0 +1,14 @@
+{
+  "base_revision": "730fd6c7b6c2c3e8cbbf94ab4da3bc97ba53f095",
+  "base_tree": "dbe7645743d09758eb3403272908ac3dcf88bf65",
+  "source_sha256": {
+    "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+    "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ops/team/d3-real-pair-prover/FINDINGS.md": "6425d367675fc709cc65f4560e654b645cb4f92f07571bb81f74ca0e9ab99778",
+    "ops/research-team/cycles/2026-09-05-real-fiber/CLOSING_STATE.json": "0e9d53d46b90b09424ff9ec873e9a0eb1584150e94f6b032c8553421ad011417",
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246"
+  }
+}

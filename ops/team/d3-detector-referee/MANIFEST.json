@@ -1,0 +1,13 @@
+{
+  "schema": "independent-referee-artifact-manifest-v1",
+  "artifact_sha256": {
+    "CANDIDATE_REVIEW.md": "83cf8ad0057ece4d5111494bc4c7e2e919958b8b071448677912f3c25cfbd64b",
+    "FINAL_REVIEW.md": "4926f7bcda6dfb0913d1dcbfcab9965a9899dfc5ad1c97505280cb91e46b27f4",
+    "HANDOFF.json": "c0b6ab85373bf491df9c1af5cee7a62b157ff57c4513d1b573a91f59c0aa62d8",
+    "INDEPENDENT_REPLAY.json": "289f1fe2bda0b3ba0be34bc5ea41b4fc6f69c0b09eba3896722ed437384895ac",
+    "OPENING_AUDIT.md": "8f62b2b216972e8284bf1fb3b2e9e78ad4a2022b3844bb61ed11af1f49d52aa4",
+    "REVIEWED_INPUTS.json": "4cec99ddf64b3c64c93988e794aa6f2106e8a154800723da0bb2bc27e9fb983d",
+    "verify_independently.py": "da17a35398c995c73a69ade3effa260b06afef7d45d079f9d1a2d2169559f96b"
+  },
+  "self_digest_excluded": true
+}

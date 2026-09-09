@@ -1,0 +1,167 @@
+{
+  "format": "d3-mixed-100-carrier-falsifier-result-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "track_id": "d3-mixed-100-carrier-falsifier",
+  "role": "universal-falsifier",
+  "branch": "research/lane-d3-mixed-100-carrier-falsifier-20260903",
+  "lane_opening_commit": "1c6519d89335dde215e93887de074ea4e6d6464a",
+  "lane_opening_tree": "ff8a33e13952e86b27f184e3d8c40e768fbeb110",
+  "canonical_base_revision": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+  "canonical_base_tree": "117850b25cd94f865cb85e681c465b8260dd9c6a",
+  "handoff": "NO_UNIVERSAL_OBSTRUCTION_FOUND_WITHIN_FROZEN_SCOPE",
+  "classification": "NULL",
+  "trajectory_recommendation": "STALLED",
+  "strategy_recommendation": "STOP",
+  "universal_counterexample_found": false,
+  "full_quantifier_negative_proved": false,
+  "exact_finding": {
+    "kind": "DECLARED_INTERFACE_NON_ENTAILMENT_WITH_ALGEBRAIC_CONE_CONTROL",
+    "interface_forces_formal_integral_filler": true,
+    "interface_forces_genuinely_mixed_semialgebraic_filler": false,
+    "reason": "The four declared L_source axioms contain only C0-C2, boundary, primitive-kernel, provenance-tag, and specialization-functor data. They contain no admissible mixed C3 generator universe, semialgebraic realization map, properness predicate, or true-parent-infinity attachment predicate.",
+    "negative_not_promoted": "The empty-carrier expansion is an exact logical non-entailment witness, but its actual rank-four 9DVL geometric admissibility is not established. Treating it as an admissible source-derived obstruction would add the hidden assumption that no geometric mixed carrier exists.",
+    "first_missing_negative_edge": "An exact source-derived definition of every admissible genuinely mixed (1,0,0) geometric generator and a proof, for one quantified parent/signature/support instance, that its full integral boundary image omits the primitive class under every required specialization."
+  },
+  "algebraic_kernel_cone_lemma": {
+    "statement": "For every finite diagram of finite free integral C0-C2 complexes and chain maps, define C3(x)=ker(d2_x), d3_x as inclusion, and C3(f) as the restriction of C2(f). This is a finite strict functor, d2*d3=0, and every integral kernel class has a coherent integral filler. All category relations, arbitrary face flags, automorphisms, monodromy, and active-block permutations are inherited exactly.",
+    "proof_dependencies": [
+      "A subgroup of a finite-rank free abelian group is finite-rank free.",
+      "A chain map sends ker(d2) into ker(d2).",
+      "Restriction preserves identities and compositions.",
+      "The inclusion ker(d2)->C2 has boundary equal to the represented kernel cycle."
+    ],
+    "consequence_for_falsification": "No obstruction using only integral boundary algebra, finite specialization-category coherence, monodromy, or permutation equivariance can disprove the target. Any valid obstruction must use the missing geometric realization/properness/true-infinity semantics.",
+    "does_not_prove": [
+      "A_GENUINELY_MIXED_SEMIALGEBRAIC_CELL_EXISTS",
+      "THE_FORMAL_CONE_IS_SOURCE_DERIVED",
+      "THE_FORMAL_CONE_MAPS_PROPERLY_TO_TRUE_PARENT_INFINITY",
+      "O3",
+      "O4"
+    ]
+  },
+  "finite_independence_fixture": {
+    "path": "ops/team/d3-mixed-100-carrier-falsifier/interface_independence_fixture.json",
+    "lower_complex": "EXACT_ROW2599_FLOW_TRIANGLE",
+    "rank_partial_1": 3,
+    "rank_partial_2": 6,
+    "rank_C2": 7,
+    "primitive_class": [-1, 1, 1, 1, 1, 1, 1],
+    "face_generators": 7,
+    "boolean_face_objects": 128,
+    "boolean_face_morphisms": 2187,
+    "arbitrary_flag_coherence": "STRICT_BY_THIN_CATEGORY_AND_IDENTITY_REPRESENTATION",
+    "formal_cone_fills": true,
+    "empty_interpretation_does_not_fill": true,
+    "same_declared_lower_interface": true,
+    "actual_negative_instance": false
+  },
+  "attack_log": [
+    {
+      "id": "A1_ROW2599_SINGLETON_COCYCLE",
+      "result": "EXACT_NARROW_NO_GO_ONLY",
+      "finding": "The primitive class is not fillable by cells subordinate to one fixed bad block at a time.",
+      "why_not_full_negative": "The admissible target explicitly permits genuine block-mass transfer or witness exchange."
+    },
+    {
+      "id": "A2_COMPACT_TRIPLE_COMPONENT",
+      "result": "NO_OBSTRUCTION",
+      "finding": "The pinned row2599 instance has an exact common proper triple-bad ray to parent wall [2467].",
+      "why_not_full_negative": "The diagnostic does not supply a compact actual triple component."
+    },
+    {
+      "id": "A3_INTEGRAL_PARITY_OR_TORSION",
+      "result": "RULED_OUT_AT_INTERFACE_LEVEL",
+      "finding": "The kernel-cone inclusion fills primitive classes with coefficient one; no divisibility obstruction arises from the lower integral diagram alone.",
+      "why_not_full_negative": "A parity obstruction would require a separately specified geometric mixed-cell boundary lattice."
+    },
+    {
+      "id": "A4_MONODROMY_AND_ACTIVE_BLOCK_SYMMETRY",
+      "result": "RULED_OUT_AT_INTERFACE_LEVEL",
+      "finding": "Every lower chain automorphism restricts to the kernel, so the cone construction is exactly equivariant under all finite automorphisms and loops.",
+      "why_not_full_negative": "A geometric stabilizer obstruction requires the missing realization representation on actual mixed cells."
+    },
+    {
+      "id": "A5_ARBITRARY_FACE_FLAGS",
+      "result": "RULED_OUT_AT_INTERFACE_LEVEL",
+      "finding": "Restriction to kernels is functorial for every composite, not just codimension-one squares.",
+      "why_not_full_negative": "The formal functor has no semialgebraic carrier or properness content."
+    },
+    {
+      "id": "A6_EMPTY_MIXED_CARRIER_EXPANSION",
+      "result": "EXACT_LOGICAL_NON_ENTAILMENT_NOT_ACTUAL_COUNTEREXAMPLE",
+      "finding": "The declared lower interface is compatible with an interpretation containing no admissible mixed geometric generators and with a formal cone interpretation that fills the class.",
+      "why_not_full_negative": "No source-derived theorem identifies the empty interpretation with the actual rank-four eight-label geometry."
+    }
+  ],
+  "quantifier_status": {
+    "all_realizable_uniform_rank4_parents_on_8_labels": "NOT_FALSIFIED",
+    "all_normalized_components_and_charts": "NOT_FALSIFIED",
+    "all_proper_incomparable_source_antichains": "NOT_FALSIFIED",
+    "all_support_strata": "NOT_FALSIFIED",
+    "all_primitive_integral_kernel_classes": "FORMALLY_CONED_BUT_GEOMETRICALLY_UNDECIDED",
+    "all_labeled_active_block_placements_and_permutations": "FORMALLY_EQUIVARIANT_BUT_GEOMETRICALLY_UNDECIDED",
+    "all_composable_face_flags": "FORMALLY_COHERENT_BUT_GEOMETRICALLY_UNDECIDED",
+    "true_parent_infinity_only": "NOT_ENCODED_BY_DECLARED_INTERFACE_AND_NOT_FALSIFIED"
+  },
+  "proof_distance": {
+    "opening_selected_route_residual": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "closing_selected_route_residual": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "strict_decrease": false,
+    "canonical_ledger_before": "2/9",
+    "canonical_ledger_after": "2/9",
+    "canonical_ledger_delta": "0/9",
+    "midpoint_recommendation": "FREEZE_NULL_STALLED_STOP",
+    "reason": "Neither a genuine geometric universal proof nor an actual admissible full-quantifier obstruction is reachable without adding a carrier-realization interface absent from the frozen target."
+  },
+  "scope_compliance": {
+    "owned_surface": "ops/team/d3-mixed-100-carrier-falsifier",
+    "constructor_worktree_inspected": false,
+    "constructor_output_imported_or_repaired": false,
+    "cycle_or_canonical_files_edited": false,
+    "ledger_edited": false,
+    "network_used": false,
+    "external_compute_used": false,
+    "atlas_census_sampling_or_residual_growth_used": false,
+    "github_write_or_push_used": false
+  },
+  "replays": [
+    {
+      "command": "python -B ops/research-team/cycles/2026-09-03-d3-mixed-block-100-universal-carrier-gate1/verify_opening_state.py",
+      "expected": "PASS"
+    },
+    {
+      "command": "python -B ai/omreal/verify_canonical_research_state_v10.py",
+      "expected": "PASS"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_joined_flow_triangle.py",
+      "expected": "PASS"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_single_bad_two_skeleton.py",
+      "expected": "PASS"
+    },
+    {
+      "command": "python -B ai/omreal/verify_diag3_row2599_common_proper_escape.py",
+      "expected": "PASS"
+    },
+    {
+      "command": "python -B ops/team/d3-mixed-100-carrier-falsifier/verify_falsifier.py",
+      "expected": "PASS"
+    }
+  ],
+  "verification": {
+    "standard_library_only": true,
+    "hostile_mutations_required": 24,
+    "hostile_mutations_implemented": 40
+  },
+  "nonconsequences": [
+    "NO_EXACT_ADMISSIBLE_COUNTEREXAMPLE_TO_O3_OR_O4",
+    "NO_PROOF_OF_O3_OR_O4",
+    "NO_ACTUAL_MIXED_C3_CELL_CONSTRUCTED_OR_EXCLUDED",
+    "NO_PARENT_OR_SIGNATURE_FAMILY_RETIRED",
+    "NO_TRUE_INFINITY_OR_GLOBAL_COVERAGE_CLAIM",
+    "NO_D3_PAIR_OR_TRIPLE_BRANCH_CHANGE",
+    "NO_THEOREM_LEDGER_CHANGE"
+  ]
+}

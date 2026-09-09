@@ -1,0 +1,15 @@
+{
+  "base_revision": "3a7ce7b5d57543d54eace7707659418cea6d69c9",
+  "base_tree": "7e2e958bcc7fef306bfc309c1502a279925b4ab6",
+  "inputs": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ops/research-team/cycles/2026-09-09-backward-detector/CLOSING_STATE.json": "712ca3d45f4fd0cd9f480d81ffe1892098535d6869f5bf1df61ca0b16e4924fb",
+    "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+    "ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ops/team/d3-detector-prover/BOUNDARY_DETECTORS.md": "cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3",
+    "ops/team/d3-detector-referee/FINAL_REVIEW.md": "4926f7bcda6dfb0913d1dcbfcab9965a9899dfc5ad1c97505280cb91e46b27f4",
+    "ops/team/d3-real-pair-prover/FINDINGS.md": "6425d367675fc709cc65f4560e654b645cb4f92f07571bb81f74ca0e9ab99778",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86"
+  }
+}

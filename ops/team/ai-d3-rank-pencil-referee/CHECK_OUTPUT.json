@@ -1,0 +1,232 @@
+{
+  "status": "PASS_INDEPENDENT_COMPLETE_FIXED_PLANE_COUNTERCERTIFICATES",
+  "principal_commit": "fdd143c8be96636b7b11af0ac7e2ea8d60b65eca",
+  "secondary_commit": "52ad4e14c63831243f0a57b193e99ebbf32891e5",
+  "arithmetic": "stdlib exact integers; recursive Laplace determinants; all four 3x3 coordinate minors",
+  "producer_acceptance_code_imported_or_executed": false,
+  "new_rank_predicate_points": 1,
+  "binding": {
+    "parent_index": 2599,
+    "chart_index": 0,
+    "catalog_chirotope": "++++++++++++++++++++++++++++-++--+++++++++-+++----+--++--------++--+++",
+    "brackets": 70,
+    "minimum_absolute_bracket": 15324526
+  },
+  "signatures": [
+    14988895318912,
+    3405195891438080,
+    40418075143643136
+  ],
+  "primary_raw_coverage": {
+    "indexed_pairs": 1680,
+    "strict_inequalities": 65520,
+    "minimum_integer_margin": 162514748513691,
+    "signature_usage": {
+      "0": 1202,
+      "1": 477,
+      "2": 1
+    }
+  },
+  "secondary_primitive_coverage": {
+    "indexed_pairs": 1680,
+    "strict_inequalities": 65520,
+    "minimum_integer_margin": 162514748513691,
+    "signature_usage": {
+      "0": 1202,
+      "1": 477,
+      "2": 1
+    }
+  },
+  "distinct_labeled_closures": 896,
+  "indexed_closure_size_histogram": {
+    "6": 840,
+    "2": 840
+  },
+  "distinct_closure_size_histogram": {
+    "2": 840,
+    "6": 56
+  },
+  "existing_pool_vectors": 23,
+  "pool_indices_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    12,
+    16,
+    20,
+    21
+  ],
+  "pair_rank_two_witnesses": 1680,
+  "excluded_row_rank_three_witnesses": 28560,
+  "three_by_three_coordinate_minors_evaluated": 141120,
+  "minimum_selected_nonzero_pair_minor_abs": 133779315986,
+  "minimum_selected_nonzero_exclusion_minor_abs": 14325306924605236,
+  "primary_full_positive_rank_four_circuits": [
+    {
+      "support": [
+        19,
+        21,
+        32,
+        37,
+        38
+      ],
+      "rank": 4,
+      "cofactor_sign": -1,
+      "minimum_absolute_deletion_minor": 1590306865848117591794167506
+    },
+    {
+      "support": [
+        9,
+        16,
+        27,
+        30,
+        35
+      ],
+      "rank": 4,
+      "cofactor_sign": 1,
+      "minimum_absolute_deletion_minor": 51411140948915064241372106
+    },
+    {
+      "support": [
+        11,
+        16,
+        17,
+        24,
+        40
+      ],
+      "rank": 4,
+      "cofactor_sign": 1,
+      "minimum_absolute_deletion_minor": 708385986150582662615629300
+    }
+  ],
+  "secondary_full_positive_rank_four_circuits": [
+    {
+      "support": [
+        0,
+        19,
+        21,
+        37,
+        38
+      ],
+      "rank": 4,
+      "cofactor_sign": -1,
+      "minimum_absolute_deletion_minor": 265051144308019598632361251
+    },
+    {
+      "support": [
+        0,
+        9,
+        27,
+        30,
+        35
+      ],
+      "rank": 4,
+      "cofactor_sign": -1,
+      "minimum_absolute_deletion_minor": 25705570474457532120686053
+    },
+    {
+      "support": [
+        0,
+        11,
+        17,
+        24,
+        40
+      ],
+      "rank": 4,
+      "cofactor_sign": -1,
+      "minimum_absolute_deletion_minor": 2789102958232858178679880120
+    }
+  ],
+  "closure_table_sha256": "d73ae4643220f61909c870dc6819e687a3a6aa02f513b2be53865b72422b1766",
+  "all_selected_strict_evaluations_sha256": "8982fb00632380631d4cde9d321c49e8b8e67d820748d0043cab9685ab22b5f9",
+  "rank_witness_table_sha256": "18b9a16ac14959aef2d6292a8712cf0389b36ea1cc16ea1fc3b68cc3af4a89f9",
+  "raw_normals_sha256": "0194d3c19108cdd928b8d4eefe5dc2c6558422f2d707d26ff0d029128c72f567",
+  "added_row_canary": {
+    "label": 1,
+    "pair": [
+      0,
+      2
+    ],
+    "pool_index": 0,
+    "old_retained_minimum": 82787030264430419792320985415,
+    "added_rows_and_raw_evaluations": [
+      [
+        5,
+        57023982609370872516088712305270710926375510549293014
+      ],
+      [
+        11,
+        103466336383575629428193249209542834423630420625
+      ],
+      [
+        21,
+        -1462394266683677639253814792112316043753468487619159
+      ],
+      [
+        36,
+        46187329222143918328083572083545026151989107554357673
+      ]
+    ]
+  },
+  "hostile_mutations_rejected": [
+    {
+      "mutation": "missing_indexed_closure",
+      "rejection": "missing indexed closure"
+    },
+    {
+      "mutation": "duplicate_indexed_closure",
+      "rejection": "invalid or duplicate indexed closure"
+    },
+    {
+      "mutation": "omit_added_closure_rows",
+      "rejection": "incorrect expanded closure"
+    },
+    {
+      "mutation": "insert_nonmember_row",
+      "rejection": "incorrect expanded closure"
+    },
+    {
+      "mutation": "zero_separator",
+      "rejection": "expanded separator is not strict"
+    },
+    {
+      "mutation": "corrupt_stored_margin",
+      "rejection": "incorrect recorded minimum margin"
+    },
+    {
+      "mutation": "proportional_star_pair",
+      "rejection": "pair rank two"
+    },
+    {
+      "mutation": "zero_full_circuit_weight",
+      "rejection": "strictly positive circuit weights"
+    },
+    {
+      "mutation": "corrupt_full_circuit_weight",
+      "rejection": "circuit residual"
+    },
+    {
+      "mutation": "corrupt_full_circuit_row",
+      "rejection": "circuit residual"
+    },
+    {
+      "mutation": "signature_bit_drift_on_support",
+      "rejection": "circuit residual"
+    },
+    {
+      "mutation": "old_two_row_separator_fails_expanded_closure",
+      "rejection": "expanded separator is not strict"
+    }
+  ],
+  "elapsed_seconds": 4.442194,
+  "process_memory": {
+    "instrumented": true,
+    "peak_working_set_bytes": 42160128,
+    "peak_pagefile_bytes": 31580160
+  },
+  "scope": "Refutes the universal fixed-support-plane one-column rank-at-most-two witness criterion; does not refute all one-column motions, D3, or prove compactness."
+}

@@ -1,0 +1,148 @@
+{
+  "format": "d3-mixed-100-independent-verifier-result-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "track_id": "d3-mixed-100-independent-verifier",
+  "role": "independent-verifier",
+  "branch": "research/lane-d3-mixed-100-independent-verifier-20260903",
+  "owned_surface": "ops/team/d3-mixed-100-independent-verifier",
+  "lane_opening": {
+    "commit": "69983136e6f222ede46433da12a674dda613244e",
+    "tree": "2656b5ad4d9406a7fc38993d162051b8a88836ee"
+  },
+  "frozen_integrated_evidence": {
+    "commit": "833d61bd0702529c892c9b37ad8a2ee5c7b8b972",
+    "tree": "736228f57bcbb1bbad355a87266bfb833fb420ce"
+  },
+  "status": "PASS",
+  "verdict": "NULL_STALLED_STOP_INDEPENDENTLY_CONFIRMED",
+  "handoff": "NULL",
+  "positive_token": null,
+  "negative_token": null,
+  "acceptance": {
+    "constructor_null_confirmed": true,
+    "falsifier_null_confirmed": true,
+    "producer_agreement_used_as_acceptance": false,
+    "O3_universal_mixed_chain": "OPEN",
+    "O4_arbitrary_flag_coherence": "OPEN",
+    "universal_positive_proved": false,
+    "exact_admissible_full_quantifier_negative_proved": false,
+    "first_missing_edge": "O3_MIXED_GEOMETRIC_RELATIVE_BOUNDARY_SURJECTIVITY"
+  },
+  "source_reconstruction": {
+    "inputs_pinned": 33,
+    "all_bytes_and_sha256_match_frozen_midpoint": true,
+    "all_bytes_and_sha256_match_disk": true,
+    "opening_source_pins_reconciled": true,
+    "midpoint_producer_pins_reconciled": true,
+    "git_commit_tree_parent_chain_reconstructed": true,
+    "producer_verifier_code_imported_or_executed": false
+  },
+  "row2599_independent_reconstruction": {
+    "source": "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md",
+    "parent": 2599,
+    "chart": 0,
+    "ranks": {"C0": 3, "C1": 9, "C2": 7, "partial_1": 3, "partial_2": 6, "kernel_partial_2": 1},
+    "partial_1_partial_2_zero": true,
+    "partial_1_integrally_surjective": true,
+    "partial_2_unit_maximal_minor": true,
+    "partial_2_nonzero_smith_invariants": [1, 1, 1, 1, 1, 1],
+    "primitive_kernel_generator": [-1, 1, 1, 1, 1, 1, 1],
+    "homology": {"H0": 0, "H1": 0, "H2": "Z"},
+    "geometric_mixed_C3_columns_certified": 0,
+    "scope": "LOCAL_DIAGNOSTIC_NOT_GLOBAL_DENOMINATOR_OR_O3_WITNESS"
+  },
+  "formal_kernel_cone_lemma": {
+    "valid_for_finite_diagrams_of_finite_free_integral_lower_complexes": true,
+    "construction": "C3_CONE_X_EQUALS_KERNEL_D2_X_WITH_BOUNDARY_INCLUSION_AND_MORPHISMS_RESTRICTED_TO_KERNELS",
+    "finite_free": true,
+    "integral_fill_for_every_kernel_class": true,
+    "identities_compositions_automorphisms_and_all_flags_strict": true,
+    "scope": "FORMAL_ALGEBRAIC_ONLY",
+    "proves_genuinely_mixed_semialgebraic_realization": false,
+    "proves_properness_or_true_parent_infinity": false,
+    "proves_O3_or_O4": false
+  },
+  "finite_category_reconstruction": {
+    "boolean_face_coordinates": 7,
+    "boolean_objects": 128,
+    "boolean_morphisms": 2187,
+    "composable_arrow_pairs": 16384,
+    "boolean_thin_category_associative": true,
+    "active_block_group": "S3",
+    "active_block_group_order": 6,
+    "monodromy_group": "C2",
+    "monodromy_group_order": 2,
+    "direct_product_symmetry_order": 12,
+    "representation": "TRIVIAL_IDENTITY",
+    "all_finite_flags_coherent_by_associativity_and_identity_representation": true,
+    "actual_full_source_face_category_constructed": false,
+    "scope_note": "2187_COUNTS_ONLY_BOOLEAN_COMPARABLE_PAIRS_NOT_GROUP_DECORATED_MORPHISMS"
+  },
+  "logical_non_entailment_boundary": {
+    "declared_interface_determines_lower_C0_C1_C2_and_specializations": true,
+    "declared_interface_contains_geometric_mixed_C3_universe": false,
+    "formal_cone_is_an_algebraic_expansion": true,
+    "formal_cone_is_an_admissible_geometric_carrier": false,
+    "empty_carrier_is_a_syntactic_non_entailment_expansion": true,
+    "empty_carrier_actual_9dvl_admissibility_established": false,
+    "non_entailment_is_an_exact_admissible_counterexample": false,
+    "conclusion": "NEITHER_POSITIVE_NOR_NEGATIVE_TOKEN_JUSTIFIED"
+  },
+  "quantifier_audit": {
+    "all_realizable_uniform_rank4_parents_on_8_labels": "OPEN",
+    "all_normalized_components_and_required_charts": "OPEN",
+    "all_source_derived_proper_incomparable_antichains": "OPEN",
+    "all_admissible_support_strata": "OPEN",
+    "all_relevant_primitive_integral_kernel_classes": "FORMALLY_CONED_GEOMETRICALLY_OPEN",
+    "all_labeled_active_block_placements_and_permutations": "FORMALLY_TRIVIAL_FIXTURE_ONLY_GEOMETRICALLY_OPEN",
+    "all_composable_face_flags": "FORMALLY_TRIVIAL_FIXTURE_ONLY_GEOMETRICALLY_OPEN",
+    "true_parent_infinity_only": "OPEN_NOT_ENCODED_BY_FORMAL_CONE"
+  },
+  "proof_distance": {
+    "canonical_opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "canonical_closing_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "selected_route_opening": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_closing": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "strict_decrease": false,
+    "minimum_acceptable_decrease_met": false,
+    "canonical_ledger_before": "2/9",
+    "canonical_ledger_after": "2/9",
+    "canonical_ledger_delta": "0/9",
+    "trajectory": "STALLED",
+    "required_action": "STOP",
+    "same_route_continue": false,
+    "successor_selected": false,
+    "formal_3_of_10_is_global_or_end_to_end_coverage": false
+  },
+  "hostile_mutations": {
+    "required_minimum": 24,
+    "implemented": 45,
+    "all_rejected": true
+  },
+  "scope_compliance": {
+    "edited_only_owned_surface": true,
+    "producer_acceptance_logic_imported_or_executed": false,
+    "producer_or_cycle_files_edited": false,
+    "discovery_expanded": false,
+    "replacement_theorem_constructed": false,
+    "canonical_or_ledger_edited": false,
+    "network_or_external_compute_used": false,
+    "github_write_push_or_merge": false,
+    "successor_selected": false
+  },
+  "verification": {
+    "command": "python -B ops/team/d3-mixed-100-independent-verifier/verify_independent.py",
+    "python_standard_library_only": true,
+    "producer_modules_imported": false
+  },
+  "nonconsequences": [
+    "NO_PROOF_OF_O3_OR_O4",
+    "NO_EXACT_ADMISSIBLE_COUNTEREXAMPLE_TO_O3_OR_O4",
+    "NO_ACTUAL_GENUINELY_MIXED_CELL_CONSTRUCTED_OR_EXCLUDED",
+    "NO_ACTUAL_FULL_SOURCE_FACE_CATEGORY_OR_MONODROMY_DESCENT",
+    "NO_GLOBAL_COVERAGE_OR_TRUE_INFINITY_CLAIM",
+    "NO_PAIR_OR_TRIPLE_BRANCH_CHANGE",
+    "NO_THEOREM_LEDGER_CHANGE",
+    "NO_SUCCESSOR_SELECTION"
+  ]
+}

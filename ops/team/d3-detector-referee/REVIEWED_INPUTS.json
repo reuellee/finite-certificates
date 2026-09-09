@@ -1,0 +1,51 @@
+{
+  "base_revision": "730fd6c7b6c2c3e8cbbf94ab4da3bc97ba53f095",
+  "base_tree": "dbe7645743d09758eb3403272908ac3dcf88bf65",
+  "sha256": {
+    "source": {
+      "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+      "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+      "ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+      "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+      "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+      "ops/team/d3-real-pair-prover/FINDINGS.md": "6425d367675fc709cc65f4560e654b645cb4f92f07571bb81f74ca0e9ab99778",
+      "ops/research-team/cycles/2026-09-05-real-fiber/CLOSING_STATE.json": "0e9d53d46b90b09424ff9ec873e9a0eb1584150e94f6b032c8553421ad011417",
+      "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+      "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+      "ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+      "ai/omreal/verify_diag3_row2599_common_proper_escape.py": "6b426e94181a0d447f79d70e3eb6f64f2f34227d88b9ae1fa0a87f9539c4297c",
+      "ai/omreal/verify_diag3_row2599_p01_tangent_collar.py": "1625d6db2172b5349edbc741704b6de10afbc1c3213b9733e1810640807bf479"
+    },
+    "opening": {
+      "ops/research-team/cycles/2026-09-09-backward-detector/OPENING.md": "c447b73eec57d686ad6617966223438a86ef3d0d28f3773c46d7e503b7e5c607",
+      "ops/research-team/cycles/2026-09-09-backward-detector/WORK_ORDERS.json": "754f74a78a6d1cea818502c2df08555161e896a0bdfaf31be2edaf807ad8e6c9",
+      "ops/research-team/cycles/2026-09-09-backward-detector/SOURCE_MANIFEST.json": "438ed677ece56815a05bd77ce93a6dd1f8ada3c4b4cc2037f1cfe7a0feeb2404"
+    },
+    "prover": {
+      "ops/team/d3-detector-prover/SOURCE_MANIFEST.json": "1d0466cad1120daba29495125a138ce7bffb5ebe4156d489f524fd628a4827ac",
+      "ops/team/d3-detector-prover/HANDOFF.json": "81537e8fde444798c7a2b00ed60881399711f06fec3bc380cb86a49125a1904f",
+      "ops/team/d3-detector-prover/verify_selected_plane_transport.py": "7934789312e65c951243db9c0b2e9046b648d87066d3743bc13a5cfc692fc0b8",
+      "ops/team/d3-detector-prover/GEOMETRY_REPLAY.json": "b148fcb3b6c84376a67b498575c477f4703b52e7f72bee15fcbbd5f4138edc43",
+      "ops/team/d3-detector-prover/FINDINGS.md": "91aedc042908fe1c33c4978cc90ba80b25e0e6ce31551e803c18652f146753e0",
+      "ops/team/d3-detector-prover/BOUNDARY_DETECTORS.md": "cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3"
+    },
+    "falsifier": {
+      "ops/team/d3-detector-falsifier/verify_detector_obstructions.py": "988034f3b18b95c0aec5983302c495ae73c35c48e0273efb1dc79a1c2533602a",
+      "ops/team/d3-detector-falsifier/ARITHMETIC_REPLAY.json": "a68d577ae1f664cd782630d070f4efdb1f4de911fb254aa66f5267e83b43a3ab",
+      "ops/team/d3-detector-falsifier/FINDINGS.md": "28cf339b063eabb95ff1037b92cff63001512f0a6f534eb01ec27bf3b6d7890c"
+    }
+  },
+  "reviewed_producer_commits": {
+    "prover": "6a99be1f7bac8215af18b5438b53cdc6ffe479fd",
+    "falsifier": "4f06cf8cf5ae2f7b68afe4e2e1f6324d75faf3be"
+  },
+  "recovery_identity": {
+    "bundle_bytes": 137374370,
+    "bundle_sha256": "f3c1859c01b2848f70ed7c275150d3edf9890cb269ec141b04843f6989c5977a",
+    "clean_restore_replay_sha256": "bd462b3ed86501e4739230e19034216692f09a91ca6dc858b1a4b774971ba388",
+    "git_bundle_verify": "PASS complete history;6 refs",
+    "historical_suites_rerun": false
+  },
+  "reviewed_coordinator_math_revision": "3eb448d2672e7a72c66874efbcd9cd125077c98d",
+  "corrected_defect": "Local projective normalization uses frame values and signs matching anchor, with continuous lift near identity; no arbitrary positive global frame inference."
+}

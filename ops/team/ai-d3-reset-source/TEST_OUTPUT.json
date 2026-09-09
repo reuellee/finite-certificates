@@ -1,0 +1,21 @@
+{
+  "rational_joined_weight_gauge": {
+    "actual_parent_normals_used": 56,
+    "exact_inverse_verified": true,
+    "extension_signature_validity_claimed": false,
+    "joined_blocks": 3,
+    "zero_block_retained": true
+  },
+  "rational_quotient_cases": {
+    "independent_reorientation_distinguished": true,
+    "negative_determinant_case": true,
+    "positive_column_scale_cases": 3,
+    "uniform_parent_brackets_checked": 70
+  },
+  "scope": "ALGEBRA_ONLY_NO_D3_OR_GLOBAL_TRIANGULATION_CERTIFICATE",
+  "universal_algebra": {
+    "covariance_polynomial_identities": 4,
+    "determinant_orientation_identity": 1,
+    "triple_homogeneity_identities": 4
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "status": "PARAMETRIC_CANDIDATE_SYSTEMS_NOT_INSTANTIATED",
+  "collar": {
+    "polynomial_variables": "nine normalized parent-chart coordinates x",
+    "candidate_factor": "one irreducible factor q of a nonzero actual normal minor of order 1 through 4",
+    "ideal_generators": [
+      "q(x)",
+      "partial_1 q(x)",
+      "partial_2 q(x)",
+      "partial_3 q(x)",
+      "partial_4 q(x)",
+      "partial_5 q(x)",
+      "partial_6 q(x)",
+      "partial_7 q(x)",
+      "partial_8 q(x)",
+      "partial_9 q(x)"
+    ],
+    "saturating_product": "u=product of all other distinct nonstructural minor factors, all prescribed nonzero parent brackets, and chart units",
+    "optional_rabinowitsch_generator": "1-z*u",
+    "sufficient_exact_certificate": "u^N = a*q + sum_j b_j*partial_j(q)",
+    "retained_unresolved_complement": [
+      "other normal-minor factors vanish",
+      "parent or chart boundary",
+      "rank and support specializations",
+      "true infinity and chart-seam attachment"
+    ],
+    "claimed_consequence_if_verified": "smooth local simultaneous sign collar only",
+    "computed_certificate": null
+  },
+  "actual_exclusive_pair": {
+    "scope": "fixed actual proper incomparable triple rho_0,rho_1,rho_2 on a normalized parent chart",
+    "parent_generators": [
+      "h_l(x)*e_l^2-1 for all prescribed strict parent/chart inequalities"
+    ],
+    "bad_block_generators": [
+      "sum_I v_iI^2-1",
+      "sum_I rho_i(I)*n_Ia(x)*v_iI^2 for a=1..4"
+    ],
+    "good_block_generators": [
+      "(rho_k(I)*n_I(x) dot p_k)*d_kI^2-1 for all 56 I"
+    ],
+    "E_ij": "parent equations and bad blocks i,j and good block k",
+    "T": "parent equations and all three bad blocks",
+    "real_scope": "exact membership encoding over R; zero weights retained",
+    "complex_scope": "squares do not preserve real signs over C; complex emptiness would be only a sufficient stronger exclusion",
+    "not_encoded": [
+      "nonzero cohomology class",
+      "compact-support condition",
+      "vanishing under D",
+      "true-infinity attachment"
+    ]
+  },
+  "mixed_prism": {
+    "given_input_required": "an actual proposed polynomial family P on the full source and its prescribed relative boundary",
+    "failure_generators": [
+      "h_l(P(t))=0 on faces required to remain strict",
+      "t_a*e_a^2-1=0",
+      "(1-t_a)*f_a^2-1=0"
+    ],
+    "missing_input": "no full original-domain prism map P with prescribed seams is available",
+    "saturation_eligible": false
+  },
+  "critical": {
+    "given_input_required": "a smooth stratum F=0 of specified full Jacobian rank and a proper chosen function ell",
+    "failure_generators": [
+      "F=0",
+      "d ell - sum_j mu_j*dF_j=0"
+    ],
+    "unit_scope": "only a specified nonzero full-rank Jacobian minor, on its chart branch",
+    "missing_input": "no noncircular implication from this critical exclusion to nonzero original signed detector trace",
+    "saturation_eligible": false
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "format": "d3-mixed-100-universal-carrier-opening-v1",
+  "cycle_id": "2026-09-03-d3-mixed-block-100-universal-carrier-gate1",
+  "authorization": {
+    "user_execution_authority_received": true,
+    "author_contact": false,
+    "network_research": false,
+    "github_write": false,
+    "external_compute": false,
+    "canonical_ledger_edit": false
+  },
+  "repository": {
+    "base_revision": "fb667bfe33ef9e945a82e9a23b615e67f5f39c0f",
+    "base_tree": "117850b25cd94f865cb85e681c465b8260dd9c6a",
+    "branch": "research/local-d3-mixed-block-100-universal-carrier-gate1-20260903",
+    "concurrent_successor_cycles": [],
+    "historical_worktrees_are_frozen_evidence": true
+  },
+  "canonical": {
+    "state": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json",
+    "score": "2/9",
+    "proved_diagonals": [1, 2],
+    "open_diagonals": [3, 4, 5, 6, 7, 8, 9],
+    "pair_residual": "UNKNOWN",
+    "pair_coverage": "UNKNOWN",
+    "triple_total": 79102449,
+    "triple_settled": 77940147,
+    "triple_residual": 1162302
+  },
+  "predecessor_close": {
+    "cycle_id": "2026-09-02-d3-triple-critical-saturation-component-gate1",
+    "q0": "NULL",
+    "q1": "DENIED",
+    "trajectory": "STALLED",
+    "action": "STOP",
+    "successor": "NONE"
+  },
+  "strategy": {
+    "verdict": "PIVOT_SELECT_D3_MIXED_100_UNIVERSAL_CARRIER_OR_OBSTRUCTION",
+    "selected_target": "D3_MIXED_BLOCK_1_0_0_UNIVERSAL_CARRIER_OR_OBSTRUCTION_GATE1",
+    "selected_count": 1,
+    "same_route_continue": false,
+    "alternatives_compared": [
+      "D3_MIXED_100_UNIVERSAL_CARRIER_OR_OBSTRUCTION",
+      "D3_COMPONENT_SATURATION_REPAIR",
+      "D3_GLOBAL_SREP_REPLACEMENT",
+      "D9_SIMULTANEOUS_INSERTION_OR_SIGN_GEODESY"
+    ]
+  },
+  "proof_distance": {
+    "opening_vector": ["2/9", 1, ["diag3_pair_hc1", "diag3_triple_hc0"], 7, "UNKNOWN", "UNKNOWN", 8, 11],
+    "selected_route_open_residual": ["O3_universal_mixed_chain", "O4_arbitrary_flag_coherence"],
+    "selected_route_open_count": 2,
+    "minimum_acceptable_decrease": "PROVE_O3_AND_O4_OR_EXACTLY_DISPROVE_THEIR_FULL_QUANTIFIED_CONJUNCTION",
+    "midpoint_trigger": "FIRST_FROZEN_CONSTRUCTOR_AND_FALSIFIER_HANDOFFS_OR_TWO_HOURS",
+    "local_or_formal_progress_counts": false
+  },
+  "quantifiers": {
+    "all_realizable_uniform_rank4_parents_on_8_labels": true,
+    "all_normalized_realization_components_and_required_charts": true,
+    "all_source_derived_proper_pairwise_incomparable_antichains": true,
+    "all_admissible_witness_support_strata": true,
+    "all_primitive_integral_kernel_classes": true,
+    "all_labeled_active_block_placements_r_1_to_3": true,
+    "all_active_block_permutations": true,
+    "all_composable_face_flags": true,
+    "true_parent_infinity_only": true
+  },
+  "route_baseline": {
+    "formal_shape_count": 10,
+    "formal_labeled_placements_one_three_block_family": 34,
+    "provisional_universal_clauses": ["(0)", "(1)", "(2)"],
+    "critical_open_clause": "(1,0,0)",
+    "formal_taxonomy_is_global_denominator": false,
+    "provisional_3_of_10_is_end_to_end_coverage": false,
+    "row2599_canary_is_global_evidence": false
+  },
+  "obligations": [
+    {"id": "global_gluing", "class": "inconclusive", "load_bearing": true},
+    {"id": "complete_extension_labels", "class": "inconclusive", "load_bearing": true},
+    {"id": "strict_closure", "class": "inconclusive", "load_bearing": true},
+    {"id": "genuine_relative_infinity", "class": "inconclusive", "load_bearing": true},
+    {"id": "global_middle_rank_replay", "class": "inconclusive", "load_bearing": true},
+    {"id": "diag3_pair_hc1", "class": "inconclusive", "load_bearing": true},
+    {"id": "diag3_triple_hc0", "class": "inconclusive", "load_bearing": true},
+    {"id": "O3_universal_mixed_chain", "class": "inconclusive", "selected_route": true},
+    {"id": "O4_arbitrary_flag_coherence", "class": "inconclusive", "selected_route": true}
+  ],
+  "resource_ceiling": {
+    "wall_seconds": 14400,
+    "lane_peak_ram_gib": 16,
+    "new_scratch_gib": 2,
+    "constructor_handoffs": 1,
+    "verifier_directed_repairs": 1,
+    "cloud_workers": 0,
+    "external_spend_usd": 0
+  },
+  "source_pins": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json": "405e1f34789e999d2b8725881a4b99c1db81cec3ecfa70abcdfa9b3fbb7a46bf",
+    "ai/omreal/verify_canonical_research_state_v10.py": "662267d9d8692c6724ab0b55472b3ca262461cce864a7cbb8bd9296bef788917",
+    "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CLOSING_MANIFEST.json": "f64592cf7f5bd991a7085ebc0f6197ed0b5361f6605a053fc0ad814a1dbff428",
+    "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CYCLE_REPORT.md": "89daf49e419b23bcdf91830c883a8ba381c226da2a366ef894c64cb3465073d6",
+    "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76",
+    "ops/team/d3-mixed-carrier-topology/RESULT.json": "7e54007c1bb97be457cbdc039c5520267cd39e39e08a930828b42708443a99e5",
+    "ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86",
+    "ops/team/d3-mixed-carrier-naturality/RESULT.json": "2911e7478a31090582dda2aeeb5e952ab84cf83946bcd5f29d3900813309e3e0",
+    "ops/team/theorem-reset-falsifier/FINDINGS.md": "893ecc8d530e7af0970cc4bb232fb34e99cb8fc5e0e6b073c93d423c7313420f",
+    "ops/team/theorem-reset-falsifier/RESULT.json": "c955c6886ed611ae915d56b21a57740f27acb5fb750b22f1900aa58e2996c663"
+  }
+}

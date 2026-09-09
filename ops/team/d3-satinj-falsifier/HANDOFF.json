@@ -1,0 +1,25 @@
+{
+  "status": "EXACT_SCOPED_NEGATIVE_ORIGINAL_PAIR_NULL",
+  "base_revision": "3a7ce7b5d57543d54eace7707659418cea6d69c9",
+  "base_tree": "7e2e958bcc7fef306bfc309c1502a279925b4ab6",
+  "candidate_refuted": "All selected-support zero-weight events in the original labeled domain are excluded by nonzero parent determinants",
+  "exact_point": "Move parent chart 0 second coordinate of column 2 by 37864449186859942661765893/7029591949415530407677535",
+  "proof": "All 70 parent determinants stay nonzero with original signs; all three proper incomparable original blocks admit nonnegative normalized witnesses; selected block-0 weight at normal 123 vanishes with four remaining weights strictly positive",
+  "algebraic_consequence": "The full triple supported-witness event ideal saturated by parent determinants is proper over Q",
+  "main_f4sat_run_started": false,
+  "modular_solver_runs": 0,
+  "discovery_frozen": true,
+  "global_attachment_supplied": false,
+  "new_frontier_blocks": 0,
+  "original_obligations_closed": 0,
+  "theorem_credit": 0,
+  "ledger": "2/9",
+  "limitations": [
+    "Representation event may be topologically harmless",
+    "Does not refute regular-stratum collar, attachment method, or injectivity",
+    "Block-0 badness on right neighboring parent not established",
+    "No genuine parent-infinity attachment computed"
+  ],
+  "replay": "python -B ops/team/d3-satinj-falsifier/verify_event.py",
+  "hostile_controls": 4
+}

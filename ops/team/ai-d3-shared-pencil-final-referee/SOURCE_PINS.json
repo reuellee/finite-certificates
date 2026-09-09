@@ -1,0 +1,144 @@
+{
+  "format": "ai-d3-final-referee-pins-v1",
+  "worktree_base": "97835f3dd9f3e36f11adeb6e5b448e72b7bb9b60",
+  "source_records": [
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ai/omgamma/data/cat_4_8.txt",
+      "git_blob": "6b5063c4d9d6f99fe645920aa74f97224a79e9e4",
+      "bytes": 189216,
+      "sha256": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ai/omreal/data/seeat_parent2599_shatter8.npz",
+      "git_blob": "3d8102c0f418f2479362a414a7b4784b72b922ae",
+      "bytes": 292033,
+      "sha256": "d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ai/omreal/data/seeat_parent2599_upper178.npz",
+      "git_blob": "16b7734749f7247f8a54c353e0eee40f9caea139",
+      "bytes": 690732,
+      "sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_B_SHARED_PENCIL.md",
+      "git_blob": "4d3375430c84d5e515822cfb2cd3f58ea9f1cc56",
+      "bytes": 5091,
+      "sha256": "e64b2632f58d6510236ca71cfb004bac65c59d0dfeb711154bef9a37261a8e81"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_C_REVIEW.md",
+      "git_blob": "d1498377470b2eb35e7438ffbb96c6db627afae9",
+      "bytes": 2455,
+      "sha256": "2699dd5faaa2077fe1dcfa48d5f11740216eecc7bacb0a62074690fe48bda756"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/CONTROLS.json",
+      "git_blob": "5b94b551eebe9e77f63c3bcf01d33f5b9c681b6b",
+      "bytes": 9237,
+      "sha256": "d5856c5c126cfdaf8475167bd7f949ca226ac3f2f6e6f89ce573adf618ecdd64"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/FINDINGS.md",
+      "git_blob": "cfabf9fbc0a840bf1493a548146601e899682a56",
+      "bytes": 16997,
+      "sha256": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/OBSTRUCTION.json",
+      "git_blob": "76c056d512dfece77cefb0acf767e40e7e5a6787",
+      "bytes": 397264,
+      "sha256": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa"
+    },
+    {
+      "git_source": "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/verify_controls.py",
+      "git_blob": "c13bd9a3e51b17ab82f69c21ef6706984a2bdf9e",
+      "bytes": 9649,
+      "sha256": "5638c053b11a4877f7d0aac0807399745bd27895150e4828c1df9a3dca7df812"
+    },
+    {
+      "git_source": "7d0efe1c55efff2d17c906569e90f5fb0ae0e371:ai/omgamma/data/cat_4_8.txt",
+      "git_blob": "6b5063c4d9d6f99fe645920aa74f97224a79e9e4",
+      "bytes": 189216,
+      "sha256": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5"
+    },
+    {
+      "git_source": "7d0efe1c55efff2d17c906569e90f5fb0ae0e371:ops/team/ai-d3-shared-pencil-constructor/FINDINGS.md",
+      "git_blob": "cfabf9fbc0a840bf1493a548146601e899682a56",
+      "bytes": 16997,
+      "sha256": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc"
+    },
+    {
+      "git_source": "7d0efe1c55efff2d17c906569e90f5fb0ae0e371:ops/team/ai-d3-shared-pencil-constructor/OBSTRUCTION.json",
+      "git_blob": "76c056d512dfece77cefb0acf767e40e7e5a6787",
+      "bytes": 397264,
+      "sha256": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa"
+    },
+    {
+      "git_source": "7d0efe1c55efff2d17c906569e90f5fb0ae0e371:ops/team/ai-d3-shared-pencil-constructor/RESULT.json",
+      "git_blob": "c53c349d4a6020f51c9eedff97076c5ef5b3c986",
+      "bytes": 4215,
+      "sha256": "606df10d56acb38330aa10bd7aa2528c701303daa3412c2dd56f61ce1bef4a95"
+    },
+    {
+      "git_source": "97835f3dd9f3e36f11adeb6e5b448e72b7bb9b60:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE.md",
+      "git_blob": "54718ac565bf526ebf44cc0f2ac0c6a57f7edf0e",
+      "bytes": 8236,
+      "sha256": "e3ce6f7110b13a46e0831fe8c2344ad865ada17d9fa70d03383fd654bd287dea"
+    },
+    {
+      "git_source": "97835f3dd9f3e36f11adeb6e5b448e72b7bb9b60:ops/team/ai-d3-reset-source/FINDINGS.md",
+      "git_blob": "60bbba5997c15954ad2f9d7e3410d4bfcd9f82d2",
+      "bytes": 29542,
+      "sha256": "f32f2fa3904e825a8d83cfb53d658862e53953a933d44c80dc9ae3dee28a43c5"
+    },
+    {
+      "git_source": "97835f3dd9f3e36f11adeb6e5b448e72b7bb9b60:ops/team/ai-d3-shared-pencil-referee/independent_check.py",
+      "git_blob": "313dbeaf71c1fad3718e9cdd4a71c064d275b96f",
+      "bytes": 20309,
+      "sha256": "8f765eee29428b5d575e82e11eee60ae436132142d69da3aa7e14b4d40eef362"
+    },
+    {
+      "git_source": "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/FINDINGS.md",
+      "git_blob": "b0923d332e2e0ccfcc0578fe98a99fbe19508037",
+      "bytes": 13197,
+      "sha256": "0aae50c46db82d2a4a0a6ee7d1afae4826a8bc1994d20936554644209a4b01df"
+    },
+    {
+      "git_source": "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json",
+      "git_blob": "a7bf4d04583e1371dc401fdaa49ddca41fb09c1d",
+      "bytes": 6363,
+      "sha256": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10"
+    },
+    {
+      "git_source": "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/shatter_pattern_0.json",
+      "git_blob": "4cc66d60d3281dba2318239aefe851742a89bdbd",
+      "bytes": 3373,
+      "sha256": "f758fa2a7d9961e72fd38ba5ef738192f1617b177e54ba4487ea1dd80b6e81a1"
+    },
+    {
+      "git_source": "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json",
+      "git_blob": "5ce89199d88ce1a1756a9c3f90f5c9c5483ada0b",
+      "bytes": 113119,
+      "sha256": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab"
+    },
+    {
+      "git_source": "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/upper_chart_7.json",
+      "git_blob": "71a0f9167ee73d7eee09dc496d3f8b76d20e767a",
+      "bytes": 1920,
+      "sha256": "db1749fadf9944fe6bc955379db4febfd1238f93dd37142306afe86a74c60d74"
+    },
+    {
+      "git_source": "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/verify_shared_pencil_certificate.py",
+      "git_blob": "4aa7459552b6e339c40ec72585de8f504f461b8b",
+      "bytes": 13367,
+      "sha256": "a7c66f659c79f3c82bddf0f4af531a395134455371f7a6fb909ee25be1a8e758"
+    }
+  ],
+  "owned_checker_hashes": {
+    "independent_check.py": "82163982583d7468a267eeb78bad9fb998a53e82b0ca5ad657b4cf00daa2b2bf",
+    "check_robustness.py": "4b90244310e6aea37e68c3f3f71948241af6154ee8ce064cb1830d072ef8d95f"
+  },
+  "producer_verifier_sources_pinned_for_provenance_only_not_executed": true,
+  "replay_requires": "Git objects at the listed commits; NumPy only for the first checker. No producer worktree paths."
+}

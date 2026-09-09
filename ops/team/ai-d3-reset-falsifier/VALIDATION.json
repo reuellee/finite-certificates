@@ -1,0 +1,532 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact integers and fractions",
+  "polynomial_system": {
+    "common_unsigned_rows": 56,
+    "columns": 4,
+    "constant_full_rank_minor": 1,
+    "signature_signs": [
+      [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "symbolic_strict_witness_identities": "PASS",
+    "nonnegative_kernel_elimination_coefficients": "PASS"
+  },
+  "models": [
+    {
+      "id": "both_invariants_fail",
+      "all_lower_vanishing_checks": "PASS",
+      "proper_pairwise_incomparable_feasibility_loci": "PASS",
+      "intersections": [
+        {
+          "signature_subset": [
+            0
+          ],
+          "dimension": 3,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            1
+          ],
+          "dimension": 3,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            2
+          ],
+          "dimension": 3,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            1
+          ],
+          "dimension": 1,
+          "relative_betti_numbers": [
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            2
+          ],
+          "dimension": 1,
+          "relative_betti_numbers": [
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            1,
+            2
+          ],
+          "dimension": 1,
+          "relative_betti_numbers": [
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            1,
+            2
+          ],
+          "dimension": 0,
+          "relative_betti_numbers": [
+            1
+          ]
+        }
+      ],
+      "union_independent_cubical_calculation": {
+        "cell_counts": [
+          1,
+          12,
+          36,
+          24
+        ],
+        "boundary_ranks": [
+          0,
+          1,
+          11,
+          21
+        ],
+        "betti_numbers": [
+          0,
+          0,
+          4,
+          3
+        ],
+        "boundary_squared_zero": true
+      },
+      "pair_kernel_rank": 3,
+      "triple_hc0_rank": 1
+    },
+    {
+      "id": "pair_only_failure",
+      "all_lower_vanishing_checks": "PASS",
+      "proper_pairwise_incomparable_feasibility_loci": "PASS",
+      "intersections": [
+        {
+          "signature_subset": [
+            0
+          ],
+          "dimension": 3,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            1
+          ],
+          "dimension": 3,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            2
+          ],
+          "dimension": 3,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            1
+          ],
+          "dimension": 1,
+          "relative_betti_numbers": [
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            2
+          ],
+          "dimension": 1,
+          "relative_betti_numbers": [
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            1,
+            2
+          ],
+          "dimension": 1,
+          "relative_betti_numbers": [
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            1,
+            2
+          ],
+          "dimension": 1,
+          "relative_betti_numbers": [
+            0,
+            1
+          ]
+        }
+      ],
+      "union_independent_cubical_calculation": {
+        "cell_counts": [
+          1,
+          14,
+          36,
+          24
+        ],
+        "boundary_ranks": [
+          0,
+          1,
+          13,
+          21
+        ],
+        "betti_numbers": [
+          0,
+          0,
+          2,
+          3
+        ],
+        "boundary_squared_zero": true
+      },
+      "pair_kernel_rank": 2,
+      "triple_hc0_rank": 0
+    },
+    {
+      "id": "triple_only_failure",
+      "all_lower_vanishing_checks": "PASS",
+      "proper_pairwise_incomparable_feasibility_loci": "PASS",
+      "intersections": [
+        {
+          "signature_subset": [
+            0
+          ],
+          "dimension": 4,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            1
+          ],
+          "dimension": 4,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            2
+          ],
+          "dimension": 4,
+          "relative_betti_numbers": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            1
+          ],
+          "dimension": 2,
+          "relative_betti_numbers": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            2
+          ],
+          "dimension": 2,
+          "relative_betti_numbers": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            1,
+            2
+          ],
+          "dimension": 2,
+          "relative_betti_numbers": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "signature_subset": [
+            0,
+            1,
+            2
+          ],
+          "dimension": 0,
+          "relative_betti_numbers": [
+            1
+          ]
+        }
+      ],
+      "union_independent_cubical_calculation": {
+        "cell_counts": [
+          1,
+          12,
+          60,
+          96,
+          48
+        ],
+        "boundary_ranks": [
+          0,
+          1,
+          11,
+          48,
+          45
+        ],
+        "betti_numbers": [
+          0,
+          0,
+          1,
+          3,
+          3
+        ],
+        "boundary_squared_zero": true
+      },
+      "pair_kernel_rank": 0,
+      "triple_hc0_rank": 1
+    }
+  ],
+  "scope": "No actual-parent search, signature-admissibility test, or global source triangulation.",
+  "integral_scope": "Cellular matrices are integral; ranks are computed over Q. Integral cohomology claims use the written cube and Mayer-Vietoris proof.",
+  "elapsed_seconds": 0.168621
+}

@@ -1,0 +1,27 @@
+{
+  "checked_utc": "2026-09-09T03:32:49.588442+00:00",
+  "trigger": "first structural NULL reported by constructive track; falsifier exact candidate pending independent replay",
+  "opening_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    12,
+    15
+  ],
+  "minimum_acceptable_decrease_met": false,
+  "construction": "conditional smooth one-factor product germ; no original global proper frontier/compact-support comparison",
+  "candidate_counterexample_scope": "parent-unit-only removal of every zero-weight support-change event; not a counterexample to collar or D",
+  "decision": "STOP_DISCOVERY_COMPLETE_FROZEN_ARTIFACTS_AND_REVIEW",
+  "f4sat_gate": "NO_GO",
+  "f4sat_started": false,
+  "f4sat_cpu_seconds": 0,
+  "saturation_budget_expanded": false,
+  "topological_blocker": "global oriented frontier maps and actual compact-support comparison",
+  "independent_review_pending": true
+}

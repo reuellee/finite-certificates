@@ -1,0 +1,171 @@
+{
+  "accepted_current_streaks": {
+    "same_blocker": 11,
+    "zero_ledger": 14
+  },
+  "accepted_file_sha256": {
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_WALL_STARS.py": "31f48a70c1a81d3583c01dcd5a9f30ef5cd4f2eb766ebdacdda3f8d26bfc4bb7",
+    "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+    "ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+    "ai/omreal/data/DIAG3_RESEARCH_DECISION_LEDGER.json": "73b0b742d6336d754ae99b7054858a3a3c96b3aaf1601b2228c076a732903d6e",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ai/omreal/verify_diag2_canonical_robust_edges.py": "0f7d7111b2087abbb388d00bcae27e8566beeca32c9749902d3774d94cd57d77",
+    "ai/omreal/verify_diag3_pair_factor_occurrence_h1.py": "346b26e48fe3265a6ccf5270fd6576070017db6d46e6978855adbbfa8f643c75",
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE_REPORT.md": "f06fea3704d67f7f2268068b28cdd5f53b027bc8a3c2a612b73546e6c165a6d4",
+    "ops/research-team/cycles/2026-09-05-real-fiber/BASELINE_REPLAY.json": "6d81544213f4792048f0a07bbd0b2873bfb0e3cba2da76a09476b78ed6f54e69",
+    "ops/research-team/cycles/2026-09-05-real-fiber/CYCLE.md": "acc795098e85e23b4c8faeb0c09261d358e06e8ad6c9e830c0833181f7ec0da7",
+    "ops/research-team/cycles/2026-09-05-real-fiber/CYCLE_REPORT.md": "6d830146fc74646cbd27ffbfa68ecddbed6491db4476a5820354ab24ee05c7e9",
+    "ops/research-team/cycles/2026-09-05-real-fiber/MID_CYCLE_CHECKPOINT.json": "7e618883ee4ed6a2e7991d075621002cbcb01fd278d37cf3654796bd75b583d1",
+    "ops/research-team/cycles/2026-09-05-real-fiber/OPENING.md": "16f7c70a6b4a1bba16d250392bbd9142372c11a9e86bd5c5515b8c9ec42fc887",
+    "ops/research-team/cycles/2026-09-05-real-fiber/OPENING_STATE.json": "0c03a9c17299f23c599838643a6eb67246e1062b2599eb17b6bf704550f2e5d3",
+    "ops/research-team/cycles/2026-09-05-real-fiber/SOURCE_ACCOUNTING.md": "6b1d84a10b793f6ec01e8fce8abe9c38a681f171d116f27636524bbf3413f6d9",
+    "ops/research-team/cycles/2026-09-05-real-fiber/WORK_ORDERS.yaml": "aedf4e08441c3a0b68607d1fbcc432629f071b0706d2277c92db5443c0e12537",
+    "ops/team/ai-d3-rank-pencil-referee/RESULT.json": "0f7117d94200e3aab550b6ac18e29ca9fc8d98add971b791e245d61797a5346a",
+    "ops/team/ai-d3-reset-coordinator/ACCEPTANCE.md": "ba62683e27ff817ba2df84410393534a4400cc8e08cd0e1f42501afc6209f532",
+    "ops/team/ai-d3-reset-referee/REVIEW.md": "2ef3e230048405210e839577f5a602c722c2e89e0af02462bb156b467febe4f6",
+    "ops/team/d3-bracket-chart/REPORT.md": "4c16c68de079e39ae1b913024cf63ff3c1dd7efd2cec9de77e013c6ad76d3f0c",
+    "ops/team/d3-height-fiber/REPORT.md": "51747c4b1f06ec2eda21c6c4b8d4eaeaf85151ed347f9fbf67626c284c52e217",
+    "ops/team/d3-real-global-prover/ARITHMETIC_REPLAY.json": "7b8e2db55e603d284e6eb5467cf3f416aa0b89a9faa0eff73cd78f65717be6c7",
+    "ops/team/d3-real-global-prover/CLOSING_MANIFEST.json": "e4ec35f8de0294b323f7f0602af2dac1519831dc5b19c44f9532019baf0b4fdf",
+    "ops/team/d3-real-global-prover/CRITICAL_NUMERICAL_DISCOVERY.json": "c5e1d38e03df4a896090034ee5f136d4eccf549dd9b617dfbd4e44aaf2b60f15",
+    "ops/team/d3-real-global-prover/HARMONIC_SCREEN.json": "701e2f95064834409218ea5518f56b77d5ebddf4d1d55a9262f7eddcd344add3",
+    "ops/team/d3-real-global-prover/NUMERICAL_TRANSCRIPT.txt": "0e12581bed5d8de512c67dcb7b269d65c913461a2852e31492b58eaf50897d03",
+    "ops/team/d3-real-global-prover/REPORT.md": "0ae73ea5952846e34c151f7cf4475ea9752fc41e25548e4ad1b80f02edbb3dd4",
+    "ops/team/d3-real-global-prover/explore_critical_real.py": "9c55c7929496f9a30dc7db6289a53c7592b0bb50be83f44817e20423b92e6e65",
+    "ops/team/d3-real-global-prover/explore_harmonic.py": "3adac1699a61521b74833a747f5a50c7fe52d9b8ba0146c8ee963c6f295b07fe",
+    "ops/team/d3-real-global-prover/verify_harmonic_obstruction.py": "20e6e7244bbbd949357fe3e9b81f92a87eb9b4a5310f9a2d9128f8849a5fe422",
+    "ops/team/d3-real-oval-falsifier/.gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "ops/team/d3-real-oval-falsifier/HANDOFF.json": "1c6c55e031f7f79510fe9cd7daf46bc7a4582d6957df860519eaba88c3c54da0",
+    "ops/team/d3-real-oval-falsifier/MANIFEST.json": "2f90ec7b1c70d42882d67e8fb77dc58faabdf50bf48955cd9e705926c9815c26",
+    "ops/team/d3-real-oval-falsifier/REPORT.md": "4ef44739091bb9bacd59837332b6147defa51b6d83531b6159fec71124abfeea",
+    "ops/team/d3-real-oval-falsifier/build_certificate.py": "8dda42d894f63e22bf31d3065a0afa598503c51916f229323eeabea13fdea579",
+    "ops/team/d3-real-oval-falsifier/certificate.json": "790daed2e50a77b424873c1e18dca918b2497970286aa95d055a84871c3b0bf4",
+    "ops/team/d3-real-oval-falsifier/grid8.json": "645f4325fe2e132ceca5001246093cac14b1d561f347f2fddc30d5a61f4ccc18",
+    "ops/team/d3-real-oval-falsifier/local1.json": "fbf340ba07ecea4618bdeaf43803276da6066fd7516ac6a0f07ed556db2c1b77",
+    "ops/team/d3-real-oval-falsifier/rational_survivors.json": "2510bdedee43f8af887efb02cbc230385bbf361f89bff3867991b45ca5958add",
+    "ops/team/d3-real-oval-falsifier/rationalize_survivors.py": "17424612e2b145e934f8548b63e0a34fe5ed9ad6dfdc9ad37deb2813f66d5ae0",
+    "ops/team/d3-real-oval-falsifier/search_ovals.py": "dc06f093d26d270f4eabca3c14baff207ea635279330c950885aec9d71f046fe",
+    "ops/team/d3-real-oval-falsifier/verification.json": "b5a2e20cf9c46c676d3617c5bf33fb93f4d8c37e17becdc8bc08425538c7c72b",
+    "ops/team/d3-real-oval-falsifier/verify_certificate.py": "adca9cc8885aec7b48026e5012fe25e6d044dcbf07cb1e89602d34b5ec6b1dc6",
+    "ops/team/d3-real-pair-prover/ARITHMETIC_REPLAY.json": "f27ab67436b7c77b6d58f0fd83c633c2023a6eaff1b9aa93f359c51df2240b56",
+    "ops/team/d3-real-pair-prover/FINDINGS.md": "6425d367675fc709cc65f4560e654b645cb4f92f07571bb81f74ca0e9ab99778",
+    "ops/team/d3-real-pair-prover/RESULT.json": "4506f65d60d617f11386e55acf842bd06df62279f22ec6d4fc64cf933aaaea79",
+    "ops/team/d3-real-pair-prover/SOURCE_MANIFEST.json": "01fecc737375f0fc5425276b7c314ac6e7af9d3cdb95fdce1f11247d7ab820bc",
+    "ops/team/d3-real-pair-prover/verify_arbitrary_block_occurrences.py": "2afca94b21ecbee4ef5be4edcc3e435910eae876ceec90eb664263df604934fc"
+  },
+  "classification": "STALLED",
+  "dependency": "Python standard library plus this referee audit_cefc495.py",
+  "hessian": {
+    "columns": 28,
+    "constant_symmetric_kernel_dimension": 0,
+    "selected_determinant": "-7421703487488",
+    "support_equations": 1191
+  },
+  "hostile_controls": {
+    "hessian_changed_coefficient": true,
+    "hessian_duplicate_equation": true,
+    "oval_corrupt_equation": true,
+    "oval_false_resultant": true,
+    "oval_interval_crosses_true_denominator_root": true,
+    "oval_missing_bracket": true,
+    "oval_repeated_branch_roots": true,
+    "pair_matching_only_unfilled_cycle": true,
+    "pair_promote_original_map": true,
+    "pair_remove_genericity": true,
+    "pair_signed_filler_reversal": true,
+    "synthetic_pair_must_not_be_original": true
+  },
+  "original_obligations_closed": 0,
+  "oval": {
+    "admissible_signature_triple": "NOT_PROVED",
+    "all_resultant_closed_interval_roots": 0,
+    "anchor_signs": "++--+-++-++++--++--+--+-+-++-------------+-++++-+---++-+----+----++++-",
+    "brackets_checked": 70,
+    "compact_fixed_base_oval": true,
+    "compact_full_source_component": "NOT_PROVED",
+    "largest_resultant_degree": 8,
+    "resultants_recomputed": 71,
+    "root_intervals": [
+      [
+        "-676/249",
+        "-695/256"
+      ],
+      [
+        "-676/319",
+        "-89/42"
+      ],
+      [
+        "-127/63",
+        "-764/379"
+      ],
+      [
+        "11/51",
+        "118/547"
+      ]
+    ],
+    "source_equivalence": true
+  },
+  "pair": {
+    "actual_parent_normals_verified": true,
+    "arbitrary_finite_extension": "deductive bitwise identity; see FINAL_REVIEW.md",
+    "gap_tables": [
+      [
+        0,
+        58,
+        180,
+        15
+      ],
+      [
+        1,
+        58,
+        180,
+        15
+      ],
+      [
+        2,
+        58,
+        180,
+        15
+      ],
+      [
+        3,
+        58,
+        180,
+        15
+      ],
+      [
+        4,
+        58,
+        180,
+        15
+      ],
+      [
+        5,
+        58,
+        180,
+        15
+      ],
+      [
+        6,
+        58,
+        180,
+        15
+      ]
+    ],
+    "global_alternating_map": "NOT_PROVED",
+    "matching_fillers": 105,
+    "ternary_inputs_checked": 1835008,
+    "union_masks": 487
+  },
+  "reviewed_revision": "65f1524bda77ebc5b74a0857e23c4323c18ad263",
+  "score": "2/9",
+  "source_counts": {
+    "settled": 77940147,
+    "total": 79102449,
+    "unresolved": 1162302
+  },
+  "verdict": "ACCEPT_SCOPED_AUXILIARY_CLAIMS_AND_NULL_CLOSURE"
+}

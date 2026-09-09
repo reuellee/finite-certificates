@@ -1,0 +1,52 @@
+{
+  "recorded_utc": "2026-09-05T18:35:01.541775+00:00",
+  "trigger": "first structural results",
+  "base": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "opening_vector": [
+    "2/9",
+    1,
+    [
+      "triple_hc0",
+      "pair_hc1"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN"
+  ],
+  "current_vector": [
+    "2/9",
+    1,
+    [
+      "triple_hc0",
+      "pair_hc1"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN"
+  ],
+  "independently_closed_original_obligations": 0,
+  "tracks": {
+    "global_prover": {
+      "reported": "Constant-metric harmonic shortcut rejected by exact rank-28 Hessian coefficient screen; independent acceptance pending. Full-source real critical geometry continues inside original ceiling.",
+      "scope": "No source escape claim.",
+      "disposition": "Freeze NULL. Full-source endpoint no longer reachable within opening ceiling; no enlarged critical solve."
+    },
+    "pair_prover": {
+      "reported": "Arbitrary-block signing patterns stabilize at the two-block family; exact proof package being frozen.",
+      "disposition": "Freeze auxiliary result and useful null for original pair-map injectivity; no atlas expansion."
+    },
+    "oval_falsifier": {
+      "reported": "Exact discovery-side Sturm calculation gives zero roots for all 70 parent-bracket resultants and graph denominator on the oval enclosure for rational base (-11/3,-11/4,-5/3,3/2,17/4); standard-library replay and independent review pending.",
+      "disposition": "Freeze exact candidate and hostile controls. No expanded search.",
+      "scope": "No full-source compactness or D3 counterexample inferred."
+    },
+    "referee": {
+      "reported": "Opening proof scope preliminarily consistent; independent arithmetic reconstruction in progress.",
+      "scope": "No final acceptance yet."
+    }
+  },
+  "convergence_check": "All discovery stops. No original invariant or source record settled. Complete arithmetic/review for the exact auxiliary claims. Promised theorem-distance decrease not achieved.",
+  "same_route_continuation_authorized_by_this_record": false,
+  "updated_utc": "2026-09-05T18:37:36.860617+00:00",
+  "provisional_trajectory": "STALLED"
+}

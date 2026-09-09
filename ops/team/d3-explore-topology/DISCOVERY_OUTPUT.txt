@@ -1,0 +1,52 @@
+counts {'GBB': 1638, 'BBB': 1190, 'BGB': 485}
+{
+  "classification": "HEURISTIC_FLOAT_LP_SAMPLE",
+  "source": "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json",
+  "source_sha256": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+  "parameterization": "Y[0,7]+=u; Y[1,7]+=v; other entries fixed",
+  "signatures": [
+    14988895318912,
+    3405195891438080,
+    40418075143643136
+  ],
+  "closed_parent_polygon_vertices": [
+    [
+      "-17312614324291/369881201005",
+      "-2142460712783/369881201005"
+    ],
+    [
+      "23326122115/24190095624",
+      "-32227551021/16126730416"
+    ],
+    [
+      "287535383314135/6670747153152",
+      "17647904893897/104230424268"
+    ],
+    [
+      "1849210848949893/84549702923189",
+      "16361195951814809/84549702923189"
+    ],
+    [
+      "-22275018006109655/69019177410709",
+      "12947315658012787/69019177410709"
+    ],
+    [
+      "-2551932160795135/7968321275594",
+      "389104613101439/3984160637797"
+    ]
+  ],
+  "recession_rays": [],
+  "fan_resolution": 24,
+  "sample_count": 3313,
+  "state_counts": {
+    "GBB": 1638,
+    "BBB": 1190,
+    "BGB": 485
+  },
+  "elapsed_seconds": 35.205940305000695,
+  "cpu_seconds": 35.20692629,
+  "maxrss_kib": 70416,
+  "limitations": "Floating LP classifications; fan nodes do not certify cells, components, holes, or coverage of bad sets. All artificial radial/grid edges are internal."
+}
+chord 0 ['-57869127/931628', '1094609/751872'] {'BBB': 20, 'BGB': 1, 'GBB': 79}
+chord 1 ['-680887/328142', '2037283091/10548542'] {'BBB': 100}

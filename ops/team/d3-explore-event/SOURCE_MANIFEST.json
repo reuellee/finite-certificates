@@ -1,0 +1,17 @@
+{
+  "canonical_base_revision": "21a97db6aa66912fd37556d81711c0588c454a7d",
+  "opening_revision": "c27a36d6e3f47a2b4c7bb017774cbe5df30abdc2",
+  "source_sha256": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ops/research-team/cycles/2026-09-09-exploration/CYCLE.md": "47dd4ae2d163d5402cc37416e1615ab33fc1b90ab11fa2ba3e2cd722f5b94f47",
+    "ops/research-team/cycles/2026-09-09-exploration/WORK_ORDERS.yaml": "0028cc1494921cba41bd218e732ce0c84819b5749dc50e1fc8646019ba8c0677",
+    "ops/research-team/cycles/2026-09-09-exploration/SOURCE_MANIFEST.json": "160c78a5c05cd8ffdc7a6d5eb5db6c01ebb30ee90d70705062d6e90ce45351e4",
+    "ops/research-team/cycles/2026-09-09-saturation-injectivity/CLOSING_STATE.json": "758b5bb7b6445326bd0b8cb7b61dcf30d752f03bf7b69f3eb6601df2f8b39b97",
+    "ops/team/d3-satinj-falsifier/DISCOVERED_EVENT.json": "b3d3e6122d38d46c6f8229a6d400e9fc1b1e461b151d03b26d6a9e803e022d8a",
+    "ops/team/d3-satinj-falsifier/EXACT_REPLAY.json": "a3e7aeee217c41d0fa74443770ee37acb57222ab9eda611a4d59790c962e9dec",
+    "ops/team/d3-satinj-falsifier/verify_event.py": "2888a6e4aaa6c7a21897a5e4ddf5ca5d6ad6df5d1958ae404a30f3b8c9d8d07c",
+    "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+    "ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a"
+  }
+}

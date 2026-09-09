@@ -1,0 +1,570 @@
+{
+  "format": "ai-only-d3-structural-reset-closing-v1",
+  "opened_at": "2026-09-05T13:20:26Z",
+  "research_closed_at": "2026-09-05T15:47:02Z",
+  "base_commit": "50a77bc5657c12cc079fb6c8043c4ad41270f506",
+  "accepted_integration_before_closing_commit": "3de0bc34bf8ae86dee8c174100cdc2428859e372",
+  "branch": "research/ai-only-d3-structural-reset-20260905",
+  "final_revision_location": "../../../../../outputs/9dvl-ai-only-reset-20260905-manifest.json",
+  "decision": {
+    "investment": "RETIRE",
+    "cycle_action": "STOP_AT_NEGATIVE_ENDPOINT",
+    "trajectory": "INFORMATIONAL",
+    "selected_successor": "NONE",
+    "same_route_continuation_justified": false
+  },
+  "retired_statements": [
+    "The listed generic compact-relative source package and lower vanishings imply D3.",
+    "Every admissible triple-bad point has three nonnegative Gordan witnesses whose combined incident positive supports have rank at most two at some label (the complete fixed-support-plane one-column criterion)."
+  ],
+  "accepted_results": {
+    "finite_semialgebraic_compact_relative_source_existence": "All five clauses accepted under the referee's stated interpretations; no automatic canonical obligation reduction.",
+    "generic_countermodels": "Integral countermodels accepted with the independent proof supplement; these are not actual-parent D3 counterexamples.",
+    "actual_parent_complete_rank_obstruction": {
+      "parent": 2599,
+      "upper178_chart": 0,
+      "signatures": [
+        14988895318912,
+        3405195891438080,
+        40418075143643136
+      ],
+      "indexed_closures": 1680,
+      "distinct_labeled_closures": 896,
+      "strict_integer_inequalities": 65520,
+      "minimum_integer_margin": 162514748513691,
+      "open_nine_dimensional_obstruction": true,
+      "conditional_proper_escape_accepted": true,
+      "hostile_mutations_rejected": 12
+    }
+  },
+  "scope_limits": {
+    "D3_counterexample": false,
+    "compact_component_proved": false,
+    "all_one_column_motions_refuted": false,
+    "quantitative_neighborhood_radius": null,
+    "formal_proof_assistant_verification": false
+  },
+  "convergence": {
+    "ledger_before": "2/9",
+    "ledger_after": "2/9",
+    "theorem_delta": 0,
+    "opening_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      9,
+      12
+    ],
+    "closing_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      10,
+      13
+    ],
+    "counter_increment": "One completed cycle, not each stage or lane.",
+    "open_obligations": [
+      "global_gluing",
+      "extension_labels",
+      "strict_closure",
+      "relative_infinity",
+      "middle_rank_replay",
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    "closed_obligations": [],
+    "triple_source_orbits": 79102449,
+    "source_orbits_are_component_denominator": false
+  },
+  "canonical_baseline": {
+    "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json",
+    "sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+    "modified": false
+  },
+  "independent_acceptance": {
+    "frozen_original_commit": "f91f7e4d20c6470d63f0c3b5859dfea9766ba0bd",
+    "integrated_commit": "3de0bc34bf8ae86dee8c174100cdc2428859e372",
+    "result_path": "ops/team/ai-d3-rank-pencil-referee/RESULT.json",
+    "root_replay": "PASS; deterministic generated tables unchanged"
+  },
+  "verification": {
+    "canonical_v11": "PASS; 34/34 hostile cases",
+    "pinned_opening": "PASS; 10/10 pins and 38/38 hostile cases",
+    "cycle_protocol": "PASS; 24 cycles and 97 base work orders",
+    "producer_and_independent_arithmetic": "PASS; detailed commands and outputs in role artifacts",
+    "stage_c_frozen_replay": "PASS; all non-time outputs match",
+    "stage_c_normalization": "PASS; 11 files exactly original CRLF-to-LF text"
+  },
+  "resources": {
+    "max_active_coordinator_hours": 40,
+    "calendar_ceiling": "2026-09-12T13:20:26Z",
+    "new_scratch_ceiling_bytes": 2147483648,
+    "active_model_hours_instrumented": false,
+    "whole_role_peak_RSS_instrumented": false,
+    "paid_or_external_compute": false,
+    "new_worktrees": [
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-reset-falsifier-20260905",
+        "logical_bytes": 212284150,
+        "files": 2664
+      },
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-reset-referee-20260905",
+        "logical_bytes": 212293239,
+        "files": 2664
+      },
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-reset-source-20260905",
+        "logical_bytes": 212428779,
+        "files": 2666
+      },
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-shared-pencil-constructor-20260905",
+        "logical_bytes": 212957809,
+        "files": 2686
+      },
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-shared-pencil-falsifier-20260905",
+        "logical_bytes": 213701080,
+        "files": 2720
+      },
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-shared-pencil-final-referee-20260905",
+        "logical_bytes": 214650784,
+        "files": 2740
+      },
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-shared-pencil-referee-20260905",
+        "logical_bytes": 213067774,
+        "files": 2697
+      },
+      {
+        "path": "E:\\Projects\\9DVL Research\\lane-worktrees\\ai-d3-source-audit-referee-20260905",
+        "logical_bytes": 212588589,
+        "files": 2684
+      }
+    ],
+    "new_worktree_logical_bytes": 1703972204,
+    "final_bundle_and_mirror_accounting": "Recorded after creation in the external recovery manifest."
+  },
+  "governance": {
+    "construction_falsification_and_acceptance_separate_AI_roles": true,
+    "human_expert_contact": false,
+    "new_cycle_github_push": false,
+    "google_drive_connector_used": false,
+    "canonical_edits": false,
+    "new_successor_opened": false
+  },
+  "github_read": {
+    "observed_at": "2026-09-05T15:30:56Z",
+    "main": "9e77c365b266e9d884e6ac14a0443992bec92c64",
+    "previous_synced_research_branch": "50a77bc5657c12cc079fb6c8043c4ad41270f506"
+  },
+  "recovery_refs_before_closing_commit": {
+    "refs/heads/research/ai-d3-rank-pencil-falsifier-20260905": "52ad4e14c63831243f0a57b193e99ebbf32891e5",
+    "refs/heads/research/ai-d3-rank-pencil-referee-20260905": "f91f7e4d20c6470d63f0c3b5859dfea9766ba0bd",
+    "refs/heads/research/ai-d3-reset-falsifier-20260905": "86d5adf0fd05ea2b68585089b857ba3d1b5ea63c",
+    "refs/heads/research/ai-d3-reset-referee-20260905": "0de26f6a6561705b37d59dfb5d3886857ab96bd3",
+    "refs/heads/research/ai-d3-reset-source-20260905": "76d168e746e6dc3996496bdf1fd08eb83d165b53",
+    "refs/heads/research/ai-d3-shared-pencil-constructor-20260905": "7d0efe1c55efff2d17c906569e90f5fb0ae0e371",
+    "refs/heads/research/ai-d3-shared-pencil-falsifier-20260905": "da1834fd34065fe826d230c26eb0b6b747dc082c",
+    "refs/heads/research/ai-d3-shared-pencil-final-referee-20260905": "964c427f6b71b6223add7dc7fd3a695d4c7db270",
+    "refs/heads/research/ai-d3-shared-pencil-referee-20260905": "97835f3dd9f3e36f11adeb6e5b448e72b7bb9b60",
+    "refs/heads/research/ai-d3-source-audit-referee-20260905": "ed10cbd5580e7266128cb477f5553bd122ee6805",
+    "refs/heads/research/ai-only-d3-structural-reset-20260905": "3de0bc34bf8ae86dee8c174100cdc2428859e372"
+  },
+  "artifact_pins": {
+    "ops/team/ai-d3-rank-pencil-coordinator/CHECK_OUTPUT.json": {
+      "sha256": "31c63639e9943dfa0fc5036ef0dc5bc348c1a1e2e5b2b1c5f7abcbc65a80dcf4",
+      "bytes": 1366
+    },
+    "ops/team/ai-d3-rank-pencil-coordinator/check_rank_closures.py": {
+      "sha256": "f89460083405bb8076d64c7abfc9902685b5c0412b17ab818431b8bfb2193b36",
+      "bytes": 6273
+    },
+    "ops/team/ai-d3-rank-pencil-coordinator/FINDINGS.md": {
+      "sha256": "aa38d4859ed8cbebc34a8d1edecca016a94c66c5762ad51ad9a62964d2991658",
+      "bytes": 5616
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/certificate.json": {
+      "sha256": "38a469d4f5c84f7d5e4fa2f09382d786d560d4847f96f76578e488bffdfadeea",
+      "bytes": 378278
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/REJECTION_CONTROLS.json": {
+      "sha256": "28814ba95a6ddee7ccb913e85d404e06bca0ef4085c5f7aa42f95be2b69229b7",
+      "bytes": 963
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/RESULT.json": {
+      "sha256": "4d789cc4439cbe12917c418eb904483968982b26caa3e4cc7cafbea2722dc061",
+      "bytes": 5251
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/RESULT.md": {
+      "sha256": "b8595e51f7e87bcbfb2d09696e2fdcb04d5f4c51a7306d15bcf405efee2db1a6",
+      "bytes": 11271
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/search_rank_closures.py": {
+      "sha256": "251b7b1a68aa016732d47d928be0c25f84bd5a7f7b5dbcbd6635e5994d704833",
+      "bytes": 5349
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/SOURCE_PINS.json": {
+      "sha256": "90afada584bcd01f7129ed03b93acca2d0a18c42cb8e015cb202548f211f048f",
+      "bytes": 1065
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/test_checker_rejections.py": {
+      "sha256": "08cd6caf29dedf240d557e5da85a9a692df28cdb04ba9038725d1f8c0d2da197",
+      "bytes": 3630
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/VERIFICATION.json": {
+      "sha256": "73c897a64ef95226d8cc1326358f0cd6a67e3d170ab1c9c11c1106dccd841475",
+      "bytes": 5720
+    },
+    "ops/team/ai-d3-rank-pencil-falsifier/verify_rank_closures.py": {
+      "sha256": "9fbe238428ab745425b5c91e840e75ef1e7d86667cb2738024554b7883721bdd",
+      "bytes": 14885
+    },
+    "ops/team/ai-d3-rank-pencil-referee/ARTIFACT_HASHES.json": {
+      "sha256": "ecf0698eb9bfc562d51bd4e40b4a9427dbccdd0ef20ad5628d8d61b5a121c7e2",
+      "bytes": 1425
+    },
+    "ops/team/ai-d3-rank-pencil-referee/CHECK_OUTPUT.json": {
+      "sha256": "14fb76f6c0937f4612c1275ef5dced7608bf481fc63363f305b11d939a48a182",
+      "bytes": 5737
+    },
+    "ops/team/ai-d3-rank-pencil-referee/EXPANDED_COVERAGE.json": {
+      "sha256": "3c4835853d831d9ff17b06a52b06db187e69619b82bd3483639855f7167d1a3c",
+      "bytes": 167820
+    },
+    "ops/team/ai-d3-rank-pencil-referee/freeze_replays.py": {
+      "sha256": "a4233e9d4cfb292f74c5b968c6134ee983e4e417022a8d591e755e28ab80cc0d",
+      "bytes": 1622
+    },
+    "ops/team/ai-d3-rank-pencil-referee/independent_check.py": {
+      "sha256": "8a386361263326aa8a21abe5926e2784e52e590565f92abcf087716157e07370",
+      "bytes": 19490
+    },
+    "ops/team/ai-d3-rank-pencil-referee/independent_check.py.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ops/team/ai-d3-rank-pencil-referee/RANK_WITNESSES.json": {
+      "sha256": "6116f2deb1fdf2eed052c92105d443c702ae27272ba809248faaebbba837341a",
+      "bytes": 1082335
+    },
+    "ops/team/ai-d3-rank-pencil-referee/replay_frozen_stage_c.py": {
+      "sha256": "1724fb5d437a1e7e1af4540382949de19be6353d1493f7cb74b31622beddf95e",
+      "bytes": 3855
+    },
+    "ops/team/ai-d3-rank-pencil-referee/replay_frozen_stage_c.py.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ops/team/ai-d3-rank-pencil-referee/RESOURCE_ACCOUNTING.json": {
+      "sha256": "d38c699c170161d2e8ca1cc0b81b5fc831cbbbfd342424acaf1a1a14895cb002",
+      "bytes": 858
+    },
+    "ops/team/ai-d3-rank-pencil-referee/RESULT.json": {
+      "sha256": "0f7117d94200e3aab550b6ac18e29ca9fc8d98add971b791e245d61797a5346a",
+      "bytes": 3409
+    },
+    "ops/team/ai-d3-rank-pencil-referee/REVIEW.md": {
+      "sha256": "dd6d2b049caa64b15d74cf7a4078c4b8c26bcdd044b8832f9604af971f6d629b",
+      "bytes": 9299
+    },
+    "ops/team/ai-d3-rank-pencil-referee/REVIEW_SOURCE_PINS.json": {
+      "sha256": "e961c7eb3bc2e5603cb28c4be153b3ce90120609ef628bbd6961f03ffdb547ba",
+      "bytes": 717
+    },
+    "ops/team/ai-d3-rank-pencil-referee/RUN_RESOURCES.json": {
+      "sha256": "720757e34347bd4b387d4efd18af1951010dd76188a8aaa4ee6b5ca7b0cf39f3",
+      "bytes": 905
+    },
+    "ops/team/ai-d3-rank-pencil-referee/SOURCE_PINS.json": {
+      "sha256": "310b88bd6cd5774026c7f2b86be320add609265de84ef0ef6be4400215706550",
+      "bytes": 1527
+    },
+    "ops/team/ai-d3-rank-pencil-referee/STAGE_C_REPLAY_OUTPUT.json": {
+      "sha256": "f773deee507d25eadfbfe0dd120a12448489e5a89ca791a64b398595f8e77688",
+      "bytes": 16523
+    },
+    "ops/team/ai-d3-reset-coordinator/ACCEPTANCE.md": {
+      "sha256": "ba62683e27ff817ba2df84410393534a4400cc8e08cd0e1f42501afc6209f532",
+      "bytes": 2018
+    },
+    "ops/team/ai-d3-reset-coordinator/check_full_dimensional_countermodel.py": {
+      "sha256": "0cd93fcbf892ebf6969b9983c5055ecca03bb0d1ff15a413a8bcd0c2b7a6927c",
+      "bytes": 9532
+    },
+    "ops/team/ai-d3-reset-coordinator/FULL_DIMENSIONAL_COUNTERMODEL.md": {
+      "sha256": "29080bd9199295747216dc7f6b619822dfa05d009d2b56accd76b61c35a3d963",
+      "bytes": 8052
+    },
+    "ops/team/ai-d3-reset-falsifier/COUNTERMODELS.json": {
+      "sha256": "a49b40888b4e9e6d7e2299903acaa00b1467fb138fb5a864f27e8d3f9d810657",
+      "bytes": 2430
+    },
+    "ops/team/ai-d3-reset-falsifier/FINDINGS.md": {
+      "sha256": "aa451796f65dcb3b1f3a59cd75e7085f51ed98725204be90d7d5d87bdb676c29",
+      "bytes": 21994
+    },
+    "ops/team/ai-d3-reset-falsifier/RESULT.json": {
+      "sha256": "41438272d0ba1146f5d1034aface8aa8fda0adfca32b8c1b160c780989a93f9d",
+      "bytes": 4404
+    },
+    "ops/team/ai-d3-reset-falsifier/SOURCE_PINS.json": {
+      "sha256": "56754fd3476fbad25e7190962ffa45d68d544682ccb0dafa8d253c51c71209c9",
+      "bytes": 2390
+    },
+    "ops/team/ai-d3-reset-falsifier/VALIDATION.json": {
+      "sha256": "8d669507bea45de4025147cb1b7646b7caea10b1bfafa673de07f5039ccb744c",
+      "bytes": 8846
+    },
+    "ops/team/ai-d3-reset-falsifier/verify_countermodels.py": {
+      "sha256": "0a3644a99e5b91104f87dc9ab5766bc431ec0c1fe851ef9bbc145663b1fa7495",
+      "bytes": 10419
+    },
+    "ops/team/ai-d3-reset-referee/CHECK_OUTPUT.json": {
+      "sha256": "7ed65445e80fad2e789e5f7eb1bcc4c71b39d8ed87e1325aa059fc7f6c9695b6",
+      "bytes": 3759
+    },
+    "ops/team/ai-d3-reset-referee/independent_check.py": {
+      "sha256": "17b0994294ab3929bae49c938ae312f7c6ad9febb6377eced0f28033b9628ac0",
+      "bytes": 12373
+    },
+    "ops/team/ai-d3-reset-referee/RESULT.json": {
+      "sha256": "3f16b324dd3541b274794ff41237a1f8f4f0da68c42bcf649b2c7d7554d4c3b7",
+      "bytes": 7576
+    },
+    "ops/team/ai-d3-reset-referee/REVIEW.md": {
+      "sha256": "2ef3e230048405210e839577f5a602c722c2e89e0af02462bb156b467febe4f6",
+      "bytes": 18282
+    },
+    "ops/team/ai-d3-reset-source/FINDINGS.md": {
+      "sha256": "f32f2fa3904e825a8d83cfb53d658862e53953a933d44c80dc9ae3dee28a43c5",
+      "bytes": 29542
+    },
+    "ops/team/ai-d3-reset-source/RESOURCE_ACCOUNTING.json": {
+      "sha256": "d1f03e1042f6e250418c51ab0eb0bcdc5c63881b2a08c11331ffa95a4acd0242",
+      "bytes": 633
+    },
+    "ops/team/ai-d3-reset-source/RESULT.json": {
+      "sha256": "0d0ba2ecbc281ed10c4c373cde574c2a7ad1598b064da12661a01fa701ed328c",
+      "bytes": 7011
+    },
+    "ops/team/ai-d3-reset-source/SOURCE_MANIFEST.json": {
+      "sha256": "cf3de5b6433fd4e71dcf01de139ccbc0997ef5a509cbbe14a468319d67a686e0",
+      "bytes": 5720
+    },
+    "ops/team/ai-d3-reset-source/sources/shiota-2005.pdf": {
+      "sha256": "73c29e07ed25cd78b5183a7652ea17c26239541cee029123036ce4809d912772",
+      "bytes": 137297
+    },
+    "ops/team/ai-d3-reset-source/sources/stacks-09V4.html.gz": {
+      "sha256": "21c5afdaf41fa82ddb66e4ff201d9764c04be9ed31ffe22405055ff5abc55067",
+      "bytes": 7208
+    },
+    "ops/team/ai-d3-reset-source/TEST_OUTPUT.json": {
+      "sha256": "a527a6f6afd345be7d91020caf21547bd8b33cdc6743481b12cc025f90a6e071",
+      "bytes": 657
+    },
+    "ops/team/ai-d3-reset-source/verify_identities.py": {
+      "sha256": "4ee8a2e89bd0a693458519c7af407bb8e0c476401ebe4027bbcd08fd3382bb39",
+      "bytes": 7047
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/certify_obstruction.py": {
+      "sha256": "2e91fd2635b4be3041f6450c4041214fd4e50720863b39ab0508af51879df2d8",
+      "bytes": 5746
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/CONTROLS.json": {
+      "sha256": "d5856c5c126cfdaf8475167bd7f949ca226ac3f2f6e6f89ce573adf618ecdd64",
+      "bytes": 9237
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/FINDINGS.md": {
+      "sha256": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc",
+      "bytes": 16997
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/OBSTRUCTION.json": {
+      "sha256": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa",
+      "bytes": 397264
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/RESOURCE_ACCOUNTING.json": {
+      "sha256": "899044a75d63947725afabea27a3c6b5cdf23d6449949bad9a9035d725389e05",
+      "bytes": 1157
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/RESULT.json": {
+      "sha256": "606df10d56acb38330aa10bd7aa2528c701303daa3412c2dd56f61ce1bef4a95",
+      "bytes": 4215
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/search_controls.py": {
+      "sha256": "3c05f12729256261e0ed809a31c34fc99ab02fa85f46957e4de730107a265c75",
+      "bytes": 4880
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/SOURCE_MANIFEST.json": {
+      "sha256": "764531d403432b9307ce0ab78c8d33b128044bd04e015ab2be74a3acf66d9da5",
+      "bytes": 4619
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/TEST_OUTPUT.json": {
+      "sha256": "6ade50f59b7265690b900e94d5bb0a366ba0a99c564b81dce95e479b1044a4c1",
+      "bytes": 638
+    },
+    "ops/team/ai-d3-shared-pencil-constructor/verify_controls.py": {
+      "sha256": "5638c053b11a4877f7d0aac0807399745bd27895150e4828c1df9a3dca7df812",
+      "bytes": 9649
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": {
+      "sha256": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+      "bytes": 6363
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/bind_admissibility.py": {
+      "sha256": "3662e60a02abf92f2fc9271c31611ea37d31586a6b6dc8b1f66603c7edbef949",
+      "bytes": 2464
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/FINDINGS.md": {
+      "sha256": "0aae50c46db82d2a4a0a6ee7d1afae4826a8bc1994d20936554644209a4b01df",
+      "bytes": 13197
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/RESULT.json": {
+      "sha256": "dd25c0e8f3378549539e39abe7e389742a3195aef2e7dc998f65c6e7c41d6579",
+      "bytes": 5867
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/search_shared_pencil.py": {
+      "sha256": "9452b1276a510fda61d4b3acd945ffdc6522310e1edaf9b1be7cde67936454e0",
+      "bytes": 8419
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/shatter_pattern_0.json": {
+      "sha256": "f758fa2a7d9961e72fd38ba5ef738192f1617b177e54ba4487ea1dd80b6e81a1",
+      "bytes": 3373
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/SOURCE_PINS.json": {
+      "sha256": "77b2657dcf5cc8652a844413ef1cfe06070ab7bd5059c492a1dc3f3da3a21bb1",
+      "bytes": 1463
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": {
+      "sha256": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+      "bytes": 113119
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_7.json": {
+      "sha256": "db1749fadf9944fe6bc955379db4febfd1238f93dd37142306afe86a74c60d74",
+      "bytes": 1920
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/VALIDATION.json": {
+      "sha256": "459d819f73bf808e846fea25adb0bb99629244c0c8aab51f80c8d32658ee2b19",
+      "bytes": 3485
+    },
+    "ops/team/ai-d3-shared-pencil-falsifier/verify_shared_pencil_certificate.py": {
+      "sha256": "a7c66f659c79f3c82bddf0f4af531a395134455371f7a6fb909ee25be1a8e758",
+      "bytes": 13367
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/CHECK_OUTPUT.json": {
+      "sha256": "fbf12639aaab2266c229b0a97134f377813715da262e4ed2ea1bdc0eaf36e14d",
+      "bytes": 4836
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/check_robustness.py": {
+      "sha256": "4b90244310e6aea37e68c3f3f71948241af6154ee8ce064cb1830d072ef8d95f",
+      "bytes": 11257
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/check_robustness.py.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/independent_check.py": {
+      "sha256": "82163982583d7468a267eeb78bad9fb998a53e82b0ca5ad657b4cf00daa2b2bf",
+      "bytes": 20751
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/independent_check.py.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/NORMALIZATION.json": {
+      "sha256": "b755063c70478d966f5b23a4d877ff1433ed6b090c911c042c0fca64c8007b84",
+      "bytes": 2633
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/RESOURCE_ACCOUNTING.json": {
+      "sha256": "089567c6a45619208ef90c6611d3d4dfe9f9932c62a97292878ef3fafcbad012",
+      "bytes": 2104
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/RESULT.json": {
+      "sha256": "61b822d83460daf39b2c1dd9715a06c402eab468b7a9efdb31133cc591f45bce",
+      "bytes": 4975
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/REVIEW.md": {
+      "sha256": "8bf6d4d12a0e6067263688a75c93ac1ffe2d3543d809852e2e259898efafaef1",
+      "bytes": 13673
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/ROBUSTNESS_OUTPUT.json": {
+      "sha256": "62b4735e5c712a3a7fb4a10c21df36706639e0b8b57af72a0b2d25db0a134666",
+      "bytes": 8987
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/RUN_RESOURCES.json": {
+      "sha256": "2b4a3d66ee6a652f243dc1c591e01399cabf9e1b1ee2950e52948191aba1cb96",
+      "bytes": 601
+    },
+    "ops/team/ai-d3-shared-pencil-final-referee/SOURCE_PINS.json": {
+      "sha256": "6b775b0e75d030dd6077e9c711e8420540dcc40187d988dbac632b9fe3945b33",
+      "bytes": 7172
+    },
+    "ops/team/ai-d3-shared-pencil-referee/independent_check.py": {
+      "sha256": "8f765eee29428b5d575e82e11eee60ae436132142d69da3aa7e14b4d40eef362",
+      "bytes": 20309
+    },
+    "ops/team/ai-d3-source-audit-referee/CHECK_OUTPUT.json": {
+      "sha256": "122a2e7e3b479f7f8f40ac8785ef5ef04e7a256d9a5ca028222a3011b35b4e0e",
+      "bytes": 4485
+    },
+    "ops/team/ai-d3-source-audit-referee/independent_check.py": {
+      "sha256": "4c789a59d9ef86df7577e9418936f5e7ba4ffcc7d19f2e438f66b5d7d3bb1810",
+      "bytes": 11103
+    },
+    "ops/team/ai-d3-source-audit-referee/RESULT.json": {
+      "sha256": "608b0deecf394b667a74c712885fe4e83b846adaac67304ffed49c96ada37865",
+      "bytes": 9949
+    },
+    "ops/team/ai-d3-source-audit-referee/REVIEW.md": {
+      "sha256": "96cc50dfb825254aea9fe7677e8cfe692b6cd23124836990ce404ecd38ec3eb1",
+      "bytes": 17660
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE.md": {
+      "sha256": "e3ce6f7110b13a46e0831fe8c2344ad865ada17d9fa70d03383fd654bd287dea",
+      "bytes": 8236
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE_REPORT.md": {
+      "sha256": "f06fea3704d67f7f2268068b28cdd5f53b027bc8a3c2a612b73546e6c165a6d4",
+      "bytes": 17006
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/MID_CYCLE_CHECKPOINT.json": {
+      "sha256": "af29febae20549d98cdffbb2fafcc963b4f560e7e8ee1c19ee9a65aaf9850c4a",
+      "bytes": 1457
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/OPENING_STATE.json": {
+      "sha256": "885fda14aa610bb8f76590b2ec9bf0ec8288c5bdee20a851a66b23f142afae1c",
+      "bytes": 1763
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_B_SHARED_PENCIL.md": {
+      "sha256": "e64b2632f58d6510236ca71cfb004bac65c59d0dfeb711154bef9a37261a8e81",
+      "bytes": 5091
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_C_REVIEW.md": {
+      "sha256": "2699dd5faaa2077fe1dcfa48d5f11740216eecc7bacb0a62074690fe48bda756",
+      "bytes": 2455
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_D_RANK_CLOSURE.md": {
+      "sha256": "af943632fcd4d0a99b3fa7c46e123943d8df08600c5c7b94b96068749a9bf5ac",
+      "bytes": 4201
+    },
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/WORK_ORDERS.yaml": {
+      "sha256": "2ec4b8edc27946a84adef1f122261cb41db066e6481c3cdee2864e9725534a0a",
+      "bytes": 3438
+    }
+  }
+}

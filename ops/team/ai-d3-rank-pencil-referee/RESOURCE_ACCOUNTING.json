@@ -1,0 +1,22 @@
+{
+  "registered_start_utc": "2026-09-05T15:20:00+00:00",
+  "deadline_utc": "2026-09-05T15:50:00+00:00",
+  "recorded_utc": "2026-09-05T15:36:41.589886+00:00",
+  "elapsed_role_wall_seconds_at_record": 1001.589886,
+  "wall_ceiling_seconds": 1800,
+  "memory_ceiling_bytes": 17179869184,
+  "artifact_ceiling_bytes": 52428800,
+  "observed_rank_checker_peak": {
+    "instrumented": true,
+    "peak_working_set_bytes": 42160128,
+    "peak_pagefile_bytes": 31580160
+  },
+  "whole_role_peak_memory_instrumented": false,
+  "existing_clean_worktree_reused": true,
+  "fresh_worktree_copied": false,
+  "new_predicate_points": 1,
+  "search_performed": false,
+  "new_artifact_bytes_before_this_accounting_file": 1313239,
+  "runtime_details": "RUN_RESOURCES.json",
+  "policy": "No external/paid compute, no human contact, no new cohort, no ledger edits, no push or merge."
+}

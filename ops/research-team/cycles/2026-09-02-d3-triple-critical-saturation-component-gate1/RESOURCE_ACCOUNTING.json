@@ -1,0 +1,66 @@
+{
+  "format": "d3-triple-critical-saturation-resource-accounting-v1",
+  "cycle_id": "2026-09-02-d3-triple-critical-saturation-component-gate1",
+  "ceilings": {
+    "active_local_wall_hours": 4,
+    "peak_ram_gib": 32,
+    "new_scratch_gib": 10,
+    "constructor_handoffs": 1,
+    "verifier_directed_repairs": 1,
+    "cloud_workers": 0,
+    "external_spend_usd": 0
+  },
+  "observable_git_timeline": {
+    "opening_alignment_commit": "7f1d9f4dc0f376a13dd356e6da61c28550607139",
+    "opening_alignment_commit_time": "2026-09-02T12:28:51-07:00",
+    "resumed_constructor_handoff_commit": "97787bed0afae6a2f7cb7d2edf9df4f54bbe97f9",
+    "resumed_constructor_handoff_commit_time": "2026-09-03T15:03:23-07:00",
+    "falsifier_commit": "2df3285c19b0c65127bd0acd79df2cc57f0d7752",
+    "falsifier_commit_time": "2026-09-03T15:08:16-07:00",
+    "independent_verifier_commit": "e65f844a4fdb82f5850b9b27eff0dc54274dd735",
+    "independent_verifier_commit_time": "2026-09-03T15:10:37-07:00",
+    "constructor_to_independent_verifier_seconds": 434,
+    "interpretation": "Commit timestamps bound the resumed active integration span. The user-controlled pause between opening and resumption is not reported as CPU time or active research execution."
+  },
+  "disk_observations_before_close": {
+    "constructor_evidence_bytes": 201491,
+    "falsifier_evidence_bytes": 30429,
+    "independent_verifier_evidence_bytes": 24684,
+    "subtotal_role_evidence_bytes": 256604,
+    "ephemeral_smoke_scratch_retained_bytes": 0,
+    "research_saturation_scratch_created_bytes": 0,
+    "scratch_ceiling_triggered": false
+  },
+  "execution": {
+    "opening_replays": 1,
+    "constructor_replays": 2,
+    "guarded_dry_runs": 2,
+    "toy_exact_cas_smoke_tests": 2,
+    "research_ideal_saturation_runs": 0,
+    "raw_groebner_or_rur_runs": 0,
+    "falsifier_replays": 2,
+    "independent_q0_replays": 2
+  },
+  "memory": {
+    "peak_ram_instrumented": false,
+    "out_of_memory_event_observed": false,
+    "ram_ceiling_trigger_observed": false,
+    "claim_boundary": "No continuous peak-RAM telemetry was collected; no measured peak is invented."
+  },
+  "handoffs": {
+    "constructor_handoffs_used": 1,
+    "verifier_directed_repairs_used": 0,
+    "reason_no_repair": "The independent failure is an end-to-end scope/resource deficit requiring new component evidence, calibrated forecasting, scratch enforcement, and five Q1 stages; it is not a bounded one-repair defect."
+  },
+  "external": {
+    "network_research_used": false,
+    "cloud_workers_created": 0,
+    "actual_spend_usd": 0,
+    "github_writes": 0,
+    "google_drive_connector_used": false,
+    "author_contacts": 0
+  },
+  "ceiling_verdict": "NO_EXECUTED_CEILING_TRIGGER; Q1_DENIED_AT_MID_CYCLE_FORECAST_GATE",
+  "claim_boundary": "Measured byte counts and Git times are exact. The unexecuted constructor forecast is recorded as forecast, not observed resource use."
+}
+

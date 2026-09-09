@@ -1,0 +1,15 @@
+{
+  "status": "PASS_EXACT_ROUTE_COUNTEREXAMPLE_CERTIFICATE",
+  "acceptance": "Pending independent research review",
+  "positive_control_restricted_witnesses": 3,
+  "upper_chart_7": "INELIGIBLE_BLOCK_2_FEASIBLE",
+  "gp_relations_checked": 11340,
+  "negative_cases": 1680,
+  "strict_separator_inequalities": 62160,
+  "minimum_integer_strict_margin": 6858251431715,
+  "full_bad_witnesses": 3,
+  "realized_good_controls": 3,
+  "ordered_incomparability_bindings": 6,
+  "properness": "All three nonempty and all bad at registered chart zero",
+  "scope": "Refutes the shared-two-triple pencil predicate only; does not refute triple Hc0 or D3"
+}

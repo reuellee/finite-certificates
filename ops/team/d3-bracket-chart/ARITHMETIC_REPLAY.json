@@ -1,0 +1,47 @@
+{
+  "result": "PASS_EXACT_GENUS_ONE_FIBER_ARITHMETIC",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "generic_numerator_terms": 389,
+  "generic_bidegree_ce": [
+    2,
+    2
+  ],
+  "generic_discriminant_c_degree": 4,
+  "generic_discriminant_terms": 3257,
+  "sample_quartic_discriminant": "4649793772367457417206802405651256329633792",
+  "sample_real_roots": 4,
+  "source_point": [
+    "-19/28",
+    "-23/7",
+    "-27/14",
+    "-5",
+    "-4",
+    "-3",
+    "-1",
+    "2",
+    "4"
+  ],
+  "source_point_parent_nonzero_brackets": 70,
+  "source_point_F_e": "5463/4",
+  "opposite_sheet_point": [
+    "90/91",
+    "-23/7",
+    "-27/14",
+    "-5",
+    "-6843/1559",
+    "-3",
+    "-1",
+    "2",
+    "4"
+  ],
+  "opposite_sheet_parent_nonzero_brackets": 70,
+  "opposite_parent_bracket": "1346",
+  "parent_signs": "++--+-++-++++--+---+--+++-++-------------+-++++-+---++------+----++++-",
+  "negative_controls_rejected": 3,
+  "geometric_inference": "REPORT.md applies Riemann-Hurwitz to the squarefree quartic; not machine-formalized.",
+  "independent_ai_referee": "NOT_PERFORMED; separate arithmetic implementation by coordinator",
+  "full_source_noncompactness": "NOT_PROVED",
+  "pair_injectivity": "NOT_PROVED",
+  "triple_source_residual": 1162302,
+  "ledger": "2/9"
+}

@@ -1,0 +1,25 @@
+{
+  "auxiliary_result": "Generic same-factor occurrence H1 vanishing extends to any finite number of block signings by two-synthetic-signing compression.",
+  "base_commit": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "classification": "INFORMATIONAL",
+  "diagonal_ledger": [
+    2,
+    9
+  ],
+  "files": {
+    "ARITHMETIC_REPLAY.json": "f27ab67436b7c77b6d58f0fd83c633c2023a6eaff1b9aa93f359c51df2240b56",
+    "FINDINGS.md": "6425d367675fc709cc65f4560e654b645cb4f92f07571bb81f74ca0e9ab99778",
+    "SOURCE_MANIFEST.json": "01fecc737375f0fc5425276b7c314ac6e7af9d3cdb95fdce1f11247d7ab820bc",
+    "verify_arbitrary_block_occurrences.py": "2afca94b21ecbee4ef5be4edcc3e435910eae876ceec90eb664263df604934fc"
+  },
+  "first_unresolved_implication": "Pointwise occurrence contraction does not supply proper globally attached original signed frontier blocks b01,b02,b12.",
+  "handoff": "NULL",
+  "independent_AI_acceptance": "PENDING",
+  "no_same_route_successor": true,
+  "original_invariants_closed": [],
+  "triple_source_accounting": {
+    "settled": 77940147,
+    "total": 79102449,
+    "unresolved": 1162302
+  }
+}

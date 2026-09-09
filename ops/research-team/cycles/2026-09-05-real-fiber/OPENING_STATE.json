@@ -1,0 +1,26 @@
+{
+  "base": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "tree": "c49c2e6625f3ee76d77cc263897366dcf7e037c2",
+  "opened_utc": "2026-09-05T18:31:29.060885+00:00",
+  "ledger": "2/9",
+  "proof_distance": [
+    "2/9",
+    1,
+    [
+      "triple_hc0",
+      "pair_hc1"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN"
+  ],
+  "source_hashes": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ai/omreal/9DVL_THEOREM_PROSPECTUS.md": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+    "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+    "ops/team/d3-bracket-chart/REPORT.md": "4c16c68de079e39ae1b913024cf63ff3c1dd7efd2cec9de77e013c6ad76d3f0c",
+    "ops/team/d3-height-fiber/REPORT.md": "51747c4b1f06ec2eda21c6c4b8d4eaeaf85151ed347f9fbf67626c284c52e217"
+  }
+}

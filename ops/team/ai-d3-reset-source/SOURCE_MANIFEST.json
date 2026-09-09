@@ -1,0 +1,126 @@
+{
+  "format": "ai-d3-reset-source-manifest-v1",
+  "base_revision": "fcb64825335245e6e53512bf4eb2c5f5279b75ae",
+  "inputs_identical_to_base": true,
+  "local_sources": [
+    {
+      "path": "ops/research-team/PROTOCOL.md",
+      "bytes": 11222,
+      "sha256": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+      "git_blob": "bc7995f0ed0c3ea296551152b2e0cfa2b16f0c74"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE.md",
+      "bytes": 8236,
+      "sha256": "e3ce6f7110b13a46e0831fe8c2344ad865ada17d9fa70d03383fd654bd287dea",
+      "git_blob": "54718ac565bf526ebf44cc0f2ac0c6a57f7edf0e"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/WORK_ORDERS.yaml",
+      "bytes": 3438,
+      "sha256": "2ec4b8edc27946a84adef1f122261cb41db066e6481c3cdee2864e9725534a0a",
+      "git_blob": "952fd96a50d2e71df7a4115edc0432db0c352a5d"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/OPENING_STATE.json",
+      "bytes": 1763,
+      "sha256": "885fda14aa610bb8f76590b2ec9bf0ec8288c5bdee20a851a66b23f142afae1c",
+      "git_blob": "b425acc5add20cfda26cf8af7c4f7f8cadf06488"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/THEOREM_CANDIDATE.md",
+      "bytes": 8926,
+      "sha256": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a",
+      "git_blob": "db9f56cc21b6e46697fb19422a9d1ca06e14ab38"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/LITERATURE_SCOPE.md",
+      "bytes": 2802,
+      "sha256": "2f69b1dacd9a856b19f687e442ff5a8107bc31c2bcff11fdbad0d7af997c5b9c",
+      "git_blob": "75c3a2fee32e3a59bb90f64feee5142a10be5ae7"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/OBLIGATION_GRAPH.json",
+      "bytes": 2586,
+      "sha256": "3ff6bd1fc17b8b1f87ada2ed8918502cd701f991e39bf1c638fdd9b4900b1ecb",
+      "git_blob": "597d6330b8723004b3b45900e885817d4a85ee3a"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/CYCLE.md",
+      "bytes": 18235,
+      "sha256": "4c692eff5b27ede005140c0bb53899750c22ce7bcb0d90b865026bb8038f39f4",
+      "git_blob": "bea46fc8ea4a2b638cef99ba529204aba5834d75"
+    },
+    {
+      "path": "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json",
+      "bytes": 8610,
+      "sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+      "git_blob": "dfe67f99959b5211d8ed408df5be6373ad5d41bc"
+    },
+    {
+      "path": "ai/omreal/ATLAS_HELLY.md",
+      "bytes": 171509,
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "git_blob": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_AUDIT.md",
+      "bytes": 16379,
+      "sha256": "5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a",
+      "git_blob": "b5dd849e4483da3dbb267e93de96b30cb304d30c"
+    },
+    {
+      "path": "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+      "bytes": 13943,
+      "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+      "git_blob": "f59a8757d18b004333876c77d29831dd7e8ce8f2"
+    },
+    {
+      "path": "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "bytes": 16265,
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+      "git_blob": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85"
+    },
+    {
+      "path": "ai/omreal/9DVL_THEOREM_PROSPECTUS.md",
+      "bytes": 23739,
+      "sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+      "git_blob": "b1332de02ed7ba875ef97e10270f234b4a7f0ef9"
+    },
+    {
+      "path": "ops/research-sources/basu-karisani/arxiv-2009.13365v3.pdf",
+      "bytes": 1382913,
+      "sha256": "c4cf62ddfa52185f6dac456ba8f4c115e5ced4ff7234d1b309b88c6c4387f8a1",
+      "git_blob": "159427e645154c9f94288e38b98be6aed33db139"
+    }
+  ],
+  "primary_external_sources": [
+    {
+      "local_path": "sources/shiota-2005.pdf",
+      "url": "https://impan.pl/shop/en/publication/transaction/download/product/84789",
+      "title": "Masahiro Shiota, Whitney triangulations of semialgebraic sets, Ann. Polon. Math. 87 (2005), 237-246, DOI 10.4064/ap87-0-20",
+      "used": "Page 237: compatible finite-family triangulation theorem",
+      "retrieved_utc_date": "2026-09-05",
+      "bytes": 137297,
+      "sha256": "73c29e07ed25cd78b5183a7652ea17c26239541cee029123036ce4809d912772"
+    },
+    {
+      "local_path": "sources/stacks-09V4.html.gz",
+      "url": "https://stacks.math.columbia.edu/tag/09V4",
+      "title": "The Stacks Project, Proper base change in topology, section 20.18",
+      "used": "Lemma 20.18.1 and Theorem 20.18.2",
+      "retrieved_utc_date": "2026-09-05",
+      "original_download_bytes": 19472,
+      "original_download_sha256": "e8eb34cb92510ea37729f0dc976b67da22b22fc89aaf491feb95fcbaf6209ce0",
+      "encoding": "gzip; exact original downloaded bytes are preserved after decompression",
+      "bytes": 7208,
+      "sha256": "21c5afdaf41fa82ddb66e4ff201d9764c04be9ed31ffe22405055ff5abc55067"
+    }
+  ],
+  "additional_primary_web_reference": {
+    "url": "https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/efficient-simplicial-replacement-of-semialgebraic-sets/C32B4A3FA99FAF864D70274612ADA1C2",
+    "title": "Basu--Karisani, Efficient simplicial replacement of semialgebraic sets",
+    "used": "Section 1.1 classical exact triangulation algorithm; pinned local arXiv version listed above",
+    "retrieved_utc_date": "2026-09-05"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "runs": [
+    {
+      "script": "independent_check.py",
+      "output": "CHECK_OUTPUT.json",
+      "exit_code": 0,
+      "wall_seconds": 1.91847,
+      "observed_process_peak_working_set_bytes": 58245120
+    },
+    {
+      "script": "check_robustness.py",
+      "output": "ROBUSTNESS_OUTPUT.json",
+      "exit_code": 0,
+      "wall_seconds": 1.662509,
+      "observed_process_peak_working_set_bytes": 22941696
+    }
+  ],
+  "memory_method": "Windows GetProcessMemoryInfo PeakWorkingSetSize observed by parent process every 10 ms; includes executable process, excludes coordinator model context."
+}

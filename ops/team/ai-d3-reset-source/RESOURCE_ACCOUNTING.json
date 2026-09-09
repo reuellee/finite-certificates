@@ -1,0 +1,16 @@
+{
+  "format": "ai-d3-reset-source-resources-v1",
+  "recorded_utc": "2026-09-05T13:52:04.468887+00:00",
+  "conservative_wall_window_start": "2026-09-05T13:20:26+00:00",
+  "conservative_wall_minutes_upper_bound": 31.641,
+  "reason_for_upper_bound": "Cycle opening predates assignment; exact assignment timestamp and model active hours were not instrumented.",
+  "active_hours": null,
+  "peak_rss_bytes": null,
+  "peak_rss_instrumented": false,
+  "new_files_before_this_record": 8,
+  "new_bytes_before_this_record": 195115,
+  "checker_wall_seconds_observed": 1.7764656,
+  "checker_runs": 2,
+  "paid_compute": 0,
+  "broad_cad_runs": 0
+}

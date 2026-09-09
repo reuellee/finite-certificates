@@ -1,0 +1,38 @@
+{
+  "format": "ai-only-d3-structural-reset-opening-v1",
+  "base_revision": "50a77bc5657c12cc079fb6c8043c4ad41270f506",
+  "base_tree": "c338e15a6735694987528be21d3c000d87704d99",
+  "started_at": "2026-09-05T13:20:26Z",
+  "deadline": "2026-09-12T13:20:26Z",
+  "user_authorized": true,
+  "human_consultation": false,
+  "ledger": "2/9",
+  "canonical_state_unchanged": true,
+  "opening_vector": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    9,
+    12
+  ],
+  "predecessor_opening_window": "ELAPSED_WITH_NO_COMMITTED_HANDOFF_AT_BASE",
+  "predecessor_independent_closing_verdict": "NOT_AVAILABLE",
+  "active_hours_ceiling": 40,
+  "stage_a_active_hours_ceiling": 6,
+  "source_pins": {
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+    "ai/omreal/BLOCK_GORDAN_AUDIT.md": "5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a",
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+    "ai/omreal/BLOCK_GORDAN_RESIDUAL_MUTATION_MAP_NO_GO.md": "2d1250c9b1d8d25a5bb4b634c71f1329d8270c2b37b7153a63b1c43f319f92ae",
+    "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md": "f0326930b473ff9e1c07c6dc69e332de28cbb3d178b7d3b5b526c451d1234f98",
+    "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/THEOREM_CANDIDATE.md": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a"
+  }
+}

@@ -1,0 +1,3 @@
+PASS independent structural replay of source, 62 walls, and five canaries
+PASS 27/27 hostile mutations rejected
+Q0 NULL; Q1 DENIED; MINIMUM DECREASE UNREACHABLE; STALLED / STOP

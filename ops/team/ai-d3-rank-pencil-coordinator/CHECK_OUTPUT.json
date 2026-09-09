@@ -1,0 +1,57 @@
+{
+  "status": "PASS_COMPLETE_FIXED_PLANE_RANK_PREDICATE_COUNTERCERTIFICATE",
+  "source_hashes": {
+    "ops/team/ai-d3-shared-pencil-constructor/OBSTRUCTION.json": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa",
+    "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab"
+  },
+  "new_predicate_points": 1,
+  "indexed_pairs": 1680,
+  "distinct_labeled_rank_closures": 896,
+  "closure_size_histogram": {
+    "6": 840,
+    "2": 840
+  },
+  "expanded_strict_inequalities": 65520,
+  "existing_separator_pool": 23,
+  "separator_indices_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    12,
+    16,
+    20,
+    21
+  ],
+  "minimum_raw_integer_margin": 162514748513691,
+  "three_full_badness_circuits_rank_four": true,
+  "cofactor_signs": [
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "closure_table_sha256": "d73ae4643220f61909c870dc6819e687a3a6aa02f513b2be53865b72422b1766",
+  "active_stage_d_producer_read_or_imported": false,
+  "scope": "Rank at most two of all incident support normals is impossible for every label at this actual point; no claim about moving support planes, multiple columns, compact components, or D3."
+}

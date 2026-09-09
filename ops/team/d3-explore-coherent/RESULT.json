@@ -1,0 +1,204 @@
+{
+  "status": "FINITE_EXACT_FILTERED_COHERENT_FILLER",
+  "original_target": "NULL",
+  "theorem_credit": 0,
+  "opening_revision": "c27a36d6e3f47a2b4c7bb017774cbe5df30abdc2",
+  "classification": "INFORMATIONAL",
+  "source_sha256": {
+    "ops/research-team/cycles/2026-09-09-exploration/CYCLE.md": "47dd4ae2d163d5402cc37416e1615ab33fc1b90ab11fa2ba3e2cd722f5b94f47",
+    "ops/research-team/cycles/2026-09-09-exploration/WORK_ORDERS.yaml": "0028cc1494921cba41bd218e732ce0c84819b5749dc50e1fc8646019ba8c0677",
+    "ops/research-team/cycles/2026-09-09-exploration/SOURCE_MANIFEST.json": "160c78a5c05cd8ffdc7a6d5eb5db6c01ebb30ee90d70705062d6e90ce45351e4",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "ops/team/d3-satinj-falsifier/DISCOVERED_EVENT.json": "b3d3e6122d38d46c6f8229a6d400e9fc1b1e461b151d03b26d6a9e803e022d8a",
+    "ops/team/d3-satinj-falsifier/EXACT_REPLAY.json": "a3e7aeee217c41d0fa74443770ee37acb57222ab9eda611a4d59790c962e9dec",
+    "ops/team/d3-detector-falsifier/FINDINGS.md": "28cf339b063eabb95ff1037b92cff63001512f0a6f534eb01ec27bf3b6d7890c",
+    "ops/team/d3-detector-falsifier/ARITHMETIC_REPLAY.json": "a68d577ae1f664cd782630d070f4efdb1f4de911fb254aa66f5267e83b43a3ab",
+    "ops/team/d3-detector-prover/BOUNDARY_DETECTORS.md": "cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3",
+    "ai/omreal/BLOCK_GORDAN_ALL_CODIM_COHERENCE.md": "1ef8ce2a6f96c922e103ea3270230e5619490020af9eadf743ac237aaef7eb2f",
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76",
+    "ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86",
+    "ops/team/d3-mixed-100-carrier-constructor/THEOREM_ATTEMPT.md": "b2195e1a52600975be9ab2a0b3fb3139ba19242aa08803c96fe58f7b085b27dc"
+  },
+  "signatures": [
+    14988895318912,
+    3405195891438080,
+    40418075143643136
+  ],
+  "initial_test": [
+    {
+      "point": "left",
+      "parameter": "7572888431453598649247097064493/1405918389883106081535507000000",
+      "block_0_endpoint_signs": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "six_coordinate_face": "closed edge: two distinct circuit vertices",
+      "blocks_1_and_2_two_circuits_positive": true,
+      "all_70_parent_signs_preserved": true,
+      "augmented_rank": 5
+    },
+    {
+      "point": "event",
+      "parameter": "37864449186859942661765893/7029591949415530407677535",
+      "block_0_endpoint_signs": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "six_coordinate_face": "singleton: opposite signs in the two zero coordinates",
+      "blocks_1_and_2_two_circuits_positive": true,
+      "all_70_parent_signs_preserved": true,
+      "augmented_rank": 5
+    },
+    {
+      "point": "right",
+      "parameter": "7572891243290378415459260135507/1405918389883106081535507000000",
+      "block_0_endpoint_signs": [
+        [
+          -1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "six_coordinate_face": "empty: affine endpoint coefficients forced nonpositive",
+      "blocks_1_and_2_two_circuits_positive": true,
+      "all_70_parent_signs_preserved": true,
+      "augmented_rank": 5
+    }
+  ],
+  "follow_through": {
+    "model": "three actual event witnesses and their convex simplex",
+    "vertices": [
+      {
+        "block": 0,
+        "support": [
+          0,
+          19,
+          21,
+          37,
+          38
+        ],
+        "normalized_weights": [
+          "0",
+          "15100255766554181524743720/64645590295975223972489057",
+          "18409186529041553537200592/64645590295975223972489057",
+          "21088775848246591223032605/64645590295975223972489057",
+          "10047372152132897687512140/64645590295975223972489057"
+        ]
+      },
+      {
+        "block": 1,
+        "support": [
+          0,
+          9,
+          27,
+          30,
+          35
+        ],
+        "normalized_weights": [
+          "180449291863564919103245497310348096006162149843875408674121870034452251012322747501155123663018790/20557499915573493394717748434098097990010151589437816914184517026046708100055981024133121315440838657",
+          "3431315587319722278017331650320815167181867574048494351954823161018540363577769212216269594014673440/20557499915573493394717748434098097990010151589437816914184517026046708100055981024133121315440838657",
+          "95255232503385363759944142752675691328361369190025470564306422654642930278595590148926350114725760/501402436965207155968725571563368243658784185108239436931329683562114831708682464003246861352215577",
+          "138606288602759726366225626352948470731535736108695892210674364769894045740021284231033099462029840/501402436965207155968725571563368243658784185108239436931329683562114831708682464003246861352215577",
+          "7357412671038257502424210753136344082366340548297871279781359710587699468702597214837359165116166827/20557499915573493394717748434098097990010151589437816914184517026046708100055981024133121315440838657"
+        ]
+      },
+      {
+        "block": 2,
+        "support": [
+          0,
+          11,
+          17,
+          24,
+          40
+        ],
+        "normalized_weights": [
+          "191252741347180358445411451787634743496530406465712383290145538454343056552202499916867955858486671625/2651615506615077919553254937833386092957282304022699216999419559237017047761108570149809268260580051976",
+          "72945202143683929242125894760901591850508496732562762191702997853428918857780393491581092348445561077/331451938326884739944156867229173261619660288002837402124927444904627130970138571268726158532572506497",
+          "303946981566971851048819094919827607455816519302716746696538052432138088414251183582964153524108182675/1325807753307538959776627468916693046478641152011349608499709779618508523880554285074904634130290025988",
+          "204430799162956646065153381460472962673543839354818077697919586238131709063083309701823139814414145675/662903876653769479888313734458346523239320576005674804249854889809254261940277142537452317065145012994",
+          "451183988332655840812584612276991549050875527671778931990895588138439627265827316327071707308655943685/2651615506615077919553254937833386092957282304022699216999419559237017047761108570149809268260580051976"
+        ]
+      }
+    ],
+    "boundary_1": [
+      [
+        -1,
+        -1,
+        0
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "boundary_2": [
+      [
+        1
+      ],
+      [
+        -1
+      ],
+      [
+        1
+      ]
+    ],
+    "pair_face_boundary_H1_Z_rank": 1,
+    "full_triangle_H1_Z_rank": 0,
+    "interior_active_blocks": 3,
+    "true_parent_infinity": false,
+    "new_geometric_mechanism": false,
+    "inherited_mechanism": "convex joined witness carrier"
+  },
+  "hostile_controls": {
+    "wrong_boundary_orientation_rejected": true,
+    "triple_interior_as_pair_face_rejected": true,
+    "support_event_as_parent_infinity_rejected": true
+  },
+  "nonconsequences": [
+    "No full 56-row block-0 goodness test.",
+    "No obstruction to all possible mixed carriers.",
+    "No global pair Hc1 or triple Hc0 calculation.",
+    "No filtration-preserving contraction or global parent-boundary attachment.",
+    "No coverage denominator, theorem promotion, or ledger mutation."
+  ]
+}

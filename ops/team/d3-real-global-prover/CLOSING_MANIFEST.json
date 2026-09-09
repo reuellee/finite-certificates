@@ -1,0 +1,26 @@
+{
+  "schema": "d3-real-global-prover-useful-null-v1",
+  "base_commit": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "endpoint": "NULL",
+  "classification": "INFORMATIONAL auxiliary; STALLED theorem convergence",
+  "source_orbits_closed": 0,
+  "original_obligations_closed": 0,
+  "ledger": "2/9 unchanged",
+  "new_artifact_bytes": 100251,
+  "files_sha256": {
+    "ARITHMETIC_REPLAY.json": "7b8e2db55e603d284e6eb5467cf3f416aa0b89a9faa0eff73cd78f65717be6c7",
+    "CRITICAL_NUMERICAL_DISCOVERY.json": "c5e1d38e03df4a896090034ee5f136d4eccf549dd9b617dfbd4e44aaf2b60f15",
+    "HARMONIC_SCREEN.json": "701e2f95064834409218ea5518f56b77d5ebddf4d1d55a9262f7eddcd344add3",
+    "NUMERICAL_TRANSCRIPT.txt": "0e12581bed5d8de512c67dcb7b269d65c913461a2852e31492b58eaf50897d03",
+    "REPORT.md": "0ae73ea5952846e34c151f7cf4475ea9752fc41e25548e4ad1b80f02edbb3dd4",
+    "explore_critical_real.py": "9c55c7929496f9a30dc7db6289a53c7592b0bb50be83f44817e20423b92e6e65",
+    "explore_harmonic.py": "3adac1699a61521b74833a747f5a50c7fe52d9b8ba0146c8ee963c6f295b07fe",
+    "verify_harmonic_obstruction.py": "20e6e7244bbbd949357fe3e9b81f92a87eb9b4a5310f9a2d9128f8849a5fe422"
+  },
+  "verification": {
+    "command": "python -B ops/team/d3-real-global-prover/verify_harmonic_obstruction.py",
+    "exit_code": 0
+  },
+  "acceptance": "No independent AI acceptance claimed; coordinator/referee must decide."
+}
