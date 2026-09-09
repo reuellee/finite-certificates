@@ -25,6 +25,12 @@ Mutation graphs of uniform oriented matroids are connected at every rank for `n 
 ### 3. Nine-Diagonal Vanishing Lemma: 2 of 9 diagonals proved
 
 The current 9DVL ledger is **2/9**. Diagonals 1 and 2 are proved integrally.
+
+The [injectivity diagnostics and actual-parent CUDA pilot](ops/research-team/experiments/2026-09-09-injectivity-cuda/README.md)
+provide independently checked local certificates, exact replay tools, and an
+optional CUDA search backend. These are informational results; original
+injectivity and the theorem ledger remain unchanged.
+
 The canonical strategy state is now **`STOP / NONE`**. There is no active
 diagonal target or construction, and no theorem promotion. The one bounded
 theorem-first feasibility round for the mixed-chain, complete pair-comparison,
