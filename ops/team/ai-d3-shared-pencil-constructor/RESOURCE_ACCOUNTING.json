@@ -1,0 +1,32 @@
+{
+  "format": "shared-pencil-constructor-resources-v1",
+  "recorded_utc": "2026-09-05T14:28:13.968191+00:00",
+  "conservative_window_start_base_commit": "2026-09-05T14:01:53+00:00",
+  "wall_minutes_upper_bound": 26.349,
+  "reason_for_upper_bound": "Base commit predates assignment; exact assignment and active model time were not instrumented.",
+  "python_executable": "C:\\Users\\reuel\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "sympy": "1.14.0",
+  "verifier_wall_seconds_final_replay": 0.411296,
+  "verifier_runs": 2,
+  "producer_scripts_runs": {
+    "search_controls.py": 1,
+    "certify_obstruction.py": 1
+  },
+  "per_producer_wall_time_instrumented": false,
+  "lp_solver_call_count_instrumented": false,
+  "peak_rss_instrumented": false,
+  "active_model_hours_instrumented": false,
+  "owned_files_before_this_record": 9,
+  "owned_bytes_before_this_record": 453245,
+  "budgets": {
+    "wall_minutes": 90,
+    "scratch_mib": 300,
+    "resident_gib": 16
+  },
+  "paid_compute": 0,
+  "external_jobs": 0,
+  "broad_cad_runs": 0
+}

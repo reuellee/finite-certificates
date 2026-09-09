@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "uncorrupted_certificate": "PASS",
+  "controls": [
+    {
+      "control": "omitted_added_closure_row",
+      "status": "REJECTED_AS_REQUIRED",
+      "exit_code": 1,
+      "expected_error_fragment": "Closure was not computed exactly"
+    },
+    {
+      "control": "old_separator_fails_added_row",
+      "status": "REJECTED_AS_REQUIRED",
+      "exit_code": 1,
+      "expected_error_fragment": "Strict separator failed on retained row"
+    },
+    {
+      "control": "missing_indexed_pair",
+      "status": "REJECTED_AS_REQUIRED",
+      "exit_code": 1,
+      "expected_error_fragment": "assert seen == required"
+    },
+    {
+      "control": "copied_parent_not_frozen_input",
+      "status": "REJECTED_AS_REQUIRED",
+      "exit_code": 1,
+      "expected_error_fragment": "certificate['parent'] == parent"
+    }
+  ],
+  "old_two_row_assignment_rejected": [
+    1,
+    [
+      0,
+      2
+    ],
+    0
+  ],
+  "new_geometric_predicate_points": 0
+}

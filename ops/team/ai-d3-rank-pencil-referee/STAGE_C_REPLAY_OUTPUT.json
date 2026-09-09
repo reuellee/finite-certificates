@@ -1,0 +1,380 @@
+{
+  "status": "PASS_FROZEN_STAGE_C_BINDINGS_AND_NORMALIZATION",
+  "original_referee_commit": "964c427f6b71b6223add7dc7fd3a695d4c7db270",
+  "current_principal_commit": "fdd143c8be96636b7b11af0ac7e2ea8d60b65eca",
+  "normalization_exact_crlf_to_lf_files": [
+    "CHECK_OUTPUT.json",
+    "check_robustness.py",
+    "check_robustness.py.stderr.txt",
+    "independent_check.py",
+    "independent_check.py.stderr.txt",
+    "RESOURCE_ACCOUNTING.json",
+    "RESULT.json",
+    "REVIEW.md",
+    "ROBUSTNESS_OUTPUT.json",
+    "RUN_RESOURCES.json",
+    "SOURCE_PINS.json"
+  ],
+  "producer_code_imported_or_executed": false,
+  "prior_independent_referee_checkers_executed": [
+    {
+      "git_source": "964c427f6b71b6223add7dc7fd3a695d4c7db270:ops/team/ai-d3-shared-pencil-final-referee/independent_check.py",
+      "sha256": "82163982583d7468a267eeb78bad9fb998a53e82b0ca5ad657b4cf00daa2b2bf",
+      "bytes": 20751
+    },
+    {
+      "git_source": "964c427f6b71b6223add7dc7fd3a695d4c7db270:ops/team/ai-d3-shared-pencil-final-referee/check_robustness.py",
+      "sha256": "4b90244310e6aea37e68c3f3f71948241af6154ee8ce064cb1830d072ef8d95f",
+      "bytes": 11257
+    }
+  ],
+  "non_time_outputs_exactly_match_original_acceptance": true,
+  "outputs": {
+    "independent_check.py": {
+      "reviewed_base": "4927d5bcc24d91cf173551b248721b247107073a",
+      "second_frozen_commit": "da1834fd34065fe826d230c26eb0b6b747dc082c",
+      "source_hashes": {
+        "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/FINDINGS.md": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc",
+        "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/OBSTRUCTION.json": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa",
+        "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/CONTROLS.json": "d5856c5c126cfdaf8475167bd7f949ca226ac3f2f6e6f89ce573adf618ecdd64",
+        "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/verify_controls.py": "5638c053b11a4877f7d0aac0807399745bd27895150e4828c1df9a3dca7df812",
+        "4927d5bcc24d91cf173551b248721b247107073a:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_B_SHARED_PENCIL.md": "e64b2632f58d6510236ca71cfb004bac65c59d0dfeb711154bef9a37261a8e81",
+        "4927d5bcc24d91cf173551b248721b247107073a:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_C_REVIEW.md": "2699dd5faaa2077fe1dcfa48d5f11740216eecc7bacb0a62074690fe48bda756",
+        "4927d5bcc24d91cf173551b248721b247107073a:ai/omgamma/data/cat_4_8.txt": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5",
+        "4927d5bcc24d91cf173551b248721b247107073a:ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+        "4927d5bcc24d91cf173551b248721b247107073a:ai/omreal/data/seeat_parent2599_shatter8.npz": "d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb",
+        "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+        "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+        "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/shatter_pattern_0.json": "f758fa2a7d9961e72fd38ba5ef738192f1617b177e54ba4487ea1dd80b6e81a1",
+        "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/upper_chart_7.json": "db1749fadf9944fe6bc955379db4febfd1238f93dd37142306afe86a74c60d74",
+        "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/FINDINGS.md": "0aae50c46db82d2a4a0a6ee7d1afae4826a8bc1994d20936554644209a4b01df",
+        "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/verify_shared_pencil_certificate.py": "a7c66f659c79f3c82bddf0f4af531a395134455371f7a6fb909ee25be1a8e758"
+      },
+      "producer_code_imported_or_executed": false,
+      "constructor_negative": {
+        "choices": 1680,
+        "strict_inequalities": 62160,
+        "minimum_raw_normal_margin": 6858251431715,
+        "blocking_signature_usage": {
+          "0": 1596,
+          "1": 83,
+          "2": 1
+        },
+        "full_bad_witnesses": 3
+      },
+      "constructor_controls": {
+        "positive_restricted_witnesses": 3,
+        "upper_chart_7": "INELIGIBLE_SIGNATURE_58432476850159616",
+        "flow_realized_extensions": 3,
+        "exclusive_feasible_anchors": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "ordered_noninclusions": 6
+      },
+      "second_negative": {
+        "choices": 1680,
+        "strict_inequalities": 62160,
+        "distinct_vectors": 23,
+        "minimum_primitive_normal_margin": 162514748513691,
+        "blocking_signature_usage": {
+          "0": 1596,
+          "1": 83,
+          "2": 1
+        },
+        "full_bad_witnesses": 3
+      },
+      "second_controls": {
+        "flow_anchor_point_indices": [
+          24588,
+          14261,
+          2534
+        ],
+        "constructor_anchor_agreement": true,
+        "designated_positive_pair_verified": true,
+        "positive_pair_count_three": "NOT_REPLAYED_OR_NEEDED",
+        "chart_seven_ineligible": true,
+        "shatter_signature_admissibility_patterns": [
+          1,
+          16,
+          8
+        ]
+      },
+      "hostile_mutations_rejected": [
+        "missing_choice",
+        "duplicate_choice",
+        "zero_separator",
+        "invalid_pair",
+        "corrupt_full_dual",
+        "signature_bit_drift",
+        "anchor_parent_drift",
+        "normal_order_drift",
+        "second_missing_choice",
+        "second_zero_separator"
+      ],
+      "catalog_row_zero_based": 2599,
+      "catalog_chirotope": "++++++++++++++++++++++++++++-++--+++++++++-+++----+--++--------++--+++",
+      "distinct_parent_matrices_bound": 9,
+      "status": "PASS_INDEPENDENT_ACTUAL_PARENT_ROUTE_COUNTERCERTIFICATES",
+      "elapsed_seconds": 1.662352,
+      "scope": "Refutes only the registered universal at-most-two-incident-triples predicate. Conditional escape proof reviewed separately. No D3 or compact-component assertion."
+    },
+    "check_robustness.py": {
+      "status": "PASS_EXACT_OPEN_OBSTRUCTION_SUPPLEMENT",
+      "source_hashes": {
+        "7d0efe1c55efff2d17c906569e90f5fb0ae0e371:ops/team/ai-d3-shared-pencil-constructor/OBSTRUCTION.json": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa",
+        "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+        "7d0efe1c55efff2d17c906569e90f5fb0ae0e371:ai/omgamma/data/cat_4_8.txt": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5"
+      },
+      "arithmetic": "Python Fraction Gaussian elimination; 3x3 normal cofactors",
+      "producer_or_other_referee_imports": false,
+      "search_performed": false,
+      "catalog_row_zero_based": 2599,
+      "catalog_chirotope": "++++++++++++++++++++++++++++-++--+++++++++-+++----+--++--------++--+++",
+      "principal_raw_circuits": [
+        {
+          "row_indices": [
+            19,
+            21,
+            32,
+            37,
+            38
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            1623106725117693378002456160,
+            977332658062553566326575621,
+            795153432924058795897083753,
+            2283101511057650042129252085,
+            1079978879960955103505923920
+          ],
+          "minimum_absolute_deletion_minor": "1590306865848117591794167506"
+        },
+        {
+          "row_indices": [
+            9,
+            16,
+            27,
+            30,
+            35
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            114009088770109482257126329,
+            25705570474457532120686053,
+            131758330372396333595413508,
+            158480757214535929666816989,
+            203038833340025225830761919
+          ],
+          "minimum_absolute_deletion_minor": "51411140948915064241372106"
+        },
+        {
+          "row_indices": [
+            11,
+            16,
+            17,
+            24,
+            40
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            650427415302112882726073831,
+            697275739558214544669970030,
+            1436403689148340827373712240,
+            915689637444896860417469780,
+            35419299307529133130781465
+          ],
+          "minimum_absolute_deletion_minor": "708385986150582662615629300"
+        }
+      ],
+      "second_primitive_circuits": [
+        {
+          "row_indices": [
+            0,
+            19,
+            21,
+            37,
+            38
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            265051144308019598632361251,
+            5694802924402400720277066772,
+            11241856379113244621565774867,
+            4076167256782328239860110188,
+            1894597190905149296869367507
+          ],
+          "minimum_absolute_deletion_minor": "265051144308019598632361251"
+        },
+        {
+          "row_indices": [
+            0,
+            9,
+            27,
+            30,
+            35
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            25705570474457532120686053,
+            19175251492270243209918247337,
+            11080253111165631515659227362,
+            16518576532319796877309051136,
+            21199082780561731822570327346
+          ],
+          "minimum_absolute_deletion_minor": "25705570474457532120686053"
+        },
+        {
+          "row_indices": [
+            0,
+            11,
+            17,
+            24,
+            40
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            139455147911642908933994006,
+            1995394068422832195355708423,
+            411179742074577830237334311,
+            559915486285878764488513353,
+            302694014803389830279661499
+          ],
+          "minimum_absolute_deletion_minor": "2789102958232858178679880120"
+        }
+      ],
+      "normalized_parent": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "-3154216294199001951757638640081/7651409624326479480805301609713",
+          "-104435299816227788454065732118175/211292439356751226461825706844159",
+          "-75973770493553379397659349795/241046279005903744279167012419"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "2313485361597084904845656916480/7651409624326479480805301609713",
+          "47001141392763897172917492245760/211292439356751226461825706844159",
+          "47680571266089361675864194560/241046279005903744279167012419"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "-1",
+          "-1301181503612895733290701432864/7651409624326479480805301609713",
+          "-42797542516875737455222139325280/211292439356751226461825706844159",
+          "-70029375002482131702582376480/241046279005903744279167012419"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "882526464917496890911304620288/7651409624326479480805301609713",
+          "17058455630883803379620343154944/211292439356751226461825706844159",
+          "47362562243778871503061091584/241046279005903744279167012419"
+        ]
+      ],
+      "normalization_determinant": "61248952029298645587851/878616632154050572006574949294080",
+      "all_56_normal_covariance_identities": true,
+      "normalized_circuits": [
+        {
+          "row_indices": [
+            19,
+            21,
+            32,
+            37,
+            38
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            695915362121009471339835006407000360711729617004231378502452019884788929678152583368540160,
+            318670237532307320024416489878027001044258079147141541873540327490126146710972440045609742,
+            1285512630920576071768866073886208501730694623275308118517819328269137576272372479239885351,
+            460432485394221951644852707629450576389943255012875987321894144933048655494525365665565440,
+            386572520316365245585372644895316000084839747487492833736592154839178275987814096677658368
+          ],
+          "minimum_absolute_deletion_minor": "5816313888947965614143392454005167919260405341023668122486279057764436759277257031718311470870153292547798129702947903657790431293683176509328588800/718733232880931331443757062310506337245952809060065360254449639866174753520725678401275172325121736377147824536035545549633275639911244948109015167969431"
+        },
+        {
+          "row_indices": [
+            9,
+            16,
+            27,
+            30,
+            35
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            133005086939751410492340859642536620962791495591229820942458289799197189091686153715712,
+            469591579605549696854254215036191036974074673526957926089049573972158363602403876835840,
+            1091840180299924263924961661863153036601545530119824597035750112109721655558253913571328,
+            11139715809474269758161825495242137644540904671168995844492268164634469427518570975867781,
+            1780295151583240993410351972956084837208709082792056682785676839132886163160922478798592
+          ],
+          "minimum_absolute_deletion_minor": "109741511703368013746249999413546229880157622895613730285351672925104663565133454873749465034239262134640114089486072483421862620578682722050673475584/630015525020639249900169867777531481413495273272673007233697702060891109661286275893679725565577360250545876531590387197797371462190084199400712314656638691"
+        },
+        {
+          "row_indices": [
+            11,
+            16,
+            17,
+            24,
+            40
+          ],
+          "rank": 4,
+          "all_five_deletion_minors_nonzero": true,
+          "positive_cofactor_vector_primitive": [
+            482072934684531849523800363375619708961189473235427223133682673732901681445855005,
+            943252427316701497992995559286049780305703007834550898657196867013610159570414800,
+            1117154820490816896109315340294465398549621655430919435292604872421822007349657600,
+            314151112211072901678159683004428903103148987945115001790157682342301387816988672,
+            12665774490182621513251374073348816804553096414512435670795790266950854595402496
+          ],
+          "minimum_absolute_deletion_minor": "537118186879780354034298271677321159097366441631372039817784452362481140777650153214822851054898637230618507207471267840/94647318814649591255005986189493746328225262374948975649869258967892957669505211628496738522291115074022648132134621446053423"
+        }
+      ],
+      "normalized_choices_checked": 1680,
+      "normalized_strict_inequalities": 62160,
+      "minimum_normalized_strict_margin": "41879330760979189238055700709483050132270526448085292659899473920/1616685004041665349423094498396798134351124714623765283931716367",
+      "independent_gp_sign_relations": 3780,
+      "hostile_mutations_rejected": [
+        "zero_circuit_weight",
+        "corrupt_circuit_ray",
+        "dependent_deletion_minor",
+        "incoherent_cofactor_sign"
+      ],
+      "robustness_conclusion": "The same finite strict inequalities and the same cofactor signs hold on a nonempty open subset of the nine-dimensional normalized parent space. This excludes only the at-most-two-incident-triples condition.",
+      "elapsed_seconds": 1.556783
+    }
+  },
+  "elapsed_seconds": 5.083902
+}

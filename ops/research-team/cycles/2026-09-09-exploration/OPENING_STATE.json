@@ -1,0 +1,22 @@
+{
+  "base_revision": "21a97db6aa66912fd37556d81711c0588c454a7d",
+  "base_tree": "4b7b850cd3e0e1ebb2aa0bf4e7c5c3f25a360bf7",
+  "ledger": "2/9",
+  "proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    13,
+    16
+  ],
+  "decision": "PIVOT",
+  "user_authorized_discovery_without_complete_global_architecture": true,
+  "github_mode": "READ_ONLY",
+  "created_utc": "2026-09-09T04:03:03.898867+00:00"
+}

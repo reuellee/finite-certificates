@@ -1,0 +1,99 @@
+{
+  "reviewed_base": "4927d5bcc24d91cf173551b248721b247107073a",
+  "second_frozen_commit": "da1834fd34065fe826d230c26eb0b6b747dc082c",
+  "source_hashes": {
+    "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/FINDINGS.md": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc",
+    "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/OBSTRUCTION.json": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa",
+    "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/CONTROLS.json": "d5856c5c126cfdaf8475167bd7f949ca226ac3f2f6e6f89ce573adf618ecdd64",
+    "4927d5bcc24d91cf173551b248721b247107073a:ops/team/ai-d3-shared-pencil-constructor/verify_controls.py": "5638c053b11a4877f7d0aac0807399745bd27895150e4828c1df9a3dca7df812",
+    "4927d5bcc24d91cf173551b248721b247107073a:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_B_SHARED_PENCIL.md": "e64b2632f58d6510236ca71cfb004bac65c59d0dfeb711154bef9a37261a8e81",
+    "4927d5bcc24d91cf173551b248721b247107073a:ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_C_REVIEW.md": "2699dd5faaa2077fe1dcfa48d5f11740216eecc7bacb0a62074690fe48bda756",
+    "4927d5bcc24d91cf173551b248721b247107073a:ai/omgamma/data/cat_4_8.txt": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5",
+    "4927d5bcc24d91cf173551b248721b247107073a:ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "4927d5bcc24d91cf173551b248721b247107073a:ai/omreal/data/seeat_parent2599_shatter8.npz": "d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb",
+    "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+    "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+    "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/shatter_pattern_0.json": "f758fa2a7d9961e72fd38ba5ef738192f1617b177e54ba4487ea1dd80b6e81a1",
+    "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/upper_chart_7.json": "db1749fadf9944fe6bc955379db4febfd1238f93dd37142306afe86a74c60d74",
+    "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/FINDINGS.md": "0aae50c46db82d2a4a0a6ee7d1afae4826a8bc1994d20936554644209a4b01df",
+    "da1834fd34065fe826d230c26eb0b6b747dc082c:ops/team/ai-d3-shared-pencil-falsifier/verify_shared_pencil_certificate.py": "a7c66f659c79f3c82bddf0f4af531a395134455371f7a6fb909ee25be1a8e758"
+  },
+  "producer_code_imported_or_executed": false,
+  "constructor_negative": {
+    "choices": 1680,
+    "strict_inequalities": 62160,
+    "minimum_raw_normal_margin": 6858251431715,
+    "blocking_signature_usage": {
+      "0": 1596,
+      "1": 83,
+      "2": 1
+    },
+    "full_bad_witnesses": 3
+  },
+  "constructor_controls": {
+    "positive_restricted_witnesses": 3,
+    "upper_chart_7": "INELIGIBLE_SIGNATURE_58432476850159616",
+    "flow_realized_extensions": 3,
+    "exclusive_feasible_anchors": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "ordered_noninclusions": 6
+  },
+  "second_negative": {
+    "choices": 1680,
+    "strict_inequalities": 62160,
+    "distinct_vectors": 23,
+    "minimum_primitive_normal_margin": 162514748513691,
+    "blocking_signature_usage": {
+      "0": 1596,
+      "1": 83,
+      "2": 1
+    },
+    "full_bad_witnesses": 3
+  },
+  "second_controls": {
+    "flow_anchor_point_indices": [
+      24588,
+      14261,
+      2534
+    ],
+    "constructor_anchor_agreement": true,
+    "designated_positive_pair_verified": true,
+    "positive_pair_count_three": "NOT_REPLAYED_OR_NEEDED",
+    "chart_seven_ineligible": true,
+    "shatter_signature_admissibility_patterns": [
+      1,
+      16,
+      8
+    ]
+  },
+  "hostile_mutations_rejected": [
+    "missing_choice",
+    "duplicate_choice",
+    "zero_separator",
+    "invalid_pair",
+    "corrupt_full_dual",
+    "signature_bit_drift",
+    "anchor_parent_drift",
+    "normal_order_drift",
+    "second_missing_choice",
+    "second_zero_separator"
+  ],
+  "catalog_row_zero_based": 2599,
+  "catalog_chirotope": "++++++++++++++++++++++++++++-++--+++++++++-+++----+--++--------++--+++",
+  "distinct_parent_matrices_bound": 9,
+  "status": "PASS_INDEPENDENT_ACTUAL_PARENT_ROUTE_COUNTERCERTIFICATES",
+  "elapsed_seconds": 1.68894,
+  "scope": "Refutes only the registered universal at-most-two-incident-triples predicate. Conditional escape proof reviewed separately. No D3 or compact-component assertion."
+}

@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-09-05T15:36:04.534063+00:00",
+  "python_executable_used": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "replays": [
+    {
+      "script": "independent_check.py",
+      "exit_code": 0,
+      "seconds": 4.610564,
+      "process_memory_if_reported": {
+        "instrumented": true,
+        "peak_working_set_bytes": 42160128,
+        "peak_pagefile_bytes": 31580160
+      }
+    },
+    {
+      "script": "replay_frozen_stage_c.py",
+      "exit_code": 0,
+      "seconds": 5.163413,
+      "process_memory_if_reported": null
+    }
+  ],
+  "whole_role_peak_memory_instrumented": false,
+  "memory_scope": "independent rank-checker peak is measured; inherited checker peak was measured in the frozen Stage C acceptance, not remeasured here"
+}

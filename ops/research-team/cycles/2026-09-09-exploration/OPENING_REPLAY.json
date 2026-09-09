@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-09-09T04:06:05.545544+00:00",
+  "archive_integrity": "PASS_ALL_PART_AND_ARCHIVE_HASHES",
+  "bundle_integrity": "PASS_ALL_MANIFEST_FILE_HASHES",
+  "base_and_tree": "PASS",
+  "predecessor_referee": {
+    "command": "python -B ops/team/d3-satinj-referee/verify_frozen_candidates.py --prover-revision 3c3ccbcac95fe05543a870c86da1b2d29342f526 --falsifier-revision 1f8be67c47679d4283edec4b67ba3ae70c1c4818",
+    "observed_verdict": "PASS_EXACT_SCOPED_NEGATIVE_AND_NULL_ACCOUNTING",
+    "arithmetic": "standard library exact rational",
+    "source_hash_checks": true,
+    "hostile_controls": [
+      "altered weight rejected",
+      "shifted event rejected"
+    ]
+  },
+  "new_opening_protocol": "PASS 28 cycles, 112 work orders",
+  "agent_instructions": "No AGENTS.md found in recovered repository"
+}

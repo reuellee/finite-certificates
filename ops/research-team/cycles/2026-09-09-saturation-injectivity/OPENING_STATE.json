@@ -1,0 +1,23 @@
+{
+  "base_revision": "3a7ce7b5d57543d54eace7707659418cea6d69c9",
+  "base_tree": "7e2e958bcc7fef306bfc309c1502a279925b4ab6",
+  "opened_utc": "2026-09-09T03:28:29.700681+00:00",
+  "ledger": "2/9",
+  "opening_gate": "BOUNDED_ATTACHMENT_DESIGN_ONLY",
+  "proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    12,
+    15
+  ],
+  "f4sat_started": false,
+  "previous_referee_replay": "PASS",
+  "concurrent_external_sessions": "UNKNOWN"
+}

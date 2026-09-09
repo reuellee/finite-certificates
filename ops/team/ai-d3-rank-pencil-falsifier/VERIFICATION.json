@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "scope": "All rank-at-most-two incident support unions excluded at one frozen point.",
+  "parent_index": 2599,
+  "chart_index": 0,
+  "signatures": [
+    14988895318912,
+    3405195891438080,
+    40418075143643136
+  ],
+  "parent_chirotope": "++++++++++++++++++++++++++++-++--+++++++++-+++----+--++--------++--+++",
+  "parent_brackets_checked_at_target": 70,
+  "minimum_absolute_parent_bracket": 15324526,
+  "primitive_normals_reconstructed": 56,
+  "target_normal_incidence_equations": 168,
+  "gp_relations_per_signature": [
+    1260,
+    1260,
+    1260
+  ],
+  "indexed_pairs": 1680,
+  "unique_labelled_closures": 896,
+  "closure_size_distribution": {
+    "6": 840,
+    "2": 840
+  },
+  "geometry": {
+    "six_rows_through_two_fixed_labels": 840,
+    "two_rows_sharing_only_moving_label": 840
+  },
+  "strict_inequalities_checked": 65520,
+  "signature_usage": {
+    "0": 1202,
+    "1": 477,
+    "2": 1
+  },
+  "reused_separator_pool_size": 23,
+  "minimum_integer_margin": 162514748513691,
+  "rank_two_pairs_verified": 1680,
+  "rank_three_exclusions_verified": 28560,
+  "minimum_absolute_selected_pair_minor": 2157730903,
+  "minimum_absolute_selected_exclusion_minor": 121441161638365,
+  "full_positive_rank_four_circuits": [
+    {
+      "support": [
+        0,
+        19,
+        21,
+        37,
+        38
+      ],
+      "strictly_positive_integer_weights": [
+        265051144308019598632361251,
+        5694802924402400720277066772,
+        11241856379113244621565774867,
+        4076167256782328239860110188,
+        1894597190905149296869367507
+      ],
+      "kernel_residual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rank": 4,
+      "signed_deletion_minors": [
+        -265051144308019598632361251,
+        -5694802924402400720277066772,
+        -11241856379113244621565774867,
+        -4076167256782328239860110188,
+        -1894597190905149296869367507
+      ],
+      "common_cofactor_sign": -1
+    },
+    {
+      "support": [
+        0,
+        9,
+        27,
+        30,
+        35
+      ],
+      "strictly_positive_integer_weights": [
+        25705570474457532120686053,
+        19175251492270243209918247337,
+        11080253111165631515659227362,
+        16518576532319796877309051136,
+        21199082780561731822570327346
+      ],
+      "kernel_residual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rank": 4,
+      "signed_deletion_minors": [
+        -25705570474457532120686053,
+        -19175251492270243209918247337,
+        -11080253111165631515659227362,
+        -16518576532319796877309051136,
+        -21199082780561731822570327346
+      ],
+      "common_cofactor_sign": -1
+    },
+    {
+      "support": [
+        0,
+        11,
+        17,
+        24,
+        40
+      ],
+      "strictly_positive_integer_weights": [
+        139455147911642908933994006,
+        1995394068422832195355708423,
+        411179742074577830237334311,
+        559915486285878764488513353,
+        302694014803389830279661499
+      ],
+      "kernel_residual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rank": 4,
+      "signed_deletion_minors": [
+        -2789102958232858178679880120,
+        -39907881368456643907114168460,
+        -8223594841491556604746686220,
+        -11198309725717575289770267060,
+        -6053880296067796605593229980
+      ],
+      "common_cofactor_sign": -1
+    }
+  ],
+  "same_parent_realized_proper_incomparable_anchors": [
+    {
+      "chart": 3,
+      "point_index": 24588,
+      "good_signature_index": 0,
+      "bad_signature_indices": [
+        1,
+        2
+      ],
+      "good_minimum_margin": 264
+    },
+    {
+      "chart": 14,
+      "point_index": 14261,
+      "good_signature_index": 1,
+      "bad_signature_indices": [
+        0,
+        2
+      ],
+      "good_minimum_margin": 1058585
+    },
+    {
+      "chart": 2,
+      "point_index": 2534,
+      "good_signature_index": 2,
+      "bad_signature_indices": [
+        0,
+        1
+      ],
+      "good_minimum_margin": 4102978
+    }
+  ],
+  "new_rank_predicate_points": [
+    [
+      2599,
+      0
+    ]
+  ],
+  "stability": {
+    "nonzero_pair_minors": 1680,
+    "nonzero_exclusion_minors": 28560,
+    "strict_separator_inequalities": 65520,
+    "positive_rank_four_full_circuits": 3,
+    "conclusion": "A relative open neighborhood is triple-bad and fails the full rank-two-star criterion."
+  },
+  "arithmetic": "Python arbitrary-precision integers; NumPy only decodes frozen NPZ.",
+  "producer_or_old_verifier_imported": false,
+  "tope_enumeration_or_lp_used": false,
+  "certificate_sha256": "38a469d4f5c84f7d5e4fa2f09382d786d560d4847f96f76578e488bffdfadeea",
+  "sources_sha256": {
+    "ai/omgamma/data/cat_4_8.txt": "47b2d2b782d298539c85cb170bb10911abe9c82795b4f344e77e3ae64236c7b5",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "ai/omreal/DIAG9_GRAPH_exact_topes.py": "aa1bb32b1fee5f9e11805352f2b072f6ee10c5dbb003c8dd4a0b530382d638df",
+    "ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+    "ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+    "ops/team/ai-d3-shared-pencil-constructor/FINDINGS.md": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc",
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_D_RANK_CLOSURE.md": "af943632fcd4d0a99b3fa7c46e123943d8df08600c5c7b94b96068749a9bf5ac"
+  },
+  "elapsed_seconds": 1.4177223000006052,
+  "memory": {
+    "instrumented": true,
+    "peak_working_set_bytes": 37289984,
+    "peak_pagefile_bytes": 429920256
+  }
+}

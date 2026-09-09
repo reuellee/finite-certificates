@@ -1,0 +1,146 @@
+{
+  "format": "ai-d3-reset-source-result-v1",
+  "cycle_id": "2026-09-05-ai-only-d3-structural-reset",
+  "track_id": "ai-d3-reset-source",
+  "role": "independent-source-architect",
+  "input_revision": "fcb64825335245e6e53512bf4eb2c5f5279b75ae",
+  "status": "PROVED_WITH_EXPLICIT_INTERPRETATIONS_AWAITING_INDEPENDENT_REVIEW",
+  "trajectory": "INFORMATIONAL",
+  "decision": "STOP",
+  "decision_scope": "Source-existence development has reached a proved endpoint; this is not a stop instruction for separately authorized structural work.",
+  "mathematical_result": {
+    "statement": "Every realizable uniform labeled rank-four parent on eight elements and every finite signature family admit a simultaneous finite semialgebraic relative source, compatible with any finite declared semialgebraic family, whose support-cardinality filtration naturally computes integral compact-support closed-cover Mayer-Vietoris.",
+    "all_realization_components": true,
+    "requires_parent_contractibility": false,
+    "requires_signature_properness_or_incomparability": false,
+    "parent_count_independently_audited": false,
+    "covers_the_reported_2604_classes_by_universal_quantifier": true,
+    "quotient": "R_chi/(GL^+(4,R) x (R_{>0})^8), chi(1234)=+1; equivalently realizations of {chi,-chi} modulo GL(4,R) and positive column scaling",
+    "independent_column_reorientations_quotiented": false,
+    "label_permutations_quotiented": false,
+    "matches_project_nine_dimensional_base": true,
+    "clauses": {
+      "1_source_open_complement": "PROVED_AS_POLYHEDRON_MINUS_SUBCOMPLEX",
+      "2_integral_compact_support": "PROVED_WITH_NATURAL_PROPER_PROJECTION_COMPARISON",
+      "3_literal_zero_padding": "PROVED_IN_ONE_AMBIENT_COMPLEX",
+      "4_finite_compatibility_and_true_parent_boundary": "PROVED_FOR_FINITE_DECLARED_DATA_AND_SUPPORT_CARDINALITY_FILTRATION",
+      "5_filtered_mayer_vietoris": "PROVED_VIA_PROPER_MASS_MAP_TO_CECH_BLOWUP"
+    },
+    "remaining_source_existence_gap": null,
+    "essential_interpretations": [
+      "The block-mass filtration is support cardinality, not all real mass thresholds.",
+      "A noncompact source is a finite polyhedron minus a subcomplex, not the realization of a finite closed complex.",
+      "The equation-defined compact source is a compact envelope; boundary-only fibers are allowed and are entirely relative.",
+      "For effective computation, optional declared data must have effectively represented real algebraic coefficients.",
+      "K_R models a bad-locus union; intersections appear in filtration strata with simplex-dimension shifts.",
+      "Simplex orientations are chosen independently by vertex order; no manifold orientability is asserted."
+    ]
+  },
+  "effective_computability": {
+    "proved_in_principle": true,
+    "method": "Real-closed-field quantifier elimination plus compatible semialgebraic triangulation; an explicit terminating formula-enumeration alternative is proved in FINDINGS.md.",
+    "uniform_in_chirotope_and_finite_signature_inputs": true,
+    "finite_antichain_predicates_decidable": true,
+    "practical_size_or_runtime_bound_claimed": false,
+    "algorithm_executed_on_all_parents": false
+  },
+  "practical_certificate_availability": {
+    "all_parent_exact_closure_formulas": false,
+    "all_parent_signature_antichain_census": false,
+    "materialized_source_complexes": false,
+    "certified_all_parent_triangulation_maps": false,
+    "computed_d3_pair_incidence_matrices": false,
+    "computed_d3_triple_component_certificate": false,
+    "available_new_certificate": "Universal cofactor covariance and triple-column homogeneity identities, plus exact rational frame and joined-weight gauge checks."
+  },
+  "d3_implications": {
+    "lower_vanishings_assumed_from_project_sources": true,
+    "lower_vanishing_geometry_reproved_here": false,
+    "exact_conditional_sequence": "0 -> Hc0(D012) -> Hc2(B0 union B1 union B2) -> ker[direct_sum Hc1(Dij) -> Hc1(D012)] -> 0",
+    "pair_map_sign_convention": "delta(alpha01,alpha02,alpha12)=res(alpha12)-res(alpha02)+res(alpha01)",
+    "pair_injectivity_proved": false,
+    "triple_escape_proved": false,
+    "actual_parent_counterexample_produced": false,
+    "common_parent_geometric_lemma_produced": false,
+    "first_missing_mathematical_edge": "A parent-specific geometric input forcing triple Hc0=0 or injectivity of the alternating direct-sum pair Hc1 restriction map, or an admissible actual-parent counterexample.",
+    "first_missing_certificate_edge": "Materialized globally certified complexes and maps, including comparison to any specified earlier carrier interface; source triangulation existence does not provide those carriers or a matching.",
+    "seven_to_three_measured_reduction_justified": false,
+    "seven_to_three_caveat": "The four source names can denote an existential statement that is now proved; the canonical certificate obligations have additional interface and construction content that is not discharged by merely renaming this theorem. Independent review must decide node meanings."
+  },
+  "validation": {
+    "command": "python -B ops/team/ai-d3-reset-source/verify_identities.py",
+    "exit_code": 0,
+    "python": "3.11.9",
+    "sympy": "1.14.0",
+    "arithmetic": "Symbolic polynomial identities and exact rational arithmetic",
+    "output_file": "TEST_OUTPUT.json",
+    "topology_or_d3_inferred_from_test_flags": false
+  },
+  "governance": {
+    "ledger_opening": "2/9",
+    "ledger_closing": "2/9",
+    "canonical_obligation_edits": 0,
+    "load_bearing_count_proposed_by_this_lane": 7,
+    "pair_residual": "UNKNOWN",
+    "global_coverage": "UNKNOWN",
+    "triple_source_residual": 1162302,
+    "triple_source_residual_is_component_count": false,
+    "opening_lane_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      9,
+      12
+    ],
+    "midpoint_lane_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      9,
+      12
+    ],
+    "closing_lane_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      9,
+      12
+    ],
+    "acceptance_authority_exercised": false,
+    "other_active_lanes_read": false,
+    "human_contact": false,
+    "paid_compute": false,
+    "external_compute_jobs": 0,
+    "broad_cad_runs": 0,
+    "pushes": 0,
+    "merges": 0,
+    "owned_surface_only": "ops/team/ai-d3-reset-source"
+  },
+  "resource_accounting": {
+    "details_file": "RESOURCE_ACCOUNTING.json",
+    "wall_budget_minutes": 90,
+    "scratch_budget_mib": 300,
+    "memory_budget_gib": 16,
+    "peak_rss_instrumented": false,
+    "active_model_hours_instrumented": false,
+    "note": "The total lane wall time is conservatively bounded above by the recorded interval from cycle opening to freeze; no inferred exact active-hour consumption is claimed."
+  }
+}

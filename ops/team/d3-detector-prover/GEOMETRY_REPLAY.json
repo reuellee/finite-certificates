@@ -1,0 +1,31 @@
+{
+  "classification": "finite exact geometry only",
+  "false_all_normal_scaling_control": "rejected",
+  "feasibility_change_asserted": false,
+  "motion": "column 1 replaced by column 1 + column 2",
+  "normal_145_after": [
+    72,
+    -258,
+    132,
+    -18
+  ],
+  "normal_145_before": [
+    0,
+    -144,
+    84,
+    -12
+  ],
+  "normal_245": [
+    72,
+    -114,
+    48,
+    -6
+  ],
+  "omitted_normal_rotates": true,
+  "original_obligation_closed": false,
+  "parent": "eight rational moment-curve columns (1,t,t^2,t^3), t=0,...,7",
+  "positive_gordan_support_asserted": false,
+  "positive_parent_brackets_before_and_after": 70,
+  "selected_unchanged_normal_rays": 6,
+  "valid_extension_signature_asserted": false
+}

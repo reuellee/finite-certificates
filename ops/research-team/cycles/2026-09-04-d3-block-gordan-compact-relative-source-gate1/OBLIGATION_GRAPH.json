@@ -1,0 +1,30 @@
+{
+  "format": "d3-bg-compact-relative-source-obligation-graph-v1",
+  "cycle_id": "2026-09-04-d3-block-gordan-compact-relative-source-gate1",
+  "ledger": {"opening": "2/9", "positive_close": "2/9", "proved": [1, 2]},
+  "opening_load_bearing_count": 7,
+  "positive_close_load_bearing_count": 3,
+  "nodes": [
+    {"id": "frame_normalization_all_parents", "class": "selected-route", "requires": []},
+    {"id": "exact_compact_parent_closure", "class": "selected-route", "requires": ["frame_normalization_all_parents"]},
+    {"id": "compact_relative_block_gordan_pair", "class": "selected-route", "requires": ["exact_compact_parent_closure"]},
+    {"id": "simultaneous_labeled_triangulation", "class": "selected-route", "requires": ["compact_relative_block_gordan_pair"]},
+    {"id": "filtration_preserving_compact_support_comparison", "class": "selected-route", "requires": ["simultaneous_labeled_triangulation"]},
+    {"id": "global_gluing", "class": "inconclusive", "load_bearing": true, "positive_gate_effect": "CLOSE", "requires": ["simultaneous_labeled_triangulation"]},
+    {"id": "extension_labels", "class": "inconclusive", "load_bearing": true, "positive_gate_effect": "CLOSE", "requires": ["global_gluing"]},
+    {"id": "strict_closure", "class": "inconclusive", "load_bearing": true, "positive_gate_effect": "CLOSE", "requires": ["global_gluing", "extension_labels"]},
+    {"id": "relative_infinity", "class": "inconclusive", "load_bearing": true, "positive_gate_effect": "CLOSE", "requires": ["strict_closure", "compact_relative_block_gordan_pair"]},
+    {"id": "middle_rank_replay", "class": "inconclusive", "load_bearing": true, "positive_gate_effect": "OPEN", "requires": ["filtration_preserving_compact_support_comparison"]},
+    {"id": "diag3_pair_hc1", "class": "inconclusive", "load_bearing": true, "positive_gate_effect": "OPEN", "requires": ["middle_rank_replay"]},
+    {"id": "diag3_triple_hc0", "class": "inconclusive", "load_bearing": true, "positive_gate_effect": "OPEN", "requires": ["filtration_preserving_compact_support_comparison"], "source_residual": 1162302},
+    {"id": "diag3", "class": "inconclusive", "load_bearing": false, "requires": ["diag3_pair_hc1", "diag3_triple_hc0"]}
+  ],
+  "forbidden_edges": [
+    ["finite_relative_source", "middle_rank_replay"],
+    ["finite_relative_source", "diag3_pair_hc1"],
+    ["finite_relative_source", "diag3_triple_hc0"],
+    ["finite_relative_source", "diag3"],
+    ["row2599_compactification", "frame_normalization_all_parents"],
+    ["homological_srep_without_labels", "simultaneous_labeled_triangulation"]
+  ]
+}

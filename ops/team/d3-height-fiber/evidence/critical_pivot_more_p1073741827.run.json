@@ -1,0 +1,27 @@
+{
+  "name": "critical_pivot_more_p1073741827",
+  "seconds": 3.162,
+  "exit_code": 11,
+  "command": [
+    "/tmp/d3-height-msolve/msolve",
+    "-g",
+    "2",
+    "-l",
+    "2",
+    "-t",
+    "2",
+    "-v",
+    "2",
+    "-S",
+    "-f",
+    "/mnt/e/Projects/9DVL Research/outputs/d3-height-cas-20260905/critical_pivot_more_p1073741827.ms",
+    "-o",
+    "/mnt/e/Projects/9DVL Research/outputs/d3-height-cas-20260905/critical_pivot_more_p1073741827.basis"
+  ],
+  "limits": {
+    "seconds": 300,
+    "virtual_memory_kib": 8388608,
+    "file_blocks": 262144
+  },
+  "theorem_status": "NO_PROMOTION; solver output requires exact certification"
+}

@@ -1,0 +1,68 @@
+{
+  "candidate_revision": "e3db2b93cb66f4f57afd9324f114d987ff7ee3ed",
+  "checked_utc": "2026-09-09T03:44:23.560782+00:00",
+  "clean_before_record": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "ops/team/d3-satinj-referee/audit_sources.py",
+        "--opening-root",
+        "."
+      ],
+      "return_code": 0,
+      "stdout": "{\n  \"additional_source_count\": 3,\n  \"base_revision\": \"3a7ce7b5d57543d54eace7707659418cea6d69c9\",\n  \"base_tree\": \"7e2e958bcc7fef306bfc309c1502a279925b4ab6\",\n  \"manifest_input_count\": 9,\n  \"opening_pins\": {\n    \"ops/research-team/cycles/2026-09-09-saturation-injectivity/CYCLE.md\": \"7020ec9e2ce2c82ed9448ab887023990d598d65a54f679a07ec05cd111a32cf2\",\n    \"ops/research-team/cycles/2026-09-09-saturation-injectivity/SOURCE_MANIFEST.json\": \"4af9c4535d06a1350b4d8fc27b9c27313957f87f95e47472b34df705387d9504\",\n    \"ops/research-team/cycles/2026-09-09-saturation-injectivity/WORK_ORDERS.yaml\": \"2995ef35f87954d1aaa9f4b8e46231984de38eaf898aa024d681843c9f79e577\"\n  },\n  \"opening_proof_distance\": [\n    \"2/9\",\n    1,\n    [\n      \"diag3_pair_hc1\",\n      \"diag3_triple_hc0\"\n    ],\n    7,\n    \"UNKNOWN\",\n    \"UNKNOWN\",\n    12,\n    15\n  ],\n  \"producer_artifacts_read\": false,\n  \"producer_imports\": [],\n  \"scope\": \"Repository source identity and inherited theorem state; no archive-byte or remote-head verification is asserted by this replay.\",\n  \"source_pins\": {\n    \"ai/omreal/9DVL_THEOREM_PROSPECTUS.md\": \"cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879\",\n    \"ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md\": \"5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15\",\n    \"ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md\": \"e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338\",\n    \"ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json\": \"5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86\",\n    \"ops/research-team/PROTOCOL.md\": \"c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246\",\n    \"ops/research-team/cycles/2026-09-02-d3-global-semialgebraic-diagram-replacement-gate1/CYCLE_REPORT.md\": \"40c39a6ace1248575a7ed0b38b7a555393eff4fe743374d1d2373d55b2b9797d\",\n    \"ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CYCLE_REPORT.md\": \"89daf49e419b23bcdf91830c883a8ba381c226da2a366ef894c64cb3465073d6\",\n    \"ops/research-team/cycles/2026-09-09-backward-detector/CLOSING_STATE.json\": \"712ca3d45f4fd0cd9f480d81ffe1892098535d6869f5bf1df61ca0b16e4924fb\",\n    \"ops/research-team/cycles/2026-09-09-backward-detector/CYCLE_REPORT.md\": \"6b59f76763c0f969338ebd56d6d8ff3ec1bc9485c443b547aa3ee1fba23d4f2f\",\n    \"ops/team/d3-detector-prover/BOUNDARY_DETECTORS.md\": \"cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3\",\n    \"ops/team/d3-detector-referee/FINAL_REVIEW.md\": \"4926f7bcda6dfb0913d1dcbfcab9965a9899dfc5ad1c97505280cb91e46b27f4\",\n    \"ops/team/d3-real-pair-prover/FINDINGS.md\": \"6425d367675fc709cc65f4560e654b645cb4f92f07571bb81f74ca0e9ab99778\"\n  },\n  \"verdict\": \"PASS_SOURCE_PINS_AND_INHERITED_STATE\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "ops/team/d3-satinj-falsifier/verify_event.py"
+      ],
+      "return_code": 0,
+      "stdout": "{\"status\": \"EXACT_ORIGINAL_SOURCE_SUPPORT_EVENT\", \"original_pair_target\": \"NULL\", \"theorem_credit\": 0, \"all_parent_brackets_nonzero\": true, \"five_support_rank\": 4, \"surviving_four_support_rank\": 3, \"elapsed_seconds\": 0.4676}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "ops/team/d3-satinj-referee/verify_frozen_candidates.py",
+        "--prover-revision",
+        "3c3ccbcac95fe05543a870c86da1b2d29342f526",
+        "--falsifier-revision",
+        "1f8be67c47679d4283edec4b67ba3ae70c1c4818"
+      ],
+      "return_code": 0,
+      "stdout": "{\n  \"adjacent_checks\": [\n    {\n      \"parameter\": \"7572888431453598649247097064493/1405918389883106081535507000000\",\n      \"selected_weight_signs\": [\n        1,\n        1,\n        1,\n        1,\n        1\n      ]\n    },\n    {\n      \"parameter\": \"7572891243290378415459260135507/1405918389883106081535507000000\",\n      \"selected_weight_signs\": [\n        -1,\n        1,\n        1,\n        1,\n        1\n      ]\n    }\n  ],\n  \"arithmetic\": \"Standard-library NPZ decode, Leibniz determinants, minor-based rank and exact rational arithmetic\",\n  \"base_revision\": \"3a7ce7b5d57543d54eace7707659418cea6d69c9\",\n  \"cofactor_constant_and_slope\": [\n    \"-1590306865848117591794167506\",\n    \"295242861875452277122456470\"\n  ],\n  \"event_generator_count\": 16,\n  \"event_generators_vanish\": true,\n  \"event_parameter\": \"37864449186859942661765893/7029591949415530407677535\",\n  \"exact_ranks\": [\n    4,\n    3,\n    5\n  ],\n  \"falsifier_revision\": \"1f8be67c47679d4283edec4b67ba3ae70c1c4818\",\n  \"hostile_controls\": {\n    \"altered_weight_rejected\": true,\n    \"shifted_event_rejected\": true\n  },\n  \"ordered_noninclusions\": 6,\n  \"original_signature_gp_checks\": 3780,\n  \"parent_brackets_nonzero_with_source_signs\": 70,\n  \"producer_or_repository_acceptance_imports\": [],\n  \"properness_anchors\": 3,\n  \"prover_revision\": \"3c3ccbcac95fe05543a870c86da1b2d29342f526\",\n  \"reviewed_input_pins\": {\n    \"ops/team/d3-satinj-falsifier/DISCOVERED_EVENT.json\": \"b3d3e6122d38d46c6f8229a6d400e9fc1b1e461b151d03b26d6a9e803e022d8a\",\n    \"ops/team/d3-satinj-falsifier/EXACT_REPLAY.json\": \"a3e7aeee217c41d0fa74443770ee37acb57222ab9eda611a4d59790c962e9dec\",\n    \"ops/team/d3-satinj-falsifier/FINDINGS.md\": \"0a299a9fcf89ac130ff54543564553b73026ce1bcf66696ec5ee89729ef42e63\",\n    \"ops/team/d3-satinj-falsifier/HANDOFF.json\": \"a43d304dcdf1b7734188d4b343a8267d7c8908ab1136e61e71e5da1674d039f5\",\n    \"ops/team/d3-satinj-falsifier/SOURCE_MANIFEST.json\": \"06f04639e1063effe13eb148304263465a00d58fa8f48e3c85661a6f6cadb9ec\",\n    \"ops/team/d3-satinj-falsifier/discover_event.py\": \"7c439b44de290eead8a699226249b6616dc01a6d8c4d0c51c21ea64f84b62cf7\",\n    \"ops/team/d3-satinj-falsifier/verify_event.py\": \"2888a6e4aaa6c7a21897a5e4ddf5ca5d6ad6df5d1958ae404a30f3b8c9d8d07c\",\n    \"ops/team/d3-satinj-prover/CANDIDATE_EQUATIONS.json\": \"7304d004f1f18944b11b3f04576ad48478f35b312fd5b2d44176f5a9c08b5849\",\n    \"ops/team/d3-satinj-prover/FINDINGS.md\": \"622c91a08c4a3620f1e6075653259b99503c5f25ae8a59a21d464ecadba65493\",\n    \"ops/team/d3-satinj-prover/RESULT.json\": \"e393a1ebcd2676f83dade923c48ef31a2d02ed8be1a379f7c9b281a9e4b785df\",\n    \"ops/team/d3-satinj-prover/SOURCE_MANIFEST.json\": \"7c7917680a979684d41d3109866c66a3fd833ba8e5cbec6f33ab69d7280b3b13\"\n  },\n  \"scope\": \"Original admitted support event and proper parent-unit event ideal; no topological-change, global attachment, cohomology kernel or original obligation closure.\",\n  \"source_pins\": {\n    \"ai/omreal/BLOCK_GORDAN_AUDIT.md\": \"5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a\",\n    \"ai/omreal/BLOCK_GORDAN_CARRIER_CHART.md\": \"26d5a7e5ac2aaf56ee6927d817cb00b270f054c545a1d6e3e87dd1c326dc84b9\",\n    \"ai/omreal/BLOCK_GORDAN_RESIDUAL_ELIMINATION_CELLS.md\": \"c4f83fa579698c50b1c430d4113deb8921d922468ba6fde2e3fec40b80cfc824\",\n    \"ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md\": \"5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15\",\n    \"ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md\": \"e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338\",\n    \"ai/omreal/DIAG3_ROW2599_H2_COMPARISON_PRISM.md\": \"e94f923313905cbb4dfae38b0033a2aa793505fb1937abf19c1f10509801e9dd\",\n    \"ai/omreal/DIAG3_ROW2599_P01_COMPARISON_PRISM.md\": \"f81d70bdd2f1c17f376e58fc30d86794a355ec71f999c782b6a27f5e0e46a4f1\",\n    \"ai/omreal/data/seeat_parent2599_upper178.npz\": \"3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a\",\n    \"ops/research-team/PROTOCOL.md\": \"c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246\",\n    \"ops/team/ai-d3-shared-pencil-falsifier/admissibility_flow.json\": \"acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10\",\n    \"ops/team/ai-d3-shared-pencil-falsifier/upper_chart_0_flow.json\": \"83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab\",\n    \"ops/team/d3-detector-prover/BOUNDARY_DETECTORS.md\": \"cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3\",\n    \"ops/team/d3-mixed-100-carrier-constructor/THEOREM_ATTEMPT.md\": \"b2195e1a52600975be9ab2a0b3fb3139ba19242aa08803c96fe58f7b085b27dc\",\n    \"ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md\": \"a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86\",\n    \"ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md\": \"131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76\",\n    \"ops/team/d3-real-pair-prover/FINDINGS.md\": \"6425d367675fc709cc65f4560e654b645cb4f92f07571bb81f74ca0e9ab99778\"\n  },\n  \"verdict\": \"PASS_EXACT_SCOPED_NEGATIVE_AND_NULL_ACCOUNTING\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "ops/research-team/verify_cycle_protocol.py"
+      ],
+      "return_code": 0,
+      "stdout": "PASS research-cycle strategy/convergence/storage/publication protocol: 27 cycles, 107 authorized work orders\n",
+      "stderr": ""
+    }
+  ],
+  "invocation_corrections": [
+    {
+      "reason": "Required --opening-root argument omitted in first source-audit invocation",
+      "original": {
+        "command": [
+          "python",
+          "-B",
+          "ops/team/d3-satinj-referee/audit_sources.py"
+        ],
+        "return_code": 2,
+        "stdout": "",
+        "stderr": "usage: audit_sources.py [-h] --opening-root OPENING_ROOT [--output OUTPUT]\naudit_sources.py: error: the following arguments are required: --opening-root\n"
+      }
+    }
+  ]
+}

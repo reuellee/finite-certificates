@@ -1,0 +1,56 @@
+{
+  "track_id": "d3-explore-event",
+  "canonical_base_revision": "21a97db6aa66912fd37556d81711c0588c454a7d",
+  "opening_revision": "c27a36d6e3f47a2b4c7bb017774cbe5df30abdc2",
+  "frozen_utc": "2026-09-09T04:12:35.995305+00:00",
+  "classification": "FINITE_EXACT_LOCAL_TRANSITION_WITH_DEDUCTIVE_GERM",
+  "theorem_trajectory": "INFORMATIONAL",
+  "original_pair_target": "NULL",
+  "original_obligations_closed": 0,
+  "ledger": "2/9",
+  "theorem_credit": 0,
+  "covered_domain": "Original row-2599 chart-0 coordinate interval t* +/- 10^-6, and explicit open original-parent neighborhood U in FINDINGS.md",
+  "findings": [
+    "B0,B1,B2 bad throughout closed left half-interval",
+    "Block 0 strictly feasible for all 56 original inequalities throughout open right half-interval; B1,B2 remain bad",
+    "In an explicit open original-parent neighborhood: B0={Delta<=0}, E12={Delta>0}, and Delta has nonzero derivative",
+    "Full normalized block-0 dual witness fiber is a singleton at the event and throughout the local Delta=0 boundary"
+  ],
+  "decision": "STOP_INITIAL_TEST_AND_ONE_EXACT_FOLLOW_THROUGH_COMPLETE",
+  "midpoint_or_decisive_report": "Numerical full-block right feasibility reported promptly, followed by exact all-56-row primal and singleton consequence; no global theorem decrease claimed",
+  "resources": {
+    "initial_test": "12 numerical LP calls at the two prescribed adjacent parents",
+    "exact_follow_through": "One affine primal/dual polynomial interval certificate and its deductive local germ",
+    "lp_cpu_seconds": 0.10411299499999993,
+    "lp_wall_seconds": 0.0676896469994972,
+    "exact_replay_cpu_seconds_observed": 0.115225422,
+    "active_discovery_ceiling_minutes": 20,
+    "cpu_ceiling_minutes": 10,
+    "extra_families": 0,
+    "external_compute": false
+  },
+  "replay": "python -B ops/team/d3-explore-event/verify.py",
+  "discovery": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -B ops/team/d3-explore-event/discover.py",
+  "replay_dependencies": "Python standard library only; numerical discovery additionally uses installed numpy/scipy",
+  "independent_acceptance": "PENDING_REFEREE; candidate verifier does not import discovery or predecessor acceptance code",
+  "nonconsequences": [
+    "No global oriented frontier contribution or proper attachment",
+    "No global cohomology computation or obligation closure",
+    "No exhaustive event coverage or certified exhaustive residual decrease",
+    "No theorem ledger promotion; original seven obligations unchanged"
+  ],
+  "next_discriminator": "Separately selected transport of this actual local B012/E12 collar to oriented frontier contribution and global attachment",
+  "source_manifest": "SOURCE_MANIFEST.json",
+  "files_sha256": {
+    "CERTIFICATE.json": "d10682642cb6b7990bf7b7531c8c681f5166127d76f5aef4f32589f5eeece90b",
+    "DISCOVERY.json": "1c5f80bf76b2a99f37c4892b99e371399e79c7933a78b61d3ef41994c821791e",
+    "FINDINGS.md": "0f913c464bf3ca036f9d9bdc74167a0d751f21a53e4a855fd1418b256a32f406",
+    "SOURCE_MANIFEST.json": "18ffd67798ea49a312b4608a086ca96af197c3d648abd442608ca40de8bb5634",
+    "discover.py": "6fa376d788e8546e13434d2c8c46c3287113178b80dd0c139e2a89e843929d3c",
+    "verify.py": "330210ef8eec42da34c1f4f8b54155f627f7035c1b4ec2918d14c347e0243f4e"
+  },
+  "public_writes": false,
+  "paid_services": false,
+  "ledger_edits": false,
+  "subagents": 0
+}

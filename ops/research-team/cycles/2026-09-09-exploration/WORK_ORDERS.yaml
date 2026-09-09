@@ -1,0 +1,84 @@
+cycle_id: 2026-09-09-exploration
+base_revision: 21a97db6aa66912fd37556d81711c0588c454a7d
+base_tree: 4b7b850cd3e0e1ebb2aa0bf4e7c5c3f25a360bf7
+opening_ledger: 2/9
+publication_authorization: &publication_authorization |
+  The user authorizes this 9DVL cycle to use the ChatGPT Library as the
+  canonical durable working branch and to mirror recovery checkpoints only to
+  the Google Drive `Projects/research-backups` area.  GitHub is read-only: do
+  not push commits, publish branches, open or update pull requests, trigger or
+  rerun CI, or merge until a new explicit user instruction.  Local scratch is
+  ephemeral and is not an authority.  This authorization does not permit
+  publishing secrets or private unrelated files, modifying any repository or
+  service, using paid external compute or paid APIs, changing repository
+  visibility or settings, force-pushing, deleting history or data, or taking
+  other irreversible actions without separate approval.
+strategy_gate:
+  opening_verdict: PIVOT_USER_AUTHORIZED_DISCOVERY
+  closing_required: true
+  stagnation_rule: Separate exploratory information from theorem progress; no repeated retired claims.
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 13
+    zero_ledger_streak: 16
+  convergence_hypothesis: Diverse small tests may discover a new geometric mechanism.
+  minimum_acceptable_delta: Original obligation closure for theorem credit; explicit user authority allows discovery without a promised theorem delta.
+  mid_cycle_checkpoint: Ten active discovery minutes or decisive result.
+  closing_classification_required: true
+  automatic_pivot_rule: No theorem-convergent CONTINUE without strict proof-distance decrease.
+work_orders:
+  - track_id: d3-explore-event
+    role: constructive_prover
+    surface: ops/team/d3-explore-event/
+    worktree: /workspace/scratch/f20778d83de1/explore-event
+    publication_authorization: *publication_authorization
+    target: Determine full badness on both sides of the exact support event and certify alternate witnesses or strict feasibility; test a whole rational interval if affordable.
+    resource_ceiling: 20 active discovery minutes and 10 CPU minutes for discovery; referee 15 active review minutes.
+    stop_rule: One initial test and at most one exact follow-through within ceiling; midpoint at ten minutes.
+    prohibited_scope: No historical edits, theorem promotion from samples, external writes, paid services, humans or large census.
+    worker_restrictions: Assigned surface only; local commit only; no ledger mutation or integration; referee uses independent acceptance logic.
+  - track_id: d3-explore-topology
+    role: falsifier
+    surface: ops/team/d3-explore-topology/
+    worktree: /workspace/scratch/f20778d83de1/explore-topology
+    publication_authorization: *publication_authorization
+    target: Run a bounded actual-parent topology/counterexample experiment, using a small complete family or explicitly labeled sample; seek compact components or a concrete escape obstruction.
+    resource_ceiling: 20 active discovery minutes and 10 CPU minutes for discovery; referee 15 active review minutes.
+    stop_rule: One initial test and at most one exact follow-through within ceiling; midpoint at ten minutes.
+    prohibited_scope: No historical edits, theorem promotion from samples, external writes, paid services, humans or large census.
+    worker_restrictions: Assigned surface only; local commit only; no ledger mutation or integration; referee uses independent acceptance logic.
+  - track_id: d3-explore-coherent
+    role: constructive_prover
+    surface: ops/team/d3-explore-coherent/
+    worktree: /workspace/scratch/f20778d83de1/explore-coherent
+    publication_authorization: *publication_authorization
+    target: Test whether a flexible witness resolution or homotopy-coherent construction bypasses strict coordinate-face contraction obstructions; instantiate one nontrivial actual-source compatibility test.
+    resource_ceiling: 20 active discovery minutes and 10 CPU minutes for discovery; referee 15 active review minutes.
+    stop_rule: One initial test and at most one exact follow-through within ceiling; midpoint at ten minutes.
+    prohibited_scope: No historical edits, theorem promotion from samples, external writes, paid services, humans or large census.
+    worker_restrictions: Assigned surface only; local commit only; no ledger mutation or integration; referee uses independent acceptance logic.
+  - track_id: d3-explore-diagonals
+    role: strategy_analyst
+    surface: ops/team/d3-explore-diagonals/
+    worktree: /workspace/scratch/f20778d83de1/explore-diagonals
+    publication_authorization: *publication_authorization
+    target: Reassess diagonals 3 through 9 from exact existing evidence and execute one cheap discriminating structural test for the best alternative.
+    resource_ceiling: 20 active discovery minutes and 10 CPU minutes for discovery; referee 15 active review minutes.
+    stop_rule: One initial test and at most one exact follow-through within ceiling; midpoint at ten minutes.
+    prohibited_scope: No historical edits, theorem promotion from samples, external writes, paid services, humans or large census.
+    worker_restrictions: Assigned surface only; local commit only; no ledger mutation or integration; referee uses independent acceptance logic.
+  - track_id: d3-explore-referee
+    role: independent_referee
+    surface: ops/team/d3-explore-referee/
+    worktree: /workspace/scratch/f20778d83de1/explore-referee
+    publication_authorization: *publication_authorization
+    target: Audit source identity, independently reconstruct the strongest candidate without producer acceptance imports, challenge scope and classify all handoffs.
+    resource_ceiling: 20 active discovery minutes and 10 CPU minutes for discovery; referee 15 active review minutes.
+    stop_rule: One initial test and at most one exact follow-through within ceiling; midpoint at ten minutes.
+    prohibited_scope: No historical edits, theorem promotion from samples, external writes, paid services, humans or large census.
+    worker_restrictions: Assigned surface only; local commit only; no ledger mutation or integration; referee uses independent acceptance logic.

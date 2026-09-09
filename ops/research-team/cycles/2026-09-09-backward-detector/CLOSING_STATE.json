@@ -1,0 +1,138 @@
+{
+  "accepted_counter_basis": "Count this independently accepted cycle once after 11/14; the preceding conversational audit is not a research cycle; historical canonical files unchanged.",
+  "auxiliary_classification": "INFORMATIONAL",
+  "auxiliary_results": [
+    {
+      "claim": "Canonical double-boundary detectors with ker(tau_i)=im(r_ij)+im(r_ik); injectivity of all kappa_i is equivalent to original D injectivity.",
+      "scope": "Inherited single-bad Hc2 vanishing; no actual global nondegeneracy conclusion or triple Hc0 closure.",
+      "verdict": "ACCEPT"
+    },
+    {
+      "claim": "Actual strict witness circuits give a normalized open triple-bad ball and three witness edges.",
+      "scope": "Excludes literal sheaf-level left inverses and point contractions strictly natural under every coordinate-face inclusion; no global degree-one kernel.",
+      "verdict": "ACCEPT"
+    },
+    {
+      "claim": "Exact selected-plane transport fixes six chosen normal rays while rotating an omitted normal.",
+      "scope": "No admissible-signature feasibility flip or universal detector obstruction.",
+      "verdict": "ACCEPT"
+    }
+  ],
+  "backup": {
+    "clean_restore_record_in_package": "CLEAN_RESTORE_REPLAY.json",
+    "complete_history": true,
+    "drive_recovery_folder_id": "1vuCkB2Yd2D2rDwwFcKgqT7ZaAOXKwpFX",
+    "final_revision_recorded_externally_to_avoid_self_reference": true,
+    "manifest_in_package": "RECOVERY_MANIFEST.json",
+    "package": "9DVL_Detector_2026-09-09.zip",
+    "standalone_report": "9DVL_Detector_2026-09-09.md"
+  },
+  "base_revision": "730fd6c7b6c2c3e8cbbf94ab4da3bc97ba53f095",
+  "closed_utc": "2026-09-09T03:04:23.986578+00:00",
+  "closing_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    12,
+    15
+  ],
+  "coordinator_replay_passed": true,
+  "defects_resolved": [
+    "Local normalization wording corrected at4f06cf8; independent acceptance of corrected proof."
+  ],
+  "external_writes": false,
+  "external_writes_scope": "Research publication and human contact; separately authorized recovery uploads are performed after the local closing commit.",
+  "frozen_producer_bytes_unchanged": true,
+  "github_write": false,
+  "global_component_coverage": "UNKNOWN",
+  "global_construction_gate": "NO_GO",
+  "human_consultation": false,
+  "independence": "No producer or repository verifier imports; independent integer/rational arithmetic and written exact-sequence proof.",
+  "independent_referee_integrated_commit": "c7ce4f48d8731de8f1b1c718293d63cb9de94feb",
+  "independent_referee_raw_commit": "cf496b4d3c9a135577eac4216f586553dc03be54",
+  "ledger": "2/9",
+  "ledger_modified": false,
+  "minimum_acceptable_decrease_met": false,
+  "next_required_input": [
+    "Actual geometric nondegeneracy of kappa_i on every nonzero opposite-pair class, controlling good-locus conditions, zero-weight specializations and true parent infinity.",
+    "Or original oriented frontier blocks and verified global comparison sufficient for the same original injectivity obligation."
+  ],
+  "nonconsequences": [
+    "No global detector nondegeneracy theorem",
+    "No original-space cohomology counterexample",
+    "No universal detector impossibility",
+    "No exclusion of homotopy-coherent or acyclic-carrier comparisons"
+  ],
+  "open_diagonals": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "open_obligations": {
+    "diag3_pair_hc1": "INCONCLUSIVE",
+    "diag3_triple_hc0": "INCONCLUSIVE",
+    "extension_labels": "INCONCLUSIVE",
+    "global_gluing": "INCONCLUSIVE",
+    "middle_rank_replay": "INCONCLUSIVE",
+    "relative_infinity": "INCONCLUSIVE",
+    "strict_closure": "INCONCLUSIVE"
+  },
+  "opening_gate": "ELIGIBLE_BOUNDED_CANDIDATE_DESIGN_ONLY",
+  "opening_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    11,
+    14
+  ],
+  "original_obligations_closed": 0,
+  "original_pair_target": "NULL",
+  "paid_compute": false,
+  "paid_compute_or_api": false,
+  "pair_residual": "UNKNOWN",
+  "proved_diagonals": [
+    1,
+    2
+  ],
+  "raw_worker_branches": {
+    "refs/heads/research/d3-detector-falsifier-20260909": "4f06cf8cf5ae2f7b68afe4e2e1f6324d75faf3be",
+    "refs/heads/research/d3-detector-prover-20260909": "6a99be1f7bac8215af18b5438b53cdc6ffe479fd",
+    "refs/heads/research/d3-detector-referee-20260909": "cf496b4d3c9a135577eac4216f586553dc03be54"
+  },
+  "referee_manifest_sha256": "61aa07fd7d21fcc97aa0cc471aac160b1a7d7bd765c411ae22d5c0bbe4c9687e",
+  "replay": "python -B ops/team/d3-detector-referee/verify_independently.py",
+  "replay_output": "INDEPENDENT_REPLAY.json",
+  "reviewed_producer_commits": {
+    "falsifier": "4f06cf8cf5ae2f7b68afe4e2e1f6324d75faf3be",
+    "prover": "6a99be1f7bac8215af18b5438b53cdc6ffe479fd"
+  },
+  "same_route_continuation": false,
+  "schema": "9dvl-backward-detector-reviewed-close-v1",
+  "selected_successor": "NONE",
+  "source_counts": {
+    "delta": 0,
+    "is_component_denominator": false,
+    "residual": 1162302,
+    "settled": 77940147,
+    "total": 79102449
+  },
+  "strategy_action": "STOP",
+  "theorem_trajectory": "STALLED",
+  "verdict": "ACCEPT_AUXILIARY_ONLY"
+}

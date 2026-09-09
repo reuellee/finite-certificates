@@ -1,0 +1,38 @@
+{
+  "classification": "FINITE_EXACT_COMPLETE_TWO_CHORD_FAMILY",
+  "ledger": "2/9",
+  "theorem_credit": 0,
+  "admission": {
+    "bank_chart": 0,
+    "anchor_charts": [
+      3,
+      14,
+      2
+    ],
+    "ordered_noninclusions": 6,
+    "gp_relations": 3780
+  },
+  "signatures": [
+    14988895318912,
+    3405195891438080,
+    40418075143643136
+  ],
+  "conclusions": [
+    "The complete horizontal actual triple-bad slice is a compact interval strictly inside its parent chord.",
+    "That whole interval lies in one actual triple-bad component admitting the certified transverse escape to a nonuniform parent boundary."
+  ],
+  "nonconsequences": [
+    "No compact ambient triple-bad component is found.",
+    "No ambient component census, pair cohomology, global triple Hc0 vanishing, source residual reduction, or D3 theorem follows."
+  ],
+  "hostile_controls": {
+    "shifted_beta": true,
+    "negative_vertical_weight": true,
+    "false_interior_infinity": true,
+    "corrupted_primal": true
+  },
+  "wall_seconds": 0.7860100270008843,
+  "cpu_seconds": 0.7857791190000001,
+  "maxrss_kib": 46248
+}
+boundary_brackets [[3, 5, 7, 8]]

@@ -1,0 +1,87 @@
+Initial seed for pseudo-random number generator is 1788627260
+
+--------------- INPUT DATA ---------------
+#variables                       9
+#equations                       9
+#invalid equations               0
+field characteristic    1073741827
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         2
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  5       1      12      10 x 49         13.06%        1 new       0 zero         0.00 | 0.00
+  5  compute kernel       7 x 26         15.38%        normal form time           0.00 | 0.00
+                                                       0 new kernel elements      0.00 | 0.00
+  5  compute kernel      24 x 172         2.33%        normal form time           0.00 | 0.00
+                                                       0 new kernel elements      0.00 | 0.00
+  5  compute kernel     134 x 788         0.68%        normal form time           0.00 | 0.00
+                                                       0 new kernel elements      0.00 | 0.00
+  5  compute kernel     519 x 2621        0.25%        normal form time           0.00 | 0.00
+                                                       0 new kernel elements      0.00 | 0.01
+  5  compute kernel    1812 x 7327        0.11%        normal form time           0.00 | 0.01
+                                                       0 new kernel elements      0.02 | 0.02
+  6       1      15      29 x 125         6.43%        0 new       1 zero         0.00 | 0.00
+  8       4      14     660 x 2554        0.34%        4 new       0 zero         0.00 | 0.00
+  9      15      23    2235 x 7320        0.20%       13 new       2 zero         0.00 | 0.01
+  6  compute kernel    5740 x 18644       0.15%        normal form time           0.03 | 0.06
+                                                       0 new kernel elements      0.13 | 0.17
+ 10      54      62    5321 x 16480       0.22%       40 new      14 zero         0.02 | 0.03
+ 10      46     178    6932 x 22327       0.32%       44 new       2 zero         0.04 | 0.05
+ 11     359     364   19780 x 52298       0.49%      195 new     164 zero         0.72 | 1.13
+  7  compute kernel   20094 x 52043       0.65%        normal form time           1.30 | 2.59
+                                                      50 new kernel elements
+                                                      50 new       0 zero         3.24 | 4.55
+  6      36     763     190 x 1056        5.38%        0 new      36 zero         0.00 | 0.00
+  7      66     727     945 x 3795        2.01%       48 new      18 zero         0.01 | 0.03
+  7  compute kernel   38021 x 77007       0.26%        normal form time           3.41 | 6.82
+                                                       0 new kernel elements      8.05 | 11.46
+  7      17     610    1089 x 4550        2.69%       15 new       2 zero         0.01 | 0.01
+  8     273     624    4317 x 12630       2.00%      168 new     105 zero         0.14 | 0.24
+  8     410    1029    5386 x 14387       3.63%      282 new     128 zero         0.54 | 0.93
+  8      25    2223    4328 x 12919       5.05%       18 new       7 zero         0.13 | 0.16
+  9    2044    2315   16620 x 32144       4.08%      736 new    1308 zero        10.33 | 19.28
+  8       9    4015    1940 x 7909        8.52%        4 new       5 zero         0.06 | 0.08
+  9    2627    4029   19944 x 35439       5.31%     1451 new    1176 zero        28.72 | 53.92
+  8    1517    7154    8694 x 16651      11.80%      330 new    1188 zero         7.08 | 13.47
+  8    1386    6836    8748 x 16728      11.01%       46 new    1354 zero         5.02 | 9.51
+  8     121    5644    6681 x 15500       9.28%        8 new     114 zero         0.76 | 1.21
+  8      18    5575    4313 x 11674      12.17%        1 new      17 zero         0.26 | 0.33
+  8       9    5557    4292 x 11655      12.14%        0 new       9 zero         0.23 | 0.25
+  9    4933    5548   25744 x 36969       6.40%      170 new    4865 zero        46.93 | 91.57
+  8      45    1714    5635 x 13807      10.44%        2 new      43 zero         0.41 | 0.54
+  8       9    1686    4277 x 11589      12.29%        0 new       9 zero         0.24 | 0.26
+  9     362    1677   21760 x 37740       4.50%       45 new     318 zero         6.05 | 10.73
+  8       9    1598    4241 x 11526      12.45%        1 new       8 zero         0.23 | 0.26
+  9      86    1597   16842 x 31145       5.57%       17 new      69 zero         1.68 | 2.37
+  8      90    1622    5836 x 13972      10.43%        2 new      88 zero         0.55 | 0.83
+  8      18    1550    5226 x 13208      11.05%        0 new      18 zero         0.31 | 0.37
+  9      36    1532    6815 x 16431       9.73%        1 new      35 zero         0.55 | 0.72
+ 10    1320    1503   50171 x 74624       2.55%      100 new    1226 zero        37.20 | 70.56
+  8       9     841    4252 x 11518      12.52%        0 new       9 zero         0.24 | 0.26
+  9      26     832    9845 x 21186       7.80%        3 new      23 zero         0.70 | 0.85
+  8       9     824    4527 x 12061      12.11%        0 new       9 zero         0.25 | 0.28
+ 10     120     815   48865 x 74096       2.39%

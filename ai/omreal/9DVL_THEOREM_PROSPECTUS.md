@@ -4,12 +4,14 @@
 
 This is a research prospectus, not a theorem announcement. The exact ledger is
 still **2/9**: diagonals 1 and 2 are proved, while diagonals 3 through 9 remain
-open. The later global semialgebraic diagram-replacement cycle also closed
-`NULL / STALLED / STOP / NONE`: its Q0 lacked an executable replacement
-backend, an exact all-parent denominator, and quantifier-free closed
-compactification formulas. Current authority is
-[`ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json`](data/CANONICAL_RESEARCH_STATE_V10.json).
+open. The two post-V10 cycles also closed `NULL / STALLED / STOP / NONE`:
+component-decorated saturation lacked materialized component witnesses and an
+end-to-end ceiling-bound Q1 path, while the universal mixed-`(1,0,0)` gate
+lacked the geometric-carrier and relative-boundary-surjectivity input needed
+to turn its formal cone into a theorem object. Current authority is
+[`ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json`](data/CANONICAL_RESEARCH_STATE_V11.json).
 See also
+[`ai/omreal/data/CANONICAL_RESEARCH_STATE_V10.json`](data/CANONICAL_RESEARCH_STATE_V10.json),
 [`ai/omreal/data/CANONICAL_RESEARCH_STATE_V9.json`](data/CANONICAL_RESEARCH_STATE_V9.json),
 [`ai/omreal/ATLAS_HELLY.md`](ATLAS_HELLY.md),
 [`ai/omreal/data/CANONICAL_RESEARCH_STATE_V8.json`](data/CANONICAL_RESEARCH_STATE_V8.json),
@@ -18,13 +20,14 @@ and the
 
 ## Post-cycle disposition
 
-V8's one-round authorization is consumed. Historical V9 selects no active
-research target and authorizes no automatic reopening. V10 records the later
-SREP null close. The user has now explicitly authorized one new governed cycle
-and prohibited contacting authors. The opening must still provide a concrete
-finite route for one first missing global edge, a predeclared theorem-level
-strict decrease, and a fresh independent audit. The target definitions below
-remain mathematical possibilities until that opening passes.
+V8's one-round authorization is consumed. V9 selects no active research target.
+Historical V9 and V10 authorize no automatic reopening. V11 records the two
+additional null closes and likewise selects no successor. Work is scoped to
+9DVL, but a new theorem cycle still requires explicit authority for its
+named target, a genuinely new theorem-capable input, a concrete finite route
+for one first missing global edge, a predeclared theorem-level strict decrease,
+and a fresh independent audit. The target definitions below remain
+mathematical possibilities until such an opening passes.
 
 The historically proposed next bet was a theorem about globally attached,
 genuinely mixed-block `(1,0,0)` carriers for diagonal three. The attraction is

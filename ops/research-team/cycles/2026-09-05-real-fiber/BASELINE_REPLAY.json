@@ -1,0 +1,39 @@
+{
+  "base": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "python": "3.12.13",
+  "replay_role": "coordinator baseline replay; independent referee recorded separately",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "ops/team/d3-bracket-chart/verify_genus_one_fiber.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"result\": \"PASS_EXACT_GENUS_ONE_FIBER_ARITHMETIC\",\n  \"source_sha256\": \"c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8\",\n  \"generic_numerator_terms\": 389,\n  \"generic_bidegree_ce\": [\n    2,\n    2\n  ],\n  \"generic_discriminant_c_degree\": 4,\n  \"generic_discriminant_terms\": 3257,\n  \"sample_quartic_discriminant\": \"4649793772367457417206802405651256329633792\",\n  \"sample_real_roots\": 4,\n  \"source_point\": [\n    \"-19/28\",\n    \"-23/7\",\n    \"-27/14\",\n    \"-5\",\n    \"-4\",\n    \"-3\",\n    \"-1\",\n    \"2\",\n    \"4\"\n  ],\n  \"source_point_parent_nonzero_brackets\": 70,\n  \"source_point_F_e\": \"5463/4\",\n  \"opposite_sheet_point\": [\n    \"90/91\",\n    \"-23/7\",\n    \"-27/14\",\n    \"-5\",\n    \"-6843/1559\",\n    \"-3\",\n    \"-1\",\n    \"2\",\n    \"4\"\n  ],\n  \"opposite_sheet_parent_nonzero_brackets\": 70,\n  \"opposite_parent_bracket\": \"1346\",\n  \"parent_signs\": \"++--+-++-++++--+---+--+++-++-------------+-++++-+---++------+----++++-\",\n  \"negative_controls_rejected\": 3,\n  \"geometric_inference\": \"REPORT.md applies Riemann-Hurwitz to the squarefree quartic; not machine-formalized.\",\n  \"independent_ai_referee\": \"NOT_PERFORMED; separate arithmetic implementation by coordinator\",\n  \"full_source_noncompactness\": \"NOT_PROVED\",\n  \"pair_injectivity\": \"NOT_PROVED\",\n  \"triple_source_residual\": 1162302,\n  \"ledger\": \"2/9\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "ai/omreal/verify_canonical_research_state_v11.py"
+      ],
+      "returncode": 0,
+      "stdout": "PASS canonical V11 STOP/NONE; ledger 2/9; two post-V10 gates NULL; 34/34 hostile mutations rejected\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "ops/research-team/verify_cycle_protocol.py"
+      ],
+      "returncode": 0,
+      "stdout": "PASS research-cycle strategy/convergence/storage/publication protocol: 25 cycles, 101 authorized work orders\n",
+      "stderr": ""
+    }
+  ],
+  "ledger": "2/9",
+  "canonical_v11_sha256": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86"
+}

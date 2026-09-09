@@ -1,0 +1,59 @@
+{
+  "inputs": {
+    "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "ops/team/d3-bracket-chart/verify_genus_one_fiber.py": "95f8c2f3f7e5064a1c4ef6afc35efd66eb008fc15719aa040e5b021a7c3d7210"
+  },
+  "outputs": {
+    ".gitignore": {
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    "HANDOFF.json": {
+      "bytes": 1257,
+      "sha256": "1c6c55e031f7f79510fe9cd7daf46bc7a4582d6957df860519eaba88c3c54da0"
+    },
+    "REPORT.md": {
+      "bytes": 9067,
+      "sha256": "4ef44739091bb9bacd59837332b6147defa51b6d83531b6159fec71124abfeea"
+    },
+    "build_certificate.py": {
+      "bytes": 4661,
+      "sha256": "8dda42d894f63e22bf31d3065a0afa598503c51916f229323eeabea13fdea579"
+    },
+    "certificate.json": {
+      "bytes": 95028,
+      "sha256": "790daed2e50a77b424873c1e18dca918b2497970286aa95d055a84871c3b0bf4"
+    },
+    "grid8.json": {
+      "bytes": 9180,
+      "sha256": "645f4325fe2e132ceca5001246093cac14b1d561f347f2fddc30d5a61f4ccc18"
+    },
+    "local1.json": {
+      "bytes": 21894,
+      "sha256": "fbf340ba07ecea4618bdeaf43803276da6066fd7516ac6a0f07ed556db2c1b77"
+    },
+    "rational_survivors.json": {
+      "bytes": 22019,
+      "sha256": "2510bdedee43f8af887efb02cbc230385bbf361f89bff3867991b45ca5958add"
+    },
+    "rationalize_survivors.py": {
+      "bytes": 1620,
+      "sha256": "17424612e2b145e934f8548b63e0a34fe5ed9ad6dfdc9ad37deb2813f66d5ae0"
+    },
+    "search_ovals.py": {
+      "bytes": 7329,
+      "sha256": "dc06f093d26d270f4eabca3c14baff207ea635279330c950885aec9d71f046fe"
+    },
+    "verification.json": {
+      "bytes": 894,
+      "sha256": "b5a2e20cf9c46c676d3617c5bf33fb93f4d8c37e17becdc8bc08425538c7c72b"
+    },
+    "verify_certificate.py": {
+      "bytes": 9750,
+      "sha256": "adca9cc8885aec7b48026e5012fe25e6d044dcbf07cb1e89602d34b5ec6b1dc6"
+    }
+  },
+  "acceptance_dependencies": "Python standard library only; no discovery code imported",
+  "producer_dependencies": "SymPy1.14.0; heuristic NumPy",
+  "discovery_frozen": true
+}

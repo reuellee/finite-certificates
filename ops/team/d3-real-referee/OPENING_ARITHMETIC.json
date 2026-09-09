@@ -1,0 +1,163 @@
+{
+  "Delta_terms": 3257,
+  "N_bidegree": [
+    2,
+    2
+  ],
+  "N_terms": 389,
+  "base": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "census_sha256": "3984ce87e11fd59d804e59568177248e218cd1c7bb07aae0a9f9f746858728bc",
+  "deductive_and_source_scope": "See OPENING_AUDIT.md; arithmetic acceptance does not promote D3.",
+  "factor_provenance": {
+    "all_factor_ids": 26740,
+    "all_occurrences": 84840,
+    "canonical_transport": [
+      4373,
+      5563,
+      23221
+    ],
+    "direct_derived_determinants": [
+      {
+        "derived_triples": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ],
+        "factor": 5563,
+        "raw_terms": 4,
+        "stripped_parent_units": []
+      },
+      {
+        "derived_triples": [
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            2,
+            5,
+            7
+          ],
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ],
+        "factor": 16134,
+        "raw_terms": 40,
+        "stripped_parent_units": []
+      },
+      {
+        "derived_triples": [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            3,
+            4,
+            8
+          ],
+          [
+            1,
+            6,
+            8
+          ]
+        ],
+        "factor": 19284,
+        "raw_terms": 16,
+        "stripped_parent_units": []
+      }
+    ],
+    "ids": [
+      5563,
+      16134,
+      19284
+    ]
+  },
+  "finite_arithmetic_status": "ACCEPT",
+  "generic_Delta_degree": 4,
+  "hostile_canaries": {
+    "corrupt_fiber_constant": true,
+    "duplicate_root_interval": true,
+    "nonuniform_zero_source_denominator": true,
+    "nonunit_denominator": true,
+    "parent_bracket_orientation": true,
+    "point_not_on_source": true,
+    "repeated_root_quartic": true,
+    "same_oval_point_does_not_prove_cut": true,
+    "same_sign_not_a_cut": true,
+    "wrong_graph_pivot_sign": true
+  },
+  "parent_brackets_per_point": 70,
+  "parent_units": {
+    "bf-ce": "1267",
+    "f-1": "2357",
+    "h-1": "2458",
+    "i": "1238"
+  },
+  "point_signs_a": [
+    "-19/28",
+    "90/91"
+  ],
+  "quartic_discriminant": "4649793772367457417206802405651256329633792",
+  "quartic_resultant": "29752472668465616914471564314956496082456207687680",
+  "root_intervals": [
+    [
+      "-67/25",
+      "-267/100"
+    ],
+    [
+      "-11/5",
+      "-219/100"
+    ],
+    [
+      "-131/100",
+      "-13/10"
+    ],
+    [
+      "43/100",
+      "11/25"
+    ]
+  ],
+  "schema": "independent-cefc495-referee-arithmetic-v1",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "specialized_quartic": [
+    6398665,
+    36722952,
+    61007646,
+    14826168,
+    -21553047
+  ],
+  "uniform_points_checked": 2
+}

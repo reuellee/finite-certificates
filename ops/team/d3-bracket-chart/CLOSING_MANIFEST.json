@@ -1,0 +1,125 @@
+{
+  "base_revision": "68c3dbaf748416be099ad71af2b7426dbadf9272",
+  "base_tree": "d9116a510b2b4c29116ad7c956996e0136264067",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "canonical_sha256_unchanged": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+  "ledger_opening": "2/9",
+  "ledger_closing": "2/9",
+  "target_3_of_9_achieved": false,
+  "triple_source_residual": 1162302,
+  "open_load_bearing_obligations": 7,
+  "global_pair_coverage": "UNKNOWN",
+  "theorem_trajectory": "STALLED",
+  "knowledge_classification": "INFORMATIONAL",
+  "decision": "RETIRE_FIXED_BASE_RATIONAL_RULING; STOP_THIS_INVESTIGATION",
+  "new_results": [
+    "Generic genus-one fiber for projection to (b,f,g,h,i)",
+    "All components of one complete fixed-base fiber are noncompact in every uniform parent cell"
+  ],
+  "independent_ai_referee": "NOT_PERFORMED",
+  "scope": "Coordinator research with separate standard-library arithmetic replay; no full-source or D3 closure",
+  "discovery_archive_entries": [
+    {
+      "path": "bracket_discovery.json",
+      "bytes": 503071,
+      "sha256": "fd48cc52d5e36178bcb1914fa7b48dfedf62297b42c5113b3df7b789a0f9a3c2"
+    },
+    {
+      "path": "quartic_discovery.json",
+      "bytes": 462662,
+      "sha256": "46406c6f127ea94b70ce0dc51c081f8b23a8d6d37194cdc9fd0974fe8aa5ca1d"
+    },
+    {
+      "path": "discriminant_factors.json",
+      "bytes": 607681,
+      "sha256": "e4f45f46867d28ca821ea22397cdc616110cc014393b295467a9ef1d4d1d9e1a"
+    },
+    {
+      "path": "real_fiber_discovery.json",
+      "bytes": 17819,
+      "sha256": "ea755b32c0ab91d5ef6ee3e02624874712085a175f71909df37e5a62856621a5"
+    }
+  ],
+  "resource_notes": {
+    "discovery_wall_ceiling_minutes": 90,
+    "symbolic_process_ceiling_seconds": 300,
+    "flint_process_memory_limit_kib": 8388608,
+    "windows_peak_memory_instrumented": false,
+    "active_model_time_instrumented": false,
+    "new_artifact_bytes_before_manifest": 118686,
+    "larger_critical_solver_runs": 0,
+    "orbit_censuses": 0
+  },
+  "files": [
+    {
+      "path": "ops/team/d3-bracket-chart/.gitignore",
+      "bytes": 102,
+      "sha256": "dc3afc5535932e038c8e3721e6e5dc574172c3c8b8d52c7e7c497fdc6fce52d9"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/ARITHMETIC_REPLAY.json",
+      "bytes": 1302,
+      "sha256": "afa9a5652d56a034d7ee6539a5f577680f614256e07eeba58bf887f8b428239d"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/DISCOVERY_OUTPUTS.zip",
+      "bytes": 64038,
+      "sha256": "1a92fe6d00cc114ae3ad09fadfdaff9c13f46f42e57ad0263935ce68fa39c0fc"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/explore_brackets.py",
+      "bytes": 2016,
+      "sha256": "c5f12cb414b092aeb90a1e92061c7c8c5af8010cb81a711cfd3fdb6b42d004f7"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/explore_quartic.py",
+      "bytes": 1301,
+      "sha256": "e81d3e38537f27eb793981f5278f8f3877a4dfb3afa0c08d88febbbfd109565d"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/explore_real_fiber.py",
+      "bytes": 1820,
+      "sha256": "5cca8ee965288db4b19867ba1c40ae40e4f6f2c33dd771dad95e2ae805db9434"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/factor_discriminant.py",
+      "bytes": 976,
+      "sha256": "ff8e44d3502cca6b6b88a4b8e8efdad5e9de756ca7b8fe5bb59a71acecacfb6a"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/OPENING.md",
+      "bytes": 3052,
+      "sha256": "748032327b1e856124108986fdff82805fc89971e9681662e2a5b05ae31e9f9f"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/package_discovery.py",
+      "bytes": 826,
+      "sha256": "f43d87395fbcf9fc29d92927e22d3aa4ce4896d345868427dfa9b42730a2fee7"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/record_validation.py",
+      "bytes": 4176,
+      "sha256": "c76840db16b281658e421807094758e21654921e25381ac281f7376a79639408"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/REPORT.md",
+      "bytes": 9650,
+      "sha256": "4c16c68de079e39ae1b913024cf63ff3c1dd7efd2cec9de77e013c6ad76d3f0c"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/VALIDATION.json",
+      "bytes": 3176,
+      "sha256": "2d8d40261229e2c2cca935c1bfd9b3f9c79cc96fd99759dbc838a91fefba1a98"
+    },
+    {
+      "path": "ops/team/d3-bracket-chart/verify_genus_one_fiber.py",
+      "bytes": 9516,
+      "sha256": "95f8c2f3f7e5064a1c4ef6afc35efd66eb008fc15719aa040e5b021a7c3d7210"
+    },
+    {
+      "path": "ops/research-team/NEXT_CYCLE.md",
+      "bytes": 16735,
+      "sha256": "ab0586e610c389e3490aad6c29a73a2cf1ca47a784c9c85f19e38f77be377179"
+    }
+  ]
+}

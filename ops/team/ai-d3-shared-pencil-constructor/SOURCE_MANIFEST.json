@@ -1,0 +1,128 @@
+{
+  "format": "shared-pencil-constructor-sources-v1",
+  "base_revision": "ee7c110a0862ec2da961a4b8c9987a0b90e03a0a",
+  "inputs_identical_to_base": true,
+  "local_sources": [
+    {
+      "path": "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/STAGE_B_SHARED_PENCIL.md",
+      "bytes": 5091,
+      "sha256": "e64b2632f58d6510236ca71cfb004bac65c59d0dfeb711154bef9a37261a8e81",
+      "git_blob": "4d3375430c84d5e515822cfb2cd3f58ea9f1cc56"
+    },
+    {
+      "path": "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE.md",
+      "bytes": 8236,
+      "sha256": "e3ce6f7110b13a46e0831fe8c2344ad865ada17d9fa70d03383fd654bd287dea",
+      "git_blob": "54718ac565bf526ebf44cc0f2ac0c6a57f7edf0e"
+    },
+    {
+      "path": "ops/research-team/PROTOCOL.md",
+      "bytes": 11222,
+      "sha256": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+      "git_blob": "bc7995f0ed0c3ea296551152b2e0cfa2b16f0c74"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_AUDIT.md",
+      "bytes": 16379,
+      "sha256": "5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a",
+      "git_blob": "b5dd849e4483da3dbb267e93de96b30cb304d30c"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_HARD_TRIPLE_PIVOT.py",
+      "bytes": 8644,
+      "sha256": "ee5dc9f38b64c33d4387d4db12b885f88e5118bb0305a0004ce07872b25f966e",
+      "git_blob": "1f9a9e8e115bc5efc101dd47b1c7b716db1075c3"
+    },
+    {
+      "path": "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md",
+      "bytes": 9599,
+      "sha256": "f0326930b473ff9e1c07c6dc69e332de28cbb3d178b7d3b5b526c451d1234f98",
+      "git_blob": "df3505e893e6f989caa575a142386b401d652cf2"
+    },
+    {
+      "path": "ai/omreal/prototype_koszul_circuits.py",
+      "bytes": 16506,
+      "sha256": "5384b0c26a7762ce9957cf508dba32f15f82d0d25e06d07f94ce89831218fd79",
+      "git_blob": "8f5396b9e6eadebaadddfb4ce09e6d3ec9ff4c65"
+    },
+    {
+      "path": "ai/omreal/DIAG9_GRAPH_exact_topes.py",
+      "bytes": 7168,
+      "sha256": "aa1bb32b1fee5f9e11805352f2b072f6ee10c5dbb003c8dd4a0b530382d638df",
+      "git_blob": "fb2834978177d4c69427bba7806aa2749576d732"
+    },
+    {
+      "path": "ai/omreal/four_chart_gate.py",
+      "bytes": 20673,
+      "sha256": "4697201fb5d17b9f6bd9091c59b6fc7bae7f8f7f23bfe4fdd5e07afd796dc0cf",
+      "git_blob": "487cea70e8ffdf67446f38cae648a7b3f2ca4699"
+    },
+    {
+      "path": "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "bytes": 16265,
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+      "git_blob": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85"
+    },
+    {
+      "path": "ai/omreal/verify_diag3_joined_flow_triangle.py",
+      "bytes": 9283,
+      "sha256": "ac01851b53d4bed1c859f74bad2e71a5025825fe7accdac13263f5d6518a0944",
+      "git_blob": "4787ef3b5dcdd3d4b36c6447cc8867b8d5e6bc50"
+    },
+    {
+      "path": "ai/omreal/data/seeat_parent2599_shatter8.npz",
+      "bytes": 292033,
+      "sha256": "d01a03e3222de5b760fd7fec36c03ccbeac820ed1ce7ea47f93001abaf3aadcb",
+      "git_blob": "3d8102c0f418f2479362a414a7b4784b72b922ae"
+    },
+    {
+      "path": "ai/omreal/data/seeat_parent2599_upper178.npz",
+      "bytes": 690732,
+      "sha256": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+      "git_blob": "16b7734749f7247f8a54c353e0eee40f9caea139"
+    }
+  ],
+  "handoff_artifacts": [
+    {
+      "path": "CONTROLS.json",
+      "bytes": 9237,
+      "sha256": "d5856c5c126cfdaf8475167bd7f949ca226ac3f2f6e6f89ce573adf618ecdd64"
+    },
+    {
+      "path": "OBSTRUCTION.json",
+      "bytes": 397264,
+      "sha256": "77bd316237f6fd7060e964aec1852daa10dfaa065a7d0c4194b0a59929a32afa"
+    },
+    {
+      "path": "verify_controls.py",
+      "bytes": 9649,
+      "sha256": "5638c053b11a4877f7d0aac0807399745bd27895150e4828c1df9a3dca7df812"
+    },
+    {
+      "path": "search_controls.py",
+      "bytes": 4880,
+      "sha256": "3c05f12729256261e0ed809a31c34fc99ab02fa85f46957e4de730107a265c75"
+    },
+    {
+      "path": "certify_obstruction.py",
+      "bytes": 5746,
+      "sha256": "2e91fd2635b4be3041f6450c4041214fd4e50720863b39ab0508af51879df2d8"
+    },
+    {
+      "path": "FINDINGS.md",
+      "bytes": 16997,
+      "sha256": "2c8c880d1a0d4f214e8586b1527d4559b238284d87b3c4feee7a6f05ee2a36cc"
+    },
+    {
+      "path": "RESULT.json",
+      "bytes": 4215,
+      "sha256": "606df10d56acb38330aa10bd7aa2528c701303daa3412c2dd56f61ce1bef4a95"
+    },
+    {
+      "path": "TEST_OUTPUT.json",
+      "bytes": 638,
+      "sha256": "6ade50f59b7265690b900e94d5bb0a366ba0a99c564b81dce95e479b1044a4c1"
+    }
+  ],
+  "active_lane_artifacts_imported": false
+}

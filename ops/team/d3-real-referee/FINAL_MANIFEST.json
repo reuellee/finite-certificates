@@ -1,0 +1,16 @@
+{
+  "reviewed_candidate": "65f1524bda77ebc5b74a0857e23c4323c18ad263",
+  "verdict": "ACCEPT_SCOPED_AUXILIARY_CLAIMS_AND_NULL_CLOSURE",
+  "replay": "python -B ops/team/d3-real-referee/audit_real_fiber.py",
+  "dependencies": "Python standard library only; imports this referee audit_cefc495.py",
+  "diagonal_score": "2/9",
+  "original_obligations_closed": 0,
+  "same_blocker_streak": 11,
+  "zero_ledger_streak": 14,
+  "files": {
+    "audit_cefc495.py": "4675b77f695d11b272ba373e2e1499cbd7d6eb13f938bdf6219cad0e8522912a",
+    "audit_real_fiber.py": "b720d9e986df73ff7e939980599e852ae010befbb36e6954d6dec9a5ffc91de9",
+    "FINAL_ARITHMETIC.json": "e14c692361b644d0ad515843f85438445777aa0c19ec6ca0e59938bb27496eab",
+    "FINAL_REVIEW.md": "74422929a8369744c8960480748fd87cd45c2ffe6b65f0af3372bf8c10e32f7a"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "verdict": "ACCEPT_AUXILIARY_ONLY",
+  "producer_logic_imported": false,
+  "source_and_artifact_hashes_verified": 24,
+  "base_revision": "730fd6c7b6c2c3e8cbbf94ab4da3bc97ba53f095",
+  "base_tree": "dbe7645743d09758eb3403272908ac3dcf88bf65",
+  "parent_brackets": 70,
+  "gp_axioms": 3780,
+  "strict_circuits": [
+    {
+      "block": 0,
+      "supports": [
+        [
+          0,
+          19,
+          21,
+          37,
+          38
+        ],
+        [
+          2,
+          19,
+          21,
+          37,
+          38
+        ]
+      ],
+      "rank": 4,
+      "union_face_dimension": 1
+    },
+    {
+      "block": 1,
+      "supports": [
+        [
+          0,
+          9,
+          27,
+          30,
+          35
+        ],
+        [
+          2,
+          9,
+          27,
+          30,
+          35
+        ]
+      ],
+      "rank": 4,
+      "union_face_dimension": 1
+    },
+    {
+      "block": 2,
+      "supports": [
+        [
+          0,
+          11,
+          17,
+          24,
+          40
+        ],
+        [
+          2,
+          11,
+          17,
+          24,
+          40
+        ]
+      ],
+      "rank": 4,
+      "union_face_dimension": 1
+    }
+  ],
+  "ordered_noninclusions": 6,
+  "linear_controls": {
+    "finite_quotient_fixtures": 343,
+    "injective_fixtures": 96,
+    "pairwise_independence_countercontrol": true,
+    "stalk_kernel_rank": 2
+  },
+  "selected_plane_control": {
+    "parent_brackets_each": 70,
+    "unchanged_selected_planes": 6,
+    "omitted_normal_span_rank": 2,
+    "producer_normal_convention_relative_to_det_Y_x": -1,
+    "admissible_signature_claim": false,
+    "feasibility_flip_claim": false
+  },
+  "hostile_controls_rejected": {
+    "supported_sign_flip": true,
+    "positive_weight_corruption": true
+  },
+  "original_obligations_closed": 0,
+  "ledger": "2/9",
+  "opening_counters": [
+    11,
+    14
+  ],
+  "recommended_closing_counters": [
+    12,
+    15
+  ],
+  "original_pair_target": "NULL",
+  "global_coverage": "UNKNOWN",
+  "pair_residual": "UNKNOWN"
+}

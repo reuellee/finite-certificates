@@ -1,0 +1,53 @@
+{
+  "kind": "numerical_discovery_only",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "system": "q1=q2=q3=0; lam*dq1+mu*dq2+dq3=0 in all columns except b",
+  "seed": 9052026,
+  "initial_point_rule": "seed source point plus independent standard normal samples times cyclic scales 0.15,0.7,1.8,3.0; multipliers initialized using columns a,d",
+  "seed_source_point": [
+    -0.6785714285714286,
+    -3.2857142857142856,
+    -1.9285714285714286,
+    -5.0,
+    -4.0,
+    -3.0,
+    -1.0,
+    2.0,
+    4.0
+  ],
+  "realized_initial_coordinate_minima": [
+    -5.382900173227796,
+    -11.456074658519306,
+    -8.738409251442961,
+    -12.974135396525663,
+    -8.690603482721034,
+    -7.966965587180263,
+    -6.2111208997905525,
+    -5.9806403423999885,
+    -1.9772483590206216
+  ],
+  "realized_initial_coordinate_maxima": [
+    6.28563729289538,
+    2.8277072339750573,
+    3.6882967232624253,
+    3.0209851890787487,
+    -0.5037905041916577,
+    3.3020350992555443,
+    6.225503296218658,
+    8.50807187573661,
+    7.8235097314353474
+  ],
+  "root_method": "scipy.optimize.root hybr, analytic Jacobian",
+  "root_options": {
+    "maxfev": 1000,
+    "xtol": 1e-10
+  },
+  "candidate_thresholds": {
+    "maximum_absolute_equation_residual_strictly_below": 1e-06,
+    "minimum_absolute_parent_bracket_strictly_above": 1e-05
+  },
+  "trials": 120,
+  "elapsed_seconds": 0.7258063650006079,
+  "consequence": "No missed-point, emptiness, source-orbit, or topological conclusion follows from any numerical outcome."
+}
+valid_candidates 0

@@ -1,0 +1,34 @@
+{
+  "base_revision": "fcb64825335245e6e53512bf4eb2c5f5279b75ae",
+  "hash_algorithm": "SHA-256",
+  "pins": {
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/CYCLE.md": "e3ce6f7110b13a46e0831fe8c2344ad865ada17d9fa70d03383fd654bd287dea",
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/WORK_ORDERS.yaml": "2ec4b8edc27946a84adef1f122261cb41db066e6481c3cdee2864e9725534a0a",
+    "ops/research-team/cycles/2026-09-05-ai-only-d3-structural-reset/OPENING_STATE.json": "885fda14aa610bb8f76590b2ec9bf0ec8288c5bdee20a851a66b23f142afae1c",
+    "ops/research-team/PROTOCOL.md": "c3fbec5b483426fcce97a523ba1ea1edc3e561cb33a1c4e5e957674e4270a246",
+    "ai/omreal/data/CANONICAL_RESEARCH_STATE_V11.json": "5929b922ecf04246920d56a1adedc29382379eb5abae8b600601995d6b5dae86",
+    "ai/omreal/BLOCK_GORDAN_AUDIT.md": "5fae5f8cfb301fdec171d79fcd6974899f78341996a73f5e0f5ed13f2ec7bc0a",
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+    "ai/omreal/ATLAS_HELLY.md": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+    "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/THEOREM_CANDIDATE.md": "fa26329cb30866a6c127f2b789a1a818f61c3d951aac57ae1ba2b558cd42c56a",
+    "ops/research-team/cycles/2026-09-04-d3-block-gordan-compact-relative-source-gate1/LITERATURE_SCOPE.md": "2f69b1dacd9a856b19f687e442ff5a8107bc31c2bcff11fdbad0d7af997c5b9c"
+  },
+  "opening_pin_checks": "PASS",
+  "external_primary_sources": [
+    {
+      "title": "Shiota, Whitney triangulations of semialgebraic sets (2005)",
+      "url": "https://impan.pl/en/publishing-house/journals-and-series/annales-polonici-mathematici/all/87/0/84789/whitney-triangulations-of-semialgebraic-sets",
+      "doi": "10.4064/ap87-0-20",
+      "accessed_utc_date": "2026-09-05",
+      "scope": "Compatible triangulation existence; publisher abstract checked."
+    },
+    {
+      "title": "The Stacks Project, Section 20.18, Proper base change in topology",
+      "url": "https://stacks.math.columbia.edu/tag/09V4",
+      "stable_tag": "09V4",
+      "accessed_utc_date": "2026-09-05",
+      "scope": "Stalkwise proper base change; Lemma 20.18.1 and Theorem 20.18.2 checked."
+    }
+  ]
+}

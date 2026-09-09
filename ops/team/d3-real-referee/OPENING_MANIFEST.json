@@ -1,0 +1,12 @@
+{
+  "base": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "files": {
+    "audit_cefc495.py": "4675b77f695d11b272ba373e2e1499cbd7d6eb13f938bdf6219cad0e8522912a",
+    "OPENING_ARITHMETIC.json": "a482d41d97f5347075a87024b24cbaa43d352e9a805cfd679855daf2ecb0d22b",
+    "OPENING_AUDIT.md": "1a5a30b1cd5d656b6d8920dd146e10cfd824fbfc7e785c5d676b13d19a28b3fd"
+  },
+  "replay": "python -B ops/team/d3-real-referee/audit_cefc495.py",
+  "verdict": "ACCEPT_SCOPED_AUXILIARY_STATEMENTS",
+  "d3_score": "2/9",
+  "global_obligations_closed": 0
+}

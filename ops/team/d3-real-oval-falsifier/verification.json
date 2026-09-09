@@ -1,0 +1,29 @@
+{
+  "status": "PASS_EXACT_ENTIRE_OVAL_ARITHMETIC",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "W_simple_real_roots": 4,
+  "compact_oval_middle_roots": [
+    2,
+    3
+  ],
+  "graph_denominator_nonzero_on_entire_oval": true,
+  "whole_oval_parent_brackets_certified": 70,
+  "reference_point": {
+    "c": "-21/10",
+    "e_root_interval": [
+      "-6285/1546",
+      "-7094/1745"
+    ]
+  },
+  "parent_signs": "++--+-++-++++--++--+--+-+-++-------------+-++++-+---++-+----+----++++-",
+  "theorem_scope": "Fixed-base factor source only; see REPORT.md for quantified topology inference.",
+  "full_source_component_compactness": "NOT_ESTABLISHED",
+  "triple_bad_component_compactness": "NOT_ESTABLISHED",
+  "diagonal_ledger": "2/9",
+  "hostile_controls_rejected": [
+    "corrupt_F",
+    "omit_parent_bracket",
+    "corrupt_resultant",
+    "wrong_base"
+  ]
+}

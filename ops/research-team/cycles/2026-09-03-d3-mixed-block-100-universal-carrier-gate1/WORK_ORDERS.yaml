@@ -1,0 +1,149 @@
+cycle_id: 2026-09-03-d3-mixed-block-100-universal-carrier-gate1
+base_revision: fb667bfe33ef9e945a82e9a23b615e67f5f39c0f
+base_tree: 117850b25cd94f865cb85e681c465b8260dd9c6a
+branch: research/local-d3-mixed-block-100-universal-carrier-gate1-20260903
+opening_ledger: 2/9
+selected_target: D3_MIXED_BLOCK_1_0_0_UNIVERSAL_CARRIER_OR_OBSTRUCTION_GATE1
+storage_authorization: &storage_authorization |
+  The saved local Codex project E:\Projects\9DVL Research is the canonical
+  working home. Bundles and manifests go under E:\Projects\9DVL Research\outputs.
+  A native-filesystem recovery mirror to
+  G:\My Drive\Projects\research-backups is optional, byte-length and SHA-256
+  verified, and nonblocking. Never invoke the Google Drive connector and never
+  block on connector approval. GitHub is read-only: do not push, publish
+  branches, open or update pull requests, trigger or rerun CI, or merge. This
+  opening authorization does not permit secrets, unrelated private files,
+  paid/external compute, force-push, history deletion, or irreversible external
+  action.
+
+strategy_gate:
+  opening_verdict: PIVOT_SELECT_D3_MIXED_100_UNIVERSAL_CARRIER_OR_OBSTRUCTION
+  closing_required: true
+  selected_count: 1
+  predecessor: Q0_NULL_Q1_DENIED_STALLED_STOP_NONE
+  same_route_continue: false
+  stagnation_rule: >-
+    Any null, timeout, incomplete-coherence result, or unchanged selected-route
+    residual forbids same-route continuation and closes STOP; an exact
+    full-quantifier obstruction retires the selected route.
+
+solution_convergence_gate:
+  proof_distance:
+    opening_score: 2/9
+    score_deficit: 1
+    named_invariant: diag3_pair_hc1_AND_diag3_triple_hc0
+    open_load_bearing_obligations: 7
+    certified_exhaustive_residual: UNKNOWN
+    global_coverage: UNKNOWN
+    same_blocker_streak: 8
+    zero_ledger_streak: 11
+  selected_route_open_residual: [O3_universal_mixed_chain, O4_arbitrary_flag_coherence]
+  convergence_hypothesis: >-
+    A universal proof of O3 and O4 reduces the selected theorem residual from
+    2/2 to 0/2 without weakening global quantifiers; an exact admissible
+    obstruction retires the route.
+  minimum_acceptable_delta: >-
+    Independently prove both O3 and O4 at the complete declared quantifier, or
+    prove an exact admissible full-quantifier obstruction to their conjunction.
+  mid_cycle_checkpoint: >-
+    Freeze after the first constructor and falsifier handoffs or two elapsed
+    hours. Stop if neither accepted endpoint remains reachable.
+  closing_classification_required: true
+  automatic_pivot_rule: >-
+    Null, timeout, incomplete coherence, or an unchanged selected-route
+    residual requires PIVOT or STOP; exact full-scope obstruction requires
+    RETIRE and positive proof permits only a separately authorized successor.
+  no_false_denominator: >-
+    Ten formal shapes and provisional 3/10 coverage are not global or end-to-end
+    D3 denominators and never change the canonical ledger.
+
+global_restrictions:
+  - no author contact or network research
+  - no GitHub writes, pushes, pull requests, CI triggers, or merges
+  - no cloud worker, external solver, paid API, or external compute
+  - no Groebner, RUR, saturation, SREP, CAD, atlas, census, sampling, or residual-growth campaign
+  - no O1, O2, O5, or O6 construction
+  - no canonical-state or theorem-ledger edit
+  - no theorem credit from local, modular, sampled, formal-taxonomy, or incomplete-coherence evidence
+
+work_orders:
+  - track_id: d3-mixed-100-carrier-constructor
+    role: constructive-prover
+    surface: ops/team/d3-mixed-100-carrier-constructor
+    storage_authorization: *storage_authorization
+    resource_ceiling: 100 wall-minutes, 16 GiB RAM, 1 GiB scratch, one frozen handoff
+    target: >-
+      Prove for every admissible finite L_source and primitive integral kernel
+      class a genuinely mixed (1,0,0) integral chain with the required boundary,
+      natural under every declared specialization and arbitrary face flag.
+    positive: PROVED_UNIVERSAL_MIXED_100_CARRIER_AND_COHERENCE
+    negative: Not available from constructor failure; return NULL with first missing edge.
+    stop_rule: >-
+      Stop on a hidden finiteness/properness assumption, fixed-block filler,
+      incomplete specialization class, artificial infinity, or unreachable
+      universal proof inside the remaining ceiling.
+    prohibited_scope: >-
+      No O1/O2/O5/O6 construction, atlas, census, saturation, SREP, CAD,
+      network, external compute, canonical edit, ledger promotion, push, or merge.
+    worker_restrictions: >-
+      Own only the constructor surface; do not edit cycle or canonical files,
+      accept your own output, inspect the falsifier worktree, push, or merge.
+
+  - track_id: d3-mixed-100-carrier-falsifier
+    role: universal-falsifier
+    surface: ops/team/d3-mixed-100-carrier-falsifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 100 wall-minutes, 16 GiB RAM, 1 GiB scratch, at least 24 hostile tests
+    target: >-
+      Seek an admissible finite L_source and primitive class giving an exact
+      obstruction to every genuinely mixed coherent (1,0,0) filler; otherwise
+      preserve exact attacks without promoting failure of one ansatz.
+    positive: DISPROVED_UNIVERSAL_MIXED_100_CARRIER_BY_EXACT_ADMISSIBLE_OBSTRUCTION
+    null: NO_UNIVERSAL_OBSTRUCTION_FOUND_WITHIN_FROZEN_SCOPE
+    stop_rule: >-
+      Stop on an exact full-scope obstruction and preserve it; fail closed on
+      inadmissible interfaces, local-only seams, or artificial infinity.
+    prohibited_scope: >-
+      No producer repair or acceptance, O1/O2/O5/O6 construction, atlas,
+      census, network, external compute, canonical edit, push, or merge.
+    worker_restrictions: >-
+      Own only the falsifier surface; do not edit cycle or canonical files,
+      repair or accept constructor output, inspect its worktree, push, or merge.
+
+  - track_id: d3-mixed-100-independent-verifier
+    role: independent-verifier
+    surface: ops/team/d3-mixed-100-independent-verifier
+    storage_authorization: *storage_authorization
+    resource_ceiling: 60 wall-minutes, 16 GiB RAM, 1 GiB scratch, one directed repair
+    target: >-
+      Reconstruct source pins, admissibility, integral boundaries, primitive
+      classes, active-block mixing, all specialization composites, monodromy,
+      and true-infinity provenance from frozen handoffs without producer code.
+    stop_rule: >-
+      Fail closed on source drift, incomplete quantifiers, a non-integral or
+      fixed-block chain, missing arbitrary-flag coherence, or an inadmissible
+      obstruction.
+    prohibited_scope: >-
+      No producer acceptance import, discovery expansion, replacement theorem,
+      canonical edit, ledger promotion, network, external compute, push, or merge.
+    worker_restrictions: >-
+      Own only the verifier surface; do not import producer acceptance code,
+      edit producer or cycle files, discover a replacement theorem, push, or merge.
+
+  - track_id: d3-mixed-100-closing-referee
+    role: closing-referee
+    surface: ops/team/d3-mixed-100-closing-referee
+    storage_authorization: *storage_authorization
+    resource_ceiling: 60 wall-minutes, 16 GiB RAM, clean frozen-head replay
+    target: >-
+      Bind the final verdict to exact Git objects, replay opening and accepted
+      gates, enforce convergence and scope, and report exact nonconsequences.
+    stop_rule: >-
+      Reject moved head, producer self-acceptance, false denominator or ledger
+      promotion, incomplete midpoint, or unjustified successor.
+    prohibited_scope: >-
+      No mutable-head repair, discovery, construction, canonical edit, ledger
+      promotion, network, external compute, push, or merge.
+    worker_restrictions: >-
+      Review only the frozen integrated candidate; own only the referee surface;
+      do not repair evidence, edit cycle or canonical files, push, or merge.

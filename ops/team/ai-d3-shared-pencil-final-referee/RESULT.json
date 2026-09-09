@@ -1,0 +1,132 @@
+{
+  "format": "ai-d3-shared-pencil-final-referee-v1",
+  "cycle_id": "2026-09-05-ai-only-d3-structural-reset",
+  "stage": "C",
+  "role": "replacement-independent-referee",
+  "worktree_base": "97835f3dd9f3e36f11adeb6e5b448e72b7bb9b60",
+  "owned_surface": "ops/team/ai-d3-shared-pencil-final-referee",
+  "principal_original_commit": "7d0efe1c55efff2d17c906569e90f5fb0ae0e371",
+  "principal_integrated_commit": "8b8adb799b7893814606cf524c30f8a42d1caba6",
+  "second_frozen_commit": "da1834fd34065fe826d230c26eb0b6b747dc082c",
+  "prior_interrupted_checker_commit": "97835f3dd9f3e36f11adeb6e5b448e72b7bb9b60",
+  "decision": "ACCEPT_ROUTE_COUNTEREXAMPLE_AND_CONDITIONAL_ESCAPE",
+  "investment_decision": "RETIRE",
+  "retired_route": "Universal pointwise common-label union-of-positive-supports incidence at most two triples",
+  "acceptance": {
+    "finite_predicate_equivalence": true,
+    "zero_weights_and_smaller_supports_covered": true,
+    "choices_per_certificate": 1680,
+    "strict_inequalities_per_certificate": 62160,
+    "actual_uniform_labeled_parent_class": 2599,
+    "upper_chart_index": 0,
+    "target_signatures": [
+      14988895318912,
+      3405195891438080,
+      40418075143643136
+    ],
+    "full_badness_checked_separately": true,
+    "valid_realized_nonempty_proper_incomparable_regions": true,
+    "exclusive_feasibility_charts": [
+      3,
+      14,
+      2
+    ],
+    "ordered_noninclusions": 6,
+    "conditional_proper_path": true,
+    "true_parent_boundary": true,
+    "bounded_signed_simplex_gauge": true,
+    "supported_rank_deficiency_allowed": true,
+    "continuous_global_choice_needed_for_conditional_hc0": false,
+    "pair_hc1_consequence": false,
+    "robustness": {
+      "accepted": true,
+      "scope": "nonempty open subset of nine-dimensional normalized parent space",
+      "all_principal_full_supports_rank_four": true,
+      "all_principal_five_cofactors_strictly_positive_after_common_orientation": true,
+      "all_second_full_supports_rank_four_positive_circuits": true,
+      "all_normalized_separator_inequalities_checked": 62160,
+      "persists": [
+        "full badness of all three signatures",
+        "failure of all at-most-two-incident-triples choices"
+      ],
+      "quantitative_radius_claimed": false,
+      "excludes_all_rank_two_star_pencils": false
+    }
+  },
+  "verification": {
+    "independent_checker": "independent_check.py",
+    "exact_supplement": "check_robustness.py",
+    "outputs": [
+      "CHECK_OUTPUT.json",
+      "ROBUSTNESS_OUTPUT.json"
+    ],
+    "all_pass": true,
+    "inherited_hostile_mutations_rejected": 10,
+    "supplemental_hostile_mutations_rejected": 4,
+    "gp_sign_relations_independently_checked": 3780,
+    "normal_covariance_identities_independently_checked": 56,
+    "producer_acceptance_code_executed_or_imported": false,
+    "prior_referee_checker_audited_and_reused": true,
+    "supplement_imports_other_referee_code": false,
+    "all_replay_inputs_pinned_git_blobs": true,
+    "search_or_solver_success_used_as_proof": false,
+    "raw_minimum_margin": 6858251431715,
+    "second_primitive_minimum_margin": 162514748513691
+  },
+  "research_credit": {
+    "trajectory": "INFORMATIONAL",
+    "ledger_before": "2/9",
+    "ledger_after": "2/9",
+    "theorem_delta": 0,
+    "canonical_obligations_open": [
+      "global_gluing",
+      "extension_labels",
+      "strict_closure",
+      "relative_infinity",
+      "middle_rank_replay",
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    "canonical_obligations_closed": [],
+    "global_pair_coverage": "UNKNOWN",
+    "certified_exhaustive_D3_residual": "UNKNOWN",
+    "triple_component_census_changed": false,
+    "D3_counterexample": false,
+    "compact_component_proved": false,
+    "compactly_supported_class_constructed": false,
+    "opening_vector": [
+      "2/9",
+      1,
+      [
+        "diag3_pair_hc1",
+        "diag3_triple_hc0"
+      ],
+      7,
+      "UNKNOWN",
+      "UNKNOWN",
+      9,
+      12
+    ],
+    "closing_theorem_fields_unchanged": true,
+    "administrative_streak_counters": "not edited by this referee",
+    "source_existence_prior_acceptance": "ed10cbd5580e7266128cb477f5553bd122ee6805",
+    "generic_countermodel_prior_acceptance": "0de26f6a6561705b37d59dfb5d3886857ab96bd3",
+    "prior_accepted_scopes_reopened": false
+  },
+  "governance": {
+    "stopped_at_decisive_endpoint": true,
+    "new_cohort": false,
+    "successor_route_opened": false,
+    "producer_or_prior_referee_edits": false,
+    "human_consultation": false,
+    "paid_compute": false,
+    "external_compute": false,
+    "push": false,
+    "merge": false,
+    "ledger_edit": false,
+    "ownership_override": "Coordinator replacement work order assigns this final-referee surface instead of the old Stage C referee surface."
+  },
+  "resources": "RESOURCE_ACCOUNTING.json",
+  "source_pins": "SOURCE_PINS.json",
+  "freeze": "The full SHA of the commit containing these files is returned separately; no self-referential hash is claimed."
+}

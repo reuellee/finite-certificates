@@ -1,0 +1,28 @@
+{
+  "track_id": "d3-explore-diagonals",
+  "classification": "finite-exact",
+  "trajectory": "INFORMATIONAL",
+  "candidate": "fixed-frame endpoint-only coordinate hybrid connectivity is false on exact original source",
+  "original_diagonal_status": "all 3-9 open",
+  "ledger_before": "2/9",
+  "ledger_after": "2/9",
+  "new_global_obligations_closed": [],
+  "test_counts": {
+    "whole_column_hybrids": 8,
+    "whole_column_valid": 2,
+    "coordinate_hybrids": 512,
+    "coordinate_valid": 2
+  },
+  "scope": "one common first-five-ray projective frame on row-2599 charts 37 and 176; parent safety only",
+  "inherited_positive_canary": "same endpoints connected in the proper incomparable nine-family by 22,811 exact segments",
+  "not_rejected": [
+    "continuous coordinate paths with arbitrary intermediate values",
+    "adaptive projective frames",
+    "general semialgebraic paths",
+    "diagonal nine"
+  ],
+  "decision": "RETIRE_ENDPOINT_ONLY_HYBRID_CLAIM_AND_STOP_TRACK",
+  "replay": "PYTHONDONTWRITEBYTECODE=1 python ops/team/d3-explore-diagonals/test_coordinate_hybrids.py",
+  "independent_review": "PENDING_COORDINATOR_REFEREE",
+  "opening_and_closing_proof_distance": "(2/9,1,{diag3_pair_hc1,diag3_triple_hc0},7,UNKNOWN,UNKNOWN,13,16)"
+}

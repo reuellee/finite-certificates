@@ -1,0 +1,49 @@
+Initial seed for pseudo-random number generator is 1788627492
+
+--------------- INPUT DATA ---------------
+#variables                       9
+#equations                       9
+#invalid equations               0
+field characteristic    1073741827
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         2
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  5       1      12      10 x 49         13.06%        1 new       0 zero         0.00 | 0.00
+  6       1      15      29 x 125         6.43%        0 new       1 zero         0.00 | 0.00
+  8       4      14     660 x 2554        0.34%        4 new       0 zero         0.00 | 0.00
+  9      15      23    2235 x 7320        0.20%       13 new       2 zero         0.01 | 0.01
+ 10      54      62    5321 x 16480       0.22%       40 new      14 zero         0.03 | 0.04
+  6  compute kernel    1605 x 6306        0.54%        normal form time           0.00 | 0.00
+                                                       0 new kernel elements      0.00 | 0.01
+  6  compute kernel    5978 x 21096       0.36%        normal form time           0.00 | 0.01
+                                                       0 new kernel elements      0.03 | 0.03
+  6  compute kernel   18246 x 53353       0.18%        normal form time           0.03 | 0.06
+                                                       0 new kernel elements      0.17 | 0.20
+  6  compute kernel   47132 x 119484      0.10%        normal form time           0.22 | 0.44
+                                                       0 new kernel elements      0.97 | 1.20
+timeout: the monitored command dumped core

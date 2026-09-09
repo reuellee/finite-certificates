@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "No nonzero constant symmetric second-order operator annihilates this N identically.",
+  "graph_numerator_terms": 389,
+  "coefficient_equations": 1191,
+  "operator_unknowns": 28,
+  "integer_certificate_determinant": "-7421703487488",
+  "hostile_controls_rejected": 3,
+  "theorem_credit": 0,
+  "source_orbits_closed": 0,
+  "ledger": "2/9 unchanged"
+}

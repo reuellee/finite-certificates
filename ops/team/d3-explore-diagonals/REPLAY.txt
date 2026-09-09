@@ -1,0 +1,4 @@
+PASS stored exact hybrid certificate
+columns valid 2 / 8 monotone_reachable [0] path [] undirected_reachable [0] undirected_path []
+coordinates valid 2 / 512 monotone_reachable [0] path [] undirected_reachable [0] undirected_path []
+seconds 1.4533321649978461 cpu 1.452753839

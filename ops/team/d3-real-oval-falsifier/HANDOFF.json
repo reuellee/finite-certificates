@@ -1,0 +1,23 @@
+{
+  "classification": "INFORMATIONAL",
+  "candidate": "EXACT_COUNTEREXAMPLE_TO_ALL_BASE_FIXED_FIBER_ESCAPE",
+  "base_commit": "cefc495b27247c4a76f88bce04978422161f7ce9",
+  "base_tree": "c49c2e6625f3ee76d77cc263897366dcf7e037c2",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "candidate_base_b_f_g_h_i": ["-11/3", "-11/4", "-5/3", "3/2", "17/4"],
+  "entire_oval_parent_bracket_exclusions": 70,
+  "graph_denominator_excluded": true,
+  "exact_replay": "PASS",
+  "independent_ai_referee": "PENDING_COORDINATOR_REVIEW",
+  "theorem_ledger": "2/9_UNCHANGED",
+  "source_residual": 1162302,
+  "scope": "One complete fixed-base factor-source component; all its points form a smooth compact oval inside one uniform parent sign cell.",
+  "not_claimed": [
+    "Compact component of the six-dimensional source",
+    "Admission to an actual proper incomparable triple-bad locus",
+    "Closure of Hc0 or the alternating pair Hc1 map",
+    "Residual decrease or a third diagonal"
+  ],
+  "decision": "STOP_DISCOVERY_AND_RETIRE_UNIVERSAL_FIXED_BASE_ESCAPE",
+  "first_unresolved_implication": "Control of source components while the five base coordinates move, with additional admission conditions for the actual triple-bad locus."
+}

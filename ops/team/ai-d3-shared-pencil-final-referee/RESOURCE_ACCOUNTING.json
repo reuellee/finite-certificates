@@ -1,0 +1,41 @@
+{
+  "format": "ai-d3-final-referee-resources-v1",
+  "review_resumption_conservative_start_utc": "2026-09-05T14:48:00+00:00",
+  "review_pre_freeze_completed_utc": "2026-09-05T15:04:04.429782+00:00",
+  "review_wall_seconds_conservative_to_pre_freeze": 964.43,
+  "deadline_utc": "2026-09-05T15:32:00Z",
+  "original_review_allocation_minutes": 60,
+  "replacement_accounting": "Inherited remaining time, not a fresh 60-minute allocation. Prior interrupted referee time is not reclassified as this lane.",
+  "before_deadline": true,
+  "ram_limit_bytes": 17179869184,
+  "new_artifact_limit_bytes": 314572800,
+  "replay_runs": [
+    {
+      "script": "independent_check.py",
+      "output": "CHECK_OUTPUT.json",
+      "exit_code": 0,
+      "wall_seconds": 1.91847,
+      "observed_process_peak_working_set_bytes": 58245120
+    },
+    {
+      "script": "check_robustness.py",
+      "output": "ROBUSTNESS_OUTPUT.json",
+      "exit_code": 0,
+      "wall_seconds": 1.662509,
+      "observed_process_peak_working_set_bytes": 22941696
+    }
+  ],
+  "memory_method": "Windows GetProcessMemoryInfo PeakWorkingSetSize observed by parent process every 10 ms; includes executable process, excludes coordinator model context.",
+  "whole_role_peak_resident_memory": "not instrumented; measured exact replay child-process peaks above; no bulk allocations or external jobs",
+  "python_executable_used": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "runtime_path_is_replay_requirement": false,
+  "new_storage_bytes_at_pre_freeze": 75037,
+  "new_storage_file_count": 11,
+  "storage_measurement": "All files in owned surface, including this accounting and empty stderr logs; no scratch elsewhere.",
+  "compute_activity": "Read frozen Git objects, exact certificate arithmetic, report authoring. No LP, CAD, tope enumeration, or search.",
+  "external_jobs": 0,
+  "paid_compute": false,
+  "human_contact": false,
+  "initial_prior_checker_replay_seconds": 1.697185,
+  "initial_prior_checker_replay_saved": "Tool transcript only; final portable replay is CHECK_OUTPUT.json."
+}

@@ -1,0 +1,33 @@
+{
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "pivot_columns": [
+    "a",
+    "d"
+  ],
+  "height": "b",
+  "minor_columns": [
+    "c",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i"
+  ],
+  "pivot_unit": "i*(f - 1)*(h - 1)*(b*f - c*e)",
+  "additional_parent_units": {
+    "1468": "a*h - b*g",
+    "5678": "a*e*i - a*e - a*f*h + a*f + a*h - a*i - b*d*i + b*d + b*f*g - b*f - b*g + b*i + c*d*h - c*d - c*e*g + c*e + c*g - c*h - d*h + d*i + e*g - e*i - f*g + f*h"
+  },
+  "equation_terms": [
+    4,
+    40,
+    16,
+    171,
+    112,
+    304,
+    192,
+    105,
+    196
+  ],
+  "role": "DISCOVERY_ONLY; NOT AN ACCEPTANCE CERTIFICATE"
+}

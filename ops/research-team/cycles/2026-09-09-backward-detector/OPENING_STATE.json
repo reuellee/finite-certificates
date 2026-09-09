@@ -1,0 +1,21 @@
+{
+  "schema": "d3-detector-opening-v1",
+  "base": "730fd6c7b6c2c3e8cbbf94ab4da3bc97ba53f095",
+  "ledger": "2/9",
+  "phase": "CANDIDATE_DESIGN_GATE",
+  "geometry_construction_started": false,
+  "proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    11,
+    14
+  ],
+  "recorded_utc": "2026-09-09T02:49:28.348688+00:00"
+}

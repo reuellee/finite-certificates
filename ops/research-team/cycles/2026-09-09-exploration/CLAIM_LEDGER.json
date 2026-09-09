@@ -1,0 +1,30 @@
+{
+  "theorem_score": "2/9",
+  "auxiliary_claims": {
+    "event": {
+      "revision": "dff5dc46744ca6680770b20392139f61bec69ff6",
+      "verdict": "ACCEPT_FINITE_EXACT_AND_MATRIX_LOCAL_GERM",
+      "scope": "Valid in the stated open parent-matrix neighborhood; no normalized-gauge transport asserted",
+      "original_obligations_closed": 0
+    },
+    "topology": {
+      "revision": "b468869778beb404cd2c4f4b5b426115a4c9356b",
+      "verdict": "ACCEPT_TWO_CHORDS_AND_SPECIFIC_NORMALIZED_COMPONENT_ESCAPE",
+      "scope": "Only the ambient triple-bad component containing the certified horizontal interval is proved noncompact",
+      "original_obligations_closed": 0
+    },
+    "coherent": {
+      "revision": "845791277cb0c41eb7b8d6dd7aea892cf135d79c",
+      "verdict": "ACCEPT_FINITE_INSTANCE_AND_INHERITED_MASS_MAP_ARGUMENT",
+      "scope": "Fixed-parent joined witness fiber; section to boundary simplex prevents pair-layer filling only",
+      "original_obligations_closed": 0
+    },
+    "diagonals": {
+      "revision": "efbb652c543dbf05a6ebb947fde5cb4218b07e26",
+      "verdict": "ACCEPT_FINITE_ENDPOINT_HYBRID_OBSTRUCTION",
+      "scope": "One fixed oriented first-five-ray frame; endpoint-coordinate/column hybrid graphs only",
+      "original_obligations_closed": 0
+    }
+  },
+  "authority": "Final independently scoped auxiliary results; no original claim promotion"
+}

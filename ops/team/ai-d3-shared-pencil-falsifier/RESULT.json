@@ -1,0 +1,174 @@
+{
+  "format": "ai-d3-shared-pencil-falsifier-result-v1",
+  "cycle_id": "2026-09-05-ai-only-d3-structural-reset",
+  "stage": "B",
+  "status": "FROZEN_PRODUCER_HANDOFF_PENDING_REFEREE",
+  "base_revision": "ee7c110a0862ec2da961a4b8c9987a0b90e03a0a",
+  "branch": "research/ai-d3-shared-pencil-falsifier-20260905",
+  "owned_surface": "ops/team/ai-d3-shared-pencil-falsifier",
+  "candidate_lemma": "Every simultaneous triple-bad point of a uniform rank-four parent with proper incomparable signatures admits one label and at most two incident triples sufficient for all three Gordan dependences.",
+  "candidate_verdict": "DISPROVED_BY_EXACT_ACTUAL_PARENT_COUNTEREXAMPLE",
+  "actual_parent_counterexample_to_intermediate_lemma": true,
+  "actual_parent_counterexample_to_D3": false,
+  "parent_index_zero_based": 2599,
+  "negative_case": "upper_chart_0_flow",
+  "negative_signatures": [
+    14988895318912,
+    3405195891438080,
+    40418075143643136
+  ],
+  "fixed_cohort": [
+    {
+      "id": "shatter_pattern_0",
+      "status": "POSITIVE_INSTANCE",
+      "search_elapsed_seconds": 10.652223800003412,
+      "full_tope_count_search": 26112
+    },
+    {
+      "id": "upper_chart_7",
+      "status": "INELIGIBLE",
+      "search_elapsed_seconds": 10.651670100000047,
+      "full_tope_count_search": 26112
+    },
+    {
+      "id": "upper_chart_0_flow",
+      "status": "NEGATIVE_POINTWISE_INSTANCE",
+      "search_elapsed_seconds": 11.553753100000904,
+      "full_tope_count_search": 26112
+    }
+  ],
+  "proof_checks": {
+    "all_parent_brackets_checked": 70,
+    "colex_order_preserved": true,
+    "gp_relations_per_signature": 1260,
+    "full_gordan_certificates": 3,
+    "proper_signatures": true,
+    "ordered_incomparability_directions_verified": 6,
+    "restriction_choices_required": 1680,
+    "restriction_choices_verified": 1680,
+    "strict_inequalities_verified": 62160,
+    "integer_separator_pool": 23,
+    "minimum_integer_margin": 162514748513691,
+    "extra_predicate_cases": 0
+  },
+  "admissibility_auxiliary_charts": {
+    "source": "existing upper178 only",
+    "chart_indices": [
+      3,
+      14,
+      2
+    ],
+    "stored_point_indices": [
+      24588,
+      14261,
+      2534
+    ],
+    "shared_pencil_predicate_tested_there": false
+  },
+  "search_independent_verification": {
+    "script": "verify_shared_pencil_certificate.py",
+    "status": "PASS",
+    "producer_imported": false,
+    "enumeration_trusted": false,
+    "lp_or_simplex_used": false,
+    "arithmetic": "Python integers; NumPy reads NPZ only",
+    "elapsed_seconds": 0.560263200000918,
+    "referee_acceptance": "PENDING"
+  },
+  "reproduction": {
+    "python": "C:\\Users\\reuel\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "verification_arguments": [
+      "-B",
+      "ops/team/ai-d3-shared-pencil-falsifier/verify_shared_pencil_certificate.py"
+    ],
+    "search_arguments": [
+      "-B",
+      "ops/team/ai-d3-shared-pencil-falsifier/search_shared_pencil.py"
+    ],
+    "admissibility_arguments": [
+      "-B",
+      "ops/team/ai-d3-shared-pencil-falsifier/bind_admissibility.py"
+    ]
+  },
+  "decision": "RETIRE",
+  "decision_scope": "Only the universal pointwise shared-pencil lemma; D3 and other proper escapes remain open.",
+  "trajectory": "INFORMATIONAL",
+  "theorem_ledger_delta": 0,
+  "named_D3_obligations_closed": [],
+  "opening_vector": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    9,
+    12
+  ],
+  "midpoint_vector": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    9,
+    12
+  ],
+  "closing_vector": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    9,
+    12
+  ],
+  "cycle_wide_streak_counters_modified": false,
+  "resources": {
+    "observed_start_utc": "2026-09-05T14:07:45.8287009Z",
+    "finished_utc": "2026-09-05T14:30:56.659141+00:00",
+    "wall_minutes_upper_bound": 35,
+    "exact_search_seconds_sum": 32.85764700000436,
+    "python_version": "3.12.14",
+    "numpy_version": "2.3.5",
+    "peak_rss_instrumented": false,
+    "new_artifact_bytes_excluding_result": 167170,
+    "paid_external_compute": false,
+    "human_contact": false
+  },
+  "isolation": {
+    "constructor_lane_read": false,
+    "coordinator_discovery_artifacts_read": false,
+    "old_lane_modified": false,
+    "tracked_files_outside_owned_surface_modified": false,
+    "ignored_cache_left": "ai/omreal/__pycache__/DIAG9_GRAPH_exact_topes.cpython-312.pyc",
+    "cache_cleanup_rejection": "Automatic approval review rejected removal: blocked by policy; no more specific reason provided. No retry attempted.",
+    "subsequent_bytecode_writes_disabled": true,
+    "push": false,
+    "merge": false,
+    "canonical_edits": false
+  },
+  "artifact_sha256": {
+    "admissibility_flow.json": "acf71128ca666697bec36436b35ed8bff991a50b8da26b2413cd610631d7ef10",
+    "bind_admissibility.py": "3662e60a02abf92f2fc9271c31611ea37d31586a6b6dc8b1f66603c7edbef949",
+    "FINDINGS.md": "0aae50c46db82d2a4a0a6ee7d1afae4826a8bc1994d20936554644209a4b01df",
+    "search_shared_pencil.py": "9452b1276a510fda61d4b3acd945ffdc6522310e1edaf9b1be7cde67936454e0",
+    "shatter_pattern_0.json": "f758fa2a7d9961e72fd38ba5ef738192f1617b177e54ba4487ea1dd80b6e81a1",
+    "SOURCE_PINS.json": "77b2657dcf5cc8652a844413ef1cfe06070ab7bd5059c492a1dc3f3da3a21bb1",
+    "upper_chart_0_flow.json": "83485ff8bb0a1f8cacffdacbf829cbee5898721b008f8bd54ec2a661ca35e6ab",
+    "upper_chart_7.json": "db1749fadf9944fe6bc955379db4febfd1238f93dd37142306afe86a74c60d74",
+    "VALIDATION.json": "459d819f73bf808e846fea25adb0bb99629244c0c8aab51f80c8d32658ee2b19",
+    "verify_shared_pencil_certificate.py": "a7c66f659c79f3c82bddf0f4af531a395134455371f7a6fb909ee25be1a8e758"
+  }
+}

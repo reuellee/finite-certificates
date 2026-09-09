@@ -1,0 +1,20 @@
+{
+  "opening_revision": "c27a36d6e3f47a2b4c7bb017774cbe5df30abdc2",
+  "canonical_base_revision": "21a97db6aa66912fd37556d81711c0588c454a7d",
+  "source_sha256": {
+    "ops/research-team/cycles/2026-09-09-exploration/CYCLE.md": "47dd4ae2d163d5402cc37416e1615ab33fc1b90ab11fa2ba3e2cd722f5b94f47",
+    "ops/research-team/cycles/2026-09-09-exploration/WORK_ORDERS.yaml": "0028cc1494921cba41bd218e732ce0c84819b5749dc50e1fc8646019ba8c0677",
+    "ops/research-team/cycles/2026-09-09-exploration/SOURCE_MANIFEST.json": "160c78a5c05cd8ffdc7a6d5eb5db6c01ebb30ee90d70705062d6e90ce45351e4",
+    "ai/omreal/data/seeat_parent2599_upper178.npz": "3b90799d26b7783e92c2ac697eaaf8b76d26a787f53205873b997657e114180a",
+    "ops/team/d3-satinj-falsifier/DISCOVERED_EVENT.json": "b3d3e6122d38d46c6f8229a6d400e9fc1b1e461b151d03b26d6a9e803e022d8a",
+    "ops/team/d3-satinj-falsifier/EXACT_REPLAY.json": "a3e7aeee217c41d0fa74443770ee37acb57222ab9eda611a4d59790c962e9dec",
+    "ops/team/d3-detector-falsifier/FINDINGS.md": "28cf339b063eabb95ff1037b92cff63001512f0a6f534eb01ec27bf3b6d7890c",
+    "ops/team/d3-detector-falsifier/ARITHMETIC_REPLAY.json": "a68d577ae1f664cd782630d070f4efdb1f4de911fb254aa66f5267e83b43a3ab",
+    "ops/team/d3-detector-prover/BOUNDARY_DETECTORS.md": "cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3",
+    "ai/omreal/BLOCK_GORDAN_ALL_CODIM_COHERENCE.md": "1ef8ce2a6f96c922e103ea3270230e5619490020af9eadf743ac237aaef7eb2f",
+    "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ops/team/d3-mixed-carrier-topology/THEOREM_MEMO.md": "131ec929171abf633b18e4eefbd1b45ec8aeea97b9d2d1a6f89a73cb205b7f76",
+    "ops/team/d3-mixed-carrier-naturality/NATURALITY_MEMO.md": "a24821526bd0e89a1473e887d60c6e38c9e28f8d65c6a86e7f5e0d3a5d2cdb86",
+    "ops/team/d3-mixed-100-carrier-constructor/THEOREM_ATTEMPT.md": "b2195e1a52600975be9ab2a0b3fb3139ba19242aa08803c96fe58f7b085b27dc"
+  }
+}

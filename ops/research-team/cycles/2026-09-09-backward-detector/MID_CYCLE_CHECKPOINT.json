@@ -1,0 +1,32 @@
+{
+  "schema": "d3-detector-midpoint-v1",
+  "recorded_utc": "2026-09-09T02:52:09.958662+00:00",
+  "trigger": "FIRST_STRUCTURAL_NULL",
+  "discovery_stopped": true,
+  "construction_gate": "NO_GO_GLOBAL_DISCOVERY",
+  "opening_proof_distance": [
+    "2/9",
+    1,
+    [
+      "diag3_pair_hc1",
+      "diag3_triple_hc0"
+    ],
+    7,
+    "UNKNOWN",
+    "UNKNOWN",
+    11,
+    14
+  ],
+  "original_obligations_closed": 0,
+  "minimum_acceptable_decrease_reachable": false,
+  "auxiliary_candidate": "Canonical double-boundary maps tau_i and kappa_i, with exact kernel identity; required injectivity unproved and equivalent to original D.",
+  "falsifier_candidate": "Actual positive witness edges and open triple-bad anchor exclude strictly coordinate-face-natural point contractions and sheaf-level left inverses only.",
+  "remaining": "Original global kappa_i nondegeneracy / comparison and true infinity; no triple Hc0 closure.",
+  "permitted_remaining_work": [
+    "bounded certificate completion",
+    "independent review",
+    "integration",
+    "durable checkpoint"
+  ],
+  "resource_ceiling_increased": false
+}
