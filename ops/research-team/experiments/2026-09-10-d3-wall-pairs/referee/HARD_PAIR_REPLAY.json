@@ -1,0 +1,25 @@
+{
+  "uniform_brackets": 70,
+  "support_ranks": [
+    3,
+    3
+  ],
+  "all_three_row_subsets_independent": true,
+  "union_degrees": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "status": "PASS",
+  "certificate_sha256": "49c390aec46d311710624194571f179f4f554e5eedf5a79e87edab9b8935614c",
+  "scope": "one actual uniform two-factor point; no compact-support cohomology result",
+  "hostile_rejections": [
+    "point"
+  ],
+  "original_obligations_closed": 0
+}

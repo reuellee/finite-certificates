@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "authenticated_files": 157,
+  "clean_independent_checks": [
+    {
+      "check": "referee/verify_opening.py",
+      "exit_code": 0,
+      "seconds": 0.026,
+      "stdout_sha256": "1aaa6e3fca13cdc136db4b0829eff111433899f7d045c1d1587c97c428380ae0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "referee/verify_pair_templates_independent.py",
+      "exit_code": 0,
+      "seconds": 0.044,
+      "stdout_sha256": "ab9558db4b3fb25f97e6eae5965ec953a2174247e2d6b91a337eab887c0530c5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "falsifier/verify_ruled_quadric_cases.py",
+      "exit_code": 0,
+      "seconds": 0.023,
+      "stdout_sha256": "0a127221f8baf6189645aa95fc5a6adea625efd973cd0c92cb0b3bb80424be5a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "referee/verify_hard_orbits_independent.py",
+      "exit_code": 0,
+      "seconds": 1.03,
+      "stdout_sha256": "ccc0fb3ad5ee1a63325ce54c8bc330024d8e4a9eb932150714798d6caf57fdba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "referee/verify_hard_pair_independent.py",
+      "exit_code": 0,
+      "seconds": 0.048,
+      "stdout_sha256": "cc09f40e144fc4b1c17d9ff7e57ea151de1ca502828bd44b8a061bc72f8cc393",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "referee/verify_column_gates_independent.py",
+      "exit_code": 0,
+      "seconds": 0.11,
+      "stdout_sha256": "06ebef8bc69943a170ff2be72ffb1806b6f0e05abfe4b78ec605b01e1eab31e0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "referee/verify_tangent_independent.py",
+      "exit_code": 0,
+      "seconds": 0.057,
+      "stdout_sha256": "184512fcacfb68052d0ea53c5f6cca86e03ecfb747bbcb4d4d5465833d7a26f2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "falsifier/verify_triple_independent.py",
+      "exit_code": 0,
+      "seconds": 1.925,
+      "stdout_sha256": "77823d0d6b41876fa4d732a103b5d5789395d7e6ec7e7e140638ae61b29b2790",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "falsifier/verify_triple_reduction_independent.py",
+      "exit_code": 0,
+      "seconds": 6.385,
+      "stdout_sha256": "1b8a53d690b7ce495d95d18d1b1a6f5310dc59d5d71b43a01285a04bb3fa6dfd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "original_ledger": "2/9",
+  "strong_pair_endpoint": {
+    "total": 9476,
+    "proved": 8902,
+    "remaining": 574
+  },
+  "original_D": "OPEN",
+  "original_triple_Hc0": "OPEN",
+  "scope": "exact certificate replay plus separately recorded deductive audits; no proof-assistant verification"
+}

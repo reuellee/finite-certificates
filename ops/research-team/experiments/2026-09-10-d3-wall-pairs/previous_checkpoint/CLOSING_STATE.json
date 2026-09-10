@@ -1,0 +1,32 @@
+{
+  "classification": "ACCEPT_AUXILIARY_CONSTRUCTIVE_AND_ACTUAL_PARENT_NO_SECTION",
+  "source_revisions": [
+    "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+    "59fec66666518257c585194b81061f60d91f439d"
+  ],
+  "original_ledger_opening": "2/9",
+  "original_ledger_closing": "2/9",
+  "original_injectivity": "OPEN",
+  "original_triple_Hc0": "OPEN",
+  "original_operational_obligations_open": 7,
+  "original_obligations_closed": 0,
+  "pair_coverage": "UNKNOWN",
+  "pair_residual": "UNKNOWN",
+  "triple_source_records_unresolved": 1162302,
+  "source_records_are_not_component_counts": true,
+  "accepted_results": [
+    "exact support6 lift through inherited three-row event",
+    "exact full56-positive crossing fixture",
+    "conditional local minimum-norm continuity lemma in fixed gauge",
+    "new proper realizable signature on actual parent with no local continuous normalized Gordan witness section"
+  ],
+  "independent_verification": {
+    "source_files": 15,
+    "stdlib_checkers": 3,
+    "hostile_controls": 34,
+    "clean_replay": "PASS",
+    "deductive_review": "ACCEPT",
+    "proof_assistant": false
+  },
+  "next_discriminator": "Test a full witness-polytope correspondence or compatible local comparison construction on the two-approach singularity; no further census or cohomological conclusion authorized by this local result alone."
+}

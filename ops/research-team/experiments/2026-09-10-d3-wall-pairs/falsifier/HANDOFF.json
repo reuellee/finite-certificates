@@ -1,0 +1,81 @@
+{
+  "status": "SCOPED_LINEARIZED_COUNTERMODEL_ONLY",
+  "original_obligations_closed": 0,
+  "original_counterexample_found": false,
+  "ledger_change": null,
+  "full_support_sign_patterns": 8,
+  "exact_triples": 56,
+  "noninjective_linearized_maps": 48,
+  "empty_triple_links": 0,
+  "smallest_next_discriminator": "Exact semialgebraic neighborhood/attachment comparison for rank-three five-normal stratum with support 012/345/036/246/147 and relative signs -----/----+/++++-, retaining tangential parent directions; determine whether local pair kernel can survive Hc0 of that stratum.",
+  "dependencies": [
+    "Exact source parent and perturbation certificate, inherited parent validity",
+    "Strict affine Farkas duality",
+    "Hc1 of closed cone equals reduced H0 of its compact link",
+    "Proper acyclic comparison for full normalized Gordan fibers"
+  ],
+  "scope_exclusions": [
+    "No global nonlinear parent topology",
+    "No original Hc1 or Hc0 certificate",
+    "No original antichain certification for selected new relative signs",
+    "No global coverage decrease"
+  ],
+  "files_sha256": {
+    "HARD_PAIR_POINT.json": "49c390aec46d311710624194571f179f4f554e5eedf5a79e87edab9b8935614c",
+    "tangent_audit.py": "753e3cb343492195236b00b9cea6380b92aa49e3d1260cee5403d6a913a88a51",
+    "TANGENT_AUDIT.json": "f21c5a16690bf937ffd02f23982476bf4d2b240eabc091fc6d6dc83da598742a",
+    "cofactor_factors.json": "0303232eae1d81523aaf85b0f6e6f036ba6e34853788fc586382b6df7637280e",
+    "RESIDENCE_AUDIT.md": "9d8b2295541aec42f8dbaa24844076b63ab6b95f303a83c69396e754966e1fff",
+    "hard_pair.py": "4b6b9fe1f97127d1341ae41f74bbc1cfe2011baf0a35213d4edf87aa4c80e58b",
+    "verify_ruled_quadric_cases.py": "16031f8a32b193e7a39199228886c9e30a3bc420f22f6cec9b1df23dbd7f48b9",
+    "verify_triple_reduction_independent.py": "ca03c74646166f50b7c5628c49e6a099494812080efd44bac23f0257bb3d6679",
+    "RULED_QUADRIC_CASES.json": "fe324090ca09eb4d42abe2aa76e113a8bd97a83de682a155255648470ca635d5",
+    "verify_hard_pair_point.py": "bf5273b8e42b97e7bcde178037e1c68954fa301156c58ad43ee170dca612e864",
+    "FINDINGS.md": "7b12e3756a2f91ce0d39469944a39a668e30169ae90b92a6287bd220969ca47a",
+    "explore.py": "21caf7021fd2ab969e38e217c21ccc610561d081ea9b6bbc77ec5afa00f9f7a3",
+    "verify_triple_independent.py": "232406e99844de22f953cf6d94ab264d3b6226d949080e18f78108e9b4e05ea3",
+    "HARD_PAIR_EQUATIONS.json": "ff6c1a6781cd4e0947d7943a2937772c788209b9dfc16998e4d52c5b984379f1",
+    "TRIPLE_AUDIT.md": "ab8696e3747fe682ea27f0cf966a915809d90eceb03f2b45e5d7289f5d9ef4f4",
+    "screen.py": "af7623f671fa2b3e9063fe407023584902cc4ba1514ca1df82e72422a1d5ef50",
+    "TRIPLE_REDUCTION_INDEPENDENT_REPLAY.json": "1b8a53d690b7ce495d95d18d1b1a6f5310dc59d5d71b43a01285a04bb3fa6dfd",
+    "RULED_QUADRIC_AUDIT.md": "64da03953bc6a0617b1f042608aedf473bcebdb238d90832790adc51c73ea9f6",
+    "TRIPLE_INDEPENDENT_REPLAY.json": "77823d0d6b41876fa4d732a103b5d5789395d7e6ec7e7e140638ae61b29b2790"
+  },
+  "source_sha256": "895438a296bf64efe729ea9acaed1185c0285b27e1b66413341db767f0306783",
+  "second_phase": {
+    "residence_quotient": "ACCEPT_WITH_p_SHRIEK_FORMULATION",
+    "hard50_50": "EXACT_NONEMPTY_UNIFORM_3REGULAR_SUPPORT_POINT",
+    "original_wallpair_hc1_counterexample_found": false,
+    "scope": "Light-label lemma audited; hard actual locus certified nonempty, cohomology uncomputed",
+    "smallest_next_discriminator": "Second independent proper residence motion or compact6cycle on certified hard50+50 root-residence component",
+    "source_dependencies": [
+      "Global factor/support equivalence from fixed-unit circuit source identities",
+      "Compact-support direct-image stalk and composition theorems"
+    ]
+  },
+  "ruled_quadric_review": {
+    "status": "ACCEPT_AUXILIARY_49_50_AND_49_51_VANISHING_WITH_SOURCE_DEPENDENCIES",
+    "cases": 16,
+    "quadric_cases": 8,
+    "linear_cases": 8,
+    "review": "RULED_QUADRIC_AUDIT.md",
+    "exceptional_fibers": "Retained as closed convex plane strata; regular interval rulings use genuine parent boundary affine cut",
+    "original_D3": "OPEN"
+  },
+  "triple_independent_review": {
+    "status": "ACCEPT_CONIC_FOLD_AND_SIX_VARIABLE_REDUCTION",
+    "review": "TRIPLE_AUDIT.md",
+    "original_triple_escape": "OPEN",
+    "exact_branch_uniform_brackets": 70,
+    "universal_conic_parent_units": 7,
+    "quadratic_terms": 1951,
+    "discriminant_terms": 4186,
+    "critical_generators_total_terms": 22160,
+    "critical_system_solved": false,
+    "unreviewed_auxiliary_results": [
+      "64-shift torus gate",
+      "573-term rational chart parameter gate",
+      "full canonical orbit attribution beyond pinned source"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "status": "SMOOTH_CONIC_FIXED_BASE_DISCRIMINATOR",
+  "fixed_base": {
+    "a": "7",
+    "b": "-8",
+    "c": "-399/100",
+    "d": "-17/4",
+    "e": "2",
+    "f": "-3"
+  },
+  "conic": "3*(696072*h**2 - 7855535*h*i - 9451068*h + 11465000*i**2 - 83098930*i - 383497152)/160000",
+  "conic_matrix": [
+    [
+      "2088216",
+      "-23566605/2",
+      "-14176602"
+    ],
+    [
+      "-23566605/2",
+      "34395000",
+      "-124648395"
+    ],
+    [
+      "-14176602",
+      "-124648395",
+      "-1150491456"
+    ]
+  ],
+  "conic_matrix_det": "-3893704459004242968750",
+  "rational_uniform_column8": [
+    "458935322/177693661",
+    "-6168314428/177693661",
+    "-1504387688/177693661"
+  ],
+  "parent_break_count": 35,
+  "admissible_parameter_intervals": [
+    [
+      "158695/22698 - 5*sqrt(61680978709)/522054",
+      "5*sqrt(61680978709)/522054 + 158695/22698"
+    ]
+  ],
+  "sampling_warning": "Rootorderuseshighprecisiondiscoveryordering;notanacceptedglobalfibercomponentcertificate",
+  "conclusion": "Nondegenerateconicrulesoutuniformparent-unit-times-linearrepresentationforthisforget8projection."
+}

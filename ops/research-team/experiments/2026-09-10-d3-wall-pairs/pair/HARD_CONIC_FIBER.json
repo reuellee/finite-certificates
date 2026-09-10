@@ -1,0 +1,404 @@
+{
+  "status": "EXACT_ONE_COLUMN_FIBER_COMPONENT",
+  "scope": "hard50+50pair,sevenfixedparentcolumns;notglobalpaircohomology",
+  "fixed_coordinates": {
+    "a": "7",
+    "b": "-8",
+    "c": "-4",
+    "d": "-17/4",
+    "e": "2",
+    "f": "-3"
+  },
+  "conic_equation": "3*(h - 10*i - 32)*(67*h - 115*i + 1196)/16",
+  "parameterization": {
+    "g": "-(1139*t - 10330)/(4*(67*t - 115))",
+    "h": "-23*(67*t + 10)/(67*t - 115)",
+    "i": "(-201*t - 1330)/(67*t - 115)"
+  },
+  "anchor_t": "450/67",
+  "component_interval": [
+    "2710/603",
+    "10790/1407"
+  ],
+  "all_real_parameter_breaks": [
+    "-1330/201",
+    "-1215/268",
+    "-150/67",
+    "-230/201",
+    "-2/3",
+    "-1/4",
+    "-10/67",
+    "-115/1608",
+    "0",
+    "5/21",
+    "510/1273",
+    "10/17",
+    "55/67",
+    "10/9",
+    "1270/871",
+    "30/19",
+    "115/67",
+    "370/201",
+    "2430/1139",
+    "2710/603",
+    "10790/1407",
+    "10330/1139",
+    "10",
+    "1790/67",
+    "3130/67"
+  ],
+  "brackets": [
+    {
+      "labels": "1234",
+      "function": "1",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1235",
+      "function": "1",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1236",
+      "function": "-4",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1237",
+      "function": "-3",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1238",
+      "function": "-(201*t + 1330)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1245",
+      "function": "-1",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1246",
+      "function": "8",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1247",
+      "function": "-2",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1248",
+      "function": "23*(67*t + 10)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1256",
+      "function": "4",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1257",
+      "function": "-5",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1258",
+      "function": "20*(67*t - 55)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1267",
+      "function": "32",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1268",
+      "function": "-4*(1139*t - 2430)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1278",
+      "function": "-1675*(3*t + 2)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1345",
+      "function": "1",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1346",
+      "function": "7",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1347",
+      "function": "-17/4",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1348",
+      "function": "-(1139*t - 10330)/(4*(67*t - 115))",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1356",
+      "function": "11",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1357",
+      "function": "-5/4",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1358",
+      "function": "-5*(67*t - 3130)/(4*(67*t - 115))",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1367",
+      "function": "38",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1368",
+      "function": "2*(1273*t - 510)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1378",
+      "function": "-13400/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1456",
+      "function": "-15",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1457",
+      "function": "25/4",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1458",
+      "function": "-75*(67*t + 150)/(4*(67*t - 115))",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1467",
+      "function": "-20",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1468",
+      "function": "-15*(871*t - 1270)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1478",
+      "function": "1675*(17*t - 10)/(4*(67*t - 115))",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1567",
+      "function": "50",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "1568",
+      "function": "-75*(201*t - 370)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1578",
+      "function": "8375*(t - 10)/(4*(67*t - 115))",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "1678",
+      "function": "-3350*(19*t - 30)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2345",
+      "function": "-1",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2346",
+      "function": "-1",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2347",
+      "function": "-1",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2348",
+      "function": "-1",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2356",
+      "function": "-5",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2357",
+      "function": "-4",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2358",
+      "function": "-(268*t + 1215)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2367",
+      "function": "1",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "2368",
+      "function": "(67*t - 1790)/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2378",
+      "function": "-1675/(67*t - 115)",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2456",
+      "function": "9",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "2457",
+      "function": "-1",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2458",
+      "function": "(1608*t + 115)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "2467",
+      "function": "-10",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2468",
+      "function": "5*(201*t + 230)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "2478",
+      "function": "1675*t/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "2567",
+      "function": "-41",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "2568",
+      "function": "28*(201*t - 370)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "2578",
+      "function": "1675*(4*t + 1)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "2678",
+      "function": "-1675*(t - 10)/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "3456",
+      "function": "6",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "3457",
+      "function": "-21/4",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "3458",
+      "function": "-(1407*t - 10790)/(4*(67*t - 115))",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "3467",
+      "function": "-45/4",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "3468",
+      "function": "-5*(603*t - 2710)/(4*(67*t - 115))",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "3478",
+      "function": "8375/(4*(67*t - 115))",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "3567",
+      "function": "-201/4",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "3568",
+      "function": "-67*(201*t - 370)/(4*(67*t - 115))",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "3578",
+      "function": "68675/(4*(67*t - 115))",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "3678",
+      "function": "16750/(67*t - 115)",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "4567",
+      "function": "165/4",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "4568",
+      "function": "255*(201*t - 370)/(4*(67*t - 115))",
+      "anchor_sign": 1
+    },
+    {
+      "labels": "4578",
+      "function": "-1675*(21*t - 5)/(4*(67*t - 115))",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "4678",
+      "function": "-8375*(9*t - 10)/(4*(67*t - 115))",
+      "anchor_sign": -1
+    },
+    {
+      "labels": "5678",
+      "function": "-1675*(201*t - 370)/(4*(67*t - 115))",
+      "anchor_sign": -1
+    }
+  ],
+  "component_Hc1": "Z",
+  "interpretation": "Afullfibercomponentisopeninterval,soonecolumnforgettinghasnonzeroHc1stalk;currentzeroHc1fibertemplatecannotextend."
+}

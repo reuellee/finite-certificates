@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "conic_degree": 2,
+  "conic_determinant_unit_factors": [
+    {
+      "factor": "b",
+      "identity": {
+        "bracket": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "sign": -1
+      }
+    },
+    {
+      "factor": "f",
+      "identity": {
+        "bracket": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "sign": 1
+      }
+    },
+    {
+      "factor": "b - e",
+      "identity": {
+        "bracket": [
+          2,
+          4,
+          6,
+          7
+        ],
+        "sign": 1
+      }
+    },
+    {
+      "factor": "e - f",
+      "identity": {
+        "bracket": [
+          1,
+          2,
+          5,
+          7
+        ],
+        "sign": -1
+      }
+    },
+    {
+      "factor": "f - 1",
+      "identity": {
+        "bracket": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "sign": 1
+      }
+    },
+    {
+      "factor": "h - 1",
+      "identity": {
+        "bracket": [
+          2,
+          4,
+          5,
+          8
+        ],
+        "sign": -1
+      }
+    },
+    {
+      "factor": "d*h - d - e*g + e + g - h",
+      "identity": {
+        "bracket": [
+          4,
+          5,
+          7,
+          8
+        ],
+        "sign": -1
+      }
+    }
+  ],
+  "quadratic_terms": 1951,
+  "quadratic_total_degree": 14,
+  "discriminant_terms": 4186,
+  "discriminant_total_degree": 18,
+  "critical_variables": [
+    "b",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i"
+  ],
+  "critical_height": "b",
+  "critical_equations": [
+    "R",
+    "dR/de",
+    "dR/df",
+    "dR/dg",
+    "dR/dh",
+    "dR/di"
+  ],
+  "critical_term_counts": [
+    4186,
+    3014,
+    3961,
+    3347,
+    3616,
+    4036
+  ],
+  "identities_verified": [
+    "4det(conic)=parent_unit_product",
+    "unit d graph",
+    "unit c graph",
+    "quadratic pullback",
+    "discriminant=unit\u00b2R",
+    "double-root identity",
+    "critical derivative identity"
+  ],
+  "scope": "Exact all-parent presentation and compactness reduction for canonical triple (5563,4373,23221); its critical system remains undecided."
+}
