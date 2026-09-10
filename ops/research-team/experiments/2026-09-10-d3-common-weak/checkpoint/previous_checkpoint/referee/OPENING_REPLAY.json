@@ -1,0 +1,26 @@
+{
+  "rank": 2,
+  "normalized_weights": [
+    "14/29",
+    "2595/11687",
+    "3450/11687"
+  ],
+  "all70_parent_signs": true,
+  "all56_signed_normals_reconstructed": true,
+  "normal_convention": "raw cofactors, colex triples; bit1 positive",
+  "all_three_support_pairs_rank_two": true,
+  "near_singular_exact_rank": 3,
+  "near_singular_minor": "-8463/312500000",
+  "hostile_controls": {
+    "altered_positive_weight": true,
+    "duplicate_support": true,
+    "supported_signature_bit_flip": true,
+    "zero_weight_vector": true,
+    "near_singular_relation": true,
+    "near_singular_rank": true,
+    "wrong_parent_chamber": true,
+    "altered_expected_parent_sign": true,
+    "floating_input": true
+  },
+  "scope": "finite literal inherited fixtures only; no global cohomology map"
+}

@@ -1,0 +1,82 @@
+{
+  "status": "PASS_INDEPENDENT_EXACT_POINT_AND_CONIC",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "original_factor_ids": [
+    5563,
+    16134,
+    19284
+  ],
+  "canonical_row": [
+    5563,
+    4373,
+    23221
+  ],
+  "irreducible_quartic": true,
+  "exact_sturm_root_count": 1,
+  "all70_reconstructed_brackets_nonzero": true,
+  "all70_recorded_bracket_functions_match": true,
+  "all3_original_factor_equations_zero": true,
+  "projection_abc_minor_zero": true,
+  "projection_acd_minor_zero": true,
+  "smoothness_ahi_minor_nonzero": true,
+  "height_b_critical": false,
+  "nonzero_quadratic_A": true,
+  "quadratic_double_root": true,
+  "simple_discriminant_h_zero": true,
+  "conic_determinant_parent_unit_identity": true,
+  "all7_conic_unit_identities": true,
+  "q0_d_unit_graph": true,
+  "q2_c_unit_graph": true,
+  "q2_line_in_a_c": true,
+  "graph_unit_identities": [
+    {
+      "factor": "i",
+      "identity": {
+        "bracket": [
+          1,
+          2,
+          3,
+          8
+        ],
+        "sign": 1
+      }
+    },
+    {
+      "factor": "g",
+      "identity": {
+        "bracket": [
+          1,
+          3,
+          4,
+          8
+        ],
+        "sign": 1
+      }
+    },
+    {
+      "factor": "d - e",
+      "identity": {
+        "bracket": [
+          1,
+          4,
+          5,
+          7
+        ],
+        "sign": -1
+      }
+    },
+    {
+      "factor": "h - 1",
+      "identity": {
+        "bracket": [
+          2,
+          4,
+          5,
+          8
+        ],
+        "sign": -1
+      }
+    }
+  ],
+  "scope": "Exact uniform branch point and universal conic identity for one named triple; no compact component or original counterexample; generic1951/4186term reduction audited separately if recorded."
+}

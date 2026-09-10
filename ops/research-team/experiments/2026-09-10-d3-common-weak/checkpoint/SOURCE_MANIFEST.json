@@ -1,0 +1,195 @@
+{
+  "repository": "reuellee/finite-certificates",
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "files": [
+    {
+      "path": "inputs/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "remote_path": "ai/omreal/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "git_blob_sha": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 16265,
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+      "git_blob": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85"
+    },
+    {
+      "path": "inputs/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+      "remote_path": "ai/omreal/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+      "git_blob_sha": "f59a8757d18b004333876c77d29831dd7e8ce8f2",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 13943,
+      "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+      "git_blob": "f59a8757d18b004333876c77d29831dd7e8ce8f2"
+    },
+    {
+      "path": "inputs/DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md",
+      "remote_path": "ai/omreal/DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md",
+      "git_blob_sha": "f1d946f85cdd9cfe6498e9b6ec8a53b149f4b344",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 9043,
+      "sha256": "f1840298c34725ccd46e1cee1762664757d644d4f3f5ddaed4aef1f283083211",
+      "git_blob": "f1d946f85cdd9cfe6498e9b6ec8a53b149f4b344"
+    },
+    {
+      "path": "inputs/DOUBLE_CONTRACTION_FIBERS.md",
+      "remote_path": "ai/omreal/DOUBLE_CONTRACTION_FIBERS.md",
+      "git_blob_sha": "a5003382eeeb50f396a78f32486f210dd6d6737f",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 8135,
+      "sha256": "63e224fbc0ca4ceaf0285f38ea7e1e7eee54e8c74c836dd27c3dd5504ba4e5b7",
+      "git_blob": "a5003382eeeb50f396a78f32486f210dd6d6737f"
+    },
+    {
+      "path": "inputs/ATLAS_HELLY.md",
+      "remote_path": "ai/omreal/ATLAS_HELLY.md",
+      "git_blob_sha": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 171509,
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "git_blob": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64"
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_FACTOR_REDUCTION.md",
+      "remote_path": "ai/omreal/DIAG3_TRIPLE_FACTOR_REDUCTION.md",
+      "git_blob_sha": "4465b4be51197a362e5c765f6a26aa4a78323aac",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 17169,
+      "sha256": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+      "git_blob": "4465b4be51197a362e5c765f6a26aa4a78323aac"
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md",
+      "remote_path": "ai/omreal/DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md",
+      "git_blob_sha": "4179139f89a15ea9018be5a2af8c207ffb26cabb",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 21608,
+      "sha256": "03615d52efec5a7abf66d8e78aff19deab8b74736f707598daada8d45b9d85dc",
+      "git_blob": "4179139f89a15ea9018be5a2af8c207ffb26cabb"
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md",
+      "remote_path": "ai/omreal/DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md",
+      "git_blob_sha": "8a0e8c58018f71e5e66eb47f03088854e33990f4",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 2616,
+      "sha256": "d8ebb65e2c99103135fa227f27ca6b1396db38a70cd68787f98cf40adef99fc7",
+      "git_blob": "8a0e8c58018f71e5e66eb47f03088854e33990f4"
+    },
+    {
+      "path": "inputs/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
+      "remote_path": "ai/omreal/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
+      "git_blob_sha": "93957012f6cb12d6c8245eeef0d2995cb0314b5c",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 5619,
+      "sha256": "df302c4753e8f10b3fa9ec59099bf9f521f62797c7326d8303f80497e9838f19",
+      "git_blob": "93957012f6cb12d6c8245eeef0d2995cb0314b5c"
+    },
+    {
+      "path": "inputs/DIAG3_triple_fullspace_critical_h1.json",
+      "remote_path": "ai/omreal/data/DIAG3_triple_fullspace_critical_h1.json",
+      "git_blob_sha": "2d0374242d4b7c94172c3b9718bfe9b089e735f0",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 364486,
+      "sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+      "git_blob": "2d0374242d4b7c94172c3b9718bfe9b089e735f0"
+    },
+    {
+      "path": "inputs/TRIPLE_SATURATION_CYCLE_REPORT.md",
+      "remote_path": "ops/research-team/cycles/2026-09-02-d3-triple-critical-saturation-component-gate1/CYCLE_REPORT.md",
+      "git_blob_sha": "3a02b23c39ac1a3699f3fb1194ca2381796b8cae",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 9584,
+      "sha256": "89daf49e419b23bcdf91830c883a8ba381c226da2a366ef894c64cb3465073d6",
+      "git_blob": "3a02b23c39ac1a3699f3fb1194ca2381796b8cae"
+    },
+    {
+      "path": "inputs/DIAG3_PAIR_DIFFERENTIAL_ENDS.md",
+      "remote_path": "ai/omreal/DIAG3_PAIR_DIFFERENTIAL_ENDS.md",
+      "git_blob_sha": "179128bd49aa74e360e49ce77e2a6c8dd1fdc733",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 16684,
+      "sha256": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+      "git_blob": "179128bd49aa74e360e49ce77e2a6c8dd1fdc733"
+    },
+    {
+      "path": "inputs/BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md",
+      "remote_path": "ai/omreal/BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md",
+      "git_blob_sha": "df3505e893e6f989caa575a142386b401d652cf2",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 9599,
+      "sha256": "f0326930b473ff9e1c07c6dc69e332de28cbb3d178b7d3b5b526c451d1234f98",
+      "git_blob": "df3505e893e6f989caa575a142386b401d652cf2"
+    },
+    {
+      "path": "inputs/CRITICAL_NUMERICAL_DISCOVERY.json",
+      "remote_path": "ops/team/d3-real-global-prover/CRITICAL_NUMERICAL_DISCOVERY.json",
+      "git_blob_sha": "036119cd640a560e60b8370ee1e6f0d4dd4bde06",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 65860,
+      "sha256": "c5e1d38e03df4a896090034ee5f136d4eccf549dd9b617dfbd4e44aaf2b60f15",
+      "git_blob": "036119cd640a560e60b8370ee1e6f0d4dd4bde06"
+    },
+    {
+      "path": "inputs/RESIDUAL_STRATUM_NONCOMPACTNESS.md",
+      "remote_path": "ai/omreal/RESIDUAL_STRATUM_NONCOMPACTNESS.md",
+      "git_blob_sha": "eca17f8f3ebdc2c7e9d9760a3982985761f12b2a",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 14861,
+      "sha256": "dd1322f85c601a2ee91600c91d3b103536ae614041f20f30e7c7f5c8522ad569",
+      "git_blob": "eca17f8f3ebdc2c7e9d9760a3982985761f12b2a"
+    },
+    {
+      "path": "inputs/verify_derived_wall_sides.py",
+      "remote_path": "ai/omreal/verify_derived_wall_sides.py",
+      "git_blob_sha": "2bb7c36fda6c1ac955c3e0c6cdec9e834fe23759",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 7223,
+      "sha256": "2083aabf1ecd6cba64dc17638d561bf8858a01df3a3f65575433600d38bc78de",
+      "git_blob": "2bb7c36fda6c1ac955c3e0c6cdec9e834fe23759"
+    },
+    {
+      "path": "inputs/verify_diag3_pair_factor_occurrence_h1.py",
+      "remote_path": "ai/omreal/verify_diag3_pair_factor_occurrence_h1.py",
+      "git_blob_sha": "19e38b8b0bbff7340d925af70ac620dd7374c3a7",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 13880,
+      "sha256": "346b26e48fe3265a6ccf5270fd6576070017db6d46e6978855adbbfa8f643c75",
+      "git_blob": "19e38b8b0bbff7340d925af70ac620dd7374c3a7"
+    },
+    {
+      "path": "inputs/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md",
+      "remote_path": "ai/omreal/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md",
+      "git_blob_sha": "88f8a6a6e241242c01254554cda6206b70f3bfde",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 18861,
+      "sha256": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+      "git_blob": "88f8a6a6e241242c01254554cda6206b70f3bfde"
+    },
+    {
+      "path": "inputs/verify_derived_walls.py",
+      "remote_path": "ai/omreal/verify_derived_walls.py",
+      "git_blob_sha": "a73ca1df79a0ecb106e487ace6a4a48355214855",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 9950,
+      "sha256": "a7d8ae49f83cc54e21d5107f72be5e8e36ad6890b8cab56cd9dfefcef9acfd59",
+      "git_blob": "a73ca1df79a0ecb106e487ace6a4a48355214855"
+    },
+    {
+      "path": "inputs/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py",
+      "remote_path": "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py",
+      "git_blob_sha": "1d5c1608083fa67a3e739f47f3546e194b864556",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 35449,
+      "sha256": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+      "git_blob": "1d5c1608083fa67a3e739f47f3546e194b864556"
+    },
+    {
+      "path": "inputs/DIAG2_PIVOT_LABELED_PAIR_THEOREM.md",
+      "remote_path": "ai/omreal/DIAG2_PIVOT_LABELED_PAIR_THEOREM.md",
+      "git_blob_sha": "afb45cd8d93fbab3bc3baecae40ab40c27c37df4",
+      "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+      "bytes": 12189,
+      "sha256": "5e7e7c4e3d717d10cbcdbc21b9e0d8ef469ee376705eb8d01dafe2c174ab94d6",
+      "git_blob": "afb45cd8d93fbab3bc3baecae40ab40c27c37df4"
+    }
+  ]
+}

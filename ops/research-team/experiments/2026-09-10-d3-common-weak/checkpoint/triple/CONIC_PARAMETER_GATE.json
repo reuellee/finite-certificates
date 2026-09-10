@@ -1,0 +1,17 @@
+{
+  "status": "exact_symbolic_gate",
+  "parameter": "t=bf-ce, a parent bracket unit",
+  "term_count": 573,
+  "total_degree": 11,
+  "coordinate_degrees": {
+    "t": 2,
+    "b": 4,
+    "e": 4,
+    "f": 4,
+    "g": 2,
+    "h": 2,
+    "i": 3
+  },
+  "affine_variables": [],
+  "scope": "Named hardcanary rational conic chart only; no global escape follows if no affine variable exists."
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "original_factor_ids": [
+    5563,
+    16134,
+    19284
+  ],
+  "canonical_row": [
+    5563,
+    4373,
+    23221
+  ],
+  "exact_real_roots_in_interval": 1,
+  "uniform_parent_brackets": 70,
+  "projection_abc_minor_zero": true,
+  "full_rank_minor_columns": [
+    "a",
+    "h",
+    "i"
+  ],
+  "height_b_critical": false,
+  "double_root_nonzero_quadratic_coefficient": true,
+  "simple_discriminant_h_root": true,
+  "scope": "One exact uniform fold, not a compact component or a universal escape proof.",
+  "rejected_corruptions": [
+    "polynomial",
+    "coordinate",
+    "interval"
+  ]
+}

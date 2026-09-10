@@ -1,0 +1,15 @@
+{
+  "base_revision": "499f1190d988be5729b38db59e6cc8230fae7857",
+  "main": "9e77c365b266e9d884e6ac14a0443992bec92c64",
+  "mathematical_source": "59fec66666518257c585194b81061f60d91f439d",
+  "ledger": "2/9",
+  "pair_injectivity": "OPEN",
+  "triple_bad_Hc0": "OPEN",
+  "strong_pairwall_coverage": {
+    "proved": 8902,
+    "total": 9476,
+    "remaining": 574
+  },
+  "triple_source_records_unresolved": 1162302,
+  "verified_checkpoint_files": 157
+}

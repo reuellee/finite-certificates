@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "parent_brackets_per_matrix": 70,
+  "signed_normals_per_signature": 56,
+  "actual_signatures": 3,
+  "positive_center_circuits": 3,
+  "weak_primal_ray_rank": 3,
+  "exclusive_feasibility_anchors": 3,
+  "cross_badness_checks": 6,
+  "support_union_degrees": [
+    4,
+    6,
+    4,
+    5,
+    5,
+    3,
+    3,
+    3
+  ],
+  "scope": "Actual proper incomparable triple defeats automatic common weak primal, light-label choice, and this fixed-three-weak-point height deformation. It is not a compactness or D3 counterexample.",
+  "unique_full_witness_polytopes": 3,
+  "minimum_union_label_degree": 3,
+  "multiweak_height_equation_rank": 7,
+  "multiweak_height_kernel_dimension": 1,
+  "multiweak_height_kernel": "only the global projective height scale",
+  "hostile_mutations_rejected": 3,
+  "input_sha256": "9868a9998a201310a67fe9a2b211bbb4011629f67f921de86b6628946aafe97f"
+}

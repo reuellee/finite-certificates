@@ -1,0 +1,22 @@
+{
+  "status": "PASS_INDEPENDENT_SYLVESTER_AND_DISCRIMINANT",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "stored_data_sha256": "bc13c4ed0423694fc1b48f3d43ab303f3b75a777ac5b24394074243f17f56b41",
+  "d_graph_exact": true,
+  "c_graph_exact": true,
+  "resultant_matches_quadratic_up_to_sign": true,
+  "quadratic_terms": 1951,
+  "quadratic_total_degree": 14,
+  "discriminant_parent_unit_square_identity": true,
+  "discriminant_terms": 4186,
+  "discriminant_total_degree": 18,
+  "critical_generator_terms": [
+    4186,
+    3014,
+    3961,
+    3347,
+    3616,
+    4036
+  ],
+  "scope": "Exact algebraic reduction for one original triple; no saturation, real emptiness, or compact-component certificate"
+}

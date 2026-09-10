@@ -1,0 +1,92 @@
+{
+  "role": "triple",
+  "status": "scoped_exact_structure_and_reduction; original_obligation_open",
+  "original_ledger": "2/9",
+  "source_orbits_closed": 0,
+  "canonical_row": [
+    5563,
+    4373,
+    23221
+  ],
+  "named_presentation": [
+    5563,
+    16134,
+    19284
+  ],
+  "claims": [
+    {
+      "id": "T-CONIC-UNIT",
+      "status": "producer_exact_pass_pending_independent_review",
+      "scope": "Every uniform parent cell for the named factor presentation",
+      "claim": "q2 is a nonsingular projective conic in(a,c); determinant is a product of parent bracket units."
+    },
+    {
+      "id": "T-DISCRIMINANT-REDUCTION",
+      "status": "producer_exact_identities_pass_pending_independent_deductive_review",
+      "scope": "One canonical triple over all parent cells",
+      "claim": "A compact component would produce a localized solution R=Re=Rf=Rg=Rh=Ri=0 in6variables; singular points retained and entire quadratic degree-drop excluded by conic unit."
+    },
+    {
+      "id": "T-UNIFORM-FOLD",
+      "status": "producer_exact_pass_pending_independent_review",
+      "scope": "One exact algebraic uniform original parent point",
+      "claim": "Projection forgetting(a,b,c) folds; b is noncritical. Not a compact component."
+    },
+    {
+      "id": "T-CONIC-TORUS-64",
+      "status": "exact_rank_rejection",
+      "scope": "64 transformed-coordinate systems on one canonical triple",
+      "claim": "No nonzero diagonal scaling in conic parameter t=bf-ce with independent0/1 base shifts."
+    }
+  ],
+  "delivered": [
+    "FINDINGS.md",
+    "HANDOFF.json",
+    "UNIFORM_BRANCH.json",
+    "verify_uniform_branch.py",
+    "EXACT_BRANCH_REPLAY.json",
+    "HEIGHT_DISCRIMINANT_SYSTEM.json",
+    "verify_conic_reduction.py",
+    "CONIC_REDUCTION_REPLAY.json",
+    "CONIC_PARAMETER_GATE.json",
+    "CONIC_TORUS_GATE.json"
+  ],
+  "proof_dependencies": [
+    "Original factor identification from pinned source",
+    "All70 parent brackets nonzero",
+    "Implicit function theorem at Pa nonzero",
+    "Lagrange condition at smooth extrema and inclusion of singular points",
+    "Nonsingular projective conic contains no line",
+    "Source nested support-drop reduction required to infer original triple-bad statement after all factor triples covered"
+  ],
+  "next_discriminator": {
+    "variables": [
+      "b",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ],
+    "equations": [
+      "R",
+      "R_e",
+      "R_f",
+      "R_g",
+      "R_h",
+      "R_i"
+    ],
+    "localization": "A and all70 parent brackets after reconstructing a=-B/(2A), d=(b(i-f)+fg)/i, c=-q3(c=0)/(d q3/dc)",
+    "scope": "Can close this canonical orbit only; no all-residue claim"
+  },
+  "source_sha256": {
+    "DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "ATLAS_HELLY.md": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+    "DIAG3_TRIPLE_FACTOR_REDUCTION.md": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+    "DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md": "03615d52efec5a7abf66d8e78aff19deab8b74736f707598daada8d45b9d85dc",
+    "DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md": "d8ebb65e2c99103135fa227f27ca6b1396db38a70cd68787f98cf40adef99fc7",
+    "DIAG3_triple_fullspace_critical_h1.json": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "CRITICAL_NUMERICAL_DISCOVERY.json": "c5e1d38e03df4a896090034ee5f136d4eccf549dd9b617dfbd4e44aaf2b60f15",
+    "DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md": "f1840298c34725ccd46e1cee1762664757d644d4f3f5ddaed4aef1f283083211"
+  }
+}

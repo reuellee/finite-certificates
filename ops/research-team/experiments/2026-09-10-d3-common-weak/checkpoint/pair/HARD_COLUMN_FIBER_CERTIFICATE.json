@@ -1,0 +1,449 @@
+{
+  "status": "PASS_EXACT_FULL_COLUMN_FIBER",
+  "scope": "Fixed seven parent columns in the actual hard 50+50 case",
+  "parametrization": {
+    "g": "-5*i/4-8",
+    "h": "(115*i-1196)/67",
+    "i": "i"
+  },
+  "interval": [
+    "-12",
+    "-36/5"
+  ],
+  "endwalls": {
+    "lower": [
+      "3468"
+    ],
+    "upper": [
+      "3458"
+    ]
+  },
+  "all_parent_brackets": [
+    {
+      "bracket": "1234",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "1235",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "1236",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "4"
+    },
+    {
+      "bracket": "1237",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "3"
+    },
+    {
+      "bracket": "1238",
+      "anchor_sign": -1,
+      "signed_slope": "-1",
+      "signed_intercept": "0"
+    },
+    {
+      "bracket": "1245",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "1246",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "8"
+    },
+    {
+      "bracket": "1247",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "2"
+    },
+    {
+      "bracket": "1248",
+      "anchor_sign": 1,
+      "signed_slope": "-115/67",
+      "signed_intercept": "1196/67"
+    },
+    {
+      "bracket": "1256",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "4"
+    },
+    {
+      "bracket": "1257",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "5"
+    },
+    {
+      "bracket": "1258",
+      "anchor_sign": 1,
+      "signed_slope": "-48/67",
+      "signed_intercept": "1196/67"
+    },
+    {
+      "bracket": "1267",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "32"
+    },
+    {
+      "bracket": "1268",
+      "anchor_sign": -1,
+      "signed_slope": "76/67",
+      "signed_intercept": "4784/67"
+    },
+    {
+      "bracket": "1278",
+      "anchor_sign": -1,
+      "signed_slope": "-479/67",
+      "signed_intercept": "3588/67"
+    },
+    {
+      "bracket": "1345",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "1346",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "7"
+    },
+    {
+      "bracket": "1347",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "17/4"
+    },
+    {
+      "bracket": "1348",
+      "anchor_sign": 1,
+      "signed_slope": "-5/4",
+      "signed_intercept": "-8"
+    },
+    {
+      "bracket": "1356",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "11"
+    },
+    {
+      "bracket": "1357",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "5/4"
+    },
+    {
+      "bracket": "1358",
+      "anchor_sign": 1,
+      "signed_slope": "-9/4",
+      "signed_intercept": "-8"
+    },
+    {
+      "bracket": "1367",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "38"
+    },
+    {
+      "bracket": "1368",
+      "anchor_sign": 1,
+      "signed_slope": "-2",
+      "signed_intercept": "32"
+    },
+    {
+      "bracket": "1378",
+      "anchor_sign": -1,
+      "signed_slope": "-8",
+      "signed_intercept": "-24"
+    },
+    {
+      "bracket": "1456",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "15"
+    },
+    {
+      "bracket": "1457",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "25/4"
+    },
+    {
+      "bracket": "1458",
+      "anchor_sign": -1,
+      "signed_slope": "-795/268",
+      "signed_intercept": "660/67"
+    },
+    {
+      "bracket": "1467",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "20"
+    },
+    {
+      "bracket": "1468",
+      "anchor_sign": -1,
+      "signed_slope": "-135/67",
+      "signed_intercept": "12660/67"
+    },
+    {
+      "bracket": "1478",
+      "anchor_sign": 1,
+      "signed_slope": "-1285/268",
+      "signed_intercept": "6155/67"
+    },
+    {
+      "bracket": "1567",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "50"
+    },
+    {
+      "bracket": "1568",
+      "anchor_sign": -1,
+      "signed_slope": "75/67",
+      "signed_intercept": "15300/67"
+    },
+    {
+      "bracket": "1578",
+      "anchor_sign": -1,
+      "signed_slope": "-2775/268",
+      "signed_intercept": "-4175/67"
+    },
+    {
+      "bracket": "1678",
+      "anchor_sign": -1,
+      "signed_slope": "-350/67",
+      "signed_intercept": "62600/67"
+    },
+    {
+      "bracket": "2345",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "2346",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "2347",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "2348",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "2356",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "5"
+    },
+    {
+      "bracket": "2357",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "4"
+    },
+    {
+      "bracket": "2358",
+      "anchor_sign": -1,
+      "signed_slope": "-1",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "2367",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "2368",
+      "anchor_sign": -1,
+      "signed_slope": "-1",
+      "signed_intercept": "-4"
+    },
+    {
+      "bracket": "2378",
+      "anchor_sign": -1,
+      "signed_slope": "-1",
+      "signed_intercept": "-3"
+    },
+    {
+      "bracket": "2456",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "9"
+    },
+    {
+      "bracket": "2457",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "1"
+    },
+    {
+      "bracket": "2458",
+      "anchor_sign": 1,
+      "signed_slope": "-115/67",
+      "signed_intercept": "1263/67"
+    },
+    {
+      "bracket": "2467",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "10"
+    },
+    {
+      "bracket": "2468",
+      "anchor_sign": 1,
+      "signed_slope": "-115/67",
+      "signed_intercept": "660/67"
+    },
+    {
+      "bracket": "2478",
+      "anchor_sign": 1,
+      "signed_slope": "-115/67",
+      "signed_intercept": "1330/67"
+    },
+    {
+      "bracket": "2567",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "41"
+    },
+    {
+      "bracket": "2568",
+      "anchor_sign": 1,
+      "signed_slope": "28/67",
+      "signed_intercept": "5712/67"
+    },
+    {
+      "bracket": "2578",
+      "anchor_sign": 1,
+      "signed_slope": "-527/67",
+      "signed_intercept": "5119/67"
+    },
+    {
+      "bracket": "2678",
+      "anchor_sign": 1,
+      "signed_slope": "-555/67",
+      "signed_intercept": "-3340/67"
+    },
+    {
+      "bracket": "3456",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "6"
+    },
+    {
+      "bracket": "3457",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "21/4"
+    },
+    {
+      "bracket": "3458",
+      "anchor_sign": 1,
+      "signed_slope": "-5/4",
+      "signed_intercept": "-9"
+    },
+    {
+      "bracket": "3467",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "45/4"
+    },
+    {
+      "bracket": "3468",
+      "anchor_sign": -1,
+      "signed_slope": "5/4",
+      "signed_intercept": "15"
+    },
+    {
+      "bracket": "3478",
+      "anchor_sign": 1,
+      "signed_slope": "-5/4",
+      "signed_intercept": "-15/4"
+    },
+    {
+      "bracket": "3567",
+      "anchor_sign": -1,
+      "signed_slope": "0",
+      "signed_intercept": "201/4"
+    },
+    {
+      "bracket": "3568",
+      "anchor_sign": -1,
+      "signed_slope": "1/4",
+      "signed_intercept": "51"
+    },
+    {
+      "bracket": "3578",
+      "anchor_sign": 1,
+      "signed_slope": "-41/4",
+      "signed_intercept": "-123/4"
+    },
+    {
+      "bracket": "3678",
+      "anchor_sign": 1,
+      "signed_slope": "-10",
+      "signed_intercept": "-30"
+    },
+    {
+      "bracket": "4567",
+      "anchor_sign": 1,
+      "signed_slope": "0",
+      "signed_intercept": "165/4"
+    },
+    {
+      "bracket": "4568",
+      "anchor_sign": 1,
+      "signed_slope": "255/268",
+      "signed_intercept": "13005/67"
+    },
+    {
+      "bracket": "4578",
+      "anchor_sign": -1,
+      "signed_slope": "-520/67",
+      "signed_intercept": "28935/268"
+    },
+    {
+      "bracket": "4678",
+      "anchor_sign": -1,
+      "signed_slope": "-1825/268",
+      "signed_intercept": "17475/67"
+    },
+    {
+      "bracket": "5678",
+      "anchor_sign": -1,
+      "signed_slope": "25/4",
+      "signed_intercept": "1275"
+    }
+  ],
+  "excluded_factor": "h-10*i-32 = [2678]",
+  "remaining_factor": "67*h-115*i+1196",
+  "fiber_Hc0": "0",
+  "fiber_Hc1": "Z",
+  "global_pair_Hc1": "NOT_COMPUTED",
+  "meaning": "The one-column forgetting map has a nonzero R1 f! stalk; the zero-Hc1 fiber template cannot extend unchanged."
+}

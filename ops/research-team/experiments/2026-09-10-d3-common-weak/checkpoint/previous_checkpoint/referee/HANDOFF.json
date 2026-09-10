@@ -1,0 +1,34 @@
+{
+  "classification": "ACCEPT_AUXILIARY_CONSTRUCTIVE_AND_ACTUAL_NO_SECTION_RESULTS",
+  "source_sha256": {
+    "constructive/CONTINUATION_CERTIFICATE.json": "27d1a72a3e6a8a8731e64466c41fab5258b50fda1a756ac18c9b80e7e70aa751",
+    "constructive/FINDINGS.md": "0681d84c0d0df8de963d563668379ff79bb5e90f5f4f29823db96fefb14d120f",
+    "constructive/verify_constructive.py": "291f065995a76339648a8591840856f5757dd07c66f6047b2c13f882850b2ed8",
+    "constructive/HANDOFF.json": "6288c2847a391cfa662cdb4590224750d6339ab1d72dc80acd9c55246e73d3c8",
+    "falsifier/candidate.json": "3d89c3619c211f2aa2b2068f4c12c6cefafc2ea1b5333228b0a89003718b0320",
+    "falsifier/certificate.json": "895438a296bf64efe729ea9acaed1185c0285b27e1b66413341db767f0306783",
+    "falsifier/certify.py": "7b6a9ec86fe829beb8aa6004a8d5353b494c9165d30d5e540133905301853abb",
+    "falsifier/FINDINGS.md": "2ce49902e90d07bf12910133b767cd209f43d80b9e3ab38e987c6705882784c0",
+    "falsifier/HANDOFF.json": "0eac7882dd540c10459496095bac774dbaa4a8d3e63c942d89a80a1f069be32d"
+  },
+  "independent_replay_commands": [
+    "python -B referee/verify_opening.py",
+    "python -B referee/verify_constructive_independent.py",
+    "python -B referee/verify_falsifier_independent.py"
+  ],
+  "hostile_checks": 34,
+  "original_obligations_closed": 0,
+  "ledger": "2/9",
+  "report": "referee/FINAL_REVIEW.md",
+  "producer_acceptance_imported": false,
+  "coordinator_surface_review": {
+    "REPORT_DRAFT.md": {
+      "sha256": "a66786d7436576d171c8eb39536681031cd03c16ae04b43db404b867e218fc6c",
+      "status": "Scope accepted; define d explicitly and include normalization limit before final publication."
+    },
+    "replay_checkpoint.py": {
+      "sha256": "f518c8855f634dfe79e84828c904ea20251243f2ec922f45d91fa837f4cc22a0",
+      "status": "Read-only review accepted: authenticates sources and runs independent checkers in clean temporary copy."
+    }
+  }
+}
