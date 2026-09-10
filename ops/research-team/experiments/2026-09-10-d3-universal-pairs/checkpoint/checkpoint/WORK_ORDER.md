@@ -1,0 +1,38 @@
+# D3 theorem cycle, 10 September 2026
+
+User objective: "figure out a plan and get to 3/9". This is explicit authorization to execute a fresh research program, including ordinary local computation and the previously authorized project publication/backups. Historical STOP records remain historical; they are not silently changed into proofs. No paid external services, unrelated repositories, destructive history edits, secrets, or external human messages.
+
+## Opening state and source pins
+
+Latest reviewed checkpoint: b2667461a6359f804090212f0f075cc1ec018048, branch research/injectivity-guess-check-20260910. Diagnostic parent: 3e69bc43f1a92ebd1c508bd75e695af76c99e0b0. Mathematical source: 59fec66666518257c585194b81061f60d91f439d. Remote main remains 9e77c365b266e9d884e6ac14a0443992bec92c64. Branches rechecked at opening. Read inputs/ and previous_checkpoint/; do not infer a theorem from a filename or prior conversation.
+
+Original ledger 2/9. Pair map D= (r01,-r02,r12): direct_sum Hc1(Bi intersect Bj;Q) -> Hc1(B0 intersect B1 intersect B2;Q) is OPEN. Triple Hc0(B0 intersect B1 intersect B2;Q)=0 is independently OPEN. Quantifiers: all realizable uniform rank4 parents on8, all normalized-parent components, every3-element antichain of proper extension signatures. Preserve actual boundaries, labels, zero weights and genuine infinity. Original operational obligations7; pair coverage/residual UNKNOWN; triple source records1162302 unresolved (not components).
+
+New input: an exact actual-parent no-continuous-witness-section example plus a constructive support6 repair and conditional Slater continuity. These exclude unconditional selector-based constructions, not proper full witness correspondences or original cohomology.
+
+## Program and roles
+
+Coordinator owns source audit, integration, original claim status, reports and publication. Workers own only their stated directories and cannot change the original ledger or publish.
+
+1. pair/: pursue a universal proof of the original pair injectivity, using full compact convex witness correspondences, homological descent and coherent mixed attachment. The proper one-block Gordan comparison is already in DIAG3_SINGLE_BAD_TWO_SKELETON.md. Mere restatement of that comparison, its product version, or the existing detector equivalence is zero advancement. Seek a genuinely new chain/nullhomotopy or geometric lemma implying injectivity. If a direct attack fails, identify and test the strongest precise missing lemma, with all quantifiers and proof dependencies explicit.
+2. triple/: pursue universal no-compact-component/escape for actual triple-bad intersections. Use positive-witness support geometry, parent motions, critical-point/stress arguments or a direct alternative to the residual census. Read prior support motion and double-contraction failures. No pointwise sample or local slice may count as universal escape. Deliver a proof, exact original counterexample, or precise exhausted avenue with a concrete next discriminator.
+3. falsifier/: independently attack universal D3 ingredients using the new exact singularity and original source constraints. Particularly test whether retaining whole witness fibers and gluing them can remove the section obstruction without introducing an unproved global rank claim. Seek an actual injectivity/triple-escape counterexample if tractable; a surrogate must be scoped. Also audit any positive pair/triple lemma when handed off. Do not duplicate pair proof search.
+4. referee/: independent source and theorem-scope audit, then independent exact/deductive review of frozen results. Rebuild the obligation graph; identify any materially simpler route to a third diagonal supported by actual source theorems. Do not assume that universal section nonexistence falsifies D. No producer acceptance code imports.
+
+Initial phase: up to18 minutes per discovery track, at most3000 explicitly targeted exact cases, maximum2GiB per process, no unbounded enumeration. Checkpoint individual compute tasks after120seconds; continue only to finish a concrete identified certificate or resolve a specific defect. A second phase must be chosen by coordinator from an actual surviving lemma or changed proof obligation, not simply more of the same search. These are resource-accounting phases, not reasons to abandon safe theorem-producing work while a concrete route is available.
+
+## Required results and gates
+
+Each worker supplies FINDINGS.md, HANDOFF.json, exact certificates/code if used, source hashes, explicit theorem dependencies and scopes. A null result must name tested lemmas, why each fails/remains open, and the smallest mathematically meaningful next test. No vague recommendation to "build a global atlas" qualifies as a handoff.
+
+Promotion to3/9 requires both original pair and triple obligations proved with complete quantifiers, or another third diagonal independently proved without weakening its statement. Inspect possible counterexamples before claiming a theorem. Local comparison, selector fixes, or standard proper-base-change statements alone do not promote anything. Preserve useful proofs and negative results with honest scope and independent audit; publisher uses a new additive checkpoint branch and durable backup.
+
+## Second phase: stronger wall-intersection endpoint
+
+The coordinator authorized a further 25 minutes per track, with the same memory and paid-service limits. The referee accepted a conditional reduction: universal pair-wall Hc1 vanishing and universal triple-wall Hc0 vanishing imply Hc2 of every finite genuine bad union vanishes, hence D3. Neither new hypothesis is assumed proved. The pair track has a universal support-selection candidate for every pair containing type36,38,48, and for type49+49; these require independent quotient and source audits. Remaining type pairs are49+50,49+51,50+50,50+51,51+51. A factor-orbit count is not a count of parent-component cohomology cases.
+
+The pair producer must freeze the all-parent geometric proof and exact combinatorial certificates, then test a concrete harder family. The falsifier must independently challenge the quotient and seek an actual obstruction in the remaining pairs. The triple producer must certify the discovered actual uniform branch point and pursue the surviving discriminant critical reduction, retaining degree-drop and singular strata. The referee prioritizes the positive pair theorem and then independently checks the scoped exact negative results. Expanding a search is authorized only to resolve one of these identified proof obligations.
+
+## Final bounded gate and closeout
+
+The accepted pair lemmas and independently reproduced support census reduce the stronger pair endpoint to 574 orbits. A concrete hard50/50 parent has a full one-column fiber equal to an open interval, so the coordinator authorized one further20-minute algebra/referee gate: test whether the entire projection has a global two-affine-equation presentation. A conditional connected-interval direct-image argument, including coefficient-rank drops to plane/3cell fibers, would then prove the whole orbit. Exact symbolic elimination and a populated nonsingular-conic specialization reject that presentation for the chosen projection. This does not refute the conditional lemma, other projections, a connected-conic argument, or original cohomology vanishing. No further574 scan was launched without a surviving uniform formula. Closeout independently verifies the final small certificates, authenticates all inputs, replays accepted arithmetic in a clean copy, and publishes the unchanged2/9 ledger with the8902/9476 stronger-endpoint theorem and exact574 residue.

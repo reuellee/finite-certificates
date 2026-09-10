@@ -1,0 +1,48 @@
+{
+  "schema": "research_track_handoff_v1",
+  "track": "alternative",
+  "status": "global_pair_contributions_and_populated_triple_rank6_obstruction_original_D3_open",
+  "original_obligations_closed": 0,
+  "source_pair_classes_closed": 0,
+  "ledger": "2/9 unchanged",
+  "claims": [
+    "All45 balanced pair source records have selected nonzero-plane/smooth-split-quadric presentations;306 certified ordered choices.",
+    "Every selected conic section has a rational forbidden smooth marker; reducible conics retained.44 records have stronger actual-parent marker charts in238 presentations.",
+    "Split-row mixed-term cancellation extends the two-column template to eight further type50-containing balanced records; later broad concurrence-height proof subsumes this contribution.",
+    "Actual predecessor triple fixture has an8x10 homogeneous incidence matrix of rank6, with only3 shear and1 scale gauge directions; fixed-parent gauge yields a rank6 unique solution.",
+    "Allowing projected concurrence directions to vary gives a triangular global escape inside that fixed-parent-projection fiber; fixture was already covered, so no new triple orbit."
+  ],
+  "excluded_claims": [
+    "Not every degree2 pivot works",
+    "No Hc1 conclusion from a rational conic chart alone",
+    "No original diagonal proof",
+    "No new triple orbit/count",
+    "No general Gale identity/no-go claim from discovery sampling",
+    "No global rank6 compatibility-locus noncompactness proof"
+  ],
+  "alternative_route_verdict": "D9 direct path attempt null; D4,D8,D9 do not presently shorten proof distance against activeD3",
+  "independent_review": "Normal-form theorem independently accepted at stated geometric scope;306/45 and238/44 presentation gates plus285 marker choices reproduced with4 hostile mutations. New triple gate submitted; final referee reports supersede pending status.",
+  "input_hashes": {
+    "d3_route_reset_20260910/original/AFFINE_PAIR_COVERAGE.json": "1c87d0bf2b33faf1044349a7f37b8f940ae372e3e83338b0c7c2bdbc4b38edb5",
+    "d3_route_reset_20260910/inputs/2026-08-29-diag4-top-sheaf_CYCLE_REPORT.md": "26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923",
+    "d3_route_reset_20260910/inputs/2026-08-31-diag8-mask6-cegar_CYCLE_REPORT.md": "85fde03ecbe5be0ecaa21e3b6da4e24c4bfa9eb24bd61a185e880f6735e27c4a",
+    "d3_route_reset_20260910/inputs/2026-09-01-diag9-s1237-normal-link_CYCLE_REPORT.md": "f61ae3bdb58c5192ccf3dee40eccbc587ace860a7e526aeebc6613d6485dc5e2",
+    "d3_route_reset_20260910/checkpoint/checkpoint/inputs/ATLAS_HELLY.md": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0"
+  },
+  "artifact_hashes": {
+    "CONIC_MARKER_GATE.json": "b684ead2cf7c8ec7b6667470e0d119f95914ae14f2d3c18d54fa9b9135962adf",
+    "FINDINGS.md": "3287ffa66a0d2d6b421b28e516b60d0e98da8f92ddd94899fbfcd4074acb5132",
+    "GALE_PRESENTATION_DISCOVERY.json": "171121610aca00b57f7cb48e1533033516b54a34e02d9a39b254af3316bac6eb",
+    "REGULUS_GEOMETRY_GATE.json": "b5f3ff3f11cb04f35d9f1e0ba042396111ff3bc635bc72e4aad8c4d5ee83c5e7",
+    "REGULUS_NORMAL_FORM.md": "69e5b61ee25aac3aae4e63147941090b0d299e9eb77d8a8d4afb11c424b834c9",
+    "TRIPLE_RANK6_GATE.json": "9c6c772cc3853ad7a8127777cf9617ec81934f0163247d086b1434c008e10705",
+    "TRIPLE_RANK6_MODEL.md": "96553b32f69e1436d0ff0b13197c777acdefe3e695f89bd98dee54575c010e47",
+    "TWO_COLUMN_SPLIT_ROW_EXTENSION.md": "f1e803da6d2be7620e252e24d799671ad6af5c9cc2a030165866a0facd157867",
+    "gale_presentation_probe.py": "cda62c6ceb3fd30e2f277eafec257f2a2ab044adb125c5222c04deccf4563eb7",
+    "marker_gate.py": "2be624f929fa9343c39c46edfe2fc9c50c5dbeec4c0bad74aadf908f8c7f8f80",
+    "triple_rank_gate.py": "4d6934e28480e5ff3b261825755f037c91c43626dc9e91b320d0b746a5d21d1c",
+    "verify_regulus_geometry_gate.py": "359314c8a5c48ae93a4c55b5608e9f2f5bf2eda2944fa145c211fdf0c86a03f7"
+  },
+  "next_discriminator": "Exclude compact components of every actual rank6 augmented-matrix compatibility locus for remaining triple supports, allowing projected concurrence directions to vary and retaining all collisions, rank changes, parent boundaries, and other anchor kinds; alternatively prove original proper-three-signature triple-bad Hc0 directly.",
+  "source_pair_count_note": "Auxiliary eight-case extension is subsumed by original track broader proof; coordinator/referee own accepted aggregate pair coverage."
+}

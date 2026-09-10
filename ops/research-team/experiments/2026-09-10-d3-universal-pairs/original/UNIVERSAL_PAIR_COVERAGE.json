@@ -1,0 +1,25 @@
+{
+  "status": "UNIVERSAL_PAIR_WALL_ENDPOINT_PROVED",
+  "scope": "For every normalizedcomponent of every realizable uniformrank4 parent on8, every unordered distinct residual-factor pair has Hc0=Hc1=0 overQ",
+  "denominator": 9476,
+  "inherited_covered": 8902,
+  "newly_closed_by_universal_theorem": 574,
+  "covered": 9476,
+  "remaining": 0,
+  "new_theorem": "CONCURRENCY_HEIGHT_PAIR_VANISHING.md",
+  "new_theorem_sha256": "c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91",
+  "independent_review": "/root/referee accepted the complete deductive proof at thisSHA",
+  "source_denominator_and_residue": "checkpoint/checkpoint/coordinator/HARD_PAIR_RESIDUE.json and inherited full9476pair census",
+  "source_residue_sha256": "82434c6e07fe3290030b057f0eba2f50b522cfc25aabe66b8abf9a8495e55fc4",
+  "intermediate_disjoint_partition": {
+    "one_column_affine": 529,
+    "two_column_affine": 27,
+    "remaining_closed_by_concurrence_height": 18,
+    "sum": 574
+  },
+  "final_theorem_does_not_depend_on_intermediate_partition": true,
+  "original_ledger": "2/9 unchanged",
+  "original_D_injectivity": "open",
+  "original_triple_Hc0": "open",
+  "next_sufficient_endpoint": "Universal triple-factor Hc0 vanishing, together with thisP endpoint and the inherited auditedwallunioncomparison"
+}

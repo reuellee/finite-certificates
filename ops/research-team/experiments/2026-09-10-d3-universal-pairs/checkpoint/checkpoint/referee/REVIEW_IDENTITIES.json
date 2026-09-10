@@ -1,0 +1,141 @@
+{
+  "status": "FINAL_FROZEN_ACCEPTED_SCOPED_PROOFS_AND_DIAGNOSTICS",
+  "files": [
+    {
+      "path": "coordinator/HARD_PAIR_RESIDUE.json",
+      "bytes": 402603,
+      "sha256": "82434c6e07fe3290030b057f0eba2f50b522cfc25aabe66b8abf9a8495e55fc4"
+    },
+    {
+      "path": "coordinator/count_hard_pair_residue.py",
+      "bytes": 2660,
+      "sha256": "7e6ebee42fd18c976263830728cc68ee3ada0c453ad1aaaabe12bec7bd68f3a6"
+    },
+    {
+      "path": "falsifier/HARD_PAIR_POINT.json",
+      "bytes": 2608,
+      "sha256": "49c390aec46d311710624194571f179f4f554e5eedf5a79e87edab9b8935614c"
+    },
+    {
+      "path": "falsifier/TANGENT_AUDIT.json",
+      "bytes": 46710,
+      "sha256": "f21c5a16690bf937ffd02f23982476bf4d2b240eabc091fc6d6dc83da598742a"
+    },
+    {
+      "path": "falsifier/TRIPLE_AUDIT.md",
+      "bytes": 5869,
+      "sha256": "ab8696e3747fe682ea27f0cf966a915809d90eceb03f2b45e5d7289f5d9ef4f4"
+    },
+    {
+      "path": "falsifier/TRIPLE_INDEPENDENT_REPLAY.json",
+      "bytes": 1783,
+      "sha256": "77823d0d6b41876fa4d732a103b5d5789395d7e6ec7e7e140638ae61b29b2790"
+    },
+    {
+      "path": "falsifier/TRIPLE_REDUCTION_INDEPENDENT_REPLAY.json",
+      "bytes": 742,
+      "sha256": "1b8a53d690b7ce495d95d18d1b1a6f5310dc59d5d71b43a01285a04bb3fa6dfd"
+    },
+    {
+      "path": "pair/FACTOR_PAIR_TEMPLATE_CERTIFICATE.json",
+      "bytes": 87632,
+      "sha256": "657045b06fb3ef06843ab3ede1204e52b2e418e01a6c5fc0fa6c1c371bc30043"
+    },
+    {
+      "path": "pair/FINDINGS.md",
+      "bytes": 15611,
+      "sha256": "131ae9d09e11f2652ced2ed0b27d5593a402d7c823cbc6f002a2cdc9a64177fc"
+    },
+    {
+      "path": "pair/HANDOFF.json",
+      "bytes": 3962,
+      "sha256": "0bcf71556b226a03c37193376aafbd91c29b9709687962a91ea2de4b009cf6f7"
+    },
+    {
+      "path": "pair/HARD_COLUMN_FIBER_CERTIFICATE.json",
+      "bytes": 9348,
+      "sha256": "1879504e2962f81567b9b13dc3e26fe2f5a2d77826e647266fad3c1ed43d0905"
+    },
+    {
+      "path": "pair/NEXT_GATE.md",
+      "bytes": 4958,
+      "sha256": "ca44a440f3f30775e8128a3504a2e39eb3cdc4c64e5c2796c1aa9960070fb109"
+    },
+    {
+      "path": "pair/SMOOTH_CONIC_GATE_CERTIFICATE.json",
+      "bytes": 1699,
+      "sha256": "8ae043ac3c7bd951e78a5824996a02d3f636bea3d60e947a591a4f9d0fed9e7b"
+    },
+    {
+      "path": "pair/verify_factor_pair_h1_templates.py",
+      "bytes": 4253,
+      "sha256": "53dd0f1d0a2e29ea9b1edb217323a0310c2857c47aacc89da83fe51e3188be70"
+    },
+    {
+      "path": "referee/ACTIVE_WALL_REDUCTION_AUDIT.md",
+      "bytes": 4994,
+      "sha256": "008d04e38b7989125f3b83b593c49299b2d1fba5bfffc91a078d9f69cf46a48a"
+    },
+    {
+      "path": "referee/AFFINE_FIBER_GATE_AUDIT.md",
+      "bytes": 4937,
+      "sha256": "33c33eabb5a31127f8d82c6d8d1eec068a3c3abc796fbd1f94bb8ac522474943"
+    },
+    {
+      "path": "referee/COLUMN_GATE_REPLAY.json",
+      "bytes": 1158,
+      "sha256": "06ebef8bc69943a170ff2be72ffb1806b6f0e05abfe4b78ec605b01e1eab31e0"
+    },
+    {
+      "path": "referee/FINAL_REVIEW.md",
+      "bytes": 7739,
+      "sha256": "f8380ecdba6e756f91d1812fef96f9f09857821f02607efaaa3531a61722a6fd"
+    },
+    {
+      "path": "referee/HARD_ORBIT_REPLAY.json",
+      "bytes": 840,
+      "sha256": "ccc0fb3ad5ee1a63325ce54c8bc330024d8e4a9eb932150714798d6caf57fdba"
+    },
+    {
+      "path": "referee/HARD_PAIR_REPLAY.json",
+      "bytes": 473,
+      "sha256": "cc09f40e144fc4b1c17d9ff7e57ea151de1ca502828bd44b8a061bc72f8cc393"
+    },
+    {
+      "path": "referee/OPENING_REPLAY.json",
+      "bytes": 5281,
+      "sha256": "1aaa6e3fca13cdc136db4b0829eff111433899f7d045c1d1587c97c428380ae0"
+    },
+    {
+      "path": "referee/PAIR_TEMPLATE_REPLAY.json",
+      "bytes": 723,
+      "sha256": "ab9558db4b3fb25f97e6eae5965ec953a2174247e2d6b91a337eab887c0530c5"
+    },
+    {
+      "path": "referee/PAIR_THEOREM_AUDIT.md",
+      "bytes": 6049,
+      "sha256": "3c69511883edf8fc766f8024efccfc9a9e197b13f17c43a66e8205765bfec8fe"
+    },
+    {
+      "path": "referee/RULED_INCIDENCE_REPLAY.json",
+      "bytes": 1745,
+      "sha256": "f6c7ba0d20256210139b86362147797c858f27202af75a7d86f08a8996419b28"
+    },
+    {
+      "path": "referee/RULED_QUADRIC_AUDIT.md",
+      "bytes": 4166,
+      "sha256": "cf13b6c1638db5f91ce1b7e5a520768784da0cafc5b76d95cb4e96c20f62e48c"
+    },
+    {
+      "path": "referee/TANGENT_REPLAY.json",
+      "bytes": 611,
+      "sha256": "184512fcacfb68052d0ea53c5f6cca86e03ecfb747bbcb4d4d5465833d7a26f2"
+    },
+    {
+      "path": "referee/verify_column_gates_independent.py",
+      "bytes": 5904,
+      "sha256": "27d8bbf7aef1edb1431b43f39ee6ba6e8b62e2847eb75702acd5cf3f60b60c27"
+    }
+  ],
+  "original_ledger": "2/9"
+}

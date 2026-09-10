@@ -1,0 +1,89 @@
+{
+  "role": "pair",
+  "status": "ACCEPTED_AUXILIARY_UNIVERSAL_GEOMETRIC_ADVANCE",
+  "original_D": "OPEN",
+  "original_D3": "OPEN",
+  "ledger": "2/9",
+  "new_results": [
+    "Finite active-wall sufficient reduction: all factor-pair Hc1 plus all factor-triple Hc0 imply original D3",
+    "Universal two-dimensional support-plane quotient application",
+    "Universal ruled-quadric residence quotient for type49 with type50/51",
+    "8902 of9476 stronger factor-pair Hc1 source orbits covered, independently counted",
+    "Exact hard50+50 full one-column fiber has Hc1=Z; no original counterexample",
+    "Exact populated nonsingular conic refutes uniform affine-linearity for the fixed hard column8 projection; other quotient routes remain possible"
+  ],
+  "remaining_stronger_pair_endpoint": {
+    "count": 574,
+    "types": {
+      "50+50": 257,
+      "50+51": 249,
+      "51+51": 68
+    },
+    "count_scope": "Relative-label factor-pair source orbits, not parent components"
+  },
+  "original_obligations_closed": 0,
+  "triple_endpoint_status": "Unchanged and independently open",
+  "required_dependencies": [
+    "Pinned all-strata wall-circuit classification and fixed-unit coefficients",
+    "Inherited global support-plane/two-pencil quotient proof",
+    "Compact-support Leray for semialgebraic maps via f!",
+    "Finite closed-cover Mayer-Vietoris",
+    "Parent Hc2 vanishing",
+    "Independent exact9476 pair-orbit denominator and574 residue audit"
+  ],
+  "checks": {
+    "factor_degree_patterns": 266,
+    "ruled_graph_cases": "16 independently checked by falsifier/referee",
+    "next_gate_parent_brackets": 70,
+    "next_gate_boundary": "[3468], [3458]",
+    "smooth_conic_parent_brackets": 70
+  },
+  "next_step": "For the exact574 source list, first prove a full connected-conic-fiber/specialization theorem, find a different affine quotient, or construct a two-parent-column quotient that passes both populated hard conic gates. No unmotivated enumeration.",
+  "files": [
+    {
+      "path": "pair/FINDINGS.md",
+      "sha256": "131ae9d09e11f2652ced2ed0b27d5593a402d7c823cbc6f002a2cdc9a64177fc"
+    },
+    {
+      "path": "pair/NEXT_GATE.md",
+      "sha256": "ca44a440f3f30775e8128a3504a2e39eb3cdc4c64e5c2796c1aa9960070fb109"
+    },
+    {
+      "path": "pair/verify_factor_pair_h1_templates.py",
+      "sha256": "53dd0f1d0a2e29ea9b1edb217323a0310c2857c47aacc89da83fe51e3188be70"
+    },
+    {
+      "path": "pair/FACTOR_PAIR_TEMPLATE_CERTIFICATE.json",
+      "sha256": "657045b06fb3ef06843ab3ede1204e52b2e418e01a6c5fc0fa6c1c371bc30043"
+    },
+    {
+      "path": "pair/verify_hard_column_fiber.py",
+      "sha256": "9760707215884aeae20d478122f712867af2b09df063af131dfca95d988ab079"
+    },
+    {
+      "path": "pair/HARD_COLUMN_FIBER_CERTIFICATE.json",
+      "sha256": "1879504e2962f81567b9b13dc3e26fe2f5a2d77826e647266fad3c1ed43d0905"
+    },
+    {
+      "path": "pair/verify_smooth_conic_gate.py",
+      "sha256": "64759a976efea9a7fdaa78536f213dce0299a26b9bd03c0ab6121de2a7cdb4fa"
+    },
+    {
+      "path": "pair/SMOOTH_CONIC_GATE_CERTIFICATE.json",
+      "sha256": "8ae043ac3c7bd951e78a5824996a02d3f636bea3d60e947a591a4f9d0fed9e7b"
+    }
+  ],
+  "audit_paths": [
+    "referee/PAIR_THEOREM_AUDIT.md",
+    "referee/ACTIVE_WALL_REDUCTION_AUDIT.md",
+    "falsifier/RULED_QUADRIC_AUDIT.md"
+  ],
+  "source_sha256": {
+    "DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "verify_derived_walls.py": "a7d8ae49f83cc54e21d5107f72be5e8e36ad6890b8cab56cd9dfefcef9acfd59",
+    "verify_derived_wall_sides.py": "2083aabf1ecd6cba64dc17638d561bf8858a01df3a3f65575433600d38bc78de",
+    "DIAG3_PAIR_FACTOR_ROOT_SWITCH.md": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+    "DIAG3_TRIPLE_FACTOR_REDUCTION.md": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+    "DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15"
+  }
+}

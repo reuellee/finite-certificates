@@ -1,0 +1,53 @@
+{
+  "scope": "files directly consulted by independent source audit",
+  "files": [
+    {
+      "path": "inputs/ATLAS_HELLY.md",
+      "bytes": 171509,
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "git_blob": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64"
+    },
+    {
+      "path": "inputs/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+      "bytes": 13943,
+      "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+      "git_blob": "f59a8757d18b004333876c77d29831dd7e8ce8f2"
+    },
+    {
+      "path": "inputs/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "bytes": 16265,
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+      "git_blob": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85"
+    },
+    {
+      "path": "inputs/DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md",
+      "bytes": 9043,
+      "sha256": "f1840298c34725ccd46e1cee1762664757d644d4f3f5ddaed4aef1f283083211",
+      "git_blob": "f1d946f85cdd9cfe6498e9b6ec8a53b149f4b344"
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_FACTOR_REDUCTION.md",
+      "bytes": 17169,
+      "sha256": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+      "git_blob": "4465b4be51197a362e5c765f6a26aa4a78323aac"
+    },
+    {
+      "path": "inputs/DIAG3_PAIR_DIFFERENTIAL_ENDS.md",
+      "bytes": 16684,
+      "sha256": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+      "git_blob": "179128bd49aa74e360e49ce77e2a6c8dd1fdc733"
+    },
+    {
+      "path": "inputs/RESIDUAL_STRATUM_NONCOMPACTNESS.md",
+      "bytes": 14861,
+      "sha256": "dd1322f85c601a2ee91600c91d3b103536ae614041f20f30e7c7f5c8522ad569",
+      "git_blob": "eca17f8f3ebdc2c7e9d9760a3982985761f12b2a"
+    },
+    {
+      "path": "inputs/verify_diag3_pair_factor_occurrence_h1.py",
+      "bytes": 13880,
+      "sha256": "346b26e48fe3265a6ccf5270fd6576070017db6d46e6978855adbbfa8f643c75",
+      "git_blob": "19e38b8b0bbff7340d925af70ac620dd7374c3a7"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema": "independent_review_identities_v1",
+  "relative_to": "d3_direct_proof_20260910/",
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "checkpoint_base": "499f1190d988be5729b38db59e6cc8230fae7857",
+  "scope": "Reviewed snapshot identities; hashing does not by itself imply acceptance of every producer claim. FINAL_REVIEW.md specifies accepted scope. This file excludes its own identity.",
+  "files": {
+    "WORK_ORDER.md": {
+      "sha256": "1b120538cb08e404bbdecc649c8c9ba873857827853016a89f08aa3bd1eef098",
+      "bytes": 4946
+    },
+    "REPORT.md": {
+      "sha256": "d854ce364638e551711634fa604061237ee5ca52bd567bff95781dd51aa26a8e",
+      "bytes": 9008
+    },
+    "pair/COMMON_WEAK_PRIMAL_VANISHING.md": {
+      "sha256": "e5c80a04ca4c7e419f420472e3b9f0e531f60bf4043a7afcbcc3e34fd7202652",
+      "bytes": 11548
+    },
+    "pair/FINDINGS.md": {
+      "sha256": "5eba869b2e3ea2d269f46ae5dbb64442de393de7db3e778b01f1a2a674576851",
+      "bytes": 8880
+    },
+    "pair/HANDOFF.json": {
+      "sha256": "191a3344e5a96ab0d7b9dd39494e0f32069f0bb8162700b794a953cf8143a7f3",
+      "bytes": 2516
+    },
+    "falsifier/ACTUAL_ANTICHAIN.json": {
+      "sha256": "12612f417a8de5f06f633975e4f941b5ca9539fe13580689db392850f53d3778",
+      "bytes": 99493
+    },
+    "falsifier/actual_antichain.py": {
+      "sha256": "ff1f9b03e3e8d97d32c7200e5ca9d1d688761416134d9a40778443a2860279dd",
+      "bytes": 5145
+    },
+    "falsifier/FINDINGS.md": {
+      "sha256": "026fd3cc03611df654a228b387ee2eb986ecfe78abb882f16809ace279b5036f",
+      "bytes": 5175
+    },
+    "falsifier/COMMON_ZERO_STRATUM.md": {
+      "sha256": "84a5b6f18d79595bd84d3dbd621c07ae246eeca462351d16651a91c09d896b97",
+      "bytes": 10563
+    },
+    "falsifier/HANDOFF.json": {
+      "sha256": "caa5fe5ecd948680c879ff800d8796abc27695c492aaddc2bb2d21d2db364bfc",
+      "bytes": 2791
+    },
+    "triple/ACTUAL_UNIQUE_HARD_THREE_BOUNDARY_SIGNATURES.json": {
+      "sha256": "9868a9998a201310a67fe9a2b211bbb4011629f67f921de86b6628946aafe97f",
+      "bytes": 8314
+    },
+    "triple/MULTIWEAK_HEIGHT_GATE.json": {
+      "sha256": "95d12c68057a6b42d3aa274108b954c53dec5c10ae9f4595c186b53dcb2a1247",
+      "bytes": 2177
+    },
+    "triple/BOUNDARY_CURVES.json": {
+      "sha256": "be6d706e216121cf584bfd8a3a53140832342b8f8413915905b440c6c4aae9e9",
+      "bytes": 3333
+    },
+    "triple/FINDINGS.md": {
+      "sha256": "699745194d16b85bbdc23e5fc42d0a36482f7bb318bf9419b45ca098d595beb1",
+      "bytes": 8759
+    },
+    "triple/AFFINE_HEIGHT_ESCAPE.md": {
+      "sha256": "36fc7b0ed2fdf37e03ff1f7c411e4243f8830760d066ae40a55d0dbb9b1a17aa",
+      "bytes": 7271
+    },
+    "triple/HANDOFF.json": {
+      "sha256": "5dc3b8a27550d78158b45529d147751a723ebd906d9f6bb0c6849b1aa7def1db",
+      "bytes": 4827
+    },
+    "triple/verify_unique_hard_boundary.py": {
+      "sha256": "894a36a7531916f074f7975915e6370edff5ad5a9e121c36a84e1e577e30da7f",
+      "bytes": 2219
+    },
+    "triple/verify_three_boundary_signatures.py": {
+      "sha256": "e381e2cfb7cc3d13054834dc190bd4f8895c109bfce17a5660b442b21ca2bbe1",
+      "bytes": 4892
+    },
+    "triple/verify_boundary_curves.py": {
+      "sha256": "263d46a47094dc44a37f3e480d700b82458eb683ae9b6c984d652d2cff7fb01d",
+      "bytes": 2112
+    },
+    "inputs/DIAG3_TRIPLE_SEQUENTIAL_AFFINE_COMPRESSION.md": {
+      "sha256": "d87f7f39ff3363e611fbd192df81f5693a13f5b3521de8430429395667275aaf",
+      "bytes": 9576
+    },
+    "checkpoint/inputs/ATLAS_HELLY.md": {
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "bytes": 171509
+    },
+    "checkpoint/inputs/DIAG3_PAIR_DIFFERENTIAL_ENDS.md": {
+      "sha256": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+      "bytes": 16684
+    },
+    "checkpoint/inputs/DIAG3_JOINED_FLOW_TRIANGLE.md": {
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+      "bytes": 16265
+    },
+    "referee/FINAL_REVIEW.md": {
+      "sha256": "b478fd02372dddd9f3b7878e44496d15b8122c90a44d74d40736d88de141064e",
+      "bytes": 8469
+    },
+    "referee/HANDOFF.json": {
+      "sha256": "9ba9e5c55181407498dbe3d0188c137aa9caace276e53097a14aed9c6be560dd",
+      "bytes": 2282
+    },
+    "referee/COMMON_WEAK_AUDIT.md": {
+      "sha256": "67a8246dba000997ef84bb36f3e96e82bb7743b3fb15b28f7c5d3c7dd37291d6",
+      "bytes": 7495
+    },
+    "referee/SOURCE_AND_TARGET_AUDIT.md": {
+      "sha256": "7d7ee5d811058a0b8410ddbd296e7b7b4fb929b7797425c08243cae68b7a9bd5",
+      "bytes": 4949
+    },
+    "referee/exact.py": {
+      "sha256": "c42ff3fcc0aeaed788374a38d285e6dc418ef70104cfecc392817a24dd930197",
+      "bytes": 3200
+    },
+    "referee/poly.py": {
+      "sha256": "11d2bb889dd7c08f3be7f2e099a36edaf11966ed1a0f8e153022565945ff5b9a",
+      "bytes": 2391
+    },
+    "referee/verify_actual_antichain.py": {
+      "sha256": "9b53cd2dce751359682367203b4d20ad13bc5e11cde3c74c0f7ce3879f957526",
+      "bytes": 7694
+    },
+    "referee/verify_three_weak_obstruction.py": {
+      "sha256": "5f1279934d028dada35e0a3b80be1c3f1dce34f6477db07ae7a06210cb84d24e",
+      "bytes": 9453
+    },
+    "referee/ACTUAL_ANTICHAIN_REPLAY.json": {
+      "sha256": "fe62e81dbc357f6c32e127ac06aed53adb497311e9ac6c7f79901cef2d782a7f",
+      "bytes": 6117
+    },
+    "referee/THREE_WEAK_OBSTRUCTION_REPLAY.json": {
+      "sha256": "f13ddc9c14b3d96c41971537f9644d398957affe12f54c7a34c5125c659898aa",
+      "bytes": 1610
+    }
+  }
+}

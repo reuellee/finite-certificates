@@ -1,0 +1,1332 @@
+{
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "inherited_checkpoint_commit": "401602fe9f8bcfad74116b46bb5574f63b6a3040",
+  "files": [
+    {
+      "path": "checkpoint/CHECKPOINT_MANIFEST.json",
+      "git_blob_sha1": "4b5d0e4a3bd98f238e5ef34b8e57090b8723d1c3",
+      "sha256": "44aa2e79f2ab95e3c7da56a1f4de21a7b0fd93ecf89bf6a5fc05a2c7b62a8db9",
+      "bytes": 53092
+    },
+    {
+      "path": "checkpoint/CLAIM_LEDGER.json",
+      "git_blob_sha1": "9e19660742df2f9a03184b1c5e90eeda9e3d0cb7",
+      "sha256": "beae2126858f8367dff70fe76c578b6a2fe4c2c882320cf6d44750377a631a00",
+      "bytes": 2662
+    },
+    {
+      "path": "checkpoint/CLEAN_REPLAY.json",
+      "git_blob_sha1": "df7e366033d22f00652d56809f06fe397439a441",
+      "sha256": "2060aa3247d2cf838d228634fbaeee26805885556a27564a19236a5d6d97c8ed",
+      "bytes": 658
+    },
+    {
+      "path": "checkpoint/OPENING_STATE.json",
+      "git_blob_sha1": "ac8ea4de271e500f7399edced71172aacacc7ac3",
+      "sha256": "4906f33c17055f524c6ed1c6a168b5c164fd4a08416de42eb0d82aaf5cdcd385",
+      "bytes": 446
+    },
+    {
+      "path": "checkpoint/README.md",
+      "git_blob_sha1": "93de31bacacce66448c5643167b744a8d5588dd4",
+      "sha256": "1cecbd779feebddb3b972902cd7c56c67f48345f318aed309b3c3ee2cd9631ca",
+      "bytes": 980
+    },
+    {
+      "path": "checkpoint/REPORT.md",
+      "git_blob_sha1": "290ee9f3857c5b2d10aa208f42c013e98db3aa21",
+      "sha256": "d854ce364638e551711634fa604061237ee5ca52bd567bff95781dd51aa26a8e",
+      "bytes": 9008
+    },
+    {
+      "path": "checkpoint/SOURCE_MANIFEST.json",
+      "git_blob_sha1": "8604e357858c9d271f7febd6b457912585063d88",
+      "sha256": "002a71ed6aefe111104308d5420a1953cc708ff7ba84978172f499572a69bf04",
+      "bytes": 41237
+    },
+    {
+      "path": "checkpoint/WORK_ORDER.md",
+      "git_blob_sha1": "98434e8fbbd7d27ad0b5e3a63411df63623cf0eb",
+      "sha256": "1b120538cb08e404bbdecc649c8c9ba873857827853016a89f08aa3bd1eef098",
+      "bytes": 4946
+    },
+    {
+      "path": "checkpoint/checkpoint/CHECKPOINT_MANIFEST.json",
+      "git_blob_sha1": "6b108c1ca3ebe1b99ccdc38996485b1461817ef1",
+      "sha256": "ddbb6877e951b4c0dbb5666d3c7ac64be9d44afc04b6c2c3afd0403165046a1a",
+      "bytes": 36949
+    },
+    {
+      "path": "checkpoint/checkpoint/CLAIM_LEDGER.json",
+      "git_blob_sha1": "8e76f29f251156785469d4397393516c5acd5b38",
+      "sha256": "1d5d1ced7f0e0bd6eeb1902eb83274d0ad281fdb087d1d57bc9131ac457bce1c",
+      "bytes": 2325
+    },
+    {
+      "path": "checkpoint/checkpoint/CLEAN_REPLAY.json",
+      "git_blob_sha1": "d5f32e20002fd04c70e76b4950b86e29bf4b8b29",
+      "sha256": "71b0027e5b0553d0b5cda374f0b2fbd5bfca62ee6a24047d33200f335ff4ba74",
+      "bytes": 3063
+    },
+    {
+      "path": "checkpoint/checkpoint/README.md",
+      "git_blob_sha1": "690ffaac9e93b49dee04c478b08e18123e73fa76",
+      "sha256": "f7dd6daafc6a15bcd2ab700e32cb9d0f442f1db9fc2626ca7b5781d72b647b70",
+      "bytes": 2016
+    },
+    {
+      "path": "checkpoint/checkpoint/REPORT.md",
+      "git_blob_sha1": "30c3f8bef679969de223d33ed8c334a7c4d93e05",
+      "sha256": "4f84adffec18abfb8c45b83093acbefa2fbf73c53045f99d01f85696e669cda5",
+      "bytes": 10278
+    },
+    {
+      "path": "checkpoint/checkpoint/SOURCE_MANIFEST.json",
+      "git_blob_sha1": "62d6859dd3936121d2b4ec2906d026c2eb138f43",
+      "sha256": "9647f06ab73c6b1d9434319bb7a8096a244c8430eab3f695a9aaa2166041cb48",
+      "bytes": 9460
+    },
+    {
+      "path": "checkpoint/checkpoint/SOURCE_READBACK.json",
+      "git_blob_sha1": "3ba50642fd4bc88af2f97d1d57de2f761016a830",
+      "sha256": "2eac64d12a001f1d1d6028017b7f37cbf97076134b06f9798719adfa10ddde61",
+      "bytes": 5510
+    },
+    {
+      "path": "checkpoint/checkpoint/WORK_ORDER.md",
+      "git_blob_sha1": "c70727cc214f25a590ebaa974de7e618e57a6f83",
+      "sha256": "43fd6b391d9d04d7d88f125dc0f7b07a3054b18ac3941fd7ee7e3f880684a901",
+      "bytes": 7661
+    },
+    {
+      "path": "checkpoint/checkpoint/coordinator/HARD_PAIR_RESIDUE.json",
+      "git_blob_sha1": "d8f35a9d5204c6e1a92a07721fc14e5b3e874f7f",
+      "sha256": "82434c6e07fe3290030b057f0eba2f50b522cfc25aabe66b8abf9a8495e55fc4",
+      "bytes": 402603
+    },
+    {
+      "path": "checkpoint/checkpoint/coordinator/PAIR_KIND_ORBIT_COUNTS.json",
+      "git_blob_sha1": "6d6a3e050b93891e6a63091e9f3524b42c8782c2",
+      "sha256": "104cd207a42e4f9a199cb038052d470450a2e15bb56c7b37bd249fe5249df5bc",
+      "bytes": 11507
+    },
+    {
+      "path": "checkpoint/checkpoint/coordinator/count_hard_pair_residue.py",
+      "git_blob_sha1": "ee9320a02fd208f8f8b079435df053654c4e2637",
+      "sha256": "7e6ebee42fd18c976263830728cc68ee3ada0c453ad1aaaabe12bec7bd68f3a6",
+      "bytes": 2660
+    },
+    {
+      "path": "checkpoint/checkpoint/coordinator/count_pair_kind_orbits.py",
+      "git_blob_sha1": "fa2809f62ab9ecd85eb948e2e564e1c244a2e2ce",
+      "sha256": "89ffa523722d87606913ebe5027d49ec9b20b7d2931ac3ac4e46123dda118242",
+      "bytes": 3803
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/FINDINGS.md",
+      "git_blob_sha1": "fe00201d2c850b38de7d8608d1b72d5ae9aff05b",
+      "sha256": "7b12e3756a2f91ce0d39469944a39a668e30169ae90b92a6287bd220969ca47a",
+      "bytes": 6940
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/HANDOFF.json",
+      "git_blob_sha1": "2c4834a1c365c0f9f303f22b0a55f697b6904e02",
+      "sha256": "33ae2e0f8ddf28e94132dee90e43349323ce3089335371f9aa4396d21f527da1",
+      "bytes": 4654
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/HARD_PAIR_EQUATIONS.json",
+      "git_blob_sha1": "296072464f31da77a8be08bc74fc1698b50c4a93",
+      "sha256": "ff6c1a6781cd4e0947d7943a2937772c788209b9dfc16998e4d52c5b984379f1",
+      "bytes": 4377
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/HARD_PAIR_POINT.json",
+      "git_blob_sha1": "f4506ab3ebad6e5ff758d34db16a00d368052313",
+      "sha256": "49c390aec46d311710624194571f179f4f554e5eedf5a79e87edab9b8935614c",
+      "bytes": 2608
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/RESIDENCE_AUDIT.md",
+      "git_blob_sha1": "5b468aa8b279cfebcdcbd8c6b9d0b2f00b2f2bd0",
+      "sha256": "9d8b2295541aec42f8dbaa24844076b63ab6b95f303a83c69396e754966e1fff",
+      "bytes": 5363
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/RULED_QUADRIC_AUDIT.md",
+      "git_blob_sha1": "04d31189582dcf22d79676dd1a65d2836bffab45",
+      "sha256": "64da03953bc6a0617b1f042608aedf473bcebdb238d90832790adc51c73ea9f6",
+      "bytes": 6355
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/RULED_QUADRIC_CASES.json",
+      "git_blob_sha1": "9f0c82510a23d97905e2d588758828fef4944a75",
+      "sha256": "fe324090ca09eb4d42abe2aa76e113a8bd97a83de682a155255648470ca635d5",
+      "bytes": 9370
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/TANGENT_AUDIT.json",
+      "git_blob_sha1": "ad5eb852cec74169e0f4e38af37ddbc653673e64",
+      "sha256": "f21c5a16690bf937ffd02f23982476bf4d2b240eabc091fc6d6dc83da598742a",
+      "bytes": 46710
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/TRIPLE_AUDIT.md",
+      "git_blob_sha1": "cb5fe6be80ff56ba88860633740b7ca38c4a6265",
+      "sha256": "ab8696e3747fe682ea27f0cf966a915809d90eceb03f2b45e5d7289f5d9ef4f4",
+      "bytes": 5869
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/TRIPLE_INDEPENDENT_REPLAY.json",
+      "git_blob_sha1": "df2cad59692a4fc4fdae3aec095706432026aeb6",
+      "sha256": "77823d0d6b41876fa4d732a103b5d5789395d7e6ec7e7e140638ae61b29b2790",
+      "bytes": 1783
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/TRIPLE_REDUCTION_INDEPENDENT_REPLAY.json",
+      "git_blob_sha1": "0cf51d0015038337a76f82ad8bfffe77d88291a6",
+      "sha256": "1b8a53d690b7ce495d95d18d1b1a6f5310dc59d5d71b43a01285a04bb3fa6dfd",
+      "bytes": 742
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/cofactor_factors.json",
+      "git_blob_sha1": "781759a6fd48aae7389722f0e0efd2dc7ed5269b",
+      "sha256": "0303232eae1d81523aaf85b0f6e6f036ba6e34853788fc586382b6df7637280e",
+      "bytes": 789
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/explore.py",
+      "git_blob_sha1": "7320d90fb62a921721c23a8684203f7be870b02b",
+      "sha256": "21caf7021fd2ab969e38e217c21ccc610561d081ea9b6bbc77ec5afa00f9f7a3",
+      "bytes": 841
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/hard_pair.py",
+      "git_blob_sha1": "c6de56b2dcd28b8f39ea1b84bcc386936d9e09fe",
+      "sha256": "4b6b9fe1f97127d1341ae41f74bbc1cfe2011baf0a35213d4edf87aa4c80e58b",
+      "bytes": 1903
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/screen.py",
+      "git_blob_sha1": "b631bf2f9ae882515478771fd86f5d666d45cabc",
+      "sha256": "af7623f671fa2b3e9063fe407023584902cc4ba1514ca1df82e72422a1d5ef50",
+      "bytes": 1548
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/tangent_audit.py",
+      "git_blob_sha1": "f7f4f45798e21b25612de097cbf3d20829bef539",
+      "sha256": "753e3cb343492195236b00b9cea6380b92aa49e3d1260cee5403d6a913a88a51",
+      "bytes": 3954
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/verify_hard_pair_point.py",
+      "git_blob_sha1": "3ef52da03880bc112f8468b96570bfc79173d43c",
+      "sha256": "bf5273b8e42b97e7bcde178037e1c68954fa301156c58ad43ee170dca612e864",
+      "bytes": 2449
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/verify_ruled_quadric_cases.py",
+      "git_blob_sha1": "e7f30d15751dedf6f94f5b6cc3732de5e50d56b5",
+      "sha256": "16031f8a32b193e7a39199228886c9e30a3bc420f22f6cec9b1df23dbd7f48b9",
+      "bytes": 2310
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/verify_triple_independent.py",
+      "git_blob_sha1": "22e8dbb45054dd1819a6486abfe05615e148fa63",
+      "sha256": "232406e99844de22f953cf6d94ab264d3b6226d949080e18f78108e9b4e05ea3",
+      "bytes": 5727
+    },
+    {
+      "path": "checkpoint/checkpoint/falsifier/verify_triple_reduction_independent.py",
+      "git_blob_sha1": "995e51cb71724b8b05156799daf104d097e08f2a",
+      "sha256": "ca03c74646166f50b7c5628c49e6a099494812080efd44bac23f0257bb3d6679",
+      "bytes": 3008
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/ATLAS_HELLY.md",
+      "git_blob_sha1": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64",
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+      "bytes": 171509
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md",
+      "git_blob_sha1": "df3505e893e6f989caa575a142386b401d652cf2",
+      "sha256": "f0326930b473ff9e1c07c6dc69e332de28cbb3d178b7d3b5b526c451d1234f98",
+      "bytes": 9599
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/CRITICAL_NUMERICAL_DISCOVERY.json",
+      "git_blob_sha1": "036119cd640a560e60b8370ee1e6f0d4dd4bde06",
+      "sha256": "c5e1d38e03df4a896090034ee5f136d4eccf549dd9b617dfbd4e44aaf2b60f15",
+      "bytes": 65860
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py",
+      "git_blob_sha1": "1d5c1608083fa67a3e739f47f3546e194b864556",
+      "sha256": "8f51cf73ea75b4de7baf38af19b6e4cc941293edb82216a4aa00feef83c38e26",
+      "bytes": 35449
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG2_PIVOT_LABELED_PAIR_THEOREM.md",
+      "git_blob_sha1": "afb45cd8d93fbab3bc3baecae40ab40c27c37df4",
+      "sha256": "5e7e7c4e3d717d10cbcdbc21b9e0d8ef469ee376705eb8d01dafe2c174ab94d6",
+      "bytes": 12189
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md",
+      "git_blob_sha1": "f1d946f85cdd9cfe6498e9b6ec8a53b149f4b344",
+      "sha256": "f1840298c34725ccd46e1cee1762664757d644d4f3f5ddaed4aef1f283083211",
+      "bytes": 9043
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "git_blob_sha1": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85",
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+      "bytes": 16265
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_PAIR_DIFFERENTIAL_ENDS.md",
+      "git_blob_sha1": "179128bd49aa74e360e49ce77e2a6c8dd1fdc733",
+      "sha256": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15",
+      "bytes": 16684
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md",
+      "git_blob_sha1": "88f8a6a6e241242c01254554cda6206b70f3bfde",
+      "sha256": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+      "bytes": 18861
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+      "git_blob_sha1": "f59a8757d18b004333876c77d29831dd7e8ce8f2",
+      "sha256": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+      "bytes": 13943
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md",
+      "git_blob_sha1": "4179139f89a15ea9018be5a2af8c207ffb26cabb",
+      "sha256": "03615d52efec5a7abf66d8e78aff19deab8b74736f707598daada8d45b9d85dc",
+      "bytes": 21608
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md",
+      "git_blob_sha1": "8a0e8c58018f71e5e66eb47f03088854e33990f4",
+      "sha256": "d8ebb65e2c99103135fa227f27ca6b1396db38a70cd68787f98cf40adef99fc7",
+      "bytes": 2616
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_TRIPLE_FACTOR_REDUCTION.md",
+      "git_blob_sha1": "4465b4be51197a362e5c765f6a26aa4a78323aac",
+      "sha256": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+      "bytes": 17169
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DIAG3_triple_fullspace_critical_h1.json",
+      "git_blob_sha1": "2d0374242d4b7c94172c3b9718bfe9b089e735f0",
+      "sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+      "bytes": 364486
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/DOUBLE_CONTRACTION_FIBERS.md",
+      "git_blob_sha1": "a5003382eeeb50f396a78f32486f210dd6d6737f",
+      "sha256": "63e224fbc0ca4ceaf0285f38ea7e1e7eee54e8c74c836dd27c3dd5504ba4e5b7",
+      "bytes": 8135
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/RESIDUAL_STRATUM_NONCOMPACTNESS.md",
+      "git_blob_sha1": "eca17f8f3ebdc2c7e9d9760a3982985761f12b2a",
+      "sha256": "dd1322f85c601a2ee91600c91d3b103536ae614041f20f30e7c7f5c8522ad569",
+      "bytes": 14861
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/TRIPLE_SATURATION_CYCLE_REPORT.md",
+      "git_blob_sha1": "3a02b23c39ac1a3699f3fb1194ca2381796b8cae",
+      "sha256": "89daf49e419b23bcdf91830c883a8ba381c226da2a366ef894c64cb3465073d6",
+      "bytes": 9584
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/verify_derived_wall_sides.py",
+      "git_blob_sha1": "2bb7c36fda6c1ac955c3e0c6cdec9e834fe23759",
+      "sha256": "2083aabf1ecd6cba64dc17638d561bf8858a01df3a3f65575433600d38bc78de",
+      "bytes": 7223
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/verify_derived_walls.py",
+      "git_blob_sha1": "a73ca1df79a0ecb106e487ace6a4a48355214855",
+      "sha256": "a7d8ae49f83cc54e21d5107f72be5e8e36ad6890b8cab56cd9dfefcef9acfd59",
+      "bytes": 9950
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/verify_diag3_pair_factor_occurrence_h1.py",
+      "git_blob_sha1": "19e38b8b0bbff7340d925af70ac620dd7374c3a7",
+      "sha256": "346b26e48fe3265a6ccf5270fd6576070017db6d46e6978855adbbfa8f643c75",
+      "bytes": 13880
+    },
+    {
+      "path": "checkpoint/checkpoint/inputs/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
+      "git_blob_sha1": "93957012f6cb12d6c8245eeef0d2995cb0314b5c",
+      "sha256": "df302c4753e8f10b3fa9ec59099bf9f521f62797c7326d8303f80497e9838f19",
+      "bytes": 5619
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/FACTOR_PAIR_TEMPLATE_CERTIFICATE.json",
+      "git_blob_sha1": "8548263d6c1aa6723f884db1ca22a7422ae4b693",
+      "sha256": "657045b06fb3ef06843ab3ede1204e52b2e418e01a6c5fc0fa6c1c371bc30043",
+      "bytes": 87632
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/FINDINGS.md",
+      "git_blob_sha1": "5207c3b5b873a7ecdbc021984e3b11747c5d6f21",
+      "sha256": "131ae9d09e11f2652ced2ed0b27d5593a402d7c823cbc6f002a2cdc9a64177fc",
+      "bytes": 15611
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/GENERAL_COLUMN8_FACTORIZATION.json",
+      "git_blob_sha1": "18ece1018017c00b52deb98a0288ebf5b0e10f26",
+      "sha256": "5f73207a0678bed1523daae7d89e2dd63cb0d04e1d64096ec3fe0f91823a90a7",
+      "bytes": 4244
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/HANDOFF.json",
+      "git_blob_sha1": "e5b1cc8052a6b66732fe38254874ad5866ab11c3",
+      "sha256": "0bcf71556b226a03c37193376aafbd91c29b9709687962a91ea2de4b009cf6f7",
+      "bytes": 3962
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/HARD_COLUMN_FIBER_CERTIFICATE.json",
+      "git_blob_sha1": "47150500cce42eb0de88be9c9b15668a9723fae1",
+      "sha256": "1879504e2962f81567b9b13dc3e26fe2f5a2d77826e647266fad3c1ed43d0905",
+      "bytes": 9348
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/HARD_CONIC_FIBER.json",
+      "git_blob_sha1": "ec5ad5e1fcb5718b01d556e7bc060a011fddf85d",
+      "sha256": "4c1fdbb1647a31d8f69eca0619b0c58c61da7303387f298ed6f129b524727f11",
+      "bytes": 7975
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/NEXT_GATE.md",
+      "git_blob_sha1": "b935f723a0ff200bfcd1ec94426aa73976bfe2cb",
+      "sha256": "ca44a440f3f30775e8128a3504a2e39eb3cdc4c64e5c2796c1aa9960070fb109",
+      "bytes": 4958
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/SMOOTH_CONIC_GATE_CERTIFICATE.json",
+      "git_blob_sha1": "9bbee82c1a767cad859792c7bc5a5d537673bbf5",
+      "sha256": "8ae043ac3c7bd951e78a5824996a02d3f636bea3d60e947a591a4f9d0fed9e7b",
+      "bytes": 1699
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/SMOOTH_CONIC_PROBE.json",
+      "git_blob_sha1": "b8f3561d057c4110cefbc106dbaa0d11b8aa2faa",
+      "sha256": "43fbc24b08aa1eb22a34d4166e99fcea3352dd6ab3f69a37fc9c2390ee9d61bd",
+      "bytes": 1099
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/general_column8_factor.py",
+      "git_blob_sha1": "b33551db575d9fcced418423fbf893e4a0ed0cdd",
+      "sha256": "799015a86649df07202e84044f7b55995d9a3d5ede0de519cb10d7616a66e130",
+      "bytes": 823
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/hard_conic_fiber.py",
+      "git_blob_sha1": "73c7e99a659cf76d4cf3fb6411675c45a5ad7e6f",
+      "sha256": "c3a4508180d69087b7f89e58340b2a2ee00ea020100b40532fba8cae458c3625",
+      "bytes": 2399
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/smooth_conic_probe.py",
+      "git_blob_sha1": "92b245ecf47ce624f5a6a4ae4a7b391267ce8677",
+      "sha256": "e1c5e30b8b6f354c910c604f23db7c1ee1f9673fd91e9fb07fe2c0b490ad1e4a",
+      "bytes": 2379
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/verify_factor_pair_h1_templates.py",
+      "git_blob_sha1": "1798fc3cd0a4f178485a416ad3f3644fedbb3d14",
+      "sha256": "53dd0f1d0a2e29ea9b1edb217323a0310c2857c47aacc89da83fe51e3188be70",
+      "bytes": 4253
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/verify_hard_column_fiber.py",
+      "git_blob_sha1": "d423fae5578cde89903be18b4b593e148d9ab010",
+      "sha256": "9760707215884aeae20d478122f712867af2b09df063af131dfca95d988ab079",
+      "bytes": 3976
+    },
+    {
+      "path": "checkpoint/checkpoint/pair/verify_smooth_conic_gate.py",
+      "git_blob_sha1": "5af80f699e2826503c3e3ab20119f2e40f2f592a",
+      "sha256": "64759a976efea9a7fdaa78536f213dce0299a26b9bd03c0ab6121de2a7cdb4fa",
+      "bytes": 2557
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/CHECKPOINT_MANIFEST.json",
+      "git_blob_sha1": "a7b9d6bed329d409c2828f1763b424733eab40c2",
+      "sha256": "ec0b5a591bf58b0df9741b4f5742666201332a567543fbb4557e9cbf47588e11",
+      "bytes": 8151
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/CLEAN_REPLAY.json",
+      "git_blob_sha1": "cd747de50ebafdd62024d7f7243d1b407b9a5357",
+      "sha256": "0ced3d87199a4c28ee215bad4f0615dea71c1f024ea69770f66d5c7b97c3caab",
+      "bytes": 4781
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/CLOSING_STATE.json",
+      "git_blob_sha1": "8fb559fe49512beba22d8795987a9de000dd42da",
+      "sha256": "ee98d5ec7f6892fb4520e513c346e7f508ad41bac87ab16cf8546d880842d017",
+      "bytes": 1347
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/MID_CYCLE.json",
+      "git_blob_sha1": "1ed1f2c6cc8cff482de6eed810984441b809a9d7",
+      "sha256": "4942ead88544be20bdfda8ae46ef72d94ea1418ceef4ad7d3a94e1c814ce07bf",
+      "bytes": 708
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/README.md",
+      "git_blob_sha1": "9b9efa658dbaa929593bcdc13f4b8b87c3c8e3af",
+      "sha256": "e2995060b21270b7503357cd069edd9fe0e395aef56cf1dfc35e24a4ce81b117",
+      "bytes": 1119
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/REPORT.md",
+      "git_blob_sha1": "04de4f627d4e7d9718770191e6c63d089df55266",
+      "sha256": "815e0a25e6e8031917bdf4051a7bc3cfcfd812bc2e11f8d995246113455f0414",
+      "bytes": 6152
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/REPORT_DRAFT.md",
+      "git_blob_sha1": "d6da5c09219b06da998dd159ca25b715525aaa18",
+      "sha256": "a66786d7436576d171c8eb39536681031cd03c16ae04b43db404b867e218fc6c",
+      "bytes": 5214
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/SOURCE_ADDITIONAL_IDENTITIES.json",
+      "git_blob_sha1": "fb0ff3fb6f1ae3b9a6a2d6fdd5d438e4c6204bae",
+      "sha256": "2149331076f1abc12c72226c96bff25fa7b7d4955b5f3b5161cf227ca129c6ea",
+      "bytes": 924
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/SOURCE_GIT_IDENTITIES.json",
+      "git_blob_sha1": "6a00e8627a76734e7f525dc8342e156c06034414",
+      "sha256": "6420cd20ac70a6b265c7b36925f169ede04a9924683501bc76a13387455e7c99",
+      "bytes": 1733
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/SOURCE_MANIFEST.json",
+      "git_blob_sha1": "17046f525325034dda6b2e14a0de2c2243d36342",
+      "sha256": "364a440eead7a479720ee9acb3da9bdf0a2225f3724b43eeb3e5c4040aae76e7",
+      "bytes": 5503
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/WORK_ORDER.md",
+      "git_blob_sha1": "d22ec8f419a849c09f7c2321eabdfcf94b2fc64f",
+      "sha256": "96dd9335a5e0b6bba360f521c5fdcf4e8c57dfb304a426a2b2ffb3d5431f6d19",
+      "bytes": 3666
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/constructive/CONTINUATION_CERTIFICATE.json",
+      "git_blob_sha1": "7f3f77e6eaf23234a886b5995053b09ccb264bc0",
+      "sha256": "27d1a72a3e6a8a8731e64466c41fab5258b50fda1a756ac18c9b80e7e70aa751",
+      "bytes": 10283
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/constructive/FINDINGS.md",
+      "git_blob_sha1": "2026e61b74bef1b31bdde761055fe161444f0e67",
+      "sha256": "0681d84c0d0df8de963d563668379ff79bb5e90f5f4f29823db96fefb14d120f",
+      "bytes": 11140
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/constructive/HANDOFF.json",
+      "git_blob_sha1": "b8aed6ea22b25c4f30642d840020b6d3ce7f38dd",
+      "sha256": "6288c2847a391cfa662cdb4590224750d6339ab1d72dc80acd9c55246e73d3c8",
+      "bytes": 2711
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/constructive/discover.py",
+      "git_blob_sha1": "bacd1c1faec9adafcf197d8e03fa616598f2177c",
+      "sha256": "e7aeb0657647e2cbf2b6681cc75706902c294a440aad3594822c74c5d8e1e33c",
+      "bytes": 1186
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/constructive/reserve_support.json",
+      "git_blob_sha1": "1948836718778277dac942f35dd07443b25ab868",
+      "sha256": "57e3eae6f4287401353a210160de3b108e3ff11f8a77a1337b2a3a3c67a1bb97",
+      "bytes": 45
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/constructive/verify_constructive.py",
+      "git_blob_sha1": "123eec8a17cf6831d97db47435becd74bec392c7",
+      "sha256": "291f065995a76339648a8591840856f5757dd07c66f6047b2c13f882850b2ed8",
+      "bytes": 9804
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/falsifier/FINDINGS.md",
+      "git_blob_sha1": "a56fc8fe26264668f125a2f10f103cf99540ee7e",
+      "sha256": "2ce49902e90d07bf12910133b767cd209f43d80b9e3ab38e987c6705882784c0",
+      "bytes": 7027
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/falsifier/HANDOFF.json",
+      "git_blob_sha1": "e89da83735a4044d9599703ed8decd3ec42ff380",
+      "sha256": "0eac7882dd540c10459496095bac774dbaa4a8d3e63c942d89a80a1f069be32d",
+      "bytes": 1950
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/falsifier/candidate.json",
+      "git_blob_sha1": "77671a7970902109bf5f74b4bb29e80d47c6bbb4",
+      "sha256": "3d89c3619c211f2aa2b2068f4c12c6cefafc2ea1b5333228b0a89003718b0320",
+      "bytes": 2224
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/falsifier/certificate.json",
+      "git_blob_sha1": "1e11d931a4d77f8a26e37a66eca7983fcf5ed11e",
+      "sha256": "895438a296bf64efe729ea9acaed1185c0285b27e1b66413341db767f0306783",
+      "bytes": 6807
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/falsifier/certify.py",
+      "git_blob_sha1": "d19cfdb56ac8c188627a8b589276e6586736eafb",
+      "sha256": "7b6a9ec86fe829beb8aa6004a8d5353b494c9165d30d5e540133905301853abb",
+      "bytes": 6366
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/falsifier/search.py",
+      "git_blob_sha1": "f88748ba7d53226335d383805ecdb570e0d770c4",
+      "sha256": "21cd55644a0edf22f56246530e02c2b9be26dec01a1b14a246561b03ec07c3fd",
+      "bytes": 4013
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/certificates/ADMISSIBILITY_REPLAY.json",
+      "git_blob_sha1": "9fd84ce0dda838d9b38732fc35117b274a6978c3",
+      "sha256": "a68d577ae1f664cd782630d070f4efdb1f4de911fb254aa66f5267e83b43a3ab",
+      "bytes": 6832
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/certificates/NEAR_SINGULAR_CANARY.json",
+      "git_blob_sha1": "2d0f84c30640b4e0e561451d7efc1b5f6ae7d163",
+      "sha256": "5c6fc2ae4f55cd2f31694f14f2516b814bb134eaff222e087d93c78220bd2a6d",
+      "bytes": 1836
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/certificates/PARENT_AUDIT.json",
+      "git_blob_sha1": "2cb876876f0af790e09c8cde9e56e99340a48493",
+      "sha256": "69388d851ed3bd55a51e9adb168c69670c92b0f33127d62edcaa99c75d3e20bb",
+      "bytes": 16163
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/certificates/THREE_ROW_WITNESS.json",
+      "git_blob_sha1": "7c6315706d8fc854a2b39d057dacd389268715b3",
+      "sha256": "36af3b347d75605ffd44b97609ba2ae99ea8812ed62eca881145d58387cdb915",
+      "bytes": 1931
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/code/parent_certificates.py",
+      "git_blob_sha1": "68da6e92ce1b2b3605911d4e8661aae7f0b0aca8",
+      "sha256": "715d39400aae9dae72d9274f0d70778278f1b77afbb9152f149cb53e2c8f302a",
+      "bytes": 21382
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/code/parent_search.py",
+      "git_blob_sha1": "4a334c29e84f5ef2f35561ad8b5226ad4d8d0e4d",
+      "sha256": "adde2f4ba2b39241d6fb0805ca085e389434d89c141dd0dfd6bd32e96b1d231a",
+      "bytes": 24094
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/code/three_circuit_search.py",
+      "git_blob_sha1": "ea9717bd8e0967dc77076715de333154b3aeb54f",
+      "sha256": "7d96793e3b521526e99f729739ced732b24ab1d231d9a6d232b1fe2f262aed92",
+      "bytes": 6747
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/BOUNDARY_DETECTORS.md",
+      "git_blob_sha1": "5f33c839a7ea0ef871e69723606c9f4b9184c6da",
+      "sha256": "cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3",
+      "bytes": 9061
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/COLLISION_DIAGNOSTIC.md",
+      "git_blob_sha1": "d868f16123d251c8b2d0f4ec36d93a5ecfaca916",
+      "sha256": "2030664a17147bd0bd8ca6efc6104c4fb8ed758f67eca63b84a4a757d9d6314f",
+      "bytes": 4816
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/DETECTOR_FALSIFIER.md",
+      "git_blob_sha1": "eb1e8755b98673be0d67ba38ee0a767b35327056",
+      "sha256": "28cf339b063eabb95ff1037b92cff63001512f0a6f534eb01ec27bf3b6d7890c",
+      "bytes": 9160
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/DETECTOR_REPORT.md",
+      "git_blob_sha1": "2981f9080d3d27f9444973d47db19d95a3393130",
+      "sha256": "6b59f76763c0f969338ebd56d6d8ff3ec1bc9485c443b547aa3ee1fba23d4f2f",
+      "bytes": 7319
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/INJECTIVITY_ATTACK.md",
+      "git_blob_sha1": "485a5671e218310672b04ca21428ac8b2fb4f012",
+      "sha256": "f142b237e961111cdc223f2bbf36cad0ae745f07dfb5ff4d4363b98ea79ba7d0",
+      "bytes": 7987
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/PARENT_CUDA_PILOT.md",
+      "git_blob_sha1": "6ee4b3bb9cd5e94b8c42949014876cf734d9b18b",
+      "sha256": "8cb8f5abd9effeb908b5f94d69fa95b9aa82b020b87ef2383d320bbbe1193e89",
+      "bytes": 7423
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/SATURATION_REPORT.md",
+      "git_blob_sha1": "2206a5fb30498f1f7bd326fd9dac058ab1eeff56",
+      "sha256": "1e76e682d00167f776cb869928018ded32c942ffd6e7fc963d8f49651ba9bacd",
+      "bytes": 7972
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/inputs/reports/THEOREM_PROSPECTUS.md",
+      "git_blob_sha1": "b1332de02ed7ba875ef97e10270f234b4a7f0ef9",
+      "sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+      "bytes": 23739
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/CONSTRUCTIVE_AUDIT.md",
+      "git_blob_sha1": "6b346bd8525289b4b882bdcfec050fa34b1bec80",
+      "sha256": "46476bdf4c54f477846fc4de6d704074cff2a23e1fa396c728a1d8ac992e95d5",
+      "bytes": 4194
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/CONSTRUCTIVE_REPLAY.json",
+      "git_blob_sha1": "cc22e617e221b2837aa98b18e90e42be975444b8",
+      "sha256": "ff23aaf38e62a59c76253cefa11acda676bbc2809848468e33ee2d96b2c0866f",
+      "bytes": 1342
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/FALSIFIER_REPLAY.json",
+      "git_blob_sha1": "c7b15448b06643e36ed31346c2d601281419165f",
+      "sha256": "340f0e8c3125f8282129640c4d121c9ab59ed2f0a8e574a58c4b9cc13709bac2",
+      "bytes": 1883
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/FINAL_REVIEW.md",
+      "git_blob_sha1": "cf259f5db1d13a48ce48a509481e12d2f9040c56",
+      "sha256": "bf9803727330edf8f3edd6ef23af126f5116e8c6591622e59595202e4fb8c792",
+      "bytes": 8254
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/HANDOFF.json",
+      "git_blob_sha1": "6958fd34356833431438c943e878a9314fc0a124",
+      "sha256": "4d607910a5b34da02781b1b859684cd542d29b3b0d9659c19ceb332052348303",
+      "bytes": 1901
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/OPENING.md",
+      "git_blob_sha1": "ab69bd6400868b5c0db5e50a0f7dc71c15fe1ee6",
+      "sha256": "3b97b4a9dc429ffa67d235e154a290e206cca159c920fe9d88c1f44580c42d15",
+      "bytes": 7055
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/OPENING_REPLAY.json",
+      "git_blob_sha1": "a616ae75da0729ce8be7cd757de204ab5833c7f2",
+      "sha256": "705370cc08c9a99dec3f5599d6535b7979170fc4d3b4c228992c9545a4ab3102",
+      "bytes": 783
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/exact.py",
+      "git_blob_sha1": "069a27e848968540ae74eee4537ef8ca1e6bdf10",
+      "sha256": "c42ff3fcc0aeaed788374a38d285e6dc418ef70104cfecc392817a24dd930197",
+      "bytes": 3200
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/verify_constructive_independent.py",
+      "git_blob_sha1": "9397552f72fbe6138ac0ecbb676db93ce9fa54be",
+      "sha256": "dddcc043ee3b5cc9a231963be2ced3c48a6371dc6f7ed3a1c5e37545d54c94e6",
+      "bytes": 9493
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/verify_falsifier_independent.py",
+      "git_blob_sha1": "e620e614d68498d3bec6d1dd76d9ad3c39d2c287",
+      "sha256": "1b1441acb3dcdfcd07eef16b15ba7723a44cd883a4889a21936451bf7ed82551",
+      "bytes": 9661
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/referee/verify_opening.py",
+      "git_blob_sha1": "f947000bc0be0fd7e822836201217677a003b6dc",
+      "sha256": "a31007aaf01f38bca4d1a170e09a14d0c8b6b6e2908741f35af6f8b9c830a911",
+      "bytes": 3153
+    },
+    {
+      "path": "checkpoint/checkpoint/previous_checkpoint/replay_checkpoint.py",
+      "git_blob_sha1": "3a6233e011a5c600bac713fd7deb342745af92d8",
+      "sha256": "f518c8855f634dfe79e84828c904ea20251243f2ec922f45d91fa837f4cc22a0",
+      "bytes": 2447
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/ACTIVE_WALL_REDUCTION_AUDIT.md",
+      "git_blob_sha1": "774d8f2c6d101a5155b6203fdabc308a40831538",
+      "sha256": "008d04e38b7989125f3b83b593c49299b2d1fba5bfffc91a078d9f69cf46a48a",
+      "bytes": 4994
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/AFFINE_FIBER_GATE_AUDIT.md",
+      "git_blob_sha1": "5c3b60e4f281c71430038f4ec87b8dbe14f13d09",
+      "sha256": "33c33eabb5a31127f8d82c6d8d1eec068a3c3abc796fbd1f94bb8ac522474943",
+      "bytes": 4937
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/COLUMN_GATE_REPLAY.json",
+      "git_blob_sha1": "91afdb2a3a51e2138e68337e56be37c113c327d2",
+      "sha256": "06ebef8bc69943a170ff2be72ffb1806b6f0e05abfe4b78ec605b01e1eab31e0",
+      "bytes": 1158
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/FINAL_REVIEW.md",
+      "git_blob_sha1": "bd43ca0dc5371dc95deee44bd6349636f4e5e940",
+      "sha256": "f8380ecdba6e756f91d1812fef96f9f09857821f02607efaaa3531a61722a6fd",
+      "bytes": 7739
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/FINDINGS.md",
+      "git_blob_sha1": "b7a7d2737de261d9a61ada9de3597b8829a37175",
+      "sha256": "483965a16bc92897778a37090dade7fd10e9e5d9b88ee910394013c7870639a2",
+      "bytes": 2449
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/HANDOFF.json",
+      "git_blob_sha1": "3df3af7ee04d10fe279d9e371934dcf75f15f7fa",
+      "sha256": "9b865a4aadfc4dcdcc0e2cf4e9cef3495b677e81d98cedfb65a5aeb281b8dcc3",
+      "bytes": 2849
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/HARD_ORBIT_REPLAY.json",
+      "git_blob_sha1": "1ce12f46d67b9d6c3fc7e8d6adf1f2ecc5d4f5b1",
+      "sha256": "ccc0fb3ad5ee1a63325ce54c8bc330024d8e4a9eb932150714798d6caf57fdba",
+      "bytes": 840
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/HARD_PAIR_REPLAY.json",
+      "git_blob_sha1": "9a07959627a74be75b658af13bd15be45b0239e2",
+      "sha256": "cc09f40e144fc4b1c17d9ff7e57ea151de1ca502828bd44b8a061bc72f8cc393",
+      "bytes": 473
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/OPENING.md",
+      "git_blob_sha1": "67fe608291bac7f5f0ec5cd65749acf9e89ba785",
+      "sha256": "f94fb9511df1026d3c35f98d0bcee30a5ba52524a253b6cca1ab8ae24e471f68",
+      "bytes": 4359
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/OPENING_REPLAY.json",
+      "git_blob_sha1": "e508832a2bf8c34b35240fbbde75df1b7b9bc5fc",
+      "sha256": "1aaa6e3fca13cdc136db4b0829eff111433899f7d045c1d1587c97c428380ae0",
+      "bytes": 5281
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/PAIR_TEMPLATE_REPLAY.json",
+      "git_blob_sha1": "b1f98766d6d877613a67d6cd083df4e25b9a267f",
+      "sha256": "ab9558db4b3fb25f97e6eae5965ec953a2174247e2d6b91a337eab887c0530c5",
+      "bytes": 723
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/PAIR_THEOREM_AUDIT.md",
+      "git_blob_sha1": "ae3b5e5e6c9fd9c00020c453157bdda9f0d71d19",
+      "sha256": "3c69511883edf8fc766f8024efccfc9a9e197b13f17c43a66e8205765bfec8fe",
+      "bytes": 6049
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/REVIEW_IDENTITIES.json",
+      "git_blob_sha1": "5f74e5fd7319dbc07f095e588b59c22a6cac0926",
+      "sha256": "dae5487f02636bcc112dd5c9a467e036e3868c3fd7331a3e1b196667b194b4e2",
+      "bytes": 4622
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/RULED_INCIDENCE_REPLAY.json",
+      "git_blob_sha1": "a400d185bb6ca0d9ceb9125447587eec8c27abd0",
+      "sha256": "f6c7ba0d20256210139b86362147797c858f27202af75a7d86f08a8996419b28",
+      "bytes": 1745
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/RULED_QUADRIC_AUDIT.md",
+      "git_blob_sha1": "5e49a61a12f43f872ed839dd8388640ce4986a2c",
+      "sha256": "cf13b6c1638db5f91ce1b7e5a520768784da0cafc5b76d95cb4e96c20f62e48c",
+      "bytes": 4166
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/SOURCE_AUDIT.json",
+      "git_blob_sha1": "eb96c23dd8caa84091497618b7e4dadf27fa7b6d",
+      "sha256": "2f0118ba693b8d52807bbf95b49a9995c616737c02150683660a270c7ada7ca2",
+      "bytes": 1979
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/TANGENT_REPLAY.json",
+      "git_blob_sha1": "80941dd1113e122f9ae7fd93325176c78d9422b9",
+      "sha256": "184512fcacfb68052d0ea53c5f6cca86e03ecfb747bbcb4d4d5465833d7a26f2",
+      "bytes": 611
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/verify_column_gates_independent.py",
+      "git_blob_sha1": "6b824fb95e58b507955973b5be43155b9e943026",
+      "sha256": "27d8bbf7aef1edb1431b43f39ee6ba6e8b62e2847eb75702acd5cf3f60b60c27",
+      "bytes": 5904
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/verify_hard_orbits_independent.py",
+      "git_blob_sha1": "191f4424713b8627dd902246dec5f7d0e2240d0a",
+      "sha256": "c906309d96d0e2805663b3894b563321fc73fa1803026ec696a13995f251b96e",
+      "bytes": 4490
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/verify_hard_pair_independent.py",
+      "git_blob_sha1": "80033050fd8d3a0072bc18eb8d4e1514ea206e3e",
+      "sha256": "e3e50448a6f5366f7af7e720ddad1038e555c6cd461dee2ddd78ec0b7900eab9",
+      "bytes": 2549
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/verify_opening.py",
+      "git_blob_sha1": "0522be89abaf41ec970c9210a26f137d1d3bf679",
+      "sha256": "1e8bc504b278f0d9bf753245b9b9c374df7d1b1160956a696588c25f37922d89",
+      "bytes": 2597
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/verify_pair_templates_independent.py",
+      "git_blob_sha1": "6a8eb9f08b050dc481557cf6a70b04a6b3a82a21",
+      "sha256": "a25286608667cd22d7f816af699202b496aa1aaffb0067ddb62d66ddaddc09df",
+      "bytes": 5521
+    },
+    {
+      "path": "checkpoint/checkpoint/referee/verify_tangent_independent.py",
+      "git_blob_sha1": "0148c51235a2757b67594b838c4495af2bfdcc9f",
+      "sha256": "3fe50952a021fd5dc9034de3198774ce640a9eb39dba46e5c4e50b7c35929d3a",
+      "bytes": 7932
+    },
+    {
+      "path": "checkpoint/checkpoint/replay_checkpoint.py",
+      "git_blob_sha1": "329e6da490cda3173f2c9b7cb86fecbc03ced94b",
+      "sha256": "b62c5785111fbc20a24e3bfa62ad8e0a00de98d6dc20608d6fe0e9028faa92f3",
+      "bytes": 2805
+    },
+    {
+      "path": "checkpoint/checkpoint/requirements.txt",
+      "git_blob_sha1": "1ca5fd06160543f8bd736f1b51db6f42372c66f4",
+      "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc",
+      "bytes": 14
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/CONIC_PARAMETER_GATE.json",
+      "git_blob_sha1": "88ea485b6422aeb02621de57782efb3b337b55ea",
+      "sha256": "6e7c31247106a49b84056714d488859a0a7091e44a5c11c3dd8ace2592ed0a0c",
+      "bytes": 383
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/CONIC_REDUCTION_REPLAY.json",
+      "git_blob_sha1": "cd96f97dc9beee349761d5034874891ff3cc0b11",
+      "sha256": "51bbddfd70e26106238c44f3c8720e0269de01a1a17e086247e7e12c1c2f5f24",
+      "bytes": 2169
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/CONIC_TORUS_GATE.json",
+      "git_blob_sha1": "2b1286dab58a5a8f789a9fa23e5e087433adb129",
+      "sha256": "0a61da68d1ae2364aacd0efe95da1ba2076b6e36ff930a74c1a97aef108e57c0",
+      "bytes": 10239
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/EXACT_BRANCH_REPLAY.json",
+      "git_blob_sha1": "503a8119c823e510691e41cd54eae30f0d77f7a4",
+      "sha256": "9516536b971ff5880c63b3ad57b3148ff16dd436240042166467d92ec4382bca",
+      "bytes": 694
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/FINDINGS.md",
+      "git_blob_sha1": "3bab99fbd0a60e7b879200d960fce7152f903a91",
+      "sha256": "bafb9964291863d2ff51ddc85904935040783875cbd98eb03023b951474d01ba",
+      "bytes": 9925
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/HANDOFF.json",
+      "git_blob_sha1": "5ef92eca6229fa8f8f1f200f42088030debc9252",
+      "sha256": "45a4e9936497d6cd5d45c37afa38d562ab3f416867a8ea4bdd02491012f632a7",
+      "bytes": 3579
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/HEIGHT_DISCRIMINANT_SYSTEM.json",
+      "git_blob_sha1": "d9795d74bb47e329f31c0ad61725438c3fc7386a",
+      "sha256": "bc13c4ed0423694fc1b48f3d43ab303f3b75a777ac5b24394074243f17f56b41",
+      "bytes": 659092
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/UNIFORM_BRANCH.json",
+      "git_blob_sha1": "0292790e38c52d468814a1d6a70d512d86db5622",
+      "sha256": "2c4968ee4bbf9491da81c6f85695f2dd8746707cc93b45ce24809ef232c43b25",
+      "bytes": 12485
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/conic_torus_gate.py",
+      "git_blob_sha1": "4a0969c4888899af896f418d53923d5b957a7b58",
+      "sha256": "49ff43541d9c3a63f290d5689acbbd0b2878a0ec589616c4fcff4bcc53b6dccf",
+      "bytes": 1593
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/derive_height_discriminant.py",
+      "git_blob_sha1": "389752410697d26b306639d087cfd838bb697a4b",
+      "sha256": "e8638ef38ab1a571eae5cec60e36770988035667d8557288a9108f10913e6168",
+      "bytes": 2118
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/explore_discriminant.py",
+      "git_blob_sha1": "d313b0e8110a6b07dfb24ac0b3ee039fc64b79b5",
+      "sha256": "718e3b2093abd7da4002209615b6527f911f0aa3789a2fb4edc4c9a7b8223be0",
+      "bytes": 957
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/explore_structure.py",
+      "git_blob_sha1": "42e3bc0c1f6e5c8e5042af562077cd2280c35520",
+      "sha256": "bc5f226033817662b4f70ca893e0809fad20dfd834a4af5c02a523c0620732d2",
+      "bytes": 1003
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/find_uniform_branch.py",
+      "git_blob_sha1": "b149f14b821fd9c08fe2df342bdd9040219ee4d4",
+      "sha256": "1a8148eadcf8a30c7778faa59ff8ad1355d7982f20b2642775e81a55c6f533fb",
+      "bytes": 2483
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/test_conic_parameter.py",
+      "git_blob_sha1": "57ebad03f0cce5a17cbdf03d77ad418032a5d33d",
+      "sha256": "b1cb4dfc17b4b2727a3d989d4c4cc05599ff1e78841a93d0292df859d11a6d04",
+      "bytes": 1189
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/verify_conic_reduction.py",
+      "git_blob_sha1": "f608cac7d9f298ecce85d7ab7e9348e7d1cdeb25",
+      "sha256": "a30dff6a112f3280af335853f457254d61eefaace6590d77eeb47347186646b8",
+      "bytes": 3330
+    },
+    {
+      "path": "checkpoint/checkpoint/triple/verify_uniform_branch.py",
+      "git_blob_sha1": "c5db3299900e3efb46be1b700559773cbf73c399",
+      "sha256": "20612b22eebcbe7c79e9aa2a6950b3f2aa6ac4cb6e541f231f8e329d3151d50f",
+      "bytes": 3525
+    },
+    {
+      "path": "checkpoint/falsifier/ACTUAL_ANTICHAIN.json",
+      "git_blob_sha1": "be4fa8bbfb7b6adb701c49c6a70b26aade3728ba",
+      "sha256": "12612f417a8de5f06f633975e4f941b5ca9539fe13580689db392850f53d3778",
+      "bytes": 99493
+    },
+    {
+      "path": "checkpoint/falsifier/COMMON_ZERO_STRATUM.md",
+      "git_blob_sha1": "e8a7b79c2a3f526a7fb992f407cd854e34e5b62c",
+      "sha256": "84a5b6f18d79595bd84d3dbd621c07ae246eeca462351d16651a91c09d896b97",
+      "bytes": 10563
+    },
+    {
+      "path": "checkpoint/falsifier/FINDINGS.md",
+      "git_blob_sha1": "14975db1241c5146109aa42e6af5821d05766a64",
+      "sha256": "026fd3cc03611df654a228b387ee2eb986ecfe78abb882f16809ace279b5036f",
+      "bytes": 5175
+    },
+    {
+      "path": "checkpoint/falsifier/HANDOFF.json",
+      "git_blob_sha1": "606d46dfd5b8fbe5ec936e67ea1a5d51edf62e82",
+      "sha256": "caa5fe5ecd948680c879ff800d8796abc27695c492aaddc2bb2d21d2db364bfc",
+      "bytes": 2791
+    },
+    {
+      "path": "checkpoint/falsifier/actual_antichain.py",
+      "git_blob_sha1": "1b2fe80268ab076c641c147617b8652a68d0fb19",
+      "sha256": "ff1f9b03e3e8d97d32c7200e5ca9d1d688761416134d9a40778443a2860279dd",
+      "bytes": 5145
+    },
+    {
+      "path": "checkpoint/inputs/BLOCK_GORDAN_FORMAL_NO_GO.py",
+      "git_blob_sha1": "d1cfa6f9a07fb276a459924d6944d59dc6f32f5e",
+      "sha256": "d7183a0e323bd1310b4914eab5d60f17c343792474b7e28c3cac1432bca65c1e",
+      "bytes": 3413
+    },
+    {
+      "path": "checkpoint/inputs/DIAG3_HOSTILE_MULTIAFFINE_PAIR_TRIPLE_COUNTERMODEL.md",
+      "git_blob_sha1": "e7fe727e94daf6b2ffed1757fd9540b8c9147817",
+      "sha256": "a29202ca34a469a4ff19704e7dc85aff4031603d36f6d59297e51d1c698de17d",
+      "bytes": 2663
+    },
+    {
+      "path": "checkpoint/inputs/DIAG3_TRIPLE_SEQUENTIAL_AFFINE_COMPRESSION.md",
+      "git_blob_sha1": "aa5c3348628732a42c2aaaae884bfb1501353b9d",
+      "sha256": "d87f7f39ff3363e611fbd192df81f5693a13f5b3521de8430429395667275aaf",
+      "bytes": 9576
+    },
+    {
+      "path": "checkpoint/inputs/verify_diag3_triple_sequential_affine_certificates.py",
+      "git_blob_sha1": "4bec546e0459db0c36aa734a8ded848a0a9bc7cb",
+      "sha256": "ccd30d7714ed294921db35c3f1b5b25b8e87eae2402757a2a7f25783989393ca",
+      "bytes": 12427
+    },
+    {
+      "path": "checkpoint/pair/COMMON_WEAK_PRIMAL_VANISHING.md",
+      "git_blob_sha1": "c1c092f9564a36593c6167572c7a9cac71a1847f",
+      "sha256": "e5c80a04ca4c7e419f420472e3b9f0e531f60bf4043a7afcbcc3e34fd7202652",
+      "bytes": 11548
+    },
+    {
+      "path": "checkpoint/pair/FINDINGS.md",
+      "git_blob_sha1": "2c10694e5a29a210783facbd12166cb4270af71a",
+      "sha256": "5eba869b2e3ea2d269f46ae5dbb64442de393de7db3e778b01f1a2a674576851",
+      "bytes": 8880
+    },
+    {
+      "path": "checkpoint/pair/HANDOFF.json",
+      "git_blob_sha1": "53234a36190a2effb4a38b363a89a9f0747ae67b",
+      "sha256": "191a3344e5a96ab0d7b9dd39494e0f32069f0bb8162700b794a953cf8143a7f3",
+      "bytes": 2516
+    },
+    {
+      "path": "checkpoint/referee/ACTUAL_ANTICHAIN_REPLAY.json",
+      "git_blob_sha1": "0236483f7da9e6faaa65344690944755a089c946",
+      "sha256": "fe62e81dbc357f6c32e127ac06aed53adb497311e9ac6c7f79901cef2d782a7f",
+      "bytes": 6117
+    },
+    {
+      "path": "checkpoint/referee/COMMON_WEAK_AUDIT.md",
+      "git_blob_sha1": "f6883c4aeb2c8fc30bdcd5a795398b20270ab61d",
+      "sha256": "67a8246dba000997ef84bb36f3e96e82bb7743b3fb15b28f7c5d3c7dd37291d6",
+      "bytes": 7495
+    },
+    {
+      "path": "checkpoint/referee/FINAL_REVIEW.md",
+      "git_blob_sha1": "6e1dd431df7b46d6281147c5af44afa0b8843ab7",
+      "sha256": "b478fd02372dddd9f3b7878e44496d15b8122c90a44d74d40736d88de141064e",
+      "bytes": 8469
+    },
+    {
+      "path": "checkpoint/referee/HANDOFF.json",
+      "git_blob_sha1": "9c550a6bbd544e47f6021f60bd528e35d50ce390",
+      "sha256": "9ba9e5c55181407498dbe3d0188c137aa9caace276e53097a14aed9c6be560dd",
+      "bytes": 2282
+    },
+    {
+      "path": "checkpoint/referee/REVIEW_IDENTITIES.json",
+      "git_blob_sha1": "cc6ff7a20a87d1f1b2d0c54197c7e8dad1736ea5",
+      "sha256": "74791f5018d4f775e77679c43a2496d46ff48754e27764a552bf5f29329f31ef",
+      "bytes": 5422
+    },
+    {
+      "path": "checkpoint/referee/SOURCE_AND_TARGET_AUDIT.md",
+      "git_blob_sha1": "874b85e4b06676a597c278e2914c43f4095c0514",
+      "sha256": "7d7ee5d811058a0b8410ddbd296e7b7b4fb929b7797425c08243cae68b7a9bd5",
+      "bytes": 4949
+    },
+    {
+      "path": "checkpoint/referee/THREE_WEAK_OBSTRUCTION_REPLAY.json",
+      "git_blob_sha1": "9c3823b7179c19092c953b8d90ca7b3a36f77b1f",
+      "sha256": "f13ddc9c14b3d96c41971537f9644d398957affe12f54c7a34c5125c659898aa",
+      "bytes": 1610
+    },
+    {
+      "path": "checkpoint/referee/exact.py",
+      "git_blob_sha1": "069a27e848968540ae74eee4537ef8ca1e6bdf10",
+      "sha256": "c42ff3fcc0aeaed788374a38d285e6dc418ef70104cfecc392817a24dd930197",
+      "bytes": 3200
+    },
+    {
+      "path": "checkpoint/referee/poly.py",
+      "git_blob_sha1": "06d1b3a7afe7ac107d3cb8f50d14216127877fd7",
+      "sha256": "11d2bb889dd7c08f3be7f2e099a36edaf11966ed1a0f8e153022565945ff5b9a",
+      "bytes": 2391
+    },
+    {
+      "path": "checkpoint/referee/verify_actual_antichain.py",
+      "git_blob_sha1": "c0c7a380d35446d849eb10f2103d2f0f4f7abeb0",
+      "sha256": "9b53cd2dce751359682367203b4d20ad13bc5e11cde3c74c0f7ce3879f957526",
+      "bytes": 7694
+    },
+    {
+      "path": "checkpoint/referee/verify_three_weak_obstruction.py",
+      "git_blob_sha1": "ccf905d13f7078dbb364ed5113114c8202651a1f",
+      "sha256": "5f1279934d028dada35e0a3b80be1c3f1dce34f6477db07ae7a06210cb84d24e",
+      "bytes": 9453
+    },
+    {
+      "path": "checkpoint/replay_checkpoint.py",
+      "git_blob_sha1": "7f04a035331c721e58084891f8e57de604400a78",
+      "sha256": "dcc9909dc997b154ef302bbe462096731d8ea83cea429e8f9c3ed78e9a829545",
+      "bytes": 2492
+    },
+    {
+      "path": "checkpoint/triple/ACTUAL_HARD_THREE_BOUNDARY_SIGNATURES.json",
+      "git_blob_sha1": "634865d9ebd8a48ad48af74e608ce02ce6516e0e",
+      "sha256": "0c77da2ef6bf05d465b5d0b7d27500f09f875ec74f8e3586c676427e5522744b",
+      "bytes": 8479
+    },
+    {
+      "path": "checkpoint/triple/ACTUAL_THREE_BOUNDARY_SIGNATURES.json",
+      "git_blob_sha1": "91cdfe064cdbb0e63c6513c0c106171158b6e0b4",
+      "sha256": "e4002b365b75441fa3d1bef2057224643d32eb0ca71055f5d2a2fb5454724d71",
+      "bytes": 8231
+    },
+    {
+      "path": "checkpoint/triple/ACTUAL_UNIQUE_HARD_THREE_BOUNDARY_SIGNATURES.json",
+      "git_blob_sha1": "dd4aa9bb2d3bfe0d3caa1847d9f2bbf714201871",
+      "sha256": "9868a9998a201310a67fe9a2b211bbb4011629f67f921de86b6628946aafe97f",
+      "bytes": 8314
+    },
+    {
+      "path": "checkpoint/triple/AFFINE_HEIGHT_ESCAPE.md",
+      "git_blob_sha1": "5621d9666e525da08d617ab636c51e0702f1f37d",
+      "sha256": "36fc7b0ed2fdf37e03ff1f7c411e4243f8830760d066ae40a55d0dbb9b1a17aa",
+      "bytes": 7271
+    },
+    {
+      "path": "checkpoint/triple/BOUNDARY_CURVES.json",
+      "git_blob_sha1": "306ca3ecba9816644431b22eb6bdaf6c73a5258f",
+      "sha256": "be6d706e216121cf584bfd8a3a53140832342b8f8413915905b440c6c4aae9e9",
+      "bytes": 3333
+    },
+    {
+      "path": "checkpoint/triple/BOUNDARY_CURVES_REPLAY.json",
+      "git_blob_sha1": "bf5cdd1a34a45a625d7e4085c7d08e632e41d5c2",
+      "sha256": "91654bda571f5adb7cfea7ed309a4f5bd5c0e45bc813a23b30882df366181cf3",
+      "bytes": 322
+    },
+    {
+      "path": "checkpoint/triple/FINDINGS.md",
+      "git_blob_sha1": "12afb56ca42ab8166dbc257e55cc1b7ab2429f90",
+      "sha256": "699745194d16b85bbdc23e5fc42d0a36482f7bb318bf9419b45ca098d595beb1",
+      "bytes": 8759
+    },
+    {
+      "path": "checkpoint/triple/HANDOFF.json",
+      "git_blob_sha1": "edc0a8661c0e67b53031637a844d7769d777c67a",
+      "sha256": "5dc3b8a27550d78158b45529d147751a723ebd906d9f6bb0c6849b1aa7def1db",
+      "bytes": 4827
+    },
+    {
+      "path": "checkpoint/triple/HARD_THREE_BOUNDARY_POINTS.json",
+      "git_blob_sha1": "10a22b1f7508f3bababc3443d14c12fbf88edc46",
+      "sha256": "06d0dff1494e1a8406e439ae69997614db015faadf2957671fac61df34a597b7",
+      "bytes": 2377
+    },
+    {
+      "path": "checkpoint/triple/MULTIWEAK_HEIGHT_GATE.json",
+      "git_blob_sha1": "ed39e327bbbf9eca8dcf4fa1b92e011152f3d295",
+      "sha256": "95d12c68057a6b42d3aa274108b954c53dec5c10ae9f4595c186b53dcb2a1247",
+      "bytes": 2177
+    },
+    {
+      "path": "checkpoint/triple/THREE_BOUNDARY_POINTS.json",
+      "git_blob_sha1": "34459578d664fbc0d9b11b85077be8f21f6457bb",
+      "sha256": "8b227f288e8168463ad37c179c75dc9bcf5155a837668c35dbb1c09ce0896aba",
+      "bytes": 1580
+    },
+    {
+      "path": "checkpoint/triple/THREE_BOUNDARY_REPLAY.json",
+      "git_blob_sha1": "67ed17c878dc44f359a80479cf39de80163984e7",
+      "sha256": "d62a46d09af57d22395926d9a61642cf63c1cc8de318cfbf78b7748438fddad2",
+      "bytes": 603
+    },
+    {
+      "path": "checkpoint/triple/UNIQUE_HARD_BOUNDARY_REPLAY.json",
+      "git_blob_sha1": "61b5373625fc15f060f270a500f90ef87abb17ef",
+      "sha256": "962b62641610b47ae4d8fd4fe368e9c495096638b48551c56ffb349195f2190f",
+      "bytes": 892
+    },
+    {
+      "path": "checkpoint/triple/UNIQUE_HARD_THREE_BOUNDARY_POINTS.json",
+      "git_blob_sha1": "7c27359820b2a9423a9ad42daf2afd55e1aac7bd",
+      "sha256": "316c3ee6108f87f71f9a5e005deb63b067947072c28252d052701c3d52c7c736",
+      "bytes": 2378
+    },
+    {
+      "path": "checkpoint/triple/build_boundary_curves.py",
+      "git_blob_sha1": "0dfa12e8da958b921897c373499859e5e25fd5f1",
+      "sha256": "e3921a7fa0aea4eea92a470ca4b0e202fbe479cd6427b6ed6869346d7db85a23",
+      "bytes": 1345
+    },
+    {
+      "path": "checkpoint/triple/build_hard_signature_triple.py",
+      "git_blob_sha1": "2dbba19d6d03a29aa2c8d55227186d4d91ab87db",
+      "sha256": "26459cef81eddc152add642741f01dae9e16ad302efe36cfcad602c8e4eabd6a",
+      "bytes": 3540
+    },
+    {
+      "path": "checkpoint/triple/build_signature_triple.py",
+      "git_blob_sha1": "a9ea45d79067235c6001802a541611011a686336",
+      "sha256": "5083135d94d1ed95641a0c0bb179ced34b1fb32cc714b7ddb2f0ef51fb30b91b",
+      "bytes": 3490
+    },
+    {
+      "path": "checkpoint/triple/build_unique_hard_signature_triple.py",
+      "git_blob_sha1": "756e660df1820e462ed0a4f6dae6891a91c9d2a5",
+      "sha256": "a05000db53622d43fe309f1ee8215f5f112512522674dd732eba270e185798f4",
+      "bytes": 3554
+    },
+    {
+      "path": "checkpoint/triple/explore_three_points.py",
+      "git_blob_sha1": "1c95d74e69ab6507c2043ddd09aa399d9f473818",
+      "sha256": "340fc7e545d272b12c85297bfde8d16c009d82e014ccf5bbef5adc347ee288e2",
+      "bytes": 1525
+    },
+    {
+      "path": "checkpoint/triple/find_hard_boundary_triple.py",
+      "git_blob_sha1": "36b5ee35eb77e16be5c4b06752ad3eae96e55df6",
+      "sha256": "20df42079e88817702c1246aebca342d6b639923de47aca47791884cab7082a1",
+      "bytes": 1915
+    },
+    {
+      "path": "checkpoint/triple/find_unique_hard_boundary_triple.py",
+      "git_blob_sha1": "9b691199aa929211622998026df59b2efa57d2ce",
+      "sha256": "9d1b274b8eb3797c0ee382dde18f2ca85a87d0d13c6bedb6baefb0299727d63f",
+      "bytes": 1923
+    },
+    {
+      "path": "checkpoint/triple/test_multiweak_height.py",
+      "git_blob_sha1": "9a5e0c72111fe4582d8f30ba204409a400272270",
+      "sha256": "8fe4428657d7e4ed04cb21d49e07bf4cc4c8b054b8969ee1e66879714d67430c",
+      "bytes": 1247
+    },
+    {
+      "path": "checkpoint/triple/verify_boundary_curves.py",
+      "git_blob_sha1": "f029761cd6e03d15122242ca98d7e043afc2bce9",
+      "sha256": "263d46a47094dc44a37f3e480d700b82458eb683ae9b6c984d652d2cff7fb01d",
+      "bytes": 2112
+    },
+    {
+      "path": "checkpoint/triple/verify_three_boundary_signatures.py",
+      "git_blob_sha1": "017d8cdcc3898f96bea8122ee021e1bc3d6fe521",
+      "sha256": "e381e2cfb7cc3d13054834dc190bd4f8895c109bfce17a5660b442b21ca2bbe1",
+      "bytes": 4892
+    },
+    {
+      "path": "checkpoint/triple/verify_unique_hard_boundary.py",
+      "git_blob_sha1": "6b4b4d7f960bbff38b976c89d1c0ad87ae19a811",
+      "sha256": "894a36a7531916f074f7975915e6370edff5ad5a9e121c36a84e1e577e30da7f",
+      "bytes": 2219
+    },
+    {
+      "path": "inputs/2026-08-29-diag4-top-sheaf_CYCLE_REPORT.md",
+      "git_blob_sha1": "493461b1e20e15c7401627998af26665bcd445ed",
+      "sha256": "26383e2c2bd4306fc1f10f94aa695df2844865821912c8aa10aaae979d7e2923",
+      "bytes": 3801
+    },
+    {
+      "path": "inputs/2026-08-31-diag8-mask6-cegar_CYCLE_REPORT.md",
+      "git_blob_sha1": "3a681a61a6dba0f8cd974a151c7df3326660c6dd",
+      "sha256": "85fde03ecbe5be0ecaa21e3b6da4e24c4bfa9eb24bd61a185e880f6735e27c4a",
+      "bytes": 8304
+    },
+    {
+      "path": "inputs/2026-09-01-diag9-s1237-normal-link_CYCLE_REPORT.md",
+      "git_blob_sha1": "e23f08b1fb6b336c39043ec3028be4b011b4e989",
+      "sha256": "f61ae3bdb58c5192ccf3dee40eccbc587ace860a7e526aeebc6613d6485dc5e2",
+      "bytes": 9448
+    },
+    {
+      "path": "inputs/9DVL_THEOREM_PROSPECTUS.md",
+      "git_blob_sha1": "b1332de02ed7ba875ef97e10270f234b4a7f0ef9",
+      "sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+      "bytes": 23739
+    },
+    {
+      "path": "inputs/NINE_DIAGONAL_STATUS_V8.md",
+      "git_blob_sha1": "9f6834acddb7cce3bce8b5ca21e7447b9919d738",
+      "sha256": "a3e4abc6bfb35efe77bea78a9f03b34406a976802c0135518add7477951b3b18",
+      "bytes": 3929
+    }
+  ]
+}

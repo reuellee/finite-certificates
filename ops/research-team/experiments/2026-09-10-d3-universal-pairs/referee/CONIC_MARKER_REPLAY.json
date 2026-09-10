@@ -1,0 +1,23 @@
+{
+  "verdict": "ACCEPT_SUPPORT_ONLY_FORBIDDEN_PARENT_MARKERS",
+  "remaining_pairs": 45,
+  "pairs_with_marker": 44,
+  "ordered_marker_choices": 285,
+  "uncovered_source_indices": [
+    573
+  ],
+  "scope": "A guaranteed excluded parent point on a plane-quadric intersection; no Hc1 vanishing or additional pair coverage.",
+  "regulus_gate": {
+    "valid_presentations": 306,
+    "pairs_with_smooth_split_quadric_presentation": 45,
+    "compatible_actual_parent_marker_presentations": 238,
+    "pairs_with_compatible_actual_parent_marker": 44,
+    "every_recorded_rank_skew_and_nonzero_witness_checked": true
+  },
+  "hostile_controls": {
+    "false_marker": true,
+    "false_full_coverage": true,
+    "false_rank_witness": true,
+    "missing_regulus_pair": true
+  }
+}

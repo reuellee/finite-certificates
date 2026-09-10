@@ -1,0 +1,51 @@
+{
+  "role": "direct_pair",
+  "status": "auxiliary_actual_parent_theorem_proved_independently_accepted",
+  "original_ledger": "2/9 unchanged",
+  "original_D_injectivity": "open",
+  "original_triple_Hc0": "open",
+  "principal_result": "For any finite nonempty signature family, common-weak simultaneous-bad locus W is closed and Hc^q(W;Q)=0 for q=0,1,2. Common-triple W can be deleted coherently without changing original D kernel or triple Hc0.",
+  "proof": "COMMON_WEAK_PRIMAL_VANISHING.md",
+  "independent_referee": "/root/referee",
+  "review": "accepted after terminology correction, applied",
+  "quantifiers_included": [
+    "every realizable uniform rank4 parent on8",
+    "every normalized parent component",
+    "every finite nonempty signature family",
+    "all exact zero/sign strata",
+    "parent-point weak vectors and loop limits",
+    "projected parallel pairs",
+    "bad witness support changes",
+    "all weak cone dimensions",
+    "parent infinity via compact supports"
+  ],
+  "quantifiers_excluded": [
+    "simultaneous bad points without common weak primal vector",
+    "vanishing on complement of W",
+    "all original D kernel",
+    "full third diagonal"
+  ],
+  "computational_dependency": false,
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "checkpoint_base": "499f1190d988be5729b38db59e6cc8230fae7857",
+  "inputs": [
+    {
+      "path": "checkpoint/inputs/DIAG3_PAIR_DIFFERENTIAL_ENDS.md",
+      "sha256": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15"
+    },
+    {
+      "path": "checkpoint/inputs/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "sha256": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a"
+    },
+    {
+      "path": "checkpoint/inputs/ATLAS_HELLY.md",
+      "sha256": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0"
+    },
+    {
+      "path": "inputs/BLOCK_GORDAN_FORMAL_NO_GO.py",
+      "sha256": "d7183a0e323bd1310b4914eab5d60f17c343792474b7e28c3cac1432bca65c1e"
+    }
+  ],
+  "next_discriminator": "Control the actual balanced-end map after excision of commonweak W; weak-primal cones for different blocks may be disjoint and actual full-rank positive witnesses occur outsideW. A potential next incidence model retains distinct weak reference vectors, but its two-row height fibers are bilinear and not yet proved acyclic.",
+  "secondary_result": "Common unsigned rank4 row family plus inherited low vanishings still does not imply D injectivity; explicit abstract graph model, not actual parent geometry."
+}

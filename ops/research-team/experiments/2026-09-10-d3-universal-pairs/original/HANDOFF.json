@@ -1,0 +1,39 @@
+{
+  "role": "original",
+  "base": "401602fe9f8bcfad74116b46bb5574f63b6a3040",
+  "status": "universal_pair_wall_endpoint_proved_independently_accepted",
+  "original_ledger": "2/9 unchanged",
+  "original_D": "open",
+  "original_triple_Hc0": "open",
+  "result": "Universal Hc0,Hc1 vanishing for all type50/type51 factor-wall pairs, completing all9476 with inherited other kinds",
+  "new_coverage": 574,
+  "pair_wall_coverage": 9476,
+  "pair_wall_denominator": 9476,
+  "remaining": 0,
+  "proof": "CONCURRENCY_HEIGHT_PAIR_VANISHING.md",
+  "exact_replay": "python3 original/verify_affine_pair_coverage.py",
+  "input_sha256": "82434c6e07fe3290030b057f0eba2f50b522cfc25aabe66b8abf9a8495e55fc4",
+  "input": "checkpoint/checkpoint/coordinator/HARD_PAIR_RESIDUE.json",
+  "independent_referee": "/root/referee",
+  "included": [
+    "all uniformrank4 parents on8",
+    "all normalizedparentcomponents",
+    "all type50/type51 labeled factor occurrences",
+    "all coefficientrankdrops",
+    "positive parentcolumn gauges and finiteclopen signsectors",
+    "allowed projected coincidences",
+    "closed concurrencecollision q=p",
+    "q-height linebundle overRP2",
+    "fullconvex heightfibers",
+    "all compact-support ends"
+  ],
+  "excluded": [
+    "originalalternatingpairmap",
+    "independenttripleobligation",
+    "universal triplewallnoncompactness"
+  ],
+  "next_discriminator": "Universal triple-factor noncompactness now suffices with completedP through auditedwallunioncomparison; tripleheightmodel has8affineequationsin6unknowns and doesnot inheritpairescape.",
+  "computational_scope": "Universal final theorem is deductive, not a newcaseinventory. Intermediate529/45 and27/18 partitions are supersededprovenance.",
+  "independent_review": "Referee accepted full concurrence-height theorem deductively at pinnedSHA; intermediate529 and27 results have independent exact coverage audits",
+  "proof_sha256": "c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91"
+}
