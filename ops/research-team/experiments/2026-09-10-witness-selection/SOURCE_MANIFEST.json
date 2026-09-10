@@ -1,0 +1,133 @@
+{
+  "revisions": [
+    "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+    "59fec66666518257c585194b81061f60d91f439d"
+  ],
+  "scope": "consulted text source subset; not complete repository or previous evidence archive",
+  "files": [
+    {
+      "path": "inputs/certificates/ADMISSIBILITY_REPLAY.json",
+      "bytes": 6832,
+      "sha256": "a68d577ae1f664cd782630d070f4efdb1f4de911fb254aa66f5267e83b43a3ab",
+      "git_blob": "9fd84ce0dda838d9b38732fc35117b274a6978c3",
+      "revision": "59fec66666518257c585194b81061f60d91f439d",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/certificates/NEAR_SINGULAR_CANARY.json",
+      "bytes": 1836,
+      "sha256": "5c6fc2ae4f55cd2f31694f14f2516b814bb134eaff222e087d93c78220bd2a6d",
+      "git_blob": "2d0f84c30640b4e0e561451d7efc1b5f6ae7d163",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/certificates/PARENT_AUDIT.json",
+      "bytes": 16163,
+      "sha256": "69388d851ed3bd55a51e9adb168c69670c92b0f33127d62edcaa99c75d3e20bb",
+      "git_blob": "2cb876876f0af790e09c8cde9e56e99340a48493",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/certificates/THREE_ROW_WITNESS.json",
+      "bytes": 1931,
+      "sha256": "36af3b347d75605ffd44b97609ba2ae99ea8812ed62eca881145d58387cdb915",
+      "git_blob": "7c6315706d8fc854a2b39d057dacd389268715b3",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/code/parent_certificates.py",
+      "bytes": 21382,
+      "sha256": "715d39400aae9dae72d9274f0d70778278f1b77afbb9152f149cb53e2c8f302a",
+      "git_blob": "68da6e92ce1b2b3605911d4e8661aae7f0b0aca8",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/code/parent_search.py",
+      "bytes": 24094,
+      "sha256": "adde2f4ba2b39241d6fb0805ca085e389434d89c141dd0dfd6bd32e96b1d231a",
+      "git_blob": "4a334c29e84f5ef2f35561ad8b5226ad4d8d0e4d",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/code/three_circuit_search.py",
+      "bytes": 6747,
+      "sha256": "7d96793e3b521526e99f729739ced732b24ab1d231d9a6d232b1fe2f262aed92",
+      "git_blob": "ea9717bd8e0967dc77076715de333154b3aeb54f",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/reports/BOUNDARY_DETECTORS.md",
+      "bytes": 9061,
+      "sha256": "cb669202d3fbf0c55ccb3daec6a2c67d5e4d13e7f12ee30eb180a9ad065584c3",
+      "git_blob": "5f33c839a7ea0ef871e69723606c9f4b9184c6da",
+      "revision": "59fec66666518257c585194b81061f60d91f439d",
+      "remote_blob_match": true,
+      "remote_path": "ops/team/d3-detector-prover/BOUNDARY_DETECTORS.md"
+    },
+    {
+      "path": "inputs/reports/COLLISION_DIAGNOSTIC.md",
+      "bytes": 4816,
+      "sha256": "2030664a17147bd0bd8ca6efc6104c4fb8ed758f67eca63b84a4a757d9d6314f",
+      "git_blob": "d868f16123d251c8b2d0f4ec36d93a5ecfaca916",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/reports/DETECTOR_FALSIFIER.md",
+      "bytes": 9160,
+      "sha256": "28cf339b063eabb95ff1037b92cff63001512f0a6f534eb01ec27bf3b6d7890c",
+      "git_blob": "eb1e8755b98673be0d67ba38ee0a767b35327056",
+      "revision": "59fec66666518257c585194b81061f60d91f439d",
+      "remote_blob_match": true,
+      "remote_path": "ops/team/d3-detector-falsifier/FINDINGS.md"
+    },
+    {
+      "path": "inputs/reports/DETECTOR_REPORT.md",
+      "bytes": 7319,
+      "sha256": "6b59f76763c0f969338ebd56d6d8ff3ec1bc9485c443b547aa3ee1fba23d4f2f",
+      "git_blob": "2981f9080d3d27f9444973d47db19d95a3393130",
+      "revision": "59fec66666518257c585194b81061f60d91f439d",
+      "remote_blob_match": true,
+      "remote_path": "ops/research-team/cycles/2026-09-09-backward-detector/CYCLE_REPORT.md"
+    },
+    {
+      "path": "inputs/reports/INJECTIVITY_ATTACK.md",
+      "bytes": 7987,
+      "sha256": "f142b237e961111cdc223f2bbf36cad0ae745f07dfb5ff4d4363b98ea79ba7d0",
+      "git_blob": "485a5671e218310672b04ca21428ac8b2fb4f012",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/reports/PARENT_CUDA_PILOT.md",
+      "bytes": 7423,
+      "sha256": "8cb8f5abd9effeb908b5f94d69fa95b9aa82b020b87ef2383d320bbbe1193e89",
+      "git_blob": "6ee4b3bb9cd5e94b8c42949014876cf734d9b18b",
+      "revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+      "remote_blob_match": true
+    },
+    {
+      "path": "inputs/reports/SATURATION_REPORT.md",
+      "bytes": 7972,
+      "sha256": "1e76e682d00167f776cb869928018ded32c942ffd6e7fc963d8f49651ba9bacd",
+      "git_blob": "2206a5fb30498f1f7bd326fd9dac058ab1eeff56",
+      "revision": "59fec66666518257c585194b81061f60d91f439d",
+      "remote_blob_match": true,
+      "remote_path": "ops/research-team/cycles/2026-09-09-saturation-injectivity/CYCLE_REPORT.md"
+    },
+    {
+      "path": "inputs/reports/THEOREM_PROSPECTUS.md",
+      "bytes": 23739,
+      "sha256": "cc6d7c6fcf93e4cdd2a2980cb92f34fd934b97b5a28e80034f1f8367fa7e7879",
+      "git_blob": "b1332de02ed7ba875ef97e10270f234b4a7f0ef9",
+      "revision": "59fec66666518257c585194b81061f60d91f439d",
+      "remote_blob_match": true
+    }
+  ]
+}

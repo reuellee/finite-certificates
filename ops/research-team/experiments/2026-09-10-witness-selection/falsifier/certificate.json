@@ -1,0 +1,440 @@
+{
+  "classification": "EXACT_ACTUAL_PARENT_NO_CONTINUOUS_NORMALIZED_SECTION",
+  "coefficient_field": "Q",
+  "normalization": "raw cofactor normals; sum weights=1; Euclidean norm on56 coordinates",
+  "signature_integer": 1110781293763710,
+  "parent": [
+    [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    [
+      "0",
+      "1",
+      "2",
+      "0",
+      "1",
+      "2",
+      "0",
+      "1"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "2",
+      "2"
+    ],
+    [
+      "-2",
+      "2",
+      "4",
+      "15",
+      "-10",
+      "-10",
+      "-8",
+      "-3"
+    ]
+  ],
+  "perturbation": [
+    [
+      "0",
+      "2",
+      "-1",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "same_parent_interval": "0<=t<=1/1000000",
+  "center_zero_support": [
+    0,
+    19,
+    23,
+    28,
+    42
+  ],
+  "center_zero_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      3,
+      6
+    ],
+    [
+      2,
+      4,
+      6
+    ],
+    [
+      1,
+      4,
+      7
+    ]
+  ],
+  "center_signed_normals": [
+    [
+      "0",
+      "0",
+      "-2",
+      "0"
+    ],
+    [
+      "-25",
+      "0",
+      "25",
+      "0"
+    ],
+    [
+      "0",
+      "40",
+      "0",
+      "0"
+    ],
+    [
+      "32",
+      "-16",
+      "-16",
+      "0"
+    ],
+    [
+      "19",
+      "-19",
+      "0",
+      "0"
+    ]
+  ],
+  "center_ray0": [
+    [
+      "200/267"
+    ],
+    [
+      "32/267"
+    ],
+    [
+      "10/267"
+    ],
+    [
+      "25/267"
+    ],
+    [
+      "0"
+    ]
+  ],
+  "center_ray1": [
+    [
+      "1900/2347"
+    ],
+    [
+      "152/2347"
+    ],
+    [
+      "95/2347"
+    ],
+    [
+      "0"
+    ],
+    [
+      "200/2347"
+    ]
+  ],
+  "center_minimum_norm_squared": "41749/71289",
+  "minimum_optimality_direction_dot": "5027435/167315283",
+  "family_positive_kernel_polynomials": [
+    [
+      "-73536*t**3 + 143672*t**2 - 127516*t + 45680"
+    ],
+    [
+      "143680*t**4 - 26144*t**3 - 4896*t**2 + 35936*t + 6944"
+    ],
+    [
+      "-30640*t**3 + 1392*t**2 + 12924*t + 2284"
+    ],
+    [
+      "32640*t**4 - 6992*t**3 + 33776*t**2 + 32996*t + 5140"
+    ],
+    [
+      "11520*t**4 - 17056*t**3 - 11632*t**2 + 848*t + 480"
+    ]
+  ],
+  "family_normalized_kernel_limit": [
+    [
+      "2855/3783"
+    ],
+    [
+      "434/3783"
+    ],
+    [
+      "571/15132"
+    ],
+    [
+      "1285/15132"
+    ],
+    [
+      "10/1261"
+    ]
+  ],
+  "zero_last_derivative": [
+    [
+      "0"
+    ],
+    [
+      "-2"
+    ],
+    [
+      "2"
+    ],
+    [
+      "2"
+    ],
+    [
+      "-2"
+    ]
+  ],
+  "derivative_dot_center_minimum": "2/89",
+  "derivative_dot_second_ray": "-514/2347",
+  "second_perturbation": [
+    [
+      "0",
+      "-179/89",
+      "177/178",
+      "179/89",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-177/89",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-1/89",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "second_positive_kernel_polynomials": [
+    [
+      "4705221747148*t**3/62742241 + 102311986576*t**2/704969 + 1016075116*t/7921 + 4050360/89"
+    ],
+    [
+      "804639529052386*t**4/5584059449 + 1546096376025*t**3/62742241 - 3242535939*t**2/704969 - 291641854*t/7921 + 631824/89"
+    ],
+    [
+      "1882727358723*t**3/62742241 + 235816942*t**2/704969 - 1128047*t/89 + 202518/89"
+    ],
+    [
+      "194036950086534*t**4/5584059449 + 494890872741*t**3/62742241 + 22960902132*t**2/704969 - 270821625*t/7921 + 480930/89"
+    ],
+    [
+      "65451663619456*t**4/5584059449 + 1117357722159*t**3/62742241 - 7397238939*t**2/704969 + 689978*t/7921 + 240"
+    ]
+  ],
+  "second_kernel_limit": [
+    [
+      "168765/224458"
+    ],
+    [
+      "13163/112229"
+    ],
+    [
+      "33753/897832"
+    ],
+    [
+      "80155/897832"
+    ],
+    [
+      "5/1261"
+    ]
+  ],
+  "second_zero_last_derivative": [
+    [
+      "1/89"
+    ],
+    [
+      "179/89"
+    ],
+    [
+      "-177/89"
+    ],
+    [
+      "-177/89"
+    ],
+    [
+      "179/89"
+    ]
+  ],
+  "disjoint_limit_halfspaces": "Path1 requires d dot w<=0; Path2 requires d dot w>=1/89. Therefore no continuous normalized nonnegative Gordan witness section exists on any relative neighborhood of the center in the full bad locus.",
+  "good_direction": [
+    [
+      "0",
+      "-1",
+      "-1/2",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "good_parent": [
+    [
+      "1",
+      "999999/1000000",
+      "1999999/2000000",
+      "1000001/1000000",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    [
+      "1/1000000",
+      "1",
+      "2",
+      "0",
+      "1",
+      "2",
+      "0",
+      "1"
+    ],
+    [
+      "-1/1000000",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "2",
+      "2"
+    ],
+    [
+      "-2",
+      "2",
+      "4",
+      "15",
+      "-10",
+      "-10",
+      "-8",
+      "-3"
+    ]
+  ],
+  "good_primal": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "good_minimum_margin": "1999997/2000000000000",
+  "proof": "Every feasible weight at center is supported onZ and lies onsegment[r0,r1]. Since q=r0 and q\u00b7(r1-r0)>0, q uniquely minimizes norm. For t>0 outsideZ signed last coordinates remainpositive. Any convergent normalized feasible sequence has d\u00b7w_limit<=0 after last-coordinate equation is divided byt. Since d\u00b7q>0, no such sequence approaches q. Exact positive kernel polynomials prove every t in(0,epsilon] isBAD. GOOD nearby parent proves fixed signature realizable and proper in same parent chamber.",
+  "coverage": "One new literal uniform rank4 parent chamber and one new fixed realizable signature. No antichain construction, no source fixed3 result, no original cohomology target refutation.",
+  "source_sha256": {
+    "candidate.json": "3d89c3619c211f2aa2b2068f4c12c6cefafc2ea1b5333228b0a89003718b0320",
+    "THREE_ROW_WITNESS.json": "36af3b347d75605ffd44b97609ba2ae99ea8812ed62eca881145d58387cdb915"
+  },
+  "hostile_changed_circuit_weight_rejected": true,
+  "original_obligations_closed": 0,
+  "ledger": "2/9"
+}

@@ -1,0 +1,37 @@
+{
+  "role": "falsifier",
+  "status": "COMPLETE_AWAITING_INDEPENDENT_REFEREE",
+  "classification": "EXACT_ACTUAL_PARENT_NO_CONTINUOUS_NORMALIZED_SECTION",
+  "claim": "There exists a realizable proper fixed signature over an actual uniform rank4 parent chamber whose normalized nonnegative Gordan witness correspondence admits no local continuous section at a specified bad parent.",
+  "scope": "New literal uniform parent and fixed signature1110781293763710; not the pinned fixed3 antichain and not a cohomology counterexample.",
+  "replay_command": "python falsifier/certify.py",
+  "discovery_command": "python falsifier/search.py",
+  "dependencies": [
+    "sympy==1.14.0 (certificate)",
+    "numpy and scipy (discovery only)"
+  ],
+  "outputs": {
+    "FINDINGS.md": "2ce49902e90d07bf12910133b767cd209f43d80b9e3ab38e987c6705882784c0",
+    "certificate.json": "895438a296bf64efe729ea9acaed1185c0285b27e1b66413341db767f0306783",
+    "candidate.json": "3d89c3619c211f2aa2b2068f4c12c6cefafc2ea1b5333228b0a89003718b0320",
+    "certify.py": "7b6a9ec86fe829beb8aa6004a8d5353b494c9165d30d5e540133905301853abb",
+    "search.py": "21cd55644a0edf22f56246530e02c2b9be26dec01a1b14a246561b03ec07c3fd"
+  },
+  "source_revisions": [
+    "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+    "59fec66666518257c585194b81061f60d91f439d"
+  ],
+  "search_extent": {
+    "literal_lift_candidates": 1,
+    "center_nonempty_active_supports": 31,
+    "coordinate_derivative_directions": 24,
+    "ordered_derivative_targets_examined": 1371,
+    "certified_bad_parameter_families": 2,
+    "certified_good_parameter_families": 1,
+    "parameter_interval": "0<t<=1/1000000"
+  },
+  "original_obligations_closed": 0,
+  "ledger": "2/9",
+  "publication": "not performed",
+  "next_discriminator": "Independent exact audit of both limiting halfspace obstructions, family positivity and properness; then require future attachment strategies to handle multivalued/stratified witness behavior."
+}

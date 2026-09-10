@@ -1,0 +1,55 @@
+{
+  "verdict": "ACCEPT_ACTUAL_PARENT_NO_LOCAL_CONTINUOUS_WITNESS_SECTION",
+  "all70_center_brackets_nonzero": true,
+  "all56_center_normals_rebuilt": true,
+  "signature": 1110781293763710,
+  "center_zero_rows": [
+    0,
+    19,
+    23,
+    28,
+    42
+  ],
+  "center_witness_polytope": "exact segment [r0,r1]",
+  "center_minimum": "r0",
+  "center_optimality_dot": "5027435/167315283",
+  "bad_family_checks": [
+    {
+      "parent_signed_bracket_bound": "49999299999/25000000000",
+      "outside51_last_coordinate_bound": "199999/200000",
+      "positive_kernel_bound": "374999337490912486674991/781250000000000000000",
+      "polynomial_kernel_identity": true,
+      "support_rank_for_positive_t": 4
+    },
+    {
+      "parent_signed_bracket_bound": "7920889595342301/3960500000000000",
+      "outside51_last_coordinate_bound": "177999107/178000000",
+      "positive_kernel_bound": "20940215332629776389363723065396571/87250928890625000000000000000000",
+      "polynomial_kernel_identity": true,
+      "support_rank_for_positive_t": 4
+    }
+  ],
+  "same_chamber_good_family_all_parameters": true,
+  "good_anchor_margin": "1999997/2000000000000",
+  "derivative_dot_center_minimum": "2/89",
+  "incompatible_necessary_limit_bounds": [
+    "d dot w <= 0",
+    "d dot w >= 1/89"
+  ],
+  "original_cohomological_obligations_closed": 0,
+  "fixed_historical_three_signature_family_tested": false,
+  "hostile_controls": {
+    "signature_flip": true,
+    "zero_support_corruption": true,
+    "center_ray_corruption": true,
+    "kernel_polynomial_corruption": true,
+    "second_kernel_polynomial_corruption": true,
+    "second_direction_corruption": true,
+    "derivative_bound_corruption": true,
+    "good_direction_corruption": true,
+    "good_primal_negation": true,
+    "good_margin_corruption": true,
+    "claimed_interval_corruption": true,
+    "center_minimum_norm_corruption": true
+  }
+}
