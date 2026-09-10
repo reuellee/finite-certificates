@@ -1,0 +1,211 @@
+{
+  "method": "Independent stdlib Fraction/permutation determinants; no producer imports or acceptance logic.",
+  "nonzero_noncollinear": {
+    "verdict": "ACCEPT_NONZERO_NONCOLLINEAR_CRITICAL_WITNESS",
+    "parent": [
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        -1,
+        4,
+        7
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        -5,
+        -4
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        3,
+        2,
+        5
+      ]
+    ],
+    "supports": [
+      [
+        "123",
+        "145",
+        "246",
+        "356"
+      ],
+      [
+        "123",
+        "146",
+        "248",
+        "378"
+      ],
+      [
+        "126",
+        "145",
+        "248",
+        "378"
+      ]
+    ],
+    "all70_parent_brackets": {
+      "1234": 1,
+      "1235": 1,
+      "1236": 3,
+      "1237": 2,
+      "1238": 5,
+      "1245": -1,
+      "1246": -2,
+      "1247": 5,
+      "1248": 4,
+      "1256": 1,
+      "1257": 7,
+      "1258": 9,
+      "1267": 19,
+      "1268": 22,
+      "1278": -17,
+      "1345": 1,
+      "1346": -1,
+      "1347": 4,
+      "1348": 7,
+      "1356": -4,
+      "1357": 2,
+      "1358": 2,
+      "1367": 14,
+      "1368": 26,
+      "1378": -6,
+      "1456": 3,
+      "1457": -9,
+      "1458": -11,
+      "1467": -3,
+      "1468": -10,
+      "1478": 19,
+      "1567": 30,
+      "1568": 38,
+      "1578": -4,
+      "1678": 62,
+      "2345": -1,
+      "2346": -1,
+      "2347": -1,
+      "2348": -1,
+      "2356": 2,
+      "2357": 1,
+      "2358": 4,
+      "2367": -1,
+      "2368": 2,
+      "2378": 3,
+      "2456": -1,
+      "2457": 6,
+      "2458": 5,
+      "2467": 7,
+      "2468": 6,
+      "2478": -1,
+      "2567": -13,
+      "2568": -14,
+      "2578": 19,
+      "2678": 20,
+      "3456": -2,
+      "3457": 3,
+      "3458": 6,
+      "3467": 5,
+      "3468": 8,
+      "3478": 3,
+      "3567": -8,
+      "3568": -20,
+      "3578": 6,
+      "3678": 18,
+      "4567": -9,
+      "4568": -4,
+      "4578": -21,
+      "4678": -26,
+      "5678": 74
+    },
+    "points": [
+      [
+        1,
+        2,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        -4,
+        0
+      ],
+      [
+        1,
+        -4,
+        -4,
+        -6
+      ]
+    ],
+    "concurrence_rank": 3,
+    "direct_gradients": [
+      [
+        "27",
+        "45",
+        "0",
+        "99",
+        "0",
+        "-18",
+        "0",
+        "-9"
+      ],
+      [
+        "27",
+        "45",
+        "0",
+        "99",
+        "0",
+        "-18",
+        "0",
+        "-9"
+      ]
+    ],
+    "normalized_free_height_labels": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "normalized_gradient_rank": 1,
+    "both_gradients_nonzero": true,
+    "hostile_controls_rejected": 2,
+    "producer_json_sha256": "af07cefbc95d2aef313b4b668c16ce1725bf35980915d64cae1139e19715655a",
+    "scope": "Refutes even the nonzero-gradient critical-implies-collinear claim. No compactness counterexample or original theorem."
+  },
+  "kind48_axis": {
+    "verdict": "ACCEPT_KIND48_FIRST_ORDER_BUT_NOT_FULL_HEIGHT_FLAT",
+    "direction": [
+      "5/6",
+      "2",
+      "1",
+      "1"
+    ],
+    "second_derivative_parent5": -2,
+    "parent_sign_interval": [
+      "-1/100",
+      "1/100"
+    ],
+    "identity_method": "Nine rational evaluations and determinant bidegree bound (2,2).",
+    "producer_json_sha256": "038690b948df43bfe7a06cf66874715df340e74c6a72f4ef3009824a6a87b211",
+    "scope": "Kernel direction diagnostic; direction need not be another factor concurrence."
+  }
+}

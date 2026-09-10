@@ -1,0 +1,7287 @@
+{
+  "scope": "Exact same-data pencil determinant and repeated rational-root kernel probe; higher nullity and irrational roots not exhausted",
+  "records": [
+    {
+      "trials": [
+        1,
+        7
+      ],
+      "det_pencil": "lam**2*(36*lam**2 + 591*lam + 1960)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        10
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        1,
+        14
+      ],
+      "det_pencil": "3*lam**2*(19*lam**2 + 150*lam + 6000)/16",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        18
+      ],
+      "det_pencil": "180*lam**2*(1960*lam**2 + 441*lam + 25)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        26
+      ],
+      "det_pencil": "2*lam**4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 4,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        27
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        1,
+        40
+      ],
+      "det_pencil": "5*lam**2*(23*lam + 256)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        49
+      ],
+      "det_pencil": "lam**2*(1183*lam**2 + 546*lam + 80)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        55
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        1,
+        61
+      ],
+      "det_pencil": "225*lam**2*(160*lam**2 - 41*lam + 5)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        62
+      ],
+      "det_pencil": "-180*lam**2*(5*lam - 16)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        65
+      ],
+      "det_pencil": "75*lam**2*(lam + 3)*(3*lam + 10)/8",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        69
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        1,
+        79
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        1,
+        83
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        1,
+        84
+      ],
+      "det_pencil": "180*lam**2*(2940*lam**2 + 434*lam + 25)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        87
+      ],
+      "det_pencil": "125*lam**2*(lam + 16)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        88
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        1,
+        101
+      ],
+      "det_pencil": "324*lam**2*(18*lam**2 - 15*lam + 20)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        110
+      ],
+      "det_pencil": "2*lam**2*(4*lam**2 + 15*lam + 10)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        1,
+        114
+      ],
+      "det_pencil": "lam**2*(162*lam**2 + 1575*lam + 980)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        10
+      ],
+      "det_pencil": "3*lam**2*(3*lam + 10)*(4*lam - 3)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        14
+      ],
+      "det_pencil": "3*lam**2*(2*lam**2 + 5*lam + 12)/16",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        18
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        7,
+        26
+      ],
+      "det_pencil": "8*lam**2*(lam - 1)*(lam + 6)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        27
+      ],
+      "det_pencil": "3*lam*(108*lam**3 + 33*lam**2 + 2*lam + 24)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        7,
+        40
+      ],
+      "det_pencil": "15*lam**2*(lam - 12)*(lam - 1)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        49
+      ],
+      "det_pencil": "13*lam**3*(1079*lam - 57)/16",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        55
+      ],
+      "det_pencil": "24*lam**2*(3*lam + 1)*(36*lam + 5)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        61
+      ],
+      "det_pencil": "9*lam**2*(2400*lam**2 + 1660*lam + 69)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        62
+      ],
+      "det_pencil": "5*lam*(112*lam**2 - 114*lam + 9)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        7,
+        65
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        7,
+        69
+      ],
+      "det_pencil": "-21*lam**2*(10*lam - 1)*(70*lam + 69)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        79
+      ],
+      "det_pencil": "9*lam**2*(42*lam - 215)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        83
+      ],
+      "det_pencil": "36*lam*(6*lam + 1)*(3*lam**2 - 11*lam + 1)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        7,
+        84
+      ],
+      "det_pencil": "1260*lam**2*(25*lam + 1)*(350*lam - 23)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        87
+      ],
+      "det_pencil": "lam*(lam - 3)*(5*lam + 3)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        7,
+        88
+      ],
+      "det_pencil": "-12*lam**2*(5*lam - 7)*(20*lam - 9)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        7,
+        101
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        7,
+        110
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        7,
+        114
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        10,
+        14
+      ],
+      "det_pencil": "-3*lam**2*(lam - 5)*(lam + 16)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        18
+      ],
+      "det_pencil": "-30*lam**2*(140*lam - 9)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        26
+      ],
+      "det_pencil": "2*lam**2*(lam - 3)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        27
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        10,
+        40
+      ],
+      "det_pencil": "3*lam**2*(lam - 1)*(lam + 4)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        49
+      ],
+      "det_pencil": "3*lam**2*(13*lam - 1)*(13*lam + 1)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        55
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        10,
+        61
+      ],
+      "det_pencil": "1125*lam**3*(8*lam + 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        62
+      ],
+      "det_pencil": "27*lam**2*(50*lam**2 - 15*lam + 4)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        65
+      ],
+      "det_pencil": "9*lam*(5*lam**2 + 7*lam + 6)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        10,
+        69
+      ],
+      "det_pencil": "15*lam*(6*lam + 1)*(70*lam + 3)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        10,
+        79
+      ],
+      "det_pencil": "75*lam**2*(112*lam - 71)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        83
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        10,
+        84
+      ],
+      "det_pencil": "30*lam**2*(42*lam - 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        87
+      ],
+      "det_pencil": "3*lam*(5*lam + 6)*(10*lam**2 + 9*lam - 4)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        10,
+        88
+      ],
+      "det_pencil": "5*lam**2*(38*lam + 9)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        101
+      ],
+      "det_pencil": "-3*lam*(540*lam**2 + 607*lam - 54)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        10,
+        110
+      ],
+      "det_pencil": "2*lam**2*(2*lam - 3)*(4*lam - 5)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        10,
+        114
+      ],
+      "det_pencil": "-3*lam**2*(33*lam - 28)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        14,
+        18
+      ],
+      "det_pencil": "-75*lam*(10*lam - 1)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        26
+      ],
+      "det_pencil": "25*lam**2*(14*lam + 3)/8",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "1",
+            "6",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              0,
+              2,
+              4,
+              7
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        14,
+        27
+      ],
+      "det_pencil": "9*lam*(72*lam**2 - 31*lam + 3)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        40
+      ],
+      "det_pencil": "lam*(60*lam**3 - 1061*lam**2 + 32*lam + 3)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        49
+      ],
+      "det_pencil": "-lam*(13*lam + 3)*(65*lam**2 - 41*lam - 2)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        55
+      ],
+      "det_pencil": "9*lam*(360*lam**2 - 41*lam + 1)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        61
+      ],
+      "det_pencil": "-45*lam*(3*lam + 1)*(320*lam**2 + 136*lam - 3)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        62
+      ],
+      "det_pencil": "9*lam*(20*lam**2 + 17*lam + 1)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        65
+      ],
+      "det_pencil": "lam*(75*lam**2 + 10*lam - 2)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        69
+      ],
+      "det_pencil": "-lam*(22540*lam**2 - 20696*lam + 147)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        79
+      ],
+      "det_pencil": "3*lam*(504*lam**2 - 36*lam + 1)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        83
+      ],
+      "det_pencil": "-3*lam*(1746*lam**2 - 390*lam + 5)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        84
+      ],
+      "det_pencil": "-9*lam*(2352000*lam**3 + 436800*lam**2 - 706*lam - 19)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        87
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        14,
+        88
+      ],
+      "det_pencil": "lam*(2235*lam**2 - 2193*lam - 38)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        101
+      ],
+      "det_pencil": "27*lam**2*(22*lam + 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "1",
+            "6",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              0,
+              2,
+              4,
+              7
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        14,
+        110
+      ],
+      "det_pencil": "-lam*(8*lam + 1)*(4*lam**2 + 15*lam + 3)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        14,
+        114
+      ],
+      "det_pencil": "-3*lam*(3*lam + 1)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        18,
+        26
+      ],
+      "det_pencil": "120*lam**2*(lam - 84)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        27
+      ],
+      "det_pencil": "-12*lam*(117*lam**2 - 3640*lam - 58800)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        18,
+        40
+      ],
+      "det_pencil": "4*lam**2*(5*lam**2 - 573*lam + 42840)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        49
+      ],
+      "det_pencil": "-1365*lam**2*(lam + 6)*(13*lam - 192)/16",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        55
+      ],
+      "det_pencil": "48*lam**2*(27*lam + 4900)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        61
+      ],
+      "det_pencil": "2250*lam**2*(2*lam + 7)*(6*lam + 11)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        62
+      ],
+      "det_pencil": "35*lam*(2719*lam**2 + 20856*lam + 25200)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        18,
+        65
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        18,
+        69
+      ],
+      "det_pencil": "231525*lam**2*(7*lam + 34)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        79
+      ],
+      "det_pencil": "49140*lam**2*(65*lam + 28)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        83
+      ],
+      "det_pencil": "-45*lam*(9*lam - 56)*(39*lam + 280)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        18,
+        84
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        18,
+        87
+      ],
+      "det_pencil": "-735*lam*(101*lam**2 + 816*lam + 960)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        18,
+        88
+      ],
+      "det_pencil": "7560*lam**2*(59*lam + 20)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        101
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        18,
+        110
+      ],
+      "det_pencil": "-8*lam**2*(lam + 6)*(11*lam + 525)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        18,
+        114
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        26,
+        27
+      ],
+      "det_pencil": "-2*lam*(3*lam - 1)*(15*lam + 2)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        40
+      ],
+      "det_pencil": "lam*(lam + 2)*(5*lam**2 + 4*lam + 4)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        49
+      ],
+      "det_pencil": "lam*(39*lam + 2)*(65*lam**2 + 63*lam + 6)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        55
+      ],
+      "det_pencil": "-192*lam**2*(3*lam - 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        26,
+        61
+      ],
+      "det_pencil": "-5*lam**2*(23040*lam**2 - 9000*lam - 901)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        26,
+        62
+      ],
+      "det_pencil": "lam*(785*lam**2 - 178*lam + 5)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        65
+      ],
+      "det_pencil": "-3*lam*(25*lam**2 - 75*lam - 4)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        69
+      ],
+      "det_pencil": "-lam*(5810*lam**2 - 2372*lam + 17)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        79
+      ],
+      "det_pencil": "28*lam*(147*lam**2 + 231*lam + 2)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        83
+      ],
+      "det_pencil": "-4*lam*(81*lam**2 - 27*lam - 1)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        84
+      ],
+      "det_pencil": "8*lam*(110250*lam**3 + 17010*lam**2 + 86*lam + 1)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        87
+      ],
+      "det_pencil": "-5*lam*(105*lam**2 - 48*lam - 4)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        88
+      ],
+      "det_pencil": "4*lam*(7*lam + 1)*(40*lam - 1)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        101
+      ],
+      "det_pencil": "18*lam*(144*lam**2 + 50*lam + 1)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        110
+      ],
+      "det_pencil": "4*lam*(12*lam**2 + 14*lam - 1)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        26,
+        114
+      ],
+      "det_pencil": "-7*lam**2*(18*lam + 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        40
+      ],
+      "det_pencil": "27*lam**2*(lam - 3)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        49
+      ],
+      "det_pencil": "-3*lam**2*(169*lam**2 - 221*lam + 36)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        55
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        27,
+        61
+      ],
+      "det_pencil": "4050*lam**3*(20*lam + 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        62
+      ],
+      "det_pencil": "-1215*lam**3",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        65
+      ],
+      "det_pencil": "9*lam*(50*lam**3 + 80*lam**2 - 363*lam + 54)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        27,
+        69
+      ],
+      "det_pencil": "lam*(50*lam + 9)*(371*lam + 45)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        27,
+        79
+      ],
+      "det_pencil": "486*lam**2*(126*lam - 95)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        83
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        27,
+        84
+      ],
+      "det_pencil": "-3240*lam**2*(7*lam + 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        87
+      ],
+      "det_pencil": "27*lam*(5*lam + 6)*(13*lam - 4)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        27,
+        88
+      ],
+      "det_pencil": "270*lam**2*(11*lam - 19)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        27,
+        101
+      ],
+      "det_pencil": "27*lam*(864*lam**3 - 664*lam**2 + 57*lam + 27)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        27,
+        110
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        27,
+        114
+      ],
+      "det_pencil": "81*lam**2*(lam + 1)**2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        },
+        {
+          "lambda": "-1",
+          "multiplicity": 2,
+          "point": [
+            "-7/2",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        40,
+        49
+      ],
+      "det_pencil": "3*lam*(13*lam + 5)*(13*lam**2 + 18*lam + 1)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        55
+      ],
+      "det_pencil": "-27*lam**2*(12*lam - 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "0",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        40,
+        61
+      ],
+      "det_pencil": "-15*lam*(30*lam - 1)*(320*lam**2 - 134*lam + 5)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        62
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        40,
+        65
+      ],
+      "det_pencil": "lam*(330*lam**2 + 1867*lam + 92)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        69
+      ],
+      "det_pencil": "15*lam**2*(490*lam**2 - 21*lam + 5)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "0",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        40,
+        79
+      ],
+      "det_pencil": "lam*(12096*lam**2 - 12417*lam + 35)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        83
+      ],
+      "det_pencil": "144*lam**3",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "point": [
+            "-2",
+            "0",
+            "0",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        40,
+        84
+      ],
+      "det_pencil": "3*lam*(147000*lam**3 + 25480*lam**2 - 516*lam + 5)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        87
+      ],
+      "det_pencil": "-25*lam*(4*lam - 1)*(5*lam - 2)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        88
+      ],
+      "det_pencil": "3*lam*(4*lam + 1)*(10*lam + 1)*(40*lam - 1)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        101
+      ],
+      "det_pencil": "5*lam*(324*lam**2 + 17*lam + 3)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        40,
+        110
+      ],
+      "det_pencil": "3*lam**2*(2*lam + 13)*(4*lam + 5)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "0",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        40,
+        114
+      ],
+      "det_pencil": "27*lam**2*(3*lam - 1)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "0",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        49,
+        55
+      ],
+      "det_pencil": "-lam*(24*lam - 13)*(63*lam - 221)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        61
+      ],
+      "det_pencil": "-15*lam*(8400*lam**3 - 3480*lam**2 - 2431*lam + 507)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        62
+      ],
+      "det_pencil": "9*lam*(12380*lam**2 + 1664*lam - 1183)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        65
+      ],
+      "det_pencil": "975*lam*(15*lam + 13)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        69
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        49,
+        79
+      ],
+      "det_pencil": "65*lam*(10920*lam**2 + 2245*lam + 221)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        83
+      ],
+      "det_pencil": "-lam*(432*lam**2 + 1833*lam + 1859)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        84
+      ],
+      "det_pencil": "91*lam*(201600*lam**3 + 67920*lam**2 + 5858*lam - 247)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        87
+      ],
+      "det_pencil": "-lam*(20*lam + 13)*(847*lam + 3887)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        88
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        49,
+        101
+      ],
+      "det_pencil": "13*lam*(56*lam + 65)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        110
+      ],
+      "det_pencil": "-lam*(4*lam + 21)*(16*lam**2 + 221*lam - 169)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        49,
+        114
+      ],
+      "det_pencil": "15*lam*(2*lam - 13)*(6*lam + 13)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        55,
+        61
+      ],
+      "det_pencil": "16200*lam**3*(2*lam + 1)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        55,
+        62
+      ],
+      "det_pencil": "-1215*lam**3",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        55,
+        65
+      ],
+      "det_pencil": "-18*lam*(20*lam**2 + 69*lam - 54)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        55,
+        69
+      ],
+      "det_pencil": "lam*(133*lam + 90)*(355*lam + 72)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        55,
+        79
+      ],
+      "det_pencil": "432*lam**2*(567*lam - 494)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        55,
+        83
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        55,
+        84
+      ],
+      "det_pencil": "-3240*lam**2*(7*lam + 4)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        55,
+        87
+      ],
+      "det_pencil": "27*lam*(5*lam + 24)*(13*lam - 16)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        55,
+        88
+      ],
+      "det_pencil": "1080*lam**2*(lam - 18)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        55,
+        101
+      ],
+      "det_pencil": "216*lam*(8*lam - 9)*(10*lam - 3)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        55,
+        110
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        55,
+        114
+      ],
+      "det_pencil": "324*lam**2*(lam + 4)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        61,
+        62
+      ],
+      "det_pencil": "-225*lam*(367*lam**2 - 200*lam - 1200)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        65
+      ],
+      "det_pencil": "-15*lam*(lam + 45)*(10*lam + 7)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        69
+      ],
+      "det_pencil": "1400*lam*(91*lam**2 - 198*lam + 90)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        79
+      ],
+      "det_pencil": "486000*lam",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        83
+      ],
+      "det_pencil": "2025*lam*(lam**2 + 40*lam + 80)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        84
+      ],
+      "det_pencil": "-1080*lam*(8*lam + 5)*(84*lam + 55)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        87
+      ],
+      "det_pencil": "270*lam*(50*lam**2 + 211*lam + 180)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        88
+      ],
+      "det_pencil": "45*lam*(501*lam**2 - 2060*lam + 800)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        101
+      ],
+      "det_pencil": "27*lam*(7001*lam**2 + 7190*lam - 1900)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        110
+      ],
+      "det_pencil": "-3*lam*(48*lam**3 + 1111*lam**2 - 9310*lam + 9600)/2",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        61,
+        114
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        62,
+        65
+      ],
+      "det_pencil": "5*lam*(225*lam**3 - 114*lam**2 + 268*lam - 1440)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        62,
+        69
+      ],
+      "det_pencil": "35*lam**2*(4844*lam - 2075)/4",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        62,
+        79
+      ],
+      "det_pencil": "25*lam**2*(2100*lam + 437)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        62,
+        83
+      ],
+      "det_pencil": "1080*lam**2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        62,
+        84
+      ],
+      "det_pencil": "-315*lam**2*(8400*lam**2 + 1512*lam + 101)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        62,
+        87
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        62,
+        88
+      ],
+      "det_pencil": "5*lam*(5850*lam**2 + 37909*lam + 90)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        62,
+        101
+      ],
+      "det_pencil": "9*lam**2*(1620*lam**2 - 6273*lam + 11315)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        62,
+        110
+      ],
+      "det_pencil": "-4*lam**2*(4*lam**2 - 12*lam - 45)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        62,
+        114
+      ],
+      "det_pencil": "135*lam*(lam + 5)*(3*lam**2 + 4*lam + 30)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        65,
+        69
+      ],
+      "det_pencil": "-225*lam**2*(280*lam - 27)/16",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        65,
+        79
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        65,
+        83
+      ],
+      "det_pencil": "9*lam*(108*lam**3 + 117*lam**2 - 330*lam + 25)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        65,
+        84
+      ],
+      "det_pencil": "15*lam**2*(382200*lam**2 + 4025*lam + 69)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        65,
+        87
+      ],
+      "det_pencil": "-25*lam*(4*lam + 3)*(2*lam**2 - 2*lam + 3)/16",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        65,
+        88
+      ],
+      "det_pencil": "525*lam**2*(10*lam - 1)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        65,
+        101
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        65,
+        110
+      ],
+      "det_pencil": "4*lam**3*(lam - 3)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        65,
+        114
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        69,
+        79
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        69,
+        83
+      ],
+      "det_pencil": "405*lam**3*(4*lam - 25)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 3,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        69,
+        84
+      ],
+      "det_pencil": "231525*lam**2*(4*lam - 3)**2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        },
+        {
+          "lambda": "3/4",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "18",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        69,
+        87
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        69,
+        88
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        69,
+        101
+      ],
+      "det_pencil": "8*lam**2*(324*lam - 2065)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        69,
+        110
+      ],
+      "det_pencil": "-lam**2*(32*lam**2 - 1645*lam - 1505)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        69,
+        114
+      ],
+      "det_pencil": "72*lam**2*(13*lam + 105)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        79,
+        83
+      ],
+      "det_pencil": "-14175*lam**2*(lam - 3)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        79,
+        84
+      ],
+      "det_pencil": "3780*lam**2*(28*lam + 65)*(340*lam + 13)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        79,
+        87
+      ],
+      "det_pencil": "-225*lam**2*(11*lam - 21)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        79,
+        88
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        79,
+        101
+      ],
+      "det_pencil": "168*lam**2*(1935*lam + 392)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        79,
+        110
+      ],
+      "det_pencil": "-2*lam**2*(lam + 24)*(8*lam - 63)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        79,
+        114
+      ],
+      "det_pencil": "-1575*lam**2*(17*lam - 24)/2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "nullity": 2,
+          "status": "higher nullity not expanded"
+        }
+      ]
+    },
+    {
+      "trials": [
+        83,
+        84
+      ],
+      "det_pencil": "405*lam**2*(56*lam - 9)*(70*lam + 3)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        83,
+        87
+      ],
+      "det_pencil": "-6*lam*(25*lam**2 - 255*lam + 108)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        83,
+        88
+      ],
+      "det_pencil": "-405*lam**2*(28*lam - 3)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        83,
+        101
+      ],
+      "det_pencil": "81*lam*(8*lam + 9)*(72*lam**2 - 83*lam + 8)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        83,
+        110
+      ],
+      "det_pencil": "-3*lam**2*(4*lam**2 - 23*lam - 21)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        83,
+        114
+      ],
+      "det_pencil": "9*lam**2*(9*lam**2 - 10*lam - 63)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        84,
+        87
+      ],
+      "det_pencil": "315*lam*(199*lam**2 - 10800*lam - 117600)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        84,
+        88
+      ],
+      "det_pencil": "-126000*lam*(lam**2 + 10*lam - 70)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        84,
+        101
+      ],
+      "det_pencil": "18*lam*(23244*lam**2 + 1246385*lam + 1543500)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        84,
+        110
+      ],
+      "det_pencil": "-24*lam*(11*lam + 525)*(lam**2 + 41*lam - 70)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        84,
+        114
+      ],
+      "det_pencil": "-18*lam*(1187*lam**2 + 1575*lam - 98000)",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        87,
+        88
+      ],
+      "det_pencil": "25*lam*(2240*lam**2 - 4205*lam + 2)/4",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        87,
+        101
+      ],
+      "det_pencil": "-9*lam**2*(5184*lam**2 - 48816*lam + 5305)/16",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        87,
+        110
+      ],
+      "det_pencil": "-lam**2*(4*lam - 5)**2",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "-2",
+            "0",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              7
+            ],
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        },
+        {
+          "lambda": "5/4",
+          "multiplicity": 2,
+          "point": [
+            "2",
+            "4",
+            "5",
+            "6"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              2,
+              5,
+              6
+            ],
+            [
+              0,
+              2,
+              5,
+              7
+            ],
+            [
+              0,
+              2,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        87,
+        114
+      ],
+      "det_pencil": "-lam*(162*lam**3 + 6102*lam**2 + 970*lam - 1125)/8",
+      "repeated_rational_root_checks": []
+    },
+    {
+      "trials": [
+        88,
+        101
+      ],
+      "det_pencil": "-336*lam**2*(27*lam + 20)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        88,
+        110
+      ],
+      "det_pencil": "24*lam**2*(lam**2 + 20*lam + 10)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        88,
+        114
+      ],
+      "det_pencil": "-9*lam**2*(39*lam - 400)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "point": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "parent_zero_brackets_0based": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              4,
+              5,
+              7
+            ],
+            [
+              0,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              6,
+              7
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              4,
+              6,
+              7
+            ],
+            [
+              1,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "actual_uniform": false
+        }
+      ]
+    },
+    {
+      "trials": [
+        101,
+        110
+      ],
+      "det_pencil": "-20*lam**2*(lam - 9)*(lam + 24)",
+      "repeated_rational_root_checks": [
+        {
+          "lambda": "0",
+          "multiplicity": 2,
+          "status": "infinite kernel point"
+        }
+      ]
+    },
+    {
+      "trials": [
+        101,
+        114
+      ],
+      "det_pencil": "0",
+      "status": "identically singular pencil"
+    },
+    {
+      "trials": [
+        110,
+        114
+      ],
+      "det_pencil": "-6*lam*(15*lam**2 + 14*lam + 1)",
+      "repeated_rational_root_checks": []
+    }
+  ],
+  "actual_uniform_candidates": []
+}

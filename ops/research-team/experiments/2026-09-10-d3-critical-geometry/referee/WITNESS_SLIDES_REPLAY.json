@@ -1,0 +1,49 @@
+{
+  "verdict": "ACCEPT_BOTH_EXACT_FULL_RESIDENCE_SLIDES",
+  "cases": [
+    {
+      "name": "zero_gradient",
+      "moving_parent": 6,
+      "height_direction": [
+        "1/2",
+        "1",
+        "1",
+        "0"
+      ],
+      "full_open_interval": [
+        "-1/3",
+        "8/11"
+      ],
+      "lower_boundary": [
+        "1467"
+      ],
+      "upper_boundary": [
+        "4568"
+      ],
+      "all_selected_concurrences_fixed": true
+    },
+    {
+      "name": "nonzero_gradients",
+      "moving_parent": 5,
+      "height_direction": [
+        "1/2",
+        "1",
+        "1",
+        "0"
+      ],
+      "full_open_interval": [
+        "-4/23",
+        "2/5"
+      ],
+      "lower_boundary": [
+        "1578"
+      ],
+      "upper_boundary": [
+        "1358"
+      ],
+      "all_selected_concurrences_fixed": true
+    }
+  ],
+  "method": "Independent affine bracket inequalities and exact concurrence identities; no producer imports.",
+  "scope": "Specific already-covered witnesses only."
+}

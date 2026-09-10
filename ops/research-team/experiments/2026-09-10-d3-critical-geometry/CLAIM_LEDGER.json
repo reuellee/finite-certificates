@@ -1,0 +1,172 @@
+{
+  "base_commit": "52b4a0efdad0c1bf05503f4126b2c6f5dc78c246",
+  "original_diagonal_ledger": "2/9",
+  "original_third_diagonal": "OPEN",
+  "original_exclusive_pair_injectivity": "OPEN",
+  "original_triple_bad_Hc0": "OPEN",
+  "universal_factor_pair_Hc1": {
+    "status": "PROVED inherited",
+    "covered_pair_orbits": 9476,
+    "total_pair_orbits": 9476
+  },
+  "universal_factor_triple_Hc0": {
+    "status": "OPEN",
+    "total_source_records": 79102449,
+    "old_certified_records": 77940147,
+    "old_residue_records": 1162302,
+    "new_numerical_credit": 0,
+    "new_subclass_overlap": "NOT RECONSTRUCTED"
+  },
+  "all_six_contraction_anchors": "PROVED coordinate extension; independently reviewed",
+  "all_concurrence_collision_union_Hc0": "PROVED; independently reviewed",
+  "collision_free_vertical_critical_reduction": "PROVED sufficient reduction; independent review",
+  "collision_free_vertical_critical_Hc0": "OPEN",
+  "vertical_critical_implies_collinear": "REFUTED in unrestricted original uniform scope by actual48/36/49 witness; no refutation claimed on source residue",
+  "fixed_projection_quadratic_scope": {
+    "projected_parents": 1,
+    "occurrence_instantiations": 120,
+    "quadratic_restrictions": 22,
+    "quadratic_pairs": 231,
+    "claim": "No uniform vertical critical points in the231 pairs among the22 quadratic restrictions at that single projection",
+    "universal_or_compactness_credit": 0
+  },
+  "critical_canary": {
+    "status": "Exact inherited diagnostic replay",
+    "identity": "q39=(f-i)q48+(1-c)q50",
+    "new_credit": 0
+  },
+  "operational_seven": "UNCHANGED; not original diagonal credit",
+  "original_internal_antichain_quantifiers": "RETAINED; no restriction to globally minimal signatures",
+  "finite_certificate_required": false,
+  "inherited_two_low_factor_triple_theorem": "PROVED inherited, all factors and relative labels when at least two kinds36/38",
+  "nonzero_vertical_critical_implies_collinear": "REFUTED in unrestricted original uniform scope by actual48/49/50 witness; support triple already covered by inherited light-label and sequential-affine methods",
+  "new_global_deductions": [
+    {
+      "claim": "Parent-on-common-line full collinear piece Hc0=0",
+      "status": "PROVED independently reviewed",
+      "proof": "referee/PARENT_ON_CONCURRENCE_LINE.md"
+    },
+    {
+      "claim": "Stacked-rank-at-most10 full parent-free collinear piece Hc0=0",
+      "status": "PROVED independently reviewed",
+      "proof": "proof/COLLINEAR_RANK_ESCAPE.md"
+    },
+    {
+      "claim": "Full collinear piece Hc0=0 whenever at least one factor kind36 or38",
+      "status": "PROVED independently reviewed",
+      "proof": "proof/ONE_LOW_COLLINEAR_ESCAPE.md"
+    },
+    {
+      "claim": "Full collinear piece Hc0=0 whenever at least one factor kind48",
+      "status": "PROVED independently reviewed",
+      "proof": "proof/TYPE48_COLLINEAR_ESCAPE.md"
+    },
+    {
+      "claim": "All49/50/51 collinear deficient-block closed piece Hc0=0",
+      "status": "PROVED independently reviewed",
+      "proof": "proof/RANK_DEFICIENT_BLOCK_ESCAPE.md"
+    },
+    {
+      "claim": "Closed whole-height flat pieces and36/38 localization-axis subcases Hc0=0",
+      "status": "PROVED independently reviewed",
+      "proof": "proof/FLAT_HEIGHT_BLOCK_EXCISION.md"
+    },
+    {
+      "claim": "Global characteristic kernels for kinds38,48,49,50,51",
+      "status": "PROVED independently reviewed",
+      "proof": "noncollinear/CHARACTERISTIC_KERNELS.md"
+    },
+    {
+      "claim": "Collinear criticality equivalence to degree-one gradient-pencil kernel for point-kernel pair",
+      "status": "PROVED discriminator; absence or escape OPEN",
+      "proof": "proof/LINEAR_GRADIENT_PENCIL_GATE.md"
+    },
+    {
+      "claim": "Closed projected-base parent-unit-proportional complete height sections have Hc0=0",
+      "status": "PROVED independently reviewed",
+      "proof": "noncollinear/escape_redundant_height.md"
+    }
+  ],
+  "remaining_collinear_branch": {
+    "status": "OPEN",
+    "factor_kinds": [
+      49,
+      50,
+      51
+    ],
+    "parent_on_common_line": false,
+    "selected_concurrences": "pairwise distinct",
+    "block_ranks": [
+      4,
+      4,
+      4
+    ],
+    "stacked_rank": 11,
+    "common_stress_dimension": 1,
+    "extra_condition": "vertical criticality; equivalent pair pencil test under point kernels"
+  },
+  "remaining_noncollinear_branch": {
+    "status": "OPEN",
+    "quantifiers": "All actual surviving source triples; preserve zero-gradient cases not proved flat, especially48, and dependent nonzero gradients",
+    "whole_height_coincidence": "Requires a separately proved closed fiber-saturated locus, never a bare gcd or first-order implication"
+  },
+  "rank11_canary": {
+    "status": "EXACT uniform collinear but VERTICALLY REGULAR",
+    "compactness_or_original_credit": 0
+  },
+  "kind48_axis_canary": {
+    "status": "EXACT stationary but non-flat direction; determinant change -u^2",
+    "actual_third_factor_anchor_claimed": false,
+    "compactness_or_original_credit": 0
+  },
+  "new_numerical_triple_credit": 0,
+  "survivor_provenance_required_before_next_discovery": true,
+  "specific_stronger_witness_triple": {
+    "global_graph": "PROVED independently reviewed; open R6 in every parent residence",
+    "critical_classification": "PROVED independently reviewed; exactly x=2,z=5 in specified complete contraction chart",
+    "source_coverage": "INHERITED light-label and sequential-affine classes",
+    "new_numerical_credit": 0
+  },
+  "all_factor_triple_route": "SUFFICIENT, not asserted logically necessary; a direct proof of original bad-block obligations remains allowed",
+  "authenticated_survivor_gate": {
+    "canonical_row": [
+      5563,
+      4373,
+      23221
+    ],
+    "named_presentation": [
+      5563,
+      16134,
+      19284
+    ],
+    "ordinary_supports": [
+      [
+        "123",
+        "145",
+        "246",
+        "378"
+      ],
+      [
+        "126",
+        "257",
+        "367",
+        "458"
+      ],
+      [
+        "157",
+        "168",
+        "245",
+        "348"
+      ]
+    ],
+    "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+    "status": "EXACT source transport and global parent-unit elimination; triple escape OPEN",
+    "unit_pivot": "R_w=-[1468][3458]",
+    "remaining_gate": "E=E_u=E_v=E_t=0, all reconstructed parent units nonzero",
+    "resultant_terms": 1690,
+    "resultant_total_degree": 13,
+    "resultant_height_degree": 7,
+    "new_triple_credit": 0,
+    "runtime_improvement_demonstrated": false
+  }
+}

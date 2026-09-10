@@ -1,0 +1,133 @@
+{
+  "track": "independent falsifier",
+  "status": "EXACT unrestricted noncollinear critical counterexamples, including both nonzero gradients; both examples are outside any claimed authenticated survivor scope. Specific global graph escape independently accepted.",
+  "input_commit": "52b4a0efdad0c1bf05503f4126b2c6f5dc78c246",
+  "input_tree": "7222302d8ae3ee4e899709309104c5e098cb9363",
+  "input_paths_base": "/workspace/scratch/47843f2221ff/d3_critical_geometry_20260910/",
+  "input_sha256": {
+    "WORK_ORDER.md": "8b8bf96cb87d77df5825db6d24781555786ec6b78237699ec9c9aa626b502b11",
+    "checkpoint/CLAIM_LEDGER.json": "b2fdcec6e4d619ca54f327dbf6d318c32a5c6d386f788d669952d1a0b229f716",
+    "checkpoint/referee/ANCHOR_COVERAGE_AUDIT.md": "e067b7f27de4c70877258a8094ad4003edc71713323d778323f52eb03bb9efe9",
+    "checkpoint/proof/VERTICAL_CRITICAL_REDUCTION.md": "e7034f7b3b51fad14e925eeabed3a43cf134e72a1a3689fede5b4ac28b69477e",
+    "checkpoint/checkpoint/checkpoint/checkpoint/inputs/DIAG2_PIVOT_LABELED_PAIR_THEOREM.md": "5e7e7c4e3d717d10cbcdbc21b9e0d8ef469ee376705eb8d01dafe2c174ab94d6",
+    "noncollinear/NONCOLLINEAR_CRITICAL_WITNESS.json": "54ce3f8b0206e47a43475506d5ec684e42d2da189348a4a170b2952814400041",
+    "noncollinear/verify_noncollinear_critical.py": "ccc28a1995aedea23f595a9423fd86b680c3d1c65bdbe0eede4928f2e71591ca",
+    "proof/LINEAR_GRADIENT_PENCIL_GATE.md": "74bfe5ff1de09803101ab13d6613c97450521db552b21684da240cda9bc9bc17",
+    "noncollinear/escape_global_graph.md": "18ad54664a496d827c9120cbc9f8c73b961135a9ac93f439f37d7dfa3c89d5f6",
+    "noncollinear/escape_redundant_height.md": "13fe6f21ab42e3a36a0cfef2a9a529177b1b5425175de9fa2851feb8a99088c3"
+  },
+  "owned_files_base": "/workspace/scratch/47843f2221ff/d3_critical_geometry_20260910/falsifier/",
+  "original_status": "2/9",
+  "inherited_factor_pair_endpoint": "9476/9476",
+  "new_original_obligations": 0,
+  "new_numerical_triple_source_credit": 0,
+  "strong_witness": {
+    "supports": [
+      "123/145/246/356",
+      "123/146/248/378",
+      "126/145/248/378"
+    ],
+    "global_kinds": [
+      48,
+      49,
+      50
+    ],
+    "concurrence_integer_representatives": [
+      [
+        1,
+        2,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        -4,
+        0
+      ],
+      [
+        1,
+        -4,
+        -4,
+        -6
+      ]
+    ],
+    "concurrence_span_rank": 3,
+    "all70_parent_brackets_nonzero": true,
+    "both_vertical_gradients_nonzero": true,
+    "vertical_gradient_rank": 1,
+    "distinct_primitive_factors_reason": "Different authenticated global factor kinds, exact canonical relabelings checked",
+    "already_covered_reason": "Parent7 occurs only in the one distinct selected plane378; inherited light-label coverage applies. A separate exact rational graph also gives full specific-triple escape.",
+    "survivor_membership": "NOT established; no counterexample to a claim restricted to the1,162,302 unresolved source triples"
+  },
+  "positive_scope": [
+    "Exact full3D height-fiber escape for both finite witnesses",
+    "Independent exact global rational graph for the specific48/49/50 support triple and its relabelings, yielding openR6 strict residence in every original parent component",
+    "Independent review of the conditional collinear degree1 gradient-pencil lemma under its explicit point-kernel premise",
+    "Independent deductive acceptance of excision for a closed locus of fixed parent-unit-proportional full height equations; finite closed unions allowed, arbitrary gcd branches excluded"
+  ],
+  "pencil_test": {
+    "cross_images_proportional": false,
+    "degree_at_most1_polynomial_kernel_exists": false,
+    "coefficient_system_rank": 8,
+    "critical_parameter1_map_rank": 3,
+    "scope": "One already-covered pair; does not challenge the collinear gate or certify residual-pair absence"
+  },
+  "excluded_scope": [
+    "No compact component counterexample",
+    "No proof of universal triple noncompactness or originalD3",
+    "No noncollinear critical example authenticated in the remaining source residue",
+    "No universal absence or existence of degree1 polynomial-kernel pairs",
+    "No proof that fixed parent-unit-proportional pieces exhaust all residual critical loci, and no independent audit here of the producer's entire critical-stratum classification"
+  ],
+  "discovery_bounds": {
+    "projected_one_parameter_determinant_families": 24,
+    "mixed_cubic_parameter_checks": 7,
+    "rejected_boundary_canaries": 2,
+    "nongeneric_parent_high_family_occurrences_checked": 47,
+    "nongeneric_parent_occurrence_limit": 64,
+    "stopped_on_success": true,
+    "covered_parent_search_stopped_by_coordinator": true
+  },
+  "main_replay": {
+    "cwd": "/workspace/scratch/47843f2221ff/d3_critical_geometry_20260910",
+    "commands": [
+      "python falsifier/verify_nonzero_noncollinear.py",
+      "python falsifier/verify_coincident_height_fiber.py",
+      "python falsifier/verify_global_graph.py",
+      "python falsifier/verify_gradient_pencil.py"
+    ],
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "arithmetic": "Fraction/permutation determinants for point and directional-gradient witnesses; exact SymPy for polynomial identities",
+    "dependencies": [
+      "Python standard library",
+      "SymPy for the height and global graph identities"
+    ],
+    "last_replay": "PASS"
+  },
+  "next_discriminator": "Before any further falsification, authenticate membership in the unresolved source residue or explicitly pass the inherited coverage filters. On that scope, test the conditional collinear linear-kernel pencil gate or prove escape for full noncollinear critical pieces; neither unrestricted example settles those questions.",
+  "files_sha256": {
+    "COINCIDENT_HEIGHT_FIBER.json": "79a8fd72bd0db55258b86dfbfee95561da2292a92cd3d59e8307c3f5b8c18f1e",
+    "CUBIC13_TARGET_NULL.json": "cf491185b6e03cbf7d50942ef05c807451e63104934192ab3994f03a6e3eee20",
+    "DEFORMATION_BOUNDARY_CANARIES.json": "582bfc5e90916cd570e9dbbd866727b58adadd801cae4f2d781af4accf655278",
+    "DEFORMED_QUADRATICS.json": "64a89e85830c7b3a532a91d34e1cb44ff1cec3405bfb82383830edd5eb550ff8",
+    "FINDINGS.md": "babb469bddbe85276d13660a0116ea112fb153d658df4258c5b3ab4810c60846",
+    "FLAT_HEIGHT_FIBER.json": "aba17ea4bfb524f47163425885e090bf01e0a740b5d4ddafce3a254600430de2",
+    "GLOBAL_GRAPH_INDEPENDENT.json": "99146d59543275c72fcc0574077fd3c0ee42693fb1face5d24dd41f0dc110b65",
+    "GRADIENT_PENCIL_REPLAY.json": "534080ba09c9e98ce310c2aeb603a87ba14899a5fdc733a516e28fdcd84ad803",
+    "NONCOLLINEAR_INDEPENDENT_REPLAY.json": "3f54a3c827d01e4d0a6ef335ffd394c2eef07ee7c5a0551983ebad799e4d63ec",
+    "NONZERO_GAMMA_SEARCH.json": "e3f1482dcf382f6782512086cfcb0fd44cf5c61c7a0f11500f8c03dbe76d3325",
+    "NONZERO_NONCOLLINEAR_REPLAY.json": "af07cefbc95d2aef313b4b668c16ce1725bf35980915d64cae1139e19715655a",
+    "cubic13_target.py": "5d53f1a930c6b49cfea695be0b22a4ca7d1f43941a44c65eca0ab94dca843627",
+    "deform_quadratics.py": "f7cbe0755f7af7efd8642632b9ae780e6387978a3b7fdc20b3f07bb90608538c",
+    "nonzero_gamma_search.py": "e9c824390a7ad6a9ec402680b28d96f0d0086e21a9d622aaf6e1edb24217812b",
+    "verify_coincident_height_fiber.py": "fb63e07ed511f77b0a267c71df973100b7b0ad6300c8ed82c58e07efca501afb",
+    "verify_deformation_boundary.py": "8dabb7fbdb1d539626d2cfcb82a4299fddba911da6e90205720e72775ee1d025",
+    "verify_flat_height_fiber.py": "1b9aca6728e070717f28549be947b3c2d73c92bae8b908d6de59d683b723f56c",
+    "verify_global_graph.py": "2d1ffd2d7846ed164847863f421418d2e2222fa084c0303adb078a36d0edc16a",
+    "verify_gradient_pencil.py": "cdc28e515c0d8017d1b2f7392d57c177d0d7b83f7043e3c541189217b7910c45",
+    "verify_noncollinear_independent.py": "29ca8c80b349d158136a28d88db3277875b9e8fb1d6e4ab03d15969b4fc5adea",
+    "verify_nonzero_noncollinear.py": "4d3b1325b8abb23be013c9e144a1feb7ffe6fc6248bc75464d19c30df20c596f"
+  }
+}

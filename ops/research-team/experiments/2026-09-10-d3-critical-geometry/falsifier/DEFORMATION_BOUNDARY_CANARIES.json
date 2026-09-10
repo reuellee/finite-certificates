@@ -1,0 +1,84 @@
+{
+  "scope": "Two rejected noncollinear critical points on parent degeneracies; not original-scope counterexamples",
+  "records": [
+    {
+      "parameter": "2",
+      "heights": [
+        "1",
+        "3",
+        "8",
+        "3/2"
+      ],
+      "parent_zero_brackets": [
+        "1346",
+        "2356",
+        "2357",
+        "2367",
+        "2567",
+        "3458",
+        "3567"
+      ],
+      "all_three_raw_walls_zero": true,
+      "vertical_determinant_gradient_rank": 1,
+      "ordinary_kernel_vectors": {
+        "P": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "Q": [
+          "1",
+          "1",
+          "-2",
+          "1"
+        ],
+        "R": [
+          "0",
+          "1",
+          "-1",
+          "1"
+        ]
+      },
+      "kernel_span_rank": 3,
+      "admissible_original_parent": false
+    },
+    {
+      "parameter": "-9/8",
+      "heights": [
+        "-3/2",
+        "3",
+        "26/7",
+        "-3/8"
+      ],
+      "parent_zero_brackets": [
+        "1346",
+        "3458"
+      ],
+      "all_three_raw_walls_zero": true,
+      "vertical_determinant_gradient_rank": 1,
+      "ordinary_kernel_vectors": {
+        "P": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "Q": [
+          "-2/3",
+          "1",
+          "-1/3",
+          "1"
+        ],
+        "R": [
+          "0",
+          "1",
+          "-1",
+          "1"
+        ]
+      },
+      "kernel_span_rank": 3,
+      "admissible_original_parent": false
+    }
+  ]
+}

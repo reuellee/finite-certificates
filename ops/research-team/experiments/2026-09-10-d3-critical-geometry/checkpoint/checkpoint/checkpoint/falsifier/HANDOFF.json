@@ -1,0 +1,60 @@
+{
+  "status": "ACTUAL_ADMISSIBILITY_AND_ACTUAL_COMMON_WEAK_POINT_COUNTEREXAMPLE",
+  "original_obligations_closed": 0,
+  "original_cohomology_counterexample": false,
+  "signatures": [
+    1115179617623167,
+    1110781571112063,
+    1115179340274814
+  ],
+  "one_hot_arcs": 3,
+  "strictly_all_bad_arc": 1,
+  "full_parameter_interval": "0<t<=1/100000000",
+  "exact_gordan_certificates": 9,
+  "parent_brackets_per_arc": 70,
+  "strict_primal_inequalities_per_good_arc": 56,
+  "scope_exclusions": [
+    "No original Hc1 nonzero class",
+    "No original D3 refutation",
+    "No universal triple-bad escape proof",
+    "No global tubular attachment theorem"
+  ],
+  "deductive_candidate": "Common-zero stratum Hc<4 via open convex four-dimensional height fibers; exact four-halfplane elimination; global cohomology-star comparison remains conditional",
+  "audit_needs": [
+    "Exact polynomial identities and signs",
+    "Same normalized parent component",
+    "Contraction-height fiber saturation",
+    "Parameterized local and global tubular comparison"
+  ],
+  "input_sha256": {
+    "previous_checkpoint/falsifier/certificate.json": "895438a296bf64efe729ea9acaed1185c0285b27e1b66413341db767f0306783",
+    "falsifier/TANGENT_AUDIT.json": "f21c5a16690bf937ffd02f23982476bf4d2b240eabc091fc6d6dc83da598742a",
+    "inputs/ATLAS_HELLY.md": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0"
+  },
+  "files_sha256": {
+    "ACTUAL_ANTICHAIN.json": "12612f417a8de5f06f633975e4f941b5ca9539fe13580689db392850f53d3778",
+    "COMMON_ZERO_STRATUM.md": "84a5b6f18d79595bd84d3dbd621c07ae246eeca462351d16651a91c09d896b97",
+    "FINDINGS.md": "026fd3cc03611df654a228b387ee2eb986ecfe78abb882f16809ace279b5036f",
+    "actual_antichain.py": "ff1f9b03e3e8d97d32c7200e5ca9d1d688761416134d9a40778443a2860279dd"
+  },
+  "common_weak_primal_independent_challenge": {
+    "verdict": "NO_LOAD_BEARING_FAULT_FOUND_NOT_A_SECOND_PROOF",
+    "checked": [
+      "proper compact convex weak resolution",
+      "finite closed zero-count filtration",
+      "projected frame with parallel/loop cases",
+      "height dimensions4/3",
+      "full-fiber simultaneous badness saturation",
+      "shriek base change",
+      "common-subset natural excision"
+    ],
+    "clarifications": [
+      "Replace ambiguous strict-infeasibility/weak-cone-zero sentence",
+      "Use ambient locally compact projected sign/zero stratum with empty fibers allowed"
+    ],
+    "proof_snapshot_sha256": "0ff1e3185f4b142841917352a0c12766774862d8363a63655d57e4a4d3e072bb",
+    "original_diagonal_closed": false
+  },
+  "input_sha256_base": "checkpoint/ relative to the cycle root; equivalently ../checkpoint/ relative to this HANDOFF.json",
+  "files_sha256_base": "falsifier/ relative to the cycle root; equivalently this HANDOFF.json directory"
+}

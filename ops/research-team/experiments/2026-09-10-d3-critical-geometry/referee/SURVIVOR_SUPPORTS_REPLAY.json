@@ -1,0 +1,47 @@
+{
+  "verdict": "ACCEPT_SURVIVOR_ORDINARY_IDENTITIES_AND_CONTRACTION_ALGEBRA",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "canonical_row": [
+    5563,
+    4373,
+    23221
+  ],
+  "named_presentation": [
+    5563,
+    16134,
+    19284
+  ],
+  "ordinary_supports": {
+    "5563": [
+      "123",
+      "145",
+      "246",
+      "378"
+    ],
+    "16134": [
+      "126",
+      "257",
+      "367",
+      "458"
+    ],
+    "19284": [
+      "157",
+      "168",
+      "245",
+      "348"
+    ]
+  },
+  "raw_to_source_ratios": {
+    "5563": "-1",
+    "16134": "-1",
+    "19284": "1"
+  },
+  "height_degrees": {
+    "Q": 3,
+    "R": 3
+  },
+  "parent_brackets_independently_rebuilt": 70,
+  "vertical_minors_independently_rebuilt": 6,
+  "method": "Referee-owned raw permutation determinants against authenticated coefficient lists; no recovery/producer code imported.",
+  "scope": "Exact source/support transport and chart algebra only. No actual uniform critical point, survivor closure, count increment, or original promotion."
+}

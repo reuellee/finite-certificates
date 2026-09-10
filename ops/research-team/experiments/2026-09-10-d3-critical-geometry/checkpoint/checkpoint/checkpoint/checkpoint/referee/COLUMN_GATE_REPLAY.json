@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "full_interval_gate": {
+    "status": "PASS",
+    "full_fiber_interval": [
+      "-12",
+      "-36/5"
+    ],
+    "endwalls": {
+      "lower": [
+        "3468"
+      ],
+      "upper": [
+        "3458"
+      ]
+    },
+    "first_wall_uniquely_solves_g": true,
+    "second_factorization_complete": true,
+    "excluded_branch_is_parent_bracket": true,
+    "fiber_Hc1": "Z",
+    "global_Hc1": "NOT_COMPUTED"
+  },
+  "nondegenerate_conic_gate": {
+    "status": "PASS",
+    "all_parent_brackets_nonzero": 70,
+    "conic_matrix_determinant": "-144211276259416406250",
+    "route_refuted": "global affine-line fiber presentation for this fixed column8 projection",
+    "global_pair_Hc1": "NOT_COMPUTED"
+  },
+  "certificate_sha256": {
+    "pair/HARD_COLUMN_FIBER_CERTIFICATE.json": "1879504e2962f81567b9b13dc3e26fe2f5a2d77826e647266fad3c1ed43d0905",
+    "pair/SMOOTH_CONIC_GATE_CERTIFICATE.json": "8ae043ac3c7bd951e78a5824996a02d3f636bea3d60e947a591a4f9d0fed9e7b"
+  },
+  "hostile_rejections": [
+    "interval",
+    "slope",
+    "conic_coefficient",
+    "conic_point"
+  ],
+  "original_obligations_closed": 0,
+  "pairwall_residue_unchanged": 574
+}

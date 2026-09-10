@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "inputs/DIAG3_JOINED_FLOW_TRIANGLE.md",
+      "bytes": 16265,
+      "expected_git_blob_sha": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85",
+      "actual_git_blob_sha": "04ec99f1bb940fb0ce2fb9d7134731a28fb83f85",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_SINGLE_BAD_TWO_SKELETON.md",
+      "bytes": 13943,
+      "expected_git_blob_sha": "f59a8757d18b004333876c77d29831dd7e8ce8f2",
+      "actual_git_blob_sha": "f59a8757d18b004333876c77d29831dd7e8ce8f2",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md",
+      "bytes": 9043,
+      "expected_git_blob_sha": "f1d946f85cdd9cfe6498e9b6ec8a53b149f4b344",
+      "actual_git_blob_sha": "f1d946f85cdd9cfe6498e9b6ec8a53b149f4b344",
+      "pass": true
+    },
+    {
+      "path": "inputs/DOUBLE_CONTRACTION_FIBERS.md",
+      "bytes": 8135,
+      "expected_git_blob_sha": "a5003382eeeb50f396a78f32486f210dd6d6737f",
+      "actual_git_blob_sha": "a5003382eeeb50f396a78f32486f210dd6d6737f",
+      "pass": true
+    },
+    {
+      "path": "inputs/ATLAS_HELLY.md",
+      "bytes": 171509,
+      "expected_git_blob_sha": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64",
+      "actual_git_blob_sha": "4dce8fde527eaf93e552ef420a4eb7a95c55dd64",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_FACTOR_REDUCTION.md",
+      "bytes": 17169,
+      "expected_git_blob_sha": "4465b4be51197a362e5c765f6a26aa4a78323aac",
+      "actual_git_blob_sha": "4465b4be51197a362e5c765f6a26aa4a78323aac",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_BOUNDARY_STRATIFICATION.md",
+      "bytes": 21608,
+      "expected_git_blob_sha": "4179139f89a15ea9018be5a2af8c207ffb26cabb",
+      "actual_git_blob_sha": "4179139f89a15ea9018be5a2af8c207ffb26cabb",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_COMMON_SCALING_NO_GO.md",
+      "bytes": 2616,
+      "expected_git_blob_sha": "8a0e8c58018f71e5e66eb47f03088854e33990f4",
+      "actual_git_blob_sha": "8a0e8c58018f71e5e66eb47f03088854e33990f4",
+      "pass": true
+    },
+    {
+      "path": "inputs/verify_diag3_triple_quadratic_ideal_flow_no_go.py",
+      "bytes": 5619,
+      "expected_git_blob_sha": "93957012f6cb12d6c8245eeef0d2995cb0314b5c",
+      "actual_git_blob_sha": "93957012f6cb12d6c8245eeef0d2995cb0314b5c",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_triple_fullspace_critical_h1.json",
+      "bytes": 364486,
+      "expected_git_blob_sha": "2d0374242d4b7c94172c3b9718bfe9b089e735f0",
+      "actual_git_blob_sha": "2d0374242d4b7c94172c3b9718bfe9b089e735f0",
+      "pass": true
+    },
+    {
+      "path": "inputs/TRIPLE_SATURATION_CYCLE_REPORT.md",
+      "bytes": 9584,
+      "expected_git_blob_sha": "3a02b23c39ac1a3699f3fb1194ca2381796b8cae",
+      "actual_git_blob_sha": "3a02b23c39ac1a3699f3fb1194ca2381796b8cae",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_PAIR_DIFFERENTIAL_ENDS.md",
+      "bytes": 16684,
+      "expected_git_blob_sha": "179128bd49aa74e360e49ce77e2a6c8dd1fdc733",
+      "actual_git_blob_sha": "179128bd49aa74e360e49ce77e2a6c8dd1fdc733",
+      "pass": true
+    },
+    {
+      "path": "inputs/BLOCK_GORDAN_MONOCHROMATIC_MASS_TRANSFER.md",
+      "bytes": 9599,
+      "expected_git_blob_sha": "df3505e893e6f989caa575a142386b401d652cf2",
+      "actual_git_blob_sha": "df3505e893e6f989caa575a142386b401d652cf2",
+      "pass": true
+    },
+    {
+      "path": "inputs/CRITICAL_NUMERICAL_DISCOVERY.json",
+      "bytes": 65860,
+      "expected_git_blob_sha": "036119cd640a560e60b8370ee1e6f0d4dd4bde06",
+      "actual_git_blob_sha": "036119cd640a560e60b8370ee1e6f0d4dd4bde06",
+      "pass": true
+    },
+    {
+      "path": "inputs/RESIDUAL_STRATUM_NONCOMPACTNESS.md",
+      "bytes": 14861,
+      "expected_git_blob_sha": "eca17f8f3ebdc2c7e9d9760a3982985761f12b2a",
+      "actual_git_blob_sha": "eca17f8f3ebdc2c7e9d9760a3982985761f12b2a",
+      "pass": true
+    },
+    {
+      "path": "inputs/verify_derived_wall_sides.py",
+      "bytes": 7223,
+      "expected_git_blob_sha": "2bb7c36fda6c1ac955c3e0c6cdec9e834fe23759",
+      "actual_git_blob_sha": "2bb7c36fda6c1ac955c3e0c6cdec9e834fe23759",
+      "pass": true
+    },
+    {
+      "path": "inputs/verify_diag3_pair_factor_occurrence_h1.py",
+      "bytes": 13880,
+      "expected_git_blob_sha": "19e38b8b0bbff7340d925af70ac620dd7374c3a7",
+      "actual_git_blob_sha": "19e38b8b0bbff7340d925af70ac620dd7374c3a7",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG3_PAIR_FACTOR_ROOT_SWITCH.md",
+      "bytes": 18861,
+      "expected_git_blob_sha": "88f8a6a6e241242c01254554cda6206b70f3bfde",
+      "actual_git_blob_sha": "88f8a6a6e241242c01254554cda6206b70f3bfde",
+      "pass": true
+    },
+    {
+      "path": "inputs/verify_derived_walls.py",
+      "bytes": 9950,
+      "expected_git_blob_sha": "a73ca1df79a0ecb106e487ace6a4a48355214855",
+      "actual_git_blob_sha": "a73ca1df79a0ecb106e487ace6a4a48355214855",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG2_PIVOT_LABELED_PAIR_ORBITS_VERIFY.py",
+      "bytes": 35449,
+      "expected_git_blob_sha": "1d5c1608083fa67a3e739f47f3546e194b864556",
+      "actual_git_blob_sha": "1d5c1608083fa67a3e739f47f3546e194b864556",
+      "pass": true
+    },
+    {
+      "path": "inputs/DIAG2_PIVOT_LABELED_PAIR_THEOREM.md",
+      "bytes": 12189,
+      "expected_git_blob_sha": "afb45cd8d93fbab3bc3baecae40ab40c27c37df4",
+      "actual_git_blob_sha": "afb45cd8d93fbab3bc3baecae40ab40c27c37df4",
+      "pass": true
+    }
+  ]
+}

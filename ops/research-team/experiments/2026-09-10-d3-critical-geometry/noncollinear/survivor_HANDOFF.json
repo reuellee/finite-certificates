@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_USEFUL_NULL_NO_NEW_COVERAGE",
+  "original_diagonals": "2/9 unchanged",
+  "named_survivor": [
+    5563,
+    16134,
+    19284
+  ],
+  "canonical_survivor": [
+    5563,
+    4373,
+    23221
+  ],
+  "new_exact_fact": "Ordinary support recovery and R_w=-[1468][3458] full-residence pivot",
+  "critical_gate": "E=E_u=E_v=E_t=0 with all original strict residence signs after w=-N/L",
+  "limitation": "1690-term degree13 resultant is not a demonstrated complexity improvement; no global escape proof.",
+  "independent_audit": "Referee accepted source/support/chart reconstruction; elimination review requested separately.",
+  "files": {
+    "survivor_FINDINGS.md": "fdb4d9fb6e92fd9c41b68c51c306d6c58ca6152b5b90f608ff20e3fa1a0184c0",
+    "survivor_recover.py": "94108c36397e53707a850de5bab22d14c9ccbcdc391af435b1e2ba150fbfea48",
+    "survivor_ORDINARY_SUPPORTS.json": "d8db267c06a9eb7da24e7aff251d88fc48aba145bbb0001e774cf755253ae6f5",
+    "survivor_chart.py": "b24edc802e014f02064489596f4925ee8d1593384b57d8f5b3055a6115fe7466",
+    "survivor_CONTRACTION_CHART.json": "f0261c6e52b5bc2df61a8278926bb80cba9823f1e489b46574ff486ce4696388",
+    "survivor_eliminate.py": "e9a77d7648ce4e464be9dbbc5940612ecd02f30c0d0c0c580d2a339f609d9292",
+    "survivor_ELIMINATION.json": "5dfed86c36805431b7f29c7dff284c60c20f9430e0d0373947b8892ab900cd96",
+    "survivor_finalize_algebra.py": "bdac300020e42d17ff37665ad27b7a9a360b120b9d7a6993b800b8d469a3e478"
+  }
+}

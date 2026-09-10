@@ -1,0 +1,17 @@
+# Independent characteristic-kernel and exact-canary audit
+
+ACCEPT_DEDUCTIVELY the statements of `noncollinear/CHARACTERISTIC_KERNELS.md`, SHA256 `35903aa747c1d654efe6cdaa4dcc8e3380bcb72d4242ebeb946d7c26ce634087`.
+
+The leaf covectors are nonzero by the stated parent-unit exclusions. For kinds50 and51 three such covectors supply independent ordinary normals. For49 the two leaf normals followed by the row2 elimination supply three independent normals. In all three cases the kernel is exactly the ordinary concurrence point. These are all-uniform-parent statements, not generic rank assertions.
+
+For38, the two nonzero leaf covectors constrain the kernel to the intersection of its core planes. The geometric plane argument proves full simultaneous height invariance in every vector direction on that axis, hence proves the reverse inclusion and rank two. All shifts are restricted to actual uniform parents.
+
+For48 the two ordinary determinants are opposite after framing parents1,...,5 and have identical projective weights. Their distinct ordinary concurrences therefore lie in the same characteristic kernel. Projective invariance puts the active image into the two-dimensional Gale kernel. Every active gradient row is nonzero: the canonical affine derivative is one and the tetrahedral incidence symmetry is transitive on all six active labels. Rank one would make a single nonzero covector annihilate all six rank-four parents, a contradiction. This proves rank two and exactly the span of the two concurrences.
+
+The diagnostic polynomial was independently reconstructed using only referee-owned Fraction/permutation determinant routines in `verify_new_critical_canaries.py`. Nine rational values and the bidegree bound (2,2) establish the entire two-variable determinant identity. The direction annihilates all eight first derivatives, while the parent5 second derivative is minus two. Exact affine bracket endpoint signs establish the whole interval [-1/100,1/100]. Thus first-order kind48 invariance does not imply full-height flatness. The diagnostic direction need not itself be another wall concurrence.
+
+The same independent checker reconstructs the SECOND, stronger critical witness, binding `falsifier/NONZERO_NONCOLLINEAR_REPLAY.json` SHA256 `af07cefbc95d2aef313b4b668c16ce1725bf35980915d64cae1139e19715655a`. Its global kinds are48/49/50. All70 parent brackets are nonzero; all ordinary normal matrices and their three-row subsets have the required rank; the three concurrence points span rank three. Both direct derivative rows are exactly (27,45,0,99,0,-18,0,-9), remain nonzero in normalized free heights5,...,8, and have rank one. Canonical support relabelings and two hostile controls are checked independently. This refutes the attempted implication even after requiring both gradients nonzero. It is distinct from the earlier48/36/49 zero-gradient witness.
+
+Output: `NEW_CRITICAL_CANARIES_REPLAY.json`, SHA256 `0c7ed39734474758a399df5d48091c48a353dcd970495a56fa6c23d09a483857`. No producer helper or acceptance logic is imported. The new witness is not a compact-component counterexample; no original theorem or new census count follows.
+
+Coverage clarification: both noncollinear witness triples have parent7 occurrence counts (0,1,1). The inherited affine-fiber escape therefore already excludes compact components for them. In particular, neither is certified to belong to the authenticated unresolved source residue; the negative verdicts concern the unrestricted conjectures only.

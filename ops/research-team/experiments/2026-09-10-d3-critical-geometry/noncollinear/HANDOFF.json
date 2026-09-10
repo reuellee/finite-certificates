@@ -1,0 +1,51 @@
+{
+  "schema": "research_track_handoff_v1",
+  "track": "noncollinear",
+  "input_commit": "52b4a0efdad0c1bf05503f4126b2c6f5dc78c246",
+  "status": "exact_counterexample_accepted_and_characteristic_kernel_lemmas_submitted",
+  "original_obligations_closed": 0,
+  "new_triple_orbit_count": 0,
+  "ledger": "2/9 unchanged; universal pair endpoint complete",
+  "accepted_negative_claim": "Actual uniform parent with three distinct primitive factors48/36/49 and pairwise distinct noncollinear ordinary concurrences has dependent eight-height gradients of rank1.",
+  "positive_candidate_claims": [
+    "Kind38 full-gradient kernel is its non-root plane-intersection line; all associated uniform simultaneous height motions preserve the wall.",
+    "Kind48 full-gradient kernel is exactly the line joining its two distinct ordinary concurrence points.",
+    "Kinds49,50,51 full-gradient kernel is only the ordinary concurrence point."
+  ],
+  "accepted_or_exact_limited_diagnostics": [
+    "The noncollinear witness has a flat localization mechanism and a hidden collision factor replacement; it is not a noncompactness counterexample.",
+    "An arbitrary direction on the kind48 characteristic line gives determinant -u^2 on a whole uniform |u|<=1/100 interval; first-order vanishing does not imply full height invariance."
+  ],
+  "excluded_claims": [
+    "No original3/9 proof",
+    "No compact triple component constructed",
+    "No new source triple orbit closed",
+    "No classification of all nonzero proportional gradients",
+    "Kind48 test direction not asserted to be another factor concurrence"
+  ],
+  "independent_review": {
+    "noncollinear_counterexample": "Accepted by independent referee and falsifier rational determinant reconstructions",
+    "characteristic_kernel_lemmas": "Submitted for independent deductive review",
+    "kind48_higher_order_canary": "Exact producer replay passed; independent replay requested"
+  },
+  "next_discriminator": "Handle the actual kind48 zero-gradient characteristic-axis locus and the two-nonzero-proportional-gradient locus after collision/flat-axis excision; establish Hc0 vanishing with every parent boundary and rank specialization retained.",
+  "experimental_scope": "One inherited exact parent; targeted derived-normal flat discovery, one frozen exact three-factor witness, one kind48 two-height polynomial/whole-interval diagnostic. No broad parent census or one-parameter optimization search.",
+  "source_hashes": {
+    "WORK_ORDER.md": "8b8bf96cb87d77df5825db6d24781555786ec6b78237699ec9c9aa626b502b11",
+    "checkpoint/proof/VERTICAL_CRITICAL_REDUCTION.md": "e7034f7b3b51fad14e925eeabed3a43cf134e72a1a3689fede5b4ac28b69477e",
+    "checkpoint/referee/ANCHOR_COVERAGE_AUDIT.md": "e067b7f27de4c70877258a8094ad4003edc71713323d778323f52eb03bb9efe9",
+    "checkpoint/proof/critical_canary.py": "c722284b375c92e17f35a054e1616ba6b0a91713a82d6e021c4f08230cea66cf"
+  },
+  "artifact_hashes": {
+    "CHARACTERISTIC_KERNELS.md": "35903aa747c1d654efe6cdaa4dcc8e3380bcb72d4242ebeb946d7c26ce634087",
+    "FINDINGS.md": "95b8b48e48513d42752f6f6442b7a58ade69a627b509acff0358ae101e5a052c",
+    "KIND48_AXIS_CANARY.json": "038690b948df43bfe7a06cf66874715df340e74c6a72f4ef3009824a6a87b211",
+    "NONCOLLINEAR_COUNTEREXAMPLE.md": "6eb157dbd1252772deba5a76dc1d0e84b4567aa0dcfafa4098e283a14836358f",
+    "NONCOLLINEAR_CRITICAL_WITNESS.json": "54ce3f8b0206e47a43475506d5ec684e42d2da189348a4a170b2952814400041",
+    "TARGETED_FLAT_DISCOVERY.json": "e82b6b4d05c2431e28d695bd910299408ae64b4731afbc229208ee2a9e73ffe7",
+    "gradient_map_probe.py": "8d07506e94cfbd3e13c295726f134ffd848c4aefc796709f68a7c33adf62e8de",
+    "targeted_flat_gate.py": "671f197292e36db501ba86ba178b42d16d5945c9cbe161093a4009ffce7bc8de",
+    "verify_kind48_axis.py": "b59812c0ec072e3af902751c8c6dc75f68b41bfebf0976a17e43c27bd3444b21",
+    "verify_noncollinear_critical.py": "ccc28a1995aedea23f595a9423fd86b680c3d1c65bdbe0eede4928f2e71591ca"
+  }
+}

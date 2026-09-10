@@ -1,0 +1,46 @@
+{
+  "base_commit": "a7a98a927e57c8872aca2b1e48d4615ede649171",
+  "owned_directory": "proof/",
+  "outcome": "positive global subclass theorem and sharpened exact global obstruction; original D3 open",
+  "new_theorem": "All triple intersections with at least two global36/38 factors have no compact component, for every original uniform parent and normalized component.",
+  "accepted_input": "Universal factor-pair endpoint9476/9476; all-kind anchor extension independently reviewed by proof track.",
+  "included": [
+    "all coefficient ranks",
+    "all concurrence collisions",
+    "all allowed projected coincidences",
+    "all original parent components",
+    "all six possible third factor kinds"
+  ],
+  "excluded": [
+    "triples with at most one global36/38 factor from positive subclass theorem",
+    "universal collision-free critical-locus Hc0 vanishing"
+  ],
+  "original_diagonal_credit": 0,
+  "new_numerical_triple_count": null,
+  "source_overlap_audit": "coordinator pending; no inferred count",
+  "replay": "python proof/critical_canary.py",
+  "actual_fixtures_replayed": 1,
+  "fixture_credit": 0,
+  "next_discriminator": "An actual collision-free vertical critical point with noncollinear concurrences, or a proof excluding all such points. Even collinear distinct critical points need a rank/escape argument.",
+  "artifacts": {
+    "TWO_PARENT_LINE_FACTORS.md": "85c449f0d814872c92a9b07f5962a9af6fdaa6c0d18b8a779c86610ba5d05b44",
+    "VERTICAL_CRITICAL_REDUCTION.md": "e7034f7b3b51fad14e925eeabed3a43cf134e72a1a3689fede5b4ac28b69477e",
+    "ANCHOR_AUDIT_REVIEW.md": "19d6a0de4b07e6a96f84355526204cacd96754b4357c57a16e14bad58a3a46fa",
+    "critical_canary.py": "c722284b375c92e17f35a054e1616ba6b0a91713a82d6e021c4f08230cea66cf",
+    "CRITICAL_CANARY.json": "faca92cca92979bfe4ac9d79059fdcdd9ab0c25bfbd8e14d2b44a01457e36d85",
+    "FINDINGS.md": "0dea80e90b4253a3c3facd28014e0dc7f534c1bcb511db6d6376f856db01d6ae"
+  },
+  "review": "Independent referee hash-bound acceptance for TWO_PARENT_LINE_FACTORS.md85c449f0... and VERTICAL_CRITICAL_REDUCTION.mde7034...; independent exact finite-difference canary reconstruction passed.",
+  "input_sha256": {
+    "referee/ANCHOR_COVERAGE_AUDIT.md": "e067b7f27de4c70877258a8094ad4003edc71713323d778323f52eb03bb9efe9",
+    "checkpoint/original/CONCURRENCY_HEIGHT_PAIR_VANISHING.md": "c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91",
+    "inputs/DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md": "aaad6a2da3b68c7c5d676115e9082ab09b5fe598c141e7403085ec3d29799985",
+    "checkpoint/checkpoint/checkpoint/inputs/DIAG2_PIVOT_LABELED_PAIR_THEOREM.md": "5e7e7c4e3d717d10cbcdbc21b9e0d8ef469ee376705eb8d01dafe2c174ab94d6",
+    "checkpoint/checkpoint/checkpoint/inputs/verify_derived_wall_sides.py": "2083aabf1ecd6cba64dc17638d561bf8858a01df3a3f65575433600d38bc78de"
+  },
+  "independent_review_artifacts": {
+    "referee/TWO_PARENT_LINE_AUDIT.md": "997bd2e1c7f5b4a1f32ad881753202ae7984cbe29aaf8827c7902ebc0b63e0f8",
+    "referee/verify_critical_canary.py": "f8965168ebd736862c196cd872261f8b0c0108dd8be88d0fa3831dd30dad7e79",
+    "referee/CRITICAL_CANARY_REPLAY.json": "3748c4bb12ca93a3245fa72aeb015503142a3ca46fd7c3f7fe92817962f244cd"
+  }
+}

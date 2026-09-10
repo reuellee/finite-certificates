@@ -1,0 +1,46 @@
+{
+  "verdict": "ACCEPT_ACTUAL_FULL_CONIC_FIBER_COMPONENT_CHANGE",
+  "cases": [
+    {
+      "c": "-3999/1000",
+      "components": 2,
+      "infinity_admissible": false,
+      "parent_inequalities_rebuilt": 70,
+      "distinct_real_cuts": 37,
+      "accepted_rational_parameter_samples": [
+        "49279473842168551764700475/8041608875363408172742298",
+        "161775851088833501414479453/16348010954136100849661624"
+      ],
+      "conic_nonsingular": true,
+      "root_order_certified_by_disjoint_rational_intervals": true
+    },
+    {
+      "c": "-399/100",
+      "components": 1,
+      "infinity_admissible": false,
+      "parent_inequalities_rebuilt": 70,
+      "distinct_real_cuts": 35,
+      "accepted_rational_parameter_samples": [
+        "39611947253446745051331793/5665660409960831905070286"
+      ],
+      "conic_nonsingular": true,
+      "root_order_certified_by_disjoint_rational_intervals": true
+    }
+  ],
+  "inherited_residue_orbit_indices": [
+    254
+  ],
+  "component_path": {
+    "parameter": "t=5",
+    "c_interval": [
+      "-3999/1000",
+      "-399/100"
+    ],
+    "all_parameter_parent_signs": 70,
+    "same_parent_component": true,
+    "method": "exact conic identity and zero Sturm root counts for every parent numerator and common denominator"
+  },
+  "producer_parametrization_and_root_lists_used": false,
+  "claim": "Two actual full fibers in one fixed parent sign chamber have different component counts.",
+  "excluded": "No global Hc1 class, no original D kernel, and no whole-diagonal conclusion."
+}

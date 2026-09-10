@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "authenticated_files": 348,
+  "runs": [
+    {
+      "script": "referee/verify_anchor_frames.py",
+      "arguments": [],
+      "status": "PASS",
+      "recorded_outputs_reproduced": {
+        "referee/ANCHOR_FRAME_REPLAY.json": "426fe7fa634607384847e2daeec57e55325062c3d0d182aeb4cb06dec3b122f9"
+      }
+    },
+    {
+      "script": "proof/critical_canary.py",
+      "arguments": [],
+      "status": "PASS",
+      "recorded_outputs_reproduced": {
+        "proof/CRITICAL_CANARY.json": "faca92cca92979bfe4ac9d79059fdcdd9ab0c25bfbd8e14d2b44a01457e36d85"
+      }
+    },
+    {
+      "script": "referee/verify_critical_canary.py",
+      "arguments": [],
+      "status": "PASS",
+      "recorded_outputs_reproduced": {
+        "referee/CRITICAL_CANARY_REPLAY.json": "3748c4bb12ca93a3245fa72aeb015503142a3ca46fd7c3f7fe92817962f244cd"
+      }
+    },
+    {
+      "script": "referee/verify_quadratic_inputs.py",
+      "arguments": [],
+      "status": "PASS",
+      "recorded_outputs_reproduced": {
+        "referee/QUADRATIC_INPUT_REPLAY.json": "ec4e3642564db775e1044a6d2f5e600b0f97922e86779e257108f456cf2fd987"
+      }
+    },
+    {
+      "script": "falsifier/verify_pencil_coverage.py",
+      "arguments": [
+        "--replay"
+      ],
+      "status": "PASS",
+      "recorded_outputs_reproduced": {
+        "falsifier/HEIGHT_OVAL_PROBE.json": "dd69e220355c6a30f00fd9bf7862b087665e8238adbd2e944bab51b53f680645",
+        "falsifier/QUAD_INERTIA.json": "7ee3a34e03f3874f65b13b0b9214ccdb42984de2a4761fc279776b7db7b86193",
+        "falsifier/PENCIL_SINGULAR_PROBE.json": "838a4cb16ee0fd8435b2698170cc06e8cbc533916df5b91f29ce5707f90d876c",
+        "falsifier/SINGULAR_PENCIL_FAMILY.json": "a6e25d6211badc6ba58718e47360f0dee7e8d8a315ba3ceef4ded7f1390e3caf",
+        "falsifier/EXCEPTIONAL_PENCIL_PROBE.json": "45bffb36d0258511c16511e4e9e215f6e1b8c86316acbc5494faef197f2cb14f",
+        "falsifier/QUADRATIC_EXTENSION_PROBE.json": "f8ee61f8f62b467d06a0f88e45af8b5f2d6dc1ef4ff14b26544a4eadbb127940",
+        "falsifier/PENCIL_COVERAGE.json": "cd37fbbc9b266ad408aa80ec14de3436ebe59f1c1103923f929fdc5bfd5d3964"
+      }
+    }
+  ],
+  "original_diagonal_ledger": "2/9",
+  "universal_pair_endpoint": "PROVED inherited 9476/9476",
+  "universal_triple_endpoint": "OPEN",
+  "new_numerical_triple_credit": 0,
+  "deductive_proofs_machine_verified": false,
+  "independent_deductive_review": "referee/FINAL_REVIEW.md",
+  "final_manifest_sha256": "06ac4aa129cf645a2850cd784c31b15001f96b1cb6eb547b008857888ecaf95a"
+}

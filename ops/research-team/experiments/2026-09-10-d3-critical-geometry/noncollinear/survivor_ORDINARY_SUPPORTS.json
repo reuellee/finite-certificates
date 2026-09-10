@@ -1,0 +1,167 @@
+{
+  "status": "PASS_EXACT_ORDINARY_RECOVERY",
+  "source_sha256": "c9244a47ded5736e7afe724a9914e75631a22b78653442e88c14f5c397919eb8",
+  "canonical_row": [
+    5563,
+    4373,
+    23221
+  ],
+  "named_presentation": [
+    5563,
+    16134,
+    19284
+  ],
+  "P_support": [
+    "123",
+    "145",
+    "246",
+    "378"
+  ],
+  "recovered": [
+    {
+      "factor": 16134,
+      "pivot": "a",
+      "ordinary_support": [
+        "126",
+        "257",
+        "367",
+        "458"
+      ],
+      "raw_to_named_ratio": "-1",
+      "sample_parent": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "1361/153",
+          "-9",
+          "-10"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "1",
+          "9",
+          "-3",
+          "6"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "7",
+          "-8",
+          "9"
+        ]
+      ],
+      "sample_substitution": {
+        "b": "9",
+        "c": "7",
+        "d": "-9",
+        "e": "-3",
+        "f": "-8",
+        "g": "-10",
+        "h": "6",
+        "i": "9",
+        "a": "1361/153"
+      },
+      "sample_concurrence": [
+        "265",
+        "353",
+        "225",
+        "175"
+      ],
+      "parent_constructions": 8,
+      "prior_nonmatches": 0
+    },
+    {
+      "factor": 19284,
+      "pivot": "c",
+      "ordinary_support": [
+        "157",
+        "168",
+        "245",
+        "348"
+      ],
+      "raw_to_named_ratio": "1",
+      "sample_parent": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "-2",
+          "9",
+          "6"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "1",
+          "-5",
+          "-8",
+          "-6"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "202/51",
+          "-9",
+          "7"
+        ]
+      ],
+      "sample_substitution": {
+        "a": "-2",
+        "b": "-5",
+        "d": "9",
+        "e": "-8",
+        "f": "-9",
+        "g": "6",
+        "h": "-6",
+        "i": "7",
+        "c": "202/51"
+      },
+      "sample_concurrence": [
+        "17",
+        "102",
+        "17",
+        "12"
+      ],
+      "parent_constructions": 3,
+      "prior_nonmatches": 0
+    }
+  ],
+  "scope": "Two targeted wall parents and exact symbolic occurrence identities; no triple closure."
+}

@@ -1,0 +1,767 @@
+{
+  "source_files_bound": 7,
+  "all178_chart_parent_signs_checked": true,
+  "fixed_signatures": [
+    14988895318912,
+    3405195891438080,
+    40418075143643136
+  ],
+  "flow_dual_normalization": "positive-gcd primitive integer normals",
+  "flow_duals_verified": 3,
+  "source_endpoints_replayed": [
+    {
+      "side": "left",
+      "block_status": [
+        "BAD",
+        "BAD",
+        "BAD"
+      ]
+    },
+    {
+      "side": "event",
+      "block_status": [
+        "BAD",
+        "BAD",
+        "BAD"
+      ]
+    },
+    {
+      "side": "right",
+      "block_status": [
+        "GOOD",
+        "BAD",
+        "BAD"
+      ]
+    }
+  ],
+  "signature_validity_properness_and_antichain": "independently established for the fixed three signatures by exact point witnesses; no universal-family claim",
+  "global_parent_coverage": "not certified",
+  "structural": {
+    "sha256": "d4affe0c5f43039443001ab618ca10ecb1d74b32572fc221e4b5ba4f067723ee",
+    "attempts_checked": 128,
+    "exact_positive_three_row_circuits": 101,
+    "parent_sign_rejections": 27,
+    "unique_parent_support_signature": 101,
+    "unique_literal_parents": 101,
+    "unique_unordered_supports": 10,
+    "signature_index_counts": {
+      "1": 76,
+      "2": 25
+    },
+    "normalization": "raw rational cofactor normals",
+    "all_support_pairs_rank_two": true,
+    "selected_witness_attempt": 65,
+    "near_singular_control": {
+      "sha256": "5c6fc2ae4f55cd2f31694f14f2516b814bb134eaff222e087d93c78220bd2a6d",
+      "exact_rank": 3,
+      "nonzero_minor": "-8463/312500000",
+      "float_SVD": "not a proof and not independently replayed"
+    },
+    "hostile_controls": {
+      "altered_positive_weight": true,
+      "duplicate_support": true,
+      "signature_bit_change": true,
+      "zero_dual": true,
+      "tiny_rational_offwall_same_weights": true,
+      "tiny_rational_offwall_rank_three": true,
+      "floating_parent_rejected": true,
+      "positive_relation_wrong_parent_chamber": true
+    },
+    "screening_order_or_completeness": "not independently reproduced",
+    "consequence": "finite exact local badness witnesses only"
+  },
+  "engineer": {
+    "sha256": "87766189a8bfb751e865639b625efda7fb3eabc4045e34193425a587c4a7d95d",
+    "selected_parents": 32,
+    "patterns": {
+      "BBB": 20,
+      "GBB": 3,
+      "BBG": 2,
+      "BGB": 4,
+      "BGG": 2,
+      "GBG": 1
+    },
+    "block_status_counts": {
+      "BAD": 81,
+      "GOOD": 15
+    },
+    "full_literal_geometry_and_candidate_identity": true,
+    "hostile_controls": {
+      "negated_primal_point": true,
+      "explicit_unknown_retained": true,
+      "zero_margin_not_primal": true
+    },
+    "fixed_family_nonempty_proper_and_pairwise_incomparable": true,
+    "family_property_witness_ids": {
+      "BBB": 0,
+      "GBB": 2,
+      "BGB": 164,
+      "BBG": 176
+    },
+    "certificates": [
+      {
+        "id": 0,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 4,
+            "rank": 3
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pattern": "GBB",
+        "blocks": [
+          {
+            "status": "GOOD",
+            "margin_min": "415087368992416150950545145811503142879809366880290"
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 176,
+        "pattern": "BBG",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "116059295683176"
+          }
+        ]
+      },
+      {
+        "id": 164,
+        "pattern": "BGB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "5009386720"
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "pattern": "BGG",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "145315585655"
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "275419698228803"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "pattern": "GBB",
+        "blocks": [
+          {
+            "status": "GOOD",
+            "margin_min": "144107317545"
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 4094,
+        "pattern": "BGB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "1140455925635/496"
+          },
+          {
+            "status": "BAD",
+            "support_size": 3,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "id": 4095,
+        "pattern": "BGB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "71278495351968966447763/31000000000000"
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 3284,
+        "pattern": "BBG",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "16896688738833"
+          }
+        ]
+      },
+      {
+        "id": 2426,
+        "pattern": "BGB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "3011090875"
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 3464,
+        "pattern": "BGG",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "456262744"
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "538233712"
+          }
+        ]
+      },
+      {
+        "id": 2987,
+        "pattern": "GBB",
+        "blocks": [
+          {
+            "status": "GOOD",
+            "margin_min": "1447122944861"
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 3736,
+        "pattern": "GBG",
+        "blocks": [
+          {
+            "status": "GOOD",
+            "margin_min": "233981566934092"
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "GOOD",
+            "margin_min": "38949740310212"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "pattern": "BBB",
+        "blocks": [
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          },
+          {
+            "status": "BAD",
+            "support_size": 5,
+            "rank": 4
+          }
+        ]
+      }
+    ],
+    "numerical_search": "heuristic, not independently proved coverage"
+  },
+  "verdict": "ACCEPT_FINITE_LOCAL_CERTIFICATES_ONLY",
+  "ledger": "2/9",
+  "original_obligations_closed": 0,
+  "gpu_execution": "UNTESTED",
+  "seconds": 2.6543984310010273
+}

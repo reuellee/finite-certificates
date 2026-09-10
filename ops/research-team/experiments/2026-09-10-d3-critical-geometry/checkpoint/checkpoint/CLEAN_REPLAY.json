@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "authenticated_files": 287,
+  "independent_replays": [
+    {
+      "script": "referee/verify_affine_pair_coverage.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "a5443b30a26a7699497742533d031f202ca7297beebecbfaab9b212144bc4fc9"
+    },
+    {
+      "script": "referee/verify_two_column_coverage.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "bd04241cdd1f7add312b3c7a2204e1d8d98b9c5c6dbe63b187946d258ba42183"
+    },
+    {
+      "script": "referee/verify_conic_markers.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "1cbafadb219ddee36d1f51061640af1d2b737457826430d248c0ed5604d6044b"
+    },
+    {
+      "script": "referee/verify_conic_specialization.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "bf7fd812113723f6f35a0d454460ccdf870e0ed43466e0ac58f0612f82ce3086"
+    },
+    {
+      "script": "newfalsifier/affine_perspective_test.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "4a4d137e0eba79c412732e1d848fcf4aa004592dfd322357bdfa782760c50593"
+    },
+    {
+      "script": "newfalsifier/contraction_height_test.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "00213b0bd66187356d43fc008682e9ec367f249cb51333442e46199d89011c39"
+    },
+    {
+      "script": "newfalsifier/verify_triple_rank_independent.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "9c7aa3e2817a9e708579b763fd2c25bb0c307087ef0c2fe83c708d5f762d30d3"
+    }
+  ],
+  "original_diagonal_ledger": "2/9",
+  "stronger_pair_endpoint": "PROVED: 9476/9476",
+  "triple_residue_records": 1162302,
+  "deductive_proof_machine_verified": false,
+  "deductive_review": "referee/FINAL_REVIEW.md"
+}

@@ -1,0 +1,53 @@
+{
+  "verdict": "ACCEPT_ACTUAL_UNIQUE_WITNESS_DISTINCT_WEAK_RAY_OBSTRUCTION",
+  "colex_signature_ids": [
+    5019905080784346,
+    68833058600159780,
+    59311597535541546
+  ],
+  "lex_encoding_explicitly_converted": true,
+  "all70_center_parent_brackets": true,
+  "all56_normals_rebuilt": true,
+  "positive_rank3_four_row_circuits": 3,
+  "full_normalized_witness_polytopes_are_singletons": 3,
+  "weak_primal_ray_rank": 3,
+  "common_nonzero_weak_vector_exists": false,
+  "feasible_anchors_in_same_parent_component": 3,
+  "anchor_minimum_primal_margins": [
+    "1/100",
+    "1/100",
+    "1/100"
+  ],
+  "ordered_noninclusions_certified": 6,
+  "union_support_label_degrees": [
+    4,
+    6,
+    4,
+    5,
+    5,
+    3,
+    3,
+    3
+  ],
+  "union_degree_at_most2_residence_available": false,
+  "fixed_three_weak_point_height_equation_rank": 7,
+  "height_kernel_dimension": 1,
+  "height_kernel_equals_global_GL_scale_direction": true,
+  "center_in_boundary_of_each_good_locus": true,
+  "primal_curve_polynomial_identities_rebuilt": true,
+  "positive_curve_polynomials": 168,
+  "common_certified_small_parameter_radius": "1/100",
+  "actual_compact_component_or_original_cohomology_kernel_constructed": false,
+  "hostile_controls": {
+    "wrong_colex_id": true,
+    "positive_weight_corruption": true,
+    "weak_ray_corruption": true,
+    "wrong_zero_support": true,
+    "anchor_parent_corruption": true,
+    "height_matrix_corruption": true,
+    "height_direction_corruption": true,
+    "height_rank_corruption": true,
+    "boundary_curve_join_corruption": true,
+    "boundary_curve_polynomial_corruption": true
+  }
+}

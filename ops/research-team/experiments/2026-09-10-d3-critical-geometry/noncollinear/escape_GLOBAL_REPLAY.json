@@ -1,0 +1,55 @@
+{
+  "status": "PASS_GLOBAL_SHARED_PLANE_TRIPLE_ESCAPE_AND_CRITICAL_CLASSIFICATION",
+  "source_sha256": "af07cefbc95d2aef313b4b668c16ce1725bf35980915d64cae1139e19715655a",
+  "ordinary_supports": {
+    "P": [
+      "123",
+      "145",
+      "246",
+      "356"
+    ],
+    "Q": [
+      "123",
+      "146",
+      "248",
+      "378"
+    ],
+    "R": [
+      "126",
+      "145",
+      "248",
+      "378"
+    ]
+  },
+  "global_raw_polynomials": [
+    "a + b*c - b - c",
+    "-a*f*h + a*h*i - b*d*i + b*f*g",
+    "-b*d*i + b*f*g - b*f*h + b*h*i + c*d*h - c*g*h"
+  ],
+  "graph_equations": {
+    "a": "-b*c + b + c",
+    "d": "f*(b - 1) + h*(-b*c + b + c)/b",
+    "g": "i*(b - 1) + h*(-b*c + b + c)/b"
+  },
+  "graph_free_variables": [
+    "b",
+    "c",
+    "e",
+    "f",
+    "h",
+    "i"
+  ],
+  "complete_contraction_Q": "-4*k*t*v + 6*k*t + 10*k*v*w - 15*k*w + 12*t**2 - 10*t*v*x + 4*t*v*z - 30*t*w",
+  "complete_contraction_R": "-8*k*t*u*v + 6*k*t*u*x + 4*k*t*v - 3*k*t*x + 20*k*u*v*w - 6*k*u*w*z - 10*k*v*w + 3*k*w*z + 12*t**2*u*x - 6*t**2*x - 20*t*u*v*x + 8*t*u*v*z - 12*t*u*w*z + 10*t*v*x - 4*t*v*z + 6*t*w*z",
+  "redundancy_base_equations": [
+    "x-2",
+    "z-5"
+  ],
+  "reduced_second_equation": "t*(x - 2) - w*(z - 5)",
+  "Q_constant_in_v": "6*k*t - 15*k*w + 12*t**2 - 30*t*w",
+  "critical_base_exact": "x=2 and z=5",
+  "original_obligations_closed": 0,
+  "new_net_triple_orbit_count": 0,
+  "novelty_note": "This source triple already fits inherited sequential-affine and light-label mechanisms. The contribution is its explicit global escape and entire critical-piece classification.",
+  "script_sha256": "1e9cb31159df5e398839c61b2b7cf38d7da58f3684512dd0c95341c5b49c7330"
+}

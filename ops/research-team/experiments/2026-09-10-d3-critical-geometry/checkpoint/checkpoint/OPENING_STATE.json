@@ -1,0 +1,20 @@
+{
+  "user_goal": "Continue toward a third original diagonal after the usage limit reset.",
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "predecessor_commit": "401602fe9f8bcfad74116b46bb5574f63b6a3040",
+  "predecessor_tree": "c8306b7454e027784ba5ce82765835b11dc75ae2",
+  "main_at_opening": "9e77c365b266e9d884e6ac14a0443992bec92c64",
+  "original_diagonals_proved": 2,
+  "original_diagonal_denominator": 9,
+  "original_D3_injectivity": "OPEN",
+  "original_D3_triple_Hc0": "OPEN",
+  "inherited_stronger_pair_coverage": 8902,
+  "stronger_pair_denominator": 9476,
+  "inherited_stronger_pair_residue": 574,
+  "inherited_triple_factor_residue_records": 1162302,
+  "prior_common_weak_excision": "PROVED; input, not new credit",
+  "authority": "Standing user authorization for ordinary research, conventional proofs, additive reviewed repository checkpoints, and backups under Google Drive Projects.",
+  "resource_extensions": "The initial bounded discovery phase was extended for the surviving two-column and concurrence-height proofs. No paid compute or API use was requested.",
+  "input_authentication": "SOURCE_MANIFEST.json authenticates all 216 predecessor files and five newly retrieved pinned historical sources.",
+  "source_index": "The supplied research index is an entry point; pinned sources and reviewed checkpoints determine the current ledger."
+}

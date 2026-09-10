@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "authenticated_files": 455,
+  "review_bound_files": 65,
+  "runs": [
+    {
+      "script": "referee/verify_noncollinear_independent.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "referee/NONCOLLINEAR_INDEPENDENT_REPLAY.json": "c22bd1b7d25350ced1c3cb4eba90d1bf6d40343fa2f3ac4a6db09446f55aada0"
+      }
+    },
+    {
+      "script": "referee/verify_new_critical_canaries.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "referee/NEW_CRITICAL_CANARIES_REPLAY.json": "0c7ed39734474758a399df5d48091c48a353dcd970495a56fa6c23d09a483857"
+      }
+    },
+    {
+      "script": "proof/verify_collinear_rank11.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "proof/COLLINEAR_RANK11_REPLAY.json": "7d045b2f5c184ddb45fe5a71628e4e924f8a8d15b8ed515a2d825c87d51deded"
+      }
+    },
+    {
+      "script": "referee/verify_witness_slides.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "referee/WITNESS_SLIDES_REPLAY.json": "8619228bf74a8cb73d44cf1f3b4c0cbc63c5593215a88eab1ed4cb8fa18d6b89"
+      }
+    },
+    {
+      "script": "referee/verify_global_graph_independent.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "referee/GLOBAL_GRAPH_REPLAY.json": "c4576113397ced79d27251b836c672db7f5bde0070946bbb931bc8882eef4c62"
+      }
+    },
+    {
+      "script": "referee/verify_critical_chart.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "referee/CRITICAL_CHART_REPLAY.json": "4a13e080077b23f745d35969b818e6be9cdbbbb28c41b7de011cda529f68920b"
+      }
+    },
+    {
+      "script": "falsifier/verify_gradient_pencil.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "falsifier/GRADIENT_PENCIL_REPLAY.json": "534080ba09c9e98ce310c2aeb603a87ba14899a5fdc733a516e28fdcd84ad803"
+      }
+    },
+    {
+      "script": "falsifier/verify_deformation_boundary.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "falsifier/DEFORMATION_BOUNDARY_CANARIES.json": "582bfc5e90916cd570e9dbbd866727b58adadd801cae4f2d781af4accf655278"
+      }
+    },
+    {
+      "script": "referee/verify_survivor_supports.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "referee/SURVIVOR_SUPPORTS_REPLAY.json": "fbadc220a1e9eefab0a2973c388fee886377365bf2d492e5d11153264654a45f"
+      }
+    },
+    {
+      "script": "referee/verify_survivor_elimination.py",
+      "status": "PASS",
+      "outputs_reproduced": {
+        "referee/SURVIVOR_ELIMINATION_REPLAY.json": "38a05b4bbef41897fcb0b85e5139089df5d756c77a7cc395335d5fb0ae04c90d"
+      }
+    }
+  ],
+  "original_diagonal_ledger": "2/9",
+  "universal_pair_endpoint": "PROVED inherited9476/9476",
+  "universal_triple_endpoint": "OPEN",
+  "new_numerical_triple_credit": 0,
+  "deductive_proofs_machine_verified": false,
+  "independent_deductive_review": "referee/FINAL_REVIEW.json"
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "Floating exploration only, same 22 forms; not an exact theorem or compactness certificate",
+  "hits": [],
+  "best_gap": [
+    0.0,
+    [
+      55,
+      83,
+      -1,
+      1.0,
+      [
+        0.0,
+        0.0,
+        1.1102230246251565e-16,
+        10.0
+      ]
+    ]
+  ]
+}

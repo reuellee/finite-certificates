@@ -1,0 +1,7013 @@
+{
+  "status": "PASS_COMBINATORIAL_TEMPLATES_ONLY",
+  "kind38_degree_cases": 266,
+  "covered_factor_kind_pairs": "every pair with36,38,48; additionally49+49",
+  "remaining_factor_kind_pairs": [
+    [
+      49,
+      50
+    ],
+    [
+      49,
+      51
+    ],
+    [
+      50,
+      50
+    ],
+    [
+      50,
+      51
+    ],
+    [
+      51,
+      51
+    ]
+  ],
+  "source_sha256": {
+    "DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "verify_derived_walls.py": "a7d8ae49f83cc54e21d5107f72be5e8e36ad6890b8cab56cd9dfefcef9acfd59",
+    "verify_derived_wall_sides.py": "2083aabf1ecd6cba64dc17638d561bf8858a01df3a3f65575433600d38bc78de",
+    "DIAG3_PAIR_FACTOR_ROOT_SWITCH.md": "e57ccb4c5dfdf209f7534b45080eea7a88cee7457527c4d720574f639a9f0338",
+    "DIAG3_TRIPLE_FACTOR_REDUCTION.md": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+    "DIAG3_PAIR_DIFFERENTIAL_ENDS.md": "5c47ce64a77784673c8deecc0279fd279154582b625d2d6a86d6da9d35bdde15"
+  },
+  "kind38_witnesses": [
+    {
+      "other_degree": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        4,
+        5
+      ],
+      "union_degree_upper_bound": [
+        2,
+        3,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        2,
+        3,
+        4,
+        2,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        3,
+        4,
+        4,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        3,
+        4,
+        4,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        3,
+        4,
+        4,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        2,
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        3,
+        2,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        3,
+        4,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        3,
+        4,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        3,
+        4,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        3,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        2,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        4,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        2,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        2,
+        4,
+        2,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        2,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        0,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        2,
+        4,
+        4,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        2,
+        4,
+        4,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        4,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        1,
+        4,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        5,
+        6
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        2,
+        2,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        4,
+        6
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        2,
+        4,
+        2,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        4,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        2,
+        4,
+        4,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        4,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        2,
+        4,
+        4,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        4,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        2,
+        4,
+        4,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        1,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        6
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        2,
+        2,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        2,
+        4,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        2,
+        4,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        2,
+        4,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        3,
+        4,
+        4,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        2,
+        2,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        2,
+        4,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        2,
+        4,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        0,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        2,
+        4,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        2,
+        4,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        6
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        2,
+        2,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        2,
+        4,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        2,
+        4,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        2,
+        4,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        2,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        2,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        1,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        1,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        2,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        2,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        2,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        2,
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        3,
+        2,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        3,
+        4,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        3,
+        4,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        3,
+        4,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        3,
+        4,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        2,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        3,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        3,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        2,
+        2,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        2,
+        4,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        2,
+        4,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        0,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        2,
+        4,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        2,
+        4,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        6
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        2,
+        2,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        2,
+        4,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        2,
+        4,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        5
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        2,
+        4,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        3,
+        4,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        2,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        2,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        0,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        2,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        1,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        2,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        3,
+        4,
+        4,
+        3,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        3,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        2,
+        4,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        2,
+        3,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        2,
+        3,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        2,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        1,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        1,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        2,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        2,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        2,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        2,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        3,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        3,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        3,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        0,
+        1,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        1,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        1,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        2,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        2,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        2,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        1,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        1,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        1,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        2,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        2,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        2,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        2,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        2,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        2,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        2
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        0,
+        1
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "other_degree": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "chosen_outer_pair": [
+        3,
+        4
+      ],
+      "union_degree_upper_bound": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        1,
+        1
+      ]
+    }
+  ],
+  "support_rigidity_canary": {
+    "P": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        3,
+        7,
+        8
+      ]
+    ],
+    "Q": [
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        1,
+        5,
+        8
+      ],
+      [
+        2,
+        6,
+        8
+      ],
+      [
+        3,
+        4,
+        7
+      ]
+    ],
+    "degree": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "nonempty_original_locus": "NOT_CHECKED"
+  },
+  "original_D": "OPEN",
+  "original_D3": "OPEN",
+  "ledger": "2/9"
+}

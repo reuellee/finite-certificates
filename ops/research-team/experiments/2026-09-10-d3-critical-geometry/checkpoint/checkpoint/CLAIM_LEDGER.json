@@ -1,0 +1,35 @@
+{
+  "original_diagonals_proved": 2,
+  "original_diagonal_denominator": 9,
+  "original_D3_injectivity": "OPEN",
+  "original_D3_triple_Hc0": "OPEN",
+  "original_operational_obligations_closed_this_cycle": 0,
+  "stronger_pair_endpoint": {
+    "status": "PROVED_INDEPENDENTLY_REVIEWED",
+    "claim": "Hc1(X intersect Hf intersect Hg; Q)=0 for all distinct primitive residual factors, every original parent component",
+    "covered_factor_pair_orbits": 9476,
+    "factor_pair_denominator": 9476,
+    "remaining": 0,
+    "inherited_covered": 8902,
+    "newly_covered": 574,
+    "disjoint_new_credit_layers": [529, 27, 18],
+    "new_universal_proof": "original/CONCURRENCY_HEIGHT_PAIR_VANISHING.md",
+    "new_universal_proof_sha256": "c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91",
+    "proof_method": "Conventional geometric proof; independent deductive review, with exact examples used only as scope checks."
+  },
+  "stronger_triple_endpoint": {
+    "status": "OPEN",
+    "claim": "Hc0(X intersect Hf intersect Hg intersect Hh; Q)=0 for all distinct primitive residual factors, every original parent component",
+    "factor_triple_orbits": 79102449,
+    "inherited_settled": 77940147,
+    "unresolved_source_records": 1162302,
+    "newly_settled_this_cycle": 0,
+    "sufficiency": "Now the sole unproved hypothesis in the inherited P-plus-T route to original D3. Includes all triples in the aligned wall union, not only triples assigned to three different signatures.",
+    "next_gate": "Exclude compact components of the rank-six compatibility locus in the retained-concurrence height model, or find another global escape projection."
+  },
+  "auxiliary_parent_H4": "PROVED; separately authored and independently reviewed; validates supported bad-union duality through D5 but proves no diagonal",
+  "prior_common_weak_excision": "INHERITED_PROVED; no repeated credit",
+  "publication_scope": "Additive reviewed research checkpoint; canonical original theorem ledger is not promoted.",
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "predecessor_commit": "401602fe9f8bcfad74116b46bb5574f63b6a3040"
+}

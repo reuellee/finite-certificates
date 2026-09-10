@@ -1,0 +1,58 @@
+{
+  "verdict": "ACCEPT_FINITE_AFFINE_PAIR_APPLICABILITY",
+  "source_sha256": "82434c6e07fe3290030b057f0eba2f50b522cfc25aabe66b8abf9a8495e55fc4",
+  "source_rows": 574,
+  "newly_covered": 529,
+  "remaining": 45,
+  "by_kinds": [
+    {
+      "kinds": [
+        50,
+        50
+      ],
+      "covered": 238,
+      "remaining": 19
+    },
+    {
+      "kinds": [
+        50,
+        51
+      ],
+      "covered": 233,
+      "remaining": 16
+    },
+    {
+      "kinds": [
+        51,
+        51
+      ],
+      "covered": 58,
+      "remaining": 10
+    }
+  ],
+  "all_remaining_union_degrees": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "stored_degree_recomputed": true,
+  "complete_partition_and_pivots_checked": true,
+  "inherited_stronger_pair_coverage": 8902,
+  "updated_stronger_pair_coverage": 9431,
+  "inherited_stronger_pair_denominator": 9476,
+  "original_obligations_closed": 0,
+  "scope": "Finite applicability of separately reviewed affine-pair theorem to the authenticated inherited residue; no original D or component computation.",
+  "hostile_controls": {
+    "invalid_affine_label": true,
+    "invented_degree": true,
+    "changed_source_quartet": true,
+    "duplicate_coverage_row": true,
+    "omitted_residue_row": true,
+    "false_complete_count": true
+  }
+}

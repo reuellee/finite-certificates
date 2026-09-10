@@ -1,0 +1,61 @@
+{
+  "base_commit": "52b4a0efdad0c1bf05503f4126b2c6f5dc78c246",
+  "owned_directory": "proof/",
+  "status": "positive independently reviewed subclass and closed-piece theorems; original D3 open",
+  "original_score": "2/9",
+  "original_diagonal_credit": 0,
+  "new_numerical_triple_credit": 0,
+  "new_positive_scope": [
+    "Full collinear triple Hc0 when at least one factor is36,38 or48; other factors arbitrary",
+    "Full closed parent-on-line and rank<=10 collinear pieces",
+    "Full rank-deficient-block collinear piece for49,50,51",
+    "Whole-height coefficient-flat blocks and saturated36/38 localization-axis pieces"
+  ],
+  "included": [
+    "all original normalized components",
+    "all relative labels",
+    "all coefficient ranks",
+    "all permitted projected coincidences",
+    "all concurrence collisions via prior excision",
+    "all parent-boundary exclusions retained"
+  ],
+  "remaining_collinear_scope": "All factors49/50/51, all parents off common line, all block ranks4, stacked rank11 and common-stress dimension1, vertically critical.",
+  "next_discriminator": "First authenticate a triple tuple outside inherited full-triple coverage and a parent outside the new removable pieces. For its all49/50/51 collinear rank11 branch, determine whether the full gradient pencil admits the degree-one kernel q+c*t*r. Require a structural exclusion or an exact uniform witness with survivor provenance.",
+  "not_assumed": [
+    "criticality implies collinearity",
+    "one zero vertical derivative implies whole-height flatness",
+    "common Q/R gradient automatically belongs to row BP",
+    "rank11 implies positive fixed-projection fiber"
+  ],
+  "replay": "python proof/verify_collinear_rank11.py",
+  "exact_parent_fixtures_replayed": 1,
+  "canary_status": "uniform distinct-collinear rank11, gamma rank2; diagnostic only",
+  "independent_review": "Hash-bound referee acceptance of all positive collinear and flat-block theorems, plus the exact gradient-pencil discriminator; parent-slide proof independently accepted by proof track. See pinned referee audit files.",
+  "artifacts_sha256": {
+    "COLLINEAR_RANK11_REPLAY.json": "7d045b2f5c184ddb45fe5a71628e4e924f8a8d15b8ed515a2d825c87d51deded",
+    "COLLINEAR_RANK_ESCAPE.md": "c2d23c946339ade1d62a42ad4957492a7388f9d6f076d1f16ba4b8fece1d2443",
+    "COMMON_STRESS_RANK_IDENTITY.md": "c79f0155149dad056e16797232fcde8af0d6a7b89cb71562b491c333c8ba14e1",
+    "FINDINGS.md": "0cf59a639fba94f4324cb34f7f1b99067071d7c103e022de1dbe3372bce9c803",
+    "FLAT_HEIGHT_BLOCK_EXCISION.md": "ff82dd4adaa5e288ab483027707fdbe589338da01823ec4e6cf381e0a53a5f57",
+    "LINEAR_GRADIENT_PENCIL_GATE.md": "74bfe5ff1de09803101ab13d6613c97450521db552b21684da240cda9bc9bc17",
+    "ONE_LOW_COLLINEAR_ESCAPE.md": "386e3e46e89ed62571d37c16d0b601b87bd36cc96333b997ab74d9086bfde024",
+    "PARENT_SLIDE_REVIEW.md": "b5b350cd4b5a31277ed8e081d974f1df45fc7df64f55e446db20bef79b4c1294",
+    "RANK_DEFICIENT_BLOCK_ESCAPE.md": "ba777a0452dcca453a1baef12748312cbed48663ab877e3bbb20e6fa659befd1",
+    "TYPE48_COLLINEAR_ESCAPE.md": "3501784505fa92aa7b5219f9b858c1895ac214e763c8ee9a12e435b9e9b193c8",
+    "verify_collinear_rank11.py": "7fcec268119d21f664892157343abe07c9900a993ef518cde2dc9cc0c5bde1f9"
+  },
+  "inputs_and_review_sha256": {
+    "checkpoint/CLAIM_LEDGER.json": "b2fdcec6e4d619ca54f327dbf6d318c32a5c6d386f788d669952d1a0b229f716",
+    "checkpoint/referee/ANCHOR_COVERAGE_AUDIT.md": "e067b7f27de4c70877258a8094ad4003edc71713323d778323f52eb03bb9efe9",
+    "checkpoint/proof/VERTICAL_CRITICAL_REDUCTION.md": "e7034f7b3b51fad14e925eeabed3a43cf134e72a1a3689fede5b4ac28b69477e",
+    "checkpoint/checkpoint/original/CONCURRENCY_HEIGHT_PAIR_VANISHING.md": "c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91",
+    "referee/PARENT_ON_CONCURRENCE_LINE.md": "c98cf31d52df05863bd1f8340e8f5196e13ae45d6358d407bfa81df2407ab70c",
+    "referee/COLLINEAR_RANK_AUDIT.md": "8c556a7fb1a3e7c0229a0c87f7a8e8a2006caf8362d5580591a7283c4a39d616",
+    "referee/ONE_LOW_COLLINEAR_AUDIT.md": "fba6c454c8e056478e9cc39c415cc2ff7f9a73b2d7e50c5663c22bc971159f1c",
+    "referee/NEW_POSITIVE_PROOF_AUDIT.md": "6123ec9d6ac884cb5324a44485d4ff8a379a47767d9b3db382c7179b16ec22e5",
+    "referee/CHARACTERISTIC_KERNEL_AUDIT.md": "952fe47f3355d72905142788c0574c4831b531438bdc26f4ef667dc5c5c1d8ba",
+    "noncollinear/CHARACTERISTIC_KERNELS.md": "35903aa747c1d654efe6cdaa4dcc8e3380bcb72d4242ebeb946d7c26ce634087"
+  },
+  "survivor_provenance": "No new canary is asserted to belong to the authenticated1162302-record residue. Covered counterexamples refute unrestricted implications only.",
+  "budget_note": "Initial phase extended only to complete the surviving collinear and flat-block deductions; one exact parent fixture independently replayed, no broad sampling by proof track."
+}

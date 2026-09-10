@@ -1,0 +1,41 @@
+{
+  "all70_parent_bracket_polynomials_rebuilt": true,
+  "all56_normal_polynomials_rebuilt": true,
+  "full56_identity_all_parameters": true,
+  "strict_weight_margin": "1/1000",
+  "strict_parent_bracket_margin": "155",
+  "reserve_augmented_determinant": "82630141776",
+  "maximal_parent_chamber_interval": [
+    "-75255/111104",
+    "94285/38192"
+  ],
+  "certified_closed_interval": [
+    "-75255/222208",
+    "75255/222208"
+  ],
+  "original_support_minor_polynomial": [
+    "0",
+    "-27081600"
+  ],
+  "replacement_differs_from_original_witness_at_zero": true,
+  "separate_support6_lift_matches_original_at_zero": true,
+  "support6_lift_exact_on_both_parameter_sides": true,
+  "support6_nonnegativity_all_real_parameters": true,
+  "minimum_norm_optimality_claimed_or_verified": false,
+  "global_original_obligations_closed": 0,
+  "hostile_controls": {
+    "altered_normalized_weight": true,
+    "altered_weight_derivative": true,
+    "reserve_weight_corruption": true,
+    "reserve_duplicate": true,
+    "signature_bit_flip": true,
+    "literal_parent_corruption": true,
+    "parent_derivative_corruption": true,
+    "oversized_interval": true,
+    "altered_rank_minor": true,
+    "inflated_weight_margin": true,
+    "source_lift_correction_corruption": true,
+    "source_lift_C_zero": true,
+    "source_lift_zero_join_corruption": true
+  }
+}

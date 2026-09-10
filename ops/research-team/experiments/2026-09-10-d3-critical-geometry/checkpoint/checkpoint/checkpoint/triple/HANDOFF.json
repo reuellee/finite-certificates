@@ -1,0 +1,64 @@
+{
+  "schema": "research_track_handoff_v1",
+  "track": "triple",
+  "status": "original_target_open_new_exact_scope_counterexample",
+  "original_obligations_closed": 0,
+  "ledger": "2/9 unchanged",
+  "source_orbits_closed": 0,
+  "proof_claims": [
+    "Actual proper incomparable triple has three independent weak-primal rays and unique full Gordan witness polytopes with no light label.",
+    "The tested generic fixed-three-weak-point height fiber has only projective-scale freedom.",
+    "Inherited square-affine argument applies uniformly to the displayed factor triple, including rank drops."
+  ],
+  "excluded_claims": [
+    "No compact component counterexample",
+    "No universal failure of all possible weak-point contractions",
+    "No proof of original triple Hc0 vanishing",
+    "No new affine-method novelty or census credit"
+  ],
+  "colex_signatures": [
+    5019905080784346,
+    68833058600159780,
+    59311597535541546
+  ],
+  "verification": [
+    "verify_unique_hard_boundary.py",
+    "verify_boundary_curves.py"
+  ],
+  "audit_status": "referee independent replay pending; encoding and genuine boundary curves corrected",
+  "input_hashes": {
+    "d3_direct_proof_20260910/checkpoint/inputs/ATLAS_HELLY.md": "9a1c2791c9b991679587d0a9ba6307191e025069b766b55855bfa0d1357071f0",
+    "d3_direct_proof_20260910/checkpoint/inputs/DIAG3_TRIPLE_FACTOR_REDUCTION.md": "805ed958909097234d05f5e2c0ec65364ecf394cd1bca0422cf70faa3d09c5cd",
+    "d3_direct_proof_20260910/checkpoint/inputs/DIAG3_JOINED_FLOW_TRIANGLE.md": "20aafd28f9624ca595a44e3124934baa4d33b942b6c8eca6bff210fedb114c8a",
+    "d3_direct_proof_20260910/checkpoint/inputs/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f",
+    "d3_direct_proof_20260910/checkpoint/inputs/DIAG3_DOUBLE_CONTRACTION_LERAY_AUDIT.md": "f1840298c34725ccd46e1cee1762664757d644d4f3f5ddaed4aef1f283083211",
+    "d3_direct_proof_20260910/inputs/DIAG3_TRIPLE_SEQUENTIAL_AFFINE_COMPRESSION.md": "d87f7f39ff3363e611fbd192df81f5693a13f5b3521de8430429395667275aaf"
+  },
+  "artifact_hashes": {
+    "ACTUAL_HARD_THREE_BOUNDARY_SIGNATURES.json": "0c77da2ef6bf05d465b5d0b7d27500f09f875ec74f8e3586c676427e5522744b",
+    "ACTUAL_THREE_BOUNDARY_SIGNATURES.json": "e4002b365b75441fa3d1bef2057224643d32eb0ca71055f5d2a2fb5454724d71",
+    "ACTUAL_UNIQUE_HARD_THREE_BOUNDARY_SIGNATURES.json": "9868a9998a201310a67fe9a2b211bbb4011629f67f921de86b6628946aafe97f",
+    "AFFINE_HEIGHT_ESCAPE.md": "36fc7b0ed2fdf37e03ff1f7c411e4243f8830760d066ae40a55d0dbb9b1a17aa",
+    "BOUNDARY_CURVES.json": "be6d706e216121cf584bfd8a3a53140832342b8f8413915905b440c6c4aae9e9",
+    "BOUNDARY_CURVES_REPLAY.json": "91654bda571f5adb7cfea7ed309a4f5bd5c0e45bc813a23b30882df366181cf3",
+    "FINDINGS.md": "699745194d16b85bbdc23e5fc42d0a36482f7bb318bf9419b45ca098d595beb1",
+    "HARD_THREE_BOUNDARY_POINTS.json": "06d0dff1494e1a8406e439ae69997614db015faadf2957671fac61df34a597b7",
+    "MULTIWEAK_HEIGHT_GATE.json": "95d12c68057a6b42d3aa274108b954c53dec5c10ae9f4595c186b53dcb2a1247",
+    "THREE_BOUNDARY_POINTS.json": "8b227f288e8168463ad37c179c75dc9bcf5155a837668c35dbb1c09ce0896aba",
+    "THREE_BOUNDARY_REPLAY.json": "d62a46d09af57d22395926d9a61642cf63c1cc8de318cfbf78b7748438fddad2",
+    "UNIQUE_HARD_BOUNDARY_REPLAY.json": "962b62641610b47ae4d8fd4fe368e9c495096638b48551c56ffb349195f2190f",
+    "UNIQUE_HARD_THREE_BOUNDARY_POINTS.json": "316c3ee6108f87f71f9a5e005deb63b067947072c28252d052701c3d52c7c736",
+    "build_boundary_curves.py": "e3921a7fa0aea4eea92a470ca4b0e202fbe479cd6427b6ed6869346d7db85a23",
+    "build_hard_signature_triple.py": "26459cef81eddc152add642741f01dae9e16ad302efe36cfcad602c8e4eabd6a",
+    "build_signature_triple.py": "5083135d94d1ed95641a0c0bb179ced34b1fb32cc714b7ddb2f0ef51fb30b91b",
+    "build_unique_hard_signature_triple.py": "a05000db53622d43fe309f1ee8215f5f112512522674dd732eba270e185798f4",
+    "explore_three_points.py": "340fc7e545d272b12c85297bfde8d16c009d82e014ccf5bbef5adc347ee288e2",
+    "find_hard_boundary_triple.py": "20df42079e88817702c1246aebca342d6b639923de47aca47791884cab7082a1",
+    "find_unique_hard_boundary_triple.py": "9d1b274b8eb3797c0ee382dde18f2ca85a87d0d13c6bedb6baefb0299727d63f",
+    "test_multiweak_height.py": "8fe4428657d7e4ed04cb21d49e07bf4cc4c8b054b8969ee1e66879714d67430c",
+    "verify_boundary_curves.py": "263d46a47094dc44a37f3e480d700b82458eb683ae9b6c984d652d2cff7fb01d",
+    "verify_three_boundary_signatures.py": "e381e2cfb7cc3d13054834dc190bd4f8895c109bfce17a5660b442b21ca2bbe1",
+    "verify_unique_hard_boundary.py": "894a36a7531916f074f7975915e6370edff5ad5a9e121c36a84e1e577e30da7f"
+  },
+  "next_discriminator": "Handle a distinct-weak-point stratum outside inherited common-affine parent-contraction coverage with actual motion or controlled specialization; do not impose common weak point/light label."
+}

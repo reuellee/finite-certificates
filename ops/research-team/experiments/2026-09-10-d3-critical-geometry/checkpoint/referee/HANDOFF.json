@@ -1,0 +1,29 @@
+{
+  "status": "ACCEPT_GLOBAL_SUBCLASS_AND_SCOPED_REDUCTIONS_ORIGINAL_2_OF_9",
+  "owned_directory": "referee/",
+  "final_review": "referee/FINAL_REVIEW.md",
+  "identities": "referee/REVIEW_IDENTITIES.json",
+  "accepted": [
+    "all-six-factor ordinary-anchor model (separate proof-track review)",
+    "two-parent-line-factor global triple subclass",
+    "all coincidence-locus excision",
+    "collision-free vertical-critical sufficient reduction",
+    "independent exact inherited collision canary and syzygy",
+    "one-projection231-quadratic-pair uniform-critical exclusion"
+  ],
+  "original_score": "2/9",
+  "new_numerical_triple_credit": 0,
+  "remaining_gap": "Full Hc0 vanishing of collision-free vertical critical locus outside accepted subclass; criticality-to-collinearity and distinct-collinear escape remain unproved.",
+  "replays": [
+    "python referee/verify_anchor_frames.py",
+    "python referee/verify_critical_canary.py",
+    "python referee/verify_quadratic_inputs.py",
+    "python falsifier/verify_pencil_coverage.py --replay"
+  ],
+  "hostile_controls": [
+    "altered quadratic input rejected",
+    "missing pair rejected",
+    "unresolved algebraic exception rejected"
+  ],
+  "publication": "Root owns all integration, ledger and publication; referee edited only owned directory."
+}

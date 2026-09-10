@@ -1,0 +1,3566 @@
+{
+  "status": "EXACT_ACTUAL_PROPER_THREE_SIGNATURE_ANTICHAIN",
+  "scope": "Original admissibility proved; transverse Hc1 does not become original global Hc1",
+  "base_parent": [
+    [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    [
+      "0",
+      "1",
+      "2",
+      "0",
+      "1",
+      "2",
+      "0",
+      "1"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "2",
+      "2"
+    ],
+    [
+      "-2",
+      "2",
+      "4",
+      "15",
+      "-10",
+      "-10",
+      "-8",
+      "-3"
+    ]
+  ],
+  "parent_same_component_interval": "0<=t<=1/100000000",
+  "signatures": [
+    1115179617623167,
+    1110781571112063,
+    1115179340274814
+  ],
+  "relative_signs": [
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      -1
+    ]
+  ],
+  "active_indices": [
+    0,
+    19,
+    23,
+    28,
+    42
+  ],
+  "derivative_pivots": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "derivative_rank": 5,
+  "outer_index": 1,
+  "records": [
+    {
+      "chart_kind": "one_hot_good",
+      "own_signature": 0,
+      "offset": [
+        [
+          "-1"
+        ],
+        [
+          "-1"
+        ],
+        [
+          "-1"
+        ],
+        [
+          "-8/25"
+        ],
+        [
+          "-1853/200"
+        ]
+      ],
+      "transverse_coordinate": [
+        [
+          "-10"
+        ],
+        [
+          "-20"
+        ]
+      ],
+      "direction": [
+        [
+          "0",
+          "1853/200",
+          "4/25",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "parent_sign_certificates": [
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "497400023881/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "113700012859/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "12962501837/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "153700005511/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "644800016533/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "14765001923/50000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "33",
+          "tail_bound": "244240021023/400000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "90000036407/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "39",
+          "tail_bound": "101325011343/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "13060001853/200000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "195300001853/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "93825005559/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "330600001853/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "1391800038913/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "220600016677/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "56",
+          "tail_bound": "2210000043/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "62",
+          "tail_bound": "795000051/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "3125000047/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "76",
+          "tail_bound": "4600000321/125000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "855000001/6250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "32",
+          "tail_bound": "100000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "36",
+          "tail_bound": "1118750003/7812500000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "1675000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "48",
+          "tail_bound": "4975000021/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "8",
+          "tail_bound": "3550000009/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "270000001/1000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "50000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "375000003/1250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "725000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "45",
+          "tail_bound": "800000021/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "1600000009/5000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "15",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "49599/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "53273/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "38",
+          "tail_bound": "34903/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "12859/2000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1837/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "1837/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "34903/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "1837/500000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "23",
+          "tail_bound": "42251/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "5511/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "1869/800000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "11",
+          "tail_bound": "36807/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "291/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "47",
+          "tail_bound": "36207/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "12",
+          "tail_bound": "80573/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "41",
+          "tail_bound": "34607/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "14",
+          "tail_bound": "5559/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "31501/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "20383/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "1853/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "1/12500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "119/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "46",
+          "tail_bound": "491/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "163/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "17",
+          "tail_bound": "657/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "37/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "3/156250000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "21",
+          "tail_bound": "17/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "11/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "1/19531250"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "3/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "17/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "11/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "1/3125000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "5",
+          "tail_bound": "0"
+        }
+      ],
+      "good_margin_certificates": [
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "1837/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "2053/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1250000027/125000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1837/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "10000001853/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1837/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "50000001/5000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1653/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "23/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "40000005559/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "625000003/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1837/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "200000003/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1753/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "21/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1853/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/625000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "10000001853/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1837/5000000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1853/10000000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "8/25",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "1853/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/156250000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "40000005559/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "625000003/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1837/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "200000003/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1453/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "3/78125000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1853/200",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "5559/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "3/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "3/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1853/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        }
+      ],
+      "bad": [
+        {
+          "other_signature": 1,
+          "q": [
+            [
+              "-3"
+            ],
+            [
+              "2"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "5"
+            ],
+            [
+              "58/25"
+            ],
+            [
+              "1/4"
+            ],
+            [
+              "3"
+            ],
+            [
+              "2"
+            ]
+          ],
+          "offset_evaluation": "-10",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "1310652*t**5/5 - 16621627*t**4/25 + 5692311*t**3/10 + 62055*t**2/2 + 63450*t + 10000"
+            ],
+            [
+              "-962465172669*t**6/25000 - 7664676249039*t**5/500000 - 297350107813*t**4/250000 - 1246635459*t**3/2500 + 54996967*t**2/125 + 552948*t/5 + 4640"
+            ],
+            [
+              "-10724169027*t**5/400 - 10780089069*t**4/1600 - 2096261709*t**3/800 - 1994614*t**2/5 - 11235*t/2 + 500"
+            ],
+            [
+              "2608306701*t**6/1000 - 64346841387*t**5/10000 + 52017040767*t**4/10000 + 142120737*t**3/200 + 3221997*t**2/5 + 144090*t + 6000"
+            ],
+            [
+              "869435567*t**6/500 - 21448947129*t**5/5000 + 17339013589*t**4/5000 + 47373579*t**3/100 + 2147998*t**2/5 + 96060*t + 4000"
+            ],
+            [
+              "-45412477*t**5/100 + 57093127*t**4/200 + 46396811*t**3/20 + 492765*t**2 + 20000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "10000",
+              "tail_bound": "7931250038784382115388833108135327663/12500000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4640",
+              "tail_bound": "27647401099939352466354887350146136382207660172669/25000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "500",
+              "tail_bound": "224700159569130481308814502237449169027/4000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "6000",
+              "tail_bound": "1440900064439940710603737017041410468416478306701/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4000",
+              "tail_bound": "480300021479980236867912339013803489472159435567/500000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "20000",
+              "tail_bound": "49276502319840552854656395412477/10000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "869435567*t**6/1000 - 21448947129*t**5/10000 + 17339013589*t**4/10000 + 47373579*t**3/200 + 1073999*t**2/5 + 48030*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "other_signature": 2,
+          "q": [
+            [
+              "3"
+            ],
+            [
+              "-1"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "29/2"
+            ],
+            [
+              "77/25"
+            ],
+            [
+              "29/40"
+            ],
+            [
+              "3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "offset_evaluation": "-10",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "-9611448*t**5/125 + 389108471*t**4/1250 - 47800161*t**3/100 + 5731227*t**2/20 - 45915*t + 29000"
+            ],
+            [
+              "-4791459409737*t**6/250000 - 7561762628079*t**5/1000000 + 1804168692251*t**4/500000 + 3676448013*t**3/5000 + 184236391*t**2/250 + 758682*t/5 + 6160"
+            ],
+            [
+              "-288090330099*t**5/20000 - 58576126917*t**4/80000 - 20787835941*t**3/40000 + 265601*t**2/25 + 115053*t/4 + 1450"
+            ],
+            [
+              "2608306701*t**6/1000 - 64346841387*t**5/10000 + 52017040767*t**4/10000 + 142120737*t**3/200 + 3221997*t**2/5 + 144090*t + 6000"
+            ],
+            [
+              "869435567*t**6/1000 - 21448947129*t**5/10000 + 17339013589*t**4/10000 + 47373579*t**3/200 + 1073999*t**2/5 + 48030*t + 2000"
+            ],
+            [
+              "491979829*t**5/5000 + 2876688881*t**4/10000 - 371213287*t**3/200 + 531051*t**2/2 + 20000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "29000",
+              "tail_bound": "71742191977521168437752048885589951431/156250000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "6160",
+              "tail_bound": "379341018423639283822409670843650299070493434409737/250000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "1450",
+              "tail_bound": "57526500212480903939181169403461015330099/200000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "6000",
+              "tail_bound": "1440900064439940710603737017041410468416478306701/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "20000",
+              "tail_bound": "1327627592803321893834444541979829/500000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "869435567*t**6/1000 - 21448947129*t**5/10000 + 17339013589*t**4/10000 + 47373579*t**3/200 + 1073999*t**2/5 + 48030*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    },
+    {
+      "chart_kind": "one_hot_good",
+      "own_signature": 1,
+      "offset": [
+        [
+          "-1"
+        ],
+        [
+          "-1"
+        ],
+        [
+          "-1"
+        ],
+        [
+          "-8/25"
+        ],
+        [
+          "4147/200"
+        ]
+      ],
+      "transverse_coordinate": [
+        [
+          "-10"
+        ],
+        [
+          "10"
+        ]
+      ],
+      "direction": [
+        [
+          "0",
+          "-4147/200",
+          "4/25",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "parent_sign_certificates": [
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "702600054119/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "486300029141/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "62037504163/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "446300012489/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1755200037467/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "15235004077/50000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "33",
+          "tail_bound": "235760044977/400000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "90000077593/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "39",
+          "tail_bound": "48675024657/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "106940004147/200000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "404700004147/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "56175012441/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "869400004147/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "2208200087087/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "979400037323/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "56",
+          "tail_bound": "2210000043/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "62",
+          "tail_bound": "795000051/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "3125000047/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "76",
+          "tail_bound": "4600000321/125000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "855000001/6250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "32",
+          "tail_bound": "100000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "36",
+          "tail_bound": "1118750003/7812500000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "1675000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "48",
+          "tail_bound": "4975000021/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "8",
+          "tail_bound": "3550000009/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "270000001/1000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "50000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "375000003/1250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "725000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "45",
+          "tail_bound": "800000021/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "1600000009/5000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "15",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "112401/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "120727/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "38",
+          "tail_bound": "79097/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "29141/2000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4163/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "4163/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "79097/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "4163/500000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "23",
+          "tail_bound": "95749/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "12489/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "4131/800000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "11",
+          "tail_bound": "77193/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "459/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "47",
+          "tail_bound": "77793/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "12",
+          "tail_bound": "165427/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "41",
+          "tail_bound": "79393/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "14",
+          "tail_bound": "12441/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "70499/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "45617/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "4147/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "1/12500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "119/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "46",
+          "tail_bound": "491/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "163/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "17",
+          "tail_bound": "657/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "37/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "3/156250000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "21",
+          "tail_bound": "17/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "11/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "1/19531250"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "3/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "17/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "11/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "1/3125000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "5",
+          "tail_bound": "0"
+        }
+      ],
+      "good_margin_certificates": [
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "3947/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1250000027/125000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "10000004147/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "50000001/5000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4347/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "23/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "40000012441/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "625000003/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "200000003/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4247/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "21/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4147/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/625000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "10000004147/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4163/5000000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4147/10000000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "8/25",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "4147/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/156250000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "40000012441/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "625000003/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4163/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "200000003/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4547/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "3/78125000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "4147/200",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "12441/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "3/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "3/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4147/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        }
+      ],
+      "bad": [
+        {
+          "other_signature": 0,
+          "q": [
+            [
+              "-1"
+            ],
+            [
+              "-2"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "27"
+            ],
+            [
+              "14/5"
+            ],
+            [
+              "27/20"
+            ],
+            [
+              "1"
+            ],
+            [
+              "2"
+            ]
+          ],
+          "offset_evaluation": "-10",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "-247987228*t**5/125 + 3100333203*t**4/625 - 189171843*t**3/50 - 12576339*t**2/10 + 209510*t + 54000"
+            ],
+            [
+              "-52209344464511*t**6/125000 - 33991365347681*t**5/500000 + 2544976344113*t**4/50000 + 3654205351*t**3/500 - 40602347*t**2/25 - 199012*t + 5600"
+            ],
+            [
+              "-2815638551557*t**5/10000 - 1026292311531*t**4/40000 + 267417408437*t**3/20000 + 16156266*t**2/25 - 270381*t/2 + 2700"
+            ],
+            [
+              "4199255567*t**6/1000 - 108415287129*t**5/10000 + 89193753589*t**4/10000 + 371337579*t**3/200 - 2598001*t**2/5 - 71970*t + 2000"
+            ],
+            [
+              "4199255567*t**6/500 - 108415287129*t**5/5000 + 89193753589*t**4/5000 + 371337579*t**3/100 - 5196002*t**2/5 - 143940*t + 4000"
+            ],
+            [
+              "6998132053*t**5/2500 - 15351901583*t**4/5000 - 1029985079*t**3/100 - 583453*t**2 + 20000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "54000",
+              "tail_bound": "654718789301060557324034251666076996807/312500000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "5600",
+              "tail_bound": "248765020301174413551401374409452609185901369464511/125000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2700",
+              "tail_bound": "135190506462507737087067842310603913551557/100000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/500000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "20000",
+              "tail_bound": "1458632757496270517595086148132053/250000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "4199255567*t**6/1000 - 108415287129*t**5/10000 + 89193753589*t**4/10000 + 371337579*t**3/200 - 2598001*t**2/5 - 71970*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "other_signature": 2,
+          "q": [
+            [
+              "2"
+            ],
+            [
+              "-1"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "13/2"
+            ],
+            [
+              "9/5"
+            ],
+            [
+              "13/40"
+            ],
+            [
+              "2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "offset_evaluation": "-30",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "216329284*t**5/125 - 5992071293*t**4/1250 + 456508983*t**3/100 - 1188741*t**2/20 - 234155*t + 13000"
+            ],
+            [
+              "52377314687191*t**6/250000 + 34742680049281*t**5/1000000 + 32742336103*t**4/4000 + 274886473*t**3/1000 - 10988369*t**2/10 - 123758*t + 3600"
+            ],
+            [
+              "2644343257517*t**5/20000 + 2935264931211*t**4/80000 - 167633483797*t**3/40000 - 26444573*t**2/25 + 861*t/4 + 650"
+            ],
+            [
+              "4199255567*t**6/500 - 108415287129*t**5/5000 + 89193753589*t**4/5000 + 371337579*t**3/100 - 5196002*t**2/5 - 143940*t + 4000"
+            ],
+            [
+              "4199255567*t**6/1000 - 108415287129*t**5/10000 + 89193753589*t**4/10000 + 371337579*t**3/200 - 2598001*t**2/5 - 71970*t + 2000"
+            ],
+            [
+              "9427991893*t**5/5000 - 31989419823*t**4/10000 - 478193799*t**3/200 - 4877093*t**2/2 + 60000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "13000",
+              "tail_bound": "731734376857409239090586855178286582321/312500000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "3600",
+              "tail_bound": "309395027470922568721638713960932942053609339687191/250000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "650",
+              "tail_bound": "430521155659238167492366625924618257517/200000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/500000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "60000",
+              "tail_bound": "12192732619548451349471000577991893/500000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "4199255567*t**6/1000 - 108415287129*t**5/10000 + 89193753589*t**4/10000 + 371337579*t**3/200 - 2598001*t**2/5 - 71970*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    },
+    {
+      "chart_kind": "one_hot_good",
+      "own_signature": 2,
+      "offset": [
+        [
+          "1"
+        ],
+        [
+          "1"
+        ],
+        [
+          "1"
+        ],
+        [
+          "8/25"
+        ],
+        [
+          "-4147/200"
+        ]
+      ],
+      "transverse_coordinate": [
+        [
+          "10"
+        ],
+        [
+          "-10"
+        ]
+      ],
+      "direction": [
+        [
+          "0",
+          "4147/200",
+          "-4/25",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "parent_sign_certificates": [
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "702600054119/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "486300029141/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "62037504163/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "446300012489/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1755200037467/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "15235004077/50000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "33",
+          "tail_bound": "235760044977/400000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "90000077593/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "39",
+          "tail_bound": "48675024657/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "106940004147/200000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "404700004147/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "56175012441/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "869400004147/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "2208200087087/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "979400037323/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "56",
+          "tail_bound": "2210000043/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "62",
+          "tail_bound": "795000051/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "3125000047/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "76",
+          "tail_bound": "4600000321/125000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "855000001/6250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "32",
+          "tail_bound": "100000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "36",
+          "tail_bound": "1118750003/7812500000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "1675000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "48",
+          "tail_bound": "4975000021/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "8",
+          "tail_bound": "3550000009/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "270000001/1000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "50000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "375000003/1250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "725000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "45",
+          "tail_bound": "800000021/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "1600000009/5000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "15",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "112401/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "120727/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "38",
+          "tail_bound": "79097/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "29141/2000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4163/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "4163/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "79097/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "4163/500000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "23",
+          "tail_bound": "95749/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "12489/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "4131/800000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "11",
+          "tail_bound": "77193/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "459/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "47",
+          "tail_bound": "77793/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "12",
+          "tail_bound": "165427/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "41",
+          "tail_bound": "79393/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "14",
+          "tail_bound": "12441/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "70499/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "45617/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "4147/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "1/12500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "119/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "46",
+          "tail_bound": "491/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "163/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "17",
+          "tail_bound": "657/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "37/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "3/156250000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "21",
+          "tail_bound": "17/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "11/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "1/19531250"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "3/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "17/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "11/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "1/3125000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "5",
+          "tail_bound": "0"
+        }
+      ],
+      "good_margin_certificates": [
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "3947/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1250000027/125000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "10000004147/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "50000001/5000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4347/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "23/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "40000012441/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "625000003/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4163/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "200000003/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4247/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "21/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4147/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/625000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "10000004147/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4163/5000000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "4147/10000000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "8/25",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "4147/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/156250000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "40000012441/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "625000003/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4163/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "200000003/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4547/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "3/78125000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 1,
+          "leading_coefficient": "4147/200",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "3",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "12441/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "3/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "3/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "4147/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "1",
+          "tail_bound": "0"
+        }
+      ],
+      "bad": [
+        {
+          "other_signature": 0,
+          "q": [
+            [
+              "-2"
+            ],
+            [
+              "-1"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "51/2"
+            ],
+            [
+              "83/25"
+            ],
+            [
+              "51/40"
+            ],
+            [
+              "2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "offset_evaluation": "-10",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "68592212*t**5/125 + 1365290349*t**4/1250 + 28769559*t**3/100 - 20835387*t**2/20 - 27115*t + 51000"
+            ],
+            [
+              "-52108562330903*t**6/250000 + 33540576526721*t**5/1000000 + 22815485960629*t**4/500000 - 30058302227*t**3/5000 - 489644311*t**2/250 + 1167322*t/5 + 6640"
+            ],
+            [
+              "2918415727981*t**5/20000 + 119091260277*t**4/80000 - 327287763221*t**3/40000 - 2941731*t**2/25 + 432093*t/4 + 2550"
+            ],
+            [
+              "4199255567*t**6/500 + 108415287129*t**5/5000 + 89193753589*t**4/5000 - 371337579*t**3/100 - 5196002*t**2/5 + 143940*t + 4000"
+            ],
+            [
+              "4199255567*t**6/1000 + 108415287129*t**5/10000 + 89193753589*t**4/10000 - 371337579*t**3/200 - 2598001*t**2/5 + 71970*t + 2000"
+            ],
+            [
+              "-5540216149*t**5/5000 - 5369390639*t**4/10000 + 1361059847*t**3/200 + 1992731*t**2/2 + 20000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "51000",
+              "tail_bound": "84734407555292277404875288225889648053/312500000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "6640",
+              "tail_bound": "583661048964432602915225427430641659465276587330903/250000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2550",
+              "tail_bound": "216046502353386436438819082284425340727981/200000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/500000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "20000",
+              "tail_bound": "4981827840264962018469537490216149/500000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "4199255567*t**6/1000 + 108415287129*t**5/10000 + 89193753589*t**4/10000 - 371337579*t**3/200 - 2598001*t**2/5 + 71970*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "other_signature": 1,
+          "q": [
+            [
+              "-2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "13/2"
+            ],
+            [
+              "9/5"
+            ],
+            [
+              "13/40"
+            ],
+            [
+              "2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "offset_evaluation": "-30",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "-216329284*t**5/125 - 5992071293*t**4/1250 - 456508983*t**3/100 - 1188741*t**2/20 + 234155*t + 13000"
+            ],
+            [
+              "52377314687191*t**6/250000 - 34742680049281*t**5/1000000 + 32742336103*t**4/4000 - 274886473*t**3/1000 - 10988369*t**2/10 + 123758*t + 3600"
+            ],
+            [
+              "-2644343257517*t**5/20000 + 2935264931211*t**4/80000 + 167633483797*t**3/40000 - 26444573*t**2/25 - 861*t/4 + 650"
+            ],
+            [
+              "4199255567*t**6/500 + 108415287129*t**5/5000 + 89193753589*t**4/5000 - 371337579*t**3/100 - 5196002*t**2/5 + 143940*t + 4000"
+            ],
+            [
+              "4199255567*t**6/1000 + 108415287129*t**5/10000 + 89193753589*t**4/10000 - 371337579*t**3/200 - 2598001*t**2/5 + 71970*t + 2000"
+            ],
+            [
+              "9427991893*t**5/5000 + 31989419823*t**4/10000 - 478193799*t**3/200 + 4877093*t**2/2 + 60000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "13000",
+              "tail_bound": "731734376857409239090586855178286582321/312500000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "3600",
+              "tail_bound": "309395027470922568721638713960932942053609339687191/250000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "650",
+              "tail_bound": "430521155659238167492366625924618257517/200000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/500000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "60000",
+              "tail_bound": "12192732619548451349471000577991893/500000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "4199255567*t**6/1000 + 108415287129*t**5/10000 + 89193753589*t**4/10000 - 371337579*t**3/200 - 2598001*t**2/5 + 71970*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "719700051960021856687984193754673152875489255567/1000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    },
+    {
+      "chart_kind": "strictly_all_bad_no_weak_ray",
+      "own_signature": null,
+      "offset": [
+        [
+          "1"
+        ],
+        [
+          "1"
+        ],
+        [
+          "1"
+        ],
+        [
+          "8/25"
+        ],
+        [
+          "1853/200"
+        ]
+      ],
+      "transverse_coordinate": [
+        [
+          "10"
+        ],
+        [
+          "20"
+        ]
+      ],
+      "direction": [
+        [
+          "0",
+          "-1853/200",
+          "-4/25",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "parent_sign_certificates": [
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "497400023881/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "113700012859/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "12962501837/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "153700005511/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "644800016533/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "14765001923/50000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "33",
+          "tail_bound": "244240021023/400000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "90000036407/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "39",
+          "tail_bound": "101325011343/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "4",
+          "tail_bound": "13060001853/200000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "195300001853/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "93825005559/250000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "330600001853/500000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "1391800038913/2000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "220600016677/1000000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "56",
+          "tail_bound": "2210000043/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "62",
+          "tail_bound": "795000051/12500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "3125000047/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "76",
+          "tail_bound": "4600000321/125000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "855000001/6250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "32",
+          "tail_bound": "100000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "36",
+          "tail_bound": "1118750003/7812500000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "1675000001/15625000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "48",
+          "tail_bound": "4975000021/62500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "8",
+          "tail_bound": "3550000009/31250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "270000001/1000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "50000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "375000003/1250000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "80",
+          "tail_bound": "725000001/2500000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "45",
+          "tail_bound": "800000021/10000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "40",
+          "tail_bound": "1600000009/5000000000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "10",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "15",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "1/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "7/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "27",
+          "tail_bound": "49599/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "53273/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "38",
+          "tail_bound": "34903/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "12859/2000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "2",
+          "tail_bound": "1837/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "1837/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "34903/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "20",
+          "tail_bound": "1837/500000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "23",
+          "tail_bound": "42251/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "6",
+          "tail_bound": "5511/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "1869/800000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "11",
+          "tail_bound": "36807/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "291/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "47",
+          "tail_bound": "36207/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "12",
+          "tail_bound": "80573/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "41",
+          "tail_bound": "34607/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "14",
+          "tail_bound": "5559/5000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "31501/20000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "19",
+          "tail_bound": "20383/10000000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "29",
+          "tail_bound": "1853/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "1/12500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "119/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "46",
+          "tail_bound": "491/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "18",
+          "tail_bound": "163/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "17",
+          "tail_bound": "657/1250000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "44",
+          "tail_bound": "37/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "3/156250000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "21",
+          "tail_bound": "17/625000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "16",
+          "tail_bound": "11/312500000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "26",
+          "tail_bound": "1/19531250"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "3/25000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "25",
+          "tail_bound": "17/100000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "30",
+          "tail_bound": "11/50000000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "35",
+          "tail_bound": "1/3125000"
+        },
+        {
+          "vanishing_order": 0,
+          "leading_coefficient": "5",
+          "tail_bound": "0"
+        }
+      ],
+      "good_margin_certificates": [],
+      "bad": [
+        {
+          "other_signature": 0,
+          "q": [
+            [
+              "-1"
+            ],
+            [
+              "-1"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "35/2"
+            ],
+            [
+              "51/25"
+            ],
+            [
+              "7/8"
+            ],
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "offset_evaluation": "-30",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "11941496*t**5/25 + 351324517*t**4/250 + 31112883*t**3/20 + 1744929*t**2/4 + 161125*t + 35000"
+            ],
+            [
+              "193884131441*t**6/10000 - 7836198950639*t**5/1000000 + 3799881441253*t**4/500000 - 9451774579*t**3/5000 + 160402073*t**2/250 - 527206*t/5 + 4080"
+            ],
+            [
+              "-46958810327*t**5/4000 + 124209145281*t**4/16000 - 21020877473*t**3/8000 + 2748019*t**2/5 - 221715*t/4 + 1750"
+            ],
+            [
+              "869435567*t**6/1000 + 21448947129*t**5/10000 + 17339013589*t**4/10000 - 47373579*t**3/200 + 1073999*t**2/5 - 48030*t + 2000"
+            ],
+            [
+              "869435567*t**6/1000 + 21448947129*t**5/10000 + 17339013589*t**4/10000 - 47373579*t**3/200 + 1073999*t**2/5 - 48030*t + 2000"
+            ],
+            [
+              "-441506417*t**5/1000 - 1720137987*t**4/2000 - 12933*t**3/40 - 2199125*t**2/2 + 60000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "35000",
+              "tail_bound": "50351563863225829863880126655647742687/31250000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4080",
+              "tail_bound": "10544120641608310903549917976296086799144523131441/10000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "1750",
+              "tail_bound": "22171502198415305104390470228678983810327/40000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "60000",
+              "tail_bound": "1099562500003233336006899791506417/100000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "869435567*t**6/1000 + 21448947129*t**5/10000 + 17339013589*t**4/10000 - 47373579*t**3/200 + 1073999*t**2/5 - 48030*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "other_signature": 1,
+          "q": [
+            [
+              "-3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "29/2"
+            ],
+            [
+              "77/25"
+            ],
+            [
+              "29/40"
+            ],
+            [
+              "3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "offset_evaluation": "-10",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "9611448*t**5/125 + 389108471*t**4/1250 + 47800161*t**3/100 + 5731227*t**2/20 + 45915*t + 29000"
+            ],
+            [
+              "-4791459409737*t**6/250000 + 7561762628079*t**5/1000000 + 1804168692251*t**4/500000 - 3676448013*t**3/5000 + 184236391*t**2/250 - 758682*t/5 + 6160"
+            ],
+            [
+              "288090330099*t**5/20000 - 58576126917*t**4/80000 + 20787835941*t**3/40000 + 265601*t**2/25 - 115053*t/4 + 1450"
+            ],
+            [
+              "2608306701*t**6/1000 + 64346841387*t**5/10000 + 52017040767*t**4/10000 - 142120737*t**3/200 + 3221997*t**2/5 - 144090*t + 6000"
+            ],
+            [
+              "869435567*t**6/1000 + 21448947129*t**5/10000 + 17339013589*t**4/10000 - 47373579*t**3/200 + 1073999*t**2/5 - 48030*t + 2000"
+            ],
+            [
+              "491979829*t**5/5000 - 2876688881*t**4/10000 - 371213287*t**3/200 - 531051*t**2/2 + 20000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "29000",
+              "tail_bound": "71742191977521168437752048885589951431/156250000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "6160",
+              "tail_bound": "379341018423639283822409670843650299070493434409737/250000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "1450",
+              "tail_bound": "57526500212480903939181169403461015330099/200000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "6000",
+              "tail_bound": "1440900064439940710603737017041410468416478306701/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "2000",
+              "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "20000",
+              "tail_bound": "1327627592803321893834444541979829/500000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "869435567*t**6/1000 + 21448947129*t**5/10000 + 17339013589*t**4/10000 - 47373579*t**3/200 + 1073999*t**2/5 - 48030*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "other_signature": 2,
+          "q": [
+            [
+              "3"
+            ],
+            [
+              "-2"
+            ]
+          ],
+          "center_kernel": [
+            [
+              "5"
+            ],
+            [
+              "58/25"
+            ],
+            [
+              "1/4"
+            ],
+            [
+              "3"
+            ],
+            [
+              "2"
+            ]
+          ],
+          "offset_evaluation": "-10",
+          "normal_indices": [
+            0,
+            19,
+            23,
+            28,
+            42,
+            1
+          ],
+          "weight_polynomials": [
+            [
+              "-1310652*t**5/5 - 16621627*t**4/25 - 5692311*t**3/10 + 62055*t**2/2 - 63450*t + 10000"
+            ],
+            [
+              "-962465172669*t**6/25000 + 7664676249039*t**5/500000 - 297350107813*t**4/250000 + 1246635459*t**3/2500 + 54996967*t**2/125 - 552948*t/5 + 4640"
+            ],
+            [
+              "10724169027*t**5/400 - 10780089069*t**4/1600 + 2096261709*t**3/800 - 1994614*t**2/5 + 11235*t/2 + 500"
+            ],
+            [
+              "2608306701*t**6/1000 + 64346841387*t**5/10000 + 52017040767*t**4/10000 - 142120737*t**3/200 + 3221997*t**2/5 - 144090*t + 6000"
+            ],
+            [
+              "869435567*t**6/500 + 21448947129*t**5/5000 + 17339013589*t**4/5000 - 47373579*t**3/100 + 2147998*t**2/5 - 96060*t + 4000"
+            ],
+            [
+              "-45412477*t**5/100 - 57093127*t**4/200 + 46396811*t**3/20 - 492765*t**2 + 20000*t"
+            ]
+          ],
+          "positivity": [
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "10000",
+              "tail_bound": "7931250038784382115388833108135327663/12500000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4640",
+              "tail_bound": "27647401099939352466354887350146136382207660172669/25000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "500",
+              "tail_bound": "224700159569130481308814502237449169027/4000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "6000",
+              "tail_bound": "1440900064439940710603737017041410468416478306701/1000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 0,
+              "leading_coefficient": "4000",
+              "tail_bound": "480300021479980236867912339013803489472159435567/500000000000000000000000000000000000000000000000000"
+            },
+            {
+              "vanishing_order": 1,
+              "leading_coefficient": "20000",
+              "tail_bound": "49276502319840552854656395412477/10000000000000000000000000000000000"
+            }
+          ],
+          "rank_four_minor_rows": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "rank_four_minor_signed": "869435567*t**6/1000 + 21448947129*t**5/10000 + 17339013589*t**4/10000 - 47373579*t**3/200 + 1073999*t**2/5 - 48030*t + 2000",
+          "rank_four_minor_positivity": {
+            "vanishing_order": 0,
+            "leading_coefficient": "2000",
+            "tail_bound": "480300021479980236867912339013803489472159435567/1000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ]
+    }
+  ],
+  "source_sha256": "895438a296bf64efe729ea9acaed1185c0285b27e1b66413341db767f0306783",
+  "original_obligations_closed": 0
+}

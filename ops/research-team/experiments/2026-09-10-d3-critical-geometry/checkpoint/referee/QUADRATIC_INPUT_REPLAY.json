@@ -1,0 +1,121 @@
+{
+  "verdict": "PASS_INDEPENDENT_ALL22_ACTUAL_QUADRATIC_REBUILD",
+  "quadric_count": 22,
+  "parent_brackets": 70,
+  "anchor_identity": true,
+  "altered_polynomial_rejected": true,
+  "records": [
+    {
+      "trial": 1,
+      "determinant_quotient_parent_units": "-6*(-w + z + 1)",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 7,
+      "determinant_quotient_parent_units": "-x",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 10,
+      "determinant_quotient_parent_units": "w - z - 1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 14,
+      "determinant_quotient_parent_units": "1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 18,
+      "determinant_quotient_parent_units": "-y",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 26,
+      "determinant_quotient_parent_units": "-1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 27,
+      "determinant_quotient_parent_units": "-w + z + 1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 40,
+      "determinant_quotient_parent_units": "-y",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 49,
+      "determinant_quotient_parent_units": "1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 55,
+      "determinant_quotient_parent_units": "-w + z + 1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 61,
+      "determinant_quotient_parent_units": "-x",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 62,
+      "determinant_quotient_parent_units": "3",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 65,
+      "determinant_quotient_parent_units": "y",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 69,
+      "determinant_quotient_parent_units": "1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 79,
+      "determinant_quotient_parent_units": "1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 83,
+      "determinant_quotient_parent_units": "2*(-w + z + 1)",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 84,
+      "determinant_quotient_parent_units": "-y",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 87,
+      "determinant_quotient_parent_units": "3",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 88,
+      "determinant_quotient_parent_units": "w - z - 1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 101,
+      "determinant_quotient_parent_units": "-x",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 110,
+      "determinant_quotient_parent_units": "1",
+      "homogeneous_matrix_rebuilt": true
+    },
+    {
+      "trial": 114,
+      "determinant_quotient_parent_units": "-y",
+      "homogeneous_matrix_rebuilt": true
+    }
+  ],
+  "input_sha256": "7ee3a34e03f3874f65b13b0b9214ccdb42984de2a4761fc279776b7db7b86193",
+  "scope": "Actual determinants, parent-unit quotient equivalence, and all22 homogeneous matrices. The231-pair theorem additionally uses the reviewed clean pencil replay."
+}

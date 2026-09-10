@@ -1,0 +1,158 @@
+{
+  "scope": "Exact full directional-gradient pencil for one already-covered actual Q49/R50 pair; no residual-triple membership or global cohomology conclusion",
+  "map_convention": "C_S(v)_j differentiates the raw ordinary four-normal determinant underY_j->Y_j+t v; eight output rows and four ambient input columns",
+  "full_maps": {
+    "Q": [
+      [
+        "0",
+        "18",
+        "9",
+        "-6"
+      ],
+      [
+        "60",
+        "0",
+        "15",
+        "-12"
+      ],
+      [
+        "20",
+        "-10",
+        "0",
+        "34"
+      ],
+      [
+        "60",
+        "36",
+        "33",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-12",
+        "-6",
+        "0"
+      ],
+      [
+        "20",
+        "-10",
+        "0",
+        "10"
+      ],
+      [
+        "-20",
+        "4",
+        "-3",
+        "-4"
+      ]
+    ],
+    "R": [
+      [
+        "0",
+        "30",
+        "-3",
+        "-18"
+      ],
+      [
+        "132",
+        "0",
+        "-21",
+        "36"
+      ],
+      [
+        "44",
+        "-22",
+        "0",
+        "22"
+      ],
+      [
+        "132",
+        "-12",
+        "45",
+        "0"
+      ],
+      [
+        "0",
+        "-24",
+        "24",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-18",
+        "12"
+      ],
+      [
+        "44",
+        "-22",
+        "0",
+        "22"
+      ],
+      [
+        "-44",
+        "16",
+        "-3",
+        "-16"
+      ]
+    ]
+  },
+  "map_ranks": {
+    "Q": 3,
+    "R": 3
+  },
+  "q": [
+    "1",
+    "2",
+    "-4",
+    "0"
+  ],
+  "r": [
+    "1",
+    "-4",
+    "-4",
+    "-6"
+  ],
+  "C_Q_r": [
+    "-72",
+    "72",
+    "-144",
+    "-216",
+    "0",
+    "72",
+    "0",
+    "0"
+  ],
+  "C_R_q": [
+    "72",
+    "216",
+    "0",
+    "-72",
+    "-144",
+    "72",
+    "0",
+    "0"
+  ],
+  "cross_images_proportional": false,
+  "c_in_C_Rq_equals_c_C_Qr": null,
+  "degree1_kernel_exists": false,
+  "degree1_kernel_constant_q": null,
+  "degree1_kernel_linear_c_r": null,
+  "coefficient_system_rank": 8,
+  "coefficient_system_nullspace": [],
+  "rank_CQ_minus_CR_at_witness_critical_parameter1": 3,
+  "common_p_in_kernel_at_parameter1": [
+    "1",
+    "2",
+    "2",
+    "0"
+  ],
+  "already_covered_reason": "Parent7 occurs only in the distinct selected plane378; inherited light-label coverage applies. Specific global rational graph also proved.",
+  "original_status": "2/9"
+}

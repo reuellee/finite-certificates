@@ -1,0 +1,55 @@
+{
+  "verdict": "ACCEPT_SPECIFIC_GLOBAL_RATIONAL_GRAPH",
+  "supports": [
+    [
+      "123",
+      "145",
+      "246",
+      "356"
+    ],
+    [
+      "123",
+      "146",
+      "248",
+      "378"
+    ],
+    [
+      "126",
+      "145",
+      "248",
+      "378"
+    ]
+  ],
+  "raw_determinants": [
+    "a + b*c - b - c",
+    "-a*f*h + a*h*i - b*d*i + b*f*g",
+    "-b*d*i + b*f*g - b*f*h + b*h*i + c*d*h - c*g*h"
+  ],
+  "auxiliary_equations": [
+    "-a*h + b*d - b*f*(b - 1)",
+    "-a*h + b*g - b*i*(b - 1)"
+  ],
+  "units": {
+    "1246": "-b",
+    "1236": "c",
+    "1248": "-h",
+    "2378": "-f + i"
+  },
+  "graph": {
+    "a": "-b*c + b + c",
+    "d": "f*(b - 1) + h*(-b*c + b + c)/b",
+    "g": "i*(b - 1) + h*(-b*c + b + c)/b"
+  },
+  "free_coordinates": [
+    "b",
+    "c",
+    "e",
+    "f",
+    "h",
+    "i"
+  ],
+  "coefficient_determinant": "-c*h*(f - i)",
+  "hostile_controls_rejected": 2,
+  "method": "Referee-owned permutation determinants; SymPy only simplifies independently reconstructed expressions. No producer imports.",
+  "scope": "Specific support triple and its relabelings; global uniform sign residences form open subsets of R6. No new numerical orbit credit."
+}

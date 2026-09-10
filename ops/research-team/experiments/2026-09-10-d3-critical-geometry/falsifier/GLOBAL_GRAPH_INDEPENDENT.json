@@ -1,0 +1,60 @@
+{
+  "verdict": "PASS exact global graph identities for the specific48/49/50 support triple",
+  "supports_1based": {
+    "P": [
+      "123",
+      "145",
+      "246",
+      "356"
+    ],
+    "Q": [
+      "123",
+      "146",
+      "248",
+      "378"
+    ],
+    "R": [
+      "126",
+      "145",
+      "248",
+      "378"
+    ]
+  },
+  "raw_normal_determinants": {
+    "P": "a + b*c - b - c",
+    "Q": "-a*f*h + a*h*i - b*d*i + b*f*g",
+    "R": "-b*d*i + b*f*g - b*f*h + b*h*i + c*d*h - c*g*h"
+  },
+  "auxiliary_numerators": {
+    "D": "-a*h + b*d - b*f*(b - 1)",
+    "G": "-a*h + b*g - b*i*(b - 1)"
+  },
+  "polynomial_identity_remainders": {
+    "Q=fG-iD": "0",
+    "b(R-Q)=ch(D-G)+bh(f-i)P": "0"
+  },
+  "uniform_units": {
+    "b": "-[1246]",
+    "c": "[1236]",
+    "h": "-[1248]",
+    "f-i": "-[2378]"
+  },
+  "graph": {
+    "a": "b+c-b*c",
+    "d": "f*(b-1)+(b+c-b*c)*h/b",
+    "g": "i*(b-1)+(b+c-b*c)*h/b"
+  },
+  "free_coordinates": [
+    "b",
+    "c",
+    "e",
+    "f",
+    "h",
+    "i"
+  ],
+  "all_raw_walls_vanish_on_graph": true,
+  "actual_witness_on_graph_and_uniform": true,
+  "scope": "Exact equivalence on every uniform parent sign residence in this standard frame; topological openR6 consequence is a deductive argument, not a sampling conclusion",
+  "new_original_obligations": 0,
+  "new_numerical_triple_credit": 0
+}

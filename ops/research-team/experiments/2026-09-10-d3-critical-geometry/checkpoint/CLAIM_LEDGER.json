@@ -1,0 +1,20 @@
+{
+  "base_commit": "a7a98a927e57c8872aca2b1e48d4615ede649171",
+  "original_diagonal_ledger": "2/9",
+  "original_third_diagonal": "OPEN",
+  "original_exclusive_pair_injectivity": "OPEN",
+  "original_triple_bad_Hc0": "OPEN",
+  "universal_factor_pair_Hc1": {"status": "PROVED inherited", "covered_pair_orbits": 9476, "total_pair_orbits": 9476},
+  "universal_factor_triple_Hc0": {"status": "OPEN", "total_source_records": 79102449, "old_certified_records": 77940147, "old_residue_records": 1162302, "new_numerical_credit": 0, "new_subclass_overlap": "NOT RECONSTRUCTED"},
+  "new_parent_line_subclass": {"status": "PROVED and independently reviewed", "hypothesis": "At least two of three distinct factors have global kind36 or38; third kind arbitrary", "scope": "Every original realizable uniform rank4 parent on8 and every normalized parent component; all relative labels, ranks and collisions"},
+  "all_six_contraction_anchors": "PROVED coordinate extension; independently reviewed",
+  "all_concurrence_collision_union_Hc0": "PROVED; independently reviewed",
+  "collision_free_vertical_critical_reduction": "PROVED sufficient reduction; independent review",
+  "collision_free_vertical_critical_Hc0": "OPEN",
+  "vertical_critical_implies_collinear": "UNPROVED conjectural discriminator",
+  "fixed_projection_quadratic_scope": {"projected_parents": 1, "occurrence_instantiations": 120, "quadratic_restrictions": 22, "quadratic_pairs": 231, "claim": "No uniform vertical critical points in the specified fixed-projection dataset", "universal_or_compactness_credit": 0},
+  "critical_canary": {"status": "Exact inherited diagnostic replay", "identity": "q39=(f-i)q48+(1-c)q50", "new_credit": 0},
+  "operational_seven": "UNCHANGED; not original diagonal credit",
+  "original_internal_antichain_quantifiers": "RETAINED; no restriction to globally minimal signatures",
+  "finite_certificate_required": false
+}

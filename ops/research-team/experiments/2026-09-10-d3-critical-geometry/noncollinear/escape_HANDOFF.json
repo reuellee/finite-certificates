@@ -1,0 +1,34 @@
+{
+  "schema": "research_track_handoff_v1",
+  "track": "noncollinear_shared_plane_extension",
+  "status": "global_source_escape_and_closed_redundant_height_excision_candidate",
+  "original_obligations_closed": 0,
+  "new_net_source_triple_count": 0,
+  "source_triple_kinds": [
+    48,
+    49,
+    50
+  ],
+  "positive_claims": [
+    "Entire actual witness support triple is a rational graph over an openR6 residence.",
+    "Its complete vertical critical locus in the accepted P48 contraction chart is exactly the closed base piece x=2,z=5.",
+    "Closed projected-base parent-unit polynomial proportionality pieces have Hc0=0; finite closed unions can be excised."
+  ],
+  "scope_exclusions": [
+    "No new net triple coverage: inherited light-label and sequential-affine mechanisms already cover this source.",
+    "No automatic componentwise common-factor saturation.",
+    "No full original D3 proof."
+  ],
+  "independent_review": "Global graph arithmetic independently accepted; critical classification and abstract excision submitted for deductive audit.",
+  "artifacts": {
+    "escape_FINDINGS.md": "a2f0c082dd437f4c639f17c5f1416f49c54e77012a6f0abd5abd59e1d117a02f",
+    "escape_GLOBAL_REPLAY.json": "5fbd339a9dfef85244ece1de03762bc2f0e6e669b1fa9fdfbfee21094ef3b3a7",
+    "escape_critical_classification.md": "38ae60867ac8760dc570e1bd8f7155e8294167033b3a60662e826e45f5bd4a22",
+    "escape_general_chart_probe.py": "7d22429e7c5690c635ec7e798f43066fd9e51087318eaeb024c8093e7b1c3e3a",
+    "escape_global_graph.md": "18ad54664a496d827c9120cbc9f8c73b961135a9ac93f439f37d7dfa3c89d5f6",
+    "escape_identity_probe.py": "736520e03fef9401800a9ae504feef7c7a0c859c88e48daff109c47e08a1f323",
+    "escape_probe.py": "ea0e2af3241e5a8a55ac6c95614ce6a8a24f5500343a7f069349ca3d3b8f54d7",
+    "escape_redundant_height.md": "13fe6f21ab42e3a36a0cfef2a9a529177b1b5425175de9fa2851feb8a99088c3",
+    "escape_verify.py": "1e9cb31159df5e398839c61b2b7cf38d7da58f3684512dd0c95341c5b49c7330"
+  }
+}

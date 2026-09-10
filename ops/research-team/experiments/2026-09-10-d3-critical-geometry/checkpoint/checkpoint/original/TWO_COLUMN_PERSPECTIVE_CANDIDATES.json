@@ -1,0 +1,908 @@
+[
+  {
+    "source_index": 61,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          2
+        ],
+        "P_triple": [
+          1,
+          2,
+          5
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 62,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          4,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          2
+        ],
+        "P_triple": [
+          1,
+          2,
+          5
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 105,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          2
+        ],
+        "P_triple": [
+          1,
+          2,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 109,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          2
+        ],
+        "P_triple": [
+          1,
+          2,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 110,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          2
+        ],
+        "P_triple": [
+          1,
+          2,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 168,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          4,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          5
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 172,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          5
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 194,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          4,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          6
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 197,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          6
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 224,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 225,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 232,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 238,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 239,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          3
+        ],
+        "P_triple": [
+          1,
+          3,
+          7
+        ],
+        "Q_shared": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 242,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      },
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          4
+        ],
+        "P_triple": [
+          1,
+          4,
+          6
+        ],
+        "Q_shared": [
+          1,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 250,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          4
+        ],
+        "P_triple": [
+          1,
+          4,
+          7
+        ],
+        "Q_shared": [
+          1,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 251,
+    "kinds": [
+      50,
+      50
+    ],
+    "options": [
+      {
+        "swapped": true,
+        "moving": [
+          1,
+          4
+        ],
+        "P_triple": [
+          1,
+          4,
+          7
+        ],
+        "Q_shared": [
+          1,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 471,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          4,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 475,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          4,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 476,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 477,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 487,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          4,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 493,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 494,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 498,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          4,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 504,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 505,
+    "kinds": [
+      50,
+      51
+    ],
+    "options": [
+      {
+        "swapped": false,
+        "moving": [
+          7,
+          8
+        ],
+        "P_triple": [
+          3,
+          7,
+          8
+        ],
+        "Q_shared": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  }
+]

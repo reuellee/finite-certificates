@@ -1,0 +1,15 @@
+# Final independent review
+
+**ACCEPT: the universal stronger factor-pair endpoint P is complete, at9,476/9,476. Original ledger2/9 is unchanged.**
+
+The principal conventional proof is `original/CONCURRENCY_HEIGHT_PAIR_VANISHING.md`, SHA256 `c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91`. `CONCURRENCY_HEIGHT_AUDIT.md` gives the independent line-by-line review. It covers every type50/type51 relative labeling on every normalized uniform-parent component, with exact normal ranks, positive gauges, allowed projected coincidences, complete convex height fibers, orientation local systems, all coefficient-rank changes and the closed q=p stratum. The inherited other-kind results complete P. This acceptance requires neither a per-parent certificate inventory nor formalization.
+
+The529-case one-column proof and27-case two-column proof are accepted intermediate applications, independently reconstructed by the referee's finite checkers. They are superseded for final coverage by the universal theorem. The final total does not double-count those layers.
+
+The conic component-change example and ruled-quadric marker results are accepted only as scoped geometry. The referee's four checkers reconstruct their stated data without producer acceptance imports and reject fourteen hostile controls. The306/238 ruled-quadric counts are included in `verify_conic_markers.py` and `CONIC_MARKER_REPLAY.json`. A separate resumed falsifier independently reconstructs the rank-four height canary and the alternative rank-six fixture. Its exact rank-six and scoped triangular-escape acceptance is recorded in `newfalsifier/TRIPLE_RANK6_INDEPENDENT_REPLAY.json` and `newfalsifier/FINDINGS.md`. That fixture was already settled; it earns no new triple credit.
+
+The parent H4 corollary was authored by this referee and independently accepted by another agent, as recorded in the hash-bound `falsifier/PARENT_H4_INDEPENDENT_AUDIT.json`. It is not self-approved. It removes an auxiliary D5 duality dependency without proving D5.
+
+The precise transfer is the inherited P-plus-Tfactor sufficient theorem. P alone supplies no standalone original D injectivity or pair-bad Hc1 vanishing. Tfactor must cover all triple-factor intersections, including triples aligned to the same signature. Once Tfactor is proved, the aligned-wall-union injection and supported duality yield original diagonal three. Thus Tfactor is the sole missing hypothesis in this sufficient route, while both coarse original D3 obligations remain formally open. The triple residue remains1,162,302 source records, with zero new triple count and zero original operational obligations closed.
+
+Latest `REPORT.md` and `CLAIM_LEDGER.json` pass scope audit: complete P, original2/9, correct conditional route to3/9, no blanket parent-contractibility assumption, no false triple promotion, and no original theorem counterexample. `REVIEW_IDENTITIES.json` binds the reviewed snapshots. These are research-agent reviews, not external peer review or proof-assistant certification. Root owns integration, clean replay, persistence and publication; their later execution is not asserted by this review.

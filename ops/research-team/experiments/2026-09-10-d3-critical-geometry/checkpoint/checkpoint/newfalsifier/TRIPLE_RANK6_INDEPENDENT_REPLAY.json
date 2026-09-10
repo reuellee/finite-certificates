@@ -1,0 +1,57 @@
+{
+  "verdict": "ACCEPT_EXACT_RANK6_MARKED_TRIPLE_HEIGHT_GATE",
+  "source_sha256": "316c3ee6108f87f71f9a5e005deb63b067947072c28252d052701c3d52c7c736",
+  "producer_snapshot_sha256": "9c6c772cc3853ad7a8127777cf9617ec81934f0163247d086b1434c008e10705",
+  "all70_parent_brackets_nonzero": true,
+  "three_normal_system_ranks": [
+    3,
+    3,
+    3
+  ],
+  "incidence_rank": 6,
+  "normalized_8x6_rank": 6,
+  "kernel_dimension": 4,
+  "gauge_kernel_basis_rank": 4,
+  "nonzero_normalized_minor": {
+    "rows_zero_based": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "columns_zero_based": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "determinant": "-147470400"
+  },
+  "row_signs_relative_producer": [
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "hostile_changed_height_rejected": true,
+  "reconstruction": "Direct determinants evaluated on each of10 unit height assignments using only fractions and permutations; no producer coefficient formulas or rank routines",
+  "scope": "Fixes projected parent and both projected Q/R concurrence directions. Only three shears plus globalscale remain; says nothing about motions changing projected data. Predecessor-settled fixture; no new triple/source count or original obligation.",
+  "three_concurrence_points_rank": 3,
+  "independent_sparse_polynomial_identities": {
+    "P_identically_zero": true,
+    "Q_raw_factor": true,
+    "R_raw_factor": true,
+    "Q_extra_unit_bracket2357": true,
+    "R_extra_unit_bracket2346": true,
+    "all70_parent_brackets_affine": true
+  },
+  "triangular_escape_review": "ACCEPT_SCOPED_FIXED_PROJECTED_PARENT_ESCAPE; eliminate h6 first, then h5, retaining zero-coefficient open fibers. No universal triangular statement or new triple coverage."
+}

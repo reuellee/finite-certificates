@@ -1,0 +1,63 @@
+{
+  "classification": "EXACT_LOCAL_CONTINUATION_AND_CONDITIONAL_SELECTION_LEMMA",
+  "status": "PRODUCER_REPLAY_PASS_PENDING_INDEPENDENT_REFEREE",
+  "role": "constructive",
+  "source_revision": "3e69bc43f1a92ebd1c508bd75e695af76c99e0b0",
+  "mathematical_source_revision": "59fec66666518257c585194b81061f60d91f439d",
+  "replay_command": "python constructive/verify_constructive.py",
+  "replay_cwd": "/workspace/scratch/47843f2221ff/guess_check_20260910",
+  "dependencies": "Python3 standard library for proof replay; NumPy/SciPy only for separate one-LP discovery",
+  "files": [
+    {
+      "path": "constructive/FINDINGS.md",
+      "sha256": "0681d84c0d0df8de963d563668379ff79bb5e90f5f4f29823db96fefb14d120f"
+    },
+    {
+      "path": "constructive/CONTINUATION_CERTIFICATE.json",
+      "sha256": "27d1a72a3e6a8a8731e64466c41fab5258b50fda1a756ac18c9b80e7e70aa751"
+    },
+    {
+      "path": "constructive/verify_constructive.py",
+      "sha256": "291f065995a76339648a8591840856f5757dd07c66f6047b2c13f882850b2ed8"
+    },
+    {
+      "path": "constructive/discover.py",
+      "sha256": "e7aeb0657647e2cbf2b6681cc75706902c294a440aad3594822c74c5d8e1e33c"
+    },
+    {
+      "path": "constructive/reserve_support.json",
+      "sha256": "57e3eae6f4287401353a210160de3b108e3ff11f8a77a1337b2a3a3c67a1bb97"
+    }
+  ],
+  "claims": [
+    "constant positive reserve five-row circuit for pinned raw-normal family",
+    "all70 strict parent signs on entire rational interval",
+    "explicit affine full56 normalized witness with minimum weight1/1000",
+    "explicit continuous support6 lift equal to original sparse witness at0",
+    "conditional minimum-norm continuity with full row rank and strict full56 feasibility; full-dimensional local application"
+  ],
+  "excluded": [
+    "global bad-locus canonical continuity",
+    "strict face-natural contractions",
+    "global chart/support coverage",
+    "compact-support restriction maps",
+    "original injectivity",
+    "tripleHc0",
+    "independent replay of inherited signature antichain/admissibility anchors"
+  ],
+  "proof_methods": [
+    "exact rational coefficients",
+    "single-coordinate determinant multilinearity",
+    "whole-interval affine sign bounds",
+    "piecewise rational nonnegativity proof",
+    "written unique minimizer continuity lemma"
+  ],
+  "original_obligations_closed": 0,
+  "ledger": "2/9",
+  "search_extent": {
+    "numerical_LPs": 1,
+    "actual_parent_families": 1,
+    "whole_interval_certificates": 1
+  },
+  "independence": "No other worker outputs used in construction. Unsolicited falsifier basis suggestion arrived after own reserve discovered and was not imported. Referee scope comments prompted an explicit source-matching lift."
+}

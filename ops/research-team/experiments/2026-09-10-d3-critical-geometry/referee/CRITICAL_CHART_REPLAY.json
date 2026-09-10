@@ -1,0 +1,42 @@
+{
+  "verdict": "ACCEPT_FULL_WITNESS_CHART_CRITICAL_CLASSIFICATION",
+  "supports": [
+    [
+      "123",
+      "145",
+      "246",
+      "356"
+    ],
+    [
+      "123",
+      "146",
+      "248",
+      "378"
+    ],
+    [
+      "126",
+      "145",
+      "248",
+      "378"
+    ]
+  ],
+  "raw_P": "0",
+  "raw_Q": "-4*k*t*v + 6*k*t + 10*k*v*w - 15*k*w + 12*t**2 - 10*t*v*x + 4*t*v*z - 30*t*w",
+  "raw_R": "-8*k*t*u*v + 6*k*t*u*x + 4*k*t*v - 3*k*t*x + 20*k*u*v*w - 6*k*u*w*z - 10*k*v*w + 3*k*w*z + 12*t**2*u*x - 6*t**2*x - 20*t*u*v*x + 8*t*u*v*z - 12*t*u*w*z + 10*t*v*x - 4*t*v*z + 6*t*w*z",
+  "H": "t*(x - 2) - w*(z - 5)",
+  "C": "(k + 2*t)*(6*t - 15*w)",
+  "F_v": "-4*k*t + 10*k*w - 10*t*x + 4*t*z",
+  "units": {
+    "1245": "1 - 2*u",
+    "1248": "-k - 2*t",
+    "2346": "-v",
+    "2378": "-2*t + 5*w"
+  },
+  "critical_projected_base": [
+    "x=2",
+    "z=5"
+  ],
+  "argument": "On F=0, F_v=-C/v is a parent unit. Outside x=2,z=5, dH is nonzero with zero v coordinate, so rank(dF,dH)=2; on that base it is1.",
+  "method": "Independent permutation determinants and symbolic simplification; no producer imports.",
+  "scope": "Full accepted P48 chart for this already-covered support triple and transported sign sectors. No general classification or new source count."
+}

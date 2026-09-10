@@ -1,0 +1,30 @@
+{
+  "counts": {
+    "0": 20,
+    "1": 4,
+    "2": 8
+  },
+  "triples": 56,
+  "noninjective": 48,
+  "special_matrix": [
+    [
+      1,
+      1
+    ]
+  ],
+  "special_kernel": [
+    -1,
+    1
+  ],
+  "status": "PASS",
+  "scope": "linearized planar model only; no original parent topology comparison",
+  "hostile_rejections": [
+    "K",
+    "active_spatial_normals",
+    "parameter_map",
+    "records"
+  ],
+  "model_sha256": "f21c5a16690bf937ffd02f23982476bf4d2b240eabc091fc6d6dc83da598742a",
+  "source_sha256": "895438a296bf64efe729ea9acaed1185c0285b27e1b66413341db767f0306783",
+  "original_obligations_closed": 0
+}

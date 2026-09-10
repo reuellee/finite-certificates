@@ -1,0 +1,21 @@
+{
+  "verdict": "ACCEPT_EXACT_SURVIVOR_ELIMINATION_AND_CRITICAL_TRANSPORT",
+  "R_w": "(B*t - D*v)*(-A*D + A*t + u)",
+  "unit_identity": "R_w=-[1468][3458]",
+  "N": "-u*(-A*B*D*t + A*B*t**2 + A*C*D*t - A*C*D*v - A*C*t**2 + A*C*t*v + A*D**2*v - A*D*t*v + B*C*D*t - B*C*D*u - B*C*t**2 + B*C*t*u + B*C*t - B*C*u + B*t*u + C*D**2*u - C*D**2*v - C*D*t*u + C*D*t*v + C*D*u - C*D*v - C*t*u + C*u*v - D*u*v)",
+  "eliminated_height": "w=-N/L",
+  "residual_total_degree": 13,
+  "residual_height_degree": 7,
+  "residual_terms": 1690,
+  "irreducible_over_QQ": true,
+  "no_factor_removed": true,
+  "critical_equations": [
+    "E=0",
+    "E_u=0",
+    "E_v=0",
+    "E_t=0"
+  ],
+  "all_projected_specializations_retained_including_C_equals_D": true,
+  "method": "Raw referee permutation determinants; exact Sylvester determinant and independent exact SymPy factorization. No producer code imported.",
+  "scope": "Exact global graph/critical-system reduction on the stated uniform contraction chart. No emptiness, noncompactness, complexity improvement, source count, or original promotion."
+}
