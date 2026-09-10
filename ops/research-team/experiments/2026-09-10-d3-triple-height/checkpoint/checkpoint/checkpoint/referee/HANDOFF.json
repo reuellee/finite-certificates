@@ -1,0 +1,65 @@
+{
+  "role": "independent_referee",
+  "status": "FINAL_FROZEN_ACCEPT_SCOPED_ADVANCEMENT",
+  "original_ledger": "2/9",
+  "original_obligations_closed": 0,
+  "accepted": [
+    "Exact original two-obligation split",
+    "Conditional active-wall reduction to universal pair-wallHc1 and triple-wallHc0",
+    "Universal pair-wallHc1 for18of21kindfamilies",
+    "Additional2488of3062relative-labelorbits fromthe3hardkindfamilies",
+    "Exact574residue withindependentfullorbitcomparison",
+    "Scopedlinearizedcone restrictiondiagrams",
+    "Actualuniformhard50/50point",
+    "Complete hard50/50 interval fiber with genuine parent end walls",
+    "Exact uniform nonsingular conic specialization refuting fixed-projection global affine-line presentation"
+  ],
+  "already_inherited_not_new": [
+    "One-block and joined full-witness proper comparison",
+    "Zero-mass functoriality and product-intersection comparison",
+    "Same-factor multi-circuit wall escape"
+  ],
+  "open": [
+    "Original signed pair-to-triple Hc1 injectivity",
+    "Original triple-bad Hc0 vanishing",
+    "Proposed universal pair-factor-wall Hc1 vanishing",
+    "Universal distinct triple-factor Hc0 vanishing"
+  ],
+  "scope_warning": "9476 factor-pair orbits require universal all-parent certificates, not one chart sample each",
+  "evidence": [
+    "referee/OPENING.md",
+    "referee/verify_opening.py",
+    "referee/OPENING_REPLAY.json",
+    "referee/ACTIVE_WALL_REDUCTION_AUDIT.md",
+    "referee/SOURCE_AUDIT.json",
+    "referee/FINDINGS.md",
+    "referee/FINAL_REVIEW.md",
+    "referee/PAIR_THEOREM_AUDIT.md",
+    "referee/RULED_QUADRIC_AUDIT.md",
+    "referee/PAIR_TEMPLATE_REPLAY.json",
+    "referee/RULED_INCIDENCE_REPLAY.json",
+    "referee/HARD_ORBIT_REPLAY.json",
+    "referee/TANGENT_REPLAY.json",
+    "referee/HARD_PAIR_REPLAY.json",
+    "referee/REVIEW_IDENTITIES.json",
+    "referee/AFFINE_FIBER_GATE_AUDIT.md",
+    "referee/COLUMN_GATE_REPLAY.json",
+    "referee/verify_column_gates_independent.py"
+  ],
+  "strong_pair_endpoint": {
+    "total": 9476,
+    "proved": 8902,
+    "open": 574,
+    "residue_by_kind": {
+      "50/50": 257,
+      "50/51": 249,
+      "51/51": 68
+    },
+    "scope": "sufficient universal factor-wall pair cohomology endpoint, not original pair-map or parent components"
+  },
+  "review_file": "referee/FINAL_REVIEW.md",
+  "identities": "referee/REVIEW_IDENTITIES.json",
+  "triple_fold_and_conic": "Separately independently accepted by falsifier/TRIPLE_AUDIT.md and its two source-derived replays; no critical-system emptiness or triple escape proved",
+  "conditional_affine_fiber_gate": "ACCEPTED conditional rank-drop theorem; fixed column8 application refuted by exact uniform nonsingular conic specialization; no further orbit promoted",
+  "closeout_discovery": "No further discovery authorized or included after these frozen gate audits"
+}

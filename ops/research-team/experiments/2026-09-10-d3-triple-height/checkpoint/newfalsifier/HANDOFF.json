@@ -1,0 +1,44 @@
+{
+  "status": "INDEPENDENT_DEDUCTIVE_ACCEPTANCE_OF_PAIR_WALL_VANISHING",
+  "original_obligations_closed": 0,
+  "reviewed_proof_sha256": {
+    "original/CONCURRENCY_HEIGHT_PAIR_VANISHING.md": "c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91",
+    "original/TWO_COLUMN_AFFINE_VANISHING.md": "a38858a7323837ad4dace37fa985cff946c44c1ca02001b3263ab491b08179df",
+    "alternative/TRIPLE_RANK6_MODEL.md": "96553b32f69e1436d0ff0b13197c777acdefe3e695f89bd98dee54575c010e47"
+  },
+  "acceptance_dependencies": [
+    "Fixed-unit correspondence from occurrence determinants to primitive factor walls",
+    "Uniform parent rank and basis properties",
+    "Compact-support shriek base change and localization",
+    "Inherited source254 and source61 support identities"
+  ],
+  "exact_canaries": [
+    "Source254 rank4 system in5 affine heights; entire strict parent interval",
+    "Source61 retained-plane jointly affine parent inequalities and Q equation"
+  ],
+  "scope_exclusions": [
+    "No triple-bad Hc0 proof",
+    "No original D3 proof",
+    "No inference of universal theorem from sampled points"
+  ],
+  "files_sha256_base": "newfalsifier/ relative to cycle root",
+  "files_sha256": {
+    "AFFINE_PERSPECTIVITY_TEST.json": "4a4d137e0eba79c412732e1d848fcf4aa004592dfd322357bdfa782760c50593",
+    "CONTRACTION_HEIGHT_TEST.json": "00213b0bd66187356d43fc008682e9ec367f249cb51333442e46199d89011c39",
+    "FINDINGS.md": "978eadd402f6a5031716803bd607323c719794316ae9ccf380622ef421a283f7",
+    "PERSPECTIVITY_TEST.json": "b3ebe9ff726c09801bb09687995f921db106053cfc5a06bd8e315d0e92a239f5",
+    "TRIPLE_RANK6_INDEPENDENT_REPLAY.json": "9c7aa3e2817a9e708579b763fd2c25bb0c307087ef0c2fe83c708d5f762d30d3",
+    "affine_perspective_test.py": "555fb88c79b2f97d27ded776bb90a12442a8d6cc313bf8ae29b74386e4f1f981",
+    "contraction_height_test.py": "40d4a2ba276b5fc7d5fcbcf550210df5076ad3dd87deced3ee58736b9dd3f13b",
+    "perspective_test.py": "73c92d38f5232c6107b4692fdfbc5793f3aefaa2c596bd61dc8b8c31a6d58057",
+    "verify_triple_rank_independent.py": "fcba408abd9a14e652015de0e5ad3c2d7a096eff2d4401e1c3b007e3dc6b9e29"
+  },
+  "strong_pair_endpoint": {
+    "covered": 9476,
+    "total": 9476,
+    "status": "INDEPENDENTLY_ACCEPTED_AUXILIARY_PAIR_WALL_HC0_HC1"
+  },
+  "original_ledger": "2/9",
+  "triple_rank_replay": "TRIPLE_RANK6_INDEPENDENT_REPLAY.json",
+  "triple_review_scope": "Exact rank6 gauge-only fixed-direction fiber and scoped triangular escape over one previously settled projected-parent fixture; no new triple count"
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "method": "adjacent-transposition BFS plus disjoint-set orbit equivalences",
+  "counts": [
+    {
+      "kinds": [
+        50,
+        50
+      ],
+      "total": 1411,
+      "two_pencil_covered": 1154,
+      "residue": 257
+    },
+    {
+      "kinds": [
+        50,
+        51
+      ],
+      "total": 1272,
+      "two_pencil_covered": 1023,
+      "residue": 249
+    },
+    {
+      "kinds": [
+        51,
+        51
+      ],
+      "total": 379,
+      "two_pencil_covered": 311,
+      "residue": 68
+    }
+  ],
+  "remaining": 574,
+  "covered_in_three_hard_families": 2488,
+  "source_artifact_sha256": "82434c6e07fe3290030b057f0eba2f50b522cfc25aabe66b8abf9a8495e55fc4",
+  "scope": "full relative-label support orbits for singleton-occurrence factor types50/51; not parent components",
+  "original_obligations_closed": 0
+}

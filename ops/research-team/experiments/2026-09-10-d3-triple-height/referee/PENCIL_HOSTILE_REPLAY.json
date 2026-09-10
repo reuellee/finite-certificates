@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS_MISSING_COVERAGE_AND_UNRESOLVED_BRANCH_REJECTION",
+  "controls": [
+    {
+      "case": "missing_pair",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "case": "unresolved_exception",
+      "rejected": true,
+      "returncode": 1
+    }
+  ]
+}

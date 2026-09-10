@@ -1,0 +1,44 @@
+{
+  "role": "independent_referee",
+  "status": "ACCEPT_AUXILIARY_ACTUAL_PARENT_THEOREM_AND_SCOPED_EXACT_EXAMPLES",
+  "principal_proof": "pair/COMMON_WEAK_PRIMAL_VANISHING.md",
+  "principal_proof_sha256": "e5c80a04ca4c7e419f420472e3b9f0e531f60bf4043a7afcbcc3e34fd7202652",
+  "principal_acceptance_type": "conventional_deductive_proof",
+  "principal_result": "Common-weak simultaneous-bad W is closed and Hc^q(W;Q)=0 for q=0,1,2; coherent deletion preserves original D kernel and triple Hc0.",
+  "original_ledger": "2/9 unchanged",
+  "original_obligations_closed": 0,
+  "original_D_injectivity": "open",
+  "original_triple_Hc0": "open",
+  "source_orbits_closed": 0,
+  "independent_replay_commands_from_cycle_root": [
+    "python -B referee/verify_actual_antichain.py",
+    "python -B referee/verify_three_weak_obstruction.py"
+  ],
+  "replay_dependencies": "Python standard library; referee-owned exact.py and poly.py; producer data read as untrusted inputs; no producer acceptance imports",
+  "hostile_controls_rejected": 19,
+  "boundary_curves_included_in_second_checker": true,
+  "reports": [
+    "referee/FINAL_REVIEW.md",
+    "referee/COMMON_WEAK_AUDIT.md",
+    "referee/SOURCE_AND_TARGET_AUDIT.md"
+  ],
+  "reviewed_identities": "referee/REVIEW_IDENTITIES.json",
+  "replay_outputs": [
+    "referee/ACTUAL_ANTICHAIN_REPLAY.json",
+    "referee/THREE_WEAK_OBSTRUCTION_REPLAY.json"
+  ],
+  "accepted_example_scope": [
+    "Actual proper incomparable three-signature family, same-component all-parameter arcs, uncovered triple-bad interior",
+    "Separate actual boundary triple with distinct weak rays and singleton full witness polytopes",
+    "Selected generic fixed-three-weak-point height rigidity; inherited affine parent escape still applies"
+  ],
+  "outstanding_caveats": [
+    "No vanishing or injectivity on complement of common-weak locus",
+    "No original global cohomology class or compact component constructed",
+    "No global tubular transfer of tangent model",
+    "Generic height obstruction does not cover exceptional directions or all deformations",
+    "No original theorem, census, canonical-coordinate enumeration, or external peer-review claim"
+  ],
+  "coordinator_report_scope": "accepted",
+  "integration_clean_replay_persistence_publication_owner": "root"
+}

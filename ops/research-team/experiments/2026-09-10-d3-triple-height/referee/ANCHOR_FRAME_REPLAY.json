@@ -1,0 +1,317 @@
+{
+  "verdict": "ACCEPT_EXACT_SIX_ORDINARY_PROJECTED_FRAMES",
+  "scope": "Support incidence and projected frames only; source orbit equivalences and wall-rank identities are inherited.",
+  "source_sha256": "a7d8ae49f83cc54e21d5107f72be5e8e36ad6890b8cab56cd9dfefcef9acfd59",
+  "frames": [
+    {
+      "global_kind": 36,
+      "ordinary_support": "123/124/345/567",
+      "high": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "low": [
+        6,
+        7
+      ],
+      "omitted": [
+        8
+      ],
+      "height_frame": [
+        1,
+        3,
+        4,
+        2
+      ],
+      "projected_frame_det": 1,
+      "fixed_high_vectors": {
+        "1": [
+          0,
+          0,
+          1
+        ],
+        "2": [
+          0,
+          0,
+          1
+        ],
+        "3": [
+          0,
+          -1,
+          0
+        ],
+        "4": [
+          1,
+          0,
+          0
+        ],
+        "5": [
+          -1,
+          1,
+          0
+        ]
+      },
+      "projected_dimension": 4,
+      "free_heights": 4
+    },
+    {
+      "global_kind": 38,
+      "ordinary_support": "123/124/345/678",
+      "high": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "low": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "omitted": [],
+      "height_frame": [
+        1,
+        3,
+        4,
+        2
+      ],
+      "projected_frame_det": 1,
+      "fixed_high_vectors": {
+        "1": [
+          0,
+          0,
+          1
+        ],
+        "2": [
+          0,
+          0,
+          1
+        ],
+        "3": [
+          0,
+          -1,
+          0
+        ],
+        "4": [
+          1,
+          0,
+          0
+        ]
+      },
+      "projected_dimension": 4,
+      "free_heights": 4
+    },
+    {
+      "global_kind": 48,
+      "ordinary_support": "123/145/246/356",
+      "high": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "low": [],
+      "omitted": [
+        7,
+        8
+      ],
+      "height_frame": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "projected_frame_det": 1,
+      "fixed_high_vectors": {
+        "1": [
+          0,
+          0,
+          1
+        ],
+        "2": [
+          0,
+          -1,
+          0
+        ],
+        "3": [
+          0,
+          -1,
+          1
+        ],
+        "4": [
+          1,
+          0,
+          0
+        ],
+        "5": [
+          1,
+          0,
+          -1
+        ],
+        "6": [
+          -1,
+          1,
+          0
+        ]
+      },
+      "projected_dimension": 4,
+      "free_heights": 4
+    },
+    {
+      "global_kind": 49,
+      "ordinary_support": "123/145/246/357",
+      "high": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "low": [
+        6,
+        7
+      ],
+      "omitted": [
+        8
+      ],
+      "height_frame": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "projected_frame_det": 1,
+      "fixed_high_vectors": {
+        "1": [
+          0,
+          0,
+          1
+        ],
+        "2": [
+          0,
+          -1,
+          0
+        ],
+        "3": [
+          0,
+          -1,
+          1
+        ],
+        "4": [
+          1,
+          0,
+          0
+        ],
+        "5": [
+          1,
+          0,
+          -1
+        ]
+      },
+      "projected_dimension": 4,
+      "free_heights": 4
+    },
+    {
+      "global_kind": 50,
+      "ordinary_support": "123/145/246/378",
+      "high": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "low": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "omitted": [],
+      "height_frame": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "projected_frame_det": 1,
+      "fixed_high_vectors": {
+        "1": [
+          0,
+          0,
+          1
+        ],
+        "2": [
+          0,
+          -1,
+          0
+        ],
+        "3": [
+          0,
+          -1,
+          1
+        ],
+        "4": [
+          1,
+          0,
+          0
+        ]
+      },
+      "projected_dimension": 4,
+      "free_heights": 4
+    },
+    {
+      "global_kind": 51,
+      "ordinary_support": "123/145/267/468",
+      "high": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "low": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "omitted": [],
+      "height_frame": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "projected_frame_det": 1,
+      "fixed_high_vectors": {
+        "1": [
+          0,
+          0,
+          1
+        ],
+        "2": [
+          0,
+          -1,
+          0
+        ],
+        "4": [
+          1,
+          0,
+          -1
+        ],
+        "6": [
+          -1,
+          1,
+          0
+        ]
+      },
+      "projected_dimension": 4,
+      "free_heights": 4
+    }
+  ]
+}

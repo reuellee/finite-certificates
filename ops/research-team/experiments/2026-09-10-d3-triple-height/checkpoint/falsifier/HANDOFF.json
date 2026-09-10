@@ -1,0 +1,59 @@
+{
+  "status": "ACTUAL_CONIC_COMPONENT_JUMP_AND_INDEPENDENT_PARENT_H4_ACCEPTANCE",
+  "original_obligations_closed": 0,
+  "original_counterexample_found": false,
+  "conic_scope": "Full hard factor-pair parent8 residence fibers in one fixed parent sign chamber; component paths and specialization maps require integration",
+  "conic_c_values": [
+    "-401/100",
+    "-39999/10000",
+    "-3999/1000",
+    "-1999/500",
+    "-799/200",
+    "-399/100"
+  ],
+  "conic_component_counts": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    1
+  ],
+  "computational_acceptance": "Producer exact arithmetic complete; independent review requested",
+  "parent_h4_review": {
+    "verdict": "ACCEPT_DEDUCTIVE_COROLLARY_WITH_INHERITED_DEPENDENCIES",
+    "proof_sha256": "4b2c956617826560a0d5b95d248300d3ef94b6bf17a7409f85694725dd7c9af5",
+    "claim": "H4(X;Q)=0 for every normalized realization component of a uniform rank4 parent on8",
+    "new_step": "Seven-label one-bad Hc0,Hc1 vanish by positive-face filtration and two-pencil residence",
+    "specific_challenges_passed": [
+      "Exactly5 nonmoving uniform columns form projective frame for2movers",
+      "Shared support planes containing both movers remain fixed",
+      "Open2D residence components have interval sections and are contractible",
+      "Positive normal-ray rescaling preserves and descends face orientation",
+      "Vertex and edge incidence counts yield required residence dimensions",
+      "Parent component restriction retains connected full residence fibers",
+      "Deletion-space contractibility explicitly uses inherited rank3-on7 theorem"
+    ],
+    "scope_exclusions": [
+      "No diagonal3 obligation",
+      "No fifth-diagonal vanishing theorem",
+      "No blanket rank4-on8 contractibility claim"
+    ],
+    "minor_expository_note": "For k=1, full fixed quotient fibers are closed in the face stratum; their genuine parent-boundary ends justify noncompactness of the containing component."
+  },
+  "input_sha256_base": "checkpoint/ relative to cycle root",
+  "input_sha256": {
+    "checkpoint/pair/NEXT_GATE.md": "ca44a440f3f30775e8128a3504a2e39eb3cdc4c64e5c2796c1aa9960070fb109",
+    "checkpoint/pair/verify_smooth_conic_gate.py": "64759a976efea9a7fdaa78536f213dce0299a26b9bd03c0ab6121de2a7cdb4fa",
+    "checkpoint/pair/verify_hard_column_fiber.py": "9760707215884aeae20d478122f712867af2b09df063af131dfca95d988ab079",
+    "checkpoint/inputs/DIAG3_SINGLE_BAD_TWO_SKELETON.md": "141da1b6d9fcd4f601e79871aaa5d06cb98721ece928a0d0d5af83518bddf71f"
+  },
+  "files_sha256_base": "falsifier/ relative to cycle root",
+  "files_sha256": {
+    "CONIC_COMPONENTS.json": "99b2d5fbe26162c125d65b2386260a6a37fa0e0ece8115a14961ed6816703620",
+    "FINDINGS.md": "a8816a5f9efd59ab190c7312ec784f35c94a2153ea1482d569c21177d13661eb",
+    "PARENT_H4_INDEPENDENT_AUDIT.json": "0a789e6c286889a784303fb0bd4b38e9c7c52ebfcd70fa113e3ba6e9dd799fcd",
+    "conic_components.py": "afd98e61623e6cf03a04a0d8febf11c0d0165a8fe1bf6cb964195cd9137d3b5c"
+  },
+  "smallest_next_discriminator": "Compute actual R1 f! specialization maps at the parent-boundary tangency and c=-4 excluded-component birth, then test compact-supported sections without replacing stalk rank by global cohomology."
+}

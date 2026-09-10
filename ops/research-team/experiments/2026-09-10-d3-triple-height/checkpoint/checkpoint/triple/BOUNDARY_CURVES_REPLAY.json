@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "actual_boundary_points": 3,
+  "curve_coordinates_degree_at_most": 3,
+  "exact_polynomial_identity_checks": 30,
+  "signed_polynomials_with_positive_leading_coefficient": 168,
+  "conclusion": "Each signature is feasible arbitrarily close to the center inside the same connected parent component."
+}

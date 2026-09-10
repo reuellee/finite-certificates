@@ -1,0 +1,8150 @@
+[
+  {
+    "source_index": 61,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          2,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 62,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          2,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 105,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            6
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 109,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 110,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 168,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 172,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            6,
+            7
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 194,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 197,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            7
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            4,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 224,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 225,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 232,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 238,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 239,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 242,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          1,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 250,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 251,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 254,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 4,
+        "linear_incident": [
+          3,
+          4,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          4,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          4,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 256,
+    "kinds": [
+      50,
+      50
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            2,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 4,
+        "linear_incident": [
+          3,
+          4,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          4,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          4,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 471,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 475,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 476,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 477,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 482,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            3,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            3,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 483,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            8
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 486,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 487,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 488,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 493,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            6
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 494,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            8
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 497,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            2,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 498,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 499,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 504,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            6
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 505,
+    "kinds": [
+      50,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 6,
+        "parent_marker": 4,
+        "linear_incident": [
+          2,
+          4,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 3,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 3,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          5,
+          6
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 562,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            4,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 4,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 3,
+        "linear_incident": [
+          2,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 7,
+        "linear_incident": [
+          2,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          4,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 8,
+        "linear_incident": [
+          4,
+          5,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 7,
+        "linear_incident": [
+          6,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 8,
+        "linear_incident": [
+          6,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 563,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 4,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 3,
+        "linear_incident": [
+          2,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 7,
+        "linear_incident": [
+          2,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 8,
+        "linear_incident": [
+          4,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 8,
+        "linear_incident": [
+          5,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 564,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 2,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 4,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            3,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 3,
+        "linear_incident": [
+          2,
+          3,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 8,
+        "linear_incident": [
+          4,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 7,
+        "linear_incident": [
+          5,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 566,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 4,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 7,
+        "linear_incident": [
+          2,
+          5,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 8,
+        "linear_incident": [
+          4,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 567,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            3,
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            4,
+            7
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 7,
+        "linear_incident": [
+          6,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 8,
+        "linear_incident": [
+          6,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 568,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            3,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 4,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 5,
+        "linear_incident": [
+          1,
+          3,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 8,
+        "linear_incident": [
+          4,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 7,
+        "linear_incident": [
+          3,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 570,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            3,
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 6,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 4,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            3,
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 8,
+        "linear_incident": [
+          3,
+          4,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 7,
+        "linear_incident": [
+          5,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 571,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 4,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 8,
+        "linear_incident": [
+          4,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 572,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": [
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 3,
+        "parent_marker": 1,
+        "linear_incident": [
+          1,
+          2,
+          3
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 5,
+        "parent_marker": 4,
+        "linear_incident": [
+          1,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 7,
+        "parent_marker": 2,
+        "linear_incident": [
+          2,
+          6,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            2,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": false,
+        "forgotten_label": 8,
+        "parent_marker": 6,
+        "linear_incident": [
+          4,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 1,
+        "parent_marker": 3,
+        "linear_incident": [
+          1,
+          3,
+          7
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 2,
+        "parent_marker": 7,
+        "linear_incident": [
+          2,
+          7,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 4,
+        "parent_marker": 5,
+        "linear_incident": [
+          3,
+          4,
+          5
+        ],
+        "quadratic_incident": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "linear_quartet_swapped": true,
+        "forgotten_label": 6,
+        "parent_marker": 8,
+        "linear_incident": [
+          5,
+          6,
+          8
+        ],
+        "quadratic_incident": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "source_index": 573,
+    "kinds": [
+      51,
+      51
+    ],
+    "choices": []
+  }
+]

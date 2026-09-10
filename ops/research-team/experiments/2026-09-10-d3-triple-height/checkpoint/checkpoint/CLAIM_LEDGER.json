@@ -1,0 +1,70 @@
+{
+  "original": {
+    "diagonals_proved": 2,
+    "diagonals_total": 9,
+    "pair_injectivity": "OPEN",
+    "triple_bad_Hc0": "OPEN",
+    "operational_obligations_open": 7,
+    "original_obligations_closed_this_cycle": 0,
+    "pair_component_coverage": "UNKNOWN",
+    "pair_component_residual": "UNKNOWN",
+    "triple_source_records_unresolved": 1162302,
+    "triple_source_records_closed_this_cycle": 0
+  },
+  "principal_new_result": {
+    "claim": "Common weak-primal simultaneous-bad locus is closed and has Hc^q=0 for q=0,1,2; coherent removal preserves original D and triple Hc0.",
+    "status": "INDEPENDENTLY_ACCEPTED_DEDUCTIVE_PROOF",
+    "proof": "pair/COMMON_WEAK_PRIMAL_VANISHING.md",
+    "review": "referee/FINAL_REVIEW.md",
+    "quantifiers": "Every uniform realizable rank4 parent on8, every normalized component, any finite nonempty signature family; all zero/sign strata and loop limits.",
+    "excluded": "No cohomology vanishing on the complement is proved.",
+    "computational_dependency": false
+  },
+  "stronger_sufficient_endpoint_inherited": {
+    "pair_wall_Hc1": {
+      "total_factor_pair_orbits": 9476,
+      "proved_orbits": 8902,
+      "remaining_orbits": 574,
+      "remaining_by_kind": [
+        {
+          "kinds": [
+            50,
+            50
+          ],
+          "count": 257
+        },
+        {
+          "kinds": [
+            50,
+            51
+          ],
+          "count": 249
+        },
+        {
+          "kinds": [
+            51,
+            51
+          ],
+          "count": 68
+        }
+      ],
+      "scope": "All original uniform parents and relative labelings for each covered orbit; counts are factor-pair orbits, not parent components",
+      "residue_artifact": "coordinator/HARD_PAIR_RESIDUE.json",
+      "independent_review": "referee/FINAL_REVIEW.md"
+    },
+    "triple_wall_Hc0": "OPEN",
+    "joint_implication_to_D3": "ACCEPTED_CONDITIONAL",
+    "pair_endpoint_alone_implies_original_injectivity": "NOT_CLAIMED"
+  },
+  "auxiliary_examples": {
+    "actual_antichain_and_robust_triple_bad_arc": "Independent exact replay",
+    "distinct_unique_weak_ray_fixture": "Independent exact replay; not an original counterexample",
+    "abstract_common_row_countermodel": "Deductively reviewed; not an actual parent"
+  },
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "previous_checkpoint": "499f1190d988be5729b38db59e6cc8230fae7857",
+  "publication_branch": "research/d3-common-weak-excision-20260910",
+  "publication_scope": "Additive research checkpoint; original theorem ledger unchanged",
+  "proof_assistant_certification": false,
+  "inherited_endpoint_path_base": "checkpoint/"
+}

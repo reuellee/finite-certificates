@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "authenticated_files": 214,
+  "independent_replays": [
+    {
+      "script": "referee/verify_actual_antichain.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "fe62e81dbc357f6c32e127ac06aed53adb497311e9ac6c7f79901cef2d782a7f"
+    },
+    {
+      "script": "referee/verify_three_weak_obstruction.py",
+      "status": "PASS",
+      "recorded_output_reproduced": true,
+      "output_sha256": "f13ddc9c14b3d96c41971537f9644d398957affe12f54c7a34c5125c659898aa"
+    }
+  ],
+  "original_ledger": "2/9",
+  "deductive_proof_machine_verified": false,
+  "deductive_review": "referee/FINAL_REVIEW.md"
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS_CLEAN_FULL_PRODUCER_REPLAY_AFTER_CODE_AND_MATHEMATICAL_REVIEW",
+  "command": "python falsifier/verify_pencil_coverage.py --replay",
+  "stdout": "PASS231 same-projection quadratic pairs: no actual uniform vertical critical point\nSTATUS original2/9; no universal triple escape or compactness conclusion\n",
+  "identical_outputs": {
+    "HEIGHT_OVAL_PROBE.json": true,
+    "QUAD_INERTIA.json": true,
+    "PENCIL_SINGULAR_PROBE.json": true,
+    "SINGULAR_PENCIL_FAMILY.json": true,
+    "EXCEPTIONAL_PENCIL_PROBE.json": true,
+    "QUADRATIC_EXTENSION_PROBE.json": true,
+    "PENCIL_COVERAGE.json": true
+  },
+  "script_sha256": "42bfafedbb00cfc8b4454356f2967714ef14a53d46ff9fbbd9eb88c908cc46d3"
+}

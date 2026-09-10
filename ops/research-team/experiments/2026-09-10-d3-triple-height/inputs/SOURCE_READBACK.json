@@ -1,0 +1,54 @@
+{
+  "source_commit": "59fec66666518257c585194b81061f60d91f439d",
+  "files": [
+    {
+      "path": "inputs/DIAG3_TRIPLE_DIRECT_FINAL_AFFINITY.md",
+      "remote_path": "ai/omreal/DIAG3_TRIPLE_DIRECT_FINAL_AFFINITY.md",
+      "git_blob_sha1": "2e8d3c83ea59a9bd097e8191022ee0f8eaddb174",
+      "sha256": "d5d856db95cf3617e9f03e51fe1a2d997bf3321fae7f40e5e805c478589cb538",
+      "bytes": 7010
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_PRIMITIVE_FINAL_DIRECTION.md",
+      "remote_path": "ai/omreal/DIAG3_TRIPLE_PRIMITIVE_FINAL_DIRECTION.md",
+      "git_blob_sha1": "6a80ffe2f76c995778b7da999439b70b775edaa6",
+      "sha256": "0eff2d65e9f01dd0a3381fc356a2938b4963e7e77ccf77081320b692e58124ec",
+      "bytes": 5533
+    },
+    {
+      "path": "inputs/DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md",
+      "remote_path": "ai/omreal/DIAG3_TRIPLE_PRIMITIVE_FINAL_SUPPORT3.md",
+      "git_blob_sha1": "d5f69c915d980f07559d9f118047e486930a7822",
+      "sha256": "2db2869c74c81d2c5ee400e411e1f8a2a93d67951dee9d9f401dfa82dbbb428a",
+      "bytes": 4331
+    },
+    {
+      "path": "inputs/DIAG3_AFFINE_FIBER_FRONTIER.md",
+      "remote_path": "ai/omreal/DIAG3_AFFINE_FIBER_FRONTIER.md",
+      "git_blob_sha1": "929d1a05d1ee12f90c176b926db69338185647e0",
+      "sha256": "7a726a999df4b10985bad75e7bac61dbc5c7b35756c45aa798e17a53144693ec",
+      "bytes": 10882
+    },
+    {
+      "path": "inputs/DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md",
+      "remote_path": "ai/omreal/DIAG3_PROJECTIVE_COLUMN_FIBER_COMPRESSION.md",
+      "git_blob_sha1": "378f844c37cf4a1876cff31ab3f54e2e1d31c2c0",
+      "sha256": "11d9e539f142a81991815a657e417706d2f42aecd0d674c46c622e0dbbfa6fe7",
+      "bytes": 18706
+    },
+    {
+      "path": "inputs/DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md",
+      "remote_path": "ai/omreal/DIAG2_PIVOT_REPRESENTATIVE_TRIPLES.md",
+      "git_blob_sha1": "8eb1631e8652327f126f8d7f74271384127fb2fe",
+      "sha256": "aaad6a2da3b68c7c5d676115e9082ab09b5fe598c141e7403085ec3d29799985",
+      "bytes": 5577
+    },
+    {
+      "path": "inputs/DIAG2_PIVOT_REPRESENTATIVE_TRIPLES_VERIFY.py",
+      "remote_path": "ai/omreal/DIAG2_PIVOT_REPRESENTATIVE_TRIPLES_VERIFY.py",
+      "git_blob_sha1": "a0cab649e1eb8c14fc3858b539737039cbe88287",
+      "sha256": "f6423de40d4ae72e633db5b9c4b8755dcfa0672d3acde183196c2763751c7d5a",
+      "bytes": 10251
+    }
+  ]
+}

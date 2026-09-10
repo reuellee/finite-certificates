@@ -1,0 +1,39 @@
+{
+  "degree_patterns": 266,
+  "factor_kind_pairs_proved": 16,
+  "factor_kind_pairs_total": 21,
+  "remaining_kind_pairs": [
+    [
+      49,
+      50
+    ],
+    [
+      49,
+      51
+    ],
+    [
+      50,
+      50
+    ],
+    [
+      50,
+      51
+    ],
+    [
+      51,
+      51
+    ]
+  ],
+  "own_selection_digest": "980376be7027252e33f8f95a7fbf15fb813669a39f16ddeba5944c9c55f999f6",
+  "status": "PASS",
+  "scope": "exact support templates; geometric deduction audited in PAIR_THEOREM_AUDIT.md",
+  "certificate_sha256": "657045b06fb3ef06843ab3ede1204e52b2e418e01a6c5fc0fa6c1c371bc30043",
+  "hostile_rejections": [
+    "choice",
+    "bound",
+    "coverage",
+    "source",
+    "canary"
+  ],
+  "original_obligations_closed": 0
+}

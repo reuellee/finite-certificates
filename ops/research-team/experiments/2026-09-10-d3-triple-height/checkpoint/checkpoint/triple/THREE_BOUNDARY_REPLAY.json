@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "parent_brackets_per_matrix": 70,
+  "signed_normals_per_signature": 56,
+  "actual_signatures": 3,
+  "positive_center_circuits": 3,
+  "weak_primal_ray_rank": 3,
+  "exclusive_feasibility_anchors": 3,
+  "cross_badness_checks": 6,
+  "support_union_degrees": [
+    3,
+    4,
+    3,
+    5,
+    4,
+    4,
+    3,
+    1
+  ],
+  "scope": "No automatic common weak-primal direction for original proper incomparable triples; no compact component or D3 counterexample.",
+  "hostile_mutations_rejected": 3,
+  "input_sha256": "fc81ebe8852328119b2396b5349b6ce4c93fb5e9bc5be76fd397e24e6890b458"
+}

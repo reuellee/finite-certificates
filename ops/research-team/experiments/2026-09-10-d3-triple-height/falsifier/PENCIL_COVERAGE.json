@@ -1,0 +1,25 @@
+{
+  "status": "PASS finite same-projection critical-locus exclusion",
+  "scope": "For the231 pairs among the22 displayed quadratic restrictions at projected parameters(2,3,4,5), every finite common zero with all70 parent brackets nonzero has independent height gradients. No compact-component or universal all-parent conclusion.",
+  "fixed_projected_parents": 1,
+  "original_occurrence_instantiations": 120,
+  "quadratic_restrictions": 22,
+  "quadratic_pairs": 231,
+  "nonzero_determinant_pencils": 193,
+  "generically_rank4_singular_pencils": 38,
+  "nonzero_pencil_repeated_rational_root_checks": 104,
+  "individual_infinite_parameter_kernels": 22,
+  "higher_nullity_rational_checks": 20,
+  "singular_pencil_rational_exceptions": 13,
+  "nonlinear_exception_factors": 24,
+  "new_original_obligations": 0,
+  "new_triple_source_count": 0,
+  "evidence_sha256": {
+    "EXCEPTIONAL_PENCIL_PROBE.json": "45bffb36d0258511c16511e4e9e215f6e1b8c86316acbc5494faef197f2cb14f",
+    "HEIGHT_OVAL_PROBE.json": "dd69e220355c6a30f00fd9bf7862b087665e8238adbd2e944bab51b53f680645",
+    "PENCIL_SINGULAR_PROBE.json": "838a4cb16ee0fd8435b2698170cc06e8cbc533916df5b91f29ce5707f90d876c",
+    "QUADRATIC_EXTENSION_PROBE.json": "f8ee61f8f62b467d06a0f88e45af8b5f2d6dc1ef4ff14b26544a4eadbb127940",
+    "QUAD_INERTIA.json": "7ee3a34e03f3874f65b13b0b9214ccdb42984de2a4761fc279776b7db7b86193",
+    "SINGULAR_PENCIL_FAMILY.json": "a6e25d6211badc6ba58718e47360f0dee7e8d8a315ba3ceef4ded7f1390e3caf"
+  }
+}

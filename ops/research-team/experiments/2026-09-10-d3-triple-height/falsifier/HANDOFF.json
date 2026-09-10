@@ -1,0 +1,76 @@
+{
+  "track": "independent falsifier",
+  "status": "complete finite same-projection critical-locus exclusion; accepted scoped deductive results; global triple endpoint open",
+  "base_checkpoint_commit": "a7a98a927e57c8872aca2b1e48d4615ede649171",
+  "base_checkpoint_tree": "4f87a672cf5a992996a594e6617defea7cfa3889",
+  "input_paths_base": "/workspace/scratch/47843f2221ff/d3_triple_height_20260910/",
+  "input_sha256": {
+    "WORK_ORDER.md": "cee9ade6a166448ce61b7114e80f9b2d5a0bf3370e82083ded408f48a74ae506",
+    "proof/VERTICAL_CRITICAL_REDUCTION.md": "e7034f7b3b51fad14e925eeabed3a43cf134e72a1a3689fede5b4ac28b69477e",
+    "proof/TWO_PARENT_LINE_FACTORS.md": "85c449f0d814872c92a9b07f5962a9af6fdaa6c0d18b8a779c86610ba5d05b44",
+    "referee/ANCHOR_COVERAGE_AUDIT.md": "e067b7f27de4c70877258a8094ad4003edc71713323d778323f52eb03bb9efe9",
+    "referee/REGULAR_HEIGHT_REDUCTION.md": "5dc5a6f6596f3895e68a1aa14d591e825e2207e44f8fdc70c5bc87a20c8afcb6",
+    "checkpoint/original/CONCURRENCY_HEIGHT_PAIR_VANISHING.md": "c4542171cc2cd0c1dd5007bc80d3dfa2e079892cf6417edce760410eed069f91"
+  },
+  "owned_files_base": "/workspace/scratch/47843f2221ff/d3_triple_height_20260910/falsifier/",
+  "original_status": "2/9",
+  "inherited_factor_pair_endpoint": "9476/9476",
+  "new_original_obligations": 0,
+  "new_triple_source_count": 0,
+  "included_scope": [
+    "One explicitly normalized projected parent A=(2,3,4,5) for ordinary anchor123/145/246/378",
+    "120 deterministic relabeled type50/51 occurrences",
+    "All231 pairs among22 quadratic restrictions: no actual uniform common zero with dependent four-height gradients",
+    "All pencil parameters, including infinity, generic singular pencils, rational and exact algebraic exceptional parameters",
+    "Scoped linear-plus-quadratic noncompactness follows from the recorded homogeneous inertia bound",
+    "Independent deductive acceptance of all-six-family anchor normalization, circuit-gradient formula, regular/critical reduction after removing full collision union, and two-parent-line factor theorem"
+  ],
+  "excluded_scope": [
+    "Any other projected parent configuration or complete primitive factor inventory",
+    "Linear, identically zero, unit, or higher-degree occurrence pairs are not part of the231 critical-locus theorem",
+    "No exclusion of smooth compact components of the231 quadratic intersections",
+    "No universal criticality-to-collinearity implication",
+    "No proof of Hc0(K minus Delta)=0, global triple endpoint, or originalD3",
+    "Floating QUAD_PENCIL_SCREEN.json is exploratory and not an acceptance input"
+  ],
+  "branch_coverage": [
+    "Nonzero pencil: simple determinant roots excluded by the adjugate derivative; all repeated factors are linear and104 rational repeated-root checks are covered",
+    "38 generic rank4 singular pencils: kernel boundary identity extends through rank-constant rational-chart poles",
+    "Rank jumps are captured by gcd of all25 four-minors;13 rational and24 irreducible nonlinear factors are covered",
+    "Each exact quotient field is checked over every real embedding via real-root isolation; rank-one quadratic restrictions vanish exactly on their radicals",
+    "One rational nullity3 restriction factors as-72c1c2 with both components excluded",
+    "All22 individual quadric kernels cover infinite pencil parameter",
+    "Dormant identically-zero kernel restriction branch now explicitly returns unresolved and is rejected by aggregation"
+  ],
+  "replay": {
+    "cwd": "/workspace/scratch/47843f2221ff/d3_triple_height_20260910",
+    "command": "python falsifier/verify_pencil_coverage.py --replay",
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "dependencies": [
+      "Python",
+      "SymPy"
+    ],
+    "approx_seconds": 25,
+    "arithmetic": "rational and exact algebraic quotient fields; no floating acceptance"
+  },
+  "next_discriminator": "An actual uniform vertical-critical common zero for a different projected parent or higher-degree restriction with three noncollinear ordinary concurrences, or a source-structured proof that the full closed critical locus has no compact component.",
+  "files_sha256": {
+    "EXCEPTIONAL_PENCIL_PROBE.json": "45bffb36d0258511c16511e4e9e215f6e1b8c86316acbc5494faef197f2cb14f",
+    "FINDINGS.md": "474bcc3ae9bdc1811becc980bca6b44a4795439c5968d5b149a2c8d3797e008a",
+    "HEIGHT_OVAL_PROBE.json": "dd69e220355c6a30f00fd9bf7862b087665e8238adbd2e944bab51b53f680645",
+    "PENCIL_COVERAGE.json": "cd37fbbc9b266ad408aa80ec14de3436ebe59f1c1103923f929fdc5bfd5d3964",
+    "PENCIL_SINGULAR_PROBE.json": "838a4cb16ee0fd8435b2698170cc06e8cbc533916df5b91f29ce5707f90d876c",
+    "QUADRATIC_EXTENSION_PROBE.json": "f8ee61f8f62b467d06a0f88e45af8b5f2d6dc1ef4ff14b26544a4eadbb127940",
+    "QUAD_INERTIA.json": "7ee3a34e03f3874f65b13b0b9214ccdb42984de2a4761fc279776b7db7b86193",
+    "QUAD_PENCIL_SCREEN.json": "60b41ebf2e5fcfe700aca519354a3417acafa70201093088ef64b50e9cdd219c",
+    "SINGULAR_PENCIL_FAMILY.json": "a6e25d6211badc6ba58718e47360f0dee7e8d8a315ba3ceef4ded7f1390e3caf",
+    "exceptional_pencil_probe.py": "12ff877d65961a5c3e509d0041945a688b6c185622f667cb96be5cba6933b299",
+    "height_oval_probe.py": "867966970aa127c11cd09b8d428c02d6e4517a6def83e0809d7d883e312f8fdf",
+    "pencil_singular_probe.py": "3acf205e3d30cdd79eb1f1f98c62531bd5bd66e96a3aaecc0bdf4be84acda06d",
+    "quad_inertia.py": "2ddecb5f0a23d7593a76e395c7469161310af1bf5445119d34bc293de2844dd0",
+    "quadratic_extension_probe.py": "de52d13c6a0481da2e58617a0483aa9e788d1c302939d3298535cbe3ad9254cd",
+    "singular_pencil_family.py": "be7ed093bfda318985e6b711864b051617b7bc48da062788d005bf277540dfb3",
+    "verify_pencil_coverage.py": "42bfafedbb00cfc8b4454356f2967714ef14a53d46ff9fbbd9eb88c908cc46d3"
+  }
+}
