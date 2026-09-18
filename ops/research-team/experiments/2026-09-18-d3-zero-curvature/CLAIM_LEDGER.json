@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-18",
+  "source": [5563, 4373, 23221],
+  "starting_github_commit": "37e6d0f05ea9c3ab0633fc101188aa3f8f56972f",
+  "original_ledger": "2/9",
+  "zero_g_maximum_branch": "EXCLUDED by complete mixed-curvature argument, including nu=0",
+  "maximum_four_by_four_reduction": "PROVED NECESSARY CONDITIONS; remaining PSD locus OPEN",
+  "seven_variable_stationary_reduction": "PROVED with all guards and reconstructed original parents",
+  "six_variable_stationary_reduction": "PROVED with all guards and reconstructed original parents",
+  "stationary_dimension": "NOT DETERMINED",
+  "remaining_maximum_locus_empty": "NOT PROVED",
+  "new_exact_stationary_witnesses": 0,
+  "new_source_orbits_closed": 0,
+  "inherited_unresolved_source_records": 1162302,
+  "whole_survivor_noncompactness": "OPEN",
+  "height_semidefinite_Hc0": "OPEN",
+  "original_diag3_triple_Hc0": "OPEN",
+  "original_diag3_pair_injectivity": "OPEN",
+  "independent_mathematical_referee": false
+}
