@@ -1,0 +1,17 @@
+{
+  "original_diagonal_ledger": "2/9",
+  "original_D3": "OPEN",
+  "original_injectivity": "OPEN",
+  "whole_authenticated_triple": "OPEN",
+  "semidefinite_target": "OPEN",
+  "new_source_orbit_credit": 0,
+  "inherited_source_record_remainder": 1162302,
+  "old_zero_multiplier_partial_unit_target": "REFUTED INHERITED",
+  "reciprocal_partial_unit_target": "REFUTED by exact rational point and family",
+  "complete_boundary_slice_classification": "PROVED by written argument and identities; not global classification",
+  "parent_localized_stationary_target": "OPEN",
+  "new_vector_field_consequences": "EXACT VERIFIED",
+  "parent_unit_product_certificate": null,
+  "independent_mathematical_referee_acceptance": false,
+  "modular_runs_grant_proof_credit": false
+}
