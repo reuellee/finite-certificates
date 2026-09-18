@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-18",
+  "original_ledger": "2/9",
+  "source": [
+    5563,
+    4373,
+    23221
+  ],
+  "full_parent_localized_stationary_empty": "REFUTED by certified real algebraic parent",
+  "real_stationary_point": "EXISTENCE CERTIFIED",
+  "B_saddle": "CERTIFIED",
+  "global_nonzero_V_curvature": "PROVED",
+  "global_mixed_VW_curvature_zero": "PROVED",
+  "maximum_Schur_reduction": "PROVED NECESSARY CONDITIONS; not a complete classification",
+  "whole_survivor_noncompactness": "OPEN",
+  "height_semidefinite_Hc0": "OPEN",
+  "original_diag3_triple_Hc0": "OPEN",
+  "original_diag3_pair_injectivity": "OPEN",
+  "inherited_unresolved_source_records": 1162302,
+  "new_source_orbits_closed": 0,
+  "global_maximum_census": "NOT PERFORMED",
+  "independent_mathematical_referee": false
+}
