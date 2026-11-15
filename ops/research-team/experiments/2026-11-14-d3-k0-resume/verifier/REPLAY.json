@@ -1,0 +1,44 @@
+[
+  {
+    "script": "verify_payload.py",
+    "exit_code": 0,
+    "seconds": 0.1722330499999316,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"new_payload_files\": 26,\n  \"unchanged_starting_payload_files\": 31,\n  \"unchanged_related_payload_files\": 27,\n  \"nested_original_target_reset_payload_files\": 24,\n  \"shared_predecessor_bytes_identical\": true,\n  \"original_ledger\": \"2/9\",\n  \"new_source_orbits_closed\": 0\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "verify_lift.py",
+    "exit_code": 0,
+    "seconds": 2.611775961000035,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"exact_checks\": 113,\n  \"negative_controls\": 4,\n  \"equation_degrees\": [\n    9,\n    6,\n    8,\n    8,\n    7,\n    8,\n    8,\n    8\n  ],\n  \"equation_terms\": [\n    95,\n    12,\n    72,\n    63,\n    65,\n    90,\n    43,\n    61\n  ],\n  \"total_equation_terms\": 501,\n  \"complete_K0_stationary_resolution\": false,\n  \"original_ledger\": \"2/9\",\n  \"new_source_orbits_closed\": 0,\n  \"seconds\": 2.354208451999966\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "verify_independent.py",
+    "exit_code": 0,
+    "seconds": 0.3942337219999672,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"independent_exact_checks\": 130,\n  \"negative_controls\": 5,\n  \"determinant_polynomials_reconstructed\": 73,\n  \"equation_terms\": [\n    95,\n    12,\n    72,\n    63,\n    65,\n    90,\n    43,\n    61\n  ],\n  \"equation_degrees\": [\n    9,\n    6,\n    8,\n    8,\n    7,\n    8,\n    8,\n    8\n  ],\n  \"no_third_party_imports\": true,\n  \"original_ledger\": \"2/9\",\n  \"new_source_orbits_closed\": 0,\n  \"seconds\": 0.34756182700004956\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "curvature_circuit.py",
+    "exit_code": 0,
+    "seconds": 0.3587833840000485,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"source_circuit_rational_evaluations\": 12,\n  \"nonzero_pivot_congruences\": 12,\n  \"PSD_tests_include_all_15_principal_minors\": true,\n  \"singular_PSD_retained\": true,\n  \"leading_minors_only_canary_rejected\": true,\n  \"scope\": \"circuit implementation tests on arbitrary rational data; not stationary examples\",\n  \"original_ledger\": \"2/9\",\n  \"new_source_orbits_closed\": 0,\n  \"seconds\": 0.3204205859999547\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "verify_reconciliation.py",
+    "exit_code": 0,
+    "seconds": 4.215647696000019,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"exact_bridge_checks\": 10,\n  \"related_commit\": \"bed3bb628fd32f0ef552691b69495fcd96fcc7a7\",\n  \"related_archive_bytes\": 11128376,\n  \"related_archive_sha256\": \"c55ead90eed44e7a4a8eaff291c6949854381c3fcdaa910700f28c2051561eb4\",\n  \"q_three_coefficients_match\": true,\n  \"transverse_three_coefficients_match\": true,\n  \"new_lift_and_published_normal_form_are_same_guarded_stationary_target\": true,\n  \"scope\": \"coordinate and coefficient reconciliation, not an emptiness proof\",\n  \"original_ledger\": \"2/9\",\n  \"new_source_orbits_closed\": 0,\n  \"seconds\": 3.896677772999965\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "verify_counterexample_bridge.py",
+    "exit_code": 0,
+    "seconds": 1.171467923000023,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"retained_root_exact_contraction\": true,\n  \"all_parent_brackets_nonzero\": 70,\n  \"new_transverse_residual_chi\": [\n    \"-764198495089/500000000000\",\n    \"-1528396990177/1000000000000\"\n  ],\n  \"old_r_residual_from_new_system\": [\n    \"60767973328623/1000000000000\",\n    \"3797998333039/62500000000\"\n  ],\n  \"old_partial_counterexample_is_not_a_solution_of_the_new_full_system\": true,\n  \"scope\": \"one retained exact counterexample, not a new stationary point or a locus census\",\n  \"original_ledger\": \"2/9\",\n  \"new_source_orbits_closed\": 0,\n  \"seconds\": 1.1354691110000203\n}\n",
+    "stderr": ""
+  }
+]

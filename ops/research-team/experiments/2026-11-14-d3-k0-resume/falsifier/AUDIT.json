@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "classification": "exact algebraic equivalence audit, not locus exclusion",
+  "source_sha256": "f6318930ebbfdaf321023d6efe28199d20f7871f1386db986dc1fbf9c519b1ab",
+  "checks": [
+    "exact equation identity 4",
+    "exact equation identity 6",
+    "exact equation identity 7",
+    "orientation positive denominator D^2",
+    "strict filter positive denominator D^2",
+    "all 36 curvature entries under positive D^2 scale",
+    "Schur numerator positive D^4 scale",
+    "negative denominator wrong-sign shortcut rejected",
+    "both E_x signs on exact conic instances; no parent admissibility claimed"
+  ],
+  "conic_sign_canaries": [
+    {
+      "A": "1",
+      "k": "3",
+      "E_x": "16/7"
+    },
+    {
+      "A": "-2",
+      "k": "3",
+      "E_x": "-320/7"
+    },
+    {
+      "A": "-1/2",
+      "k": "3",
+      "E_x": "35/74"
+    },
+    {
+      "A": "1",
+      "k": "-3",
+      "E_x": "160/7"
+    },
+    {
+      "A": "-2",
+      "k": "-3",
+      "E_x": "-32/7"
+    },
+    {
+      "A": "-1/2",
+      "k": "-3",
+      "E_x": "35/74"
+    },
+    {
+      "A": "-1/2",
+      "k": "2",
+      "E_x": "15/34"
+    },
+    {
+      "A": "-1/2",
+      "k": "-2",
+      "E_x": "15/34"
+    }
+  ],
+  "reduced_profiles": [
+    {
+      "degree": 9,
+      "terms": 95
+    },
+    {
+      "degree": 6,
+      "terms": 12
+    },
+    {
+      "degree": 8,
+      "terms": 72
+    },
+    {
+      "degree": 8,
+      "terms": 63
+    },
+    {
+      "degree": 13,
+      "terms": 515
+    },
+    {
+      "degree": 13,
+      "terms": 400
+    },
+    {
+      "degree": 14,
+      "terms": 671
+    }
+  ],
+  "ledger": "2/9",
+  "new_source_closures": 0
+}
