@@ -1,0 +1,98 @@
+{
+  "check_names": [
+    "connected-positive-polynomial-denominator",
+    "barrier-derivative-numerator",
+    "two-distinct-positive-squared-critical-radii",
+    "three-minima-two-maxima-with-exact-order",
+    "connected-canary-two-saddle-attachments",
+    "connected-canary-laplacian-rows-sum-zero",
+    "two-disconnected-base-intervals",
+    "two-minima-no-index-one-point",
+    "disconnected-canary-null-laplacian",
+    "hostile-deleted-saddle-rejected",
+    "hostile-loop-saddle-rejected",
+    "hostile-unjustified-bridge-would-change-conclusion",
+    "two-strict-rank-one-amplifications"
+  ],
+  "connected_barrier": {
+    "certificate": {
+      "H0_dimension": 1,
+      "accepted": true,
+      "boundary": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "boundary_rank": 2,
+      "edges": 2,
+      "laplacian": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          2,
+          -1
+        ],
+        [
+          0,
+          -1,
+          1
+        ]
+      ],
+      "laplacian_rank": 2,
+      "vertices": 3
+    },
+    "critical_maxima": 2,
+    "critical_minima": 3
+  },
+  "date": "2026-11-21",
+  "disconnected_d9_abstract_barrier": {
+    "certificate": {
+      "H0_dimension": 2,
+      "accepted": true,
+      "boundary": [
+        [],
+        []
+      ],
+      "boundary_rank": 0,
+      "edges": 0,
+      "laplacian": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "laplacian_rank": 0,
+      "vertices": 2
+    },
+    "critical_maxima": 0,
+    "critical_minima": 2
+  },
+  "exact_checks_passed": 13,
+  "format": "d9-critical-incidence-pilot-v1",
+  "hostile_deletion_result": 2,
+  "hostile_self_loop_result": 2,
+  "rank_progression": [
+    0,
+    1,
+    2
+  ],
+  "scope": "one-dimensional abstract canaries; no actual 9DVL parent coverage",
+  "theorem_ledger": "2/9"
+}
